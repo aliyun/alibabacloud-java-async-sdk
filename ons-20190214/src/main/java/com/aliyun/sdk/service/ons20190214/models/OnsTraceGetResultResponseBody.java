@@ -36,6 +36,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TraceData traceData; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsTraceGetResultResponseBody model) {
+            this.requestId = model.requestId;
+            this.traceData = model.traceData;
+        } 
 
         /**
          * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
@@ -171,6 +183,18 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             private String subGroupName; 
             private Long subTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubClientInfoDo model) {
+                this.clientHost = model.clientHost;
+                this.costTime = model.costTime;
+                this.reconsumeTimes = model.reconsumeTimes;
+                this.status = model.status;
+                this.subGroupName = model.subGroupName;
+                this.subTime = model.subTime;
+            } 
+
             /**
              * <p>The address of the consumer.</p>
              * 
@@ -283,6 +307,13 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SubClientInfoDo> subClientInfoDo; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClientList model) {
+                this.subClientInfoDo = model.subClientInfoDo;
+            } 
+
             /**
              * SubClientInfoDo.
              */
@@ -366,6 +397,16 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             private String subGroupName; 
             private Integer successCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubMapDo model) {
+                this.clientList = model.clientList;
+                this.failCount = model.failCount;
+                this.subGroupName = model.subGroupName;
+                this.successCount = model.successCount;
+            } 
+
             /**
              * <p>The information about message consumption by consumers in the group.</p>
              */
@@ -445,6 +486,13 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SubMapDo> subMapDo; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubList model) {
+                this.subMapDo = model.subMapDo;
+            } 
 
             /**
              * SubMapDo.
@@ -601,6 +649,22 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             private String tag; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(TraceMapDo model) {
+                this.bornHost = model.bornHost;
+                this.costTime = model.costTime;
+                this.msgId = model.msgId;
+                this.msgKey = model.msgKey;
+                this.pubGroupName = model.pubGroupName;
+                this.pubTime = model.pubTime;
+                this.status = model.status;
+                this.subList = model.subList;
+                this.tag = model.tag;
+                this.topic = model.topic;
+            } 
+
             /**
              * <p>The address of the producer that generated the message.</p>
              * 
@@ -753,6 +817,13 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TraceMapDo> traceMapDo; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraceList model) {
+                this.traceMapDo = model.traceMapDo;
+            } 
 
             /**
              * TraceMapDo.
@@ -908,6 +979,22 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             private TraceList traceList; 
             private Long updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraceData model) {
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.msgId = model.msgId;
+                this.msgKey = model.msgKey;
+                this.queryId = model.queryId;
+                this.status = model.status;
+                this.topic = model.topic;
+                this.traceList = model.traceList;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The point in time when the task was created.</p>

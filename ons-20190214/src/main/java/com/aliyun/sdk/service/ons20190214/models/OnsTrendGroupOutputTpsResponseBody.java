@@ -36,6 +36,10 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsTrendGroupOutputTpsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -123,6 +135,14 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
             private Long x; 
             private Float y; 
 
+            private Builder() {
+            } 
+
+            private Builder(StatsDataDo model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * <p>The X axis. The value of this parameter is a UNIX timestamp in milliseconds.</p>
              * 
@@ -183,6 +203,13 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<StatsDataDo> statsDataDo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.statsDataDo = model.statsDataDo;
+            } 
 
             /**
              * StatsDataDo.
@@ -266,6 +293,16 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
             private String title; 
             private String xUnit; 
             private String yUnit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.records = model.records;
+                this.title = model.title;
+                this.xUnit = model.xUnit;
+                this.yUnit = model.yUnit;
+            } 
 
             /**
              * <p>The data set returned based on sampling period.</p>

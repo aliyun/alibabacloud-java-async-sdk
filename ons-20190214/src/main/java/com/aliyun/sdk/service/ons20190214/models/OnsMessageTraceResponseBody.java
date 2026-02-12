@@ -36,6 +36,10 @@ public class OnsMessageTraceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsMessageTraceResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsMessageTraceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the message that is queried.</p>
@@ -135,6 +147,15 @@ public class OnsMessageTraceResponseBody extends TeaModel {
             private String instanceId; 
             private String trackType; 
 
+            private Builder() {
+            } 
+
+            private Builder(MessageTrack model) {
+                this.consumerGroup = model.consumerGroup;
+                this.instanceId = model.instanceId;
+                this.trackType = model.trackType;
+            } 
+
             /**
              * <p>The ID of the consumer group that subscribes to the topic.</p>
              * 
@@ -213,6 +234,13 @@ public class OnsMessageTraceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MessageTrack> messageTrack; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.messageTrack = model.messageTrack;
+            } 
 
             /**
              * MessageTrack.

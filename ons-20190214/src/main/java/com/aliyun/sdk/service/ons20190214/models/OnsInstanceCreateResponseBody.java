@@ -36,6 +36,10 @@ public class OnsInstanceCreateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsInstanceCreateResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsInstanceCreateResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The result returned.</p>
@@ -122,6 +134,14 @@ public class OnsInstanceCreateResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private Integer instanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+            } 
 
             /**
              * <p>The ID of the instance that you created.</p>

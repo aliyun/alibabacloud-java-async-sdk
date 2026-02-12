@@ -36,6 +36,10 @@ public class OnsRegionListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsRegionListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsRegionListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -171,6 +183,18 @@ public class OnsRegionListResponseBody extends TeaModel {
             private String regionName; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionDo model) {
+                this.channelName = model.channelName;
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.onsRegionId = model.onsRegionId;
+                this.regionName = model.regionName;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The channel name.</p>
              * 
@@ -275,6 +299,13 @@ public class OnsRegionListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RegionDo> regionDo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.regionDo = model.regionDo;
+            } 
 
             /**
              * RegionDo.

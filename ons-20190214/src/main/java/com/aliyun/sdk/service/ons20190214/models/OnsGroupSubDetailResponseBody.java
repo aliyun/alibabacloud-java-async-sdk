@@ -36,6 +36,10 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsGroupSubDetailResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -123,6 +135,14 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
             private String subString; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionDataList model) {
+                this.subString = model.subString;
+                this.topic = model.topic;
+            } 
+
             /**
              * <p>The expression based on which consumers in the consumer group subscribe to the topic.</p>
              * 
@@ -185,6 +205,13 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SubscriptionDataList> subscriptionDataList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSubscriptionDataList model) {
+                this.subscriptionDataList = model.subscriptionDataList;
+            } 
 
             /**
              * SubscriptionDataList.
@@ -268,6 +295,16 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
             private String messageModel; 
             private Boolean online; 
             private DataSubscriptionDataList subscriptionDataList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.groupId = model.groupId;
+                this.messageModel = model.messageModel;
+                this.online = model.online;
+                this.subscriptionDataList = model.subscriptionDataList;
+            } 
 
             /**
              * <p>The ID of the consumer group that you want to query.</p>

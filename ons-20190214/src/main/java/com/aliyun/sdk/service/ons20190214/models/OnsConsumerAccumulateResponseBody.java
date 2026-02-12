@@ -36,6 +36,10 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsConsumerAccumulateResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The message accumulation information about topics to which the specified consumer subscribes.</p>
@@ -147,6 +159,16 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
             private String topic; 
             private Long totalDiff; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetailInTopicDo model) {
+                this.delayTime = model.delayTime;
+                this.lastTimestamp = model.lastTimestamp;
+                this.topic = model.topic;
+                this.totalDiff = model.totalDiff;
+            } 
+
             /**
              * <p>The maximum latency of message consumption in the topic.</p>
              * 
@@ -229,6 +251,13 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DetailInTopicDo> detailInTopicDo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailInTopicList model) {
+                this.detailInTopicDo = model.detailInTopicDo;
+            } 
 
             /**
              * DetailInTopicDo.
@@ -336,6 +365,18 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
             private Long lastTimestamp; 
             private Boolean online; 
             private Long totalDiff; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.consumeTps = model.consumeTps;
+                this.delayTime = model.delayTime;
+                this.detailInTopicList = model.detailInTopicList;
+                this.lastTimestamp = model.lastTimestamp;
+                this.online = model.online;
+                this.totalDiff = model.totalDiff;
+            } 
 
             /**
              * <p>The transactions per second (TPS) for message consumption performed by consumers in the group.</p>

@@ -36,6 +36,10 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsMessageGetByKeyResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of returned results.</p>
@@ -122,6 +134,14 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(MessageProperty model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the attribute. Valid values:</p>
@@ -194,6 +214,13 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MessageProperty> messageProperty; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyList model) {
+                this.messageProperty = model.messageProperty;
+            } 
 
             /**
              * MessageProperty.
@@ -362,6 +389,23 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
             private Long storeTimestamp; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(OnsRestMessageDo model) {
+                this.bodyCRC = model.bodyCRC;
+                this.bornHost = model.bornHost;
+                this.bornTimestamp = model.bornTimestamp;
+                this.instanceId = model.instanceId;
+                this.msgId = model.msgId;
+                this.propertyList = model.propertyList;
+                this.reconsumeTimes = model.reconsumeTimes;
+                this.storeHost = model.storeHost;
+                this.storeSize = model.storeSize;
+                this.storeTimestamp = model.storeTimestamp;
+                this.topic = model.topic;
+            } 
+
             /**
              * <p>The cyclic redundancy check (CRC) value of the message body.</p>
              * 
@@ -518,6 +562,13 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OnsRestMessageDo> onsRestMessageDo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.onsRestMessageDo = model.onsRestMessageDo;
+            } 
 
             /**
              * OnsRestMessageDo.

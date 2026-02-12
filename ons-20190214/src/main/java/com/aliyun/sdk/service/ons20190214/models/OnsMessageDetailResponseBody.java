@@ -36,6 +36,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsMessageDetailResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsMessageDetailResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -122,6 +134,14 @@ public class OnsMessageDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyList model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the attribute. Valid values:</p>
@@ -335,6 +355,25 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             private Integer storeSize; 
             private Long storeTimestamp; 
             private String topic; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.body = model.body;
+                this.bodyCRC = model.bodyCRC;
+                this.bodyStr = model.bodyStr;
+                this.bornHost = model.bornHost;
+                this.bornTimestamp = model.bornTimestamp;
+                this.instanceId = model.instanceId;
+                this.msgId = model.msgId;
+                this.propertyList = model.propertyList;
+                this.reconsumeTimes = model.reconsumeTimes;
+                this.storeHost = model.storeHost;
+                this.storeSize = model.storeSize;
+                this.storeTimestamp = model.storeTimestamp;
+                this.topic = model.topic;
+            } 
 
             /**
              * <p>The string that is obtained after the message body is encrypted by using the Base 64 algorithm.</p>

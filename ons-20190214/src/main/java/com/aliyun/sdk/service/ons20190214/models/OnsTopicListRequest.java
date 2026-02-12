@@ -29,16 +29,11 @@ public class OnsTopicListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Topic")
     private String topic;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("UserId")
-    private String userId;
-
     private OnsTopicListRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.tag = builder.tag;
         this.topic = builder.topic;
-        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -49,7 +44,7 @@ public class OnsTopicListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,18 +70,10 @@ public class OnsTopicListRequest extends Request {
         return this.topic;
     }
 
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
-    }
-
     public static final class Builder extends Request.Builder<OnsTopicListRequest, Builder> {
         private String instanceId; 
         private java.util.List<Tag> tag; 
         private String topic; 
-        private String userId; 
 
         private Builder() {
             super();
@@ -97,7 +84,6 @@ public class OnsTopicListRequest extends Request {
             this.instanceId = request.instanceId;
             this.tag = request.tag;
             this.topic = request.topic;
-            this.userId = request.userId;
         } 
 
         /**
@@ -130,18 +116,6 @@ public class OnsTopicListRequest extends Request {
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);
             this.topic = topic;
-            return this;
-        }
-
-        /**
-         * <p>The user ID of the topic owner. Set this parameter to an Alibaba Cloud account ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>138015630679****</p>
-         */
-        public Builder userId(String userId) {
-            this.putQueryParameter("UserId", userId);
-            this.userId = userId;
             return this;
         }
 
@@ -197,6 +171,14 @@ public class OnsTopicListRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the <strong>Value</strong> parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tag. If you do not include these parameters in a request, this operation queries all topics that you can access.</p>

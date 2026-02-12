@@ -36,6 +36,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsConsumerStatusResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -92,6 +104,9 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
+        @com.aliyun.core.annotation.NameInMap("Diff")
+        private Long diff;
+
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
@@ -104,6 +119,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         private ConnectionDo(Builder builder) {
             this.clientAddr = builder.clientAddr;
             this.clientId = builder.clientId;
+            this.diff = builder.diff;
             this.language = builder.language;
             this.remoteIP = builder.remoteIP;
             this.version = builder.version;
@@ -132,6 +148,13 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return diff
+         */
+        public Long getDiff() {
+            return this.diff;
+        }
+
+        /**
          * @return language
          */
         public String getLanguage() {
@@ -155,9 +178,22 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String clientAddr; 
             private String clientId; 
+            private Long diff; 
             private String language; 
             private String remoteIP; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConnectionDo model) {
+                this.clientAddr = model.clientAddr;
+                this.clientId = model.clientId;
+                this.diff = model.diff;
+                this.language = model.language;
+                this.remoteIP = model.remoteIP;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The IP address and port number of the consumer instance.</p>
@@ -178,6 +214,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
+                return this;
+            }
+
+            /**
+             * Diff.
+             */
+            public Builder diff(Long diff) {
+                this.diff = diff;
                 return this;
             }
 
@@ -253,6 +297,13 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ConnectionDo> connectionDo; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnectionSet model) {
+                this.connectionDo = model.connectionDo;
+            } 
+
             /**
              * ConnectionDo.
              */
@@ -299,6 +350,13 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> track; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrackList model) {
+                this.track = model.track;
+            } 
 
             /**
              * Track.
@@ -359,6 +417,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             private String thread; 
             private TrackList trackList; 
 
+            private Builder() {
+            } 
+
+            private Builder(ThreadTrackDo model) {
+                this.thread = model.thread;
+                this.trackList = model.trackList;
+            } 
+
             /**
              * <p>The name of the thread.</p>
              * 
@@ -416,6 +482,13 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ThreadTrackDo> threadTrackDo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Jstack model) {
+                this.threadTrackDo = model.threadTrackDo;
+            } 
 
             /**
              * ThreadTrackDo.
@@ -512,6 +585,17 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             private Float rt; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsumerRunningDataDo model) {
+                this.failedCountPerHour = model.failedCountPerHour;
+                this.failedTps = model.failedTps;
+                this.okTps = model.okTps;
+                this.rt = model.rt;
+                this.topic = model.topic;
+            } 
+
             /**
              * <p>The number of messages that failed to be consumed each hour.</p>
              * 
@@ -606,6 +690,13 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ConsumerRunningDataDo> consumerRunningDataDo; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunningDataList model) {
+                this.consumerRunningDataDo = model.consumerRunningDataDo;
+            } 
+
             /**
              * ConsumerRunningDataDo.
              */
@@ -652,6 +743,13 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagsSet model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -736,6 +834,16 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             private TagsSet tagsSet; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionData model) {
+                this.subString = model.subString;
+                this.subVersion = model.subVersion;
+                this.tagsSet = model.tagsSet;
+                this.topic = model.topic;
+            } 
+
             /**
              * <p>The expression that is used to specify the tags of messages in the subscribed topic.</p>
              * 
@@ -817,6 +925,13 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SubscriptionData> subscriptionData; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionSet model) {
+                this.subscriptionData = model.subscriptionData;
+            } 
 
             /**
              * SubscriptionData.
@@ -997,6 +1112,24 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             private Integer threadCount; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsumerConnectionInfoDo model) {
+                this.clientId = model.clientId;
+                this.connection = model.connection;
+                this.consumeModel = model.consumeModel;
+                this.consumeType = model.consumeType;
+                this.jstack = model.jstack;
+                this.language = model.language;
+                this.lastTimeStamp = model.lastTimeStamp;
+                this.runningDataList = model.runningDataList;
+                this.startTimeStamp = model.startTimeStamp;
+                this.subscriptionSet = model.subscriptionSet;
+                this.threadCount = model.threadCount;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The ID of the consumer instance.</p>
              * 
@@ -1170,6 +1303,13 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ConsumerConnectionInfoDo> consumerConnectionInfoDo; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsumerConnectionInfoList model) {
+                this.consumerConnectionInfoDo = model.consumerConnectionInfoDo;
+            } 
+
             /**
              * ConsumerConnectionInfoDo.
              */
@@ -1252,6 +1392,16 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             private Long lastTimestamp; 
             private String topic; 
             private Long totalDiff; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailInTopicDo model) {
+                this.delayTime = model.delayTime;
+                this.lastTimestamp = model.lastTimestamp;
+                this.topic = model.topic;
+                this.totalDiff = model.totalDiff;
+            } 
 
             /**
              * <p>The latency of message consumption in the topic. Unit: milliseconds.</p>
@@ -1336,6 +1486,13 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DetailInTopicDo> detailInTopicDo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailInTopicList model) {
+                this.detailInTopicDo = model.detailInTopicDo;
+            } 
 
             /**
              * DetailInTopicDo.
@@ -1515,6 +1672,24 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             private Boolean rebalanceOK; 
             private Boolean subscriptionSame; 
             private Long totalDiff; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.connectionSet = model.connectionSet;
+                this.consumeModel = model.consumeModel;
+                this.consumeTps = model.consumeTps;
+                this.consumerConnectionInfoList = model.consumerConnectionInfoList;
+                this.delayTime = model.delayTime;
+                this.detailInTopicList = model.detailInTopicList;
+                this.instanceId = model.instanceId;
+                this.lastTimestamp = model.lastTimestamp;
+                this.online = model.online;
+                this.rebalanceOK = model.rebalanceOK;
+                this.subscriptionSame = model.subscriptionSame;
+                this.totalDiff = model.totalDiff;
+            } 
 
             /**
              * <p>The information about online consumers in the consumer group.</p>

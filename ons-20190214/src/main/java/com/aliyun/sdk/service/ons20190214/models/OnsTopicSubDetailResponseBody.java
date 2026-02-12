@@ -36,6 +36,10 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsTopicSubDetailResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -147,6 +159,16 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
             private String online; 
             private String subString; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionDataList model) {
+                this.groupId = model.groupId;
+                this.messageModel = model.messageModel;
+                this.online = model.online;
+                this.subString = model.subString;
+            } 
+
             /**
              * <p>The ID of the consumer group that subscribes to the topic.</p>
              * 
@@ -175,7 +197,10 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Online.
+             * <p>Indicates whether the consumer group is online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(String online) {
                 this.online = online;
@@ -233,6 +258,13 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SubscriptionDataList> subscriptionDataList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSubscriptionDataList model) {
+                this.subscriptionDataList = model.subscriptionDataList;
+            } 
 
             /**
              * SubscriptionDataList.
@@ -292,6 +324,14 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         public static final class Builder {
             private DataSubscriptionDataList subscriptionDataList; 
             private String topic; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.subscriptionDataList = model.subscriptionDataList;
+                this.topic = model.topic;
+            } 
 
             /**
              * <p>The information about the online consumer groups that subscribe to the topic.</p>

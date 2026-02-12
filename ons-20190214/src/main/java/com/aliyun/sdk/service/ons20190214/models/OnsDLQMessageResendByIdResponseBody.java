@@ -36,6 +36,10 @@ public class OnsDLQMessageResendByIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsDLQMessageResendByIdResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsDLQMessageResendByIdResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned messages.</p>
@@ -110,6 +122,13 @@ public class OnsDLQMessageResendByIdResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> msgId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.msgId = model.msgId;
+            } 
 
             /**
              * MsgId.

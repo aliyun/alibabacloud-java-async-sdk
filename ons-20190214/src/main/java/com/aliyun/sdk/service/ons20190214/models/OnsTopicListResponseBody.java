@@ -36,6 +36,10 @@ public class OnsTopicListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsTopicListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsTopicListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the topics.</p>
@@ -123,6 +135,14 @@ public class OnsTopicListResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -183,6 +203,13 @@ public class OnsTopicListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -350,6 +377,23 @@ public class OnsTopicListResponseBody extends TeaModel {
             private Integer serviceStatus; 
             private Tags tags; 
             private String topic; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublishInfoDo model) {
+                this.createTime = model.createTime;
+                this.independentNaming = model.independentNaming;
+                this.instanceId = model.instanceId;
+                this.messageType = model.messageType;
+                this.owner = model.owner;
+                this.relation = model.relation;
+                this.relationName = model.relationName;
+                this.remark = model.remark;
+                this.serviceStatus = model.serviceStatus;
+                this.tags = model.tags;
+                this.topic = model.topic;
+            } 
 
             /**
              * <p>The time when the topic was created.</p>
@@ -528,6 +572,13 @@ public class OnsTopicListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PublishInfoDo> publishInfoDo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.publishInfoDo = model.publishInfoDo;
+            } 
 
             /**
              * PublishInfoDo.

@@ -36,6 +36,10 @@ public class OnsTraceQueryByMsgKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return queryId
      */
@@ -53,6 +57,14 @@ public class OnsTraceQueryByMsgKeyResponseBody extends TeaModel {
     public static final class Builder {
         private String queryId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsTraceQueryByMsgKeyResponseBody model) {
+            this.queryId = model.queryId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the query task. You can call the <a href="https://help.aliyun.com/document_detail/59832.html">OnsTraceGetResult</a> operation to query the details of the message trace based on the task ID.</p>

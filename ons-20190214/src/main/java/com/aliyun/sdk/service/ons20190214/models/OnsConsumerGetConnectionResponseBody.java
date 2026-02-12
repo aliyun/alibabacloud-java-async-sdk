@@ -36,6 +36,10 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsConsumerGetConnectionResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -147,6 +159,16 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
             private String language; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnectionDo model) {
+                this.clientAddr = model.clientAddr;
+                this.clientId = model.clientId;
+                this.language = model.language;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The IP address and port number of the consumer client.</p>
              * 
@@ -230,6 +252,13 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ConnectionDo> connectionDo; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnectionList model) {
+                this.connectionDo = model.connectionDo;
+            } 
+
             /**
              * ConnectionDo.
              */
@@ -288,6 +317,14 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         public static final class Builder {
             private ConnectionList connectionList; 
             private String messageModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.connectionList = model.connectionList;
+                this.messageModel = model.messageModel;
+            } 
 
             /**
              * <p>The client connection information of the consumer group.</p>

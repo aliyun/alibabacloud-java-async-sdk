@@ -36,6 +36,10 @@ public class OnsTopicStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsTopicStatusResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsTopicStatusResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data structure of the queried topic.</p>
@@ -134,6 +146,15 @@ public class OnsTopicStatusResponseBody extends TeaModel {
             private Long lastTimeStamp; 
             private Integer perm; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.lastTimeStamp = model.lastTimeStamp;
+                this.perm = model.perm;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The point in time when the latest message is ready in the topic. If no message exists in the topic, the return value of this parameter is 0.</p>

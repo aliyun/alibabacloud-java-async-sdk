@@ -36,6 +36,10 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsConsumerTimeSpanResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -159,6 +171,17 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
             private Long minTimeStamp; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.consumeTimeStamp = model.consumeTimeStamp;
+                this.instanceId = model.instanceId;
+                this.maxTimeStamp = model.maxTimeStamp;
+                this.minTimeStamp = model.minTimeStamp;
+                this.topic = model.topic;
+            } 
+
             /**
              * <p>The most recent point in time when a message in the topic was consumed by the customer group.</p>
              * 
@@ -182,7 +205,7 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time when the earliest stored message was published to the topic.</p>
+             * <p>The point in time when the most recently stored message was published to the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>1570761026804</p>
@@ -193,7 +216,7 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time when the most recently stored message was published to the topic.</p>
+             * <p>The point in time when the earliest stored message was published to the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>1570701231122</p>

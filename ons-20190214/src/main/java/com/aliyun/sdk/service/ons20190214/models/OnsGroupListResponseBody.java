@@ -36,6 +36,10 @@ public class OnsGroupListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsGroupListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsGroupListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned list of subscriptions.</p>
@@ -123,6 +135,14 @@ public class OnsGroupListResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag that is attached to the consumer group.</p>
              * 
@@ -183,6 +203,13 @@ public class OnsGroupListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -327,6 +354,21 @@ public class OnsGroupListResponseBody extends TeaModel {
             private Tags tags; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubscribeInfoDo model) {
+                this.createTime = model.createTime;
+                this.groupId = model.groupId;
+                this.groupType = model.groupType;
+                this.independentNaming = model.independentNaming;
+                this.instanceId = model.instanceId;
+                this.owner = model.owner;
+                this.remark = model.remark;
+                this.tags = model.tags;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The point in time when the consumer group was created.</p>
              * 
@@ -469,6 +511,13 @@ public class OnsGroupListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SubscribeInfoDo> subscribeInfoDo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.subscribeInfoDo = model.subscribeInfoDo;
+            } 
 
             /**
              * SubscribeInfoDo.

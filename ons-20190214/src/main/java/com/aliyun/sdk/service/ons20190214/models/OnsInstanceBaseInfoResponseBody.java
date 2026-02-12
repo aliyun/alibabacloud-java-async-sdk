@@ -36,6 +36,10 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceBaseInfo
      */
@@ -53,6 +57,14 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceBaseInfo instanceBaseInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsInstanceBaseInfoResponseBody model) {
+            this.instanceBaseInfo = model.instanceBaseInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the instance.</p>
@@ -158,6 +170,17 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             private String httpInternetSecureEndpoint; 
             private String tcpEndpoint; 
             private String tcpInternetEndpoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.httpInternalEndpoint = model.httpInternalEndpoint;
+                this.httpInternetEndpoint = model.httpInternetEndpoint;
+                this.httpInternetSecureEndpoint = model.httpInternetSecureEndpoint;
+                this.tcpEndpoint = model.tcpEndpoint;
+                this.tcpInternetEndpoint = model.tcpInternetEndpoint;
+            } 
 
             /**
              * <p>The private HTTP endpoint of the instance.</p>
@@ -270,6 +293,9 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
+        @com.aliyun.core.annotation.NameInMap("SupportClassic")
+        private Integer supportClassic;
+
         @com.aliyun.core.annotation.NameInMap("TopicCapacity")
         private Integer topicCapacity;
 
@@ -290,6 +316,7 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             this.maxTps = builder.maxTps;
             this.releaseTime = builder.releaseTime;
             this.remark = builder.remark;
+            this.supportClassic = builder.supportClassic;
             this.topicCapacity = builder.topicCapacity;
             this.spInstanceId = builder.spInstanceId;
             this.spInstanceType = builder.spInstanceType;
@@ -374,6 +401,13 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportClassic
+         */
+        public Integer getSupportClassic() {
+            return this.supportClassic;
+        }
+
+        /**
          * @return topicCapacity
          */
         public Integer getTopicCapacity() {
@@ -405,9 +439,30 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             private Long maxTps; 
             private Long releaseTime; 
             private String remark; 
+            private Integer supportClassic; 
             private Integer topicCapacity; 
             private String spInstanceId; 
             private Integer spInstanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceBaseInfo model) {
+                this.createTime = model.createTime;
+                this.endpoints = model.endpoints;
+                this.independentNaming = model.independentNaming;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceStatus = model.instanceStatus;
+                this.instanceType = model.instanceType;
+                this.maxTps = model.maxTps;
+                this.releaseTime = model.releaseTime;
+                this.remark = model.remark;
+                this.supportClassic = model.supportClassic;
+                this.topicCapacity = model.topicCapacity;
+                this.spInstanceId = model.spInstanceId;
+                this.spInstanceType = model.spInstanceType;
+            } 
 
             /**
              * <p>The time when the instance was created. The value of this parameter is a UNIX timestamp in milliseconds.</p>
@@ -533,6 +588,14 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
              */
             public Builder remark(String remark) {
                 this.remark = remark;
+                return this;
+            }
+
+            /**
+             * SupportClassic.
+             */
+            public Builder supportClassic(Integer supportClassic) {
+                this.supportClassic = supportClassic;
                 return this;
             }
 

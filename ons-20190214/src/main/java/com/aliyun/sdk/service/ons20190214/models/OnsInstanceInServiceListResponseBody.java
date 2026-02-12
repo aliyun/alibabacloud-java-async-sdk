@@ -36,6 +36,10 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnsInstanceInServiceListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned information about the queried instances.</p>
@@ -123,6 +135,14 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -183,6 +203,13 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -338,6 +365,22 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
             private Long releaseTime; 
             private Tags tags; 
             private Integer topicCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceVO model) {
+                this.createTime = model.createTime;
+                this.groupCount = model.groupCount;
+                this.independentNaming = model.independentNaming;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceStatus = model.instanceStatus;
+                this.instanceType = model.instanceType;
+                this.releaseTime = model.releaseTime;
+                this.tags = model.tags;
+                this.topicCount = model.topicCount;
+            } 
 
             /**
              * <p>The time when the instance was created. The value of this parameter is a UNIX timestamp in milliseconds.</p>
@@ -500,6 +543,13 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceVO> instanceVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceVO = model.instanceVO;
+            } 
 
             /**
              * InstanceVO.
