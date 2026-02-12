@@ -152,6 +152,12 @@ public class JobItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SystemEnvs")
     private java.util.Map<String, String> systemEnvs;
 
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    private String templateId;
+
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    private String templateName;
+
     @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
@@ -234,6 +240,8 @@ public class JobItem extends TeaModel {
         this.statusHistory = builder.statusHistory;
         this.subStatus = builder.subStatus;
         this.systemEnvs = builder.systemEnvs;
+        this.templateId = builder.templateId;
+        this.templateName = builder.templateName;
         this.tenantId = builder.tenantId;
         this.thirdpartyLibDir = builder.thirdpartyLibDir;
         this.thirdpartyLibs = builder.thirdpartyLibs;
@@ -576,6 +584,20 @@ public class JobItem extends TeaModel {
     }
 
     /**
+     * @return templateId
+     */
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    /**
+     * @return templateName
+     */
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -705,6 +727,8 @@ public class JobItem extends TeaModel {
         private java.util.List<StatusTransitionItem> statusHistory; 
         private String subStatus; 
         private java.util.Map<String, String> systemEnvs; 
+        private String templateId; 
+        private String templateName; 
         private String tenantId; 
         private String thirdpartyLibDir; 
         private java.util.List<String> thirdpartyLibs; 
@@ -767,6 +791,8 @@ public class JobItem extends TeaModel {
             this.statusHistory = model.statusHistory;
             this.subStatus = model.subStatus;
             this.systemEnvs = model.systemEnvs;
+            this.templateId = model.templateId;
+            this.templateName = model.templateName;
             this.tenantId = model.tenantId;
             this.thirdpartyLibDir = model.thirdpartyLibDir;
             this.thirdpartyLibs = model.thirdpartyLibs;
@@ -1138,6 +1164,22 @@ public class JobItem extends TeaModel {
          */
         public Builder systemEnvs(java.util.Map<String, String> systemEnvs) {
             this.systemEnvs = systemEnvs;
+            return this;
+        }
+
+        /**
+         * TemplateId.
+         */
+        public Builder templateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * TemplateName.
+         */
+        public Builder templateName(String templateName) {
+            this.templateName = templateName;
             return this;
         }
 

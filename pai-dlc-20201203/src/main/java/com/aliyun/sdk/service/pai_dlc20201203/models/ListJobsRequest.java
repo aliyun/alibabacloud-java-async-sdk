@@ -139,6 +139,10 @@ public class ListJobsRequest extends Request {
     private java.util.Map<String, String> tags;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    private String templateId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TimeRangeField")
     private String timeRangeField;
 
@@ -189,6 +193,7 @@ public class ListJobsRequest extends Request {
         this.startTime = builder.startTime;
         this.status = builder.status;
         this.tags = builder.tags;
+        this.templateId = builder.templateId;
         this.timeRangeField = builder.timeRangeField;
         this.userCommandSearch = builder.userCommandSearch;
         this.userIdForFilter = builder.userIdForFilter;
@@ -413,6 +418,13 @@ public class ListJobsRequest extends Request {
     }
 
     /**
+     * @return templateId
+     */
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    /**
      * @return timeRangeField
      */
     public String getTimeRangeField() {
@@ -477,6 +489,7 @@ public class ListJobsRequest extends Request {
         private String startTime; 
         private String status; 
         private java.util.Map<String, String> tags; 
+        private String templateId; 
         private String timeRangeField; 
         private String userCommandSearch; 
         private String userIdForFilter; 
@@ -518,6 +531,7 @@ public class ListJobsRequest extends Request {
             this.startTime = request.startTime;
             this.status = request.status;
             this.tags = request.tags;
+            this.templateId = request.templateId;
             this.timeRangeField = request.timeRangeField;
             this.userCommandSearch = request.userCommandSearch;
             this.userIdForFilter = request.userIdForFilter;
@@ -892,6 +906,15 @@ public class ListJobsRequest extends Request {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * TemplateId.
+         */
+        public Builder templateId(String templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 

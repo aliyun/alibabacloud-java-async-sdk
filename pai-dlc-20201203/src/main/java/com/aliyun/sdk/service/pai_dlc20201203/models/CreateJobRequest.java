@@ -89,6 +89,14 @@ public class CreateJobRequest extends Request {
     private String successPolicy;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    private String templateId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
+    private Integer templateVersion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ThirdpartyLibDir")
     private String thirdpartyLibDir;
 
@@ -128,6 +136,8 @@ public class CreateJobRequest extends Request {
         this.resourceId = builder.resourceId;
         this.settings = builder.settings;
         this.successPolicy = builder.successPolicy;
+        this.templateId = builder.templateId;
+        this.templateVersion = builder.templateVersion;
         this.thirdpartyLibDir = builder.thirdpartyLibDir;
         this.thirdpartyLibs = builder.thirdpartyLibs;
         this.userCommand = builder.userCommand;
@@ -268,6 +278,20 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return templateId
+     */
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    /**
+     * @return templateVersion
+     */
+    public Integer getTemplateVersion() {
+        return this.templateVersion;
+    }
+
+    /**
      * @return thirdpartyLibDir
      */
     public String getThirdpartyLibDir() {
@@ -320,6 +344,8 @@ public class CreateJobRequest extends Request {
         private String resourceId; 
         private JobSettings settings; 
         private String successPolicy; 
+        private String templateId; 
+        private Integer templateVersion; 
         private String thirdpartyLibDir; 
         private java.util.List<String> thirdpartyLibs; 
         private String userCommand; 
@@ -349,6 +375,8 @@ public class CreateJobRequest extends Request {
             this.resourceId = request.resourceId;
             this.settings = request.settings;
             this.successPolicy = request.successPolicy;
+            this.templateId = request.templateId;
+            this.templateVersion = request.templateVersion;
             this.thirdpartyLibDir = request.thirdpartyLibDir;
             this.thirdpartyLibs = request.thirdpartyLibs;
             this.userCommand = request.userCommand;
@@ -578,6 +606,30 @@ public class CreateJobRequest extends Request {
         public Builder successPolicy(String successPolicy) {
             this.putBodyParameter("SuccessPolicy", successPolicy);
             this.successPolicy = successPolicy;
+            return this;
+        }
+
+        /**
+         * <p>任务模板的 ID。指定后将基于模板创建作业，作业参数需符合模板约束规则。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tplxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder templateId(String templateId) {
+            this.putBodyParameter("TemplateId", templateId);
+            this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * <p>指定使用的模板版本号，不传则使用模板默认版本。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder templateVersion(Integer templateVersion) {
+            this.putBodyParameter("TemplateVersion", templateVersion);
+            this.templateVersion = templateVersion;
             return this;
         }
 
