@@ -204,6 +204,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ObtainCloudAccountRoleAccessCredentialResponse> obtainCloudAccountRoleAccessCredential(ObtainCloudAccountRoleAccessCredentialRequest request);
 
     /**
+     * @param request the request parameters of ObtainCredential  ObtainCredentialRequest
+     * @return ObtainCredentialResponse
+     */
+    CompletableFuture<ObtainCredentialResponse> obtainCredential(ObtainCredentialRequest request);
+
+    /**
      * @param request the request parameters of PatchGroup  PatchGroupRequest
      * @return PatchGroupResponse
      */
