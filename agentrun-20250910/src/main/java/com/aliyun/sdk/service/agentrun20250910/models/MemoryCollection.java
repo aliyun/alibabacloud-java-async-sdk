@@ -26,6 +26,12 @@ public class MemoryCollection extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("embedderConfig")
     private EmbedderConfig embedderConfig;
 
+    @com.aliyun.core.annotation.NameInMap("enableConversationHistory")
+    private Boolean enableConversationHistory;
+
+    @com.aliyun.core.annotation.NameInMap("enableConversationState")
+    private Boolean enableConversationState;
+
     @com.aliyun.core.annotation.NameInMap("executionRoleArn")
     private String executionRoleArn;
 
@@ -51,6 +57,8 @@ public class MemoryCollection extends TeaModel {
         this.createdAt = builder.createdAt;
         this.description = builder.description;
         this.embedderConfig = builder.embedderConfig;
+        this.enableConversationHistory = builder.enableConversationHistory;
+        this.enableConversationState = builder.enableConversationState;
         this.executionRoleArn = builder.executionRoleArn;
         this.lastUpdatedAt = builder.lastUpdatedAt;
         this.llmConfig = builder.llmConfig;
@@ -91,6 +99,20 @@ public class MemoryCollection extends TeaModel {
      */
     public EmbedderConfig getEmbedderConfig() {
         return this.embedderConfig;
+    }
+
+    /**
+     * @return enableConversationHistory
+     */
+    public Boolean getEnableConversationHistory() {
+        return this.enableConversationHistory;
+    }
+
+    /**
+     * @return enableConversationState
+     */
+    public Boolean getEnableConversationState() {
+        return this.enableConversationState;
     }
 
     /**
@@ -146,6 +168,8 @@ public class MemoryCollection extends TeaModel {
         private String createdAt; 
         private String description; 
         private EmbedderConfig embedderConfig; 
+        private Boolean enableConversationHistory; 
+        private Boolean enableConversationState; 
         private String executionRoleArn; 
         private String lastUpdatedAt; 
         private LLMConfig llmConfig; 
@@ -161,6 +185,8 @@ public class MemoryCollection extends TeaModel {
             this.createdAt = model.createdAt;
             this.description = model.description;
             this.embedderConfig = model.embedderConfig;
+            this.enableConversationHistory = model.enableConversationHistory;
+            this.enableConversationState = model.enableConversationState;
             this.executionRoleArn = model.executionRoleArn;
             this.lastUpdatedAt = model.lastUpdatedAt;
             this.llmConfig = model.llmConfig;
@@ -191,6 +217,22 @@ public class MemoryCollection extends TeaModel {
          */
         public Builder embedderConfig(EmbedderConfig embedderConfig) {
             this.embedderConfig = embedderConfig;
+            return this;
+        }
+
+        /**
+         * enableConversationHistory.
+         */
+        public Builder enableConversationHistory(Boolean enableConversationHistory) {
+            this.enableConversationHistory = enableConversationHistory;
+            return this;
+        }
+
+        /**
+         * enableConversationState.
+         */
+        public Builder enableConversationState(Boolean enableConversationState) {
+            this.enableConversationState = enableConversationState;
             return this;
         }
 

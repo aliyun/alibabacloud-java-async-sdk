@@ -23,6 +23,12 @@ public class CreateMemoryCollectionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("embedderConfig")
     private EmbedderConfig embedderConfig;
 
+    @com.aliyun.core.annotation.NameInMap("enableConversationHistory")
+    private Boolean enableConversationHistory;
+
+    @com.aliyun.core.annotation.NameInMap("enableConversationState")
+    private Boolean enableConversationState;
+
     @com.aliyun.core.annotation.NameInMap("executionRoleArn")
     private String executionRoleArn;
 
@@ -44,6 +50,8 @@ public class CreateMemoryCollectionInput extends TeaModel {
     private CreateMemoryCollectionInput(Builder builder) {
         this.description = builder.description;
         this.embedderConfig = builder.embedderConfig;
+        this.enableConversationHistory = builder.enableConversationHistory;
+        this.enableConversationState = builder.enableConversationState;
         this.executionRoleArn = builder.executionRoleArn;
         this.llmConfig = builder.llmConfig;
         this.memoryCollectionName = builder.memoryCollectionName;
@@ -76,6 +84,20 @@ public class CreateMemoryCollectionInput extends TeaModel {
      */
     public EmbedderConfig getEmbedderConfig() {
         return this.embedderConfig;
+    }
+
+    /**
+     * @return enableConversationHistory
+     */
+    public Boolean getEnableConversationHistory() {
+        return this.enableConversationHistory;
+    }
+
+    /**
+     * @return enableConversationState
+     */
+    public Boolean getEnableConversationState() {
+        return this.enableConversationState;
     }
 
     /**
@@ -123,6 +145,8 @@ public class CreateMemoryCollectionInput extends TeaModel {
     public static final class Builder {
         private String description; 
         private EmbedderConfig embedderConfig; 
+        private Boolean enableConversationHistory; 
+        private Boolean enableConversationState; 
         private String executionRoleArn; 
         private LLMConfig llmConfig; 
         private String memoryCollectionName; 
@@ -136,6 +160,8 @@ public class CreateMemoryCollectionInput extends TeaModel {
         private Builder(CreateMemoryCollectionInput model) {
             this.description = model.description;
             this.embedderConfig = model.embedderConfig;
+            this.enableConversationHistory = model.enableConversationHistory;
+            this.enableConversationState = model.enableConversationState;
             this.executionRoleArn = model.executionRoleArn;
             this.llmConfig = model.llmConfig;
             this.memoryCollectionName = model.memoryCollectionName;
@@ -157,6 +183,22 @@ public class CreateMemoryCollectionInput extends TeaModel {
          */
         public Builder embedderConfig(EmbedderConfig embedderConfig) {
             this.embedderConfig = embedderConfig;
+            return this;
+        }
+
+        /**
+         * enableConversationHistory.
+         */
+        public Builder enableConversationHistory(Boolean enableConversationHistory) {
+            this.enableConversationHistory = enableConversationHistory;
+            return this;
+        }
+
+        /**
+         * enableConversationState.
+         */
+        public Builder enableConversationState(Boolean enableConversationState) {
+            this.enableConversationState = enableConversationState;
             return this;
         }
 
