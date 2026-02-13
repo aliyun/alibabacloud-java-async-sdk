@@ -41,6 +41,106 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AISearchResourceAdd  AISearchResourceAddRequest
+     * @return AISearchResourceAddResponse
+     */
+    @Override
+    public CompletableFuture<AISearchResourceAddResponse> aISearchResourceAdd(AISearchResourceAddRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AISearchResourceAdd").setMethod(HttpMethod.POST).setPathRegex("/api/v1/aiSearch/resource/add").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AISearchResourceAddResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AISearchResourceAddResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AISearchResourceDelete  AISearchResourceDeleteRequest
+     * @return AISearchResourceDeleteResponse
+     */
+    @Override
+    public CompletableFuture<AISearchResourceDeleteResponse> aISearchResourceDelete(AISearchResourceDeleteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AISearchResourceDelete").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/aiSearch/resource/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AISearchResourceDeleteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AISearchResourceDeleteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AISearchResourceGetList  AISearchResourceGetListRequest
+     * @return AISearchResourceGetListResponse
+     */
+    @Override
+    public CompletableFuture<AISearchResourceGetListResponse> aISearchResourceGetList(AISearchResourceGetListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AISearchResourceGetList").setMethod(HttpMethod.GET).setPathRegex("/api/v1/aiSearch/resource/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AISearchResourceGetListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AISearchResourceGetListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AISearchResourceUpdate  AISearchResourceUpdateRequest
+     * @return AISearchResourceUpdateResponse
+     */
+    @Override
+    public CompletableFuture<AISearchResourceUpdateResponse> aISearchResourceUpdate(AISearchResourceUpdateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AISearchResourceUpdate").setMethod(HttpMethod.POST).setPathRegex("/api/v1/aiSearch/resource/update").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AISearchResourceUpdateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AISearchResourceUpdateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AISearchStream  AISearchStreamRequest
+     * @return AISearchStreamResponse
+     */
+    @Override
+    public CompletableFuture<AISearchStreamResponse> aISearchStream(AISearchStreamRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AISearchStream").setMethod(HttpMethod.POST).setPathRegex("/api/v1/aiSearch/searchStream").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AISearchStreamResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AISearchStreamResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<AISearchStreamResponseBody> aISearchStreamWithResponseIterable(AISearchStreamRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("AISearchStream").setMethod(HttpMethod.POST).setPathRegex("/api/v1/aiSearch/searchStream").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        AISearchStreamResponseBodyIterator iterator = AISearchStreamResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of AddFolder  AddFolderRequest
      * @return AddFolderResponse
      */

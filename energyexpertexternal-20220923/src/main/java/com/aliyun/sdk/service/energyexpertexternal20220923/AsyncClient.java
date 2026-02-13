@@ -20,6 +20,38 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AISearchResourceAdd  AISearchResourceAddRequest
+     * @return AISearchResourceAddResponse
+     */
+    CompletableFuture<AISearchResourceAddResponse> aISearchResourceAdd(AISearchResourceAddRequest request);
+
+    /**
+     * @param request the request parameters of AISearchResourceDelete  AISearchResourceDeleteRequest
+     * @return AISearchResourceDeleteResponse
+     */
+    CompletableFuture<AISearchResourceDeleteResponse> aISearchResourceDelete(AISearchResourceDeleteRequest request);
+
+    /**
+     * @param request the request parameters of AISearchResourceGetList  AISearchResourceGetListRequest
+     * @return AISearchResourceGetListResponse
+     */
+    CompletableFuture<AISearchResourceGetListResponse> aISearchResourceGetList(AISearchResourceGetListRequest request);
+
+    /**
+     * @param request the request parameters of AISearchResourceUpdate  AISearchResourceUpdateRequest
+     * @return AISearchResourceUpdateResponse
+     */
+    CompletableFuture<AISearchResourceUpdateResponse> aISearchResourceUpdate(AISearchResourceUpdateRequest request);
+
+    /**
+     * @param request the request parameters of AISearchStream  AISearchStreamRequest
+     * @return AISearchStreamResponse
+     */
+    CompletableFuture<AISearchStreamResponse> aISearchStream(AISearchStreamRequest request);
+
+    ResponseIterable<AISearchStreamResponseBody> aISearchStreamWithResponseIterable(AISearchStreamRequest request);
+
+    /**
      * @param request the request parameters of AddFolder  AddFolderRequest
      * @return AddFolderResponse
      */
