@@ -238,6 +238,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCustomAgentResponse> listCustomAgent(ListCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of ListDataAgentSession  ListDataAgentSessionRequest
+     * @return ListDataAgentSessionResponse
+     */
+    CompletableFuture<ListDataAgentSessionResponse> listDataAgentSession(ListDataAgentSessionRequest request);
+
+    /**
      * @param request the request parameters of ListDataAgentWorkspace  ListDataAgentWorkspaceRequest
      * @return ListDataAgentWorkspaceResponse
      */
