@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAirflowLoginTokenResponse> createAirflowLoginToken(CreateAirflowLoginTokenRequest request);
 
     /**
+     * @param request the request parameters of CreateCustomAgent  CreateCustomAgentRequest
+     * @return CreateCustomAgentResponse
+     */
+    CompletableFuture<CreateCustomAgentResponse> createCustomAgent(CreateCustomAgentRequest request);
+
+    /**
      * @param request the request parameters of CreateDataAgentSession  CreateDataAgentSessionRequest
      * @return CreateDataAgentSessionResponse
      */
@@ -96,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAirflowResponse
      */
     CompletableFuture<DeleteAirflowResponse> deleteAirflow(DeleteAirflowRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCustomAgent  DeleteCustomAgentRequest
+     * @return DeleteCustomAgentResponse
+     */
+    CompletableFuture<DeleteCustomAgentResponse> deleteCustomAgent(DeleteCustomAgentRequest request);
 
     /**
      * @param request the request parameters of DeleteDataAgentWorkspace  DeleteDataAgentWorkspaceRequest
@@ -256,6 +268,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataAgentWorkspaceMemberResponse> listDataAgentWorkspaceMember(ListDataAgentWorkspaceMemberRequest request);
 
     /**
+     * @param request the request parameters of ListDataCenterDatabase  ListDataCenterDatabaseRequest
+     * @return ListDataCenterDatabaseResponse
+     */
+    CompletableFuture<ListDataCenterDatabaseResponse> listDataCenterDatabase(ListDataCenterDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of ListDataCenterTable  ListDataCenterTableRequest
+     * @return ListDataCenterTableResponse
+     */
+    CompletableFuture<ListDataCenterTableResponse> listDataCenterTable(ListDataCenterTableRequest request);
+
+    /**
      * @param request the request parameters of ListDataLakeCatalog  ListDataLakeCatalogRequest
      * @return ListDataLakeCatalogResponse
      */
@@ -320,6 +344,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListFileUploadResponse
      */
     CompletableFuture<ListFileUploadResponse> listFileUpload(ListFileUploadRequest request);
+
+    /**
+     * @param request the request parameters of ModifyCustomAgent  ModifyCustomAgentRequest
+     * @return ModifyCustomAgentResponse
+     */
+    CompletableFuture<ModifyCustomAgentResponse> modifyCustomAgent(ModifyCustomAgentRequest request);
+
+    /**
+     * @param request the request parameters of OperateCustomAgent  OperateCustomAgentRequest
+     * @return OperateCustomAgentResponse
+     */
+    CompletableFuture<OperateCustomAgentResponse> operateCustomAgent(OperateCustomAgentRequest request);
 
     /**
      * @param request the request parameters of RemoveUserToDataAgentWorkspace  RemoveUserToDataAgentWorkspaceRequest
