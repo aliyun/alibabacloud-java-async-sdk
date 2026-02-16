@@ -130,6 +130,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of LockEmbodiedAIPlatform  LockEmbodiedAIPlatformRequest
+     * @return LockEmbodiedAIPlatformResponse
+     */
+    @Override
+    public CompletableFuture<LockEmbodiedAIPlatformResponse> lockEmbodiedAIPlatform(LockEmbodiedAIPlatformRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("LockEmbodiedAIPlatform").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(LockEmbodiedAIPlatformResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<LockEmbodiedAIPlatformResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ResetEmbodiedAIPlatformPassword  ResetEmbodiedAIPlatformPasswordRequest
      * @return ResetEmbodiedAIPlatformPasswordResponse
      */
@@ -142,6 +160,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ResetEmbodiedAIPlatformPasswordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnlockEmbodiedAIPlatform  UnlockEmbodiedAIPlatformRequest
+     * @return UnlockEmbodiedAIPlatformResponse
+     */
+    @Override
+    public CompletableFuture<UnlockEmbodiedAIPlatformResponse> unlockEmbodiedAIPlatform(UnlockEmbodiedAIPlatformRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UnlockEmbodiedAIPlatform").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnlockEmbodiedAIPlatformResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnlockEmbodiedAIPlatformResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
