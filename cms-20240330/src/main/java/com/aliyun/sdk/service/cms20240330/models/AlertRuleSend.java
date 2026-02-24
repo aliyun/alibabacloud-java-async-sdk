@@ -26,6 +26,9 @@ public class AlertRuleSend extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("notifyStrategies")
     private java.util.List<String> notifyStrategies;
 
+    @com.aliyun.core.annotation.NameInMap("rcaConfig")
+    private AlertRuleRcaConfig rcaConfig;
+
     @com.aliyun.core.annotation.NameInMap("sendToArms")
     private Boolean sendToArms;
 
@@ -33,6 +36,7 @@ public class AlertRuleSend extends TeaModel {
         this.action = builder.action;
         this.notification = builder.notification;
         this.notifyStrategies = builder.notifyStrategies;
+        this.rcaConfig = builder.rcaConfig;
         this.sendToArms = builder.sendToArms;
     }
 
@@ -70,6 +74,13 @@ public class AlertRuleSend extends TeaModel {
     }
 
     /**
+     * @return rcaConfig
+     */
+    public AlertRuleRcaConfig getRcaConfig() {
+        return this.rcaConfig;
+    }
+
+    /**
      * @return sendToArms
      */
     public Boolean getSendToArms() {
@@ -80,6 +91,7 @@ public class AlertRuleSend extends TeaModel {
         private AlertRuleAction action; 
         private AlertRuleNotification notification; 
         private java.util.List<String> notifyStrategies; 
+        private AlertRuleRcaConfig rcaConfig; 
         private Boolean sendToArms; 
 
         private Builder() {
@@ -89,6 +101,7 @@ public class AlertRuleSend extends TeaModel {
             this.action = model.action;
             this.notification = model.notification;
             this.notifyStrategies = model.notifyStrategies;
+            this.rcaConfig = model.rcaConfig;
             this.sendToArms = model.sendToArms;
         } 
 
@@ -113,6 +126,14 @@ public class AlertRuleSend extends TeaModel {
          */
         public Builder notifyStrategies(java.util.List<String> notifyStrategies) {
             this.notifyStrategies = notifyStrategies;
+            return this;
+        }
+
+        /**
+         * rcaConfig.
+         */
+        public Builder rcaConfig(AlertRuleRcaConfig rcaConfig) {
+            this.rcaConfig = rcaConfig;
             return this;
         }
 

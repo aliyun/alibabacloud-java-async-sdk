@@ -77,6 +77,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDigitalEmployeeResponse> createDigitalEmployee(CreateDigitalEmployeeRequest request);
 
     /**
+     * @param request the request parameters of CreateDigitalEmployeeSkill  CreateDigitalEmployeeSkillRequest
+     * @return CreateDigitalEmployeeSkillResponse
+     */
+    CompletableFuture<CreateDigitalEmployeeSkillResponse> createDigitalEmployeeSkill(CreateDigitalEmployeeSkillRequest request);
+
+    /**
      * @param request the request parameters of CreateEntityStore  CreateEntityStoreRequest
      * @return CreateEntityStoreResponse
      */
@@ -183,6 +189,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDigitalEmployeeResponse
      */
     CompletableFuture<DeleteDigitalEmployeeResponse> deleteDigitalEmployee(DeleteDigitalEmployeeRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDigitalEmployeeSkill  DeleteDigitalEmployeeSkillRequest
+     * @return DeleteDigitalEmployeeSkillResponse
+     */
+    CompletableFuture<DeleteDigitalEmployeeSkillResponse> deleteDigitalEmployeeSkill(DeleteDigitalEmployeeSkillRequest request);
 
     /**
      * @param request the request parameters of DeleteEntityStore  DeleteEntityStoreRequest
@@ -321,6 +333,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDigitalEmployeeResponse
      */
     CompletableFuture<GetDigitalEmployeeResponse> getDigitalEmployee(GetDigitalEmployeeRequest request);
+
+    /**
+     * @param request the request parameters of GetDigitalEmployeeSkill  GetDigitalEmployeeSkillRequest
+     * @return GetDigitalEmployeeSkillResponse
+     */
+    CompletableFuture<GetDigitalEmployeeSkillResponse> getDigitalEmployeeSkill(GetDigitalEmployeeSkillRequest request);
 
     /**
      * @param request the request parameters of GetEntityStore  GetEntityStoreRequest
@@ -462,6 +480,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListBizTracesResponse
      */
     CompletableFuture<ListBizTracesResponse> listBizTraces(ListBizTracesRequest request);
+
+    /**
+     * @param request the request parameters of ListDigitalEmployeeSkillVersions  ListDigitalEmployeeSkillVersionsRequest
+     * @return ListDigitalEmployeeSkillVersionsResponse
+     */
+    CompletableFuture<ListDigitalEmployeeSkillVersionsResponse> listDigitalEmployeeSkillVersions(ListDigitalEmployeeSkillVersionsRequest request);
+
+    /**
+     * @param request the request parameters of ListDigitalEmployeeSkills  ListDigitalEmployeeSkillsRequest
+     * @return ListDigitalEmployeeSkillsResponse
+     */
+    CompletableFuture<ListDigitalEmployeeSkillsResponse> listDigitalEmployeeSkills(ListDigitalEmployeeSkillsRequest request);
 
     /**
      * @param request the request parameters of ListDigitalEmployees  ListDigitalEmployeesRequest
@@ -643,6 +673,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDigitalEmployeeResponse
      */
     CompletableFuture<UpdateDigitalEmployeeResponse> updateDigitalEmployee(UpdateDigitalEmployeeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDigitalEmployeeSkill  UpdateDigitalEmployeeSkillRequest
+     * @return UpdateDigitalEmployeeSkillResponse
+     */
+    CompletableFuture<UpdateDigitalEmployeeSkillResponse> updateDigitalEmployeeSkill(UpdateDigitalEmployeeSkillRequest request);
 
     /**
      * @param request the request parameters of UpdateIntegrationPolicy  UpdateIntegrationPolicyRequest
