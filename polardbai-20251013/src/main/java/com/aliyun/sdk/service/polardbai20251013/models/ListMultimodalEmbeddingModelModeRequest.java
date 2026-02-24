@@ -22,9 +22,14 @@ public class ListMultimodalEmbeddingModelModeRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private ListMultimodalEmbeddingModelModeRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class ListMultimodalEmbeddingModelModeRequest extends Request {
         return this.DBClusterId;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<ListMultimodalEmbeddingModelModeRequest, Builder> {
         private String DBClusterId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class ListMultimodalEmbeddingModelModeRequest extends Request {
         private Builder(ListMultimodalEmbeddingModelModeRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -68,6 +82,15 @@ public class ListMultimodalEmbeddingModelModeRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

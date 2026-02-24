@@ -40,6 +40,10 @@ public class ChatBISchemaIndexCreateRequest extends Request {
     private String instanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableNameSuffix")
     private String tableNameSuffix;
 
@@ -58,6 +62,7 @@ public class ChatBISchemaIndexCreateRequest extends Request {
         this.columnsExcluded = builder.columnsExcluded;
         this.dbName = builder.dbName;
         this.instanceName = builder.instanceName;
+        this.sourceRegionId = builder.sourceRegionId;
         this.tableNameSuffix = builder.tableNameSuffix;
         this.tablesIncluded = builder.tablesIncluded;
         this.toSample = builder.toSample;
@@ -112,6 +117,13 @@ public class ChatBISchemaIndexCreateRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return tableNameSuffix
      */
     public String getTableNameSuffix() {
@@ -138,6 +150,7 @@ public class ChatBISchemaIndexCreateRequest extends Request {
         private String columnsExcluded; 
         private String dbName; 
         private String instanceName; 
+        private String sourceRegionId; 
         private String tableNameSuffix; 
         private String tablesIncluded; 
         private Integer toSample; 
@@ -153,6 +166,7 @@ public class ChatBISchemaIndexCreateRequest extends Request {
             this.columnsExcluded = request.columnsExcluded;
             this.dbName = request.dbName;
             this.instanceName = request.instanceName;
+            this.sourceRegionId = request.sourceRegionId;
             this.tableNameSuffix = request.tableNameSuffix;
             this.tablesIncluded = request.tablesIncluded;
             this.toSample = request.toSample;
@@ -206,6 +220,15 @@ public class ChatBISchemaIndexCreateRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

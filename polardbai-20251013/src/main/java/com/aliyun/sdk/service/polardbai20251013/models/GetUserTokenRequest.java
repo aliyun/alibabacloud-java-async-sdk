@@ -28,6 +28,10 @@ public class GetUserTokenRequest extends Request {
     private String password;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Username")
     @com.aliyun.core.annotation.Validation(required = true)
     private String username;
@@ -36,6 +40,7 @@ public class GetUserTokenRequest extends Request {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.password = builder.password;
+        this.sourceRegionId = builder.sourceRegionId;
         this.username = builder.username;
     }
 
@@ -67,6 +72,13 @@ public class GetUserTokenRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return username
      */
     public String getUsername() {
@@ -76,6 +88,7 @@ public class GetUserTokenRequest extends Request {
     public static final class Builder extends Request.Builder<GetUserTokenRequest, Builder> {
         private String DBClusterId; 
         private String password; 
+        private String sourceRegionId; 
         private String username; 
 
         private Builder() {
@@ -86,6 +99,7 @@ public class GetUserTokenRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.password = request.password;
+            this.sourceRegionId = request.sourceRegionId;
             this.username = request.username;
         } 
 
@@ -110,6 +124,15 @@ public class GetUserTokenRequest extends Request {
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
             this.password = password;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

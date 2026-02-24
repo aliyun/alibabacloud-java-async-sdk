@@ -35,12 +35,17 @@ public class CreateMultimodalDatasetEmbeddingRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ModelMode")
     private String modelMode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private CreateMultimodalDatasetEmbeddingRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.datasetId = builder.datasetId;
         this.model = builder.model;
         this.modelMode = builder.modelMode;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -84,11 +89,19 @@ public class CreateMultimodalDatasetEmbeddingRequest extends Request {
         return this.modelMode;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<CreateMultimodalDatasetEmbeddingRequest, Builder> {
         private String DBClusterId; 
         private String datasetId; 
         private String model; 
         private String modelMode; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class CreateMultimodalDatasetEmbeddingRequest extends Request {
             this.datasetId = request.datasetId;
             this.model = request.model;
             this.modelMode = request.modelMode;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -141,6 +155,15 @@ public class CreateMultimodalDatasetEmbeddingRequest extends Request {
         public Builder modelMode(String modelMode) {
             this.putQueryParameter("ModelMode", modelMode);
             this.modelMode = modelMode;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

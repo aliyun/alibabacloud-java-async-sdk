@@ -54,6 +54,10 @@ public class ChatBIConfigUpdateEntryRequest extends Request {
     private String queryFunction;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SqlCondition")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sqlCondition;
@@ -78,6 +82,7 @@ public class ChatBIConfigUpdateEntryRequest extends Request {
         this.instanceName = builder.instanceName;
         this.isFunctional = builder.isFunctional;
         this.queryFunction = builder.queryFunction;
+        this.sourceRegionId = builder.sourceRegionId;
         this.sqlCondition = builder.sqlCondition;
         this.sqlFunction = builder.sqlFunction;
         this.textCondition = builder.textCondition;
@@ -153,6 +158,13 @@ public class ChatBIConfigUpdateEntryRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return sqlCondition
      */
     public String getSqlCondition() {
@@ -182,6 +194,7 @@ public class ChatBIConfigUpdateEntryRequest extends Request {
         private String instanceName; 
         private Integer isFunctional; 
         private String queryFunction; 
+        private String sourceRegionId; 
         private String sqlCondition; 
         private String sqlFunction; 
         private String textCondition; 
@@ -200,6 +213,7 @@ public class ChatBIConfigUpdateEntryRequest extends Request {
             this.instanceName = request.instanceName;
             this.isFunctional = request.isFunctional;
             this.queryFunction = request.queryFunction;
+            this.sourceRegionId = request.sourceRegionId;
             this.sqlCondition = request.sqlCondition;
             this.sqlFunction = request.sqlFunction;
             this.textCondition = request.textCondition;
@@ -289,6 +303,15 @@ public class ChatBIConfigUpdateEntryRequest extends Request {
         public Builder queryFunction(String queryFunction) {
             this.putQueryParameter("QueryFunction", queryFunction);
             this.queryFunction = queryFunction;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

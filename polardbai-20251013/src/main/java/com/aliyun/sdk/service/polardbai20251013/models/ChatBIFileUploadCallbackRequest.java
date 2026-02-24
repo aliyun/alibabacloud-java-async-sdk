@@ -45,6 +45,10 @@ public class ChatBIFileUploadCallbackRequest extends Request {
     private String instanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
@@ -62,6 +66,7 @@ public class ChatBIFileUploadCallbackRequest extends Request {
         this.dbName = builder.dbName;
         this.fileName = builder.fileName;
         this.instanceName = builder.instanceName;
+        this.sourceRegionId = builder.sourceRegionId;
         this.tableName = builder.tableName;
         this.tableType = builder.tableType;
     }
@@ -122,6 +127,13 @@ public class ChatBIFileUploadCallbackRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return tableName
      */
     public String getTableName() {
@@ -142,6 +154,7 @@ public class ChatBIFileUploadCallbackRequest extends Request {
         private String dbName; 
         private String fileName; 
         private String instanceName; 
+        private String sourceRegionId; 
         private String tableName; 
         private String tableType; 
 
@@ -157,6 +170,7 @@ public class ChatBIFileUploadCallbackRequest extends Request {
             this.dbName = request.dbName;
             this.fileName = request.fileName;
             this.instanceName = request.instanceName;
+            this.sourceRegionId = request.sourceRegionId;
             this.tableName = request.tableName;
             this.tableType = request.tableType;
         } 
@@ -221,6 +235,15 @@ public class ChatBIFileUploadCallbackRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

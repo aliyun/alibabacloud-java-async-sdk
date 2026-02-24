@@ -36,6 +36,10 @@ public class ChatBIPatternCreateRequest extends Request {
     private String instanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableNameSuffix")
     private String tableNameSuffix;
 
@@ -45,6 +49,7 @@ public class ChatBIPatternCreateRequest extends Request {
         this.authType = builder.authType;
         this.dbName = builder.dbName;
         this.instanceName = builder.instanceName;
+        this.sourceRegionId = builder.sourceRegionId;
         this.tableNameSuffix = builder.tableNameSuffix;
     }
 
@@ -90,6 +95,13 @@ public class ChatBIPatternCreateRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return tableNameSuffix
      */
     public String getTableNameSuffix() {
@@ -101,6 +113,7 @@ public class ChatBIPatternCreateRequest extends Request {
         private String authType; 
         private String dbName; 
         private String instanceName; 
+        private String sourceRegionId; 
         private String tableNameSuffix; 
 
         private Builder() {
@@ -113,6 +126,7 @@ public class ChatBIPatternCreateRequest extends Request {
             this.authType = request.authType;
             this.dbName = request.dbName;
             this.instanceName = request.instanceName;
+            this.sourceRegionId = request.sourceRegionId;
             this.tableNameSuffix = request.tableNameSuffix;
         } 
 
@@ -155,6 +169,15 @@ public class ChatBIPatternCreateRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

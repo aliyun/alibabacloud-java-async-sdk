@@ -35,12 +35,17 @@ public class ChatBIConfigCreateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private ChatBIConfigCreateRequest(Builder builder) {
         super(builder);
         this.authMessage = builder.authMessage;
         this.authType = builder.authType;
         this.dbName = builder.dbName;
         this.instanceName = builder.instanceName;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -84,11 +89,19 @@ public class ChatBIConfigCreateRequest extends Request {
         return this.instanceName;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<ChatBIConfigCreateRequest, Builder> {
         private String authMessage; 
         private String authType; 
         private String dbName; 
         private String instanceName; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class ChatBIConfigCreateRequest extends Request {
             this.authType = request.authType;
             this.dbName = request.dbName;
             this.instanceName = request.instanceName;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -141,6 +155,15 @@ public class ChatBIConfigCreateRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

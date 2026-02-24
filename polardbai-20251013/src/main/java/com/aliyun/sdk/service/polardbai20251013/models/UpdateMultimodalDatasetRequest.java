@@ -34,12 +34,17 @@ public class UpdateMultimodalDatasetRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("DatasetName")
     private String datasetName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private UpdateMultimodalDatasetRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.datasetDescription = builder.datasetDescription;
         this.datasetId = builder.datasetId;
         this.datasetName = builder.datasetName;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class UpdateMultimodalDatasetRequest extends Request {
         return this.datasetName;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<UpdateMultimodalDatasetRequest, Builder> {
         private String DBClusterId; 
         private String datasetDescription; 
         private String datasetId; 
         private String datasetName; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class UpdateMultimodalDatasetRequest extends Request {
             this.datasetDescription = request.datasetDescription;
             this.datasetId = request.datasetId;
             this.datasetName = request.datasetName;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -137,6 +151,15 @@ public class UpdateMultimodalDatasetRequest extends Request {
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
             this.datasetName = datasetName;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

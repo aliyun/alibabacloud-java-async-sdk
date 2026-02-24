@@ -27,10 +27,15 @@ public class DeleteMultimodalFineTuneDatasetRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String datasetId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private DeleteMultimodalFineTuneDatasetRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.datasetId = builder.datasetId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class DeleteMultimodalFineTuneDatasetRequest extends Request {
         return this.datasetId;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteMultimodalFineTuneDatasetRequest, Builder> {
         private String DBClusterId; 
         private String datasetId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -72,6 +85,7 @@ public class DeleteMultimodalFineTuneDatasetRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.datasetId = request.datasetId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -95,6 +109,15 @@ public class DeleteMultimodalFineTuneDatasetRequest extends Request {
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("DatasetId", datasetId);
             this.datasetId = datasetId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

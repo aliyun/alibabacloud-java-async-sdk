@@ -32,11 +32,16 @@ public class ValidateUserTokenRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private ValidateUserTokenRequest(Builder builder) {
         super(builder);
         this.authMessage = builder.authMessage;
         this.authType = builder.authType;
         this.DBClusterId = builder.DBClusterId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -73,10 +78,18 @@ public class ValidateUserTokenRequest extends Request {
         return this.DBClusterId;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<ValidateUserTokenRequest, Builder> {
         private String authMessage; 
         private String authType; 
         private String DBClusterId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -87,6 +100,7 @@ public class ValidateUserTokenRequest extends Request {
             this.authMessage = request.authMessage;
             this.authType = request.authType;
             this.DBClusterId = request.DBClusterId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -122,6 +136,15 @@ public class ValidateUserTokenRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

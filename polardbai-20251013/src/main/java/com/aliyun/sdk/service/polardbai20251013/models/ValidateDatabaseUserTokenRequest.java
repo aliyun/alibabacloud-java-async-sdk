@@ -37,12 +37,17 @@ public class ValidateDatabaseUserTokenRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private ValidateDatabaseUserTokenRequest(Builder builder) {
         super(builder);
         this.authMessage = builder.authMessage;
         this.authType = builder.authType;
         this.DBClusterId = builder.DBClusterId;
         this.DBName = builder.DBName;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -86,11 +91,19 @@ public class ValidateDatabaseUserTokenRequest extends Request {
         return this.DBName;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<ValidateDatabaseUserTokenRequest, Builder> {
         private String authMessage; 
         private String authType; 
         private String DBClusterId; 
         private String DBName; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -102,6 +115,7 @@ public class ValidateDatabaseUserTokenRequest extends Request {
             this.authType = request.authType;
             this.DBClusterId = request.DBClusterId;
             this.DBName = request.DBName;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -149,6 +163,15 @@ public class ValidateDatabaseUserTokenRequest extends Request {
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
             this.DBName = DBName;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

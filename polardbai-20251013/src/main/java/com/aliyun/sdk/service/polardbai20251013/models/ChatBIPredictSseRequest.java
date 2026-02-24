@@ -65,6 +65,10 @@ public class ChatBIPredictSseRequest extends Request {
     private Boolean selectData;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ThinkingMode")
     private Boolean thinkingMode;
 
@@ -81,6 +85,7 @@ public class ChatBIPredictSseRequest extends Request {
         this.question = builder.question;
         this.schemaIndexTableName = builder.schemaIndexTableName;
         this.selectData = builder.selectData;
+        this.sourceRegionId = builder.sourceRegionId;
         this.thinkingMode = builder.thinkingMode;
     }
 
@@ -175,6 +180,13 @@ public class ChatBIPredictSseRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return thinkingMode
      */
     public Boolean getThinkingMode() {
@@ -193,6 +205,7 @@ public class ChatBIPredictSseRequest extends Request {
         private String question; 
         private String schemaIndexTableName; 
         private Boolean selectData; 
+        private String sourceRegionId; 
         private Boolean thinkingMode; 
 
         private Builder() {
@@ -212,6 +225,7 @@ public class ChatBIPredictSseRequest extends Request {
             this.question = request.question;
             this.schemaIndexTableName = request.schemaIndexTableName;
             this.selectData = request.selectData;
+            this.sourceRegionId = request.sourceRegionId;
             this.thinkingMode = request.thinkingMode;
         } 
 
@@ -321,6 +335,15 @@ public class ChatBIPredictSseRequest extends Request {
         public Builder selectData(Boolean selectData) {
             this.putQueryParameter("SelectData", selectData);
             this.selectData = selectData;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

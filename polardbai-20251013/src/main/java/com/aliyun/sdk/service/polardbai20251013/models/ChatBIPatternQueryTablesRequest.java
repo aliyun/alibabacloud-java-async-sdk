@@ -47,6 +47,10 @@ public class ChatBIPatternQueryTablesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private ChatBIPatternQueryTablesRequest(Builder builder) {
         super(builder);
         this.authMessage = builder.authMessage;
@@ -56,6 +60,7 @@ public class ChatBIPatternQueryTablesRequest extends Request {
         this.instanceName = builder.instanceName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -120,6 +125,13 @@ public class ChatBIPatternQueryTablesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<ChatBIPatternQueryTablesRequest, Builder> {
         private String authMessage; 
         private String authType; 
@@ -128,6 +140,7 @@ public class ChatBIPatternQueryTablesRequest extends Request {
         private String instanceName; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -142,6 +155,7 @@ public class ChatBIPatternQueryTablesRequest extends Request {
             this.instanceName = request.instanceName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -210,6 +224,15 @@ public class ChatBIPatternQueryTablesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

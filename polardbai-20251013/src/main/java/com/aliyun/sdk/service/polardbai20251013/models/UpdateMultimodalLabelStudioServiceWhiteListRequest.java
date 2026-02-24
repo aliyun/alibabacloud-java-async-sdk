@@ -23,12 +23,17 @@ public class UpdateMultimodalLabelStudioServiceWhiteListRequest extends Request 
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WhiteList")
     private java.util.List<String> whiteList;
 
     private UpdateMultimodalLabelStudioServiceWhiteListRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.sourceRegionId = builder.sourceRegionId;
         this.whiteList = builder.whiteList;
     }
 
@@ -53,6 +58,13 @@ public class UpdateMultimodalLabelStudioServiceWhiteListRequest extends Request 
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return whiteList
      */
     public java.util.List<String> getWhiteList() {
@@ -61,6 +73,7 @@ public class UpdateMultimodalLabelStudioServiceWhiteListRequest extends Request 
 
     public static final class Builder extends Request.Builder<UpdateMultimodalLabelStudioServiceWhiteListRequest, Builder> {
         private String DBClusterId; 
+        private String sourceRegionId; 
         private java.util.List<String> whiteList; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class UpdateMultimodalLabelStudioServiceWhiteListRequest extends Request 
         private Builder(UpdateMultimodalLabelStudioServiceWhiteListRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.sourceRegionId = request.sourceRegionId;
             this.whiteList = request.whiteList;
         } 
 
@@ -82,6 +96,15 @@ public class UpdateMultimodalLabelStudioServiceWhiteListRequest extends Request 
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

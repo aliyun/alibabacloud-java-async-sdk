@@ -36,6 +36,10 @@ public class ChatBIUpdateTableValidationColumnsRequest extends Request {
     private String instanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
@@ -51,6 +55,7 @@ public class ChatBIUpdateTableValidationColumnsRequest extends Request {
         this.authType = builder.authType;
         this.dbName = builder.dbName;
         this.instanceName = builder.instanceName;
+        this.sourceRegionId = builder.sourceRegionId;
         this.tableName = builder.tableName;
         this.tableType = builder.tableType;
     }
@@ -97,6 +102,13 @@ public class ChatBIUpdateTableValidationColumnsRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return tableName
      */
     public String getTableName() {
@@ -115,6 +127,7 @@ public class ChatBIUpdateTableValidationColumnsRequest extends Request {
         private String authType; 
         private String dbName; 
         private String instanceName; 
+        private String sourceRegionId; 
         private String tableName; 
         private String tableType; 
 
@@ -128,6 +141,7 @@ public class ChatBIUpdateTableValidationColumnsRequest extends Request {
             this.authType = request.authType;
             this.dbName = request.dbName;
             this.instanceName = request.instanceName;
+            this.sourceRegionId = request.sourceRegionId;
             this.tableName = request.tableName;
             this.tableType = request.tableType;
         } 
@@ -171,6 +185,15 @@ public class ChatBIUpdateTableValidationColumnsRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

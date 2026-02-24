@@ -34,12 +34,17 @@ public class ListMultimodalDatasetRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private ListMultimodalDatasetRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.inputField = builder.inputField;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class ListMultimodalDatasetRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<ListMultimodalDatasetRequest, Builder> {
         private String DBClusterId; 
         private String inputField; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class ListMultimodalDatasetRequest extends Request {
             this.inputField = request.inputField;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -137,6 +151,15 @@ public class ListMultimodalDatasetRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

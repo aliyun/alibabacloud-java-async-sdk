@@ -23,12 +23,17 @@ public class DownloadMultimodalSearchTaskResultMetadataRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private DownloadMultimodalSearchTaskResultMetadataRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.sourceRegionId = builder.sourceRegionId;
         this.taskId = builder.taskId;
     }
 
@@ -53,6 +58,13 @@ public class DownloadMultimodalSearchTaskResultMetadataRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -61,6 +73,7 @@ public class DownloadMultimodalSearchTaskResultMetadataRequest extends Request {
 
     public static final class Builder extends Request.Builder<DownloadMultimodalSearchTaskResultMetadataRequest, Builder> {
         private String DBClusterId; 
+        private String sourceRegionId; 
         private String taskId; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class DownloadMultimodalSearchTaskResultMetadataRequest extends Request {
         private Builder(DownloadMultimodalSearchTaskResultMetadataRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.sourceRegionId = request.sourceRegionId;
             this.taskId = request.taskId;
         } 
 
@@ -82,6 +96,15 @@ public class DownloadMultimodalSearchTaskResultMetadataRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

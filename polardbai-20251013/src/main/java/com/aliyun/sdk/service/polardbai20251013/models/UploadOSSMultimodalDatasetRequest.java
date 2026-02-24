@@ -30,11 +30,16 @@ public class UploadOSSMultimodalDatasetRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("OssUrl")
     private String ossUrl;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private UploadOSSMultimodalDatasetRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.datasetId = builder.datasetId;
         this.ossUrl = builder.ossUrl;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -71,10 +76,18 @@ public class UploadOSSMultimodalDatasetRequest extends Request {
         return this.ossUrl;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<UploadOSSMultimodalDatasetRequest, Builder> {
         private String DBClusterId; 
         private String datasetId; 
         private String ossUrl; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -85,6 +98,7 @@ public class UploadOSSMultimodalDatasetRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.datasetId = request.datasetId;
             this.ossUrl = request.ossUrl;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -114,6 +128,15 @@ public class UploadOSSMultimodalDatasetRequest extends Request {
         public Builder ossUrl(String ossUrl) {
             this.putQueryParameter("OssUrl", ossUrl);
             this.ossUrl = ossUrl;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -31,6 +31,10 @@ public class ListMultimodalSearchTaskResultRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
@@ -40,6 +44,7 @@ public class ListMultimodalSearchTaskResultRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.sourceRegionId = builder.sourceRegionId;
         this.taskId = builder.taskId;
     }
 
@@ -78,6 +83,13 @@ public class ListMultimodalSearchTaskResultRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -88,6 +100,7 @@ public class ListMultimodalSearchTaskResultRequest extends Request {
         private String DBClusterId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String sourceRegionId; 
         private String taskId; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class ListMultimodalSearchTaskResultRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.sourceRegionId = request.sourceRegionId;
             this.taskId = request.taskId;
         } 
 
@@ -129,6 +143,15 @@ public class ListMultimodalSearchTaskResultRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

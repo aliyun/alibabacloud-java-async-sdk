@@ -39,6 +39,10 @@ public class CreateMultimodalSearchTaskResultFineTuneDatasetRequest extends Requ
     private String resultMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
@@ -54,6 +58,7 @@ public class CreateMultimodalSearchTaskResultFineTuneDatasetRequest extends Requ
         this.datasetName = builder.datasetName;
         this.resultIndex = builder.resultIndex;
         this.resultMode = builder.resultMode;
+        this.sourceRegionId = builder.sourceRegionId;
         this.taskId = builder.taskId;
         this.topN = builder.topN;
     }
@@ -107,6 +112,13 @@ public class CreateMultimodalSearchTaskResultFineTuneDatasetRequest extends Requ
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -126,6 +138,7 @@ public class CreateMultimodalSearchTaskResultFineTuneDatasetRequest extends Requ
         private String datasetName; 
         private java.util.List<Integer> resultIndex; 
         private String resultMode; 
+        private String sourceRegionId; 
         private String taskId; 
         private Integer topN; 
 
@@ -140,6 +153,7 @@ public class CreateMultimodalSearchTaskResultFineTuneDatasetRequest extends Requ
             this.datasetName = request.datasetName;
             this.resultIndex = request.resultIndex;
             this.resultMode = request.resultMode;
+            this.sourceRegionId = request.sourceRegionId;
             this.taskId = request.taskId;
             this.topN = request.topN;
         } 
@@ -190,6 +204,15 @@ public class CreateMultimodalSearchTaskResultFineTuneDatasetRequest extends Requ
         public Builder resultMode(String resultMode) {
             this.putQueryParameter("ResultMode", resultMode);
             this.resultMode = resultMode;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -34,12 +34,17 @@ public class ChatBIFileUploadRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private ChatBIFileUploadRequest(Builder builder) {
         super(builder);
         this.authMessage = builder.authMessage;
         this.authType = builder.authType;
         this.fileName = builder.fileName;
         this.instanceName = builder.instanceName;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class ChatBIFileUploadRequest extends Request {
         return this.instanceName;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<ChatBIFileUploadRequest, Builder> {
         private String authMessage; 
         private String authType; 
         private String fileName; 
         private String instanceName; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class ChatBIFileUploadRequest extends Request {
             this.authType = request.authType;
             this.fileName = request.fileName;
             this.instanceName = request.instanceName;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -137,6 +151,15 @@ public class ChatBIFileUploadRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

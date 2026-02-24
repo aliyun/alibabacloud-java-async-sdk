@@ -43,6 +43,10 @@ public class CreateMultimodalSearchTaskRequest extends Request {
     private String searchModel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopK")
     private Integer topK;
 
@@ -54,6 +58,7 @@ public class CreateMultimodalSearchTaskRequest extends Request {
         this.modelMode = builder.modelMode;
         this.query = builder.query;
         this.searchModel = builder.searchModel;
+        this.sourceRegionId = builder.sourceRegionId;
         this.topK = builder.topK;
     }
 
@@ -113,6 +118,13 @@ public class CreateMultimodalSearchTaskRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return topK
      */
     public Integer getTopK() {
@@ -126,6 +138,7 @@ public class CreateMultimodalSearchTaskRequest extends Request {
         private String modelMode; 
         private String query; 
         private String searchModel; 
+        private String sourceRegionId; 
         private Integer topK; 
 
         private Builder() {
@@ -140,6 +153,7 @@ public class CreateMultimodalSearchTaskRequest extends Request {
             this.modelMode = request.modelMode;
             this.query = request.query;
             this.searchModel = request.searchModel;
+            this.sourceRegionId = request.sourceRegionId;
             this.topK = request.topK;
         } 
 
@@ -198,6 +212,15 @@ public class CreateMultimodalSearchTaskRequest extends Request {
         public Builder searchModel(String searchModel) {
             this.putQueryParameter("SearchModel", searchModel);
             this.searchModel = searchModel;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

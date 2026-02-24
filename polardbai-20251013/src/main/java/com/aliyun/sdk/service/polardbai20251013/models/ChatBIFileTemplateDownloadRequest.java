@@ -31,6 +31,10 @@ public class ChatBIFileTemplateDownloadRequest extends Request {
     private String instanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String tableType;
@@ -40,6 +44,7 @@ public class ChatBIFileTemplateDownloadRequest extends Request {
         this.authMessage = builder.authMessage;
         this.authType = builder.authType;
         this.instanceName = builder.instanceName;
+        this.sourceRegionId = builder.sourceRegionId;
         this.tableType = builder.tableType;
     }
 
@@ -78,6 +83,13 @@ public class ChatBIFileTemplateDownloadRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return tableType
      */
     public String getTableType() {
@@ -88,6 +100,7 @@ public class ChatBIFileTemplateDownloadRequest extends Request {
         private String authMessage; 
         private String authType; 
         private String instanceName; 
+        private String sourceRegionId; 
         private String tableType; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class ChatBIFileTemplateDownloadRequest extends Request {
             this.authMessage = request.authMessage;
             this.authType = request.authType;
             this.instanceName = request.instanceName;
+            this.sourceRegionId = request.sourceRegionId;
             this.tableType = request.tableType;
         } 
 
@@ -129,6 +143,15 @@ public class ChatBIFileTemplateDownloadRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

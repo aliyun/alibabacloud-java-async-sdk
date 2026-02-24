@@ -27,10 +27,15 @@ public class DeleteMultimodalEmbeddingRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String embedding;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private DeleteMultimodalEmbeddingRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.embedding = builder.embedding;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class DeleteMultimodalEmbeddingRequest extends Request {
         return this.embedding;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteMultimodalEmbeddingRequest, Builder> {
         private String DBClusterId; 
         private String embedding; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -72,6 +85,7 @@ public class DeleteMultimodalEmbeddingRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.embedding = request.embedding;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -95,6 +109,15 @@ public class DeleteMultimodalEmbeddingRequest extends Request {
         public Builder embedding(String embedding) {
             this.putQueryParameter("Embedding", embedding);
             this.embedding = embedding;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
