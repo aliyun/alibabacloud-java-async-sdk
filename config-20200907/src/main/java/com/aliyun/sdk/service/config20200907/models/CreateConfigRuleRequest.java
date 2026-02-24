@@ -22,6 +22,10 @@ public class CreateConfigRuleRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Conditions")
+    private String conditions;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleName;
@@ -124,6 +128,7 @@ public class CreateConfigRuleRequest extends Request {
     private CreateConfigRuleRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.conditions = builder.conditions;
         this.configRuleName = builder.configRuleName;
         this.configRuleTriggerTypes = builder.configRuleTriggerTypes;
         this.description = builder.description;
@@ -167,6 +172,13 @@ public class CreateConfigRuleRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return conditions
+     */
+    public String getConditions() {
+        return this.conditions;
     }
 
     /**
@@ -332,6 +344,7 @@ public class CreateConfigRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateConfigRuleRequest, Builder> {
         private String clientToken; 
+        private String conditions; 
         private String configRuleName; 
         private String configRuleTriggerTypes; 
         private String description; 
@@ -363,6 +376,7 @@ public class CreateConfigRuleRequest extends Request {
         private Builder(CreateConfigRuleRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.conditions = request.conditions;
             this.configRuleName = request.configRuleName;
             this.configRuleTriggerTypes = request.configRuleTriggerTypes;
             this.description = request.description;
@@ -397,6 +411,15 @@ public class CreateConfigRuleRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Conditions.
+         */
+        public Builder conditions(String conditions) {
+            this.putBodyParameter("Conditions", conditions);
+            this.conditions = conditions;
             return this;
         }
 

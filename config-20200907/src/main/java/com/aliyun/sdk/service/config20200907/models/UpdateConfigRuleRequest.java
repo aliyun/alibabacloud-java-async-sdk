@@ -22,6 +22,10 @@ public class UpdateConfigRuleRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Conditions")
+    private String conditions;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleId;
@@ -117,6 +121,7 @@ public class UpdateConfigRuleRequest extends Request {
     private UpdateConfigRuleRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.conditions = builder.conditions;
         this.configRuleId = builder.configRuleId;
         this.configRuleName = builder.configRuleName;
         this.configRuleTriggerTypes = builder.configRuleTriggerTypes;
@@ -159,6 +164,13 @@ public class UpdateConfigRuleRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return conditions
+     */
+    public String getConditions() {
+        return this.conditions;
     }
 
     /**
@@ -317,6 +329,7 @@ public class UpdateConfigRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateConfigRuleRequest, Builder> {
         private String clientToken; 
+        private String conditions; 
         private String configRuleId; 
         private String configRuleName; 
         private String configRuleTriggerTypes; 
@@ -347,6 +360,7 @@ public class UpdateConfigRuleRequest extends Request {
         private Builder(UpdateConfigRuleRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.conditions = request.conditions;
             this.configRuleId = request.configRuleId;
             this.configRuleName = request.configRuleName;
             this.configRuleTriggerTypes = request.configRuleTriggerTypes;
@@ -380,6 +394,15 @@ public class UpdateConfigRuleRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Conditions.
+         */
+        public Builder conditions(String conditions) {
+            this.putBodyParameter("Conditions", conditions);
+            this.conditions = conditions;
             return this;
         }
 

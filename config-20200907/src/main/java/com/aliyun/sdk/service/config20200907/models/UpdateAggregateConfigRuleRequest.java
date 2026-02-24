@@ -31,6 +31,10 @@ public class UpdateAggregateConfigRuleRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Conditions")
+    private String conditions;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleId;
@@ -136,6 +140,7 @@ public class UpdateAggregateConfigRuleRequest extends Request {
         this.accountIdsScope = builder.accountIdsScope;
         this.aggregatorId = builder.aggregatorId;
         this.clientToken = builder.clientToken;
+        this.conditions = builder.conditions;
         this.configRuleId = builder.configRuleId;
         this.configRuleName = builder.configRuleName;
         this.configRuleTriggerTypes = builder.configRuleTriggerTypes;
@@ -194,6 +199,13 @@ public class UpdateAggregateConfigRuleRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return conditions
+     */
+    public String getConditions() {
+        return this.conditions;
     }
 
     /**
@@ -368,6 +380,7 @@ public class UpdateAggregateConfigRuleRequest extends Request {
         private String accountIdsScope; 
         private String aggregatorId; 
         private String clientToken; 
+        private String conditions; 
         private String configRuleId; 
         private String configRuleName; 
         private String configRuleTriggerTypes; 
@@ -402,6 +415,7 @@ public class UpdateAggregateConfigRuleRequest extends Request {
             this.accountIdsScope = request.accountIdsScope;
             this.aggregatorId = request.aggregatorId;
             this.clientToken = request.clientToken;
+            this.conditions = request.conditions;
             this.configRuleId = request.configRuleId;
             this.configRuleName = request.configRuleName;
             this.configRuleTriggerTypes = request.configRuleTriggerTypes;
@@ -463,6 +477,15 @@ public class UpdateAggregateConfigRuleRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Conditions.
+         */
+        public Builder conditions(String conditions) {
+            this.putBodyParameter("Conditions", conditions);
+            this.conditions = conditions;
             return this;
         }
 
