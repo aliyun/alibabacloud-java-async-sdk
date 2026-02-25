@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddGateway  AddGatewayRequest
+     * @return AddGatewayResponse
+     */
+    CompletableFuture<AddGatewayResponse> addGateway(AddGatewayRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -38,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
 
     /**
+     * @param request the request parameters of DeleteGateway  DeleteGatewayRequest
+     * @return DeleteGatewayResponse
+     */
+    CompletableFuture<DeleteGatewayResponse> deleteGateway(DeleteGatewayRequest request);
+
+    /**
      * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
      * @return DescribeInstancesResponse
      */
@@ -48,6 +60,42 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeNodeGroupsResponse
      */
     CompletableFuture<DescribeNodeGroupsResponse> describeNodeGroups(DescribeNodeGroupsRequest request);
+
+    /**
+     * @param request the request parameters of DisableSSLConnection  DisableSSLConnectionRequest
+     * @return DisableSSLConnectionResponse
+     */
+    CompletableFuture<DisableSSLConnectionResponse> disableSSLConnection(DisableSSLConnectionRequest request);
+
+    /**
+     * @param request the request parameters of EnableSSLConnection  EnableSSLConnectionRequest
+     * @return EnableSSLConnectionResponse
+     */
+    CompletableFuture<EnableSSLConnectionResponse> enableSSLConnection(EnableSSLConnectionRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceFeatureGate  GetInstanceFeatureGateRequest
+     * @return GetInstanceFeatureGateResponse
+     */
+    CompletableFuture<GetInstanceFeatureGateResponse> getInstanceFeatureGate(GetInstanceFeatureGateRequest request);
+
+    /**
+     * @param request the request parameters of IsolateLeader  IsolateLeaderRequest
+     * @return IsolateLeaderResponse
+     */
+    CompletableFuture<IsolateLeaderResponse> isolateLeader(IsolateLeaderRequest request);
+
+    /**
+     * @param request the request parameters of ListGateway  ListGatewayRequest
+     * @return ListGatewayResponse
+     */
+    CompletableFuture<ListGatewayResponse> listGateway(ListGatewayRequest request);
+
+    /**
+     * @param request the request parameters of ModifyChargeType  ModifyChargeTypeRequest
+     * @return ModifyChargeTypeResponse
+     */
+    CompletableFuture<ModifyChargeTypeResponse> modifyChargeType(ModifyChargeTypeRequest request);
 
     /**
      * <b>description</b> :
@@ -128,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDiskSizeResponse> modifyDiskSize(ModifyDiskSizeRequest request);
 
     /**
+     * @param request the request parameters of ModifyDiskType  ModifyDiskTypeRequest
+     * @return ModifyDiskTypeResponse
+     */
+    CompletableFuture<ModifyDiskTypeResponse> modifyDiskType(ModifyDiskTypeRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
      * <ul>
@@ -177,16 +231,52 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request);
 
     /**
+     * @param request the request parameters of RestartNodeGroup  RestartNodeGroupRequest
+     * @return RestartNodeGroupResponse
+     */
+    CompletableFuture<RestartNodeGroupResponse> restartNodeGroup(RestartNodeGroupRequest request);
+
+    /**
+     * @param request the request parameters of RestartNodes  RestartNodesRequest
+     * @return RestartNodesResponse
+     */
+    CompletableFuture<RestartNodesResponse> restartNodes(RestartNodesRequest request);
+
+    /**
+     * @param request the request parameters of RestoreInstance  RestoreInstanceRequest
+     * @return RestoreInstanceResponse
+     */
+    CompletableFuture<RestoreInstanceResponse> restoreInstance(RestoreInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ResumeInstance  ResumeInstanceRequest
+     * @return ResumeInstanceResponse
+     */
+    CompletableFuture<ResumeInstanceResponse> resumeInstance(ResumeInstanceRequest request);
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**
+     * @param request the request parameters of TogglePublicSlb  TogglePublicSlbRequest
+     * @return TogglePublicSlbResponse
+     */
+    CompletableFuture<TogglePublicSlbResponse> togglePublicSlb(TogglePublicSlbRequest request);
+
+    /**
      * @param request the request parameters of UnTagResources  UnTagResourcesRequest
      * @return UnTagResourcesResponse
      */
     CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateGateway  UpdateGatewayRequest
+     * @return UpdateGatewayResponse
+     */
+    CompletableFuture<UpdateGatewayResponse> updateGateway(UpdateGatewayRequest request);
 
     /**
      * @param request the request parameters of UpdateInstanceName  UpdateInstanceNameRequest
