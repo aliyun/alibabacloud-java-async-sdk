@@ -22,6 +22,10 @@ public class SubmitMediaInfoJobRequest extends Request {
     private Boolean async;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    private String config;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Input")
     @com.aliyun.core.annotation.Validation(required = true)
     private String input;
@@ -53,6 +57,7 @@ public class SubmitMediaInfoJobRequest extends Request {
     private SubmitMediaInfoJobRequest(Builder builder) {
         super(builder);
         this.async = builder.async;
+        this.config = builder.config;
         this.input = builder.input;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -80,6 +85,13 @@ public class SubmitMediaInfoJobRequest extends Request {
      */
     public Boolean getAsync() {
         return this.async;
+    }
+
+    /**
+     * @return config
+     */
+    public String getConfig() {
+        return this.config;
     }
 
     /**
@@ -133,6 +145,7 @@ public class SubmitMediaInfoJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitMediaInfoJobRequest, Builder> {
         private Boolean async; 
+        private String config; 
         private String input; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -148,6 +161,7 @@ public class SubmitMediaInfoJobRequest extends Request {
         private Builder(SubmitMediaInfoJobRequest request) {
             super(request);
             this.async = request.async;
+            this.config = request.config;
             this.input = request.input;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -170,6 +184,15 @@ public class SubmitMediaInfoJobRequest extends Request {
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
             this.async = async;
+            return this;
+        }
+
+        /**
+         * Config.
+         */
+        public Builder config(String config) {
+            this.putQueryParameter("Config", config);
+            this.config = config;
             return this;
         }
 

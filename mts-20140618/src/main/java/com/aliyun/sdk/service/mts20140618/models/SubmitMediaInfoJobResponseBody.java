@@ -332,6 +332,9 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, ?> tags;
+
         private Format(Builder builder) {
             this.bitrate = builder.bitrate;
             this.duration = builder.duration;
@@ -341,6 +344,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             this.numStreams = builder.numStreams;
             this.size = builder.size;
             this.startTime = builder.startTime;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -407,6 +411,13 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             return this.startTime;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String bitrate; 
             private String duration; 
@@ -416,6 +427,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private String numStreams; 
             private String size; 
             private String startTime; 
+            private java.util.Map<String, ?> tags; 
 
             private Builder() {
             } 
@@ -429,6 +441,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
                 this.numStreams = model.numStreams;
                 this.size = model.size;
                 this.startTime = model.startTime;
+                this.tags = model.tags;
             } 
 
             /**
@@ -519,6 +532,14 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.Map<String, ?> tags) {
+                this.tags = tags;
+                return this;
+            }
+
             public Format build() {
                 return new Format(this);
             } 
@@ -560,6 +581,9 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
+        @com.aliyun.core.annotation.NameInMap("DurationInaccurate")
+        private String durationInaccurate;
+
         @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
@@ -591,6 +615,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             this.codecTagString = builder.codecTagString;
             this.codecTimeBase = builder.codecTimeBase;
             this.duration = builder.duration;
+            this.durationInaccurate = builder.durationInaccurate;
             this.index = builder.index;
             this.lang = builder.lang;
             this.numFrames = builder.numFrames;
@@ -672,6 +697,13 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return durationInaccurate
+         */
+        public String getDurationInaccurate() {
+            return this.durationInaccurate;
+        }
+
+        /**
          * @return index
          */
         public String getIndex() {
@@ -730,6 +762,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private String codecTagString; 
             private String codecTimeBase; 
             private String duration; 
+            private String durationInaccurate; 
             private String index; 
             private String lang; 
             private String numFrames; 
@@ -751,6 +784,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
                 this.codecTagString = model.codecTagString;
                 this.codecTimeBase = model.codecTimeBase;
                 this.duration = model.duration;
+                this.durationInaccurate = model.durationInaccurate;
                 this.index = model.index;
                 this.lang = model.lang;
                 this.numFrames = model.numFrames;
@@ -863,6 +897,14 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
              */
             public Builder duration(String duration) {
                 this.duration = duration;
+                return this;
+            }
+
+            /**
+             * DurationInaccurate.
+             */
+            public Builder durationInaccurate(String durationInaccurate) {
+                this.durationInaccurate = durationInaccurate;
                 return this;
             }
 
@@ -1341,6 +1383,81 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
      *
      * <p>SubmitMediaInfoJobResponseBody</p>
      */
+    public static class DolbyVision extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("Profile")
+        private String profile;
+
+        private DolbyVision(Builder builder) {
+            this.level = builder.level;
+            this.profile = builder.profile;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DolbyVision create() {
+            return builder().build();
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return profile
+         */
+        public String getProfile() {
+            return this.profile;
+        }
+
+        public static final class Builder {
+            private String level; 
+            private String profile; 
+
+            private Builder() {
+            } 
+
+            private Builder(DolbyVision model) {
+                this.level = model.level;
+                this.profile = model.profile;
+            } 
+
+            /**
+             * Level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * Profile.
+             */
+            public Builder profile(String profile) {
+                this.profile = profile;
+                return this;
+            }
+
+            public DolbyVision build() {
+                return new DolbyVision(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubmitMediaInfoJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitMediaInfoJobResponseBody</p>
+     */
     public static class NetworkCost extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgBitrate")
         private String avgBitrate;
@@ -1480,8 +1597,14 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dar")
         private String dar;
 
+        @com.aliyun.core.annotation.NameInMap("DolbyVision")
+        private DolbyVision dolbyVision;
+
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
+
+        @com.aliyun.core.annotation.NameInMap("DurationInaccurate")
+        private String durationInaccurate;
 
         @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
@@ -1540,7 +1663,9 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             this.colorRange = builder.colorRange;
             this.colorTransfer = builder.colorTransfer;
             this.dar = builder.dar;
+            this.dolbyVision = builder.dolbyVision;
             this.duration = builder.duration;
+            this.durationInaccurate = builder.durationInaccurate;
             this.fps = builder.fps;
             this.hasBFrames = builder.hasBFrames;
             this.height = builder.height;
@@ -1644,10 +1769,24 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return dolbyVision
+         */
+        public DolbyVision getDolbyVision() {
+            return this.dolbyVision;
+        }
+
+        /**
          * @return duration
          */
         public String getDuration() {
             return this.duration;
+        }
+
+        /**
+         * @return durationInaccurate
+         */
+        public String getDurationInaccurate() {
+            return this.durationInaccurate;
         }
 
         /**
@@ -1767,7 +1906,9 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private String colorRange; 
             private String colorTransfer; 
             private String dar; 
+            private DolbyVision dolbyVision; 
             private String duration; 
+            private String durationInaccurate; 
             private String fps; 
             private String hasBFrames; 
             private String height; 
@@ -1799,7 +1940,9 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
                 this.colorRange = model.colorRange;
                 this.colorTransfer = model.colorTransfer;
                 this.dar = model.dar;
+                this.dolbyVision = model.dolbyVision;
                 this.duration = model.duration;
+                this.durationInaccurate = model.durationInaccurate;
                 this.fps = model.fps;
                 this.hasBFrames = model.hasBFrames;
                 this.height = model.height;
@@ -1945,6 +2088,14 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             }
 
             /**
+             * DolbyVision.
+             */
+            public Builder dolbyVision(DolbyVision dolbyVision) {
+                this.dolbyVision = dolbyVision;
+                return this;
+            }
+
+            /**
              * <p>The duration of the video stream. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
@@ -1952,6 +2103,14 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
              */
             public Builder duration(String duration) {
                 this.duration = duration;
+                return this;
+            }
+
+            /**
+             * DurationInaccurate.
+             */
+            public Builder durationInaccurate(String durationInaccurate) {
+                this.durationInaccurate = durationInaccurate;
                 return this;
             }
 
@@ -2302,6 +2461,9 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
+        @com.aliyun.core.annotation.NameInMap("MD5")
+        private String mD5;
+
         @com.aliyun.core.annotation.NameInMap("Streams")
         private Streams streams;
 
@@ -2316,6 +2478,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             this.format = builder.format;
             this.fps = builder.fps;
             this.height = builder.height;
+            this.mD5 = builder.mD5;
             this.streams = builder.streams;
             this.width = builder.width;
         }
@@ -2378,6 +2541,13 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return mD5
+         */
+        public String getMD5() {
+            return this.mD5;
+        }
+
+        /**
          * @return streams
          */
         public Streams getStreams() {
@@ -2399,6 +2569,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private Format format; 
             private String fps; 
             private String height; 
+            private String mD5; 
             private Streams streams; 
             private String width; 
 
@@ -2413,6 +2584,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
                 this.format = model.format;
                 this.fps = model.fps;
                 this.height = model.height;
+                this.mD5 = model.mD5;
                 this.streams = model.streams;
                 this.width = model.width;
             } 
@@ -2488,6 +2660,14 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
              */
             public Builder height(String height) {
                 this.height = height;
+                return this;
+            }
+
+            /**
+             * MD5.
+             */
+            public Builder mD5(String mD5) {
+                this.mD5 = mD5;
                 return this;
             }
 
