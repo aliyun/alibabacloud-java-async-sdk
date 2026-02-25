@@ -1,3 +1,6 @@
+2026-02-25 Version: 2.0.30
+- Generated java-async 2019-05-06 for sae.
+
 2026-02-03 Version: 2.0.29
 - Generated java-async 2019-05-06 for sae.
 

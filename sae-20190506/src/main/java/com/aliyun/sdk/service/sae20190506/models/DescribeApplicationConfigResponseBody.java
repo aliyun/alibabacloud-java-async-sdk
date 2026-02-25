@@ -1937,6 +1937,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KafkaConfigs")
         private String kafkaConfigs;
 
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.Map<String, String> labels;
+
         @com.aliyun.core.annotation.NameInMap("Liveness")
         private String liveness;
 
@@ -2151,6 +2154,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.jarStartOptions = builder.jarStartOptions;
             this.jdk = builder.jdk;
             this.kafkaConfigs = builder.kafkaConfigs;
+            this.labels = builder.labels;
             this.liveness = builder.liveness;
             this.lokiConfigs = builder.lokiConfigs;
             this.maxSurgeInstanceRatio = builder.maxSurgeInstanceRatio;
@@ -2530,6 +2534,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getKafkaConfigs() {
             return this.kafkaConfigs;
+        }
+
+        /**
+         * @return labels
+         */
+        public java.util.Map<String, String> getLabels() {
+            return this.labels;
         }
 
         /**
@@ -2970,6 +2981,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String jarStartOptions; 
             private String jdk; 
             private String kafkaConfigs; 
+            private java.util.Map<String, String> labels; 
             private String liveness; 
             private String lokiConfigs; 
             private Integer maxSurgeInstanceRatio; 
@@ -3076,6 +3088,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.jarStartOptions = model.jarStartOptions;
                 this.jdk = model.jdk;
                 this.kafkaConfigs = model.kafkaConfigs;
+                this.labels = model.labels;
                 this.liveness = model.liveness;
                 this.lokiConfigs = model.lokiConfigs;
                 this.maxSurgeInstanceRatio = model.maxSurgeInstanceRatio;
@@ -3684,6 +3697,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder kafkaConfigs(String kafkaConfigs) {
                 this.kafkaConfigs = kafkaConfigs;
+                return this;
+            }
+
+            /**
+             * Labels.
+             */
+            public Builder labels(java.util.Map<String, String> labels) {
+                this.labels = labels;
                 return this;
             }
 

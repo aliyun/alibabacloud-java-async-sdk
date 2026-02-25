@@ -175,6 +175,10 @@ public class CreateApplicationRequest extends Request {
     private String kafkaConfigs;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.Map<String, String> labels;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Liveness")
     private String liveness;
 
@@ -406,6 +410,7 @@ public class CreateApplicationRequest extends Request {
         this.jarStartOptions = builder.jarStartOptions;
         this.jdk = builder.jdk;
         this.kafkaConfigs = builder.kafkaConfigs;
+        this.labels = builder.labels;
         this.liveness = builder.liveness;
         this.lokiConfigs = builder.lokiConfigs;
         this.memory = builder.memory;
@@ -739,6 +744,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getKafkaConfigs() {
         return this.kafkaConfigs;
+    }
+
+    /**
+     * @return labels
+     */
+    public java.util.Map<String, String> getLabels() {
+        return this.labels;
     }
 
     /**
@@ -1110,6 +1122,7 @@ public class CreateApplicationRequest extends Request {
         private String jarStartOptions; 
         private String jdk; 
         private String kafkaConfigs; 
+        private java.util.Map<String, String> labels; 
         private String liveness; 
         private String lokiConfigs; 
         private Integer memory; 
@@ -1203,6 +1216,7 @@ public class CreateApplicationRequest extends Request {
             this.jarStartOptions = request.jarStartOptions;
             this.jdk = request.jdk;
             this.kafkaConfigs = request.kafkaConfigs;
+            this.labels = request.labels;
             this.liveness = request.liveness;
             this.lokiConfigs = request.lokiConfigs;
             this.memory = request.memory;
@@ -1796,6 +1810,16 @@ public class CreateApplicationRequest extends Request {
         public Builder kafkaConfigs(String kafkaConfigs) {
             this.putQueryParameter("KafkaConfigs", kafkaConfigs);
             this.kafkaConfigs = kafkaConfigs;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(java.util.Map<String, String> labels) {
+            String labelsShrink = shrink(labels, "Labels", "json");
+            this.putQueryParameter("Labels", labelsShrink);
+            this.labels = labels;
             return this;
         }
 
