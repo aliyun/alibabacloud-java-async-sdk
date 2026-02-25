@@ -224,6 +224,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request);
 
     /**
+     * @param request the request parameters of ListQuotaActiveUserUsages  ListQuotaActiveUserUsagesRequest
+     * @return ListQuotaActiveUserUsagesResponse
+     */
+    CompletableFuture<ListQuotaActiveUserUsagesResponse> listQuotaActiveUserUsages(ListQuotaActiveUserUsagesRequest request);
+
+    /**
      * @param request the request parameters of ListQuotaWorkloads  ListQuotaWorkloadsRequest
      * @return ListQuotaWorkloadsResponse
      */

@@ -660,6 +660,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListQuotaActiveUserUsages  ListQuotaActiveUserUsagesRequest
+     * @return ListQuotaActiveUserUsagesResponse
+     */
+    @Override
+    public CompletableFuture<ListQuotaActiveUserUsagesResponse> listQuotaActiveUserUsages(ListQuotaActiveUserUsagesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListQuotaActiveUserUsages").setMethod(HttpMethod.GET).setPathRegex("/api/v1/quotas/{QuotaId}/activeuserusages").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListQuotaActiveUserUsagesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListQuotaActiveUserUsagesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListQuotaWorkloads  ListQuotaWorkloadsRequest
      * @return ListQuotaWorkloadsResponse
      */

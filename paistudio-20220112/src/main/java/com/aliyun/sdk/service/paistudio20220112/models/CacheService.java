@@ -29,11 +29,17 @@ public class CacheService extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GmtCreated")
     private String gmtCreated;
 
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
+    private String networkType;
+
     @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
+
+    @com.aliyun.core.annotation.NameInMap("SupportRDMA")
+    private String supportRDMA;
 
     @com.aliyun.core.annotation.NameInMap("SupportedClientQuotaIds")
     private java.util.List<String> supportedClientQuotaIds;
@@ -52,8 +58,10 @@ public class CacheService extends TeaModel {
         this.cacheServiceId = builder.cacheServiceId;
         this.createdBy = builder.createdBy;
         this.gmtCreated = builder.gmtCreated;
+        this.networkType = builder.networkType;
         this.quotaId = builder.quotaId;
         this.status = builder.status;
+        this.supportRDMA = builder.supportRDMA;
         this.supportedClientQuotaIds = builder.supportedClientQuotaIds;
         this.tenantId = builder.tenantId;
         this.userId = builder.userId;
@@ -101,6 +109,13 @@ public class CacheService extends TeaModel {
     }
 
     /**
+     * @return networkType
+     */
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    /**
      * @return quotaId
      */
     public String getQuotaId() {
@@ -112,6 +127,13 @@ public class CacheService extends TeaModel {
      */
     public String getStatus() {
         return this.status;
+    }
+
+    /**
+     * @return supportRDMA
+     */
+    public String getSupportRDMA() {
+        return this.supportRDMA;
     }
 
     /**
@@ -147,8 +169,10 @@ public class CacheService extends TeaModel {
         private String cacheServiceId; 
         private String createdBy; 
         private String gmtCreated; 
+        private String networkType; 
         private String quotaId; 
         private String status; 
+        private String supportRDMA; 
         private java.util.List<String> supportedClientQuotaIds; 
         private String tenantId; 
         private String userId; 
@@ -162,8 +186,10 @@ public class CacheService extends TeaModel {
             this.cacheServiceId = model.cacheServiceId;
             this.createdBy = model.createdBy;
             this.gmtCreated = model.gmtCreated;
+            this.networkType = model.networkType;
             this.quotaId = model.quotaId;
             this.status = model.status;
+            this.supportRDMA = model.supportRDMA;
             this.supportedClientQuotaIds = model.supportedClientQuotaIds;
             this.tenantId = model.tenantId;
             this.userId = model.userId;
@@ -203,6 +229,14 @@ public class CacheService extends TeaModel {
         }
 
         /**
+         * NetworkType.
+         */
+        public Builder networkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+
+        /**
          * QuotaId.
          */
         public Builder quotaId(String quotaId) {
@@ -215,6 +249,14 @@ public class CacheService extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * SupportRDMA.
+         */
+        public Builder supportRDMA(String supportRDMA) {
+            this.supportRDMA = supportRDMA;
             return this;
         }
 

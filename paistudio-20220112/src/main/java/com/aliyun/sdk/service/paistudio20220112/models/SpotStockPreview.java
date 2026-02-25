@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SpotStockPreview</p>
  */
 public class SpotStockPreview extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AvailableQuantity")
+    private Integer availableQuantity;
+
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    private String clusterId;
+
     @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
@@ -27,6 +33,8 @@ public class SpotStockPreview extends TeaModel {
     private String stockStatus;
 
     private SpotStockPreview(Builder builder) {
+        this.availableQuantity = builder.availableQuantity;
+        this.clusterId = builder.clusterId;
         this.instanceType = builder.instanceType;
         this.spotDiscount = builder.spotDiscount;
         this.stockStatus = builder.stockStatus;
@@ -42,6 +50,20 @@ public class SpotStockPreview extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return availableQuantity
+     */
+    public Integer getAvailableQuantity() {
+        return this.availableQuantity;
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -66,6 +88,8 @@ public class SpotStockPreview extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer availableQuantity; 
+        private String clusterId; 
         private String instanceType; 
         private Float spotDiscount; 
         private String stockStatus; 
@@ -74,10 +98,28 @@ public class SpotStockPreview extends TeaModel {
         } 
 
         private Builder(SpotStockPreview model) {
+            this.availableQuantity = model.availableQuantity;
+            this.clusterId = model.clusterId;
             this.instanceType = model.instanceType;
             this.spotDiscount = model.spotDiscount;
             this.stockStatus = model.stockStatus;
         } 
+
+        /**
+         * AvailableQuantity.
+         */
+        public Builder availableQuantity(Integer availableQuantity) {
+            this.availableQuantity = availableQuantity;
+            return this;
+        }
+
+        /**
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
 
         /**
          * InstanceType.
