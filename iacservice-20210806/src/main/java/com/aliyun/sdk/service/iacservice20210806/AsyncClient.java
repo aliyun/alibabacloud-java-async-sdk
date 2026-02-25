@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssociateGroupResponse> associateGroup(AssociateGroupRequest request);
 
     /**
+     * @param request the request parameters of AssociateParameterSet  AssociateParameterSetRequest
+     * @return AssociateParameterSetResponse
+     */
+    CompletableFuture<AssociateParameterSetResponse> associateParameterSet(AssociateParameterSetRequest request);
+
+    /**
      * @param request the request parameters of CancelResourceExportTask  CancelResourceExportTaskRequest
      * @return CancelResourceExportTaskResponse
      */
@@ -60,6 +66,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateModuleVersionResponse
      */
     CompletableFuture<CreateModuleVersionResponse> createModuleVersion(CreateModuleVersionRequest request);
+
+    /**
+     * @param request the request parameters of CreateParameterSet  CreateParameterSetRequest
+     * @return CreateParameterSetResponse
+     */
+    CompletableFuture<CreateParameterSetResponse> createParameterSet(CreateParameterSetRequest request);
 
     /**
      * @param request the request parameters of CreateProject  CreateProjectRequest
@@ -104,6 +116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteModuleResponse> deleteModule(DeleteModuleRequest request);
 
     /**
+     * @param request the request parameters of DeleteParameterSet  DeleteParameterSetRequest
+     * @return DeleteParameterSetResponse
+     */
+    CompletableFuture<DeleteParameterSetResponse> deleteParameterSet(DeleteParameterSetRequest request);
+
+    /**
      * @param request the request parameters of DeleteProject  DeleteProjectRequest
      * @return DeleteProjectResponse
      */
@@ -144,6 +162,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DissociateGroupResponse
      */
     CompletableFuture<DissociateGroupResponse> dissociateGroup(DissociateGroupRequest request);
+
+    /**
+     * @param request the request parameters of DissociateParameterSet  DissociateParameterSetRequest
+     * @return DissociateParameterSetResponse
+     */
+    CompletableFuture<DissociateParameterSetResponse> dissociateParameterSet(DissociateParameterSetRequest request);
 
     /**
      * @param request the request parameters of ExecuteRegistryModule  ExecuteRegistryModuleRequest
@@ -210,6 +234,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetModuleVersionResponse
      */
     CompletableFuture<GetModuleVersionResponse> getModuleVersion(GetModuleVersionRequest request);
+
+    /**
+     * @param request the request parameters of GetParameterSet  GetParameterSetRequest
+     * @return GetParameterSetResponse
+     */
+    CompletableFuture<GetParameterSetResponse> getParameterSet(GetParameterSetRequest request);
 
     /**
      * @param request the request parameters of GetProject  GetProjectRequest
@@ -294,6 +324,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListModulesResponse
      */
     CompletableFuture<ListModulesResponse> listModules(ListModulesRequest request);
+
+    /**
+     * @param request the request parameters of ListParameterSetRelation  ListParameterSetRelationRequest
+     * @return ListParameterSetRelationResponse
+     */
+    CompletableFuture<ListParameterSetRelationResponse> listParameterSetRelation(ListParameterSetRelationRequest request);
+
+    /**
+     * @param request the request parameters of ListParameterSets  ListParameterSetsRequest
+     * @return ListParameterSetsResponse
+     */
+    CompletableFuture<ListParameterSetsResponse> listParameterSets(ListParameterSetsRequest request);
 
     /**
      * @param request the request parameters of ListProducts  ListProductsRequest
@@ -396,6 +438,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateModuleAttributeResponse
      */
     CompletableFuture<UpdateModuleAttributeResponse> updateModuleAttribute(UpdateModuleAttributeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateParameterSetAttribute  UpdateParameterSetAttributeRequest
+     * @return UpdateParameterSetAttributeResponse
+     */
+    CompletableFuture<UpdateParameterSetAttributeResponse> updateParameterSetAttribute(UpdateParameterSetAttributeRequest request);
 
     /**
      * @param request the request parameters of UpdateProject  UpdateProjectRequest
