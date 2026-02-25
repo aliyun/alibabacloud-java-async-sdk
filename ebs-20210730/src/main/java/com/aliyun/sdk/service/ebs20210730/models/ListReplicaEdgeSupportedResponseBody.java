@@ -137,10 +137,14 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
      * <p>ListReplicaEdgeSupportedResponseBody</p>
      */
     public static class Zones extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SupportRtc")
+        private Boolean supportRtc;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Zones(Builder builder) {
+            this.supportRtc = builder.supportRtc;
             this.zoneId = builder.zoneId;
         }
 
@@ -153,6 +157,13 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportRtc
+         */
+        public Boolean getSupportRtc() {
+            return this.supportRtc;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -160,14 +171,24 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean supportRtc; 
             private String zoneId; 
 
             private Builder() {
             } 
 
             private Builder(Zones model) {
+                this.supportRtc = model.supportRtc;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * SupportRtc.
+             */
+            public Builder supportRtc(Boolean supportRtc) {
+                this.supportRtc = supportRtc;
+                return this;
+            }
 
             /**
              * ZoneId.
