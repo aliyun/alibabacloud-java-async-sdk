@@ -23,7 +23,6 @@ public class CreateBindingRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatasetName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String datasetName;
 
     @com.aliyun.core.annotation.Query
@@ -114,7 +113,6 @@ public class CreateBindingRequest extends Request {
 
         /**
          * <p>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test-dataset</p>

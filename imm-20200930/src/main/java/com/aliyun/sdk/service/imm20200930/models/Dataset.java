@@ -23,6 +23,9 @@ public class Dataset extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("DatasetConfig")
+    private DatasetConfig datasetConfig;
+
     @com.aliyun.core.annotation.NameInMap("DatasetMaxBindCount")
     private Long datasetMaxBindCount;
 
@@ -65,6 +68,7 @@ public class Dataset extends TeaModel {
     private Dataset(Builder builder) {
         this.bindCount = builder.bindCount;
         this.createTime = builder.createTime;
+        this.datasetConfig = builder.datasetConfig;
         this.datasetMaxBindCount = builder.datasetMaxBindCount;
         this.datasetMaxEntityCount = builder.datasetMaxEntityCount;
         this.datasetMaxFileCount = builder.datasetMaxFileCount;
@@ -104,6 +108,13 @@ public class Dataset extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return datasetConfig
+     */
+    public DatasetConfig getDatasetConfig() {
+        return this.datasetConfig;
     }
 
     /**
@@ -200,6 +211,7 @@ public class Dataset extends TeaModel {
     public static final class Builder {
         private Long bindCount; 
         private String createTime; 
+        private DatasetConfig datasetConfig; 
         private Long datasetMaxBindCount; 
         private Long datasetMaxEntityCount; 
         private Long datasetMaxFileCount; 
@@ -220,6 +232,7 @@ public class Dataset extends TeaModel {
         private Builder(Dataset model) {
             this.bindCount = model.bindCount;
             this.createTime = model.createTime;
+            this.datasetConfig = model.datasetConfig;
             this.datasetMaxBindCount = model.datasetMaxBindCount;
             this.datasetMaxEntityCount = model.datasetMaxEntityCount;
             this.datasetMaxFileCount = model.datasetMaxFileCount;
@@ -248,6 +261,14 @@ public class Dataset extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * DatasetConfig.
+         */
+        public Builder datasetConfig(DatasetConfig datasetConfig) {
+            this.datasetConfig = datasetConfig;
             return this;
         }
 

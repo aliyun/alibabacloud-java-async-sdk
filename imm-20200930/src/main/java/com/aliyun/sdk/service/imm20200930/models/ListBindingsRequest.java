@@ -23,7 +23,6 @@ public class ListBindingsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatasetName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String datasetName;
 
     @com.aliyun.core.annotation.Query
@@ -127,7 +126,6 @@ public class ListBindingsRequest extends Request {
 
         /**
          * <p>The name of the dataset.<a href="~~478160~~"></a></p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test-dataset</p>

@@ -20,6 +20,12 @@ public class Label extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CentricScore")
     private Float centricScore;
 
+    @com.aliyun.core.annotation.NameInMap("Clips")
+    private java.util.List<Clip> clips;
+
+    @com.aliyun.core.annotation.NameInMap("LabelAlias")
+    private String labelAlias;
+
     @com.aliyun.core.annotation.NameInMap("LabelConfidence")
     private Float labelConfidence;
 
@@ -37,6 +43,8 @@ public class Label extends TeaModel {
 
     private Label(Builder builder) {
         this.centricScore = builder.centricScore;
+        this.clips = builder.clips;
+        this.labelAlias = builder.labelAlias;
         this.labelConfidence = builder.labelConfidence;
         this.labelLevel = builder.labelLevel;
         this.labelName = builder.labelName;
@@ -61,6 +69,20 @@ public class Label extends TeaModel {
      */
     public Float getCentricScore() {
         return this.centricScore;
+    }
+
+    /**
+     * @return clips
+     */
+    public java.util.List<Clip> getClips() {
+        return this.clips;
+    }
+
+    /**
+     * @return labelAlias
+     */
+    public String getLabelAlias() {
+        return this.labelAlias;
     }
 
     /**
@@ -100,6 +122,8 @@ public class Label extends TeaModel {
 
     public static final class Builder {
         private Float centricScore; 
+        private java.util.List<Clip> clips; 
+        private String labelAlias; 
         private Float labelConfidence; 
         private Long labelLevel; 
         private String labelName; 
@@ -111,6 +135,8 @@ public class Label extends TeaModel {
 
         private Builder(Label model) {
             this.centricScore = model.centricScore;
+            this.clips = model.clips;
+            this.labelAlias = model.labelAlias;
             this.labelConfidence = model.labelConfidence;
             this.labelLevel = model.labelLevel;
             this.labelName = model.labelName;
@@ -123,6 +149,22 @@ public class Label extends TeaModel {
          */
         public Builder centricScore(Float centricScore) {
             this.centricScore = centricScore;
+            return this;
+        }
+
+        /**
+         * Clips.
+         */
+        public Builder clips(java.util.List<Clip> clips) {
+            this.clips = clips;
+            return this;
+        }
+
+        /**
+         * LabelAlias.
+         */
+        public Builder labelAlias(String labelAlias) {
+            this.labelAlias = labelAlias;
             return this;
         }
 

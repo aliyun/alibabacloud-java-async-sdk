@@ -23,7 +23,6 @@ public class DeleteBindingRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatasetName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String datasetName;
 
     @com.aliyun.core.annotation.Query
@@ -114,7 +113,6 @@ public class DeleteBindingRequest extends Request {
 
         /**
          * <p>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>dataset001</p>
