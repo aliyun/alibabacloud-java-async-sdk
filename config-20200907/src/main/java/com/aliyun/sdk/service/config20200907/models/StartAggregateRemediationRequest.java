@@ -31,11 +31,26 @@ public class StartAggregateRemediationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceAccountId")
     private Long resourceAccountId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    private String resourceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
+    private String resourceRegionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
     private StartAggregateRemediationRequest(Builder builder) {
         super(builder);
         this.aggregatorId = builder.aggregatorId;
         this.configRuleId = builder.configRuleId;
         this.resourceAccountId = builder.resourceAccountId;
+        this.resourceId = builder.resourceId;
+        this.resourceRegionId = builder.resourceRegionId;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -72,10 +87,34 @@ public class StartAggregateRemediationRequest extends Request {
         return this.resourceAccountId;
     }
 
+    /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
+     * @return resourceRegionId
+     */
+    public String getResourceRegionId() {
+        return this.resourceRegionId;
+    }
+
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public static final class Builder extends Request.Builder<StartAggregateRemediationRequest, Builder> {
         private String aggregatorId; 
         private String configRuleId; 
         private Long resourceAccountId; 
+        private String resourceId; 
+        private String resourceRegionId; 
+        private String resourceType; 
 
         private Builder() {
             super();
@@ -86,6 +125,9 @@ public class StartAggregateRemediationRequest extends Request {
             this.aggregatorId = request.aggregatorId;
             this.configRuleId = request.configRuleId;
             this.resourceAccountId = request.resourceAccountId;
+            this.resourceId = request.resourceId;
+            this.resourceRegionId = request.resourceRegionId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
@@ -128,6 +170,33 @@ public class StartAggregateRemediationRequest extends Request {
         public Builder resourceAccountId(Long resourceAccountId) {
             this.putQueryParameter("ResourceAccountId", resourceAccountId);
             this.resourceAccountId = resourceAccountId;
+            return this;
+        }
+
+        /**
+         * ResourceId.
+         */
+        public Builder resourceId(String resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ResourceRegionId.
+         */
+        public Builder resourceRegionId(String resourceRegionId) {
+            this.putQueryParameter("ResourceRegionId", resourceRegionId);
+            this.resourceRegionId = resourceRegionId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

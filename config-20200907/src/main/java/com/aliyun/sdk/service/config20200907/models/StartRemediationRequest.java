@@ -22,9 +22,24 @@ public class StartRemediationRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    private String resourceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
+    private String resourceRegionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
     private StartRemediationRequest(Builder builder) {
         super(builder);
         this.configRuleId = builder.configRuleId;
+        this.resourceId = builder.resourceId;
+        this.resourceRegionId = builder.resourceRegionId;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -47,8 +62,32 @@ public class StartRemediationRequest extends Request {
         return this.configRuleId;
     }
 
+    /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
+     * @return resourceRegionId
+     */
+    public String getResourceRegionId() {
+        return this.resourceRegionId;
+    }
+
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public static final class Builder extends Request.Builder<StartRemediationRequest, Builder> {
         private String configRuleId; 
+        private String resourceId; 
+        private String resourceRegionId; 
+        private String resourceType; 
 
         private Builder() {
             super();
@@ -57,6 +96,9 @@ public class StartRemediationRequest extends Request {
         private Builder(StartRemediationRequest request) {
             super(request);
             this.configRuleId = request.configRuleId;
+            this.resourceId = request.resourceId;
+            this.resourceRegionId = request.resourceRegionId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
@@ -70,6 +112,33 @@ public class StartRemediationRequest extends Request {
         public Builder configRuleId(String configRuleId) {
             this.putQueryParameter("ConfigRuleId", configRuleId);
             this.configRuleId = configRuleId;
+            return this;
+        }
+
+        /**
+         * ResourceId.
+         */
+        public Builder resourceId(String resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ResourceRegionId.
+         */
+        public Builder resourceRegionId(String resourceRegionId) {
+            this.putQueryParameter("ResourceRegionId", resourceRegionId);
+            this.resourceRegionId = resourceRegionId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 
