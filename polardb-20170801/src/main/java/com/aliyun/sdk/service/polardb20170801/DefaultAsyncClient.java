@@ -3597,6 +3597,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DisableDBClusterDynamoDB  DisableDBClusterDynamoDBRequest
+     * @return DisableDBClusterDynamoDBResponse
+     */
+    @Override
+    public CompletableFuture<DisableDBClusterDynamoDBResponse> disableDBClusterDynamoDB(DisableDBClusterDynamoDBRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableDBClusterDynamoDB").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableDBClusterDynamoDBResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableDBClusterDynamoDBResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DisableDBClusterOrca  DisableDBClusterOrcaRequest
      * @return DisableDBClusterOrcaResponse
      */
@@ -3627,6 +3645,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DisableDBClusterServerlessResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableDBClusterDynamoDB  EnableDBClusterDynamoDBRequest
+     * @return EnableDBClusterDynamoDBResponse
+     */
+    @Override
+    public CompletableFuture<EnableDBClusterDynamoDBResponse> enableDBClusterDynamoDB(EnableDBClusterDynamoDBRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableDBClusterDynamoDB").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableDBClusterDynamoDBResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableDBClusterDynamoDBResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

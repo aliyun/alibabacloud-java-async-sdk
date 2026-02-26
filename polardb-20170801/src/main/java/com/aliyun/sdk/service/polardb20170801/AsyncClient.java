@@ -1316,6 +1316,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request);
 
     /**
+     * @param request the request parameters of DisableDBClusterDynamoDB  DisableDBClusterDynamoDBRequest
+     * @return DisableDBClusterDynamoDBResponse
+     */
+    CompletableFuture<DisableDBClusterDynamoDBResponse> disableDBClusterDynamoDB(DisableDBClusterDynamoDBRequest request);
+
+    /**
      * @param request the request parameters of DisableDBClusterOrca  DisableDBClusterOrcaRequest
      * @return DisableDBClusterOrcaResponse
      */
@@ -1326,6 +1332,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DisableDBClusterServerlessResponse
      */
     CompletableFuture<DisableDBClusterServerlessResponse> disableDBClusterServerless(DisableDBClusterServerlessRequest request);
+
+    /**
+     * @param request the request parameters of EnableDBClusterDynamoDB  EnableDBClusterDynamoDBRequest
+     * @return EnableDBClusterDynamoDBResponse
+     */
+    CompletableFuture<EnableDBClusterDynamoDBResponse> enableDBClusterDynamoDB(EnableDBClusterDynamoDBRequest request);
 
     /**
      * @param request the request parameters of EnableDBClusterOrca  EnableDBClusterOrcaRequest
