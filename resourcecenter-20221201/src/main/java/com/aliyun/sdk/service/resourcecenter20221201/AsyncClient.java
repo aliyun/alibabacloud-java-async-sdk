@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssociateDefaultFilterResponse> associateDefaultFilter(AssociateDefaultFilterRequest request);
 
     /**
+     * @param request the request parameters of BatchGetResourceConfigurations  BatchGetResourceConfigurationsRequest
+     * @return BatchGetResourceConfigurationsResponse
+     */
+    CompletableFuture<BatchGetResourceConfigurationsResponse> batchGetResourceConfigurations(BatchGetResourceConfigurationsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
      * Scheduled resource snapshots support the following delivery scenarios:</p>

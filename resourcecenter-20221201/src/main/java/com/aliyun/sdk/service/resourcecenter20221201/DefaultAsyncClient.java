@@ -58,6 +58,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchGetResourceConfigurations  BatchGetResourceConfigurationsRequest
+     * @return BatchGetResourceConfigurationsResponse
+     */
+    @Override
+    public CompletableFuture<BatchGetResourceConfigurationsResponse> batchGetResourceConfigurations(BatchGetResourceConfigurationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchGetResourceConfigurations").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchGetResourceConfigurationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchGetResourceConfigurationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
      * Scheduled resource snapshots support the following delivery scenarios:</p>
