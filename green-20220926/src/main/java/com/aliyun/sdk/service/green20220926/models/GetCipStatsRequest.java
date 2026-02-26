@@ -30,6 +30,10 @@ public class GetCipStatsRequest extends Request {
     private String label;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Query")
+    private String query;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -58,6 +62,7 @@ public class GetCipStatsRequest extends Request {
         this.byMonth = builder.byMonth;
         this.endDate = builder.endDate;
         this.label = builder.label;
+        this.query = builder.query;
         this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
         this.serviceCode = builder.serviceCode;
@@ -98,6 +103,13 @@ public class GetCipStatsRequest extends Request {
      */
     public String getLabel() {
         return this.label;
+    }
+
+    /**
+     * @return query
+     */
+    public String getQuery() {
+        return this.query;
     }
 
     /**
@@ -146,6 +158,7 @@ public class GetCipStatsRequest extends Request {
         private Boolean byMonth; 
         private String endDate; 
         private String label; 
+        private String query; 
         private String regionId; 
         private String resourceType; 
         private String serviceCode; 
@@ -162,6 +175,7 @@ public class GetCipStatsRequest extends Request {
             this.byMonth = request.byMonth;
             this.endDate = request.endDate;
             this.label = request.label;
+            this.query = request.query;
             this.regionId = request.regionId;
             this.resourceType = request.resourceType;
             this.serviceCode = request.serviceCode;
@@ -194,6 +208,15 @@ public class GetCipStatsRequest extends Request {
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
             this.label = label;
+            return this;
+        }
+
+        /**
+         * Query.
+         */
+        public Builder query(String query) {
+            this.putQueryParameter("Query", query);
+            this.query = query;
             return this;
         }
 

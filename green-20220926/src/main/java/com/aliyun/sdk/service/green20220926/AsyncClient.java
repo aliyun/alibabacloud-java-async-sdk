@@ -302,6 +302,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetOssCheckTaskInfoResponse> getOssCheckTaskInfo(GetOssCheckTaskInfoRequest request);
 
     /**
+     * @param request the request parameters of GetPromptTestResult  GetPromptTestResultRequest
+     * @return GetPromptTestResultResponse
+     */
+    CompletableFuture<GetPromptTestResultResponse> getPromptTestResult(GetPromptTestResultRequest request);
+
+    /**
      * @param request the request parameters of GetScanNum  GetScanNumRequest
      * @return GetScanNumResponse
      */
