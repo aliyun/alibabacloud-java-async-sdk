@@ -183,11 +183,15 @@ public class InvokeSkillRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
+        @com.aliyun.core.annotation.NameInMap("alidingSsoTicket")
+        private String alidingSsoTicket;
+
         @com.aliyun.core.annotation.NameInMap("ssoTicket")
         private String ssoTicket;
 
         private AccountContext(Builder builder) {
             this.accountId = builder.accountId;
+            this.alidingSsoTicket = builder.alidingSsoTicket;
             this.ssoTicket = builder.ssoTicket;
         }
 
@@ -207,6 +211,13 @@ public class InvokeSkillRequest extends Request {
         }
 
         /**
+         * @return alidingSsoTicket
+         */
+        public String getAlidingSsoTicket() {
+            return this.alidingSsoTicket;
+        }
+
+        /**
          * @return ssoTicket
          */
         public String getSsoTicket() {
@@ -215,6 +226,7 @@ public class InvokeSkillRequest extends Request {
 
         public static final class Builder {
             private String accountId; 
+            private String alidingSsoTicket; 
             private String ssoTicket; 
 
             private Builder() {
@@ -222,6 +234,7 @@ public class InvokeSkillRequest extends Request {
 
             private Builder(AccountContext model) {
                 this.accountId = model.accountId;
+                this.alidingSsoTicket = model.alidingSsoTicket;
                 this.ssoTicket = model.ssoTicket;
             } 
 
@@ -233,6 +246,14 @@ public class InvokeSkillRequest extends Request {
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * alidingSsoTicket.
+             */
+            public Builder alidingSsoTicket(String alidingSsoTicket) {
+                this.alidingSsoTicket = alidingSsoTicket;
                 return this;
             }
 

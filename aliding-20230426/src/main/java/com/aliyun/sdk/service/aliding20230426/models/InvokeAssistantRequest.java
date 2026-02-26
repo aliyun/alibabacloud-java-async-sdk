@@ -21,6 +21,10 @@ public class InvokeAssistantRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("accountId")
     private String accountId;
 
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("alidingSsoTicket")
+    private String alidingSsoTicket;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("assistantId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -62,6 +66,7 @@ public class InvokeAssistantRequest extends Request {
     private InvokeAssistantRequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
+        this.alidingSsoTicket = builder.alidingSsoTicket;
         this.assistantId = builder.assistantId;
         this.clientEnum = builder.clientEnum;
         this.extLoginUser = builder.extLoginUser;
@@ -91,6 +96,13 @@ public class InvokeAssistantRequest extends Request {
      */
     public String getAccountId() {
         return this.accountId;
+    }
+
+    /**
+     * @return alidingSsoTicket
+     */
+    public String getAlidingSsoTicket() {
+        return this.alidingSsoTicket;
     }
 
     /**
@@ -158,6 +170,7 @@ public class InvokeAssistantRequest extends Request {
 
     public static final class Builder extends Request.Builder<InvokeAssistantRequest, Builder> {
         private String accountId; 
+        private String alidingSsoTicket; 
         private String assistantId; 
         private String clientEnum; 
         private ExtLoginUser extLoginUser; 
@@ -175,6 +188,7 @@ public class InvokeAssistantRequest extends Request {
         private Builder(InvokeAssistantRequest request) {
             super(request);
             this.accountId = request.accountId;
+            this.alidingSsoTicket = request.alidingSsoTicket;
             this.assistantId = request.assistantId;
             this.clientEnum = request.clientEnum;
             this.extLoginUser = request.extLoginUser;
@@ -192,6 +206,15 @@ public class InvokeAssistantRequest extends Request {
         public Builder accountId(String accountId) {
             this.putHeaderParameter("accountId", accountId);
             this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * alidingSsoTicket.
+         */
+        public Builder alidingSsoTicket(String alidingSsoTicket) {
+            this.putHeaderParameter("alidingSsoTicket", alidingSsoTicket);
+            this.alidingSsoTicket = alidingSsoTicket;
             return this;
         }
 
