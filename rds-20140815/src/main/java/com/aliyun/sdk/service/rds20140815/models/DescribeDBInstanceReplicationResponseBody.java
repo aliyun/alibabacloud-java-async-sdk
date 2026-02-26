@@ -47,6 +47,9 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SlaveStatusList")
+    private java.util.List<SlaveStatusList> slaveStatusList;
+
     private DescribeDBInstanceReplicationResponseBody(Builder builder) {
         this.externalReplication = builder.externalReplication;
         this.gtidExecuted = builder.gtidExecuted;
@@ -58,6 +61,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         this.replicationSource = builder.replicationSource;
         this.replicationState = builder.replicationState;
         this.requestId = builder.requestId;
+        this.slaveStatusList = builder.slaveStatusList;
     }
 
     public static Builder builder() {
@@ -142,6 +146,13 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return slaveStatusList
+     */
+    public java.util.List<SlaveStatusList> getSlaveStatusList() {
+        return this.slaveStatusList;
+    }
+
     public static final class Builder {
         private String externalReplication; 
         private String gtidExecuted; 
@@ -153,6 +164,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         private String replicationSource; 
         private String replicationState; 
         private String requestId; 
+        private java.util.List<SlaveStatusList> slaveStatusList; 
 
         private Builder() {
         } 
@@ -168,6 +180,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             this.replicationSource = model.replicationSource;
             this.replicationState = model.replicationState;
             this.requestId = model.requestId;
+            this.slaveStatusList = model.slaveStatusList;
         } 
 
         /**
@@ -194,7 +207,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * ImportStatus.
+         * <p>COMPLETED: 导入完成，INIT: 初始化，IMPORTING: 正在导入</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
          */
         public Builder importStatus(String importStatus) {
             this.importStatus = importStatus;
@@ -281,10 +297,507 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * SlaveStatusList.
+         */
+        public Builder slaveStatusList(java.util.List<SlaveStatusList> slaveStatusList) {
+            this.slaveStatusList = slaveStatusList;
+            return this;
+        }
+
         public DescribeDBInstanceReplicationResponseBody build() {
             return new DescribeDBInstanceReplicationResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceReplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceReplicationResponseBody</p>
+     */
+    public static class SlaveStatusList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ChannelName")
+        private String channelName;
+
+        @com.aliyun.core.annotation.NameInMap("ExecutedGtidSet")
+        private String executedGtidSet;
+
+        @com.aliyun.core.annotation.NameInMap("LastErrno")
+        private Integer lastErrno;
+
+        @com.aliyun.core.annotation.NameInMap("LastIoErrno")
+        private Integer lastIoErrno;
+
+        @com.aliyun.core.annotation.NameInMap("LastIoError")
+        private String lastIoError;
+
+        @com.aliyun.core.annotation.NameInMap("LastSqlErrno")
+        private Integer lastSqlErrno;
+
+        @com.aliyun.core.annotation.NameInMap("LastSqlError")
+        private String lastSqlError;
+
+        @com.aliyun.core.annotation.NameInMap("MasterHost")
+        private String masterHost;
+
+        @com.aliyun.core.annotation.NameInMap("MasterUser")
+        private String masterUser;
+
+        @com.aliyun.core.annotation.NameInMap("MasterUuid")
+        private String masterUuid;
+
+        @com.aliyun.core.annotation.NameInMap("ReplicateDoDb")
+        private String replicateDoDb;
+
+        @com.aliyun.core.annotation.NameInMap("ReplicateDoTable")
+        private String replicateDoTable;
+
+        @com.aliyun.core.annotation.NameInMap("ReplicateIgnoreDb")
+        private String replicateIgnoreDb;
+
+        @com.aliyun.core.annotation.NameInMap("ReplicateIgnoreTable")
+        private String replicateIgnoreTable;
+
+        @com.aliyun.core.annotation.NameInMap("ReplicateWildDoTable")
+        private String replicateWildDoTable;
+
+        @com.aliyun.core.annotation.NameInMap("ReplicateWildIgnoreTable")
+        private String replicateWildIgnoreTable;
+
+        @com.aliyun.core.annotation.NameInMap("SecondsBehindMaster")
+        private Integer secondsBehindMaster;
+
+        @com.aliyun.core.annotation.NameInMap("SlaveIoRunning")
+        private String slaveIoRunning;
+
+        @com.aliyun.core.annotation.NameInMap("SlaveIoState")
+        private String slaveIoState;
+
+        @com.aliyun.core.annotation.NameInMap("SlaveSqlRunning")
+        private String slaveSqlRunning;
+
+        @com.aliyun.core.annotation.NameInMap("SlaveSqlRunningState")
+        private String slaveSqlRunningState;
+
+        private SlaveStatusList(Builder builder) {
+            this.channelName = builder.channelName;
+            this.executedGtidSet = builder.executedGtidSet;
+            this.lastErrno = builder.lastErrno;
+            this.lastIoErrno = builder.lastIoErrno;
+            this.lastIoError = builder.lastIoError;
+            this.lastSqlErrno = builder.lastSqlErrno;
+            this.lastSqlError = builder.lastSqlError;
+            this.masterHost = builder.masterHost;
+            this.masterUser = builder.masterUser;
+            this.masterUuid = builder.masterUuid;
+            this.replicateDoDb = builder.replicateDoDb;
+            this.replicateDoTable = builder.replicateDoTable;
+            this.replicateIgnoreDb = builder.replicateIgnoreDb;
+            this.replicateIgnoreTable = builder.replicateIgnoreTable;
+            this.replicateWildDoTable = builder.replicateWildDoTable;
+            this.replicateWildIgnoreTable = builder.replicateWildIgnoreTable;
+            this.secondsBehindMaster = builder.secondsBehindMaster;
+            this.slaveIoRunning = builder.slaveIoRunning;
+            this.slaveIoState = builder.slaveIoState;
+            this.slaveSqlRunning = builder.slaveSqlRunning;
+            this.slaveSqlRunningState = builder.slaveSqlRunningState;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SlaveStatusList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return channelName
+         */
+        public String getChannelName() {
+            return this.channelName;
+        }
+
+        /**
+         * @return executedGtidSet
+         */
+        public String getExecutedGtidSet() {
+            return this.executedGtidSet;
+        }
+
+        /**
+         * @return lastErrno
+         */
+        public Integer getLastErrno() {
+            return this.lastErrno;
+        }
+
+        /**
+         * @return lastIoErrno
+         */
+        public Integer getLastIoErrno() {
+            return this.lastIoErrno;
+        }
+
+        /**
+         * @return lastIoError
+         */
+        public String getLastIoError() {
+            return this.lastIoError;
+        }
+
+        /**
+         * @return lastSqlErrno
+         */
+        public Integer getLastSqlErrno() {
+            return this.lastSqlErrno;
+        }
+
+        /**
+         * @return lastSqlError
+         */
+        public String getLastSqlError() {
+            return this.lastSqlError;
+        }
+
+        /**
+         * @return masterHost
+         */
+        public String getMasterHost() {
+            return this.masterHost;
+        }
+
+        /**
+         * @return masterUser
+         */
+        public String getMasterUser() {
+            return this.masterUser;
+        }
+
+        /**
+         * @return masterUuid
+         */
+        public String getMasterUuid() {
+            return this.masterUuid;
+        }
+
+        /**
+         * @return replicateDoDb
+         */
+        public String getReplicateDoDb() {
+            return this.replicateDoDb;
+        }
+
+        /**
+         * @return replicateDoTable
+         */
+        public String getReplicateDoTable() {
+            return this.replicateDoTable;
+        }
+
+        /**
+         * @return replicateIgnoreDb
+         */
+        public String getReplicateIgnoreDb() {
+            return this.replicateIgnoreDb;
+        }
+
+        /**
+         * @return replicateIgnoreTable
+         */
+        public String getReplicateIgnoreTable() {
+            return this.replicateIgnoreTable;
+        }
+
+        /**
+         * @return replicateWildDoTable
+         */
+        public String getReplicateWildDoTable() {
+            return this.replicateWildDoTable;
+        }
+
+        /**
+         * @return replicateWildIgnoreTable
+         */
+        public String getReplicateWildIgnoreTable() {
+            return this.replicateWildIgnoreTable;
+        }
+
+        /**
+         * @return secondsBehindMaster
+         */
+        public Integer getSecondsBehindMaster() {
+            return this.secondsBehindMaster;
+        }
+
+        /**
+         * @return slaveIoRunning
+         */
+        public String getSlaveIoRunning() {
+            return this.slaveIoRunning;
+        }
+
+        /**
+         * @return slaveIoState
+         */
+        public String getSlaveIoState() {
+            return this.slaveIoState;
+        }
+
+        /**
+         * @return slaveSqlRunning
+         */
+        public String getSlaveSqlRunning() {
+            return this.slaveSqlRunning;
+        }
+
+        /**
+         * @return slaveSqlRunningState
+         */
+        public String getSlaveSqlRunningState() {
+            return this.slaveSqlRunningState;
+        }
+
+        public static final class Builder {
+            private String channelName; 
+            private String executedGtidSet; 
+            private Integer lastErrno; 
+            private Integer lastIoErrno; 
+            private String lastIoError; 
+            private Integer lastSqlErrno; 
+            private String lastSqlError; 
+            private String masterHost; 
+            private String masterUser; 
+            private String masterUuid; 
+            private String replicateDoDb; 
+            private String replicateDoTable; 
+            private String replicateIgnoreDb; 
+            private String replicateIgnoreTable; 
+            private String replicateWildDoTable; 
+            private String replicateWildIgnoreTable; 
+            private Integer secondsBehindMaster; 
+            private String slaveIoRunning; 
+            private String slaveIoState; 
+            private String slaveSqlRunning; 
+            private String slaveSqlRunningState; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlaveStatusList model) {
+                this.channelName = model.channelName;
+                this.executedGtidSet = model.executedGtidSet;
+                this.lastErrno = model.lastErrno;
+                this.lastIoErrno = model.lastIoErrno;
+                this.lastIoError = model.lastIoError;
+                this.lastSqlErrno = model.lastSqlErrno;
+                this.lastSqlError = model.lastSqlError;
+                this.masterHost = model.masterHost;
+                this.masterUser = model.masterUser;
+                this.masterUuid = model.masterUuid;
+                this.replicateDoDb = model.replicateDoDb;
+                this.replicateDoTable = model.replicateDoTable;
+                this.replicateIgnoreDb = model.replicateIgnoreDb;
+                this.replicateIgnoreTable = model.replicateIgnoreTable;
+                this.replicateWildDoTable = model.replicateWildDoTable;
+                this.replicateWildIgnoreTable = model.replicateWildIgnoreTable;
+                this.secondsBehindMaster = model.secondsBehindMaster;
+                this.slaveIoRunning = model.slaveIoRunning;
+                this.slaveIoState = model.slaveIoState;
+                this.slaveSqlRunning = model.slaveSqlRunning;
+                this.slaveSqlRunningState = model.slaveSqlRunningState;
+            } 
+
+            /**
+             * ChannelName.
+             */
+            public Builder channelName(String channelName) {
+                this.channelName = channelName;
+                return this;
+            }
+
+            /**
+             * ExecutedGtidSet.
+             */
+            public Builder executedGtidSet(String executedGtidSet) {
+                this.executedGtidSet = executedGtidSet;
+                return this;
+            }
+
+            /**
+             * <p>0表示无错误，其他值表示具体的错误代码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder lastErrno(Integer lastErrno) {
+                this.lastErrno = lastErrno;
+                return this;
+            }
+
+            /**
+             * <p>0表示无错误，其他值表示IO线程的错误代码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder lastIoErrno(Integer lastIoErrno) {
+                this.lastIoErrno = lastIoErrno;
+                return this;
+            }
+
+            /**
+             * <p>IO线程的错误信息描述</p>
+             */
+            public Builder lastIoError(String lastIoError) {
+                this.lastIoError = lastIoError;
+                return this;
+            }
+
+            /**
+             * <p>0表示无错误，其他值表示SQL线程的错误代码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder lastSqlErrno(Integer lastSqlErrno) {
+                this.lastSqlErrno = lastSqlErrno;
+                return this;
+            }
+
+            /**
+             * <p>SQL线程的错误信息描述</p>
+             */
+            public Builder lastSqlError(String lastSqlError) {
+                this.lastSqlError = lastSqlError;
+                return this;
+            }
+
+            /**
+             * MasterHost.
+             */
+            public Builder masterHost(String masterHost) {
+                this.masterHost = masterHost;
+                return this;
+            }
+
+            /**
+             * MasterUser.
+             */
+            public Builder masterUser(String masterUser) {
+                this.masterUser = masterUser;
+                return this;
+            }
+
+            /**
+             * MasterUuid.
+             */
+            public Builder masterUuid(String masterUuid) {
+                this.masterUuid = masterUuid;
+                return this;
+            }
+
+            /**
+             * ReplicateDoDb.
+             */
+            public Builder replicateDoDb(String replicateDoDb) {
+                this.replicateDoDb = replicateDoDb;
+                return this;
+            }
+
+            /**
+             * ReplicateDoTable.
+             */
+            public Builder replicateDoTable(String replicateDoTable) {
+                this.replicateDoTable = replicateDoTable;
+                return this;
+            }
+
+            /**
+             * ReplicateIgnoreDb.
+             */
+            public Builder replicateIgnoreDb(String replicateIgnoreDb) {
+                this.replicateIgnoreDb = replicateIgnoreDb;
+                return this;
+            }
+
+            /**
+             * ReplicateIgnoreTable.
+             */
+            public Builder replicateIgnoreTable(String replicateIgnoreTable) {
+                this.replicateIgnoreTable = replicateIgnoreTable;
+                return this;
+            }
+
+            /**
+             * ReplicateWildDoTable.
+             */
+            public Builder replicateWildDoTable(String replicateWildDoTable) {
+                this.replicateWildDoTable = replicateWildDoTable;
+                return this;
+            }
+
+            /**
+             * ReplicateWildIgnoreTable.
+             */
+            public Builder replicateWildIgnoreTable(String replicateWildIgnoreTable) {
+                this.replicateWildIgnoreTable = replicateWildIgnoreTable;
+                return this;
+            }
+
+            /**
+             * SecondsBehindMaster.
+             */
+            public Builder secondsBehindMaster(Integer secondsBehindMaster) {
+                this.secondsBehindMaster = secondsBehindMaster;
+                return this;
+            }
+
+            /**
+             * <p>Yes: 运行中，No: 已停止</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yes</p>
+             */
+            public Builder slaveIoRunning(String slaveIoRunning) {
+                this.slaveIoRunning = slaveIoRunning;
+                return this;
+            }
+
+            /**
+             * SlaveIoState.
+             */
+            public Builder slaveIoState(String slaveIoState) {
+                this.slaveIoState = slaveIoState;
+                return this;
+            }
+
+            /**
+             * <p>Yes: 运行中，No: 已停止</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yes</p>
+             */
+            public Builder slaveSqlRunning(String slaveSqlRunning) {
+                this.slaveSqlRunning = slaveSqlRunning;
+                return this;
+            }
+
+            /**
+             * SlaveSqlRunningState.
+             */
+            public Builder slaveSqlRunningState(String slaveSqlRunningState) {
+                this.slaveSqlRunningState = slaveSqlRunningState;
+                return this;
+            }
+
+            public SlaveStatusList build() {
+                return new SlaveStatusList(this);
+            } 
+
+        } 
+
+    }
 }

@@ -580,6 +580,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDBInstanceForRebuildResponse> createDBInstanceForRebuild(CreateDBInstanceForRebuildRequest request);
 
     /**
+     * @param request the request parameters of CreateDBInstanceReplication  CreateDBInstanceReplicationRequest
+     * @return CreateDBInstanceReplicationResponse
+     */
+    CompletableFuture<CreateDBInstanceReplicationResponse> createDBInstanceReplication(CreateDBInstanceReplicationRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engine</h3>
      * <p>SQL Server</p>
@@ -1099,6 +1105,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDBInstanceEndpointAddressResponse
      */
     CompletableFuture<DeleteDBInstanceEndpointAddressResponse> deleteDBInstanceEndpointAddress(DeleteDBInstanceEndpointAddressRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDBInstanceReplication  DeleteDBInstanceReplicationRequest
+     * @return DeleteDBInstanceReplicationResponse
+     */
+    CompletableFuture<DeleteDBInstanceReplicationResponse> deleteDBInstanceReplication(DeleteDBInstanceReplicationRequest request);
 
     /**
      * <b>description</b> :
@@ -5650,6 +5662,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDBInstanceReplication  UpdateDBInstanceReplicationRequest
+     * @return UpdateDBInstanceReplicationResponse
+     */
+    CompletableFuture<UpdateDBInstanceReplicationResponse> updateDBInstanceReplication(UpdateDBInstanceReplicationRequest request);
 
     /**
      * <b>description</b> :
