@@ -281,6 +281,9 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UseComputeNode")
         private Boolean useComputeNode;
 
+        @com.aliyun.core.annotation.NameInMap("supportCompactionService")
+        private Boolean supportCompactionService;
+
         private Data(Builder builder) {
             this.consoleControlRestart = builder.consoleControlRestart;
             this.enableManageMv = builder.enableManageMv;
@@ -301,6 +304,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             this.supportModifyTimezone = builder.supportModifyTimezone;
             this.supportMultiAZ = builder.supportMultiAZ;
             this.useComputeNode = builder.useComputeNode;
+            this.supportCompactionService = builder.supportCompactionService;
         }
 
         public static Builder builder() {
@@ -444,6 +448,13 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             return this.useComputeNode;
         }
 
+        /**
+         * @return supportCompactionService
+         */
+        public Boolean getSupportCompactionService() {
+            return this.supportCompactionService;
+        }
+
         public static final class Builder {
             private Boolean consoleControlRestart; 
             private Boolean enableManageMv; 
@@ -464,6 +475,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             private Boolean supportModifyTimezone; 
             private Boolean supportMultiAZ; 
             private Boolean useComputeNode; 
+            private Boolean supportCompactionService; 
 
             private Builder() {
             } 
@@ -488,6 +500,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
                 this.supportModifyTimezone = model.supportModifyTimezone;
                 this.supportMultiAZ = model.supportMultiAZ;
                 this.useComputeNode = model.useComputeNode;
+                this.supportCompactionService = model.supportCompactionService;
             } 
 
             /**
@@ -639,6 +652,14 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
              */
             public Builder useComputeNode(Boolean useComputeNode) {
                 this.useComputeNode = useComputeNode;
+                return this;
+            }
+
+            /**
+             * supportCompactionService.
+             */
+            public Builder supportCompactionService(Boolean supportCompactionService) {
+                this.supportCompactionService = supportCompactionService;
                 return this;
             }
 
