@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OrderLineResult</p>
  */
 public class OrderLineResult extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("eticketInfos")
+    private java.util.List<EticketInfo> eticketInfos;
+
     @com.aliyun.core.annotation.NameInMap("logisticsStatus")
     private String logisticsStatus;
 
@@ -51,6 +54,7 @@ public class OrderLineResult extends TeaModel {
     private String skuTitle;
 
     private OrderLineResult(Builder builder) {
+        this.eticketInfos = builder.eticketInfos;
         this.logisticsStatus = builder.logisticsStatus;
         this.number = builder.number;
         this.orderId = builder.orderId;
@@ -74,6 +78,13 @@ public class OrderLineResult extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return eticketInfos
+     */
+    public java.util.List<EticketInfo> getEticketInfos() {
+        return this.eticketInfos;
     }
 
     /**
@@ -154,6 +165,7 @@ public class OrderLineResult extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<EticketInfo> eticketInfos; 
         private String logisticsStatus; 
         private String number; 
         private String orderId; 
@@ -170,6 +182,7 @@ public class OrderLineResult extends TeaModel {
         } 
 
         private Builder(OrderLineResult model) {
+            this.eticketInfos = model.eticketInfos;
             this.logisticsStatus = model.logisticsStatus;
             this.number = model.number;
             this.orderId = model.orderId;
@@ -182,6 +195,14 @@ public class OrderLineResult extends TeaModel {
             this.skuId = model.skuId;
             this.skuTitle = model.skuTitle;
         } 
+
+        /**
+         * eticketInfos.
+         */
+        public Builder eticketInfos(java.util.List<EticketInfo> eticketInfos) {
+            this.eticketInfos = eticketInfos;
+            return this;
+        }
 
         /**
          * logisticsStatus.
