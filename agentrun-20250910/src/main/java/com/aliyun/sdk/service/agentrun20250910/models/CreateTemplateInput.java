@@ -85,6 +85,9 @@ public class CreateTemplateInput extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String templateType;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private CreateTemplateInput(Builder builder) {
         this.allowAnonymousManage = builder.allowAnonymousManage;
         this.armsConfiguration = builder.armsConfiguration;
@@ -106,6 +109,7 @@ public class CreateTemplateInput extends TeaModel {
         this.templateConfiguration = builder.templateConfiguration;
         this.templateName = builder.templateName;
         this.templateType = builder.templateType;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -260,6 +264,13 @@ public class CreateTemplateInput extends TeaModel {
         return this.templateType;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private Boolean allowAnonymousManage; 
         private ArmsConfiguration armsConfiguration; 
@@ -281,6 +292,7 @@ public class CreateTemplateInput extends TeaModel {
         private java.util.Map<String, ?> templateConfiguration; 
         private String templateName; 
         private String templateType; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -306,6 +318,7 @@ public class CreateTemplateInput extends TeaModel {
             this.templateConfiguration = model.templateConfiguration;
             this.templateName = model.templateName;
             this.templateType = model.templateType;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -468,6 +481,14 @@ public class CreateTemplateInput extends TeaModel {
          */
         public Builder templateType(String templateType) {
             this.templateType = templateType;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

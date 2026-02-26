@@ -71,6 +71,9 @@ public class UpdateTemplateInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("templateConfiguration")
     private java.util.Map<String, ?> templateConfiguration;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private UpdateTemplateInput(Builder builder) {
         this.allowAnonymousManage = builder.allowAnonymousManage;
         this.armsConfiguration = builder.armsConfiguration;
@@ -89,6 +92,7 @@ public class UpdateTemplateInput extends TeaModel {
         this.sandboxIdleTimeoutInSeconds = builder.sandboxIdleTimeoutInSeconds;
         this.sandboxTTLInSeconds = builder.sandboxTTLInSeconds;
         this.templateConfiguration = builder.templateConfiguration;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -222,6 +226,13 @@ public class UpdateTemplateInput extends TeaModel {
         return this.templateConfiguration;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private Boolean allowAnonymousManage; 
         private ArmsConfiguration armsConfiguration; 
@@ -240,6 +251,7 @@ public class UpdateTemplateInput extends TeaModel {
         private Integer sandboxIdleTimeoutInSeconds; 
         private Integer sandboxTTLInSeconds; 
         private java.util.Map<String, ?> templateConfiguration; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -262,6 +274,7 @@ public class UpdateTemplateInput extends TeaModel {
             this.sandboxIdleTimeoutInSeconds = model.sandboxIdleTimeoutInSeconds;
             this.sandboxTTLInSeconds = model.sandboxTTLInSeconds;
             this.templateConfiguration = model.templateConfiguration;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -397,6 +410,14 @@ public class UpdateTemplateInput extends TeaModel {
          */
         public Builder templateConfiguration(java.util.Map<String, ?> templateConfiguration) {
             this.templateConfiguration = templateConfiguration;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDiscoveryEndpointsOutput</p>
  */
 public class GetDiscoveryEndpointsOutput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("credentialName")
+    private String credentialName;
+
     @com.aliyun.core.annotation.NameInMap("discoveryEndpoints")
     private java.util.List<DiscoveryEndpoint> discoveryEndpoints;
 
     private GetDiscoveryEndpointsOutput(Builder builder) {
+        this.credentialName = builder.credentialName;
         this.discoveryEndpoints = builder.discoveryEndpoints;
     }
 
@@ -37,6 +41,13 @@ public class GetDiscoveryEndpointsOutput extends TeaModel {
     }
 
     /**
+     * @return credentialName
+     */
+    public String getCredentialName() {
+        return this.credentialName;
+    }
+
+    /**
      * @return discoveryEndpoints
      */
     public java.util.List<DiscoveryEndpoint> getDiscoveryEndpoints() {
@@ -44,14 +55,24 @@ public class GetDiscoveryEndpointsOutput extends TeaModel {
     }
 
     public static final class Builder {
+        private String credentialName; 
         private java.util.List<DiscoveryEndpoint> discoveryEndpoints; 
 
         private Builder() {
         } 
 
         private Builder(GetDiscoveryEndpointsOutput model) {
+            this.credentialName = model.credentialName;
             this.discoveryEndpoints = model.discoveryEndpoints;
         } 
+
+        /**
+         * credentialName.
+         */
+        public Builder credentialName(String credentialName) {
+            this.credentialName = credentialName;
+            return this;
+        }
 
         /**
          * discoveryEndpoints.

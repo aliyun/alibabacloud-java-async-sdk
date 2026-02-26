@@ -50,6 +50,9 @@ public class AgentRuntime extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("diskSize")
+    private Integer diskSize;
+
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map<String, String> environmentVariables;
 
@@ -118,6 +121,7 @@ public class AgentRuntime extends TeaModel {
         this.createdAt = builder.createdAt;
         this.credentialName = builder.credentialName;
         this.description = builder.description;
+        this.diskSize = builder.diskSize;
         this.environmentVariables = builder.environmentVariables;
         this.executionRoleArn = builder.executionRoleArn;
         this.externalAgentEndpointUrl = builder.externalAgentEndpointUrl;
@@ -225,6 +229,13 @@ public class AgentRuntime extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return diskSize
+     */
+    public Integer getDiskSize() {
+        return this.diskSize;
     }
 
     /**
@@ -365,6 +376,7 @@ public class AgentRuntime extends TeaModel {
         private String createdAt; 
         private String credentialName; 
         private String description; 
+        private Integer diskSize; 
         private java.util.Map<String, String> environmentVariables; 
         private String executionRoleArn; 
         private String externalAgentEndpointUrl; 
@@ -399,6 +411,7 @@ public class AgentRuntime extends TeaModel {
             this.createdAt = model.createdAt;
             this.credentialName = model.credentialName;
             this.description = model.description;
+            this.diskSize = model.diskSize;
             this.environmentVariables = model.environmentVariables;
             this.executionRoleArn = model.executionRoleArn;
             this.externalAgentEndpointUrl = model.externalAgentEndpointUrl;
@@ -537,6 +550,14 @@ public class AgentRuntime extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * diskSize.
+         */
+        public Builder diskSize(Integer diskSize) {
+            this.diskSize = diskSize;
             return this;
         }
 

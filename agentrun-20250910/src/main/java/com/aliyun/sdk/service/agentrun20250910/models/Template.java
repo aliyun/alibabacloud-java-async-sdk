@@ -109,6 +109,9 @@ public class Template extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("templateVersion")
     private String templateVersion;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private Template(Builder builder) {
         this.allowAnonymousManage = builder.allowAnonymousManage;
         this.containerConfiguration = builder.containerConfiguration;
@@ -139,6 +142,7 @@ public class Template extends TeaModel {
         this.templateName = builder.templateName;
         this.templateType = builder.templateType;
         this.templateVersion = builder.templateVersion;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -356,6 +360,13 @@ public class Template extends TeaModel {
         return this.templateVersion;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private Boolean allowAnonymousManage; 
         private ContainerConfiguration containerConfiguration; 
@@ -386,6 +397,7 @@ public class Template extends TeaModel {
         private String templateName; 
         private String templateType; 
         private String templateVersion; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -420,6 +432,7 @@ public class Template extends TeaModel {
             this.templateName = model.templateName;
             this.templateType = model.templateType;
             this.templateVersion = model.templateVersion;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -651,6 +664,14 @@ public class Template extends TeaModel {
          */
         public Builder templateVersion(String templateVersion) {
             this.templateVersion = templateVersion;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 
