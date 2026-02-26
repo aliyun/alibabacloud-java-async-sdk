@@ -21,7 +21,7 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("VulWhitelistList")
-    private java.util.List<VulWhitelistList> vulWhitelistList;
+    private VulWhitelistList vulWhitelistList;
 
     private ModifyCreateVulWhitelistResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -50,13 +50,13 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
     /**
      * @return vulWhitelistList
      */
-    public java.util.List<VulWhitelistList> getVulWhitelistList() {
+    public VulWhitelistList getVulWhitelistList() {
         return this.vulWhitelistList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List<VulWhitelistList> vulWhitelistList; 
+        private VulWhitelistList vulWhitelistList; 
 
         private Builder() {
         } 
@@ -80,7 +80,7 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the information about the whitelist.</p>
          */
-        public Builder vulWhitelistList(java.util.List<VulWhitelistList> vulWhitelistList) {
+        public Builder vulWhitelistList(VulWhitelistList vulWhitelistList) {
             this.vulWhitelistList = vulWhitelistList;
             return this;
         }
@@ -131,10 +131,7 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the whitelist.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>30376</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
