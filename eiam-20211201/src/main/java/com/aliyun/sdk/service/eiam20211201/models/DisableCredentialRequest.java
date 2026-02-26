@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link EnableCloudAccountRoleRequest} extends {@link RequestModel}
+ * {@link DisableCredentialRequest} extends {@link RequestModel}
  *
- * <p>EnableCloudAccountRoleRequest</p>
+ * <p>DisableCredentialRequest</p>
  */
-public class EnableCloudAccountRoleRequest extends Request {
+public class DisableCredentialRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -27,26 +27,20 @@ public class EnableCloudAccountRoleRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CloudAccountId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String cloudAccountId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CloudAccountRoleId")
+    @com.aliyun.core.annotation.NameInMap("CredentialId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
-    private String cloudAccountRoleId;
+    private String credentialId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    private EnableCloudAccountRoleRequest(Builder builder) {
+    private DisableCredentialRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.clientToken = builder.clientToken;
-        this.cloudAccountId = builder.cloudAccountId;
-        this.cloudAccountRoleId = builder.cloudAccountRoleId;
+        this.credentialId = builder.credentialId;
         this.instanceId = builder.instanceId;
     }
 
@@ -54,7 +48,7 @@ public class EnableCloudAccountRoleRequest extends Request {
         return new Builder();
     }
 
-    public static EnableCloudAccountRoleRequest create() {
+    public static DisableCredentialRequest create() {
         return builder().build();
     }
 
@@ -78,17 +72,10 @@ public class EnableCloudAccountRoleRequest extends Request {
     }
 
     /**
-     * @return cloudAccountId
+     * @return credentialId
      */
-    public String getCloudAccountId() {
-        return this.cloudAccountId;
-    }
-
-    /**
-     * @return cloudAccountRoleId
-     */
-    public String getCloudAccountRoleId() {
-        return this.cloudAccountRoleId;
+    public String getCredentialId() {
+        return this.credentialId;
     }
 
     /**
@@ -98,23 +85,21 @@ public class EnableCloudAccountRoleRequest extends Request {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<EnableCloudAccountRoleRequest, Builder> {
+    public static final class Builder extends Request.Builder<DisableCredentialRequest, Builder> {
         private String regionId; 
         private String clientToken; 
-        private String cloudAccountId; 
-        private String cloudAccountRoleId; 
+        private String credentialId; 
         private String instanceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(EnableCloudAccountRoleRequest request) {
+        private Builder(DisableCredentialRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.clientToken = request.clientToken;
-            this.cloudAccountId = request.cloudAccountId;
-            this.cloudAccountRoleId = request.cloudAccountRoleId;
+            this.credentialId = request.credentialId;
             this.instanceId = request.instanceId;
         } 
 
@@ -128,6 +113,7 @@ public class EnableCloudAccountRoleRequest extends Request {
         }
 
         /**
+         * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,27 +126,15 @@ public class EnableCloudAccountRoleRequest extends Request {
         }
 
         /**
+         * <p>凭据ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ca_01kmegjc11qa1txxxxx</p>
+         * <p>cred_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
-        public Builder cloudAccountId(String cloudAccountId) {
-            this.putQueryParameter("CloudAccountId", cloudAccountId);
-            this.cloudAccountId = cloudAccountId;
-            return this;
-        }
-
-        /**
-         * <p>云账号角色ID</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>carole_01kmek49aqxxxx</p>
-         */
-        public Builder cloudAccountRoleId(String cloudAccountRoleId) {
-            this.putQueryParameter("CloudAccountRoleId", cloudAccountRoleId);
-            this.cloudAccountRoleId = cloudAccountRoleId;
+        public Builder credentialId(String credentialId) {
+            this.putQueryParameter("CredentialId", credentialId);
+            this.credentialId = credentialId;
             return this;
         }
 
@@ -178,8 +152,8 @@ public class EnableCloudAccountRoleRequest extends Request {
         }
 
         @Override
-        public EnableCloudAccountRoleRequest build() {
-            return new EnableCloudAccountRoleRequest(this);
+        public DisableCredentialRequest build() {
+            return new DisableCredentialRequest(this);
         } 
 
     } 

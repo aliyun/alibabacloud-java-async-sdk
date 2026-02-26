@@ -23,7 +23,7 @@ public class UpdateCloudAccountDescriptionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String clientToken;
 
     @com.aliyun.core.annotation.Query

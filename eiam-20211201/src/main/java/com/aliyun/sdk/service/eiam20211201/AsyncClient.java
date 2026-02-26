@@ -212,6 +212,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateConditionalAccessPolicyResponse> createConditionalAccessPolicy(CreateConditionalAccessPolicyRequest request);
 
     /**
+     * @param request the request parameters of CreateCredential  CreateCredentialRequest
+     * @return CreateCredentialResponse
+     */
+    CompletableFuture<CreateCredentialResponse> createCredential(CreateCredentialRequest request);
+
+    /**
      * @param request the request parameters of CreateCustomField  CreateCustomFieldRequest
      * @return CreateCustomFieldResponse
      */
@@ -378,6 +384,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteConditionalAccessPolicyResponse
      */
     CompletableFuture<DeleteConditionalAccessPolicyResponse> deleteConditionalAccessPolicy(DeleteConditionalAccessPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCredential  DeleteCredentialRequest
+     * @return DeleteCredentialResponse
+     */
+    CompletableFuture<DeleteCredentialResponse> deleteCredential(DeleteCredentialRequest request);
 
     /**
      * @param request the request parameters of DeleteCustomField  DeleteCustomFieldRequest
@@ -569,6 +581,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableConditionalAccessPolicyResponse> disableConditionalAccessPolicy(DisableConditionalAccessPolicyRequest request);
 
     /**
+     * @param request the request parameters of DisableCredential  DisableCredentialRequest
+     * @return DisableCredentialResponse
+     */
+    CompletableFuture<DisableCredentialResponse> disableCredential(DisableCredentialRequest request);
+
+    /**
      * @param request the request parameters of DisableCustomField  DisableCustomFieldRequest
      * @return DisableCustomFieldResponse
      */
@@ -720,6 +738,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableConditionalAccessPolicyResponse
      */
     CompletableFuture<EnableConditionalAccessPolicyResponse> enableConditionalAccessPolicy(EnableConditionalAccessPolicyRequest request);
+
+    /**
+     * @param request the request parameters of EnableCredential  EnableCredentialRequest
+     * @return EnableCredentialResponse
+     */
+    CompletableFuture<EnableCredentialResponse> enableCredential(EnableCredentialRequest request);
 
     /**
      * @param request the request parameters of EnableCustomField  EnableCustomFieldRequest
@@ -921,6 +945,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetConditionalAccessPolicyResponse
      */
     CompletableFuture<GetConditionalAccessPolicyResponse> getConditionalAccessPolicy(GetConditionalAccessPolicyRequest request);
+
+    /**
+     * @param request the request parameters of GetCredential  GetCredentialRequest
+     * @return GetCredentialResponse
+     */
+    CompletableFuture<GetCredentialResponse> getCredential(GetCredentialRequest request);
 
     /**
      * @param request the request parameters of GetCustomField  GetCustomFieldRequest
@@ -1301,6 +1331,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListConditionalAccessPoliciesForUserResponse> listConditionalAccessPoliciesForUser(ListConditionalAccessPoliciesForUserRequest request);
 
     /**
+     * @param request the request parameters of ListCredentials  ListCredentialsRequest
+     * @return ListCredentialsResponse
+     */
+    CompletableFuture<ListCredentialsResponse> listCredentials(ListCredentialsRequest request);
+
+    /**
      * @param request the request parameters of ListCustomPrivacyPolicies  ListCustomPrivacyPoliciesRequest
      * @return ListCustomPrivacyPoliciesResponse
      */
@@ -1515,6 +1551,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ObtainApplicationTokenResponse
      */
     CompletableFuture<ObtainApplicationTokenResponse> obtainApplicationToken(ObtainApplicationTokenRequest request);
+
+    /**
+     * @param request the request parameters of ObtainCredential  ObtainCredentialRequest
+     * @return ObtainCredentialResponse
+     */
+    CompletableFuture<ObtainCredentialResponse> obtainCredential(ObtainCredentialRequest request);
 
     /**
      * @param request the request parameters of ObtainDomainProxyToken  ObtainDomainProxyTokenRequest
@@ -1908,6 +1950,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateConditionalAccessPolicyDescriptionResponse
      */
     CompletableFuture<UpdateConditionalAccessPolicyDescriptionResponse> updateConditionalAccessPolicyDescription(UpdateConditionalAccessPolicyDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCredential  UpdateCredentialRequest
+     * @return UpdateCredentialResponse
+     */
+    CompletableFuture<UpdateCredentialResponse> updateCredential(UpdateCredentialRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCredentialDescription  UpdateCredentialDescriptionRequest
+     * @return UpdateCredentialDescriptionResponse
+     */
+    CompletableFuture<UpdateCredentialDescriptionResponse> updateCredentialDescription(UpdateCredentialDescriptionRequest request);
 
     /**
      * @param request the request parameters of UpdateCustomPrivacyPolicy  UpdateCustomPrivacyPolicyRequest
