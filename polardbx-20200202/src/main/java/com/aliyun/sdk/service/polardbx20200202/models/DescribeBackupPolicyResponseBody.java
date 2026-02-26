@@ -161,6 +161,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CrossRegionDataBackupRetention")
         private Integer crossRegionDataBackupRetention;
 
+        @com.aliyun.core.annotation.NameInMap("CrossRegionFilterValue")
+        private String crossRegionFilterValue;
+
         @com.aliyun.core.annotation.NameInMap("CrossRegionLogBackupRetention")
         private Integer crossRegionLogBackupRetention;
 
@@ -203,6 +206,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             this.coldDataBackupInterval = builder.coldDataBackupInterval;
             this.coldDataBackupRetention = builder.coldDataBackupRetention;
             this.crossRegionDataBackupRetention = builder.crossRegionDataBackupRetention;
+            this.crossRegionFilterValue = builder.crossRegionFilterValue;
             this.crossRegionLogBackupRetention = builder.crossRegionLogBackupRetention;
             this.DBInstanceName = builder.DBInstanceName;
             this.destCrossRegion = builder.destCrossRegion;
@@ -278,6 +282,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          */
         public Integer getCrossRegionDataBackupRetention() {
             return this.crossRegionDataBackupRetention;
+        }
+
+        /**
+         * @return crossRegionFilterValue
+         */
+        public String getCrossRegionFilterValue() {
+            return this.crossRegionFilterValue;
         }
 
         /**
@@ -366,6 +377,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             private Integer coldDataBackupInterval; 
             private Integer coldDataBackupRetention; 
             private Integer crossRegionDataBackupRetention; 
+            private String crossRegionFilterValue; 
             private Integer crossRegionLogBackupRetention; 
             private String DBInstanceName; 
             private String destCrossRegion; 
@@ -390,6 +402,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
                 this.coldDataBackupInterval = model.coldDataBackupInterval;
                 this.coldDataBackupRetention = model.coldDataBackupRetention;
                 this.crossRegionDataBackupRetention = model.crossRegionDataBackupRetention;
+                this.crossRegionFilterValue = model.crossRegionFilterValue;
                 this.crossRegionLogBackupRetention = model.crossRegionLogBackupRetention;
                 this.DBInstanceName = model.DBInstanceName;
                 this.destCrossRegion = model.destCrossRegion;
@@ -464,6 +477,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
              */
             public Builder crossRegionDataBackupRetention(Integer crossRegionDataBackupRetention) {
                 this.crossRegionDataBackupRetention = crossRegionDataBackupRetention;
+                return this;
+            }
+
+            /**
+             * CrossRegionFilterValue.
+             */
+            public Builder crossRegionFilterValue(String crossRegionFilterValue) {
+                this.crossRegionFilterValue = crossRegionFilterValue;
                 return this;
             }
 

@@ -50,6 +50,10 @@ public class UpdateBackupPolicyRequest extends Request {
     private Integer crossRegionDataBackupRetention;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossRegionFilterValue")
+    private String crossRegionFilterValue;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CrossRegionLogBackupRetention")
     private Integer crossRegionLogBackupRetention;
 
@@ -109,6 +113,7 @@ public class UpdateBackupPolicyRequest extends Request {
         this.coldDataBackupInterval = builder.coldDataBackupInterval;
         this.coldDataBackupRetention = builder.coldDataBackupRetention;
         this.crossRegionDataBackupRetention = builder.crossRegionDataBackupRetention;
+        this.crossRegionFilterValue = builder.crossRegionFilterValue;
         this.crossRegionLogBackupRetention = builder.crossRegionLogBackupRetention;
         this.DBInstanceName = builder.DBInstanceName;
         this.destCrossRegion = builder.destCrossRegion;
@@ -190,6 +195,13 @@ public class UpdateBackupPolicyRequest extends Request {
      */
     public Integer getCrossRegionDataBackupRetention() {
         return this.crossRegionDataBackupRetention;
+    }
+
+    /**
+     * @return crossRegionFilterValue
+     */
+    public String getCrossRegionFilterValue() {
+        return this.crossRegionFilterValue;
     }
 
     /**
@@ -285,6 +297,7 @@ public class UpdateBackupPolicyRequest extends Request {
         private Integer coldDataBackupInterval; 
         private Integer coldDataBackupRetention; 
         private Integer crossRegionDataBackupRetention; 
+        private String crossRegionFilterValue; 
         private Integer crossRegionLogBackupRetention; 
         private String DBInstanceName; 
         private String destCrossRegion; 
@@ -312,6 +325,7 @@ public class UpdateBackupPolicyRequest extends Request {
             this.coldDataBackupInterval = request.coldDataBackupInterval;
             this.coldDataBackupRetention = request.coldDataBackupRetention;
             this.crossRegionDataBackupRetention = request.crossRegionDataBackupRetention;
+            this.crossRegionFilterValue = request.crossRegionFilterValue;
             this.crossRegionLogBackupRetention = request.crossRegionLogBackupRetention;
             this.DBInstanceName = request.DBInstanceName;
             this.destCrossRegion = request.destCrossRegion;
@@ -395,6 +409,15 @@ public class UpdateBackupPolicyRequest extends Request {
         public Builder crossRegionDataBackupRetention(Integer crossRegionDataBackupRetention) {
             this.putQueryParameter("CrossRegionDataBackupRetention", crossRegionDataBackupRetention);
             this.crossRegionDataBackupRetention = crossRegionDataBackupRetention;
+            return this;
+        }
+
+        /**
+         * CrossRegionFilterValue.
+         */
+        public Builder crossRegionFilterValue(String crossRegionFilterValue) {
+            this.putQueryParameter("CrossRegionFilterValue", crossRegionFilterValue);
+            this.crossRegionFilterValue = crossRegionFilterValue;
             return this;
         }
 
