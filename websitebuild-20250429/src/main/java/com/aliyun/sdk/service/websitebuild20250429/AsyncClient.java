@@ -236,6 +236,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryMaterialTaskListResponse> queryMaterialTaskList(QueryMaterialTaskListRequest request);
 
     /**
+     * @param request the request parameters of QuerySupabaseInstanceInfoForAdmin  QuerySupabaseInstanceInfoForAdminRequest
+     * @return QuerySupabaseInstanceInfoForAdminResponse
+     */
+    CompletableFuture<QuerySupabaseInstanceInfoForAdminResponse> querySupabaseInstanceInfoForAdmin(QuerySupabaseInstanceInfoForAdminRequest request);
+
+    /**
      * @param request the request parameters of RefreshAppInstanceTicket  RefreshAppInstanceTicketRequest
      * @return RefreshAppInstanceTicketResponse
      */
