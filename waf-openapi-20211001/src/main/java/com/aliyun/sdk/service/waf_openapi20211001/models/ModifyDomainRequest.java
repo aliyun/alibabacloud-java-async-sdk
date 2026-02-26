@@ -269,6 +269,15 @@ public class ModifyDomainRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("FocusHttps")
         private Boolean focusHttps;
 
+        @com.aliyun.core.annotation.NameInMap("HstsIncludeSubDomain")
+        private Boolean hstsIncludeSubDomain;
+
+        @com.aliyun.core.annotation.NameInMap("HstsMaxAge")
+        private Long hstsMaxAge;
+
+        @com.aliyun.core.annotation.NameInMap("HstsPreload")
+        private Boolean hstsPreload;
+
         @com.aliyun.core.annotation.NameInMap("Http2Enabled")
         private Boolean http2Enabled;
 
@@ -309,6 +318,9 @@ public class ModifyDomainRequest extends Request {
             this.enableTLSv3 = builder.enableTLSv3;
             this.exclusiveIp = builder.exclusiveIp;
             this.focusHttps = builder.focusHttps;
+            this.hstsIncludeSubDomain = builder.hstsIncludeSubDomain;
+            this.hstsMaxAge = builder.hstsMaxAge;
+            this.hstsPreload = builder.hstsPreload;
             this.http2Enabled = builder.http2Enabled;
             this.httpPorts = builder.httpPorts;
             this.httpsPorts = builder.httpsPorts;
@@ -370,6 +382,27 @@ public class ModifyDomainRequest extends Request {
          */
         public Boolean getFocusHttps() {
             return this.focusHttps;
+        }
+
+        /**
+         * @return hstsIncludeSubDomain
+         */
+        public Boolean getHstsIncludeSubDomain() {
+            return this.hstsIncludeSubDomain;
+        }
+
+        /**
+         * @return hstsMaxAge
+         */
+        public Long getHstsMaxAge() {
+            return this.hstsMaxAge;
+        }
+
+        /**
+         * @return hstsPreload
+         */
+        public Boolean getHstsPreload() {
+            return this.hstsPreload;
         }
 
         /**
@@ -456,6 +489,9 @@ public class ModifyDomainRequest extends Request {
             private Boolean enableTLSv3; 
             private Boolean exclusiveIp; 
             private Boolean focusHttps; 
+            private Boolean hstsIncludeSubDomain; 
+            private Long hstsMaxAge; 
+            private Boolean hstsPreload; 
             private Boolean http2Enabled; 
             private java.util.List<Integer> httpPorts; 
             private java.util.List<Integer> httpsPorts; 
@@ -478,6 +514,9 @@ public class ModifyDomainRequest extends Request {
                 this.enableTLSv3 = model.enableTLSv3;
                 this.exclusiveIp = model.exclusiveIp;
                 this.focusHttps = model.focusHttps;
+                this.hstsIncludeSubDomain = model.hstsIncludeSubDomain;
+                this.hstsMaxAge = model.hstsMaxAge;
+                this.hstsPreload = model.hstsPreload;
                 this.http2Enabled = model.http2Enabled;
                 this.httpPorts = model.httpPorts;
                 this.httpsPorts = model.httpsPorts;
@@ -568,6 +607,30 @@ public class ModifyDomainRequest extends Request {
              */
             public Builder focusHttps(Boolean focusHttps) {
                 this.focusHttps = focusHttps;
+                return this;
+            }
+
+            /**
+             * HstsIncludeSubDomain.
+             */
+            public Builder hstsIncludeSubDomain(Boolean hstsIncludeSubDomain) {
+                this.hstsIncludeSubDomain = hstsIncludeSubDomain;
+                return this;
+            }
+
+            /**
+             * HstsMaxAge.
+             */
+            public Builder hstsMaxAge(Long hstsMaxAge) {
+                this.hstsMaxAge = hstsMaxAge;
+                return this;
+            }
+
+            /**
+             * HstsPreload.
+             */
+            public Builder hstsPreload(Boolean hstsPreload) {
+                this.hstsPreload = hstsPreload;
                 return this;
             }
 
@@ -948,6 +1011,9 @@ public class ModifyDomainRequest extends Request {
         @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
         private Integer maxBodySize;
 
+        @com.aliyun.core.annotation.NameInMap("ProxyProtocol")
+        private Boolean proxyProtocol;
+
         @com.aliyun.core.annotation.NameInMap("ReadTimeout")
         @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer readTimeout;
@@ -1000,6 +1066,7 @@ public class ModifyDomainRequest extends Request {
             this.keepaliveTimeout = builder.keepaliveTimeout;
             this.loadbalance = builder.loadbalance;
             this.maxBodySize = builder.maxBodySize;
+            this.proxyProtocol = builder.proxyProtocol;
             this.readTimeout = builder.readTimeout;
             this.requestHeaders = builder.requestHeaders;
             this.retry = builder.retry;
@@ -1114,6 +1181,13 @@ public class ModifyDomainRequest extends Request {
         }
 
         /**
+         * @return proxyProtocol
+         */
+        public Boolean getProxyProtocol() {
+            return this.proxyProtocol;
+        }
+
+        /**
          * @return readTimeout
          */
         public Integer getReadTimeout() {
@@ -1211,6 +1285,7 @@ public class ModifyDomainRequest extends Request {
             private Integer keepaliveTimeout; 
             private String loadbalance; 
             private Integer maxBodySize; 
+            private Boolean proxyProtocol; 
             private Integer readTimeout; 
             private java.util.List<RequestHeaders> requestHeaders; 
             private Boolean retry; 
@@ -1241,6 +1316,7 @@ public class ModifyDomainRequest extends Request {
                 this.keepaliveTimeout = model.keepaliveTimeout;
                 this.loadbalance = model.loadbalance;
                 this.maxBodySize = model.maxBodySize;
+                this.proxyProtocol = model.proxyProtocol;
                 this.readTimeout = model.readTimeout;
                 this.requestHeaders = model.requestHeaders;
                 this.retry = model.retry;
@@ -1405,6 +1481,14 @@ public class ModifyDomainRequest extends Request {
              */
             public Builder maxBodySize(Integer maxBodySize) {
                 this.maxBodySize = maxBodySize;
+                return this;
+            }
+
+            /**
+             * ProxyProtocol.
+             */
+            public Builder proxyProtocol(Boolean proxyProtocol) {
+                this.proxyProtocol = proxyProtocol;
                 return this;
             }
 
