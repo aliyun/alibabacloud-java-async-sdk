@@ -67,7 +67,7 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
         } 
 
         /**
-         * Capabilities.
+         * <p>Indicates whether a specific resource type or cloud service supports resource group events.</p>
          */
         public Builder capabilities(java.util.List<Capabilities> capabilities) {
             this.capabilities = capabilities;
@@ -75,7 +75,10 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2CB870A2-DF0F-5338-8223-F64737FF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -95,6 +98,9 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
      * <p>ListResourceGroupCapabilityResponseBody</p>
      */
     public static class Capabilities extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ResourceCenterResourceType")
+        private String resourceCenterResourceType;
+
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
@@ -105,6 +111,7 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
         private Boolean supportResourceGroupEvent;
 
         private Capabilities(Builder builder) {
+            this.resourceCenterResourceType = builder.resourceCenterResourceType;
             this.resourceType = builder.resourceType;
             this.service = builder.service;
             this.supportResourceGroupEvent = builder.supportResourceGroupEvent;
@@ -116,6 +123,13 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
 
         public static Capabilities create() {
             return builder().build();
+        }
+
+        /**
+         * @return resourceCenterResourceType
+         */
+        public String getResourceCenterResourceType() {
+            return this.resourceCenterResourceType;
         }
 
         /**
@@ -140,6 +154,7 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String resourceCenterResourceType; 
             private String resourceType; 
             private String service; 
             private Boolean supportResourceGroupEvent; 
@@ -148,13 +163,26 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
             } 
 
             private Builder(Capabilities model) {
+                this.resourceCenterResourceType = model.resourceCenterResourceType;
                 this.resourceType = model.resourceType;
                 this.service = model.service;
                 this.supportResourceGroupEvent = model.supportResourceGroupEvent;
             } 
 
             /**
-             * ResourceType.
+             * ResourceCenterResourceType.
+             */
+            public Builder resourceCenterResourceType(String resourceCenterResourceType) {
+                this.resourceCenterResourceType = resourceCenterResourceType;
+                return this;
+            }
+
+            /**
+             * <p>The resource type.</p>
+             * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -162,7 +190,11 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
             }
 
             /**
-             * Service.
+             * <p>The service code.</p>
+             * <p>You can obtain the code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -170,7 +202,10 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
             }
 
             /**
-             * SupportResourceGroupEvent.
+             * <p>Indicates whether a specific resource type or cloud service supports resource group events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportResourceGroupEvent(Boolean supportResourceGroupEvent) {
                 this.supportResourceGroupEvent = supportResourceGroupEvent;

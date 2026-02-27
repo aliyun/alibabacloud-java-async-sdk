@@ -87,7 +87,11 @@ public class ListResourceGroupCapabilityRequest extends Request {
         } 
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -96,7 +100,11 @@ public class ListResourceGroupCapabilityRequest extends Request {
         }
 
         /**
-         * Service.
+         * <p>The ID of the Alibaba Cloud service.</p>
+         * <p>You can obtain the service code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);
@@ -105,7 +113,10 @@ public class ListResourceGroupCapabilityRequest extends Request {
         }
 
         /**
-         * SupportResourceGroupEvent.
+         * <p>Specifies whether a specific resource type or cloud service supports resource group events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportResourceGroupEvent(Boolean supportResourceGroupEvent) {
             this.putQueryParameter("SupportResourceGroupEvent", supportResourceGroupEvent);

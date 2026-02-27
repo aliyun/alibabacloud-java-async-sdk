@@ -119,7 +119,7 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthDetails.
+         * <p>The authorization details for resource groups.</p>
          */
         public Builder authDetails(java.util.List<AuthDetails> authDetails) {
             this.authDetails = authDetails;
@@ -127,7 +127,10 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +160,7 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroups.
+         * <p>The information of the resource groups.</p>
          */
         public Builder resourceGroups(java.util.List<ResourceGroups> resourceGroups) {
             this.resourceGroups = resourceGroups;
@@ -162,7 +168,10 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -228,7 +237,10 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * HasPermission.
+             * <p>Indicates whether the user has permissions on the resource group for the specified resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasPermission(Boolean hasPermission) {
                 this.hasPermission = hasPermission;
@@ -236,7 +248,10 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzscexx6w3u2y</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -329,7 +344,7 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountScopeAuth.
+             * <p>Indicates whether the user has account-level authorization for this resource type.</p>
              */
             public Builder accountScopeAuth(Boolean accountScopeAuth) {
                 this.accountScopeAuth = accountScopeAuth;
@@ -337,7 +352,7 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthOfResourceGroups.
+             * <p>The permission details for the resource groups on the specified resource types.</p>
              */
             public Builder authOfResourceGroups(java.util.List<AuthOfResourceGroups> authOfResourceGroups) {
                 this.authOfResourceGroups = authOfResourceGroups;
@@ -345,7 +360,11 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -353,7 +372,11 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Service.
+             * <p>The ID of the Alibaba Cloud service.</p>
+             * <p>You can obtain the ID from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -420,7 +443,10 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -428,7 +454,10 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -560,7 +589,10 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -568,7 +600,10 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -576,7 +611,10 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-project</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -584,7 +622,10 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of your Alibaba Cloud resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-9gLOoK****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -592,7 +633,10 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The unique identifier of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-project</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -600,7 +644,15 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the resource group. Valid values:</p>
+             * <ul>
+             * <li>Creating: The resource group is being created.</li>
+             * <li>OK: The resource group is created.</li>
+             * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -608,7 +660,7 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

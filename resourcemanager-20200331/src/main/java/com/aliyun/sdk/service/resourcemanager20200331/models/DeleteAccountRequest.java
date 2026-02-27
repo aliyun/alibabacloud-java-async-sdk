@@ -74,7 +74,8 @@ public class DeleteAccountRequest extends Request {
         } 
 
         /**
-         * AbandonableCheckId.
+         * <p>The ID of a check item that you can choose to ignore for the member deletion.</p>
+         * <p>You can obtain the ID from the response of the <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> operation.</p>
          */
         public Builder abandonableCheckId(java.util.List<String> abandonableCheckId) {
             String abandonableCheckIdShrink = shrink(abandonableCheckId, "AbandonableCheckId", "json");
@@ -84,11 +85,7 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * <p>The type of the deletion. Valid values:</p>
-         * <ul>
-         * <li>0: direct deletion. If the member does not have pay-as-you-go resources that are purchased within the previous 30 days, the system directly deletes the member.</li>
-         * <li>1: deletion with a silence period. If the member has pay-as-you-go resources that are purchased within the previous 30 days, the member enters a silence period of 45 days. The system starts to delete the member until the silence period ends. For more information about the silence period, see <a href="https://help.aliyun.com/document_detail/446079.html">What is the silence period for member deletion?</a></li>
-         * </ul>
+         * <p>The Alibaba Cloud account ID of the member that you want to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

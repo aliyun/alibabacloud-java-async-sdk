@@ -80,7 +80,7 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * Events.
+         * <p>The queried events.</p>
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
@@ -88,7 +88,10 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cm****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -96,7 +99,10 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7701451-340B-5CB3-AEA7-7D831F7F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +168,10 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceGroupDisplayName.
+             * <p>The resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestGroupA</p>
              */
             public Builder resourceGroupDisplayName(String resourceGroupDisplayName) {
                 this.resourceGroupDisplayName = resourceGroupDisplayName;
@@ -170,7 +179,10 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekz25pfurj****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -237,7 +249,10 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceGroupDisplayName.
+             * <p>The resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestGroupB</p>
              */
             public Builder resourceGroupDisplayName(String resourceGroupDisplayName) {
                 this.resourceGroupDisplayName = resourceGroupDisplayName;
@@ -245,7 +260,10 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmwfrxcre****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -416,7 +434,10 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * ChangeType.
+             * <p>The type of the resource change event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Add</p>
              */
             public Builder changeType(String changeType) {
                 this.changeType = changeType;
@@ -424,7 +445,10 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * <p>The time when the event was triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-04T18:35:17Z</p>
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -432,7 +456,10 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -440,7 +467,10 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupDisplayName.
+             * <p>The resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ProjectA</p>
              */
             public Builder resourceGroupDisplayName(String resourceGroupDisplayName) {
                 this.resourceGroupDisplayName = resourceGroupDisplayName;
@@ -448,7 +478,10 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm2sohr74****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -456,7 +489,10 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9fpfe64****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -464,7 +500,11 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -472,7 +512,11 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Service.
+             * <p>The service code.</p>
+             * <p>You can obtain the code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -480,7 +524,7 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceResourceGroupInfo.
+             * <p>The source resource group.</p>
              */
             public Builder sourceResourceGroupInfo(SourceResourceGroupInfo sourceResourceGroupInfo) {
                 this.sourceResourceGroupInfo = sourceResourceGroupInfo;
@@ -488,7 +532,7 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetResourceGroupInfo.
+             * <p>The destination resource group.</p>
              */
             public Builder targetResourceGroupInfo(TargetResourceGroupInfo targetResourceGroupInfo) {
                 this.targetResourceGroupInfo = targetResourceGroupInfo;

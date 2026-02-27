@@ -158,7 +158,10 @@ public class LookupResourceGroupEventsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-11-30 23:43:16</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -167,6 +170,7 @@ public class LookupResourceGroupEventsRequest extends Request {
         }
 
         /**
+         * <p>The event type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +183,7 @@ public class LookupResourceGroupEventsRequest extends Request {
         }
 
         /**
-         * LookupAttributes.
+         * <p>The attributes used for advanced search.</p>
          */
         public Builder lookupAttributes(java.util.List<LookupAttributes> lookupAttributes) {
             this.putQueryParameter("LookupAttributes", lookupAttributes);
@@ -188,7 +192,11 @@ public class LookupResourceGroupEventsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -197,7 +205,10 @@ public class LookupResourceGroupEventsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cm****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -206,7 +217,10 @@ public class LookupResourceGroupEventsRequest extends Request {
         }
 
         /**
-         * ResourceGroupDisplayName.
+         * <p>The resource group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProjectA</p>
          */
         public Builder resourceGroupDisplayName(String resourceGroupDisplayName) {
             this.putQueryParameter("ResourceGroupDisplayName", resourceGroupDisplayName);
@@ -215,7 +229,10 @@ public class LookupResourceGroupEventsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-9gLOoK****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -224,7 +241,10 @@ public class LookupResourceGroupEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-11-30 23:43:16</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -292,7 +312,10 @@ public class LookupResourceGroupEventsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -300,7 +323,10 @@ public class LookupResourceGroupEventsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

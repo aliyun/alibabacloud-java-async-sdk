@@ -185,7 +185,11 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
         } 
 
         /**
-         * DisplayName.
+         * <p>The display name of the resource group. This parameter specifies a filter condition for the query. Fuzzy search is supported.</p>
+         * <p>The display name can be a maximum of 50 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestRG-BVT1</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -194,7 +198,17 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
         }
 
         /**
-         * IncludeTags.
+         * <p>Specifies whether to return the information of tags. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set a tag filter condition, the tag information is returned regardless of the <code>IncludeTags</code> value.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeTags(Boolean includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);
@@ -203,7 +217,11 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The identifier of the resource group. This parameter specifies a filter condition for the query. Fuzzy search is supported.</p>
+         * <p>The identifier can be a maximum of 50 characters in length and can contain letters, digits, and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-rg</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -212,7 +230,10 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,7 +242,10 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +254,7 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
         }
 
         /**
-         * ResourceGroupIds.
+         * <p>The IDs of the resource groups that you want to query.</p>
          */
         public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);
@@ -239,7 +263,10 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
         }
 
         /**
-         * ResourceRegionId.
+         * <p>The ID of the region where the resource resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder resourceRegionId(String resourceRegionId) {
             this.putQueryParameter("ResourceRegionId", resourceRegionId);
@@ -248,7 +275,7 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
         }
 
         /**
-         * ResourceTypes.
+         * <p>The resource types.</p>
          */
         public Builder resourceTypes(java.util.List<ResourceTypes> resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
@@ -257,7 +284,15 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the resource group. This parameter specifies a filter condition for the query. Valid values:</p>
+         * <ul>
+         * <li>Creating: The resource group is being created.</li>
+         * <li>OK: The resource group is created.</li>
+         * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -266,7 +301,7 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -334,7 +369,11 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
             } 
 
             /**
-             * ResourceTypeCode.
+             * <p>The resource type.</p>
+             * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceTypeCode(String resourceTypeCode) {
                 this.resourceTypeCode = resourceTypeCode;
@@ -342,7 +381,11 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
             }
 
             /**
-             * Service.
+             * <p>The service code.</p>
+             * <p>You can obtain the code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -409,7 +452,10 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -417,7 +463,10 @@ public class ListResourceGroupsWithAuthDetailsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
