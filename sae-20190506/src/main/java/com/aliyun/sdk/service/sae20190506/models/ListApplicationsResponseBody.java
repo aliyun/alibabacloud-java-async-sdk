@@ -1035,6 +1035,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsStateful")
         private Boolean isStateful;
 
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.Map<String, String> labels;
+
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
@@ -1088,6 +1091,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.imageUrl = builder.imageUrl;
             this.instances = builder.instances;
             this.isStateful = builder.isStateful;
+            this.labels = builder.labels;
             this.mem = builder.mem;
             this.mseEnabled = builder.mseEnabled;
             this.mseNamespaceId = builder.mseNamespaceId;
@@ -1203,6 +1207,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return labels
+         */
+        public java.util.Map<String, String> getLabels() {
+            return this.labels;
+        }
+
+        /**
          * @return mem
          */
         public Integer getMem() {
@@ -1307,6 +1318,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String imageUrl; 
             private Integer instances; 
             private Boolean isStateful; 
+            private java.util.Map<String, String> labels; 
             private Integer mem; 
             private Boolean mseEnabled; 
             private String mseNamespaceId; 
@@ -1338,6 +1350,7 @@ public class ListApplicationsResponseBody extends TeaModel {
                 this.imageUrl = model.imageUrl;
                 this.instances = model.instances;
                 this.isStateful = model.isStateful;
+                this.labels = model.labels;
                 this.mem = model.mem;
                 this.mseEnabled = model.mseEnabled;
                 this.mseNamespaceId = model.mseNamespaceId;
@@ -1500,6 +1513,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder isStateful(Boolean isStateful) {
                 this.isStateful = isStateful;
+                return this;
+            }
+
+            /**
+             * Labels.
+             */
+            public Builder labels(java.util.Map<String, String> labels) {
+                this.labels = labels;
                 return this;
             }
 
