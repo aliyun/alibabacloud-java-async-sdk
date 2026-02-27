@@ -20,8 +20,14 @@ public class OpenStructSaseDepartment extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DepartmentId")
     private String departmentId;
 
+    @com.aliyun.core.annotation.NameInMap("FullDepartmentIdPath")
+    private String fullDepartmentIdPath;
+
     @com.aliyun.core.annotation.NameInMap("FullDn")
     private String fullDn;
+
+    @com.aliyun.core.annotation.NameInMap("IdpId")
+    private Long idpId;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
@@ -31,7 +37,9 @@ public class OpenStructSaseDepartment extends TeaModel {
 
     private OpenStructSaseDepartment(Builder builder) {
         this.departmentId = builder.departmentId;
+        this.fullDepartmentIdPath = builder.fullDepartmentIdPath;
         this.fullDn = builder.fullDn;
+        this.idpId = builder.idpId;
         this.name = builder.name;
         this.parentDepartmentId = builder.parentDepartmentId;
     }
@@ -56,10 +64,24 @@ public class OpenStructSaseDepartment extends TeaModel {
     }
 
     /**
+     * @return fullDepartmentIdPath
+     */
+    public String getFullDepartmentIdPath() {
+        return this.fullDepartmentIdPath;
+    }
+
+    /**
      * @return fullDn
      */
     public String getFullDn() {
         return this.fullDn;
+    }
+
+    /**
+     * @return idpId
+     */
+    public Long getIdpId() {
+        return this.idpId;
     }
 
     /**
@@ -78,7 +100,9 @@ public class OpenStructSaseDepartment extends TeaModel {
 
     public static final class Builder {
         private String departmentId; 
+        private String fullDepartmentIdPath; 
         private String fullDn; 
+        private Long idpId; 
         private String name; 
         private String parentDepartmentId; 
 
@@ -87,7 +111,9 @@ public class OpenStructSaseDepartment extends TeaModel {
 
         private Builder(OpenStructSaseDepartment model) {
             this.departmentId = model.departmentId;
+            this.fullDepartmentIdPath = model.fullDepartmentIdPath;
             this.fullDn = model.fullDn;
+            this.idpId = model.idpId;
             this.name = model.name;
             this.parentDepartmentId = model.parentDepartmentId;
         } 
@@ -101,10 +127,26 @@ public class OpenStructSaseDepartment extends TeaModel {
         }
 
         /**
+         * FullDepartmentIdPath.
+         */
+        public Builder fullDepartmentIdPath(String fullDepartmentIdPath) {
+            this.fullDepartmentIdPath = fullDepartmentIdPath;
+            return this;
+        }
+
+        /**
          * FullDn.
          */
         public Builder fullDn(String fullDn) {
             this.fullDn = fullDn;
+            return this;
+        }
+
+        /**
+         * IdpId.
+         */
+        public Builder idpId(Long idpId) {
+            this.idpId = idpId;
             return this;
         }
 

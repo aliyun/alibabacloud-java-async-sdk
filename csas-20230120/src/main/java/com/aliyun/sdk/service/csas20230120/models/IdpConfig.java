@@ -41,6 +41,9 @@ public class IdpConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IdpConfigId")
     private String idpConfigId;
 
+    @com.aliyun.core.annotation.NameInMap("IdpId")
+    private Long idpId;
+
     @com.aliyun.core.annotation.NameInMap("LastSyncTimeUnix")
     private Long lastSyncTimeUnix;
 
@@ -80,6 +83,7 @@ public class IdpConfig extends TeaModel {
         this.feishuConfig = builder.feishuConfig;
         this.idaasConfig = builder.idaasConfig;
         this.idpConfigId = builder.idpConfigId;
+        this.idpId = builder.idpId;
         this.lastSyncTimeUnix = builder.lastSyncTimeUnix;
         this.ldapConfig = builder.ldapConfig;
         this.loginConfig = builder.loginConfig;
@@ -161,6 +165,13 @@ public class IdpConfig extends TeaModel {
     }
 
     /**
+     * @return idpId
+     */
+    public Long getIdpId() {
+        return this.idpId;
+    }
+
+    /**
      * @return lastSyncTimeUnix
      */
     public Long getLastSyncTimeUnix() {
@@ -239,6 +250,7 @@ public class IdpConfig extends TeaModel {
         private IdpFeishuSubConfig feishuConfig; 
         private IdpIdaas2SubConfig idaasConfig; 
         private String idpConfigId; 
+        private Long idpId; 
         private Long lastSyncTimeUnix; 
         private IdpLdapSubConfig ldapConfig; 
         private IdpLoginConfig loginConfig; 
@@ -262,6 +274,7 @@ public class IdpConfig extends TeaModel {
             this.feishuConfig = model.feishuConfig;
             this.idaasConfig = model.idaasConfig;
             this.idpConfigId = model.idpConfigId;
+            this.idpId = model.idpId;
             this.lastSyncTimeUnix = model.lastSyncTimeUnix;
             this.ldapConfig = model.ldapConfig;
             this.loginConfig = model.loginConfig;
@@ -335,6 +348,14 @@ public class IdpConfig extends TeaModel {
          */
         public Builder idpConfigId(String idpConfigId) {
             this.idpConfigId = idpConfigId;
+            return this;
+        }
+
+        /**
+         * IdpId.
+         */
+        public Builder idpId(Long idpId) {
+            this.idpId = idpId;
             return this;
         }
 

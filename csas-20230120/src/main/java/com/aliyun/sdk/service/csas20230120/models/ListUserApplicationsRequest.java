@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListUserApplicationsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
+    private String address;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
@@ -38,6 +42,7 @@ public class ListUserApplicationsRequest extends Request {
 
     private ListUserApplicationsRequest(Builder builder) {
         super(builder);
+        this.address = builder.address;
         this.currentPage = builder.currentPage;
         this.name = builder.name;
         this.pageSize = builder.pageSize;
@@ -55,6 +60,13 @@ public class ListUserApplicationsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return address
+     */
+    public String getAddress() {
+        return this.address;
     }
 
     /**
@@ -86,6 +98,7 @@ public class ListUserApplicationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListUserApplicationsRequest, Builder> {
+        private String address; 
         private Integer currentPage; 
         private String name; 
         private Integer pageSize; 
@@ -97,11 +110,21 @@ public class ListUserApplicationsRequest extends Request {
 
         private Builder(ListUserApplicationsRequest request) {
             super(request);
+            this.address = request.address;
             this.currentPage = request.currentPage;
             this.name = request.name;
             this.pageSize = request.pageSize;
             this.saseUserId = request.saseUserId;
         } 
+
+        /**
+         * Address.
+         */
+        public Builder address(String address) {
+            this.putQueryParameter("Address", address);
+            this.address = address;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
