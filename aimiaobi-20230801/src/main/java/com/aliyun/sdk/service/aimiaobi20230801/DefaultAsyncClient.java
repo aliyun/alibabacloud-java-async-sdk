@@ -2507,6 +2507,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>根据任务ID查询视频审校结果，包含视频信息、分镜信息和审核结果</p>
+     * 
+     * @param request the request parameters of QueryVideoAuditResult  QueryVideoAuditResultRequest
+     * @return QueryVideoAuditResultResponse
+     */
+    @Override
+    public CompletableFuture<QueryVideoAuditResultResponse> queryVideoAuditResult(QueryVideoAuditResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryVideoAuditResult").setMethod(HttpMethod.POST).setPathRegex("/quanmiao/aimiaobi/pop/videoAudit/queryVideoAuditResult").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryVideoAuditResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryVideoAuditResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RunAbbreviationContent  RunAbbreviationContentRequest
      * @return RunAbbreviationContentResponse
      */
@@ -3915,6 +3936,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitTopicSelectionPerspectiveAnalysisTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>提交视频审校任务，支持传入fileKey或url，系统会对视频进行分镜检测、抽帧审核，返回任务ID</p>
+     * 
+     * @param request the request parameters of SubmitVideoAudit  SubmitVideoAuditRequest
+     * @return SubmitVideoAuditResponse
+     */
+    @Override
+    public CompletableFuture<SubmitVideoAuditResponse> submitVideoAudit(SubmitVideoAuditRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitVideoAudit").setMethod(HttpMethod.POST).setPathRegex("/quanmiao/aimiaobi/pop/videoAudit/submitVideoAudit").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitVideoAuditResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitVideoAuditResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

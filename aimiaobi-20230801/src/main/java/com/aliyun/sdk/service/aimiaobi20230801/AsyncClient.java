@@ -842,6 +842,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryAuditTaskResponse> queryAuditTask(QueryAuditTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>根据任务ID查询视频审校结果，包含视频信息、分镜信息和审核结果</p>
+     * 
+     * @param request the request parameters of QueryVideoAuditResult  QueryVideoAuditResultRequest
+     * @return QueryVideoAuditResultResponse
+     */
+    CompletableFuture<QueryVideoAuditResultResponse> queryVideoAuditResult(QueryVideoAuditResultRequest request);
+
+    /**
      * @param request the request parameters of RunAbbreviationContent  RunAbbreviationContentRequest
      * @return RunAbbreviationContentResponse
      */
@@ -1262,6 +1271,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitTopicSelectionPerspectiveAnalysisTaskResponse
      */
     CompletableFuture<SubmitTopicSelectionPerspectiveAnalysisTaskResponse> submitTopicSelectionPerspectiveAnalysisTask(SubmitTopicSelectionPerspectiveAnalysisTaskRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>提交视频审校任务，支持传入fileKey或url，系统会对视频进行分镜检测、抽帧审核，返回任务ID</p>
+     * 
+     * @param request the request parameters of SubmitVideoAudit  SubmitVideoAuditRequest
+     * @return SubmitVideoAuditResponse
+     */
+    CompletableFuture<SubmitVideoAuditResponse> submitVideoAudit(SubmitVideoAuditRequest request);
 
     /**
      * @param request the request parameters of UpdateCustomText  UpdateCustomTextRequest
