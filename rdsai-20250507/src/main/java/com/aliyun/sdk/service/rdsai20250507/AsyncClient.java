@@ -67,6 +67,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateScheduledTaskResponse> createScheduledTask(CreateScheduledTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateSkill  CreateSkillRequest
+     * @return CreateSkillResponse
+     */
+    CompletableFuture<CreateSkillResponse> createSkill(CreateSkillRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engine</h3>
      * <p>RDS PostgreSQL</p>
@@ -93,6 +99,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteScheduledTaskResponse
      */
     CompletableFuture<DeleteScheduledTaskResponse> deleteScheduledTask(DeleteScheduledTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSkill  DeleteSkillRequest
+     * @return DeleteSkillResponse
+     */
+    CompletableFuture<DeleteSkillResponse> deleteSkill(DeleteSkillRequest request);
 
     /**
      * <b>description</b> :
@@ -230,6 +242,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetScheduledReportsResponse> getScheduledReports(GetScheduledReportsRequest request);
 
     /**
+     * @param request the request parameters of GetSkill  GetSkillRequest
+     * @return GetSkillResponse
+     */
+    CompletableFuture<GetSkillResponse> getSkill(GetSkillRequest request);
+
+    /**
      * @param request the request parameters of GetStandAloneReports  GetStandAloneReportsRequest
      * @return GetStandAloneReportsResponse
      */
@@ -252,6 +270,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListScheduledTasksResponse
      */
     CompletableFuture<ListScheduledTasksResponse> listScheduledTasks(ListScheduledTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListSkill  ListSkillRequest
+     * @return ListSkillResponse
+     */
+    CompletableFuture<ListSkillResponse> listSkill(ListSkillRequest request);
 
     /**
      * <b>description</b> :
@@ -396,5 +420,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCustomAgentResponse
      */
     CompletableFuture<UpdateCustomAgentResponse> updateCustomAgent(UpdateCustomAgentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSkill  UpdateSkillRequest
+     * @return UpdateSkillResponse
+     */
+    CompletableFuture<UpdateSkillResponse> updateSkill(UpdateSkillRequest request);
 
 }
