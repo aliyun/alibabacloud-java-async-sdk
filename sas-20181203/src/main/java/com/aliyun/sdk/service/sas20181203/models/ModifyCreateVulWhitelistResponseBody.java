@@ -78,7 +78,8 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the information about the whitelist.</p>
+         * <p>Vulnerability whitelist information. 
+         * <notice> This data is not returned when adding or updating the vulnerability whitelist in batches, it is only returned when adding or updating a single vulnerability whitelist entry. </notice></p>
          */
         public Builder vulWhitelistList(VulWhitelistList vulWhitelistList) {
             this.vulWhitelistList = vulWhitelistList;
@@ -131,7 +132,10 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>Vulnerability whitelist ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1002</p>
              */
             public Builder id(Long id) {
                 this.id = id;

@@ -560,6 +560,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Details")
         private java.util.List<Details> details;
 
+        @com.aliyun.core.annotation.NameInMap("DetectSource")
+        private String detectSource;
+
         @com.aliyun.core.annotation.NameInMap("DisplaySandboxResult")
         private Boolean displaySandboxResult;
 
@@ -695,6 +698,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             this.dataSource = builder.dataSource;
             this.desc = builder.desc;
             this.details = builder.details;
+            this.detectSource = builder.detectSource;
             this.displaySandboxResult = builder.displaySandboxResult;
             this.eventNotes = builder.eventNotes;
             this.eventStatus = builder.eventStatus;
@@ -861,6 +865,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
          */
         public java.util.List<Details> getDetails() {
             return this.details;
+        }
+
+        /**
+         * @return detectSource
+         */
+        public String getDetectSource() {
+            return this.detectSource;
         }
 
         /**
@@ -1154,6 +1165,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String dataSource; 
             private String desc; 
             private java.util.List<Details> details; 
+            private String detectSource; 
             private Boolean displaySandboxResult; 
             private java.util.List<EventNotes> eventNotes; 
             private Integer eventStatus; 
@@ -1215,6 +1227,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
                 this.dataSource = model.dataSource;
                 this.desc = model.desc;
                 this.details = model.details;
+                this.detectSource = model.detectSource;
                 this.displaySandboxResult = model.displaySandboxResult;
                 this.eventNotes = model.eventNotes;
                 this.eventStatus = model.eventStatus;
@@ -1449,6 +1462,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              */
             public Builder details(java.util.List<Details> details) {
                 this.details = details;
+                return this;
+            }
+
+            /**
+             * DetectSource.
+             */
+            public Builder detectSource(String detectSource) {
+                this.detectSource = detectSource;
                 return this;
             }
 

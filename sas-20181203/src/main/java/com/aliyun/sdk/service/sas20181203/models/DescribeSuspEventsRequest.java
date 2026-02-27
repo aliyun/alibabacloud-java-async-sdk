@@ -46,6 +46,10 @@ public class DescribeSuspEventsRequest extends Request {
     private String dealed;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DetectSource")
+    private String detectSource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventNames")
     private String eventNames;
 
@@ -170,6 +174,7 @@ public class DescribeSuspEventsRequest extends Request {
         this.containerFieldValue = builder.containerFieldValue;
         this.currentPage = builder.currentPage;
         this.dealed = builder.dealed;
+        this.detectSource = builder.detectSource;
         this.eventNames = builder.eventNames;
         this.from = builder.from;
         this.groupId = builder.groupId;
@@ -261,6 +266,13 @@ public class DescribeSuspEventsRequest extends Request {
      */
     public String getDealed() {
         return this.dealed;
+    }
+
+    /**
+     * @return detectSource
+     */
+    public String getDetectSource() {
+        return this.detectSource;
     }
 
     /**
@@ -474,6 +486,7 @@ public class DescribeSuspEventsRequest extends Request {
         private String containerFieldValue; 
         private String currentPage; 
         private String dealed; 
+        private String detectSource; 
         private String eventNames; 
         private String from; 
         private Long groupId; 
@@ -517,6 +530,7 @@ public class DescribeSuspEventsRequest extends Request {
             this.containerFieldValue = request.containerFieldValue;
             this.currentPage = request.currentPage;
             this.dealed = request.dealed;
+            this.detectSource = request.detectSource;
             this.eventNames = request.eventNames;
             this.from = request.from;
             this.groupId = request.groupId;
@@ -647,6 +661,15 @@ public class DescribeSuspEventsRequest extends Request {
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
             this.dealed = dealed;
+            return this;
+        }
+
+        /**
+         * DetectSource.
+         */
+        public Builder detectSource(String detectSource) {
+            this.putQueryParameter("DetectSource", detectSource);
+            this.detectSource = detectSource;
             return this;
         }
 
