@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.wyota20210420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AddTerminalsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AddTerminalParams")
-    private java.util.List < AddTerminalParams> addTerminalParams;
+    private java.util.List<AddTerminalParams> addTerminalParams;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MainBizType")
+    private String mainBizType;
 
     private AddTerminalsRequest(Builder builder) {
         super(builder);
         this.addTerminalParams = builder.addTerminalParams;
+        this.mainBizType = builder.mainBizType;
     }
 
     public static Builder builder() {
@@ -29,7 +39,7 @@ public class AddTerminalsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -37,12 +47,20 @@ public class AddTerminalsRequest extends Request {
     /**
      * @return addTerminalParams
      */
-    public java.util.List < AddTerminalParams> getAddTerminalParams() {
+    public java.util.List<AddTerminalParams> getAddTerminalParams() {
         return this.addTerminalParams;
     }
 
+    /**
+     * @return mainBizType
+     */
+    public String getMainBizType() {
+        return this.mainBizType;
+    }
+
     public static final class Builder extends Request.Builder<AddTerminalsRequest, Builder> {
-        private java.util.List < AddTerminalParams> addTerminalParams; 
+        private java.util.List<AddTerminalParams> addTerminalParams; 
+        private String mainBizType; 
 
         private Builder() {
             super();
@@ -51,14 +69,24 @@ public class AddTerminalsRequest extends Request {
         private Builder(AddTerminalsRequest request) {
             super(request);
             this.addTerminalParams = request.addTerminalParams;
+            this.mainBizType = request.mainBizType;
         } 
 
         /**
          * AddTerminalParams.
          */
-        public Builder addTerminalParams(java.util.List < AddTerminalParams> addTerminalParams) {
+        public Builder addTerminalParams(java.util.List<AddTerminalParams> addTerminalParams) {
             this.putBodyParameter("AddTerminalParams", addTerminalParams);
             this.addTerminalParams = addTerminalParams;
+            return this;
+        }
+
+        /**
+         * MainBizType.
+         */
+        public Builder mainBizType(String mainBizType) {
+            this.putBodyParameter("MainBizType", mainBizType);
+            this.mainBizType = mainBizType;
             return this;
         }
 
@@ -148,6 +176,17 @@ public class AddTerminalsRequest extends Request {
             private String serialNumber; 
             private String terminalGroupId; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddTerminalParams model) {
+                this.alias = model.alias;
+                this.clientType = model.clientType;
+                this.serialNumber = model.serialNumber;
+                this.terminalGroupId = model.terminalGroupId;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * Alias.

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.wyota20210420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDeviceSeatsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -51,6 +56,10 @@ public class DescribeDeviceSeatsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -61,7 +70,7 @@ public class DescribeDeviceSeatsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -102,12 +111,25 @@ public class DescribeDeviceSeatsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDeviceSeatsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -120,7 +142,7 @@ public class DescribeDeviceSeatsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -274,6 +296,19 @@ public class DescribeDeviceSeatsResponseBody extends TeaModel {
             private String serialNo; 
             private String siteId; 
             private String siteName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.seatCol = model.seatCol;
+                this.seatName = model.seatName;
+                this.seatNo = model.seatNo;
+                this.seatRow = model.seatRow;
+                this.serialNo = model.serialNo;
+                this.siteId = model.siteId;
+                this.siteName = model.siteName;
+            } 
 
             /**
              * SeatCol.

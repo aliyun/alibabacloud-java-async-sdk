@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.wyota20210420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class SendOpsMessageToTerminalsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Uuids")
-    private java.util.List < String > uuids;
+    private java.util.List<String> uuids;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WaitForAck")
@@ -49,7 +54,7 @@ public class SendOpsMessageToTerminalsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -78,7 +83,7 @@ public class SendOpsMessageToTerminalsRequest extends Request {
     /**
      * @return uuids
      */
-    public java.util.List < String > getUuids() {
+    public java.util.List<String> getUuids() {
         return this.uuids;
     }
 
@@ -93,7 +98,7 @@ public class SendOpsMessageToTerminalsRequest extends Request {
         private Boolean delay; 
         private String msg; 
         private String opsAction; 
-        private java.util.List < String > uuids; 
+        private java.util.List<String> uuids; 
         private Boolean waitForAck; 
 
         private Builder() {
@@ -139,7 +144,7 @@ public class SendOpsMessageToTerminalsRequest extends Request {
         /**
          * Uuids.
          */
-        public Builder uuids(java.util.List < String > uuids) {
+        public Builder uuids(java.util.List<String> uuids) {
             this.putBodyParameter("Uuids", uuids);
             this.uuids = uuids;
             return this;

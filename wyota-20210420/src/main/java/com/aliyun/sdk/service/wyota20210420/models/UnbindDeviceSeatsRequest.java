@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.wyota20210420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UnbindDeviceSeatsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SerialNoList")
-    private java.util.List < String > serialNoList;
+    private java.util.List<String> serialNoList;
 
     private UnbindDeviceSeatsRequest(Builder builder) {
         super(builder);
@@ -29,7 +34,7 @@ public class UnbindDeviceSeatsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -37,12 +42,12 @@ public class UnbindDeviceSeatsRequest extends Request {
     /**
      * @return serialNoList
      */
-    public java.util.List < String > getSerialNoList() {
+    public java.util.List<String> getSerialNoList() {
         return this.serialNoList;
     }
 
     public static final class Builder extends Request.Builder<UnbindDeviceSeatsRequest, Builder> {
-        private java.util.List < String > serialNoList; 
+        private java.util.List<String> serialNoList; 
 
         private Builder() {
             super();
@@ -56,7 +61,7 @@ public class UnbindDeviceSeatsRequest extends Request {
         /**
          * SerialNoList.
          */
-        public Builder serialNoList(java.util.List < String > serialNoList) {
+        public Builder serialNoList(java.util.List<String> serialNoList) {
             String serialNoListShrink = shrink(serialNoList, "SerialNoList", "json");
             this.putBodyParameter("SerialNoList", serialNoListShrink);
             this.serialNoList = serialNoList;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.wyota20210420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListTerminalResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -55,6 +60,10 @@ public class ListTerminalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,7 +74,7 @@ public class ListTerminalResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -113,13 +122,27 @@ public class ListTerminalResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTerminalResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -132,7 +155,7 @@ public class ListTerminalResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -415,6 +438,29 @@ public class ListTerminalResponseBody extends TeaModel {
             private String serialNumber; 
             private String terminalGroupId; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alias = model.alias;
+                this.bindUserCount = model.bindUserCount;
+                this.bindUserId = model.bindUserId;
+                this.buildId = model.buildId;
+                this.clientType = model.clientType;
+                this.desktopId = model.desktopId;
+                this.inManage = model.inManage;
+                this.ipv4 = model.ipv4;
+                this.lastLoginUser = model.lastLoginUser;
+                this.locationInfo = model.locationInfo;
+                this.lockSettings = model.lockSettings;
+                this.loginUser = model.loginUser;
+                this.model = model.model;
+                this.onlineStatus = model.onlineStatus;
+                this.serialNumber = model.serialNumber;
+                this.terminalGroupId = model.terminalGroupId;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * Alias.

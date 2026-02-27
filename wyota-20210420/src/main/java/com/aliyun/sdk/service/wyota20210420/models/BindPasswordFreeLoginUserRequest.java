@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.wyota20210420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,6 +22,10 @@ public class BindPasswordFreeLoginUserRequest extends Request {
     private String endUserId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MainBizType")
+    private String mainBizType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SerialNumber")
     private String serialNumber;
 
@@ -27,6 +36,7 @@ public class BindPasswordFreeLoginUserRequest extends Request {
     private BindPasswordFreeLoginUserRequest(Builder builder) {
         super(builder);
         this.endUserId = builder.endUserId;
+        this.mainBizType = builder.mainBizType;
         this.serialNumber = builder.serialNumber;
         this.uuid = builder.uuid;
     }
@@ -39,7 +49,7 @@ public class BindPasswordFreeLoginUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,6 +59,13 @@ public class BindPasswordFreeLoginUserRequest extends Request {
      */
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    /**
+     * @return mainBizType
+     */
+    public String getMainBizType() {
+        return this.mainBizType;
     }
 
     /**
@@ -67,6 +84,7 @@ public class BindPasswordFreeLoginUserRequest extends Request {
 
     public static final class Builder extends Request.Builder<BindPasswordFreeLoginUserRequest, Builder> {
         private String endUserId; 
+        private String mainBizType; 
         private String serialNumber; 
         private String uuid; 
 
@@ -77,6 +95,7 @@ public class BindPasswordFreeLoginUserRequest extends Request {
         private Builder(BindPasswordFreeLoginUserRequest request) {
             super(request);
             this.endUserId = request.endUserId;
+            this.mainBizType = request.mainBizType;
             this.serialNumber = request.serialNumber;
             this.uuid = request.uuid;
         } 
@@ -87,6 +106,15 @@ public class BindPasswordFreeLoginUserRequest extends Request {
         public Builder endUserId(String endUserId) {
             this.putBodyParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
+            return this;
+        }
+
+        /**
+         * MainBizType.
+         */
+        public Builder mainBizType(String mainBizType) {
+            this.putBodyParameter("MainBizType", mainBizType);
+            this.mainBizType = mainBizType;
             return this;
         }
 

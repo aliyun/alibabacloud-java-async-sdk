@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.wyota20210420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class DescribeDeviceSeatsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SerialNoList")
-    private java.util.List < String > serialNoList;
+    private java.util.List<String> serialNoList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SiteId")
@@ -54,7 +59,7 @@ public class DescribeDeviceSeatsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +88,7 @@ public class DescribeDeviceSeatsRequest extends Request {
     /**
      * @return serialNoList
      */
-    public java.util.List < String > getSerialNoList() {
+    public java.util.List<String> getSerialNoList() {
         return this.serialNoList;
     }
 
@@ -105,7 +110,7 @@ public class DescribeDeviceSeatsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String serialNo; 
-        private java.util.List < String > serialNoList; 
+        private java.util.List<String> serialNoList; 
         private String siteId; 
         private String tenantId; 
 
@@ -153,7 +158,7 @@ public class DescribeDeviceSeatsRequest extends Request {
         /**
          * SerialNoList.
          */
-        public Builder serialNoList(java.util.List < String > serialNoList) {
+        public Builder serialNoList(java.util.List<String> serialNoList) {
             this.putBodyParameter("SerialNoList", serialNoList);
             this.serialNoList = serialNoList;
             return this;

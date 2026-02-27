@@ -19,140 +19,64 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
-    CompletableFuture<ActivateDeviceResponse> activateDevice(ActivateDeviceRequest request);
-
-    CompletableFuture<AddDeviceFromSNResponse> addDeviceFromSN(AddDeviceFromSNRequest request);
-
-    CompletableFuture<AddDeviceSeatsAndLabelsResponse> addDeviceSeatsAndLabels(AddDeviceSeatsAndLabelsRequest request);
-
-    CompletableFuture<AddDevicesFromCSVResponse> addDevicesFromCSV(AddDevicesFromCSVRequest request);
-
-    CompletableFuture<AddLabelsResponse> addLabels(AddLabelsRequest request);
-
-    CompletableFuture<AddOrUpdateDeviceSeatsResponse> addOrUpdateDeviceSeats(AddOrUpdateDeviceSeatsRequest request);
-
+    /**
+     * @param request the request parameters of AddTerminal  AddTerminalRequest
+     * @return AddTerminalResponse
+     */
     CompletableFuture<AddTerminalResponse> addTerminal(AddTerminalRequest request);
 
+    /**
+     * @param request the request parameters of AddTerminals  AddTerminalsRequest
+     * @return AddTerminalsResponse
+     */
     CompletableFuture<AddTerminalsResponse> addTerminals(AddTerminalsRequest request);
 
-    CompletableFuture<AttachEndUsersResponse> attachEndUsers(AttachEndUsersRequest request);
-
-    CompletableFuture<AttachLabelResponse> attachLabel(AttachLabelRequest request);
-
-    CompletableFuture<AttachLabelsResponse> attachLabels(AttachLabelsRequest request);
-
+    /**
+     * @param request the request parameters of BindAccountLessLoginUser  BindAccountLessLoginUserRequest
+     * @return BindAccountLessLoginUserResponse
+     */
     CompletableFuture<BindAccountLessLoginUserResponse> bindAccountLessLoginUser(BindAccountLessLoginUserRequest request);
 
+    /**
+     * @param request the request parameters of BindPasswordFreeLoginUser  BindPasswordFreeLoginUserRequest
+     * @return BindPasswordFreeLoginUserResponse
+     */
     CompletableFuture<BindPasswordFreeLoginUserResponse> bindPasswordFreeLoginUser(BindPasswordFreeLoginUserRequest request);
 
-    CompletableFuture<CheckUuidValidResponse> checkUuidValid(CheckUuidValidRequest request);
-
-    CompletableFuture<CreateAppOtaTaskResponse> createAppOtaTask(CreateAppOtaTaskRequest request);
-
-    CompletableFuture<CreateAppOtaVersionResponse> createAppOtaVersion(CreateAppOtaVersionRequest request);
-
-    CompletableFuture<DeleteAppOtaVersionsResponse> deleteAppOtaVersions(DeleteAppOtaVersionsRequest request);
-
-    CompletableFuture<DeleteDevicesResponse> deleteDevices(DeleteDevicesRequest request);
-
-    CompletableFuture<DeleteLabelResponse> deleteLabel(DeleteLabelRequest request);
-
-    CompletableFuture<DescribeAppOtaVersionResponse> describeAppOtaVersion(DescribeAppOtaVersionRequest request);
-
+    /**
+     * @param request the request parameters of DescribeDeviceSeats  DescribeDeviceSeatsRequest
+     * @return DescribeDeviceSeatsResponse
+     */
     CompletableFuture<DescribeDeviceSeatsResponse> describeDeviceSeats(DescribeDeviceSeatsRequest request);
 
-    CompletableFuture<DescribeDeviceVersionDetailResponse> describeDeviceVersionDetail(DescribeDeviceVersionDetailRequest request);
-
-    CompletableFuture<DescribeSnLabelCountsResponse> describeSnLabelCounts(DescribeSnLabelCountsRequest request);
-
-    CompletableFuture<DescribeWorkZonesResponse> describeWorkZones(DescribeWorkZonesRequest request);
-
-    CompletableFuture<DetachEndUsersResponse> detachEndUsers(DetachEndUsersRequest request);
-
-    CompletableFuture<DetachLabelResponse> detachLabel(DetachLabelRequest request);
-
-    CompletableFuture<DetachLabelsResponse> detachLabels(DetachLabelsRequest request);
-
-    CompletableFuture<GenerateOssUrlResponse> generateOssUrl(GenerateOssUrlRequest request);
-
-    CompletableFuture<GetAppOtaLatestVersionResponse> getAppOtaLatestVersion(GetAppOtaLatestVersionRequest request);
-
-    CompletableFuture<GetDeviceConfigsResponse> getDeviceConfigs(GetDeviceConfigsRequest request);
-
-    CompletableFuture<GetDeviceOtaAutoStatusResponse> getDeviceOtaAutoStatus(GetDeviceOtaAutoStatusRequest request);
-
-    CompletableFuture<GetDeviceOtaInfoResponse> getDeviceOtaInfo(GetDeviceOtaInfoRequest request);
-
-    CompletableFuture<GetDeviceOtaInfoTestResponse> getDeviceOtaInfoTest(GetDeviceOtaInfoTestRequest request);
-
-    CompletableFuture<GetDeviceOtaTaskVersionInfoResponse> getDeviceOtaTaskVersionInfo(GetDeviceOtaTaskVersionInfoRequest request);
-
-    CompletableFuture<GetDeviceUpgradeStatusResponse> getDeviceUpgradeStatus(GetDeviceUpgradeStatusRequest request);
-
-    CompletableFuture<GetExportDeviceInfoOssUrlResponse> getExportDeviceInfoOssUrl(GetExportDeviceInfoOssUrlRequest request);
-
-    CompletableFuture<GetFbOssConfigResponse> getFbOssConfig(GetFbOssConfigRequest request);
-
-    CompletableFuture<GetOssConfigResponse> getOssConfig(GetOssConfigRequest request);
-
-    CompletableFuture<GetVersionDownloadUrlResponse> getVersionDownloadUrl(GetVersionDownloadUrlRequest request);
-
-    CompletableFuture<ListDeviceOtaTaskByTenantResponse> listDeviceOtaTaskByTenant(ListDeviceOtaTaskByTenantRequest request);
-
-    CompletableFuture<ListDeviceSeatsResponse> listDeviceSeats(ListDeviceSeatsRequest request);
-
-    CompletableFuture<ListDevicesResponse> listDevices(ListDevicesRequest request);
-
-    CompletableFuture<ListFbIssueLabelsResponse> listFbIssueLabels(ListFbIssueLabelsRequest request);
-
-    CompletableFuture<ListFbIssueLabelsByLCResponse> listFbIssueLabelsByLC(ListFbIssueLabelsByLCRequest request);
-
-    CompletableFuture<ListLabelsResponse> listLabels(ListLabelsRequest request);
-
-    CompletableFuture<ListTenantDeviceOtaInfoResponse> listTenantDeviceOtaInfo(ListTenantDeviceOtaInfoRequest request);
-
+    /**
+     * @param request the request parameters of ListTerminal  ListTerminalRequest
+     * @return ListTerminalResponse
+     */
     CompletableFuture<ListTerminalResponse> listTerminal(ListTerminalRequest request);
 
-    CompletableFuture<ListTerminalsResponse> listTerminals(ListTerminalsRequest request);
-
-    CompletableFuture<ListTrustDevicesResponse> listTrustDevices(ListTrustDevicesRequest request);
-
-    CompletableFuture<ListUserFbAcIssuesResponse> listUserFbAcIssues(ListUserFbAcIssuesRequest request);
-
-    CompletableFuture<ListUserFbIssuesResponse> listUserFbIssues(ListUserFbIssuesRequest request);
-
-    CompletableFuture<ModifyDevicesSecureNetworkTypeResponse> modifyDevicesSecureNetworkType(ModifyDevicesSecureNetworkTypeRequest request);
-
-    CompletableFuture<ModifySecureNetworkTypeResponse> modifySecureNetworkType(ModifySecureNetworkTypeRequest request);
-
-    CompletableFuture<RegisterDeviceResponse> registerDevice(RegisterDeviceRequest request);
-
-    CompletableFuture<ReportAppOtaInfoResponse> reportAppOtaInfo(ReportAppOtaInfoRequest request);
-
-    CompletableFuture<ReportDeviceOtaInfoResponse> reportDeviceOtaInfo(ReportDeviceOtaInfoRequest request);
-
-    CompletableFuture<ReportUserFbAcIssueResponse> reportUserFbAcIssue(ReportUserFbAcIssueRequest request);
-
-    CompletableFuture<ReportUserFbIssueResponse> reportUserFbIssue(ReportUserFbIssueRequest request);
-
+    /**
+     * @param request the request parameters of SendOpsMessageToTerminals  SendOpsMessageToTerminalsRequest
+     * @return SendOpsMessageToTerminalsResponse
+     */
     CompletableFuture<SendOpsMessageToTerminalsResponse> sendOpsMessageToTerminals(SendOpsMessageToTerminalsRequest request);
 
-    CompletableFuture<SetDeviceOtaAutoStatusResponse> setDeviceOtaAutoStatus(SetDeviceOtaAutoStatusRequest request);
-
-    CompletableFuture<SetDeviceOtaTaskStatusResponse> setDeviceOtaTaskStatus(SetDeviceOtaTaskStatusRequest request);
-
+    /**
+     * @param request the request parameters of UnbindAccountLessLoginUser  UnbindAccountLessLoginUserRequest
+     * @return UnbindAccountLessLoginUserResponse
+     */
     CompletableFuture<UnbindAccountLessLoginUserResponse> unbindAccountLessLoginUser(UnbindAccountLessLoginUserRequest request);
 
+    /**
+     * @param request the request parameters of UnbindDeviceSeats  UnbindDeviceSeatsRequest
+     * @return UnbindDeviceSeatsResponse
+     */
     CompletableFuture<UnbindDeviceSeatsResponse> unbindDeviceSeats(UnbindDeviceSeatsRequest request);
 
+    /**
+     * @param request the request parameters of UnbindPasswordFreeLoginUser  UnbindPasswordFreeLoginUserRequest
+     * @return UnbindPasswordFreeLoginUserResponse
+     */
     CompletableFuture<UnbindPasswordFreeLoginUserResponse> unbindPasswordFreeLoginUser(UnbindPasswordFreeLoginUserRequest request);
-
-    CompletableFuture<UpdateAliasResponse> updateAlias(UpdateAliasRequest request);
-
-    CompletableFuture<UpdateDeviceBindedEndUserResponse> updateDeviceBindedEndUser(UpdateDeviceBindedEndUserRequest request);
-
-    CompletableFuture<UpdateLabelResponse> updateLabel(UpdateLabelRequest request);
-
-    CompletableFuture<UpdateTerminalPolicyResponse> updateTerminalPolicy(UpdateTerminalPolicyRequest request);
 
 }
