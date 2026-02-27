@@ -128,6 +128,10 @@ public class RunRCInstancesRequest extends Request {
     private String periodUnit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
+    private String privateIpAddress;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PromotionCode")
     private String promotionCode;
 
@@ -151,6 +155,10 @@ public class RunRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
+    private java.util.List<String> securityGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpotStrategy")
@@ -214,12 +222,14 @@ public class RunRCInstancesRequest extends Request {
         this.passwordInherit = builder.passwordInherit;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
+        this.privateIpAddress = builder.privateIpAddress;
         this.promotionCode = builder.promotionCode;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.scheduledRule = builder.scheduledRule;
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
         this.securityGroupId = builder.securityGroupId;
+        this.securityGroupIds = builder.securityGroupIds;
         this.spotStrategy = builder.spotStrategy;
         this.supportCase = builder.supportCase;
         this.systemDisk = builder.systemDisk;
@@ -433,6 +443,13 @@ public class RunRCInstancesRequest extends Request {
     }
 
     /**
+     * @return privateIpAddress
+     */
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    /**
      * @return promotionCode
      */
     public String getPromotionCode() {
@@ -472,6 +489,13 @@ public class RunRCInstancesRequest extends Request {
      */
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    /**
+     * @return securityGroupIds
+     */
+    public java.util.List<String> getSecurityGroupIds() {
+        return this.securityGroupIds;
     }
 
     /**
@@ -558,12 +582,14 @@ public class RunRCInstancesRequest extends Request {
         private Boolean passwordInherit; 
         private Integer period; 
         private String periodUnit; 
+        private String privateIpAddress; 
         private String promotionCode; 
         private String regionId; 
         private String resourceGroupId; 
         private String scheduledRule; 
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
+        private java.util.List<String> securityGroupIds; 
         private String spotStrategy; 
         private String supportCase; 
         private SystemDisk systemDisk; 
@@ -606,12 +632,14 @@ public class RunRCInstancesRequest extends Request {
             this.passwordInherit = request.passwordInherit;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
+            this.privateIpAddress = request.privateIpAddress;
             this.promotionCode = request.promotionCode;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.scheduledRule = request.scheduledRule;
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
             this.securityGroupId = request.securityGroupId;
+            this.securityGroupIds = request.securityGroupIds;
             this.spotStrategy = request.spotStrategy;
             this.supportCase = request.supportCase;
             this.systemDisk = request.systemDisk;
@@ -943,6 +971,15 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
+         * PrivateIpAddress.
+         */
+        public Builder privateIpAddress(String privateIpAddress) {
+            this.putQueryParameter("PrivateIpAddress", privateIpAddress);
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+
+        /**
          * PromotionCode.
          */
         public Builder promotionCode(String promotionCode) {
@@ -1006,6 +1043,16 @@ public class RunRCInstancesRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupIds.
+         */
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
+            String securityGroupIdsShrink = shrink(securityGroupIds, "SecurityGroupIds", "json");
+            this.putQueryParameter("SecurityGroupIds", securityGroupIdsShrink);
+            this.securityGroupIds = securityGroupIds;
             return this;
         }
 

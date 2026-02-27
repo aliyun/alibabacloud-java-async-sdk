@@ -521,6 +521,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
      * <p>DescribeRCInstancesResponseBody</p>
      */
     public static class RCInstances extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
+        private Boolean autoRenew;
+
         @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
@@ -621,6 +624,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         private String zoneId;
 
         private RCInstances(Builder builder) {
+            this.autoRenew = builder.autoRenew;
             this.clusterName = builder.clusterName;
             this.cpu = builder.cpu;
             this.createMode = builder.createMode;
@@ -662,6 +666,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
         public static RCInstances create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
         }
 
         /**
@@ -896,6 +907,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean autoRenew; 
             private String clusterName; 
             private Integer cpu; 
             private String createMode; 
@@ -934,6 +946,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             } 
 
             private Builder(RCInstances model) {
+                this.autoRenew = model.autoRenew;
                 this.clusterName = model.clusterName;
                 this.cpu = model.cpu;
                 this.createMode = model.createMode;
@@ -968,6 +981,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
                 this.vpcId = model.vpcId;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * AutoRenew.
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
 
             /**
              * <p>The cluster name.</p>
