@@ -44,6 +44,9 @@ public class ForwardInfoResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
+    @com.aliyun.core.annotation.NameInMap("NlbGatewayId")
+    private String nlbGatewayId;
+
     @com.aliyun.core.annotation.NameInMap("SSHPublicKey")
     private String SSHPublicKey;
 
@@ -58,6 +61,7 @@ public class ForwardInfoResponse extends Response {
         this.forwardPort = builder.forwardPort;
         this.name = builder.name;
         this.natGatewayId = builder.natGatewayId;
+        this.nlbGatewayId = builder.nlbGatewayId;
         this.SSHPublicKey = builder.SSHPublicKey;
     }
 
@@ -134,6 +138,13 @@ public class ForwardInfoResponse extends Response {
     }
 
     /**
+     * @return nlbGatewayId
+     */
+    public String getNlbGatewayId() {
+        return this.nlbGatewayId;
+    }
+
+    /**
      * @return SSHPublicKey
      */
     public String getSSHPublicKey() {
@@ -160,6 +171,8 @@ public class ForwardInfoResponse extends Response {
 
         Builder natGatewayId(String natGatewayId);
 
+        Builder nlbGatewayId(String nlbGatewayId);
+
         Builder SSHPublicKey(String SSHPublicKey);
 
         @Override
@@ -179,6 +192,7 @@ public class ForwardInfoResponse extends Response {
         private String forwardPort; 
         private String name; 
         private String natGatewayId; 
+        private String nlbGatewayId; 
         private String SSHPublicKey; 
 
         private BuilderImpl() {
@@ -196,6 +210,7 @@ public class ForwardInfoResponse extends Response {
             this.forwardPort = response.forwardPort;
             this.name = response.name;
             this.natGatewayId = response.natGatewayId;
+            this.nlbGatewayId = response.nlbGatewayId;
             this.SSHPublicKey = response.SSHPublicKey;
         } 
 
@@ -277,6 +292,15 @@ public class ForwardInfoResponse extends Response {
         @Override
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
+            return this;
+        }
+
+        /**
+         * NlbGatewayId.
+         */
+        @Override
+        public Builder nlbGatewayId(String nlbGatewayId) {
+            this.nlbGatewayId = nlbGatewayId;
             return this;
         }
 

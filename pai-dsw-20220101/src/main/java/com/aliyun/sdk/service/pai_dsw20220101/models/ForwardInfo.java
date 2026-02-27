@@ -41,6 +41,9 @@ public class ForwardInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
+    @com.aliyun.core.annotation.NameInMap("NlbGatewayId")
+    private String nlbGatewayId;
+
     @com.aliyun.core.annotation.NameInMap("SSHPublicKey")
     private String SSHPublicKey;
 
@@ -53,6 +56,7 @@ public class ForwardInfo extends TeaModel {
         this.forwardPort = builder.forwardPort;
         this.name = builder.name;
         this.natGatewayId = builder.natGatewayId;
+        this.nlbGatewayId = builder.nlbGatewayId;
         this.SSHPublicKey = builder.SSHPublicKey;
     }
 
@@ -125,6 +129,13 @@ public class ForwardInfo extends TeaModel {
     }
 
     /**
+     * @return nlbGatewayId
+     */
+    public String getNlbGatewayId() {
+        return this.nlbGatewayId;
+    }
+
+    /**
      * @return SSHPublicKey
      */
     public String getSSHPublicKey() {
@@ -140,6 +151,7 @@ public class ForwardInfo extends TeaModel {
         private String forwardPort; 
         private String name; 
         private String natGatewayId; 
+        private String nlbGatewayId; 
         private String SSHPublicKey; 
 
         private Builder() {
@@ -154,6 +166,7 @@ public class ForwardInfo extends TeaModel {
             this.forwardPort = model.forwardPort;
             this.name = model.name;
             this.natGatewayId = model.natGatewayId;
+            this.nlbGatewayId = model.nlbGatewayId;
             this.SSHPublicKey = model.SSHPublicKey;
         } 
 
@@ -218,6 +231,14 @@ public class ForwardInfo extends TeaModel {
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
+            return this;
+        }
+
+        /**
+         * NlbGatewayId.
+         */
+        public Builder nlbGatewayId(String nlbGatewayId) {
+            this.nlbGatewayId = nlbGatewayId;
             return this;
         }
 
