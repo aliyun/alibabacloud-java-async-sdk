@@ -26,6 +26,9 @@ public class Quota extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("GPUType")
+    private String GPUType;
+
     @com.aliyun.core.annotation.NameInMap("GmtCreatedTime")
     private String gmtCreatedTime;
 
@@ -93,6 +96,7 @@ public class Quota extends TeaModel {
         this.allocateStrategy = builder.allocateStrategy;
         this.creatorId = builder.creatorId;
         this.description = builder.description;
+        this.GPUType = builder.GPUType;
         this.gmtCreatedTime = builder.gmtCreatedTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.hyperZones = builder.hyperZones;
@@ -147,6 +151,13 @@ public class Quota extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return GPUType
+     */
+    public String getGPUType() {
+        return this.GPUType;
     }
 
     /**
@@ -300,6 +311,7 @@ public class Quota extends TeaModel {
         private String allocateStrategy; 
         private String creatorId; 
         private String description; 
+        private String GPUType; 
         private String gmtCreatedTime; 
         private String gmtModifiedTime; 
         private java.util.List<String> hyperZones; 
@@ -329,6 +341,7 @@ public class Quota extends TeaModel {
             this.allocateStrategy = model.allocateStrategy;
             this.creatorId = model.creatorId;
             this.description = model.description;
+            this.GPUType = model.GPUType;
             this.gmtCreatedTime = model.gmtCreatedTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.hyperZones = model.hyperZones;
@@ -373,6 +386,14 @@ public class Quota extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * GPUType.
+         */
+        public Builder GPUType(String GPUType) {
+            this.GPUType = GPUType;
             return this;
         }
 

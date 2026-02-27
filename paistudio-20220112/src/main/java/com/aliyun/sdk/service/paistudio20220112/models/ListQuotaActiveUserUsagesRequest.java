@@ -51,6 +51,10 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
     private String username;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkloadCount")
+    private Integer workloadCount;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -64,6 +68,7 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
         this.sortBy = builder.sortBy;
         this.userId = builder.userId;
         this.username = builder.username;
+        this.workloadCount = builder.workloadCount;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -137,6 +142,13 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
     }
 
     /**
+     * @return workloadCount
+     */
+    public Integer getWorkloadCount() {
+        return this.workloadCount;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -152,6 +164,7 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
         private String sortBy; 
         private String userId; 
         private String username; 
+        private Integer workloadCount; 
         private String workspaceId; 
 
         private Builder() {
@@ -168,6 +181,7 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
             this.sortBy = request.sortBy;
             this.userId = request.userId;
             this.username = request.username;
+            this.workloadCount = request.workloadCount;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -243,6 +257,15 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
             this.username = username;
+            return this;
+        }
+
+        /**
+         * WorkloadCount.
+         */
+        public Builder workloadCount(Integer workloadCount) {
+            this.putQueryParameter("WorkloadCount", workloadCount);
+            this.workloadCount = workloadCount;
             return this;
         }
 

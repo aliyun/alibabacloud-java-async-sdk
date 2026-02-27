@@ -30,6 +30,10 @@ public class ListNodesRequest extends Request {
     private String cliqueID;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskPL")
+    private String diskPL;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FilterByQuotaId")
     private String filterByQuotaId;
 
@@ -102,6 +106,10 @@ public class ListNodesRequest extends Request {
     private String paymentType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PodNum")
+    private Integer podNum;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
@@ -114,12 +122,20 @@ public class ListNodesRequest extends Request {
     private String resourceGroupIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
+    private String resourceGroupName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Verbose")
     private Boolean verbose;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkloadNum")
+    private Integer workloadNum;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -130,6 +146,7 @@ public class ListNodesRequest extends Request {
         this.acceleratorType = builder.acceleratorType;
         this.availabilityZone = builder.availabilityZone;
         this.cliqueID = builder.cliqueID;
+        this.diskPL = builder.diskPL;
         this.filterByQuotaId = builder.filterByQuotaId;
         this.filterByResourceGroupIds = builder.filterByResourceGroupIds;
         this.GPUType = builder.GPUType;
@@ -148,11 +165,14 @@ public class ListNodesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.paymentType = builder.paymentType;
+        this.podNum = builder.podNum;
         this.quotaId = builder.quotaId;
         this.reasonCodes = builder.reasonCodes;
         this.resourceGroupIds = builder.resourceGroupIds;
+        this.resourceGroupName = builder.resourceGroupName;
         this.sortBy = builder.sortBy;
         this.verbose = builder.verbose;
+        this.workloadNum = builder.workloadNum;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -188,6 +208,13 @@ public class ListNodesRequest extends Request {
      */
     public String getCliqueID() {
         return this.cliqueID;
+    }
+
+    /**
+     * @return diskPL
+     */
+    public String getDiskPL() {
+        return this.diskPL;
     }
 
     /**
@@ -317,6 +344,13 @@ public class ListNodesRequest extends Request {
     }
 
     /**
+     * @return podNum
+     */
+    public Integer getPodNum() {
+        return this.podNum;
+    }
+
+    /**
      * @return quotaId
      */
     public String getQuotaId() {
@@ -338,6 +372,13 @@ public class ListNodesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupName
+     */
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -352,6 +393,13 @@ public class ListNodesRequest extends Request {
     }
 
     /**
+     * @return workloadNum
+     */
+    public Integer getWorkloadNum() {
+        return this.workloadNum;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -362,6 +410,7 @@ public class ListNodesRequest extends Request {
         private String acceleratorType; 
         private String availabilityZone; 
         private String cliqueID; 
+        private String diskPL; 
         private String filterByQuotaId; 
         private String filterByResourceGroupIds; 
         private String GPUType; 
@@ -380,11 +429,14 @@ public class ListNodesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String paymentType; 
+        private Integer podNum; 
         private String quotaId; 
         private String reasonCodes; 
         private String resourceGroupIds; 
+        private String resourceGroupName; 
         private String sortBy; 
         private Boolean verbose; 
+        private Integer workloadNum; 
         private String workspaceId; 
 
         private Builder() {
@@ -396,6 +448,7 @@ public class ListNodesRequest extends Request {
             this.acceleratorType = request.acceleratorType;
             this.availabilityZone = request.availabilityZone;
             this.cliqueID = request.cliqueID;
+            this.diskPL = request.diskPL;
             this.filterByQuotaId = request.filterByQuotaId;
             this.filterByResourceGroupIds = request.filterByResourceGroupIds;
             this.GPUType = request.GPUType;
@@ -414,11 +467,14 @@ public class ListNodesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.paymentType = request.paymentType;
+            this.podNum = request.podNum;
             this.quotaId = request.quotaId;
             this.reasonCodes = request.reasonCodes;
             this.resourceGroupIds = request.resourceGroupIds;
+            this.resourceGroupName = request.resourceGroupName;
             this.sortBy = request.sortBy;
             this.verbose = request.verbose;
+            this.workloadNum = request.workloadNum;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -446,6 +502,15 @@ public class ListNodesRequest extends Request {
         public Builder cliqueID(String cliqueID) {
             this.putQueryParameter("CliqueID", cliqueID);
             this.cliqueID = cliqueID;
+            return this;
+        }
+
+        /**
+         * DiskPL.
+         */
+        public Builder diskPL(String diskPL) {
+            this.putQueryParameter("DiskPL", diskPL);
+            this.diskPL = diskPL;
             return this;
         }
 
@@ -614,6 +679,15 @@ public class ListNodesRequest extends Request {
         }
 
         /**
+         * PodNum.
+         */
+        public Builder podNum(Integer podNum) {
+            this.putQueryParameter("PodNum", podNum);
+            this.podNum = podNum;
+            return this;
+        }
+
+        /**
          * QuotaId.
          */
         public Builder quotaId(String quotaId) {
@@ -641,6 +715,15 @@ public class ListNodesRequest extends Request {
         }
 
         /**
+         * ResourceGroupName.
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            this.putQueryParameter("ResourceGroupName", resourceGroupName);
+            this.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
          * SortBy.
          */
         public Builder sortBy(String sortBy) {
@@ -655,6 +738,15 @@ public class ListNodesRequest extends Request {
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
             this.verbose = verbose;
+            return this;
+        }
+
+        /**
+         * WorkloadNum.
+         */
+        public Builder workloadNum(Integer workloadNum) {
+            this.putQueryParameter("WorkloadNum", workloadNum);
+            this.workloadNum = workloadNum;
             return this;
         }
 

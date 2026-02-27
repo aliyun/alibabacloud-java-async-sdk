@@ -22,6 +22,10 @@ public class ListQuotasRequest extends Request {
     private String clusterType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GPUType")
+    private String GPUType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HasResource")
     private String hasResource;
 
@@ -88,6 +92,7 @@ public class ListQuotasRequest extends Request {
     private ListQuotasRequest(Builder builder) {
         super(builder);
         this.clusterType = builder.clusterType;
+        this.GPUType = builder.GPUType;
         this.hasResource = builder.hasResource;
         this.labels = builder.labels;
         this.layoutMode = builder.layoutMode;
@@ -124,6 +129,13 @@ public class ListQuotasRequest extends Request {
      */
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    /**
+     * @return GPUType
+     */
+    public String getGPUType() {
+        return this.GPUType;
     }
 
     /**
@@ -240,6 +252,7 @@ public class ListQuotasRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListQuotasRequest, Builder> {
         private String clusterType; 
+        private String GPUType; 
         private String hasResource; 
         private String labels; 
         private String layoutMode; 
@@ -264,6 +277,7 @@ public class ListQuotasRequest extends Request {
         private Builder(ListQuotasRequest request) {
             super(request);
             this.clusterType = request.clusterType;
+            this.GPUType = request.GPUType;
             this.hasResource = request.hasResource;
             this.labels = request.labels;
             this.layoutMode = request.layoutMode;
@@ -288,6 +302,15 @@ public class ListQuotasRequest extends Request {
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
             this.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * GPUType.
+         */
+        public Builder GPUType(String GPUType) {
+            this.putQueryParameter("GPUType", GPUType);
+            this.GPUType = GPUType;
             return this;
         }
 

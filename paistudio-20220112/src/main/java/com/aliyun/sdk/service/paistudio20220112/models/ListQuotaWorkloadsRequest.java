@@ -39,6 +39,10 @@ public class ListQuotaWorkloadsRequest extends Request {
     private TimeRangeFilter gmtPositionModifiedTimeRange;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeName")
     private String nodeName;
 
@@ -54,6 +58,14 @@ public class ListQuotaWorkloadsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Position")
+    private Integer position;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private Integer priority;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShowOwn")
@@ -72,6 +84,10 @@ public class ListQuotaWorkloadsRequest extends Request {
     private String subQuotaIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseOversoldResource")
+    private Boolean useOversoldResource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserIds")
     private String userIds;
 
@@ -86,6 +102,10 @@ public class ListQuotaWorkloadsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkloadIds")
     private String workloadIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkloadNames")
+    private String workloadNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkloadStatuses")
@@ -106,18 +126,23 @@ public class ListQuotaWorkloadsRequest extends Request {
         this.gmtDequeuedTimeRange = builder.gmtDequeuedTimeRange;
         this.gmtEnqueuedTimeRange = builder.gmtEnqueuedTimeRange;
         this.gmtPositionModifiedTimeRange = builder.gmtPositionModifiedTimeRange;
+        this.instanceId = builder.instanceId;
         this.nodeName = builder.nodeName;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.position = builder.position;
+        this.priority = builder.priority;
         this.showOwn = builder.showOwn;
         this.sortBy = builder.sortBy;
         this.status = builder.status;
         this.subQuotaIds = builder.subQuotaIds;
+        this.useOversoldResource = builder.useOversoldResource;
         this.userIds = builder.userIds;
         this.withHistoricalData = builder.withHistoricalData;
         this.workloadCreatedTimeRange = builder.workloadCreatedTimeRange;
         this.workloadIds = builder.workloadIds;
+        this.workloadNames = builder.workloadNames;
         this.workloadStatuses = builder.workloadStatuses;
         this.workloadType = builder.workloadType;
         this.workspaceIds = builder.workspaceIds;
@@ -172,6 +197,13 @@ public class ListQuotaWorkloadsRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return nodeName
      */
     public String getNodeName() {
@@ -197,6 +229,20 @@ public class ListQuotaWorkloadsRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return position
+     */
+    public Integer getPosition() {
+        return this.position;
+    }
+
+    /**
+     * @return priority
+     */
+    public Integer getPriority() {
+        return this.priority;
     }
 
     /**
@@ -228,6 +274,13 @@ public class ListQuotaWorkloadsRequest extends Request {
     }
 
     /**
+     * @return useOversoldResource
+     */
+    public Boolean getUseOversoldResource() {
+        return this.useOversoldResource;
+    }
+
+    /**
      * @return userIds
      */
     public String getUserIds() {
@@ -253,6 +306,13 @@ public class ListQuotaWorkloadsRequest extends Request {
      */
     public String getWorkloadIds() {
         return this.workloadIds;
+    }
+
+    /**
+     * @return workloadNames
+     */
+    public String getWorkloadNames() {
+        return this.workloadNames;
     }
 
     /**
@@ -282,18 +342,23 @@ public class ListQuotaWorkloadsRequest extends Request {
         private TimeRangeFilter gmtDequeuedTimeRange; 
         private TimeRangeFilter gmtEnqueuedTimeRange; 
         private TimeRangeFilter gmtPositionModifiedTimeRange; 
+        private String instanceId; 
         private String nodeName; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Integer position; 
+        private Integer priority; 
         private Boolean showOwn; 
         private String sortBy; 
         private String status; 
         private String subQuotaIds; 
+        private Boolean useOversoldResource; 
         private String userIds; 
         private Boolean withHistoricalData; 
         private TimeRangeFilter workloadCreatedTimeRange; 
         private String workloadIds; 
+        private String workloadNames; 
         private String workloadStatuses; 
         private String workloadType; 
         private String workspaceIds; 
@@ -309,18 +374,23 @@ public class ListQuotaWorkloadsRequest extends Request {
             this.gmtDequeuedTimeRange = request.gmtDequeuedTimeRange;
             this.gmtEnqueuedTimeRange = request.gmtEnqueuedTimeRange;
             this.gmtPositionModifiedTimeRange = request.gmtPositionModifiedTimeRange;
+            this.instanceId = request.instanceId;
             this.nodeName = request.nodeName;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.position = request.position;
+            this.priority = request.priority;
             this.showOwn = request.showOwn;
             this.sortBy = request.sortBy;
             this.status = request.status;
             this.subQuotaIds = request.subQuotaIds;
+            this.useOversoldResource = request.useOversoldResource;
             this.userIds = request.userIds;
             this.withHistoricalData = request.withHistoricalData;
             this.workloadCreatedTimeRange = request.workloadCreatedTimeRange;
             this.workloadIds = request.workloadIds;
+            this.workloadNames = request.workloadNames;
             this.workloadStatuses = request.workloadStatuses;
             this.workloadType = request.workloadType;
             this.workspaceIds = request.workspaceIds;
@@ -376,6 +446,15 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
          * NodeName.
          */
         public Builder nodeName(String nodeName) {
@@ -408,6 +487,24 @@ public class ListQuotaWorkloadsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Position.
+         */
+        public Builder position(Integer position) {
+            this.putQueryParameter("Position", position);
+            this.position = position;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(Integer priority) {
+            this.putQueryParameter("Priority", priority);
+            this.priority = priority;
             return this;
         }
 
@@ -448,6 +545,15 @@ public class ListQuotaWorkloadsRequest extends Request {
         }
 
         /**
+         * UseOversoldResource.
+         */
+        public Builder useOversoldResource(Boolean useOversoldResource) {
+            this.putQueryParameter("UseOversoldResource", useOversoldResource);
+            this.useOversoldResource = useOversoldResource;
+            return this;
+        }
+
+        /**
          * UserIds.
          */
         public Builder userIds(String userIds) {
@@ -480,6 +586,15 @@ public class ListQuotaWorkloadsRequest extends Request {
         public Builder workloadIds(String workloadIds) {
             this.putQueryParameter("WorkloadIds", workloadIds);
             this.workloadIds = workloadIds;
+            return this;
+        }
+
+        /**
+         * WorkloadNames.
+         */
+        public Builder workloadNames(String workloadNames) {
+            this.putQueryParameter("WorkloadNames", workloadNames);
+            this.workloadNames = workloadNames;
             return this;
         }
 

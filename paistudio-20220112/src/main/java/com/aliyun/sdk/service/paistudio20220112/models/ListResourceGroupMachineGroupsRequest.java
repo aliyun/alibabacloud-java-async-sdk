@@ -26,6 +26,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
     private String creatorID;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskPL")
+    private String diskPL;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
@@ -77,6 +81,7 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         super(builder);
         this.resourceGroupID = builder.resourceGroupID;
         this.creatorID = builder.creatorID;
+        this.diskPL = builder.diskPL;
         this.ecsSpec = builder.ecsSpec;
         this.machineGroupIDs = builder.machineGroupIDs;
         this.name = builder.name;
@@ -116,6 +121,13 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
      */
     public String getCreatorID() {
         return this.creatorID;
+    }
+
+    /**
+     * @return diskPL
+     */
+    public String getDiskPL() {
+        return this.diskPL;
     }
 
     /**
@@ -205,6 +217,7 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
     public static final class Builder extends Request.Builder<ListResourceGroupMachineGroupsRequest, Builder> {
         private String resourceGroupID; 
         private String creatorID; 
+        private String diskPL; 
         private String ecsSpec; 
         private String machineGroupIDs; 
         private String name; 
@@ -226,6 +239,7 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
             super(request);
             this.resourceGroupID = request.resourceGroupID;
             this.creatorID = request.creatorID;
+            this.diskPL = request.diskPL;
             this.ecsSpec = request.ecsSpec;
             this.machineGroupIDs = request.machineGroupIDs;
             this.name = request.name;
@@ -255,6 +269,15 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         public Builder creatorID(String creatorID) {
             this.putQueryParameter("CreatorID", creatorID);
             this.creatorID = creatorID;
+            return this;
+        }
+
+        /**
+         * DiskPL.
+         */
+        public Builder diskPL(String diskPL) {
+            this.putQueryParameter("DiskPL", diskPL);
+            this.diskPL = diskPL;
             return this;
         }
 
