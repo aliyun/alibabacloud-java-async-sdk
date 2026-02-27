@@ -437,7 +437,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessDomain.
+             * <p>The backend domain name for FULLNAT address translation in a FULLNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx.com</p>
              */
             public Builder accessDomain(String accessDomain) {
                 this.accessDomain = accessDomain;
@@ -478,7 +481,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * DomainResolve.
+             * <p>The IP resolved from the backend domain name for address translation in the FULLNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder domainResolve(String domainResolve) {
                 this.domainResolve = domainResolve;

@@ -27,6 +27,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     private String cidrBlock;
 
     @com.aliyun.core.annotation.NameInMap("ClassicLinkEnabled")
+    @Deprecated
     private Boolean classicLinkEnabled;
 
     @com.aliyun.core.annotation.NameInMap("CloudResources")

@@ -425,7 +425,14 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);

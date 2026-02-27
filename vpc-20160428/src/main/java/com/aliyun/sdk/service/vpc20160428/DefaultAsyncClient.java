@@ -146,20 +146,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
-     * <ul>
-     * <li>When you call this operation to associate an EIP with an Internet Shared Bandwidth instance, make sure that the EIP meets the following requirements:<ul>
-     * <li>The EIP uses the pay-as-you-go billing method.</li>
-     * <li>The EIP and the Internet Shared Bandwidth instance belong to the same region.</li>
-     * <li>The line type of the EIPs is the same as that of the Internet Shared Bandwidth instance.</li>
-     * </ul>
-     * </li>
-     * <li><strong>AddCommonBandwidthPackageIp</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> operation to query the status of the operation.<ul>
-     * <li>If the Internet Shared Bandwidth instance is in the <strong>BINDING</strong> state, the EIP is being associated with the Internet Shared Bandwidth instance. In this state, you can only query the Internet Shared Bandwidth instance and cannot perform other operations.</li>
-     * <li>If the Internet Shared Bandwidth instance is in the <strong>BINDED</strong> state, the EIP is associated with the Internet Shared Bandwidth instance.</li>
-     * </ul>
-     * </li>
-     * </ul>
+     * <p>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</p>
      * 
      * @param request the request parameters of AddCommonBandwidthPackageIp  AddCommonBandwidthPackageIpRequest
      * @return AddCommonBandwidthPackageIpResponse
@@ -2177,17 +2164,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The IPsec-VPN connection must be associated with a transit router. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</p>
-     * <ul>
-     * <li>You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.</li>
-     * <li>Do not add a destination-based route whose destination CIDR block is 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10 or belongs to 100.64.0.0/10. Such a route will make the console fail to display the status of the IPsec-VPN connection or cause IPsec negotiation failures.</li>
-     * <li><strong>CreateVcoRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the status of the task.<ul>
-     * <li>If the IPsec-VPN connection is in the <strong>updating</strong> state, the destination-based route is being created.</li>
-     * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the destination-based route is created.</li>
-     * </ul>
-     * </li>
-     * <li>You cannot repeatedly call <strong>CreateVcoRouteEntry</strong> within the specified period of time.</li>
-     * </ul>
+     * <p>Adds a destination-based route for an IPsec-VPN connection.</p>
      * 
      * @param request the request parameters of CreateVcoRouteEntry  CreateVcoRouteEntryRequest
      * @return CreateVcoRouteEntryResponse
@@ -2453,16 +2430,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the match rules of and limits on policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Manage policy-based routes</a>.</p>
-     * <ul>
-     * <li>Before you create a policy-based route, make sure that an IPsec-VPN connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</li>
-     * <li><strong>CreateVpnPbrRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway.<ul>
-     * <li>If the VPN gateway is in the <strong>updating</strong> state, the policy-based route is being created.</li>
-     * <li>If the VPN gateway is in the <strong>active</strong> state, the policy-based route is created.</li>
-     * </ul>
-     * </li>
-     * <li>You cannot call the <strong>CreateVpnPbrRouteEntry</strong> operation to create multiple policy-based routes for a VPN gateway at a time.</li>
-     * </ul>
+     * <p>Creates a policy-based route for a VPN gateway.</p>
      * 
      * @param request the request parameters of CreateVpnPbrRouteEntry  CreateVpnPbrRouteEntryRequest
      * @return CreateVpnPbrRouteEntryResponse
@@ -5441,9 +5409,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DisableVpcClassicLink  DisableVpcClassicLinkRequest
+     * @deprecated OpenAPI DisableVpcClassicLink is deprecated  * @param request  the request parameters of DisableVpcClassicLink  DisableVpcClassicLinkRequest
      * @return DisableVpcClassicLinkResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DisableVpcClassicLinkResponse> disableVpcClassicLink(DisableVpcClassicLinkRequest request) {
         try {
@@ -5566,9 +5535,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of EnableVpcClassicLink  EnableVpcClassicLinkRequest
+     * @deprecated OpenAPI EnableVpcClassicLink is deprecated  * @param request  the request parameters of EnableVpcClassicLink  EnableVpcClassicLinkRequest
      * @return EnableVpcClassicLinkResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<EnableVpcClassicLinkResponse> enableVpcClassicLink(EnableVpcClassicLinkRequest request) {
         try {

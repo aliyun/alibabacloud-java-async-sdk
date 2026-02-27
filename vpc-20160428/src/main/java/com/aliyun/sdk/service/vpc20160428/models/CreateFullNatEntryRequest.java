@@ -289,7 +289,10 @@ public class CreateFullNatEntryRequest extends Request {
         } 
 
         /**
-         * AccessDomain.
+         * <p>The backend domain name for FULLNAT address translation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.com</p>
          */
         public Builder accessDomain(String accessDomain) {
             this.putQueryParameter("AccessDomain", accessDomain);

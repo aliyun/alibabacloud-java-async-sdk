@@ -452,7 +452,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
          * <p><strong>POSTPAY</strong>: pay-as-you-go</p>
          * 
          * <strong>example:</strong>
-         * <p>China site (aliyun.com): Prepay. International site (alibabacloud.com): POSTPAY.</p>
+         * <p>中国站示例值：Prepay，国际站示例值：POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -534,7 +534,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ENIs created by the system for the VPN gateway.</p>
+         * EniInstanceIds.
          */
         public Builder eniInstanceIds(EniInstanceIds eniInstanceIds) {
             this.eniInstanceIds = eniInstanceIds;
@@ -542,7 +542,14 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * GatewayType.
+         * <p>Type of VPN gateway:</p>
+         * <ul>
+         * <li><strong>Traditional</strong>: Traditional-type VPN gateway, supports both IPSec and SSL.</li>
+         * <li><strong>Enhanced.SiteToSite</strong>: Enhanced Site-to-Site VPN gateway, only supports IPSec.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enhanced.SiteToSite</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.gatewayType = gatewayType;
@@ -748,7 +755,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;VpnEnableBgp&quot;:&quot;true&quot;,&quot;VisuallySsl&quot;:&quot;true&quot;,&quot;PbrPriority&quot;:&quot;true&quot;,&quot;VpnNewImage&quot;:&quot;true&quot;,&quot;description&quot;:&quot;forwarding1.3.7&quot;,&quot;VpnVersion&quot;:&quot;v1.2.4&quot;}</p>
+         * <p>{&quot;VpnEnableBgp&quot;:&quot;true&quot;,&quot;VisuallySsl&quot;:&quot;true&quot;,&quot;PbrPriority&quot;:&quot;true&quot;,&quot;VpnNewImage&quot;:&quot;true&quot;,&quot;description&quot;:&quot;转发1.3.24&quot;,&quot;VpnVersion&quot;:&quot;v1.2.4&quot;,&quot;IDaaSNewVersion&quot;:&quot;true&quot;}</p>
          */
         public Builder tag(String tag) {
             this.tag = tag;
@@ -756,7 +763,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tags that are added to the VPN gateway.</p>
+         * Tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -1139,10 +1146,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>aaa</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1150,10 +1154,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>bbb</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1246,7 +1247,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;VpnEnableBgp&quot;:&quot;true&quot;,&quot;VisuallySsl&quot;:&quot;true&quot;,&quot;PbrPriority&quot;:&quot;true&quot;,&quot;VpnNewImage&quot;:&quot;true&quot;,&quot;description&quot;:&quot;forwarding1.3.7&quot;,&quot;VpnVersion&quot;:&quot;v1.2.4&quot;}</p>
+             * <p>{&quot;VpnEnableBgp&quot;:&quot;true&quot;,&quot;VisuallySsl&quot;:&quot;true&quot;,&quot;PbrPriority&quot;:&quot;true&quot;,&quot;VpnNewImage&quot;:&quot;true&quot;,&quot;description&quot;:&quot;转发1.3.24&quot;,&quot;VpnVersion&quot;:&quot;v1.2.4&quot;,&quot;IDaaSNewVersion&quot;:&quot;true&quot;}</p>
              */
             public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;

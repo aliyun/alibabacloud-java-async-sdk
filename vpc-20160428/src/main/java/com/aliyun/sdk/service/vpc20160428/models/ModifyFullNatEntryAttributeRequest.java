@@ -300,7 +300,10 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         } 
 
         /**
-         * AccessDomain.
+         * <p>The backend domain name of the FULLNAT address translation that needs to be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.com</p>
          */
         public Builder accessDomain(String accessDomain) {
             this.putQueryParameter("AccessDomain", accessDomain);

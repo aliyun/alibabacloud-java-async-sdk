@@ -150,7 +150,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the VPN gateways.</p>
+         * VpnGateways.
          */
         public Builder vpnGateways(VpnGateways vpnGateways) {
             this.vpnGateways = vpnGateways;
@@ -335,11 +335,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>If the value of ReservationOrderType is <strong>TEMP_UPGRADE</strong>, this parameter indicates the time when the temporary upgrade expires.</p>
-             * <p>If the value of ReservationOrderType is <strong>RENEWCHANGE</strong> or <strong>RENEW</strong>, this parameter indicates the time when the renewal or renewal with a specification change takes effect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-07-20T16:00:00Z</p>
+             * ReservationEndTime.
              */
             public Builder reservationEndTime(String reservationEndTime) {
                 this.reservationEndTime = reservationEndTime;
@@ -347,14 +343,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPsec-VPN status of the pending order. Valid values:</p>
-             * <ul>
-             * <li><strong>enable</strong></li>
-             * <li><strong>disable</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>enable</p>
+             * ReservationIpsec.
              */
             public Builder reservationIpsec(String reservationIpsec) {
                 this.reservationIpsec = reservationIpsec;
@@ -362,10 +351,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of concurrent SSL-VPN connections of the pending order.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * ReservationMaxConnections.
              */
             public Builder reservationMaxConnections(Integer reservationMaxConnections) {
                 this.reservationMaxConnections = reservationMaxConnections;
@@ -373,15 +359,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the order that has not taken effect. Valid values:</p>
-             * <ul>
-             * <li><strong>RENEWCHANGE</strong>: renewal with upgrade or downgrade</li>
-             * <li><strong>TEMP_UPGRADE</strong>: temporary upgrade</li>
-             * <li><strong>RENEW</strong>: renewal</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>TEMP_UPGRADE</p>
+             * ReservationOrderType.
              */
             public Builder reservationOrderType(String reservationOrderType) {
                 this.reservationOrderType = reservationOrderType;
@@ -389,10 +367,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bandwidth of the pending order. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * ReservationSpec.
              */
             public Builder reservationSpec(String reservationSpec) {
                 this.reservationSpec = reservationSpec;
@@ -400,14 +375,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SSL-VPN status of the pending order. Valid values:</p>
-             * <ul>
-             * <li><strong>enable</strong></li>
-             * <li><strong>disable</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>enable</p>
+             * ReservationSsl.
              */
             public Builder reservationSsl(String reservationSsl) {
                 this.reservationSsl = reservationSsl;
@@ -415,14 +383,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the pending order.</p>
-             * <ul>
-             * <li><strong>1</strong>: indicates that the order for renewal or the order for renewal with a specification change has not taken effect.</li>
-             * <li><strong>2</strong>: indicates that the order of the temporary upgrade has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, the values of <strong>ReservationIpsec</strong>, <strong>ReservationMaxConnections</strong>, <strong>ReservationSpec</strong>, and <strong>ReservationSsl</strong> indicate the previous specifications of the VPN gateway.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -489,10 +450,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -500,10 +458,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceJoshua</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -962,14 +917,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether BGP routes are automatically advertised to the VPC.</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * AutoPropagate.
              */
             public Builder autoPropagate(Boolean autoPropagate) {
                 this.autoPropagate = autoPropagate;
@@ -977,14 +925,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The payment status of the VPN gateway.</p>
-             * <ul>
-             * <li><strong>Normal</strong></li>
-             * <li><strong>FinancialLocked</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * BusinessStatus.
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -992,11 +933,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the VPN gateway.</p>
-             * <p>Only <strong>POSTPAY</strong> may be returned, which indicates the pay-as-you-go billing method.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Example value for the China site (aliyun.com): Prepay. Example value for the International site (alibabacloud.com): POSTPAY.</p>
+             * ChargeType.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1004,11 +941,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp generated when the VPN gateway was created. Unit: milliseconds.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1515383700000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1016,10 +949,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the VPN gateway.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1027,11 +957,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The second IP address that is assigned to the VPN gateway to create IPsec-VPN connections.</p>
-             * <p>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in dual-tunnel mode.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>47.91.XX.XX</p>
+             * DisasterRecoveryInternetIp.
              */
             public Builder disasterRecoveryInternetIp(String disasterRecoveryInternetIp) {
                 this.disasterRecoveryInternetIp = disasterRecoveryInternetIp;
@@ -1039,11 +965,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the second vSwitch that is associated with the VPN gateway.</p>
-             * <p>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in dual-tunnel mode.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-p0w95ql6tmr2ludkt****</p>
+             * DisasterRecoveryVSwitchId.
              */
             public Builder disasterRecoveryVSwitchId(String disasterRecoveryVSwitchId) {
                 this.disasterRecoveryVSwitchId = disasterRecoveryVSwitchId;
@@ -1051,14 +973,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The BGP status of the VPN gateway. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * EnableBgp.
              */
             public Builder enableBgp(Boolean enableBgp) {
                 this.enableBgp = enableBgp;
@@ -1066,11 +981,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp generated when the VPN gateway expires. Unit: milliseconds.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1518105600000</p>
+             * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -1078,7 +989,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ENIs created by the system for the VPN gateway.</p>
+             * EniInstanceIds.
              */
             public Builder eniInstanceIds(EniInstanceIds eniInstanceIds) {
                 this.eniInstanceIds = eniInstanceIds;
@@ -1094,16 +1005,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li><p>If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the value of this parameter is the IP address of the VPN gateway, which can be used to create IPsec-VPN or SSL-VPN connections.</p>
-             * </li>
-             * <li><p>If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the value of this parameter is the first IP address that is used to create an IPsec-VPN connection. The IP address cannot be used to create SSL-VPN connections.</p>
-             * <p>If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IPsec addresses to the VPN gateway to create IPsec-VPN connections in dual-tunnel mode.</p>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>47.12.XX.XX</p>
+             * InternetIp.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -1111,14 +1013,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether IPsec-VPN is enabled for the VPN gateway. Valid values:</p>
-             * <ul>
-             * <li><strong>enable</strong></li>
-             * <li><strong>disable</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>enable</p>
+             * IpsecVpn.
              */
             public Builder ipsecVpn(String ipsecVpn) {
                 this.ipsecVpn = ipsecVpn;
@@ -1126,10 +1021,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the VPN gateway.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1137,14 +1029,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the VPN gateway.</p>
-             * <ul>
-             * <li><strong>public</strong></li>
-             * <li><strong>private</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>public</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -1152,10 +1037,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about pending orders.</p>
-             * <blockquote>
-             * <p>This parameter is returned only if <strong>IncludeReservationData</strong> is set to <strong>true</strong>.</p>
-             * </blockquote>
+             * ReservationData.
              */
             public Builder reservationData(ReservationData reservationData) {
                 this.reservationData = reservationData;
@@ -1163,11 +1045,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the VPN gateway belongs.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfmzs372yg****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1175,10 +1053,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum bandwidth of the VPN gateway. Unit: <strong>M</strong>, which indicates Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5M</p>
+             * Spec.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -1186,10 +1061,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of SSL-VPN connections supported by the VPN gateway.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * SslMaxConnections.
              */
             public Builder sslMaxConnections(Long sslMaxConnections) {
                 this.sslMaxConnections = sslMaxConnections;
@@ -1197,14 +1069,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether SSL-VPN is enabled for the VPN gateway. Valid values:</p>
-             * <ul>
-             * <li><strong>enable</strong></li>
-             * <li><strong>disable</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>enable</p>
+             * SslVpn.
              */
             public Builder sslVpn(String sslVpn) {
                 this.sslVpn = sslVpn;
@@ -1212,11 +1077,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the SSL-VPN connection.</p>
-             * <p>This parameter is returned only if the VPN gateway is a public VPN gateway and supports IPsec-VPN connections in dual-tunnel mode. In addition, SSL-VPN must be enabled for the VPN gateway.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>47.74.XX.XX</p>
+             * SslVpnInternetIp.
              */
             public Builder sslVpnInternetIp(String sslVpnInternetIp) {
                 this.sslVpnInternetIp = sslVpnInternetIp;
@@ -1224,17 +1085,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the VPN gateway. Valid values:</p>
-             * <ul>
-             * <li><strong>init</strong></li>
-             * <li><strong>provisioning</strong></li>
-             * <li><strong>active</strong></li>
-             * <li><strong>updating</strong></li>
-             * <li><strong>deleting</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1242,46 +1093,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag that is automatically generated for the VPN gateway.</p>
-             * <ul>
-             * <li><p><strong>VpnEnableBgp</strong>: indicates whether the VPN gateway supports BGP. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * </li>
-             * <li><p><strong>VisuallySsl</strong>: indicates whether the VPN gateway allows you to view the connection information of SSL clients. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * </li>
-             * <li><p><strong>PbrPriority</strong>: indicates whether the VPN gateway allows you to configure priorities for policy-based routes. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * </li>
-             * <li><p><strong>VpnNewImage</strong>: indicates whether the VPN gateway is upgraded. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: queries only SQL templates that need to be optimized.</li>
-             * <li><strong>false</strong>: does not query only SQL statements that need to be optimized.</li>
-             * </ul>
-             * </li>
-             * <li><p><strong>description</strong>: the description of the VPN gateway. This parameter is only for internal use.</p>
-             * </li>
-             * <li><p><strong>VpnVersion</strong>: the version of the VPN gateway.</p>
-             * </li>
-             * <li><p><strong>IDaaSNewVersion</strong>: indicates whether the VPN gateway can be associated with an EIAM 2.0 instance.</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;VpnEnableBgp&quot;:&quot;true&quot;,&quot;VisuallySsl&quot;:&quot;true&quot;,&quot;PbrPriority&quot;:&quot;true&quot;,&quot;VpnNewImage&quot;:&quot;true&quot;,&quot;description&quot;:&quot;forwarding1.3.7&quot;,&quot;VpnVersion&quot;:&quot;v1.2.4&quot;}</p>
+             * Tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1289,7 +1101,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are added to the VPN gateway.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1297,10 +1109,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch to which the VPN gateway belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bp15lbk8sgtr6r5b0****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1308,10 +1117,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC to which the VPN gateway belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp1m3i0kn1nd4wiw9****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1319,10 +1125,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPN gateway.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpn-bp17lofy9fd0dnvzv****</p>
+             * VpnGatewayId.
              */
             public Builder vpnGatewayId(String vpnGatewayId) {
                 this.vpnGatewayId = vpnGatewayId;
@@ -1330,11 +1133,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of VPN gateway.</p>
-             * <p>Only <strong>Normal</strong> may be returned, which indicates a standard VPN gateway.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * VpnType.
              */
             public Builder vpnType(String vpnType) {
                 this.vpnType = vpnType;

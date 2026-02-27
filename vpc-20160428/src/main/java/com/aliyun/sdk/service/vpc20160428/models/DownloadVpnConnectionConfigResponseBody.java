@@ -900,10 +900,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the tunnel on the data center side.</p>
+             * <p>The identifier of the customer gateway. FQDN and IP formats are supported. The default value is the IP address of the customer gateway.</p>
              * 
              * <strong>example:</strong>
-             * <p>47.21.XX.XX</p>
+             * <p>116.62.XX.XX</p>
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -922,10 +922,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the tunnel on the Alibaba Cloud side.</p>
+             * <p>The identifier of the VPN gateway. FQDN and IP formats are supported. The default value is the IP address of the VPN gateway.</p>
              * 
              * <strong>example:</strong>
-             * <p>47.24.XX.XX</p>
+             * <p>139.196.XX.XX</p>
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -1160,7 +1160,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configurations of Phase 1 negotiations.</p>
+             * IkeConfig.
              */
             public Builder ikeConfig(TunnelConfigIkeConfig ikeConfig) {
                 this.ikeConfig = ikeConfig;
@@ -1168,7 +1168,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of Phase 2 negotiations.</p>
+             * IpsecConfig.
              */
             public Builder ipsecConfig(TunnelConfigIpsecConfig ipsecConfig) {
                 this.ipsecConfig = ipsecConfig;
@@ -1176,10 +1176,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the tunnel on the data center side.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>47.21.XX.XX</p>
+             * Local.
              */
             public Builder local(String local) {
                 this.local = local;
@@ -1187,10 +1184,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the tunnel on the Alibaba Cloud side.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>47.24.XX.XX</p>
+             * Remote.
              */
             public Builder remote(String remote) {
                 this.remote = remote;
@@ -1198,10 +1192,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tunnel ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>tun-opsqc4d97wni27****</p>
+             * TunnelId.
              */
             public Builder tunnelId(String tunnelId) {
                 this.tunnelId = tunnelId;
@@ -1468,8 +1459,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tunnel configurations of the peer gateway device.</p>
-             * <p>The parameters in <strong>TunnelsConfig</strong> are returned only when the IPsec-VPN connection supports the dual-tunnel mode.</p>
+             * TunnelsConfig.
              */
             public Builder tunnelsConfig(TunnelsConfig tunnelsConfig) {
                 this.tunnelsConfig = tunnelsConfig;

@@ -184,8 +184,8 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the policy-based route was created.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp generated when the policy-based route was created. Unit: milliseconds.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1492747187000</p>
@@ -196,7 +196,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the policy-based route.</p>
+         * <p>The description of the route.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -207,7 +207,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The next hop of the policy-based route.</p>
+         * <p>The tunneling protocol. The value is <strong>Ipsec</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>vco-bp15oes1py4i66rmd****</p>
@@ -218,7 +218,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tunneling protocol. The value is <strong>Ipsec</strong>.</p>
+         * <p>The tunneling protocol. The value is set to <strong>Ipsec</strong>, which indicates the IPsec tunneling protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>Ipsec</p>
@@ -240,7 +240,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The priority of the policy-based route.</p>
          * 
          * <strong>example:</strong>
          * <p>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</p>
@@ -251,7 +251,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The destination CIDR block of the policy-based route.</p>
+         * <p>The VPN gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/24</p>
@@ -273,7 +273,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the policy-based route. Valid values:</p>
+         * <p>The status of the policy-based route.</p>
          * <ul>
          * <li><strong>published</strong>: advertised to the VPC route table.</li>
          * <li><strong>normal</strong>: not advertised to the VPC route table.</li>
@@ -288,7 +288,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The VPN gateway ID.</p>
+         * <p>The ID of the VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>vpn-bp1cmw7jh1nfe43m9****</p>
@@ -299,11 +299,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The weight of the policy-based route. Valid values:</p>
-         * <ul>
-         * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</li>
-         * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</li>
-         * </ul>
+         * <p>The source CIDR block of the policy-based route.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

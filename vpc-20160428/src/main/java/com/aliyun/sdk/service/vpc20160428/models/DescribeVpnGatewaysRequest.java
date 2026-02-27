@@ -272,7 +272,9 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * GatewayType.
+         * <p>VPN 网关类型，取值：
+         * Traditional：传统型VPN网关，覆盖IPsec功能和SSL功能
+         * Enhance.SiteToSite：增强型站点入云VPN，只覆盖IPsec功能</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("GatewayType", gatewayType);
@@ -344,7 +346,7 @@ public class DescribeVpnGatewaysRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-zhangjiakou</p>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -507,7 +507,14 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TunnelBandwidth.
+             * <p>Specifies the bandwidth specifications for a single tunnel in VPN attachment. Available options:</p>
+             * <ul>
+             * <li><strong>Standard</strong>: Standard, 1Gbps</li>
+             * <li><strong>Large</strong>:  Large-sized, 3Gbps</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder tunnelBandwidth(String tunnelBandwidth) {
                 this.tunnelBandwidth = tunnelBandwidth;
