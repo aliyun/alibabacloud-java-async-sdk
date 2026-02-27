@@ -55,6 +55,10 @@ public class DescribeNodeGroupsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tags> tags;
+
     private DescribeNodeGroupsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -66,6 +70,7 @@ public class DescribeNodeGroupsRequest extends Request {
         this.nodeGroupIds = builder.nodeGroupIds;
         this.nodeGroupName = builder.nodeGroupName;
         this.status = builder.status;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -144,6 +149,13 @@ public class DescribeNodeGroupsRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<DescribeNodeGroupsRequest, Builder> {
         private String regionId; 
         private String clusterId; 
@@ -154,6 +166,7 @@ public class DescribeNodeGroupsRequest extends Request {
         private java.util.List<String> nodeGroupIds; 
         private String nodeGroupName; 
         private String status; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -170,6 +183,7 @@ public class DescribeNodeGroupsRequest extends Request {
             this.nodeGroupIds = request.nodeGroupIds;
             this.nodeGroupName = request.nodeGroupName;
             this.status = request.status;
+            this.tags = request.tags;
         } 
 
         /**
@@ -253,6 +267,15 @@ public class DescribeNodeGroupsRequest extends Request {
             return this;
         }
 
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putBodyParameter("tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public DescribeNodeGroupsRequest build() {
             return new DescribeNodeGroupsRequest(this);
@@ -260,4 +283,79 @@ public class DescribeNodeGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNodeGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeNodeGroupsRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }
