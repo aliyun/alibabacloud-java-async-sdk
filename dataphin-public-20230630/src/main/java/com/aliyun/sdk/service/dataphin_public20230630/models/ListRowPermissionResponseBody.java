@@ -545,6 +545,9 @@ public class ListRowPermissionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Expressions")
         private java.util.List<Expressions> expressions;
 
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
         @com.aliyun.core.annotation.NameInMap("IsDelete")
         private Boolean isDelete;
 
@@ -562,6 +565,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
 
         private Rules(Builder builder) {
             this.expressions = builder.expressions;
+            this.id = builder.id;
             this.isDelete = builder.isDelete;
             this.ruleName = builder.ruleName;
             this.scopeType = builder.scopeType;
@@ -582,6 +586,13 @@ public class ListRowPermissionResponseBody extends TeaModel {
          */
         public java.util.List<Expressions> getExpressions() {
             return this.expressions;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
         }
 
         /**
@@ -621,6 +632,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Expressions> expressions; 
+            private Long id; 
             private Boolean isDelete; 
             private String ruleName; 
             private String scopeType; 
@@ -632,6 +644,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
 
             private Builder(Rules model) {
                 this.expressions = model.expressions;
+                this.id = model.id;
                 this.isDelete = model.isDelete;
                 this.ruleName = model.ruleName;
                 this.scopeType = model.scopeType;
@@ -644,6 +657,14 @@ public class ListRowPermissionResponseBody extends TeaModel {
              */
             public Builder expressions(java.util.List<Expressions> expressions) {
                 this.expressions = expressions;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
                 return this;
             }
 

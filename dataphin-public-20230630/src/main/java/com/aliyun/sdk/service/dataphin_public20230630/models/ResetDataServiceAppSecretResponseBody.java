@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDataServiceAuthorizedAppsByGroupIdResponseBody} extends {@link TeaModel}
+ * {@link ResetDataServiceAppSecretResponseBody} extends {@link TeaModel}
  *
- * <p>GetDataServiceAuthorizedAppsByGroupIdResponseBody</p>
+ * <p>ResetDataServiceAppSecretResponseBody</p>
  */
-public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("AppInfoList")
-    private java.util.List<AppInfoList> appInfoList;
-
+public class ResetDataServiceAppSecretResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
+
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -35,9 +35,9 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private GetDataServiceAuthorizedAppsByGroupIdResponseBody(Builder builder) {
-        this.appInfoList = builder.appInfoList;
+    private ResetDataServiceAppSecretResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -48,7 +48,7 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
         return new Builder();
     }
 
-    public static GetDataServiceAuthorizedAppsByGroupIdResponseBody create() {
+    public static ResetDataServiceAppSecretResponseBody create() {
         return builder().build();
     }
 
@@ -57,17 +57,17 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
     }
 
     /**
-     * @return appInfoList
-     */
-    public java.util.List<AppInfoList> getAppInfoList() {
-        return this.appInfoList;
-    }
-
-    /**
      * @return code
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
     }
 
     /**
@@ -99,8 +99,8 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
     }
 
     public static final class Builder {
-        private java.util.List<AppInfoList> appInfoList; 
         private String code; 
+        private Data data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -109,9 +109,9 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
         private Builder() {
         } 
 
-        private Builder(GetDataServiceAuthorizedAppsByGroupIdResponseBody model) {
-            this.appInfoList = model.appInfoList;
+        private Builder(ResetDataServiceAppSecretResponseBody model) {
             this.code = model.code;
+            this.data = model.data;
             this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
             this.requestId = model.requestId;
@@ -119,18 +119,18 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
         } 
 
         /**
-         * AppInfoList.
-         */
-        public Builder appInfoList(java.util.List<AppInfoList> appInfoList) {
-            this.appInfoList = appInfoList;
-            return this;
-        }
-
-        /**
          * Code.
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
             return this;
         }
 
@@ -169,131 +169,82 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
             return this;
         }
 
-        public GetDataServiceAuthorizedAppsByGroupIdResponseBody build() {
-            return new GetDataServiceAuthorizedAppsByGroupIdResponseBody(this);
+        public ResetDataServiceAppSecretResponseBody build() {
+            return new ResetDataServiceAppSecretResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetDataServiceAuthorizedAppsByGroupIdResponseBody} extends {@link TeaModel}
+     * {@link ResetDataServiceAppSecretResponseBody} extends {@link TeaModel}
      *
-     * <p>GetDataServiceAuthorizedAppsByGroupIdResponseBody</p>
+     * <p>ResetDataServiceAppSecretResponseBody</p>
      */
-    public static class AppInfoList extends TeaModel {
+    public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppKey")
-        @Deprecated
-        private Long appKey;
+        private String appKey;
 
-        @com.aliyun.core.annotation.NameInMap("AppKeyStr")
-        private String appKeyStr;
+        @com.aliyun.core.annotation.NameInMap("AppSecret")
+        private String appSecret;
 
-        @com.aliyun.core.annotation.NameInMap("Id")
-        private Integer id;
-
-        @com.aliyun.core.annotation.NameInMap("Name")
-        private String name;
-
-        private AppInfoList(Builder builder) {
+        private Data(Builder builder) {
             this.appKey = builder.appKey;
-            this.appKeyStr = builder.appKeyStr;
-            this.id = builder.id;
-            this.name = builder.name;
+            this.appSecret = builder.appSecret;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static AppInfoList create() {
+        public static Data create() {
             return builder().build();
         }
 
         /**
          * @return appKey
          */
-        public Long getAppKey() {
+        public String getAppKey() {
             return this.appKey;
         }
 
         /**
-         * @return appKeyStr
+         * @return appSecret
          */
-        public String getAppKeyStr() {
-            return this.appKeyStr;
-        }
-
-        /**
-         * @return id
-         */
-        public Integer getId() {
-            return this.id;
-        }
-
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
+        public String getAppSecret() {
+            return this.appSecret;
         }
 
         public static final class Builder {
-            private Long appKey; 
-            private String appKeyStr; 
-            private Integer id; 
-            private String name; 
+            private String appKey; 
+            private String appSecret; 
 
             private Builder() {
             } 
 
-            private Builder(AppInfoList model) {
+            private Builder(Data model) {
                 this.appKey = model.appKey;
-                this.appKeyStr = model.appKeyStr;
-                this.id = model.id;
-                this.name = model.name;
+                this.appSecret = model.appSecret;
             } 
 
             /**
-             * <p>AppKey</p>
-             * 
-             * <strong>example:</strong>
-             * <p>202212</p>
+             * AppKey.
              */
-            public Builder appKey(Long appKey) {
+            public Builder appKey(String appKey) {
                 this.appKey = appKey;
                 return this;
             }
 
             /**
-             * AppKeyStr.
+             * AppSecret.
              */
-            public Builder appKeyStr(String appKeyStr) {
-                this.appKeyStr = appKeyStr;
+            public Builder appSecret(String appSecret) {
+                this.appSecret = appSecret;
                 return this;
             }
 
-            /**
-             * <p>AppId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1021</p>
-             */
-            public Builder id(Integer id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * Name.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            public AppInfoList build() {
-                return new AppInfoList(this);
+            public Data build() {
+                return new Data(this);
             } 
 
         } 

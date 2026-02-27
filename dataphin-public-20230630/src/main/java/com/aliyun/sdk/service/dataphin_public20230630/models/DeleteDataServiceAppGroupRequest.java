@@ -12,37 +12,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDataServiceAppGroupsRequest} extends {@link RequestModel}
+ * {@link DeleteDataServiceAppGroupRequest} extends {@link RequestModel}
  *
- * <p>GetDataServiceAppGroupsRequest</p>
+ * <p>DeleteDataServiceAppGroupRequest</p>
  */
-public class GetDataServiceAppGroupsRequest extends Request {
+public class DeleteDataServiceAppGroupRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Integer groupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OpTenantId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ProjectId")
-    @Deprecated
-    private Integer projectId;
-
-    private GetDataServiceAppGroupsRequest(Builder builder) {
+    private DeleteDataServiceAppGroupRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.groupId = builder.groupId;
         this.opTenantId = builder.opTenantId;
-        this.projectId = builder.projectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetDataServiceAppGroupsRequest create() {
+    public static DeleteDataServiceAppGroupRequest create() {
         return builder().build();
     }
 
@@ -59,33 +59,33 @@ public class GetDataServiceAppGroupsRequest extends Request {
     }
 
     /**
+     * @return groupId
+     */
+    public Integer getGroupId() {
+        return this.groupId;
+    }
+
+    /**
      * @return opTenantId
      */
     public Long getOpTenantId() {
         return this.opTenantId;
     }
 
-    /**
-     * @return projectId
-     */
-    public Integer getProjectId() {
-        return this.projectId;
-    }
-
-    public static final class Builder extends Request.Builder<GetDataServiceAppGroupsRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteDataServiceAppGroupRequest, Builder> {
         private String regionId; 
+        private Integer groupId; 
         private Long opTenantId; 
-        private Integer projectId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDataServiceAppGroupsRequest request) {
+        private Builder(DeleteDataServiceAppGroupRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.groupId = request.groupId;
             this.opTenantId = request.opTenantId;
-            this.projectId = request.projectId;
         } 
 
         /**
@@ -101,6 +101,18 @@ public class GetDataServiceAppGroupsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
+         * <p>550980364236</p>
+         */
+        public Builder groupId(Integer groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
          * <p>30001011</p>
          */
         public Builder opTenantId(Long opTenantId) {
@@ -109,18 +121,9 @@ public class GetDataServiceAppGroupsRequest extends Request {
             return this;
         }
 
-        /**
-         * ProjectId.
-         */
-        public Builder projectId(Integer projectId) {
-            this.putQueryParameter("ProjectId", projectId);
-            this.projectId = projectId;
-            return this;
-        }
-
         @Override
-        public GetDataServiceAppGroupsRequest build() {
-            return new GetDataServiceAppGroupsRequest(this);
+        public DeleteDataServiceAppGroupRequest build() {
+            return new DeleteDataServiceAppGroupRequest(this);
         } 
 
     } 

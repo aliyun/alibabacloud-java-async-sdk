@@ -134,22 +134,24 @@ public class ListApiByAppRequest extends Request {
      */
     public static class PageQuery extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppKey")
-        @com.aliyun.core.annotation.Validation(required = true)
+        @Deprecated
         private Long appKey;
+
+        @com.aliyun.core.annotation.NameInMap("AppKeyStr")
+        private String appKeyStr;
 
         @com.aliyun.core.annotation.NameInMap("Keyword")
         private String keyword;
 
         @com.aliyun.core.annotation.NameInMap("PageNum")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer pageNum;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer pageSize;
 
         private PageQuery(Builder builder) {
             this.appKey = builder.appKey;
+            this.appKeyStr = builder.appKeyStr;
             this.keyword = builder.keyword;
             this.pageNum = builder.pageNum;
             this.pageSize = builder.pageSize;
@@ -168,6 +170,13 @@ public class ListApiByAppRequest extends Request {
          */
         public Long getAppKey() {
             return this.appKey;
+        }
+
+        /**
+         * @return appKeyStr
+         */
+        public String getAppKeyStr() {
+            return this.appKeyStr;
         }
 
         /**
@@ -193,6 +202,7 @@ public class ListApiByAppRequest extends Request {
 
         public static final class Builder {
             private Long appKey; 
+            private String appKeyStr; 
             private String keyword; 
             private Integer pageNum; 
             private Integer pageSize; 
@@ -202,6 +212,7 @@ public class ListApiByAppRequest extends Request {
 
             private Builder(PageQuery model) {
                 this.appKey = model.appKey;
+                this.appKeyStr = model.appKeyStr;
                 this.keyword = model.keyword;
                 this.pageNum = model.pageNum;
                 this.pageSize = model.pageSize;
@@ -209,13 +220,20 @@ public class ListApiByAppRequest extends Request {
 
             /**
              * <p>appKey</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>10121101</p>
              */
             public Builder appKey(Long appKey) {
                 this.appKey = appKey;
+                return this;
+            }
+
+            /**
+             * AppKeyStr.
+             */
+            public Builder appKeyStr(String appKeyStr) {
+                this.appKeyStr = appKeyStr;
                 return this;
             }
 
@@ -228,10 +246,7 @@ public class ListApiByAppRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * PageNum.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -239,10 +254,7 @@ public class ListApiByAppRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

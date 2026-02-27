@@ -2003,6 +2003,9 @@ public class ListApiByAppResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("AuthTypes")
+        private java.util.List<String> authTypes;
+
         @com.aliyun.core.annotation.NameInMap("BizModuleEnName")
         private String bizModuleEnName;
 
@@ -2124,6 +2127,7 @@ public class ListApiByAppResponseBody extends TeaModel {
             this.apiNo = builder.apiNo;
             this.apiTimeout = builder.apiTimeout;
             this.appName = builder.appName;
+            this.authTypes = builder.authTypes;
             this.bizModuleEnName = builder.bizModuleEnName;
             this.cacheSwitch = builder.cacheSwitch;
             this.cacheTime = builder.cacheTime;
@@ -2192,6 +2196,13 @@ public class ListApiByAppResponseBody extends TeaModel {
          */
         public String getAppName() {
             return this.appName;
+        }
+
+        /**
+         * @return authTypes
+         */
+        public java.util.List<String> getAuthTypes() {
+            return this.authTypes;
         }
 
         /**
@@ -2471,6 +2482,7 @@ public class ListApiByAppResponseBody extends TeaModel {
             private Long apiNo; 
             private Long apiTimeout; 
             private String appName; 
+            private java.util.List<String> authTypes; 
             private String bizModuleEnName; 
             private String cacheSwitch; 
             private String cacheTime; 
@@ -2518,6 +2530,7 @@ public class ListApiByAppResponseBody extends TeaModel {
                 this.apiNo = model.apiNo;
                 this.apiTimeout = model.apiTimeout;
                 this.appName = model.appName;
+                this.authTypes = model.authTypes;
                 this.bizModuleEnName = model.bizModuleEnName;
                 this.cacheSwitch = model.cacheSwitch;
                 this.cacheTime = model.cacheTime;
@@ -2580,6 +2593,14 @@ public class ListApiByAppResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * AuthTypes.
+             */
+            public Builder authTypes(java.util.List<String> authTypes) {
+                this.authTypes = authTypes;
                 return this;
             }
 

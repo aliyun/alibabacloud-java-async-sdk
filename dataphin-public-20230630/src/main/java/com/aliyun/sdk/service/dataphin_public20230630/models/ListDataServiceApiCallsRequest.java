@@ -167,7 +167,11 @@ public class ListDataServiceApiCallsRequest extends Request {
         private String apiName;
 
         @com.aliyun.core.annotation.NameInMap("AppKey")
+        @Deprecated
         private Long appKey;
+
+        @com.aliyun.core.annotation.NameInMap("AppKeyStr")
+        private String appKeyStr;
 
         @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
@@ -193,6 +197,7 @@ public class ListDataServiceApiCallsRequest extends Request {
             this.apiId = builder.apiId;
             this.apiName = builder.apiName;
             this.appKey = builder.appKey;
+            this.appKeyStr = builder.appKeyStr;
             this.clientIp = builder.clientIp;
             this.endTime = builder.endTime;
             this.pageNo = builder.pageNo;
@@ -228,6 +233,13 @@ public class ListDataServiceApiCallsRequest extends Request {
          */
         public Long getAppKey() {
             return this.appKey;
+        }
+
+        /**
+         * @return appKeyStr
+         */
+        public String getAppKeyStr() {
+            return this.appKeyStr;
         }
 
         /**
@@ -276,6 +288,7 @@ public class ListDataServiceApiCallsRequest extends Request {
             private Long apiId; 
             private String apiName; 
             private Long appKey; 
+            private String appKeyStr; 
             private String clientIp; 
             private String endTime; 
             private Integer pageNo; 
@@ -290,6 +303,7 @@ public class ListDataServiceApiCallsRequest extends Request {
                 this.apiId = model.apiId;
                 this.apiName = model.apiName;
                 this.appKey = model.appKey;
+                this.appKeyStr = model.appKeyStr;
                 this.clientIp = model.clientIp;
                 this.endTime = model.endTime;
                 this.pageNo = model.pageNo;
@@ -322,6 +336,14 @@ public class ListDataServiceApiCallsRequest extends Request {
              */
             public Builder appKey(Long appKey) {
                 this.appKey = appKey;
+                return this;
+            }
+
+            /**
+             * AppKeyStr.
+             */
+            public Builder appKeyStr(String appKeyStr) {
+                this.appKeyStr = appKeyStr;
                 return this;
             }
 

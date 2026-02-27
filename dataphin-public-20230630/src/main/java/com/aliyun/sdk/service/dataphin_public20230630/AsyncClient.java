@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddDataServiceAppMember  AddDataServiceAppMemberRequest
+     * @return AddDataServiceAppMemberResponse
+     */
+    CompletableFuture<AddDataServiceAppMemberResponse> addDataServiceAppMember(AddDataServiceAppMemberRequest request);
+
+    /**
      * @param request the request parameters of AddDataServiceProjectMember  AddDataServiceProjectMemberRequest
      * @return AddDataServiceProjectMemberResponse
      */
@@ -156,6 +162,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDataServiceApiResponse
      */
     CompletableFuture<CreateDataServiceApiResponse> createDataServiceApi(CreateDataServiceApiRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataServiceApp  CreateDataServiceAppRequest
+     * @return CreateDataServiceAppResponse
+     */
+    CompletableFuture<CreateDataServiceAppResponse> createDataServiceApp(CreateDataServiceAppRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataServiceAppGroup  CreateDataServiceAppGroupRequest
+     * @return CreateDataServiceAppGroupResponse
+     */
+    CompletableFuture<CreateDataServiceAppGroupResponse> createDataServiceAppGroup(CreateDataServiceAppGroupRequest request);
 
     /**
      * @param request the request parameters of CreateDataSource  CreateDataSourceRequest
@@ -330,6 +348,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDataDomainResponse
      */
     CompletableFuture<DeleteDataDomainResponse> deleteDataDomain(DeleteDataDomainRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataServiceApp  DeleteDataServiceAppRequest
+     * @return DeleteDataServiceAppResponse
+     */
+    CompletableFuture<DeleteDataServiceAppResponse> deleteDataServiceApp(DeleteDataServiceAppRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataServiceAppGroup  DeleteDataServiceAppGroupRequest
+     * @return DeleteDataServiceAppGroupResponse
+     */
+    CompletableFuture<DeleteDataServiceAppGroupResponse> deleteDataServiceAppGroup(DeleteDataServiceAppGroupRequest request);
 
     /**
      * @param request the request parameters of DeleteDataSource  DeleteDataSourceRequest
@@ -632,6 +662,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataServiceApiGroupsResponse> getDataServiceApiGroups(GetDataServiceApiGroupsRequest request);
 
     /**
+     * @param request the request parameters of GetDataServiceApp  GetDataServiceAppRequest
+     * @return GetDataServiceAppResponse
+     */
+    CompletableFuture<GetDataServiceAppResponse> getDataServiceApp(GetDataServiceAppRequest request);
+
+    /**
      * @param request the request parameters of GetDataServiceAppAuthorizedUsers  GetDataServiceAppAuthorizedUsersRequest
      * @return GetDataServiceAppAuthorizedUsersResponse
      */
@@ -642,6 +678,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDataServiceAppGroupsResponse
      */
     CompletableFuture<GetDataServiceAppGroupsResponse> getDataServiceAppGroups(GetDataServiceAppGroupsRequest request);
+
+    /**
+     * @param request the request parameters of GetDataServiceAppMembers  GetDataServiceAppMembersRequest
+     * @return GetDataServiceAppMembersResponse
+     */
+    CompletableFuture<GetDataServiceAppMembersResponse> getDataServiceAppMembers(GetDataServiceAppMembersRequest request);
 
     /**
      * @param request the request parameters of GetDataServiceAppsByGroupId  GetDataServiceAppsByGroupIdRequest
@@ -896,6 +938,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceByVersionResponse> getResourceByVersion(GetResourceByVersionRequest request);
 
     /**
+     * @param request the request parameters of GetRowPermissionByTableGuids  GetRowPermissionByTableGuidsRequest
+     * @return GetRowPermissionByTableGuidsResponse
+     */
+    CompletableFuture<GetRowPermissionByTableGuidsResponse> getRowPermissionByTableGuids(GetRowPermissionByTableGuidsRequest request);
+
+    /**
      * @param request the request parameters of GetSecurityClassify  GetSecurityClassifyRequest
      * @return GetSecurityClassifyResponse
      */
@@ -1134,6 +1182,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDataServiceApiImpactsResponse
      */
     CompletableFuture<ListDataServiceApiImpactsResponse> listDataServiceApiImpacts(ListDataServiceApiImpactsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataServiceApps  ListDataServiceAppsRequest
+     * @return ListDataServiceAppsResponse
+     */
+    CompletableFuture<ListDataServiceAppsResponse> listDataServiceApps(ListDataServiceAppsRequest request);
 
     /**
      * @param request the request parameters of ListDataServiceAuthorizedApps  ListDataServiceAuthorizedAppsRequest
@@ -1382,6 +1436,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishStandardResponse> publishStandard(PublishStandardRequest request);
 
     /**
+     * @param request the request parameters of RemoveDataServiceAppMember  RemoveDataServiceAppMemberRequest
+     * @return RemoveDataServiceAppMemberResponse
+     */
+    CompletableFuture<RemoveDataServiceAppMemberResponse> removeDataServiceAppMember(RemoveDataServiceAppMemberRequest request);
+
+    /**
      * @param request the request parameters of RemoveProjectMember  RemoveProjectMemberRequest
      * @return RemoveProjectMemberResponse
      */
@@ -1410,6 +1470,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ReplaceProjectWhiteListsResponse
      */
     CompletableFuture<ReplaceProjectWhiteListsResponse> replaceProjectWhiteLists(ReplaceProjectWhiteListsRequest request);
+
+    /**
+     * @param request the request parameters of ResetDataServiceAppSecret  ResetDataServiceAppSecretRequest
+     * @return ResetDataServiceAppSecretResponse
+     */
+    CompletableFuture<ResetDataServiceAppSecretResponse> resetDataServiceAppSecret(ResetDataServiceAppSecretRequest request);
 
     /**
      * @param request the request parameters of ResumePhysicalNode  ResumePhysicalNodeRequest
@@ -1524,6 +1590,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDataDomainResponse
      */
     CompletableFuture<UpdateDataDomainResponse> updateDataDomain(UpdateDataDomainRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataServiceApp  UpdateDataServiceAppRequest
+     * @return UpdateDataServiceAppResponse
+     */
+    CompletableFuture<UpdateDataServiceAppResponse> updateDataServiceApp(UpdateDataServiceAppRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataServiceAppGroup  UpdateDataServiceAppGroupRequest
+     * @return UpdateDataServiceAppGroupResponse
+     */
+    CompletableFuture<UpdateDataServiceAppGroupResponse> updateDataServiceAppGroup(UpdateDataServiceAppGroupRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataServiceAppMember  UpdateDataServiceAppMemberRequest
+     * @return UpdateDataServiceAppMemberResponse
+     */
+    CompletableFuture<UpdateDataServiceAppMemberResponse> updateDataServiceAppMember(UpdateDataServiceAppMemberRequest request);
 
     /**
      * @param request the request parameters of UpdateDataSourceBasicInfo  UpdateDataSourceBasicInfoRequest

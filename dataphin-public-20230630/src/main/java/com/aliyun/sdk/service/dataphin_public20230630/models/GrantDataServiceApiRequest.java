@@ -161,7 +161,6 @@ public class GrantDataServiceApiRequest extends Request {
      */
     public static class DevFieldList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer id;
 
         private DevFieldList(Builder builder) {
@@ -194,7 +193,7 @@ public class GrantDataServiceApiRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * Id.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -216,7 +215,6 @@ public class GrantDataServiceApiRequest extends Request {
      */
     public static class ProdFieldList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer id;
 
         private ProdFieldList(Builder builder) {
@@ -249,7 +247,7 @@ public class GrantDataServiceApiRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * Id.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -275,7 +273,6 @@ public class GrantDataServiceApiRequest extends Request {
         private Long apiId;
 
         @com.aliyun.core.annotation.NameInMap("AppId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer appId;
 
         @com.aliyun.core.annotation.NameInMap("ApplyDev")
@@ -284,12 +281,18 @@ public class GrantDataServiceApiRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ApplyProd")
         private Boolean applyProd;
 
+        @com.aliyun.core.annotation.NameInMap("AuthTypes")
+        private java.util.List<String> authTypes;
+
         @com.aliyun.core.annotation.NameInMap("DevFieldList")
         private java.util.List<DevFieldList> devFieldList;
 
         @com.aliyun.core.annotation.NameInMap("ExpireDate")
         @com.aliyun.core.annotation.Validation(required = true)
         private String expireDate;
+
+        @com.aliyun.core.annotation.NameInMap("GranteeType")
+        private String granteeType;
 
         @com.aliyun.core.annotation.NameInMap("ProdFieldList")
         private java.util.List<ProdFieldList> prodFieldList;
@@ -298,15 +301,21 @@ public class GrantDataServiceApiRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String reason;
 
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        private String userId;
+
         private GrantCommand(Builder builder) {
             this.apiId = builder.apiId;
             this.appId = builder.appId;
             this.applyDev = builder.applyDev;
             this.applyProd = builder.applyProd;
+            this.authTypes = builder.authTypes;
             this.devFieldList = builder.devFieldList;
             this.expireDate = builder.expireDate;
+            this.granteeType = builder.granteeType;
             this.prodFieldList = builder.prodFieldList;
             this.reason = builder.reason;
+            this.userId = builder.userId;
         }
 
         public static Builder builder() {
@@ -346,6 +355,13 @@ public class GrantDataServiceApiRequest extends Request {
         }
 
         /**
+         * @return authTypes
+         */
+        public java.util.List<String> getAuthTypes() {
+            return this.authTypes;
+        }
+
+        /**
          * @return devFieldList
          */
         public java.util.List<DevFieldList> getDevFieldList() {
@@ -357,6 +373,13 @@ public class GrantDataServiceApiRequest extends Request {
          */
         public String getExpireDate() {
             return this.expireDate;
+        }
+
+        /**
+         * @return granteeType
+         */
+        public String getGranteeType() {
+            return this.granteeType;
         }
 
         /**
@@ -373,15 +396,25 @@ public class GrantDataServiceApiRequest extends Request {
             return this.reason;
         }
 
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
         public static final class Builder {
             private Long apiId; 
             private Integer appId; 
             private Boolean applyDev; 
             private Boolean applyProd; 
+            private java.util.List<String> authTypes; 
             private java.util.List<DevFieldList> devFieldList; 
             private String expireDate; 
+            private String granteeType; 
             private java.util.List<ProdFieldList> prodFieldList; 
             private String reason; 
+            private String userId; 
 
             private Builder() {
             } 
@@ -391,10 +424,13 @@ public class GrantDataServiceApiRequest extends Request {
                 this.appId = model.appId;
                 this.applyDev = model.applyDev;
                 this.applyProd = model.applyProd;
+                this.authTypes = model.authTypes;
                 this.devFieldList = model.devFieldList;
                 this.expireDate = model.expireDate;
+                this.granteeType = model.granteeType;
                 this.prodFieldList = model.prodFieldList;
                 this.reason = model.reason;
+                this.userId = model.userId;
             } 
 
             /**
@@ -410,7 +446,6 @@ public class GrantDataServiceApiRequest extends Request {
 
             /**
              * <p>AppID</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1201</p>
@@ -437,6 +472,14 @@ public class GrantDataServiceApiRequest extends Request {
             }
 
             /**
+             * AuthTypes.
+             */
+            public Builder authTypes(java.util.List<String> authTypes) {
+                this.authTypes = authTypes;
+                return this;
+            }
+
+            /**
              * DevFieldList.
              */
             public Builder devFieldList(java.util.List<DevFieldList> devFieldList) {
@@ -456,6 +499,14 @@ public class GrantDataServiceApiRequest extends Request {
             }
 
             /**
+             * GranteeType.
+             */
+            public Builder granteeType(String granteeType) {
+                this.granteeType = granteeType;
+                return this;
+            }
+
+            /**
              * ProdFieldList.
              */
             public Builder prodFieldList(java.util.List<ProdFieldList> prodFieldList) {
@@ -471,6 +522,14 @@ public class GrantDataServiceApiRequest extends Request {
              */
             public Builder reason(String reason) {
                 this.reason = reason;
+                return this;
+            }
+
+            /**
+             * UserId.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
                 return this;
             }
 

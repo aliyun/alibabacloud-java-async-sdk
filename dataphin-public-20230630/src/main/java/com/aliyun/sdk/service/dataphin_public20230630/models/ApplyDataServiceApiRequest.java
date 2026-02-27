@@ -161,7 +161,6 @@ public class ApplyDataServiceApiRequest extends Request {
      */
     public static class DevFieldList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer id;
 
         private DevFieldList(Builder builder) {
@@ -194,10 +193,7 @@ public class ApplyDataServiceApiRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>22</p>
+             * Id.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -219,7 +215,6 @@ public class ApplyDataServiceApiRequest extends Request {
      */
     public static class ProdFieldList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer id;
 
         private ProdFieldList(Builder builder) {
@@ -252,10 +247,7 @@ public class ApplyDataServiceApiRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>22</p>
+             * Id.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -281,8 +273,19 @@ public class ApplyDataServiceApiRequest extends Request {
         private Long apiId;
 
         @com.aliyun.core.annotation.NameInMap("AppId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer appId;
+
+        @com.aliyun.core.annotation.NameInMap("ApplyDev")
+        private Boolean applyDev;
+
+        @com.aliyun.core.annotation.NameInMap("ApplyProd")
+        private Boolean applyProd;
+
+        @com.aliyun.core.annotation.NameInMap("ApplyType")
+        private String applyType;
+
+        @com.aliyun.core.annotation.NameInMap("AuthTypes")
+        private java.util.List<String> authTypes;
 
         @com.aliyun.core.annotation.NameInMap("DevFieldList")
         private java.util.List<DevFieldList> devFieldList;
@@ -301,6 +304,10 @@ public class ApplyDataServiceApiRequest extends Request {
         private ApplyCommand(Builder builder) {
             this.apiId = builder.apiId;
             this.appId = builder.appId;
+            this.applyDev = builder.applyDev;
+            this.applyProd = builder.applyProd;
+            this.applyType = builder.applyType;
+            this.authTypes = builder.authTypes;
             this.devFieldList = builder.devFieldList;
             this.expireDate = builder.expireDate;
             this.prodFieldList = builder.prodFieldList;
@@ -327,6 +334,34 @@ public class ApplyDataServiceApiRequest extends Request {
          */
         public Integer getAppId() {
             return this.appId;
+        }
+
+        /**
+         * @return applyDev
+         */
+        public Boolean getApplyDev() {
+            return this.applyDev;
+        }
+
+        /**
+         * @return applyProd
+         */
+        public Boolean getApplyProd() {
+            return this.applyProd;
+        }
+
+        /**
+         * @return applyType
+         */
+        public String getApplyType() {
+            return this.applyType;
+        }
+
+        /**
+         * @return authTypes
+         */
+        public java.util.List<String> getAuthTypes() {
+            return this.authTypes;
         }
 
         /**
@@ -360,6 +395,10 @@ public class ApplyDataServiceApiRequest extends Request {
         public static final class Builder {
             private Long apiId; 
             private Integer appId; 
+            private Boolean applyDev; 
+            private Boolean applyProd; 
+            private String applyType; 
+            private java.util.List<String> authTypes; 
             private java.util.List<DevFieldList> devFieldList; 
             private String expireDate; 
             private java.util.List<ProdFieldList> prodFieldList; 
@@ -371,6 +410,10 @@ public class ApplyDataServiceApiRequest extends Request {
             private Builder(ApplyCommand model) {
                 this.apiId = model.apiId;
                 this.appId = model.appId;
+                this.applyDev = model.applyDev;
+                this.applyProd = model.applyProd;
+                this.applyType = model.applyType;
+                this.authTypes = model.authTypes;
                 this.devFieldList = model.devFieldList;
                 this.expireDate = model.expireDate;
                 this.prodFieldList = model.prodFieldList;
@@ -390,13 +433,44 @@ public class ApplyDataServiceApiRequest extends Request {
 
             /**
              * <p>AppId</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1203</p>
              */
             public Builder appId(Integer appId) {
                 this.appId = appId;
+                return this;
+            }
+
+            /**
+             * ApplyDev.
+             */
+            public Builder applyDev(Boolean applyDev) {
+                this.applyDev = applyDev;
+                return this;
+            }
+
+            /**
+             * ApplyProd.
+             */
+            public Builder applyProd(Boolean applyProd) {
+                this.applyProd = applyProd;
+                return this;
+            }
+
+            /**
+             * ApplyType.
+             */
+            public Builder applyType(String applyType) {
+                this.applyType = applyType;
+                return this;
+            }
+
+            /**
+             * AuthTypes.
+             */
+            public Builder authTypes(java.util.List<String> authTypes) {
+                this.authTypes = authTypes;
                 return this;
             }
 

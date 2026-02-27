@@ -12,37 +12,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDataServiceAppGroupsRequest} extends {@link RequestModel}
+ * {@link DeleteDataServiceAppRequest} extends {@link RequestModel}
  *
- * <p>GetDataServiceAppGroupsRequest</p>
+ * <p>DeleteDataServiceAppRequest</p>
  */
-public class GetDataServiceAppGroupsRequest extends Request {
+public class DeleteDataServiceAppRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Integer appId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OpTenantId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ProjectId")
-    @Deprecated
-    private Integer projectId;
-
-    private GetDataServiceAppGroupsRequest(Builder builder) {
+    private DeleteDataServiceAppRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.appId = builder.appId;
         this.opTenantId = builder.opTenantId;
-        this.projectId = builder.projectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetDataServiceAppGroupsRequest create() {
+    public static DeleteDataServiceAppRequest create() {
         return builder().build();
     }
 
@@ -59,33 +59,33 @@ public class GetDataServiceAppGroupsRequest extends Request {
     }
 
     /**
+     * @return appId
+     */
+    public Integer getAppId() {
+        return this.appId;
+    }
+
+    /**
      * @return opTenantId
      */
     public Long getOpTenantId() {
         return this.opTenantId;
     }
 
-    /**
-     * @return projectId
-     */
-    public Integer getProjectId() {
-        return this.projectId;
-    }
-
-    public static final class Builder extends Request.Builder<GetDataServiceAppGroupsRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteDataServiceAppRequest, Builder> {
         private String regionId; 
+        private Integer appId; 
         private Long opTenantId; 
-        private Integer projectId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDataServiceAppGroupsRequest request) {
+        private Builder(DeleteDataServiceAppRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.appId = request.appId;
             this.opTenantId = request.opTenantId;
-            this.projectId = request.projectId;
         } 
 
         /**
@@ -101,6 +101,18 @@ public class GetDataServiceAppGroupsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
+         * <p>-535093682933</p>
+         */
+        public Builder appId(Integer appId) {
+            this.putQueryParameter("AppId", appId);
+            this.appId = appId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
          * <p>30001011</p>
          */
         public Builder opTenantId(Long opTenantId) {
@@ -109,18 +121,9 @@ public class GetDataServiceAppGroupsRequest extends Request {
             return this;
         }
 
-        /**
-         * ProjectId.
-         */
-        public Builder projectId(Integer projectId) {
-            this.putQueryParameter("ProjectId", projectId);
-            this.projectId = projectId;
-            return this;
-        }
-
         @Override
-        public GetDataServiceAppGroupsRequest build() {
-            return new GetDataServiceAppGroupsRequest(this);
+        public DeleteDataServiceAppRequest build() {
+            return new DeleteDataServiceAppRequest(this);
         } 
 
     } 

@@ -12,37 +12,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDataServiceAppGroupsRequest} extends {@link RequestModel}
+ * {@link CreateDataServiceAppGroupRequest} extends {@link RequestModel}
  *
- * <p>GetDataServiceAppGroupsRequest</p>
+ * <p>CreateDataServiceAppGroupRequest</p>
  */
-public class GetDataServiceAppGroupsRequest extends Request {
+public class CreateDataServiceAppGroupRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
+    private String groupName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OpTenantId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ProjectId")
-    @Deprecated
-    private Integer projectId;
-
-    private GetDataServiceAppGroupsRequest(Builder builder) {
+    private CreateDataServiceAppGroupRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.groupName = builder.groupName;
         this.opTenantId = builder.opTenantId;
-        this.projectId = builder.projectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetDataServiceAppGroupsRequest create() {
+    public static CreateDataServiceAppGroupRequest create() {
         return builder().build();
     }
 
@@ -59,33 +59,33 @@ public class GetDataServiceAppGroupsRequest extends Request {
     }
 
     /**
+     * @return groupName
+     */
+    public String getGroupName() {
+        return this.groupName;
+    }
+
+    /**
      * @return opTenantId
      */
     public Long getOpTenantId() {
         return this.opTenantId;
     }
 
-    /**
-     * @return projectId
-     */
-    public Integer getProjectId() {
-        return this.projectId;
-    }
-
-    public static final class Builder extends Request.Builder<GetDataServiceAppGroupsRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateDataServiceAppGroupRequest, Builder> {
         private String regionId; 
+        private String groupName; 
         private Long opTenantId; 
-        private Integer projectId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDataServiceAppGroupsRequest request) {
+        private Builder(CreateDataServiceAppGroupRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.groupName = request.groupName;
             this.opTenantId = request.opTenantId;
-            this.projectId = request.projectId;
         } 
 
         /**
@@ -101,6 +101,18 @@ public class GetDataServiceAppGroupsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
+         * <p>default_app_group</p>
+         */
+        public Builder groupName(String groupName) {
+            this.putQueryParameter("GroupName", groupName);
+            this.groupName = groupName;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
          * <p>30001011</p>
          */
         public Builder opTenantId(Long opTenantId) {
@@ -109,18 +121,9 @@ public class GetDataServiceAppGroupsRequest extends Request {
             return this;
         }
 
-        /**
-         * ProjectId.
-         */
-        public Builder projectId(Integer projectId) {
-            this.putQueryParameter("ProjectId", projectId);
-            this.projectId = projectId;
-            return this;
-        }
-
         @Override
-        public GetDataServiceAppGroupsRequest build() {
-            return new GetDataServiceAppGroupsRequest(this);
+        public CreateDataServiceAppGroupRequest build() {
+            return new CreateDataServiceAppGroupRequest(this);
         } 
 
     } 

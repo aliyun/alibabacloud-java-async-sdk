@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListAuthorizedDataServiceApiDetailsRequest} extends {@link RequestModel}
+ * {@link ListDataServiceAppsRequest} extends {@link RequestModel}
  *
- * <p>ListAuthorizedDataServiceApiDetailsRequest</p>
+ * <p>ListDataServiceAppsRequest</p>
  */
-public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
+public class ListDataServiceAppsRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -31,7 +31,7 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
-    private ListAuthorizedDataServiceApiDetailsRequest(Builder builder) {
+    private ListDataServiceAppsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.listQuery = builder.listQuery;
@@ -42,7 +42,7 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
         return new Builder();
     }
 
-    public static ListAuthorizedDataServiceApiDetailsRequest create() {
+    public static ListDataServiceAppsRequest create() {
         return builder().build();
     }
 
@@ -72,7 +72,7 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
         return this.opTenantId;
     }
 
-    public static final class Builder extends Request.Builder<ListAuthorizedDataServiceApiDetailsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListDataServiceAppsRequest, Builder> {
         private String regionId; 
         private ListQuery listQuery; 
         private Long opTenantId; 
@@ -81,7 +81,7 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAuthorizedDataServiceApiDetailsRequest request) {
+        private Builder(ListDataServiceAppsRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.listQuery = request.listQuery;
@@ -120,38 +120,35 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
         }
 
         @Override
-        public ListAuthorizedDataServiceApiDetailsRequest build() {
-            return new ListAuthorizedDataServiceApiDetailsRequest(this);
+        public ListDataServiceAppsRequest build() {
+            return new ListDataServiceAppsRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListAuthorizedDataServiceApiDetailsRequest} extends {@link TeaModel}
+     * {@link ListDataServiceAppsRequest} extends {@link TeaModel}
      *
-     * <p>ListAuthorizedDataServiceApiDetailsRequest</p>
+     * <p>ListDataServiceAppsRequest</p>
      */
     public static class ListQuery extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AppKey")
-        @Deprecated
-        private Long appKey;
+        @com.aliyun.core.annotation.NameInMap("AppGroupId")
+        private Integer appGroupId;
 
-        @com.aliyun.core.annotation.NameInMap("AppKeyStr")
-        private String appKeyStr;
+        @com.aliyun.core.annotation.NameInMap("Keyword")
+        private String keyword;
 
-        @com.aliyun.core.annotation.NameInMap("Page")
-        @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
-        private Integer page;
+        @com.aliyun.core.annotation.NameInMap("PageNo")
+        private Integer pageNo;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
         private Integer pageSize;
 
         private ListQuery(Builder builder) {
-            this.appKey = builder.appKey;
-            this.appKeyStr = builder.appKeyStr;
-            this.page = builder.page;
+            this.appGroupId = builder.appGroupId;
+            this.keyword = builder.keyword;
+            this.pageNo = builder.pageNo;
             this.pageSize = builder.pageSize;
         }
 
@@ -164,24 +161,24 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
         }
 
         /**
-         * @return appKey
+         * @return appGroupId
          */
-        public Long getAppKey() {
-            return this.appKey;
+        public Integer getAppGroupId() {
+            return this.appGroupId;
         }
 
         /**
-         * @return appKeyStr
+         * @return keyword
          */
-        public String getAppKeyStr() {
-            return this.appKeyStr;
+        public String getKeyword() {
+            return this.keyword;
         }
 
         /**
-         * @return page
+         * @return pageNo
          */
-        public Integer getPage() {
-            return this.page;
+        public Integer getPageNo() {
+            return this.pageNo;
         }
 
         /**
@@ -192,56 +189,47 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
         }
 
         public static final class Builder {
-            private Long appKey; 
-            private String appKeyStr; 
-            private Integer page; 
+            private Integer appGroupId; 
+            private String keyword; 
+            private Integer pageNo; 
             private Integer pageSize; 
 
             private Builder() {
             } 
 
             private Builder(ListQuery model) {
-                this.appKey = model.appKey;
-                this.appKeyStr = model.appKeyStr;
-                this.page = model.page;
+                this.appGroupId = model.appGroupId;
+                this.keyword = model.keyword;
+                this.pageNo = model.pageNo;
                 this.pageSize = model.pageSize;
             } 
 
             /**
-             * <p>AppKey</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200000000</p>
+             * AppGroupId.
              */
-            public Builder appKey(Long appKey) {
-                this.appKey = appKey;
+            public Builder appGroupId(Integer appGroupId) {
+                this.appGroupId = appGroupId;
                 return this;
             }
 
             /**
-             * AppKeyStr.
+             * Keyword.
              */
-            public Builder appKeyStr(String appKeyStr) {
-                this.appKeyStr = appKeyStr;
+            public Builder keyword(String keyword) {
+                this.keyword = keyword;
                 return this;
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * PageNo.
              */
-            public Builder page(Integer page) {
-                this.page = page;
+            public Builder pageNo(Integer pageNo) {
+                this.pageNo = pageNo;
                 return this;
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

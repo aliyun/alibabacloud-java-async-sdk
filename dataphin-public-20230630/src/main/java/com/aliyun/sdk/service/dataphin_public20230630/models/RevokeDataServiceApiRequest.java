@@ -165,17 +165,32 @@ public class RevokeDataServiceApiRequest extends Request {
         private Long apiId;
 
         @com.aliyun.core.annotation.NameInMap("AppId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer appId;
 
+        @com.aliyun.core.annotation.NameInMap("AuthType")
+        private String authType;
+
+        @com.aliyun.core.annotation.NameInMap("Env")
+        private String env;
+
+        @com.aliyun.core.annotation.NameInMap("GranteeType")
+        private String granteeType;
+
         @com.aliyun.core.annotation.NameInMap("Reason")
-        @com.aliyun.core.annotation.Validation(required = true)
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
         private String reason;
+
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        private String userId;
 
         private RevokeCommand(Builder builder) {
             this.apiId = builder.apiId;
             this.appId = builder.appId;
+            this.authType = builder.authType;
+            this.env = builder.env;
+            this.granteeType = builder.granteeType;
             this.reason = builder.reason;
+            this.userId = builder.userId;
         }
 
         public static Builder builder() {
@@ -201,16 +216,48 @@ public class RevokeDataServiceApiRequest extends Request {
         }
 
         /**
+         * @return authType
+         */
+        public String getAuthType() {
+            return this.authType;
+        }
+
+        /**
+         * @return env
+         */
+        public String getEnv() {
+            return this.env;
+        }
+
+        /**
+         * @return granteeType
+         */
+        public String getGranteeType() {
+            return this.granteeType;
+        }
+
+        /**
          * @return reason
          */
         public String getReason() {
             return this.reason;
         }
 
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
         public static final class Builder {
             private Long apiId; 
             private Integer appId; 
+            private String authType; 
+            private String env; 
+            private String granteeType; 
             private String reason; 
+            private String userId; 
 
             private Builder() {
             } 
@@ -218,7 +265,11 @@ public class RevokeDataServiceApiRequest extends Request {
             private Builder(RevokeCommand model) {
                 this.apiId = model.apiId;
                 this.appId = model.appId;
+                this.authType = model.authType;
+                this.env = model.env;
+                this.granteeType = model.granteeType;
                 this.reason = model.reason;
+                this.userId = model.userId;
             } 
 
             /**
@@ -233,13 +284,34 @@ public class RevokeDataServiceApiRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1203</p>
+             * AppId.
              */
             public Builder appId(Integer appId) {
                 this.appId = appId;
+                return this;
+            }
+
+            /**
+             * AuthType.
+             */
+            public Builder authType(String authType) {
+                this.authType = authType;
+                return this;
+            }
+
+            /**
+             * Env.
+             */
+            public Builder env(String env) {
+                this.env = env;
+                return this;
+            }
+
+            /**
+             * GranteeType.
+             */
+            public Builder granteeType(String granteeType) {
+                this.granteeType = granteeType;
                 return this;
             }
 
@@ -251,6 +323,14 @@ public class RevokeDataServiceApiRequest extends Request {
              */
             public Builder reason(String reason) {
                 this.reason = reason;
+                return this;
+            }
+
+            /**
+             * UserId.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
                 return this;
             }
 

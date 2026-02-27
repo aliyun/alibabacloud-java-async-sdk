@@ -132,7 +132,169 @@ public class CreateDataServiceApiRequest extends Request {
      *
      * <p>CreateDataServiceApiRequest</p>
      */
+    public static class DmlConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BatchInputDataSize")
+        private Integer batchInputDataSize;
+
+        @com.aliyun.core.annotation.NameInMap("DataVolumeType")
+        private Integer dataVolumeType;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorHandlingType")
+        private Integer errorHandlingType;
+
+        @com.aliyun.core.annotation.NameInMap("MaxInputDataSize")
+        private Integer maxInputDataSize;
+
+        @com.aliyun.core.annotation.NameInMap("ParallelNum")
+        private Integer parallelNum;
+
+        @com.aliyun.core.annotation.NameInMap("TransactionType")
+        private Integer transactionType;
+
+        private DmlConfig(Builder builder) {
+            this.batchInputDataSize = builder.batchInputDataSize;
+            this.dataVolumeType = builder.dataVolumeType;
+            this.errorHandlingType = builder.errorHandlingType;
+            this.maxInputDataSize = builder.maxInputDataSize;
+            this.parallelNum = builder.parallelNum;
+            this.transactionType = builder.transactionType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DmlConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return batchInputDataSize
+         */
+        public Integer getBatchInputDataSize() {
+            return this.batchInputDataSize;
+        }
+
+        /**
+         * @return dataVolumeType
+         */
+        public Integer getDataVolumeType() {
+            return this.dataVolumeType;
+        }
+
+        /**
+         * @return errorHandlingType
+         */
+        public Integer getErrorHandlingType() {
+            return this.errorHandlingType;
+        }
+
+        /**
+         * @return maxInputDataSize
+         */
+        public Integer getMaxInputDataSize() {
+            return this.maxInputDataSize;
+        }
+
+        /**
+         * @return parallelNum
+         */
+        public Integer getParallelNum() {
+            return this.parallelNum;
+        }
+
+        /**
+         * @return transactionType
+         */
+        public Integer getTransactionType() {
+            return this.transactionType;
+        }
+
+        public static final class Builder {
+            private Integer batchInputDataSize; 
+            private Integer dataVolumeType; 
+            private Integer errorHandlingType; 
+            private Integer maxInputDataSize; 
+            private Integer parallelNum; 
+            private Integer transactionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DmlConfig model) {
+                this.batchInputDataSize = model.batchInputDataSize;
+                this.dataVolumeType = model.dataVolumeType;
+                this.errorHandlingType = model.errorHandlingType;
+                this.maxInputDataSize = model.maxInputDataSize;
+                this.parallelNum = model.parallelNum;
+                this.transactionType = model.transactionType;
+            } 
+
+            /**
+             * BatchInputDataSize.
+             */
+            public Builder batchInputDataSize(Integer batchInputDataSize) {
+                this.batchInputDataSize = batchInputDataSize;
+                return this;
+            }
+
+            /**
+             * DataVolumeType.
+             */
+            public Builder dataVolumeType(Integer dataVolumeType) {
+                this.dataVolumeType = dataVolumeType;
+                return this;
+            }
+
+            /**
+             * ErrorHandlingType.
+             */
+            public Builder errorHandlingType(Integer errorHandlingType) {
+                this.errorHandlingType = errorHandlingType;
+                return this;
+            }
+
+            /**
+             * MaxInputDataSize.
+             */
+            public Builder maxInputDataSize(Integer maxInputDataSize) {
+                this.maxInputDataSize = maxInputDataSize;
+                return this;
+            }
+
+            /**
+             * ParallelNum.
+             */
+            public Builder parallelNum(Integer parallelNum) {
+                this.parallelNum = parallelNum;
+                return this;
+            }
+
+            /**
+             * TransactionType.
+             */
+            public Builder transactionType(Integer transactionType) {
+                this.transactionType = transactionType;
+                return this;
+            }
+
+            public DmlConfig build() {
+                return new DmlConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataServiceApiRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataServiceApiRequest</p>
+     */
     public static class ScriptRequestParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
+        private String defaultValue;
+
         @com.aliyun.core.annotation.NameInMap("ExampleValue")
         private String exampleValue;
 
@@ -156,6 +318,7 @@ public class CreateDataServiceApiRequest extends Request {
         private String parameterValueType;
 
         private ScriptRequestParameters(Builder builder) {
+            this.defaultValue = builder.defaultValue;
             this.exampleValue = builder.exampleValue;
             this.isRequiredParameter = builder.isRequiredParameter;
             this.parameterDataType = builder.parameterDataType;
@@ -170,6 +333,13 @@ public class CreateDataServiceApiRequest extends Request {
 
         public static ScriptRequestParameters create() {
             return builder().build();
+        }
+
+        /**
+         * @return defaultValue
+         */
+        public String getDefaultValue() {
+            return this.defaultValue;
         }
 
         /**
@@ -215,6 +385,7 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         public static final class Builder {
+            private String defaultValue; 
             private String exampleValue; 
             private Boolean isRequiredParameter; 
             private String parameterDataType; 
@@ -226,6 +397,7 @@ public class CreateDataServiceApiRequest extends Request {
             } 
 
             private Builder(ScriptRequestParameters model) {
+                this.defaultValue = model.defaultValue;
                 this.exampleValue = model.exampleValue;
                 this.isRequiredParameter = model.isRequiredParameter;
                 this.parameterDataType = model.parameterDataType;
@@ -233,6 +405,14 @@ public class CreateDataServiceApiRequest extends Request {
                 this.parameterName = model.parameterName;
                 this.parameterValueType = model.parameterValueType;
             } 
+
+            /**
+             * DefaultValue.
+             */
+            public Builder defaultValue(String defaultValue) {
+                this.defaultValue = defaultValue;
+                return this;
+            }
 
             /**
              * ExampleValue.
@@ -318,6 +498,9 @@ public class CreateDataServiceApiRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
+        @com.aliyun.core.annotation.NameInMap("ParameterLocation")
+        private String parameterLocation;
+
         @com.aliyun.core.annotation.NameInMap("ParameterName")
         @com.aliyun.core.annotation.Validation(required = true)
         private String parameterName;
@@ -326,6 +509,7 @@ public class CreateDataServiceApiRequest extends Request {
             this.exampleValue = builder.exampleValue;
             this.parameterDataType = builder.parameterDataType;
             this.parameterDescription = builder.parameterDescription;
+            this.parameterLocation = builder.parameterLocation;
             this.parameterName = builder.parameterName;
         }
 
@@ -359,6 +543,13 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
+         * @return parameterLocation
+         */
+        public String getParameterLocation() {
+            return this.parameterLocation;
+        }
+
+        /**
          * @return parameterName
          */
         public String getParameterName() {
@@ -369,6 +560,7 @@ public class CreateDataServiceApiRequest extends Request {
             private String exampleValue; 
             private String parameterDataType; 
             private String parameterDescription; 
+            private String parameterLocation; 
             private String parameterName; 
 
             private Builder() {
@@ -378,6 +570,7 @@ public class CreateDataServiceApiRequest extends Request {
                 this.exampleValue = model.exampleValue;
                 this.parameterDataType = model.parameterDataType;
                 this.parameterDescription = model.parameterDescription;
+                this.parameterLocation = model.parameterLocation;
                 this.parameterName = model.parameterName;
             } 
 
@@ -405,6 +598,14 @@ public class CreateDataServiceApiRequest extends Request {
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
+                return this;
+            }
+
+            /**
+             * ParameterLocation.
+             */
+            public Builder parameterLocation(String parameterLocation) {
+                this.parameterLocation = parameterLocation;
                 return this;
             }
 
@@ -448,11 +649,9 @@ public class CreateDataServiceApiRequest extends Request {
         private String script;
 
         @com.aliyun.core.annotation.NameInMap("ScriptRequestParameters")
-        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<ScriptRequestParameters> scriptRequestParameters;
 
         @com.aliyun.core.annotation.NameInMap("ScriptResponseParameters")
-        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<ScriptResponseParameters> scriptResponseParameters;
 
         @com.aliyun.core.annotation.NameInMap("SortPriority")
@@ -600,7 +799,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * ScriptRequestParameters.
              */
             public Builder scriptRequestParameters(java.util.List<ScriptRequestParameters> scriptRequestParameters) {
                 this.scriptRequestParameters = scriptRequestParameters;
@@ -608,7 +807,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * ScriptResponseParameters.
              */
             public Builder scriptResponseParameters(java.util.List<ScriptResponseParameters> scriptResponseParameters) {
                 this.scriptResponseParameters = scriptResponseParameters;
@@ -669,7 +868,6 @@ public class CreateDataServiceApiRequest extends Request {
         private java.util.List<Integer> bizProtocol;
 
         @com.aliyun.core.annotation.NameInMap("CacheTimeout")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer cacheTimeout;
 
         @com.aliyun.core.annotation.NameInMap("CallMode")
@@ -680,6 +878,9 @@ public class CreateDataServiceApiRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("DmlConfig")
+        private DmlConfig dmlConfig;
 
         @com.aliyun.core.annotation.NameInMap("ExecutionTimeout")
         private Integer executionTimeout;
@@ -695,6 +896,12 @@ public class CreateDataServiceApiRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RequestType")
         @com.aliyun.core.annotation.Validation(required = true)
         private Integer requestType;
+
+        @com.aliyun.core.annotation.NameInMap("ReturnSqlSwitch")
+        private Boolean returnSqlSwitch;
+
+        @com.aliyun.core.annotation.NameInMap("RowPermissionIds")
+        private java.util.List<Long> rowPermissionIds;
 
         @com.aliyun.core.annotation.NameInMap("ScriptDetails")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -721,10 +928,13 @@ public class CreateDataServiceApiRequest extends Request {
             this.callMode = builder.callMode;
             this.customUpdateRate = builder.customUpdateRate;
             this.description = builder.description;
+            this.dmlConfig = builder.dmlConfig;
             this.executionTimeout = builder.executionTimeout;
             this.mode = builder.mode;
             this.projectId = builder.projectId;
             this.requestType = builder.requestType;
+            this.returnSqlSwitch = builder.returnSqlSwitch;
+            this.rowPermissionIds = builder.rowPermissionIds;
             this.scriptDetails = builder.scriptDetails;
             this.timeout = builder.timeout;
             this.updateRate = builder.updateRate;
@@ -803,6 +1013,13 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
+         * @return dmlConfig
+         */
+        public DmlConfig getDmlConfig() {
+            return this.dmlConfig;
+        }
+
+        /**
          * @return executionTimeout
          */
         public Integer getExecutionTimeout() {
@@ -828,6 +1045,20 @@ public class CreateDataServiceApiRequest extends Request {
          */
         public Integer getRequestType() {
             return this.requestType;
+        }
+
+        /**
+         * @return returnSqlSwitch
+         */
+        public Boolean getReturnSqlSwitch() {
+            return this.returnSqlSwitch;
+        }
+
+        /**
+         * @return rowPermissionIds
+         */
+        public java.util.List<Long> getRowPermissionIds() {
+            return this.rowPermissionIds;
         }
 
         /**
@@ -868,10 +1099,13 @@ public class CreateDataServiceApiRequest extends Request {
             private Integer callMode; 
             private String customUpdateRate; 
             private String description; 
+            private DmlConfig dmlConfig; 
             private Integer executionTimeout; 
             private Integer mode; 
             private Long projectId; 
             private Integer requestType; 
+            private Boolean returnSqlSwitch; 
+            private java.util.List<Long> rowPermissionIds; 
             private ScriptDetails scriptDetails; 
             private Integer timeout; 
             private Integer updateRate; 
@@ -890,10 +1124,13 @@ public class CreateDataServiceApiRequest extends Request {
                 this.callMode = model.callMode;
                 this.customUpdateRate = model.customUpdateRate;
                 this.description = model.description;
+                this.dmlConfig = model.dmlConfig;
                 this.executionTimeout = model.executionTimeout;
                 this.mode = model.mode;
                 this.projectId = model.projectId;
                 this.requestType = model.requestType;
+                this.returnSqlSwitch = model.returnSqlSwitch;
+                this.rowPermissionIds = model.rowPermissionIds;
                 this.scriptDetails = model.scriptDetails;
                 this.timeout = model.timeout;
                 this.updateRate = model.updateRate;
@@ -950,10 +1187,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>600</p>
+             * CacheTimeout.
              */
             public Builder cacheTimeout(Integer cacheTimeout) {
                 this.cacheTimeout = cacheTimeout;
@@ -981,6 +1215,14 @@ public class CreateDataServiceApiRequest extends Request {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DmlConfig.
+             */
+            public Builder dmlConfig(DmlConfig dmlConfig) {
+                this.dmlConfig = dmlConfig;
                 return this;
             }
 
@@ -1022,6 +1264,22 @@ public class CreateDataServiceApiRequest extends Request {
              */
             public Builder requestType(Integer requestType) {
                 this.requestType = requestType;
+                return this;
+            }
+
+            /**
+             * ReturnSqlSwitch.
+             */
+            public Builder returnSqlSwitch(Boolean returnSqlSwitch) {
+                this.returnSqlSwitch = returnSqlSwitch;
+                return this;
+            }
+
+            /**
+             * RowPermissionIds.
+             */
+            public Builder rowPermissionIds(java.util.List<Long> rowPermissionIds) {
+                this.rowPermissionIds = rowPermissionIds;
                 return this;
             }
 

@@ -189,7 +189,11 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         private String apiName;
 
         @com.aliyun.core.annotation.NameInMap("AppKey")
+        @Deprecated
         private Long appKey;
+
+        @com.aliyun.core.annotation.NameInMap("AppKeyStr")
+        private String appKeyStr;
 
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -267,6 +271,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             this.apiId = builder.apiId;
             this.apiName = builder.apiName;
             this.appKey = builder.appKey;
+            this.appKeyStr = builder.appKeyStr;
             this.appName = builder.appName;
             this.bizCode = builder.bizCode;
             this.bizCodeDescription = builder.bizCodeDescription;
@@ -320,6 +325,13 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
          */
         public Long getAppKey() {
             return this.appKey;
+        }
+
+        /**
+         * @return appKeyStr
+         */
+        public String getAppKeyStr() {
+            return this.appKeyStr;
         }
 
         /**
@@ -494,6 +506,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             private Long apiId; 
             private String apiName; 
             private Long appKey; 
+            private String appKeyStr; 
             private String appName; 
             private String bizCode; 
             private String bizCodeDescription; 
@@ -526,6 +539,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
                 this.apiId = model.apiId;
                 this.apiName = model.apiName;
                 this.appKey = model.appKey;
+                this.appKeyStr = model.appKeyStr;
                 this.appName = model.appName;
                 this.bizCode = model.bizCode;
                 this.bizCodeDescription = model.bizCodeDescription;
@@ -573,6 +587,14 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
              */
             public Builder appKey(Long appKey) {
                 this.appKey = appKey;
+                return this;
+            }
+
+            /**
+             * AppKeyStr.
+             */
+            public Builder appKeyStr(String appKeyStr) {
+                this.appKeyStr = appKeyStr;
                 return this;
             }
 

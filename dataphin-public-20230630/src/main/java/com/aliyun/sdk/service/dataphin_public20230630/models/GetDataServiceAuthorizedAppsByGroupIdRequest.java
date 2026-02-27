@@ -23,7 +23,6 @@ public class GetDataServiceAuthorizedAppsByGroupIdRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer groupId;
 
     @com.aliyun.core.annotation.Query
@@ -113,10 +112,7 @@ public class GetDataServiceAuthorizedAppsByGroupIdRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>202102</p>
+         * GroupId.
          */
         public Builder groupId(Integer groupId) {
             this.putQueryParameter("GroupId", groupId);

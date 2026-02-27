@@ -186,7 +186,11 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         private Integer appId;
 
         @com.aliyun.core.annotation.NameInMap("AppKey")
+        @Deprecated
         private Long appKey;
+
+        @com.aliyun.core.annotation.NameInMap("AppKeyStr")
+        private String appKeyStr;
 
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -194,6 +198,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         private AppInfoList(Builder builder) {
             this.appId = builder.appId;
             this.appKey = builder.appKey;
+            this.appKeyStr = builder.appKeyStr;
             this.appName = builder.appName;
         }
 
@@ -220,6 +225,13 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         }
 
         /**
+         * @return appKeyStr
+         */
+        public String getAppKeyStr() {
+            return this.appKeyStr;
+        }
+
+        /**
          * @return appName
          */
         public String getAppName() {
@@ -229,6 +241,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public static final class Builder {
             private Integer appId; 
             private Long appKey; 
+            private String appKeyStr; 
             private String appName; 
 
             private Builder() {
@@ -237,6 +250,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             private Builder(AppInfoList model) {
                 this.appId = model.appId;
                 this.appKey = model.appKey;
+                this.appKeyStr = model.appKeyStr;
                 this.appName = model.appName;
             } 
 
@@ -256,6 +270,14 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
              */
             public Builder appKey(Long appKey) {
                 this.appKey = appKey;
+                return this;
+            }
+
+            /**
+             * AppKeyStr.
+             */
+            public Builder appKeyStr(String appKeyStr) {
+                this.appKeyStr = appKeyStr;
                 return this;
             }
 
