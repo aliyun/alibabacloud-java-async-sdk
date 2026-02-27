@@ -172,184 +172,7 @@ public class CreateAutoRepairPolicyRequest extends Request {
      *
      * <p>CreateAutoRepairPolicyRequest</p>
      */
-    public static class Conditions extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("reason")
-        private String reason;
-
-        @com.aliyun.core.annotation.NameInMap("status")
-        private String status;
-
-        @com.aliyun.core.annotation.NameInMap("type")
-        private String type;
-
-        private Conditions(Builder builder) {
-            this.reason = builder.reason;
-            this.status = builder.status;
-            this.type = builder.type;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Conditions create() {
-            return builder().build();
-        }
-
-        /**
-         * @return reason
-         */
-        public String getReason() {
-            return this.reason;
-        }
-
-        /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
-         * @return type
-         */
-        public String getType() {
-            return this.type;
-        }
-
-        public static final class Builder {
-            private String reason; 
-            private String status; 
-            private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Conditions model) {
-                this.reason = model.reason;
-                this.status = model.status;
-                this.type = model.type;
-            } 
-
-            /**
-             * reason.
-             */
-            public Builder reason(String reason) {
-                this.reason = reason;
-                return this;
-            }
-
-            /**
-             * status.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * type.
-             */
-            public Builder type(String type) {
-                this.type = type;
-                return this;
-            }
-
-            public Conditions build() {
-                return new Conditions(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link CreateAutoRepairPolicyRequest} extends {@link TeaModel}
-     *
-     * <p>CreateAutoRepairPolicyRequest</p>
-     */
-    public static class Events extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("reason")
-        private String reason;
-
-        @com.aliyun.core.annotation.NameInMap("type")
-        private String type;
-
-        private Events(Builder builder) {
-            this.reason = builder.reason;
-            this.type = builder.type;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Events create() {
-            return builder().build();
-        }
-
-        /**
-         * @return reason
-         */
-        public String getReason() {
-            return this.reason;
-        }
-
-        /**
-         * @return type
-         */
-        public String getType() {
-            return this.type;
-        }
-
-        public static final class Builder {
-            private String reason; 
-            private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Events model) {
-                this.reason = model.reason;
-                this.type = model.type;
-            } 
-
-            /**
-             * reason.
-             */
-            public Builder reason(String reason) {
-                this.reason = reason;
-                return this;
-            }
-
-            /**
-             * type.
-             */
-            public Builder type(String type) {
-                this.type = type;
-                return this;
-            }
-
-            public Events build() {
-                return new Events(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link CreateAutoRepairPolicyRequest} extends {@link TeaModel}
-     *
-     * <p>CreateAutoRepairPolicyRequest</p>
-     */
     public static class Incidents extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("conditions")
-        private java.util.List<Conditions> conditions;
-
-        @com.aliyun.core.annotation.NameInMap("events")
-        private java.util.List<Events> events;
-
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -357,8 +180,6 @@ public class CreateAutoRepairPolicyRequest extends Request {
         private String type;
 
         private Incidents(Builder builder) {
-            this.conditions = builder.conditions;
-            this.events = builder.events;
             this.name = builder.name;
             this.type = builder.type;
         }
@@ -369,20 +190,6 @@ public class CreateAutoRepairPolicyRequest extends Request {
 
         public static Incidents create() {
             return builder().build();
-        }
-
-        /**
-         * @return conditions
-         */
-        public java.util.List<Conditions> getConditions() {
-            return this.conditions;
-        }
-
-        /**
-         * @return events
-         */
-        public java.util.List<Events> getEvents() {
-            return this.events;
         }
 
         /**
@@ -400,8 +207,6 @@ public class CreateAutoRepairPolicyRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List<Conditions> conditions; 
-            private java.util.List<Events> events; 
             private String name; 
             private String type; 
 
@@ -409,27 +214,9 @@ public class CreateAutoRepairPolicyRequest extends Request {
             } 
 
             private Builder(Incidents model) {
-                this.conditions = model.conditions;
-                this.events = model.events;
                 this.name = model.name;
                 this.type = model.type;
             } 
-
-            /**
-             * conditions.
-             */
-            public Builder conditions(java.util.List<Conditions> conditions) {
-                this.conditions = conditions;
-                return this;
-            }
-
-            /**
-             * events.
-             */
-            public Builder events(java.util.List<Events> events) {
-                this.events = events;
-                return this;
-            }
 
             /**
              * name.

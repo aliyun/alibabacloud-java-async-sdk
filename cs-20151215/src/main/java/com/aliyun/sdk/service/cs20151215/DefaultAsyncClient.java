@@ -2626,6 +2626,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateKMSEncryption  UpdateKMSEncryptionRequest
+     * @return UpdateKMSEncryptionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKMSEncryptionResponse> updateKMSEncryption(UpdateKMSEncryptionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateKMSEncryption").setMethod(HttpMethod.PUT).setPathRegex("/clusters/{ClusterId}/kms").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKMSEncryptionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKMSEncryptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateNodePoolComponent  UpdateNodePoolComponentRequest
      * @return UpdateNodePoolComponentResponse
      */

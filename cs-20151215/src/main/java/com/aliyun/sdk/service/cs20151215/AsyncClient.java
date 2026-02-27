@@ -979,6 +979,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateK8sClusterUserConfigExpireResponse> updateK8sClusterUserConfigExpire(UpdateK8sClusterUserConfigExpireRequest request);
 
     /**
+     * @param request the request parameters of UpdateKMSEncryption  UpdateKMSEncryptionRequest
+     * @return UpdateKMSEncryptionResponse
+     */
+    CompletableFuture<UpdateKMSEncryptionResponse> updateKMSEncryption(UpdateKMSEncryptionRequest request);
+
+    /**
      * @param request the request parameters of UpdateNodePoolComponent  UpdateNodePoolComponentRequest
      * @return UpdateNodePoolComponentResponse
      */
