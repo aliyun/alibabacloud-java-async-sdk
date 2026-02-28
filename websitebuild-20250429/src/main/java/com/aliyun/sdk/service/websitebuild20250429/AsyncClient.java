@@ -98,6 +98,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAppInstanceResponse> getAppInstance(GetAppInstanceRequest request);
 
     /**
+     * @param request the request parameters of GetAppPluginConfig  GetAppPluginConfigRequest
+     * @return GetAppPluginConfigResponse
+     */
+    CompletableFuture<GetAppPluginConfigResponse> getAppPluginConfig(GetAppPluginConfigRequest request);
+
+    /**
      * @param request the request parameters of GetCreateLogoTask  GetCreateLogoTaskRequest
      * @return GetCreateLogoTaskResponse
      */
