@@ -116,7 +116,10 @@ public class DeleteErRouteMapRequest extends Request {
         }
 
         /**
-         * ErRouteMapId.
+         * <p>routing policy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-rmap-uwglhzom</p>
          */
         public Builder erRouteMapId(String erRouteMapId) {
             this.putBodyParameter("ErRouteMapId", erRouteMapId);
