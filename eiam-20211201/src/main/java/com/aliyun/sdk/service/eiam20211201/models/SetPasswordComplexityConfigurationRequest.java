@@ -22,6 +22,10 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisabledWeakPasswordLogin")
+    private Boolean disabledWeakPasswordLogin;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
@@ -38,6 +42,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
     private SetPasswordComplexityConfigurationRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.disabledWeakPasswordLogin = builder.disabledWeakPasswordLogin;
         this.instanceId = builder.instanceId;
         this.passwordComplexityRules = builder.passwordComplexityRules;
         this.passwordMinLength = builder.passwordMinLength;
@@ -64,6 +69,13 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
     }
 
     /**
+     * @return disabledWeakPasswordLogin
+     */
+    public Boolean getDisabledWeakPasswordLogin() {
+        return this.disabledWeakPasswordLogin;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -86,6 +98,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetPasswordComplexityConfigurationRequest, Builder> {
         private String regionId; 
+        private Boolean disabledWeakPasswordLogin; 
         private String instanceId; 
         private java.util.List<PasswordComplexityRules> passwordComplexityRules; 
         private Integer passwordMinLength; 
@@ -97,6 +110,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         private Builder(SetPasswordComplexityConfigurationRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.disabledWeakPasswordLogin = request.disabledWeakPasswordLogin;
             this.instanceId = request.instanceId;
             this.passwordComplexityRules = request.passwordComplexityRules;
             this.passwordMinLength = request.passwordMinLength;
@@ -108,6 +122,15 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DisabledWeakPasswordLogin.
+         */
+        public Builder disabledWeakPasswordLogin(Boolean disabledWeakPasswordLogin) {
+            this.putQueryParameter("DisabledWeakPasswordLogin", disabledWeakPasswordLogin);
+            this.disabledWeakPasswordLogin = disabledWeakPasswordLogin;
             return this;
         }
 

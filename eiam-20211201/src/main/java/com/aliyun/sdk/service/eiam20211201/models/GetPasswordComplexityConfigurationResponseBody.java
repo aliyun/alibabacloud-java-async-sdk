@@ -165,6 +165,12 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
      * <p>GetPasswordComplexityConfigurationResponseBody</p>
      */
     public static class PasswordComplexityConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisabledWeakPasswordLogin")
+        private Boolean disabledWeakPasswordLogin;
+
+        @com.aliyun.core.annotation.NameInMap("DisabledWeakPasswordLoginStartedAt")
+        private Long disabledWeakPasswordLoginStartedAt;
+
         @com.aliyun.core.annotation.NameInMap("PasswordComplexityRules")
         private java.util.List<PasswordComplexityRules> passwordComplexityRules;
 
@@ -172,6 +178,8 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
         private Integer passwordMinLength;
 
         private PasswordComplexityConfiguration(Builder builder) {
+            this.disabledWeakPasswordLogin = builder.disabledWeakPasswordLogin;
+            this.disabledWeakPasswordLoginStartedAt = builder.disabledWeakPasswordLoginStartedAt;
             this.passwordComplexityRules = builder.passwordComplexityRules;
             this.passwordMinLength = builder.passwordMinLength;
         }
@@ -182,6 +190,20 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
 
         public static PasswordComplexityConfiguration create() {
             return builder().build();
+        }
+
+        /**
+         * @return disabledWeakPasswordLogin
+         */
+        public Boolean getDisabledWeakPasswordLogin() {
+            return this.disabledWeakPasswordLogin;
+        }
+
+        /**
+         * @return disabledWeakPasswordLoginStartedAt
+         */
+        public Long getDisabledWeakPasswordLoginStartedAt() {
+            return this.disabledWeakPasswordLoginStartedAt;
         }
 
         /**
@@ -199,6 +221,8 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean disabledWeakPasswordLogin; 
+            private Long disabledWeakPasswordLoginStartedAt; 
             private java.util.List<PasswordComplexityRules> passwordComplexityRules; 
             private Integer passwordMinLength; 
 
@@ -206,9 +230,27 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
             } 
 
             private Builder(PasswordComplexityConfiguration model) {
+                this.disabledWeakPasswordLogin = model.disabledWeakPasswordLogin;
+                this.disabledWeakPasswordLoginStartedAt = model.disabledWeakPasswordLoginStartedAt;
                 this.passwordComplexityRules = model.passwordComplexityRules;
                 this.passwordMinLength = model.passwordMinLength;
             } 
+
+            /**
+             * DisabledWeakPasswordLogin.
+             */
+            public Builder disabledWeakPasswordLogin(Boolean disabledWeakPasswordLogin) {
+                this.disabledWeakPasswordLogin = disabledWeakPasswordLogin;
+                return this;
+            }
+
+            /**
+             * DisabledWeakPasswordLoginStartedAt.
+             */
+            public Builder disabledWeakPasswordLoginStartedAt(Long disabledWeakPasswordLoginStartedAt) {
+                this.disabledWeakPasswordLoginStartedAt = disabledWeakPasswordLoginStartedAt;
+                return this;
+            }
 
             /**
              * <p>The password complexity rules.</p>
