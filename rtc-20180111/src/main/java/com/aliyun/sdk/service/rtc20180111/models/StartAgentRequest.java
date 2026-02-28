@@ -874,6 +874,12 @@ public class StartAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Temperature")
         private Double temperature;
 
+        @com.aliyun.core.annotation.NameInMap("ToolExecutionConfig")
+        private Object toolExecutionConfig;
+
+        @com.aliyun.core.annotation.NameInMap("Tools")
+        private java.util.List<?> tools;
+
         @com.aliyun.core.annotation.NameInMap("TopP")
         private Double topP;
 
@@ -892,6 +898,8 @@ public class StartAgentRequest extends Request {
             this.params = builder.params;
             this.prompt = builder.prompt;
             this.temperature = builder.temperature;
+            this.toolExecutionConfig = builder.toolExecutionConfig;
+            this.tools = builder.tools;
             this.topP = builder.topP;
             this.url = builder.url;
             this.vendor = builder.vendor;
@@ -962,6 +970,20 @@ public class StartAgentRequest extends Request {
         }
 
         /**
+         * @return toolExecutionConfig
+         */
+        public Object getToolExecutionConfig() {
+            return this.toolExecutionConfig;
+        }
+
+        /**
+         * @return tools
+         */
+        public java.util.List<?> getTools() {
+            return this.tools;
+        }
+
+        /**
          * @return topP
          */
         public Double getTopP() {
@@ -991,6 +1013,8 @@ public class StartAgentRequest extends Request {
             private java.util.Map<String, ?> params; 
             private String prompt; 
             private Double temperature; 
+            private Object toolExecutionConfig; 
+            private java.util.List<?> tools; 
             private Double topP; 
             private String url; 
             private String vendor; 
@@ -1007,6 +1031,8 @@ public class StartAgentRequest extends Request {
                 this.params = model.params;
                 this.prompt = model.prompt;
                 this.temperature = model.temperature;
+                this.toolExecutionConfig = model.toolExecutionConfig;
+                this.tools = model.tools;
                 this.topP = model.topP;
                 this.url = model.url;
                 this.vendor = model.vendor;
@@ -1076,6 +1102,22 @@ public class StartAgentRequest extends Request {
              */
             public Builder temperature(Double temperature) {
                 this.temperature = temperature;
+                return this;
+            }
+
+            /**
+             * ToolExecutionConfig.
+             */
+            public Builder toolExecutionConfig(Object toolExecutionConfig) {
+                this.toolExecutionConfig = toolExecutionConfig;
+                return this;
+            }
+
+            /**
+             * Tools.
+             */
+            public Builder tools(java.util.List<?> tools) {
+                this.tools = tools;
                 return this;
             }
 
