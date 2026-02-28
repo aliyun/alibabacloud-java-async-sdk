@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySpeechPushJobRequest} extends {@link RequestModel}
  *
  * <p>QuerySpeechPushJobRequest</p>
  */
 public class QuerySpeechPushJobRequest extends Request {
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("JobCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobCode")
     private String jobCode;
 
-    @Body
-    @NameInMap("PageId")
-    @Validation(maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageId")
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 1)
     private Integer pageId;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ProjectCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectCode;
 
-    @Body
-    @NameInMap("PushMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PushMode")
     private String pushMode;
 
-    @Body
-    @NameInMap("StatusList")
-    private java.util.List < String > statusList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StatusList")
+    private java.util.List<String> statusList;
 
     private QuerySpeechPushJobRequest(Builder builder) {
         super(builder);
@@ -62,7 +67,7 @@ public class QuerySpeechPushJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +117,7 @@ public class QuerySpeechPushJobRequest extends Request {
     /**
      * @return statusList
      */
-    public java.util.List < String > getStatusList() {
+    public java.util.List<String> getStatusList() {
         return this.statusList;
     }
 
@@ -123,7 +128,7 @@ public class QuerySpeechPushJobRequest extends Request {
         private Integer pageSize; 
         private String projectCode; 
         private String pushMode; 
-        private java.util.List < String > statusList; 
+        private java.util.List<String> statusList; 
 
         private Builder() {
             super();
@@ -177,7 +182,10 @@ public class QuerySpeechPushJobRequest extends Request {
         }
 
         /**
-         * ProjectCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0Ykj************************Av0I</p>
          */
         public Builder projectCode(String projectCode) {
             this.putBodyParameter("ProjectCode", projectCode);
@@ -197,7 +205,7 @@ public class QuerySpeechPushJobRequest extends Request {
         /**
          * StatusList.
          */
-        public Builder statusList(java.util.List < String > statusList) {
+        public Builder statusList(java.util.List<String> statusList) {
             this.putBodyParameter("StatusList", statusList);
             this.statusList = statusList;
             return this;

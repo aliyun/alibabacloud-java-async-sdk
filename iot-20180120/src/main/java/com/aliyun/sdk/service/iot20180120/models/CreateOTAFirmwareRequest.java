@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOTAFirmwareRequest} extends {@link RequestModel}
  *
  * <p>CreateOTAFirmwareRequest</p>
  */
 public class CreateOTAFirmwareRequest extends Request {
-    @Query
-    @NameInMap("DestVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destVersion;
 
-    @Query
-    @NameInMap("FirmwareDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirmwareDesc")
     private String firmwareDesc;
 
-    @Query
-    @NameInMap("FirmwareName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirmwareName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String firmwareName;
 
-    @Query
-    @NameInMap("FirmwareSign")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirmwareSign")
     private String firmwareSign;
 
-    @Query
-    @NameInMap("FirmwareSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirmwareSize")
     private Integer firmwareSize;
 
-    @Query
-    @NameInMap("FirmwareUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirmwareUrl")
     private String firmwareUrl;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ModuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModuleName")
     private String moduleName;
 
-    @Query
-    @NameInMap("MultiFiles")
-    private java.util.List < MultiFiles> multiFiles;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiFiles")
+    private java.util.List<MultiFiles> multiFiles;
 
-    @Query
-    @NameInMap("NeedToVerify")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedToVerify")
     private Boolean needToVerify;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("SignMethod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignMethod")
     private String signMethod;
 
-    @Query
-    @NameInMap("SrcVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcVersion")
     private String srcVersion;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private Integer type;
 
-    @Query
-    @NameInMap("Udi")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Udi")
     private String udi;
 
     private CreateOTAFirmwareRequest(Builder builder) {
@@ -101,7 +106,7 @@ public class CreateOTAFirmwareRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -165,7 +170,7 @@ public class CreateOTAFirmwareRequest extends Request {
     /**
      * @return multiFiles
      */
-    public java.util.List < MultiFiles> getMultiFiles() {
+    public java.util.List<MultiFiles> getMultiFiles() {
         return this.multiFiles;
     }
 
@@ -220,7 +225,7 @@ public class CreateOTAFirmwareRequest extends Request {
         private String firmwareUrl; 
         private String iotInstanceId; 
         private String moduleName; 
-        private java.util.List < MultiFiles> multiFiles; 
+        private java.util.List<MultiFiles> multiFiles; 
         private Boolean needToVerify; 
         private String productKey; 
         private String signMethod; 
@@ -252,7 +257,11 @@ public class CreateOTAFirmwareRequest extends Request {
         } 
 
         /**
-         * DestVersion.
+         * <p>The version number of the OTA update package. The value can contain letters, digits, periods (.), hyphens (-), and underscores (_). The version number must be 1 to 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         public Builder destVersion(String destVersion) {
             this.putQueryParameter("DestVersion", destVersion);
@@ -261,7 +270,10 @@ public class CreateOTAFirmwareRequest extends Request {
         }
 
         /**
-         * FirmwareDesc.
+         * <p>The description of the OTA update package. The description must be 1 to 100 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OTA function updated</p>
          */
         public Builder firmwareDesc(String firmwareDesc) {
             this.putQueryParameter("FirmwareDesc", firmwareDesc);
@@ -270,7 +282,11 @@ public class CreateOTAFirmwareRequest extends Request {
         }
 
         /**
-         * FirmwareName.
+         * <p>The name of the OTA update package. The name must be unique within an Alibaba Cloud account. The name cannot be modified after the OTA update package is created. The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), underscores (_), and parentheses (). The name must start with a letter or a digit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Firmware2</p>
          */
         public Builder firmwareName(String firmwareName) {
             this.putQueryParameter("FirmwareName", firmwareName);
@@ -279,7 +295,13 @@ public class CreateOTAFirmwareRequest extends Request {
         }
 
         /**
-         * FirmwareSign.
+         * <p>The signature of the OTA update package. The value is calculated by using the specified <strong>signature algorithm</strong> to sign the OTA update package.</p>
+         * <blockquote>
+         * <p>If you add only one file to the OTA update package, you can configure this parameter. If you do not configure this parameter, the MD5 value of the OTA update package in OSS is used as the package signature.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>93230c3bde425a9d7984a594ac55****</p>
          */
         public Builder firmwareSign(String firmwareSign) {
             this.putQueryParameter("FirmwareSign", firmwareSign);
@@ -288,7 +310,13 @@ public class CreateOTAFirmwareRequest extends Request {
         }
 
         /**
-         * FirmwareSize.
+         * <p>The size of the OTA update package. Unit: bytes.</p>
+         * <blockquote>
+         * <p>If you add only one file to the OTA update package, you can configure this parameter. If you do not configure this parameter, the size of the OTA update package in OSS is used.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder firmwareSize(Integer firmwareSize) {
             this.putQueryParameter("FirmwareSize", firmwareSize);
@@ -297,7 +325,10 @@ public class CreateOTAFirmwareRequest extends Request {
         }
 
         /**
-         * FirmwareUrl.
+         * <p>The URL of the OTA update package. This parameter specifies the storage location of the OTA update package in OSS. You can call the <a href="https://help.aliyun.com/document_detail/147310.html">GenerateOTAUploadURL</a> operation to generate a URL for the OTA update package.</p>
+         * <blockquote>
+         * <p>If you add only one file to the OTA update package, you must configure this parameter.</p>
+         * </blockquote>
          */
         public Builder firmwareUrl(String firmwareUrl) {
             this.putQueryParameter("FirmwareUrl", firmwareUrl);
@@ -306,7 +337,16 @@ public class CreateOTAFirmwareRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the ID of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.</li>
+         * <li>If no <strong>Overview</strong> page or <strong>ID</strong> is generated for your instance, you do not need to configure this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-0pp1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -315,7 +355,16 @@ public class CreateOTAFirmwareRequest extends Request {
         }
 
         /**
-         * ModuleName.
+         * <p>The name of the OTA module. OTA modules are the updatable units of devices that belong to the same product.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you do not configure this parameter, the default OTA module is used. The default value indicates that the complete device firmware is updated.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/186066.html">CreateOTAModule</a> operation to create a custom OTA module. You can call the <a href="https://help.aliyun.com/document_detail/186532.html">ListOTAModuleByProduct</a> operation to query the existing OTA modules of a product.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>WifiConfigModify</p>
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);
@@ -326,14 +375,21 @@ public class CreateOTAFirmwareRequest extends Request {
         /**
          * MultiFiles.
          */
-        public Builder multiFiles(java.util.List < MultiFiles> multiFiles) {
+        public Builder multiFiles(java.util.List<MultiFiles> multiFiles) {
             this.putQueryParameter("MultiFiles", multiFiles);
             this.multiFiles = multiFiles;
             return this;
         }
 
         /**
-         * NeedToVerify.
+         * <p>Specifies whether to verify the OTA update package before you create a batch update task.</p>
+         * <ul>
+         * <li><strong>true</strong> The system verifies the OTA update package before you create a batch update task. This is the default value.</li>
+         * <li><strong>false</strong>: The system does not verify the OTA update package before you create a batch update task.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needToVerify(Boolean needToVerify) {
             this.putQueryParameter("NeedToVerify", needToVerify);
@@ -342,7 +398,10 @@ public class CreateOTAFirmwareRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product to which the OTA update package belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1uctKe****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -351,7 +410,11 @@ public class CreateOTAFirmwareRequest extends Request {
         }
 
         /**
-         * SignMethod.
+         * <p>The signature algorithm of the OTA update package. Set the value to <strong>MD5</strong>. The value indicates an MD5 signature.</p>
+         * <p>Default value: <strong>MD5</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MD5</p>
          */
         public Builder signMethod(String signMethod) {
             this.putQueryParameter("SignMethod", signMethod);
@@ -360,7 +423,17 @@ public class CreateOTAFirmwareRequest extends Request {
         }
 
         /**
-         * SrcVersion.
+         * <p>The version number of the OTA module of the device to be updated.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69594.html">QueryDeviceDetail</a> operation and view the <strong>FirmwareVersion</strong> parameter in the response.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you set the <strong>Type</strong> parameter to <strong>1</strong>, you must configure this parameter, and the value cannot be the same as the update package version that is specified by the <strong>DestVersion</strong> parameter.</li>
+         * <li>If you set the <strong>Type</strong> parameter to <strong>0</strong>, this parameter is optional.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder srcVersion(String srcVersion) {
             this.putQueryParameter("SrcVersion", srcVersion);
@@ -369,7 +442,15 @@ public class CreateOTAFirmwareRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the OTA update package. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The uploaded file contains a full update package. IoT Platform pushes the full update package to a device for update.</li>
+         * <li><strong>1</strong>: The uploaded file contains only the differences between the latest update package and the previous update package. IoT Platform pushes only the differences to a device for update.</li>
+         * </ul>
+         * <p>Default value: <strong>0</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);
@@ -378,7 +459,8 @@ public class CreateOTAFirmwareRequest extends Request {
         }
 
         /**
-         * Udi.
+         * <p>The custom information that you want to send to a device. The format of the custom information has no limits. However, the information cannot exceed 4,096 characters in length.</p>
+         * <p>After you add the OTA update package and create an update task, IoT Platform sends the custom information to the specified device when IoT Platform pushes an update notification.</p>
          */
         public Builder udi(String udi) {
             this.putQueryParameter("Udi", udi);
@@ -393,20 +475,26 @@ public class CreateOTAFirmwareRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOTAFirmwareRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOTAFirmwareRequest</p>
+     */
     public static class MultiFiles extends TeaModel {
-        @NameInMap("FileMd5")
+        @com.aliyun.core.annotation.NameInMap("FileMd5")
         private String fileMd5;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SignValue")
+        @com.aliyun.core.annotation.NameInMap("SignValue")
         private String signValue;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private MultiFiles(Builder builder) {
@@ -467,8 +555,25 @@ public class CreateOTAFirmwareRequest extends Request {
             private Integer size; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(MultiFiles model) {
+                this.fileMd5 = model.fileMd5;
+                this.name = model.name;
+                this.signValue = model.signValue;
+                this.size = model.size;
+                this.url = model.url;
+            } 
+
             /**
-             * FileMd5.
+             * <p>The MD5 value of the file.</p>
+             * <blockquote>
+             * <p> If you want to add multiple files to the OTA update package, you can configure this parameter. If you do not configure this parameter, the MD5 value of the file in OSS is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>93230c3bde425a9d7984a594ac56***</p>
              */
             public Builder fileMd5(String fileMd5) {
                 this.fileMd5 = fileMd5;
@@ -476,7 +581,13 @@ public class CreateOTAFirmwareRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the file in the update package. The name must be 1 to 32 characters in length. You can specify up to 20 file names. Each name must be unique in the OTA update package.</p>
+             * <blockquote>
+             * <p>If you want to add multiple files to the OTA update package, you must configure this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Firmware1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -484,7 +595,13 @@ public class CreateOTAFirmwareRequest extends Request {
             }
 
             /**
-             * SignValue.
+             * <p>The signature of the file. The value is calculated by using the specified <strong>signature algorithm</strong> to sign the file.</p>
+             * <blockquote>
+             * <p> If you want to add multiple files to the OTA update package, you can configure this parameter. If you do not configure this parameter, the MD5 value of the file in OSS is used as the file signature.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>93230c3bde425a9d7984a594ac45****</p>
              */
             public Builder signValue(String signValue) {
                 this.signValue = signValue;
@@ -492,7 +609,13 @@ public class CreateOTAFirmwareRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The size of the file in the OTA update package. Unit: bytes.</p>
+             * <blockquote>
+             * <p> If you want to add multiple files to the OTA update package, you can configure this parameter. If you do not configure this parameter, the size of the file in OSS is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -500,7 +623,10 @@ public class CreateOTAFirmwareRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The URL of the file. This parameter specifies the storage location of the file in OSS. You can call the <a href="https://help.aliyun.com/document_detail/147310.html">GenerateOTAUploadURL</a> operation to generate a URL for each file in the OTA update package.</p>
+             * <blockquote>
+             * <p>If you want to add multiple files to the OTA update package, you must configure this parameter.</p>
+             * </blockquote>
              */
             public Builder url(String url) {
                 this.url = url;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteProductTopicRequest} extends {@link RequestModel}
  *
  * <p>DeleteProductTopicRequest</p>
  */
 public class DeleteProductTopicRequest extends Request {
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("TopicId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topicId;
 
     private DeleteProductTopicRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class DeleteProductTopicRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,17 @@ public class DeleteProductTopicRequest extends Request {
         } 
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+         * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-0pp1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -78,7 +93,11 @@ public class DeleteProductTopicRequest extends Request {
         }
 
         /**
-         * TopicId.
+         * <p>The ID of the topic category that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>798****</p>
          */
         public Builder topicId(String topicId) {
             this.putQueryParameter("TopicId", topicId);

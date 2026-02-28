@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOTAUnfinishedTaskByDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>ListOTAUnfinishedTaskByDeviceResponseBody</p>
  */
 public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListOTAUnfinishedTaskByDeviceResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
 
     public static ListOTAUnfinishedTaskByDeviceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListOTAUnfinishedTaskByDeviceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The update task information returned if the call is successful. For more information, see the following <strong>SimpleOTATaskInfo</strong>.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A59D3BE1-E9A3-43F3-9B50-B7C8DE165D9B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,44 +164,50 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOTAUnfinishedTaskByDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOTAUnfinishedTaskByDeviceResponseBody</p>
+     */
     public static class SimpleOTATaskInfo extends TeaModel {
-        @NameInMap("DestVersion")
+        @com.aliyun.core.annotation.NameInMap("DestVersion")
         private String destVersion;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("FirmwareId")
+        @com.aliyun.core.annotation.NameInMap("FirmwareId")
         private String firmwareId;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("SrcVersion")
+        @com.aliyun.core.annotation.NameInMap("SrcVersion")
         private String srcVersion;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("UtcCreate")
+        @com.aliyun.core.annotation.NameInMap("UtcCreate")
         private String utcCreate;
 
-        @NameInMap("UtcModified")
+        @com.aliyun.core.annotation.NameInMap("UtcModified")
         private String utcModified;
 
         private SimpleOTATaskInfo(Builder builder) {
@@ -301,8 +340,30 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
             private String utcCreate; 
             private String utcModified; 
 
+            private Builder() {
+            } 
+
+            private Builder(SimpleOTATaskInfo model) {
+                this.destVersion = model.destVersion;
+                this.deviceName = model.deviceName;
+                this.firmwareId = model.firmwareId;
+                this.iotId = model.iotId;
+                this.jobId = model.jobId;
+                this.moduleName = model.moduleName;
+                this.productKey = model.productKey;
+                this.productName = model.productName;
+                this.srcVersion = model.srcVersion;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+                this.utcCreate = model.utcCreate;
+                this.utcModified = model.utcModified;
+            } 
+
             /**
-             * DestVersion.
+             * <p>The firmware version after the update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.1</p>
              */
             public Builder destVersion(String destVersion) {
                 this.destVersion = destVersion;
@@ -310,7 +371,10 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceName.
+             * <p>The DeviceName of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>light</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -318,7 +382,10 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * FirmwareId.
+             * <p>The ID of the update package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>q3j9OYBjUAZMv1hlMgdo03****</p>
              */
             public Builder firmwareId(String firmwareId) {
                 this.firmwareId = firmwareId;
@@ -326,7 +393,10 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * IotId.
+             * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nadRdeffljdEndlfadgadfse****</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -334,7 +404,10 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the update batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7glPHmaDYLAYMD1HHutT02****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -342,7 +415,10 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * <p>The name of the OTA module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WifiConfigModify</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -350,7 +426,10 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The ProductKey of the product to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1GUfrM****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -358,7 +437,10 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The name of the product to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyProduct</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -366,7 +448,10 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * SrcVersion.
+             * <p>The firmware version before the update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder srcVersion(String srcVersion) {
                 this.srcVersion = srcVersion;
@@ -374,7 +459,10 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the update task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>y3tOmCDNgpR8F9jnVEzC01****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -382,7 +470,16 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The status of the update task.</p>
+             * <ul>
+             * <li><strong>CONFIRM</strong>: The update task is pending confirmation.</li>
+             * <li><strong>QUEUED</strong>: The update notification is to be pushed.</li>
+             * <li><strong>NOTIFIED</strong>: The update notification is pushed to the device.</li>
+             * <li><strong>IN_PROGRESS</strong>: The update task is in progress.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CONFIRM</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -390,7 +487,10 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreate.
+             * <p>The time when the update task was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-04T03:38:22.000Z</p>
              */
             public Builder utcCreate(String utcCreate) {
                 this.utcCreate = utcCreate;
@@ -398,7 +498,10 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * UtcModified.
+             * <p>The time when the update task was last modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-04T03:38:22.000Z</p>
              */
             public Builder utcModified(String utcModified) {
                 this.utcModified = utcModified;
@@ -412,9 +515,15 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOTAUnfinishedTaskByDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOTAUnfinishedTaskByDeviceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("SimpleOTATaskInfo")
-        private java.util.List < SimpleOTATaskInfo> simpleOTATaskInfo;
+        @com.aliyun.core.annotation.NameInMap("SimpleOTATaskInfo")
+        private java.util.List<SimpleOTATaskInfo> simpleOTATaskInfo;
 
         private Data(Builder builder) {
             this.simpleOTATaskInfo = builder.simpleOTATaskInfo;
@@ -431,17 +540,24 @@ public class ListOTAUnfinishedTaskByDeviceResponseBody extends TeaModel {
         /**
          * @return simpleOTATaskInfo
          */
-        public java.util.List < SimpleOTATaskInfo> getSimpleOTATaskInfo() {
+        public java.util.List<SimpleOTATaskInfo> getSimpleOTATaskInfo() {
             return this.simpleOTATaskInfo;
         }
 
         public static final class Builder {
-            private java.util.List < SimpleOTATaskInfo> simpleOTATaskInfo; 
+            private java.util.List<SimpleOTATaskInfo> simpleOTATaskInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.simpleOTATaskInfo = model.simpleOTATaskInfo;
+            } 
 
             /**
              * SimpleOTATaskInfo.
              */
-            public Builder simpleOTATaskInfo(java.util.List < SimpleOTATaskInfo> simpleOTATaskInfo) {
+            public Builder simpleOTATaskInfo(java.util.List<SimpleOTATaskInfo> simpleOTATaskInfo) {
                 this.simpleOTATaskInfo = simpleOTATaskInfo;
                 return this;
             }

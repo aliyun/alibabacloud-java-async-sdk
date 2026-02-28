@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataAPIServiceDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataAPIServiceDetailResponseBody</p>
  */
 public class GetDataAPIServiceDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataAPIServiceDetailResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
 
     public static GetDataAPIServiceDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataAPIServiceDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,20 +151,26 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataAPIServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataAPIServiceDetailResponseBody</p>
+     */
     public static class RequestParams extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Example")
+        @com.aliyun.core.annotation.NameInMap("Example")
         private String example;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RequestParams(Builder builder) {
@@ -205,6 +231,17 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
             private Boolean required; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestParams model) {
+                this.desc = model.desc;
+                this.example = model.example;
+                this.name = model.name;
+                this.required = model.required;
+                this.type = model.type;
+            } 
+
             /**
              * Desc.
              */
@@ -252,9 +289,15 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataAPIServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataAPIServiceDetailResponseBody</p>
+     */
     public static class SqlTemplateDTORequestParams extends TeaModel {
-        @NameInMap("RequestParams")
-        private java.util.List < RequestParams> requestParams;
+        @com.aliyun.core.annotation.NameInMap("RequestParams")
+        private java.util.List<RequestParams> requestParams;
 
         private SqlTemplateDTORequestParams(Builder builder) {
             this.requestParams = builder.requestParams;
@@ -271,17 +314,24 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         /**
          * @return requestParams
          */
-        public java.util.List < RequestParams> getRequestParams() {
+        public java.util.List<RequestParams> getRequestParams() {
             return this.requestParams;
         }
 
         public static final class Builder {
-            private java.util.List < RequestParams> requestParams; 
+            private java.util.List<RequestParams> requestParams; 
+
+            private Builder() {
+            } 
+
+            private Builder(SqlTemplateDTORequestParams model) {
+                this.requestParams = model.requestParams;
+            } 
 
             /**
              * RequestParams.
              */
-            public Builder requestParams(java.util.List < RequestParams> requestParams) {
+            public Builder requestParams(java.util.List<RequestParams> requestParams) {
                 this.requestParams = requestParams;
                 return this;
             }
@@ -293,20 +343,26 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataAPIServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataAPIServiceDetailResponseBody</p>
+     */
     public static class ResponseParams extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Example")
+        @com.aliyun.core.annotation.NameInMap("Example")
         private String example;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ResponseParams(Builder builder) {
@@ -367,6 +423,17 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
             private Boolean required; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResponseParams model) {
+                this.desc = model.desc;
+                this.example = model.example;
+                this.name = model.name;
+                this.required = model.required;
+                this.type = model.type;
+            } 
+
             /**
              * Desc.
              */
@@ -414,9 +481,15 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataAPIServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataAPIServiceDetailResponseBody</p>
+     */
     public static class SqlTemplateDTOResponseParams extends TeaModel {
-        @NameInMap("ResponseParams")
-        private java.util.List < ResponseParams> responseParams;
+        @com.aliyun.core.annotation.NameInMap("ResponseParams")
+        private java.util.List<ResponseParams> responseParams;
 
         private SqlTemplateDTOResponseParams(Builder builder) {
             this.responseParams = builder.responseParams;
@@ -433,17 +506,24 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         /**
          * @return responseParams
          */
-        public java.util.List < ResponseParams> getResponseParams() {
+        public java.util.List<ResponseParams> getResponseParams() {
             return this.responseParams;
         }
 
         public static final class Builder {
-            private java.util.List < ResponseParams> responseParams; 
+            private java.util.List<ResponseParams> responseParams; 
+
+            private Builder() {
+            } 
+
+            private Builder(SqlTemplateDTOResponseParams model) {
+                this.responseParams = model.responseParams;
+            } 
 
             /**
              * ResponseParams.
              */
-            public Builder responseParams(java.util.List < ResponseParams> responseParams) {
+            public Builder responseParams(java.util.List<ResponseParams> responseParams) {
                 this.responseParams = responseParams;
                 return this;
             }
@@ -455,17 +535,23 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataAPIServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataAPIServiceDetailResponseBody</p>
+     */
     public static class SqlTemplateDTO extends TeaModel {
-        @NameInMap("OriginSql")
+        @com.aliyun.core.annotation.NameInMap("OriginSql")
         private String originSql;
 
-        @NameInMap("RequestParams")
+        @com.aliyun.core.annotation.NameInMap("RequestParams")
         private SqlTemplateDTORequestParams requestParams;
 
-        @NameInMap("ResponseParams")
+        @com.aliyun.core.annotation.NameInMap("ResponseParams")
         private SqlTemplateDTOResponseParams responseParams;
 
-        @NameInMap("TemplateSql")
+        @com.aliyun.core.annotation.NameInMap("TemplateSql")
         private String templateSql;
 
         private SqlTemplateDTO(Builder builder) {
@@ -517,6 +603,16 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
             private SqlTemplateDTOResponseParams responseParams; 
             private String templateSql; 
 
+            private Builder() {
+            } 
+
+            private Builder(SqlTemplateDTO model) {
+                this.originSql = model.originSql;
+                this.requestParams = model.requestParams;
+                this.responseParams = model.responseParams;
+                this.templateSql = model.templateSql;
+            } 
+
             /**
              * OriginSql.
              */
@@ -556,38 +652,44 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataAPIServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataAPIServiceDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ApiPath")
+        @com.aliyun.core.annotation.NameInMap("ApiPath")
         private String apiPath;
 
-        @NameInMap("ApiSrn")
+        @com.aliyun.core.annotation.NameInMap("ApiSrn")
         private String apiSrn;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DateFormat")
+        @com.aliyun.core.annotation.NameInMap("DateFormat")
         private String dateFormat;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("LastUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
         private Long lastUpdateTime;
 
-        @NameInMap("RequestMethod")
+        @com.aliyun.core.annotation.NameInMap("RequestMethod")
         private String requestMethod;
 
-        @NameInMap("RequestProtocol")
+        @com.aliyun.core.annotation.NameInMap("RequestProtocol")
         private String requestProtocol;
 
-        @NameInMap("SqlTemplateDTO")
+        @com.aliyun.core.annotation.NameInMap("SqlTemplateDTO")
         private SqlTemplateDTO sqlTemplateDTO;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Data(Builder builder) {
@@ -701,6 +803,23 @@ public class GetDataAPIServiceDetailResponseBody extends TeaModel {
             private String requestProtocol; 
             private SqlTemplateDTO sqlTemplateDTO; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiPath = model.apiPath;
+                this.apiSrn = model.apiSrn;
+                this.createTime = model.createTime;
+                this.dateFormat = model.dateFormat;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.lastUpdateTime = model.lastUpdateTime;
+                this.requestMethod = model.requestMethod;
+                this.requestProtocol = model.requestProtocol;
+                this.sqlTemplateDTO = model.sqlTemplateDTO;
+                this.status = model.status;
+            } 
 
             /**
              * ApiPath.

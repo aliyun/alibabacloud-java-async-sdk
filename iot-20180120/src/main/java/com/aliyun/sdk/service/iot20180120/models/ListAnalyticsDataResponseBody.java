@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAnalyticsDataResponseBody} extends {@link TeaModel}
  *
  * <p>ListAnalyticsDataResponseBody</p>
  */
 public class ListAnalyticsDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAnalyticsDataResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListAnalyticsDataResponseBody extends TeaModel {
 
     public static ListAnalyticsDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class ListAnalyticsDataResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAnalyticsDataResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,20 +151,26 @@ public class ListAnalyticsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAnalyticsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAnalyticsDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("HasNext")
+        @com.aliyun.core.annotation.NameInMap("HasNext")
         private Boolean hasNext;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ResultJson")
+        @com.aliyun.core.annotation.NameInMap("ResultJson")
         private String resultJson;
 
         private Data(Builder builder) {
@@ -204,6 +230,17 @@ public class ListAnalyticsDataResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private String resultJson; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.count = model.count;
+                this.hasNext = model.hasNext;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.resultJson = model.resultJson;
+            } 
 
             /**
              * Count.

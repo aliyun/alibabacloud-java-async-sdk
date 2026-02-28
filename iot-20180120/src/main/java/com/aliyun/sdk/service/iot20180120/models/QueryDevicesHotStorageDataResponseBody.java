@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDevicesHotStorageDataResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDevicesHotStorageDataResponseBody</p>
  */
 public class QueryDevicesHotStorageDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDevicesHotStorageDataResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryDevicesHotStorageDataResponseBody extends TeaModel {
 
     public static QueryDevicesHotStorageDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryDevicesHotStorageDataResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDevicesHotStorageDataResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,11 +151,17 @@ public class QueryDevicesHotStorageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDevicesHotStorageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDevicesHotStorageDataResponseBody</p>
+     */
     public static class PropertyInfo extends TeaModel {
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PropertyInfo(Builder builder) {
@@ -169,6 +195,14 @@ public class QueryDevicesHotStorageDataResponseBody extends TeaModel {
             private String time; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(PropertyInfo model) {
+                this.time = model.time;
+                this.value = model.value;
+            } 
+
             /**
              * Time.
              */
@@ -192,9 +226,15 @@ public class QueryDevicesHotStorageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDevicesHotStorageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDevicesHotStorageDataResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("PropertyInfo")
-        private java.util.List < PropertyInfo> propertyInfo;
+        @com.aliyun.core.annotation.NameInMap("PropertyInfo")
+        private java.util.List<PropertyInfo> propertyInfo;
 
         private List(Builder builder) {
             this.propertyInfo = builder.propertyInfo;
@@ -211,17 +251,24 @@ public class QueryDevicesHotStorageDataResponseBody extends TeaModel {
         /**
          * @return propertyInfo
          */
-        public java.util.List < PropertyInfo> getPropertyInfo() {
+        public java.util.List<PropertyInfo> getPropertyInfo() {
             return this.propertyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < PropertyInfo> propertyInfo; 
+            private java.util.List<PropertyInfo> propertyInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.propertyInfo = model.propertyInfo;
+            } 
 
             /**
              * PropertyInfo.
              */
-            public Builder propertyInfo(java.util.List < PropertyInfo> propertyInfo) {
+            public Builder propertyInfo(java.util.List<PropertyInfo> propertyInfo) {
                 this.propertyInfo = propertyInfo;
                 return this;
             }
@@ -233,14 +280,20 @@ public class QueryDevicesHotStorageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDevicesHotStorageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDevicesHotStorageDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("NextValid")
+        @com.aliyun.core.annotation.NameInMap("NextValid")
         private Boolean nextValid;
 
-        @NameInMap("nextPageToken")
+        @com.aliyun.core.annotation.NameInMap("nextPageToken")
         private String nextPageToken;
 
         private Data(Builder builder) {
@@ -282,6 +335,15 @@ public class QueryDevicesHotStorageDataResponseBody extends TeaModel {
             private List list; 
             private Boolean nextValid; 
             private String nextPageToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.nextValid = model.nextValid;
+                this.nextPageToken = model.nextPageToken;
+            } 
 
             /**
              * List.

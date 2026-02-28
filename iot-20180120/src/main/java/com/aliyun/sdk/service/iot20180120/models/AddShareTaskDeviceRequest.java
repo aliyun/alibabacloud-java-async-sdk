@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddShareTaskDeviceRequest} extends {@link RequestModel}
  *
  * <p>AddShareTaskDeviceRequest</p>
  */
 public class AddShareTaskDeviceRequest extends Request {
-    @Body
-    @NameInMap("IotIdList")
-    private java.util.List < String > iotIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotIdList")
+    private java.util.List<String> iotIdList;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Body
-    @NameInMap("ShareTaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShareTaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String shareTaskId;
 
     private AddShareTaskDeviceRequest(Builder builder) {
@@ -45,7 +50,7 @@ public class AddShareTaskDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -53,7 +58,7 @@ public class AddShareTaskDeviceRequest extends Request {
     /**
      * @return iotIdList
      */
-    public java.util.List < String > getIotIdList() {
+    public java.util.List<String> getIotIdList() {
         return this.iotIdList;
     }
 
@@ -79,7 +84,7 @@ public class AddShareTaskDeviceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddShareTaskDeviceRequest, Builder> {
-        private java.util.List < String > iotIdList; 
+        private java.util.List<String> iotIdList; 
         private String iotInstanceId; 
         private String productKey; 
         private String shareTaskId; 
@@ -99,7 +104,7 @@ public class AddShareTaskDeviceRequest extends Request {
         /**
          * IotIdList.
          */
-        public Builder iotIdList(java.util.List < String > iotIdList) {
+        public Builder iotIdList(java.util.List<String> iotIdList) {
             this.putBodyParameter("IotIdList", iotIdList);
             this.iotIdList = iotIdList;
             return this;
@@ -124,7 +129,10 @@ public class AddShareTaskDeviceRequest extends Request {
         }
 
         /**
-         * ShareTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Md3ZiTL888K9llXDy7890***********</p>
          */
         public Builder shareTaskId(String shareTaskId) {
             this.putBodyParameter("ShareTaskId", shareTaskId);

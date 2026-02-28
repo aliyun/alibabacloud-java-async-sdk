@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListParserResponseBody} extends {@link TeaModel}
  *
  * <p>ListParserResponseBody</p>
  */
 public class ListParserResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListParserResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListParserResponseBody extends TeaModel {
 
     public static ListParserResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListParserResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListParserResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -151,23 +172,29 @@ public class ListParserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListParserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListParserResponseBody</p>
+     */
     public static class ParserList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParserId")
+        @com.aliyun.core.annotation.NameInMap("ParserId")
         private Long parserId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UtcCreated")
+        @com.aliyun.core.annotation.NameInMap("UtcCreated")
         private String utcCreated;
 
-        @NameInMap("UtcModified")
+        @com.aliyun.core.annotation.NameInMap("UtcModified")
         private String utcModified;
 
         private ParserList(Builder builder) {
@@ -237,6 +264,18 @@ public class ListParserResponseBody extends TeaModel {
             private String utcCreated; 
             private String utcModified; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParserList model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.parserId = model.parserId;
+                this.status = model.status;
+                this.utcCreated = model.utcCreated;
+                this.utcModified = model.utcModified;
+            } 
+
             /**
              * Description.
              */
@@ -292,9 +331,15 @@ public class ListParserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListParserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListParserResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ParserList")
-        private java.util.List < ParserList> parserList;
+        @com.aliyun.core.annotation.NameInMap("ParserList")
+        private java.util.List<ParserList> parserList;
 
         private Data(Builder builder) {
             this.parserList = builder.parserList;
@@ -311,17 +356,24 @@ public class ListParserResponseBody extends TeaModel {
         /**
          * @return parserList
          */
-        public java.util.List < ParserList> getParserList() {
+        public java.util.List<ParserList> getParserList() {
             return this.parserList;
         }
 
         public static final class Builder {
-            private java.util.List < ParserList> parserList; 
+            private java.util.List<ParserList> parserList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.parserList = model.parserList;
+            } 
 
             /**
              * ParserList.
              */
-            public Builder parserList(java.util.List < ParserList> parserList) {
+            public Builder parserList(java.util.List<ParserList> parserList) {
                 this.parserList = parserList;
                 return this;
             }

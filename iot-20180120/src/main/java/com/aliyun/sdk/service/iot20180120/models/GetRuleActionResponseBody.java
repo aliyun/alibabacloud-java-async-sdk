@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRuleActionResponseBody} extends {@link TeaModel}
  *
  * <p>GetRuleActionResponseBody</p>
  */
 public class GetRuleActionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleActionInfo")
+    @com.aliyun.core.annotation.NameInMap("RuleActionInfo")
     private RuleActionInfo ruleActionInfo;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRuleActionResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetRuleActionResponseBody extends TeaModel {
 
     public static GetRuleActionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GetRuleActionResponseBody extends TeaModel {
         private RuleActionInfo ruleActionInfo; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRuleActionResponseBody model) {
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.ruleActionInfo = model.ruleActionInfo;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GetRuleActionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The ID of the request.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +125,14 @@ public class GetRuleActionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>F2D0755D-F350-40FE-9A6D-491859DB5E5F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +140,11 @@ public class GetRuleActionResponseBody extends TeaModel {
         }
 
         /**
-         * RuleActionInfo.
+         * <p>Indicates whether the rule action forwarded error operation data that failed to be forwarded to the destination cloud service. A data forwarding failure indicates that forwarding retries also failed.</p>
+         * <ul>
+         * <li><strong>true</strong>: forwards error operation data.</li>
+         * <li><strong>false</strong>: forwards normal data instead of error operation data.</li>
+         * </ul>
          */
         public Builder ruleActionInfo(RuleActionInfo ruleActionInfo) {
             this.ruleActionInfo = ruleActionInfo;
@@ -118,7 +152,10 @@ public class GetRuleActionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The rule action information returned if the call was successful. For more information, see the following parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,20 +168,26 @@ public class GetRuleActionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRuleActionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleActionResponseBody</p>
+     */
     public static class RuleActionInfo extends TeaModel {
-        @NameInMap("Configuration")
+        @com.aliyun.core.annotation.NameInMap("Configuration")
         private String configuration;
 
-        @NameInMap("ErrorActionFlag")
+        @com.aliyun.core.annotation.NameInMap("ErrorActionFlag")
         private Boolean errorActionFlag;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RuleActionInfo(Builder builder) {
@@ -205,8 +248,19 @@ public class GetRuleActionResponseBody extends TeaModel {
             private Long ruleId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleActionInfo model) {
+                this.configuration = model.configuration;
+                this.errorActionFlag = model.errorActionFlag;
+                this.id = model.id;
+                this.ruleId = model.ruleId;
+                this.type = model.type;
+            } 
+
             /**
-             * Configuration.
+             * <p>The ID of rule action.</p>
              */
             public Builder configuration(String configuration) {
                 this.configuration = configuration;
@@ -214,7 +268,18 @@ public class GetRuleActionResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorActionFlag.
+             * <p>The type of the rule action. Valid values:</p>
+             * <ul>
+             * <li><strong>REPUBLISH</strong>: forwards data to another topic.</li>
+             * <li><strong>OTS</strong>: stores data to Tablestore.</li>
+             * <li><strong>MNS</strong>: sends data to Message Service (MNS).</li>
+             * <li><strong>FC</strong>: sends data to Function Compute.</li>
+             * <li><strong>RDS</strong>: Save to cloud databases.</li>
+             * <li><strong>AMQP</strong>: forwards data to an AMQP consumer group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder errorActionFlag(Boolean errorActionFlag) {
                 this.errorActionFlag = errorActionFlag;
@@ -222,7 +287,10 @@ public class GetRuleActionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the rule based on which the rule action is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -238,7 +306,10 @@ public class GetRuleActionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The configurations of the rule action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REPUBLISH</p>
              */
             public Builder type(String type) {
                 this.type = type;

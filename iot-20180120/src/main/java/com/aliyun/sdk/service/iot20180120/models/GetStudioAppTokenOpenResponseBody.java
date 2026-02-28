@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStudioAppTokenOpenResponseBody} extends {@link TeaModel}
  *
  * <p>GetStudioAppTokenOpenResponseBody</p>
  */
 public class GetStudioAppTokenOpenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetStudioAppTokenOpenResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetStudioAppTokenOpenResponseBody extends TeaModel {
 
     public static GetStudioAppTokenOpenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetStudioAppTokenOpenResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStudioAppTokenOpenResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,20 +151,26 @@ public class GetStudioAppTokenOpenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStudioAppTokenOpenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStudioAppTokenOpenResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("IsEnable")
+        @com.aliyun.core.annotation.NameInMap("IsEnable")
         private String isEnable;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Data(Builder builder) {
@@ -204,6 +230,17 @@ public class GetStudioAppTokenOpenResponseBody extends TeaModel {
             private String isEnable; 
             private String token; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizId = model.bizId;
+                this.bizType = model.bizType;
+                this.isEnable = model.isEnable;
+                this.token = model.token;
+                this.type = model.type;
+            } 
 
             /**
              * BizId.

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEdgeInstanceDeviceByDriverResponseBody} extends {@link TeaModel}
  *
  * <p>QueryEdgeInstanceDeviceByDriverResponseBody</p>
  */
 public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryEdgeInstanceDeviceByDriverResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
 
     public static QueryEdgeInstanceDeviceByDriverResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryEdgeInstanceDeviceByDriverResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,8 +151,14 @@ public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryEdgeInstanceDeviceByDriverResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceDeviceByDriverResponseBody</p>
+     */
     public static class DeviceList extends TeaModel {
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
         private DeviceList(Builder builder) {
@@ -157,6 +183,13 @@ public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
         public static final class Builder {
             private String iotId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceList model) {
+                this.iotId = model.iotId;
+            } 
+
             /**
              * IotId.
              */
@@ -172,17 +205,23 @@ public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEdgeInstanceDeviceByDriverResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceDeviceByDriverResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("DeviceList")
-        private java.util.List < DeviceList> deviceList;
+        @com.aliyun.core.annotation.NameInMap("DeviceList")
+        private java.util.List<DeviceList> deviceList;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -210,7 +249,7 @@ public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
         /**
          * @return deviceList
          */
-        public java.util.List < DeviceList> getDeviceList() {
+        public java.util.List<DeviceList> getDeviceList() {
             return this.deviceList;
         }
 
@@ -230,9 +269,19 @@ public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer currentPage; 
-            private java.util.List < DeviceList> deviceList; 
+            private java.util.List<DeviceList> deviceList; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.deviceList = model.deviceList;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * CurrentPage.
@@ -245,7 +294,7 @@ public class QueryEdgeInstanceDeviceByDriverResponseBody extends TeaModel {
             /**
              * DeviceList.
              */
-            public Builder deviceList(java.util.List < DeviceList> deviceList) {
+            public Builder deviceList(java.util.List<DeviceList> deviceList) {
                 this.deviceList = deviceList;
                 return this;
             }

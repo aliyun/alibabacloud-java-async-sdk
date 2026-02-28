@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSoundCodeLabelRequest} extends {@link RequestModel}
  *
  * <p>UpdateSoundCodeLabelRequest</p>
  */
 public class UpdateSoundCodeLabelRequest extends Request {
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("Label")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Label")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String label;
 
-    @Body
-    @NameInMap("SoundCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SoundCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String soundCode;
 
     private UpdateSoundCodeLabelRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class UpdateSoundCodeLabelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -93,7 +98,10 @@ public class UpdateSoundCodeLabelRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -102,7 +110,10 @@ public class UpdateSoundCodeLabelRequest extends Request {
         }
 
         /**
-         * SoundCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Md3ZiTL888K9llXDy7890***********</p>
          */
         public Builder soundCode(String soundCode) {
             this.putBodyParameter("SoundCode", soundCode);

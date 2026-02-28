@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStudioAppDomainOpenResponseBody} extends {@link TeaModel}
  *
  * <p>CreateStudioAppDomainOpenResponseBody</p>
  */
 public class CreateStudioAppDomainOpenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateStudioAppDomainOpenResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class CreateStudioAppDomainOpenResponseBody extends TeaModel {
 
     public static CreateStudioAppDomainOpenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CreateStudioAppDomainOpenResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateStudioAppDomainOpenResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,26 +151,32 @@ public class CreateStudioAppDomainOpenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateStudioAppDomainOpenResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateStudioAppDomainOpenResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("IsBeian")
+        @com.aliyun.core.annotation.NameInMap("IsBeian")
         private String isBeian;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
         private Data(Builder builder) {
@@ -228,6 +254,19 @@ public class CreateStudioAppDomainOpenResponseBody extends TeaModel {
             private String projectId; 
             private String protocol; 
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.host = model.host;
+                this.id = model.id;
+                this.isBeian = model.isBeian;
+                this.projectId = model.projectId;
+                this.protocol = model.protocol;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * AppId.

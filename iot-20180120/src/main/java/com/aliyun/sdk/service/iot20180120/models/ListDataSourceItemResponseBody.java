@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataSourceItemResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataSourceItemResponseBody</p>
  */
 public class ListDataSourceItemResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DataSourceItems")
+    @com.aliyun.core.annotation.NameInMap("DataSourceItems")
     private DataSourceItems dataSourceItems;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListDataSourceItemResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class ListDataSourceItemResponseBody extends TeaModel {
 
     public static ListDataSourceItemResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -121,8 +130,25 @@ public class ListDataSourceItemResponseBody extends TeaModel {
         private Boolean success; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListDataSourceItemResponseBody model) {
+            this.code = model.code;
+            this.dataSourceItems = model.dataSourceItems;
+            this.errorMessage = model.errorMessage;
+            this.page = model.page;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +156,7 @@ public class ListDataSourceItemResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceItems.
+         * <p>The information about the topics that are returned.</p>
          */
         public Builder dataSourceItems(DataSourceItems dataSourceItems) {
             this.dataSourceItems = dataSourceItems;
@@ -138,7 +164,7 @@ public class ListDataSourceItemResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -146,7 +172,10 @@ public class ListDataSourceItemResponseBody extends TeaModel {
         }
 
         /**
-         * Page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -154,7 +183,10 @@ public class ListDataSourceItemResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +194,10 @@ public class ListDataSourceItemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +205,14 @@ public class ListDataSourceItemResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +220,10 @@ public class ListDataSourceItemResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -191,20 +236,26 @@ public class ListDataSourceItemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataSourceItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSourceItemResponseBody</p>
+     */
     public static class DataSourceItem extends TeaModel {
-        @NameInMap("DataSourceItemId")
+        @com.aliyun.core.annotation.NameInMap("DataSourceItemId")
         private Long dataSourceItemId;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("ScopeType")
+        @com.aliyun.core.annotation.NameInMap("ScopeType")
         private String scopeType;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private DataSourceItem(Builder builder) {
@@ -265,8 +316,22 @@ public class ListDataSourceItemResponseBody extends TeaModel {
             private String scopeType; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSourceItem model) {
+                this.dataSourceItemId = model.dataSourceItemId;
+                this.deviceName = model.deviceName;
+                this.productKey = model.productKey;
+                this.scopeType = model.scopeType;
+                this.topic = model.topic;
+            } 
+
             /**
-             * DataSourceItemId.
+             * <p>The ID of the topic of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>129322</p>
              */
             public Builder dataSourceItemId(Long dataSourceItemId) {
                 this.dataSourceItemId = dataSourceItemId;
@@ -298,7 +363,10 @@ public class ListDataSourceItemResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * <p>The name of the topic of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/gyh***z/+/thing/event/property/post</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -312,9 +380,15 @@ public class ListDataSourceItemResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataSourceItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSourceItemResponseBody</p>
+     */
     public static class DataSourceItems extends TeaModel {
-        @NameInMap("dataSourceItem")
-        private java.util.List < DataSourceItem> dataSourceItem;
+        @com.aliyun.core.annotation.NameInMap("dataSourceItem")
+        private java.util.List<DataSourceItem> dataSourceItem;
 
         private DataSourceItems(Builder builder) {
             this.dataSourceItem = builder.dataSourceItem;
@@ -331,17 +405,24 @@ public class ListDataSourceItemResponseBody extends TeaModel {
         /**
          * @return dataSourceItem
          */
-        public java.util.List < DataSourceItem> getDataSourceItem() {
+        public java.util.List<DataSourceItem> getDataSourceItem() {
             return this.dataSourceItem;
         }
 
         public static final class Builder {
-            private java.util.List < DataSourceItem> dataSourceItem; 
+            private java.util.List<DataSourceItem> dataSourceItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSourceItems model) {
+                this.dataSourceItem = model.dataSourceItem;
+            } 
 
             /**
              * dataSourceItem.
              */
-            public Builder dataSourceItem(java.util.List < DataSourceItem> dataSourceItem) {
+            public Builder dataSourceItem(java.util.List<DataSourceItem> dataSourceItem) {
                 this.dataSourceItem = dataSourceItem;
                 return this;
             }

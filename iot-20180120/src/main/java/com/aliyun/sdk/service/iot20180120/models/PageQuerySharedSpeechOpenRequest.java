@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PageQuerySharedSpeechOpenRequest} extends {@link RequestModel}
  *
  * <p>PageQuerySharedSpeechOpenRequest</p>
  */
 public class PageQuerySharedSpeechOpenRequest extends Request {
-    @Body
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Body
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("PageId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageId")
     private Integer pageId;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Body
-    @NameInMap("ShareTaskCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShareTaskCode")
     private String shareTaskCode;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private PageQuerySharedSpeechOpenRequest(Builder builder) {
@@ -65,7 +70,7 @@ public class PageQuerySharedSpeechOpenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -153,7 +158,10 @@ public class PageQuerySharedSpeechOpenRequest extends Request {
         } 
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putBodyParameter("DeviceName", deviceName);
@@ -162,7 +170,13 @@ public class PageQuerySharedSpeechOpenRequest extends Request {
         }
 
         /**
-         * IotId.
+         * <p>The ID of the device.</p>
+         * <blockquote>
+         * <p>If you specify this parameter, you do not need to specify <strong>ProductKey</strong> and <strong>DeviceName</strong>. <strong>IotId</strong> specifies the GUID of the device. The value of the IotId parameter is a combination of the values of the <strong>ProductKey</strong> and <strong>DeviceName</strong> parameters. If you specify the <strong>IotId</strong>, <strong>ProductKey</strong>, and <strong>DeviceName</strong> parameters, the value of the <strong>IotId</strong> parameter takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Q7uOhVRdZRRlDnTLv****00100</p>
          */
         public Builder iotId(String iotId) {
             this.putBodyParameter("IotId", iotId);
@@ -171,7 +185,14 @@ public class PageQuerySharedSpeechOpenRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p> If your instance has an ID, you must specify this parameter. Otherwise, the request fails. If no Overview page exists or no instance ID is displayed, you do not need to specify this parameter.</p>
+         * </blockquote>
+         * <p>For more information, see the <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a> topic of IoT instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-2w****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putBodyParameter("IotInstanceId", iotInstanceId);
@@ -180,7 +201,10 @@ public class PageQuerySharedSpeechOpenRequest extends Request {
         }
 
         /**
-         * PageId.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageId(Integer pageId) {
             this.putBodyParameter("PageId", pageId);
@@ -189,7 +213,10 @@ public class PageQuerySharedSpeechOpenRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -198,7 +225,10 @@ public class PageQuerySharedSpeechOpenRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sd34****</p>
          */
         public Builder productKey(String productKey) {
             this.putBodyParameter("ProductKey", productKey);
@@ -207,7 +237,11 @@ public class PageQuerySharedSpeechOpenRequest extends Request {
         }
 
         /**
-         * ShareTaskCode.
+         * <p>The code that is used to share the speeches.</p>
+         * <p>You can obtain the <strong>code</strong> on the <strong>Shared Corpus Management</strong> page of <strong>Speech Sending Voice Broadcasting Service</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ebed9280_ba25_48df_80c2_****</p>
          */
         public Builder shareTaskCode(String shareTaskCode) {
             this.putBodyParameter("ShareTaskCode", shareTaskCode);
@@ -216,7 +250,15 @@ public class PageQuerySharedSpeechOpenRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the speeches that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The speeches are pending approval.</li>
+         * <li><strong>2</strong>: The speeches are approved.</li>
+         * <li><strong>3</strong>: The speeches are rejected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);

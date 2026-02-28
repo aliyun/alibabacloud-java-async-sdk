@@ -1,3 +1,6 @@
+2026-02-28 Version: 1.0.5
+- Generated java-async 2018-01-20 for Iot.
+
 2023-02-10 Version: 1.0.4
 - Support broadcast for FengTian.
 

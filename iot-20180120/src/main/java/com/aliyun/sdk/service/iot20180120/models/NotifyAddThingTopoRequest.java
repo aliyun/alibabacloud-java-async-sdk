@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NotifyAddThingTopoRequest} extends {@link RequestModel}
  *
  * <p>NotifyAddThingTopoRequest</p>
  */
 public class NotifyAddThingTopoRequest extends Request {
-    @Query
-    @NameInMap("DeviceListStr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceListStr")
     private String deviceListStr;
 
-    @Query
-    @NameInMap("GwDeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GwDeviceName")
     private String gwDeviceName;
 
-    @Query
-    @NameInMap("GwIotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GwIotId")
     private String gwIotId;
 
-    @Query
-    @NameInMap("GwProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GwProductKey")
     private String gwProductKey;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private NotifyAddThingTopoRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class NotifyAddThingTopoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -110,7 +115,10 @@ public class NotifyAddThingTopoRequest extends Request {
         } 
 
         /**
-         * DeviceListStr.
+         * <p>A JSON array of the sub-device identity information. You can use a combination of <strong>ProductKey</strong> and <strong>DeviceName</strong> or only <strong>IotId</strong> to specify a device, such as <strong>[{&quot;productKey&quot;:&quot;a1BwAGxxx&quot;,&quot;deviceName&quot;:&quot;device1&quot;},{&quot;IotId&quot;:&quot;Q7uOhxxx&quot;}]</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;productKey&quot;:&quot;a1BwAGV****&quot;,&quot;deviceName&quot;:&quot;device1&quot;},{&quot;IotId&quot;:&quot;Q7uOhVRdZRRlDnTLv****00100&quot;}]</p>
          */
         public Builder deviceListStr(String deviceListStr) {
             this.putQueryParameter("DeviceListStr", deviceListStr);
@@ -119,7 +127,13 @@ public class NotifyAddThingTopoRequest extends Request {
         }
 
         /**
-         * GwDeviceName.
+         * <p>The DeviceName of the gateway.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, you must also specify the <strong>ProductKey</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>gateway</p>
          */
         public Builder gwDeviceName(String gwDeviceName) {
             this.putQueryParameter("GwDeviceName", gwDeviceName);
@@ -128,7 +142,13 @@ public class NotifyAddThingTopoRequest extends Request {
         }
 
         /**
-         * GwIotId.
+         * <p>The ID of the gateway device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, you do not need to specify <strong>ProductKey</strong> or <strong>DeviceName</strong>. The <strong>IotId</strong> parameter specifies a globally unique identifier (GUID) of the device, which corresponds to a combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>. If you specify both <strong>IotId</strong> and the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>, <strong>IotId</strong> takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vWxNur6BUApsqjv****4000100</p>
          */
         public Builder gwIotId(String gwIotId) {
             this.putQueryParameter("GwIotId", gwIotId);
@@ -137,7 +157,13 @@ public class NotifyAddThingTopoRequest extends Request {
         }
 
         /**
-         * GwProductKey.
+         * <p>The ProductKey of the product to which the gateway belongs.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, you must also specify the <strong>DeviceName</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a1T27vz****</p>
          */
         public Builder gwProductKey(String gwProductKey) {
             this.putQueryParameter("GwProductKey", gwProductKey);
@@ -146,7 +172,17 @@ public class NotifyAddThingTopoRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+         * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);

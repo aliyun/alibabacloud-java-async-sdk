@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEdgeInstanceMessageRoutingResponseBody} extends {@link TeaModel}
  *
  * <p>QueryEdgeInstanceMessageRoutingResponseBody</p>
  */
 public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryEdgeInstanceMessageRoutingResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
 
     public static QueryEdgeInstanceMessageRoutingResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryEdgeInstanceMessageRoutingResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,26 +151,32 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryEdgeInstanceMessageRoutingResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceMessageRoutingResponseBody</p>
+     */
     public static class RouteContext extends TeaModel {
-        @NameInMap("Qos")
+        @com.aliyun.core.annotation.NameInMap("Qos")
         private String qos;
 
-        @NameInMap("SourceApplicationName")
+        @com.aliyun.core.annotation.NameInMap("SourceApplicationName")
         private String sourceApplicationName;
 
-        @NameInMap("SourceFcFunctionName")
+        @com.aliyun.core.annotation.NameInMap("SourceFcFunctionName")
         private String sourceFcFunctionName;
 
-        @NameInMap("SourceFcServiceName")
+        @com.aliyun.core.annotation.NameInMap("SourceFcServiceName")
         private String sourceFcServiceName;
 
-        @NameInMap("TargetApplicationName")
+        @com.aliyun.core.annotation.NameInMap("TargetApplicationName")
         private String targetApplicationName;
 
-        @NameInMap("TargetFcFunctionName")
+        @com.aliyun.core.annotation.NameInMap("TargetFcFunctionName")
         private String targetFcFunctionName;
 
-        @NameInMap("TargetFcServiceName")
+        @com.aliyun.core.annotation.NameInMap("TargetFcServiceName")
         private String targetFcServiceName;
 
         private RouteContext(Builder builder) {
@@ -229,6 +255,19 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
             private String targetFcFunctionName; 
             private String targetFcServiceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteContext model) {
+                this.qos = model.qos;
+                this.sourceApplicationName = model.sourceApplicationName;
+                this.sourceFcFunctionName = model.sourceFcFunctionName;
+                this.sourceFcServiceName = model.sourceFcServiceName;
+                this.targetApplicationName = model.targetApplicationName;
+                this.targetFcFunctionName = model.targetFcFunctionName;
+                this.targetFcServiceName = model.targetFcServiceName;
+            } 
+
             /**
              * Qos.
              */
@@ -292,41 +331,47 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEdgeInstanceMessageRoutingResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceMessageRoutingResponseBody</p>
+     */
     public static class MessageRoute extends TeaModel {
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtCreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTimestamp")
         private Long gmtCreateTimestamp;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GmtModifiedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTimestamp")
         private Long gmtModifiedTimestamp;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RouteContext")
+        @com.aliyun.core.annotation.NameInMap("RouteContext")
         private RouteContext routeContext;
 
-        @NameInMap("RouteId")
+        @com.aliyun.core.annotation.NameInMap("RouteId")
         private Integer routeId;
 
-        @NameInMap("SourceData")
+        @com.aliyun.core.annotation.NameInMap("SourceData")
         private String sourceData;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("TargetData")
+        @com.aliyun.core.annotation.NameInMap("TargetData")
         private String targetData;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("TopicFilter")
+        @com.aliyun.core.annotation.NameInMap("TopicFilter")
         private String topicFilter;
 
         private MessageRoute(Builder builder) {
@@ -450,6 +495,24 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
             private String targetType; 
             private String topicFilter; 
 
+            private Builder() {
+            } 
+
+            private Builder(MessageRoute model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtCreateTimestamp = model.gmtCreateTimestamp;
+                this.gmtModified = model.gmtModified;
+                this.gmtModifiedTimestamp = model.gmtModifiedTimestamp;
+                this.name = model.name;
+                this.routeContext = model.routeContext;
+                this.routeId = model.routeId;
+                this.sourceData = model.sourceData;
+                this.sourceType = model.sourceType;
+                this.targetData = model.targetData;
+                this.targetType = model.targetType;
+                this.topicFilter = model.topicFilter;
+            } 
+
             /**
              * GmtCreate.
              */
@@ -553,9 +616,15 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEdgeInstanceMessageRoutingResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceMessageRoutingResponseBody</p>
+     */
     public static class MessageRouteList extends TeaModel {
-        @NameInMap("MessageRoute")
-        private java.util.List < MessageRoute> messageRoute;
+        @com.aliyun.core.annotation.NameInMap("MessageRoute")
+        private java.util.List<MessageRoute> messageRoute;
 
         private MessageRouteList(Builder builder) {
             this.messageRoute = builder.messageRoute;
@@ -572,17 +641,24 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
         /**
          * @return messageRoute
          */
-        public java.util.List < MessageRoute> getMessageRoute() {
+        public java.util.List<MessageRoute> getMessageRoute() {
             return this.messageRoute;
         }
 
         public static final class Builder {
-            private java.util.List < MessageRoute> messageRoute; 
+            private java.util.List<MessageRoute> messageRoute; 
+
+            private Builder() {
+            } 
+
+            private Builder(MessageRouteList model) {
+                this.messageRoute = model.messageRoute;
+            } 
 
             /**
              * MessageRoute.
              */
-            public Builder messageRoute(java.util.List < MessageRoute> messageRoute) {
+            public Builder messageRoute(java.util.List<MessageRoute> messageRoute) {
                 this.messageRoute = messageRoute;
                 return this;
             }
@@ -594,17 +670,23 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEdgeInstanceMessageRoutingResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceMessageRoutingResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("MessageRouteList")
+        @com.aliyun.core.annotation.NameInMap("MessageRouteList")
         private MessageRouteList messageRouteList;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -655,6 +737,16 @@ public class QueryEdgeInstanceMessageRoutingResponseBody extends TeaModel {
             private MessageRouteList messageRouteList; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.messageRouteList = model.messageRouteList;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * CurrentPage.

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataAPIServiceDetailRequest} extends {@link RequestModel}
  *
  * <p>GetDataAPIServiceDetailRequest</p>
  */
 public class GetDataAPIServiceDetailRequest extends Request {
-    @Body
-    @NameInMap("ApiSrn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiSrn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiSrn;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private GetDataAPIServiceDetailRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class GetDataAPIServiceDetailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,10 @@ public class GetDataAPIServiceDetailRequest extends Request {
         } 
 
         /**
-         * ApiSrn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:iot:<em>:127103983461</em>***:serveapi/device/getDeviceCountByStatus2</p>
          */
         public Builder apiSrn(String apiSrn) {
             this.putBodyParameter("ApiSrn", apiSrn);

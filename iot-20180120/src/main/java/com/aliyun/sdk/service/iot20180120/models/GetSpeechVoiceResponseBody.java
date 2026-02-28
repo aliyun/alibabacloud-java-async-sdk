@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSpeechVoiceResponseBody} extends {@link TeaModel}
  *
  * <p>GetSpeechVoiceResponseBody</p>
  */
 public class GetSpeechVoiceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSpeechVoiceResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
 
     public static GetSpeechVoiceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSpeechVoiceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,11 +151,17 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSpeechVoiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpeechVoiceResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Items(Builder builder) {
@@ -169,6 +195,14 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
             private String label; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.label = model.label;
+                this.value = model.value;
+            } 
+
             /**
              * Label.
              */
@@ -192,9 +226,15 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpeechVoiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpeechVoiceResponseBody</p>
+     */
     public static class VoiceList extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
         private VoiceList(Builder builder) {
             this.items = builder.items;
@@ -211,17 +251,24 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(VoiceList model) {
+                this.items = model.items;
+            } 
 
             /**
              * Items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
@@ -233,14 +280,20 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpeechVoiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpeechVoiceResponseBody</p>
+     */
     public static class DataItems extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("VoiceList")
+        @com.aliyun.core.annotation.NameInMap("VoiceList")
         private VoiceList voiceList;
 
         private DataItems(Builder builder) {
@@ -283,6 +336,15 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
             private String value; 
             private VoiceList voiceList; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataItems model) {
+                this.label = model.label;
+                this.value = model.value;
+                this.voiceList = model.voiceList;
+            } 
+
             /**
              * Label.
              */
@@ -314,9 +376,15 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpeechVoiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpeechVoiceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < DataItems> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<DataItems> items;
 
         private Data(Builder builder) {
             this.items = builder.items;
@@ -333,17 +401,24 @@ public class GetSpeechVoiceResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < DataItems> getItems() {
+        public java.util.List<DataItems> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < DataItems> items; 
+            private java.util.List<DataItems> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+            } 
 
             /**
              * Items.
              */
-            public Builder items(java.util.List < DataItems> items) {
+            public Builder items(java.util.List<DataItems> items) {
                 this.items = items;
                 return this;
             }

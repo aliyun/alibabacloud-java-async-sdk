@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDynamicGroupDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDynamicGroupDevicesResponseBody</p>
  */
 public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Integer pageCount;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private QueryDynamicGroupDevicesResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
 
     public static QueryDynamicGroupDevicesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -145,8 +154,27 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
         private Boolean success; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDynamicGroupDevicesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.nextToken = model.nextToken;
+            this.page = model.page;
+            this.pageCount = model.pageCount;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -154,7 +182,7 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The devices returned after the request succeeds. The information is included in the <strong>SimpleDeviceInfo</strong> field.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -162,7 +190,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A system exception occurred.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -170,7 +201,11 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291***</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -178,7 +213,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -186,7 +224,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -194,7 +235,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -202,7 +246,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +257,14 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +272,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of devices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -231,41 +288,47 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDynamicGroupDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDynamicGroupDevicesResponseBody</p>
+     */
     public static class SimpleDeviceInfo extends TeaModel {
-        @NameInMap("ActiveTime")
+        @com.aliyun.core.annotation.NameInMap("ActiveTime")
         private String activeTime;
 
-        @NameInMap("CategoryKey")
+        @com.aliyun.core.annotation.NameInMap("CategoryKey")
         private String categoryKey;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("LastOnlineTime")
+        @com.aliyun.core.annotation.NameInMap("LastOnlineTime")
         private String lastOnlineTime;
 
-        @NameInMap("Nickname")
+        @com.aliyun.core.annotation.NameInMap("Nickname")
         private String nickname;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private Integer nodeType;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UtcActiveTime")
+        @com.aliyun.core.annotation.NameInMap("UtcActiveTime")
         private String utcActiveTime;
 
-        @NameInMap("UtcLastOnlineTime")
+        @com.aliyun.core.annotation.NameInMap("UtcLastOnlineTime")
         private String utcLastOnlineTime;
 
         private SimpleDeviceInfo(Builder builder) {
@@ -389,8 +452,29 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
             private String utcActiveTime; 
             private String utcLastOnlineTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(SimpleDeviceInfo model) {
+                this.activeTime = model.activeTime;
+                this.categoryKey = model.categoryKey;
+                this.deviceName = model.deviceName;
+                this.iotId = model.iotId;
+                this.lastOnlineTime = model.lastOnlineTime;
+                this.nickname = model.nickname;
+                this.nodeType = model.nodeType;
+                this.productKey = model.productKey;
+                this.productName = model.productName;
+                this.status = model.status;
+                this.utcActiveTime = model.utcActiveTime;
+                this.utcLastOnlineTime = model.utcLastOnlineTime;
+            } 
+
             /**
-             * ActiveTime.
+             * <p>The time when the device was activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-06 10:48:41</p>
              */
             public Builder activeTime(String activeTime) {
                 this.activeTime = activeTime;
@@ -398,7 +482,11 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryKey.
+             * <p>The identifier of the category to which the product belongs.</p>
+             * <p>This parameter is returned if the product uses the Thing Specification Language (TSL) model of a standard category that is pre-defined by IoT Platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Lighting</p>
              */
             public Builder categoryKey(String categoryKey) {
                 this.categoryKey = categoryKey;
@@ -406,7 +494,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceName.
+             * <p>The DeviceName of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>light</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -414,7 +505,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * IotId.
+             * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Q7uOhVRdZRRlDnTLv****00100</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -422,7 +516,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * LastOnlineTime.
+             * <p>The last time when the device went online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-06 13:43:12</p>
              */
             public Builder lastOnlineTime(String lastOnlineTime) {
                 this.lastOnlineTime = lastOnlineTime;
@@ -430,7 +527,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Nickname.
+             * <p>The alias of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>detectors_in_beijing</p>
              */
             public Builder nickname(String nickname) {
                 this.nickname = nickname;
@@ -438,7 +538,14 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type of the product. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: device. A device can connect to IoT Platform directly, or be attached to a gateway as a sub-device and then connect to IoT Platform. Sub-devices cannot be attached to a device.</li>
+             * <li><strong>1</strong>: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain topological relationships with sub-devices, and synchronize topological relationships to IoT Platform.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nodeType(Integer nodeType) {
                 this.nodeType = nodeType;
@@ -446,7 +553,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1rYuVF***</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -454,7 +564,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The ProductName of the product to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -462,7 +575,16 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The device status. Valid values:</p>
+             * <ul>
+             * <li><strong>ONLINE</strong>: The device is online.</li>
+             * <li><strong>OFFLINE</strong>: The device is offline.</li>
+             * <li><strong>UNACTIVE</strong>: The device is not activated.</li>
+             * <li><strong>DISABLE</strong>: The device is deactivated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -470,7 +592,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * UtcActiveTime.
+             * <p>The time when the device was activated. The time is in the UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-06T02:48:41.000Z</p>
              */
             public Builder utcActiveTime(String utcActiveTime) {
                 this.utcActiveTime = utcActiveTime;
@@ -478,7 +603,10 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * UtcLastOnlineTime.
+             * <p>The last time when the device went online. The time is in the UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-06T05:43:12.000Z</p>
              */
             public Builder utcLastOnlineTime(String utcLastOnlineTime) {
                 this.utcLastOnlineTime = utcLastOnlineTime;
@@ -492,9 +620,15 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDynamicGroupDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDynamicGroupDevicesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("SimpleDeviceInfo")
-        private java.util.List < SimpleDeviceInfo> simpleDeviceInfo;
+        @com.aliyun.core.annotation.NameInMap("SimpleDeviceInfo")
+        private java.util.List<SimpleDeviceInfo> simpleDeviceInfo;
 
         private Data(Builder builder) {
             this.simpleDeviceInfo = builder.simpleDeviceInfo;
@@ -511,17 +645,24 @@ public class QueryDynamicGroupDevicesResponseBody extends TeaModel {
         /**
          * @return simpleDeviceInfo
          */
-        public java.util.List < SimpleDeviceInfo> getSimpleDeviceInfo() {
+        public java.util.List<SimpleDeviceInfo> getSimpleDeviceInfo() {
             return this.simpleDeviceInfo;
         }
 
         public static final class Builder {
-            private java.util.List < SimpleDeviceInfo> simpleDeviceInfo; 
+            private java.util.List<SimpleDeviceInfo> simpleDeviceInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.simpleDeviceInfo = model.simpleDeviceInfo;
+            } 
 
             /**
              * SimpleDeviceInfo.
              */
-            public Builder simpleDeviceInfo(java.util.List < SimpleDeviceInfo> simpleDeviceInfo) {
+            public Builder simpleDeviceInfo(java.util.List<SimpleDeviceInfo> simpleDeviceInfo) {
                 this.simpleDeviceInfo = simpleDeviceInfo;
                 return this;
             }

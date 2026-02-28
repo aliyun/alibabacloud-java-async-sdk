@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushSpeechRequest} extends {@link RequestModel}
  *
  * <p>PushSpeechRequest</p>
  */
 public class PushSpeechRequest extends Request {
-    @Body
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Body
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Body
-    @NameInMap("ProjectCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectCode;
 
-    @Body
-    @NameInMap("PushMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PushMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pushMode;
 
-    @Body
-    @NameInMap("SpeechCodeList")
-    @Validation(required = true)
-    private java.util.List < String > speechCodeList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SpeechCodeList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> speechCodeList;
 
     private PushSpeechRequest(Builder builder) {
         super(builder);
@@ -67,7 +72,7 @@ public class PushSpeechRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -124,7 +129,7 @@ public class PushSpeechRequest extends Request {
     /**
      * @return speechCodeList
      */
-    public java.util.List < String > getSpeechCodeList() {
+    public java.util.List<String> getSpeechCodeList() {
         return this.speechCodeList;
     }
 
@@ -136,7 +141,7 @@ public class PushSpeechRequest extends Request {
         private String productKey; 
         private String projectCode; 
         private String pushMode; 
-        private java.util.List < String > speechCodeList; 
+        private java.util.List<String> speechCodeList; 
 
         private Builder() {
             super();
@@ -200,7 +205,10 @@ public class PushSpeechRequest extends Request {
         }
 
         /**
-         * ProjectCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4de2c367**<strong>8c585e5992</strong></p>
          */
         public Builder projectCode(String projectCode) {
             this.putBodyParameter("ProjectCode", projectCode);
@@ -209,7 +217,10 @@ public class PushSpeechRequest extends Request {
         }
 
         /**
-         * PushMode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SINGLE_DEVICE</p>
          */
         public Builder pushMode(String pushMode) {
             this.putBodyParameter("PushMode", pushMode);
@@ -218,9 +229,12 @@ public class PushSpeechRequest extends Request {
         }
 
         /**
-         * SpeechCodeList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4de2c367**<strong>8c585e5992</strong></p>
          */
-        public Builder speechCodeList(java.util.List < String > speechCodeList) {
+        public Builder speechCodeList(java.util.List<String> speechCodeList) {
             this.putBodyParameter("SpeechCodeList", speechCodeList);
             this.speechCodeList = speechCodeList;
             return this;

@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PageQuerySpeechBroadcastHourRequest} extends {@link RequestModel}
  *
  * <p>PageQuerySpeechBroadcastHourRequest</p>
  */
 public class PageQuerySpeechBroadcastHourRequest extends Request {
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 2000, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 2000, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("PageToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageToken")
     private String pageToken;
 
-    @Query
-    @NameInMap("QueryDateTimeHour")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryDateTimeHour")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queryDateTimeHour;
 
-    @Body
-    @NameInMap("ShareTaskCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShareTaskCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String shareTaskCode;
 
     private PageQuerySpeechBroadcastHourRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class PageQuerySpeechBroadcastHourRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +118,14 @@ public class PageQuerySpeechBroadcastHourRequest extends Request {
         } 
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p> If your instance has an ID, you must specify this parameter. Otherwise, the request fails. If no Overview page exists or no instance ID is displayed, you do not need to specify this parameter.</p>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a> of IoT instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-2w****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putBodyParameter("IotInstanceId", iotInstanceId);
@@ -122,7 +134,10 @@ public class PageQuerySpeechBroadcastHourRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Valid values: 1 to 2000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -131,7 +146,11 @@ public class PageQuerySpeechBroadcastHourRequest extends Request {
         }
 
         /**
-         * PageToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <strong>PageToken</strong>.</p>
+         * <p>For example, if you want to query the results on Page n, you must set PageToken to the token that you obtained when you queried the results on Page n - 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cm****</p>
          */
         public Builder pageToken(String pageToken) {
             this.putBodyParameter("PageToken", pageToken);
@@ -140,7 +159,11 @@ public class PageQuerySpeechBroadcastHourRequest extends Request {
         }
 
         /**
-         * QueryDateTimeHour.
+         * <p>The end time of the hour in which you want to query data. Example: 2020090919, which specifies 19:00 on September 9, 2020.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020090919</p>
          */
         public Builder queryDateTimeHour(String queryDateTimeHour) {
             this.putQueryParameter("QueryDateTimeHour", queryDateTimeHour);
@@ -149,7 +172,12 @@ public class PageQuerySpeechBroadcastHourRequest extends Request {
         }
 
         /**
-         * ShareTaskCode.
+         * <p>The code of the speech sharing task.</p>
+         * <p>You can obtain the <strong>code</strong> on the <strong>Shared Corpus Management</strong> page of <strong>Speech Sending Voice Broadcasting Service</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ebed9280_ba25_48df_80c2_****</p>
          */
         public Builder shareTaskCode(String shareTaskCode) {
             this.putBodyParameter("ShareTaskCode", shareTaskCode);

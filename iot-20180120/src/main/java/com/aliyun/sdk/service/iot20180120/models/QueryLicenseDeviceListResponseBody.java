@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryLicenseDeviceListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryLicenseDeviceListResponseBody</p>
  */
 public class QueryLicenseDeviceListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryLicenseDeviceListResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
 
     public static QueryLicenseDeviceListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryLicenseDeviceListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the request fails. For more information, see the <strong>&quot;Error codes&quot;</strong> section in this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response message.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>291438BA-6E10-4C4C-B761-243B9A0D324F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,26 +164,32 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryLicenseDeviceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryLicenseDeviceListResponseBody</p>
+     */
     public static class Item extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("ExpiryTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiryTime")
         private Long expiryTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("LicenseCode")
+        @com.aliyun.core.annotation.NameInMap("LicenseCode")
         private String licenseCode;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
         private Item(Builder builder) {
@@ -229,8 +268,24 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
             private String productKey; 
             private String productName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.deviceName = model.deviceName;
+                this.expiryTime = model.expiryTime;
+                this.gmtCreate = model.gmtCreate;
+                this.iotId = model.iotId;
+                this.licenseCode = model.licenseCode;
+                this.productKey = model.productKey;
+                this.productName = model.productName;
+            } 
+
             /**
-             * DeviceName.
+             * <p>The DeviceName of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>device1</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -238,7 +293,10 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiryTime.
+             * <p>The expiration time of the license.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1690934297000</p>
              */
             public Builder expiryTime(Long expiryTime) {
                 this.expiryTime = expiryTime;
@@ -246,7 +304,10 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the license was bound to the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620634297000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -254,7 +315,10 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * IotId.
+             * <p>The device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Q7uOhVRdZRRlDnTLv****00100</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -262,7 +326,10 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * LicenseCode.
+             * <p>The license type that indicates the audio and video specifications. Valid values: <strong>480P</strong> and <strong>720P</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720P</p>
              */
             public Builder licenseCode(String licenseCode) {
                 this.licenseCode = licenseCode;
@@ -270,7 +337,10 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -278,7 +348,7 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The ProductName of the product.</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -292,9 +362,15 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryLicenseDeviceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryLicenseDeviceListResponseBody</p>
+     */
     public static class DeviceList extends TeaModel {
-        @NameInMap("item")
-        private java.util.List < Item> item;
+        @com.aliyun.core.annotation.NameInMap("item")
+        private java.util.List<Item> item;
 
         private DeviceList(Builder builder) {
             this.item = builder.item;
@@ -311,17 +387,24 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
         /**
          * @return item
          */
-        public java.util.List < Item> getItem() {
+        public java.util.List<Item> getItem() {
             return this.item;
         }
 
         public static final class Builder {
-            private java.util.List < Item> item; 
+            private java.util.List<Item> item; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceList model) {
+                this.item = model.item;
+            } 
 
             /**
              * item.
              */
-            public Builder item(java.util.List < Item> item) {
+            public Builder item(java.util.List<Item> item) {
                 this.item = item;
                 return this;
             }
@@ -333,17 +416,23 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryLicenseDeviceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryLicenseDeviceListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeviceList")
+        @com.aliyun.core.annotation.NameInMap("DeviceList")
         private DeviceList deviceList;
 
-        @NameInMap("PageId")
+        @com.aliyun.core.annotation.NameInMap("PageId")
         private Integer pageId;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -395,8 +484,18 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deviceList = model.deviceList;
+                this.pageId = model.pageId;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
+
             /**
-             * DeviceList.
+             * <p>The information about the devices.</p>
              */
             public Builder deviceList(DeviceList deviceList) {
                 this.deviceList = deviceList;
@@ -404,7 +503,10 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * PageId.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageId(Integer pageId) {
                 this.pageId = pageId;
@@ -412,7 +514,10 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -420,7 +525,10 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

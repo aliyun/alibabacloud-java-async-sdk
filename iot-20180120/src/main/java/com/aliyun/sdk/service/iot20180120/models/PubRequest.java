@@ -1,63 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PubRequest} extends {@link RequestModel}
  *
  * <p>PubRequest</p>
  */
 public class PubRequest extends Request {
-    @Query
-    @NameInMap("ContentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentType")
     private String contentType;
 
-    @Query
-    @NameInMap("CorrelationData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CorrelationData")
     private String correlationData;
 
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("MessageContent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MessageContent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String messageContent;
 
-    @Query
-    @NameInMap("PayloadFormatIndicator")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MessageExpiryInterval")
+    private Long messageExpiryInterval;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayloadFormatIndicator")
     private Integer payloadFormatIndicator;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
-    @Query
-    @NameInMap("Qos")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Qos")
     private Integer qos;
 
-    @Query
-    @NameInMap("ResponseTopic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResponseTopic")
     private String responseTopic;
 
-    @Query
-    @NameInMap("TopicFullName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Retained")
+    private Boolean retained;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicAlias")
+    private Integer topicAlias;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicFullName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topicFullName;
 
-    @Query
-    @NameInMap("UserProp")
-    private java.util.List < UserProp> userProp;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserProp")
+    private java.util.List<UserProp> userProp;
 
     private PubRequest(Builder builder) {
         super(builder);
@@ -66,10 +83,13 @@ public class PubRequest extends Request {
         this.deviceName = builder.deviceName;
         this.iotInstanceId = builder.iotInstanceId;
         this.messageContent = builder.messageContent;
+        this.messageExpiryInterval = builder.messageExpiryInterval;
         this.payloadFormatIndicator = builder.payloadFormatIndicator;
         this.productKey = builder.productKey;
         this.qos = builder.qos;
         this.responseTopic = builder.responseTopic;
+        this.retained = builder.retained;
+        this.topicAlias = builder.topicAlias;
         this.topicFullName = builder.topicFullName;
         this.userProp = builder.userProp;
     }
@@ -82,7 +102,7 @@ public class PubRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,6 +143,13 @@ public class PubRequest extends Request {
     }
 
     /**
+     * @return messageExpiryInterval
+     */
+    public Long getMessageExpiryInterval() {
+        return this.messageExpiryInterval;
+    }
+
+    /**
      * @return payloadFormatIndicator
      */
     public Integer getPayloadFormatIndicator() {
@@ -151,6 +178,20 @@ public class PubRequest extends Request {
     }
 
     /**
+     * @return retained
+     */
+    public Boolean getRetained() {
+        return this.retained;
+    }
+
+    /**
+     * @return topicAlias
+     */
+    public Integer getTopicAlias() {
+        return this.topicAlias;
+    }
+
+    /**
      * @return topicFullName
      */
     public String getTopicFullName() {
@@ -160,7 +201,7 @@ public class PubRequest extends Request {
     /**
      * @return userProp
      */
-    public java.util.List < UserProp> getUserProp() {
+    public java.util.List<UserProp> getUserProp() {
         return this.userProp;
     }
 
@@ -170,12 +211,15 @@ public class PubRequest extends Request {
         private String deviceName; 
         private String iotInstanceId; 
         private String messageContent; 
+        private Long messageExpiryInterval; 
         private Integer payloadFormatIndicator; 
         private String productKey; 
         private Integer qos; 
         private String responseTopic; 
+        private Boolean retained; 
+        private Integer topicAlias; 
         private String topicFullName; 
-        private java.util.List < UserProp> userProp; 
+        private java.util.List<UserProp> userProp; 
 
         private Builder() {
             super();
@@ -188,16 +232,23 @@ public class PubRequest extends Request {
             this.deviceName = request.deviceName;
             this.iotInstanceId = request.iotInstanceId;
             this.messageContent = request.messageContent;
+            this.messageExpiryInterval = request.messageExpiryInterval;
             this.payloadFormatIndicator = request.payloadFormatIndicator;
             this.productKey = request.productKey;
             this.qos = request.qos;
             this.responseTopic = request.responseTopic;
+            this.retained = request.retained;
+            this.topicAlias = request.topicAlias;
             this.topicFullName = request.topicFullName;
             this.userProp = request.userProp;
         } 
 
         /**
-         * ContentType.
+         * <p>The content type of the message when you use MQTT 5.0 for communication.</p>
+         * <p>The content type is usually MIME, such as text or plain********.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("ContentType", contentType);
@@ -206,7 +257,14 @@ public class PubRequest extends Request {
         }
 
         /**
-         * CorrelationData.
+         * <p>The related data in the request/response communication mode when you use MQTT 5.0. You can specify this parameter as needed.</p>
+         * <p>A message recipient can process the request based on the data.</p>
+         * <blockquote>
+         * <p> You must convert the related data into binary data and perform Base64 encoding to generate a value of the string type.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>aGVsbG8****</p>
          */
         public Builder correlationData(String correlationData) {
             this.putQueryParameter("CorrelationData", correlationData);
@@ -215,7 +273,13 @@ public class PubRequest extends Request {
         }
 
         /**
-         * DeviceName.
+         * <p>The name of the MQTT cloud gateway.</p>
+         * <blockquote>
+         * <p>When you publish a message to an MQTT cloud gateway, you must specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>device1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -224,7 +288,17 @@ public class PubRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can obtain the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must specify this parameter. Otherwise, the call fails.</li>
+         * <li>If the <strong>Overview</strong> page or the instance ID is not displayed in the IoT Platform console, ignore this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-0pp1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -233,7 +307,12 @@ public class PubRequest extends Request {
         }
 
         /**
-         * MessageContent.
+         * <p>The body of the message that you want to publish.</p>
+         * <p>To generate a message body, you must convert the raw message into binary data and perform Base64 encoding.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ0ZXN0IjoidGFzayBwdWIgYnJvYWRjYXN0In0=</p>
          */
         public Builder messageContent(String messageContent) {
             this.putBodyParameter("MessageContent", messageContent);
@@ -242,7 +321,23 @@ public class PubRequest extends Request {
         }
 
         /**
-         * PayloadFormatIndicator.
+         * MessageExpiryInterval.
+         */
+        public Builder messageExpiryInterval(Long messageExpiryInterval) {
+            this.putQueryParameter("MessageExpiryInterval", messageExpiryInterval);
+            this.messageExpiryInterval = messageExpiryInterval;
+            return this;
+        }
+
+        /**
+         * <p>The payload identifier of the message when you use MQTT 5.0 for communication. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The message is unknown byte data.</li>
+         * <li><strong>1</strong>: The payload of the message is UTF-8 encoded character data.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder payloadFormatIndicator(Integer payloadFormatIndicator) {
             this.putQueryParameter("PayloadFormatIndicator", payloadFormatIndicator);
@@ -251,7 +346,11 @@ public class PubRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product to which the device that receives the message belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1Q5XoY****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -260,7 +359,16 @@ public class PubRequest extends Request {
         }
 
         /**
-         * Qos.
+         * <p>The quality of service (QoS) level of the message. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The message is published at most once.</li>
+         * <li><strong>1</strong>: The message is published at least once. If a PUBACK response is not returned after you publish a QoS 1 message, the message is pushed to the device again when the device reconnects to IoT Platform.</li>
+         * </ul>
+         * <p>Default value: <strong>0</strong>.</p>
+         * <p>For more information about message communication, see <a href="https://help.aliyun.com/document_detail/30527.html">Limits</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder qos(Integer qos) {
             this.putQueryParameter("Qos", qos);
@@ -269,7 +377,7 @@ public class PubRequest extends Request {
         }
 
         /**
-         * ResponseTopic.
+         * <p>The response topic in the request/response communication mode when you use MQTT 5.0. For more information, see <a href="https://help.aliyun.com/document_detail/30540.html">MQTT 5.0</a>.</p>
          */
         public Builder responseTopic(String responseTopic) {
             this.putQueryParameter("ResponseTopic", responseTopic);
@@ -278,7 +386,34 @@ public class PubRequest extends Request {
         }
 
         /**
-         * TopicFullName.
+         * Retained.
+         */
+        public Builder retained(Boolean retained) {
+            this.putQueryParameter("Retained", retained);
+            this.retained = retained;
+            return this;
+        }
+
+        /**
+         * TopicAlias.
+         */
+        public Builder topicAlias(Integer topicAlias) {
+            this.putQueryParameter("TopicAlias", topicAlias);
+            this.topicAlias = topicAlias;
+            return this;
+        }
+
+        /**
+         * <p>The custom topic for the device that receives the message.</p>
+         * <ul>
+         * <li>Topic format: <code>/${productKey}/${deviceName}/user/${TopicShortName}</code>.</li>
+         * <li>You must specify the <strong>Subscribe</strong> permission, or <strong>Publish and Subscribe</strong> permissions for the topic.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Make sure that the device subscribes to the topic before you call the Pub operation. Otherwise, the device cannot receive the message.</p>
+         * </blockquote>
+         * <p>You can view the custom topics of a product on the <strong>Topic Categories</strong> tab of the <strong>Product Details</strong> page, or by calling the <a href="https://help.aliyun.com/document_detail/69647.html">QueryProductTopic</a> operation. You can view the topics to which the device subscribes on the <strong>Topic List</strong> tab of the <strong>Device Details</strong> page.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder topicFullName(String topicFullName) {
             this.putQueryParameter("TopicFullName", topicFullName);
@@ -289,7 +424,7 @@ public class PubRequest extends Request {
         /**
          * UserProp.
          */
-        public Builder userProp(java.util.List < UserProp> userProp) {
+        public Builder userProp(java.util.List<UserProp> userProp) {
             this.putQueryParameter("UserProp", userProp);
             this.userProp = userProp;
             return this;
@@ -302,11 +437,17 @@ public class PubRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PubRequest} extends {@link TeaModel}
+     *
+     * <p>PubRequest</p>
+     */
     public static class UserProp extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private UserProp(Builder builder) {
@@ -340,8 +481,20 @@ public class PubRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserProp model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The custom property key that is specified when you use MQTT 5.0 for communication.</p>
+             * <p>This parameter must be used together with the <strong>UserProp.N.Value</strong> parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -349,7 +502,11 @@ public class PubRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The custom property value that is specified when you use MQTT 5.0 for communication.</p>
+             * <p>This parameter must be used together with the <strong>UserProp.N.Key</strong> parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

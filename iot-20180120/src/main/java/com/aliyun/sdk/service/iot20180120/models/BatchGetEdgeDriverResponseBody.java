@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetEdgeDriverResponseBody} extends {@link TeaModel}
  *
  * <p>BatchGetEdgeDriverResponseBody</p>
  */
 public class BatchGetEdgeDriverResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DriverList")
-    private java.util.List < DriverList> driverList;
+    @com.aliyun.core.annotation.NameInMap("DriverList")
+    private java.util.List<DriverList> driverList;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchGetEdgeDriverResponseBody(Builder builder) {
@@ -43,6 +48,10 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,7 +62,7 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
     /**
      * @return driverList
      */
-    public java.util.List < DriverList> getDriverList() {
+    public java.util.List<DriverList> getDriverList() {
         return this.driverList;
     }
 
@@ -80,13 +89,27 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < DriverList> driverList; 
+        private java.util.List<DriverList> driverList; 
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(BatchGetEdgeDriverResponseBody model) {
+            this.code = model.code;
+            this.driverList = model.driverList;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code. Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see <a href="https://help.aliyun.com/document_detail/135200.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,15 +117,18 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
         }
 
         /**
-         * DriverList.
+         * <p>The information about each driver.</p>
          */
-        public Builder driverList(java.util.List < DriverList> driverList) {
+        public Builder driverList(java.util.List<DriverList> driverList) {
             this.driverList = driverList;
             return this;
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request parameter error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +136,10 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A42CAB88-6E26-4DC7-9A35-584D17E82DE0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. true indicates that the call was successful. false indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,32 +163,38 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchGetEdgeDriverResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetEdgeDriverResponseBody</p>
+     */
     public static class DriverList extends TeaModel {
-        @NameInMap("CpuArch")
+        @com.aliyun.core.annotation.NameInMap("CpuArch")
         private String cpuArch;
 
-        @NameInMap("DriverId")
+        @com.aliyun.core.annotation.NameInMap("DriverId")
         private String driverId;
 
-        @NameInMap("DriverName")
+        @com.aliyun.core.annotation.NameInMap("DriverName")
         private String driverName;
 
-        @NameInMap("DriverProtocol")
+        @com.aliyun.core.annotation.NameInMap("DriverProtocol")
         private String driverProtocol;
 
-        @NameInMap("GmtCreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTimestamp")
         private Long gmtCreateTimestamp;
 
-        @NameInMap("GmtModifiedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTimestamp")
         private Long gmtModifiedTimestamp;
 
-        @NameInMap("IsBuiltIn")
+        @com.aliyun.core.annotation.NameInMap("IsBuiltIn")
         private Boolean isBuiltIn;
 
-        @NameInMap("Runtime")
+        @com.aliyun.core.annotation.NameInMap("Runtime")
         private String runtime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private DriverList(Builder builder) {
@@ -253,8 +291,33 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
             private String runtime; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DriverList model) {
+                this.cpuArch = model.cpuArch;
+                this.driverId = model.driverId;
+                this.driverName = model.driverName;
+                this.driverProtocol = model.driverProtocol;
+                this.gmtCreateTimestamp = model.gmtCreateTimestamp;
+                this.gmtModifiedTimestamp = model.gmtModifiedTimestamp;
+                this.isBuiltIn = model.isBuiltIn;
+                this.runtime = model.runtime;
+                this.type = model.type;
+            } 
+
             /**
-             * CpuArch.
+             * <p>The CPU architecture that the driver supports. Valid values:</p>
+             * <ul>
+             * <li>ARMv7</li>
+             * <li>ARMv7-HF</li>
+             * <li>AArch64</li>
+             * <li>x86-64</li>
+             * <li>x86</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>x86-64</p>
              */
             public Builder cpuArch(String cpuArch) {
                 this.cpuArch = cpuArch;
@@ -262,7 +325,10 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
             }
 
             /**
-             * DriverId.
+             * <p>The ID of the driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fec565038d7544978d9aed5c1a******</p>
              */
             public Builder driverId(String driverId) {
                 this.driverId = driverId;
@@ -270,7 +336,10 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
             }
 
             /**
-             * DriverName.
+             * <p>The name of the driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyLedDriver</p>
              */
             public Builder driverName(String driverName) {
                 this.driverName = driverName;
@@ -278,7 +347,15 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
             }
 
             /**
-             * DriverProtocol.
+             * <p>The communications protocol that the driver uses. Valid values:</p>
+             * <ul>
+             * <li>modbus: Modbus protocol</li>
+             * <li>opc-ua: OPC UA protocol</li>
+             * <li>customize: custom protocol</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>customize</p>
              */
             public Builder driverProtocol(String driverProtocol) {
                 this.driverProtocol = driverProtocol;
@@ -286,7 +363,10 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTimestamp.
+             * <p>The time when the driver was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581912859713</p>
              */
             public Builder gmtCreateTimestamp(Long gmtCreateTimestamp) {
                 this.gmtCreateTimestamp = gmtCreateTimestamp;
@@ -294,7 +374,10 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTimestamp.
+             * <p>The time when the driver was last modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581912859713</p>
              */
             public Builder gmtModifiedTimestamp(Long gmtModifiedTimestamp) {
                 this.gmtModifiedTimestamp = gmtModifiedTimestamp;
@@ -302,7 +385,14 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
             }
 
             /**
-             * IsBuiltIn.
+             * <p>Indicates whether the driver is a built-in driver.</p>
+             * <ul>
+             * <li>true: indicates that the driver is a built-in driver, that is, the driver code is pre-configured on the gateway device.</li>
+             * <li>false: indicates that the driver is not a built-in driver.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isBuiltIn(Boolean isBuiltIn) {
                 this.isBuiltIn = isBuiltIn;
@@ -310,7 +400,15 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
             }
 
             /**
-             * Runtime.
+             * <p>The language in which the driver is programmed. Valid values:</p>
+             * <ul>
+             * <li>nodejs8: Node.js v8</li>
+             * <li>python3: Python v3.5</li>
+             * <li>c: C</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>c</p>
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -318,7 +416,14 @@ public class BatchGetEdgeDriverResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the driver. Valid values:</p>
+             * <ul>
+             * <li>0: official driver</li>
+             * <li>1: custom driver</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

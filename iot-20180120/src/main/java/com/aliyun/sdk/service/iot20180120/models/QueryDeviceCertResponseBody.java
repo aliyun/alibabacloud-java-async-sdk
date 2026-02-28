@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceCertResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceCertResponseBody</p>
  */
 public class QueryDeviceCertResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DeviceCertInfo")
+    @com.aliyun.core.annotation.NameInMap("DeviceCertInfo")
     private DeviceCertInfo deviceCertInfo;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDeviceCertResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryDeviceCertResponseBody extends TeaModel {
 
     public static QueryDeviceCertResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryDeviceCertResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceCertResponseBody model) {
+            this.code = model.code;
+            this.deviceCertInfo = model.deviceCertInfo;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,17 +151,23 @@ public class QueryDeviceCertResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceCertResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceCertResponseBody</p>
+     */
     public static class DeviceCertInfo extends TeaModel {
-        @NameInMap("CertSN")
+        @com.aliyun.core.annotation.NameInMap("CertSN")
         private String certSN;
 
-        @NameInMap("Certificate")
+        @com.aliyun.core.annotation.NameInMap("Certificate")
         private String certificate;
 
-        @NameInMap("PrivateKey")
+        @com.aliyun.core.annotation.NameInMap("PrivateKey")
         private String privateKey;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private DeviceCertInfo(Builder builder) {
@@ -192,6 +218,16 @@ public class QueryDeviceCertResponseBody extends TeaModel {
             private String certificate; 
             private String privateKey; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceCertInfo model) {
+                this.certSN = model.certSN;
+                this.certificate = model.certificate;
+                this.privateKey = model.privateKey;
+                this.status = model.status;
+            } 
 
             /**
              * CertSN.

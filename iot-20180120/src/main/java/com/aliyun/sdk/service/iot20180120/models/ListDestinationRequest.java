@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDestinationRequest} extends {@link RequestModel}
  *
  * <p>ListDestinationRequest</p>
  */
 public class ListDestinationRequest extends Request {
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("Page")
-    @Validation(required = true, maximum = 9999999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 9999999, minimum = 1)
     private Integer page;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SearchName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchName")
     private String searchName;
 
-    @Query
-    @NameInMap("Types")
-    private java.util.List < String > types;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Types")
+    private java.util.List<String> types;
 
     private ListDestinationRequest(Builder builder) {
         super(builder);
@@ -51,7 +56,7 @@ public class ListDestinationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +92,7 @@ public class ListDestinationRequest extends Request {
     /**
      * @return types
      */
-    public java.util.List < String > getTypes() {
+    public java.util.List<String> getTypes() {
         return this.types;
     }
 
@@ -96,7 +101,7 @@ public class ListDestinationRequest extends Request {
         private Integer page; 
         private Integer pageSize; 
         private String searchName; 
-        private java.util.List < String > types; 
+        private java.util.List<String> types; 
 
         private Builder() {
             super();
@@ -121,7 +126,10 @@ public class ListDestinationRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -130,7 +138,10 @@ public class ListDestinationRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,9 +159,21 @@ public class ListDestinationRequest extends Request {
         }
 
         /**
-         * Types.
+         * <p>The actions of forwarding data to data destinations. Data is processed by using a parser script before the data is forwarded. Valid values:</p>
+         * <ul>
+         * <li><strong>REPUBLISH</strong>: forwards topic data to an IoT Platform communication topic.</li>
+         * <li><strong>AMQP</strong>: forwards topic data to an Advanced Message Queuing Protocol (AMQP) consumer group.</li>
+         * <li><strong>DATAHUB</strong>: forwards topic data to Alibaba Cloud DataHub for stream data processing.</li>
+         * <li><strong>ONS</strong>: forwards topic data to Message Queue for Apache RocketMQ for message distribution.</li>
+         * <li><strong>MNS</strong>: forwards topic data to Message Service (MNS) for message transmission.</li>
+         * <li><strong>FC</strong>: forwards topic data to Function Compute for event computing.</li>
+         * <li><strong>OTS</strong>: forwards topic data to Tablestore for NoSQL data storage.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;REPUBLISH&quot;, &quot;OTS&quot;]</p>
          */
-        public Builder types(java.util.List < String > types) {
+        public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);
             this.types = types;
             return this;

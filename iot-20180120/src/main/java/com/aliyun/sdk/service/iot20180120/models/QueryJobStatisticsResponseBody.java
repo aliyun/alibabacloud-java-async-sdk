@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryJobStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryJobStatisticsResponseBody</p>
  */
 public class QueryJobStatisticsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryJobStatisticsResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryJobStatisticsResponseBody extends TeaModel {
 
     public static QueryJobStatisticsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryJobStatisticsResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryJobStatisticsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,32 +151,38 @@ public class QueryJobStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryJobStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Cancelled")
+        @com.aliyun.core.annotation.NameInMap("Cancelled")
         private Integer cancelled;
 
-        @NameInMap("Failed")
+        @com.aliyun.core.annotation.NameInMap("Failed")
         private Integer failed;
 
-        @NameInMap("InProgress")
+        @com.aliyun.core.annotation.NameInMap("InProgress")
         private Integer inProgress;
 
-        @NameInMap("Queued")
+        @com.aliyun.core.annotation.NameInMap("Queued")
         private Integer queued;
 
-        @NameInMap("Rejected")
+        @com.aliyun.core.annotation.NameInMap("Rejected")
         private Integer rejected;
 
-        @NameInMap("Sent")
+        @com.aliyun.core.annotation.NameInMap("Sent")
         private Integer sent;
 
-        @NameInMap("Succeeded")
+        @com.aliyun.core.annotation.NameInMap("Succeeded")
         private Integer succeeded;
 
-        @NameInMap("TimeOut")
+        @com.aliyun.core.annotation.NameInMap("TimeOut")
         private Integer timeOut;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -252,6 +278,21 @@ public class QueryJobStatisticsResponseBody extends TeaModel {
             private Integer succeeded; 
             private Integer timeOut; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cancelled = model.cancelled;
+                this.failed = model.failed;
+                this.inProgress = model.inProgress;
+                this.queued = model.queued;
+                this.rejected = model.rejected;
+                this.sent = model.sent;
+                this.succeeded = model.succeeded;
+                this.timeOut = model.timeOut;
+                this.total = model.total;
+            } 
 
             /**
              * Cancelled.

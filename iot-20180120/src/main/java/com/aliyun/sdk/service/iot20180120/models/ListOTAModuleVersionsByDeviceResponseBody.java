@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOTAModuleVersionsByDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>ListOTAModuleVersionsByDeviceResponseBody</p>
  */
 public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Integer pageCount;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListOTAModuleVersionsByDeviceResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
 
     public static ListOTAModuleVersionsByDeviceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -133,8 +142,26 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
         private Boolean success; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListOTAModuleVersionsByDeviceResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.pageCount = model.pageCount;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,10 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -150,7 +180,7 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The module version information returned if the call is successful. The information was submitted by the device. For more information, see the <strong>SimpleOTAModuleInfo</strong> parameter in this table.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -158,7 +188,7 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -166,7 +196,10 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -174,7 +207,10 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of module versions returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +218,10 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>291438BA-6E10-4C4C-B761-243B9A0D324F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +229,14 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +244,10 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of module versions that was submitted by the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -211,20 +260,26 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOTAModuleVersionsByDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOTAModuleVersionsByDeviceResponseBody</p>
+     */
     public static class SimpleOTAModuleInfo extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
-        @NameInMap("ModuleVersion")
+        @com.aliyun.core.annotation.NameInMap("ModuleVersion")
         private String moduleVersion;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
         private SimpleOTAModuleInfo(Builder builder) {
@@ -285,8 +340,22 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
             private String moduleVersion; 
             private String productKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(SimpleOTAModuleInfo model) {
+                this.deviceName = model.deviceName;
+                this.iotId = model.iotId;
+                this.moduleName = model.moduleName;
+                this.moduleVersion = model.moduleVersion;
+                this.productKey = model.productKey;
+            } 
+
             /**
-             * DeviceName.
+             * <p>The DeviceName of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>newDevice</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -294,7 +363,10 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * IotId.
+             * <p>The ID of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QjIFT***000101</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -302,7 +374,10 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * <p>The name of the OTA module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>barcodeScanner</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -310,7 +385,10 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleVersion.
+             * <p>The module version that was submitted by the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder moduleVersion(String moduleVersion) {
                 this.moduleVersion = moduleVersion;
@@ -318,7 +396,10 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aluctKe****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -332,9 +413,15 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOTAModuleVersionsByDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOTAModuleVersionsByDeviceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("SimpleOTAModuleInfo")
-        private java.util.List < SimpleOTAModuleInfo> simpleOTAModuleInfo;
+        @com.aliyun.core.annotation.NameInMap("SimpleOTAModuleInfo")
+        private java.util.List<SimpleOTAModuleInfo> simpleOTAModuleInfo;
 
         private Data(Builder builder) {
             this.simpleOTAModuleInfo = builder.simpleOTAModuleInfo;
@@ -351,17 +438,24 @@ public class ListOTAModuleVersionsByDeviceResponseBody extends TeaModel {
         /**
          * @return simpleOTAModuleInfo
          */
-        public java.util.List < SimpleOTAModuleInfo> getSimpleOTAModuleInfo() {
+        public java.util.List<SimpleOTAModuleInfo> getSimpleOTAModuleInfo() {
             return this.simpleOTAModuleInfo;
         }
 
         public static final class Builder {
-            private java.util.List < SimpleOTAModuleInfo> simpleOTAModuleInfo; 
+            private java.util.List<SimpleOTAModuleInfo> simpleOTAModuleInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.simpleOTAModuleInfo = model.simpleOTAModuleInfo;
+            } 
 
             /**
              * SimpleOTAModuleInfo.
              */
-            public Builder simpleOTAModuleInfo(java.util.List < SimpleOTAModuleInfo> simpleOTAModuleInfo) {
+            public Builder simpleOTAModuleInfo(java.util.List<SimpleOTAModuleInfo> simpleOTAModuleInfo) {
                 this.simpleOTAModuleInfo = simpleOTAModuleInfo;
                 return this;
             }

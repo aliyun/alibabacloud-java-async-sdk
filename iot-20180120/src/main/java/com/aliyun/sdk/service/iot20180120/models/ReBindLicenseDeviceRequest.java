@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReBindLicenseDeviceRequest} extends {@link RequestModel}
  *
  * <p>ReBindLicenseDeviceRequest</p>
  */
 public class ReBindLicenseDeviceRequest extends Request {
-    @Body
-    @NameInMap("DeviceNameList")
-    @Validation(required = true)
-    private java.util.List < String > deviceNameList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceNameList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> deviceNameList;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("LicenseCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LicenseCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String licenseCode;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
     private ReBindLicenseDeviceRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class ReBindLicenseDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class ReBindLicenseDeviceRequest extends Request {
     /**
      * @return deviceNameList
      */
-    public java.util.List < String > getDeviceNameList() {
+    public java.util.List<String> getDeviceNameList() {
         return this.deviceNameList;
     }
 
@@ -81,7 +86,7 @@ public class ReBindLicenseDeviceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ReBindLicenseDeviceRequest, Builder> {
-        private java.util.List < String > deviceNameList; 
+        private java.util.List<String> deviceNameList; 
         private String iotInstanceId; 
         private String licenseCode; 
         private String productKey; 
@@ -99,16 +104,28 @@ public class ReBindLicenseDeviceRequest extends Request {
         } 
 
         /**
-         * DeviceNameList.
+         * <p>The <strong>DeviceNames</strong> of all devices to which you want to rebind a license.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69905.html">QueryDevice</a> operation to query the <strong>DeviceNames</strong> of all devices that belong to a specific product.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
-        public Builder deviceNameList(java.util.List < String > deviceNameList) {
+        public Builder deviceNameList(java.util.List<String> deviceNameList) {
             this.putBodyParameter("DeviceNameList", deviceNameList);
             this.deviceNameList = deviceNameList;
             return this;
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p> You must specify the ID of a public instance of the new version or an Enterprise Edition instance. Otherwise, the request fails. You do not need to specify the ID of a public instance of the previous version.</p>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a> of IoT instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-e3***</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -117,7 +134,11 @@ public class ReBindLicenseDeviceRequest extends Request {
         }
 
         /**
-         * LicenseCode.
+         * <p>The license type. Set the value to <strong>LINK_SPEECH_COMMON_LICENSE</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LINK_SPEECH_COMMON_LICENSE</p>
          */
         public Builder licenseCode(String licenseCode) {
             this.putQueryParameter("LicenseCode", licenseCode);
@@ -126,7 +147,12 @@ public class ReBindLicenseDeviceRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product to which the devices belong.</p>
+         * <p>You can go to the IoT Platform console or call the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation to view the information about all products of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2YwD23***</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);

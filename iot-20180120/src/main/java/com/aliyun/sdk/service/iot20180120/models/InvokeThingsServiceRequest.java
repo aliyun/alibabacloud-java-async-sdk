@@ -1,40 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvokeThingsServiceRequest} extends {@link RequestModel}
  *
  * <p>InvokeThingsServiceRequest</p>
  */
 public class InvokeThingsServiceRequest extends Request {
-    @Query
-    @NameInMap("Args")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Args")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String args;
 
-    @Query
-    @NameInMap("DeviceName")
-    @Validation(required = true)
-    private java.util.List < String > deviceName;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> deviceName;
 
-    @Query
-    @NameInMap("Identifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Identifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identifier;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Qos")
+    @com.aliyun.core.annotation.Validation(maximum = 1)
+    private Integer qos;
 
     private InvokeThingsServiceRequest(Builder builder) {
         super(builder);
@@ -43,6 +53,7 @@ public class InvokeThingsServiceRequest extends Request {
         this.identifier = builder.identifier;
         this.iotInstanceId = builder.iotInstanceId;
         this.productKey = builder.productKey;
+        this.qos = builder.qos;
     }
 
     public static Builder builder() {
@@ -53,7 +64,7 @@ public class InvokeThingsServiceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +79,7 @@ public class InvokeThingsServiceRequest extends Request {
     /**
      * @return deviceName
      */
-    public java.util.List < String > getDeviceName() {
+    public java.util.List<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -93,12 +104,20 @@ public class InvokeThingsServiceRequest extends Request {
         return this.productKey;
     }
 
+    /**
+     * @return qos
+     */
+    public Integer getQos() {
+        return this.qos;
+    }
+
     public static final class Builder extends Request.Builder<InvokeThingsServiceRequest, Builder> {
         private String args; 
-        private java.util.List < String > deviceName; 
+        private java.util.List<String> deviceName; 
         private String identifier; 
         private String iotInstanceId; 
         private String productKey; 
+        private Integer qos; 
 
         private Builder() {
             super();
@@ -111,10 +130,19 @@ public class InvokeThingsServiceRequest extends Request {
             this.identifier = request.identifier;
             this.iotInstanceId = request.iotInstanceId;
             this.productKey = request.productKey;
+            this.qos = request.qos;
         } 
 
         /**
-         * Args.
+         * <p>The input parameter of the service. The value is a JSON string. Example: <strong>Args={&quot;param1&quot;: 1}</strong>.</p>
+         * <p>If this parameter is left empty, set the value to <strong>Args={}</strong>.</p>
+         * <blockquote>
+         * <p>If the TSL data is of the float or double type, the parameter values that correspond to the TSL data contain at least one decimal place. Examples: 10.0 and 11.1.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;param1&quot;:1}</p>
          */
         public Builder args(String args) {
             this.putQueryParameter("Args", args);
@@ -123,16 +151,31 @@ public class InvokeThingsServiceRequest extends Request {
         }
 
         /**
-         * DeviceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device1</p>
          */
-        public Builder deviceName(java.util.List < String > deviceName) {
+        public Builder deviceName(java.util.List<String> deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
             this.deviceName = deviceName;
             return this;
         }
 
         /**
-         * Identifier.
+         * <p>The identifier of the service.</p>
+         * <p>You can use one of the following methods to view the <strong>identifier</strong> of the service.</p>
+         * <ul>
+         * <li>Log on to the IoT Platform console. On the <strong>Define Feature</strong> tab of the product to which the device belongs, you can view the identifier.</li>
+         * <li>Call the <a href="https://help.aliyun.com/document_detail/150321.html">QueryThingModel</a> operation and view the identifier in the TSL information that is returned.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If a service named testService belongs to a custom module named testFb, you can set this parameter to <strong><strong><strong>testFb:testService</strong></strong></strong>. The custom module is not the default module.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Set</p>
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
@@ -141,7 +184,17 @@ public class InvokeThingsServiceRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the ID of the instance on the <strong>Overview</strong> page in the IoT Platform console.****</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.****</li>
+         * <li>If no <strong>Overview</strong> page or <strong>ID</strong> is generated for your instance, you do not need to configure this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -150,11 +203,24 @@ public class InvokeThingsServiceRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
             this.productKey = productKey;
+            return this;
+        }
+
+        /**
+         * Qos.
+         */
+        public Builder qos(Integer qos) {
+            this.putQueryParameter("Qos", qos);
+            this.qos = qos;
             return this;
         }
 

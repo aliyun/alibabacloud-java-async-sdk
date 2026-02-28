@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceEventDataRequest} extends {@link RequestModel}
  *
  * <p>QueryDeviceEventDataRequest</p>
  */
 public class QueryDeviceEventDataRequest extends Request {
-    @Query
-    @NameInMap("Asc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Asc")
     private Integer asc;
 
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @Query
-    @NameInMap("Identifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Identifier")
     private String identifier;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private QueryDeviceEventDataRequest(Builder builder) {
@@ -76,7 +81,7 @@ public class QueryDeviceEventDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -182,7 +187,17 @@ public class QueryDeviceEventDataRequest extends Request {
         } 
 
         /**
-         * Asc.
+         * <p>The order in which you want to sort the returned event records. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: in reverse chronological order. This is the default value.</li>
+         * <li><strong>1</strong>: in chronological order.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not configure this parameter, the default value <strong>0</strong> is used. The system sorts the returned event records in reverse chronological order.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder asc(Integer asc) {
             this.putQueryParameter("Asc", asc);
@@ -191,7 +206,13 @@ public class QueryDeviceEventDataRequest extends Request {
         }
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the device.</p>
+         * <blockquote>
+         * <p> If you specify a value for this parameter, you must also specify a value for the <strong>ProductKey</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -200,7 +221,11 @@ public class QueryDeviceEventDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The value is a 13-digit timestamp in milliseconds. Example: 1516541900303.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1516541900303</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -209,7 +234,15 @@ public class QueryDeviceEventDataRequest extends Request {
         }
 
         /**
-         * EventType.
+         * <p>The type of the event that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>info</strong>: Information.</li>
+         * <li><strong>alert</strong>: Alert.</li>
+         * <li><strong>error</strong>: Error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>info</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -218,7 +251,14 @@ public class QueryDeviceEventDataRequest extends Request {
         }
 
         /**
-         * Identifier.
+         * <p>The identifier of the event that you want to query. You can view the event identifier on the Define Feature tab of the Product Details page in the IoT Platform console. You can also call the <a href="https://help.aliyun.com/document_detail/150321.html">QueryThingModel</a> operation and view the event identifier in the returned TSL data.</p>
+         * <blockquote>
+         * <p> If the PowerOff event belongs to a custom module named testFb, this parameter is set to <strong>testFb:PowerOff</strong>.</p>
+         * </blockquote>
+         * <p>If you do not specify this parameter, the system queries all event data of the default module and custom modules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PowerOff</p>
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
@@ -227,7 +267,13 @@ public class QueryDeviceEventDataRequest extends Request {
         }
 
         /**
-         * IotId.
+         * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+         * <blockquote>
+         * <p> If you specify a value for this parameter, you do not need to specify a value for the <strong>ProductKey</strong> or <strong>DeviceName</strong> parameter. The <strong>IotId</strong> parameter specifies a globally unique identifier (GUID) for the device. The value of the IotId parameter corresponds to a combination of the values of the <strong>ProductKey</strong> and <strong>DeviceName</strong> parameters. If you specify a value for the <strong>IotId</strong> parameter and values for the <strong>ProductKey</strong> and <strong>DeviceName</strong> parameters, the value of the <strong>IotId</strong> parameter takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Q7uOhVRdZRRlDnTLv****00100</p>
          */
         public Builder iotId(String iotId) {
             this.putQueryParameter("IotId", iotId);
@@ -236,7 +282,17 @@ public class QueryDeviceEventDataRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must specify this parameter. Otherwise, the call fails.</li>
+         * <li>If the <strong>Overview</strong> page does not appear in the IoT Platform console or no ID is generated for your instance, you do not need to specify this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -245,7 +301,10 @@ public class QueryDeviceEventDataRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -254,7 +313,13 @@ public class QueryDeviceEventDataRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product to which the device belongs.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, you must also specify the <strong>DeviceName</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -263,7 +328,14 @@ public class QueryDeviceEventDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. The value is a 13-digit timestamp in milliseconds. Example: 1516538300303.</p>
+         * <blockquote>
+         * <p> You can query the event data only of the most recent 30 days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1516541900303</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

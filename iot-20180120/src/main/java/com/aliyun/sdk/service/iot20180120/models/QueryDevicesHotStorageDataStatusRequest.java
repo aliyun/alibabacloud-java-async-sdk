@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDevicesHotStorageDataStatusRequest} extends {@link RequestModel}
  *
  * <p>QueryDevicesHotStorageDataStatusRequest</p>
  */
 public class QueryDevicesHotStorageDataStatusRequest extends Request {
-    @Query
-    @NameInMap("Asc")
-    @Validation(required = true, maximum = 5)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Asc")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 5)
     private Integer asc;
 
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 201)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 201)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("UserTopic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserTopic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userTopic;
 
     private QueryDevicesHotStorageDataStatusRequest(Builder builder) {
@@ -68,7 +73,7 @@ public class QueryDevicesHotStorageDataStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -156,7 +161,10 @@ public class QueryDevicesHotStorageDataStatusRequest extends Request {
         } 
 
         /**
-         * Asc.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder asc(Integer asc) {
             this.putQueryParameter("Asc", asc);
@@ -183,7 +191,10 @@ public class QueryDevicesHotStorageDataStatusRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-2w****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -201,7 +212,10 @@ public class QueryDevicesHotStorageDataStatusRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -219,7 +233,7 @@ public class QueryDevicesHotStorageDataStatusRequest extends Request {
         }
 
         /**
-         * UserTopic.
+         * <p>This parameter is required.</p>
          */
         public Builder userTopic(String userTopic) {
             this.putQueryParameter("UserTopic", userTopic);

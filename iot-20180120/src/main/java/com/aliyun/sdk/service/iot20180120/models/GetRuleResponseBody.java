@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetRuleResponseBody</p>
  */
 public class GetRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleInfo")
+    @com.aliyun.core.annotation.NameInMap("RuleInfo")
     private RuleInfo ruleInfo;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRuleResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetRuleResponseBody extends TeaModel {
 
     public static GetRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GetRuleResponseBody extends TeaModel {
         private RuleInfo ruleInfo; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRuleResponseBody model) {
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.ruleInfo = model.ruleInfo;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GetRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +125,10 @@ public class GetRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D4CEC0-3E95-4DBE-AFC1-809D1400E52F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +136,7 @@ public class GetRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleInfo.
+         * <p>The rule information returned if the call is successful. For more information, see RuleInfo.</p>
          */
         public Builder ruleInfo(RuleInfo ruleInfo) {
             this.ruleInfo = ruleInfo;
@@ -118,7 +144,14 @@ public class GetRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,53 +164,59 @@ public class GetRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleResponseBody</p>
+     */
     public static class RuleInfo extends TeaModel {
-        @NameInMap("CreateUserId")
+        @com.aliyun.core.annotation.NameInMap("CreateUserId")
         private Long createUserId;
 
-        @NameInMap("Created")
+        @com.aliyun.core.annotation.NameInMap("Created")
         private String created;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Modified")
+        @com.aliyun.core.annotation.NameInMap("Modified")
         private String modified;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("RuleDesc")
+        @com.aliyun.core.annotation.NameInMap("RuleDesc")
         private String ruleDesc;
 
-        @NameInMap("Select")
+        @com.aliyun.core.annotation.NameInMap("Select")
         private String select;
 
-        @NameInMap("ShortTopic")
+        @com.aliyun.core.annotation.NameInMap("ShortTopic")
         private String shortTopic;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("TopicType")
+        @com.aliyun.core.annotation.NameInMap("TopicType")
         private Integer topicType;
 
-        @NameInMap("UtcCreated")
+        @com.aliyun.core.annotation.NameInMap("UtcCreated")
         private String utcCreated;
 
-        @NameInMap("UtcModified")
+        @com.aliyun.core.annotation.NameInMap("UtcModified")
         private String utcModified;
 
-        @NameInMap("Where")
+        @com.aliyun.core.annotation.NameInMap("Where")
         private String where;
 
         private RuleInfo(Builder builder) {
@@ -337,8 +376,33 @@ public class GetRuleResponseBody extends TeaModel {
             private String utcModified; 
             private String where; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleInfo model) {
+                this.createUserId = model.createUserId;
+                this.created = model.created;
+                this.dataType = model.dataType;
+                this.id = model.id;
+                this.modified = model.modified;
+                this.name = model.name;
+                this.productKey = model.productKey;
+                this.ruleDesc = model.ruleDesc;
+                this.select = model.select;
+                this.shortTopic = model.shortTopic;
+                this.status = model.status;
+                this.topic = model.topic;
+                this.topicType = model.topicType;
+                this.utcCreated = model.utcCreated;
+                this.utcModified = model.utcModified;
+                this.where = model.where;
+            } 
+
             /**
-             * CreateUserId.
+             * <p>The ID of the user who created the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000000000000</p>
              */
             public Builder createUserId(Long createUserId) {
                 this.createUserId = createUserId;
@@ -346,7 +410,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Created.
+             * <p>The time when the rule was created. The time is displayed in UTC-6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Thu Feb 28 14:14:33 CST 2019</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -354,7 +421,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The data type of the rule. Valid values: <strong>JSON</strong> and <strong>BINARY</strong> .</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSON</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -362,7 +432,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -370,7 +443,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Modified.
+             * <p>The time when the rule was last modified. The time is displayed in UTC-6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Thu Feb 28 14:20:58 CST 2019</p>
              */
             public Builder modified(String modified) {
                 this.modified = modified;
@@ -378,7 +454,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iotrules</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -386,7 +465,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The ProductKey of the product to which the rule applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1KiV******</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -394,7 +476,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleDesc.
+             * <p>The description of this rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule1Desc</p>
              */
             public Builder ruleDesc(String ruleDesc) {
                 this.ruleDesc = ruleDesc;
@@ -402,7 +487,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Select.
+             * <p>The values of <strong>Select</strong> in the SQL statements of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deviceName() as deviceName</p>
              */
             public Builder select(String select) {
                 this.select = select;
@@ -410,7 +498,13 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ShortTopic.
+             * <p>The topic to which the rule applies. The topic does not include the ProductKey level. Format: <code>${deviceName}/topicShortName</code>. ${deviceName} indicates the name of the device, and topicShortName indicates the custom name of the topic.</p>
+             * <blockquote>
+             * <p> For information about how to use the <code>+</code> or <code>#</code> wildcard in a topic, see <a href="https://help.aliyun.com/document_detail/73731.html">Topic wildcards</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>+/user/pm25data</p>
              */
             public Builder shortTopic(String shortTopic) {
                 this.shortTopic = shortTopic;
@@ -418,7 +512,14 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>RUNNING</strong>: Running</li>
+             * <li><strong>STOP</strong>: Stopped</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STOP</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -426,7 +527,13 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * <p>The complete topic to which the rule applies. Format: <code>${productKey}/${deviceName}/topicShortName</code>.</p>
+             * <blockquote>
+             * <p> For information about how to use the <code>+</code> or <code>#</code> wildcard in a topic, see <a href="https://help.aliyun.com/document_detail/73731.html">Topic wildcards</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>/a1QsMlL44pp/+/user/pm25data</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -434,7 +541,16 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TopicType.
+             * <p>The type of the topic. This parameter is returned if you set the SQL statement for the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: a basic communication topic or TSL communication topic.</li>
+             * <li><strong>1</strong>: a custom topic.</li>
+             * <li><strong>2</strong>: a device status topic.</li>
+             * </ul>
+             * <p>If no SQL statement is set for the rule, the value <strong>-1</strong> is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder topicType(Integer topicType) {
                 this.topicType = topicType;
@@ -442,7 +558,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreated.
+             * <p>The time when the rule was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-28T06:14:33.000Z</p>
              */
             public Builder utcCreated(String utcCreated) {
                 this.utcCreated = utcCreated;
@@ -450,7 +569,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * UtcModified.
+             * <p>The time when the rule was last modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-28T06:20:58.000Z</p>
              */
             public Builder utcModified(String utcModified) {
                 this.utcModified = utcModified;
@@ -458,7 +580,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Where.
+             * <p>The <strong>Where</strong> query condition in the SQL statements of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Temperature&gt;35</p>
              */
             public Builder where(String where) {
                 this.where = where;

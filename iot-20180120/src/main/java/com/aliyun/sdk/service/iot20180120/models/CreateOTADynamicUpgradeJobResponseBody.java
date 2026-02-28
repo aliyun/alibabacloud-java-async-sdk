@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOTADynamicUpgradeJobResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOTADynamicUpgradeJobResponseBody</p>
  */
 public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateOTADynamicUpgradeJobResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
 
     public static CreateOTADynamicUpgradeJobResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateOTADynamicUpgradeJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The unique identifier of the update batch.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The ID of the request.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,14 @@ public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>9F41D14E-CB5F-4CCE-939C-057F39E688F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +148,10 @@ public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The update batch information returned if the call is successful. For more information, see Data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +164,17 @@ public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOTADynamicUpgradeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOTADynamicUpgradeJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("UtcCreate")
+        @com.aliyun.core.annotation.NameInMap("UtcCreate")
         private String utcCreate;
 
         private Data(Builder builder) {
@@ -169,8 +208,19 @@ public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
             private String jobId; 
             private String utcCreate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobId = model.jobId;
+                this.utcCreate = model.utcCreate;
+            } 
+
             /**
-             * JobId.
+             * <p>The time when the update batch was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XUbmsMHmkqv0PiAG****010001</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

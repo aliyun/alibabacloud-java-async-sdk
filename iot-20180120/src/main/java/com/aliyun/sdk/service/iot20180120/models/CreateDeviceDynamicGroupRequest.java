@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDeviceDynamicGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateDeviceDynamicGroupRequest</p>
  */
 public class CreateDeviceDynamicGroupRequest extends Request {
-    @Query
-    @NameInMap("DynamicGroupExpression")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DynamicGroupExpression")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dynamicGroupExpression;
 
-    @Query
-    @NameInMap("GroupDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupDesc")
     private String groupDesc;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Query
-    @NameInMap("IotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotInstanceId;
 
     private CreateDeviceDynamicGroupRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class CreateDeviceDynamicGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,10 @@ public class CreateDeviceDynamicGroupRequest extends Request {
         } 
 
         /**
-         * DynamicGroupExpression.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product_key = &quot;a1***&quot; and name LIKE &quot;test%&quot;</p>
          */
         public Builder dynamicGroupExpression(String dynamicGroupExpression) {
             this.putQueryParameter("DynamicGroupExpression", dynamicGroupExpression);
@@ -117,7 +125,10 @@ public class CreateDeviceDynamicGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grouptest</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -126,7 +137,10 @@ public class CreateDeviceDynamicGroupRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-***</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);

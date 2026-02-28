@@ -1,80 +1,85 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSubscribeRelationRequest} extends {@link RequestModel}
  *
  * <p>CreateSubscribeRelationRequest</p>
  */
 public class CreateSubscribeRelationRequest extends Request {
-    @Query
-    @NameInMap("ConsumerGroupIds")
-    private java.util.List < String > consumerGroupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupIds")
+    private java.util.List<String> consumerGroupIds;
 
-    @Query
-    @NameInMap("DeviceDataFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceDataFlag")
     private Boolean deviceDataFlag;
 
-    @Query
-    @NameInMap("DeviceLifeCycleFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceLifeCycleFlag")
     private Boolean deviceLifeCycleFlag;
 
-    @Query
-    @NameInMap("DeviceStatusChangeFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceStatusChangeFlag")
     private Boolean deviceStatusChangeFlag;
 
-    @Query
-    @NameInMap("DeviceTagFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceTagFlag")
     private Boolean deviceTagFlag;
 
-    @Query
-    @NameInMap("DeviceTopoLifeCycleFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceTopoLifeCycleFlag")
     private Boolean deviceTopoLifeCycleFlag;
 
-    @Query
-    @NameInMap("FoundDeviceListFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FoundDeviceListFlag")
     private Boolean foundDeviceListFlag;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("MnsConfiguration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MnsConfiguration")
     private String mnsConfiguration;
 
-    @Query
-    @NameInMap("OtaEventFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtaEventFlag")
     private Boolean otaEventFlag;
 
-    @Query
-    @NameInMap("OtaJobFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtaJobFlag")
     private Boolean otaJobFlag;
 
-    @Query
-    @NameInMap("OtaVersionFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtaVersionFlag")
     private Boolean otaVersionFlag;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
-    @Query
-    @NameInMap("SubscribeFlags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscribeFlags")
     private String subscribeFlags;
 
-    @Query
-    @NameInMap("ThingHistoryFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThingHistoryFlag")
     private Boolean thingHistoryFlag;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private CreateSubscribeRelationRequest(Builder builder) {
@@ -105,7 +110,7 @@ public class CreateSubscribeRelationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +118,7 @@ public class CreateSubscribeRelationRequest extends Request {
     /**
      * @return consumerGroupIds
      */
-    public java.util.List < String > getConsumerGroupIds() {
+    public java.util.List<String> getConsumerGroupIds() {
         return this.consumerGroupIds;
     }
 
@@ -223,7 +228,7 @@ public class CreateSubscribeRelationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSubscribeRelationRequest, Builder> {
-        private java.util.List < String > consumerGroupIds; 
+        private java.util.List<String> consumerGroupIds; 
         private Boolean deviceDataFlag; 
         private Boolean deviceLifeCycleFlag; 
         private Boolean deviceStatusChangeFlag; 
@@ -267,14 +272,21 @@ public class CreateSubscribeRelationRequest extends Request {
         /**
          * ConsumerGroupIds.
          */
-        public Builder consumerGroupIds(java.util.List < String > consumerGroupIds) {
+        public Builder consumerGroupIds(java.util.List<String> consumerGroupIds) {
             this.putQueryParameter("ConsumerGroupIds", consumerGroupIds);
             this.consumerGroupIds = consumerGroupIds;
             return this;
         }
 
         /**
-         * DeviceDataFlag.
+         * <p>Specifies whether to push upstream device messages. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deviceDataFlag(Boolean deviceDataFlag) {
             this.putQueryParameter("DeviceDataFlag", deviceDataFlag);
@@ -283,7 +295,14 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * DeviceLifeCycleFlag.
+         * <p>Specifies whether to push messages about device lifecycle changes. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deviceLifeCycleFlag(Boolean deviceLifeCycleFlag) {
             this.putQueryParameter("DeviceLifeCycleFlag", deviceLifeCycleFlag);
@@ -292,7 +311,14 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * DeviceStatusChangeFlag.
+         * <p>Specifies whether to push messages about device status changes. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deviceStatusChangeFlag(Boolean deviceStatusChangeFlag) {
             this.putQueryParameter("DeviceStatusChangeFlag", deviceStatusChangeFlag);
@@ -301,7 +327,14 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * DeviceTagFlag.
+         * <p>Specifies whether to push messages about device tag changes. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes. This parameter is valid only if you set the <strong>Type</strong> parameter to <strong>AMQP</strong>.</li>
+         * <li><strong>false</strong>: no. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deviceTagFlag(Boolean deviceTagFlag) {
             this.putQueryParameter("DeviceTagFlag", deviceTagFlag);
@@ -310,7 +343,14 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * DeviceTopoLifeCycleFlag.
+         * <p>Specifies whether to push messages about topological relationship changes of devices. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes. This parameter is valid only for gateway products.</li>
+         * <li><strong>false</strong>: no. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deviceTopoLifeCycleFlag(Boolean deviceTopoLifeCycleFlag) {
             this.putQueryParameter("DeviceTopoLifeCycleFlag", deviceTopoLifeCycleFlag);
@@ -319,7 +359,14 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * FoundDeviceListFlag.
+         * <p>Specifies whether to push messages when a gateway detects new sub-devices. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes. This parameter is valid only for gateway products.</li>
+         * <li><strong>false</strong>: no. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder foundDeviceListFlag(Boolean foundDeviceListFlag) {
             this.putQueryParameter("FoundDeviceListFlag", foundDeviceListFlag);
@@ -328,7 +375,17 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the ID of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.****</li>
+         * <li>If no <strong>Overview</strong> page or <strong>ID</strong> is generated for your instance, you do not need to configure this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-0pp1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -337,7 +394,11 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * MnsConfiguration.
+         * <p>The configurations of the MNS queue. If you set the <strong>Type</strong> parameter to <strong>AMQP</strong>, this parameter is required.</p>
+         * <p>For more information, see the &quot;Definition of the MnsConfiguration parameter&quot; section.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;queueName&quot;: &quot;mns-test-topic1&quot;,     &quot;regionName&quot;: &quot;cn-shanghai&quot;,     &quot;role&quot;: {         &quot;roleArn&quot;: &quot;acs:ram::5645***:role/aliyuniotaccessingmnsrole&quot;,         &quot;roleName&quot;: &quot;AliyunIOTAccessingMNSRole&quot;     } }</p>
          */
         public Builder mnsConfiguration(String mnsConfiguration) {
             this.putQueryParameter("MnsConfiguration", mnsConfiguration);
@@ -346,7 +407,14 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * OtaEventFlag.
+         * <p>Specifies whether to push notifications about the status of over-the-air (OTA) update batches. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder otaEventFlag(Boolean otaEventFlag) {
             this.putQueryParameter("OtaEventFlag", otaEventFlag);
@@ -355,7 +423,14 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * OtaJobFlag.
+         * <p>Specifies whether to push notifications about the status of OTA update batches. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes. This parameter is valid only if you set the <strong>Type</strong> parameter to <strong>AMQP</strong>.</li>
+         * <li><strong>false</strong>: no. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder otaJobFlag(Boolean otaJobFlag) {
             this.putQueryParameter("OtaJobFlag", otaJobFlag);
@@ -364,7 +439,14 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * OtaVersionFlag.
+         * <p>Specifies whether to push messages about the version numbers of OTA modules. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes. This parameter is valid only if you set the <strong>Type</strong> parameter to <strong>AMQP</strong>.</li>
+         * <li><strong>false</strong>: no. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder otaVersionFlag(Boolean otaVersionFlag) {
             this.putQueryParameter("OtaVersionFlag", otaVersionFlag);
@@ -373,7 +455,11 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product that is specified for the subscription.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1fyXVF****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -382,7 +468,16 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * SubscribeFlags.
+         * <p>Specifies whether to receive the messages of a specific subscribed product.</p>
+         * <p>If you subscribe to JT/T 808 gateway products, you must configure the <strong>SubscribeFlags</strong> parameter. Set the value to the following code.</p>
+         * <pre><code>
+         * {
+         *     &quot;jt808DeviceDataFlag&quot;: true
+         * }
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;jt808DeviceDataFlag&quot;: true }</p>
          */
         public Builder subscribeFlags(String subscribeFlags) {
             this.putQueryParameter("SubscribeFlags", subscribeFlags);
@@ -391,7 +486,14 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * ThingHistoryFlag.
+         * <p>Specifies whether to push upstream historical Thing Specification Language (TSL) data. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder thingHistoryFlag(Boolean thingHistoryFlag) {
             this.putQueryParameter("ThingHistoryFlag", thingHistoryFlag);
@@ -400,7 +502,14 @@ public class CreateSubscribeRelationRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the subscription. Valid values:</p>
+         * <ul>
+         * <li><strong>MNS</strong></li>
+         * <li><strong>AMQP</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AMQP</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

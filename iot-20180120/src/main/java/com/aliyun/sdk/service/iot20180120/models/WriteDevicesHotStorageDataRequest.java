@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WriteDevicesHotStorageDataRequest} extends {@link RequestModel}
  *
  * <p>WriteDevicesHotStorageDataRequest</p>
  */
 public class WriteDevicesHotStorageDataRequest extends Request {
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("Items")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Items")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String items;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("UserTopic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserTopic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userTopic;
 
     private WriteDevicesHotStorageDataRequest(Builder builder) {
@@ -57,7 +62,7 @@ public class WriteDevicesHotStorageDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +150,10 @@ public class WriteDevicesHotStorageDataRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-2w****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -154,7 +162,10 @@ public class WriteDevicesHotStorageDataRequest extends Request {
         }
 
         /**
-         * Items.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Power&quot;: { &quot;value&quot;: &quot;on&quot;, &quot;time&quot;: 1524448722000 }, &quot;WF&quot;: { &quot;value&quot;: 23.6, &quot;time&quot;: 1524448722000 } }</p>
          */
         public Builder items(String items) {
             this.putQueryParameter("Items", items);
@@ -172,7 +183,7 @@ public class WriteDevicesHotStorageDataRequest extends Request {
         }
 
         /**
-         * UserTopic.
+         * <p>This parameter is required.</p>
          */
         public Builder userTopic(String userTopic) {
             this.putQueryParameter("UserTopic", userTopic);

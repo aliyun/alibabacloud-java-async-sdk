@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindRoleToEdgeInstanceRequest} extends {@link RequestModel}
  *
  * <p>BindRoleToEdgeInstanceRequest</p>
  */
 public class BindRoleToEdgeInstanceRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("RoleArn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleArn;
 
-    @Query
-    @NameInMap("RoleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleName;
 
     private BindRoleToEdgeInstanceRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class BindRoleToEdgeInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,10 @@ public class BindRoleToEdgeInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3APY0tPLhmgGtx0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +125,10 @@ public class BindRoleToEdgeInstanceRequest extends Request {
         }
 
         /**
-         * RoleArn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::176********:role/iotedgerole</p>
          */
         public Builder roleArn(String roleArn) {
             this.putQueryParameter("RoleArn", roleArn);
@@ -126,7 +137,10 @@ public class BindRoleToEdgeInstanceRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IoTEdgeRole</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

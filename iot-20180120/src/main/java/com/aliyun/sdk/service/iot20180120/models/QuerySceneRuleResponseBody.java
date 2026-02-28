@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySceneRuleResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySceneRuleResponseBody</p>
  */
 public class QuerySceneRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySceneRuleResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QuerySceneRuleResponseBody extends TeaModel {
 
     public static QuerySceneRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QuerySceneRuleResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySceneRuleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,23 +151,29 @@ public class QuerySceneRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySceneRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySceneRuleResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("RuleDescription")
+        @com.aliyun.core.annotation.NameInMap("RuleDescription")
         private String ruleDescription;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleStatus")
+        @com.aliyun.core.annotation.NameInMap("RuleStatus")
         private Integer ruleStatus;
 
         private RuleList(Builder builder) {
@@ -217,6 +243,18 @@ public class QuerySceneRuleResponseBody extends TeaModel {
             private String ruleName; 
             private Integer ruleStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.ruleDescription = model.ruleDescription;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleStatus = model.ruleStatus;
+            } 
+
             /**
              * GmtCreate.
              */
@@ -272,17 +310,23 @@ public class QuerySceneRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySceneRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySceneRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        @com.aliyun.core.annotation.NameInMap("RuleList")
+        private java.util.List<RuleList> ruleList;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -317,7 +361,7 @@ public class QuerySceneRuleResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
@@ -331,8 +375,18 @@ public class QuerySceneRuleResponseBody extends TeaModel {
         public static final class Builder {
             private Integer currentPage; 
             private Integer pageSize; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.ruleList = model.ruleList;
+                this.total = model.total;
+            } 
 
             /**
              * CurrentPage.
@@ -353,7 +407,7 @@ public class QuerySceneRuleResponseBody extends TeaModel {
             /**
              * RuleList.
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }

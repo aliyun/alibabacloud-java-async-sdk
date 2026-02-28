@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryLoRaJoinPermissionsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryLoRaJoinPermissionsResponseBody</p>
  */
 public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("JoinPermissions")
+    @com.aliyun.core.annotation.NameInMap("JoinPermissions")
     private JoinPermissions joinPermissions;
 
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryLoRaJoinPermissionsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
 
     public static QueryLoRaJoinPermissionsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
         private String productKey; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryLoRaJoinPermissionsResponseBody model) {
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.joinPermissions = model.joinPermissions;
+            this.productKey = model.productKey;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,23 +172,29 @@ public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryLoRaJoinPermissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryLoRaJoinPermissionsResponseBody</p>
+     */
     public static class JoinPermission extends TeaModel {
-        @NameInMap("ClassMode")
+        @com.aliyun.core.annotation.NameInMap("ClassMode")
         private String classMode;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("JoinPermissionId")
+        @com.aliyun.core.annotation.NameInMap("JoinPermissionId")
         private String joinPermissionId;
 
-        @NameInMap("JoinPermissionName")
+        @com.aliyun.core.annotation.NameInMap("JoinPermissionName")
         private String joinPermissionName;
 
-        @NameInMap("JoinPermissionType")
+        @com.aliyun.core.annotation.NameInMap("JoinPermissionType")
         private String joinPermissionType;
 
-        @NameInMap("OwnerAliyunPk")
+        @com.aliyun.core.annotation.NameInMap("OwnerAliyunPk")
         private String ownerAliyunPk;
 
         private JoinPermission(Builder builder) {
@@ -237,6 +264,18 @@ public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
             private String joinPermissionType; 
             private String ownerAliyunPk; 
 
+            private Builder() {
+            } 
+
+            private Builder(JoinPermission model) {
+                this.classMode = model.classMode;
+                this.enabled = model.enabled;
+                this.joinPermissionId = model.joinPermissionId;
+                this.joinPermissionName = model.joinPermissionName;
+                this.joinPermissionType = model.joinPermissionType;
+                this.ownerAliyunPk = model.ownerAliyunPk;
+            } 
+
             /**
              * ClassMode.
              */
@@ -292,9 +331,15 @@ public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryLoRaJoinPermissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryLoRaJoinPermissionsResponseBody</p>
+     */
     public static class JoinPermissions extends TeaModel {
-        @NameInMap("JoinPermission")
-        private java.util.List < JoinPermission> joinPermission;
+        @com.aliyun.core.annotation.NameInMap("JoinPermission")
+        private java.util.List<JoinPermission> joinPermission;
 
         private JoinPermissions(Builder builder) {
             this.joinPermission = builder.joinPermission;
@@ -311,17 +356,24 @@ public class QueryLoRaJoinPermissionsResponseBody extends TeaModel {
         /**
          * @return joinPermission
          */
-        public java.util.List < JoinPermission> getJoinPermission() {
+        public java.util.List<JoinPermission> getJoinPermission() {
             return this.joinPermission;
         }
 
         public static final class Builder {
-            private java.util.List < JoinPermission> joinPermission; 
+            private java.util.List<JoinPermission> joinPermission; 
+
+            private Builder() {
+            } 
+
+            private Builder(JoinPermissions model) {
+                this.joinPermission = model.joinPermission;
+            } 
 
             /**
              * JoinPermission.
              */
-            public Builder joinPermission(java.util.List < JoinPermission> joinPermission) {
+            public Builder joinPermission(java.util.List<JoinPermission> joinPermission) {
                 this.joinPermission = joinPermission;
                 return this;
             }

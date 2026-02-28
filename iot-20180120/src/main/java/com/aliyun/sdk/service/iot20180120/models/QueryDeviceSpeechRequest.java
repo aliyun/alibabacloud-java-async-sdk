@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceSpeechRequest} extends {@link RequestModel}
  *
  * <p>QueryDeviceSpeechRequest</p>
  */
 public class QueryDeviceSpeechRequest extends Request {
-    @Body
-    @NameInMap("IotId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotId;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("PageId")
-    @Validation(maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageId")
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 1)
     private Integer pageId;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
     private QueryDeviceSpeechRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class QueryDeviceSpeechRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,10 @@ public class QueryDeviceSpeechRequest extends Request {
         } 
 
         /**
-         * IotId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4de2c367**<strong>8c585e5992</strong></p>
          */
         public Builder iotId(String iotId) {
             this.putBodyParameter("IotId", iotId);

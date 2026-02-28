@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceTunnelShareStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeviceTunnelShareStatusResponseBody</p>
  */
 public class GetDeviceTunnelShareStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDeviceTunnelShareStatusResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetDeviceTunnelShareStatusResponseBody extends TeaModel {
 
     public static GetDeviceTunnelShareStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetDeviceTunnelShareStatusResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDeviceTunnelShareStatusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,17 +151,23 @@ public class GetDeviceTunnelShareStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeviceTunnelShareStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceTunnelShareStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("GmtOpened")
+        @com.aliyun.core.annotation.NameInMap("GmtOpened")
         private Long gmtOpened;
 
-        @NameInMap("IsOpen")
+        @com.aliyun.core.annotation.NameInMap("IsOpen")
         private Boolean isOpen;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("ShareId")
+        @com.aliyun.core.annotation.NameInMap("ShareId")
         private String shareId;
 
         private Data(Builder builder) {
@@ -192,6 +218,16 @@ public class GetDeviceTunnelShareStatusResponseBody extends TeaModel {
             private Boolean isOpen; 
             private String password; 
             private String shareId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gmtOpened = model.gmtOpened;
+                this.isOpen = model.isOpen;
+                this.password = model.password;
+                this.shareId = model.shareId;
+            } 
 
             /**
              * GmtOpened.

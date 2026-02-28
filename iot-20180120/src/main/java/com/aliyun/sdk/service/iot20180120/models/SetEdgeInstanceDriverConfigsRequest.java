@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetEdgeInstanceDriverConfigsRequest} extends {@link RequestModel}
  *
  * <p>SetEdgeInstanceDriverConfigsRequest</p>
  */
 public class SetEdgeInstanceDriverConfigsRequest extends Request {
-    @Query
-    @NameInMap("Configs")
-    @Validation(required = true)
-    private java.util.List < Configs> configs;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Configs")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Configs> configs;
 
-    @Query
-    @NameInMap("DriverId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DriverId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String driverId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private SetEdgeInstanceDriverConfigsRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class SetEdgeInstanceDriverConfigsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class SetEdgeInstanceDriverConfigsRequest extends Request {
     /**
      * @return configs
      */
-    public java.util.List < Configs> getConfigs() {
+    public java.util.List<Configs> getConfigs() {
         return this.configs;
     }
 
@@ -81,7 +86,7 @@ public class SetEdgeInstanceDriverConfigsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetEdgeInstanceDriverConfigsRequest, Builder> {
-        private java.util.List < Configs> configs; 
+        private java.util.List<Configs> configs; 
         private String driverId; 
         private String instanceId; 
         private String iotInstanceId; 
@@ -99,16 +104,19 @@ public class SetEdgeInstanceDriverConfigsRequest extends Request {
         } 
 
         /**
-         * Configs.
+         * <p>This parameter is required.</p>
          */
-        public Builder configs(java.util.List < Configs> configs) {
+        public Builder configs(java.util.List<Configs> configs) {
             this.putQueryParameter("Configs", configs);
             this.configs = configs;
             return this;
         }
 
         /**
-         * DriverId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>021d154d2a2f4dd7a489773d9e04****</p>
          */
         public Builder driverId(String driverId) {
             this.putQueryParameter("DriverId", driverId);
@@ -117,7 +125,10 @@ public class SetEdgeInstanceDriverConfigsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3APY0tPLhmgGtx0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -141,16 +152,22 @@ public class SetEdgeInstanceDriverConfigsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetEdgeInstanceDriverConfigsRequest} extends {@link TeaModel}
+     *
+     * <p>SetEdgeInstanceDriverConfigsRequest</p>
+     */
     public static class Configs extends TeaModel {
-        @NameInMap("Content")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Content")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String content;
 
-        @NameInMap("Format")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Format")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String format;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private Configs(Builder builder) {
@@ -193,8 +210,20 @@ public class SetEdgeInstanceDriverConfigsRequest extends Request {
             private String format; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.content = model.content;
+                this.format = model.format;
+                this.key = model.key;
+            } 
+
             /**
-             * Content.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;test&quot;:123}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -202,7 +231,10 @@ public class SetEdgeInstanceDriverConfigsRequest extends Request {
             }
 
             /**
-             * Format.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSON</p>
              */
             public Builder format(String format) {
                 this.format = format;

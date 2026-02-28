@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceSubTopicResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceSubTopicResponseBody</p>
  */
 public class QueryDeviceSubTopicResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TopicList")
-    private java.util.List < TopicList> topicList;
+    @com.aliyun.core.annotation.NameInMap("TopicList")
+    private java.util.List<TopicList> topicList;
 
     private QueryDeviceSubTopicResponseBody(Builder builder) {
         this.code = builder.code;
@@ -41,6 +46,10 @@ public class QueryDeviceSubTopicResponseBody extends TeaModel {
 
     public static QueryDeviceSubTopicResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -74,7 +83,7 @@ public class QueryDeviceSubTopicResponseBody extends TeaModel {
     /**
      * @return topicList
      */
-    public java.util.List < TopicList> getTopicList() {
+    public java.util.List<TopicList> getTopicList() {
         return this.topicList;
     }
 
@@ -83,10 +92,24 @@ public class QueryDeviceSubTopicResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TopicList> topicList; 
+        private java.util.List<TopicList> topicList; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceSubTopicResponseBody model) {
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.topicList = model.topicList;
+        } 
 
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryDeviceSubTopicResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +125,10 @@ public class QueryDeviceSubTopicResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. The ID uniquely identifies this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +136,14 @@ public class QueryDeviceSubTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,9 +151,9 @@ public class QueryDeviceSubTopicResponseBody extends TeaModel {
         }
 
         /**
-         * TopicList.
+         * <p>The information about the topics to which the device has subscribed. This parameter is returned if the call was successful.</p>
          */
-        public Builder topicList(java.util.List < TopicList> topicList) {
+        public Builder topicList(java.util.List<TopicList> topicList) {
             this.topicList = topicList;
             return this;
         }
@@ -131,11 +164,17 @@ public class QueryDeviceSubTopicResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceSubTopicResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceSubTopicResponseBody</p>
+     */
     public static class TopicList extends TeaModel {
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TopicName")
+        @com.aliyun.core.annotation.NameInMap("TopicName")
         private String topicName;
 
         private TopicList(Builder builder) {
@@ -169,8 +208,19 @@ public class QueryDeviceSubTopicResponseBody extends TeaModel {
             private Long timestamp; 
             private String topicName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TopicList model) {
+                this.timestamp = model.timestamp;
+                this.topicName = model.topicName;
+            } 
+
             /**
-             * Timestamp.
+             * <p>The time when the device subscribed to a topic. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1662039965873</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -178,7 +228,7 @@ public class QueryDeviceSubTopicResponseBody extends TeaModel {
             }
 
             /**
-             * TopicName.
+             * <p>The name of the topic.</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;

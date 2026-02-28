@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateFileUploadURLRequest} extends {@link RequestModel}
  *
  * <p>GenerateFileUploadURLRequest</p>
  */
 public class GenerateFileUploadURLRequest extends Request {
-    @Query
-    @NameInMap("BizCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizCode;
 
-    @Query
-    @NameInMap("FileName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
-    @Query
-    @NameInMap("FileSuffix")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSuffix")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSuffix;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private GenerateFileUploadURLRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class GenerateFileUploadURLRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +103,10 @@ public class GenerateFileUploadURLRequest extends Request {
         } 
 
         /**
-         * BizCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEVICE_JOB_FILE</p>
          */
         public Builder bizCode(String bizCode) {
             this.putQueryParameter("BizCode", bizCode);
@@ -116,7 +124,10 @@ public class GenerateFileUploadURLRequest extends Request {
         }
 
         /**
-         * FileSuffix.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bin</p>
          */
         public Builder fileSuffix(String fileSuffix) {
             this.putQueryParameter("FileSuffix", fileSuffix);

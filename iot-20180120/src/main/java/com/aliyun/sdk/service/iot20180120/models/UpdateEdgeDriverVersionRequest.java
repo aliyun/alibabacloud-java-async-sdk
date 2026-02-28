@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEdgeDriverVersionRequest} extends {@link RequestModel}
  *
  * <p>UpdateEdgeDriverVersionRequest</p>
  */
 public class UpdateEdgeDriverVersionRequest extends Request {
-    @Query
-    @NameInMap("Argument")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Argument")
     private String argument;
 
-    @Query
-    @NameInMap("ConfigCheckRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigCheckRule")
     private String configCheckRule;
 
-    @Query
-    @NameInMap("ContainerConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerConfig")
     private String containerConfig;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DriverConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DriverConfig")
     private String driverConfig;
 
-    @Query
-    @NameInMap("DriverId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DriverId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String driverId;
 
-    @Query
-    @NameInMap("DriverVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DriverVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String driverVersion;
 
-    @Query
-    @NameInMap("EdgeVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EdgeVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String edgeVersion;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("SourceConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceConfig")
     private String sourceConfig;
 
     private UpdateEdgeDriverVersionRequest(Builder builder) {
@@ -77,7 +82,7 @@ public class UpdateEdgeDriverVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -183,7 +188,10 @@ public class UpdateEdgeDriverVersionRequest extends Request {
         } 
 
         /**
-         * Argument.
+         * <p>The Java Virtual Machine (JVM) startup parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-XX:+PrintGCDetails</p>
          */
         public Builder argument(String argument) {
             this.putQueryParameter("Argument", argument);
@@ -192,7 +200,17 @@ public class UpdateEdgeDriverVersionRequest extends Request {
         }
 
         /**
-         * ConfigCheckRule.
+         * <p>The rule for verifying configurations. Set this parameter to a JSON string in the following format:</p>
+         * <p><code>{&quot;deviceConfig&quot;:{&quot;required&quot;:false},&quot;driverConfig&quot;:{&quot;required&quot;:false}</code></p>
+         * <p>The JSON string contains the following parameters:</p>
+         * <ul>
+         * <li>driverConfig: the rule for verifying the configuration of the driver when the driver is to be deployed in an edge instance.</li>
+         * <li>deviceConfig: the rule for verifying the configurations of devices that use the driver when the driver is to be deployed in an edge instance.</li>
+         * </ul>
+         * <p><code>required</code>: A value of true indicates that the corresponding parameter is required. A value of false indicates that the corresponding parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;deviceConfig&quot;:{&quot;required&quot;:false},&quot;driverConfig&quot;:{&quot;required&quot;:false}}</p>
          */
         public Builder configCheckRule(String configCheckRule) {
             this.putQueryParameter("ConfigCheckRule", configCheckRule);
@@ -201,7 +219,10 @@ public class UpdateEdgeDriverVersionRequest extends Request {
         }
 
         /**
-         * ContainerConfig.
+         * <p>The configuration of the container where the driver runs. Set this parameter to a JSON string. For more information about parameters in the JSON string, see the following parameter description of ContainerConfig.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;privileged&quot;:1,&quot;devMappings&quot;:[],&quot;volumeMappings&quot;:[],&quot;hostNetworkMode&quot;:0,&quot;portMappings&quot;:[]}</p>
          */
         public Builder containerConfig(String containerConfig) {
             this.putQueryParameter("ContainerConfig", containerConfig);
@@ -210,7 +231,7 @@ public class UpdateEdgeDriverVersionRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the driver. The description can be a maximum of 256 bytes in length.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -219,7 +240,21 @@ public class UpdateEdgeDriverVersionRequest extends Request {
         }
 
         /**
-         * DriverConfig.
+         * <p>The configuration of the driver. Set this parameter to a JSON string in the following format:</p>
+         * <p><code>{&quot;format&quot;:&quot;JSON&quot;,&quot;content&quot;:&quot;{}&quot;}</code></p>
+         * <p>The JSON string contains the following parameters:</p>
+         * <ul>
+         * <li><p>format: the format of the driver configuration. Valid values: KV (key-value pair), JSON (JSON string), and FILE (configuration file).</p>
+         * </li>
+         * <li><p>content: the content of the driver configuration. If you set the format parameter to KV or JSON, set this parameter to the configuration content of the driver. If you set the format parameter to FILE, set this parameter to the URL of the driver configuration file stored in OSS.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>To obtain the URL of the driver configuration file stored in OSS, call the <a href="https://help.aliyun.com/document_detail/155858.html">CreateOssPreSignedAddress</a> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;format&quot;:&quot;JSON&quot;,&quot;content&quot;:&quot;{&quot;defaultConfig&quot;:&quot;this is default driver config demo&quot;}&quot;}]</p>
          */
         public Builder driverConfig(String driverConfig) {
             this.putQueryParameter("DriverConfig", driverConfig);
@@ -228,7 +263,12 @@ public class UpdateEdgeDriverVersionRequest extends Request {
         }
 
         /**
-         * DriverId.
+         * <p>The ID of the driver. To obtain the driver ID, perform the following steps: Log on to the <a href="https://iot.console.aliyun.com/le/instance/list">Link IoT Edge console</a>. On the <strong>Drivers</strong> page, move the pointer over the name of the driver for which you want to update a driver version and obtain the driver ID.</p>
+         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/155776.html">QueryEdgeDriver</a> operation to query the driver ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fec565038d7544978d9aed5c1a******</p>
          */
         public Builder driverId(String driverId) {
             this.putQueryParameter("DriverId", driverId);
@@ -237,7 +277,11 @@ public class UpdateEdgeDriverVersionRequest extends Request {
         }
 
         /**
-         * DriverVersion.
+         * <p>The version number of the driver.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.0</p>
          */
         public Builder driverVersion(String driverVersion) {
             this.putQueryParameter("DriverVersion", driverVersion);
@@ -246,7 +290,11 @@ public class UpdateEdgeDriverVersionRequest extends Request {
         }
 
         /**
-         * EdgeVersion.
+         * <p>The earliest version of Link IoT Edge that is supported by the driver. The driver can run on gateways of only this version and later. For example, if you set this parameter to 2.4.0, the driver can run on gateways of only version 2.4.0 and later.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         public Builder edgeVersion(String edgeVersion) {
             this.putQueryParameter("EdgeVersion", edgeVersion);
@@ -255,7 +303,10 @@ public class UpdateEdgeDriverVersionRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the Internet of Things (IoT) service instance. This parameter is not required for the public instance but required for Enterprise Edition instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);

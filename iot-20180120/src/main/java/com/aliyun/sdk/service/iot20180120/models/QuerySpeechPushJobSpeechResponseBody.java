@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySpeechPushJobSpeechResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySpeechPushJobSpeechResponseBody</p>
  */
 public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySpeechPushJobSpeechResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
 
     public static QuerySpeechPushJobSpeechResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySpeechPushJobSpeechResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,14 +151,20 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySpeechPushJobSpeechResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySpeechPushJobSpeechResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("BizCode")
+        @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("Voice")
+        @com.aliyun.core.annotation.NameInMap("Voice")
         private String voice;
 
         private Items(Builder builder) {
@@ -181,6 +207,15 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
             private String text; 
             private String voice; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.bizCode = model.bizCode;
+                this.text = model.text;
+                this.voice = model.voice;
+            } 
+
             /**
              * BizCode.
              */
@@ -212,9 +247,15 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySpeechPushJobSpeechResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySpeechPushJobSpeechResponseBody</p>
+     */
     public static class SpeechList extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
         private SpeechList(Builder builder) {
             this.items = builder.items;
@@ -231,17 +272,24 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpeechList model) {
+                this.items = model.items;
+            } 
 
             /**
              * Items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
@@ -253,20 +301,26 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySpeechPushJobSpeechResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySpeechPushJobSpeechResponseBody</p>
+     */
     public static class ListItems extends TeaModel {
-        @NameInMap("BizCode")
+        @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;
 
-        @NameInMap("SpeechList")
+        @com.aliyun.core.annotation.NameInMap("SpeechList")
         private SpeechList speechList;
 
-        @NameInMap("SpeechType")
+        @com.aliyun.core.annotation.NameInMap("SpeechType")
         private String speechType;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("Voice")
+        @com.aliyun.core.annotation.NameInMap("Voice")
         private String voice;
 
         private ListItems(Builder builder) {
@@ -327,6 +381,17 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
             private String text; 
             private String voice; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListItems model) {
+                this.bizCode = model.bizCode;
+                this.speechList = model.speechList;
+                this.speechType = model.speechType;
+                this.text = model.text;
+                this.voice = model.voice;
+            } 
+
             /**
              * BizCode.
              */
@@ -374,9 +439,15 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySpeechPushJobSpeechResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySpeechPushJobSpeechResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < ListItems> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<ListItems> items;
 
         private List(Builder builder) {
             this.items = builder.items;
@@ -393,17 +464,24 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < ListItems> getItems() {
+        public java.util.List<ListItems> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < ListItems> items; 
+            private java.util.List<ListItems> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.items = model.items;
+            } 
 
             /**
              * Items.
              */
-            public Builder items(java.util.List < ListItems> items) {
+            public Builder items(java.util.List<ListItems> items) {
                 this.items = items;
                 return this;
             }
@@ -415,17 +493,23 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySpeechPushJobSpeechResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySpeechPushJobSpeechResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageId")
+        @com.aliyun.core.annotation.NameInMap("PageId")
         private Integer pageId;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -476,6 +560,16 @@ public class QuerySpeechPushJobSpeechResponseBody extends TeaModel {
             private Integer pageId; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageId = model.pageId;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * List.

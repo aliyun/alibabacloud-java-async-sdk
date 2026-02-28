@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchImportDeviceRequest} extends {@link RequestModel}
  *
  * <p>BatchImportDeviceRequest</p>
  */
 public class BatchImportDeviceRequest extends Request {
-    @Query
-    @NameInMap("DeviceList")
-    @Validation(required = true)
-    private java.util.List < DeviceList> deviceList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<DeviceList> deviceList;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
     private BatchImportDeviceRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class BatchImportDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,7 +54,7 @@ public class BatchImportDeviceRequest extends Request {
     /**
      * @return deviceList
      */
-    public java.util.List < DeviceList> getDeviceList() {
+    public java.util.List<DeviceList> getDeviceList() {
         return this.deviceList;
     }
 
@@ -68,7 +73,7 @@ public class BatchImportDeviceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchImportDeviceRequest, Builder> {
-        private java.util.List < DeviceList> deviceList; 
+        private java.util.List<DeviceList> deviceList; 
         private String iotInstanceId; 
         private String productKey; 
 
@@ -84,16 +89,23 @@ public class BatchImportDeviceRequest extends Request {
         } 
 
         /**
-         * DeviceList.
+         * <p>This parameter is required.</p>
          */
-        public Builder deviceList(java.util.List < DeviceList> deviceList) {
-            this.putQueryParameter("DeviceList", deviceList);
+        public Builder deviceList(java.util.List<DeviceList> deviceList) {
+            this.putBodyParameter("DeviceList", deviceList);
             this.deviceList = deviceList;
             return this;
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p> If your instance has an ID, you must specify this parameter. Otherwise, the request fails. If no Overview page exists or no instance ID is displayed, you do not need to specify this parameter.</p>
+         * </blockquote>
+         * <p>For more information, see the <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a> topic of IoT instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -102,7 +114,11 @@ public class BatchImportDeviceRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the gateway product to which the devices belong.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -117,16 +133,22 @@ public class BatchImportDeviceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchImportDeviceRequest} extends {@link TeaModel}
+     *
+     * <p>BatchImportDeviceRequest</p>
+     */
     public static class DeviceList extends TeaModel {
-        @NameInMap("DeviceName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String deviceName;
 
-        @NameInMap("DeviceSecret")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DeviceSecret")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String deviceSecret;
 
-        @NameInMap("Sn")
+        @com.aliyun.core.annotation.NameInMap("Sn")
         private String sn;
 
         private DeviceList(Builder builder) {
@@ -169,8 +191,17 @@ public class BatchImportDeviceRequest extends Request {
             private String deviceSecret; 
             private String sn; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceList model) {
+                this.deviceName = model.deviceName;
+                this.deviceSecret = model.deviceSecret;
+                this.sn = model.sn;
+            } 
+
             /**
-             * DeviceName.
+             * <p>This parameter is required.</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -178,7 +209,7 @@ public class BatchImportDeviceRequest extends Request {
             }
 
             /**
-             * DeviceSecret.
+             * <p>This parameter is required.</p>
              */
             public Builder deviceSecret(String deviceSecret) {
                 this.deviceSecret = deviceSecret;

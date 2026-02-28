@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindDriverToEdgeInstanceRequest} extends {@link RequestModel}
  *
  * <p>BindDriverToEdgeInstanceRequest</p>
  */
 public class BindDriverToEdgeInstanceRequest extends Request {
-    @Query
-    @NameInMap("DriverId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DriverId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String driverId;
 
-    @Query
-    @NameInMap("DriverVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DriverVersion")
     private String driverVersion;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
     private BindDriverToEdgeInstanceRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class BindDriverToEdgeInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +117,12 @@ public class BindDriverToEdgeInstanceRequest extends Request {
         } 
 
         /**
-         * DriverId.
+         * <p>The ID of the driver. To obtain the driver ID, perform the following steps: Log on to the <a href="https://iot.console.aliyun.com/le/instance/list">Link IoT Edge console</a>. On the <strong>Drivers</strong> page, move the pointer over the name of the driver that you want to bind and obtain the driver ID.</p>
+         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/155776.html">QueryEdgeDriver</a> operation to query the driver ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9c1ae7bd59f1469abbdccc959228****</p>
          */
         public Builder driverId(String driverId) {
             this.putQueryParameter("DriverId", driverId);
@@ -121,7 +131,10 @@ public class BindDriverToEdgeInstanceRequest extends Request {
         }
 
         /**
-         * DriverVersion.
+         * <p>The version number of the driver. By default, if you do not specify this parameter, the latest version of the driver is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         public Builder driverVersion(String driverVersion) {
             this.putQueryParameter("DriverVersion", driverVersion);
@@ -130,7 +143,12 @@ public class BindDriverToEdgeInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the edge instance. To obtain the instance ID, perform the following steps: Log on to the <a href="https://iot.console.aliyun.com/le/instance/list">Link IoT Edge console</a>. On the <strong>Edge Instances</strong> page, move the pointer over the name of the edge instance to which you want to bind a driver and obtain the instance ID.</p>
+         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/135214.html">QueryEdgeInstance</a> operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3APY0tPLhmgGtx0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -139,7 +157,10 @@ public class BindDriverToEdgeInstanceRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the Internet of Things (IoT) service instance. This parameter is not required for the public instance but required for Enterprise Edition instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -148,7 +169,13 @@ public class BindDriverToEdgeInstanceRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * <p>The ID of the order.</p>
+         * <blockquote>
+         * <p> This parameter is required if you use a third-party driver that is purchased from the IoT marketplace. If an official or self-developed driver is used, you do not need to specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>11123458765****</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);

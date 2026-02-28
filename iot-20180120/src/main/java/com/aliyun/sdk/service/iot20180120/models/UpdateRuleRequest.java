@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateRuleRequest</p>
  */
 public class UpdateRuleRequest extends Request {
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("RuleDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleDesc")
     private String ruleDesc;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ruleId;
 
-    @Query
-    @NameInMap("Select")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Select")
     private String select;
 
-    @Query
-    @NameInMap("ShortTopic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShortTopic")
     private String shortTopic;
 
-    @Query
-    @NameInMap("Topic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
     private String topic;
 
-    @Query
-    @NameInMap("TopicType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicType")
     private Integer topicType;
 
-    @Query
-    @NameInMap("Where")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Where")
     private String where;
 
     private UpdateRuleRequest(Builder builder) {
@@ -75,7 +80,7 @@ public class UpdateRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,7 +186,17 @@ public class UpdateRuleRequest extends Request {
         } 
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+         * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-0pp1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -190,7 +205,10 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the rule. The rule name must be 1 to 30 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_2</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -199,7 +217,10 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product to which the rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aladaeW****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -208,7 +229,10 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * RuleDesc.
+         * <p>The description of the rule. The description can be up to 100 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ruleDesc(String ruleDesc) {
             this.putQueryParameter("RuleDesc", ruleDesc);
@@ -217,7 +241,11 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the rule that you want to modify. You can log on to the IoT Platform console and choose <strong>Rules</strong> &gt; <strong>Data Forwarding</strong> to view the rule ID. You can also call the <a href="https://help.aliyun.com/document_detail/69486.html">ListRule</a> operation and view the rule ID in the response.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -226,7 +254,13 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * Select.
+         * <p>The SQL SELECT statement to be executed. For more information, see <a href="https://help.aliyun.com/document_detail/30554.html">SQL expressions</a>.</p>
+         * <blockquote>
+         * <p> Specify the content that follows the SELECT keyword for this parameter. For example, if the SELECT statement is <code>SELECT a,b,c</code>, specify <code>a,b,c</code> for this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>deviceName() as deviceName, items.Humidity.value as Humidity, items.Temperature.value as Temperature</p>
          */
         public Builder select(String select) {
             this.putQueryParameter("Select", select);
@@ -235,7 +269,55 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * ShortTopic.
+         * <p>The topic to which this rule is applied. Syntax: <code>${deviceName}/topicShortName</code>. <code>${deviceName}</code> specifies the name of the device, and <code>topicShortName</code> specifies the custom name of the topic.</p>
+         * <ul>
+         * <li><p>Basic communication topics or Thing Specification Language (TSL)-based communication topics. Syntax: <code>${deviceName}/topicShortName</code>. You can replace <code>${deviceName}</code> with the <code>+</code> wildcard. The wildcard indicates that the topic applies to all devices under the product. Valid values of <code>topicShortName</code>:</p>
+         * <ul>
+         * <li><p><code>/thing/event/property/post</code>: submits the property data of a device.</p>
+         * </li>
+         * <li><p><code>/thing/event/${tsl.event.identifier}/post</code>: submits the event data of a device. <code>${tsl.event.identifier}</code> specifies the identifier of an event in the TSL model.</p>
+         * </li>
+         * <li><p><code>/thing/lifecycle</code>: submits device lifecycle changes.</p>
+         * </li>
+         * <li><p><code>/thing/downlink/reply/message</code>: sends a response to a request from IoT Platform.</p>
+         * </li>
+         * <li><p><code>/thing/list/found</code>: submits the data when a gateway detects a new sub-device.</p>
+         * </li>
+         * <li><p><code>/thing/topo/lifecycle</code>: submits device topology changes.</p>
+         * </li>
+         * <li><p><code>/thing/event/property/history/post</code>: submits historical property data of a device.</p>
+         * </li>
+         * <li><p><code>/thing/event/${tsl.event.identifier}/post</code>: submits the historical event data of a device. <code>${tsl.event.identifier}</code> specifies the identifier of an event in the TSL.</p>
+         * </li>
+         * <li><p><code>/ota/upgrade</code>: submits OTA update statuses.</p>
+         * </li>
+         * <li><p><code>/ota/version/post</code>: submits OTA module versions.</p>
+         * </li>
+         * <li><p><code>/thing/deviceinfo/update</code>: submits device tag changes.</p>
+         * </li>
+         * <li><p><code>/edge/driver/${driver_id}/point_post</code>: submits pass-through data from Link IoT Edge. <code>${driver_id}</code> specifies the ID of the driver that a device uses to access Link IoT Edge.</p>
+         * <p><code>${packageId}/${jobId}/ota/job/status</code>: submits the statuses of OTA update batches. This topic is a basic communication topic. <code>${packageId}</code> specifies the ID of the update package. <code>${jobId}</code> specifies the ID of the update batch.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>Custom topics. Example: <code>${deviceName}/user/get</code>.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69647.html">QueryProductTopic</a> operation to view all custom topics of the product.</p>
+         * <p>When you specify a custom topic, you can use the <code>+</code> and <code>#</code> wildcards.</p>
+         * <ul>
+         * <li><p>You can replace <code>${deviceName}</code> with the <code>+</code> wildcard. The wildcard indicates that the topic applies to all devices under the product.</p>
+         * </li>
+         * <li><p>You can replace the fields that follow ${deviceName} with <code>/user/#</code>. The <code>#</code> wildcard indicates that the topic applies whatever values are specified for the fields that follow<code>/user</code>.</p>
+         * <p>For more information about how to use wildcards, see <a href="https://help.aliyun.com/document_detail/85539.html">Wildcards in topics</a>.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>Topic that is used to submit device status changes: <code>${deviceName}</code>.</p>
+         * <p>You can use the <code>+</code> wildcard. In this case, the status changes of all devices under the product are submitted.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>+/thing/event/property/post</p>
          */
         public Builder shortTopic(String shortTopic) {
             this.putQueryParameter("ShortTopic", shortTopic);
@@ -244,7 +326,8 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * Topic.
+         * <p>The complete topic to which the rule applies.</p>
+         * <p>If you specify this parameter, you do not need to specify the <strong>ProductKey</strong>, <strong>ShortTopic</strong>, and <strong>TopicType</strong> parameters.</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);
@@ -253,7 +336,14 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * TopicType.
+         * <ul>
+         * <li><strong>0</strong>: The topic is a basic communication topic or TSL-based communication topic.****</li>
+         * <li><strong>1</strong>: The topic is a custom topic.</li>
+         * <li><strong>2</strong>: The topic is used to submit device status changes. Syntax: <code>/as/mqtt/status/${productKey}/${deviceName}</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder topicType(Integer topicType) {
             this.putQueryParameter("TopicType", topicType);
@@ -262,7 +352,13 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * Where.
+         * <p>The condition that is used to trigger the rule. For more information, see <a href="https://help.aliyun.com/document_detail/30554.html">SQL expressions</a>.</p>
+         * <blockquote>
+         * <p> Specify the content that follows the WHERE keyword for this parameter. For example, if the WHERE statement is <code>WHERE a&gt;10</code>, specify <code>a&gt;10</code> for this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Temperature&gt;35</p>
          */
         public Builder where(String where) {
             this.putQueryParameter("Where", where);

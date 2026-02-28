@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSchedulePeriodRequest} extends {@link RequestModel}
  *
  * <p>UpdateSchedulePeriodRequest</p>
  */
 public class UpdateSchedulePeriodRequest extends Request {
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("PeriodCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PeriodCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String periodCode;
 
-    @Body
-    @NameInMap("SoundCodeContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SoundCodeContent")
     private String soundCodeContent;
 
-    @Body
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private UpdateSchedulePeriodRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class UpdateSchedulePeriodRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,7 +157,10 @@ public class UpdateSchedulePeriodRequest extends Request {
         }
 
         /**
-         * PeriodCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Md3ZiTL888K9llXDy7890***********</p>
          */
         public Builder periodCode(String periodCode) {
             this.putBodyParameter("PeriodCode", periodCode);

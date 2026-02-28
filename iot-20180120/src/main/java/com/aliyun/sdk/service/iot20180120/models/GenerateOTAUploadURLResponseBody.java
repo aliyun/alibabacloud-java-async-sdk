@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateOTAUploadURLResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateOTAUploadURLResponseBody</p>
  */
 public class GenerateOTAUploadURLResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GenerateOTAUploadURLResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
 
     public static GenerateOTAUploadURLResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GenerateOTAUploadURLResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The information returned if the call is successful. For more information, see the following parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74C2BB8D-1D6F-41F5-AE68-6B2310883F63</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,29 +164,35 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateOTAUploadURLResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateOTAUploadURLResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("FirmwareUrl")
+        @com.aliyun.core.annotation.NameInMap("FirmwareUrl")
         private String firmwareUrl;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("OSSAccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("OSSAccessKeyId")
         private String OSSAccessKeyId;
 
-        @NameInMap("ObjectStorage")
+        @com.aliyun.core.annotation.NameInMap("ObjectStorage")
         private String objectStorage;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Signature")
+        @com.aliyun.core.annotation.NameInMap("Signature")
         private String signature;
 
-        @NameInMap("UtcCreate")
+        @com.aliyun.core.annotation.NameInMap("UtcCreate")
         private String utcCreate;
 
         private Data(Builder builder) {
@@ -241,8 +280,23 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
             private String signature; 
             private String utcCreate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.firmwareUrl = model.firmwareUrl;
+                this.host = model.host;
+                this.key = model.key;
+                this.OSSAccessKeyId = model.OSSAccessKeyId;
+                this.objectStorage = model.objectStorage;
+                this.policy = model.policy;
+                this.signature = model.signature;
+                this.utcCreate = model.utcCreate;
+            } 
+
             /**
-             * FirmwareUrl.
+             * <p>The URL of the update package file that is stored in OSS.</p>
+             * <p>After the update package file is uploaded, this parameter is used to call the <a href="https://help.aliyun.com/document_detail/147311.html">CreateOTAFirmware</a> operation to create an update package.</p>
              */
             public Builder firmwareUrl(String firmwareUrl) {
                 this.firmwareUrl = firmwareUrl;
@@ -250,7 +304,10 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The endpoint of OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://iotx-ota.oss-cn-shanghai.aliyuncs.com">https://iotx-ota.oss-cn-shanghai.aliyuncs.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -258,7 +315,7 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The full path of the file in OSS. The file is uploaded by calling the OSS PostObject operation.</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -266,7 +323,11 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
             }
 
             /**
-             * OSSAccessKeyId.
+             * <p>The AccessKey ID of the bucket owner.</p>
+             * <p>This OSS bucket stores the update package file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cS8uRRy54Rsz****</p>
              */
             public Builder OSSAccessKeyId(String OSSAccessKeyId) {
                 this.OSSAccessKeyId = OSSAccessKeyId;
@@ -274,7 +335,10 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectStorage.
+             * <p>The type of object storage. Default value: OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder objectStorage(String objectStorage) {
                 this.objectStorage = objectStorage;
@@ -282,7 +346,10 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>The parameter that is used by OSS to verify form fields for the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJleHBpcmF****</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -290,7 +357,10 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>The signature that is calculated based on <strong>AccessKeySecret</strong> and <strong>Policy</strong>. When you call an OSS operation, OSS uses the signature information to verify the POST request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v6lViO4FBvfquajQjg20K5hK****</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -298,7 +368,10 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreate.
+             * <p>The time when the URL of the uploaded update package file was generated. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-04T06:21:54.607Z</p>
              */
             public Builder utcCreate(String utcCreate) {
                 this.utcCreate = utcCreate;

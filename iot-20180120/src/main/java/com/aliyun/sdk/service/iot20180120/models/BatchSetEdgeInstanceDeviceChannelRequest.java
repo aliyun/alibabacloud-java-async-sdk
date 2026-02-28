@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSetEdgeInstanceDeviceChannelRequest} extends {@link RequestModel}
  *
  * <p>BatchSetEdgeInstanceDeviceChannelRequest</p>
  */
 public class BatchSetEdgeInstanceDeviceChannelRequest extends Request {
-    @Query
-    @NameInMap("ChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelId;
 
-    @Query
-    @NameInMap("DriverId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DriverId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String driverId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IotIds")
-    @Validation(required = true)
-    private java.util.List < String > iotIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> iotIds;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private BatchSetEdgeInstanceDeviceChannelRequest(Builder builder) {
@@ -53,7 +58,7 @@ public class BatchSetEdgeInstanceDeviceChannelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +87,7 @@ public class BatchSetEdgeInstanceDeviceChannelRequest extends Request {
     /**
      * @return iotIds
      */
-    public java.util.List < String > getIotIds() {
+    public java.util.List<String> getIotIds() {
         return this.iotIds;
     }
 
@@ -97,7 +102,7 @@ public class BatchSetEdgeInstanceDeviceChannelRequest extends Request {
         private String channelId; 
         private String driverId; 
         private String instanceId; 
-        private java.util.List < String > iotIds; 
+        private java.util.List<String> iotIds; 
         private String iotInstanceId; 
 
         private Builder() {
@@ -114,7 +119,10 @@ public class BatchSetEdgeInstanceDeviceChannelRequest extends Request {
         } 
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE0BD49EF5EF4D119D09CC1B25******</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -123,7 +131,10 @@ public class BatchSetEdgeInstanceDeviceChannelRequest extends Request {
         }
 
         /**
-         * DriverId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9c1ae7bd59f1469abbdccc9592******</p>
          */
         public Builder driverId(String driverId) {
             this.putQueryParameter("DriverId", driverId);
@@ -132,7 +143,10 @@ public class BatchSetEdgeInstanceDeviceChannelRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6GaTtvTj7vJhiS******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -141,9 +155,12 @@ public class BatchSetEdgeInstanceDeviceChannelRequest extends Request {
         }
 
         /**
-         * IotIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hathoyxglj9jpYPyw3WN******</p>
          */
-        public Builder iotIds(java.util.List < String > iotIds) {
+        public Builder iotIds(java.util.List<String> iotIds) {
             this.putQueryParameter("IotIds", iotIds);
             this.iotIds = iotIds;
             return this;

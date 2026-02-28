@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSceneRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSceneRuleResponseBody</p>
  */
 public class CreateSceneRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateSceneRuleResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class CreateSceneRuleResponseBody extends TeaModel {
 
     public static CreateSceneRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CreateSceneRuleResponseBody extends TeaModel {
         private String requestId; 
         private String ruleId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSceneRuleResponseBody model) {
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.ruleId = model.ruleId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.

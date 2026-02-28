@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListParserDataSourceResponseBody} extends {@link TeaModel}
  *
  * <p>ListParserDataSourceResponseBody</p>
  */
 public class ListParserDataSourceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListParserDataSourceResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class ListParserDataSourceResponseBody extends TeaModel {
 
     public static ListParserDataSourceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class ListParserDataSourceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListParserDataSourceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.page = model.page;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -191,17 +214,23 @@ public class ListParserDataSourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListParserDataSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListParserDataSourceResponseBody</p>
+     */
     public static class DataSource extends TeaModel {
-        @NameInMap("DataSourceId")
+        @com.aliyun.core.annotation.NameInMap("DataSourceId")
         private Long dataSourceId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UtcCreated")
+        @com.aliyun.core.annotation.NameInMap("UtcCreated")
         private String utcCreated;
 
         private DataSource(Builder builder) {
@@ -253,6 +282,16 @@ public class ListParserDataSourceResponseBody extends TeaModel {
             private String name; 
             private String utcCreated; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.dataSourceId = model.dataSourceId;
+                this.description = model.description;
+                this.name = model.name;
+                this.utcCreated = model.utcCreated;
+            } 
+
             /**
              * DataSourceId.
              */
@@ -292,9 +331,15 @@ public class ListParserDataSourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListParserDataSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListParserDataSourceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DataSource")
-        private java.util.List < DataSource> dataSource;
+        @com.aliyun.core.annotation.NameInMap("DataSource")
+        private java.util.List<DataSource> dataSource;
 
         private Data(Builder builder) {
             this.dataSource = builder.dataSource;
@@ -311,17 +356,24 @@ public class ListParserDataSourceResponseBody extends TeaModel {
         /**
          * @return dataSource
          */
-        public java.util.List < DataSource> getDataSource() {
+        public java.util.List<DataSource> getDataSource() {
             return this.dataSource;
         }
 
         public static final class Builder {
-            private java.util.List < DataSource> dataSource; 
+            private java.util.List<DataSource> dataSource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataSource = model.dataSource;
+            } 
 
             /**
              * DataSource.
              */
-            public Builder dataSource(java.util.List < DataSource> dataSource) {
+            public Builder dataSource(java.util.List<DataSource> dataSource) {
                 this.dataSource = dataSource;
                 return this;
             }

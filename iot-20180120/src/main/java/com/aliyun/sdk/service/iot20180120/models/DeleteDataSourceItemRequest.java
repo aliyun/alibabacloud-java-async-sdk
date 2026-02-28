@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDataSourceItemRequest} extends {@link RequestModel}
  *
  * <p>DeleteDataSourceItemRequest</p>
  */
 public class DeleteDataSourceItemRequest extends Request {
-    @Query
-    @NameInMap("DataSourceId")
-    @Validation(required = true, maximum = 99999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99999999)
     private Long dataSourceId;
 
-    @Query
-    @NameInMap("DataSourceItemId")
-    @Validation(required = true, maximum = 99999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceItemId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99999999)
     private Long dataSourceItemId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private DeleteDataSourceItemRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class DeleteDataSourceItemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,10 @@ public class DeleteDataSourceItemRequest extends Request {
         } 
 
         /**
-         * DataSourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder dataSourceId(Long dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -93,7 +101,10 @@ public class DeleteDataSourceItemRequest extends Request {
         }
 
         /**
-         * DataSourceItemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129322</p>
          */
         public Builder dataSourceItemId(Long dataSourceItemId) {
             this.putQueryParameter("DataSourceItemId", dataSourceItemId);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEdgeDriverResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEdgeDriverResponseBody</p>
  */
 public class CreateEdgeDriverResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DriverId")
+    @com.aliyun.core.annotation.NameInMap("DriverId")
     private String driverId;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateEdgeDriverResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class CreateEdgeDriverResponseBody extends TeaModel {
 
     public static CreateEdgeDriverResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class CreateEdgeDriverResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateEdgeDriverResponseBody model) {
+            this.code = model.code;
+            this.driverId = model.driverId;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code. Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see <a href="https://help.aliyun.com/document_detail/135200.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,10 @@ public class CreateEdgeDriverResponseBody extends TeaModel {
         }
 
         /**
-         * DriverId.
+         * <p>The ID of the driver created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fec565038d7544978d9aed5c1a******</p>
          */
         public Builder driverId(String driverId) {
             this.driverId = driverId;
@@ -102,7 +128,10 @@ public class CreateEdgeDriverResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request parameter error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +139,10 @@ public class CreateEdgeDriverResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB179FE4-94AB-41B0-AE8A-66DDB7B8B13A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +150,10 @@ public class CreateEdgeDriverResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. true indicates that the call was successful. false indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

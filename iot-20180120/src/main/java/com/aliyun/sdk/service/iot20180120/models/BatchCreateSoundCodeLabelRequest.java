@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchCreateSoundCodeLabelRequest} extends {@link RequestModel}
  *
  * <p>BatchCreateSoundCodeLabelRequest</p>
  */
 public class BatchCreateSoundCodeLabelRequest extends Request {
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("ScheduleCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScheduleCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scheduleCode;
 
-    @Body
-    @NameInMap("Total")
-    @Validation(required = true, maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Total")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 200, minimum = 1)
     private Integer total;
 
     private BatchCreateSoundCodeLabelRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class BatchCreateSoundCodeLabelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,7 +121,10 @@ public class BatchCreateSoundCodeLabelRequest extends Request {
         }
 
         /**
-         * ScheduleCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Md3ZiTL888K9llXDy7890***********</p>
          */
         public Builder scheduleCode(String scheduleCode) {
             this.putBodyParameter("ScheduleCode", scheduleCode);
@@ -125,7 +133,10 @@ public class BatchCreateSoundCodeLabelRequest extends Request {
         }
 
         /**
-         * Total.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder total(Integer total) {
             this.putBodyParameter("Total", total);

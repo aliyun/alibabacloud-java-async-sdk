@@ -1,72 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySubscribeRelationResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySubscribeRelationResponseBody</p>
  */
 public class QuerySubscribeRelationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ConsumerGroupIds")
-    private java.util.List < String > consumerGroupIds;
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupIds")
+    private java.util.List<String> consumerGroupIds;
 
-    @NameInMap("DeviceDataFlag")
+    @com.aliyun.core.annotation.NameInMap("DeviceDataFlag")
     private Boolean deviceDataFlag;
 
-    @NameInMap("DeviceLifeCycleFlag")
+    @com.aliyun.core.annotation.NameInMap("DeviceLifeCycleFlag")
     private Boolean deviceLifeCycleFlag;
 
-    @NameInMap("DeviceStatusChangeFlag")
+    @com.aliyun.core.annotation.NameInMap("DeviceStatusChangeFlag")
     private Boolean deviceStatusChangeFlag;
 
-    @NameInMap("DeviceTagFlag")
+    @com.aliyun.core.annotation.NameInMap("DeviceTagFlag")
     private Boolean deviceTagFlag;
 
-    @NameInMap("DeviceTopoLifeCycleFlag")
+    @com.aliyun.core.annotation.NameInMap("DeviceTopoLifeCycleFlag")
     private Boolean deviceTopoLifeCycleFlag;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("FoundDeviceListFlag")
+    @com.aliyun.core.annotation.NameInMap("FoundDeviceListFlag")
     private Boolean foundDeviceListFlag;
 
-    @NameInMap("MnsConfiguration")
+    @com.aliyun.core.annotation.NameInMap("MnsConfiguration")
     private String mnsConfiguration;
 
-    @NameInMap("OtaEventFlag")
+    @com.aliyun.core.annotation.NameInMap("OtaEventFlag")
     private Boolean otaEventFlag;
 
-    @NameInMap("OtaJobFlag")
+    @com.aliyun.core.annotation.NameInMap("OtaJobFlag")
     private Boolean otaJobFlag;
 
-    @NameInMap("OtaVersionFlag")
+    @com.aliyun.core.annotation.NameInMap("OtaVersionFlag")
     private Boolean otaVersionFlag;
 
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubscribeFlags")
+    @com.aliyun.core.annotation.NameInMap("SubscribeFlags")
     private String subscribeFlags;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("ThingHistoryFlag")
+    @com.aliyun.core.annotation.NameInMap("ThingHistoryFlag")
     private Boolean thingHistoryFlag;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private QuerySubscribeRelationResponseBody(Builder builder) {
@@ -99,6 +104,10 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -109,7 +118,7 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
     /**
      * @return consumerGroupIds
      */
-    public java.util.List < String > getConsumerGroupIds() {
+    public java.util.List<String> getConsumerGroupIds() {
         return this.consumerGroupIds;
     }
 
@@ -234,7 +243,7 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < String > consumerGroupIds; 
+        private java.util.List<String> consumerGroupIds; 
         private Boolean deviceDataFlag; 
         private Boolean deviceLifeCycleFlag; 
         private Boolean deviceStatusChangeFlag; 
@@ -253,8 +262,36 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         private Boolean thingHistoryFlag; 
         private String type; 
 
+        private Builder() {
+        } 
+
+        private Builder(QuerySubscribeRelationResponseBody model) {
+            this.code = model.code;
+            this.consumerGroupIds = model.consumerGroupIds;
+            this.deviceDataFlag = model.deviceDataFlag;
+            this.deviceLifeCycleFlag = model.deviceLifeCycleFlag;
+            this.deviceStatusChangeFlag = model.deviceStatusChangeFlag;
+            this.deviceTagFlag = model.deviceTagFlag;
+            this.deviceTopoLifeCycleFlag = model.deviceTopoLifeCycleFlag;
+            this.errorMessage = model.errorMessage;
+            this.foundDeviceListFlag = model.foundDeviceListFlag;
+            this.mnsConfiguration = model.mnsConfiguration;
+            this.otaEventFlag = model.otaEventFlag;
+            this.otaJobFlag = model.otaJobFlag;
+            this.otaVersionFlag = model.otaVersionFlag;
+            this.productKey = model.productKey;
+            this.requestId = model.requestId;
+            this.subscribeFlags = model.subscribeFlags;
+            this.success = model.success;
+            this.thingHistoryFlag = model.thingHistoryFlag;
+            this.type = model.type;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -262,15 +299,22 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * ConsumerGroupIds.
+         * <p>The IDs of the consumer groups that are created in the AMQP subscription. This parameter is returned if the <strong>Type</strong> parameter is set to <strong>AMQP</strong>.</p>
          */
-        public Builder consumerGroupIds(java.util.List < String > consumerGroupIds) {
+        public Builder consumerGroupIds(java.util.List<String> consumerGroupIds) {
             this.consumerGroupIds = consumerGroupIds;
             return this;
         }
 
         /**
-         * DeviceDataFlag.
+         * <p>Indicates whether upstream device messages were pushed.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deviceDataFlag(Boolean deviceDataFlag) {
             this.deviceDataFlag = deviceDataFlag;
@@ -278,7 +322,14 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * DeviceLifeCycleFlag.
+         * <p>Indicates whether messages about device lifecycle changes were pushed.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deviceLifeCycleFlag(Boolean deviceLifeCycleFlag) {
             this.deviceLifeCycleFlag = deviceLifeCycleFlag;
@@ -286,7 +337,14 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * DeviceStatusChangeFlag.
+         * <p>Indicates whether messages about device status changes were pushed.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deviceStatusChangeFlag(Boolean deviceStatusChangeFlag) {
             this.deviceStatusChangeFlag = deviceStatusChangeFlag;
@@ -294,7 +352,15 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * DeviceTagFlag.
+         * <p>Indicates whether messages about device tag changes were pushed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes. This parameter takes effect only if the <strong>Type</strong> parameter is set to <strong>AMQP</strong>.</li>
+         * <li><strong>false</strong>: no.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deviceTagFlag(Boolean deviceTagFlag) {
             this.deviceTagFlag = deviceTagFlag;
@@ -302,7 +368,14 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * DeviceTopoLifeCycleFlag.
+         * <p>Indicates whether messages about topological relationship changes of devices were pushed.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes. The value <strong>true</strong> is returned only when you query a gateway product.</li>
+         * <li><strong>false</strong>: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deviceTopoLifeCycleFlag(Boolean deviceTopoLifeCycleFlag) {
             this.deviceTopoLifeCycleFlag = deviceTopoLifeCycleFlag;
@@ -310,7 +383,7 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -318,7 +391,14 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * FoundDeviceListFlag.
+         * <p>Indicates whether messages were pushed if a gateway detected new sub-devices.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes. The value <strong>true</strong> is returned only when you query a gateway product.</li>
+         * <li><strong>false</strong>: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder foundDeviceListFlag(Boolean foundDeviceListFlag) {
             this.foundDeviceListFlag = foundDeviceListFlag;
@@ -326,7 +406,11 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * MnsConfiguration.
+         * <p>The configurations of the MNS queue. This parameter is returned if the <strong>Type</strong> parameter is set to <strong>MNS</strong>.</p>
+         * <p>For more information, see the &quot;Definition of the MnsConfiguration parameter&quot; section.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;queueName&quot;: &quot;mns-test-topic1&quot;,     &quot;regionName&quot;: &quot;cn-shanghai&quot;,     &quot;role&quot;: {         &quot;roleArn&quot;: &quot;acs:ram::5645***:role/aliyuniotaccessingmnsrole&quot;,         &quot;roleName&quot;: &quot;AliyunIOTAccessingMNSRole&quot;     } }</p>
          */
         public Builder mnsConfiguration(String mnsConfiguration) {
             this.mnsConfiguration = mnsConfiguration;
@@ -334,7 +418,14 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * OtaEventFlag.
+         * <p>Indicates whether notifications about the status of OTA update batches were pushed.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder otaEventFlag(Boolean otaEventFlag) {
             this.otaEventFlag = otaEventFlag;
@@ -342,7 +433,15 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * OtaJobFlag.
+         * <p>Indicates whether notifications about OTA batch updates were pushed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes. This parameter takes effect only if the <strong>Type</strong> parameter is set to <strong>AMQP</strong>.</li>
+         * <li><strong>false</strong>: no.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder otaJobFlag(Boolean otaJobFlag) {
             this.otaJobFlag = otaJobFlag;
@@ -350,7 +449,15 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * OtaVersionFlag.
+         * <p>Indicates whether messages about the version numbers of OTA modules were pushed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes. This parameter takes effect only if the <strong>Type</strong> parameter is set to <strong>AMQP</strong>.</li>
+         * <li><strong>false</strong>: no.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder otaVersionFlag(Boolean otaVersionFlag) {
             this.otaVersionFlag = otaVersionFlag;
@@ -358,7 +465,10 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product that is specified for the subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1fyXVF****</p>
          */
         public Builder productKey(String productKey) {
             this.productKey = productKey;
@@ -366,7 +476,10 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21D327AF-A7DE-4E59-B5D1-ACAC8C024555</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -382,7 +495,14 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -390,7 +510,14 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * ThingHistoryFlag.
+         * <p>Indicates whether upstream historical Thing Specification Language (TSL) data was pushed.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder thingHistoryFlag(Boolean thingHistoryFlag) {
             this.thingHistoryFlag = thingHistoryFlag;
@@ -398,7 +525,14 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the subscription. Valid values:</p>
+         * <ul>
+         * <li><strong>MNS</strong></li>
+         * <li><strong>AMQP</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AMQP</p>
          */
         public Builder type(String type) {
             this.type = type;

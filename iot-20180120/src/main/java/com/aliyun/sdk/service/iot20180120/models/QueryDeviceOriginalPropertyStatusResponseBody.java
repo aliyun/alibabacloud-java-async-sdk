@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceOriginalPropertyStatusResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceOriginalPropertyStatusResponseBody</p>
  */
 public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDeviceOriginalPropertyStatusResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
 
     public static QueryDeviceOriginalPropertyStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceOriginalPropertyStatusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.common.InvalidPageParams</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned if the call succeeds. For more information, see the parameters of the List parameter.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call succeeds.</p>
+         * <ul>
+         * <li>true: The call succeeded.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +164,20 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceOriginalPropertyStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceOriginalPropertyStatusResponseBody</p>
+     */
     public static class PropertyStatusDataInfo extends TeaModel {
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PropertyStatusDataInfo(Builder builder) {
@@ -181,8 +220,20 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
             private Long time; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(PropertyStatusDataInfo model) {
+                this.identifier = model.identifier;
+                this.time = model.time;
+                this.value = model.value;
+            } 
+
             /**
-             * Identifier.
+             * <p>The identifier of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Temperture</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -190,7 +241,10 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the property was modified, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1517553572362</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -198,7 +252,10 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -212,9 +269,15 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceOriginalPropertyStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceOriginalPropertyStatusResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("PropertyStatusDataInfo")
-        private java.util.List < PropertyStatusDataInfo> propertyStatusDataInfo;
+        @com.aliyun.core.annotation.NameInMap("PropertyStatusDataInfo")
+        private java.util.List<PropertyStatusDataInfo> propertyStatusDataInfo;
 
         private List(Builder builder) {
             this.propertyStatusDataInfo = builder.propertyStatusDataInfo;
@@ -231,17 +294,24 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
         /**
          * @return propertyStatusDataInfo
          */
-        public java.util.List < PropertyStatusDataInfo> getPropertyStatusDataInfo() {
+        public java.util.List<PropertyStatusDataInfo> getPropertyStatusDataInfo() {
             return this.propertyStatusDataInfo;
         }
 
         public static final class Builder {
-            private java.util.List < PropertyStatusDataInfo> propertyStatusDataInfo; 
+            private java.util.List<PropertyStatusDataInfo> propertyStatusDataInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.propertyStatusDataInfo = model.propertyStatusDataInfo;
+            } 
 
             /**
              * PropertyStatusDataInfo.
              */
-            public Builder propertyStatusDataInfo(java.util.List < PropertyStatusDataInfo> propertyStatusDataInfo) {
+            public Builder propertyStatusDataInfo(java.util.List<PropertyStatusDataInfo> propertyStatusDataInfo) {
                 this.propertyStatusDataInfo = propertyStatusDataInfo;
                 return this;
             }
@@ -253,14 +323,20 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceOriginalPropertyStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceOriginalPropertyStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("NextPageToken")
+        @com.aliyun.core.annotation.NameInMap("NextPageToken")
         private String nextPageToken;
 
-        @NameInMap("NextValid")
+        @com.aliyun.core.annotation.NameInMap("NextValid")
         private Boolean nextValid;
 
         private Data(Builder builder) {
@@ -303,8 +379,17 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
             private String nextPageToken; 
             private Boolean nextValid; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.nextPageToken = model.nextPageToken;
+                this.nextValid = model.nextValid;
+            } 
+
             /**
-             * List.
+             * <p>The array of property information. The information about each property is indicated by the <strong>PropertyStatusInfo</strong> parameter.</p>
              */
             public Builder list(List list) {
                 this.list = list;
@@ -312,7 +397,10 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * NextPageToken.
+             * <p>The identifier of the next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bo***x44Qx</p>
              */
             public Builder nextPageToken(String nextPageToken) {
                 this.nextPageToken = nextPageToken;
@@ -320,7 +408,15 @@ public class QueryDeviceOriginalPropertyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * NextValid.
+             * <p>Indicates whether the next page exists.</p>
+             * <ul>
+             * <li><strong>true</strong>: The next page exists.</li>
+             * <li><strong>false</strong>: The next page does not exist.</li>
+             * </ul>
+             * <p>If the value <strong><strong><strong>true</strong> is returned, you can add the value of the <strong>NextPageToken</strong> parameter</strong></strong> to the next query. This allows you to query the data that is not returned by the current query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder nextValid(Boolean nextValid) {
                 this.nextValid = nextValid;

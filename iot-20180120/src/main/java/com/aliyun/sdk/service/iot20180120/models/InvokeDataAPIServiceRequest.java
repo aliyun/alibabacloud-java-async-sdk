@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvokeDataAPIServiceRequest} extends {@link RequestModel}
  *
  * <p>InvokeDataAPIServiceRequest</p>
  */
 public class InvokeDataAPIServiceRequest extends Request {
-    @Body
-    @NameInMap("ApiSrn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiSrn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiSrn;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("Param")
-    private java.util.List < Param> param;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Param")
+    private java.util.List<Param> param;
 
     private InvokeDataAPIServiceRequest(Builder builder) {
         super(builder);
@@ -40,7 +45,7 @@ public class InvokeDataAPIServiceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -62,14 +67,14 @@ public class InvokeDataAPIServiceRequest extends Request {
     /**
      * @return param
      */
-    public java.util.List < Param> getParam() {
+    public java.util.List<Param> getParam() {
         return this.param;
     }
 
     public static final class Builder extends Request.Builder<InvokeDataAPIServiceRequest, Builder> {
         private String apiSrn; 
         private String iotInstanceId; 
-        private java.util.List < Param> param; 
+        private java.util.List<Param> param; 
 
         private Builder() {
             super();
@@ -83,7 +88,10 @@ public class InvokeDataAPIServiceRequest extends Request {
         } 
 
         /**
-         * ApiSrn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:iot:<em>:127103983461</em>***:serveapi/device/getDeviceCountByStatus2</p>
          */
         public Builder apiSrn(String apiSrn) {
             this.putBodyParameter("ApiSrn", apiSrn);
@@ -103,7 +111,7 @@ public class InvokeDataAPIServiceRequest extends Request {
         /**
          * Param.
          */
-        public Builder param(java.util.List < Param> param) {
+        public Builder param(java.util.List<Param> param) {
             this.putBodyParameter("Param", param);
             this.param = param;
             return this;
@@ -116,20 +124,26 @@ public class InvokeDataAPIServiceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InvokeDataAPIServiceRequest} extends {@link TeaModel}
+     *
+     * <p>InvokeDataAPIServiceRequest</p>
+     */
     public static class Param extends TeaModel {
-        @NameInMap("ListParamType")
+        @com.aliyun.core.annotation.NameInMap("ListParamType")
         private String listParamType;
 
-        @NameInMap("ListParamValue")
-        private java.util.List < String > listParamValue;
+        @com.aliyun.core.annotation.NameInMap("ListParamValue")
+        private java.util.List<String> listParamValue;
 
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ParamType")
+        @com.aliyun.core.annotation.NameInMap("ParamType")
         private String paramType;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
         private Param(Builder builder) {
@@ -158,7 +172,7 @@ public class InvokeDataAPIServiceRequest extends Request {
         /**
          * @return listParamValue
          */
-        public java.util.List < String > getListParamValue() {
+        public java.util.List<String> getListParamValue() {
             return this.listParamValue;
         }
 
@@ -185,10 +199,21 @@ public class InvokeDataAPIServiceRequest extends Request {
 
         public static final class Builder {
             private String listParamType; 
-            private java.util.List < String > listParamValue; 
+            private java.util.List<String> listParamValue; 
             private String paramName; 
             private String paramType; 
             private String paramValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.listParamType = model.listParamType;
+                this.listParamValue = model.listParamValue;
+                this.paramName = model.paramName;
+                this.paramType = model.paramType;
+                this.paramValue = model.paramValue;
+            } 
 
             /**
              * ListParamType.
@@ -201,7 +226,7 @@ public class InvokeDataAPIServiceRequest extends Request {
             /**
              * ListParamValue.
              */
-            public Builder listParamValue(java.util.List < String > listParamValue) {
+            public Builder listParamValue(java.util.List<String> listParamValue) {
                 this.listParamValue = listParamValue;
                 return this;
             }

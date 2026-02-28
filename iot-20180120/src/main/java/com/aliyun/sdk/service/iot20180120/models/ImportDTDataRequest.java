@@ -1,33 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportDTDataRequest} extends {@link RequestModel}
  *
  * <p>ImportDTDataRequest</p>
  */
 public class ImportDTDataRequest extends Request {
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DTInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String DTInstanceId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("Items")
-    @Validation(required = true)
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Items")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Items> items;
 
-    @Body
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
     private ImportDTDataRequest(Builder builder) {
         super(builder);
+        this.DTInstanceId = builder.DTInstanceId;
         this.iotInstanceId = builder.iotInstanceId;
         this.items = builder.items;
         this.productKey = builder.productKey;
@@ -41,9 +52,16 @@ public class ImportDTDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return DTInstanceId
+     */
+    public String getDTInstanceId() {
+        return this.DTInstanceId;
     }
 
     /**
@@ -56,7 +74,7 @@ public class ImportDTDataRequest extends Request {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -68,8 +86,9 @@ public class ImportDTDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ImportDTDataRequest, Builder> {
+        private String DTInstanceId; 
         private String iotInstanceId; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String productKey; 
 
         private Builder() {
@@ -78,10 +97,20 @@ public class ImportDTDataRequest extends Request {
 
         private Builder(ImportDTDataRequest request) {
             super(request);
+            this.DTInstanceId = request.DTInstanceId;
             this.iotInstanceId = request.iotInstanceId;
             this.items = request.items;
             this.productKey = request.productKey;
         } 
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder DTInstanceId(String DTInstanceId) {
+            this.putQueryParameter("DTInstanceId", DTInstanceId);
+            this.DTInstanceId = DTInstanceId;
+            return this;
+        }
 
         /**
          * IotInstanceId.
@@ -93,16 +122,19 @@ public class ImportDTDataRequest extends Request {
         }
 
         /**
-         * Items.
+         * <p>This parameter is required.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.putBodyParameter("Items", items);
             this.items = items;
             return this;
         }
 
         /**
-         * ProductKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dgb9****</p>
          */
         public Builder productKey(String productKey) {
             this.putBodyParameter("ProductKey", productKey);
@@ -117,13 +149,19 @@ public class ImportDTDataRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ImportDTDataRequest} extends {@link TeaModel}
+     *
+     * <p>ImportDTDataRequest</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DeviceName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String deviceName;
 
-        @NameInMap("Params")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Params")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String params;
 
         private Items(Builder builder) {
@@ -157,8 +195,19 @@ public class ImportDTDataRequest extends Request {
             private String deviceName; 
             private String params; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.deviceName = model.deviceName;
+                this.params = model.params;
+            } 
+
             /**
-             * DeviceName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Device1</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -166,7 +215,10 @@ public class ImportDTDataRequest extends Request {
             }
 
             /**
-             * Params.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key1&quot;:12,&quot;key2&quot;:56}</p>
              */
             public Builder params(String params) {
                 this.params = params;

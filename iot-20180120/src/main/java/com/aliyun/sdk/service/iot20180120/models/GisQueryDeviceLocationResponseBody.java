@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GisQueryDeviceLocationResponseBody} extends {@link TeaModel}
  *
  * <p>GisQueryDeviceLocationResponseBody</p>
  */
 public class GisQueryDeviceLocationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GisQueryDeviceLocationResponseBody(Builder builder) {
@@ -43,6 +48,10 @@ public class GisQueryDeviceLocationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,7 +62,7 @@ public class GisQueryDeviceLocationResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,10 +89,21 @@ public class GisQueryDeviceLocationResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GisQueryDeviceLocationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -96,7 +116,7 @@ public class GisQueryDeviceLocationResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -131,35 +151,41 @@ public class GisQueryDeviceLocationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GisQueryDeviceLocationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GisQueryDeviceLocationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Adcode")
+        @com.aliyun.core.annotation.NameInMap("Adcode")
         private Long adcode;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("CoordinateSystem")
+        @com.aliyun.core.annotation.NameInMap("CoordinateSystem")
         private Integer coordinateSystem;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Latitude")
+        @com.aliyun.core.annotation.NameInMap("Latitude")
         private Float latitude;
 
-        @NameInMap("Longitude")
+        @com.aliyun.core.annotation.NameInMap("Longitude")
         private Float longitude;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private Data(Builder builder) {
@@ -264,6 +290,22 @@ public class GisQueryDeviceLocationResponseBody extends TeaModel {
             private Float longitude; 
             private String productKey; 
             private String province; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.adcode = model.adcode;
+                this.city = model.city;
+                this.coordinateSystem = model.coordinateSystem;
+                this.country = model.country;
+                this.deviceName = model.deviceName;
+                this.ip = model.ip;
+                this.latitude = model.latitude;
+                this.longitude = model.longitude;
+                this.productKey = model.productKey;
+                this.province = model.province;
+            } 
 
             /**
              * Adcode.

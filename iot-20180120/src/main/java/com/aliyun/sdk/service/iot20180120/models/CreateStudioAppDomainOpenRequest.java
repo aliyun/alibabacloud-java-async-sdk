@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStudioAppDomainOpenRequest} extends {@link RequestModel}
  *
  * <p>CreateStudioAppDomainOpenRequest</p>
  */
 public class CreateStudioAppDomainOpenRequest extends Request {
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("Host")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Host")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String host;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Body
-    @NameInMap("Protocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Protocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protocol;
 
     private CreateStudioAppDomainOpenRequest(Builder builder) {
@@ -53,7 +58,7 @@ public class CreateStudioAppDomainOpenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,7 +119,10 @@ public class CreateStudioAppDomainOpenRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a12*******</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -123,7 +131,10 @@ public class CreateStudioAppDomainOpenRequest extends Request {
         }
 
         /**
-         * Host.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.test.com">www.aliyun.test.com</a></p>
          */
         public Builder host(String host) {
             this.putBodyParameter("Host", host);
@@ -141,7 +152,10 @@ public class CreateStudioAppDomainOpenRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a123******</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -150,7 +164,10 @@ public class CreateStudioAppDomainOpenRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https</p>
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("Protocol", protocol);

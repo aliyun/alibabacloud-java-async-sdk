@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDownloadFileResponseBody} extends {@link TeaModel}
  *
  * <p>GetDownloadFileResponseBody</p>
  */
 public class GetDownloadFileResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDownloadFileResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetDownloadFileResponseBody extends TeaModel {
 
     public static GetDownloadFileResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetDownloadFileResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDownloadFileResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,26 +151,32 @@ public class GetDownloadFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDownloadFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDownloadFileResponseBody</p>
+     */
     public static class DataHeader extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("DimDateClass")
+        @com.aliyun.core.annotation.NameInMap("DimDateClass")
         private String dimDateClass;
 
-        @NameInMap("FieldName")
+        @com.aliyun.core.annotation.NameInMap("FieldName")
         private String fieldName;
 
-        @NameInMap("FieldType")
+        @com.aliyun.core.annotation.NameInMap("FieldType")
         private String fieldType;
 
-        @NameInMap("GeoClass")
+        @com.aliyun.core.annotation.NameInMap("GeoClass")
         private String geoClass;
 
-        @NameInMap("TimeClass")
+        @com.aliyun.core.annotation.NameInMap("TimeClass")
         private String timeClass;
 
-        @NameInMap("TypeClass")
+        @com.aliyun.core.annotation.NameInMap("TypeClass")
         private String typeClass;
 
         private DataHeader(Builder builder) {
@@ -229,6 +255,19 @@ public class GetDownloadFileResponseBody extends TeaModel {
             private String timeClass; 
             private String typeClass; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataHeader model) {
+                this.alias = model.alias;
+                this.dimDateClass = model.dimDateClass;
+                this.fieldName = model.fieldName;
+                this.fieldType = model.fieldType;
+                this.geoClass = model.geoClass;
+                this.timeClass = model.timeClass;
+                this.typeClass = model.typeClass;
+            } 
+
             /**
              * Alias.
              */
@@ -292,11 +331,17 @@ public class GetDownloadFileResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDownloadFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDownloadFileResponseBody</p>
+     */
     public static class AstExpr extends TeaModel {
-        @NameInMap("Expr")
+        @com.aliyun.core.annotation.NameInMap("Expr")
         private String expr;
 
-        @NameInMap("ExprType")
+        @com.aliyun.core.annotation.NameInMap("ExprType")
         private String exprType;
 
         private AstExpr(Builder builder) {
@@ -330,6 +375,14 @@ public class GetDownloadFileResponseBody extends TeaModel {
             private String expr; 
             private String exprType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AstExpr model) {
+                this.expr = model.expr;
+                this.exprType = model.exprType;
+            } 
+
             /**
              * Expr.
              */
@@ -353,23 +406,29 @@ public class GetDownloadFileResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDownloadFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDownloadFileResponseBody</p>
+     */
     public static class SelectedHeaders extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("DimDateClass")
+        @com.aliyun.core.annotation.NameInMap("DimDateClass")
         private String dimDateClass;
 
-        @NameInMap("FieldName")
+        @com.aliyun.core.annotation.NameInMap("FieldName")
         private String fieldName;
 
-        @NameInMap("FieldType")
+        @com.aliyun.core.annotation.NameInMap("FieldType")
         private String fieldType;
 
-        @NameInMap("GeoClass")
+        @com.aliyun.core.annotation.NameInMap("GeoClass")
         private String geoClass;
 
-        @NameInMap("TimeClass")
+        @com.aliyun.core.annotation.NameInMap("TimeClass")
         private String timeClass;
 
         private SelectedHeaders(Builder builder) {
@@ -439,6 +498,18 @@ public class GetDownloadFileResponseBody extends TeaModel {
             private String geoClass; 
             private String timeClass; 
 
+            private Builder() {
+            } 
+
+            private Builder(SelectedHeaders model) {
+                this.alias = model.alias;
+                this.dimDateClass = model.dimDateClass;
+                this.fieldName = model.fieldName;
+                this.fieldType = model.fieldType;
+                this.geoClass = model.geoClass;
+                this.timeClass = model.timeClass;
+            } 
+
             /**
              * Alias.
              */
@@ -494,12 +565,18 @@ public class GetDownloadFileResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDownloadFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDownloadFileResponseBody</p>
+     */
     public static class QuerySetting extends TeaModel {
-        @NameInMap("AstExpr")
-        private java.util.List < AstExpr> astExpr;
+        @com.aliyun.core.annotation.NameInMap("AstExpr")
+        private java.util.List<AstExpr> astExpr;
 
-        @NameInMap("SelectedHeaders")
-        private java.util.List < SelectedHeaders> selectedHeaders;
+        @com.aliyun.core.annotation.NameInMap("SelectedHeaders")
+        private java.util.List<SelectedHeaders> selectedHeaders;
 
         private QuerySetting(Builder builder) {
             this.astExpr = builder.astExpr;
@@ -517,25 +594,33 @@ public class GetDownloadFileResponseBody extends TeaModel {
         /**
          * @return astExpr
          */
-        public java.util.List < AstExpr> getAstExpr() {
+        public java.util.List<AstExpr> getAstExpr() {
             return this.astExpr;
         }
 
         /**
          * @return selectedHeaders
          */
-        public java.util.List < SelectedHeaders> getSelectedHeaders() {
+        public java.util.List<SelectedHeaders> getSelectedHeaders() {
             return this.selectedHeaders;
         }
 
         public static final class Builder {
-            private java.util.List < AstExpr> astExpr; 
-            private java.util.List < SelectedHeaders> selectedHeaders; 
+            private java.util.List<AstExpr> astExpr; 
+            private java.util.List<SelectedHeaders> selectedHeaders; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuerySetting model) {
+                this.astExpr = model.astExpr;
+                this.selectedHeaders = model.selectedHeaders;
+            } 
 
             /**
              * AstExpr.
              */
-            public Builder astExpr(java.util.List < AstExpr> astExpr) {
+            public Builder astExpr(java.util.List<AstExpr> astExpr) {
                 this.astExpr = astExpr;
                 return this;
             }
@@ -543,7 +628,7 @@ public class GetDownloadFileResponseBody extends TeaModel {
             /**
              * SelectedHeaders.
              */
-            public Builder selectedHeaders(java.util.List < SelectedHeaders> selectedHeaders) {
+            public Builder selectedHeaders(java.util.List<SelectedHeaders> selectedHeaders) {
                 this.selectedHeaders = selectedHeaders;
                 return this;
             }
@@ -555,53 +640,59 @@ public class GetDownloadFileResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDownloadFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDownloadFileResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AsyncExecute")
+        @com.aliyun.core.annotation.NameInMap("AsyncExecute")
         private Boolean asyncExecute;
 
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
-        @NameInMap("CsvFileName")
+        @com.aliyun.core.annotation.NameInMap("CsvFileName")
         private String csvFileName;
 
-        @NameInMap("CsvUrl")
+        @com.aliyun.core.annotation.NameInMap("CsvUrl")
         private String csvUrl;
 
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Header")
-        private java.util.List < DataHeader> header;
+        @com.aliyun.core.annotation.NameInMap("Header")
+        private java.util.List<DataHeader> header;
 
-        @NameInMap("LongJobId")
+        @com.aliyun.core.annotation.NameInMap("LongJobId")
         private String longJobId;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("PreviewSize")
+        @com.aliyun.core.annotation.NameInMap("PreviewSize")
         private Integer previewSize;
 
-        @NameInMap("QuerySetting")
+        @com.aliyun.core.annotation.NameInMap("QuerySetting")
         private QuerySetting querySetting;
 
-        @NameInMap("Result")
-        private java.util.List < java.util.Map<String, ?>> result;
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<java.util.Map<String, ?>> result;
 
-        @NameInMap("ResultDataInString")
+        @com.aliyun.core.annotation.NameInMap("ResultDataInString")
         private String resultDataInString;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {
@@ -676,7 +767,7 @@ public class GetDownloadFileResponseBody extends TeaModel {
         /**
          * @return header
          */
-        public java.util.List < DataHeader> getHeader() {
+        public java.util.List<DataHeader> getHeader() {
             return this.header;
         }
 
@@ -718,7 +809,7 @@ public class GetDownloadFileResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < java.util.Map<String, ?>> getResult() {
+        public java.util.List<java.util.Map<String, ?>> getResult() {
             return this.result;
         }
 
@@ -750,16 +841,38 @@ public class GetDownloadFileResponseBody extends TeaModel {
             private String csvUrl; 
             private String datasetId; 
             private Long endTime; 
-            private java.util.List < DataHeader> header; 
+            private java.util.List<DataHeader> header; 
             private String longJobId; 
             private Integer pageNo; 
             private Integer pageSize; 
             private Integer previewSize; 
             private QuerySetting querySetting; 
-            private java.util.List < java.util.Map<String, ?>> result; 
+            private java.util.List<java.util.Map<String, ?>> result; 
             private String resultDataInString; 
             private Integer status; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.asyncExecute = model.asyncExecute;
+                this.beginTime = model.beginTime;
+                this.csvFileName = model.csvFileName;
+                this.csvUrl = model.csvUrl;
+                this.datasetId = model.datasetId;
+                this.endTime = model.endTime;
+                this.header = model.header;
+                this.longJobId = model.longJobId;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.previewSize = model.previewSize;
+                this.querySetting = model.querySetting;
+                this.result = model.result;
+                this.resultDataInString = model.resultDataInString;
+                this.status = model.status;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * AsyncExecute.
@@ -812,7 +925,7 @@ public class GetDownloadFileResponseBody extends TeaModel {
             /**
              * Header.
              */
-            public Builder header(java.util.List < DataHeader> header) {
+            public Builder header(java.util.List<DataHeader> header) {
                 this.header = header;
                 return this;
             }
@@ -860,7 +973,7 @@ public class GetDownloadFileResponseBody extends TeaModel {
             /**
              * Result.
              */
-            public Builder result(java.util.List < java.util.Map<String, ?>> result) {
+            public Builder result(java.util.List<java.util.Map<String, ?>> result) {
                 this.result = result;
                 return this;
             }

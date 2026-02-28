@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceOriginalPropertyDataRequest} extends {@link RequestModel}
  *
  * <p>QueryDeviceOriginalPropertyDataRequest</p>
  */
 public class QueryDeviceOriginalPropertyDataRequest extends Request {
-    @Query
-    @NameInMap("Asc")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Asc")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer asc;
 
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("Identifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Identifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identifier;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private QueryDeviceOriginalPropertyDataRequest(Builder builder) {
@@ -79,7 +84,7 @@ public class QueryDeviceOriginalPropertyDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -185,7 +190,18 @@ public class QueryDeviceOriginalPropertyDataRequest extends Request {
         } 
 
         /**
-         * Asc.
+         * <p>The order in which you want to sort the returned property records. Valid values:</p>
+         * <ul>
+         * <li>0: descending.</li>
+         * <li>1: ascending.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The <strong>start time</strong> must be earlier than the <strong>end time</strong>. The system sorts the returned records based on the specified order.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder asc(Integer asc) {
             this.putQueryParameter("Asc", asc);
@@ -194,7 +210,13 @@ public class QueryDeviceOriginalPropertyDataRequest extends Request {
         }
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the device.</p>
+         * <blockquote>
+         * <p>If you specify a value for this parameter, you must configure the <strong>ProductKey</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -203,7 +225,11 @@ public class QueryDeviceOriginalPropertyDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The value must be a 13-digit timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1579249499000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -212,7 +238,15 @@ public class QueryDeviceOriginalPropertyDataRequest extends Request {
         }
 
         /**
-         * Identifier.
+         * <p>The identifier of the property.</p>
+         * <ul>
+         * <li>If weak verification is used, you can perform the following steps to view the <strong>Identifier</strong> of a device property: Log on to the IoT Platform console and go to the Define Feature tab of the Product Details page. You can also call the <a href="https://help.aliyun.com/document_detail/150321.html">QueryThingModel</a> operation and view the property identifier in the returned TSL data.</li>
+         * <li>If no verification is used, the value must be the same as the custom <strong>identifier</strong> that is submitted by the device.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>temperature</p>
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
@@ -221,7 +255,13 @@ public class QueryDeviceOriginalPropertyDataRequest extends Request {
         }
 
         /**
-         * IotId.
+         * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+         * <blockquote>
+         * <p>The IotId parameter specifies a unique ID for the device. The value of the <strong>IotId</strong> parameter is equivalent to a combination of the values of the <strong>ProductKey</strong> and <strong>DeviceName.N</strong> parameters. If you specify the IotId parameter, you do not need to configure the <strong>ProductKey</strong> or <strong>DeviceName.N</strong> parameter. If you specify values for the <strong>IotId</strong>, <strong>ProductKey</strong>, and <strong>DeviceName.N</strong> parameters, the value of the <strong>IotId</strong> parameter takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Q7uOhVRdZRRlDnTLv****00100</p>
          */
         public Builder iotId(String iotId) {
             this.putQueryParameter("IotId", iotId);
@@ -230,7 +270,17 @@ public class QueryDeviceOriginalPropertyDataRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the ID of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.****</li>
+         * <li>If no <strong>Overview</strong> page or <strong>ID</strong> is generated for your instance, you do not need to configure this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -239,7 +289,10 @@ public class QueryDeviceOriginalPropertyDataRequest extends Request {
         }
 
         /**
-         * NextPageToken.
+         * <p>The token that is used to retrieve the next page of the query results. If the next page exists, this parameter is returned. In this case, you must add the value of the parameter to the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bo***x44Qx</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -248,7 +301,12 @@ public class QueryDeviceOriginalPropertyDataRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of records that can be returned for each property. Maximum value: 100.</p>
+         * <p>The number of records that are returned for an arbitrary property cannot exceed the limit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -257,7 +315,13 @@ public class QueryDeviceOriginalPropertyDataRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product to which the device belongs.****</p>
+         * <blockquote>
+         * <p>If you specify a value for this parameter, you must configure the <strong>DeviceName</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -266,7 +330,11 @@ public class QueryDeviceOriginalPropertyDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range to query. The value must be a 13-digit timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1569249488000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

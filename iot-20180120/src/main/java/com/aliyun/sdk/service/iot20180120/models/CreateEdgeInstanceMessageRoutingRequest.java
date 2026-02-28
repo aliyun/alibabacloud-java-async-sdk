@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEdgeInstanceMessageRoutingRequest} extends {@link RequestModel}
  *
  * <p>CreateEdgeInstanceMessageRoutingRequest</p>
  */
 public class CreateEdgeInstanceMessageRoutingRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("SourceData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceData")
     private String sourceData;
 
-    @Query
-    @NameInMap("SourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
 
-    @Query
-    @NameInMap("TargetData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetData")
     private String targetData;
 
-    @Query
-    @NameInMap("TargetIotHubQos")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetIotHubQos")
     private Integer targetIotHubQos;
 
-    @Query
-    @NameInMap("TargetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetType;
 
-    @Query
-    @NameInMap("TopicFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicFilter")
     private String topicFilter;
 
     private CreateEdgeInstanceMessageRoutingRequest(Builder builder) {
@@ -72,7 +77,7 @@ public class CreateEdgeInstanceMessageRoutingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -169,7 +174,10 @@ public class CreateEdgeInstanceMessageRoutingRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nF9oXo7kLRWQ********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -205,7 +213,10 @@ public class CreateEdgeInstanceMessageRoutingRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -232,7 +243,10 @@ public class CreateEdgeInstanceMessageRoutingRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>function</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

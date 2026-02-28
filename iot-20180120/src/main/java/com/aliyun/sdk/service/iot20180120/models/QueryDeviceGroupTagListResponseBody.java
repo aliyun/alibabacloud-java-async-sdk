@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceGroupTagListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceGroupTagListResponseBody</p>
  */
 public class QueryDeviceGroupTagListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDeviceGroupTagListResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryDeviceGroupTagListResponseBody extends TeaModel {
 
     public static QueryDeviceGroupTagListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryDeviceGroupTagListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceGroupTagListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryDeviceGroupTagListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The tag information returned if the call succeeds. For more information, see the following <strong>GroupTagInfo</strong> parameter.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class QueryDeviceGroupTagListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class QueryDeviceGroupTagListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>214154FF-9D47-4E3F-AAAD-F4CE67F41060</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class QueryDeviceGroupTagListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +164,17 @@ public class QueryDeviceGroupTagListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceGroupTagListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceGroupTagListResponseBody</p>
+     */
     public static class GroupTagInfo extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private GroupTagInfo(Builder builder) {
@@ -169,8 +208,19 @@ public class QueryDeviceGroupTagListResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupTagInfo model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * TagKey.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>room1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +228,10 @@ public class QueryDeviceGroupTagListResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bulb</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -192,9 +245,15 @@ public class QueryDeviceGroupTagListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceGroupTagListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceGroupTagListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("GroupTagInfo")
-        private java.util.List < GroupTagInfo> groupTagInfo;
+        @com.aliyun.core.annotation.NameInMap("GroupTagInfo")
+        private java.util.List<GroupTagInfo> groupTagInfo;
 
         private Data(Builder builder) {
             this.groupTagInfo = builder.groupTagInfo;
@@ -211,17 +270,24 @@ public class QueryDeviceGroupTagListResponseBody extends TeaModel {
         /**
          * @return groupTagInfo
          */
-        public java.util.List < GroupTagInfo> getGroupTagInfo() {
+        public java.util.List<GroupTagInfo> getGroupTagInfo() {
             return this.groupTagInfo;
         }
 
         public static final class Builder {
-            private java.util.List < GroupTagInfo> groupTagInfo; 
+            private java.util.List<GroupTagInfo> groupTagInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.groupTagInfo = model.groupTagInfo;
+            } 
 
             /**
              * GroupTagInfo.
              */
-            public Builder groupTagInfo(java.util.List < GroupTagInfo> groupTagInfo) {
+            public Builder groupTagInfo(java.util.List<GroupTagInfo> groupTagInfo) {
                 this.groupTagInfo = groupTagInfo;
                 return this;
             }

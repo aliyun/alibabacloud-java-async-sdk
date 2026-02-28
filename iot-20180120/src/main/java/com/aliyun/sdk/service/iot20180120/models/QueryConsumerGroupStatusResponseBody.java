@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryConsumerGroupStatusResponseBody} extends {@link TeaModel}
  *
  * <p>QueryConsumerGroupStatusResponseBody</p>
  */
 public class QueryConsumerGroupStatusResponseBody extends TeaModel {
-    @NameInMap("AccumulatedConsumeCountPerMinute")
+    @com.aliyun.core.annotation.NameInMap("AccumulatedConsumeCountPerMinute")
     private Integer accumulatedConsumeCountPerMinute;
 
-    @NameInMap("AccumulationCount")
+    @com.aliyun.core.annotation.NameInMap("AccumulationCount")
     private Integer accumulationCount;
 
-    @NameInMap("ClientConnectionStatusList")
+    @com.aliyun.core.annotation.NameInMap("ClientConnectionStatusList")
     private ClientConnectionStatusList clientConnectionStatusList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ConsumerSpeed")
+    @com.aliyun.core.annotation.NameInMap("ConsumerSpeed")
     private Integer consumerSpeed;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("LastConsumerTime")
+    @com.aliyun.core.annotation.NameInMap("LastConsumerTime")
     private String lastConsumerTime;
 
-    @NameInMap("RealTimeConsumeCountPerMinute")
+    @com.aliyun.core.annotation.NameInMap("RealTimeConsumeCountPerMinute")
     private Integer realTimeConsumeCountPerMinute;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryConsumerGroupStatusResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
 
     public static QueryConsumerGroupStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -145,8 +154,27 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryConsumerGroupStatusResponseBody model) {
+            this.accumulatedConsumeCountPerMinute = model.accumulatedConsumeCountPerMinute;
+            this.accumulationCount = model.accumulationCount;
+            this.clientConnectionStatusList = model.clientConnectionStatusList;
+            this.code = model.code;
+            this.consumerSpeed = model.consumerSpeed;
+            this.errorMessage = model.errorMessage;
+            this.lastConsumerTime = model.lastConsumerTime;
+            this.realTimeConsumeCountPerMinute = model.realTimeConsumeCountPerMinute;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * AccumulatedConsumeCountPerMinute.
+         * <p>The message consumption rate. Unit: messages/minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder accumulatedConsumeCountPerMinute(Integer accumulatedConsumeCountPerMinute) {
             this.accumulatedConsumeCountPerMinute = accumulatedConsumeCountPerMinute;
@@ -154,7 +182,10 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * AccumulationCount.
+         * <p>The number of accumulated messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder accumulationCount(Integer accumulationCount) {
             this.accumulationCount = accumulationCount;
@@ -162,7 +193,7 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ClientConnectionStatusList.
+         * <p>The details about the client. For more information, see <strong>ConsumerGroupClientConnectionInfo</strong>.</p>
          */
         public Builder clientConnectionStatusList(ClientConnectionStatusList clientConnectionStatusList) {
             this.clientConnectionStatusList = clientConnectionStatusList;
@@ -170,7 +201,10 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="/help/en/iot-platform/latest/bce100">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -178,7 +212,10 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ConsumerSpeed.
+         * <p>The message consumption rate of the consumer group. Unit: messages/minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         public Builder consumerSpeed(Integer consumerSpeed) {
             this.consumerSpeed = consumerSpeed;
@@ -186,7 +223,7 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -194,7 +231,10 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * LastConsumerTime.
+         * <p>The time when the last message was consumed. The time is in the yyyy-MM-dd&quot;T&quot;HH:mm:ss.SSSZ format. The time is displayed in UTC and accurate to milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-29T03:37:56.000Z</p>
          */
         public Builder lastConsumerTime(String lastConsumerTime) {
             this.lastConsumerTime = lastConsumerTime;
@@ -202,7 +242,10 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RealTimeConsumeCountPerMinute.
+         * <p>The consumption rate of real-time messages in the consumer group. Unit: messages/minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         public Builder realTimeConsumeCountPerMinute(Integer realTimeConsumeCountPerMinute) {
             this.realTimeConsumeCountPerMinute = realTimeConsumeCountPerMinute;
@@ -210,7 +253,10 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +264,14 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -231,20 +284,26 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryConsumerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryConsumerGroupStatusResponseBody</p>
+     */
     public static class ConsumerGroupClientConnectionInfo extends TeaModel {
-        @NameInMap("AccumulatedConsumeCountPerMinute")
+        @com.aliyun.core.annotation.NameInMap("AccumulatedConsumeCountPerMinute")
         private Integer accumulatedConsumeCountPerMinute;
 
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("ClientIpPort")
+        @com.aliyun.core.annotation.NameInMap("ClientIpPort")
         private String clientIpPort;
 
-        @NameInMap("OnlineTime")
+        @com.aliyun.core.annotation.NameInMap("OnlineTime")
         private Long onlineTime;
 
-        @NameInMap("RealTimeConsumeCountPerMinute")
+        @com.aliyun.core.annotation.NameInMap("RealTimeConsumeCountPerMinute")
         private Integer realTimeConsumeCountPerMinute;
 
         private ConsumerGroupClientConnectionInfo(Builder builder) {
@@ -305,8 +364,22 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
             private Long onlineTime; 
             private Integer realTimeConsumeCountPerMinute; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsumerGroupClientConnectionInfo model) {
+                this.accumulatedConsumeCountPerMinute = model.accumulatedConsumeCountPerMinute;
+                this.clientId = model.clientId;
+                this.clientIpPort = model.clientIpPort;
+                this.onlineTime = model.onlineTime;
+                this.realTimeConsumeCountPerMinute = model.realTimeConsumeCountPerMinute;
+            } 
+
             /**
-             * AccumulatedConsumeCountPerMinute.
+             * <p>The consumption rate of accumulated messages on a single client of the consumer group. Unit: messages/minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder accumulatedConsumeCountPerMinute(Integer accumulatedConsumeCountPerMinute) {
                 this.accumulatedConsumeCountPerMinute = accumulatedConsumeCountPerMinute;
@@ -314,7 +387,10 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ClientId.
+             * <p>The ID of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>868575026******</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -322,7 +398,10 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIpPort.
+             * <p>The IP address and port of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.2:36918</p>
              */
             public Builder clientIpPort(String clientIpPort) {
                 this.clientIpPort = clientIpPort;
@@ -330,7 +409,10 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineTime.
+             * <p>The last time when the client was online. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1591240546649</p>
              */
             public Builder onlineTime(Long onlineTime) {
                 this.onlineTime = onlineTime;
@@ -338,7 +420,10 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RealTimeConsumeCountPerMinute.
+             * <p>The consumption rate of real-time messages on a single client of the consumer group. Unit: messages/minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder realTimeConsumeCountPerMinute(Integer realTimeConsumeCountPerMinute) {
                 this.realTimeConsumeCountPerMinute = realTimeConsumeCountPerMinute;
@@ -352,9 +437,15 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryConsumerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryConsumerGroupStatusResponseBody</p>
+     */
     public static class ClientConnectionStatusList extends TeaModel {
-        @NameInMap("ConsumerGroupClientConnectionInfo")
-        private java.util.List < ConsumerGroupClientConnectionInfo> consumerGroupClientConnectionInfo;
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroupClientConnectionInfo")
+        private java.util.List<ConsumerGroupClientConnectionInfo> consumerGroupClientConnectionInfo;
 
         private ClientConnectionStatusList(Builder builder) {
             this.consumerGroupClientConnectionInfo = builder.consumerGroupClientConnectionInfo;
@@ -371,17 +462,24 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         /**
          * @return consumerGroupClientConnectionInfo
          */
-        public java.util.List < ConsumerGroupClientConnectionInfo> getConsumerGroupClientConnectionInfo() {
+        public java.util.List<ConsumerGroupClientConnectionInfo> getConsumerGroupClientConnectionInfo() {
             return this.consumerGroupClientConnectionInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ConsumerGroupClientConnectionInfo> consumerGroupClientConnectionInfo; 
+            private java.util.List<ConsumerGroupClientConnectionInfo> consumerGroupClientConnectionInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClientConnectionStatusList model) {
+                this.consumerGroupClientConnectionInfo = model.consumerGroupClientConnectionInfo;
+            } 
 
             /**
              * ConsumerGroupClientConnectionInfo.
              */
-            public Builder consumerGroupClientConnectionInfo(java.util.List < ConsumerGroupClientConnectionInfo> consumerGroupClientConnectionInfo) {
+            public Builder consumerGroupClientConnectionInfo(java.util.List<ConsumerGroupClientConnectionInfo> consumerGroupClientConnectionInfo) {
                 this.consumerGroupClientConnectionInfo = consumerGroupClientConnectionInfo;
                 return this;
             }

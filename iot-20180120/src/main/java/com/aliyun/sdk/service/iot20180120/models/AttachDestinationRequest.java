@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachDestinationRequest} extends {@link RequestModel}
  *
  * <p>AttachDestinationRequest</p>
  */
 public class AttachDestinationRequest extends Request {
-    @Query
-    @NameInMap("DestinationId")
-    @Validation(required = true, maximum = 999999999999D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999999D)
     private Long destinationId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("IsFailover")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsFailover")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean isFailover;
 
-    @Query
-    @NameInMap("ParserId")
-    @Validation(required = true, maximum = 999999999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParserId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999, minimum = 1)
     private Long parserId;
 
     private AttachDestinationRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class AttachDestinationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,10 @@ public class AttachDestinationRequest extends Request {
         } 
 
         /**
-         * DestinationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1002</p>
          */
         public Builder destinationId(Long destinationId) {
             this.putQueryParameter("DestinationId", destinationId);
@@ -117,7 +125,10 @@ public class AttachDestinationRequest extends Request {
         }
 
         /**
-         * IsFailover.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isFailover(Boolean isFailover) {
             this.putQueryParameter("IsFailover", isFailover);
@@ -126,7 +137,10 @@ public class AttachDestinationRequest extends Request {
         }
 
         /**
-         * ParserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder parserId(Long parserId) {
             this.putQueryParameter("ParserId", parserId);

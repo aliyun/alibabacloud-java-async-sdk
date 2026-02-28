@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEdgeDriverVersionResponseBody} extends {@link TeaModel}
  *
  * <p>GetEdgeDriverVersionResponseBody</p>
  */
 public class GetEdgeDriverVersionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetEdgeDriverVersionResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
 
     public static GetEdgeDriverVersionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetEdgeDriverVersionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see <a href="https://help.aliyun.com/document_detail/135200.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data that is returned if the call was successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request parameter error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +136,10 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6ECE664B-E670-47BA-A6AD-62B9F35E3A7B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,41 +163,47 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEdgeDriverVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEdgeDriverVersionResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Argument")
+        @com.aliyun.core.annotation.NameInMap("Argument")
         private String argument;
 
-        @NameInMap("ConfigCheckRule")
+        @com.aliyun.core.annotation.NameInMap("ConfigCheckRule")
         private String configCheckRule;
 
-        @NameInMap("ContainerConfig")
+        @com.aliyun.core.annotation.NameInMap("ContainerConfig")
         private String containerConfig;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DriverConfig")
+        @com.aliyun.core.annotation.NameInMap("DriverConfig")
         private String driverConfig;
 
-        @NameInMap("DriverId")
+        @com.aliyun.core.annotation.NameInMap("DriverId")
         private String driverId;
 
-        @NameInMap("DriverVersion")
+        @com.aliyun.core.annotation.NameInMap("DriverVersion")
         private String driverVersion;
 
-        @NameInMap("EdgeVersion")
+        @com.aliyun.core.annotation.NameInMap("EdgeVersion")
         private String edgeVersion;
 
-        @NameInMap("GmtCreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTimestamp")
         private Long gmtCreateTimestamp;
 
-        @NameInMap("GmtModifiedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTimestamp")
         private Long gmtModifiedTimestamp;
 
-        @NameInMap("SourceConfig")
+        @com.aliyun.core.annotation.NameInMap("SourceConfig")
         private String sourceConfig;
 
-        @NameInMap("VersionState")
+        @com.aliyun.core.annotation.NameInMap("VersionState")
         private String versionState;
 
         private Data(Builder builder) {
@@ -289,8 +327,29 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
             private String sourceConfig; 
             private String versionState; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.argument = model.argument;
+                this.configCheckRule = model.configCheckRule;
+                this.containerConfig = model.containerConfig;
+                this.description = model.description;
+                this.driverConfig = model.driverConfig;
+                this.driverId = model.driverId;
+                this.driverVersion = model.driverVersion;
+                this.edgeVersion = model.edgeVersion;
+                this.gmtCreateTimestamp = model.gmtCreateTimestamp;
+                this.gmtModifiedTimestamp = model.gmtModifiedTimestamp;
+                this.sourceConfig = model.sourceConfig;
+                this.versionState = model.versionState;
+            } 
+
             /**
-             * Argument.
+             * <p>The Java Virtual Machine (JVM) startup parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-XX:+PrintGCDetails</p>
              */
             public Builder argument(String argument) {
                 this.argument = argument;
@@ -298,7 +357,16 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigCheckRule.
+             * <p>The rule for verifying configurations. The value is a JSON string in the following format:</p>
+             * <p><code>{&quot;deviceConfig&quot;:{&quot;required&quot;:false},&quot;driverConfig&quot;:{&quot;required&quot;:false}</code></p>
+             * <p>The JSON string contains the following parameters:</p>
+             * <ul>
+             * <li>driverConfig: the rule for verifying the configuration of the driver when the driver is to be deployed in an edge instance.</li>
+             * <li>deviceConfig: the rule for verifying the configurations of devices that use the driver when the driver is to be deployed in an edge instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;deviceConfig&quot;:{&quot;required&quot;:false},&quot;driverConfig&quot;:{&quot;required&quot;:false}}</p>
              */
             public Builder configCheckRule(String configCheckRule) {
                 this.configCheckRule = configCheckRule;
@@ -306,7 +374,10 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerConfig.
+             * <p>The configuration of the container where the driver runs. The value is a JSON string. For more information about parameters in the JSON string, see the following parameter description of ContainerConfig.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;devMappings&quot;:[],&quot;hostNetworkMode&quot;:0,&quot;portMappings&quot;:[],&quot;privileged&quot;:1,&quot;volumeMappings&quot;:[]}</p>
              */
             public Builder containerConfig(String containerConfig) {
                 this.containerConfig = containerConfig;
@@ -314,7 +385,7 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the driver.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -322,7 +393,16 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
             }
 
             /**
-             * DriverConfig.
+             * <p>The configuration of the driver. The value is a JSON string in the following format:</p>
+             * <p><code>{&quot;format&quot;:&quot;JSON&quot;,&quot;content&quot;:&quot;{}&quot;}</code></p>
+             * <p>The JSON string contains the following parameters:</p>
+             * <ul>
+             * <li>format: the format of the driver configuration. Valid values: KV (key-value pair), JSON (JSON string), and FILE (configuration file).</li>
+             * <li>content: the content of the driver configuration. If the format parameter is set to KV or JSON, the value of this parameter is the configuration content. If the format parameter is set to FILE, the value of this parameter is the URL of the configuration file stored in Object Storage Service (OSS).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;content&quot;:&quot;{\&quot;defaultConfig\&quot;:\&quot;this is default driver config demo\&quot;}&quot;,&quot;format&quot;:&quot;JSON&quot;}]</p>
              */
             public Builder driverConfig(String driverConfig) {
                 this.driverConfig = driverConfig;
@@ -330,7 +410,10 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
             }
 
             /**
-             * DriverId.
+             * <p>The ID of the driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fec565038d7544978d9aed5c1a******</p>
              */
             public Builder driverId(String driverId) {
                 this.driverId = driverId;
@@ -338,7 +421,10 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
             }
 
             /**
-             * DriverVersion.
+             * <p>The version number of the driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.0</p>
              */
             public Builder driverVersion(String driverVersion) {
                 this.driverVersion = driverVersion;
@@ -346,7 +432,10 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
             }
 
             /**
-             * EdgeVersion.
+             * <p>The earliest version of Link IoT Edge that is supported by the driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0.0</p>
              */
             public Builder edgeVersion(String edgeVersion) {
                 this.edgeVersion = edgeVersion;
@@ -354,7 +443,10 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTimestamp.
+             * <p>The UNIX timestamp when the driver was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581912859713</p>
              */
             public Builder gmtCreateTimestamp(Long gmtCreateTimestamp) {
                 this.gmtCreateTimestamp = gmtCreateTimestamp;
@@ -362,7 +454,10 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTimestamp.
+             * <p>The last UNIX timestamp when the driver was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581912859713</p>
              */
             public Builder gmtModifiedTimestamp(Long gmtModifiedTimestamp) {
                 this.gmtModifiedTimestamp = gmtModifiedTimestamp;
@@ -378,7 +473,14 @@ public class GetEdgeDriverVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionState.
+             * <p>The status of the driver version. Valid values:</p>
+             * <ul>
+             * <li>0: The driver version was not published.</li>
+             * <li>1: The driver version was published.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder versionState(String versionState) {
                 this.versionState = versionState;

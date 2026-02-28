@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseEdgeDriverVersionRequest} extends {@link RequestModel}
  *
  * <p>ReleaseEdgeDriverVersionRequest</p>
  */
 public class ReleaseEdgeDriverVersionRequest extends Request {
-    @Query
-    @NameInMap("DriverId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DriverId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String driverId;
 
-    @Query
-    @NameInMap("DriverVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DriverVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String driverVersion;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private ReleaseEdgeDriverVersionRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class ReleaseEdgeDriverVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,10 @@ public class ReleaseEdgeDriverVersionRequest extends Request {
         } 
 
         /**
-         * DriverId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fec565038d7544978d9aed5c1a******</p>
          */
         public Builder driverId(String driverId) {
             this.putQueryParameter("DriverId", driverId);
@@ -93,7 +101,10 @@ public class ReleaseEdgeDriverVersionRequest extends Request {
         }
 
         /**
-         * DriverVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.0</p>
          */
         public Builder driverVersion(String driverVersion) {
             this.putQueryParameter("DriverVersion", driverVersion);

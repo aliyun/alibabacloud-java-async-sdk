@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachDestinationRequest} extends {@link RequestModel}
  *
  * <p>DetachDestinationRequest</p>
  */
 public class DetachDestinationRequest extends Request {
-    @Query
-    @NameInMap("DestinationId")
-    @Validation(required = true, maximum = 999999999999D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999999D)
     private Long destinationId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ParserId")
-    @Validation(required = true, maximum = 9999999999D, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParserId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 9999999999D, minimum = 1)
     private Long parserId;
 
     private DetachDestinationRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class DetachDestinationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,11 @@ public class DetachDestinationRequest extends Request {
         } 
 
         /**
-         * DestinationId.
+         * <p>The ID of the data destination. You can call the <a href="https://help.aliyun.com/document_detail/433025.html">ListDestination</a> operation to query data destinations and obtain the ID of the <strong>data destination</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1002</p>
          */
         public Builder destinationId(Long destinationId) {
             this.putQueryParameter("DestinationId", destinationId);
@@ -93,7 +102,17 @@ public class DetachDestinationRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.</li>
+         * <li>If no <strong>Overview</strong> page or ID is generated for your instance, you do not need to configure this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-2w****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -102,7 +121,11 @@ public class DetachDestinationRequest extends Request {
         }
 
         /**
-         * ParserId.
+         * <p>The ID of the parser. You can call the <a href="https://help.aliyun.com/document_detail/444814.html">ListParser</a> operation to query parsers and obtain the ID of the <strong>parser</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder parserId(Long parserId) {
             this.putQueryParameter("ParserId", parserId);

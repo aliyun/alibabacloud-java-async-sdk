@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSoundCodeRequest} extends {@link RequestModel}
  *
  * <p>UpdateSoundCodeRequest</p>
  */
 public class UpdateSoundCodeRequest extends Request {
-    @Body
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("SoundCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SoundCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String soundCode;
 
-    @Body
-    @NameInMap("SoundCodeContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SoundCodeContent")
     private String soundCodeContent;
 
     private UpdateSoundCodeRequest(Builder builder) {
@@ -50,7 +55,7 @@ public class UpdateSoundCodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -138,7 +143,10 @@ public class UpdateSoundCodeRequest extends Request {
         }
 
         /**
-         * SoundCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Md3ZiTL888K9llXDy7890***********</p>
          */
         public Builder soundCode(String soundCode) {
             this.putBodyParameter("SoundCode", soundCode);

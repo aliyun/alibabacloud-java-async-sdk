@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductByTagsRequest} extends {@link RequestModel}
  *
  * <p>ListProductByTagsRequest</p>
  */
 public class ListProductByTagsRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductTag")
-    @Validation(required = true)
-    private java.util.List < ProductTag> productTag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductTag")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ProductTag> productTag;
 
     private ListProductByTagsRequest(Builder builder) {
         super(builder);
@@ -45,7 +50,7 @@ public class ListProductByTagsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +79,7 @@ public class ListProductByTagsRequest extends Request {
     /**
      * @return productTag
      */
-    public java.util.List < ProductTag> getProductTag() {
+    public java.util.List<ProductTag> getProductTag() {
         return this.productTag;
     }
 
@@ -82,7 +87,7 @@ public class ListProductByTagsRequest extends Request {
         private Integer currentPage; 
         private String iotInstanceId; 
         private Integer pageSize; 
-        private java.util.List < ProductTag> productTag; 
+        private java.util.List<ProductTag> productTag; 
 
         private Builder() {
             super();
@@ -97,7 +102,10 @@ public class ListProductByTagsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -106,7 +114,17 @@ public class ListProductByTagsRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+         * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-v64***</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -115,7 +133,10 @@ public class ListProductByTagsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,9 +145,9 @@ public class ListProductByTagsRequest extends Request {
         }
 
         /**
-         * ProductTag.
+         * <p>This parameter is required.</p>
          */
-        public Builder productTag(java.util.List < ProductTag> productTag) {
+        public Builder productTag(java.util.List<ProductTag> productTag) {
             this.putQueryParameter("ProductTag", productTag);
             this.productTag = productTag;
             return this;
@@ -139,12 +160,18 @@ public class ListProductByTagsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductByTagsRequest} extends {@link TeaModel}
+     *
+     * <p>ListProductByTagsRequest</p>
+     */
     public static class ProductTag extends TeaModel {
-        @NameInMap("TagKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private ProductTag(Builder builder) {
@@ -178,8 +205,20 @@ public class ListProductByTagsRequest extends Request {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductTag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * TagKey.
+             * <p>The keys of the product tags.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>room</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -187,7 +226,10 @@ public class ListProductByTagsRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>The values of the product tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

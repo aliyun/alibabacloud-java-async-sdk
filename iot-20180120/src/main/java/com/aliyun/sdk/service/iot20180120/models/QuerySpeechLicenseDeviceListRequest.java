@@ -1,43 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySpeechLicenseDeviceListRequest} extends {@link RequestModel}
  *
  * <p>QuerySpeechLicenseDeviceListRequest</p>
  */
 public class QuerySpeechLicenseDeviceListRequest extends Request {
-    @Body
-    @NameInMap("CheckGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckGroupId")
     private String checkGroupId;
 
-    @Body
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("LicenseStatusList")
-    private java.util.List < String > licenseStatusList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LicenseStatusList")
+    private java.util.List<String> licenseStatusList;
 
-    @Query
-    @NameInMap("PageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageId")
     private Integer pageId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
     private QuerySpeechLicenseDeviceListRequest(Builder builder) {
@@ -59,7 +65,7 @@ public class QuerySpeechLicenseDeviceListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -88,7 +94,7 @@ public class QuerySpeechLicenseDeviceListRequest extends Request {
     /**
      * @return licenseStatusList
      */
-    public java.util.List < String > getLicenseStatusList() {
+    public java.util.List<String> getLicenseStatusList() {
         return this.licenseStatusList;
     }
 
@@ -117,7 +123,7 @@ public class QuerySpeechLicenseDeviceListRequest extends Request {
         private String checkGroupId; 
         private String deviceName; 
         private String iotInstanceId; 
-        private java.util.List < String > licenseStatusList; 
+        private java.util.List<String> licenseStatusList; 
         private Integer pageId; 
         private Integer pageSize; 
         private String productKey; 
@@ -138,7 +144,10 @@ public class QuerySpeechLicenseDeviceListRequest extends Request {
         } 
 
         /**
-         * CheckGroupId.
+         * <p>The ID of a device group. The InSpecifiedGroup response parameter indicates whether the devices belong to the specified group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4de2c367**<strong>8c585e5992</strong></p>
          */
         public Builder checkGroupId(String checkGroupId) {
             this.putBodyParameter("CheckGroupId", checkGroupId);
@@ -147,7 +156,10 @@ public class QuerySpeechLicenseDeviceListRequest extends Request {
         }
 
         /**
-         * DeviceName.
+         * <p>The keyword in the DeviceName of the device whose information you want to query. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder deviceName(String deviceName) {
             this.putBodyParameter("DeviceName", deviceName);
@@ -156,7 +168,14 @@ public class QuerySpeechLicenseDeviceListRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p> You must specify this parameter for a public instance of the new version or an Enterprise Edition instance. You do not need to specify this parameter for a public instance of the previous version.</p>
+         * </blockquote>
+         * <p>For more information, see the <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a> topic of IoT instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-e3***</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -165,16 +184,27 @@ public class QuerySpeechLicenseDeviceListRequest extends Request {
         }
 
         /**
-         * LicenseStatusList.
+         * <p>The license status.</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The license is valid.</li>
+         * <li><strong>EXPIRE</strong>: The license is expired.</li>
+         * <li><strong>EXPIRING</strong>: The license is about to expire.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
-        public Builder licenseStatusList(java.util.List < String > licenseStatusList) {
+        public Builder licenseStatusList(java.util.List<String> licenseStatusList) {
             this.putBodyParameter("LicenseStatusList", licenseStatusList);
             this.licenseStatusList = licenseStatusList;
             return this;
         }
 
         /**
-         * PageId.
+         * <p>The page number. Valid values: 1 to 10000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageId(Integer pageId) {
             this.putQueryParameter("PageId", pageId);
@@ -183,7 +213,10 @@ public class QuerySpeechLicenseDeviceListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 50. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,7 +225,10 @@ public class QuerySpeechLicenseDeviceListRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product to which the devices belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putBodyParameter("ProductKey", productKey);

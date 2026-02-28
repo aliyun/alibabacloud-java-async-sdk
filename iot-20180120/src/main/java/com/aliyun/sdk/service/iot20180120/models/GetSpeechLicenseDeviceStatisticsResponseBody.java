@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSpeechLicenseDeviceStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetSpeechLicenseDeviceStatisticsResponseBody</p>
  */
 public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSpeechLicenseDeviceStatisticsResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
 
     public static GetSpeechLicenseDeviceStatisticsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetSpeechLicenseDeviceStatisticsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An internal error occurred. Try again later.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +136,10 @@ public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF71BF1D-B552-47CD-B34B-352557627992</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,14 @@ public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +167,20 @@ public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSpeechLicenseDeviceStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpeechLicenseDeviceStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AvailableQuota")
+        @com.aliyun.core.annotation.NameInMap("AvailableQuota")
         private Integer availableQuota;
 
-        @NameInMap("ExpiredQuota")
+        @com.aliyun.core.annotation.NameInMap("ExpiredQuota")
         private Integer expiredQuota;
 
-        @NameInMap("ExpiringQuota")
+        @com.aliyun.core.annotation.NameInMap("ExpiringQuota")
         private Integer expiringQuota;
 
         private Data(Builder builder) {
@@ -181,8 +223,20 @@ public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
             private Integer expiredQuota; 
             private Integer expiringQuota; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.availableQuota = model.availableQuota;
+                this.expiredQuota = model.expiredQuota;
+                this.expiringQuota = model.expiringQuota;
+            } 
+
             /**
-             * AvailableQuota.
+             * <p>The number of available licenses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder availableQuota(Integer availableQuota) {
                 this.availableQuota = availableQuota;
@@ -190,7 +244,10 @@ public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredQuota.
+             * <p>The number of expired licenses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder expiredQuota(Integer expiredQuota) {
                 this.expiredQuota = expiredQuota;
@@ -198,7 +255,10 @@ public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiringQuota.
+             * <p>The number of licenses that are about to expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder expiringQuota(Integer expiringQuota) {
                 this.expiringQuota = expiringQuota;

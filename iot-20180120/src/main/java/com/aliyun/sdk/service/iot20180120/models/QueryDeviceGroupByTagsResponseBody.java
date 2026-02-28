@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceGroupByTagsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceGroupByTagsResponseBody</p>
  */
 public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Integer pageCount;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private QueryDeviceGroupByTagsResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
 
     public static QueryDeviceGroupByTagsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -133,8 +142,26 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
         private Boolean success; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceGroupByTagsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.page = model.page;
+            this.pageCount = model.pageCount;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,7 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The group information returned if the call succeeds.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,7 +177,7 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -158,7 +185,10 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -166,7 +196,10 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -174,7 +207,10 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +218,10 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9599EE98-1642-4FCD-BFC4-039E458A4693</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +229,14 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +244,10 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -211,11 +260,17 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceGroupByTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceGroupByTagsResponseBody</p>
+     */
     public static class DeviceGroup extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private DeviceGroup(Builder builder) {
@@ -249,8 +304,19 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
             private String groupId; 
             private String groupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceGroup model) {
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+            } 
+
             /**
-             * GroupId.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Z0ElGF5aqc0t****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -258,7 +324,10 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test11</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -272,9 +341,15 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceGroupByTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceGroupByTagsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeviceGroup")
-        private java.util.List < DeviceGroup> deviceGroup;
+        @com.aliyun.core.annotation.NameInMap("DeviceGroup")
+        private java.util.List<DeviceGroup> deviceGroup;
 
         private Data(Builder builder) {
             this.deviceGroup = builder.deviceGroup;
@@ -291,17 +366,24 @@ public class QueryDeviceGroupByTagsResponseBody extends TeaModel {
         /**
          * @return deviceGroup
          */
-        public java.util.List < DeviceGroup> getDeviceGroup() {
+        public java.util.List<DeviceGroup> getDeviceGroup() {
             return this.deviceGroup;
         }
 
         public static final class Builder {
-            private java.util.List < DeviceGroup> deviceGroup; 
+            private java.util.List<DeviceGroup> deviceGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deviceGroup = model.deviceGroup;
+            } 
 
             /**
              * DeviceGroup.
              */
-            public Builder deviceGroup(java.util.List < DeviceGroup> deviceGroup) {
+            public Builder deviceGroup(java.util.List<DeviceGroup> deviceGroup) {
                 this.deviceGroup = deviceGroup;
                 return this;
             }

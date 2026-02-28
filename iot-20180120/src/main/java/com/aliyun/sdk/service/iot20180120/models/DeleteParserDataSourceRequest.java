@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteParserDataSourceRequest} extends {@link RequestModel}
  *
  * <p>DeleteParserDataSourceRequest</p>
  */
 public class DeleteParserDataSourceRequest extends Request {
-    @Query
-    @NameInMap("DataSourceId")
-    @Validation(required = true, maximum = 999999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999)
     private Long dataSourceId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private DeleteParserDataSourceRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class DeleteParserDataSourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,10 @@ public class DeleteParserDataSourceRequest extends Request {
         } 
 
         /**
-         * DataSourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder dataSourceId(Long dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);

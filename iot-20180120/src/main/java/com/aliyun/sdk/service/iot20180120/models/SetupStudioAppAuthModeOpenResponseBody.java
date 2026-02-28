@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetupStudioAppAuthModeOpenResponseBody} extends {@link TeaModel}
  *
  * <p>SetupStudioAppAuthModeOpenResponseBody</p>
  */
 public class SetupStudioAppAuthModeOpenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SetupStudioAppAuthModeOpenResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class SetupStudioAppAuthModeOpenResponseBody extends TeaModel {
 
     public static SetupStudioAppAuthModeOpenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class SetupStudioAppAuthModeOpenResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetupStudioAppAuthModeOpenResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,20 +151,26 @@ public class SetupStudioAppAuthModeOpenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SetupStudioAppAuthModeOpenResponseBody} extends {@link TeaModel}
+     *
+     * <p>SetupStudioAppAuthModeOpenResponseBody</p>
+     */
     public static class TokenInfo extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("IsEnable")
+        @com.aliyun.core.annotation.NameInMap("IsEnable")
         private String isEnable;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TokenInfo(Builder builder) {
@@ -205,6 +231,17 @@ public class SetupStudioAppAuthModeOpenResponseBody extends TeaModel {
             private String token; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(TokenInfo model) {
+                this.bizId = model.bizId;
+                this.bizType = model.bizType;
+                this.isEnable = model.isEnable;
+                this.token = model.token;
+                this.type = model.type;
+            } 
+
             /**
              * BizId.
              */
@@ -252,11 +289,17 @@ public class SetupStudioAppAuthModeOpenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SetupStudioAppAuthModeOpenResponseBody} extends {@link TeaModel}
+     *
+     * <p>SetupStudioAppAuthModeOpenResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AuthMode")
+        @com.aliyun.core.annotation.NameInMap("AuthMode")
         private Integer authMode;
 
-        @NameInMap("TokenInfo")
+        @com.aliyun.core.annotation.NameInMap("TokenInfo")
         private TokenInfo tokenInfo;
 
         private Data(Builder builder) {
@@ -289,6 +332,14 @@ public class SetupStudioAppAuthModeOpenResponseBody extends TeaModel {
         public static final class Builder {
             private Integer authMode; 
             private TokenInfo tokenInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.authMode = model.authMode;
+                this.tokenInfo = model.tokenInfo;
+            } 
 
             /**
              * AuthMode.

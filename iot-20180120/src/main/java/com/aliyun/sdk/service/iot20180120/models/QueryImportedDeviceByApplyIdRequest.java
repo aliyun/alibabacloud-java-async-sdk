@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryImportedDeviceByApplyIdRequest} extends {@link RequestModel}
  *
  * <p>QueryImportedDeviceByApplyIdRequest</p>
  */
 public class QueryImportedDeviceByApplyIdRequest extends Request {
-    @Query
-    @NameInMap("ApplyId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long applyId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(required = true, maximum = 100000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100000, minimum = 1)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 1)
     private Integer pageSize;
 
     private QueryImportedDeviceByApplyIdRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class QueryImportedDeviceByApplyIdRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,11 @@ public class QueryImportedDeviceByApplyIdRequest extends Request {
         } 
 
         /**
-         * ApplyId.
+         * <p>The application ID. You can call the <a href="https://help.aliyun.com/document_detail/433878.html">BatchImportDevice</a> operation to obtain the application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1295006</p>
          */
         public Builder applyId(Long applyId) {
             this.putQueryParameter("ApplyId", applyId);
@@ -108,7 +117,14 @@ public class QueryImportedDeviceByApplyIdRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p> If your instance has an ID, you must specify this parameter. Otherwise, the request fails. If no Overview page exists or no instance ID is displayed, you do not need to specify this parameter.</p>
+         * </blockquote>
+         * <p>For more information, see the <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a> topic of IoT instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -117,7 +133,11 @@ public class QueryImportedDeviceByApplyIdRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Valid values: 1 to 10000.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -126,7 +146,11 @@ public class QueryImportedDeviceByApplyIdRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Valid values: 1 to 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

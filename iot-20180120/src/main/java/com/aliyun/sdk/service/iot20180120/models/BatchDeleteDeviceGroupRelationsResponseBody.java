@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDeleteDeviceGroupRelationsResponseBody} extends {@link TeaModel}
  *
  * <p>BatchDeleteDeviceGroupRelationsResponseBody</p>
  */
 public class BatchDeleteDeviceGroupRelationsResponseBody extends TeaModel {
-    @NameInMap("AlreadyRelatedGroupDeviceCount")
+    @com.aliyun.core.annotation.NameInMap("AlreadyRelatedGroupDeviceCount")
     private Integer alreadyRelatedGroupDeviceCount;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("SuccessDeviceCount")
+    @com.aliyun.core.annotation.NameInMap("SuccessDeviceCount")
     private Integer successDeviceCount;
 
-    @NameInMap("ValidDeviceCount")
+    @com.aliyun.core.annotation.NameInMap("ValidDeviceCount")
     private Integer validDeviceCount;
 
     private BatchDeleteDeviceGroupRelationsResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class BatchDeleteDeviceGroupRelationsResponseBody extends TeaModel {
 
     public static BatchDeleteDeviceGroupRelationsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,24 @@ public class BatchDeleteDeviceGroupRelationsResponseBody extends TeaModel {
         private Integer successDeviceCount; 
         private Integer validDeviceCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(BatchDeleteDeviceGroupRelationsResponseBody model) {
+            this.alreadyRelatedGroupDeviceCount = model.alreadyRelatedGroupDeviceCount;
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.successDeviceCount = model.successDeviceCount;
+            this.validDeviceCount = model.validDeviceCount;
+        } 
+
         /**
-         * AlreadyRelatedGroupDeviceCount.
+         * <p>The number of devices that exist in the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder alreadyRelatedGroupDeviceCount(Integer alreadyRelatedGroupDeviceCount) {
             this.alreadyRelatedGroupDeviceCount = alreadyRelatedGroupDeviceCount;
@@ -118,7 +143,10 @@ public class BatchDeleteDeviceGroupRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +154,7 @@ public class BatchDeleteDeviceGroupRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -134,7 +162,10 @@ public class BatchDeleteDeviceGroupRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8739385E-143F-4389-B900-B7DF9174CE0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +173,14 @@ public class BatchDeleteDeviceGroupRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,7 +188,10 @@ public class BatchDeleteDeviceGroupRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessDeviceCount.
+         * <p>The number of devices that are removed from the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder successDeviceCount(Integer successDeviceCount) {
             this.successDeviceCount = successDeviceCount;
@@ -158,7 +199,10 @@ public class BatchDeleteDeviceGroupRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * ValidDeviceCount.
+         * <p>The number of valid devices that you specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder validDeviceCount(Integer validDeviceCount) {
             this.validDeviceCount = validDeviceCount;

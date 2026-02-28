@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GisQueryDeviceLocationRequest} extends {@link RequestModel}
  *
  * <p>GisQueryDeviceLocationRequest</p>
  */
 public class GisQueryDeviceLocationRequest extends Request {
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ThingList")
-    @Validation(required = true)
-    private java.util.List < ThingList> thingList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThingList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ThingList> thingList;
 
     private GisQueryDeviceLocationRequest(Builder builder) {
         super(builder);
@@ -35,7 +40,7 @@ public class GisQueryDeviceLocationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -50,13 +55,13 @@ public class GisQueryDeviceLocationRequest extends Request {
     /**
      * @return thingList
      */
-    public java.util.List < ThingList> getThingList() {
+    public java.util.List<ThingList> getThingList() {
         return this.thingList;
     }
 
     public static final class Builder extends Request.Builder<GisQueryDeviceLocationRequest, Builder> {
         private String iotInstanceId; 
-        private java.util.List < ThingList> thingList; 
+        private java.util.List<ThingList> thingList; 
 
         private Builder() {
             super();
@@ -78,9 +83,9 @@ public class GisQueryDeviceLocationRequest extends Request {
         }
 
         /**
-         * ThingList.
+         * <p>This parameter is required.</p>
          */
-        public Builder thingList(java.util.List < ThingList> thingList) {
+        public Builder thingList(java.util.List<ThingList> thingList) {
             this.putQueryParameter("ThingList", thingList);
             this.thingList = thingList;
             return this;
@@ -93,11 +98,17 @@ public class GisQueryDeviceLocationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GisQueryDeviceLocationRequest} extends {@link TeaModel}
+     *
+     * <p>GisQueryDeviceLocationRequest</p>
+     */
     public static class ThingList extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
         private ThingList(Builder builder) {
@@ -130,6 +141,14 @@ public class GisQueryDeviceLocationRequest extends Request {
         public static final class Builder {
             private String deviceName; 
             private String productKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(ThingList model) {
+                this.deviceName = model.deviceName;
+                this.productKey = model.productKey;
+            } 
 
             /**
              * DeviceName.

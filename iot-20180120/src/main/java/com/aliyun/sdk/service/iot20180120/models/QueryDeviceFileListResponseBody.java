@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceFileListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceFileListResponseBody</p>
  */
 public class QueryDeviceFileListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Integer pageCount;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private QueryDeviceFileListResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
 
     public static QueryDeviceFileListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -133,8 +142,26 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
         private Boolean success; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceFileListResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.pageCount = model.pageCount;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,10 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -150,7 +180,7 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The file list information returned if the call succeeds.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -158,7 +188,7 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -166,7 +196,10 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -174,7 +207,10 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +218,10 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +229,14 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +244,10 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -211,17 +260,23 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceFileListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceFileListResponseBody</p>
+     */
     public static class FileSummary extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("UtcCreatedOn")
+        @com.aliyun.core.annotation.NameInMap("UtcCreatedOn")
         private String utcCreatedOn;
 
         private FileSummary(Builder builder) {
@@ -273,8 +328,21 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
             private String size; 
             private String utcCreatedOn; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileSummary model) {
+                this.fileId = model.fileId;
+                this.name = model.name;
+                this.size = model.size;
+                this.utcCreatedOn = model.utcCreatedOn;
+            } 
+
             /**
-             * FileId.
+             * <p>The ID of each file. The ID is the unique identifier for the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xL0G67MBLBDtkR7GCfT******</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -282,7 +350,10 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testFile2.txt</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -290,7 +361,10 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the file. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024000</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -298,7 +372,10 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreatedOn.
+             * <p>The time when the file was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-21T08:45:42.000Z</p>
              */
             public Builder utcCreatedOn(String utcCreatedOn) {
                 this.utcCreatedOn = utcCreatedOn;
@@ -312,9 +389,15 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceFileListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceFileListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("FileSummary")
-        private java.util.List < FileSummary> fileSummary;
+        @com.aliyun.core.annotation.NameInMap("FileSummary")
+        private java.util.List<FileSummary> fileSummary;
 
         private Data(Builder builder) {
             this.fileSummary = builder.fileSummary;
@@ -331,17 +414,24 @@ public class QueryDeviceFileListResponseBody extends TeaModel {
         /**
          * @return fileSummary
          */
-        public java.util.List < FileSummary> getFileSummary() {
+        public java.util.List<FileSummary> getFileSummary() {
             return this.fileSummary;
         }
 
         public static final class Builder {
-            private java.util.List < FileSummary> fileSummary; 
+            private java.util.List<FileSummary> fileSummary; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileSummary = model.fileSummary;
+            } 
 
             /**
              * FileSummary.
              */
-            public Builder fileSummary(java.util.List < FileSummary> fileSummary) {
+            public Builder fileSummary(java.util.List<FileSummary> fileSummary) {
                 this.fileSummary = fileSummary;
                 return this;
             }

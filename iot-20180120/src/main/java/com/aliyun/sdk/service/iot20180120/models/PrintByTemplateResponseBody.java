@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PrintByTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>PrintByTemplateResponseBody</p>
  */
 public class PrintByTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private PrintByTemplateResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class PrintByTemplateResponseBody extends TeaModel {
 
     public static PrintByTemplateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class PrintByTemplateResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(PrintByTemplateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.printservice.NotSigned</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class PrintByTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result of the printing operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class PrintByTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>print service not open</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +136,10 @@ public class PrintByTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66FF51D3-<em><strong>-49F1-B1A2-</strong></em></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,14 @@ public class PrintByTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,23 +167,29 @@ public class PrintByTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PrintByTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>PrintByTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeviceErrorCode")
+        @com.aliyun.core.annotation.NameInMap("DeviceErrorCode")
         private String deviceErrorCode;
 
-        @NameInMap("DeviceErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("DeviceErrorMessage")
         private String deviceErrorMessage;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MaxRetryCount")
+        @com.aliyun.core.annotation.NameInMap("MaxRetryCount")
         private Integer maxRetryCount;
 
-        @NameInMap("RetryCount")
+        @com.aliyun.core.annotation.NameInMap("RetryCount")
         private Integer retryCount;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Data(Builder builder) {
@@ -217,8 +259,27 @@ public class PrintByTemplateResponseBody extends TeaModel {
             private Integer retryCount; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deviceErrorCode = model.deviceErrorCode;
+                this.deviceErrorMessage = model.deviceErrorMessage;
+                this.id = model.id;
+                this.maxRetryCount = model.maxRetryCount;
+                this.retryCount = model.retryCount;
+                this.success = model.success;
+            } 
+
             /**
-             * DeviceErrorCode.
+             * <p>The error code returned by the printer. Valid values:</p>
+             * <ul>
+             * <li>2: The printer ran out of paper.</li>
+             * <li>3: A paper jam occurred in the printer.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder deviceErrorCode(String deviceErrorCode) {
                 this.deviceErrorCode = deviceErrorCode;
@@ -226,7 +287,10 @@ public class PrintByTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceErrorMessage.
+             * <p>The error message returned by the printer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no paper</p>
              */
             public Builder deviceErrorMessage(String deviceErrorMessage) {
                 this.deviceErrorMessage = deviceErrorMessage;
@@ -234,7 +298,10 @@ public class PrintByTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the printing operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NyWh5lw3<em><strong><strong>RfL9LJUivhOhQV</strong></strong></em></p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -242,7 +309,11 @@ public class PrintByTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRetryCount.
+             * <p>The maximum number of retries. The value is fixed at 2, which indicates that up to two printing retries are supported.</p>
+             * <p>If the printer responds to the printing command with a failure or timeout error, IoT Platform delivers the printing command to the printer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxRetryCount(Integer maxRetryCount) {
                 this.maxRetryCount = maxRetryCount;
@@ -250,7 +321,10 @@ public class PrintByTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * RetryCount.
+             * <p>The actual number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retryCount(Integer retryCount) {
                 this.retryCount = retryCount;
@@ -258,7 +332,14 @@ public class PrintByTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the printing operation was successful.</p>
+             * <ul>
+             * <li><strong>true</strong>: The printing operation was successful.</li>
+             * <li><strong>false</strong>: The printing operation failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

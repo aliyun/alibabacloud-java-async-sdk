@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchAddDataForApiSourceRequest} extends {@link RequestModel}
  *
  * <p>BatchAddDataForApiSourceRequest</p>
  */
 public class BatchAddDataForApiSourceRequest extends Request {
-    @Query
-    @NameInMap("ApiId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiId;
 
-    @Query
-    @NameInMap("ContentList")
-    @Validation(required = true)
-    private java.util.Map < String, ? > contentList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String contentList;
 
-    @Query
-    @NameInMap("IotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotInstanceId;
 
     private BatchAddDataForApiSourceRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class BatchAddDataForApiSourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -57,7 +62,7 @@ public class BatchAddDataForApiSourceRequest extends Request {
     /**
      * @return contentList
      */
-    public java.util.Map < String, ? > getContentList() {
+    public String getContentList() {
         return this.contentList;
     }
 
@@ -70,7 +75,7 @@ public class BatchAddDataForApiSourceRequest extends Request {
 
     public static final class Builder extends Request.Builder<BatchAddDataForApiSourceRequest, Builder> {
         private String apiId; 
-        private java.util.Map < String, ? > contentList; 
+        private String contentList; 
         private String iotInstanceId; 
 
         private Builder() {
@@ -85,7 +90,10 @@ public class BatchAddDataForApiSourceRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cxatswiniekxw***</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -94,17 +102,22 @@ public class BatchAddDataForApiSourceRequest extends Request {
         }
 
         /**
-         * ContentList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;:&quot;value1&quot;,&quot;ts&quot;:1637658286000},{&quot;key&quot;:&quot;value2&quot;,&quot;ts&quot;:1637658287000}]</p>
          */
-        public Builder contentList(java.util.Map < String, ? > contentList) {
-            String contentListShrink = shrink(contentList, "ContentList", "json");
-            this.putQueryParameter("ContentList", contentListShrink);
+        public Builder contentList(String contentList) {
+            this.putQueryParameter("ContentList", contentList);
             this.contentList = contentList;
             return this;
         }
 
         /**
-         * IotInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-0pp1n*****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);

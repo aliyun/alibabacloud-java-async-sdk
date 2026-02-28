@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLoRaNodesTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateLoRaNodesTaskRequest</p>
  */
 public class CreateLoRaNodesTaskRequest extends Request {
-    @Query
-    @NameInMap("DeviceInfo")
-    @Validation(required = true)
-    private java.util.List < DeviceInfo> deviceInfo;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<DeviceInfo> deviceInfo;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
     private CreateLoRaNodesTaskRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class CreateLoRaNodesTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,7 +54,7 @@ public class CreateLoRaNodesTaskRequest extends Request {
     /**
      * @return deviceInfo
      */
-    public java.util.List < DeviceInfo> getDeviceInfo() {
+    public java.util.List<DeviceInfo> getDeviceInfo() {
         return this.deviceInfo;
     }
 
@@ -68,7 +73,7 @@ public class CreateLoRaNodesTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateLoRaNodesTaskRequest, Builder> {
-        private java.util.List < DeviceInfo> deviceInfo; 
+        private java.util.List<DeviceInfo> deviceInfo; 
         private String iotInstanceId; 
         private String productKey; 
 
@@ -84,16 +89,24 @@ public class CreateLoRaNodesTaskRequest extends Request {
         } 
 
         /**
-         * DeviceInfo.
+         * <p>The LoRaWAN devices.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder deviceInfo(java.util.List < DeviceInfo> deviceInfo) {
+        public Builder deviceInfo(java.util.List<DeviceInfo> deviceInfo) {
             this.putQueryParameter("DeviceInfo", deviceInfo);
             this.deviceInfo = deviceInfo;
             return this;
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p> If your instance has an ID, you must specify this parameter. Otherwise, the request fails. If no Overview page exists or no instance ID is displayed, you do not need to specify this parameter.</p>
+         * </blockquote>
+         * <p>For more information, see the <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a> topic of IoT instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -102,7 +115,11 @@ public class CreateLoRaNodesTaskRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product to which the devices belong.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -117,11 +134,17 @@ public class CreateLoRaNodesTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateLoRaNodesTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLoRaNodesTaskRequest</p>
+     */
     public static class DeviceInfo extends TeaModel {
-        @NameInMap("DevEui")
+        @com.aliyun.core.annotation.NameInMap("DevEui")
         private String devEui;
 
-        @NameInMap("PinCode")
+        @com.aliyun.core.annotation.NameInMap("PinCode")
         private String pinCode;
 
         private DeviceInfo(Builder builder) {
@@ -155,8 +178,19 @@ public class CreateLoRaNodesTaskRequest extends Request {
             private String devEui; 
             private String pinCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceInfo model) {
+                this.devEui = model.devEui;
+                this.pinCode = model.pinCode;
+            } 
+
             /**
-             * DevEui.
+             * <p>The DevEUI of the LoRaWAN device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d896e0efff00****</p>
              */
             public Builder devEui(String devEui) {
                 this.devEui = devEui;
@@ -164,7 +198,10 @@ public class CreateLoRaNodesTaskRequest extends Request {
             }
 
             /**
-             * PinCode.
+             * <p>The PIN code of the LoRaWAN device. The value of the parameter is used to verify the DevEUI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123***</p>
              */
             public Builder pinCode(String pinCode) {
                 this.pinCode = pinCode;

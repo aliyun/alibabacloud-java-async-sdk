@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateDeviceNameListURLResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateDeviceNameListURLResponseBody</p>
  */
 public class GenerateDeviceNameListURLResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GenerateDeviceNameListURLResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
 
     public static GenerateDeviceNameListURLResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GenerateDeviceNameListURLResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The information returned if the call is successful. For more information, see the following parameters:</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74C2BB8D-1D6F-41F5-AE68-6B2310883F63</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,29 +164,35 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateDeviceNameListURLResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateDeviceNameListURLResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("FileUrl")
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("ObjectStorage")
+        @com.aliyun.core.annotation.NameInMap("ObjectStorage")
         private String objectStorage;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Signature")
+        @com.aliyun.core.annotation.NameInMap("Signature")
         private String signature;
 
-        @NameInMap("UtcCreate")
+        @com.aliyun.core.annotation.NameInMap("UtcCreate")
         private String utcCreate;
 
         private Data(Builder builder) {
@@ -241,8 +280,26 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
             private String signature; 
             private String utcCreate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessKeyId = model.accessKeyId;
+                this.fileUrl = model.fileUrl;
+                this.host = model.host;
+                this.key = model.key;
+                this.objectStorage = model.objectStorage;
+                this.policy = model.policy;
+                this.signature = model.signature;
+                this.utcCreate = model.utcCreate;
+            } 
+
             /**
-             * AccessKeyId.
+             * <p>The AccessKey ID of the bucket owner.</p>
+             * <p>The OSS bucket stores the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cS8uRRy54Rsz****</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -250,7 +307,8 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The URL of the file that is stored in OSS.</p>
+             * <p>After the device list file is uploaded, this parameter is used to call the <a href="https://help.aliyun.com/document_detail/147496.html">CreateOTAStaticUpgradeJob</a> operation to create a static update batch.</p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -258,7 +316,10 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The endpoint of OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://iotx-ota.oss-cn-shanghai.aliyuncs.com">https://iotx-ota.oss-cn-shanghai.aliyuncs.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -266,7 +327,7 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The full path of the file in OSS. You can call the OSS PostObject operation to upload the file to OSS.</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -274,7 +335,10 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectStorage.
+             * <p>The type of the object storage. Default value: OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder objectStorage(String objectStorage) {
                 this.objectStorage = objectStorage;
@@ -282,7 +346,10 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>The parameter that is used by OSS to verify form fields for the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJleHBpcmF****</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -290,7 +357,10 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>The signature that is calculated based on <strong>AccessKeySecret</strong> and <strong>Policy</strong>. When you call an OSS operation, OSS uses the signature information to verify the POST request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v6lViO4FBvfquajQjg20K5hK****</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -298,7 +368,10 @@ public class GenerateDeviceNameListURLResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreate.
+             * <p>The time when the URL of the file that you want to upload was generated. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-04T06:21:54.607Z</p>
              */
             public Builder utcCreate(String utcCreate) {
                 this.utcCreate = utcCreate;

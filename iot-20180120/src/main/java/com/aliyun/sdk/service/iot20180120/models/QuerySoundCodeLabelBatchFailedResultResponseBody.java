@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySoundCodeLabelBatchFailedResultResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySoundCodeLabelBatchFailedResultResponseBody</p>
  */
 public class QuerySoundCodeLabelBatchFailedResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySoundCodeLabelBatchFailedResultResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QuerySoundCodeLabelBatchFailedResultResponseBody extends TeaModel {
 
     public static QuerySoundCodeLabelBatchFailedResultResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QuerySoundCodeLabelBatchFailedResultResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySoundCodeLabelBatchFailedResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,14 +151,20 @@ public class QuerySoundCodeLabelBatchFailedResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySoundCodeLabelBatchFailedResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySoundCodeLabelBatchFailedResultResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("ResultCode")
+        @com.aliyun.core.annotation.NameInMap("ResultCode")
         private String resultCode;
 
         private Items(Builder builder) {
@@ -181,6 +207,15 @@ public class QuerySoundCodeLabelBatchFailedResultResponseBody extends TeaModel {
             private String label; 
             private String resultCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.errorMessage = model.errorMessage;
+                this.label = model.label;
+                this.resultCode = model.resultCode;
+            } 
+
             /**
              * ErrorMessage.
              */
@@ -212,9 +247,15 @@ public class QuerySoundCodeLabelBatchFailedResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySoundCodeLabelBatchFailedResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySoundCodeLabelBatchFailedResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
         private Data(Builder builder) {
             this.items = builder.items;
@@ -231,17 +272,24 @@ public class QuerySoundCodeLabelBatchFailedResultResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+            } 
 
             /**
              * Items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

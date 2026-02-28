@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataAPIServiceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDataAPIServiceResponseBody</p>
  */
 public class CreateDataAPIServiceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateDataAPIServiceResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class CreateDataAPIServiceResponseBody extends TeaModel {
 
     public static CreateDataAPIServiceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CreateDataAPIServiceResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDataAPIServiceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,14 +151,20 @@ public class CreateDataAPIServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDataAPIServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataAPIServiceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ApiSrn")
+        @com.aliyun.core.annotation.NameInMap("ApiSrn")
         private String apiSrn;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("LastUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
         private Long lastUpdateTime;
 
         private Data(Builder builder) {
@@ -180,6 +206,15 @@ public class CreateDataAPIServiceResponseBody extends TeaModel {
             private String apiSrn; 
             private Long createTime; 
             private Long lastUpdateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiSrn = model.apiSrn;
+                this.createTime = model.createTime;
+                this.lastUpdateTime = model.lastUpdateTime;
+            } 
 
             /**
              * ApiSrn.

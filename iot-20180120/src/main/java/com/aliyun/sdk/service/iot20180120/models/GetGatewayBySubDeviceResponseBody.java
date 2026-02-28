@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGatewayBySubDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>GetGatewayBySubDeviceResponseBody</p>
  */
 public class GetGatewayBySubDeviceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetGatewayBySubDeviceResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
 
     public static GetGatewayBySubDeviceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetGatewayBySubDeviceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The gateway details returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,53 +164,59 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGatewayBySubDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayBySubDeviceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("DeviceSecret")
+        @com.aliyun.core.annotation.NameInMap("DeviceSecret")
         private String deviceSecret;
 
-        @NameInMap("FirmwareVersion")
+        @com.aliyun.core.annotation.NameInMap("FirmwareVersion")
         private String firmwareVersion;
 
-        @NameInMap("GmtActive")
+        @com.aliyun.core.annotation.NameInMap("GmtActive")
         private String gmtActive;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtOnline")
+        @com.aliyun.core.annotation.NameInMap("GmtOnline")
         private String gmtOnline;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UtcActive")
+        @com.aliyun.core.annotation.NameInMap("UtcActive")
         private String utcActive;
 
-        @NameInMap("UtcCreate")
+        @com.aliyun.core.annotation.NameInMap("UtcCreate")
         private String utcCreate;
 
-        @NameInMap("UtcOnline")
+        @com.aliyun.core.annotation.NameInMap("UtcOnline")
         private String utcOnline;
 
-        @NameInMap("iotId")
+        @com.aliyun.core.annotation.NameInMap("iotId")
         private String iotId;
 
-        @NameInMap("region")
+        @com.aliyun.core.annotation.NameInMap("region")
         private String region;
 
         private Data(Builder builder) {
@@ -337,8 +376,33 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             private String iotId; 
             private String region; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deviceName = model.deviceName;
+                this.deviceSecret = model.deviceSecret;
+                this.firmwareVersion = model.firmwareVersion;
+                this.gmtActive = model.gmtActive;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtOnline = model.gmtOnline;
+                this.ipAddress = model.ipAddress;
+                this.nodeType = model.nodeType;
+                this.productKey = model.productKey;
+                this.productName = model.productName;
+                this.status = model.status;
+                this.utcActive = model.utcActive;
+                this.utcCreate = model.utcCreate;
+                this.utcOnline = model.utcOnline;
+                this.iotId = model.iotId;
+                this.region = model.region;
+            } 
+
             /**
-             * DeviceName.
+             * <p>The DeviceName of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gateway</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -346,7 +410,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceSecret.
+             * <p>The DeviceSecret of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dCYdTU3gw5Z77bsHjPk6lPHPVnBT****</p>
              */
             public Builder deviceSecret(String deviceSecret) {
                 this.deviceSecret = deviceSecret;
@@ -354,7 +421,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * FirmwareVersion.
+             * <p>The firmware version number of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V1.0.1</p>
              */
             public Builder firmwareVersion(String firmwareVersion) {
                 this.firmwareVersion = firmwareVersion;
@@ -362,7 +432,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtActive.
+             * <p>The activation time of the gateway. The time is displayed in GMT. The time is the local time of the region where the gateway resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-18 23:25:30</p>
              */
             public Builder gmtActive(String gmtActive) {
                 this.gmtActive = gmtActive;
@@ -370,7 +443,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time of the gateway. The time is displayed in GMT. The time is the local time of the region where the gateway resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-18 16:58:33</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -378,7 +454,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtOnline.
+             * <p>The last online time of the gateway. The time is displayed in GMT. The time is the local time of the region where the gateway resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-20 17:41:04</p>
              */
             public Builder gmtOnline(String gmtOnline) {
                 this.gmtOnline = gmtOnline;
@@ -386,7 +465,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * <p>The IP address of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>106.<strong>.1</strong>.**</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -394,7 +476,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type. The value 1 indicates that the device is a gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -402,7 +487,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The <strong>ProductKey</strong> of the product to which the gateway belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1BwAGV****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -410,7 +498,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The name of the product to which the gateway belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LinkIoT</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -418,7 +509,16 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the gateway device. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong>: The device is online.</li>
+             * <li><strong>offline</strong>: The device is offline.</li>
+             * <li><strong>unactive</strong>: The device is not activated.</li>
+             * <li><strong>disable</strong>: The device is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -426,7 +526,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * UtcActive.
+             * <p>The activation time of the gateway. The time is displayed in UTC. The actual time of the region where the gateway resides is calculated based on the time zone of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-18T15:25:30.176Z</p>
              */
             public Builder utcActive(String utcActive) {
                 this.utcActive = utcActive;
@@ -434,7 +537,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreate.
+             * <p>The creation time of the gateway. The time is displayed in UTC. The actual time of the region where the gateway resides is calculated based on the time zone of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-18T08:58:33.000Z</p>
              */
             public Builder utcCreate(String utcCreate) {
                 this.utcCreate = utcCreate;
@@ -442,7 +548,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * UtcOnline.
+             * <p>The last online time of the gateway. The time is displayed in UTC. The actual time of the region where the gateway resides is calculated based on the time zone of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-20T09:41:04.879Z</p>
              */
             public Builder utcOnline(String utcOnline) {
                 this.utcOnline = utcOnline;
@@ -450,7 +559,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * iotId.
+             * <p>The ID of the gateway device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WuyjPSDQE1L22z1d****000100</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -458,7 +570,10 @@ public class GetGatewayBySubDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>The region where the gateway resides. This region corresponds to the region that is displayed in the IoT Platform console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;

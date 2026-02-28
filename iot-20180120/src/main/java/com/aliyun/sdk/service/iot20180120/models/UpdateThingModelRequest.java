@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateThingModelRequest} extends {@link RequestModel}
  *
  * <p>UpdateThingModelRequest</p>
  */
 public class UpdateThingModelRequest extends Request {
-    @Query
-    @NameInMap("FunctionBlockId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FunctionBlockId")
     private String functionBlockId;
 
-    @Query
-    @NameInMap("FunctionBlockName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FunctionBlockName")
     private String functionBlockName;
 
-    @Query
-    @NameInMap("Identifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Identifier")
     private String identifier;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
-    @Query
-    @NameInMap("ThingModelJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThingModelJson")
     private String thingModelJson;
 
     private UpdateThingModelRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class UpdateThingModelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -125,7 +130,11 @@ public class UpdateThingModelRequest extends Request {
         } 
 
         /**
-         * FunctionBlockId.
+         * <p>The identifier of the custom TSL module. Each identifier is unique in a product.</p>
+         * <p>If you do not specify this parameter or the <strong>FunctionBlockName</strong> parameter, the system updates the features of the default module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BatteryModule</p>
          */
         public Builder functionBlockId(String functionBlockId) {
             this.putQueryParameter("FunctionBlockId", functionBlockId);
@@ -134,7 +143,14 @@ public class UpdateThingModelRequest extends Request {
         }
 
         /**
-         * FunctionBlockName.
+         * <p>The name of the custom module. The name must be 4 to 30 characters in length, and can contain letters, digits, and underscores (_).</p>
+         * <ul>
+         * <li>If you do not specify this parameter or the <strong>FunctionBlockId</strong> parameter, the system updates the features of the default module.</li>
+         * <li>If you specify this parameter, the parameter must be used in combination with the <strong>FunctionBlockId</strong> parameter. You can modify the name of the specified custom module. The name corresponds to the value of the <strong>FunctionBlockId</strong> parameter.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You cannot modify the name of the default module.</p>
+         * </blockquote>
          */
         public Builder functionBlockName(String functionBlockName) {
             this.putQueryParameter("FunctionBlockName", functionBlockName);
@@ -143,7 +159,11 @@ public class UpdateThingModelRequest extends Request {
         }
 
         /**
-         * Identifier.
+         * <p>The identifier of the feature.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/150319.html">GetThingModelTsl</a> operation and view the identifier in the <strong>TslStr</strong> response parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Temperature</p>
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
@@ -152,7 +172,17 @@ public class UpdateThingModelRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+         * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-0pp1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -161,7 +191,12 @@ public class UpdateThingModelRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product.</p>
+         * <p>You can view the ProductKey on the Product Details page of the IoT Platform console. You can also obtain the ProductKey by calling the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -170,7 +205,12 @@ public class UpdateThingModelRequest extends Request {
         }
 
         /**
-         * ThingModelJson.
+         * <p>The updated details of the feature.</p>
+         * <ul>
+         * <li>If you specify the <strong>Identifier</strong> parameter, you can define only the identifier of the feature.</li>
+         * <li>If you do not specify the <strong>Identifier</strong> parameter, you can define a maximum of 50 input and output parameters for a service or event.</li>
+         * </ul>
+         * <p>For more information about how to specify this parameter, see <a href="https://help.aliyun.com/document_detail/150457.html">Data structure of ThingModelJson</a>.</p>
          */
         public Builder thingModelJson(String thingModelJson) {
             this.putQueryParameter("ThingModelJson", thingModelJson);

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSetEdgeInstanceDeviceConfigRequest} extends {@link RequestModel}
  *
  * <p>BatchSetEdgeInstanceDeviceConfigRequest</p>
  */
 public class BatchSetEdgeInstanceDeviceConfigRequest extends Request {
-    @Query
-    @NameInMap("DeviceConfigs")
-    @Validation(required = true)
-    private java.util.List < DeviceConfigs> deviceConfigs;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceConfigs")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<DeviceConfigs> deviceConfigs;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private BatchSetEdgeInstanceDeviceConfigRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class BatchSetEdgeInstanceDeviceConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,7 +54,7 @@ public class BatchSetEdgeInstanceDeviceConfigRequest extends Request {
     /**
      * @return deviceConfigs
      */
-    public java.util.List < DeviceConfigs> getDeviceConfigs() {
+    public java.util.List<DeviceConfigs> getDeviceConfigs() {
         return this.deviceConfigs;
     }
 
@@ -68,7 +73,7 @@ public class BatchSetEdgeInstanceDeviceConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchSetEdgeInstanceDeviceConfigRequest, Builder> {
-        private java.util.List < DeviceConfigs> deviceConfigs; 
+        private java.util.List<DeviceConfigs> deviceConfigs; 
         private String instanceId; 
         private String iotInstanceId; 
 
@@ -84,16 +89,19 @@ public class BatchSetEdgeInstanceDeviceConfigRequest extends Request {
         } 
 
         /**
-         * DeviceConfigs.
+         * <p>This parameter is required.</p>
          */
-        public Builder deviceConfigs(java.util.List < DeviceConfigs> deviceConfigs) {
+        public Builder deviceConfigs(java.util.List<DeviceConfigs> deviceConfigs) {
             this.putQueryParameter("DeviceConfigs", deviceConfigs);
             this.deviceConfigs = deviceConfigs;
             return this;
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3APY0tPLhmgGtx0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,13 +125,19 @@ public class BatchSetEdgeInstanceDeviceConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchSetEdgeInstanceDeviceConfigRequest} extends {@link TeaModel}
+     *
+     * <p>BatchSetEdgeInstanceDeviceConfigRequest</p>
+     */
     public static class DeviceConfigs extends TeaModel {
-        @NameInMap("Content")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Content")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String content;
 
-        @NameInMap("IotId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IotId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String iotId;
 
         private DeviceConfigs(Builder builder) {
@@ -157,8 +171,19 @@ public class BatchSetEdgeInstanceDeviceConfigRequest extends Request {
             private String content; 
             private String iotId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceConfigs model) {
+                this.content = model.content;
+                this.iotId = model.iotId;
+            } 
+
             /**
-             * Content.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;test&quot;: &quot;device_config_demo&quot;}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -166,7 +191,10 @@ public class BatchSetEdgeInstanceDeviceConfigRequest extends Request {
             }
 
             /**
-             * IotId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sjI0Sd124XFYyjBY****000101</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;

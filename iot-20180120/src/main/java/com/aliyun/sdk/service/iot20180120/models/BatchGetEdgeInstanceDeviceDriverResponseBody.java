@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetEdgeInstanceDeviceDriverResponseBody} extends {@link TeaModel}
  *
  * <p>BatchGetEdgeInstanceDeviceDriverResponseBody</p>
  */
 public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DeviceDriverList")
-    private java.util.List < DeviceDriverList> deviceDriverList;
+    @com.aliyun.core.annotation.NameInMap("DeviceDriverList")
+    private java.util.List<DeviceDriverList> deviceDriverList;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchGetEdgeInstanceDeviceDriverResponseBody(Builder builder) {
@@ -43,6 +48,10 @@ public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,7 +62,7 @@ public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
     /**
      * @return deviceDriverList
      */
-    public java.util.List < DeviceDriverList> getDeviceDriverList() {
+    public java.util.List<DeviceDriverList> getDeviceDriverList() {
         return this.deviceDriverList;
     }
 
@@ -80,10 +89,21 @@ public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < DeviceDriverList> deviceDriverList; 
+        private java.util.List<DeviceDriverList> deviceDriverList; 
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchGetEdgeInstanceDeviceDriverResponseBody model) {
+            this.code = model.code;
+            this.deviceDriverList = model.deviceDriverList;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -96,7 +116,7 @@ public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
         /**
          * DeviceDriverList.
          */
-        public Builder deviceDriverList(java.util.List < DeviceDriverList> deviceDriverList) {
+        public Builder deviceDriverList(java.util.List<DeviceDriverList> deviceDriverList) {
             this.deviceDriverList = deviceDriverList;
             return this;
         }
@@ -131,11 +151,17 @@ public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchGetEdgeInstanceDeviceDriverResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetEdgeInstanceDeviceDriverResponseBody</p>
+     */
     public static class DeviceDriverList extends TeaModel {
-        @NameInMap("DriverId")
+        @com.aliyun.core.annotation.NameInMap("DriverId")
         private String driverId;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
         private DeviceDriverList(Builder builder) {
@@ -168,6 +194,14 @@ public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
         public static final class Builder {
             private String driverId; 
             private String iotId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceDriverList model) {
+                this.driverId = model.driverId;
+                this.iotId = model.iotId;
+            } 
 
             /**
              * DriverId.

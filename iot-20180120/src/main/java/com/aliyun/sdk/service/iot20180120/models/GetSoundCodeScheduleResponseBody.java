@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSoundCodeScheduleResponseBody} extends {@link TeaModel}
  *
  * <p>GetSoundCodeScheduleResponseBody</p>
  */
 public class GetSoundCodeScheduleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSoundCodeScheduleResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetSoundCodeScheduleResponseBody extends TeaModel {
 
     public static GetSoundCodeScheduleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetSoundCodeScheduleResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSoundCodeScheduleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,35 +151,41 @@ public class GetSoundCodeScheduleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSoundCodeScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSoundCodeScheduleResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OpenType")
+        @com.aliyun.core.annotation.NameInMap("OpenType")
         private String openType;
 
-        @NameInMap("ScheduleCode")
+        @com.aliyun.core.annotation.NameInMap("ScheduleCode")
         private String scheduleCode;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -264,6 +290,22 @@ public class GetSoundCodeScheduleResponseBody extends TeaModel {
             private String startDate; 
             private String startTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.endDate = model.endDate;
+                this.endTime = model.endTime;
+                this.gmtCreate = model.gmtCreate;
+                this.name = model.name;
+                this.openType = model.openType;
+                this.scheduleCode = model.scheduleCode;
+                this.startDate = model.startDate;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * Description.

@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLoraNodesTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetLoraNodesTaskResponseBody</p>
  */
 public class GetLoraNodesTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("SuccessCount")
+    @com.aliyun.core.annotation.NameInMap("SuccessCount")
     private Long successCount;
 
-    @NameInMap("SuccessDevEuis")
+    @com.aliyun.core.annotation.NameInMap("SuccessDevEuis")
     private SuccessDevEuis successDevEuis;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TaskState")
+    @com.aliyun.core.annotation.NameInMap("TaskState")
     private String taskState;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private GetLoraNodesTaskResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
 
     public static GetLoraNodesTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -133,8 +142,26 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
         private String taskState; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetLoraNodesTaskResponseBody model) {
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.successCount = model.successCount;
+            this.successDevEuis = model.successDevEuis;
+            this.taskId = model.taskId;
+            this.taskState = model.taskState;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,10 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A system exception occurred.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -150,7 +180,10 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +191,14 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -166,7 +206,10 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessCount.
+         * <p>The number of devices that were created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder successCount(Long successCount) {
             this.successCount = successCount;
@@ -182,7 +225,10 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>625***</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -190,7 +236,14 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskState.
+         * <p>The task status.</p>
+         * <ul>
+         * <li><strong>RUNNING</strong>: The task is in progress.</li>
+         * <li><strong>FINISH</strong>: The task is completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder taskState(String taskState) {
             this.taskState = taskState;
@@ -198,7 +251,10 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of devices that you want to create.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -211,9 +267,15 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLoraNodesTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLoraNodesTaskResponseBody</p>
+     */
     public static class SuccessDevEuis extends TeaModel {
-        @NameInMap("SuccessDevEui")
-        private java.util.List < String > successDevEui;
+        @com.aliyun.core.annotation.NameInMap("SuccessDevEui")
+        private java.util.List<String> successDevEui;
 
         private SuccessDevEuis(Builder builder) {
             this.successDevEui = builder.successDevEui;
@@ -230,17 +292,24 @@ public class GetLoraNodesTaskResponseBody extends TeaModel {
         /**
          * @return successDevEui
          */
-        public java.util.List < String > getSuccessDevEui() {
+        public java.util.List<String> getSuccessDevEui() {
             return this.successDevEui;
         }
 
         public static final class Builder {
-            private java.util.List < String > successDevEui; 
+            private java.util.List<String> successDevEui; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuccessDevEuis model) {
+                this.successDevEui = model.successDevEui;
+            } 
 
             /**
              * SuccessDevEui.
              */
-            public Builder successDevEui(java.util.List < String > successDevEui) {
+            public Builder successDevEui(java.util.List<String> successDevEui) {
                 this.successDevEui = successDevEui;
                 return this;
             }

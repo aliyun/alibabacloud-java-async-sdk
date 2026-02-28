@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceServiceDataResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceServiceDataResponseBody</p>
  */
 public class QueryDeviceServiceDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDeviceServiceDataResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
 
     public static QueryDeviceServiceDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceServiceDataResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code that is returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The service call records returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. The ID uniquely identifies the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,20 +164,26 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceServiceDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceServiceDataResponseBody</p>
+     */
     public static class ServiceInfo extends TeaModel {
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("InputData")
+        @com.aliyun.core.annotation.NameInMap("InputData")
         private String inputData;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OutputData")
+        @com.aliyun.core.annotation.NameInMap("OutputData")
         private String outputData;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private ServiceInfo(Builder builder) {
@@ -205,8 +244,22 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
             private String outputData; 
             private String time; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceInfo model) {
+                this.identifier = model.identifier;
+                this.inputData = model.inputData;
+                this.name = model.name;
+                this.outputData = model.outputData;
+                this.time = model.time;
+            } 
+
             /**
-             * Identifier.
+             * <p>The identifier of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Set</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -214,7 +267,10 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
             }
 
             /**
-             * InputData.
+             * <p>The input parameter of the service. The value is a string in the MAP format. Syntax: <code>key:value</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;LightAdjustLevel&quot;:123}</p>
              */
             public Builder inputData(String inputData) {
                 this.inputData = inputData;
@@ -222,7 +278,7 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the service.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -230,7 +286,10 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
             }
 
             /**
-             * OutputData.
+             * <p>The output parameter of the service. The value is a string in the MAP format. Syntax: <code>key:value</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;code&quot;:200,&quot;data&quot;:{},&quot;id&quot;:&quot;100686&quot;,&quot;message&quot;:&quot;success&quot;,&quot;version&quot;:&quot;1.0&quot;}</p>
              */
             public Builder outputData(String outputData) {
                 this.outputData = outputData;
@@ -238,7 +297,10 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the service was called.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579249499000</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -252,9 +314,15 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceServiceDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceServiceDataResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("ServiceInfo")
-        private java.util.List < ServiceInfo> serviceInfo;
+        @com.aliyun.core.annotation.NameInMap("ServiceInfo")
+        private java.util.List<ServiceInfo> serviceInfo;
 
         private List(Builder builder) {
             this.serviceInfo = builder.serviceInfo;
@@ -271,17 +339,24 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
         /**
          * @return serviceInfo
          */
-        public java.util.List < ServiceInfo> getServiceInfo() {
+        public java.util.List<ServiceInfo> getServiceInfo() {
             return this.serviceInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ServiceInfo> serviceInfo; 
+            private java.util.List<ServiceInfo> serviceInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.serviceInfo = model.serviceInfo;
+            } 
 
             /**
              * ServiceInfo.
              */
-            public Builder serviceInfo(java.util.List < ServiceInfo> serviceInfo) {
+            public Builder serviceInfo(java.util.List<ServiceInfo> serviceInfo) {
                 this.serviceInfo = serviceInfo;
                 return this;
             }
@@ -293,14 +368,20 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceServiceDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceServiceDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("NextTime")
+        @com.aliyun.core.annotation.NameInMap("NextTime")
         private Long nextTime;
 
-        @NameInMap("NextValid")
+        @com.aliyun.core.annotation.NameInMap("NextValid")
         private Boolean nextValid;
 
         private Data(Builder builder) {
@@ -343,8 +424,17 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
             private Long nextTime; 
             private Boolean nextValid; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.nextTime = model.nextTime;
+                this.nextValid = model.nextValid;
+            } 
+
             /**
-             * List.
+             * <p>The array of service call records. Each element represents a service call record.</p>
              */
             public Builder list(List list) {
                 this.list = list;
@@ -352,7 +442,11 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
             }
 
             /**
-             * NextTime.
+             * <p>The start time of service call records on the next page. </p>
+             * <p>If you call the QueryDeviceServiceData operation to query the service call records on the next page, you must set the <strong>StartTime</strong> parameter to the value of this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579335899000</p>
              */
             public Builder nextTime(Long nextTime) {
                 this.nextTime = nextTime;
@@ -360,7 +454,15 @@ public class QueryDeviceServiceDataResponseBody extends TeaModel {
             }
 
             /**
-             * NextValid.
+             * <p>Indicates whether the next page exists.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <p>If the return value of the <strong>NextValid</strong> parameter is <strong>true</strong>, you can use the value of the <strong>NextTime</strong> parameter as the value of the <strong>StartTime</strong> parameter when you query the next page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder nextValid(Boolean nextValid) {
                 this.nextValid = nextValid;

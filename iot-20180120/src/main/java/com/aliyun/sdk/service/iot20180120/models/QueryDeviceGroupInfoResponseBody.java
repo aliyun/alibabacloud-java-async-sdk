@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceGroupInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceGroupInfoResponseBody</p>
  */
 public class QueryDeviceGroupInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDeviceGroupInfoResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
 
     public static QueryDeviceGroupInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceGroupInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The group details returned if the call succeeds. This parameter includes the following parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7411716B-A488-4EEB-9AA0-6DB05AD2491F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,29 +164,35 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceGroupInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceGroupInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeviceActive")
+        @com.aliyun.core.annotation.NameInMap("DeviceActive")
         private Integer deviceActive;
 
-        @NameInMap("DeviceCount")
+        @com.aliyun.core.annotation.NameInMap("DeviceCount")
         private Integer deviceCount;
 
-        @NameInMap("DeviceOnline")
+        @com.aliyun.core.annotation.NameInMap("DeviceOnline")
         private Integer deviceOnline;
 
-        @NameInMap("DynamicGroupExpression")
+        @com.aliyun.core.annotation.NameInMap("DynamicGroupExpression")
         private String dynamicGroupExpression;
 
-        @NameInMap("GroupDesc")
+        @com.aliyun.core.annotation.NameInMap("GroupDesc")
         private String groupDesc;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("UtcCreate")
+        @com.aliyun.core.annotation.NameInMap("UtcCreate")
         private String utcCreate;
 
         private Data(Builder builder) {
@@ -241,8 +280,25 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
             private String groupName; 
             private String utcCreate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deviceActive = model.deviceActive;
+                this.deviceCount = model.deviceCount;
+                this.deviceOnline = model.deviceOnline;
+                this.dynamicGroupExpression = model.dynamicGroupExpression;
+                this.groupDesc = model.groupDesc;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.utcCreate = model.utcCreate;
+            } 
+
             /**
-             * DeviceActive.
+             * <p>The number of activated devices.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder deviceActive(Integer deviceActive) {
                 this.deviceActive = deviceActive;
@@ -250,7 +306,10 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceCount.
+             * <p>The total number of devices.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder deviceCount(Integer deviceCount) {
                 this.deviceCount = deviceCount;
@@ -258,7 +317,10 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceOnline.
+             * <p>The number of online devices.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deviceOnline(Integer deviceOnline) {
                 this.deviceOnline = deviceOnline;
@@ -266,7 +328,10 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicGroupExpression.
+             * <p>The rule of the dynamic group. This parameter is returned if a dynamic group is queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product_key = &quot;a1***&quot; and name LIKE &quot;test%&quot;</p>
              */
             public Builder dynamicGroupExpression(String dynamicGroupExpression) {
                 this.dynamicGroupExpression = dynamicGroupExpression;
@@ -274,7 +339,10 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GroupDesc.
+             * <p>The description of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usefulGroup</p>
              */
             public Builder groupDesc(String groupDesc) {
                 this.groupDesc = groupDesc;
@@ -282,7 +350,10 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tDQvBJqbUyHs****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -290,7 +361,10 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -298,7 +372,10 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreate.
+             * <p>The time when the group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-14T14:35:51.000Z</p>
              */
             public Builder utcCreate(String utcCreate) {
                 this.utcCreate = utcCreate;

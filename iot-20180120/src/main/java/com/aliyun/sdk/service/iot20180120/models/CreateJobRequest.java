@@ -1,59 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJobRequest} extends {@link RequestModel}
  *
  * <p>CreateJobRequest</p>
  */
 public class CreateJobRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("JobDocument")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobDocument")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobDocument;
 
-    @Query
-    @NameInMap("JobFile")
-    private java.util.Map < String, ? > jobFile;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobFile")
+    private java.util.Map<String, ?> jobFile;
 
-    @Query
-    @NameInMap("JobName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobName;
 
-    @Query
-    @NameInMap("RolloutConfig")
-    private java.util.Map < String, ? > rolloutConfig;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RolloutConfig")
+    private java.util.Map<String, ?> rolloutConfig;
 
-    @Query
-    @NameInMap("ScheduledTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduledTime")
     private Long scheduledTime;
 
-    @Query
-    @NameInMap("TargetConfig")
-    @Validation(required = true)
-    private java.util.Map < String, ? > targetConfig;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> targetConfig;
 
-    @Query
-    @NameInMap("TimeoutConfig")
-    private java.util.Map < String, ? > timeoutConfig;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutConfig")
+    private java.util.Map<String, ?> timeoutConfig;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateJobRequest(Builder builder) {
@@ -78,7 +83,7 @@ public class CreateJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -107,7 +112,7 @@ public class CreateJobRequest extends Request {
     /**
      * @return jobFile
      */
-    public java.util.Map < String, ? > getJobFile() {
+    public java.util.Map<String, ?> getJobFile() {
         return this.jobFile;
     }
 
@@ -121,7 +126,7 @@ public class CreateJobRequest extends Request {
     /**
      * @return rolloutConfig
      */
-    public java.util.Map < String, ? > getRolloutConfig() {
+    public java.util.Map<String, ?> getRolloutConfig() {
         return this.rolloutConfig;
     }
 
@@ -135,14 +140,14 @@ public class CreateJobRequest extends Request {
     /**
      * @return targetConfig
      */
-    public java.util.Map < String, ? > getTargetConfig() {
+    public java.util.Map<String, ?> getTargetConfig() {
         return this.targetConfig;
     }
 
     /**
      * @return timeoutConfig
      */
-    public java.util.Map < String, ? > getTimeoutConfig() {
+    public java.util.Map<String, ?> getTimeoutConfig() {
         return this.timeoutConfig;
     }
 
@@ -157,12 +162,12 @@ public class CreateJobRequest extends Request {
         private String description; 
         private String iotInstanceId; 
         private String jobDocument; 
-        private java.util.Map < String, ? > jobFile; 
+        private java.util.Map<String, ?> jobFile; 
         private String jobName; 
-        private java.util.Map < String, ? > rolloutConfig; 
+        private java.util.Map<String, ?> rolloutConfig; 
         private Long scheduledTime; 
-        private java.util.Map < String, ? > targetConfig; 
-        private java.util.Map < String, ? > timeoutConfig; 
+        private java.util.Map<String, ?> targetConfig; 
+        private java.util.Map<String, ?> timeoutConfig; 
         private String type; 
 
         private Builder() {
@@ -202,7 +207,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * JobDocument.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;serviceIdentifier&quot;: &quot;test_service&quot;, &quot;params&quot;: { &quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot; } }</p>
          */
         public Builder jobDocument(String jobDocument) {
             this.putQueryParameter("JobDocument", jobDocument);
@@ -213,7 +221,7 @@ public class CreateJobRequest extends Request {
         /**
          * JobFile.
          */
-        public Builder jobFile(java.util.Map < String, ? > jobFile) {
+        public Builder jobFile(java.util.Map<String, ?> jobFile) {
             String jobFileShrink = shrink(jobFile, "JobFile", "json");
             this.putQueryParameter("JobFile", jobFileShrink);
             this.jobFile = jobFile;
@@ -221,7 +229,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * JobName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oneJob</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -232,7 +243,7 @@ public class CreateJobRequest extends Request {
         /**
          * RolloutConfig.
          */
-        public Builder rolloutConfig(java.util.Map < String, ? > rolloutConfig) {
+        public Builder rolloutConfig(java.util.Map<String, ?> rolloutConfig) {
             String rolloutConfigShrink = shrink(rolloutConfig, "RolloutConfig", "json");
             this.putQueryParameter("RolloutConfig", rolloutConfigShrink);
             this.rolloutConfig = rolloutConfig;
@@ -249,9 +260,12 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * TargetConfig.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;targetType&quot;:&quot;PRODUCT_KEY&quot;,&quot;targetProduct&quot;:&quot;a1j***3d&quot;}</p>
          */
-        public Builder targetConfig(java.util.Map < String, ? > targetConfig) {
+        public Builder targetConfig(java.util.Map<String, ?> targetConfig) {
             String targetConfigShrink = shrink(targetConfig, "TargetConfig", "json");
             this.putQueryParameter("TargetConfig", targetConfigShrink);
             this.targetConfig = targetConfig;
@@ -261,7 +275,7 @@ public class CreateJobRequest extends Request {
         /**
          * TimeoutConfig.
          */
-        public Builder timeoutConfig(java.util.Map < String, ? > timeoutConfig) {
+        public Builder timeoutConfig(java.util.Map<String, ?> timeoutConfig) {
             String timeoutConfigShrink = shrink(timeoutConfig, "TimeoutConfig", "json");
             this.putQueryParameter("TimeoutConfig", timeoutConfigShrink);
             this.timeoutConfig = timeoutConfig;
@@ -269,7 +283,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INVOKE_SERVICE</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

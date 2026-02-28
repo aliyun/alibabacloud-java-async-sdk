@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOTAFirmwareResponseBody} extends {@link TeaModel}
  *
  * <p>ListOTAFirmwareResponseBody</p>
  */
 public class ListOTAFirmwareResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("FirmwareInfo")
+    @com.aliyun.core.annotation.NameInMap("FirmwareInfo")
     private FirmwareInfo firmwareInfo;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Integer pageCount;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListOTAFirmwareResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
 
     public static ListOTAFirmwareResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -133,8 +142,26 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
         private Boolean success; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListOTAFirmwareResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.errorMessage = model.errorMessage;
+            this.firmwareInfo = model.firmwareInfo;
+            this.pageCount = model.pageCount;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -150,7 +180,7 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -158,7 +188,7 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
         }
 
         /**
-         * FirmwareInfo.
+         * <p>The OTA update packages returned if the call is successful. For more information, see SimpleFirmwareInfo.</p>
          */
         public Builder firmwareInfo(FirmwareInfo firmwareInfo) {
             this.firmwareInfo = firmwareInfo;
@@ -166,7 +196,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -174,7 +207,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +218,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A01829CE-75A1-4920-B775-921146A1AB79</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +229,14 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +244,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of OTA update packages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -211,50 +260,56 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOTAFirmwareResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOTAFirmwareResponseBody</p>
+     */
     public static class SimpleFirmwareInfo extends TeaModel {
-        @NameInMap("DestVersion")
+        @com.aliyun.core.annotation.NameInMap("DestVersion")
         private String destVersion;
 
-        @NameInMap("FirmwareDesc")
+        @com.aliyun.core.annotation.NameInMap("FirmwareDesc")
         private String firmwareDesc;
 
-        @NameInMap("FirmwareId")
+        @com.aliyun.core.annotation.NameInMap("FirmwareId")
         private String firmwareId;
 
-        @NameInMap("FirmwareName")
+        @com.aliyun.core.annotation.NameInMap("FirmwareName")
         private String firmwareName;
 
-        @NameInMap("FirmwareSign")
+        @com.aliyun.core.annotation.NameInMap("FirmwareSign")
         private String firmwareSign;
 
-        @NameInMap("FirmwareSize")
+        @com.aliyun.core.annotation.NameInMap("FirmwareSize")
         private Integer firmwareSize;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("SignMethod")
+        @com.aliyun.core.annotation.NameInMap("SignMethod")
         private String signMethod;
 
-        @NameInMap("SrcVersion")
+        @com.aliyun.core.annotation.NameInMap("SrcVersion")
         private String srcVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("UtcCreate")
+        @com.aliyun.core.annotation.NameInMap("UtcCreate")
         private String utcCreate;
 
-        @NameInMap("UtcModified")
+        @com.aliyun.core.annotation.NameInMap("UtcModified")
         private String utcModified;
 
         private SimpleFirmwareInfo(Builder builder) {
@@ -405,8 +460,32 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             private String utcCreate; 
             private String utcModified; 
 
+            private Builder() {
+            } 
+
+            private Builder(SimpleFirmwareInfo model) {
+                this.destVersion = model.destVersion;
+                this.firmwareDesc = model.firmwareDesc;
+                this.firmwareId = model.firmwareId;
+                this.firmwareName = model.firmwareName;
+                this.firmwareSign = model.firmwareSign;
+                this.firmwareSize = model.firmwareSize;
+                this.moduleName = model.moduleName;
+                this.productKey = model.productKey;
+                this.productName = model.productName;
+                this.signMethod = model.signMethod;
+                this.srcVersion = model.srcVersion;
+                this.status = model.status;
+                this.type = model.type;
+                this.utcCreate = model.utcCreate;
+                this.utcModified = model.utcModified;
+            } 
+
             /**
-             * DestVersion.
+             * <p>The version number of the OTA update package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.0.0</p>
              */
             public Builder destVersion(String destVersion) {
                 this.destVersion = destVersion;
@@ -414,7 +493,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * FirmwareDesc.
+             * <p>The description of the OTA update package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>firmwareDesc</p>
              */
             public Builder firmwareDesc(String firmwareDesc) {
                 this.firmwareDesc = firmwareDesc;
@@ -422,7 +504,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * FirmwareId.
+             * <p>The unique ID of the OTA update package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UfuxnwygsuSkVE0VCN****0100</p>
              */
             public Builder firmwareId(String firmwareId) {
                 this.firmwareId = firmwareId;
@@ -430,7 +515,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * FirmwareName.
+             * <p>The name of the OTA update package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t3q5rkNm</p>
              */
             public Builder firmwareName(String firmwareName) {
                 this.firmwareName = firmwareName;
@@ -438,7 +526,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * FirmwareSign.
+             * <p>The signature of the OTA update package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3d04ab6462633508606e5f3daac8****</p>
              */
             public Builder firmwareSign(String firmwareSign) {
                 this.firmwareSign = firmwareSign;
@@ -446,7 +537,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * FirmwareSize.
+             * <p>The size of the update package. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>924</p>
              */
             public Builder firmwareSize(Integer firmwareSize) {
                 this.firmwareSize = firmwareSize;
@@ -454,7 +548,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * <p>The name of the module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>module1234</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -462,7 +559,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The ProductKey of the product to which the OTA update package belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a19mzPZ****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -470,7 +570,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The name of the product to which the OTA update package belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyProduct</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -478,7 +581,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * SignMethod.
+             * <p>The signature method of the OTA update package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MD5</p>
              */
             public Builder signMethod(String signMethod) {
                 this.signMethod = signMethod;
@@ -486,7 +592,13 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * SrcVersion.
+             * <p>The version number of the original update package to be updated.</p>
+             * <blockquote>
+             * <p> The return value is null if you perform a full update.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>V1.0.0</p>
              */
             public Builder srcVersion(String srcVersion) {
                 this.srcVersion = srcVersion;
@@ -494,7 +606,16 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the OTA update package. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unverified</li>
+             * <li><strong>1</strong>: verified</li>
+             * <li><strong>2</strong>: verifying</li>
+             * <li><strong>3</strong>: failed to be verified</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -502,7 +623,14 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the OTA update package. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: complete firmware</li>
+             * <li><strong>1</strong>: differential firmware</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -510,7 +638,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreate.
+             * <p>The time when the update package was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-28T02:42:22.000Z</p>
              */
             public Builder utcCreate(String utcCreate) {
                 this.utcCreate = utcCreate;
@@ -518,7 +649,10 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
             }
 
             /**
-             * UtcModified.
+             * <p>The time when the update task was last modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-28T02:42:22.000Z</p>
              */
             public Builder utcModified(String utcModified) {
                 this.utcModified = utcModified;
@@ -532,9 +666,15 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOTAFirmwareResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOTAFirmwareResponseBody</p>
+     */
     public static class FirmwareInfo extends TeaModel {
-        @NameInMap("SimpleFirmwareInfo")
-        private java.util.List < SimpleFirmwareInfo> simpleFirmwareInfo;
+        @com.aliyun.core.annotation.NameInMap("SimpleFirmwareInfo")
+        private java.util.List<SimpleFirmwareInfo> simpleFirmwareInfo;
 
         private FirmwareInfo(Builder builder) {
             this.simpleFirmwareInfo = builder.simpleFirmwareInfo;
@@ -551,17 +691,24 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
         /**
          * @return simpleFirmwareInfo
          */
-        public java.util.List < SimpleFirmwareInfo> getSimpleFirmwareInfo() {
+        public java.util.List<SimpleFirmwareInfo> getSimpleFirmwareInfo() {
             return this.simpleFirmwareInfo;
         }
 
         public static final class Builder {
-            private java.util.List < SimpleFirmwareInfo> simpleFirmwareInfo; 
+            private java.util.List<SimpleFirmwareInfo> simpleFirmwareInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(FirmwareInfo model) {
+                this.simpleFirmwareInfo = model.simpleFirmwareInfo;
+            } 
 
             /**
              * SimpleFirmwareInfo.
              */
-            public Builder simpleFirmwareInfo(java.util.List < SimpleFirmwareInfo> simpleFirmwareInfo) {
+            public Builder simpleFirmwareInfo(java.util.List<SimpleFirmwareInfo> simpleFirmwareInfo) {
                 this.simpleFirmwareInfo = simpleFirmwareInfo;
                 return this;
             }

@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceByTagsRequest} extends {@link RequestModel}
  *
  * <p>QueryDeviceByTagsRequest</p>
  */
 public class QueryDeviceByTagsRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private QueryDeviceByTagsRequest(Builder builder) {
         super(builder);
@@ -44,7 +49,7 @@ public class QueryDeviceByTagsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +78,7 @@ public class QueryDeviceByTagsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -81,7 +86,7 @@ public class QueryDeviceByTagsRequest extends Request {
         private Integer currentPage; 
         private String iotInstanceId; 
         private Integer pageSize; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -96,7 +101,10 @@ public class QueryDeviceByTagsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +113,17 @@ public class QueryDeviceByTagsRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+         * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -114,7 +132,10 @@ public class QueryDeviceByTagsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Maximum value: 50. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +146,7 @@ public class QueryDeviceByTagsRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -138,13 +159,19 @@ public class QueryDeviceByTagsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceByTagsRequest} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceByTagsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String tagKey;
 
-        @NameInMap("TagValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -178,8 +205,20 @@ public class QueryDeviceByTagsRequest extends Request {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * TagKey.
+             * <p>The key of the device tag.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>room</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -187,7 +226,11 @@ public class QueryDeviceByTagsRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>The value of the device tag.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

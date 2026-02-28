@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEdgeInstanceGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>QueryEdgeInstanceGatewayResponseBody</p>
  */
 public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("GatewayList")
-    private java.util.List < GatewayList> gatewayList;
+    @com.aliyun.core.annotation.NameInMap("GatewayList")
+    private java.util.List<GatewayList> gatewayList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryEdgeInstanceGatewayResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
 
     public static QueryEdgeInstanceGatewayResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,7 +69,7 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
     /**
      * @return gatewayList
      */
-    public java.util.List < GatewayList> getGatewayList() {
+    public java.util.List<GatewayList> getGatewayList() {
         return this.gatewayList;
     }
 
@@ -81,12 +90,26 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String errorMessage; 
-        private java.util.List < GatewayList> gatewayList; 
+        private java.util.List<GatewayList> gatewayList; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryEdgeInstanceGatewayResponseBody model) {
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.gatewayList = model.gatewayList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see <a href="https://help.aliyun.com/document_detail/135200.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,10 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request parameter error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,15 +128,18 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * GatewayList.
+         * <p>The data that is returned if the call was successful.</p>
          */
-        public Builder gatewayList(java.util.List < GatewayList> gatewayList) {
+        public Builder gatewayList(java.util.List<GatewayList> gatewayList) {
             this.gatewayList = gatewayList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28D159F4-980F-423D-95F0-F705E9DFC016</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,17 +163,23 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryEdgeInstanceGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceGatewayResponseBody</p>
+     */
     public static class GatewayList extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("EdgeVersion")
+        @com.aliyun.core.annotation.NameInMap("EdgeVersion")
         private String edgeVersion;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
         private GatewayList(Builder builder) {
@@ -193,8 +231,21 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
             private String iotId; 
             private String productKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(GatewayList model) {
+                this.deviceName = model.deviceName;
+                this.edgeVersion = model.edgeVersion;
+                this.iotId = model.iotId;
+                this.productKey = model.productKey;
+            } 
+
             /**
-             * DeviceName.
+             * <p>The name of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gateway_01</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -202,7 +253,10 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * EdgeVersion.
+             * <p>The version number of Link IoT Edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0.0</p>
              */
             public Builder edgeVersion(String edgeVersion) {
                 this.edgeVersion = edgeVersion;
@@ -210,7 +264,10 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * IotId.
+             * <p>The ID of the gateway in IoT Platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LuD9x5hiRUdVemWU****000101</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -218,7 +275,10 @@ public class QueryEdgeInstanceGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The key that uniquely identifies the product to which the gateway belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1mAdeG****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;

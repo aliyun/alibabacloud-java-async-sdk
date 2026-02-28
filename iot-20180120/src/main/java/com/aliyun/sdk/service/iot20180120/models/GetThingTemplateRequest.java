@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetThingTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetThingTemplateRequest</p>
  */
 public class GetThingTemplateRequest extends Request {
-    @Query
-    @NameInMap("CategoryKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CategoryKey")
     private String categoryKey;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private GetThingTemplateRequest(Builder builder) {
@@ -39,7 +44,7 @@ public class GetThingTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +87,10 @@ public class GetThingTemplateRequest extends Request {
         } 
 
         /**
-         * CategoryKey.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lighting</p>
          */
         public Builder categoryKey(String categoryKey) {
             this.putQueryParameter("CategoryKey", categoryKey);
@@ -91,7 +99,11 @@ public class GetThingTemplateRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The identifier of the category that you want to query.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/150316.html">ListThingTemplates</a> operation and view all category keys in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -100,7 +112,10 @@ public class GetThingTemplateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm4l5tcwd****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

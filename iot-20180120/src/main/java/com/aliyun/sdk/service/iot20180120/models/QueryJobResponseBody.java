@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryJobResponseBody} extends {@link TeaModel}
  *
  * <p>QueryJobResponseBody</p>
  */
 public class QueryJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryJobResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryJobResponseBody extends TeaModel {
 
     public static QueryJobResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryJobResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,14 +151,20 @@ public class QueryJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobResponseBody</p>
+     */
     public static class JobFile extends TeaModel {
-        @NameInMap("FileUrl")
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
 
-        @NameInMap("Sign")
+        @com.aliyun.core.annotation.NameInMap("Sign")
         private String sign;
 
-        @NameInMap("SignMethod")
+        @com.aliyun.core.annotation.NameInMap("SignMethod")
         private String signMethod;
 
         private JobFile(Builder builder) {
@@ -181,6 +207,15 @@ public class QueryJobResponseBody extends TeaModel {
             private String sign; 
             private String signMethod; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobFile model) {
+                this.fileUrl = model.fileUrl;
+                this.sign = model.sign;
+                this.signMethod = model.signMethod;
+            } 
+
             /**
              * FileUrl.
              */
@@ -212,11 +247,17 @@ public class QueryJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobResponseBody</p>
+     */
     public static class RolloutConfig extends TeaModel {
-        @NameInMap("MaximumPerMinute")
+        @com.aliyun.core.annotation.NameInMap("MaximumPerMinute")
         private Integer maximumPerMinute;
 
-        @NameInMap("MessageQoS")
+        @com.aliyun.core.annotation.NameInMap("MessageQoS")
         private String messageQoS;
 
         private RolloutConfig(Builder builder) {
@@ -250,6 +291,14 @@ public class QueryJobResponseBody extends TeaModel {
             private Integer maximumPerMinute; 
             private String messageQoS; 
 
+            private Builder() {
+            } 
+
+            private Builder(RolloutConfig model) {
+                this.maximumPerMinute = model.maximumPerMinute;
+                this.messageQoS = model.messageQoS;
+            } 
+
             /**
              * MaximumPerMinute.
              */
@@ -273,11 +322,17 @@ public class QueryJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobResponseBody</p>
+     */
     public static class TargetDevices extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
         private TargetDevices(Builder builder) {
@@ -311,6 +366,14 @@ public class QueryJobResponseBody extends TeaModel {
             private String deviceName; 
             private String productKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(TargetDevices model) {
+                this.deviceName = model.deviceName;
+                this.productKey = model.productKey;
+            } 
+
             /**
              * DeviceName.
              */
@@ -334,9 +397,15 @@ public class QueryJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobResponseBody</p>
+     */
     public static class TargetConfigTargetDevices extends TeaModel {
-        @NameInMap("targetDevices")
-        private java.util.List < TargetDevices> targetDevices;
+        @com.aliyun.core.annotation.NameInMap("targetDevices")
+        private java.util.List<TargetDevices> targetDevices;
 
         private TargetConfigTargetDevices(Builder builder) {
             this.targetDevices = builder.targetDevices;
@@ -353,17 +422,24 @@ public class QueryJobResponseBody extends TeaModel {
         /**
          * @return targetDevices
          */
-        public java.util.List < TargetDevices> getTargetDevices() {
+        public java.util.List<TargetDevices> getTargetDevices() {
             return this.targetDevices;
         }
 
         public static final class Builder {
-            private java.util.List < TargetDevices> targetDevices; 
+            private java.util.List<TargetDevices> targetDevices; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetConfigTargetDevices model) {
+                this.targetDevices = model.targetDevices;
+            } 
 
             /**
              * targetDevices.
              */
-            public Builder targetDevices(java.util.List < TargetDevices> targetDevices) {
+            public Builder targetDevices(java.util.List<TargetDevices> targetDevices) {
                 this.targetDevices = targetDevices;
                 return this;
             }
@@ -375,17 +451,23 @@ public class QueryJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobResponseBody</p>
+     */
     public static class TargetConfig extends TeaModel {
-        @NameInMap("TargetDevices")
+        @com.aliyun.core.annotation.NameInMap("TargetDevices")
         private TargetConfigTargetDevices targetDevices;
 
-        @NameInMap("TargetGroup")
+        @com.aliyun.core.annotation.NameInMap("TargetGroup")
         private String targetGroup;
 
-        @NameInMap("TargetProduct")
+        @com.aliyun.core.annotation.NameInMap("TargetProduct")
         private String targetProduct;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private TargetConfig(Builder builder) {
@@ -437,6 +519,16 @@ public class QueryJobResponseBody extends TeaModel {
             private String targetProduct; 
             private String targetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TargetConfig model) {
+                this.targetDevices = model.targetDevices;
+                this.targetGroup = model.targetGroup;
+                this.targetProduct = model.targetProduct;
+                this.targetType = model.targetType;
+            } 
+
             /**
              * TargetDevices.
              */
@@ -476,8 +568,14 @@ public class QueryJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobResponseBody</p>
+     */
     public static class TimeoutConfig extends TeaModel {
-        @NameInMap("InProgressTimeoutInMinutes")
+        @com.aliyun.core.annotation.NameInMap("InProgressTimeoutInMinutes")
         private Integer inProgressTimeoutInMinutes;
 
         private TimeoutConfig(Builder builder) {
@@ -502,6 +600,13 @@ public class QueryJobResponseBody extends TeaModel {
         public static final class Builder {
             private Integer inProgressTimeoutInMinutes; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimeoutConfig model) {
+                this.inProgressTimeoutInMinutes = model.inProgressTimeoutInMinutes;
+            } 
+
             /**
              * InProgressTimeoutInMinutes.
              */
@@ -517,44 +622,50 @@ public class QueryJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("JobDocument")
+        @com.aliyun.core.annotation.NameInMap("JobDocument")
         private String jobDocument;
 
-        @NameInMap("JobFile")
+        @com.aliyun.core.annotation.NameInMap("JobFile")
         private JobFile jobFile;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("RolloutConfig")
+        @com.aliyun.core.annotation.NameInMap("RolloutConfig")
         private RolloutConfig rolloutConfig;
 
-        @NameInMap("ScheduledTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduledTime")
         private Long scheduledTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TargetConfig")
+        @com.aliyun.core.annotation.NameInMap("TargetConfig")
         private TargetConfig targetConfig;
 
-        @NameInMap("TimeoutConfig")
+        @com.aliyun.core.annotation.NameInMap("TimeoutConfig")
         private TimeoutConfig timeoutConfig;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UtcCreate")
+        @com.aliyun.core.annotation.NameInMap("UtcCreate")
         private String utcCreate;
 
-        @NameInMap("UtcModified")
+        @com.aliyun.core.annotation.NameInMap("UtcModified")
         private String utcModified;
 
         private Data(Builder builder) {
@@ -686,6 +797,25 @@ public class QueryJobResponseBody extends TeaModel {
             private String type; 
             private String utcCreate; 
             private String utcModified; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.jobDocument = model.jobDocument;
+                this.jobFile = model.jobFile;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.rolloutConfig = model.rolloutConfig;
+                this.scheduledTime = model.scheduledTime;
+                this.status = model.status;
+                this.targetConfig = model.targetConfig;
+                this.timeoutConfig = model.timeoutConfig;
+                this.type = model.type;
+                this.utcCreate = model.utcCreate;
+                this.utcModified = model.utcModified;
+            } 
 
             /**
              * Description.

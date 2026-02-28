@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportDeviceRequest} extends {@link RequestModel}
  *
  * <p>ImportDeviceRequest</p>
  */
 public class ImportDeviceRequest extends Request {
-    @Query
-    @NameInMap("DeviceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceName;
 
-    @Query
-    @NameInMap("DeviceSecret")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceSecret")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceSecret;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("Nickname")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Nickname")
     private String nickname;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
-    @Query
-    @NameInMap("Sn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sn")
     private String sn;
 
     private ImportDeviceRequest(Builder builder) {
@@ -57,7 +62,7 @@ public class ImportDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -127,7 +132,13 @@ public class ImportDeviceRequest extends Request {
         } 
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the device.</p>
+         * <p>The DeviceName must be 4 to 32 characters in length, and can contain letters, digits, hyphens (-), underscores (_), at signs (@), periods (.), and colons (:).</p>
+         * <p>The DeviceName must be unique in the product.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -136,7 +147,12 @@ public class ImportDeviceRequest extends Request {
         }
 
         /**
-         * DeviceSecret.
+         * <p>The DeviceSecret of the device.</p>
+         * <p>The DeviceSecret must be 1 to 32 characters in length, and can contain letters, digits, hyphens (-), underscores (_), at signs (@), periods (.), and colons (:).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b4d43f7******10ba5e5</p>
          */
         public Builder deviceSecret(String deviceSecret) {
             this.putQueryParameter("DeviceSecret", deviceSecret);
@@ -145,7 +161,14 @@ public class ImportDeviceRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p> If your instance has an ID, you must specify this parameter. Otherwise, the request fails. If no Overview page exists or no instance ID is displayed, you do not need to specify this parameter.</p>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a> of IoT instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -154,7 +177,14 @@ public class ImportDeviceRequest extends Request {
         }
 
         /**
-         * Nickname.
+         * <p>The alias of the device.</p>
+         * <p>The alias must be 1 to 64 characters in length, and can contain letters, digits, and underscores (_).</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, IoT Platform does not generate an alias for the device.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Campus light</p>
          */
         public Builder nickname(String nickname) {
             this.putQueryParameter("Nickname", nickname);
@@ -163,7 +193,11 @@ public class ImportDeviceRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the gateway product to which the device belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -172,7 +206,14 @@ public class ImportDeviceRequest extends Request {
         }
 
         /**
-         * Sn.
+         * <p>The serial number (SN) of the device.</p>
+         * <p>The SN must be 1 to 64 characters in length, and can contain letters, digits, and underscores (_).</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, IoT Platform does not generate an SN for the device.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>QC4******001</p>
          */
         public Builder sn(String sn) {
             this.putQueryParameter("Sn", sn);

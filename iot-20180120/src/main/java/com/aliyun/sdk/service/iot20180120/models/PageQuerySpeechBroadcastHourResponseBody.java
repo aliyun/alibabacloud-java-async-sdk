@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PageQuerySpeechBroadcastHourResponseBody} extends {@link TeaModel}
  *
  * <p>PageQuerySpeechBroadcastHourResponseBody</p>
  */
 public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private PageQuerySpeechBroadcastHourResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
 
     public static PageQuerySpeechBroadcastHourResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(PageQuerySpeechBroadcastHourResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,29 +164,35 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PageQuerySpeechBroadcastHourResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageQuerySpeechBroadcastHourResponseBody</p>
+     */
     public static class ResultDataData extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("ShareTaskCode")
+        @com.aliyun.core.annotation.NameInMap("ShareTaskCode")
         private String shareTaskCode;
 
-        @NameInMap("SpeechId")
+        @com.aliyun.core.annotation.NameInMap("SpeechId")
         private String speechId;
 
-        @NameInMap("Speechs")
+        @com.aliyun.core.annotation.NameInMap("Speechs")
         private String speechs;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private ResultDataData(Builder builder) {
@@ -241,8 +280,30 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
             private String speechs; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultDataData model) {
+                this.code = model.code;
+                this.deviceName = model.deviceName;
+                this.msg = model.msg;
+                this.productKey = model.productKey;
+                this.shareTaskCode = model.shareTaskCode;
+                this.speechId = model.speechId;
+                this.speechs = model.speechs;
+                this.startTime = model.startTime;
+            } 
+
             /**
-             * Code.
+             * <p>Indicates whether the speech was successfully broadcasted. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The speech was successfully broadcasted.</li>
+             * <li><strong>1</strong>: The speech was repeatedly broadcasted.</li>
+             * <li><strong>2</strong>: The speech does not exist.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -250,7 +311,10 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceName.
+             * <p>The DeviceName of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>device1</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -258,7 +322,7 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * <p>The message that indicates the speech broadcasting result.</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -266,7 +330,10 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sd34****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -274,7 +341,10 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
             }
 
             /**
-             * ShareTaskCode.
+             * <p>The code of the sharing task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ebed9280_ba25_48df_80c2_****</p>
              */
             public Builder shareTaskCode(String shareTaskCode) {
                 this.shareTaskCode = shareTaskCode;
@@ -282,7 +352,10 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
             }
 
             /**
-             * SpeechId.
+             * <p>The ID of the speech that was broadcasted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42000011392021112380****</p>
              */
             public Builder speechId(String speechId) {
                 this.speechId = speechId;
@@ -290,7 +363,10 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
             }
 
             /**
-             * Speechs.
+             * <p>The content of the broadcasted speech. The parameter value is a JSON array.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;ANC&quot;,&quot;CDF&quot;]</p>
              */
             public Builder speechs(String speechs) {
                 this.speechs = speechs;
@@ -298,7 +374,10 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of speech broadcasting. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1663210172207</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -312,9 +391,15 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PageQuerySpeechBroadcastHourResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageQuerySpeechBroadcastHourResponseBody</p>
+     */
     public static class ResultData extends TeaModel {
-        @NameInMap("Data")
-        private java.util.List < ResultDataData> data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<ResultDataData> data;
 
         private ResultData(Builder builder) {
             this.data = builder.data;
@@ -331,17 +416,24 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < ResultDataData> getData() {
+        public java.util.List<ResultDataData> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < ResultDataData> data; 
+            private java.util.List<ResultDataData> data; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultData model) {
+                this.data = model.data;
+            } 
 
             /**
-             * Data.
+             * <p>The result returned if the call is successful.</p>
              */
-            public Builder data(java.util.List < ResultDataData> data) {
+            public Builder data(java.util.List<ResultDataData> data) {
                 this.data = data;
                 return this;
             }
@@ -353,20 +445,26 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PageQuerySpeechBroadcastHourResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageQuerySpeechBroadcastHourResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageId")
+        @com.aliyun.core.annotation.NameInMap("PageId")
         private Integer pageId;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("PageToken")
+        @com.aliyun.core.annotation.NameInMap("PageToken")
         private String pageToken;
 
-        @NameInMap("ResultData")
+        @com.aliyun.core.annotation.NameInMap("ResultData")
         private ResultData resultData;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -427,8 +525,22 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
             private ResultData resultData; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageId = model.pageId;
+                this.pageSize = model.pageSize;
+                this.pageToken = model.pageToken;
+                this.resultData = model.resultData;
+                this.total = model.total;
+            } 
+
             /**
-             * PageId.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageId(Integer pageId) {
                 this.pageId = pageId;
@@ -436,7 +548,10 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -444,7 +559,11 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
             }
 
             /**
-             * PageToken.
+             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * <p>If <strong>PageToken</strong> is empty, no next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TGlzdFJlc291cm****</p>
              */
             public Builder pageToken(String pageToken) {
                 this.pageToken = pageToken;
@@ -452,7 +571,7 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
             }
 
             /**
-             * ResultData.
+             * <p>The shared speech broadcasting data returned.</p>
              */
             public Builder resultData(ResultData resultData) {
                 this.resultData = resultData;
@@ -460,7 +579,10 @@ public class PageQuerySpeechBroadcastHourResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSoundCodeAudioResponseBody} extends {@link TeaModel}
  *
  * <p>GetSoundCodeAudioResponseBody</p>
  */
 public class GetSoundCodeAudioResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSoundCodeAudioResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetSoundCodeAudioResponseBody extends TeaModel {
 
     public static GetSoundCodeAudioResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetSoundCodeAudioResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSoundCodeAudioResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,9 +151,15 @@ public class GetSoundCodeAudioResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSoundCodeAudioResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSoundCodeAudioResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < String > items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<String> items;
 
         private Data(Builder builder) {
             this.items = builder.items;
@@ -150,17 +176,24 @@ public class GetSoundCodeAudioResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < String > getItems() {
+        public java.util.List<String> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < String > items; 
+            private java.util.List<String> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+            } 
 
             /**
              * Items.
              */
-            public Builder items(java.util.List < String > items) {
+            public Builder items(java.util.List<String> items) {
                 this.items = items;
                 return this;
             }

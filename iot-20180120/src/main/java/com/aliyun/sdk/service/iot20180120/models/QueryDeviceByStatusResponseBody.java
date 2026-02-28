@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceByStatusResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceByStatusResponseBody</p>
  */
 public class QueryDeviceByStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Integer pageCount;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private QueryDeviceByStatusResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
 
     public static QueryDeviceByStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -133,8 +142,26 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
         private Boolean success; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceByStatusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.page = model.page;
+            this.pageCount = model.pageCount;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,7 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The device list information returned if the call succeeds. The <strong>SimpleDeviceInfo</strong> parameter includes the details of the devices.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,7 +177,7 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -158,7 +185,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -166,7 +196,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -174,7 +207,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +218,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +229,14 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +244,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of devices returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -211,35 +260,41 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceByStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceByStatusResponseBody</p>
+     */
     public static class SimpleDeviceInfo extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("DeviceSecret")
+        @com.aliyun.core.annotation.NameInMap("DeviceSecret")
         private String deviceSecret;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("Nickname")
+        @com.aliyun.core.annotation.NameInMap("Nickname")
         private String nickname;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UtcCreate")
+        @com.aliyun.core.annotation.NameInMap("UtcCreate")
         private String utcCreate;
 
-        @NameInMap("UtcModified")
+        @com.aliyun.core.annotation.NameInMap("UtcModified")
         private String utcModified;
 
         private SimpleDeviceInfo(Builder builder) {
@@ -345,8 +400,27 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
             private String utcCreate; 
             private String utcModified; 
 
+            private Builder() {
+            } 
+
+            private Builder(SimpleDeviceInfo model) {
+                this.deviceName = model.deviceName;
+                this.deviceSecret = model.deviceSecret;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.iotId = model.iotId;
+                this.nickname = model.nickname;
+                this.productKey = model.productKey;
+                this.status = model.status;
+                this.utcCreate = model.utcCreate;
+                this.utcModified = model.utcModified;
+            } 
+
             /**
-             * DeviceName.
+             * <p>The DeviceName of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>light</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -354,7 +428,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceSecret.
+             * <p>The secret of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sLefbFmN9SYfnWLJTePG893XNuRV****</p>
              */
             public Builder deviceSecret(String deviceSecret) {
                 this.deviceSecret = deviceSecret;
@@ -362,7 +439,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the device was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-18 10:46:32</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -370,7 +450,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the device information was last modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-18 10:46:32</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -378,7 +461,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * IotId.
+             * <p>The ID of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Av8NGHGtwPrH9BYGLMBi00****</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -386,7 +472,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Nickname.
+             * <p>The alias of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SensorInShanghai</p>
              */
             public Builder nickname(String nickname) {
                 this.nickname = nickname;
@@ -394,7 +483,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The ProductKey of the product to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1BwAGV****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -402,7 +494,16 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the device. Valid values:</p>
+             * <ul>
+             * <li><strong>UNACTIVE</strong>: The device is not activated.</li>
+             * <li><strong>ONLINE</strong>: The device is online.</li>
+             * <li><strong>OFFLINE</strong>: The device is offline.</li>
+             * <li><strong>DISABLE</strong>: The device is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -410,7 +511,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreate.
+             * <p>The time when the device was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-18T02:46:32.000Z</p>
              */
             public Builder utcCreate(String utcCreate) {
                 this.utcCreate = utcCreate;
@@ -418,7 +522,10 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UtcModified.
+             * <p>The time when the device information was last modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-18T02:46:32.000Z</p>
              */
             public Builder utcModified(String utcModified) {
                 this.utcModified = utcModified;
@@ -432,9 +539,15 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceByStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceByStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("SimpleDeviceInfo")
-        private java.util.List < SimpleDeviceInfo> simpleDeviceInfo;
+        @com.aliyun.core.annotation.NameInMap("SimpleDeviceInfo")
+        private java.util.List<SimpleDeviceInfo> simpleDeviceInfo;
 
         private Data(Builder builder) {
             this.simpleDeviceInfo = builder.simpleDeviceInfo;
@@ -451,17 +564,24 @@ public class QueryDeviceByStatusResponseBody extends TeaModel {
         /**
          * @return simpleDeviceInfo
          */
-        public java.util.List < SimpleDeviceInfo> getSimpleDeviceInfo() {
+        public java.util.List<SimpleDeviceInfo> getSimpleDeviceInfo() {
             return this.simpleDeviceInfo;
         }
 
         public static final class Builder {
-            private java.util.List < SimpleDeviceInfo> simpleDeviceInfo; 
+            private java.util.List<SimpleDeviceInfo> simpleDeviceInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.simpleDeviceInfo = model.simpleDeviceInfo;
+            } 
 
             /**
              * SimpleDeviceInfo.
              */
-            public Builder simpleDeviceInfo(java.util.List < SimpleDeviceInfo> simpleDeviceInfo) {
+            public Builder simpleDeviceInfo(java.util.List<SimpleDeviceInfo> simpleDeviceInfo) {
                 this.simpleDeviceInfo = simpleDeviceInfo;
                 return this;
             }

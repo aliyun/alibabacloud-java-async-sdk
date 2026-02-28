@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetEdgeInstanceDriverConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>BatchGetEdgeInstanceDriverConfigsResponseBody</p>
  */
 public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DriverConfigList")
-    private java.util.List < DriverConfigList> driverConfigList;
+    @com.aliyun.core.annotation.NameInMap("DriverConfigList")
+    private java.util.List<DriverConfigList> driverConfigList;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchGetEdgeInstanceDriverConfigsResponseBody(Builder builder) {
@@ -43,6 +48,10 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,7 +62,7 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
     /**
      * @return driverConfigList
      */
-    public java.util.List < DriverConfigList> getDriverConfigList() {
+    public java.util.List<DriverConfigList> getDriverConfigList() {
         return this.driverConfigList;
     }
 
@@ -80,13 +89,27 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < DriverConfigList> driverConfigList; 
+        private java.util.List<DriverConfigList> driverConfigList; 
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(BatchGetEdgeInstanceDriverConfigsResponseBody model) {
+            this.code = model.code;
+            this.driverConfigList = model.driverConfigList;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see <a href="https://help.aliyun.com/document_detail/135200.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,15 +117,18 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * DriverConfigList.
+         * <p>The data that is returned if the call was successful.</p>
          */
-        public Builder driverConfigList(java.util.List < DriverConfigList> driverConfigList) {
+        public Builder driverConfigList(java.util.List<DriverConfigList> driverConfigList) {
             this.driverConfigList = driverConfigList;
             return this;
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request parameter error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +136,10 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6113390-F507-458B-8544-7B01F945630B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,17 +163,23 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchGetEdgeInstanceDriverConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetEdgeInstanceDriverConfigsResponseBody</p>
+     */
     public static class ConfigList extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private ConfigList(Builder builder) {
@@ -193,8 +231,21 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
             private String format; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigList model) {
+                this.configId = model.configId;
+                this.content = model.content;
+                this.format = model.format;
+                this.key = model.key;
+            } 
+
             /**
-             * ConfigId.
+             * <p>The ID of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dac71722ceac4a299dbf3e8dc3c8****</p>
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -202,7 +253,10 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The configuration content or the Object Storage Service (OSS) path of the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;test&quot;:123}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -210,7 +264,10 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>The format of the configuration. Valid values: KV (key-value pair), JSON (JSON string), and FILE (configuration file).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSON</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -218,7 +275,10 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The key of the configuration. If multiple configurations are available, keywords can be used to identify the configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -232,11 +292,17 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchGetEdgeInstanceDriverConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetEdgeInstanceDriverConfigsResponseBody</p>
+     */
     public static class DriverConfigList extends TeaModel {
-        @NameInMap("ConfigList")
-        private java.util.List < ConfigList> configList;
+        @com.aliyun.core.annotation.NameInMap("ConfigList")
+        private java.util.List<ConfigList> configList;
 
-        @NameInMap("DriverId")
+        @com.aliyun.core.annotation.NameInMap("DriverId")
         private String driverId;
 
         private DriverConfigList(Builder builder) {
@@ -255,7 +321,7 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
         /**
          * @return configList
          */
-        public java.util.List < ConfigList> getConfigList() {
+        public java.util.List<ConfigList> getConfigList() {
             return this.configList;
         }
 
@@ -267,19 +333,30 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ConfigList> configList; 
+            private java.util.List<ConfigList> configList; 
             private String driverId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DriverConfigList model) {
+                this.configList = model.configList;
+                this.driverId = model.driverId;
+            } 
+
             /**
-             * ConfigList.
+             * <p>The configuration information of the driver.</p>
              */
-            public Builder configList(java.util.List < ConfigList> configList) {
+            public Builder configList(java.util.List<ConfigList> configList) {
                 this.configList = configList;
                 return this;
             }
 
             /**
-             * DriverId.
+             * <p>The ID of the driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>021d154d2a2f4dd7a489773d9e04****</p>
              */
             public Builder driverId(String driverId) {
                 this.driverId = driverId;

@@ -1,29 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchCheckVehicleDeviceRequest} extends {@link RequestModel}
  *
  * <p>BatchCheckVehicleDeviceRequest</p>
  */
 public class BatchCheckVehicleDeviceRequest extends Request {
-    @Query
-    @NameInMap("DeviceList")
-    @Validation(required = true)
-    private java.util.List < DeviceList> deviceList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<DeviceList> deviceList;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
     private BatchCheckVehicleDeviceRequest(Builder builder) {
@@ -41,7 +47,7 @@ public class BatchCheckVehicleDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,7 +55,7 @@ public class BatchCheckVehicleDeviceRequest extends Request {
     /**
      * @return deviceList
      */
-    public java.util.List < DeviceList> getDeviceList() {
+    public java.util.List<DeviceList> getDeviceList() {
         return this.deviceList;
     }
 
@@ -68,7 +74,7 @@ public class BatchCheckVehicleDeviceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchCheckVehicleDeviceRequest, Builder> {
-        private java.util.List < DeviceList> deviceList; 
+        private java.util.List<DeviceList> deviceList; 
         private String iotInstanceId; 
         private String productKey; 
 
@@ -84,16 +90,20 @@ public class BatchCheckVehicleDeviceRequest extends Request {
         } 
 
         /**
-         * DeviceList.
+         * <p>This parameter is required.</p>
          */
-        public Builder deviceList(java.util.List < DeviceList> deviceList) {
-            this.putQueryParameter("DeviceList", deviceList);
+        public Builder deviceList(java.util.List<DeviceList> deviceList) {
+            this.putBodyParameter("DeviceList", deviceList);
             this.deviceList = deviceList;
             return this;
         }
 
         /**
-         * IotInstanceId.
+         * <p>BatchCheckVehicleDevice</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -102,7 +112,10 @@ public class BatchCheckVehicleDeviceRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1Bw****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -117,21 +130,33 @@ public class BatchCheckVehicleDeviceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchCheckVehicleDeviceRequest} extends {@link TeaModel}
+     *
+     * <p>BatchCheckVehicleDeviceRequest</p>
+     */
     public static class DeviceList extends TeaModel {
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("DeviceModel")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DeviceModel")
         private String deviceModel;
 
-        @NameInMap("Manufacturer")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
+        private String deviceName;
+
+        @com.aliyun.core.annotation.NameInMap("DeviceSecret")
+        private String deviceSecret;
+
+        @com.aliyun.core.annotation.NameInMap("Manufacturer")
         private String manufacturer;
 
         private DeviceList(Builder builder) {
             this.deviceId = builder.deviceId;
             this.deviceModel = builder.deviceModel;
+            this.deviceName = builder.deviceName;
+            this.deviceSecret = builder.deviceSecret;
             this.manufacturer = builder.manufacturer;
         }
 
@@ -158,6 +183,20 @@ public class BatchCheckVehicleDeviceRequest extends Request {
         }
 
         /**
+         * @return deviceName
+         */
+        public String getDeviceName() {
+            return this.deviceName;
+        }
+
+        /**
+         * @return deviceSecret
+         */
+        public String getDeviceSecret() {
+            return this.deviceSecret;
+        }
+
+        /**
          * @return manufacturer
          */
         public String getManufacturer() {
@@ -167,7 +206,20 @@ public class BatchCheckVehicleDeviceRequest extends Request {
         public static final class Builder {
             private String deviceId; 
             private String deviceModel; 
+            private String deviceName; 
+            private String deviceSecret; 
             private String manufacturer; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceList model) {
+                this.deviceId = model.deviceId;
+                this.deviceModel = model.deviceModel;
+                this.deviceName = model.deviceName;
+                this.deviceSecret = model.deviceSecret;
+                this.manufacturer = model.manufacturer;
+            } 
 
             /**
              * DeviceId.
@@ -182,6 +234,22 @@ public class BatchCheckVehicleDeviceRequest extends Request {
              */
             public Builder deviceModel(String deviceModel) {
                 this.deviceModel = deviceModel;
+                return this;
+            }
+
+            /**
+             * DeviceName.
+             */
+            public Builder deviceName(String deviceName) {
+                this.deviceName = deviceName;
+                return this;
+            }
+
+            /**
+             * DeviceSecret.
+             */
+            public Builder deviceSecret(String deviceSecret) {
+                this.deviceSecret = deviceSecret;
                 return this;
             }
 

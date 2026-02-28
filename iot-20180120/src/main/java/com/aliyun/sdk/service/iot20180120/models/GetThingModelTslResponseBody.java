@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetThingModelTslResponseBody} extends {@link TeaModel}
  *
  * <p>GetThingModelTslResponseBody</p>
  */
 public class GetThingModelTslResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetThingModelTslResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetThingModelTslResponseBody extends TeaModel {
 
     public static GetThingModelTslResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GetThingModelTslResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetThingModelTslResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GetThingModelTslResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The URI that is used to store the TSL data in Object Storage Service (OSS). The URI is valid for 60 minutes.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class GetThingModelTslResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The ID of the request.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,14 @@ public class GetThingModelTslResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +148,10 @@ public class GetThingModelTslResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The TSL data returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +164,17 @@ public class GetThingModelTslResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetThingModelTslResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetThingModelTslResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("TslStr")
+        @com.aliyun.core.annotation.NameInMap("TslStr")
         private String tslStr;
 
-        @NameInMap("TslUri")
+        @com.aliyun.core.annotation.NameInMap("TslUri")
         private String tslUri;
 
         private Data(Builder builder) {
@@ -169,6 +208,14 @@ public class GetThingModelTslResponseBody extends TeaModel {
             private String tslStr; 
             private String tslUri; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.tslStr = model.tslStr;
+                this.tslUri = model.tslUri;
+            } 
+
             /**
              * TslStr.
              */
@@ -178,7 +225,7 @@ public class GetThingModelTslResponseBody extends TeaModel {
             }
 
             /**
-             * TslUri.
+             * <p>The string of the TSL model.</p>
              */
             public Builder tslUri(String tslUri) {
                 this.tslUri = tslUri;

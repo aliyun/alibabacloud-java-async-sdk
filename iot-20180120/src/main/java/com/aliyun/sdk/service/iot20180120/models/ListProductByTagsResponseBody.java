@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductByTagsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProductByTagsResponseBody</p>
  */
 public class ListProductByTagsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("ProductInfos")
+    @com.aliyun.core.annotation.NameInMap("ProductInfos")
     private ProductInfos productInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListProductByTagsResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListProductByTagsResponseBody extends TeaModel {
 
     public static ListProductByTagsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class ListProductByTagsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListProductByTagsResponseBody model) {
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.productInfos = model.productInfos;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class ListProductByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +125,10 @@ public class ListProductByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * ProductInfos.
+         * <p>The details of the products returned if the call is successful. The details are included in the <strong>ProductInfo</strong> parameter.</p>
+         * <blockquote>
+         * <p> The returned product information is sorted in reverse-chronological order based on the time when the products were created.</p>
+         * </blockquote>
          */
         public Builder productInfos(ProductInfos productInfos) {
             this.productInfos = productInfos;
@@ -110,7 +136,10 @@ public class ListProductByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,14 @@ public class ListProductByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,20 +167,26 @@ public class ListProductByTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductByTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductByTagsResponseBody</p>
+     */
     public static class ProductInfo extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private Integer nodeType;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
         private ProductInfo(Builder builder) {
@@ -205,8 +247,22 @@ public class ListProductByTagsResponseBody extends TeaModel {
             private String productKey; 
             private String productName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductInfo model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.nodeType = model.nodeType;
+                this.productKey = model.productKey;
+                this.productName = model.productName;
+            } 
+
             /**
-             * CreateTime.
+             * <p>The time when the product was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1545355537000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -214,7 +270,10 @@ public class ListProductByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test product.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -222,7 +281,14 @@ public class ListProductByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type of the product. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: device. Sub-devices cannot be attached to a device. A device can connect to IoT Platform directly or as a sub-device of a gateway.</li>
+             * <li><strong>1</strong>: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain the topological relationships with sub-devices, and synchronize the topological relationships to IoT Platform.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nodeType(Integer nodeType) {
                 this.nodeType = nodeType;
@@ -230,7 +296,10 @@ public class ListProductByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The ProductKey of the product. A ProductKey is a globally unique identifier (GUID) issued by IoT Platform to a new product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1BwAGV****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -238,7 +307,7 @@ public class ListProductByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The name of the product.</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -252,9 +321,15 @@ public class ListProductByTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProductByTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductByTagsResponseBody</p>
+     */
     public static class ProductInfos extends TeaModel {
-        @NameInMap("ProductInfo")
-        private java.util.List < ProductInfo> productInfo;
+        @com.aliyun.core.annotation.NameInMap("ProductInfo")
+        private java.util.List<ProductInfo> productInfo;
 
         private ProductInfos(Builder builder) {
             this.productInfo = builder.productInfo;
@@ -271,17 +346,24 @@ public class ListProductByTagsResponseBody extends TeaModel {
         /**
          * @return productInfo
          */
-        public java.util.List < ProductInfo> getProductInfo() {
+        public java.util.List<ProductInfo> getProductInfo() {
             return this.productInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ProductInfo> productInfo; 
+            private java.util.List<ProductInfo> productInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProductInfos model) {
+                this.productInfo = model.productInfo;
+            } 
 
             /**
              * ProductInfo.
              */
-            public Builder productInfo(java.util.List < ProductInfo> productInfo) {
+            public Builder productInfo(java.util.List<ProductInfo> productInfo) {
                 this.productInfo = productInfo;
                 return this;
             }

@@ -1,50 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDownloadDataJobRequest} extends {@link RequestModel}
  *
  * <p>CreateDownloadDataJobRequest</p>
  */
 public class CreateDownloadDataJobRequest extends Request {
-    @Body
-    @NameInMap("Context")
-    private java.util.Map < String, ? > context;
-
-    @Query
-    @NameInMap("DownloadDataType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownloadDataType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String downloadDataType;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("FileConfig")
-    private java.util.Map < String, ? > fileConfig;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileConfig")
+    private java.util.Map<String, ?> fileConfig;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @Query
-    @NameInMap("TableName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
 
     private CreateDownloadDataJobRequest(Builder builder) {
         super(builder);
-        this.context = builder.context;
         this.downloadDataType = builder.downloadDataType;
         this.endTime = builder.endTime;
         this.fileConfig = builder.fileConfig;
@@ -61,16 +61,9 @@ public class CreateDownloadDataJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return context
-     */
-    public java.util.Map < String, ? > getContext() {
-        return this.context;
     }
 
     /**
@@ -90,7 +83,7 @@ public class CreateDownloadDataJobRequest extends Request {
     /**
      * @return fileConfig
      */
-    public java.util.Map < String, ? > getFileConfig() {
+    public java.util.Map<String, ?> getFileConfig() {
         return this.fileConfig;
     }
 
@@ -116,10 +109,9 @@ public class CreateDownloadDataJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDownloadDataJobRequest, Builder> {
-        private java.util.Map < String, ? > context; 
         private String downloadDataType; 
         private Long endTime; 
-        private java.util.Map < String, ? > fileConfig; 
+        private java.util.Map<String, ?> fileConfig; 
         private String iotInstanceId; 
         private Long startTime; 
         private String tableName; 
@@ -130,7 +122,6 @@ public class CreateDownloadDataJobRequest extends Request {
 
         private Builder(CreateDownloadDataJobRequest request) {
             super(request);
-            this.context = request.context;
             this.downloadDataType = request.downloadDataType;
             this.endTime = request.endTime;
             this.fileConfig = request.fileConfig;
@@ -140,17 +131,10 @@ public class CreateDownloadDataJobRequest extends Request {
         } 
 
         /**
-         * Context.
-         */
-        public Builder context(java.util.Map < String, ? > context) {
-            String contextShrink = shrink(context, "Context", "json");
-            this.putBodyParameter("Context", contextShrink);
-            this.context = context;
-            return this;
-        }
-
-        /**
-         * DownloadDataType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TABLE</p>
          */
         public Builder downloadDataType(String downloadDataType) {
             this.putQueryParameter("DownloadDataType", downloadDataType);
@@ -170,7 +154,7 @@ public class CreateDownloadDataJobRequest extends Request {
         /**
          * FileConfig.
          */
-        public Builder fileConfig(java.util.Map < String, ? > fileConfig) {
+        public Builder fileConfig(java.util.Map<String, ?> fileConfig) {
             String fileConfigShrink = shrink(fileConfig, "FileConfig", "json");
             this.putQueryParameter("FileConfig", fileConfigShrink);
             this.fileConfig = fileConfig;
@@ -196,7 +180,10 @@ public class CreateDownloadDataJobRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product_info</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

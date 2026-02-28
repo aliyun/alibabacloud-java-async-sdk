@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubscribeTopicRequest} extends {@link RequestModel}
  *
  * <p>SubscribeTopicRequest</p>
  */
 public class SubscribeTopicRequest extends Request {
-    @Query
-    @NameInMap("DeviceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceName;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
-    @Query
-    @NameInMap("Topic")
-    @Validation(required = true)
-    private java.util.List < String > topic;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> topic;
 
     private SubscribeTopicRequest(Builder builder) {
         super(builder);
@@ -47,7 +52,7 @@ public class SubscribeTopicRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -76,7 +81,7 @@ public class SubscribeTopicRequest extends Request {
     /**
      * @return topic
      */
-    public java.util.List < String > getTopic() {
+    public java.util.List<String> getTopic() {
         return this.topic;
     }
 
@@ -84,7 +89,7 @@ public class SubscribeTopicRequest extends Request {
         private String deviceName; 
         private String iotInstanceId; 
         private String productKey; 
-        private java.util.List < String > topic; 
+        private java.util.List<String> topic; 
 
         private Builder() {
             super();
@@ -99,7 +104,11 @@ public class SubscribeTopicRequest extends Request {
         } 
 
         /**
-         * DeviceName.
+         * <p>The <strong>DeviceName</strong> of the device to which the topic belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -108,7 +117,17 @@ public class SubscribeTopicRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.</li>
+         * <li>If no <strong>Overview</strong> page or ID is generated for your instance, you do not need to configure this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-06***</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -117,7 +136,11 @@ public class SubscribeTopicRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1Q5XoY***</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -126,9 +149,9 @@ public class SubscribeTopicRequest extends Request {
         }
 
         /**
-         * Topic.
+         * <p>This parameter is required.</p>
          */
-        public Builder topic(java.util.List < String > topic) {
+        public Builder topic(java.util.List<String> topic) {
             this.putQueryParameter("Topic", topic);
             this.topic = topic;
             return this;

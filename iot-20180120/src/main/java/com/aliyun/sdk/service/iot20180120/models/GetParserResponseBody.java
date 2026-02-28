@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetParserResponseBody} extends {@link TeaModel}
  *
  * <p>GetParserResponseBody</p>
  */
 public class GetParserResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetParserResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetParserResponseBody extends TeaModel {
 
     public static GetParserResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetParserResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetParserResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,32 +151,38 @@ public class GetParserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetParserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetParserResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DataSourceId")
+        @com.aliyun.core.annotation.NameInMap("DataSourceId")
         private Long dataSourceId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParserId")
+        @com.aliyun.core.annotation.NameInMap("ParserId")
         private Long parserId;
 
-        @NameInMap("Script")
+        @com.aliyun.core.annotation.NameInMap("Script")
         private String script;
 
-        @NameInMap("ScriptDraft")
+        @com.aliyun.core.annotation.NameInMap("ScriptDraft")
         private String scriptDraft;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UtcCreated")
+        @com.aliyun.core.annotation.NameInMap("UtcCreated")
         private String utcCreated;
 
-        @NameInMap("UtcModified")
+        @com.aliyun.core.annotation.NameInMap("UtcModified")
         private String utcModified;
 
         private Data(Builder builder) {
@@ -252,6 +278,21 @@ public class GetParserResponseBody extends TeaModel {
             private String status; 
             private String utcCreated; 
             private String utcModified; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataSourceId = model.dataSourceId;
+                this.description = model.description;
+                this.name = model.name;
+                this.parserId = model.parserId;
+                this.script = model.script;
+                this.scriptDraft = model.scriptDraft;
+                this.status = model.status;
+                this.utcCreated = model.utcCreated;
+                this.utcModified = model.utcModified;
+            } 
 
             /**
              * DataSourceId.

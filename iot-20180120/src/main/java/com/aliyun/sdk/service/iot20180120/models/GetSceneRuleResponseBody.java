@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSceneRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetSceneRuleResponseBody</p>
  */
 public class GetSceneRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSceneRuleResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetSceneRuleResponseBody extends TeaModel {
 
     public static GetSceneRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetSceneRuleResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSceneRuleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,23 +151,29 @@ public class GetSceneRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSceneRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSceneRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("RuleContent")
+        @com.aliyun.core.annotation.NameInMap("RuleContent")
         private String ruleContent;
 
-        @NameInMap("RuleDescription")
+        @com.aliyun.core.annotation.NameInMap("RuleDescription")
         private String ruleDescription;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleStatus")
+        @com.aliyun.core.annotation.NameInMap("RuleStatus")
         private Integer ruleStatus;
 
         private Data(Builder builder) {
@@ -216,6 +242,18 @@ public class GetSceneRuleResponseBody extends TeaModel {
             private String ruleDescription; 
             private String ruleName; 
             private Integer ruleStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.ruleContent = model.ruleContent;
+                this.ruleDescription = model.ruleDescription;
+                this.ruleName = model.ruleName;
+                this.ruleStatus = model.ruleStatus;
+            } 
 
             /**
              * GmtCreate.

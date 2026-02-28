@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceListByDeviceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceListByDeviceGroupResponseBody</p>
  */
 public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Integer pageCount;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private QueryDeviceListByDeviceGroupResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
 
     public static QueryDeviceListByDeviceGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -133,8 +142,26 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         private Boolean success; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceListByDeviceGroupResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.page = model.page;
+            this.pageCount = model.pageCount;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,7 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The device list information returned if the call succeeds. For more information, see the following <strong>SimpleDeviceInfo</strong> parameter.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,7 +177,7 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -158,7 +185,10 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -166,7 +196,10 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -174,7 +207,10 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +218,10 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1A921D9-1061-4D45-9F12-EA6B0FDEDE30</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +229,14 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +244,10 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of devices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -211,17 +260,23 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceListByDeviceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceListByDeviceGroupResponseBody</p>
+     */
     public static class SimpleDeviceInfo extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
         private SimpleDeviceInfo(Builder builder) {
@@ -273,8 +328,21 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
             private String productKey; 
             private String productName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SimpleDeviceInfo model) {
+                this.deviceName = model.deviceName;
+                this.iotId = model.iotId;
+                this.productKey = model.productKey;
+                this.productName = model.productName;
+            } 
+
             /**
-             * DeviceName.
+             * <p>The name of each device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ios_1207_08</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -282,7 +350,10 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * IotId.
+             * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TfmUAeJjQQhCPH84UVNn0010c6****</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -290,7 +361,10 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The ProductKey of the product to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1hWjHD****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -298,7 +372,10 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The ProductName of the product to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WIFIdevice</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -312,9 +389,15 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceListByDeviceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceListByDeviceGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("SimpleDeviceInfo")
-        private java.util.List < SimpleDeviceInfo> simpleDeviceInfo;
+        @com.aliyun.core.annotation.NameInMap("SimpleDeviceInfo")
+        private java.util.List<SimpleDeviceInfo> simpleDeviceInfo;
 
         private Data(Builder builder) {
             this.simpleDeviceInfo = builder.simpleDeviceInfo;
@@ -331,17 +414,24 @@ public class QueryDeviceListByDeviceGroupResponseBody extends TeaModel {
         /**
          * @return simpleDeviceInfo
          */
-        public java.util.List < SimpleDeviceInfo> getSimpleDeviceInfo() {
+        public java.util.List<SimpleDeviceInfo> getSimpleDeviceInfo() {
             return this.simpleDeviceInfo;
         }
 
         public static final class Builder {
-            private java.util.List < SimpleDeviceInfo> simpleDeviceInfo; 
+            private java.util.List<SimpleDeviceInfo> simpleDeviceInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.simpleDeviceInfo = model.simpleDeviceInfo;
+            } 
 
             /**
              * SimpleDeviceInfo.
              */
-            public Builder simpleDeviceInfo(java.util.List < SimpleDeviceInfo> simpleDeviceInfo) {
+            public Builder simpleDeviceInfo(java.util.List<SimpleDeviceInfo> simpleDeviceInfo) {
                 this.simpleDeviceInfo = simpleDeviceInfo;
                 return this;
             }

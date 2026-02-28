@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDeviceDistributeJobRequest} extends {@link RequestModel}
  *
  * <p>CreateDeviceDistributeJobRequest</p>
  */
 public class CreateDeviceDistributeJobRequest extends Request {
-    @Body
-    @NameInMap("DeviceName")
-    @Validation(required = true)
-    private java.util.List < String > deviceName;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> deviceName;
 
-    @Body
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
-    @Body
-    @NameInMap("SourceInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceInstanceId;
 
-    @Body
-    @NameInMap("Strategy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Strategy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer strategy;
 
-    @Body
-    @NameInMap("TargetAliyunId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetAliyunId")
     private String targetAliyunId;
 
-    @Body
-    @NameInMap("TargetInstanceConfig")
-    @Validation(required = true)
-    private java.util.List < TargetInstanceConfig> targetInstanceConfig;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetInstanceConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<TargetInstanceConfig> targetInstanceConfig;
 
-    @Body
-    @NameInMap("TargetUid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetUid")
     private String targetUid;
 
     private CreateDeviceDistributeJobRequest(Builder builder) {
@@ -64,7 +69,7 @@ public class CreateDeviceDistributeJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -72,7 +77,7 @@ public class CreateDeviceDistributeJobRequest extends Request {
     /**
      * @return deviceName
      */
-    public java.util.List < String > getDeviceName() {
+    public java.util.List<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -107,7 +112,7 @@ public class CreateDeviceDistributeJobRequest extends Request {
     /**
      * @return targetInstanceConfig
      */
-    public java.util.List < TargetInstanceConfig> getTargetInstanceConfig() {
+    public java.util.List<TargetInstanceConfig> getTargetInstanceConfig() {
         return this.targetInstanceConfig;
     }
 
@@ -119,12 +124,12 @@ public class CreateDeviceDistributeJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDeviceDistributeJobRequest, Builder> {
-        private java.util.List < String > deviceName; 
+        private java.util.List<String> deviceName; 
         private String productKey; 
         private String sourceInstanceId; 
         private Integer strategy; 
         private String targetAliyunId; 
-        private java.util.List < TargetInstanceConfig> targetInstanceConfig; 
+        private java.util.List<TargetInstanceConfig> targetInstanceConfig; 
         private String targetUid; 
 
         private Builder() {
@@ -143,16 +148,24 @@ public class CreateDeviceDistributeJobRequest extends Request {
         } 
 
         /**
-         * DeviceName.
+         * <p>The names of the devices to be distributed. You can specify a maximum of 10,000 device names.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RepeatList</p>
          */
-        public Builder deviceName(java.util.List < String > deviceName) {
+        public Builder deviceName(java.util.List<String> deviceName) {
             this.putBodyParameter("DeviceName", deviceName);
             this.deviceName = deviceName;
             return this;
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putBodyParameter("ProductKey", productKey);
@@ -161,7 +174,27 @@ public class CreateDeviceDistributeJobRequest extends Request {
         }
 
         /**
-         * SourceInstanceId.
+         * <p>The ID of the source instance to which the device belongs.</p>
+         * <ul>
+         * <li><p>The IDs of public instances in different regions:</p>
+         * <ul>
+         * <li>China (Shanghai): iotx-oxssharez200.</li>
+         * <li>Japan (Tokyo): iotx-oxssharez300.</li>
+         * <li>Singapore (Singapore): iotx-oxssharez400.</li>
+         * <li>US (Silicon Valley): iotx-oxssharez500.</li>
+         * <li>US (Virginia): iotx-oxssharez600.</li>
+         * <li>Germany (Frankfurt): iotx-oxssharez700.</li>
+         * </ul>
+         * </li>
+         * <li><p>The IDs of Enterprise Edition instances:</p>
+         * <p>1. Log on to the IoT Platform console. Select a region from the drop-down list in the upper-left corner of the top navigation bar.</p>
+         * <p>2. On the <strong>Overview</strong> page, click the instance name. On the <strong>Instance Details</strong> page, view the instance ID in the <strong>Basic Information</strong> section.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-060***</p>
          */
         public Builder sourceInstanceId(String sourceInstanceId) {
             this.putBodyParameter("SourceInstanceId", sourceInstanceId);
@@ -170,7 +203,15 @@ public class CreateDeviceDistributeJobRequest extends Request {
         }
 
         /**
-         * Strategy.
+         * <p>The distribution policy. Default value: 0.</p>
+         * <ul>
+         * <li><strong>0</strong>: distributes devices to instances in a specified region.</li>
+         * <li><strong>1</strong>: configures instance IDs in multiple regions and distributes devices to the nearest regions based on the IP addresses of the devices.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder strategy(Integer strategy) {
             this.putBodyParameter("Strategy", strategy);
@@ -179,7 +220,11 @@ public class CreateDeviceDistributeJobRequest extends Request {
         }
 
         /**
-         * TargetAliyunId.
+         * <p>The Alibaba Cloud account to which the device belongs. You can log on to the IoT Platform console, click the profile picture, and then view the account ID on the <strong>Security Settings</strong> page.</p>
+         * <p>The <strong>TargetUid</strong> and <strong>TargetAliyunId</strong> parameters cannot be left empty at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>io****@example.com</p>
          */
         public Builder targetAliyunId(String targetAliyunId) {
             this.putBodyParameter("TargetAliyunId", targetAliyunId);
@@ -188,16 +233,20 @@ public class CreateDeviceDistributeJobRequest extends Request {
         }
 
         /**
-         * TargetInstanceConfig.
+         * <p>This parameter is required.</p>
          */
-        public Builder targetInstanceConfig(java.util.List < TargetInstanceConfig> targetInstanceConfig) {
+        public Builder targetInstanceConfig(java.util.List<TargetInstanceConfig> targetInstanceConfig) {
             this.putBodyParameter("TargetInstanceConfig", targetInstanceConfig);
             this.targetInstanceConfig = targetInstanceConfig;
             return this;
         }
 
         /**
-         * TargetUid.
+         * <p>The ID of the Alibaba Cloud account to which the device belongs. You can log on to the IoT Platform console, click the profile picture, and then view the account ID on the <strong>Security Settings</strong> page.</p>
+         * <p>The <strong>TargetUid</strong> and <strong>TargetAliyunId</strong> parameters cannot be left empty at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>198***</p>
          */
         public Builder targetUid(String targetUid) {
             this.putBodyParameter("TargetUid", targetUid);
@@ -212,9 +261,15 @@ public class CreateDeviceDistributeJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDeviceDistributeJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDeviceDistributeJobRequest</p>
+     */
     public static class TargetInstanceConfig extends TeaModel {
-        @NameInMap("TargetInstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String targetInstanceId;
 
         private TargetInstanceConfig(Builder builder) {
@@ -239,8 +294,23 @@ public class CreateDeviceDistributeJobRequest extends Request {
         public static final class Builder {
             private String targetInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TargetInstanceConfig model) {
+                this.targetInstanceId = model.targetInstanceId;
+            } 
+
             /**
-             * TargetInstanceId.
+             * <p>The configurations of the destination instance to which the device is distributed. For more information about instance IDs, see the description of the <strong>SourceInstanceId</strong> parameter.</p>
+             * <ul>
+             * <li>If the value of the <strong>Strategy</strong> parameter is <strong>1</strong>, you can specify multiple instance IDs.</li>
+             * <li>If the value of the <strong>Strategy</strong> parameter is <strong>0</strong>, you can specify only one instance ID.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iot-cn-6ja***</p>
              */
             public Builder targetInstanceId(String targetInstanceId) {
                 this.targetInstanceId = targetInstanceId;

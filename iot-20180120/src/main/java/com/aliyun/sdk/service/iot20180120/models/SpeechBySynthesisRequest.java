@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SpeechBySynthesisRequest} extends {@link RequestModel}
  *
  * <p>SpeechBySynthesisRequest</p>
  */
 public class SpeechBySynthesisRequest extends Request {
-    @Body
-    @NameInMap("AudioFormat")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AudioFormat")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String audioFormat;
 
-    @Body
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Body
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Body
-    @NameInMap("SpeechId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SpeechId")
     private String speechId;
 
-    @Body
-    @NameInMap("SpeechRate")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SpeechRate")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer speechRate;
 
-    @Body
-    @NameInMap("Text")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Text")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String text;
 
-    @Body
-    @NameInMap("Voice")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Voice")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String voice;
 
-    @Body
-    @NameInMap("Volume")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Volume")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer volume;
 
     private SpeechBySynthesisRequest(Builder builder) {
@@ -79,7 +84,7 @@ public class SpeechBySynthesisRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -185,7 +190,10 @@ public class SpeechBySynthesisRequest extends Request {
         } 
 
         /**
-         * AudioFormat.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wav</p>
          */
         public Builder audioFormat(String audioFormat) {
             this.putBodyParameter("AudioFormat", audioFormat);
@@ -248,7 +256,10 @@ public class SpeechBySynthesisRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder text(String text) {
             this.putBodyParameter("Text", text);
@@ -257,7 +268,10 @@ public class SpeechBySynthesisRequest extends Request {
         }
 
         /**
-         * Voice.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Siyue</p>
          */
         public Builder voice(String voice) {
             this.putBodyParameter("Voice", voice);

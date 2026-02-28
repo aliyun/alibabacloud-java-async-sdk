@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RRpcRequest} extends {@link RequestModel}
  *
  * <p>RRpcRequest</p>
  */
 public class RRpcRequest extends Request {
-    @Query
-    @NameInMap("ContentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentType")
     private String contentType;
 
-    @Query
-    @NameInMap("DeviceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceName;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
-    @Query
-    @NameInMap("RequestBase64Byte")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestBase64Byte")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestBase64Byte;
 
-    @Query
-    @NameInMap("Timeout")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeout;
 
-    @Query
-    @NameInMap("Topic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
     private String topic;
 
     private RRpcRequest(Builder builder) {
@@ -63,7 +68,7 @@ public class RRpcRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -151,7 +156,11 @@ public class RRpcRequest extends Request {
         }
 
         /**
-         * DeviceName.
+         * <p>The name of the device that receives the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -160,7 +169,17 @@ public class RRpcRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+         * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -169,7 +188,11 @@ public class RRpcRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product to which the device belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aldfeSe****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -178,16 +201,20 @@ public class RRpcRequest extends Request {
         }
 
         /**
-         * RequestBase64Byte.
+         * <p>This parameter is required.</p>
          */
         public Builder requestBase64Byte(String requestBase64Byte) {
-            this.putQueryParameter("RequestBase64Byte", requestBase64Byte);
+            this.putBodyParameter("RequestBase64Byte", requestBase64Byte);
             this.requestBase64Byte = requestBase64Byte;
             return this;
         }
 
         /**
-         * Timeout.
+         * <p>The timeout period of a response. Unit: milliseconds. Valid values: 1000 to 8000.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -196,7 +223,8 @@ public class RRpcRequest extends Request {
         }
 
         /**
-         * Topic.
+         * <p>The custom revert-RPC (RRPC) topic. Before you can use a custom RRPC topic, you must configure the device. For more information, see <a href="https://help.aliyun.com/document_detail/90570.html">Use custom topics</a>.</p>
+         * <p>If you do not configure this parameter, the default RRPC topic is used.</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

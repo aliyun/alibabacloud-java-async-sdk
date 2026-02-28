@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySuperDeviceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySuperDeviceGroupResponseBody</p>
  */
 public class QuerySuperDeviceGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySuperDeviceGroupResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
 
     public static QuerySuperDeviceGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QuerySuperDeviceGroupResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The parent group information returned if the call succeeds. For more information, see the following <strong>GroupInfo</strong> parameter.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7411716B-A488-4EEB-9AA0-6DB05AD2491F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +164,20 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySuperDeviceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySuperDeviceGroupResponseBody</p>
+     */
     public static class GroupInfo extends TeaModel {
-        @NameInMap("GroupDesc")
+        @com.aliyun.core.annotation.NameInMap("GroupDesc")
         private String groupDesc;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private GroupInfo(Builder builder) {
@@ -181,8 +220,20 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
             private String groupId; 
             private String groupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupInfo model) {
+                this.groupDesc = model.groupDesc;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+            } 
+
             /**
-             * GroupDesc.
+             * <p>The description of the parent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A test</p>
              */
             public Builder groupDesc(String groupDesc) {
                 this.groupDesc = groupDesc;
@@ -190,7 +241,10 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the parent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tDQvBJqbUyHskDse</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -198,7 +252,10 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the parent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IOTTEST</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -212,9 +269,15 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySuperDeviceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySuperDeviceGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("GroupInfo")
-        private java.util.List < GroupInfo> groupInfo;
+        @com.aliyun.core.annotation.NameInMap("GroupInfo")
+        private java.util.List<GroupInfo> groupInfo;
 
         private Data(Builder builder) {
             this.groupInfo = builder.groupInfo;
@@ -231,17 +294,24 @@ public class QuerySuperDeviceGroupResponseBody extends TeaModel {
         /**
          * @return groupInfo
          */
-        public java.util.List < GroupInfo> getGroupInfo() {
+        public java.util.List<GroupInfo> getGroupInfo() {
             return this.groupInfo;
         }
 
         public static final class Builder {
-            private java.util.List < GroupInfo> groupInfo; 
+            private java.util.List<GroupInfo> groupInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.groupInfo = model.groupInfo;
+            } 
 
             /**
              * GroupInfo.
              */
-            public Builder groupInfo(java.util.List < GroupInfo> groupInfo) {
+            public Builder groupInfo(java.util.List<GroupInfo> groupInfo) {
                 this.groupInfo = groupInfo;
                 return this;
             }

@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReplaceEdgeInstanceGatewayRequest} extends {@link RequestModel}
  *
  * <p>ReplaceEdgeInstanceGatewayRequest</p>
  */
 public class ReplaceEdgeInstanceGatewayRequest extends Request {
-    @Query
-    @NameInMap("CurrentGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String currentGatewayId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("NewGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newGatewayId;
 
     private ReplaceEdgeInstanceGatewayRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class ReplaceEdgeInstanceGatewayRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,10 @@ public class ReplaceEdgeInstanceGatewayRequest extends Request {
         } 
 
         /**
-         * CurrentGatewayId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oTCJomvT95WPyPPQ5sje******</p>
          */
         public Builder currentGatewayId(String currentGatewayId) {
             this.putQueryParameter("CurrentGatewayId", currentGatewayId);
@@ -108,7 +116,10 @@ public class ReplaceEdgeInstanceGatewayRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>G4TGWGYwpo8zwr******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +137,10 @@ public class ReplaceEdgeInstanceGatewayRequest extends Request {
         }
 
         /**
-         * NewGatewayId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65SkFyhZcU5d3PO2Ri13******</p>
          */
         public Builder newGatewayId(String newGatewayId) {
             this.putQueryParameter("NewGatewayId", newGatewayId);

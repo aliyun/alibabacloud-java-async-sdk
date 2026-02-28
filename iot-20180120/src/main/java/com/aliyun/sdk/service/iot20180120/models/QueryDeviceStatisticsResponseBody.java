@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceStatisticsResponseBody</p>
  */
 public class QueryDeviceStatisticsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDeviceStatisticsResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryDeviceStatisticsResponseBody extends TeaModel {
 
     public static QueryDeviceStatisticsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryDeviceStatisticsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceStatisticsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryDeviceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The device statistics returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class QueryDeviceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class QueryDeviceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class QueryDeviceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +164,20 @@ public class QueryDeviceStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("activeCount")
+        @com.aliyun.core.annotation.NameInMap("activeCount")
         private Long activeCount;
 
-        @NameInMap("deviceCount")
+        @com.aliyun.core.annotation.NameInMap("deviceCount")
         private Long deviceCount;
 
-        @NameInMap("onlineCount")
+        @com.aliyun.core.annotation.NameInMap("onlineCount")
         private Long onlineCount;
 
         private Data(Builder builder) {
@@ -181,8 +220,20 @@ public class QueryDeviceStatisticsResponseBody extends TeaModel {
             private Long deviceCount; 
             private Long onlineCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.activeCount = model.activeCount;
+                this.deviceCount = model.deviceCount;
+                this.onlineCount = model.onlineCount;
+            } 
+
             /**
-             * activeCount.
+             * <p>The number of activated devices.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -190,7 +241,10 @@ public class QueryDeviceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * deviceCount.
+             * <p>The total number of devices.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder deviceCount(Long deviceCount) {
                 this.deviceCount = deviceCount;
@@ -198,7 +252,10 @@ public class QueryDeviceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * onlineCount.
+             * <p>The number of online devices.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder onlineCount(Long onlineCount) {
                 this.onlineCount = onlineCount;

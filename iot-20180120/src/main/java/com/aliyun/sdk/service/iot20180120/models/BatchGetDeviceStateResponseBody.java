@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetDeviceStateResponseBody} extends {@link TeaModel}
  *
  * <p>BatchGetDeviceStateResponseBody</p>
  */
 public class BatchGetDeviceStateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DeviceStatusList")
+    @com.aliyun.core.annotation.NameInMap("DeviceStatusList")
     private DeviceStatusList deviceStatusList;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchGetDeviceStateResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
 
     public static BatchGetDeviceStateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(BatchGetDeviceStateResponseBody model) {
+            this.code = model.code;
+            this.deviceStatusList = model.deviceStatusList;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
         }
 
         /**
-         * DeviceStatusList.
+         * <p>The device status information returned if the call is successful. For more information, see the following parameters that are included in the DeviceStatus parameter.</p>
          */
         public Builder deviceStatusList(DeviceStatusList deviceStatusList) {
             this.deviceStatusList = deviceStatusList;
@@ -102,7 +125,7 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,24 +164,33 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchGetDeviceStateResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetDeviceStateResponseBody</p>
+     */
     public static class DeviceStatus extends TeaModel {
-        @NameInMap("AsAddress")
+        @com.aliyun.core.annotation.NameInMap("AsAddress")
         private String asAddress;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("LastOnlineTime")
+        @com.aliyun.core.annotation.NameInMap("LastOnlineTime")
         private String lastOnlineTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
+        private Long timestamp;
 
         private DeviceStatus(Builder builder) {
             this.asAddress = builder.asAddress;
@@ -157,6 +199,7 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
             this.iotId = builder.iotId;
             this.lastOnlineTime = builder.lastOnlineTime;
             this.status = builder.status;
+            this.timestamp = builder.timestamp;
         }
 
         public static Builder builder() {
@@ -209,6 +252,13 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return timestamp
+         */
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
         public static final class Builder {
             private String asAddress; 
             private String deviceId; 
@@ -216,9 +266,26 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
             private String iotId; 
             private String lastOnlineTime; 
             private String status; 
+            private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceStatus model) {
+                this.asAddress = model.asAddress;
+                this.deviceId = model.deviceId;
+                this.deviceName = model.deviceName;
+                this.iotId = model.iotId;
+                this.lastOnlineTime = model.lastOnlineTime;
+                this.status = model.status;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
-             * AsAddress.
+             * <p>The IP address of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.2.1</p>
              */
             public Builder asAddress(String asAddress) {
                 this.asAddress = asAddress;
@@ -226,7 +293,13 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>The ID of the device (expired).</p>
+             * <blockquote>
+             * <p> This parameter is no longer supported. Do not use this parameter to identify a device. You can use the value of the <strong>IotId</strong>** parameter or a combination of the values of the **<strong>ProductKey</strong> and DeviceName parameters to identify a device.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>dwnS41bhNxjslDAI****</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -234,7 +307,10 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceName.
+             * <p>The DeviceName of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>light</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -242,7 +318,10 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
             }
 
             /**
-             * IotId.
+             * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dwnS41bhNxjslDAI****000100</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -250,7 +329,10 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
             }
 
             /**
-             * LastOnlineTime.
+             * <p>The last time when the device was online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-17 16:19:11</p>
              */
             public Builder lastOnlineTime(String lastOnlineTime) {
                 this.lastOnlineTime = lastOnlineTime;
@@ -258,10 +340,27 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the device. Valid values: Valid values:</p>
+             * <ul>
+             * <li><strong>ONLINE</strong>: The device is online.</li>
+             * <li><strong>OFFLINE</strong>: The device is offline.</li>
+             * <li><strong>UNACTIVE</strong>: The device is not activated.</li>
+             * <li><strong>DISABLE</strong>: The device is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OFFLINE</p>
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Timestamp.
+             */
+            public Builder timestamp(Long timestamp) {
+                this.timestamp = timestamp;
                 return this;
             }
 
@@ -272,9 +371,15 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchGetDeviceStateResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetDeviceStateResponseBody</p>
+     */
     public static class DeviceStatusList extends TeaModel {
-        @NameInMap("DeviceStatus")
-        private java.util.List < DeviceStatus> deviceStatus;
+        @com.aliyun.core.annotation.NameInMap("DeviceStatus")
+        private java.util.List<DeviceStatus> deviceStatus;
 
         private DeviceStatusList(Builder builder) {
             this.deviceStatus = builder.deviceStatus;
@@ -291,17 +396,24 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
         /**
          * @return deviceStatus
          */
-        public java.util.List < DeviceStatus> getDeviceStatus() {
+        public java.util.List<DeviceStatus> getDeviceStatus() {
             return this.deviceStatus;
         }
 
         public static final class Builder {
-            private java.util.List < DeviceStatus> deviceStatus; 
+            private java.util.List<DeviceStatus> deviceStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceStatusList model) {
+                this.deviceStatus = model.deviceStatus;
+            } 
 
             /**
              * DeviceStatus.
              */
-            public Builder deviceStatus(java.util.List < DeviceStatus> deviceStatus) {
+            public Builder deviceStatus(java.util.List<DeviceStatus> deviceStatus) {
                 this.deviceStatus = deviceStatus;
                 return this;
             }

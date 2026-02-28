@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetEdgeInstanceDeviceConfigRequest} extends {@link RequestModel}
  *
  * <p>BatchGetEdgeInstanceDeviceConfigRequest</p>
  */
 public class BatchGetEdgeInstanceDeviceConfigRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IotIds")
-    @Validation(required = true)
-    private java.util.List < String > iotIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> iotIds;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private BatchGetEdgeInstanceDeviceConfigRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class BatchGetEdgeInstanceDeviceConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -56,7 +61,7 @@ public class BatchGetEdgeInstanceDeviceConfigRequest extends Request {
     /**
      * @return iotIds
      */
-    public java.util.List < String > getIotIds() {
+    public java.util.List<String> getIotIds() {
         return this.iotIds;
     }
 
@@ -69,7 +74,7 @@ public class BatchGetEdgeInstanceDeviceConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<BatchGetEdgeInstanceDeviceConfigRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > iotIds; 
+        private java.util.List<String> iotIds; 
         private String iotInstanceId; 
 
         private Builder() {
@@ -84,7 +89,12 @@ public class BatchGetEdgeInstanceDeviceConfigRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the edge instance. To obtain the instance ID, perform the following steps: Log on to the <a href="https://iot.console.aliyun.com/le/instance/list">Link IoT Edge console</a>. On the <strong>Edge Instances</strong> page, move the pointer over the name of the edge instance that you want to query and obtain the instance ID.</p>
+         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/135214.html">QueryEdgeInstance</a> operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3APY0tPLhmgGtx0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,16 +103,22 @@ public class BatchGetEdgeInstanceDeviceConfigRequest extends Request {
         }
 
         /**
-         * IotIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BXPV9Ks3bxwM9fDl****000101</p>
          */
-        public Builder iotIds(java.util.List < String > iotIds) {
+        public Builder iotIds(java.util.List<String> iotIds) {
             this.putQueryParameter("IotIds", iotIds);
             this.iotIds = iotIds;
             return this;
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the Internet of Things (IoT) service instance. This parameter is not required for the public instance but required for Enterprise Edition instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);

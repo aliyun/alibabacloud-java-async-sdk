@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListParserDestinationResponseBody} extends {@link TeaModel}
  *
  * <p>ListParserDestinationResponseBody</p>
  */
 public class ListParserDestinationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListParserDestinationResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListParserDestinationResponseBody extends TeaModel {
 
     public static ListParserDestinationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class ListParserDestinationResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListParserDestinationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,26 +151,32 @@ public class ListParserDestinationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListParserDestinationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListParserDestinationResponseBody</p>
+     */
     public static class Destinations extends TeaModel {
-        @NameInMap("Configuration")
+        @com.aliyun.core.annotation.NameInMap("Configuration")
         private String configuration;
 
-        @NameInMap("DestinationId")
+        @com.aliyun.core.annotation.NameInMap("DestinationId")
         private Long destinationId;
 
-        @NameInMap("IsFailover")
+        @com.aliyun.core.annotation.NameInMap("IsFailover")
         private Boolean isFailover;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UtcCreated")
+        @com.aliyun.core.annotation.NameInMap("UtcCreated")
         private String utcCreated;
 
-        @NameInMap("UtcModified")
+        @com.aliyun.core.annotation.NameInMap("UtcModified")
         private String utcModified;
 
         private Destinations(Builder builder) {
@@ -229,6 +255,19 @@ public class ListParserDestinationResponseBody extends TeaModel {
             private String utcCreated; 
             private String utcModified; 
 
+            private Builder() {
+            } 
+
+            private Builder(Destinations model) {
+                this.configuration = model.configuration;
+                this.destinationId = model.destinationId;
+                this.isFailover = model.isFailover;
+                this.name = model.name;
+                this.type = model.type;
+                this.utcCreated = model.utcCreated;
+                this.utcModified = model.utcModified;
+            } 
+
             /**
              * Configuration.
              */
@@ -292,9 +331,15 @@ public class ListParserDestinationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListParserDestinationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListParserDestinationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("destinations")
-        private java.util.List < Destinations> destinations;
+        @com.aliyun.core.annotation.NameInMap("destinations")
+        private java.util.List<Destinations> destinations;
 
         private Data(Builder builder) {
             this.destinations = builder.destinations;
@@ -311,17 +356,24 @@ public class ListParserDestinationResponseBody extends TeaModel {
         /**
          * @return destinations
          */
-        public java.util.List < Destinations> getDestinations() {
+        public java.util.List<Destinations> getDestinations() {
             return this.destinations;
         }
 
         public static final class Builder {
-            private java.util.List < Destinations> destinations; 
+            private java.util.List<Destinations> destinations; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.destinations = model.destinations;
+            } 
 
             /**
              * destinations.
              */
-            public Builder destinations(java.util.List < Destinations> destinations) {
+            public Builder destinations(java.util.List<Destinations> destinations) {
                 this.destinations = destinations;
                 return this;
             }

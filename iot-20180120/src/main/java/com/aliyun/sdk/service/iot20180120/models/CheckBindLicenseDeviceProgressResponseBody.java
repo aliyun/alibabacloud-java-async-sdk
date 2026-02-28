@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckBindLicenseDeviceProgressResponseBody} extends {@link TeaModel}
  *
  * <p>CheckBindLicenseDeviceProgressResponseBody</p>
  */
 public class CheckBindLicenseDeviceProgressResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CheckBindLicenseDeviceProgressResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class CheckBindLicenseDeviceProgressResponseBody extends TeaModel {
 
     public static CheckBindLicenseDeviceProgressResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CheckBindLicenseDeviceProgressResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckBindLicenseDeviceProgressResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,17 +151,23 @@ public class CheckBindLicenseDeviceProgressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckBindLicenseDeviceProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckBindLicenseDeviceProgressResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("FailSum")
+        @com.aliyun.core.annotation.NameInMap("FailSum")
         private Long failSum;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("ResultCsvFile")
+        @com.aliyun.core.annotation.NameInMap("ResultCsvFile")
         private String resultCsvFile;
 
-        @NameInMap("SuccessSum")
+        @com.aliyun.core.annotation.NameInMap("SuccessSum")
         private Long successSum;
 
         private Data(Builder builder) {
@@ -192,6 +218,16 @@ public class CheckBindLicenseDeviceProgressResponseBody extends TeaModel {
             private Integer progress; 
             private String resultCsvFile; 
             private Long successSum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.failSum = model.failSum;
+                this.progress = model.progress;
+                this.resultCsvFile = model.resultCsvFile;
+                this.successSum = model.successSum;
+            } 
 
             /**
              * FailSum.

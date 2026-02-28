@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySoundCodeLabelListResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySoundCodeLabelListResponseBody</p>
  */
 public class QuerySoundCodeLabelListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySoundCodeLabelListResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QuerySoundCodeLabelListResponseBody extends TeaModel {
 
     public static QuerySoundCodeLabelListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QuerySoundCodeLabelListResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySoundCodeLabelListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,11 +151,17 @@ public class QuerySoundCodeLabelListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySoundCodeLabelListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySoundCodeLabelListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("SoundCode")
+        @com.aliyun.core.annotation.NameInMap("SoundCode")
         private String soundCode;
 
         private Items(Builder builder) {
@@ -169,6 +195,14 @@ public class QuerySoundCodeLabelListResponseBody extends TeaModel {
             private String label; 
             private String soundCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.label = model.label;
+                this.soundCode = model.soundCode;
+            } 
+
             /**
              * Label.
              */
@@ -192,9 +226,15 @@ public class QuerySoundCodeLabelListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySoundCodeLabelListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySoundCodeLabelListResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
         private List(Builder builder) {
             this.items = builder.items;
@@ -211,17 +251,24 @@ public class QuerySoundCodeLabelListResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.items = model.items;
+            } 
 
             /**
              * Items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
@@ -233,17 +280,23 @@ public class QuerySoundCodeLabelListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySoundCodeLabelListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySoundCodeLabelListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageId")
+        @com.aliyun.core.annotation.NameInMap("PageId")
         private Integer pageId;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -294,6 +347,16 @@ public class QuerySoundCodeLabelListResponseBody extends TeaModel {
             private Integer pageId; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageId = model.pageId;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * List.

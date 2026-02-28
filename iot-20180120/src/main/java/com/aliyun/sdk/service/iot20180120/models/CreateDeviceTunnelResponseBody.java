@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDeviceTunnelResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDeviceTunnelResponseBody</p>
  */
 public class CreateDeviceTunnelResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateDeviceTunnelResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class CreateDeviceTunnelResponseBody extends TeaModel {
 
     public static CreateDeviceTunnelResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CreateDeviceTunnelResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDeviceTunnelResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,14 +151,20 @@ public class CreateDeviceTunnelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDeviceTunnelResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDeviceTunnelResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("SourceAccessToken")
+        @com.aliyun.core.annotation.NameInMap("SourceAccessToken")
         private String sourceAccessToken;
 
-        @NameInMap("SourceURI")
+        @com.aliyun.core.annotation.NameInMap("SourceURI")
         private String sourceURI;
 
-        @NameInMap("TunnelId")
+        @com.aliyun.core.annotation.NameInMap("TunnelId")
         private String tunnelId;
 
         private Data(Builder builder) {
@@ -180,6 +206,15 @@ public class CreateDeviceTunnelResponseBody extends TeaModel {
             private String sourceAccessToken; 
             private String sourceURI; 
             private String tunnelId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.sourceAccessToken = model.sourceAccessToken;
+                this.sourceURI = model.sourceURI;
+                this.tunnelId = model.tunnelId;
+            } 
 
             /**
              * SourceAccessToken.

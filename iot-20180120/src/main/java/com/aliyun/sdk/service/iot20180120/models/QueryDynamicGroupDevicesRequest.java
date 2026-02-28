@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDynamicGroupDevicesRequest} extends {@link RequestModel}
  *
  * <p>QueryDynamicGroupDevicesRequest</p>
  */
 public class QueryDynamicGroupDevicesRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("FuzzyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FuzzyName")
     private Boolean fuzzyName;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("IotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private QueryDynamicGroupDevicesRequest(Builder builder) {
@@ -71,7 +76,7 @@ public class QueryDynamicGroupDevicesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -168,7 +173,10 @@ public class QueryDynamicGroupDevicesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -177,7 +185,11 @@ public class QueryDynamicGroupDevicesRequest extends Request {
         }
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the device.</p>
+         * <p>If you specify this parameter and set <strong>FuzzyName</strong> to <strong>true</strong>, the value you specified is used as the prefix to fuzzy match the DeviceName. The value must be at least 4 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -186,7 +198,14 @@ public class QueryDynamicGroupDevicesRequest extends Request {
         }
 
         /**
-         * FuzzyName.
+         * <p>Specifies whether to fuzzy match devices by the value of the <strong>DeviceName</strong> parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fuzzyName(Boolean fuzzyName) {
             this.putQueryParameter("FuzzyName", fuzzyName);
@@ -195,7 +214,12 @@ public class QueryDynamicGroupDevicesRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the group. The ID is the globally unique identifier (GUID) for the group.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/93356.html">QueryDeviceGroupList</a> operation to query the <strong>GroupId</strong> parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tDQvBJqbUyHs***</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -204,7 +228,11 @@ public class QueryDynamicGroupDevicesRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-<em><strong>-v6</strong></em></p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -213,7 +241,10 @@ public class QueryDynamicGroupDevicesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291***</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -222,7 +253,10 @@ public class QueryDynamicGroupDevicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 200. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -231,7 +265,10 @@ public class QueryDynamicGroupDevicesRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product to which the devices belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV***</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -240,7 +277,16 @@ public class QueryDynamicGroupDevicesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The device status. Valid values:</p>
+         * <ul>
+         * <li><strong>ONLINE</strong>: The device is online.</li>
+         * <li><strong>OFFLINE</strong>: The device is offline.</li>
+         * <li><strong>UNACTIVE</strong>: The device is not activated.</li>
+         * <li><strong>DISABLE</strong>: The device is deactivated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OFFLINE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

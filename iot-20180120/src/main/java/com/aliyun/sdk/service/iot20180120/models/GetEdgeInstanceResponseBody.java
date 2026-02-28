@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEdgeInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetEdgeInstanceResponseBody</p>
  */
 public class GetEdgeInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetEdgeInstanceResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
 
     public static GetEdgeInstanceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetEdgeInstanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see <a href="https://help.aliyun.com/document_detail/135200.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data that is returned if the call was successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request parameter error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +136,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16645053-546B-4D7C-832E-E519B0E23CF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,53 +163,59 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEdgeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEdgeInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BizEnable")
+        @com.aliyun.core.annotation.NameInMap("BizEnable")
         private Boolean bizEnable;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtCreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTimestamp")
         private Long gmtCreateTimestamp;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GmtModifiedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTimestamp")
         private Long gmtModifiedTimestamp;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LatestDeploymentStatus")
+        @com.aliyun.core.annotation.NameInMap("LatestDeploymentStatus")
         private Integer latestDeploymentStatus;
 
-        @NameInMap("LatestDeploymentType")
+        @com.aliyun.core.annotation.NameInMap("LatestDeploymentType")
         private String latestDeploymentType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
-        @NameInMap("RoleAttachTime")
+        @com.aliyun.core.annotation.NameInMap("RoleAttachTime")
         private String roleAttachTime;
 
-        @NameInMap("RoleAttachTimestamp")
+        @com.aliyun.core.annotation.NameInMap("RoleAttachTimestamp")
         private Long roleAttachTimestamp;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private Integer spec;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Data(Builder builder) {
@@ -337,8 +375,37 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             private String tags; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizEnable = model.bizEnable;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtCreateTimestamp = model.gmtCreateTimestamp;
+                this.gmtModified = model.gmtModified;
+                this.gmtModifiedTimestamp = model.gmtModifiedTimestamp;
+                this.instanceId = model.instanceId;
+                this.latestDeploymentStatus = model.latestDeploymentStatus;
+                this.latestDeploymentType = model.latestDeploymentType;
+                this.name = model.name;
+                this.roleArn = model.roleArn;
+                this.roleAttachTime = model.roleAttachTime;
+                this.roleAttachTimestamp = model.roleAttachTimestamp;
+                this.roleName = model.roleName;
+                this.spec = model.spec;
+                this.tags = model.tags;
+                this.type = model.type;
+            } 
+
             /**
-             * BizEnable.
+             * <p>Indicates whether the edge instance was enabled. Valid values:</p>
+             * <ul>
+             * <li>true: enabled</li>
+             * <li>false: disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bizEnable(Boolean bizEnable) {
                 this.bizEnable = bizEnable;
@@ -346,7 +413,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the edge instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-26 12:33:25</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -354,7 +424,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTimestamp.
+             * <p>The UNIX timestamp when the edge instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581912859713</p>
              */
             public Builder gmtCreateTimestamp(Long gmtCreateTimestamp) {
                 this.gmtCreateTimestamp = gmtCreateTimestamp;
@@ -362,7 +435,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last time when the edge instance was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-26 12:33:25</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -370,7 +446,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTimestamp.
+             * <p>The last UNIX timestamp when the edge instance was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581912859713</p>
              */
             public Builder gmtModifiedTimestamp(Long gmtModifiedTimestamp) {
                 this.gmtModifiedTimestamp = gmtModifiedTimestamp;
@@ -378,7 +457,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the edge instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>F3APY0tPLhmgGtx0****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -386,7 +468,16 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LatestDeploymentStatus.
+             * <p>The status of the latest deployment task. Valid values:</p>
+             * <ul>
+             * <li>0: The task was not started.</li>
+             * <li>1: The task was being processed.</li>
+             * <li>2: The task was successful.</li>
+             * <li>3: The task failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder latestDeploymentStatus(Integer latestDeploymentStatus) {
                 this.latestDeploymentStatus = latestDeploymentStatus;
@@ -394,7 +485,14 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LatestDeploymentType.
+             * <p>The type of the latest deployment task. Valid values:</p>
+             * <ul>
+             * <li>deploy: deploys the edge instance.</li>
+             * <li>reset: resets the edge instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>deploy</p>
              */
             public Builder latestDeploymentType(String latestDeploymentType) {
                 this.latestDeploymentType = latestDeploymentType;
@@ -402,7 +500,7 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the edge instance.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -410,7 +508,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1473922805******:role/aliyuniotaccessingfcrole</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -418,7 +519,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RoleAttachTime.
+             * <p>The time when the RAM role was attached to IoT Platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02-19 11:25:48</p>
              */
             public Builder roleAttachTime(String roleAttachTime) {
                 this.roleAttachTime = roleAttachTime;
@@ -426,7 +530,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RoleAttachTimestamp.
+             * <p>The UNIX timestamp when the RAM role was attached to IoT Platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581912859713</p>
              */
             public Builder roleAttachTimestamp(Long roleAttachTimestamp) {
                 this.roleAttachTimestamp = roleAttachTimestamp;
@@ -434,7 +541,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The name of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunIOTAccessingFCRole</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -442,7 +552,15 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The specifications of the edge instance. Valid values:</p>
+             * <ul>
+             * <li>10: Lite Edition</li>
+             * <li>20: Standard Edition</li>
+             * <li>30: Pro Edition</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder spec(Integer spec) {
                 this.spec = spec;
@@ -450,7 +568,10 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the edge instance. Each tag is a <code>key-value</code> pair. Multiple tags are separated with commas(,). Example: <code>k1:v1,k2:v2</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1:v1,k2:v2</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -458,7 +579,14 @@ public class GetEdgeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Indicates whether you own the edge instance or you are authorized to use the edge instance. Valid values:</p>
+             * <ul>
+             * <li>0: You own the edge instance.</li>
+             * <li>1: You are authorized to use the edge instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDestinationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDestinationResponseBody</p>
  */
 public class CreateDestinationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Destination")
+    @com.aliyun.core.annotation.NameInMap("Destination")
     private Destination destination;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateDestinationResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class CreateDestinationResponseBody extends TeaModel {
 
     public static CreateDestinationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CreateDestinationResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDestinationResponseBody model) {
+            this.code = model.code;
+            this.destination = model.destination;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,23 +151,29 @@ public class CreateDestinationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDestinationResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDestinationResponseBody</p>
+     */
     public static class Destination extends TeaModel {
-        @NameInMap("Configuration")
+        @com.aliyun.core.annotation.NameInMap("Configuration")
         private String configuration;
 
-        @NameInMap("DestinationId")
+        @com.aliyun.core.annotation.NameInMap("DestinationId")
         private Long destinationId;
 
-        @NameInMap("IsFailover")
+        @com.aliyun.core.annotation.NameInMap("IsFailover")
         private Boolean isFailover;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UtcCreated")
+        @com.aliyun.core.annotation.NameInMap("UtcCreated")
         private String utcCreated;
 
         private Destination(Builder builder) {
@@ -216,6 +242,18 @@ public class CreateDestinationResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String utcCreated; 
+
+            private Builder() {
+            } 
+
+            private Builder(Destination model) {
+                this.configuration = model.configuration;
+                this.destinationId = model.destinationId;
+                this.isFailover = model.isFailover;
+                this.name = model.name;
+                this.type = model.type;
+                this.utcCreated = model.utcCreated;
+            } 
 
             /**
              * Configuration.

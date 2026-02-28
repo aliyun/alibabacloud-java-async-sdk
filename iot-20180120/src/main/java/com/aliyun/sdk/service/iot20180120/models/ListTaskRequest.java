@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskRequest} extends {@link RequestModel}
  *
  * <p>ListTaskRequest</p>
  */
 public class ListTaskRequest extends Request {
-    @Query
-    @NameInMap("Device")
-    private java.util.Map < String, ? > device;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Device")
+    private java.util.Map<String, ?> device;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @Query
-    @NameInMap("Limit")
-    @Validation(required = true, maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 50, minimum = 1)
     private Integer limit;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListTaskRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class ListTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,7 +68,7 @@ public class ListTaskRequest extends Request {
     /**
      * @return device
      */
-    public java.util.Map < String, ? > getDevice() {
+    public java.util.Map<String, ?> getDevice() {
         return this.device;
     }
 
@@ -103,7 +108,7 @@ public class ListTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTaskRequest, Builder> {
-        private java.util.Map < String, ? > device; 
+        private java.util.Map<String, ?> device; 
         private String iotInstanceId; 
         private String jobId; 
         private Integer limit; 
@@ -127,7 +132,7 @@ public class ListTaskRequest extends Request {
         /**
          * Device.
          */
-        public Builder device(java.util.Map < String, ? > device) {
+        public Builder device(java.util.Map<String, ?> device) {
             String deviceShrink = shrink(device, "Device", "json");
             this.putQueryParameter("Device", deviceShrink);
             this.device = device;
@@ -153,7 +158,10 @@ public class ListTaskRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);

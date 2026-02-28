@@ -1,41 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOTAUnfinishedTaskByDeviceRequest} extends {@link RequestModel}
  *
  * <p>ListOTAUnfinishedTaskByDeviceRequest</p>
  */
 public class ListOTAUnfinishedTaskByDeviceRequest extends Request {
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ModuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModuleName")
     private String moduleName;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("TaskStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskStatusList")
+    private java.util.List<String> taskStatusList;
 
     private ListOTAUnfinishedTaskByDeviceRequest(Builder builder) {
         super(builder);
@@ -45,6 +53,7 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends Request {
         this.moduleName = builder.moduleName;
         this.productKey = builder.productKey;
         this.taskStatus = builder.taskStatus;
+        this.taskStatusList = builder.taskStatusList;
     }
 
     public static Builder builder() {
@@ -55,7 +64,7 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,6 +111,13 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends Request {
         return this.taskStatus;
     }
 
+    /**
+     * @return taskStatusList
+     */
+    public java.util.List<String> getTaskStatusList() {
+        return this.taskStatusList;
+    }
+
     public static final class Builder extends Request.Builder<ListOTAUnfinishedTaskByDeviceRequest, Builder> {
         private String deviceName; 
         private String iotId; 
@@ -109,6 +125,7 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends Request {
         private String moduleName; 
         private String productKey; 
         private String taskStatus; 
+        private java.util.List<String> taskStatusList; 
 
         private Builder() {
             super();
@@ -122,10 +139,17 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends Request {
             this.moduleName = request.moduleName;
             this.productKey = request.productKey;
             this.taskStatus = request.taskStatus;
+            this.taskStatusList = request.taskStatusList;
         } 
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the device.</p>
+         * <blockquote>
+         * <p>If you specify this parameter, you must also specify the <strong>ProductKey</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -134,7 +158,13 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends Request {
         }
 
         /**
-         * IotId.
+         * <p>The ID of the device.</p>
+         * <blockquote>
+         * <p>If you specify this parameter, you do not need to specify <strong>ProductKey</strong> or <strong>DeviceName</strong>. The <strong>IotId</strong> parameter specifies a globally unique identifier (GUID) of the device, which corresponds to a combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>. If you specify both <strong>IotId</strong> and the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>, <strong>IotId</strong> takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>TfmUAeJjQQhCPH84UVNn0010c6****</p>
          */
         public Builder iotId(String iotId) {
             this.putQueryParameter("IotId", iotId);
@@ -143,7 +173,17 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+         * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-c3j***</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -152,7 +192,14 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends Request {
         }
 
         /**
-         * ModuleName.
+         * <p>The name of the OTA module.</p>
+         * <ul>
+         * <li>If you specify this parameter, update tasks of the specified module are queried.</li>
+         * <li>If you do not specify this parameter, update tasks of all modules are queried.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WifiConfigModify</p>
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);
@@ -161,7 +208,13 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product to which the device belongs.</p>
+         * <blockquote>
+         * <p>If you specify this parameter, you must also specify the <strong>DeviceName</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a19mzPZ****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -170,11 +223,29 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * <p>The status of the update task.</p>
+         * <ul>
+         * <li><strong>CONFIRM</strong>: The update task is pending confirmation.</li>
+         * <li><strong>QUEUED</strong>: The update notification is to be pushed.</li>
+         * <li><strong>NOTIFIED</strong>: The update notification is pushed to the device.</li>
+         * <li><strong>IN_PROGRESS</strong>: The update task is in progress.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CONFIRM</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
             this.taskStatus = taskStatus;
+            return this;
+        }
+
+        /**
+         * TaskStatusList.
+         */
+        public Builder taskStatusList(java.util.List<String> taskStatusList) {
+            this.putQueryParameter("TaskStatusList", taskStatusList);
+            this.taskStatusList = taskStatusList;
             return this;
         }
 

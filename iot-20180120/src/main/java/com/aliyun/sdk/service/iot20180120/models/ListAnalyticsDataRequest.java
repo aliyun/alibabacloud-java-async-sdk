@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAnalyticsDataRequest} extends {@link RequestModel}
  *
  * <p>ListAnalyticsDataRequest</p>
  */
 public class ListAnalyticsDataRequest extends Request {
-    @Query
-    @NameInMap("ApiPath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiPath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiPath;
 
-    @Query
-    @NameInMap("Condition")
-    private java.util.List < Condition> condition;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Condition")
+    private java.util.List<Condition> condition;
 
-    @Query
-    @NameInMap("IotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("IsoId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsoId")
     private String isoId;
 
-    @Query
-    @NameInMap("PageNum")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 20000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 20000, minimum = 1)
     private Integer pageSize;
 
     private ListAnalyticsDataRequest(Builder builder) {
@@ -58,7 +63,7 @@ public class ListAnalyticsDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +78,7 @@ public class ListAnalyticsDataRequest extends Request {
     /**
      * @return condition
      */
-    public java.util.List < Condition> getCondition() {
+    public java.util.List<Condition> getCondition() {
         return this.condition;
     }
 
@@ -107,7 +112,7 @@ public class ListAnalyticsDataRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListAnalyticsDataRequest, Builder> {
         private String apiPath; 
-        private java.util.List < Condition> condition; 
+        private java.util.List<Condition> condition; 
         private String iotInstanceId; 
         private String isoId; 
         private Integer pageNum; 
@@ -128,7 +133,7 @@ public class ListAnalyticsDataRequest extends Request {
         } 
 
         /**
-         * ApiPath.
+         * <p>This parameter is required.</p>
          */
         public Builder apiPath(String apiPath) {
             this.putQueryParameter("ApiPath", apiPath);
@@ -139,14 +144,17 @@ public class ListAnalyticsDataRequest extends Request {
         /**
          * Condition.
          */
-        public Builder condition(java.util.List < Condition> condition) {
+        public Builder condition(java.util.List<Condition> condition) {
             this.putQueryParameter("Condition", condition);
             this.condition = condition;
             return this;
         }
 
         /**
-         * IotInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-npk1u******</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -188,22 +196,28 @@ public class ListAnalyticsDataRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListAnalyticsDataRequest} extends {@link TeaModel}
+     *
+     * <p>ListAnalyticsDataRequest</p>
+     */
     public static class Condition extends TeaModel {
-        @NameInMap("BetweenEnd")
+        @com.aliyun.core.annotation.NameInMap("BetweenEnd")
         private String betweenEnd;
 
-        @NameInMap("BetweenStart")
+        @com.aliyun.core.annotation.NameInMap("BetweenStart")
         private String betweenStart;
 
-        @NameInMap("FieldName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FieldName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fieldName;
 
-        @NameInMap("Operate")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Operate")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String operate;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Condition(Builder builder) {
@@ -264,6 +278,17 @@ public class ListAnalyticsDataRequest extends Request {
             private String operate; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Condition model) {
+                this.betweenEnd = model.betweenEnd;
+                this.betweenStart = model.betweenStart;
+                this.fieldName = model.fieldName;
+                this.operate = model.operate;
+                this.value = model.value;
+            } 
+
             /**
              * BetweenEnd.
              */
@@ -281,7 +306,10 @@ public class ListAnalyticsDataRequest extends Request {
             }
 
             /**
-             * FieldName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testCode</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -289,7 +317,10 @@ public class ListAnalyticsDataRequest extends Request {
             }
 
             /**
-             * Operate.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>=</p>
              */
             public Builder operate(String operate) {
                 this.operate = operate;

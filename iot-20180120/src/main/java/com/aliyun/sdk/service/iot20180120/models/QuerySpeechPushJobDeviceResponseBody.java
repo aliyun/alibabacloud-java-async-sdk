@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySpeechPushJobDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySpeechPushJobDeviceResponseBody</p>
  */
 public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySpeechPushJobDeviceResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
 
     public static QuerySpeechPushJobDeviceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySpeechPushJobDeviceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,20 +151,26 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySpeechPushJobDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySpeechPushJobDeviceResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Items(Builder builder) {
@@ -205,6 +231,17 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
             private Long gmtModified; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.deviceName = model.deviceName;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.gmtModified = model.gmtModified;
+                this.status = model.status;
+            } 
+
             /**
              * DeviceName.
              */
@@ -252,9 +289,15 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySpeechPushJobDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySpeechPushJobDeviceResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
         private List(Builder builder) {
             this.items = builder.items;
@@ -271,17 +314,24 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.items = model.items;
+            } 
 
             /**
              * Items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
@@ -293,17 +343,23 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySpeechPushJobDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySpeechPushJobDeviceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageId")
+        @com.aliyun.core.annotation.NameInMap("PageId")
         private Integer pageId;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -354,6 +410,16 @@ public class QuerySpeechPushJobDeviceResponseBody extends TeaModel {
             private Integer pageId; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageId = model.pageId;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * List.

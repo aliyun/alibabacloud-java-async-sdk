@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetThingScriptResponseBody} extends {@link TeaModel}
  *
  * <p>GetThingScriptResponseBody</p>
  */
 public class GetThingScriptResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetThingScriptResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetThingScriptResponseBody extends TeaModel {
 
     public static GetThingScriptResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GetThingScriptResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetThingScriptResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GetThingScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class GetThingScriptResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class GetThingScriptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB71E443-4447-4024-A000-EDE09922891E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class GetThingScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +164,17 @@ public class GetThingScriptResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetThingScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetThingScriptResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ScriptType")
+        @com.aliyun.core.annotation.NameInMap("ScriptType")
         private String scriptType;
 
-        @NameInMap("ScriptUrl")
+        @com.aliyun.core.annotation.NameInMap("ScriptUrl")
         private String scriptUrl;
 
         private Data(Builder builder) {
@@ -169,8 +208,24 @@ public class GetThingScriptResponseBody extends TeaModel {
             private String scriptType; 
             private String scriptUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.scriptType = model.scriptType;
+                this.scriptUrl = model.scriptUrl;
+            } 
+
             /**
-             * ScriptType.
+             * <p>The type of the script. Valid values:</p>
+             * <ul>
+             * <li>JavaScript</li>
+             * <li>Python_27: Python 2.7</li>
+             * <li>PHP_72: PHP 7.2</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>JavaScript</p>
              */
             public Builder scriptType(String scriptType) {
                 this.scriptType = scriptType;
@@ -178,7 +233,10 @@ public class GetThingScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptUrl.
+             * <p>The URL of the script payload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://***</p>
              */
             public Builder scriptUrl(String scriptUrl) {
                 this.scriptUrl = scriptUrl;

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetProductCertInfoRequest} extends {@link RequestModel}
  *
  * <p>SetProductCertInfoRequest</p>
  */
 public class SetProductCertInfoRequest extends Request {
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("IssueModel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IssueModel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer issueModel;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
     private SetProductCertInfoRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class SetProductCertInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,14 @@ public class SetProductCertInfoRequest extends Request {
         } 
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the ID of the instance on the <strong>Overview</strong> page in the IoT Platform console.****</p>
+         * <blockquote>
+         * <p> If your instance has an ID, you must specify the ID for the parameter. Otherwise, the call fails. If no Overview page or ID is generated for your instance, you do not need configure this parameter.</p>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-0pp1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -93,7 +105,15 @@ public class SetProductCertInfoRequest extends Request {
         }
 
         /**
-         * IssueModel.
+         * <p>The source from which the X.509 certificate is issued.</p>
+         * <ul>
+         * <li><strong>1</strong>: The X.509 certificate is issued by IoT Platform.</li>
+         * <li><strong>3</strong>: The X.509 certificate is issued by a third-party platform.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder issueModel(Integer issueModel) {
             this.putQueryParameter("IssueModel", issueModel);
@@ -102,7 +122,11 @@ public class SetProductCertInfoRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aS2dewS****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);

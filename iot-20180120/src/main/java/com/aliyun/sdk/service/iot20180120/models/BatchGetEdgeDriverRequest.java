@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetEdgeDriverRequest} extends {@link RequestModel}
  *
  * <p>BatchGetEdgeDriverRequest</p>
  */
 public class BatchGetEdgeDriverRequest extends Request {
-    @Query
-    @NameInMap("DriverIds")
-    @Validation(required = true)
-    private java.util.List < String > driverIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DriverIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> driverIds;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private BatchGetEdgeDriverRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class BatchGetEdgeDriverRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -43,7 +48,7 @@ public class BatchGetEdgeDriverRequest extends Request {
     /**
      * @return driverIds
      */
-    public java.util.List < String > getDriverIds() {
+    public java.util.List<String> getDriverIds() {
         return this.driverIds;
     }
 
@@ -55,7 +60,7 @@ public class BatchGetEdgeDriverRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchGetEdgeDriverRequest, Builder> {
-        private java.util.List < String > driverIds; 
+        private java.util.List<String> driverIds; 
         private String iotInstanceId; 
 
         private Builder() {
@@ -69,16 +74,22 @@ public class BatchGetEdgeDriverRequest extends Request {
         } 
 
         /**
-         * DriverIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fec565038d7544978d9aed5c1a******</p>
          */
-        public Builder driverIds(java.util.List < String > driverIds) {
+        public Builder driverIds(java.util.List<String> driverIds) {
             this.putQueryParameter("DriverIds", driverIds);
             this.driverIds = driverIds;
             return this;
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the Internet of Things (IoT) service instance. This parameter is not required for public instances. However, this parameter is required for the instances that you have purchased.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);

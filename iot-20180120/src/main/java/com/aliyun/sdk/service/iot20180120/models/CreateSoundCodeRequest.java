@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSoundCodeRequest} extends {@link RequestModel}
  *
  * <p>CreateSoundCodeRequest</p>
  */
 public class CreateSoundCodeRequest extends Request {
-    @Body
-    @NameInMap("Duration")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Duration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer duration;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("OpenType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OpenType")
     private String openType;
 
-    @Body
-    @NameInMap("SoundCodeContent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SoundCodeContent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String soundCodeContent;
 
     private CreateSoundCodeRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class CreateSoundCodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +117,10 @@ public class CreateSoundCodeRequest extends Request {
         } 
 
         /**
-         * Duration.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder duration(Integer duration) {
             this.putBodyParameter("Duration", duration);
@@ -148,7 +156,10 @@ public class CreateSoundCodeRequest extends Request {
         }
 
         /**
-         * SoundCodeContent.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.taobao.com">www.taobao.com</a></p>
          */
         public Builder soundCodeContent(String soundCodeContent) {
             this.putBodyParameter("SoundCodeContent", soundCodeContent);

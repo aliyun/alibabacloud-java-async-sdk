@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEdgeInstanceChannelResponseBody} extends {@link TeaModel}
  *
  * <p>QueryEdgeInstanceChannelResponseBody</p>
  */
 public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryEdgeInstanceChannelResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
 
     public static QueryEdgeInstanceChannelResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryEdgeInstanceChannelResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,17 +151,23 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryEdgeInstanceChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceChannelResponseBody</p>
+     */
     public static class Config extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private Config(Builder builder) {
@@ -193,6 +219,16 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
             private String format; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.configId = model.configId;
+                this.content = model.content;
+                this.format = model.format;
+                this.key = model.key;
+            } 
+
             /**
              * ConfigId.
              */
@@ -232,9 +268,15 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEdgeInstanceChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceChannelResponseBody</p>
+     */
     public static class ConfigList extends TeaModel {
-        @NameInMap("Config")
-        private java.util.List < Config> config;
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private java.util.List<Config> config;
 
         private ConfigList(Builder builder) {
             this.config = builder.config;
@@ -251,17 +293,24 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
         /**
          * @return config
          */
-        public java.util.List < Config> getConfig() {
+        public java.util.List<Config> getConfig() {
             return this.config;
         }
 
         public static final class Builder {
-            private java.util.List < Config> config; 
+            private java.util.List<Config> config; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigList model) {
+                this.config = model.config;
+            } 
 
             /**
              * Config.
              */
-            public Builder config(java.util.List < Config> config) {
+            public Builder config(java.util.List<Config> config) {
                 this.config = config;
                 return this;
             }
@@ -273,26 +322,32 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEdgeInstanceChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceChannelResponseBody</p>
+     */
     public static class Channel extends TeaModel {
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("ChannelName")
+        @com.aliyun.core.annotation.NameInMap("ChannelName")
         private String channelName;
 
-        @NameInMap("ConfigList")
+        @com.aliyun.core.annotation.NameInMap("ConfigList")
         private ConfigList configList;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtCreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTimestamp")
         private Long gmtCreateTimestamp;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GmtModifiedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTimestamp")
         private Long gmtModifiedTimestamp;
 
         private Channel(Builder builder) {
@@ -371,6 +426,19 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
             private String gmtModified; 
             private Long gmtModifiedTimestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Channel model) {
+                this.channelId = model.channelId;
+                this.channelName = model.channelName;
+                this.configList = model.configList;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtCreateTimestamp = model.gmtCreateTimestamp;
+                this.gmtModified = model.gmtModified;
+                this.gmtModifiedTimestamp = model.gmtModifiedTimestamp;
+            } 
+
             /**
              * ChannelId.
              */
@@ -434,9 +502,15 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEdgeInstanceChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceChannelResponseBody</p>
+     */
     public static class ChannelList extends TeaModel {
-        @NameInMap("Channel")
-        private java.util.List < Channel> channel;
+        @com.aliyun.core.annotation.NameInMap("Channel")
+        private java.util.List<Channel> channel;
 
         private ChannelList(Builder builder) {
             this.channel = builder.channel;
@@ -453,17 +527,24 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
         /**
          * @return channel
          */
-        public java.util.List < Channel> getChannel() {
+        public java.util.List<Channel> getChannel() {
             return this.channel;
         }
 
         public static final class Builder {
-            private java.util.List < Channel> channel; 
+            private java.util.List<Channel> channel; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChannelList model) {
+                this.channel = model.channel;
+            } 
 
             /**
              * Channel.
              */
-            public Builder channel(java.util.List < Channel> channel) {
+            public Builder channel(java.util.List<Channel> channel) {
                 this.channel = channel;
                 return this;
             }
@@ -475,17 +556,23 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEdgeInstanceChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceChannelResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ChannelList")
+        @com.aliyun.core.annotation.NameInMap("ChannelList")
         private ChannelList channelList;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -536,6 +623,16 @@ public class QueryEdgeInstanceChannelResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.channelList = model.channelList;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * ChannelList.

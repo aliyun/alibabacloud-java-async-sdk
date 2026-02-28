@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveScriptRequest} extends {@link RequestModel}
  *
  * <p>SaveScriptRequest</p>
  */
 public class SaveScriptRequest extends Request {
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ParserId")
-    @Validation(required = true, maximum = 99999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParserId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99999999)
     private Long parserId;
 
-    @Query
-    @NameInMap("ScriptDraft")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptDraft")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptDraft;
 
     private SaveScriptRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class SaveScriptRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -93,7 +98,10 @@ public class SaveScriptRequest extends Request {
         }
 
         /**
-         * ParserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder parserId(Long parserId) {
             this.putQueryParameter("ParserId", parserId);
@@ -102,7 +110,10 @@ public class SaveScriptRequest extends Request {
         }
 
         /**
-         * ScriptDraft.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>var data = payload(&quot;json&quot;)</p>
          */
         public Builder scriptDraft(String scriptDraft) {
             this.putQueryParameter("ScriptDraft", scriptDraft);

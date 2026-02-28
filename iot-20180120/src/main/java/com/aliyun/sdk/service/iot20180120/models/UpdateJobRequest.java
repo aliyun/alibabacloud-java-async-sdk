@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateJobRequest} extends {@link RequestModel}
  *
  * <p>UpdateJobRequest</p>
  */
 public class UpdateJobRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("RolloutConfig")
-    private java.util.Map < String, ? > rolloutConfig;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RolloutConfig")
+    private java.util.Map<String, ?> rolloutConfig;
 
-    @Query
-    @NameInMap("TimeoutConfig")
-    private java.util.Map < String, ? > timeoutConfig;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutConfig")
+    private java.util.Map<String, ?> timeoutConfig;
 
     private UpdateJobRequest(Builder builder) {
         super(builder);
@@ -50,7 +55,7 @@ public class UpdateJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -79,14 +84,14 @@ public class UpdateJobRequest extends Request {
     /**
      * @return rolloutConfig
      */
-    public java.util.Map < String, ? > getRolloutConfig() {
+    public java.util.Map<String, ?> getRolloutConfig() {
         return this.rolloutConfig;
     }
 
     /**
      * @return timeoutConfig
      */
-    public java.util.Map < String, ? > getTimeoutConfig() {
+    public java.util.Map<String, ?> getTimeoutConfig() {
         return this.timeoutConfig;
     }
 
@@ -94,8 +99,8 @@ public class UpdateJobRequest extends Request {
         private String description; 
         private String iotInstanceId; 
         private String jobId; 
-        private java.util.Map < String, ? > rolloutConfig; 
-        private java.util.Map < String, ? > timeoutConfig; 
+        private java.util.Map<String, ?> rolloutConfig; 
+        private java.util.Map<String, ?> timeoutConfig; 
 
         private Builder() {
             super();
@@ -129,7 +134,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XUbmsMHmkqv0PiAG****010001</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -140,7 +148,7 @@ public class UpdateJobRequest extends Request {
         /**
          * RolloutConfig.
          */
-        public Builder rolloutConfig(java.util.Map < String, ? > rolloutConfig) {
+        public Builder rolloutConfig(java.util.Map<String, ?> rolloutConfig) {
             String rolloutConfigShrink = shrink(rolloutConfig, "RolloutConfig", "json");
             this.putQueryParameter("RolloutConfig", rolloutConfigShrink);
             this.rolloutConfig = rolloutConfig;
@@ -150,7 +158,7 @@ public class UpdateJobRequest extends Request {
         /**
          * TimeoutConfig.
          */
-        public Builder timeoutConfig(java.util.Map < String, ? > timeoutConfig) {
+        public Builder timeoutConfig(java.util.Map<String, ?> timeoutConfig) {
             String timeoutConfigShrink = shrink(timeoutConfig, "TimeoutConfig", "json");
             this.putQueryParameter("TimeoutConfig", timeoutConfigShrink);
             this.timeoutConfig = timeoutConfig;

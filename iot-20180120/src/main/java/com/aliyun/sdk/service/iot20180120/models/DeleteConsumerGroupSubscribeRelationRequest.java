@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteConsumerGroupSubscribeRelationRequest} extends {@link RequestModel}
  *
  * <p>DeleteConsumerGroupSubscribeRelationRequest</p>
  */
 public class DeleteConsumerGroupSubscribeRelationRequest extends Request {
-    @Query
-    @NameInMap("ConsumerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
     private DeleteConsumerGroupSubscribeRelationRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class DeleteConsumerGroupSubscribeRelationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,11 @@ public class DeleteConsumerGroupSubscribeRelationRequest extends Request {
         } 
 
         /**
-         * ConsumerGroupId.
+         * <p>The ID of the consumer group. You can call the <a href="https://help.aliyun.com/document_detail/170352.html">QuerySubscribeRelation</a> operation to query the consumer group ID in an AMQP subscription. You can also go to the IoT Platform console,and choose <strong>Rules</strong> &gt; <strong>Server-side Subscription</strong> to view the consumer group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nJRaJPn5U1JITGfjBO9l00****</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putQueryParameter("ConsumerGroupId", consumerGroupId);
@@ -93,7 +102,17 @@ public class DeleteConsumerGroupSubscribeRelationRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+         * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-0pp1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -102,7 +121,11 @@ public class DeleteConsumerGroupSubscribeRelationRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product that is specified for the subscription.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1fyXVF****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);

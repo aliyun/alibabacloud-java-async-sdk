@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceBySQLResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceBySQLResponseBody</p>
  */
 public class QueryDeviceBySQLResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryDeviceBySQLResponseBody(Builder builder) {
@@ -47,6 +52,10 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -57,7 +66,7 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,14 +100,29 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceBySQLResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,15 +130,15 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The device information returned if the call is successful.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +146,10 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +157,14 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +172,10 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>If you specify <code>SELECT count(*) FROM device</code> in the SQL-like statement, the number of rows that match the specified conditions is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -151,8 +188,14 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceBySQLResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceBySQLResponseBody</p>
+     */
     public static class Groups extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
         private Groups(Builder builder) {
@@ -177,8 +220,18 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         public static final class Builder {
             private String groupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.groupId = model.groupId;
+            } 
+
             /**
-             * GroupId.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1d21d2fas</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -192,11 +245,17 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceBySQLResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceBySQLResponseBody</p>
+     */
     public static class OTAModules extends TeaModel {
-        @NameInMap("FirmwareVersion")
+        @com.aliyun.core.annotation.NameInMap("FirmwareVersion")
         private String firmwareVersion;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
         private OTAModules(Builder builder) {
@@ -230,8 +289,19 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             private String firmwareVersion; 
             private String moduleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(OTAModules model) {
+                this.firmwareVersion = model.firmwareVersion;
+                this.moduleName = model.moduleName;
+            } 
+
             /**
-             * FirmwareVersion.
+             * <p>The version number of each OTA module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1-dads2-dad2</p>
              */
             public Builder firmwareVersion(String firmwareVersion) {
                 this.firmwareVersion = firmwareVersion;
@@ -239,7 +309,10 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * <p>The name of the OTA module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SomeSampleModule</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -253,11 +326,17 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceBySQLResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceBySQLResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -291,8 +370,19 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             private String tagName; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagName = model.tagName;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * TagName.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Color</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -300,7 +390,10 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Red</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -314,39 +407,45 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceBySQLResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceBySQLResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ActiveTime")
+        @com.aliyun.core.annotation.NameInMap("ActiveTime")
         private String activeTime;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Groups")
-        private java.util.List < Groups> groups;
+        @com.aliyun.core.annotation.NameInMap("Groups")
+        private java.util.List<Groups> groups;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("Nickname")
+        @com.aliyun.core.annotation.NameInMap("Nickname")
         private String nickname;
 
-        @NameInMap("OTAModules")
-        private java.util.List < OTAModules> OTAModules;
+        @com.aliyun.core.annotation.NameInMap("OTAModules")
+        private java.util.List<OTAModules> OTAModules;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private Data(Builder builder) {
             this.activeTime = builder.activeTime;
@@ -401,7 +500,7 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         /**
          * @return groups
          */
-        public java.util.List < Groups> getGroups() {
+        public java.util.List<Groups> getGroups() {
             return this.groups;
         }
 
@@ -422,7 +521,7 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         /**
          * @return OTAModules
          */
-        public java.util.List < OTAModules> getOTAModules() {
+        public java.util.List<OTAModules> getOTAModules() {
             return this.OTAModules;
         }
 
@@ -443,7 +542,7 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -452,16 +551,36 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             private String deviceName; 
             private String gmtCreate; 
             private String gmtModified; 
-            private java.util.List < Groups> groups; 
+            private java.util.List<Groups> groups; 
             private String iotId; 
             private String nickname; 
-            private java.util.List < OTAModules> OTAModules; 
+            private java.util.List<OTAModules> OTAModules; 
             private String productKey; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.activeTime = model.activeTime;
+                this.deviceName = model.deviceName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.groups = model.groups;
+                this.iotId = model.iotId;
+                this.nickname = model.nickname;
+                this.OTAModules = model.OTAModules;
+                this.productKey = model.productKey;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
-             * ActiveTime.
+             * <p>The time when the device was activated. The time is in the GMT format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-04 16:38:18.607</p>
              */
             public Builder activeTime(String activeTime) {
                 this.activeTime = activeTime;
@@ -469,7 +588,10 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceName.
+             * <p>The name of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>light</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -477,7 +599,10 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the device was created. The time is in the GMT format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-04 16:38:17.000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -485,7 +610,10 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the device information was last updated. The time is in the GMT format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-04 16:38:19.000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -493,15 +621,18 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             }
 
             /**
-             * Groups.
+             * <p>The information about the groups to which the device belongs.</p>
              */
-            public Builder groups(java.util.List < Groups> groups) {
+            public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;
                 return this;
             }
 
             /**
-             * IotId.
+             * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Q7uOhVRdZRRlDnTLv****00100</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -509,7 +640,7 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             }
 
             /**
-             * Nickname.
+             * <p>The alias of the device.</p>
              */
             public Builder nickname(String nickname) {
                 this.nickname = nickname;
@@ -517,15 +648,18 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             }
 
             /**
-             * OTAModules.
+             * <p>The information about the firmware of each device module.</p>
              */
-            public Builder OTAModules(java.util.List < OTAModules> OTAModules) {
+            public Builder OTAModules(java.util.List<OTAModules> OTAModules) {
                 this.OTAModules = OTAModules;
                 return this;
             }
 
             /**
-             * ProductKey.
+             * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1BwAGV****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -533,7 +667,16 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the device. Valid values:</p>
+             * <ul>
+             * <li><strong>ONLINE</strong>: The device is online.</li>
+             * <li><strong>OFFLINE</strong>: The device is offline.</li>
+             * <li><strong>UNACTIVE</strong>: The device is not activated.</li>
+             * <li><strong>DISABLE</strong>: The device is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -541,9 +684,9 @@ public class QueryDeviceBySQLResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The information about device tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

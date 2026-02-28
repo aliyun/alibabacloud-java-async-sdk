@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataAPIServiceRequest} extends {@link RequestModel}
  *
  * <p>CreateDataAPIServiceRequest</p>
  */
 public class CreateDataAPIServiceRequest extends Request {
-    @Body
-    @NameInMap("ApiPath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiPath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiPath;
 
-    @Body
-    @NameInMap("Desc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
-    @Body
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("OriginSql")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OriginSql")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String originSql;
 
-    @Body
-    @NameInMap("RequestParam")
-    private java.util.List < RequestParam> requestParam;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestParam")
+    private java.util.List<RequestParam> requestParam;
 
-    @Body
-    @NameInMap("ResponseParam")
-    private java.util.List < ResponseParam> responseParam;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResponseParam")
+    private java.util.List<ResponseParam> responseParam;
 
-    @Body
-    @NameInMap("TemplateSql")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateSql")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateSql;
 
     private CreateDataAPIServiceRequest(Builder builder) {
@@ -68,7 +73,7 @@ public class CreateDataAPIServiceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,14 +116,14 @@ public class CreateDataAPIServiceRequest extends Request {
     /**
      * @return requestParam
      */
-    public java.util.List < RequestParam> getRequestParam() {
+    public java.util.List<RequestParam> getRequestParam() {
         return this.requestParam;
     }
 
     /**
      * @return responseParam
      */
-    public java.util.List < ResponseParam> getResponseParam() {
+    public java.util.List<ResponseParam> getResponseParam() {
         return this.responseParam;
     }
 
@@ -135,8 +140,8 @@ public class CreateDataAPIServiceRequest extends Request {
         private String displayName; 
         private String iotInstanceId; 
         private String originSql; 
-        private java.util.List < RequestParam> requestParam; 
-        private java.util.List < ResponseParam> responseParam; 
+        private java.util.List<RequestParam> requestParam; 
+        private java.util.List<ResponseParam> responseParam; 
         private String templateSql; 
 
         private Builder() {
@@ -156,7 +161,10 @@ public class CreateDataAPIServiceRequest extends Request {
         } 
 
         /**
-         * ApiPath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device/getDeviceCountByStatus</p>
          */
         public Builder apiPath(String apiPath) {
             this.putBodyParameter("ApiPath", apiPath);
@@ -174,7 +182,7 @@ public class CreateDataAPIServiceRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>This parameter is required.</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -192,7 +200,10 @@ public class CreateDataAPIServiceRequest extends Request {
         }
 
         /**
-         * OriginSql.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT COUNT(iot_id) AS deviceCount FROM ${system.device} WHERE status=1</p>
          */
         public Builder originSql(String originSql) {
             this.putBodyParameter("OriginSql", originSql);
@@ -203,7 +214,7 @@ public class CreateDataAPIServiceRequest extends Request {
         /**
          * RequestParam.
          */
-        public Builder requestParam(java.util.List < RequestParam> requestParam) {
+        public Builder requestParam(java.util.List<RequestParam> requestParam) {
             this.putBodyParameter("RequestParam", requestParam);
             this.requestParam = requestParam;
             return this;
@@ -212,14 +223,17 @@ public class CreateDataAPIServiceRequest extends Request {
         /**
          * ResponseParam.
          */
-        public Builder responseParam(java.util.List < ResponseParam> responseParam) {
+        public Builder responseParam(java.util.List<ResponseParam> responseParam) {
             this.putBodyParameter("ResponseParam", responseParam);
             this.responseParam = responseParam;
             return this;
         }
 
         /**
-         * TemplateSql.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT COUNT(iot_id) AS deviceCount FROM ${system.device} WHERE status=${status}</p>
          */
         public Builder templateSql(String templateSql) {
             this.putBodyParameter("TemplateSql", templateSql);
@@ -234,20 +248,26 @@ public class CreateDataAPIServiceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDataAPIServiceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataAPIServiceRequest</p>
+     */
     public static class RequestParam extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Example")
+        @com.aliyun.core.annotation.NameInMap("Example")
         private String example;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RequestParam(Builder builder) {
@@ -308,6 +328,17 @@ public class CreateDataAPIServiceRequest extends Request {
             private Boolean required; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestParam model) {
+                this.desc = model.desc;
+                this.example = model.example;
+                this.name = model.name;
+                this.required = model.required;
+                this.type = model.type;
+            } 
+
             /**
              * Desc.
              */
@@ -355,20 +386,26 @@ public class CreateDataAPIServiceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDataAPIServiceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataAPIServiceRequest</p>
+     */
     public static class ResponseParam extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Example")
+        @com.aliyun.core.annotation.NameInMap("Example")
         private String example;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ResponseParam(Builder builder) {
@@ -428,6 +465,17 @@ public class CreateDataAPIServiceRequest extends Request {
             private String name; 
             private Boolean required; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResponseParam model) {
+                this.desc = model.desc;
+                this.example = model.example;
+                this.name = model.name;
+                this.required = model.required;
+                this.type = model.type;
+            } 
 
             /**
              * Desc.

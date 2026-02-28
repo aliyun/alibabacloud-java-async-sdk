@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySpeechResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySpeechResponseBody</p>
  */
 public class QuerySpeechResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySpeechResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QuerySpeechResponseBody extends TeaModel {
 
     public static QuerySpeechResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QuerySpeechResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySpeechResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,11 +151,17 @@ public class QuerySpeechResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySpeechResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySpeechResponseBody</p>
+     */
     public static class SoundCodeConfig extends TeaModel {
-        @NameInMap("AdditionalDuration")
+        @com.aliyun.core.annotation.NameInMap("AdditionalDuration")
         private Integer additionalDuration;
 
-        @NameInMap("SoundCodeContent")
+        @com.aliyun.core.annotation.NameInMap("SoundCodeContent")
         private String soundCodeContent;
 
         private SoundCodeConfig(Builder builder) {
@@ -169,6 +195,14 @@ public class QuerySpeechResponseBody extends TeaModel {
             private Integer additionalDuration; 
             private String soundCodeContent; 
 
+            private Builder() {
+            } 
+
+            private Builder(SoundCodeConfig model) {
+                this.additionalDuration = model.additionalDuration;
+                this.soundCodeContent = model.soundCodeContent;
+            } 
+
             /**
              * AdditionalDuration.
              */
@@ -192,35 +226,41 @@ public class QuerySpeechResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySpeechResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySpeechResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AudioFormat")
+        @com.aliyun.core.annotation.NameInMap("AudioFormat")
         private String audioFormat;
 
-        @NameInMap("BizCode")
+        @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;
 
-        @NameInMap("EnableSoundCode")
+        @com.aliyun.core.annotation.NameInMap("EnableSoundCode")
         private Boolean enableSoundCode;
 
-        @NameInMap("SoundCodeConfig")
+        @com.aliyun.core.annotation.NameInMap("SoundCodeConfig")
         private SoundCodeConfig soundCodeConfig;
 
-        @NameInMap("SpeechCode")
+        @com.aliyun.core.annotation.NameInMap("SpeechCode")
         private String speechCode;
 
-        @NameInMap("SpeechRate")
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
         private Integer speechRate;
 
-        @NameInMap("SpeechType")
+        @com.aliyun.core.annotation.NameInMap("SpeechType")
         private String speechType;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("Voice")
+        @com.aliyun.core.annotation.NameInMap("Voice")
         private String voice;
 
-        @NameInMap("Volume")
+        @com.aliyun.core.annotation.NameInMap("Volume")
         private Integer volume;
 
         private Data(Builder builder) {
@@ -325,6 +365,22 @@ public class QuerySpeechResponseBody extends TeaModel {
             private String text; 
             private String voice; 
             private Integer volume; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.audioFormat = model.audioFormat;
+                this.bizCode = model.bizCode;
+                this.enableSoundCode = model.enableSoundCode;
+                this.soundCodeConfig = model.soundCodeConfig;
+                this.speechCode = model.speechCode;
+                this.speechRate = model.speechRate;
+                this.speechType = model.speechType;
+                this.text = model.text;
+                this.voice = model.voice;
+                this.volume = model.volume;
+            } 
 
             /**
              * AudioFormat.

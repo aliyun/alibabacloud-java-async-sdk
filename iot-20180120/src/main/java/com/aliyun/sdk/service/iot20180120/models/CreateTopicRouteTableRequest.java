@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTopicRouteTableRequest} extends {@link RequestModel}
  *
  * <p>CreateTopicRouteTableRequest</p>
  */
 public class CreateTopicRouteTableRequest extends Request {
-    @Query
-    @NameInMap("DstTopic")
-    @Validation(required = true)
-    private java.util.List < String > dstTopic;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstTopic")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> dstTopic;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("SrcTopic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcTopic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String srcTopic;
 
     private CreateTopicRouteTableRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class CreateTopicRouteTableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,7 +54,7 @@ public class CreateTopicRouteTableRequest extends Request {
     /**
      * @return dstTopic
      */
-    public java.util.List < String > getDstTopic() {
+    public java.util.List<String> getDstTopic() {
         return this.dstTopic;
     }
 
@@ -68,7 +73,7 @@ public class CreateTopicRouteTableRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateTopicRouteTableRequest, Builder> {
-        private java.util.List < String > dstTopic; 
+        private java.util.List<String> dstTopic; 
         private String iotInstanceId; 
         private String srcTopic; 
 
@@ -84,16 +89,26 @@ public class CreateTopicRouteTableRequest extends Request {
         } 
 
         /**
-         * DstTopic.
+         * <p>This parameter is required.</p>
          */
-        public Builder dstTopic(java.util.List < String > dstTopic) {
+        public Builder dstTopic(java.util.List<String> dstTopic) {
             this.putQueryParameter("DstTopic", dstTopic);
             this.dstTopic = dstTopic;
             return this;
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+         * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-0pp1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -102,7 +117,8 @@ public class CreateTopicRouteTableRequest extends Request {
         }
 
         /**
-         * SrcTopic.
+         * <p>The source topic. Example: <code>SrcTopic=/x7aWKW9 ****** /testDataToDataHub/user/update</code>.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder srcTopic(String srcTopic) {
             this.putQueryParameter("SrcTopic", srcTopic);

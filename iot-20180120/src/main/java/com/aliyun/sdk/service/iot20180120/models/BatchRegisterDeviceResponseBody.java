@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchRegisterDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>BatchRegisterDeviceResponseBody</p>
  */
 public class BatchRegisterDeviceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchRegisterDeviceResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class BatchRegisterDeviceResponseBody extends TeaModel {
 
     public static BatchRegisterDeviceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class BatchRegisterDeviceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(BatchRegisterDeviceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class BatchRegisterDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class BatchRegisterDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class BatchRegisterDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class BatchRegisterDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,8 +164,14 @@ public class BatchRegisterDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchRegisterDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchRegisterDeviceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ApplyId")
+        @com.aliyun.core.annotation.NameInMap("ApplyId")
         private Long applyId;
 
         private Data(Builder builder) {
@@ -157,8 +196,18 @@ public class BatchRegisterDeviceResponseBody extends TeaModel {
         public static final class Builder {
             private Long applyId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.applyId = model.applyId;
+            } 
+
             /**
-             * ApplyId.
+             * <p>The application ID (ApplyId) returned for the request if the call is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1295006</p>
              */
             public Builder applyId(Long applyId) {
                 this.applyId = applyId;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryStudioAppDomainListOpenResponseBody} extends {@link TeaModel}
  *
  * <p>QueryStudioAppDomainListOpenResponseBody</p>
  */
 public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryStudioAppDomainListOpenResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
 
     public static QueryStudioAppDomainListOpenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryStudioAppDomainListOpenResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,32 +151,38 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryStudioAppDomainListOpenResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryStudioAppDomainListOpenResponseBody</p>
+     */
     public static class DomainInfo extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("IsBeian")
+        @com.aliyun.core.annotation.NameInMap("IsBeian")
         private String isBeian;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
         private DomainInfo(Builder builder) {
@@ -253,6 +279,21 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
             private String protocol; 
             private String tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainInfo model) {
+                this.appId = model.appId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.host = model.host;
+                this.id = model.id;
+                this.isBeian = model.isBeian;
+                this.projectId = model.projectId;
+                this.protocol = model.protocol;
+                this.tenantId = model.tenantId;
+            } 
+
             /**
              * AppId.
              */
@@ -332,9 +373,15 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryStudioAppDomainListOpenResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryStudioAppDomainListOpenResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("DomainInfo")
-        private java.util.List < DomainInfo> domainInfo;
+        @com.aliyun.core.annotation.NameInMap("DomainInfo")
+        private java.util.List<DomainInfo> domainInfo;
 
         private List(Builder builder) {
             this.domainInfo = builder.domainInfo;
@@ -351,17 +398,24 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
         /**
          * @return domainInfo
          */
-        public java.util.List < DomainInfo> getDomainInfo() {
+        public java.util.List<DomainInfo> getDomainInfo() {
             return this.domainInfo;
         }
 
         public static final class Builder {
-            private java.util.List < DomainInfo> domainInfo; 
+            private java.util.List<DomainInfo> domainInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.domainInfo = model.domainInfo;
+            } 
 
             /**
              * DomainInfo.
              */
-            public Builder domainInfo(java.util.List < DomainInfo> domainInfo) {
+            public Builder domainInfo(java.util.List<DomainInfo> domainInfo) {
                 this.domainInfo = domainInfo;
                 return this;
             }
@@ -373,20 +427,26 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryStudioAppDomainListOpenResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryStudioAppDomainListOpenResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("TotalPage")
+        @com.aliyun.core.annotation.NameInMap("TotalPage")
         private Integer totalPage;
 
         private Data(Builder builder) {
@@ -446,6 +506,17 @@ public class QueryStudioAppDomainListOpenResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer total; 
             private Integer totalPage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+                this.totalPage = model.totalPage;
+            } 
 
             /**
              * List.

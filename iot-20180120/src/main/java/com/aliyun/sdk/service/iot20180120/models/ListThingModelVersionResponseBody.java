@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListThingModelVersionResponseBody} extends {@link TeaModel}
  *
  * <p>ListThingModelVersionResponseBody</p>
  */
 public class ListThingModelVersionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListThingModelVersionResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListThingModelVersionResponseBody extends TeaModel {
 
     public static ListThingModelVersionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class ListThingModelVersionResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListThingModelVersionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class ListThingModelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class ListThingModelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class ListThingModelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class ListThingModelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +164,20 @@ public class ListThingModelVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListThingModelVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListThingModelVersionResponseBody</p>
+     */
     public static class ModelVersions extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("ModelVersion")
+        @com.aliyun.core.annotation.NameInMap("ModelVersion")
         private String modelVersion;
 
         private ModelVersions(Builder builder) {
@@ -181,8 +220,17 @@ public class ListThingModelVersionResponseBody extends TeaModel {
             private Long gmtCreate; 
             private String modelVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModelVersions model) {
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.modelVersion = model.modelVersion;
+            } 
+
             /**
-             * Description.
+             * <p>The description of the TSL model version.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -190,7 +238,10 @@ public class ListThingModelVersionResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The timestamp when the TSL model version was published. The time is displayed in UTC. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579235657535</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -198,7 +249,10 @@ public class ListThingModelVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ModelVersion.
+             * <p>The version number of the TSL model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V1.0.0</p>
              */
             public Builder modelVersion(String modelVersion) {
                 this.modelVersion = modelVersion;
@@ -212,9 +266,15 @@ public class ListThingModelVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListThingModelVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListThingModelVersionResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ModelVersions")
-        private java.util.List < ModelVersions> modelVersions;
+        @com.aliyun.core.annotation.NameInMap("ModelVersions")
+        private java.util.List<ModelVersions> modelVersions;
 
         private Data(Builder builder) {
             this.modelVersions = builder.modelVersions;
@@ -231,17 +291,24 @@ public class ListThingModelVersionResponseBody extends TeaModel {
         /**
          * @return modelVersions
          */
-        public java.util.List < ModelVersions> getModelVersions() {
+        public java.util.List<ModelVersions> getModelVersions() {
             return this.modelVersions;
         }
 
         public static final class Builder {
-            private java.util.List < ModelVersions> modelVersions; 
+            private java.util.List<ModelVersions> modelVersions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.modelVersions = model.modelVersions;
+            } 
 
             /**
-             * ModelVersions.
+             * <p>The list of TSL model versions. The versions are displayed in descending order based on the release time. The first version is the current version.</p>
              */
-            public Builder modelVersions(java.util.List < ModelVersions> modelVersions) {
+            public Builder modelVersions(java.util.List<ModelVersions> modelVersions) {
                 this.modelVersions = modelVersions;
                 return this;
             }

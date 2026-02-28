@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobResponseBody} extends {@link TeaModel}
  *
  * <p>ListJobResponseBody</p>
  */
 public class ListJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListJobResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class ListJobResponseBody extends TeaModel {
 
     public static ListJobResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class ListJobResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.page = model.page;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -191,29 +214,35 @@ public class ListJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobResponseBody</p>
+     */
     public static class DataData extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("ScheduledTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduledTime")
         private Long scheduledTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UtcCreate")
+        @com.aliyun.core.annotation.NameInMap("UtcCreate")
         private String utcCreate;
 
-        @NameInMap("UtcModified")
+        @com.aliyun.core.annotation.NameInMap("UtcModified")
         private String utcModified;
 
         private DataData(Builder builder) {
@@ -301,6 +330,20 @@ public class ListJobResponseBody extends TeaModel {
             private String utcCreate; 
             private String utcModified; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataData model) {
+                this.description = model.description;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.scheduledTime = model.scheduledTime;
+                this.status = model.status;
+                this.type = model.type;
+                this.utcCreate = model.utcCreate;
+                this.utcModified = model.utcModified;
+            } 
+
             /**
              * Description.
              */
@@ -372,9 +415,15 @@ public class ListJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("data")
-        private java.util.List < DataData> data;
+        @com.aliyun.core.annotation.NameInMap("data")
+        private java.util.List<DataData> data;
 
         private Data(Builder builder) {
             this.data = builder.data;
@@ -391,17 +440,24 @@ public class ListJobResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < DataData> getData() {
+        public java.util.List<DataData> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < DataData> data; 
+            private java.util.List<DataData> data; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.data = model.data;
+            } 
 
             /**
              * data.
              */
-            public Builder data(java.util.List < DataData> data) {
+            public Builder data(java.util.List<DataData> data) {
                 this.data = data;
                 return this;
             }

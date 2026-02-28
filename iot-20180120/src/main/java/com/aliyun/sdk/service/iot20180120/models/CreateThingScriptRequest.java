@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateThingScriptRequest} extends {@link RequestModel}
  *
  * <p>CreateThingScriptRequest</p>
  */
 public class CreateThingScriptRequest extends Request {
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
-    @Query
-    @NameInMap("ScriptContent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptContent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptContent;
 
-    @Query
-    @NameInMap("ScriptType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptType;
 
     private CreateThingScriptRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class CreateThingScriptRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,17 @@ public class CreateThingScriptRequest extends Request {
         } 
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must specify this parameter. Otherwise, the call fails.</li>
+         * <li>If the <strong>Overview</strong> page does not appear in the console or no ID is generated for your instance, you do not need to specify this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-0pp1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -108,7 +123,12 @@ public class CreateThingScriptRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product.</p>
+         * <p>You can view the <strong>ProductKey</strong> on the Product Details page of the IoT Platform console. You can also obtain the ProductKey by calling the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1Q5XoY****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -117,7 +137,12 @@ public class CreateThingScriptRequest extends Request {
         }
 
         /**
-         * ScriptContent.
+         * <p>The content of the script. You must specify this parameter.</p>
+         * <p>For more information about script examples, see <a href="https://help.aliyun.com/document_detail/68702.html">What is data parsing</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;function protocolToRawData(jsonObj) {return rawdata; }function rawDataToProtocol(rawData) {return jsonObj; }&quot;</p>
          */
         public Builder scriptContent(String scriptContent) {
             this.putQueryParameter("ScriptContent", scriptContent);
@@ -126,7 +151,16 @@ public class CreateThingScriptRequest extends Request {
         }
 
         /**
-         * ScriptType.
+         * <p>The language of the script. Valid values:</p>
+         * <ul>
+         * <li>JavaScript</li>
+         * <li>Python_27: Python 2.7</li>
+         * <li>PHP_72: PHP 7.2</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JavaScript</p>
          */
         public Builder scriptType(String scriptType) {
             this.putQueryParameter("ScriptType", scriptType);

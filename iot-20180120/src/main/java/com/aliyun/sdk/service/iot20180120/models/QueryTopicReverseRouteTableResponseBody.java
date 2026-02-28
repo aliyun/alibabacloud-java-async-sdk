@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTopicReverseRouteTableResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTopicReverseRouteTableResponseBody</p>
  */
 public class QueryTopicReverseRouteTableResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SrcTopics")
+    @com.aliyun.core.annotation.NameInMap("SrcTopics")
     private SrcTopics srcTopics;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryTopicReverseRouteTableResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryTopicReverseRouteTableResponseBody extends TeaModel {
 
     public static QueryTopicReverseRouteTableResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryTopicReverseRouteTableResponseBody extends TeaModel {
         private SrcTopics srcTopics; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryTopicReverseRouteTableResponseBody model) {
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.srcTopics = model.srcTopics;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryTopicReverseRouteTableResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The ID of the request.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +125,14 @@ public class QueryTopicReverseRouteTableResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FCC27691-9151-4B93-9622-9C90F30542EC&quot;</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +148,10 @@ public class QueryTopicReverseRouteTableResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The list of source topics returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,9 +164,15 @@ public class QueryTopicReverseRouteTableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTopicReverseRouteTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTopicReverseRouteTableResponseBody</p>
+     */
     public static class SrcTopics extends TeaModel {
-        @NameInMap("Topic")
-        private java.util.List < java.util.Map<String, ?>> topic;
+        @com.aliyun.core.annotation.NameInMap("Topic")
+        private java.util.List<java.util.Map<String, ?>> topic;
 
         private SrcTopics(Builder builder) {
             this.topic = builder.topic;
@@ -150,17 +189,24 @@ public class QueryTopicReverseRouteTableResponseBody extends TeaModel {
         /**
          * @return topic
          */
-        public java.util.List < java.util.Map<String, ?>> getTopic() {
+        public java.util.List<java.util.Map<String, ?>> getTopic() {
             return this.topic;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> topic; 
+            private java.util.List<java.util.Map<String, ?>> topic; 
+
+            private Builder() {
+            } 
+
+            private Builder(SrcTopics model) {
+                this.topic = model.topic;
+            } 
 
             /**
              * Topic.
              */
-            public Builder topic(java.util.List < java.util.Map<String, ?>> topic) {
+            public Builder topic(java.util.List<java.util.Map<String, ?>> topic) {
                 this.topic = topic;
                 return this;
             }

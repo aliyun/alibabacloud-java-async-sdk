@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSpeechRequest} extends {@link RequestModel}
  *
  * <p>UpdateSpeechRequest</p>
  */
 public class UpdateSpeechRequest extends Request {
-    @Body
-    @NameInMap("EnableSoundCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableSoundCode")
     private Boolean enableSoundCode;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("ProjectCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectCode;
 
-    @Body
-    @NameInMap("SoundCodeConfig")
-    private java.util.Map < String, ? > soundCodeConfig;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SoundCodeConfig")
+    private java.util.Map<String, ?> soundCodeConfig;
 
-    @Body
-    @NameInMap("SpeechCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SpeechCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String speechCode;
 
-    @Body
-    @NameInMap("SpeechRate")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SpeechRate")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer speechRate;
 
-    @Body
-    @NameInMap("Voice")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Voice")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String voice;
 
-    @Body
-    @NameInMap("Volume")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Volume")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer volume;
 
     private UpdateSpeechRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class UpdateSpeechRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +103,7 @@ public class UpdateSpeechRequest extends Request {
     /**
      * @return soundCodeConfig
      */
-    public java.util.Map < String, ? > getSoundCodeConfig() {
+    public java.util.Map<String, ?> getSoundCodeConfig() {
         return this.soundCodeConfig;
     }
 
@@ -134,7 +139,7 @@ public class UpdateSpeechRequest extends Request {
         private Boolean enableSoundCode; 
         private String iotInstanceId; 
         private String projectCode; 
-        private java.util.Map < String, ? > soundCodeConfig; 
+        private java.util.Map<String, ?> soundCodeConfig; 
         private String speechCode; 
         private Integer speechRate; 
         private String voice; 
@@ -175,7 +180,10 @@ public class UpdateSpeechRequest extends Request {
         }
 
         /**
-         * ProjectCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4de2c367**<strong>8c585e5992</strong></p>
          */
         public Builder projectCode(String projectCode) {
             this.putBodyParameter("ProjectCode", projectCode);
@@ -186,7 +194,7 @@ public class UpdateSpeechRequest extends Request {
         /**
          * SoundCodeConfig.
          */
-        public Builder soundCodeConfig(java.util.Map < String, ? > soundCodeConfig) {
+        public Builder soundCodeConfig(java.util.Map<String, ?> soundCodeConfig) {
             String soundCodeConfigShrink = shrink(soundCodeConfig, "SoundCodeConfig", "json");
             this.putBodyParameter("SoundCodeConfig", soundCodeConfigShrink);
             this.soundCodeConfig = soundCodeConfig;
@@ -194,7 +202,10 @@ public class UpdateSpeechRequest extends Request {
         }
 
         /**
-         * SpeechCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VlKzbj3XIZ**<strong>CeIHH6vR82JNCSzk</strong></p>
          */
         public Builder speechCode(String speechCode) {
             this.putBodyParameter("SpeechCode", speechCode);
@@ -212,7 +223,10 @@ public class UpdateSpeechRequest extends Request {
         }
 
         /**
-         * Voice.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Siyue</p>
          */
         public Builder voice(String voice) {
             this.putBodyParameter("Voice", voice);

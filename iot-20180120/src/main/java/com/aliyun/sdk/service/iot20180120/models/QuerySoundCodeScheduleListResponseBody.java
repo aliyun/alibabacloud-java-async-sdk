@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySoundCodeScheduleListResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySoundCodeScheduleListResponseBody</p>
  */
 public class QuerySoundCodeScheduleListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySoundCodeScheduleListResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QuerySoundCodeScheduleListResponseBody extends TeaModel {
 
     public static QuerySoundCodeScheduleListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QuerySoundCodeScheduleListResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySoundCodeScheduleListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,35 +151,41 @@ public class QuerySoundCodeScheduleListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySoundCodeScheduleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySoundCodeScheduleListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OpenType")
+        @com.aliyun.core.annotation.NameInMap("OpenType")
         private String openType;
 
-        @NameInMap("ScheduleCode")
+        @com.aliyun.core.annotation.NameInMap("ScheduleCode")
         private String scheduleCode;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Items(Builder builder) {
@@ -265,6 +291,22 @@ public class QuerySoundCodeScheduleListResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.description = model.description;
+                this.endDate = model.endDate;
+                this.endTime = model.endTime;
+                this.gmtCreate = model.gmtCreate;
+                this.name = model.name;
+                this.openType = model.openType;
+                this.scheduleCode = model.scheduleCode;
+                this.startDate = model.startDate;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
+
             /**
              * Description.
              */
@@ -352,9 +394,15 @@ public class QuerySoundCodeScheduleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySoundCodeScheduleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySoundCodeScheduleListResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
         private List(Builder builder) {
             this.items = builder.items;
@@ -371,17 +419,24 @@ public class QuerySoundCodeScheduleListResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.items = model.items;
+            } 
 
             /**
              * Items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
@@ -393,17 +448,23 @@ public class QuerySoundCodeScheduleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySoundCodeScheduleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySoundCodeScheduleListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageId")
+        @com.aliyun.core.annotation.NameInMap("PageId")
         private Integer pageId;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -454,6 +515,16 @@ public class QuerySoundCodeScheduleListResponseBody extends TeaModel {
             private Integer pageId; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageId = model.pageId;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * List.

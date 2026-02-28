@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEdgeInstanceChannelRequest} extends {@link RequestModel}
  *
  * <p>UpdateEdgeInstanceChannelRequest</p>
  */
 public class UpdateEdgeInstanceChannelRequest extends Request {
-    @Query
-    @NameInMap("ChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelId;
 
-    @Query
-    @NameInMap("ChannelName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelName;
 
-    @Query
-    @NameInMap("Configs")
-    @Validation(required = true)
-    private java.util.List < Configs> configs;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Configs")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Configs> configs;
 
-    @Query
-    @NameInMap("DriverId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DriverId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String driverId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private UpdateEdgeInstanceChannelRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class UpdateEdgeInstanceChannelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,7 +86,7 @@ public class UpdateEdgeInstanceChannelRequest extends Request {
     /**
      * @return configs
      */
-    public java.util.List < Configs> getConfigs() {
+    public java.util.List<Configs> getConfigs() {
         return this.configs;
     }
 
@@ -109,7 +114,7 @@ public class UpdateEdgeInstanceChannelRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateEdgeInstanceChannelRequest, Builder> {
         private String channelId; 
         private String channelName; 
-        private java.util.List < Configs> configs; 
+        private java.util.List<Configs> configs; 
         private String driverId; 
         private String instanceId; 
         private String iotInstanceId; 
@@ -129,7 +134,10 @@ public class UpdateEdgeInstanceChannelRequest extends Request {
         } 
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE0BD49EF5EF4D119D09CC1B25******</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -138,7 +146,10 @@ public class UpdateEdgeInstanceChannelRequest extends Request {
         }
 
         /**
-         * ChannelName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>le_name_update</p>
          */
         public Builder channelName(String channelName) {
             this.putQueryParameter("ChannelName", channelName);
@@ -147,16 +158,19 @@ public class UpdateEdgeInstanceChannelRequest extends Request {
         }
 
         /**
-         * Configs.
+         * <p>This parameter is required.</p>
          */
-        public Builder configs(java.util.List < Configs> configs) {
+        public Builder configs(java.util.List<Configs> configs) {
             this.putQueryParameter("Configs", configs);
             this.configs = configs;
             return this;
         }
 
         /**
-         * DriverId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9c1ae7bd59f1469abbdccc9592******</p>
          */
         public Builder driverId(String driverId) {
             this.putQueryParameter("DriverId", driverId);
@@ -165,7 +179,10 @@ public class UpdateEdgeInstanceChannelRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6GaTtvTj7vJhiS******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -189,16 +206,22 @@ public class UpdateEdgeInstanceChannelRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateEdgeInstanceChannelRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEdgeInstanceChannelRequest</p>
+     */
     public static class Configs extends TeaModel {
-        @NameInMap("Content")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Content")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String content;
 
-        @NameInMap("Format")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Format")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String format;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private Configs(Builder builder) {
@@ -241,8 +264,20 @@ public class UpdateEdgeInstanceChannelRequest extends Request {
             private String format; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.content = model.content;
+                this.format = model.format;
+                this.key = model.key;
+            } 
+
             /**
-             * Content.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;protocol&quot;:&quot;TCP&quot;, &quot;ip&quot;:&quot;1.2.3.4&quot;, &quot;port&quot;:122}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -250,7 +285,10 @@ public class UpdateEdgeInstanceChannelRequest extends Request {
             }
 
             /**
-             * Format.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSON</p>
              */
             public Builder format(String format) {
                 this.format = format;

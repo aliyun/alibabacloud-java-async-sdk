@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryProductCertInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryProductCertInfoResponseBody</p>
  */
 public class QueryProductCertInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("ProductCertInfo")
+    @com.aliyun.core.annotation.NameInMap("ProductCertInfo")
     private ProductCertInfo productCertInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryProductCertInfoResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryProductCertInfoResponseBody extends TeaModel {
 
     public static QueryProductCertInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryProductCertInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryProductCertInfoResponseBody model) {
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.productCertInfo = model.productCertInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingProductKey</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,10 @@ public class QueryProductCertInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProductKey is mandatory for this action.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +128,7 @@ public class QueryProductCertInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ProductCertInfo.
+         * <p>The returned certificate information that includes the value of the <strong>IssueModel</strong> parameter.</p>
          */
         public Builder productCertInfo(ProductCertInfo productCertInfo) {
             this.productCertInfo = productCertInfo;
@@ -110,7 +136,10 @@ public class QueryProductCertInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57b144cf-09fc-4916-a272-a62902d5b207</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,14 @@ public class QueryProductCertInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,8 +167,14 @@ public class QueryProductCertInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryProductCertInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryProductCertInfoResponseBody</p>
+     */
     public static class ProductCertInfo extends TeaModel {
-        @NameInMap("IssueModel")
+        @com.aliyun.core.annotation.NameInMap("IssueModel")
         private Integer issueModel;
 
         private ProductCertInfo(Builder builder) {
@@ -157,8 +199,22 @@ public class QueryProductCertInfoResponseBody extends TeaModel {
         public static final class Builder {
             private Integer issueModel; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductCertInfo model) {
+                this.issueModel = model.issueModel;
+            } 
+
             /**
-             * IssueModel.
+             * <p>The source from which the X.509 certificate is issued.</p>
+             * <ul>
+             * <li><strong>1</strong>: The X.509 certificate is issued by IoT Platform.</li>
+             * <li><strong>3</strong>: The X.509 certificate is issued by a third-party platform.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder issueModel(Integer issueModel) {
                 this.issueModel = issueModel;

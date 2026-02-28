@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchUpdateDeviceNicknameRequest} extends {@link RequestModel}
  *
  * <p>BatchUpdateDeviceNicknameRequest</p>
  */
 public class BatchUpdateDeviceNicknameRequest extends Request {
-    @Query
-    @NameInMap("DeviceNicknameInfo")
-    @Validation(required = true)
-    private java.util.List < DeviceNicknameInfo> deviceNicknameInfo;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceNicknameInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<DeviceNicknameInfo> deviceNicknameInfo;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private BatchUpdateDeviceNicknameRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class BatchUpdateDeviceNicknameRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -43,7 +48,7 @@ public class BatchUpdateDeviceNicknameRequest extends Request {
     /**
      * @return deviceNicknameInfo
      */
-    public java.util.List < DeviceNicknameInfo> getDeviceNicknameInfo() {
+    public java.util.List<DeviceNicknameInfo> getDeviceNicknameInfo() {
         return this.deviceNicknameInfo;
     }
 
@@ -55,7 +60,7 @@ public class BatchUpdateDeviceNicknameRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchUpdateDeviceNicknameRequest, Builder> {
-        private java.util.List < DeviceNicknameInfo> deviceNicknameInfo; 
+        private java.util.List<DeviceNicknameInfo> deviceNicknameInfo; 
         private String iotInstanceId; 
 
         private Builder() {
@@ -69,16 +74,26 @@ public class BatchUpdateDeviceNicknameRequest extends Request {
         } 
 
         /**
-         * DeviceNicknameInfo.
+         * <p>This parameter is required.</p>
          */
-        public Builder deviceNicknameInfo(java.util.List < DeviceNicknameInfo> deviceNicknameInfo) {
+        public Builder deviceNicknameInfo(java.util.List<DeviceNicknameInfo> deviceNicknameInfo) {
             this.putQueryParameter("DeviceNicknameInfo", deviceNicknameInfo);
             this.deviceNicknameInfo = deviceNicknameInfo;
             return this;
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+         * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -93,17 +108,23 @@ public class BatchUpdateDeviceNicknameRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchUpdateDeviceNicknameRequest} extends {@link TeaModel}
+     *
+     * <p>BatchUpdateDeviceNicknameRequest</p>
+     */
     public static class DeviceNicknameInfo extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("Nickname")
+        @com.aliyun.core.annotation.NameInMap("Nickname")
         private String nickname;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
         private DeviceNicknameInfo(Builder builder) {
@@ -155,8 +176,24 @@ public class BatchUpdateDeviceNicknameRequest extends Request {
             private String nickname; 
             private String productKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceNicknameInfo model) {
+                this.deviceName = model.deviceName;
+                this.iotId = model.iotId;
+                this.nickname = model.nickname;
+                this.productKey = model.productKey;
+            } 
+
             /**
-             * DeviceName.
+             * <p>The DeviceName of the device.</p>
+             * <blockquote>
+             * <p> If you specify this parameter, you must also specify the <strong>ProductKey</strong> parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>light</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -164,7 +201,13 @@ public class BatchUpdateDeviceNicknameRequest extends Request {
             }
 
             /**
-             * IotId.
+             * <p>The ID of the device.</p>
+             * <blockquote>
+             * <p> If you specify this parameter, you do not need to specify <strong>ProductKey</strong> or <strong>DeviceName</strong>. The <strong>IotId</strong> parameter specifies a globally unique identifier (GUID) of the device, which corresponds to a combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>. If you specify both <strong>IotId</strong> and the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>, <strong>IotId</strong> takes precedence.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Q7uOhVRdZRRlDnTLv****00100</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -172,7 +215,13 @@ public class BatchUpdateDeviceNicknameRequest extends Request {
             }
 
             /**
-             * Nickname.
+             * <p>The new alias of the device. The alias must be 4 to 32 characters in length, and can contain letters, digits, and underscores (_). Each Chinese character is counted as two characters.</p>
+             * <blockquote>
+             * <p> If you do not specify this parameter, the original alias of the device will be deleted.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunDataCenter</p>
              */
             public Builder nickname(String nickname) {
                 this.nickname = nickname;
@@ -180,7 +229,13 @@ public class BatchUpdateDeviceNicknameRequest extends Request {
             }
 
             /**
-             * ProductKey.
+             * <p>The ProductKey of the product to which the device belongs.</p>
+             * <blockquote>
+             * <p> If you specify this parameter, you must also specify the <strong>DeviceName</strong> parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>a1BwAGV****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;

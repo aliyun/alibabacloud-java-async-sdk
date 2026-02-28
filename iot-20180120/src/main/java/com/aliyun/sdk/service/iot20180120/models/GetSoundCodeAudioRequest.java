@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSoundCodeAudioRequest} extends {@link RequestModel}
  *
  * <p>GetSoundCodeAudioRequest</p>
  */
 public class GetSoundCodeAudioRequest extends Request {
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("SoundCodeList")
-    @Validation(required = true)
-    private java.util.List < String > soundCodeList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SoundCodeList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> soundCodeList;
 
     private GetSoundCodeAudioRequest(Builder builder) {
         super(builder);
@@ -35,7 +40,7 @@ public class GetSoundCodeAudioRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -50,13 +55,13 @@ public class GetSoundCodeAudioRequest extends Request {
     /**
      * @return soundCodeList
      */
-    public java.util.List < String > getSoundCodeList() {
+    public java.util.List<String> getSoundCodeList() {
         return this.soundCodeList;
     }
 
     public static final class Builder extends Request.Builder<GetSoundCodeAudioRequest, Builder> {
         private String iotInstanceId; 
-        private java.util.List < String > soundCodeList; 
+        private java.util.List<String> soundCodeList; 
 
         private Builder() {
             super();
@@ -78,9 +83,12 @@ public class GetSoundCodeAudioRequest extends Request {
         }
 
         /**
-         * SoundCodeList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Md3ZiTL888K9llXDy7890***********</p>
          */
-        public Builder soundCodeList(java.util.List < String > soundCodeList) {
+        public Builder soundCodeList(java.util.List<String> soundCodeList) {
             this.putBodyParameter("SoundCodeList", soundCodeList);
             this.soundCodeList = soundCodeList;
             return this;

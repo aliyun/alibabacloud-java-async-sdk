@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchBindDeviceToEdgeInstanceWithDriverResponseBody} extends {@link TeaModel}
  *
  * <p>BatchBindDeviceToEdgeInstanceWithDriverResponseBody</p>
  */
 public class BatchBindDeviceToEdgeInstanceWithDriverResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchBindDeviceToEdgeInstanceWithDriverResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class BatchBindDeviceToEdgeInstanceWithDriverResponseBody extends TeaMode
 
     public static BatchBindDeviceToEdgeInstanceWithDriverResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class BatchBindDeviceToEdgeInstanceWithDriverResponseBody extends TeaMode
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(BatchBindDeviceToEdgeInstanceWithDriverResponseBody model) {
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error message that is returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class BatchBindDeviceToEdgeInstanceWithDriverResponseBody extends TeaMode
         }
 
         /**
-         * ErrorMessage.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request parameter error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +115,10 @@ public class BatchBindDeviceToEdgeInstanceWithDriverResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFFA9519-6AF1-4D15-AFAF-FD412714C1BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListParserDestinationRequest} extends {@link RequestModel}
  *
  * <p>ListParserDestinationRequest</p>
  */
 public class ListParserDestinationRequest extends Request {
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("IsFailover")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsFailover")
     private Boolean isFailover;
 
-    @Query
-    @NameInMap("ParserId")
-    @Validation(required = true, maximum = 9999999999D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParserId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 9999999999D)
     private Long parserId;
 
     private ListParserDestinationRequest(Builder builder) {
@@ -40,7 +45,7 @@ public class ListParserDestinationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +106,10 @@ public class ListParserDestinationRequest extends Request {
         }
 
         /**
-         * ParserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1002</p>
          */
         public Builder parserId(Long parserId) {
             this.putQueryParameter("ParserId", parserId);

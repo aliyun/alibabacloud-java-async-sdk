@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTaskResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTaskResponseBody</p>
  */
 public class QueryTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryTaskResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryTaskResponseBody extends TeaModel {
 
     public static QueryTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryTaskResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,41 +151,47 @@ public class QueryTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusDetail")
+        @com.aliyun.core.annotation.NameInMap("StatusDetail")
         private String statusDetail;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("UtcModified")
+        @com.aliyun.core.annotation.NameInMap("UtcModified")
         private String utcModified;
 
-        @NameInMap("UtcQueueTime")
+        @com.aliyun.core.annotation.NameInMap("UtcQueueTime")
         private String utcQueueTime;
 
         private Data(Builder builder) {
@@ -288,6 +314,24 @@ public class QueryTaskResponseBody extends TeaModel {
             private String taskId; 
             private String utcModified; 
             private String utcQueueTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deviceName = model.deviceName;
+                this.iotId = model.iotId;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.message = model.message;
+                this.productKey = model.productKey;
+                this.progress = model.progress;
+                this.status = model.status;
+                this.statusDetail = model.statusDetail;
+                this.taskId = model.taskId;
+                this.utcModified = model.utcModified;
+                this.utcQueueTime = model.utcQueueTime;
+            } 
 
             /**
              * DeviceName.

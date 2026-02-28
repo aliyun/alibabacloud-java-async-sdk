@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySolutionDeviceGroupPageRequest} extends {@link RequestModel}
  *
  * <p>QuerySolutionDeviceGroupPageRequest</p>
  */
 public class QuerySolutionDeviceGroupPageRequest extends Request {
-    @Query
-    @NameInMap("FuzzyGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FuzzyGroupName")
     private String fuzzyGroupName;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("PageId")
-    @Validation(required = true, maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000, minimum = 1)
     private Integer pageId;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProjectCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectCode;
 
     private QuerySolutionDeviceGroupPageRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class QuerySolutionDeviceGroupPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,7 +136,10 @@ public class QuerySolutionDeviceGroupPageRequest extends Request {
         }
 
         /**
-         * PageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageId(Integer pageId) {
             this.putQueryParameter("PageId", pageId);
@@ -140,7 +148,10 @@ public class QuerySolutionDeviceGroupPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,7 +160,10 @@ public class QuerySolutionDeviceGroupPageRequest extends Request {
         }
 
         /**
-         * ProjectCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4de2c367**<strong>8c585e5992</strong></p>
          */
         public Builder projectCode(String projectCode) {
             this.putQueryParameter("ProjectCode", projectCode);

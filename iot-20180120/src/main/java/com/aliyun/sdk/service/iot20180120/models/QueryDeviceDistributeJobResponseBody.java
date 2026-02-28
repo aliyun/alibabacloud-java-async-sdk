@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceDistributeJobResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceDistributeJobResponseBody</p>
  */
 public class QueryDeviceDistributeJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDeviceDistributeJobResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
 
     public static QueryDeviceDistributeJobResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceDistributeJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The task information returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,8 +164,14 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceDistributeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceDistributeJobResponseBody</p>
+     */
     public static class TargetInstanceConfigs extends TeaModel {
-        @NameInMap("TargetInstanceId")
+        @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
         private String targetInstanceId;
 
         private TargetInstanceConfigs(Builder builder) {
@@ -157,8 +196,18 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String targetInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TargetInstanceConfigs model) {
+                this.targetInstanceId = model.targetInstanceId;
+            } 
+
             /**
-             * TargetInstanceId.
+             * <p>The ID of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iot-cn-6ja***</p>
              */
             public Builder targetInstanceId(String targetInstanceId) {
                 this.targetInstanceId = targetInstanceId;
@@ -172,9 +221,15 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceDistributeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceDistributeJobResponseBody</p>
+     */
     public static class DataTargetInstanceConfigs extends TeaModel {
-        @NameInMap("targetInstanceConfigs")
-        private java.util.List < TargetInstanceConfigs> targetInstanceConfigs;
+        @com.aliyun.core.annotation.NameInMap("targetInstanceConfigs")
+        private java.util.List<TargetInstanceConfigs> targetInstanceConfigs;
 
         private DataTargetInstanceConfigs(Builder builder) {
             this.targetInstanceConfigs = builder.targetInstanceConfigs;
@@ -191,17 +246,24 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
         /**
          * @return targetInstanceConfigs
          */
-        public java.util.List < TargetInstanceConfigs> getTargetInstanceConfigs() {
+        public java.util.List<TargetInstanceConfigs> getTargetInstanceConfigs() {
             return this.targetInstanceConfigs;
         }
 
         public static final class Builder {
-            private java.util.List < TargetInstanceConfigs> targetInstanceConfigs; 
+            private java.util.List<TargetInstanceConfigs> targetInstanceConfigs; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataTargetInstanceConfigs model) {
+                this.targetInstanceConfigs = model.targetInstanceConfigs;
+            } 
 
             /**
              * targetInstanceConfigs.
              */
-            public Builder targetInstanceConfigs(java.util.List < TargetInstanceConfigs> targetInstanceConfigs) {
+            public Builder targetInstanceConfigs(java.util.List<TargetInstanceConfigs> targetInstanceConfigs) {
                 this.targetInstanceConfigs = targetInstanceConfigs;
                 return this;
             }
@@ -213,35 +275,41 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceDistributeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceDistributeJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("SourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
         private String sourceInstanceId;
 
-        @NameInMap("SourceUid")
+        @com.aliyun.core.annotation.NameInMap("SourceUid")
         private String sourceUid;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Strategy")
+        @com.aliyun.core.annotation.NameInMap("Strategy")
         private Integer strategy;
 
-        @NameInMap("TargetInstanceConfigs")
+        @com.aliyun.core.annotation.NameInMap("TargetInstanceConfigs")
         private DataTargetInstanceConfigs targetInstanceConfigs;
 
-        @NameInMap("TargetUid")
+        @com.aliyun.core.annotation.NameInMap("TargetUid")
         private String targetUid;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -347,8 +415,27 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
             private String targetUid; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gmtCreate = model.gmtCreate;
+                this.jobId = model.jobId;
+                this.productKey = model.productKey;
+                this.sourceInstanceId = model.sourceInstanceId;
+                this.sourceUid = model.sourceUid;
+                this.status = model.status;
+                this.strategy = model.strategy;
+                this.targetInstanceConfigs = model.targetInstanceConfigs;
+                this.targetUid = model.targetUid;
+                this.total = model.total;
+            } 
+
             /**
-             * GmtCreate.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581595942000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -356,7 +443,10 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the distribution task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UbmsMHmkqv0PiAG****010001</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -364,7 +454,10 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1BwAGV****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -372,7 +465,10 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceId.
+             * <p>The ID of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iot-cn-6ja***</p>
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -380,7 +476,10 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
             }
 
             /**
-             * SourceUid.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>198***</p>
              */
             public Builder sourceUid(String sourceUid) {
                 this.sourceUid = sourceUid;
@@ -388,7 +487,16 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the distribution task.</p>
+             * <ul>
+             * <li><strong>0</strong>: The task is being initialized.</li>
+             * <li><strong>1</strong>: The task is being implemented.</li>
+             * <li><strong>2</strong>: The task is completed. This status only indicates that the distribution task is completed. This status does not indicate that all products and devices are distributed. To obtain distribution results, call the <a href="https://help.aliyun.com/document_detail/199533.html">QueryDeviceDistributeDetail</a> operation.</li>
+             * <li><strong>3</strong>: The task is unexpectedly interrupted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -396,7 +504,14 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
             }
 
             /**
-             * Strategy.
+             * <p>The distribution policy.</p>
+             * <ul>
+             * <li><strong>0</strong>: distributes devices to instances in a specified region.</li>
+             * <li><strong>1</strong>: configures instance IDs in multiple regions and distributes devices to the nearest regions based on the IP addresses of the devices.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder strategy(Integer strategy) {
                 this.strategy = strategy;
@@ -404,7 +519,11 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
             }
 
             /**
-             * TargetInstanceConfigs.
+             * <p>The IDs of the destination instances.</p>
+             * <ul>
+             * <li>If the value of the <strong>Strategy</strong> parameter is <strong>1</strong>, multiple instance IDs exist.</li>
+             * <li>If the value of the <strong>Strategy</strong> parameter is <strong>0</strong>, only one instance ID exists.</li>
+             * </ul>
              */
             public Builder targetInstanceConfigs(DataTargetInstanceConfigs targetInstanceConfigs) {
                 this.targetInstanceConfigs = targetInstanceConfigs;
@@ -420,7 +539,10 @@ public class QueryDeviceDistributeJobResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of devices in the distribution task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

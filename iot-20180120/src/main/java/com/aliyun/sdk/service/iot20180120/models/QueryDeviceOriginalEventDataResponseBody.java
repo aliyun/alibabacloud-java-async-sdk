@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceOriginalEventDataResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceOriginalEventDataResponseBody</p>
  */
 public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDeviceOriginalEventDataResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
 
     public static QueryDeviceOriginalEventDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceOriginalEventDataResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.device.InvalidIoTId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The event records returned if the call succeeds.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call succeeds.</p>
+         * <ul>
+         * <li>true: The call succeeded.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,20 +164,26 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceOriginalEventDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceOriginalEventDataResponseBody</p>
+     */
     public static class EventInfo extends TeaModel {
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OutputData")
+        @com.aliyun.core.annotation.NameInMap("OutputData")
         private String outputData;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private EventInfo(Builder builder) {
@@ -205,8 +244,27 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
             private String outputData; 
             private String time; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventInfo model) {
+                this.eventType = model.eventType;
+                this.identifier = model.identifier;
+                this.name = model.name;
+                this.outputData = model.outputData;
+                this.time = model.time;
+            } 
+
             /**
-             * EventType.
+             * <p>The type of the event. Valid values:</p>
+             * <ul>
+             * <li>info: information.</li>
+             * <li>alert: alert.</li>
+             * <li>error: error.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -214,7 +272,10 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
             }
 
             /**
-             * Identifier.
+             * <p>The identifier of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PowerOff</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -222,7 +283,7 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the event.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -230,7 +291,10 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
             }
 
             /**
-             * OutputData.
+             * <p>The output parameter of the event. The value is a string in the MAP format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;structArgs&quot;:{&quot;structchildFLOATf71c20e&quot;:1.23}}</p>
              */
             public Builder outputData(String outputData) {
                 this.outputData = outputData;
@@ -238,7 +302,10 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the event occurred. The value is a 13-digit timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579163099000</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -252,9 +319,15 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceOriginalEventDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceOriginalEventDataResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("EventInfo")
-        private java.util.List < EventInfo> eventInfo;
+        @com.aliyun.core.annotation.NameInMap("EventInfo")
+        private java.util.List<EventInfo> eventInfo;
 
         private List(Builder builder) {
             this.eventInfo = builder.eventInfo;
@@ -271,17 +344,24 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
         /**
          * @return eventInfo
          */
-        public java.util.List < EventInfo> getEventInfo() {
+        public java.util.List<EventInfo> getEventInfo() {
             return this.eventInfo;
         }
 
         public static final class Builder {
-            private java.util.List < EventInfo> eventInfo; 
+            private java.util.List<EventInfo> eventInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.eventInfo = model.eventInfo;
+            } 
 
             /**
              * EventInfo.
              */
-            public Builder eventInfo(java.util.List < EventInfo> eventInfo) {
+            public Builder eventInfo(java.util.List<EventInfo> eventInfo) {
                 this.eventInfo = eventInfo;
                 return this;
             }
@@ -293,14 +373,20 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceOriginalEventDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceOriginalEventDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("NextPageToken")
+        @com.aliyun.core.annotation.NameInMap("NextPageToken")
         private String nextPageToken;
 
-        @NameInMap("NextValid")
+        @com.aliyun.core.annotation.NameInMap("NextValid")
         private Boolean nextValid;
 
         private Data(Builder builder) {
@@ -343,8 +429,17 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
             private String nextPageToken; 
             private Boolean nextValid; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.nextPageToken = model.nextPageToken;
+                this.nextValid = model.nextValid;
+            } 
+
             /**
-             * List.
+             * <p>The array of events. Each element represents an event. For more information about the details of the event, see the parameters of the <strong>EventInfo</strong> parameter.</p>
              */
             public Builder list(List list) {
                 this.list = list;
@@ -352,7 +447,10 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
             }
 
             /**
-             * NextPageToken.
+             * <p>The identifier of the next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bo***x44Qx</p>
              */
             public Builder nextPageToken(String nextPageToken) {
                 this.nextPageToken = nextPageToken;
@@ -360,7 +458,15 @@ public class QueryDeviceOriginalEventDataResponseBody extends TeaModel {
             }
 
             /**
-             * NextValid.
+             * <p>Indicates whether the next page exists.</p>
+             * <ul>
+             * <li><strong>true</strong>: The next page exists.</li>
+             * <li><strong>false</strong>: The next page does not exist.</li>
+             * </ul>
+             * <p>If the value <strong><strong><strong>true</strong> is returned, you can add the value of the <strong>NextPageToken</strong> parameter</strong></strong> to the next request. This allows you to query the data that is not included in the current query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder nextValid(Boolean nextValid) {
                 this.nextValid = nextValid;

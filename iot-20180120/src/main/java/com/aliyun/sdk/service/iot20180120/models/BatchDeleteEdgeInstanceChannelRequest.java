@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDeleteEdgeInstanceChannelRequest} extends {@link RequestModel}
  *
  * <p>BatchDeleteEdgeInstanceChannelRequest</p>
  */
 public class BatchDeleteEdgeInstanceChannelRequest extends Request {
-    @Query
-    @NameInMap("ChannelIds")
-    @Validation(required = true)
-    private java.util.List < String > channelIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> channelIds;
 
-    @Query
-    @NameInMap("DriverId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DriverId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String driverId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private BatchDeleteEdgeInstanceChannelRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class BatchDeleteEdgeInstanceChannelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class BatchDeleteEdgeInstanceChannelRequest extends Request {
     /**
      * @return channelIds
      */
-    public java.util.List < String > getChannelIds() {
+    public java.util.List<String> getChannelIds() {
         return this.channelIds;
     }
 
@@ -81,7 +86,7 @@ public class BatchDeleteEdgeInstanceChannelRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchDeleteEdgeInstanceChannelRequest, Builder> {
-        private java.util.List < String > channelIds; 
+        private java.util.List<String> channelIds; 
         private String driverId; 
         private String instanceId; 
         private String iotInstanceId; 
@@ -99,16 +104,22 @@ public class BatchDeleteEdgeInstanceChannelRequest extends Request {
         } 
 
         /**
-         * ChannelIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE0BD49EF5EF4D119D09CC1B25******</p>
          */
-        public Builder channelIds(java.util.List < String > channelIds) {
+        public Builder channelIds(java.util.List<String> channelIds) {
             this.putQueryParameter("ChannelIds", channelIds);
             this.channelIds = channelIds;
             return this;
         }
 
         /**
-         * DriverId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9c1ae7bd59f1469abbdccc9592******</p>
          */
         public Builder driverId(String driverId) {
             this.putQueryParameter("DriverId", driverId);
@@ -117,7 +128,10 @@ public class BatchDeleteEdgeInstanceChannelRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6GaTtvTj7vJhiS******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

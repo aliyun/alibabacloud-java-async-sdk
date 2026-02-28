@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteProductTagsRequest} extends {@link RequestModel}
  *
  * <p>DeleteProductTagsRequest</p>
  */
 public class DeleteProductTagsRequest extends Request {
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
-    @Query
-    @NameInMap("ProductTagKey")
-    @Validation(required = true)
-    private java.util.List < String > productTagKey;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductTagKey")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> productTagKey;
 
     private DeleteProductTagsRequest(Builder builder) {
         super(builder);
@@ -41,7 +46,7 @@ public class DeleteProductTagsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,14 +68,14 @@ public class DeleteProductTagsRequest extends Request {
     /**
      * @return productTagKey
      */
-    public java.util.List < String > getProductTagKey() {
+    public java.util.List<String> getProductTagKey() {
         return this.productTagKey;
     }
 
     public static final class Builder extends Request.Builder<DeleteProductTagsRequest, Builder> {
         private String iotInstanceId; 
         private String productKey; 
-        private java.util.List < String > productTagKey; 
+        private java.util.List<String> productTagKey; 
 
         private Builder() {
             super();
@@ -84,7 +89,17 @@ public class DeleteProductTagsRequest extends Request {
         } 
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
+         * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-v64***</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -93,7 +108,11 @@ public class DeleteProductTagsRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product. A ProductKey is a GUID that is issued by IoT Platform to a product. You can use the IoT Platform console or call the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation to view the information about all products within the current account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -102,9 +121,12 @@ public class DeleteProductTagsRequest extends Request {
         }
 
         /**
-         * ProductTagKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>room</p>
          */
-        public Builder productTagKey(java.util.List < String > productTagKey) {
+        public Builder productTagKey(java.util.List<String> productTagKey) {
             this.putQueryParameter("ProductTagKey", productTagKey);
             this.productTagKey = productTagKey;
             return this;

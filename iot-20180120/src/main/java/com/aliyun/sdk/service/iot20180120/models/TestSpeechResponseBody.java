@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TestSpeechResponseBody} extends {@link TeaModel}
  *
  * <p>TestSpeechResponseBody</p>
  */
 public class TestSpeechResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private TestSpeechResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class TestSpeechResponseBody extends TeaModel {
 
     public static TestSpeechResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class TestSpeechResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(TestSpeechResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,9 +151,15 @@ public class TestSpeechResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TestSpeechResponseBody} extends {@link TeaModel}
+     *
+     * <p>TestSpeechResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("items")
-        private java.util.List < String > items;
+        @com.aliyun.core.annotation.NameInMap("items")
+        private java.util.List<String> items;
 
         private Data(Builder builder) {
             this.items = builder.items;
@@ -150,17 +176,24 @@ public class TestSpeechResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < String > getItems() {
+        public java.util.List<String> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < String > items; 
+            private java.util.List<String> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+            } 
 
             /**
              * items.
              */
-            public Builder items(java.util.List < String > items) {
+            public Builder items(java.util.List<String> items) {
                 this.items = items;
                 return this;
             }

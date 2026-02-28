@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySpeechDeviceRequest} extends {@link RequestModel}
  *
  * <p>QuerySpeechDeviceRequest</p>
  */
 public class QuerySpeechDeviceRequest extends Request {
-    @Body
-    @NameInMap("AvailableSpace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AvailableSpace")
     private String availableSpace;
 
-    @Body
-    @NameInMap("AvailableSpaceScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AvailableSpaceScope")
     private String availableSpaceScope;
 
-    @Body
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("PageId")
-    @Validation(maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageId")
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 1)
     private Integer pageId;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ProjectCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectCode;
 
     private QuerySpeechDeviceRequest(Builder builder) {
@@ -62,7 +67,7 @@ public class QuerySpeechDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -195,7 +200,10 @@ public class QuerySpeechDeviceRequest extends Request {
         }
 
         /**
-         * ProjectCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4de2c367**<strong>8c585e5992</strong></p>
          */
         public Builder projectCode(String projectCode) {
             this.putBodyParameter("ProjectCode", projectCode);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetEdgeInstanceDeviceChannelResponseBody} extends {@link TeaModel}
  *
  * <p>BatchGetEdgeInstanceDeviceChannelResponseBody</p>
  */
 public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DeviceChannelList")
-    private java.util.List < DeviceChannelList> deviceChannelList;
+    @com.aliyun.core.annotation.NameInMap("DeviceChannelList")
+    private java.util.List<DeviceChannelList> deviceChannelList;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchGetEdgeInstanceDeviceChannelResponseBody(Builder builder) {
@@ -43,6 +48,10 @@ public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,7 +62,7 @@ public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
     /**
      * @return deviceChannelList
      */
-    public java.util.List < DeviceChannelList> getDeviceChannelList() {
+    public java.util.List<DeviceChannelList> getDeviceChannelList() {
         return this.deviceChannelList;
     }
 
@@ -80,10 +89,21 @@ public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < DeviceChannelList> deviceChannelList; 
+        private java.util.List<DeviceChannelList> deviceChannelList; 
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchGetEdgeInstanceDeviceChannelResponseBody model) {
+            this.code = model.code;
+            this.deviceChannelList = model.deviceChannelList;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -96,7 +116,7 @@ public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
         /**
          * DeviceChannelList.
          */
-        public Builder deviceChannelList(java.util.List < DeviceChannelList> deviceChannelList) {
+        public Builder deviceChannelList(java.util.List<DeviceChannelList> deviceChannelList) {
             this.deviceChannelList = deviceChannelList;
             return this;
         }
@@ -131,14 +151,20 @@ public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchGetEdgeInstanceDeviceChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetEdgeInstanceDeviceChannelResponseBody</p>
+     */
     public static class DeviceChannelList extends TeaModel {
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("ChannelName")
+        @com.aliyun.core.annotation.NameInMap("ChannelName")
         private String channelName;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
         private DeviceChannelList(Builder builder) {
@@ -180,6 +206,15 @@ public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
             private String channelId; 
             private String channelName; 
             private String iotId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceChannelList model) {
+                this.channelId = model.channelId;
+                this.channelName = model.channelName;
+                this.iotId = model.iotId;
+            } 
 
             /**
              * ChannelId.

@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOTAJobByDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>ListOTAJobByDeviceResponseBody</p>
  */
 public class ListOTAJobByDeviceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Integer pageCount;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListOTAJobByDeviceResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
 
     public static ListOTAJobByDeviceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -133,8 +142,26 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         private Boolean success; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListOTAJobByDeviceResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.pageCount = model.pageCount;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingFirmwareId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,10 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -150,7 +180,7 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The update batch information returned if the call is successful. For more information, see the following <strong>SimpleOTAJobInfo</strong> parameter.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -158,7 +188,10 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FirmwareId is mandatory for this action</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -166,7 +199,10 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -174,7 +210,10 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +221,10 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A01829CE-75A1-4920-B775-921146A1AB79</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +232,14 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +247,10 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of update packages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -211,11 +263,17 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOTAJobByDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOTAJobByDeviceResponseBody</p>
+     */
     public static class OtaTagDTO extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private OtaTagDTO(Builder builder) {
@@ -249,8 +307,19 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(OtaTagDTO model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The key of each tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -258,7 +327,10 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -272,9 +344,15 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOTAJobByDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOTAJobByDeviceResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("OtaTagDTO")
-        private java.util.List < OtaTagDTO> otaTagDTO;
+        @com.aliyun.core.annotation.NameInMap("OtaTagDTO")
+        private java.util.List<OtaTagDTO> otaTagDTO;
 
         private Tags(Builder builder) {
             this.otaTagDTO = builder.otaTagDTO;
@@ -291,17 +369,24 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         /**
          * @return otaTagDTO
          */
-        public java.util.List < OtaTagDTO> getOtaTagDTO() {
+        public java.util.List<OtaTagDTO> getOtaTagDTO() {
             return this.otaTagDTO;
         }
 
         public static final class Builder {
-            private java.util.List < OtaTagDTO> otaTagDTO; 
+            private java.util.List<OtaTagDTO> otaTagDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.otaTagDTO = model.otaTagDTO;
+            } 
 
             /**
              * OtaTagDTO.
              */
-            public Builder otaTagDTO(java.util.List < OtaTagDTO> otaTagDTO) {
+            public Builder otaTagDTO(java.util.List<OtaTagDTO> otaTagDTO) {
                 this.otaTagDTO = otaTagDTO;
                 return this;
             }
@@ -313,41 +398,47 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOTAJobByDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOTAJobByDeviceResponseBody</p>
+     */
     public static class SimpleOTAJobInfo extends TeaModel {
-        @NameInMap("FirmwareId")
+        @com.aliyun.core.annotation.NameInMap("FirmwareId")
         private String firmwareId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobStatus")
+        @com.aliyun.core.annotation.NameInMap("JobStatus")
         private String jobStatus;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("SelectionType")
+        @com.aliyun.core.annotation.NameInMap("SelectionType")
         private String selectionType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("TargetSelection")
+        @com.aliyun.core.annotation.NameInMap("TargetSelection")
         private String targetSelection;
 
-        @NameInMap("UtcCreate")
+        @com.aliyun.core.annotation.NameInMap("UtcCreate")
         private String utcCreate;
 
-        @NameInMap("UtcEndTime")
+        @com.aliyun.core.annotation.NameInMap("UtcEndTime")
         private String utcEndTime;
 
-        @NameInMap("UtcModified")
+        @com.aliyun.core.annotation.NameInMap("UtcModified")
         private String utcModified;
 
-        @NameInMap("UtcStartTime")
+        @com.aliyun.core.annotation.NameInMap("UtcStartTime")
         private String utcStartTime;
 
         private SimpleOTAJobInfo(Builder builder) {
@@ -471,8 +562,29 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             private String utcModified; 
             private String utcStartTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(SimpleOTAJobInfo model) {
+                this.firmwareId = model.firmwareId;
+                this.jobId = model.jobId;
+                this.jobStatus = model.jobStatus;
+                this.jobType = model.jobType;
+                this.productKey = model.productKey;
+                this.selectionType = model.selectionType;
+                this.tags = model.tags;
+                this.targetSelection = model.targetSelection;
+                this.utcCreate = model.utcCreate;
+                this.utcEndTime = model.utcEndTime;
+                this.utcModified = model.utcModified;
+                this.utcStartTime = model.utcStartTime;
+            } 
+
             /**
-             * FirmwareId.
+             * <p>The ID of the update package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FJFx8JzpnhpIsKftRjjm03****</p>
              */
             public Builder firmwareId(String firmwareId) {
                 this.firmwareId = firmwareId;
@@ -480,7 +592,10 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the update batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HvKuBpuk3rdk6E92CP****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -488,7 +603,15 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * <p>The status of the update batch. Valid values:</p>
+             * <ul>
+             * <li><strong>IN_PROGRESS</strong>: The update batch is running.</li>
+             * <li><strong>COMPLETE</strong>: The update batch is completed.</li>
+             * <li><strong>CANCELED</strong>: The update batch is canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -496,7 +619,14 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The type of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>VERFIY_FIRMWARE</strong>: update package verification.</li>
+             * <li><strong>UPGRADE_FIRMWARE</strong>: batch update.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UPGRADE_FIRMWARE</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -504,7 +634,10 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The ProductKey of the product to which the update package belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a19mzPZ****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -512,7 +645,14 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * SelectionType.
+             * <p>The update policy of the update batch. Valid values:</p>
+             * <ul>
+             * <li>DYNAMIC: dynamic update. This value is returned if you call the <a href="https://help.aliyun.com/document_detail/147887.html">CreateOTADynamicUpgradeJob</a> API operation to create an update batch.</li>
+             * <li>STATIC: static update. This value is returned if you call the <a href="https://help.aliyun.com/document_detail/147496.html">CreateOTAStaticUpgradeJob</a> API operation to create an update batch.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STATIC</p>
              */
             public Builder selectionType(String selectionType) {
                 this.selectionType = selectionType;
@@ -520,7 +660,7 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the update batch.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -528,7 +668,18 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * TargetSelection.
+             * <p>The scope of the update. Valid values: </p>
+             * <ul>
+             * <li><strong>ALL</strong>: updates all devices.</li>
+             * <li><strong>SPECIFIC</strong>: updates specified devices.</li>
+             * <li><strong>GRAY</strong>: performs a phased update.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The value ALL is returned if you call the <a href="/help/en/iot-platform/latest/av6dui">CreateOTADynamicUpgradeJob</a> API operation to create an update batch.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder targetSelection(String targetSelection) {
                 this.targetSelection = targetSelection;
@@ -536,7 +687,10 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreate.
+             * <p>The time when the update batch was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-28T02:43:10.000Z</p>
              */
             public Builder utcCreate(String utcCreate) {
                 this.utcCreate = utcCreate;
@@ -544,7 +698,13 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * UtcEndTime.
+             * <p>The end time of the update batch. The time is displayed in UTC.</p>
+             * <blockquote>
+             * <p> This parameter is returned only after the update batch is completed.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-29T02:43:10.000Z</p>
              */
             public Builder utcEndTime(String utcEndTime) {
                 this.utcEndTime = utcEndTime;
@@ -552,7 +712,10 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * UtcModified.
+             * <p>The time when the task was last modified. The time is in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-29T02:43:10.000Z</p>
              */
             public Builder utcModified(String utcModified) {
                 this.utcModified = utcModified;
@@ -560,7 +723,10 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * UtcStartTime.
+             * <p>The start time of the update batch. The time is in the UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-29T02:43:10.000Z</p>
              */
             public Builder utcStartTime(String utcStartTime) {
                 this.utcStartTime = utcStartTime;
@@ -574,9 +740,15 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOTAJobByDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOTAJobByDeviceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("SimpleOTAJobInfo")
-        private java.util.List < SimpleOTAJobInfo> simpleOTAJobInfo;
+        @com.aliyun.core.annotation.NameInMap("SimpleOTAJobInfo")
+        private java.util.List<SimpleOTAJobInfo> simpleOTAJobInfo;
 
         private Data(Builder builder) {
             this.simpleOTAJobInfo = builder.simpleOTAJobInfo;
@@ -593,17 +765,24 @@ public class ListOTAJobByDeviceResponseBody extends TeaModel {
         /**
          * @return simpleOTAJobInfo
          */
-        public java.util.List < SimpleOTAJobInfo> getSimpleOTAJobInfo() {
+        public java.util.List<SimpleOTAJobInfo> getSimpleOTAJobInfo() {
             return this.simpleOTAJobInfo;
         }
 
         public static final class Builder {
-            private java.util.List < SimpleOTAJobInfo> simpleOTAJobInfo; 
+            private java.util.List<SimpleOTAJobInfo> simpleOTAJobInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.simpleOTAJobInfo = model.simpleOTAJobInfo;
+            } 
 
             /**
              * SimpleOTAJobInfo.
              */
-            public Builder simpleOTAJobInfo(java.util.List < SimpleOTAJobInfo> simpleOTAJobInfo) {
+            public Builder simpleOTAJobInfo(java.util.List<SimpleOTAJobInfo> simpleOTAJobInfo) {
                 this.simpleOTAJobInfo = simpleOTAJobInfo;
                 return this;
             }

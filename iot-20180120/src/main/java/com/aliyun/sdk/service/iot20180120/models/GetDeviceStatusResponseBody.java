@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeviceStatusResponseBody</p>
  */
 public class GetDeviceStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDeviceStatusResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetDeviceStatusResponseBody extends TeaModel {
 
     public static GetDeviceStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GetDeviceStatusResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetDeviceStatusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GetDeviceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The device status returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class GetDeviceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class GetDeviceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class GetDeviceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +164,17 @@ public class GetDeviceStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeviceStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private Data(Builder builder) {
@@ -169,8 +208,25 @@ public class GetDeviceStatusResponseBody extends TeaModel {
             private String status; 
             private Long timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.status = model.status;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
-             * Status.
+             * <p>The status of the device. Valid values:</p>
+             * <ul>
+             * <li><strong>ONLINE</strong>: The device is online.</li>
+             * <li><strong>OFFLINE</strong>: The device is offline.</li>
+             * <li><strong>UNACTIVE</strong>: The device is not activated.</li>
+             * <li><strong>DISABLE</strong>: The device is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -178,7 +234,10 @@ public class GetDeviceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The time when the device status changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1557062301656</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

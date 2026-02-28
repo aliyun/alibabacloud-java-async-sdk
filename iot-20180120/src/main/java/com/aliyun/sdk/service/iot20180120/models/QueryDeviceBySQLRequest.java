@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceBySQLRequest} extends {@link RequestModel}
  *
  * <p>QueryDeviceBySQLRequest</p>
  */
 public class QueryDeviceBySQLRequest extends Request {
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("SQL")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SQL")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SQL;
 
     private QueryDeviceBySQLRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class QueryDeviceBySQLRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,16 @@ public class QueryDeviceBySQLRequest extends Request {
         } 
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the <strong>ID</strong> of the instance on the <strong>Instance Overview</strong> page in the IoT Platform console.</p>
+         * <p><strong>Important</strong></p>
+         * <ul>
+         * <li>If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.****</li>
+         * <li>If no <strong>Overview</strong> page or <strong>ID</strong> is generated for your instance, you do not need to configure this parameter.</li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-0pp1n8t****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -78,7 +92,11 @@ public class QueryDeviceBySQLRequest extends Request {
         }
 
         /**
-         * SQL.
+         * <p>The SQL-like statement that you want to execute to query devices. For more information about specific requirements and examples, see the following section.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT * FROM device where product_key = &quot;a1*********&quot; limit 100, 20</p>
          */
         public Builder SQL(String SQL) {
             this.putQueryParameter("SQL", SQL);

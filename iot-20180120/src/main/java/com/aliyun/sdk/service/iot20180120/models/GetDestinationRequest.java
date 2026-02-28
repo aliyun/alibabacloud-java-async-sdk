@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDestinationRequest} extends {@link RequestModel}
  *
  * <p>GetDestinationRequest</p>
  */
 public class GetDestinationRequest extends Request {
-    @Query
-    @NameInMap("DestinationId")
-    @Validation(required = true, maximum = 9999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 9999999)
     private Long destinationId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private GetDestinationRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class GetDestinationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,10 @@ public class GetDestinationRequest extends Request {
         } 
 
         /**
-         * DestinationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1004</p>
          */
         public Builder destinationId(Long destinationId) {
             this.putQueryParameter("DestinationId", destinationId);

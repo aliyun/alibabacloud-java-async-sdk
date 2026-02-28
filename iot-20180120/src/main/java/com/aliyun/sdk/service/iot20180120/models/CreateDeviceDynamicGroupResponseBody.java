@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDeviceDynamicGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDeviceDynamicGroupResponseBody</p>
  */
 public class CreateDeviceDynamicGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateDeviceDynamicGroupResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class CreateDeviceDynamicGroupResponseBody extends TeaModel {
 
     public static CreateDeviceDynamicGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CreateDeviceDynamicGroupResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDeviceDynamicGroupResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,20 +151,26 @@ public class CreateDeviceDynamicGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDeviceDynamicGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDeviceDynamicGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DynamicGroupExpression")
+        @com.aliyun.core.annotation.NameInMap("DynamicGroupExpression")
         private String dynamicGroupExpression;
 
-        @NameInMap("GroupDesc")
+        @com.aliyun.core.annotation.NameInMap("GroupDesc")
         private String groupDesc;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("UtcCreate")
+        @com.aliyun.core.annotation.NameInMap("UtcCreate")
         private String utcCreate;
 
         private Data(Builder builder) {
@@ -204,6 +230,17 @@ public class CreateDeviceDynamicGroupResponseBody extends TeaModel {
             private String groupId; 
             private String groupName; 
             private String utcCreate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dynamicGroupExpression = model.dynamicGroupExpression;
+                this.groupDesc = model.groupDesc;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.utcCreate = model.utcCreate;
+            } 
 
             /**
              * DynamicGroupExpression.

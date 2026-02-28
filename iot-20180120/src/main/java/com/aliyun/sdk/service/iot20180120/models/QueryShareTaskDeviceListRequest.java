@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryShareTaskDeviceListRequest} extends {@link RequestModel}
  *
  * <p>QueryShareTaskDeviceListRequest</p>
  */
 public class QueryShareTaskDeviceListRequest extends Request {
-    @Body
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("PageId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageId")
     private Integer pageId;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ShareTaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShareTaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String shareTaskId;
 
     private QueryShareTaskDeviceListRequest(Builder builder) {
@@ -50,7 +55,7 @@ public class QueryShareTaskDeviceListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,7 +116,10 @@ public class QueryShareTaskDeviceListRequest extends Request {
         } 
 
         /**
-         * DeviceName.
+         * <p>The keyword in the DeviceName of the device that you want to query. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder deviceName(String deviceName) {
             this.putBodyParameter("DeviceName", deviceName);
@@ -120,7 +128,14 @@ public class QueryShareTaskDeviceListRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p> If your instance has an ID, you must specify this parameter. Otherwise, the request fails. If no Overview page exists or no instance ID is displayed, you do not need to specify this parameter.</p>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a> of IoT instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-e3***</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putBodyParameter("IotInstanceId", iotInstanceId);
@@ -129,7 +144,10 @@ public class QueryShareTaskDeviceListRequest extends Request {
         }
 
         /**
-         * PageId.
+         * <p>The page number. Valid values: 1 to 10000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageId(Integer pageId) {
             this.putBodyParameter("PageId", pageId);
@@ -138,7 +156,10 @@ public class QueryShareTaskDeviceListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 50. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -147,7 +168,11 @@ public class QueryShareTaskDeviceListRequest extends Request {
         }
 
         /**
-         * ShareTaskId.
+         * <p>The ID of the sharing task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Md3ZiTL888K9llXDy7890***********</p>
          */
         public Builder shareTaskId(String shareTaskId) {
             this.putBodyParameter("ShareTaskId", shareTaskId);

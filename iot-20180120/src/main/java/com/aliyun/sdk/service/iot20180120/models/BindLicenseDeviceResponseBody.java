@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindLicenseDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>BindLicenseDeviceResponseBody</p>
  */
 public class BindLicenseDeviceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BindLicenseDeviceResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
 
     public static BindLicenseDeviceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(BindLicenseDeviceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the request fails. For more information, see the &quot;Error codes&quot; section in this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result of the batch binding operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4F94B97-1D64-4080-BFD2-67461667AA43</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,20 +164,26 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BindLicenseDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>BindLicenseDeviceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CheckProgressId")
+        @com.aliyun.core.annotation.NameInMap("CheckProgressId")
         private String checkProgressId;
 
-        @NameInMap("FailSum")
+        @com.aliyun.core.annotation.NameInMap("FailSum")
         private Long failSum;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("ResultCsvFile")
+        @com.aliyun.core.annotation.NameInMap("ResultCsvFile")
         private String resultCsvFile;
 
-        @NameInMap("SuccessSum")
+        @com.aliyun.core.annotation.NameInMap("SuccessSum")
         private Long successSum;
 
         private Data(Builder builder) {
@@ -205,8 +244,22 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
             private String resultCsvFile; 
             private Long successSum; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.checkProgressId = model.checkProgressId;
+                this.failSum = model.failSum;
+                this.progress = model.progress;
+                this.resultCsvFile = model.resultCsvFile;
+                this.successSum = model.successSum;
+            } 
+
             /**
-             * CheckProgressId.
+             * <p>The unique ID that can be used to query the progress of the batch binding operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123***</p>
              */
             public Builder checkProgressId(String checkProgressId) {
                 this.checkProgressId = checkProgressId;
@@ -214,7 +267,10 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * FailSum.
+             * <p>The number of devices that failed to be bound to the license.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder failSum(Long failSum) {
                 this.failSum = failSum;
@@ -222,7 +278,10 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress of the batch binding operation. The progress is a percentage. Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -230,7 +289,10 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ResultCsvFile.
+             * <p>The URL of the file that contains unbound devices. The devices failed to be bound to the license.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://***</p>
              */
             public Builder resultCsvFile(String resultCsvFile) {
                 this.resultCsvFile = resultCsvFile;
@@ -238,7 +300,10 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessSum.
+             * <p>The number of devices to which the license is successfully bound.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder successSum(Long successSum) {
                 this.successSum = successSum;

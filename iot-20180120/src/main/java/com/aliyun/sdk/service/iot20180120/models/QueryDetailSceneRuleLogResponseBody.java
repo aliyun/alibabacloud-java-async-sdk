@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDetailSceneRuleLogResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDetailSceneRuleLogResponseBody</p>
  */
 public class QueryDetailSceneRuleLogResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDetailSceneRuleLogResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryDetailSceneRuleLogResponseBody extends TeaModel {
 
     public static QueryDetailSceneRuleLogResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryDetailSceneRuleLogResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDetailSceneRuleLogResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,14 +151,20 @@ public class QueryDetailSceneRuleLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDetailSceneRuleLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDetailSceneRuleLogResponseBody</p>
+     */
     public static class LogList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PkDn")
+        @com.aliyun.core.annotation.NameInMap("PkDn")
         private String pkDn;
 
         private LogList(Builder builder) {
@@ -181,6 +207,15 @@ public class QueryDetailSceneRuleLogResponseBody extends TeaModel {
             private String message; 
             private String pkDn; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogList model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.pkDn = model.pkDn;
+            } 
+
             /**
              * Code.
              */
@@ -212,17 +247,23 @@ public class QueryDetailSceneRuleLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDetailSceneRuleLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDetailSceneRuleLogResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("LogList")
-        private java.util.List < LogList> logList;
+        @com.aliyun.core.annotation.NameInMap("LogList")
+        private java.util.List<LogList> logList;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -250,7 +291,7 @@ public class QueryDetailSceneRuleLogResponseBody extends TeaModel {
         /**
          * @return logList
          */
-        public java.util.List < LogList> getLogList() {
+        public java.util.List<LogList> getLogList() {
             return this.logList;
         }
 
@@ -270,9 +311,19 @@ public class QueryDetailSceneRuleLogResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer currentPage; 
-            private java.util.List < LogList> logList; 
+            private java.util.List<LogList> logList; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.logList = model.logList;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * CurrentPage.
@@ -285,7 +336,7 @@ public class QueryDetailSceneRuleLogResponseBody extends TeaModel {
             /**
              * LogList.
              */
-            public Builder logList(java.util.List < LogList> logList) {
+            public Builder logList(java.util.List<LogList> logList) {
                 this.logList = logList;
                 return this;
             }

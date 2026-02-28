@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceTunnelResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceTunnelResponseBody</p>
  */
 public class QueryDeviceTunnelResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDeviceTunnelResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryDeviceTunnelResponseBody extends TeaModel {
 
     public static QueryDeviceTunnelResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryDeviceTunnelResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceTunnelResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,41 +151,47 @@ public class QueryDeviceTunnelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceTunnelResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceTunnelResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DeviceConnState")
+        @com.aliyun.core.annotation.NameInMap("DeviceConnState")
         private String deviceConnState;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("SourceConnState")
+        @com.aliyun.core.annotation.NameInMap("SourceConnState")
         private String sourceConnState;
 
-        @NameInMap("TunnelId")
+        @com.aliyun.core.annotation.NameInMap("TunnelId")
         private String tunnelId;
 
-        @NameInMap("TunnelState")
+        @com.aliyun.core.annotation.NameInMap("TunnelState")
         private String tunnelState;
 
-        @NameInMap("Udi")
+        @com.aliyun.core.annotation.NameInMap("Udi")
         private String udi;
 
-        @NameInMap("UtcClosed")
+        @com.aliyun.core.annotation.NameInMap("UtcClosed")
         private String utcClosed;
 
-        @NameInMap("UtcCreated")
+        @com.aliyun.core.annotation.NameInMap("UtcCreated")
         private String utcCreated;
 
         private Data(Builder builder) {
@@ -288,6 +314,24 @@ public class QueryDeviceTunnelResponseBody extends TeaModel {
             private String udi; 
             private String utcClosed; 
             private String utcCreated; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.deviceConnState = model.deviceConnState;
+                this.deviceName = model.deviceName;
+                this.iotId = model.iotId;
+                this.productKey = model.productKey;
+                this.productName = model.productName;
+                this.sourceConnState = model.sourceConnState;
+                this.tunnelId = model.tunnelId;
+                this.tunnelState = model.tunnelState;
+                this.udi = model.udi;
+                this.utcClosed = model.utcClosed;
+                this.utcCreated = model.utcCreated;
+            } 
 
             /**
              * Description.

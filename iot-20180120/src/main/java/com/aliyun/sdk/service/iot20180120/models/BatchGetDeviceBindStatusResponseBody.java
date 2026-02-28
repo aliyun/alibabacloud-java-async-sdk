@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetDeviceBindStatusResponseBody} extends {@link TeaModel}
  *
  * <p>BatchGetDeviceBindStatusResponseBody</p>
  */
 public class BatchGetDeviceBindStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchGetDeviceBindStatusResponseBody(Builder builder) {
@@ -43,6 +48,10 @@ public class BatchGetDeviceBindStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,7 +62,7 @@ public class BatchGetDeviceBindStatusResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,10 +89,21 @@ public class BatchGetDeviceBindStatusResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchGetDeviceBindStatusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -96,7 +116,7 @@ public class BatchGetDeviceBindStatusResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -131,14 +151,20 @@ public class BatchGetDeviceBindStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchGetDeviceBindStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetDeviceBindStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BindStatus")
+        @com.aliyun.core.annotation.NameInMap("BindStatus")
         private Integer bindStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
         private Data(Builder builder) {
@@ -181,6 +207,15 @@ public class BatchGetDeviceBindStatusResponseBody extends TeaModel {
             private String instanceId; 
             private String iotId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bindStatus = model.bindStatus;
+                this.instanceId = model.instanceId;
+                this.iotId = model.iotId;
+            } 
+
             /**
              * BindStatus.
              */
@@ -190,7 +225,10 @@ public class BatchGetDeviceBindStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>实例ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iot-v64********</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvokeDataAPIServiceResponseBody} extends {@link TeaModel}
  *
  * <p>InvokeDataAPIServiceResponseBody</p>
  */
 public class InvokeDataAPIServiceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private InvokeDataAPIServiceResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
 
     public static InvokeDataAPIServiceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(InvokeDataAPIServiceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,9 +151,15 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InvokeDataAPIServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>InvokeDataAPIServiceResponseBody</p>
+     */
     public static class FieldNameList extends TeaModel {
-        @NameInMap("FieldNameList")
-        private java.util.List < String > fieldNameList;
+        @com.aliyun.core.annotation.NameInMap("FieldNameList")
+        private java.util.List<String> fieldNameList;
 
         private FieldNameList(Builder builder) {
             this.fieldNameList = builder.fieldNameList;
@@ -150,17 +176,24 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
         /**
          * @return fieldNameList
          */
-        public java.util.List < String > getFieldNameList() {
+        public java.util.List<String> getFieldNameList() {
             return this.fieldNameList;
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldNameList; 
+            private java.util.List<String> fieldNameList; 
+
+            private Builder() {
+            } 
+
+            private Builder(FieldNameList model) {
+                this.fieldNameList = model.fieldNameList;
+            } 
 
             /**
              * FieldNameList.
              */
-            public Builder fieldNameList(java.util.List < String > fieldNameList) {
+            public Builder fieldNameList(java.util.List<String> fieldNameList) {
                 this.fieldNameList = fieldNameList;
                 return this;
             }
@@ -172,9 +205,15 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InvokeDataAPIServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>InvokeDataAPIServiceResponseBody</p>
+     */
     public static class ResultList extends TeaModel {
-        @NameInMap("ResultList")
-        private java.util.List < java.util.Map<String, ?>> resultList;
+        @com.aliyun.core.annotation.NameInMap("ResultList")
+        private java.util.List<java.util.Map<String, ?>> resultList;
 
         private ResultList(Builder builder) {
             this.resultList = builder.resultList;
@@ -191,17 +230,24 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
         /**
          * @return resultList
          */
-        public java.util.List < java.util.Map<String, ?>> getResultList() {
+        public java.util.List<java.util.Map<String, ?>> getResultList() {
             return this.resultList;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> resultList; 
+            private java.util.List<java.util.Map<String, ?>> resultList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultList model) {
+                this.resultList = model.resultList;
+            } 
 
             /**
              * ResultList.
              */
-            public Builder resultList(java.util.List < java.util.Map<String, ?>> resultList) {
+            public Builder resultList(java.util.List<java.util.Map<String, ?>> resultList) {
                 this.resultList = resultList;
                 return this;
             }
@@ -213,23 +259,29 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InvokeDataAPIServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>InvokeDataAPIServiceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ApiSrn")
+        @com.aliyun.core.annotation.NameInMap("ApiSrn")
         private String apiSrn;
 
-        @NameInMap("FieldNameList")
+        @com.aliyun.core.annotation.NameInMap("FieldNameList")
         private FieldNameList fieldNameList;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ResultList")
+        @com.aliyun.core.annotation.NameInMap("ResultList")
         private ResultList resultList;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {
@@ -298,6 +350,18 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
             private Integer pageSize; 
             private ResultList resultList; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiSrn = model.apiSrn;
+                this.fieldNameList = model.fieldNameList;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.resultList = model.resultList;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * ApiSrn.

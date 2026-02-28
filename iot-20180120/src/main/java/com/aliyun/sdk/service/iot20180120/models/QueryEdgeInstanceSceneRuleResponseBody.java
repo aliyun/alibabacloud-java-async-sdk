@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEdgeInstanceSceneRuleResponseBody} extends {@link TeaModel}
  *
  * <p>QueryEdgeInstanceSceneRuleResponseBody</p>
  */
 public class QueryEdgeInstanceSceneRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryEdgeInstanceSceneRuleResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryEdgeInstanceSceneRuleResponseBody extends TeaModel {
 
     public static QueryEdgeInstanceSceneRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryEdgeInstanceSceneRuleResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryEdgeInstanceSceneRuleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,20 +151,26 @@ public class QueryEdgeInstanceSceneRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryEdgeInstanceSceneRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceSceneRuleResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("IsExisted")
+        @com.aliyun.core.annotation.NameInMap("IsExisted")
         private Integer isExisted;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private RuleList(Builder builder) {
@@ -205,6 +231,17 @@ public class QueryEdgeInstanceSceneRuleResponseBody extends TeaModel {
             private String ruleName; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.gmtCreate = model.gmtCreate;
+                this.isExisted = model.isExisted;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.status = model.status;
+            } 
+
             /**
              * GmtCreate.
              */
@@ -252,17 +289,23 @@ public class QueryEdgeInstanceSceneRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEdgeInstanceSceneRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceSceneRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        @com.aliyun.core.annotation.NameInMap("RuleList")
+        private java.util.List<RuleList> ruleList;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -297,7 +340,7 @@ public class QueryEdgeInstanceSceneRuleResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
@@ -311,8 +354,18 @@ public class QueryEdgeInstanceSceneRuleResponseBody extends TeaModel {
         public static final class Builder {
             private Integer currentPage; 
             private Integer pageSize; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.ruleList = model.ruleList;
+                this.total = model.total;
+            } 
 
             /**
              * CurrentPage.
@@ -333,7 +386,7 @@ public class QueryEdgeInstanceSceneRuleResponseBody extends TeaModel {
             /**
              * RuleList.
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }

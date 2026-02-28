@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOTAVerifyJobResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOTAVerifyJobResponseBody</p>
  */
 public class CreateOTAVerifyJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateOTAVerifyJobResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class CreateOTAVerifyJobResponseBody extends TeaModel {
 
     public static CreateOTAVerifyJobResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class CreateOTAVerifyJobResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateOTAVerifyJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class CreateOTAVerifyJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The task information returned if the call is successful. For more information, see the following parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class CreateOTAVerifyJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class CreateOTAVerifyJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. The ID uniquely identifies this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29EC7245-0FA4-4BB6-B4F5-5F04818FDFB1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class CreateOTAVerifyJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +164,17 @@ public class CreateOTAVerifyJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOTAVerifyJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOTAVerifyJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("UtcCreate")
+        @com.aliyun.core.annotation.NameInMap("UtcCreate")
         private String utcCreate;
 
         private Data(Builder builder) {
@@ -169,8 +208,19 @@ public class CreateOTAVerifyJobResponseBody extends TeaModel {
             private String jobId; 
             private String utcCreate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobId = model.jobId;
+                this.utcCreate = model.utcCreate;
+            } 
+
             /**
-             * JobId.
+             * <p>The ID of the verification task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wahVIzGkCMuAUE2gDERM02****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -178,7 +228,10 @@ public class CreateOTAVerifyJobResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreate.
+             * <p>The time when the verification task was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-04T06:22:19.566Z</p>
              */
             public Builder utcCreate(String utcCreate) {
                 this.utcCreate = utcCreate;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySolutionDeviceGroupPageResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySolutionDeviceGroupPageResponseBody</p>
  */
 public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySolutionDeviceGroupPageResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
 
     public static QuerySolutionDeviceGroupPageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySolutionDeviceGroupPageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,23 +151,29 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySolutionDeviceGroupPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySolutionDeviceGroupPageResponseBody</p>
+     */
     public static class ItemName extends TeaModel {
-        @NameInMap("DeviceCount")
+        @com.aliyun.core.annotation.NameInMap("DeviceCount")
         private Long deviceCount;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("GroupDesc")
+        @com.aliyun.core.annotation.NameInMap("GroupDesc")
         private String groupDesc;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private ItemName(Builder builder) {
@@ -217,6 +243,18 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
             private String groupId; 
             private String groupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ItemName model) {
+                this.deviceCount = model.deviceCount;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.groupDesc = model.groupDesc;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+            } 
+
             /**
              * DeviceCount.
              */
@@ -272,9 +310,15 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySolutionDeviceGroupPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySolutionDeviceGroupPageResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("itemName")
-        private java.util.List < ItemName> itemName;
+        @com.aliyun.core.annotation.NameInMap("itemName")
+        private java.util.List<ItemName> itemName;
 
         private List(Builder builder) {
             this.itemName = builder.itemName;
@@ -291,17 +335,24 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
         /**
          * @return itemName
          */
-        public java.util.List < ItemName> getItemName() {
+        public java.util.List<ItemName> getItemName() {
             return this.itemName;
         }
 
         public static final class Builder {
-            private java.util.List < ItemName> itemName; 
+            private java.util.List<ItemName> itemName; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.itemName = model.itemName;
+            } 
 
             /**
              * itemName.
              */
-            public Builder itemName(java.util.List < ItemName> itemName) {
+            public Builder itemName(java.util.List<ItemName> itemName) {
                 this.itemName = itemName;
                 return this;
             }
@@ -313,17 +364,23 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySolutionDeviceGroupPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySolutionDeviceGroupPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageId")
+        @com.aliyun.core.annotation.NameInMap("PageId")
         private Integer pageId;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -374,6 +431,16 @@ public class QuerySolutionDeviceGroupPageResponseBody extends TeaModel {
             private Integer pageId; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageId = model.pageId;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * List.

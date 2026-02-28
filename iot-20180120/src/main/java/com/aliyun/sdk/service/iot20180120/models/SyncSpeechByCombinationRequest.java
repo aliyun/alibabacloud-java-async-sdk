@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncSpeechByCombinationRequest} extends {@link RequestModel}
  *
  * <p>SyncSpeechByCombinationRequest</p>
  */
 public class SyncSpeechByCombinationRequest extends Request {
-    @Body
-    @NameInMap("AudioFormat")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AudioFormat")
     private String audioFormat;
 
-    @Body
-    @NameInMap("CombinationList")
-    @Validation(required = true)
-    private java.util.List < String > combinationList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CombinationList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> combinationList;
 
-    @Body
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Body
-    @NameInMap("EnforceFlag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnforceFlag")
     private Boolean enforceFlag;
 
-    @Body
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Body
-    @NameInMap("SpeechId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SpeechId")
     private String speechId;
 
     private SyncSpeechByCombinationRequest(Builder builder) {
@@ -65,7 +70,7 @@ public class SyncSpeechByCombinationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -80,7 +85,7 @@ public class SyncSpeechByCombinationRequest extends Request {
     /**
      * @return combinationList
      */
-    public java.util.List < String > getCombinationList() {
+    public java.util.List<String> getCombinationList() {
         return this.combinationList;
     }
 
@@ -128,7 +133,7 @@ public class SyncSpeechByCombinationRequest extends Request {
 
     public static final class Builder extends Request.Builder<SyncSpeechByCombinationRequest, Builder> {
         private String audioFormat; 
-        private java.util.List < String > combinationList; 
+        private java.util.List<String> combinationList; 
         private String deviceName; 
         private Boolean enforceFlag; 
         private String iotId; 
@@ -162,9 +167,12 @@ public class SyncSpeechByCombinationRequest extends Request {
         }
 
         /**
-         * CombinationList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZFBDZ</p>
          */
-        public Builder combinationList(java.util.List < String > combinationList) {
+        public Builder combinationList(java.util.List<String> combinationList) {
             this.putBodyParameter("CombinationList", combinationList);
             this.combinationList = combinationList;
             return this;

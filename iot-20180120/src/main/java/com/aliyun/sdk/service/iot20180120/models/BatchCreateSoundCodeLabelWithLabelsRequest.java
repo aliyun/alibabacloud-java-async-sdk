@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchCreateSoundCodeLabelWithLabelsRequest} extends {@link RequestModel}
  *
  * <p>BatchCreateSoundCodeLabelWithLabelsRequest</p>
  */
 public class BatchCreateSoundCodeLabelWithLabelsRequest extends Request {
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("Labels")
-    @Validation(required = true)
-    private java.util.List < String > labels;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> labels;
 
-    @Body
-    @NameInMap("ScheduleCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScheduleCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scheduleCode;
 
     private BatchCreateSoundCodeLabelWithLabelsRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class BatchCreateSoundCodeLabelWithLabelsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +73,7 @@ public class BatchCreateSoundCodeLabelWithLabelsRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < String > getLabels() {
+    public java.util.List<String> getLabels() {
         return this.labels;
     }
 
@@ -82,7 +87,7 @@ public class BatchCreateSoundCodeLabelWithLabelsRequest extends Request {
     public static final class Builder extends Request.Builder<BatchCreateSoundCodeLabelWithLabelsRequest, Builder> {
         private String description; 
         private String iotInstanceId; 
-        private java.util.List < String > labels; 
+        private java.util.List<String> labels; 
         private String scheduleCode; 
 
         private Builder() {
@@ -116,16 +121,22 @@ public class BatchCreateSoundCodeLabelWithLabelsRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
-        public Builder labels(java.util.List < String > labels) {
+        public Builder labels(java.util.List<String> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;
         }
 
         /**
-         * ScheduleCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Md3ZiTL888K9llXDy7890***********</p>
          */
         public Builder scheduleCode(String scheduleCode) {
             this.putBodyParameter("ScheduleCode", scheduleCode);

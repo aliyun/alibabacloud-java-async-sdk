@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceTunnelRequest} extends {@link RequestModel}
  *
  * <p>QueryDeviceTunnelRequest</p>
  */
 public class QueryDeviceTunnelRequest extends Request {
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("TunnelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TunnelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tunnelId;
 
     private QueryDeviceTunnelRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class QueryDeviceTunnelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -78,7 +83,10 @@ public class QueryDeviceTunnelRequest extends Request {
         }
 
         /**
-         * TunnelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d4098041-a560-***</p>
          */
         public Builder tunnelId(String tunnelId) {
             this.putQueryParameter("TunnelId", tunnelId);

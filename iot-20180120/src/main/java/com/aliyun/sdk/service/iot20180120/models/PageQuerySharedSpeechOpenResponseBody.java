@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PageQuerySharedSpeechOpenResponseBody} extends {@link TeaModel}
  *
  * <p>PageQuerySharedSpeechOpenResponseBody</p>
  */
 public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private PageQuerySharedSpeechOpenResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
 
     public static PageQuerySharedSpeechOpenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(PageQuerySharedSpeechOpenResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String	iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result returned if the request was successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,29 +164,35 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PageQuerySharedSpeechOpenResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageQuerySharedSpeechOpenResponseBody</p>
+     */
     public static class ResultDataData extends TeaModel {
-        @NameInMap("AudioFormat")
+        @com.aliyun.core.annotation.NameInMap("AudioFormat")
         private String audioFormat;
 
-        @NameInMap("BizCode")
+        @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("SpeechRate")
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
         private Integer speechRate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("Voice")
+        @com.aliyun.core.annotation.NameInMap("Voice")
         private String voice;
 
-        @NameInMap("Volume")
+        @com.aliyun.core.annotation.NameInMap("Volume")
         private Integer volume;
 
         private ResultDataData(Builder builder) {
@@ -241,8 +280,25 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
             private String voice; 
             private Integer volume; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultDataData model) {
+                this.audioFormat = model.audioFormat;
+                this.bizCode = model.bizCode;
+                this.code = model.code;
+                this.speechRate = model.speechRate;
+                this.status = model.status;
+                this.text = model.text;
+                this.voice = model.voice;
+                this.volume = model.volume;
+            } 
+
             /**
-             * AudioFormat.
+             * <p>The audio format. Valid values: <strong>wav</strong>, <strong>mp3</strong>, and <strong>amr</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wav</p>
              */
             public Builder audioFormat(String audioFormat) {
                 this.audioFormat = audioFormat;
@@ -250,7 +306,10 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
             }
 
             /**
-             * BizCode.
+             * <p>The unique identifier of the speech in the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identifying</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -258,7 +317,10 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The unique identifier of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws****</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -266,7 +328,10 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
             }
 
             /**
-             * SpeechRate.
+             * <p>The broadcasting speed. Valid values: -500 to 500.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder speechRate(Integer speechRate) {
                 this.speechRate = speechRate;
@@ -274,7 +339,15 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the speeches. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The speeches are pending approval.</li>
+             * <li><strong>2</strong>: The speeches are approved.</li>
+             * <li><strong>3</strong>: The speeches are rejected.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -282,7 +355,10 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * <p>The content of the speech.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -290,7 +366,10 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
             }
 
             /**
-             * Voice.
+             * <p>The sound effect that is used to broadcast speeches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Siyue</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;
@@ -298,7 +377,10 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
             }
 
             /**
-             * Volume.
+             * <p>The volume. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder volume(Integer volume) {
                 this.volume = volume;
@@ -312,9 +394,15 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PageQuerySharedSpeechOpenResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageQuerySharedSpeechOpenResponseBody</p>
+     */
     public static class ResultData extends TeaModel {
-        @NameInMap("Data")
-        private java.util.List < ResultDataData> data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<ResultDataData> data;
 
         private ResultData(Builder builder) {
             this.data = builder.data;
@@ -331,17 +419,24 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < ResultDataData> getData() {
+        public java.util.List<ResultDataData> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < ResultDataData> data; 
+            private java.util.List<ResultDataData> data; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultData model) {
+                this.data = model.data;
+            } 
 
             /**
-             * Data.
+             * <p>The result returned if the request was successful.</p>
              */
-            public Builder data(java.util.List < ResultDataData> data) {
+            public Builder data(java.util.List<ResultDataData> data) {
                 this.data = data;
                 return this;
             }
@@ -353,17 +448,23 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PageQuerySharedSpeechOpenResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageQuerySharedSpeechOpenResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageId")
+        @com.aliyun.core.annotation.NameInMap("PageId")
         private Integer pageId;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ResultData")
+        @com.aliyun.core.annotation.NameInMap("ResultData")
         private ResultData resultData;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -415,8 +516,21 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
             private ResultData resultData; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageId = model.pageId;
+                this.pageSize = model.pageSize;
+                this.resultData = model.resultData;
+                this.total = model.total;
+            } 
+
             /**
-             * PageId.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageId(Integer pageId) {
                 this.pageId = pageId;
@@ -424,7 +538,10 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -432,7 +549,7 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
             }
 
             /**
-             * ResultData.
+             * <p>The information about shared speeches.</p>
              */
             public Builder resultData(ResultData resultData) {
                 this.resultData = resultData;
@@ -440,7 +557,10 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

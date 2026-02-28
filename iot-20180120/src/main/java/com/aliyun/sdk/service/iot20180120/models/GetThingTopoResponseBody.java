@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetThingTopoResponseBody} extends {@link TeaModel}
  *
  * <p>GetThingTopoResponseBody</p>
  */
 public class GetThingTopoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetThingTopoResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetThingTopoResponseBody extends TeaModel {
 
     public static GetThingTopoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GetThingTopoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetThingTopoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GetThingTopoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned if the call succeeds. For more information, see the following parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class GetThingTopoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class GetThingTopoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class GetThingTopoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call succeeds.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call succeeds.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +164,20 @@ public class GetThingTopoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetThingTopoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetThingTopoResponseBody</p>
+     */
     public static class DeviceInfo extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
         private DeviceInfo(Builder builder) {
@@ -181,8 +220,20 @@ public class GetThingTopoResponseBody extends TeaModel {
             private String iotId; 
             private String productKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceInfo model) {
+                this.deviceName = model.deviceName;
+                this.iotId = model.iotId;
+                this.productKey = model.productKey;
+            } 
+
             /**
-             * DeviceName.
+             * <p>The DeviceName of the sub-device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>light</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -190,7 +241,10 @@ public class GetThingTopoResponseBody extends TeaModel {
             }
 
             /**
-             * IotId.
+             * <p>The ID of the sub-device. The ID is the unique identifier that is issued by IoT Platform to the sub-device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Q7uOhVRdZRRlDnTLv****00100</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -198,7 +252,10 @@ public class GetThingTopoResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The ProductKey of the product to which the sub-device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1BwAGV****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -212,9 +269,15 @@ public class GetThingTopoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetThingTopoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetThingTopoResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("deviceInfo")
-        private java.util.List < DeviceInfo> deviceInfo;
+        @com.aliyun.core.annotation.NameInMap("deviceInfo")
+        private java.util.List<DeviceInfo> deviceInfo;
 
         private List(Builder builder) {
             this.deviceInfo = builder.deviceInfo;
@@ -231,17 +294,24 @@ public class GetThingTopoResponseBody extends TeaModel {
         /**
          * @return deviceInfo
          */
-        public java.util.List < DeviceInfo> getDeviceInfo() {
+        public java.util.List<DeviceInfo> getDeviceInfo() {
             return this.deviceInfo;
         }
 
         public static final class Builder {
-            private java.util.List < DeviceInfo> deviceInfo; 
+            private java.util.List<DeviceInfo> deviceInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.deviceInfo = model.deviceInfo;
+            } 
 
             /**
              * deviceInfo.
              */
-            public Builder deviceInfo(java.util.List < DeviceInfo> deviceInfo) {
+            public Builder deviceInfo(java.util.List<DeviceInfo> deviceInfo) {
                 this.deviceInfo = deviceInfo;
                 return this;
             }
@@ -253,20 +323,26 @@ public class GetThingTopoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetThingTopoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetThingTopoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageCount")
+        @com.aliyun.core.annotation.NameInMap("PageCount")
         private Long pageCount;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -327,8 +403,22 @@ public class GetThingTopoResponseBody extends TeaModel {
             private Integer pageSize; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.list = model.list;
+                this.pageCount = model.pageCount;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
+
             /**
-             * CurrentPage.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -336,7 +426,7 @@ public class GetThingTopoResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * <p>The details of the sub-device. The details of the sub-device are included in the <strong>deviceInfo</strong> parameter.</p>
              */
             public Builder list(List list) {
                 this.list = list;
@@ -344,7 +434,10 @@ public class GetThingTopoResponseBody extends TeaModel {
             }
 
             /**
-             * PageCount.
+             * <p>The total number of pages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageCount(Long pageCount) {
                 this.pageCount = pageCount;
@@ -352,7 +445,10 @@ public class GetThingTopoResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -360,7 +456,10 @@ public class GetThingTopoResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

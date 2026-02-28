@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryProductResponseBody} extends {@link TeaModel}
  *
  * <p>QueryProductResponseBody</p>
  */
 public class QueryProductResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryProductResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryProductResponseBody extends TeaModel {
 
     public static QueryProductResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryProductResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryProductResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryProductResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The product information returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,7 @@ public class QueryProductResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +133,10 @@ public class QueryProductResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4F94B97-1D64-4080-BFD2-67461667AA43</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +144,14 @@ public class QueryProductResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,59 +164,65 @@ public class QueryProductResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryProductResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AliyunCommodityCode")
+        @com.aliyun.core.annotation.NameInMap("AliyunCommodityCode")
         private String aliyunCommodityCode;
 
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
 
-        @NameInMap("CategoryKey")
+        @com.aliyun.core.annotation.NameInMap("CategoryKey")
         private String categoryKey;
 
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
-        @NameInMap("DataFormat")
+        @com.aliyun.core.annotation.NameInMap("DataFormat")
         private Integer dataFormat;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DeviceCount")
+        @com.aliyun.core.annotation.NameInMap("DeviceCount")
         private Integer deviceCount;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("Id2")
+        @com.aliyun.core.annotation.NameInMap("Id2")
         private Boolean id2;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private Integer netType;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private Integer nodeType;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private Boolean owner;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductSecret")
+        @com.aliyun.core.annotation.NameInMap("ProductSecret")
         private String productSecret;
 
-        @NameInMap("ProductStatus")
+        @com.aliyun.core.annotation.NameInMap("ProductStatus")
         private String productStatus;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("ValidateType")
+        @com.aliyun.core.annotation.NameInMap("ValidateType")
         private Integer validateType;
 
         private Data(Builder builder) {
@@ -361,8 +400,40 @@ public class QueryProductResponseBody extends TeaModel {
             private String protocolType; 
             private Integer validateType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliyunCommodityCode = model.aliyunCommodityCode;
+                this.authType = model.authType;
+                this.categoryKey = model.categoryKey;
+                this.categoryName = model.categoryName;
+                this.dataFormat = model.dataFormat;
+                this.description = model.description;
+                this.deviceCount = model.deviceCount;
+                this.gmtCreate = model.gmtCreate;
+                this.id2 = model.id2;
+                this.netType = model.netType;
+                this.nodeType = model.nodeType;
+                this.owner = model.owner;
+                this.productKey = model.productKey;
+                this.productName = model.productName;
+                this.productSecret = model.productSecret;
+                this.productStatus = model.productStatus;
+                this.protocolType = model.protocolType;
+                this.validateType = model.validateType;
+            } 
+
             /**
-             * AliyunCommodityCode.
+             * <p>The type of the product. This parameter indicates whether a Thing Specification Language (TSL) model was used.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><strong>iothub_senior</strong>: A TSL model was used.</li>
+             * <li><strong>iothub</strong>: No TSL model was used.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>iothub_senior</p>
              */
             public Builder aliyunCommodityCode(String aliyunCommodityCode) {
                 this.aliyunCommodityCode = aliyunCommodityCode;
@@ -370,7 +441,15 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * AuthType.
+             * <p>The authentication method that was used to connect the devices of the product to IoT Platform. Valid values:</p>
+             * <ul>
+             * <li><strong>secret</strong>: DeviceSecrets were used to authenticate the devices.</li>
+             * <li><strong>id2</strong>: IoT Internet Device ID was used to authenticate the devices.</li>
+             * <li><strong>x509</strong>: X.509 certificates were used to authenticate the devices.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>secret</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -378,7 +457,12 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryKey.
+             * <p>The identifier of the category to which the product belongs.</p>
+             * <p>This parameter is returned if the product uses the TSL model of a standard category that is pre-defined by IoT Platform.</p>
+             * <p>This parameter is available if the AliyunCommodityCode parameter is set to iothub_senior.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Lighting</p>
              */
             public Builder categoryKey(String categoryKey) {
                 this.categoryKey = categoryKey;
@@ -386,7 +470,9 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The name of the product category.</p>
+             * <p>This parameter is returned if the product uses the TSL model of a standard category that is pre-defined by IoT Platform.</p>
+             * <p>This parameter is available if the AliyunCommodityCode parameter is set to iothub_senior.</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -394,7 +480,15 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * DataFormat.
+             * <p>The data format that was used by a communication protocol to transmit data between the devices and IoT Platform. This parameter is available if the AliyunCommodityCode parameter is set to iothub_senior.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: custom. A custom serial data format was used. In this case, the device can submit raw data, such as binary data streams. IoT Platform converts the raw data into standard Alink JSON data by using a specified data parsing script.</li>
+             * <li><strong>1</strong>: Alink JSON. Alink JSON data is transmitted between the devices and IoT Platform. Alink is a data exchange protocol that is pre-defined by IoT Platform.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dataFormat(Integer dataFormat) {
                 this.dataFormat = dataFormat;
@@ -402,7 +496,7 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the product.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -410,7 +504,10 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceCount.
+             * <p>The number of devices under the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deviceCount(Integer deviceCount) {
                 this.deviceCount = deviceCount;
@@ -418,7 +515,10 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the product was created. The value is a timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581595942000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -426,7 +526,14 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * Id2.
+             * <p>Indicates whether IoT Internet Device ID was enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: IoT Internet Device ID was enabled.</li>
+             * <li><strong>false</strong>: IoT Internet Device ID was disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder id2(Boolean id2) {
                 this.id2 = id2;
@@ -434,7 +541,16 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network connection method. Valid values:</p>
+             * <ul>
+             * <li><strong>3</strong>: Wi-Fi.</li>
+             * <li><strong>6</strong>: cellular network (2G/3G/4G/5G).</li>
+             * <li><strong>7</strong>: Ethernet.</li>
+             * <li><strong>8</strong>: others.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder netType(Integer netType) {
                 this.netType = netType;
@@ -442,7 +558,14 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type of the product. This parameter is available if the AliyunCommodityCode parameter is set to iothub_senior. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: device. Sub-devices cannot be attached to a device. A device can connect to IoT Platform directly or as a sub-device of a gateway.</li>
+             * <li><strong>1</strong>: gateway. Sub-devices can be attached to a gateway. A gateway can manage sub-devices, maintain the topological relationships with sub-devices, and synchronize the topological relationships to IoT Platform.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nodeType(Integer nodeType) {
                 this.nodeType = nodeType;
@@ -450,7 +573,14 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>Indicates whether the operation was called by the owner of the product.</p>
+             * <ul>
+             * <li><strong>true</strong>: yes.</li>
+             * <li><strong>false</strong>: no.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder owner(Boolean owner) {
                 this.owner = owner;
@@ -458,7 +588,10 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The ProductKey of the product. When you create a product, a ProductKey is the globally unique identifier (GUID) that is issued by IoT Platform to the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1T27vz****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -466,7 +599,7 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The name of the product.</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -474,7 +607,10 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * ProductSecret.
+             * <p>The ProductSecret of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>U5tW7i44uilc****</p>
              */
             public Builder productSecret(String productSecret) {
                 this.productSecret = productSecret;
@@ -482,7 +618,14 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * ProductStatus.
+             * <p>The status of the product.</p>
+             * <ul>
+             * <li><strong>DEVELOPMENT_STATUS</strong>: The product is being developed.</li>
+             * <li><strong>RELEASE_STATUS</strong>: The product was published.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DEVELOPMENT_STATUS</p>
              */
             public Builder productStatus(String productStatus) {
                 this.productStatus = productStatus;
@@ -490,7 +633,18 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * <p>The type of the protocol that was used by the sub-devices to connect with a gateway.</p>
+             * <p>This parameter is available if the AliyunCommodityCode parameter is set to iothub_senior and the NodeType parameter is set to 1. Valid values:</p>
+             * <ul>
+             * <li><strong>modbus</strong>: Modbus.</li>
+             * <li><strong>opc-ua</strong>: OPC UA.</li>
+             * <li><strong>customize</strong>: custom protocol.</li>
+             * <li><strong>ble</strong>: BLE.</li>
+             * <li><strong>zigbee</strong>: ZigBee.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>modbus</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -498,7 +652,26 @@ public class QueryProductResponseBody extends TeaModel {
             }
 
             /**
-             * ValidateType.
+             * <p>The level of the data verification. Valid values:</p>
+             * <ul>
+             * <li><p><strong>2</strong>: no verification. IoT Platform does not verify the data. All data is forwarded.</p>
+             * <p>In the IoT Platform console, the data is not displayed on the TSL Data tab of the Device Details page.</p>
+             * </li>
+             * <li><p><strong>1</strong>: low-level verification. IoT Platform verifies only the identifier and dataType fields of the data. All data is forwarded.</p>
+             * </li>
+             * <li><p><strong>0</strong>: high-level verification. IoT Platform verifies all fields of the data. Only the data that passes the verification is forwarded.</p>
+             * <p>The products that were created before October 14, 2020 support only high-level verification.</p>
+             * </li>
+             * </ul>
+             * <p>The products that were created on October 14, 2020 or later support low-level verification or no verification.</p>
+             * <p>After verification, you can view the data that passes or fails the verification.</p>
+             * <ul>
+             * <li>In the IoT Platform console, the data is displayed on the <strong>TSL Data</strong> tab of the <strong>Device Details</strong> page. The data that fails the verification is not displayed.</li>
+             * <li>You can view the data that fails the verification in the <strong>checkFailedData</strong> parameter of the forwarded data. For more information, see <a href="https://help.aliyun.com/document_detail/73736.html">Data formats</a>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder validateType(Integer validateType) {
                 this.validateType = validateType;

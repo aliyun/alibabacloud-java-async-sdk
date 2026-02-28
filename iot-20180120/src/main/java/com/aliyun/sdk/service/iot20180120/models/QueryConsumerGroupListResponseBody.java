@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryConsumerGroupListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryConsumerGroupListResponseBody</p>
  */
 public class QueryConsumerGroupListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Integer pageCount;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private QueryConsumerGroupListResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
 
     public static QueryConsumerGroupListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -133,8 +142,26 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
         private Boolean success; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryConsumerGroupListResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.pageCount = model.pageCount;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,10 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -150,7 +180,7 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The details about the consumer group. This parameter is returned if the call is successful. For more information, see ConsumerGroupDTO.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -158,7 +188,7 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -166,7 +196,10 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -174,7 +207,10 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +218,10 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73B9DF43-7780-47DE-8BED-077729D28BD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +229,14 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +244,10 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -211,14 +260,20 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryConsumerGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryConsumerGroupListResponseBody</p>
+     */
     public static class ConsumerGroupDTO extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private ConsumerGroupDTO(Builder builder) {
@@ -261,8 +316,20 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
             private String groupId; 
             private String groupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsumerGroupDTO model) {
+                this.createTime = model.createTime;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+            } 
+
             /**
-             * CreateTime.
+             * <p>The time when the consumer group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ss.SSSZ format. The time is displayed in UTC and accurate to milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-20T00:05:20.000Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -270,7 +337,10 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nJRaJPn5U1JITGf******</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -278,7 +348,7 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the consumer group.</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -292,9 +362,15 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryConsumerGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryConsumerGroupListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ConsumerGroupDTO")
-        private java.util.List < ConsumerGroupDTO> consumerGroupDTO;
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroupDTO")
+        private java.util.List<ConsumerGroupDTO> consumerGroupDTO;
 
         private Data(Builder builder) {
             this.consumerGroupDTO = builder.consumerGroupDTO;
@@ -311,17 +387,24 @@ public class QueryConsumerGroupListResponseBody extends TeaModel {
         /**
          * @return consumerGroupDTO
          */
-        public java.util.List < ConsumerGroupDTO> getConsumerGroupDTO() {
+        public java.util.List<ConsumerGroupDTO> getConsumerGroupDTO() {
             return this.consumerGroupDTO;
         }
 
         public static final class Builder {
-            private java.util.List < ConsumerGroupDTO> consumerGroupDTO; 
+            private java.util.List<ConsumerGroupDTO> consumerGroupDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.consumerGroupDTO = model.consumerGroupDTO;
+            } 
 
             /**
              * ConsumerGroupDTO.
              */
-            public Builder consumerGroupDTO(java.util.List < ConsumerGroupDTO> consumerGroupDTO) {
+            public Builder consumerGroupDTO(java.util.List<ConsumerGroupDTO> consumerGroupDTO) {
                 this.consumerGroupDTO = consumerGroupDTO;
                 return this;
             }

@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProductDistributeJobRequest} extends {@link RequestModel}
  *
  * <p>CreateProductDistributeJobRequest</p>
  */
 public class CreateProductDistributeJobRequest extends Request {
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
-    @Query
-    @NameInMap("SourceInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceInstanceId;
 
-    @Query
-    @NameInMap("TargetAliyunId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetAliyunId")
     private String targetAliyunId;
 
-    @Query
-    @NameInMap("TargetInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetInstanceId;
 
-    @Query
-    @NameInMap("TargetUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetUid")
     private String targetUid;
 
     private CreateProductDistributeJobRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class CreateProductDistributeJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +118,11 @@ public class CreateProductDistributeJobRequest extends Request {
         } 
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product to be published.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -122,7 +131,27 @@ public class CreateProductDistributeJobRequest extends Request {
         }
 
         /**
-         * SourceInstanceId.
+         * <p>The ID of the source instance to which the product belongs.</p>
+         * <ul>
+         * <li><p>The IDs of public instances in different regions:</p>
+         * <ul>
+         * <li>China (Shanghai): iotx-oxssharez200.</li>
+         * <li>Japan (Tokyo): iotx-oxssharez300.</li>
+         * <li>Singapore (Singapore): iotx-oxssharez400.</li>
+         * <li>US (Silicon Valley): iotx-oxssharez500.</li>
+         * <li>US (Virginia): iotx-oxssharez600.</li>
+         * <li>Germany (Frankfurt): iotx-oxssharez700.</li>
+         * </ul>
+         * </li>
+         * <li><p>The IDs of Enterprise Edition instances:</p>
+         * <p>1. Log on to the IoT Platform console. Select a region from the drop-down list in the upper-left corner of the top navigation bar.</p>
+         * <p>2. On the <strong>Overview</strong> page, click the instance name. On the <strong>Instance Details</strong> page, view the instance ID in the <strong>Basic Information</strong> section.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-st2***</p>
          */
         public Builder sourceInstanceId(String sourceInstanceId) {
             this.putQueryParameter("SourceInstanceId", sourceInstanceId);
@@ -131,7 +160,11 @@ public class CreateProductDistributeJobRequest extends Request {
         }
 
         /**
-         * TargetAliyunId.
+         * <p>The Alibaba Cloud account to which the product belongs. You can log on to the IoT Platform console, click the profile picture, and then view <strong>Logon Account</strong> on the <strong>Security Settings</strong> page.</p>
+         * <p>The <strong>TargetUid</strong> and <strong>TargetAliyunId</strong> parameters cannot be left empty at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>io****@example.com</p>
          */
         public Builder targetAliyunId(String targetAliyunId) {
             this.putQueryParameter("TargetAliyunId", targetAliyunId);
@@ -140,7 +173,11 @@ public class CreateProductDistributeJobRequest extends Request {
         }
 
         /**
-         * TargetInstanceId.
+         * <p>The ID of the destination instance to which the product is distributed. For more information about instance IDs, see the description of the <strong>SourceInstanceId</strong> parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-6ja***</p>
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putQueryParameter("TargetInstanceId", targetInstanceId);
@@ -149,7 +186,11 @@ public class CreateProductDistributeJobRequest extends Request {
         }
 
         /**
-         * TargetUid.
+         * <p>The ID of the Alibaba Cloud account to which the product belongs. You can log on to the IoT Platform console, click the profile picture, and then view <strong>Account ID</strong> on the <strong>Security Settings</strong> page.</p>
+         * <p>The <strong>TargetUid</strong> and <strong>TargetAliyunId</strong> parameters cannot be left empty at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>198***</p>
          */
         public Builder targetUid(String targetUid) {
             this.putQueryParameter("TargetUid", targetUid);

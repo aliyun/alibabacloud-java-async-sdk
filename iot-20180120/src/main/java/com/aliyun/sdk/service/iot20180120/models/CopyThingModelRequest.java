@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyThingModelRequest} extends {@link RequestModel}
  *
  * <p>CopyThingModelRequest</p>
  */
 public class CopyThingModelRequest extends Request {
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SourceModelVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceModelVersion")
     private String sourceModelVersion;
 
-    @Query
-    @NameInMap("SourceProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceProductKey;
 
-    @Query
-    @NameInMap("TargetProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetProductKey;
 
     private CopyThingModelRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class CopyThingModelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +117,17 @@ public class CopyThingModelRequest extends Request {
         } 
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. On the <strong>Overview</strong> page in the IoT Platform console, you can view the ID of the instance.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must specify this parameter. Otherwise, the call fails.</li>
+         * <li>If the <strong>Overview</strong> page or instance ID is not displayed in the IoT Platform console, ignore this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -121,7 +136,13 @@ public class CopyThingModelRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * <blockquote>
+         * <p> You do not need to configure this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm4l5tcwd****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -130,7 +151,11 @@ public class CopyThingModelRequest extends Request {
         }
 
         /**
-         * SourceModelVersion.
+         * <p>The version of the TSL model that you want to copy.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/150318.html">ListThingModelVersion</a> operation to view the TSL model versions of a product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V1.0.0</p>
          */
         public Builder sourceModelVersion(String sourceModelVersion) {
             this.putQueryParameter("SourceModelVersion", sourceModelVersion);
@@ -139,7 +164,12 @@ public class CopyThingModelRequest extends Request {
         }
 
         /**
-         * SourceProductKey.
+         * <p>The ProductKey of the source product.</p>
+         * <p>You can view the ProductKey on the Product Details page of the IoT Platform console. You can also obtain the ProductKey by calling the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder sourceProductKey(String sourceProductKey) {
             this.putQueryParameter("SourceProductKey", sourceProductKey);
@@ -148,7 +178,12 @@ public class CopyThingModelRequest extends Request {
         }
 
         /**
-         * TargetProductKey.
+         * <p>The ProductKey of the destination product.</p>
+         * <p>You can view the ProductKey on the Product Details page of the IoT Platform console. You can also obtain the ProductKey by calling the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwwG0****</p>
          */
         public Builder targetProductKey(String targetProductKey) {
             this.putQueryParameter("TargetProductKey", targetProductKey);

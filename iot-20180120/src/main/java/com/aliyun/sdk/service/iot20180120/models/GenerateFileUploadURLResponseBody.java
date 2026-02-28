@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateFileUploadURLResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateFileUploadURLResponseBody</p>
  */
 public class GenerateFileUploadURLResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GenerateFileUploadURLResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GenerateFileUploadURLResponseBody extends TeaModel {
 
     public static GenerateFileUploadURLResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GenerateFileUploadURLResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateFileUploadURLResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,23 +151,29 @@ public class GenerateFileUploadURLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateFileUploadURLResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateFileUploadURLResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("ObjectStorage")
+        @com.aliyun.core.annotation.NameInMap("ObjectStorage")
         private String objectStorage;
 
-        @NameInMap("OssAccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("OssAccessKeyId")
         private String ossAccessKeyId;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Signature")
+        @com.aliyun.core.annotation.NameInMap("Signature")
         private String signature;
 
         private Data(Builder builder) {
@@ -216,6 +242,18 @@ public class GenerateFileUploadURLResponseBody extends TeaModel {
             private String ossAccessKeyId; 
             private String policy; 
             private String signature; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.host = model.host;
+                this.key = model.key;
+                this.objectStorage = model.objectStorage;
+                this.ossAccessKeyId = model.ossAccessKeyId;
+                this.policy = model.policy;
+                this.signature = model.signature;
+            } 
 
             /**
              * Host.

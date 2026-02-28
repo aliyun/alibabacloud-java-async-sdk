@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryStudioAppListRequest} extends {@link RequestModel}
  *
  * <p>QueryStudioAppListRequest</p>
  */
 public class QueryStudioAppListRequest extends Request {
-    @Body
-    @NameInMap("FuzzyName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FuzzyName")
     private String fuzzyName;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Body
-    @NameInMap("Types")
-    @Validation(required = true)
-    private java.util.List < String > types;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Types")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> types;
 
     private QueryStudioAppListRequest(Builder builder) {
         super(builder);
@@ -56,7 +61,7 @@ public class QueryStudioAppListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,7 @@ public class QueryStudioAppListRequest extends Request {
     /**
      * @return types
      */
-    public java.util.List < String > getTypes() {
+    public java.util.List<String> getTypes() {
         return this.types;
     }
 
@@ -109,7 +114,7 @@ public class QueryStudioAppListRequest extends Request {
         private Integer pageNo; 
         private Integer pageSize; 
         private String projectId; 
-        private java.util.List < String > types; 
+        private java.util.List<String> types; 
 
         private Builder() {
             super();
@@ -162,7 +167,10 @@ public class QueryStudioAppListRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a123********</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -171,9 +179,12 @@ public class QueryStudioAppListRequest extends Request {
         }
 
         /**
-         * Types.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;webApp&quot;, &quot;mobileApp&quot;]</p>
          */
-        public Builder types(java.util.List < String > types) {
+        public Builder types(java.util.List<String> types) {
             this.putBodyParameter("Types", types);
             this.types = types;
             return this;

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachParserDataSourceRequest} extends {@link RequestModel}
  *
  * <p>DetachParserDataSourceRequest</p>
  */
 public class DetachParserDataSourceRequest extends Request {
-    @Query
-    @NameInMap("DataSourceId")
-    @Validation(required = true, maximum = 99999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99999999)
     private Long dataSourceId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ParserId")
-    @Validation(required = true, maximum = 999999999999D, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParserId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999999D, minimum = 1)
     private Long parserId;
 
     private DetachParserDataSourceRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class DetachParserDataSourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,10 @@ public class DetachParserDataSourceRequest extends Request {
         } 
 
         /**
-         * DataSourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder dataSourceId(Long dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -102,7 +110,10 @@ public class DetachParserDataSourceRequest extends Request {
         }
 
         /**
-         * ParserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder parserId(Long parserId) {
             this.putQueryParameter("ParserId", parserId);

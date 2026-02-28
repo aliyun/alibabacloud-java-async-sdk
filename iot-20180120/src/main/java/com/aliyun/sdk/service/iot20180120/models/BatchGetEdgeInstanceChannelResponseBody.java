@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetEdgeInstanceChannelResponseBody} extends {@link TeaModel}
  *
  * <p>BatchGetEdgeInstanceChannelResponseBody</p>
  */
 public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchGetEdgeInstanceChannelResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
 
     public static BatchGetEdgeInstanceChannelResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchGetEdgeInstanceChannelResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,17 +151,23 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchGetEdgeInstanceChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetEdgeInstanceChannelResponseBody</p>
+     */
     public static class Config extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private Config(Builder builder) {
@@ -193,6 +219,16 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
             private String format; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.configId = model.configId;
+                this.content = model.content;
+                this.format = model.format;
+                this.key = model.key;
+            } 
+
             /**
              * ConfigId.
              */
@@ -232,9 +268,15 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchGetEdgeInstanceChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetEdgeInstanceChannelResponseBody</p>
+     */
     public static class ConfigList extends TeaModel {
-        @NameInMap("Config")
-        private java.util.List < Config> config;
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private java.util.List<Config> config;
 
         private ConfigList(Builder builder) {
             this.config = builder.config;
@@ -251,17 +293,24 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
         /**
          * @return config
          */
-        public java.util.List < Config> getConfig() {
+        public java.util.List<Config> getConfig() {
             return this.config;
         }
 
         public static final class Builder {
-            private java.util.List < Config> config; 
+            private java.util.List<Config> config; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigList model) {
+                this.config = model.config;
+            } 
 
             /**
              * Config.
              */
-            public Builder config(java.util.List < Config> config) {
+            public Builder config(java.util.List<Config> config) {
                 this.config = config;
                 return this;
             }
@@ -273,14 +322,20 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchGetEdgeInstanceChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetEdgeInstanceChannelResponseBody</p>
+     */
     public static class Channel extends TeaModel {
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("ChannelName")
+        @com.aliyun.core.annotation.NameInMap("ChannelName")
         private String channelName;
 
-        @NameInMap("ConfigList")
+        @com.aliyun.core.annotation.NameInMap("ConfigList")
         private ConfigList configList;
 
         private Channel(Builder builder) {
@@ -323,6 +378,15 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
             private String channelName; 
             private ConfigList configList; 
 
+            private Builder() {
+            } 
+
+            private Builder(Channel model) {
+                this.channelId = model.channelId;
+                this.channelName = model.channelName;
+                this.configList = model.configList;
+            } 
+
             /**
              * ChannelId.
              */
@@ -354,9 +418,15 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchGetEdgeInstanceChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetEdgeInstanceChannelResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Channel")
-        private java.util.List < Channel> channel;
+        @com.aliyun.core.annotation.NameInMap("Channel")
+        private java.util.List<Channel> channel;
 
         private Data(Builder builder) {
             this.channel = builder.channel;
@@ -373,17 +443,24 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
         /**
          * @return channel
          */
-        public java.util.List < Channel> getChannel() {
+        public java.util.List<Channel> getChannel() {
             return this.channel;
         }
 
         public static final class Builder {
-            private java.util.List < Channel> channel; 
+            private java.util.List<Channel> channel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.channel = model.channel;
+            } 
 
             /**
              * Channel.
              */
-            public Builder channel(java.util.List < Channel> channel) {
+            public Builder channel(java.util.List<Channel> channel) {
                 this.channel = channel;
                 return this;
             }

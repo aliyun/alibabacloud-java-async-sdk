@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GisSearchDeviceTraceResponseBody} extends {@link TeaModel}
  *
  * <p>GisSearchDeviceTraceResponseBody</p>
  */
 public class GisSearchDeviceTraceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GisSearchDeviceTraceResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GisSearchDeviceTraceResponseBody extends TeaModel {
 
     public static GisSearchDeviceTraceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GisSearchDeviceTraceResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GisSearchDeviceTraceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,11 +151,17 @@ public class GisSearchDeviceTraceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GisSearchDeviceTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GisSearchDeviceTraceResponseBody</p>
+     */
     public static class Points extends TeaModel {
-        @NameInMap("LocateTime")
+        @com.aliyun.core.annotation.NameInMap("LocateTime")
         private Long locateTime;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
         private Points(Builder builder) {
@@ -169,6 +195,14 @@ public class GisSearchDeviceTraceResponseBody extends TeaModel {
             private Long locateTime; 
             private String location; 
 
+            private Builder() {
+            } 
+
+            private Builder(Points model) {
+                this.locateTime = model.locateTime;
+                this.location = model.location;
+            } 
+
             /**
              * LocateTime.
              */
@@ -192,14 +226,20 @@ public class GisSearchDeviceTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GisSearchDeviceTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GisSearchDeviceTraceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("Points")
-        private java.util.List < Points> points;
+        @com.aliyun.core.annotation.NameInMap("Points")
+        private java.util.List<Points> points;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
         private Data(Builder builder) {
@@ -226,7 +266,7 @@ public class GisSearchDeviceTraceResponseBody extends TeaModel {
         /**
          * @return points
          */
-        public java.util.List < Points> getPoints() {
+        public java.util.List<Points> getPoints() {
             return this.points;
         }
 
@@ -239,8 +279,17 @@ public class GisSearchDeviceTraceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String deviceName; 
-            private java.util.List < Points> points; 
+            private java.util.List<Points> points; 
             private String productKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deviceName = model.deviceName;
+                this.points = model.points;
+                this.productKey = model.productKey;
+            } 
 
             /**
              * DeviceName.
@@ -253,7 +302,7 @@ public class GisSearchDeviceTraceResponseBody extends TeaModel {
             /**
              * Points.
              */
-            public Builder points(java.util.List < Points> points) {
+            public Builder points(java.util.List<Points> points) {
                 this.points = points;
                 return this;
             }

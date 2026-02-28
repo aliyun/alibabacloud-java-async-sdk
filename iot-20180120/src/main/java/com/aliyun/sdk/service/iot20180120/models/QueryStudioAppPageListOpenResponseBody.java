@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryStudioAppPageListOpenResponseBody} extends {@link TeaModel}
  *
  * <p>QueryStudioAppPageListOpenResponseBody</p>
  */
 public class QueryStudioAppPageListOpenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryStudioAppPageListOpenResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryStudioAppPageListOpenResponseBody extends TeaModel {
 
     public static QueryStudioAppPageListOpenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryStudioAppPageListOpenResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryStudioAppPageListOpenResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,32 +151,38 @@ public class QueryStudioAppPageListOpenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryStudioAppPageListOpenResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryStudioAppPageListOpenResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("IsHidden")
+        @com.aliyun.core.annotation.NameInMap("IsHidden")
         private Integer isHidden;
 
-        @NameInMap("IsHome")
+        @com.aliyun.core.annotation.NameInMap("IsHome")
         private Integer isHome;
 
-        @NameInMap("IsLoginPage")
+        @com.aliyun.core.annotation.NameInMap("IsLoginPage")
         private Integer isLoginPage;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PageId")
+        @com.aliyun.core.annotation.NameInMap("PageId")
         private String pageId;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private PageInfo(Builder builder) {
@@ -253,6 +279,21 @@ public class QueryStudioAppPageListOpenResponseBody extends TeaModel {
             private String pageId; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.isHidden = model.isHidden;
+                this.isHome = model.isHome;
+                this.isLoginPage = model.isLoginPage;
+                this.name = model.name;
+                this.pageId = model.pageId;
+                this.path = model.path;
+            } 
+
             /**
              * GmtCreate.
              */
@@ -332,9 +373,15 @@ public class QueryStudioAppPageListOpenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryStudioAppPageListOpenResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryStudioAppPageListOpenResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("PageInfo")
-        private java.util.List < PageInfo> pageInfo;
+        @com.aliyun.core.annotation.NameInMap("PageInfo")
+        private java.util.List<PageInfo> pageInfo;
 
         private List(Builder builder) {
             this.pageInfo = builder.pageInfo;
@@ -351,17 +398,24 @@ public class QueryStudioAppPageListOpenResponseBody extends TeaModel {
         /**
          * @return pageInfo
          */
-        public java.util.List < PageInfo> getPageInfo() {
+        public java.util.List<PageInfo> getPageInfo() {
             return this.pageInfo;
         }
 
         public static final class Builder {
-            private java.util.List < PageInfo> pageInfo; 
+            private java.util.List<PageInfo> pageInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.pageInfo = model.pageInfo;
+            } 
 
             /**
              * PageInfo.
              */
-            public Builder pageInfo(java.util.List < PageInfo> pageInfo) {
+            public Builder pageInfo(java.util.List<PageInfo> pageInfo) {
                 this.pageInfo = pageInfo;
                 return this;
             }
@@ -373,20 +427,26 @@ public class QueryStudioAppPageListOpenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryStudioAppPageListOpenResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryStudioAppPageListOpenResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("TotalPage")
+        @com.aliyun.core.annotation.NameInMap("TotalPage")
         private Integer totalPage;
 
         private Data(Builder builder) {
@@ -446,6 +506,17 @@ public class QueryStudioAppPageListOpenResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer total; 
             private Integer totalPage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+                this.totalPage = model.totalPage;
+            } 
 
             /**
              * List.

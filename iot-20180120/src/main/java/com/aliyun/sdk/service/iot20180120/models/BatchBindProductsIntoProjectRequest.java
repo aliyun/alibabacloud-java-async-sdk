@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchBindProductsIntoProjectRequest} extends {@link RequestModel}
  *
  * <p>BatchBindProductsIntoProjectRequest</p>
  */
 public class BatchBindProductsIntoProjectRequest extends Request {
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Body
-    @NameInMap("ProductKeys")
-    @Validation(required = true)
-    private java.util.List < String > productKeys;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductKeys")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> productKeys;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
     private BatchBindProductsIntoProjectRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class BatchBindProductsIntoProjectRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -56,7 +61,7 @@ public class BatchBindProductsIntoProjectRequest extends Request {
     /**
      * @return productKeys
      */
-    public java.util.List < String > getProductKeys() {
+    public java.util.List<String> getProductKeys() {
         return this.productKeys;
     }
 
@@ -69,7 +74,7 @@ public class BatchBindProductsIntoProjectRequest extends Request {
 
     public static final class Builder extends Request.Builder<BatchBindProductsIntoProjectRequest, Builder> {
         private String iotInstanceId; 
-        private java.util.List < String > productKeys; 
+        private java.util.List<String> productKeys; 
         private String projectId; 
 
         private Builder() {
@@ -93,16 +98,22 @@ public class BatchBindProductsIntoProjectRequest extends Request {
         }
 
         /**
-         * ProductKeys.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
-        public Builder productKeys(java.util.List < String > productKeys) {
+        public Builder productKeys(java.util.List<String> productKeys) {
             this.putBodyParameter("ProductKeys", productKeys);
             this.productKeys = productKeys;
             return this;
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a123********</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);

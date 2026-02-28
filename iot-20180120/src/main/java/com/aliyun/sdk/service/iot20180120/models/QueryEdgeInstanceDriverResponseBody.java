@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEdgeInstanceDriverResponseBody} extends {@link TeaModel}
  *
  * <p>QueryEdgeInstanceDriverResponseBody</p>
  */
 public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryEdgeInstanceDriverResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
 
     public static QueryEdgeInstanceDriverResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryEdgeInstanceDriverResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see <a href="https://help.aliyun.com/document_detail/135200.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data that is returned if the call was successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that is returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request parameter error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +136,10 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77F540BC-A0EF-46A4-ABDE-18644C69AAF5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,20 +163,26 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryEdgeInstanceDriverResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceDriverResponseBody</p>
+     */
     public static class DriverList extends TeaModel {
-        @NameInMap("DriverId")
+        @com.aliyun.core.annotation.NameInMap("DriverId")
         private String driverId;
 
-        @NameInMap("DriverVersion")
+        @com.aliyun.core.annotation.NameInMap("DriverVersion")
         private String driverVersion;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
         private DriverList(Builder builder) {
@@ -205,8 +243,22 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
             private String gmtModified; 
             private String orderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DriverList model) {
+                this.driverId = model.driverId;
+                this.driverVersion = model.driverVersion;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.orderId = model.orderId;
+            } 
+
             /**
-             * DriverId.
+             * <p>The ID of the driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9c1ae7bd59f1469abbdccc959228****</p>
              */
             public Builder driverId(String driverId) {
                 this.driverId = driverId;
@@ -214,7 +266,10 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
             }
 
             /**
-             * DriverVersion.
+             * <p>The version number of the driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder driverVersion(String driverVersion) {
                 this.driverVersion = driverVersion;
@@ -222,7 +277,10 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the driver was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-26 17:22:25</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -230,7 +288,10 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last time when the driver was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-26 17:22:25</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -238,7 +299,10 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The ID of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11123458765423</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -252,17 +316,23 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEdgeInstanceDriverResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEdgeInstanceDriverResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("DriverList")
-        private java.util.List < DriverList> driverList;
+        @com.aliyun.core.annotation.NameInMap("DriverList")
+        private java.util.List<DriverList> driverList;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -290,7 +360,7 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
         /**
          * @return driverList
          */
-        public java.util.List < DriverList> getDriverList() {
+        public java.util.List<DriverList> getDriverList() {
             return this.driverList;
         }
 
@@ -310,12 +380,25 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer currentPage; 
-            private java.util.List < DriverList> driverList; 
+            private java.util.List<DriverList> driverList; 
             private Integer pageSize; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.driverList = model.driverList;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
+
             /**
-             * CurrentPage.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -323,15 +406,18 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
             }
 
             /**
-             * DriverList.
+             * <p>The list of drivers.</p>
              */
-            public Builder driverList(java.util.List < DriverList> driverList) {
+            public Builder driverList(java.util.List<DriverList> driverList) {
                 this.driverList = driverList;
                 return this;
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -339,7 +425,10 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The number of drivers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryProjectShareDeviceListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryProjectShareDeviceListResponseBody</p>
  */
 public class QueryProjectShareDeviceListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryProjectShareDeviceListResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
 
     public static QueryProjectShareDeviceListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryProjectShareDeviceListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result of the request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An internal error occurred. Try again later.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +136,10 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>671D0F8F-FDC7-4B12-93FA-336C079C965A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,14 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,17 +167,23 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryProjectShareDeviceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryProjectShareDeviceListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("Sharable")
+        @com.aliyun.core.annotation.NameInMap("Sharable")
         private Long sharable;
 
         private Items(Builder builder) {
@@ -193,8 +235,21 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
             private String productKey; 
             private Long sharable; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.deviceName = model.deviceName;
+                this.iotId = model.iotId;
+                this.productKey = model.productKey;
+                this.sharable = model.sharable;
+            } 
+
             /**
-             * DeviceName.
+             * <p>The DeviceName of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -202,7 +257,10 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * IotId.
+             * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Q7uOhVRdZRRlDnTLv****00100</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -210,7 +268,10 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1BwAGV****</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -218,7 +279,14 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * Sharable.
+             * <p>Indicates whether the project was shared to the device.</p>
+             * <ul>
+             * <li><strong>1</strong>: The project was shared.</li>
+             * <li><strong>0</strong>: The project failed to be shared.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sharable(Long sharable) {
                 this.sharable = sharable;
@@ -232,9 +300,15 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryProjectShareDeviceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryProjectShareDeviceListResponseBody</p>
+     */
     public static class DeviceList extends TeaModel {
-        @NameInMap("items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("items")
+        private java.util.List<Items> items;
 
         private DeviceList(Builder builder) {
             this.items = builder.items;
@@ -251,17 +325,24 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceList model) {
+                this.items = model.items;
+            } 
 
             /**
              * items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
@@ -273,17 +354,23 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryProjectShareDeviceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryProjectShareDeviceListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeviceList")
+        @com.aliyun.core.annotation.NameInMap("DeviceList")
         private DeviceList deviceList;
 
-        @NameInMap("PageId")
+        @com.aliyun.core.annotation.NameInMap("PageId")
         private Integer pageId;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -335,8 +422,18 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deviceList = model.deviceList;
+                this.pageId = model.pageId;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
+
             /**
-             * DeviceList.
+             * <p>The information about devices that you queried.</p>
              */
             public Builder deviceList(DeviceList deviceList) {
                 this.deviceList = deviceList;
@@ -344,7 +441,10 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * PageId.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageId(Integer pageId) {
                 this.pageId = pageId;
@@ -352,7 +452,10 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -360,7 +463,10 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

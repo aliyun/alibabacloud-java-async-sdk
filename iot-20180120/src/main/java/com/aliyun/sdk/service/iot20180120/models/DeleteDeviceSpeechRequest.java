@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDeviceSpeechRequest} extends {@link RequestModel}
  *
  * <p>DeleteDeviceSpeechRequest</p>
  */
 public class DeleteDeviceSpeechRequest extends Request {
-    @Body
-    @NameInMap("DeviceSpeechList")
-    @Validation(required = true)
-    private java.util.List < DeviceSpeechList> deviceSpeechList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceSpeechList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<DeviceSpeechList> deviceSpeechList;
 
-    @Body
-    @NameInMap("IotId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotId;
 
-    @Body
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private DeleteDeviceSpeechRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class DeleteDeviceSpeechRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,7 +54,7 @@ public class DeleteDeviceSpeechRequest extends Request {
     /**
      * @return deviceSpeechList
      */
-    public java.util.List < DeviceSpeechList> getDeviceSpeechList() {
+    public java.util.List<DeviceSpeechList> getDeviceSpeechList() {
         return this.deviceSpeechList;
     }
 
@@ -68,7 +73,7 @@ public class DeleteDeviceSpeechRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteDeviceSpeechRequest, Builder> {
-        private java.util.List < DeviceSpeechList> deviceSpeechList; 
+        private java.util.List<DeviceSpeechList> deviceSpeechList; 
         private String iotId; 
         private String iotInstanceId; 
 
@@ -84,16 +89,19 @@ public class DeleteDeviceSpeechRequest extends Request {
         } 
 
         /**
-         * DeviceSpeechList.
+         * <p>This parameter is required.</p>
          */
-        public Builder deviceSpeechList(java.util.List < DeviceSpeechList> deviceSpeechList) {
+        public Builder deviceSpeechList(java.util.List<DeviceSpeechList> deviceSpeechList) {
             this.putBodyParameter("DeviceSpeechList", deviceSpeechList);
             this.deviceSpeechList = deviceSpeechList;
             return this;
         }
 
         /**
-         * IotId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4de2c367**<strong>8c585e5992</strong></p>
          */
         public Builder iotId(String iotId) {
             this.putBodyParameter("IotId", iotId);
@@ -117,13 +125,19 @@ public class DeleteDeviceSpeechRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteDeviceSpeechRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteDeviceSpeechRequest</p>
+     */
     public static class DeviceSpeechList extends TeaModel {
-        @NameInMap("AudioFormat")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AudioFormat")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String audioFormat;
 
-        @NameInMap("BizCode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("BizCode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String bizCode;
 
         private DeviceSpeechList(Builder builder) {
@@ -157,8 +171,19 @@ public class DeleteDeviceSpeechRequest extends Request {
             private String audioFormat; 
             private String bizCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceSpeechList model) {
+                this.audioFormat = model.audioFormat;
+                this.bizCode = model.bizCode;
+            } 
+
             /**
-             * AudioFormat.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wav</p>
              */
             public Builder audioFormat(String audioFormat) {
                 this.audioFormat = audioFormat;
@@ -166,7 +191,10 @@ public class DeleteDeviceSpeechRequest extends Request {
             }
 
             /**
-             * BizCode.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identifying</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;

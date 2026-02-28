@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSpeechDeviceDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetSpeechDeviceDetailResponseBody</p>
  */
 public class GetSpeechDeviceDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSpeechDeviceDetailResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetSpeechDeviceDetailResponseBody extends TeaModel {
 
     public static GetSpeechDeviceDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetSpeechDeviceDetailResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSpeechDeviceDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,26 +151,32 @@ public class GetSpeechDeviceDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSpeechDeviceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpeechDeviceDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AvailableSpace")
+        @com.aliyun.core.annotation.NameInMap("AvailableSpace")
         private Float availableSpace;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("SpeechListUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("SpeechListUpdateTime")
         private Long speechListUpdateTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalSpace")
+        @com.aliyun.core.annotation.NameInMap("TotalSpace")
         private Float totalSpace;
 
         private Data(Builder builder) {
@@ -228,6 +254,19 @@ public class GetSpeechDeviceDetailResponseBody extends TeaModel {
             private Long speechListUpdateTime; 
             private String status; 
             private Float totalSpace; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.availableSpace = model.availableSpace;
+                this.deviceName = model.deviceName;
+                this.iotId = model.iotId;
+                this.productKey = model.productKey;
+                this.speechListUpdateTime = model.speechListUpdateTime;
+                this.status = model.status;
+                this.totalSpace = model.totalSpace;
+            } 
 
             /**
              * AvailableSpace.

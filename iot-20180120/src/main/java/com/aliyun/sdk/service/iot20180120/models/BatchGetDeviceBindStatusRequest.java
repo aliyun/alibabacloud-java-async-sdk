@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetDeviceBindStatusRequest} extends {@link RequestModel}
  *
  * <p>BatchGetDeviceBindStatusRequest</p>
  */
 public class BatchGetDeviceBindStatusRequest extends Request {
-    @Query
-    @NameInMap("IotIds")
-    @Validation(required = true)
-    private java.util.List < String > iotIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> iotIds;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private BatchGetDeviceBindStatusRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class BatchGetDeviceBindStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -43,7 +48,7 @@ public class BatchGetDeviceBindStatusRequest extends Request {
     /**
      * @return iotIds
      */
-    public java.util.List < String > getIotIds() {
+    public java.util.List<String> getIotIds() {
         return this.iotIds;
     }
 
@@ -55,7 +60,7 @@ public class BatchGetDeviceBindStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchGetDeviceBindStatusRequest, Builder> {
-        private java.util.List < String > iotIds; 
+        private java.util.List<String> iotIds; 
         private String iotInstanceId; 
 
         private Builder() {
@@ -69,9 +74,12 @@ public class BatchGetDeviceBindStatusRequest extends Request {
         } 
 
         /**
-         * IotIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sjI0Sd124XFYyjBYMiYO******</p>
          */
-        public Builder iotIds(java.util.List < String > iotIds) {
+        public Builder iotIds(java.util.List<String> iotIds) {
             this.putQueryParameter("IotIds", iotIds);
             this.iotIds = iotIds;
             return this;

@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTopicConfigResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateTopicConfigResponseBody</p>
  */
 public class UpdateTopicConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
-    private String errorMessage;
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpdateTopicConfigResponseBody(Builder builder) {
         this.code = builder.code;
-        this.errorMessage = builder.errorMessage;
+        this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -39,6 +44,10 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -47,10 +56,10 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
     }
 
     /**
-     * @return errorMessage
+     * @return message
      */
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -69,12 +78,25 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private String errorMessage; 
+        private String message; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateTopicConfigResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,15 +104,18 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * Message.
          */
-        public Builder errorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +123,14 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetThingTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetThingTemplateResponseBody</p>
  */
 public class GetThingTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("ThingModelJSON")
+    @com.aliyun.core.annotation.NameInMap("ThingModelJSON")
     private String thingModelJSON;
 
     private GetThingTemplateResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetThingTemplateResponseBody extends TeaModel {
 
     public static GetThingTemplateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GetThingTemplateResponseBody extends TeaModel {
         private Boolean success; 
         private String thingModelJSON; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetThingTemplateResponseBody model) {
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.thingModelJSON = model.thingModelJSON;
+        } 
+
         /**
-         * Code.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.system.SystemException</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,16 @@ public class GetThingTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The TSL features returned if the call is successful. Format:</p>
+         * <pre><code>
+         * {
+         *   &quot;properties&quot;: [], //The list of properties
+         *   &quot;services&quot;: [], //The list of services
+         *   &quot;events&quot;: [], //The list of events
+         * }
+         *                                 
+         * </code></pre>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/73727.html">TSL formats</a>.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +134,14 @@ public class GetThingTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

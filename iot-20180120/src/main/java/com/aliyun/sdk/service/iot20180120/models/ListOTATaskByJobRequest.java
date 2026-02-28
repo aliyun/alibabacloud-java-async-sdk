@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOTATaskByJobRequest} extends {@link RequestModel}
  *
  * <p>ListOTATaskByJobRequest</p>
  */
 public class ListOTATaskByJobRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DeviceNames")
-    private java.util.List < String > deviceNames;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceNames")
+    private java.util.List<String> deviceNames;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
     private ListOTATaskByJobRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class ListOTATaskByJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,7 @@ public class ListOTATaskByJobRequest extends Request {
     /**
      * @return deviceNames
      */
-    public java.util.List < String > getDeviceNames() {
+    public java.util.List<String> getDeviceNames() {
         return this.deviceNames;
     }
 
@@ -104,7 +109,7 @@ public class ListOTATaskByJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListOTATaskByJobRequest, Builder> {
         private Integer currentPage; 
-        private java.util.List < String > deviceNames; 
+        private java.util.List<String> deviceNames; 
         private String iotInstanceId; 
         private String jobId; 
         private Integer pageSize; 
@@ -125,7 +130,13 @@ public class ListOTATaskByJobRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <blockquote>
+         * <p>The product of the value of the <strong>CurrentPage</strong> parameter and the value of the <strong>PageSize</strong> parameter must be less than or equal to 100,000.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -136,14 +147,24 @@ public class ListOTATaskByJobRequest extends Request {
         /**
          * DeviceNames.
          */
-        public Builder deviceNames(java.util.List < String > deviceNames) {
+        public Builder deviceNames(java.util.List<String> deviceNames) {
             this.putQueryParameter("DeviceNames", deviceNames);
             this.deviceNames = deviceNames;
             return this;
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. You can view the <strong>ID</strong> of the instance on the <strong>Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.</li>
+         * <li>If no <strong>Overview</strong> page or ID is generated for your instance, you do not need to configure this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -152,7 +173,11 @@ public class ListOTATaskByJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the update batch. This ID uniquely identifies the update batch. You can obtain the ID from the value of the <strong>JobId</strong> parameter that is returned after you call the <a href="https://help.aliyun.com/document_detail/147480.html">CreateOTAVerifyJob</a>, <a href="https://help.aliyun.com/document_detail/147496.html">CreateOTAStaticUpgradeJob</a>, or <a href="https://help.aliyun.com/document_detail/147887.html">CreateOTADynamicUpgradeJob</a> operation. You can also view the batch ID on the <strong>Firmware Details</strong> page of the IoT Platform console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7glPHmaDYLAYMD1HHutT02****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -161,7 +186,13 @@ public class ListOTATaskByJobRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Maximum value: 100.</p>
+         * <blockquote>
+         * <p>The product of the value of the <strong>CurrentPage</strong> parameter and the value of the <strong>PageSize</strong> parameter must be less than or equal to 100,000.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,7 +201,20 @@ public class ListOTATaskByJobRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * <p>If you specify a value for this parameter, only the update tasks that are in the specified state are queried. Valid values:</p>
+         * <ul>
+         * <li><strong>CONFIRM</strong>: The update task is pending confirmation.</li>
+         * <li><strong>QUEUED</strong>: The update notification is to be pushed.</li>
+         * <li><strong>NOTIFIED</strong>: The update notification is pushed to the device.</li>
+         * <li><strong>IN_PROGRESS</strong>: The update task is in progress.</li>
+         * <li><strong>SUCCEEDED</strong>: The update is successful.</li>
+         * <li><strong>FAILED</strong>: The update failed.</li>
+         * <li><strong>CANCELED</strong>: The update batch is canceled.</li>
+         * </ul>
+         * <p>If you do not specify a value for this parameter, all update tasks of the specified batch are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAILED</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);

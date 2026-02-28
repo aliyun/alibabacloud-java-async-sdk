@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iot20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncSpeechByCombinationResponseBody} extends {@link TeaModel}
  *
  * <p>SyncSpeechByCombinationResponseBody</p>
  */
 public class SyncSpeechByCombinationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SyncSpeechByCombinationResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class SyncSpeechByCombinationResponseBody extends TeaModel {
 
     public static SyncSpeechByCombinationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class SyncSpeechByCombinationResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SyncSpeechByCombinationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,26 +151,32 @@ public class SyncSpeechByCombinationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SyncSpeechByCombinationResponseBody} extends {@link TeaModel}
+     *
+     * <p>SyncSpeechByCombinationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("DeviceErrorCode")
+        @com.aliyun.core.annotation.NameInMap("DeviceErrorCode")
         private String deviceErrorCode;
 
-        @NameInMap("DeviceErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("DeviceErrorMessage")
         private String deviceErrorMessage;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MaxRetryCount")
+        @com.aliyun.core.annotation.NameInMap("MaxRetryCount")
         private Integer maxRetryCount;
 
-        @NameInMap("RetryCount")
+        @com.aliyun.core.annotation.NameInMap("RetryCount")
         private Integer retryCount;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Data(Builder builder) {
@@ -228,6 +254,19 @@ public class SyncSpeechByCombinationResponseBody extends TeaModel {
             private Integer maxRetryCount; 
             private Integer retryCount; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.detail = model.detail;
+                this.deviceErrorCode = model.deviceErrorCode;
+                this.deviceErrorMessage = model.deviceErrorMessage;
+                this.id = model.id;
+                this.maxRetryCount = model.maxRetryCount;
+                this.retryCount = model.retryCount;
+                this.success = model.success;
+            } 
 
             /**
              * Detail.
