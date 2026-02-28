@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetConversationDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentId")
+    private String agentId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContactId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String contactId;
@@ -29,6 +33,7 @@ public class GetConversationDetailRequest extends Request {
 
     private GetConversationDetailRequest(Builder builder) {
         super(builder);
+        this.agentId = builder.agentId;
         this.contactId = builder.contactId;
         this.instanceId = builder.instanceId;
     }
@@ -47,6 +52,13 @@ public class GetConversationDetailRequest extends Request {
     }
 
     /**
+     * @return agentId
+     */
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
      * @return contactId
      */
     public String getContactId() {
@@ -61,6 +73,7 @@ public class GetConversationDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetConversationDetailRequest, Builder> {
+        private String agentId; 
         private String contactId; 
         private String instanceId; 
 
@@ -70,9 +83,19 @@ public class GetConversationDetailRequest extends Request {
 
         private Builder(GetConversationDetailRequest request) {
             super(request);
+            this.agentId = request.agentId;
             this.contactId = request.contactId;
             this.instanceId = request.instanceId;
         } 
+
+        /**
+         * AgentId.
+         */
+        public Builder agentId(String agentId) {
+            this.putQueryParameter("AgentId", agentId);
+            this.agentId = agentId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

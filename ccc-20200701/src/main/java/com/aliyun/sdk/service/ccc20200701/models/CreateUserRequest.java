@@ -50,6 +50,10 @@ public class CreateUserRequest extends Request {
     private String mobile;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedEmailNotification")
+    private String needEmailNotification;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Nickname")
     private String nickname;
 
@@ -79,6 +83,7 @@ public class CreateUserRequest extends Request {
         this.instanceId = builder.instanceId;
         this.loginName = builder.loginName;
         this.mobile = builder.mobile;
+        this.needEmailNotification = builder.needEmailNotification;
         this.nickname = builder.nickname;
         this.resetPassword = builder.resetPassword;
         this.roleId = builder.roleId;
@@ -149,6 +154,13 @@ public class CreateUserRequest extends Request {
     }
 
     /**
+     * @return needEmailNotification
+     */
+    public String getNeedEmailNotification() {
+        return this.needEmailNotification;
+    }
+
+    /**
      * @return nickname
      */
     public String getNickname() {
@@ -191,6 +203,7 @@ public class CreateUserRequest extends Request {
         private String instanceId; 
         private String loginName; 
         private String mobile; 
+        private String needEmailNotification; 
         private String nickname; 
         private Boolean resetPassword; 
         private String roleId; 
@@ -210,6 +223,7 @@ public class CreateUserRequest extends Request {
             this.instanceId = request.instanceId;
             this.loginName = request.loginName;
             this.mobile = request.mobile;
+            this.needEmailNotification = request.needEmailNotification;
             this.nickname = request.nickname;
             this.resetPassword = request.resetPassword;
             this.roleId = request.roleId;
@@ -286,6 +300,15 @@ public class CreateUserRequest extends Request {
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
             this.mobile = mobile;
+            return this;
+        }
+
+        /**
+         * NeedEmailNotification.
+         */
+        public Builder needEmailNotification(String needEmailNotification) {
+            this.putQueryParameter("NeedEmailNotification", needEmailNotification);
+            this.needEmailNotification = needEmailNotification;
             return this;
         }
 

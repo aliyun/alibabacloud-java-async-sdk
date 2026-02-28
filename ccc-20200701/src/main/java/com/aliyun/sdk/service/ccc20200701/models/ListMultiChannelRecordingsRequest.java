@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListMultiChannelRecordingsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentChannelId")
+    private String agentChannelId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentId")
+    private String agentId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContactId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String contactId;
@@ -29,6 +37,8 @@ public class ListMultiChannelRecordingsRequest extends Request {
 
     private ListMultiChannelRecordingsRequest(Builder builder) {
         super(builder);
+        this.agentChannelId = builder.agentChannelId;
+        this.agentId = builder.agentId;
         this.contactId = builder.contactId;
         this.instanceId = builder.instanceId;
     }
@@ -47,6 +57,20 @@ public class ListMultiChannelRecordingsRequest extends Request {
     }
 
     /**
+     * @return agentChannelId
+     */
+    public String getAgentChannelId() {
+        return this.agentChannelId;
+    }
+
+    /**
+     * @return agentId
+     */
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
      * @return contactId
      */
     public String getContactId() {
@@ -61,6 +85,8 @@ public class ListMultiChannelRecordingsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListMultiChannelRecordingsRequest, Builder> {
+        private String agentChannelId; 
+        private String agentId; 
         private String contactId; 
         private String instanceId; 
 
@@ -70,9 +96,29 @@ public class ListMultiChannelRecordingsRequest extends Request {
 
         private Builder(ListMultiChannelRecordingsRequest request) {
             super(request);
+            this.agentChannelId = request.agentChannelId;
+            this.agentId = request.agentId;
             this.contactId = request.contactId;
             this.instanceId = request.instanceId;
         } 
+
+        /**
+         * AgentChannelId.
+         */
+        public Builder agentChannelId(String agentChannelId) {
+            this.putQueryParameter("AgentChannelId", agentChannelId);
+            this.agentChannelId = agentChannelId;
+            return this;
+        }
+
+        /**
+         * AgentId.
+         */
+        public Builder agentId(String agentId) {
+            this.putQueryParameter("AgentId", agentId);
+            this.agentId = agentId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
