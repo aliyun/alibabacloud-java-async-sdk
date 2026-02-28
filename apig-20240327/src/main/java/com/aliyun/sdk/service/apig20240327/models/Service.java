@@ -80,6 +80,9 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("updateTimestamp")
     private Long updateTimestamp;
 
+    @com.aliyun.core.annotation.NameInMap("versions")
+    private java.util.List<Versions> versions;
+
     private Service(Builder builder) {
         this.addresses = builder.addresses;
         this.agentServiceConfig = builder.agentServiceConfig;
@@ -102,6 +105,7 @@ public class Service extends TeaModel {
         this.sourceType = builder.sourceType;
         this.unhealthyEndpoints = builder.unhealthyEndpoints;
         this.updateTimestamp = builder.updateTimestamp;
+        this.versions = builder.versions;
     }
 
     public static Builder builder() {
@@ -263,6 +267,13 @@ public class Service extends TeaModel {
         return this.updateTimestamp;
     }
 
+    /**
+     * @return versions
+     */
+    public java.util.List<Versions> getVersions() {
+        return this.versions;
+    }
+
     public static final class Builder {
         private java.util.List<String> addresses; 
         private AgentServiceConfig agentServiceConfig; 
@@ -285,6 +296,7 @@ public class Service extends TeaModel {
         private String sourceType; 
         private java.util.List<String> unhealthyEndpoints; 
         private Long updateTimestamp; 
+        private java.util.List<Versions> versions; 
 
         private Builder() {
         } 
@@ -311,6 +323,7 @@ public class Service extends TeaModel {
             this.sourceType = model.sourceType;
             this.unhealthyEndpoints = model.unhealthyEndpoints;
             this.updateTimestamp = model.updateTimestamp;
+            this.versions = model.versions;
         } 
 
         /**
@@ -481,6 +494,14 @@ public class Service extends TeaModel {
             return this;
         }
 
+        /**
+         * versions.
+         */
+        public Builder versions(java.util.List<Versions> versions) {
+            this.versions = versions;
+            return this;
+        }
+
         public Service build() {
             return new Service(this);
         } 
@@ -578,6 +599,156 @@ public class Service extends TeaModel {
 
             public Ports build() {
                 return new Ports(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link Service} extends {@link TeaModel}
+     *
+     * <p>Service</p>
+     */
+    public static class Labels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Labels(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link Service} extends {@link TeaModel}
+     *
+     * <p>Service</p>
+     */
+    public static class Versions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("labels")
+        private java.util.List<Labels> labels;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private Versions(Builder builder) {
+            this.labels = builder.labels;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Versions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return labels
+         */
+        public java.util.List<Labels> getLabels() {
+            return this.labels;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private java.util.List<Labels> labels; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Versions model) {
+                this.labels = model.labels;
+                this.name = model.name;
+            } 
+
+            /**
+             * labels.
+             */
+            public Builder labels(java.util.List<Labels> labels) {
+                this.labels = labels;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Versions build() {
+                return new Versions(this);
             } 
 
         } 

@@ -1462,6 +1462,81 @@ public class HttpApiDeployConfig extends TeaModel {
      *
      * <p>HttpApiDeployConfig</p>
      */
+    public static class AiStatisticsConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("logRequestContent")
+        private Boolean logRequestContent;
+
+        @com.aliyun.core.annotation.NameInMap("logResponseContent")
+        private Boolean logResponseContent;
+
+        private AiStatisticsConfig(Builder builder) {
+            this.logRequestContent = builder.logRequestContent;
+            this.logResponseContent = builder.logResponseContent;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AiStatisticsConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return logRequestContent
+         */
+        public Boolean getLogRequestContent() {
+            return this.logRequestContent;
+        }
+
+        /**
+         * @return logResponseContent
+         */
+        public Boolean getLogResponseContent() {
+            return this.logResponseContent;
+        }
+
+        public static final class Builder {
+            private Boolean logRequestContent; 
+            private Boolean logResponseContent; 
+
+            private Builder() {
+            } 
+
+            private Builder(AiStatisticsConfig model) {
+                this.logRequestContent = model.logRequestContent;
+                this.logResponseContent = model.logResponseContent;
+            } 
+
+            /**
+             * logRequestContent.
+             */
+            public Builder logRequestContent(Boolean logRequestContent) {
+                this.logRequestContent = logRequestContent;
+                return this;
+            }
+
+            /**
+             * logResponseContent.
+             */
+            public Builder logResponseContent(Boolean logResponseContent) {
+                this.logResponseContent = logResponseContent;
+                return this;
+            }
+
+            public AiStatisticsConfig build() {
+                return new AiStatisticsConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HttpApiDeployConfig} extends {@link TeaModel}
+     *
+     * <p>HttpApiDeployConfig</p>
+     */
     public static class GlobalRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("limitMode")
         private String limitMode;
@@ -1883,6 +1958,9 @@ public class HttpApiDeployConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aiSecurityGuardConfig")
         private AiSecurityGuardConfig aiSecurityGuardConfig;
 
+        @com.aliyun.core.annotation.NameInMap("aiStatisticsConfig")
+        private AiStatisticsConfig aiStatisticsConfig;
+
         @com.aliyun.core.annotation.NameInMap("aiTokenRateLimitConfig")
         private AiTokenRateLimitConfig aiTokenRateLimitConfig;
 
@@ -1895,6 +1973,7 @@ public class HttpApiDeployConfig extends TeaModel {
         private PolicyConfigs(Builder builder) {
             this.aiFallbackConfig = builder.aiFallbackConfig;
             this.aiSecurityGuardConfig = builder.aiSecurityGuardConfig;
+            this.aiStatisticsConfig = builder.aiStatisticsConfig;
             this.aiTokenRateLimitConfig = builder.aiTokenRateLimitConfig;
             this.enable = builder.enable;
             this.type = builder.type;
@@ -1923,6 +2002,13 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
+         * @return aiStatisticsConfig
+         */
+        public AiStatisticsConfig getAiStatisticsConfig() {
+            return this.aiStatisticsConfig;
+        }
+
+        /**
          * @return aiTokenRateLimitConfig
          */
         public AiTokenRateLimitConfig getAiTokenRateLimitConfig() {
@@ -1946,6 +2032,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public static final class Builder {
             private AiFallbackConfig aiFallbackConfig; 
             private AiSecurityGuardConfig aiSecurityGuardConfig; 
+            private AiStatisticsConfig aiStatisticsConfig; 
             private AiTokenRateLimitConfig aiTokenRateLimitConfig; 
             private Boolean enable; 
             private String type; 
@@ -1956,6 +2043,7 @@ public class HttpApiDeployConfig extends TeaModel {
             private Builder(PolicyConfigs model) {
                 this.aiFallbackConfig = model.aiFallbackConfig;
                 this.aiSecurityGuardConfig = model.aiSecurityGuardConfig;
+                this.aiStatisticsConfig = model.aiStatisticsConfig;
                 this.aiTokenRateLimitConfig = model.aiTokenRateLimitConfig;
                 this.enable = model.enable;
                 this.type = model.type;
@@ -1974,6 +2062,14 @@ public class HttpApiDeployConfig extends TeaModel {
              */
             public Builder aiSecurityGuardConfig(AiSecurityGuardConfig aiSecurityGuardConfig) {
                 this.aiSecurityGuardConfig = aiSecurityGuardConfig;
+                return this;
+            }
+
+            /**
+             * aiStatisticsConfig.
+             */
+            public Builder aiStatisticsConfig(AiStatisticsConfig aiStatisticsConfig) {
+                this.aiStatisticsConfig = aiStatisticsConfig;
                 return this;
             }
 

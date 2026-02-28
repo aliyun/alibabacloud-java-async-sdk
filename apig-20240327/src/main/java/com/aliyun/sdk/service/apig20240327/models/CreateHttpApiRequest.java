@@ -51,6 +51,7 @@ public class CreateHttpApiRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dryRun")
+    @Deprecated
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Body
