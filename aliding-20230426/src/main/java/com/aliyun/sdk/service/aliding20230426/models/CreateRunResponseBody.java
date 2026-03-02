@@ -26,10 +26,14 @@ public class CreateRunResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("run")
     private Run run;
 
+    @com.aliyun.core.annotation.NameInMap("thread")
+    private Thread thread;
+
     private CreateRunResponseBody(Builder builder) {
         this.messages = builder.messages;
         this.requestId = builder.requestId;
         this.run = builder.run;
+        this.thread = builder.thread;
     }
 
     public static Builder builder() {
@@ -65,10 +69,18 @@ public class CreateRunResponseBody extends TeaModel {
         return this.run;
     }
 
+    /**
+     * @return thread
+     */
+    public Thread getThread() {
+        return this.thread;
+    }
+
     public static final class Builder {
         private java.util.List<Messages> messages; 
         private String requestId; 
         private Run run; 
+        private Thread thread; 
 
         private Builder() {
         } 
@@ -77,6 +89,7 @@ public class CreateRunResponseBody extends TeaModel {
             this.messages = model.messages;
             this.requestId = model.requestId;
             this.run = model.run;
+            this.thread = model.thread;
         } 
 
         /**
@@ -100,6 +113,14 @@ public class CreateRunResponseBody extends TeaModel {
          */
         public Builder run(Run run) {
             this.run = run;
+            return this;
+        }
+
+        /**
+         * thread.
+         */
+        public Builder thread(Thread thread) {
+            this.thread = thread;
             return this;
         }
 
@@ -3189,6 +3210,102 @@ public class CreateRunResponseBody extends TeaModel {
 
             public Run build() {
                 return new Run(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRunResponseBody</p>
+     */
+    public static class Thread extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("createAt")
+        private Long createAt;
+
+        @com.aliyun.core.annotation.NameInMap("id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        private Thread(Builder builder) {
+            this.createAt = builder.createAt;
+            this.id = builder.id;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Thread create() {
+            return builder().build();
+        }
+
+        /**
+         * @return createAt
+         */
+        public Long getCreateAt() {
+            return this.createAt;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private Long createAt; 
+            private String id; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Thread model) {
+                this.createAt = model.createAt;
+                this.id = model.id;
+                this.status = model.status;
+            } 
+
+            /**
+             * createAt.
+             */
+            public Builder createAt(Long createAt) {
+                this.createAt = createAt;
+                return this;
+            }
+
+            /**
+             * id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public Thread build() {
+                return new Thread(this);
             } 
 
         } 
