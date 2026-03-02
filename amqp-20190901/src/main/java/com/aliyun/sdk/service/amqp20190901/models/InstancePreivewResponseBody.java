@@ -157,6 +157,135 @@ public class InstancePreivewResponseBody extends TeaModel {
      *
      * <p>InstancePreivewResponseBody</p>
      */
+    public static class PvlVO extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private PvlVO(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PvlVO create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(PvlVO model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public PvlVO build() {
+                return new PvlVO(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InstancePreivewResponseBody} extends {@link TeaModel}
+     *
+     * <p>InstancePreivewResponseBody</p>
+     */
+    public static class PvlParams extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PvlVO")
+        private java.util.List<PvlVO> pvlVO;
+
+        private PvlParams(Builder builder) {
+            this.pvlVO = builder.pvlVO;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PvlParams create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pvlVO
+         */
+        public java.util.List<PvlVO> getPvlVO() {
+            return this.pvlVO;
+        }
+
+        public static final class Builder {
+            private java.util.List<PvlVO> pvlVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(PvlParams model) {
+                this.pvlVO = model.pvlVO;
+            } 
+
+            /**
+             * PvlVO.
+             */
+            public Builder pvlVO(java.util.List<PvlVO> pvlVO) {
+                this.pvlVO = pvlVO;
+                return this;
+            }
+
+            public PvlParams build() {
+                return new PvlParams(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InstancePreivewResponseBody} extends {@link TeaModel}
+     *
+     * <p>InstancePreivewResponseBody</p>
+     */
     public static class TagsVO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -320,6 +449,9 @@ public class InstancePreivewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KmsKeyId")
         private String kmsKeyId;
 
+        @com.aliyun.core.annotation.NameInMap("ListenerMode")
+        private String listenerMode;
+
         @com.aliyun.core.annotation.NameInMap("MaxBindingCount")
         private Integer maxBindingCount;
 
@@ -374,8 +506,14 @@ public class InstancePreivewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateEndpoint")
         private String privateEndpoint;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateEndpointType")
+        private String privateEndpointType;
+
         @com.aliyun.core.annotation.NameInMap("PublicEndpoint")
         private String publicEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("PvlParams")
+        private PvlParams pvlParams;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -425,6 +563,7 @@ public class InstancePreivewResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.invisibleTime = builder.invisibleTime;
             this.kmsKeyId = builder.kmsKeyId;
+            this.listenerMode = builder.listenerMode;
             this.maxBindingCount = builder.maxBindingCount;
             this.maxConnectionChannelCount = builder.maxConnectionChannelCount;
             this.maxConnectionCount = builder.maxConnectionCount;
@@ -443,7 +582,9 @@ public class InstancePreivewResponseBody extends TeaModel {
             this.orderCreate = builder.orderCreate;
             this.orderType = builder.orderType;
             this.privateEndpoint = builder.privateEndpoint;
+            this.privateEndpointType = builder.privateEndpointType;
             this.publicEndpoint = builder.publicEndpoint;
+            this.pvlParams = builder.pvlParams;
             this.resourceGroupId = builder.resourceGroupId;
             this.serverlessRate = builder.serverlessRate;
             this.serverlessSwitch = builder.serverlessSwitch;
@@ -541,6 +682,13 @@ public class InstancePreivewResponseBody extends TeaModel {
          */
         public String getKmsKeyId() {
             return this.kmsKeyId;
+        }
+
+        /**
+         * @return listenerMode
+         */
+        public String getListenerMode() {
+            return this.listenerMode;
         }
 
         /**
@@ -670,10 +818,24 @@ public class InstancePreivewResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateEndpointType
+         */
+        public String getPrivateEndpointType() {
+            return this.privateEndpointType;
+        }
+
+        /**
          * @return publicEndpoint
          */
         public String getPublicEndpoint() {
             return this.publicEndpoint;
+        }
+
+        /**
+         * @return pvlParams
+         */
+        public PvlParams getPvlParams() {
+            return this.pvlParams;
         }
 
         /**
@@ -772,6 +934,7 @@ public class InstancePreivewResponseBody extends TeaModel {
             private String instanceType; 
             private Integer invisibleTime; 
             private String kmsKeyId; 
+            private String listenerMode; 
             private Integer maxBindingCount; 
             private Integer maxConnectionChannelCount; 
             private Integer maxConnectionCount; 
@@ -790,7 +953,9 @@ public class InstancePreivewResponseBody extends TeaModel {
             private Long orderCreate; 
             private String orderType; 
             private String privateEndpoint; 
+            private String privateEndpointType; 
             private String publicEndpoint; 
+            private PvlParams pvlParams; 
             private String resourceGroupId; 
             private Double serverlessRate; 
             private Boolean serverlessSwitch; 
@@ -819,6 +984,7 @@ public class InstancePreivewResponseBody extends TeaModel {
                 this.instanceType = model.instanceType;
                 this.invisibleTime = model.invisibleTime;
                 this.kmsKeyId = model.kmsKeyId;
+                this.listenerMode = model.listenerMode;
                 this.maxBindingCount = model.maxBindingCount;
                 this.maxConnectionChannelCount = model.maxConnectionChannelCount;
                 this.maxConnectionCount = model.maxConnectionCount;
@@ -837,7 +1003,9 @@ public class InstancePreivewResponseBody extends TeaModel {
                 this.orderCreate = model.orderCreate;
                 this.orderType = model.orderType;
                 this.privateEndpoint = model.privateEndpoint;
+                this.privateEndpointType = model.privateEndpointType;
                 this.publicEndpoint = model.publicEndpoint;
+                this.pvlParams = model.pvlParams;
                 this.resourceGroupId = model.resourceGroupId;
                 this.serverlessRate = model.serverlessRate;
                 this.serverlessSwitch = model.serverlessSwitch;
@@ -937,6 +1105,14 @@ public class InstancePreivewResponseBody extends TeaModel {
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
+                return this;
+            }
+
+            /**
+             * ListenerMode.
+             */
+            public Builder listenerMode(String listenerMode) {
+                this.listenerMode = listenerMode;
                 return this;
             }
 
@@ -1085,10 +1261,26 @@ public class InstancePreivewResponseBody extends TeaModel {
             }
 
             /**
+             * PrivateEndpointType.
+             */
+            public Builder privateEndpointType(String privateEndpointType) {
+                this.privateEndpointType = privateEndpointType;
+                return this;
+            }
+
+            /**
              * PublicEndpoint.
              */
             public Builder publicEndpoint(String publicEndpoint) {
                 this.publicEndpoint = publicEndpoint;
+                return this;
+            }
+
+            /**
+             * PvlParams.
+             */
+            public Builder pvlParams(PvlParams pvlParams) {
+                this.pvlParams = pvlParams;
                 return this;
             }
 
