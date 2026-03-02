@@ -20,6 +20,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AcceleratorType")
     private String acceleratorType;
 
+    @com.aliyun.core.annotation.NameInMap("AccessRestrictionRules")
+    private java.util.Map<String, String> accessRestrictionRules;
+
     @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
@@ -40,6 +43,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Datasets")
     private java.util.List<Datasets> datasets;
+
+    @com.aliyun.core.annotation.NameInMap("DockerConfig")
+    private DockerConfig dockerConfig;
 
     @com.aliyun.core.annotation.NameInMap("Driver")
     private String driver;
@@ -181,6 +187,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     private GetInstanceResponseBody(Builder builder) {
         this.acceleratorType = builder.acceleratorType;
+        this.accessRestrictionRules = builder.accessRestrictionRules;
         this.accessibility = builder.accessibility;
         this.accumulatedRunningTimeInMs = builder.accumulatedRunningTimeInMs;
         this.affinity = builder.affinity;
@@ -188,6 +195,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.code = builder.code;
         this.credentialConfig = builder.credentialConfig;
         this.datasets = builder.datasets;
+        this.dockerConfig = builder.dockerConfig;
         this.driver = builder.driver;
         this.dynamicMount = builder.dynamicMount;
         this.ecsSpec = builder.ecsSpec;
@@ -256,6 +264,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return accessRestrictionRules
+     */
+    public java.util.Map<String, String> getAccessRestrictionRules() {
+        return this.accessRestrictionRules;
+    }
+
+    /**
      * @return accessibility
      */
     public String getAccessibility() {
@@ -302,6 +317,13 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     public java.util.List<Datasets> getDatasets() {
         return this.datasets;
+    }
+
+    /**
+     * @return dockerConfig
+     */
+    public DockerConfig getDockerConfig() {
+        return this.dockerConfig;
     }
 
     /**
@@ -628,6 +650,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String acceleratorType; 
+        private java.util.Map<String, String> accessRestrictionRules; 
         private String accessibility; 
         private Long accumulatedRunningTimeInMs; 
         private Affinity affinity; 
@@ -635,6 +658,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String code; 
         private CredentialConfig credentialConfig; 
         private java.util.List<Datasets> datasets; 
+        private DockerConfig dockerConfig; 
         private String driver; 
         private DynamicMount dynamicMount; 
         private String ecsSpec; 
@@ -687,6 +711,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
         private Builder(GetInstanceResponseBody model) {
             this.acceleratorType = model.acceleratorType;
+            this.accessRestrictionRules = model.accessRestrictionRules;
             this.accessibility = model.accessibility;
             this.accumulatedRunningTimeInMs = model.accumulatedRunningTimeInMs;
             this.affinity = model.affinity;
@@ -694,6 +719,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.code = model.code;
             this.credentialConfig = model.credentialConfig;
             this.datasets = model.datasets;
+            this.dockerConfig = model.dockerConfig;
             this.driver = model.driver;
             this.dynamicMount = model.dynamicMount;
             this.ecsSpec = model.ecsSpec;
@@ -755,6 +781,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
+            return this;
+        }
+
+        /**
+         * AccessRestrictionRules.
+         */
+        public Builder accessRestrictionRules(java.util.Map<String, String> accessRestrictionRules) {
+            this.accessRestrictionRules = accessRestrictionRules;
             return this;
         }
 
@@ -831,6 +865,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder datasets(java.util.List<Datasets> datasets) {
             this.datasets = datasets;
+            return this;
+        }
+
+        /**
+         * DockerConfig.
+         */
+        public Builder dockerConfig(DockerConfig dockerConfig) {
+            this.dockerConfig = dockerConfig;
             return this;
         }
 
@@ -1978,6 +2020,106 @@ public class GetInstanceResponseBody extends TeaModel {
 
             public Datasets build() {
                 return new Datasets(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
+    public static class DockerConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContainersLimit")
+        private Long containersLimit;
+
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("MountAccessConfigPath")
+        private String mountAccessConfigPath;
+
+        private DockerConfig(Builder builder) {
+            this.containersLimit = builder.containersLimit;
+            this.enable = builder.enable;
+            this.mountAccessConfigPath = builder.mountAccessConfigPath;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DockerConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return containersLimit
+         */
+        public Long getContainersLimit() {
+            return this.containersLimit;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return mountAccessConfigPath
+         */
+        public String getMountAccessConfigPath() {
+            return this.mountAccessConfigPath;
+        }
+
+        public static final class Builder {
+            private Long containersLimit; 
+            private Boolean enable; 
+            private String mountAccessConfigPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(DockerConfig model) {
+                this.containersLimit = model.containersLimit;
+                this.enable = model.enable;
+                this.mountAccessConfigPath = model.mountAccessConfigPath;
+            } 
+
+            /**
+             * ContainersLimit.
+             */
+            public Builder containersLimit(Long containersLimit) {
+                this.containersLimit = containersLimit;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether CPU affinity is enabled.</p>
+             * <p>true false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * MountAccessConfigPath.
+             */
+            public Builder mountAccessConfigPath(String mountAccessConfigPath) {
+                this.mountAccessConfigPath = mountAccessConfigPath;
+                return this;
+            }
+
+            public DockerConfig build() {
+                return new DockerConfig(this);
             } 
 
         } 

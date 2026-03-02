@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateInstanceRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessRestrictionRules")
+    private java.util.Map<String, String> accessRestrictionRules;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
@@ -40,6 +44,10 @@ public class CreateInstanceRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Datasets")
     private java.util.List<Datasets> datasets;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DockerConfig")
+    private DockerConfig dockerConfig;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Driver")
@@ -127,12 +135,14 @@ public class CreateInstanceRequest extends Request {
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
+        this.accessRestrictionRules = builder.accessRestrictionRules;
         this.accessibility = builder.accessibility;
         this.affinity = builder.affinity;
         this.assignNodeSpec = builder.assignNodeSpec;
         this.cloudDisks = builder.cloudDisks;
         this.credentialConfig = builder.credentialConfig;
         this.datasets = builder.datasets;
+        this.dockerConfig = builder.dockerConfig;
         this.driver = builder.driver;
         this.dynamicMount = builder.dynamicMount;
         this.ecsSpec = builder.ecsSpec;
@@ -167,6 +177,13 @@ public class CreateInstanceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessRestrictionRules
+     */
+    public java.util.Map<String, String> getAccessRestrictionRules() {
+        return this.accessRestrictionRules;
     }
 
     /**
@@ -209,6 +226,13 @@ public class CreateInstanceRequest extends Request {
      */
     public java.util.List<Datasets> getDatasets() {
         return this.datasets;
+    }
+
+    /**
+     * @return dockerConfig
+     */
+    public DockerConfig getDockerConfig() {
+        return this.dockerConfig;
     }
 
     /**
@@ -359,12 +383,14 @@ public class CreateInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
+        private java.util.Map<String, String> accessRestrictionRules; 
         private String accessibility; 
         private Affinity affinity; 
         private AssignNodeSpec assignNodeSpec; 
         private java.util.List<CloudDisks> cloudDisks; 
         private CredentialConfig credentialConfig; 
         private java.util.List<Datasets> datasets; 
+        private DockerConfig dockerConfig; 
         private String driver; 
         private DynamicMount dynamicMount; 
         private String ecsSpec; 
@@ -393,12 +419,14 @@ public class CreateInstanceRequest extends Request {
 
         private Builder(CreateInstanceRequest request) {
             super(request);
+            this.accessRestrictionRules = request.accessRestrictionRules;
             this.accessibility = request.accessibility;
             this.affinity = request.affinity;
             this.assignNodeSpec = request.assignNodeSpec;
             this.cloudDisks = request.cloudDisks;
             this.credentialConfig = request.credentialConfig;
             this.datasets = request.datasets;
+            this.dockerConfig = request.dockerConfig;
             this.driver = request.driver;
             this.dynamicMount = request.dynamicMount;
             this.ecsSpec = request.ecsSpec;
@@ -421,6 +449,15 @@ public class CreateInstanceRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.workspaceSource = request.workspaceSource;
         } 
+
+        /**
+         * AccessRestrictionRules.
+         */
+        public Builder accessRestrictionRules(java.util.Map<String, String> accessRestrictionRules) {
+            this.putBodyParameter("AccessRestrictionRules", accessRestrictionRules);
+            this.accessRestrictionRules = accessRestrictionRules;
+            return this;
+        }
 
         /**
          * <p>The instance accessibility.</p>
@@ -484,6 +521,15 @@ public class CreateInstanceRequest extends Request {
         public Builder datasets(java.util.List<Datasets> datasets) {
             this.putBodyParameter("Datasets", datasets);
             this.datasets = datasets;
+            return this;
+        }
+
+        /**
+         * DockerConfig.
+         */
+        public Builder dockerConfig(DockerConfig dockerConfig) {
+            this.putBodyParameter("DockerConfig", dockerConfig);
+            this.dockerConfig = dockerConfig;
             return this;
         }
 
@@ -1445,6 +1491,109 @@ public class CreateInstanceRequest extends Request {
 
             public Datasets build() {
                 return new Datasets(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class DockerConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContainersLimit")
+        private Long containersLimit;
+
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("MountAccessConfigPath")
+        private String mountAccessConfigPath;
+
+        private DockerConfig(Builder builder) {
+            this.containersLimit = builder.containersLimit;
+            this.enable = builder.enable;
+            this.mountAccessConfigPath = builder.mountAccessConfigPath;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DockerConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return containersLimit
+         */
+        public Long getContainersLimit() {
+            return this.containersLimit;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return mountAccessConfigPath
+         */
+        public String getMountAccessConfigPath() {
+            return this.mountAccessConfigPath;
+        }
+
+        public static final class Builder {
+            private Long containersLimit; 
+            private Boolean enable; 
+            private String mountAccessConfigPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(DockerConfig model) {
+                this.containersLimit = model.containersLimit;
+                this.enable = model.enable;
+                this.mountAccessConfigPath = model.mountAccessConfigPath;
+            } 
+
+            /**
+             * ContainersLimit.
+             */
+            public Builder containersLimit(Long containersLimit) {
+                this.containersLimit = containersLimit;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable the CPU affinity feature.</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * MountAccessConfigPath.
+             */
+            public Builder mountAccessConfigPath(String mountAccessConfigPath) {
+                this.mountAccessConfigPath = mountAccessConfigPath;
+                return this;
+            }
+
+            public DockerConfig build() {
+                return new DockerConfig(this);
             } 
 
         } 
