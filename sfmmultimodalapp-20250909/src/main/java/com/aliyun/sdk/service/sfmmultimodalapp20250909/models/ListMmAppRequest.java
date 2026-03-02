@@ -28,7 +28,7 @@ public class ListMmAppRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 10)
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query

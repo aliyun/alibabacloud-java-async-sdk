@@ -28,7 +28,6 @@ public class CreateCommandRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
     @com.aliyun.core.annotation.Query
@@ -182,10 +181,7 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>shopping_t</p>
+         * DomainName.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

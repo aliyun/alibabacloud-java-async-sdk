@@ -26,10 +26,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCommandResponse> createCommand(CreateCommandRequest request);
 
     /**
+     * @param request the request parameters of CreateMemory  CreateMemoryRequest
+     * @return CreateMemoryResponse
+     */
+    CompletableFuture<CreateMemoryResponse> createMemory(CreateMemoryRequest request);
+
+    /**
      * @param request the request parameters of CreateMmApp  CreateMmAppRequest
      * @return CreateMmAppResponse
      */
     CompletableFuture<CreateMmAppResponse> createMmApp(CreateMmAppRequest request);
+
+    /**
+     * @param request the request parameters of CreateProfile  CreateProfileRequest
+     * @return CreateProfileResponse
+     */
+    CompletableFuture<CreateProfileResponse> createProfile(CreateProfileRequest request);
 
     /**
      * @param request the request parameters of DeleteCommand  DeleteCommandRequest
@@ -38,10 +50,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCommandResponse> deleteCommand(DeleteCommandRequest request);
 
     /**
+     * @param request the request parameters of DeleteMemory  DeleteMemoryRequest
+     * @return DeleteMemoryResponse
+     */
+    CompletableFuture<DeleteMemoryResponse> deleteMemory(DeleteMemoryRequest request);
+
+    /**
      * @param request the request parameters of DeleteMmApp  DeleteMmAppRequest
      * @return DeleteMmAppResponse
      */
     CompletableFuture<DeleteMmAppResponse> deleteMmApp(DeleteMmAppRequest request);
+
+    /**
+     * @param request the request parameters of DeleteProfile  DeleteProfileRequest
+     * @return DeleteProfileResponse
+     */
+    CompletableFuture<DeleteProfileResponse> deleteProfile(DeleteProfileRequest request);
 
     /**
      * @param request the request parameters of DescribeCommand  DescribeCommandRequest
@@ -74,10 +98,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPublishedMmAppResponse> listPublishedMmApp(ListPublishedMmAppRequest request);
 
     /**
+     * @param request the request parameters of PatchMemoryConfig  PatchMemoryConfigRequest
+     * @return PatchMemoryConfigResponse
+     */
+    CompletableFuture<PatchMemoryConfigResponse> patchMemoryConfig(PatchMemoryConfigRequest request);
+
+    /**
      * @param request the request parameters of PublishMmApp  PublishMmAppRequest
      * @return PublishMmAppResponse
      */
     CompletableFuture<PublishMmAppResponse> publishMmApp(PublishMmAppRequest request);
+
+    /**
+     * @param request the request parameters of QueryMemoryConfig  QueryMemoryConfigRequest
+     * @return QueryMemoryConfigResponse
+     */
+    CompletableFuture<QueryMemoryConfigResponse> queryMemoryConfig(QueryMemoryConfigRequest request);
+
+    /**
+     * @param request the request parameters of QueryMemoryList  QueryMemoryListRequest
+     * @return QueryMemoryListResponse
+     */
+    CompletableFuture<QueryMemoryListResponse> queryMemoryList(QueryMemoryListRequest request);
+
+    /**
+     * @param request the request parameters of QueryProfile  QueryProfileRequest
+     * @return QueryProfileResponse
+     */
+    CompletableFuture<QueryProfileResponse> queryProfile(QueryProfileRequest request);
+
+    /**
+     * @param request the request parameters of QueryUserProfile  QueryUserProfileRequest
+     * @return QueryUserProfileResponse
+     */
+    CompletableFuture<QueryUserProfileResponse> queryUserProfile(QueryUserProfileRequest request);
 
     /**
      * @param request the request parameters of UpdateCommand  UpdateCommandRequest
@@ -86,9 +140,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateCommandResponse> updateCommand(UpdateCommandRequest request);
 
     /**
+     * @param request the request parameters of UpdateMemory  UpdateMemoryRequest
+     * @return UpdateMemoryResponse
+     */
+    CompletableFuture<UpdateMemoryResponse> updateMemory(UpdateMemoryRequest request);
+
+    /**
      * @param request the request parameters of UpdateMmApp  UpdateMmAppRequest
      * @return UpdateMmAppResponse
      */
     CompletableFuture<UpdateMmAppResponse> updateMmApp(UpdateMmAppRequest request);
+
+    /**
+     * @param request the request parameters of UpdateProfile  UpdateProfileRequest
+     * @return UpdateProfileResponse
+     */
+    CompletableFuture<UpdateProfileResponse> updateProfile(UpdateProfileRequest request);
 
 }
