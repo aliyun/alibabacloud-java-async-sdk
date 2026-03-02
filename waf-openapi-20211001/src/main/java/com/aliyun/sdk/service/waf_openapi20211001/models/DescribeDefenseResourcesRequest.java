@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeDefenseResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
@@ -148,7 +147,6 @@ public class DescribeDefenseResourcesRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>waf_cdnsdf3****</p>

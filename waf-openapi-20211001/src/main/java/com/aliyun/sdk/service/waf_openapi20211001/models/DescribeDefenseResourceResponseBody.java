@@ -203,6 +203,9 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
         @com.aliyun.core.annotation.NameInMap("OwnerUserId")
         private String ownerUserId;
 
@@ -239,6 +242,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             this.detail = builder.detail;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.instanceId = builder.instanceId;
             this.ownerUserId = builder.ownerUserId;
             this.pattern = builder.pattern;
             this.product = builder.product;
@@ -315,6 +319,13 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
          * @return ownerUserId
          */
         public String getOwnerUserId() {
@@ -386,6 +397,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             private java.util.Map<String, ?> detail; 
             private Long gmtCreate; 
             private Long gmtModified; 
+            private String instanceId; 
             private String ownerUserId; 
             private String pattern; 
             private String product; 
@@ -408,6 +420,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
                 this.detail = model.detail;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
+                this.instanceId = model.instanceId;
                 this.ownerUserId = model.ownerUserId;
                 this.pattern = model.pattern;
                 this.product = model.product;
@@ -519,6 +532,14 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 
