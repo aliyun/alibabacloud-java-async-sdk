@@ -227,6 +227,9 @@ public class ListAivppResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectNum")
         private Integer connectNum;
 
+        @com.aliyun.core.annotation.NameInMap("ConsoleUrl")
+        private String consoleUrl;
+
         @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
@@ -265,6 +268,7 @@ public class ListAivppResourcesResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.connectNum = builder.connectNum;
+            this.consoleUrl = builder.consoleUrl;
             this.detail = builder.detail;
             this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
@@ -292,6 +296,13 @@ public class ListAivppResourcesResponseBody extends TeaModel {
          */
         public Integer getConnectNum() {
             return this.connectNum;
+        }
+
+        /**
+         * @return consoleUrl
+         */
+        public String getConsoleUrl() {
+            return this.consoleUrl;
         }
 
         /**
@@ -380,6 +391,7 @@ public class ListAivppResourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer connectNum; 
+            private String consoleUrl; 
             private String detail; 
             private String expireTime; 
             private String instanceId; 
@@ -398,6 +410,7 @@ public class ListAivppResourcesResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.connectNum = model.connectNum;
+                this.consoleUrl = model.consoleUrl;
                 this.detail = model.detail;
                 this.expireTime = model.expireTime;
                 this.instanceId = model.instanceId;
@@ -417,6 +430,14 @@ public class ListAivppResourcesResponseBody extends TeaModel {
              */
             public Builder connectNum(Integer connectNum) {
                 this.connectNum = connectNum;
+                return this;
+            }
+
+            /**
+             * ConsoleUrl.
+             */
+            public Builder consoleUrl(String consoleUrl) {
+                this.consoleUrl = consoleUrl;
                 return this;
             }
 

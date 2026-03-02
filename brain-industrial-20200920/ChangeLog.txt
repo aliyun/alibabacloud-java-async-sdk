@@ -1,3 +1,6 @@
+2026-03-02 Version: 2.0.6
+- Generated java-async 2020-09-20 for brain-industrial.
+
 2026-02-09 Version: 2.0.5
 - Generated java-async 2020-09-20 for brain-industrial.
 
