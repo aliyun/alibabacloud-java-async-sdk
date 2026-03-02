@@ -215,6 +215,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EncryptResponse> encrypt(EncryptRequest request);
 
     /**
+     * @param request the request parameters of GetAssetCount  GetAssetCountRequest
+     * @return GetAssetCountResponse
+     */
+    CompletableFuture<GetAssetCountResponse> getAssetCount(GetAssetCountRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
@@ -248,6 +254,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceSummaryResponse> getInstanceSummary(GetInstanceSummaryRequest request);
 
     /**
+     * @param request the request parameters of GetRiskCount  GetRiskCountRequest
+     * @return GetRiskCountResponse
+     */
+    CompletableFuture<GetRiskCountResponse> getRiskCount(GetRiskCountRequest request);
+
+    /**
      * @param request the request parameters of GetTaskAttribute  GetTaskAttributeRequest
      * @return GetTaskAttributeResponse
      */
@@ -261,6 +273,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUserCertificateDetailResponse
      */
     CompletableFuture<GetUserCertificateDetailResponse> getUserCertificateDetail(GetUserCertificateDetailRequest request);
+
+    /**
+     * @param request the request parameters of ListAssetCount  ListAssetCountRequest
+     * @return ListAssetCountResponse
+     */
+    CompletableFuture<ListAssetCountResponse> listAssetCount(ListAssetCountRequest request);
 
     /**
      * <b>description</b> :
