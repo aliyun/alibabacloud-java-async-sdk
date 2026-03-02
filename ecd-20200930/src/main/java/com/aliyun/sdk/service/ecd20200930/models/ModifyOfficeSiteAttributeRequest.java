@@ -67,6 +67,10 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    private java.util.List<String> vSwitchId;
+
     private ModifyOfficeSiteAttributeRequest(Builder builder) {
         super(builder);
         this.authorityHost = builder.authorityHost;
@@ -81,6 +85,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         this.officeSiteName = builder.officeSiteName;
         this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
+        this.vSwitchId = builder.vSwitchId;
     }
 
     public static Builder builder() {
@@ -180,6 +185,13 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         return this.tenantId;
     }
 
+    /**
+     * @return vSwitchId
+     */
+    public java.util.List<String> getVSwitchId() {
+        return this.vSwitchId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyOfficeSiteAttributeRequest, Builder> {
         private String authorityHost; 
         private String clientId; 
@@ -193,6 +205,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         private String officeSiteName; 
         private String regionId; 
         private String tenantId; 
+        private java.util.List<String> vSwitchId; 
 
         private Builder() {
             super();
@@ -212,6 +225,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
             this.officeSiteName = request.officeSiteName;
             this.regionId = request.regionId;
             this.tenantId = request.tenantId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**
@@ -356,6 +370,15 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("TenantId", tenantId);
             this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(java.util.List<String> vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
             return this;
         }
 

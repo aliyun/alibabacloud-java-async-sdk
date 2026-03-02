@@ -436,6 +436,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</p>
+     * 
+     * @param request the request parameters of CreateOfficeSiteAccelerator  CreateOfficeSiteAcceleratorRequest
+     * @return CreateOfficeSiteAcceleratorResponse
+     */
+    CompletableFuture<CreateOfficeSiteAcceleratorResponse> createOfficeSiteAccelerator(CreateOfficeSiteAcceleratorRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>A cloud computer policy is a collection of rules to manage cloud computers in performance and security. For example, you can create a basic policy that involves the disk mapping, USB redirection, watermarking features and rules such as DNS rules. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
      * 
      * @param request the request parameters of CreatePolicyGroup  CreatePolicyGroupRequest
@@ -646,6 +655,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteNetworkPackagesResponse
      */
     CompletableFuture<DeleteNetworkPackagesResponse> deleteNetworkPackages(DeleteNetworkPackagesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOfficeSiteAccelerator  DeleteOfficeSiteAcceleratorRequest
+     * @return DeleteOfficeSiteAcceleratorResponse
+     */
+    CompletableFuture<DeleteOfficeSiteAcceleratorResponse> deleteOfficeSiteAccelerator(DeleteOfficeSiteAcceleratorRequest request);
 
     /**
      * <b>description</b> :
@@ -1730,6 +1745,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyNetworkPackageEnabledResponse
      */
     CompletableFuture<ModifyNetworkPackageEnabledResponse> modifyNetworkPackageEnabled(ModifyNetworkPackageEnabledRequest request);
+
+    /**
+     * @param request the request parameters of ModifyOfficeSiteAccelerator  ModifyOfficeSiteAcceleratorRequest
+     * @return ModifyOfficeSiteAcceleratorResponse
+     */
+    CompletableFuture<ModifyOfficeSiteAcceleratorResponse> modifyOfficeSiteAccelerator(ModifyOfficeSiteAcceleratorRequest request);
 
     /**
      * @param request the request parameters of ModifyOfficeSiteAttribute  ModifyOfficeSiteAttributeRequest

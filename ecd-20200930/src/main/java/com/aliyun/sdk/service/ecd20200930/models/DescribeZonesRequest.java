@@ -23,12 +23,17 @@ public class DescribeZonesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcAccessZone")
+    private Boolean vpcAccessZone;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneType")
     private String zoneType;
 
     private DescribeZonesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.vpcAccessZone = builder.vpcAccessZone;
         this.zoneType = builder.zoneType;
     }
 
@@ -53,6 +58,13 @@ public class DescribeZonesRequest extends Request {
     }
 
     /**
+     * @return vpcAccessZone
+     */
+    public Boolean getVpcAccessZone() {
+        return this.vpcAccessZone;
+    }
+
+    /**
      * @return zoneType
      */
     public String getZoneType() {
@@ -61,6 +73,7 @@ public class DescribeZonesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeZonesRequest, Builder> {
         private String regionId; 
+        private Boolean vpcAccessZone; 
         private String zoneType; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class DescribeZonesRequest extends Request {
         private Builder(DescribeZonesRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.vpcAccessZone = request.vpcAccessZone;
             this.zoneType = request.zoneType;
         } 
 
@@ -83,6 +97,15 @@ public class DescribeZonesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * VpcAccessZone.
+         */
+        public Builder vpcAccessZone(Boolean vpcAccessZone) {
+            this.putQueryParameter("VpcAccessZone", vpcAccessZone);
+            this.vpcAccessZone = vpcAccessZone;
             return this;
         }
 

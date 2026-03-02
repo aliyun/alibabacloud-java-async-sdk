@@ -1092,6 +1092,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</p>
+     * 
+     * @param request the request parameters of CreateOfficeSiteAccelerator  CreateOfficeSiteAcceleratorRequest
+     * @return CreateOfficeSiteAcceleratorResponse
+     */
+    @Override
+    public CompletableFuture<CreateOfficeSiteAcceleratorResponse> createOfficeSiteAccelerator(CreateOfficeSiteAcceleratorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateOfficeSiteAccelerator").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateOfficeSiteAcceleratorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateOfficeSiteAcceleratorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>A cloud computer policy is a collection of rules to manage cloud computers in performance and security. For example, you can create a basic policy that involves the disk mapping, USB redirection, watermarking features and rules such as DNS rules. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
      * 
      * @param request the request parameters of CreatePolicyGroup  CreatePolicyGroupRequest
@@ -1634,6 +1655,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteNetworkPackagesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteOfficeSiteAccelerator  DeleteOfficeSiteAcceleratorRequest
+     * @return DeleteOfficeSiteAcceleratorResponse
+     */
+    @Override
+    public CompletableFuture<DeleteOfficeSiteAcceleratorResponse> deleteOfficeSiteAccelerator(DeleteOfficeSiteAcceleratorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteOfficeSiteAccelerator").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteOfficeSiteAcceleratorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteOfficeSiteAcceleratorResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4482,6 +4521,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyNetworkPackageEnabledResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyOfficeSiteAccelerator  ModifyOfficeSiteAcceleratorRequest
+     * @return ModifyOfficeSiteAcceleratorResponse
+     */
+    @Override
+    public CompletableFuture<ModifyOfficeSiteAcceleratorResponse> modifyOfficeSiteAccelerator(ModifyOfficeSiteAcceleratorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyOfficeSiteAccelerator").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyOfficeSiteAcceleratorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyOfficeSiteAcceleratorResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
