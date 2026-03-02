@@ -104,6 +104,9 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InitialPasswordAge")
         private Integer initialPasswordAge;
 
+        @com.aliyun.core.annotation.NameInMap("InterceptRiskPasswordOnApi")
+        private Boolean interceptRiskPasswordOnApi;
+
         @com.aliyun.core.annotation.NameInMap("MaxLoginAttemps")
         private Integer maxLoginAttemps;
 
@@ -137,6 +140,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         private PasswordPolicy(Builder builder) {
             this.hardExpire = builder.hardExpire;
             this.initialPasswordAge = builder.initialPasswordAge;
+            this.interceptRiskPasswordOnApi = builder.interceptRiskPasswordOnApi;
             this.maxLoginAttemps = builder.maxLoginAttemps;
             this.maxPasswordAge = builder.maxPasswordAge;
             this.minimumPasswordDifferentCharacter = builder.minimumPasswordDifferentCharacter;
@@ -169,6 +173,13 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
          */
         public Integer getInitialPasswordAge() {
             return this.initialPasswordAge;
+        }
+
+        /**
+         * @return interceptRiskPasswordOnApi
+         */
+        public Boolean getInterceptRiskPasswordOnApi() {
+            return this.interceptRiskPasswordOnApi;
         }
 
         /**
@@ -244,6 +255,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean hardExpire; 
             private Integer initialPasswordAge; 
+            private Boolean interceptRiskPasswordOnApi; 
             private Integer maxLoginAttemps; 
             private Integer maxPasswordAge; 
             private Integer minimumPasswordDifferentCharacter; 
@@ -261,6 +273,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             private Builder(PasswordPolicy model) {
                 this.hardExpire = model.hardExpire;
                 this.initialPasswordAge = model.initialPasswordAge;
+                this.interceptRiskPasswordOnApi = model.interceptRiskPasswordOnApi;
                 this.maxLoginAttemps = model.maxLoginAttemps;
                 this.maxPasswordAge = model.maxPasswordAge;
                 this.minimumPasswordDifferentCharacter = model.minimumPasswordDifferentCharacter;
@@ -289,6 +302,14 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
              */
             public Builder initialPasswordAge(Integer initialPasswordAge) {
                 this.initialPasswordAge = initialPasswordAge;
+                return this;
+            }
+
+            /**
+             * InterceptRiskPasswordOnApi.
+             */
+            public Builder interceptRiskPasswordOnApi(Boolean interceptRiskPasswordOnApi) {
+                this.interceptRiskPasswordOnApi = interceptRiskPasswordOnApi;
                 return this;
             }
 

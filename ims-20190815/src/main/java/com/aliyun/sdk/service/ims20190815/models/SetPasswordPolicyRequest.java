@@ -26,6 +26,10 @@ public class SetPasswordPolicyRequest extends Request {
     private Integer initialPasswordAge;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InterceptRiskPasswordOnApi")
+    private Boolean interceptRiskPasswordOnApi;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxLoginAttemps")
     private Integer maxLoginAttemps;
 
@@ -69,6 +73,7 @@ public class SetPasswordPolicyRequest extends Request {
         super(builder);
         this.hardExpire = builder.hardExpire;
         this.initialPasswordAge = builder.initialPasswordAge;
+        this.interceptRiskPasswordOnApi = builder.interceptRiskPasswordOnApi;
         this.maxLoginAttemps = builder.maxLoginAttemps;
         this.maxPasswordAge = builder.maxPasswordAge;
         this.minimumPasswordDifferentCharacter = builder.minimumPasswordDifferentCharacter;
@@ -106,6 +111,13 @@ public class SetPasswordPolicyRequest extends Request {
      */
     public Integer getInitialPasswordAge() {
         return this.initialPasswordAge;
+    }
+
+    /**
+     * @return interceptRiskPasswordOnApi
+     */
+    public Boolean getInterceptRiskPasswordOnApi() {
+        return this.interceptRiskPasswordOnApi;
     }
 
     /**
@@ -181,6 +193,7 @@ public class SetPasswordPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<SetPasswordPolicyRequest, Builder> {
         private Boolean hardExpire; 
         private Integer initialPasswordAge; 
+        private Boolean interceptRiskPasswordOnApi; 
         private Integer maxLoginAttemps; 
         private Integer maxPasswordAge; 
         private Integer minimumPasswordDifferentCharacter; 
@@ -200,6 +213,7 @@ public class SetPasswordPolicyRequest extends Request {
             super(request);
             this.hardExpire = request.hardExpire;
             this.initialPasswordAge = request.initialPasswordAge;
+            this.interceptRiskPasswordOnApi = request.interceptRiskPasswordOnApi;
             this.maxLoginAttemps = request.maxLoginAttemps;
             this.maxPasswordAge = request.maxPasswordAge;
             this.minimumPasswordDifferentCharacter = request.minimumPasswordDifferentCharacter;
@@ -234,6 +248,15 @@ public class SetPasswordPolicyRequest extends Request {
         public Builder initialPasswordAge(Integer initialPasswordAge) {
             this.putQueryParameter("InitialPasswordAge", initialPasswordAge);
             this.initialPasswordAge = initialPasswordAge;
+            return this;
+        }
+
+        /**
+         * InterceptRiskPasswordOnApi.
+         */
+        public Builder interceptRiskPasswordOnApi(Boolean interceptRiskPasswordOnApi) {
+            this.putQueryParameter("InterceptRiskPasswordOnApi", interceptRiskPasswordOnApi);
+            this.interceptRiskPasswordOnApi = interceptRiskPasswordOnApi;
             return this;
         }
 
