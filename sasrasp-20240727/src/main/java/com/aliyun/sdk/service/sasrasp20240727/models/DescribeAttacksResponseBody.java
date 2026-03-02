@@ -275,6 +275,9 @@ public class DescribeAttacksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LanguageVersion")
         private String languageVersion;
 
+        @com.aliyun.core.annotation.NameInMap("LlmAsset")
+        private Boolean llmAsset;
+
         @com.aliyun.core.annotation.NameInMap("MaxTimestamp")
         private Long maxTimestamp;
 
@@ -369,6 +372,7 @@ public class DescribeAttacksResponseBody extends TeaModel {
             this.jdk = builder.jdk;
             this.language = builder.language;
             this.languageVersion = builder.languageVersion;
+            this.llmAsset = builder.llmAsset;
             this.maxTimestamp = builder.maxTimestamp;
             this.message = builder.message;
             this.method = builder.method;
@@ -548,6 +552,13 @@ public class DescribeAttacksResponseBody extends TeaModel {
          */
         public String getLanguageVersion() {
             return this.languageVersion;
+        }
+
+        /**
+         * @return llmAsset
+         */
+        public Boolean getLlmAsset() {
+            return this.llmAsset;
         }
 
         /**
@@ -740,6 +751,7 @@ public class DescribeAttacksResponseBody extends TeaModel {
             private String jdk; 
             private String language; 
             private String languageVersion; 
+            private Boolean llmAsset; 
             private Long maxTimestamp; 
             private String message; 
             private String method; 
@@ -790,6 +802,7 @@ public class DescribeAttacksResponseBody extends TeaModel {
                 this.jdk = model.jdk;
                 this.language = model.language;
                 this.languageVersion = model.languageVersion;
+                this.llmAsset = model.llmAsset;
                 this.maxTimestamp = model.maxTimestamp;
                 this.message = model.message;
                 this.method = model.method;
@@ -981,6 +994,14 @@ public class DescribeAttacksResponseBody extends TeaModel {
              */
             public Builder languageVersion(String languageVersion) {
                 this.languageVersion = languageVersion;
+                return this;
+            }
+
+            /**
+             * LlmAsset.
+             */
+            public Builder llmAsset(Boolean llmAsset) {
+                this.llmAsset = llmAsset;
                 return this;
             }
 
