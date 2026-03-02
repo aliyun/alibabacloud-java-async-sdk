@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListImageCachesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Image")
+    private String image;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageCacheName")
     @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String imageCacheName;
@@ -49,6 +53,7 @@ public class ListImageCachesRequest extends Request {
 
     private ListImageCachesRequest(Builder builder) {
         super(builder);
+        this.image = builder.image;
         this.imageCacheName = builder.imageCacheName;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -69,6 +74,13 @@ public class ListImageCachesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return image
+     */
+    public String getImage() {
+        return this.image;
     }
 
     /**
@@ -121,6 +133,7 @@ public class ListImageCachesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListImageCachesRequest, Builder> {
+        private String image; 
         private String imageCacheName; 
         private Integer maxResults; 
         private String nextToken; 
@@ -135,6 +148,7 @@ public class ListImageCachesRequest extends Request {
 
         private Builder(ListImageCachesRequest request) {
             super(request);
+            this.image = request.image;
             this.imageCacheName = request.imageCacheName;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -143,6 +157,15 @@ public class ListImageCachesRequest extends Request {
             this.status = request.status;
             this.tags = request.tags;
         } 
+
+        /**
+         * Image.
+         */
+        public Builder image(String image) {
+            this.putQueryParameter("Image", image);
+            this.image = image;
+            return this;
+        }
 
         /**
          * ImageCacheName.

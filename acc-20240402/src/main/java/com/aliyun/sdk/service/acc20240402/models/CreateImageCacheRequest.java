@@ -46,6 +46,10 @@ public class CreateImageCacheRequest extends Request {
     private NetworkConfig networkConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
+    private String platform;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -66,6 +70,7 @@ public class CreateImageCacheRequest extends Request {
         this.imageRegistryCredentials = builder.imageRegistryCredentials;
         this.images = builder.images;
         this.networkConfig = builder.networkConfig;
+        this.platform = builder.platform;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
@@ -127,6 +132,13 @@ public class CreateImageCacheRequest extends Request {
     }
 
     /**
+     * @return platform
+     */
+    public String getPlatform() {
+        return this.platform;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -154,6 +166,7 @@ public class CreateImageCacheRequest extends Request {
         private java.util.List<ImageRegistryCredentials> imageRegistryCredentials; 
         private java.util.List<String> images; 
         private NetworkConfig networkConfig; 
+        private String platform; 
         private String regionId; 
         private String resourceGroupId; 
         private java.util.List<Tags> tags; 
@@ -170,6 +183,7 @@ public class CreateImageCacheRequest extends Request {
             this.imageRegistryCredentials = request.imageRegistryCredentials;
             this.images = request.images;
             this.networkConfig = request.networkConfig;
+            this.platform = request.platform;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
@@ -230,6 +244,15 @@ public class CreateImageCacheRequest extends Request {
             String networkConfigShrink = shrink(networkConfig, "NetworkConfig", "json");
             this.putQueryParameter("NetworkConfig", networkConfigShrink);
             this.networkConfig = networkConfig;
+            return this;
+        }
+
+        /**
+         * Platform.
+         */
+        public Builder platform(String platform) {
+            this.putQueryParameter("Platform", platform);
+            this.platform = platform;
             return this;
         }
 

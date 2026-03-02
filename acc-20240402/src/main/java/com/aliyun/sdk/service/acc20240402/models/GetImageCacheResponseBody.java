@@ -38,6 +38,9 @@ public class GetImageCacheResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
+    @com.aliyun.core.annotation.NameInMap("Platform")
+    private String platform;
+
     @com.aliyun.core.annotation.NameInMap("ReadyTime")
     private String readyTime;
 
@@ -67,6 +70,7 @@ public class GetImageCacheResponseBody extends TeaModel {
         this.images = builder.images;
         this.networkConfig = builder.networkConfig;
         this.paymentType = builder.paymentType;
+        this.platform = builder.platform;
         this.readyTime = builder.readyTime;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
@@ -138,6 +142,13 @@ public class GetImageCacheResponseBody extends TeaModel {
     }
 
     /**
+     * @return platform
+     */
+    public String getPlatform() {
+        return this.platform;
+    }
+
+    /**
      * @return readyTime
      */
     public String getReadyTime() {
@@ -194,6 +205,7 @@ public class GetImageCacheResponseBody extends TeaModel {
         private java.util.List<String> images; 
         private NetworkConfig networkConfig; 
         private String paymentType; 
+        private String platform; 
         private String readyTime; 
         private String regionId; 
         private String requestId; 
@@ -213,6 +225,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             this.images = model.images;
             this.networkConfig = model.networkConfig;
             this.paymentType = model.paymentType;
+            this.platform = model.platform;
             this.readyTime = model.readyTime;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
@@ -275,6 +288,14 @@ public class GetImageCacheResponseBody extends TeaModel {
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
+            return this;
+        }
+
+        /**
+         * Platform.
+         */
+        public Builder platform(String platform) {
+            this.platform = platform;
             return this;
         }
 
