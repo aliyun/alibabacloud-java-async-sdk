@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TableResult</p>
  */
 public class TableResult extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("collectSinkOperatorId")
+    private String collectSinkOperatorId;
+
     @com.aliyun.core.annotation.NameInMap("rowUpdates")
     private java.util.List<RowUpdate> rowUpdates;
 
@@ -24,6 +27,7 @@ public class TableResult extends TeaModel {
     private String tableName;
 
     private TableResult(Builder builder) {
+        this.collectSinkOperatorId = builder.collectSinkOperatorId;
         this.rowUpdates = builder.rowUpdates;
         this.tableName = builder.tableName;
     }
@@ -41,6 +45,13 @@ public class TableResult extends TeaModel {
     }
 
     /**
+     * @return collectSinkOperatorId
+     */
+    public String getCollectSinkOperatorId() {
+        return this.collectSinkOperatorId;
+    }
+
+    /**
      * @return rowUpdates
      */
     public java.util.List<RowUpdate> getRowUpdates() {
@@ -55,6 +66,7 @@ public class TableResult extends TeaModel {
     }
 
     public static final class Builder {
+        private String collectSinkOperatorId; 
         private java.util.List<RowUpdate> rowUpdates; 
         private String tableName; 
 
@@ -62,9 +74,18 @@ public class TableResult extends TeaModel {
         } 
 
         private Builder(TableResult model) {
+            this.collectSinkOperatorId = model.collectSinkOperatorId;
             this.rowUpdates = model.rowUpdates;
             this.tableName = model.tableName;
         } 
+
+        /**
+         * collectSinkOperatorId.
+         */
+        public Builder collectSinkOperatorId(String collectSinkOperatorId) {
+            this.collectSinkOperatorId = collectSinkOperatorId;
+            return this;
+        }
 
         /**
          * rowUpdates.

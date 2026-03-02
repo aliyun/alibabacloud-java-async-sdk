@@ -101,7 +101,7 @@ public class ExecuteSqlStatementRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The SQL statement to query the metadata.</p>
          */
         public Builder body(SqlStatementWithContext body) {
             this.putBodyParameter("body", body);

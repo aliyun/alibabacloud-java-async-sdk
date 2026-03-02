@@ -119,7 +119,7 @@ public class GetCatalogsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>If the value of success was true, the list of catalogs that meet the specified condition was returned. If the value of success was false, a null value was returned.</p>
          */
         public Builder data(java.util.List<Catalog> data) {
             this.data = data;

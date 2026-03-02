@@ -105,6 +105,7 @@ public class UpdateVariableRequest extends Request {
         } 
 
         /**
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class UpdateVariableRequest extends Request {
         }
 
         /**
+         * <p>The name of the variable.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class UpdateVariableRequest extends Request {
         }
 
         /**
+         * <p>The information about the variable after the update.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(Variable body) {
@@ -138,6 +141,7 @@ public class UpdateVariableRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

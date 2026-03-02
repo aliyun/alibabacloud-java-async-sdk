@@ -89,6 +89,7 @@ public class CreateFolderRequest extends Request {
         } 
 
         /**
+         * <p>The name of the namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,7 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The structure of data in the folder.</p>
          */
         public Builder body(Folder body) {
             this.putBodyParameter("body", body);
@@ -110,6 +111,7 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

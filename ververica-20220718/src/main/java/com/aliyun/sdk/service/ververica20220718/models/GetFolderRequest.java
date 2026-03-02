@@ -26,6 +26,10 @@ public class GetFolderRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("folderId")
     private String folderId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("rootType")
+    private String rootType;
+
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("workspace")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -35,6 +39,7 @@ public class GetFolderRequest extends Request {
         super(builder);
         this.namespace = builder.namespace;
         this.folderId = builder.folderId;
+        this.rootType = builder.rootType;
         this.workspace = builder.workspace;
     }
 
@@ -66,6 +71,13 @@ public class GetFolderRequest extends Request {
     }
 
     /**
+     * @return rootType
+     */
+    public String getRootType() {
+        return this.rootType;
+    }
+
+    /**
      * @return workspace
      */
     public String getWorkspace() {
@@ -75,6 +87,7 @@ public class GetFolderRequest extends Request {
     public static final class Builder extends Request.Builder<GetFolderRequest, Builder> {
         private String namespace; 
         private String folderId; 
+        private String rootType; 
         private String workspace; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class GetFolderRequest extends Request {
             super(request);
             this.namespace = request.namespace;
             this.folderId = request.folderId;
+            this.rootType = request.rootType;
             this.workspace = request.workspace;
         } 
 
@@ -106,6 +120,15 @@ public class GetFolderRequest extends Request {
         public Builder folderId(String folderId) {
             this.putQueryParameter("folderId", folderId);
             this.folderId = folderId;
+            return this;
+        }
+
+        /**
+         * rootType.
+         */
+        public Builder rootType(String rootType) {
+            this.putQueryParameter("rootType", rootType);
+            this.rootType = rootType;
             return this;
         }
 

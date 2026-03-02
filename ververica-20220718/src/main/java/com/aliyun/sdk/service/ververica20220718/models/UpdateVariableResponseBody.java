@@ -132,7 +132,10 @@ public class UpdateVariableResponseBody extends TeaModel {
         } 
 
         /**
-         * accessDeniedDetail.
+         * <p>The details of the access denial. This parameter is returned in scenarios where the account is not authorized to perform operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,7 @@ public class UpdateVariableResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The variable structure after the update.</p>
          */
         public Builder data(Variable data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class UpdateVariableResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>If the value of success was false, an error code was returned. If the value of success was true, a null value was returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +162,10 @@ public class UpdateVariableResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>If the value of success was false, an error message was returned. If the value of success was true, a null value was returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -164,7 +173,10 @@ public class UpdateVariableResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The status code returned. The value was fixed to 200. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -172,7 +184,10 @@ public class UpdateVariableResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1EF03B0C-F44F-47AD-BB48-D002D0F7B8C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class UpdateVariableResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

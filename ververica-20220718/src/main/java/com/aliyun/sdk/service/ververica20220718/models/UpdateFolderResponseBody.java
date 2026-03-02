@@ -119,7 +119,7 @@ public class UpdateFolderResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The information returned after the folder is updated.</p>
          */
         public Builder data(Folder data) {
             this.data = data;
@@ -127,7 +127,13 @@ public class UpdateFolderResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <ul>
+         * <li>If the value of success was false, an error code was returned.</li>
+         * <li>If the value of success was true, a null value was returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +141,13 @@ public class UpdateFolderResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <ul>
+         * <li>If the value of success was false, an error message was returned.</li>
+         * <li>If the value of success was true, a null value was returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +155,10 @@ public class UpdateFolderResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -151,7 +166,10 @@ public class UpdateFolderResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +177,10 @@ public class UpdateFolderResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

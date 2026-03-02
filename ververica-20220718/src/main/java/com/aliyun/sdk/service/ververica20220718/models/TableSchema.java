@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TableSchema</p>
  */
 public class TableSchema extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("collectSinkOperatorId")
+    private String collectSinkOperatorId;
+
     @com.aliyun.core.annotation.NameInMap("schema")
     private Schema schema;
 
@@ -24,6 +27,7 @@ public class TableSchema extends TeaModel {
     private String tableName;
 
     private TableSchema(Builder builder) {
+        this.collectSinkOperatorId = builder.collectSinkOperatorId;
         this.schema = builder.schema;
         this.tableName = builder.tableName;
     }
@@ -41,6 +45,13 @@ public class TableSchema extends TeaModel {
     }
 
     /**
+     * @return collectSinkOperatorId
+     */
+    public String getCollectSinkOperatorId() {
+        return this.collectSinkOperatorId;
+    }
+
+    /**
      * @return schema
      */
     public Schema getSchema() {
@@ -55,6 +66,7 @@ public class TableSchema extends TeaModel {
     }
 
     public static final class Builder {
+        private String collectSinkOperatorId; 
         private Schema schema; 
         private String tableName; 
 
@@ -62,9 +74,18 @@ public class TableSchema extends TeaModel {
         } 
 
         private Builder(TableSchema model) {
+            this.collectSinkOperatorId = model.collectSinkOperatorId;
             this.schema = model.schema;
             this.tableName = model.tableName;
         } 
+
+        /**
+         * collectSinkOperatorId.
+         */
+        public Builder collectSinkOperatorId(String collectSinkOperatorId) {
+            this.collectSinkOperatorId = collectSinkOperatorId;
+            return this;
+        }
 
         /**
          * schema.

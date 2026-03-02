@@ -119,7 +119,7 @@ public class ExecuteSqlStatementResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The result of executing the SQL statement to query the metadata.</p>
          */
         public Builder data(SqlStatementExecuteResult data) {
             this.data = data;

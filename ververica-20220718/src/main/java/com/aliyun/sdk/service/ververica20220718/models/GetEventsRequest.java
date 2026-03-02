@@ -27,6 +27,10 @@ public class GetEventsRequest extends Request {
     private String deploymentId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("deploymentName")
+    private String deploymentName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageIndex")
     private Integer pageIndex;
 
@@ -44,6 +48,7 @@ public class GetEventsRequest extends Request {
         super(builder);
         this.namespace = builder.namespace;
         this.deploymentId = builder.deploymentId;
+        this.deploymentName = builder.deploymentName;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
         this.workspace = builder.workspace;
@@ -77,6 +82,13 @@ public class GetEventsRequest extends Request {
     }
 
     /**
+     * @return deploymentName
+     */
+    public String getDeploymentName() {
+        return this.deploymentName;
+    }
+
+    /**
      * @return pageIndex
      */
     public Integer getPageIndex() {
@@ -100,6 +112,7 @@ public class GetEventsRequest extends Request {
     public static final class Builder extends Request.Builder<GetEventsRequest, Builder> {
         private String namespace; 
         private String deploymentId; 
+        private String deploymentName; 
         private Integer pageIndex; 
         private Integer pageSize; 
         private String workspace; 
@@ -112,6 +125,7 @@ public class GetEventsRequest extends Request {
             super(request);
             this.namespace = request.namespace;
             this.deploymentId = request.deploymentId;
+            this.deploymentName = request.deploymentName;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
             this.workspace = request.workspace;
@@ -135,6 +149,15 @@ public class GetEventsRequest extends Request {
         public Builder deploymentId(String deploymentId) {
             this.putQueryParameter("deploymentId", deploymentId);
             this.deploymentId = deploymentId;
+            return this;
+        }
+
+        /**
+         * deploymentName.
+         */
+        public Builder deploymentName(String deploymentName) {
+            this.putQueryParameter("deploymentName", deploymentName);
+            this.deploymentName = deploymentName;
             return this;
         }
 

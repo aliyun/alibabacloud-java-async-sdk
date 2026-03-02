@@ -90,6 +90,7 @@ public class DeleteFolderRequest extends Request {
         } 
 
         /**
+         * <p>The name of the namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteFolderRequest extends Request {
         }
 
         /**
+         * <p>The folder ID. You can call the GetFloder operation to obtain the folder ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteFolderRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
