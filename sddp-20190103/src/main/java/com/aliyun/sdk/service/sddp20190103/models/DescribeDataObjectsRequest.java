@@ -18,8 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDataObjectsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("APIVersion")
+    private Integer APIVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bucket")
+    private String bucket;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    private String dbName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainId")
@@ -46,6 +58,14 @@ public class DescribeDataObjectsRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogStore")
+    private String logStore;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogStoreFlag")
+    private Integer logStoreFlag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemberAccount")
     private Long memberAccount;
 
@@ -66,20 +86,52 @@ public class DescribeDataObjectsRequest extends Request {
     private String parentCategoryIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
+    private String path;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductId")
+    private Integer productId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProductIds")
     private String productIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Project")
+    private String project;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueryName")
     private String queryName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevelIdList")
+    private String riskLevelIdList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskLevels")
     private String riskLevels;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleIds")
+    private String ruleIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
     private String serviceRegionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    private String tableName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private Long taskId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
@@ -88,22 +140,35 @@ public class DescribeDataObjectsRequest extends Request {
 
     private DescribeDataObjectsRequest(Builder builder) {
         super(builder);
+        this.APIVersion = builder.APIVersion;
+        this.bucket = builder.bucket;
         this.currentPage = builder.currentPage;
+        this.dbName = builder.dbName;
         this.domainId = builder.domainId;
         this.featureType = builder.featureType;
         this.fileCategoryCode = builder.fileCategoryCode;
         this.fileType = builder.fileType;
         this.instanceId = builder.instanceId;
         this.lang = builder.lang;
+        this.logStore = builder.logStore;
+        this.logStoreFlag = builder.logStoreFlag;
         this.memberAccount = builder.memberAccount;
         this.modelIds = builder.modelIds;
         this.modelTagIds = builder.modelTagIds;
         this.pageSize = builder.pageSize;
         this.parentCategoryIds = builder.parentCategoryIds;
+        this.path = builder.path;
+        this.productId = builder.productId;
         this.productIds = builder.productIds;
+        this.project = builder.project;
         this.queryName = builder.queryName;
+        this.regionId = builder.regionId;
+        this.riskLevelIdList = builder.riskLevelIdList;
         this.riskLevels = builder.riskLevels;
+        this.ruleIds = builder.ruleIds;
         this.serviceRegionId = builder.serviceRegionId;
+        this.tableName = builder.tableName;
+        this.taskId = builder.taskId;
         this.templateId = builder.templateId;
     }
 
@@ -121,10 +186,31 @@ public class DescribeDataObjectsRequest extends Request {
     }
 
     /**
+     * @return APIVersion
+     */
+    public Integer getAPIVersion() {
+        return this.APIVersion;
+    }
+
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    /**
      * @return currentPage
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return dbName
+     */
+    public String getDbName() {
+        return this.dbName;
     }
 
     /**
@@ -170,6 +256,20 @@ public class DescribeDataObjectsRequest extends Request {
     }
 
     /**
+     * @return logStore
+     */
+    public String getLogStore() {
+        return this.logStore;
+    }
+
+    /**
+     * @return logStoreFlag
+     */
+    public Integer getLogStoreFlag() {
+        return this.logStoreFlag;
+    }
+
+    /**
      * @return memberAccount
      */
     public Long getMemberAccount() {
@@ -205,10 +305,31 @@ public class DescribeDataObjectsRequest extends Request {
     }
 
     /**
+     * @return path
+     */
+    public String getPath() {
+        return this.path;
+    }
+
+    /**
+     * @return productId
+     */
+    public Integer getProductId() {
+        return this.productId;
+    }
+
+    /**
      * @return productIds
      */
     public String getProductIds() {
         return this.productIds;
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -219,10 +340,31 @@ public class DescribeDataObjectsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return riskLevelIdList
+     */
+    public String getRiskLevelIdList() {
+        return this.riskLevelIdList;
+    }
+
+    /**
      * @return riskLevels
      */
     public String getRiskLevels() {
         return this.riskLevels;
+    }
+
+    /**
+     * @return ruleIds
+     */
+    public String getRuleIds() {
+        return this.ruleIds;
     }
 
     /**
@@ -233,6 +375,20 @@ public class DescribeDataObjectsRequest extends Request {
     }
 
     /**
+     * @return tableName
+     */
+    public String getTableName() {
+        return this.tableName;
+    }
+
+    /**
+     * @return taskId
+     */
+    public Long getTaskId() {
+        return this.taskId;
+    }
+
+    /**
      * @return templateId
      */
     public Long getTemplateId() {
@@ -240,22 +396,35 @@ public class DescribeDataObjectsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDataObjectsRequest, Builder> {
+        private Integer APIVersion; 
+        private String bucket; 
         private Integer currentPage; 
+        private String dbName; 
         private Long domainId; 
         private Integer featureType; 
         private Long fileCategoryCode; 
         private Long fileType; 
         private String instanceId; 
         private String lang; 
+        private String logStore; 
+        private Integer logStoreFlag; 
         private Long memberAccount; 
         private String modelIds; 
         private String modelTagIds; 
         private Integer pageSize; 
         private String parentCategoryIds; 
+        private String path; 
+        private Integer productId; 
         private String productIds; 
+        private String project; 
         private String queryName; 
+        private String regionId; 
+        private String riskLevelIdList; 
         private String riskLevels; 
+        private String ruleIds; 
         private String serviceRegionId; 
+        private String tableName; 
+        private Long taskId; 
         private Long templateId; 
 
         private Builder() {
@@ -264,24 +433,55 @@ public class DescribeDataObjectsRequest extends Request {
 
         private Builder(DescribeDataObjectsRequest request) {
             super(request);
+            this.APIVersion = request.APIVersion;
+            this.bucket = request.bucket;
             this.currentPage = request.currentPage;
+            this.dbName = request.dbName;
             this.domainId = request.domainId;
             this.featureType = request.featureType;
             this.fileCategoryCode = request.fileCategoryCode;
             this.fileType = request.fileType;
             this.instanceId = request.instanceId;
             this.lang = request.lang;
+            this.logStore = request.logStore;
+            this.logStoreFlag = request.logStoreFlag;
             this.memberAccount = request.memberAccount;
             this.modelIds = request.modelIds;
             this.modelTagIds = request.modelTagIds;
             this.pageSize = request.pageSize;
             this.parentCategoryIds = request.parentCategoryIds;
+            this.path = request.path;
+            this.productId = request.productId;
             this.productIds = request.productIds;
+            this.project = request.project;
             this.queryName = request.queryName;
+            this.regionId = request.regionId;
+            this.riskLevelIdList = request.riskLevelIdList;
             this.riskLevels = request.riskLevels;
+            this.ruleIds = request.ruleIds;
             this.serviceRegionId = request.serviceRegionId;
+            this.tableName = request.tableName;
+            this.taskId = request.taskId;
             this.templateId = request.templateId;
         } 
+
+        /**
+         * APIVersion.
+         */
+        public Builder APIVersion(Integer APIVersion) {
+            this.putQueryParameter("APIVersion", APIVersion);
+            this.APIVersion = APIVersion;
+            return this;
+        }
+
+        /**
+         * Bucket.
+         */
+        public Builder bucket(String bucket) {
+            this.putQueryParameter("Bucket", bucket);
+            this.bucket = bucket;
+            return this;
+        }
 
         /**
          * <p>Page number for the paginated query. Default value: 1.</p>
@@ -292,6 +492,15 @@ public class DescribeDataObjectsRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * DbName.
+         */
+        public Builder dbName(String dbName) {
+            this.putQueryParameter("DbName", dbName);
+            this.dbName = dbName;
             return this;
         }
 
@@ -375,6 +584,24 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
+         * LogStore.
+         */
+        public Builder logStore(String logStore) {
+            this.putQueryParameter("LogStore", logStore);
+            this.logStore = logStore;
+            return this;
+        }
+
+        /**
+         * LogStoreFlag.
+         */
+        public Builder logStoreFlag(Integer logStoreFlag) {
+            this.putQueryParameter("LogStoreFlag", logStoreFlag);
+            this.logStoreFlag = logStoreFlag;
+            return this;
+        }
+
+        /**
          * <p>Member account ID.</p>
          * 
          * <strong>example:</strong>
@@ -443,6 +670,24 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
+         * Path.
+         */
+        public Builder path(String path) {
+            this.putQueryParameter("Path", path);
+            this.path = path;
+            return this;
+        }
+
+        /**
+         * ProductId.
+         */
+        public Builder productId(Integer productId) {
+            this.putQueryParameter("ProductId", productId);
+            this.productId = productId;
+            return this;
+        }
+
+        /**
          * <p>It is recommended to fill in the list of product IDs to be queried, separated by commas. Values:</p>
          * <ul>
          * <li><strong>1</strong>: MaxCompute</li>
@@ -472,6 +717,15 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
+         * Project.
+         */
+        public Builder project(String project) {
+            this.putQueryParameter("Project", project);
+            this.project = project;
+            return this;
+        }
+
+        /**
          * <p>Keyword for the data object to be queried.</p>
          * 
          * <strong>example:</strong>
@@ -480,6 +734,24 @@ public class DescribeDataObjectsRequest extends Request {
         public Builder queryName(String queryName) {
             this.putQueryParameter("QueryName", queryName);
             this.queryName = queryName;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RiskLevelIdList.
+         */
+        public Builder riskLevelIdList(String riskLevelIdList) {
+            this.putQueryParameter("RiskLevelIdList", riskLevelIdList);
+            this.riskLevelIdList = riskLevelIdList;
             return this;
         }
 
@@ -502,6 +774,15 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
+         * RuleIds.
+         */
+        public Builder ruleIds(String ruleIds) {
+            this.putQueryParameter("RuleIds", ruleIds);
+            this.ruleIds = ruleIds;
+            return this;
+        }
+
+        /**
          * <p>Region where the asset is located. Values:</p>
          * <ul>
          * <li><strong>cn-beijing</strong>: North China 2 (Beijing).</li>
@@ -519,6 +800,24 @@ public class DescribeDataObjectsRequest extends Request {
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);
             this.serviceRegionId = serviceRegionId;
+            return this;
+        }
+
+        /**
+         * TableName.
+         */
+        public Builder tableName(String tableName) {
+            this.putQueryParameter("TableName", tableName);
+            this.tableName = tableName;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(Long taskId) {
+            this.putQueryParameter("TaskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 

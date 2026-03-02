@@ -74,6 +74,10 @@ public class DescribeColumnsRequest extends Request {
     private String sensLevelName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
+    private String serviceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableId")
     private Long tableId;
 
@@ -105,6 +109,7 @@ public class DescribeColumnsRequest extends Request {
         this.ruleId = builder.ruleId;
         this.ruleName = builder.ruleName;
         this.sensLevelName = builder.sensLevelName;
+        this.serviceRegionId = builder.serviceRegionId;
         this.tableId = builder.tableId;
         this.tableName = builder.tableName;
         this.templateId = builder.templateId;
@@ -223,6 +228,13 @@ public class DescribeColumnsRequest extends Request {
     }
 
     /**
+     * @return serviceRegionId
+     */
+    public String getServiceRegionId() {
+        return this.serviceRegionId;
+    }
+
+    /**
      * @return tableId
      */
     public Long getTableId() {
@@ -265,6 +277,7 @@ public class DescribeColumnsRequest extends Request {
         private Long ruleId; 
         private String ruleName; 
         private String sensLevelName; 
+        private String serviceRegionId; 
         private Long tableId; 
         private String tableName; 
         private String templateId; 
@@ -290,6 +303,7 @@ public class DescribeColumnsRequest extends Request {
             this.ruleId = request.ruleId;
             this.ruleName = request.ruleName;
             this.sensLevelName = request.sensLevelName;
+            this.serviceRegionId = request.serviceRegionId;
             this.tableId = request.tableId;
             this.tableName = request.tableName;
             this.templateId = request.templateId;
@@ -511,6 +525,15 @@ public class DescribeColumnsRequest extends Request {
         public Builder sensLevelName(String sensLevelName) {
             this.putQueryParameter("SensLevelName", sensLevelName);
             this.sensLevelName = sensLevelName;
+            return this;
+        }
+
+        /**
+         * ServiceRegionId.
+         */
+        public Builder serviceRegionId(String serviceRegionId) {
+            this.putQueryParameter("ServiceRegionId", serviceRegionId);
+            this.serviceRegionId = serviceRegionId;
             return this;
         }
 

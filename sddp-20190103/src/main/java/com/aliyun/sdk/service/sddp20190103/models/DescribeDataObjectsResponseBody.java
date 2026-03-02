@@ -267,6 +267,9 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
+        @com.aliyun.core.annotation.NameInMap("RuleCategoryNameList")
+        private String ruleCategoryNameList;
+
         @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
@@ -276,12 +279,17 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
+        @com.aliyun.core.annotation.NameInMap("SampleList")
+        private String sampleList;
+
         private RuleList(Builder builder) {
             this.riskLevelId = builder.riskLevelId;
             this.riskLevelName = builder.riskLevelName;
+            this.ruleCategoryNameList = builder.ruleCategoryNameList;
             this.ruleCount = builder.ruleCount;
             this.ruleId = builder.ruleId;
             this.ruleName = builder.ruleName;
+            this.sampleList = builder.sampleList;
         }
 
         public static Builder builder() {
@@ -307,6 +315,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleCategoryNameList
+         */
+        public String getRuleCategoryNameList() {
+            return this.ruleCategoryNameList;
+        }
+
+        /**
          * @return ruleCount
          */
         public Integer getRuleCount() {
@@ -327,12 +342,21 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             return this.ruleName;
         }
 
+        /**
+         * @return sampleList
+         */
+        public String getSampleList() {
+            return this.sampleList;
+        }
+
         public static final class Builder {
             private Long riskLevelId; 
             private String riskLevelName; 
+            private String ruleCategoryNameList; 
             private Integer ruleCount; 
             private Long ruleId; 
             private String ruleName; 
+            private String sampleList; 
 
             private Builder() {
             } 
@@ -340,9 +364,11 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             private Builder(RuleList model) {
                 this.riskLevelId = model.riskLevelId;
                 this.riskLevelName = model.riskLevelName;
+                this.ruleCategoryNameList = model.ruleCategoryNameList;
                 this.ruleCount = model.ruleCount;
                 this.ruleId = model.ruleId;
                 this.ruleName = model.ruleName;
+                this.sampleList = model.sampleList;
             } 
 
             /**
@@ -382,6 +408,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             }
 
             /**
+             * RuleCategoryNameList.
+             */
+            public Builder ruleCategoryNameList(String ruleCategoryNameList) {
+                this.ruleCategoryNameList = ruleCategoryNameList;
+                return this;
+            }
+
+            /**
              * <p>Number of matched identification models.</p>
              * 
              * <strong>example:</strong>
@@ -414,6 +448,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * SampleList.
+             */
+            public Builder sampleList(String sampleList) {
+                this.sampleList = sampleList;
+                return this;
+            }
+
             public RuleList build() {
                 return new RuleList(this);
             } 
@@ -431,6 +473,18 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List<String> categories;
 
+        @com.aliyun.core.annotation.NameInMap("Comment")
+        private String comment;
+
+        @com.aliyun.core.annotation.NameInMap("DataType")
+        private String dataType;
+
+        @com.aliyun.core.annotation.NameInMap("DbName")
+        private String dbName;
+
+        @com.aliyun.core.annotation.NameInMap("FileCategoryCode")
+        private Integer fileCategoryCode;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
@@ -440,11 +494,20 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("IsRevision")
+        private Integer isRevision;
+
         @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
         private Long lastModifiedTime;
 
         @com.aliyun.core.annotation.NameInMap("LastScanTime")
         private Long lastScanTime;
+
+        @com.aliyun.core.annotation.NameInMap("LogStore")
+        private String logStore;
+
+        @com.aliyun.core.annotation.NameInMap("MaskStatus")
+        private Integer maskStatus;
 
         @com.aliyun.core.annotation.NameInMap("MemberAccount")
         private Long memberAccount;
@@ -470,11 +533,20 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductId")
         private Long productId;
 
+        @com.aliyun.core.annotation.NameInMap("Project")
+        private String project;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
+        private Integer riskLevelId;
+
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
+        private Integer ruleCount;
 
         @com.aliyun.core.annotation.NameInMap("RuleList")
         private java.util.List<RuleList> ruleList;
@@ -482,16 +554,44 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SensitiveCount")
         private Integer sensitiveCount;
 
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Long size;
+
+        @com.aliyun.core.annotation.NameInMap("Sx")
+        private String sx;
+
+        @com.aliyun.core.annotation.NameInMap("TableName")
+        private String tableName;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private Long taskId;
+
+        @com.aliyun.core.annotation.NameInMap("TaskName")
+        private String taskName;
+
+        @com.aliyun.core.annotation.NameInMap("TaskNumber")
+        private Long taskNumber;
+
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
+        private String templateName;
+
         private Items(Builder builder) {
             this.categories = builder.categories;
+            this.comment = builder.comment;
+            this.dataType = builder.dataType;
+            this.dbName = builder.dbName;
+            this.fileCategoryCode = builder.fileCategoryCode;
             this.id = builder.id;
             this.instanceDescription = builder.instanceDescription;
             this.instanceId = builder.instanceId;
+            this.isRevision = builder.isRevision;
             this.lastModifiedTime = builder.lastModifiedTime;
             this.lastScanTime = builder.lastScanTime;
+            this.logStore = builder.logStore;
+            this.maskStatus = builder.maskStatus;
             this.memberAccount = builder.memberAccount;
             this.modelTags = builder.modelTags;
             this.name = builder.name;
@@ -500,11 +600,21 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             this.path = builder.path;
             this.productCode = builder.productCode;
             this.productId = builder.productId;
+            this.project = builder.project;
             this.regionId = builder.regionId;
             this.regionName = builder.regionName;
+            this.riskLevelId = builder.riskLevelId;
+            this.ruleCount = builder.ruleCount;
             this.ruleList = builder.ruleList;
             this.sensitiveCount = builder.sensitiveCount;
+            this.size = builder.size;
+            this.sx = builder.sx;
+            this.tableName = builder.tableName;
+            this.taskId = builder.taskId;
+            this.taskName = builder.taskName;
+            this.taskNumber = builder.taskNumber;
             this.templateId = builder.templateId;
+            this.templateName = builder.templateName;
         }
 
         public static Builder builder() {
@@ -520,6 +630,34 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
          */
         public java.util.List<String> getCategories() {
             return this.categories;
+        }
+
+        /**
+         * @return comment
+         */
+        public String getComment() {
+            return this.comment;
+        }
+
+        /**
+         * @return dataType
+         */
+        public String getDataType() {
+            return this.dataType;
+        }
+
+        /**
+         * @return dbName
+         */
+        public String getDbName() {
+            return this.dbName;
+        }
+
+        /**
+         * @return fileCategoryCode
+         */
+        public Integer getFileCategoryCode() {
+            return this.fileCategoryCode;
         }
 
         /**
@@ -544,6 +682,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
 
         /**
+         * @return isRevision
+         */
+        public Integer getIsRevision() {
+            return this.isRevision;
+        }
+
+        /**
          * @return lastModifiedTime
          */
         public Long getLastModifiedTime() {
@@ -555,6 +700,20 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
          */
         public Long getLastScanTime() {
             return this.lastScanTime;
+        }
+
+        /**
+         * @return logStore
+         */
+        public String getLogStore() {
+            return this.logStore;
+        }
+
+        /**
+         * @return maskStatus
+         */
+        public Integer getMaskStatus() {
+            return this.maskStatus;
         }
 
         /**
@@ -614,6 +773,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
 
         /**
+         * @return project
+         */
+        public String getProject() {
+            return this.project;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -625,6 +791,20 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
          */
         public String getRegionName() {
             return this.regionName;
+        }
+
+        /**
+         * @return riskLevelId
+         */
+        public Integer getRiskLevelId() {
+            return this.riskLevelId;
+        }
+
+        /**
+         * @return ruleCount
+         */
+        public Integer getRuleCount() {
+            return this.ruleCount;
         }
 
         /**
@@ -642,19 +822,75 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
 
         /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return sx
+         */
+        public String getSx() {
+            return this.sx;
+        }
+
+        /**
+         * @return tableName
+         */
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        /**
+         * @return taskId
+         */
+        public Long getTaskId() {
+            return this.taskId;
+        }
+
+        /**
+         * @return taskName
+         */
+        public String getTaskName() {
+            return this.taskName;
+        }
+
+        /**
+         * @return taskNumber
+         */
+        public Long getTaskNumber() {
+            return this.taskNumber;
+        }
+
+        /**
          * @return templateId
          */
         public Long getTemplateId() {
             return this.templateId;
         }
 
+        /**
+         * @return templateName
+         */
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
         public static final class Builder {
             private java.util.List<String> categories; 
+            private String comment; 
+            private String dataType; 
+            private String dbName; 
+            private Integer fileCategoryCode; 
             private String id; 
             private String instanceDescription; 
             private String instanceId; 
+            private Integer isRevision; 
             private Long lastModifiedTime; 
             private Long lastScanTime; 
+            private String logStore; 
+            private Integer maskStatus; 
             private Long memberAccount; 
             private java.util.List<ModelTags> modelTags; 
             private String name; 
@@ -663,22 +899,39 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             private String path; 
             private String productCode; 
             private Long productId; 
+            private String project; 
             private String regionId; 
             private String regionName; 
+            private Integer riskLevelId; 
+            private Integer ruleCount; 
             private java.util.List<RuleList> ruleList; 
             private Integer sensitiveCount; 
+            private Long size; 
+            private String sx; 
+            private String tableName; 
+            private Long taskId; 
+            private String taskName; 
+            private Long taskNumber; 
             private Long templateId; 
+            private String templateName; 
 
             private Builder() {
             } 
 
             private Builder(Items model) {
                 this.categories = model.categories;
+                this.comment = model.comment;
+                this.dataType = model.dataType;
+                this.dbName = model.dbName;
+                this.fileCategoryCode = model.fileCategoryCode;
                 this.id = model.id;
                 this.instanceDescription = model.instanceDescription;
                 this.instanceId = model.instanceId;
+                this.isRevision = model.isRevision;
                 this.lastModifiedTime = model.lastModifiedTime;
                 this.lastScanTime = model.lastScanTime;
+                this.logStore = model.logStore;
+                this.maskStatus = model.maskStatus;
                 this.memberAccount = model.memberAccount;
                 this.modelTags = model.modelTags;
                 this.name = model.name;
@@ -687,11 +940,21 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
                 this.path = model.path;
                 this.productCode = model.productCode;
                 this.productId = model.productId;
+                this.project = model.project;
                 this.regionId = model.regionId;
                 this.regionName = model.regionName;
+                this.riskLevelId = model.riskLevelId;
+                this.ruleCount = model.ruleCount;
                 this.ruleList = model.ruleList;
                 this.sensitiveCount = model.sensitiveCount;
+                this.size = model.size;
+                this.sx = model.sx;
+                this.tableName = model.tableName;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskNumber = model.taskNumber;
                 this.templateId = model.templateId;
+                this.templateName = model.templateName;
             } 
 
             /**
@@ -699,6 +962,38 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
+                return this;
+            }
+
+            /**
+             * Comment.
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
+
+            /**
+             * DataType.
+             */
+            public Builder dataType(String dataType) {
+                this.dataType = dataType;
+                return this;
+            }
+
+            /**
+             * DbName.
+             */
+            public Builder dbName(String dbName) {
+                this.dbName = dbName;
+                return this;
+            }
+
+            /**
+             * FileCategoryCode.
+             */
+            public Builder fileCategoryCode(Integer fileCategoryCode) {
+                this.fileCategoryCode = fileCategoryCode;
                 return this;
             }
 
@@ -736,6 +1031,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             }
 
             /**
+             * IsRevision.
+             */
+            public Builder isRevision(Integer isRevision) {
+                this.isRevision = isRevision;
+                return this;
+            }
+
+            /**
              * <p>Latest file modification time, in milliseconds.</p>
              * 
              * <strong>example:</strong>
@@ -754,6 +1057,22 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
+                return this;
+            }
+
+            /**
+             * LogStore.
+             */
+            public Builder logStore(String logStore) {
+                this.logStore = logStore;
+                return this;
+            }
+
+            /**
+             * MaskStatus.
+             */
+            public Builder maskStatus(Integer maskStatus) {
+                this.maskStatus = maskStatus;
                 return this;
             }
 
@@ -871,6 +1190,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             }
 
             /**
+             * Project.
+             */
+            public Builder project(String project) {
+                this.project = project;
+                return this;
+            }
+
+            /**
              * <p>The region ID to which the OSS storage object belongs.</p>
              * 
              * <strong>example:</strong>
@@ -889,6 +1216,35 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
+                return this;
+            }
+
+            /**
+             * <p>Risk level ID for sensitive data identification rules. Values:</p>
+             * <ul>
+             * <li><strong>1</strong>: N/A: No sensitive data identified.</li>
+             * <li><strong>2</strong>: S1: Level 1 sensitive data.</li>
+             * <li><strong>3</strong>: S2: Level 2 sensitive data.</li>
+             * <li><strong>4</strong>: S3: Level 3 sensitive data.</li>
+             * <li><strong>5</strong>: S4: Level 4 sensitive data.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder riskLevelId(Integer riskLevelId) {
+                this.riskLevelId = riskLevelId;
+                return this;
+            }
+
+            /**
+             * <p>Number of matched identification models.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>590</p>
+             */
+            public Builder ruleCount(Integer ruleCount) {
+                this.ruleCount = ruleCount;
                 return this;
             }
 
@@ -912,6 +1268,54 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             }
 
             /**
+             * Size.
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * Sx.
+             */
+            public Builder sx(String sx) {
+                this.sx = sx;
+                return this;
+            }
+
+            /**
+             * TableName.
+             */
+            public Builder tableName(String tableName) {
+                this.tableName = tableName;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(Long taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * TaskName.
+             */
+            public Builder taskName(String taskName) {
+                this.taskName = taskName;
+                return this;
+            }
+
+            /**
+             * TaskNumber.
+             */
+            public Builder taskNumber(Long taskNumber) {
+                this.taskNumber = taskNumber;
+                return this;
+            }
+
+            /**
              * <p>Industry template ID</p>
              * 
              * <strong>example:</strong>
@@ -919,6 +1323,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
+                return this;
+            }
+
+            /**
+             * TemplateName.
+             */
+            public Builder templateName(String templateName) {
+                this.templateName = templateName;
                 return this;
             }
 
