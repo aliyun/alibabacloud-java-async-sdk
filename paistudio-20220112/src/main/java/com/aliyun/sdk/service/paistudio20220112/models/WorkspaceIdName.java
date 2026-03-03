@@ -20,8 +20,12 @@ public class WorkspaceIdName extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
+    @com.aliyun.core.annotation.NameInMap("WorkspaceName")
+    private String workspaceName;
+
     private WorkspaceIdName(Builder builder) {
         this.workspaceId = builder.workspaceId;
+        this.workspaceName = builder.workspaceName;
     }
 
     public static Builder builder() {
@@ -43,14 +47,23 @@ public class WorkspaceIdName extends TeaModel {
         return this.workspaceId;
     }
 
+    /**
+     * @return workspaceName
+     */
+    public String getWorkspaceName() {
+        return this.workspaceName;
+    }
+
     public static final class Builder {
         private String workspaceId; 
+        private String workspaceName; 
 
         private Builder() {
         } 
 
         private Builder(WorkspaceIdName model) {
             this.workspaceId = model.workspaceId;
+            this.workspaceName = model.workspaceName;
         } 
 
         /**
@@ -58,6 +71,14 @@ public class WorkspaceIdName extends TeaModel {
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * WorkspaceName.
+         */
+        public Builder workspaceName(String workspaceName) {
+            this.workspaceName = workspaceName;
             return this;
         }
 

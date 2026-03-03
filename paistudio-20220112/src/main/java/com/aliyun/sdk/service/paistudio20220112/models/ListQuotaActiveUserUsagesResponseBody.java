@@ -20,6 +20,9 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("QuotaUserUsage")
     private java.util.List<QuotaUser> quotaUserUsage;
 
+    @com.aliyun.core.annotation.NameInMap("QuotaUserUsages")
+    private java.util.List<QuotaUser> quotaUserUsages;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -28,6 +31,7 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
 
     private ListQuotaActiveUserUsagesResponseBody(Builder builder) {
         this.quotaUserUsage = builder.quotaUserUsage;
+        this.quotaUserUsages = builder.quotaUserUsages;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
     }
@@ -52,6 +56,13 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
     }
 
     /**
+     * @return quotaUserUsages
+     */
+    public java.util.List<QuotaUser> getQuotaUserUsages() {
+        return this.quotaUserUsages;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -67,6 +78,7 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<QuotaUser> quotaUserUsage; 
+        private java.util.List<QuotaUser> quotaUserUsages; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -75,6 +87,7 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
 
         private Builder(ListQuotaActiveUserUsagesResponseBody model) {
             this.quotaUserUsage = model.quotaUserUsage;
+            this.quotaUserUsages = model.quotaUserUsages;
             this.requestId = model.requestId;
             this.totalCount = model.totalCount;
         } 
@@ -84,6 +97,14 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
          */
         public Builder quotaUserUsage(java.util.List<QuotaUser> quotaUserUsage) {
             this.quotaUserUsage = quotaUserUsage;
+            return this;
+        }
+
+        /**
+         * QuotaUserUsages.
+         */
+        public Builder quotaUserUsages(java.util.List<QuotaUser> quotaUserUsages) {
+            this.quotaUserUsages = quotaUserUsages;
             return this;
         }
 

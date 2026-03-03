@@ -35,6 +35,12 @@ public class ResourceGroup extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
     private String resourceGroupID;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
     @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
@@ -51,6 +57,8 @@ public class ResourceGroup extends TeaModel {
         this.name = builder.name;
         this.nodeCount = builder.nodeCount;
         this.resourceGroupID = builder.resourceGroupID;
+        this.resourceType = builder.resourceType;
+        this.status = builder.status;
         this.userVpc = builder.userVpc;
         this.version = builder.version;
         this.workspaceID = builder.workspaceID;
@@ -111,6 +119,20 @@ public class ResourceGroup extends TeaModel {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return userVpc
      */
     public UserVpc getUserVpc() {
@@ -138,6 +160,8 @@ public class ResourceGroup extends TeaModel {
         private String name; 
         private Integer nodeCount; 
         private String resourceGroupID; 
+        private String resourceType; 
+        private String status; 
         private UserVpc userVpc; 
         private String version; 
         private String workspaceID; 
@@ -152,6 +176,8 @@ public class ResourceGroup extends TeaModel {
             this.name = model.name;
             this.nodeCount = model.nodeCount;
             this.resourceGroupID = model.resourceGroupID;
+            this.resourceType = model.resourceType;
+            this.status = model.status;
             this.userVpc = model.userVpc;
             this.version = model.version;
             this.workspaceID = model.workspaceID;
@@ -202,6 +228,22 @@ public class ResourceGroup extends TeaModel {
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 
