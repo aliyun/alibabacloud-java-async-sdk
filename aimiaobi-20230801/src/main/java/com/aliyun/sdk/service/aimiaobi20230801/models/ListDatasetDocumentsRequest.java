@@ -21,15 +21,15 @@ public class ListDatasetDocumentsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CategoryUuids")
     private java.util.List<String> categoryUuids;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CreateTimeEnd")
     private Long createTimeEnd;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CreateTimeStart")
     private Long createTimeStart;
 
@@ -45,7 +45,7 @@ public class ListDatasetDocumentsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("DatasetName")
     private String datasetName;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocIds")
     private java.util.List<String> docIds;
 
@@ -53,11 +53,11 @@ public class ListDatasetDocumentsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("DocType")
     private String docType;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocUuids")
     private java.util.List<String> docUuids;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
@@ -65,15 +65,15 @@ public class ListDatasetDocumentsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ExcludeFields")
     private java.util.List<String> excludeFields;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Extend1")
     private String extend1;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Extend2")
     private String extend2;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Extend3")
     private String extend3;
 
@@ -93,7 +93,7 @@ public class ListDatasetDocumentsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
@@ -101,11 +101,11 @@ public class ListDatasetDocumentsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<String> tags;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
@@ -395,7 +395,7 @@ public class ListDatasetDocumentsRequest extends Request {
          */
         public Builder categoryUuids(java.util.List<String> categoryUuids) {
             String categoryUuidsShrink = shrink(categoryUuids, "CategoryUuids", "json");
-            this.putQueryParameter("CategoryUuids", categoryUuidsShrink);
+            this.putBodyParameter("CategoryUuids", categoryUuidsShrink);
             this.categoryUuids = categoryUuids;
             return this;
         }
@@ -404,7 +404,7 @@ public class ListDatasetDocumentsRequest extends Request {
          * CreateTimeEnd.
          */
         public Builder createTimeEnd(Long createTimeEnd) {
-            this.putQueryParameter("CreateTimeEnd", createTimeEnd);
+            this.putBodyParameter("CreateTimeEnd", createTimeEnd);
             this.createTimeEnd = createTimeEnd;
             return this;
         }
@@ -413,7 +413,7 @@ public class ListDatasetDocumentsRequest extends Request {
          * CreateTimeStart.
          */
         public Builder createTimeStart(Long createTimeStart) {
-            this.putQueryParameter("CreateTimeStart", createTimeStart);
+            this.putBodyParameter("CreateTimeStart", createTimeStart);
             this.createTimeStart = createTimeStart;
             return this;
         }
@@ -450,7 +450,7 @@ public class ListDatasetDocumentsRequest extends Request {
          */
         public Builder docIds(java.util.List<String> docIds) {
             String docIdsShrink = shrink(docIds, "DocIds", "json");
-            this.putQueryParameter("DocIds", docIdsShrink);
+            this.putBodyParameter("DocIds", docIdsShrink);
             this.docIds = docIds;
             return this;
         }
@@ -469,7 +469,7 @@ public class ListDatasetDocumentsRequest extends Request {
          */
         public Builder docUuids(java.util.List<String> docUuids) {
             String docUuidsShrink = shrink(docUuids, "DocUuids", "json");
-            this.putQueryParameter("DocUuids", docUuidsShrink);
+            this.putBodyParameter("DocUuids", docUuidsShrink);
             this.docUuids = docUuids;
             return this;
         }
@@ -478,7 +478,7 @@ public class ListDatasetDocumentsRequest extends Request {
          * EndTime.
          */
         public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
+            this.putBodyParameter("EndTime", endTime);
             this.endTime = endTime;
             return this;
         }
@@ -497,7 +497,7 @@ public class ListDatasetDocumentsRequest extends Request {
          * Extend1.
          */
         public Builder extend1(String extend1) {
-            this.putQueryParameter("Extend1", extend1);
+            this.putBodyParameter("Extend1", extend1);
             this.extend1 = extend1;
             return this;
         }
@@ -506,7 +506,7 @@ public class ListDatasetDocumentsRequest extends Request {
          * Extend2.
          */
         public Builder extend2(String extend2) {
-            this.putQueryParameter("Extend2", extend2);
+            this.putBodyParameter("Extend2", extend2);
             this.extend2 = extend2;
             return this;
         }
@@ -515,7 +515,7 @@ public class ListDatasetDocumentsRequest extends Request {
          * Extend3.
          */
         public Builder extend3(String extend3) {
-            this.putQueryParameter("Extend3", extend3);
+            this.putBodyParameter("Extend3", extend3);
             this.extend3 = extend3;
             return this;
         }
@@ -561,7 +561,7 @@ public class ListDatasetDocumentsRequest extends Request {
          * StartTime.
          */
         public Builder startTime(Long startTime) {
-            this.putQueryParameter("StartTime", startTime);
+            this.putBodyParameter("StartTime", startTime);
             this.startTime = startTime;
             return this;
         }
@@ -580,7 +580,7 @@ public class ListDatasetDocumentsRequest extends Request {
          */
         public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
-            this.putQueryParameter("Tags", tagsShrink);
+            this.putBodyParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }
@@ -589,7 +589,7 @@ public class ListDatasetDocumentsRequest extends Request {
          * Title.
          */
         public Builder title(String title) {
-            this.putQueryParameter("Title", title);
+            this.putBodyParameter("Title", title);
             this.title = title;
             return this;
         }
