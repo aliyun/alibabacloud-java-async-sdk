@@ -1389,6 +1389,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetStorageAnalysisResultResponse> getStorageAnalysisResult(GetStorageAnalysisResultRequest request);
 
     /**
+     * @param request the request parameters of GetYaoChiAgent  GetYaoChiAgentRequest
+     * @return GetYaoChiAgentResponse
+     */
+    CompletableFuture<GetYaoChiAgentResponse> getYaoChiAgent(GetYaoChiAgentRequest request);
+
+    ResponseIterable<GetYaoChiAgentResponseBody> getYaoChiAgentWithResponseIterable(GetYaoChiAgentRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This operation is applicable only to ApsaraDB for Redis.</p>
      * <ul>
