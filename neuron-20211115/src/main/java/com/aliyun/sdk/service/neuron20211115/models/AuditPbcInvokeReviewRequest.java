@@ -75,6 +75,9 @@ public class AuditPbcInvokeReviewRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder reviewId(Long reviewId) {
             this.putPathParameter("reviewId", reviewId);

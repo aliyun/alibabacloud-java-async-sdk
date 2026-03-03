@@ -191,6 +191,9 @@ public class ListDeploymentsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceGroupId(Long serviceGroupId) {
             this.putQueryParameter("serviceGroupId", serviceGroupId);

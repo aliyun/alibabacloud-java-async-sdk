@@ -75,6 +75,9 @@ public class AuditForkReviewRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reviewId(Long reviewId) {
             this.putPathParameter("reviewId", reviewId);

@@ -61,6 +61,9 @@ public class GetLastDeploymentConfigRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder serviceGroupId(Long serviceGroupId) {
             this.putQueryParameter("serviceGroupId", serviceGroupId);
