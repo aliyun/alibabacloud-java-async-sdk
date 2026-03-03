@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AllocateSupabaseForAdmin  AllocateSupabaseForAdminRequest
+     * @return AllocateSupabaseForAdminResponse
+     */
+    CompletableFuture<AllocateSupabaseForAdminResponse> allocateSupabaseForAdmin(AllocateSupabaseForAdminRequest request);
+
+    /**
      * @param request the request parameters of BindAppDomain  BindAppDomainRequest
      * @return BindAppDomainResponse
      */
@@ -204,6 +210,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OperateAppServiceForPartnerResponse
      */
     CompletableFuture<OperateAppServiceForPartnerResponse> operateAppServiceForPartner(OperateAppServiceForPartnerRequest request);
+
+    /**
+     * @param request the request parameters of OperateSupabaseForAdmin  OperateSupabaseForAdminRequest
+     * @return OperateSupabaseForAdminResponse
+     */
+    CompletableFuture<OperateSupabaseForAdminResponse> operateSupabaseForAdmin(OperateSupabaseForAdminRequest request);
 
     /**
      * @param request the request parameters of QueryMaterialDirectoryTree  QueryMaterialDirectoryTreeRequest

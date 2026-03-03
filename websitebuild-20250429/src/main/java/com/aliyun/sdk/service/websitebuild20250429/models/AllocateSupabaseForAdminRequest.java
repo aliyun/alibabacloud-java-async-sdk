@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link QuerySupabaseInstanceInfoForAdminRequest} extends {@link RequestModel}
+ * {@link AllocateSupabaseForAdminRequest} extends {@link RequestModel}
  *
- * <p>QuerySupabaseInstanceInfoForAdminRequest</p>
+ * <p>AllocateSupabaseForAdminRequest</p>
  */
-public class QuerySupabaseInstanceInfoForAdminRequest extends Request {
+public class AllocateSupabaseForAdminRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -25,11 +25,6 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("BizId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Env")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String env;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderColumn")
@@ -51,11 +46,10 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    private QuerySupabaseInstanceInfoForAdminRequest(Builder builder) {
+    private AllocateSupabaseForAdminRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
-        this.env = builder.env;
         this.orderColumn = builder.orderColumn;
         this.orderType = builder.orderType;
         this.pageNum = builder.pageNum;
@@ -67,7 +61,7 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends Request {
         return new Builder();
     }
 
-    public static QuerySupabaseInstanceInfoForAdminRequest create() {
+    public static AllocateSupabaseForAdminRequest create() {
         return builder().build();
     }
 
@@ -88,13 +82,6 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends Request {
      */
     public String getBizId() {
         return this.bizId;
-    }
-
-    /**
-     * @return env
-     */
-    public String getEnv() {
-        return this.env;
     }
 
     /**
@@ -132,10 +119,9 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends Request {
         return this.userId;
     }
 
-    public static final class Builder extends Request.Builder<QuerySupabaseInstanceInfoForAdminRequest, Builder> {
+    public static final class Builder extends Request.Builder<AllocateSupabaseForAdminRequest, Builder> {
         private String regionId; 
         private String bizId; 
-        private String env; 
         private String orderColumn; 
         private String orderType; 
         private Integer pageNum; 
@@ -146,11 +132,10 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySupabaseInstanceInfoForAdminRequest request) {
+        private Builder(AllocateSupabaseForAdminRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.bizId = request.bizId;
-            this.env = request.env;
             this.orderColumn = request.orderColumn;
             this.orderType = request.orderType;
             this.pageNum = request.pageNum;
@@ -171,23 +156,11 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>WD20250703155602000001</p>
+         * <p>WS20250801154628000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
             this.bizId = bizId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>staging</p>
-         */
-        public Builder env(String env) {
-            this.putQueryParameter("Env", env);
-            this.env = env;
             return this;
         }
 
@@ -237,8 +210,8 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends Request {
         }
 
         @Override
-        public QuerySupabaseInstanceInfoForAdminRequest build() {
-            return new QuerySupabaseInstanceInfoForAdminRequest(this);
+        public AllocateSupabaseForAdminRequest build() {
+            return new AllocateSupabaseForAdminRequest(this);
         } 
 
     } 
