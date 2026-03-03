@@ -4560,6 +4560,315 @@ public class ListEventStreamingsResponseBody extends TeaModel {
      *
      * <p>ListEventStreamingsResponseBody</p>
      */
+    public static class ColumnValue extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ColumnValue(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ColumnValue create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnValue model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ColumnValue build() {
+                return new ColumnValue(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListEventStreamingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventStreamingsResponseBody</p>
+     */
+    public static class MappingRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
+        private String columnName;
+
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
+        private String columnType;
+
+        @com.aliyun.core.annotation.NameInMap("ColumnValue")
+        private ColumnValue columnValue;
+
+        private MappingRules(Builder builder) {
+            this.columnName = builder.columnName;
+            this.columnType = builder.columnType;
+            this.columnValue = builder.columnValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MappingRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return columnName
+         */
+        public String getColumnName() {
+            return this.columnName;
+        }
+
+        /**
+         * @return columnType
+         */
+        public String getColumnType() {
+            return this.columnType;
+        }
+
+        /**
+         * @return columnValue
+         */
+        public ColumnValue getColumnValue() {
+            return this.columnValue;
+        }
+
+        public static final class Builder {
+            private String columnName; 
+            private String columnType; 
+            private ColumnValue columnValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(MappingRules model) {
+                this.columnName = model.columnName;
+                this.columnType = model.columnType;
+                this.columnValue = model.columnValue;
+            } 
+
+            /**
+             * ColumnName.
+             */
+            public Builder columnName(String columnName) {
+                this.columnName = columnName;
+                return this;
+            }
+
+            /**
+             * ColumnType.
+             */
+            public Builder columnType(String columnType) {
+                this.columnType = columnType;
+                return this;
+            }
+
+            /**
+             * ColumnValue.
+             */
+            public Builder columnValue(ColumnValue columnValue) {
+                this.columnValue = columnValue;
+                return this;
+            }
+
+            public MappingRules build() {
+                return new MappingRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListEventStreamingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventStreamingsResponseBody</p>
+     */
+    public static class SinkEventHouseParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CatalogName")
+        private String catalogName;
+
+        @com.aliyun.core.annotation.NameInMap("EventTableName")
+        private String eventTableName;
+
+        @com.aliyun.core.annotation.NameInMap("MappingRules")
+        private java.util.List<MappingRules> mappingRules;
+
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
+        private String namespaceName;
+
+        private SinkEventHouseParameters(Builder builder) {
+            this.catalogName = builder.catalogName;
+            this.eventTableName = builder.eventTableName;
+            this.mappingRules = builder.mappingRules;
+            this.namespaceName = builder.namespaceName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkEventHouseParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return catalogName
+         */
+        public String getCatalogName() {
+            return this.catalogName;
+        }
+
+        /**
+         * @return eventTableName
+         */
+        public String getEventTableName() {
+            return this.eventTableName;
+        }
+
+        /**
+         * @return mappingRules
+         */
+        public java.util.List<MappingRules> getMappingRules() {
+            return this.mappingRules;
+        }
+
+        /**
+         * @return namespaceName
+         */
+        public String getNamespaceName() {
+            return this.namespaceName;
+        }
+
+        public static final class Builder {
+            private String catalogName; 
+            private String eventTableName; 
+            private java.util.List<MappingRules> mappingRules; 
+            private String namespaceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkEventHouseParameters model) {
+                this.catalogName = model.catalogName;
+                this.eventTableName = model.eventTableName;
+                this.mappingRules = model.mappingRules;
+                this.namespaceName = model.namespaceName;
+            } 
+
+            /**
+             * CatalogName.
+             */
+            public Builder catalogName(String catalogName) {
+                this.catalogName = catalogName;
+                return this;
+            }
+
+            /**
+             * EventTableName.
+             */
+            public Builder eventTableName(String eventTableName) {
+                this.eventTableName = eventTableName;
+                return this;
+            }
+
+            /**
+             * MappingRules.
+             */
+            public Builder mappingRules(java.util.List<MappingRules> mappingRules) {
+                this.mappingRules = mappingRules;
+                return this;
+            }
+
+            /**
+             * NamespaceName.
+             */
+            public Builder namespaceName(String namespaceName) {
+                this.namespaceName = namespaceName;
+                return this;
+            }
+
+            public SinkEventHouseParameters build() {
+                return new SinkEventHouseParameters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListEventStreamingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventStreamingsResponseBody</p>
+     */
     public static class SinkFcParametersBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -12457,6 +12766,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SinkDorisParameters")
         private SinkDorisParameters sinkDorisParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SinkEventHouseParameters")
+        private SinkEventHouseParameters sinkEventHouseParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkFcParameters")
         private SinkFcParameters sinkFcParameters;
 
@@ -12508,6 +12820,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             this.sinkDashVectorParameters = builder.sinkDashVectorParameters;
             this.sinkDataHubParameters = builder.sinkDataHubParameters;
             this.sinkDorisParameters = builder.sinkDorisParameters;
+            this.sinkEventHouseParameters = builder.sinkEventHouseParameters;
             this.sinkFcParameters = builder.sinkFcParameters;
             this.sinkFnfParameters = builder.sinkFnfParameters;
             this.sinkHttpsParameters = builder.sinkHttpsParameters;
@@ -12586,6 +12899,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
          */
         public SinkDorisParameters getSinkDorisParameters() {
             return this.sinkDorisParameters;
+        }
+
+        /**
+         * @return sinkEventHouseParameters
+         */
+        public SinkEventHouseParameters getSinkEventHouseParameters() {
+            return this.sinkEventHouseParameters;
         }
 
         /**
@@ -12695,6 +13015,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private SinkDashVectorParameters sinkDashVectorParameters; 
             private SinkDataHubParameters sinkDataHubParameters; 
             private SinkDorisParameters sinkDorisParameters; 
+            private SinkEventHouseParameters sinkEventHouseParameters; 
             private SinkFcParameters sinkFcParameters; 
             private SinkFnfParameters sinkFnfParameters; 
             private SinkHttpsParameters sinkHttpsParameters; 
@@ -12722,6 +13043,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
                 this.sinkDashVectorParameters = model.sinkDashVectorParameters;
                 this.sinkDataHubParameters = model.sinkDataHubParameters;
                 this.sinkDorisParameters = model.sinkDorisParameters;
+                this.sinkEventHouseParameters = model.sinkEventHouseParameters;
                 this.sinkFcParameters = model.sinkFcParameters;
                 this.sinkFnfParameters = model.sinkFnfParameters;
                 this.sinkHttpsParameters = model.sinkHttpsParameters;
@@ -12799,6 +13121,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
              */
             public Builder sinkDorisParameters(SinkDorisParameters sinkDorisParameters) {
                 this.sinkDorisParameters = sinkDorisParameters;
+                return this;
+            }
+
+            /**
+             * SinkEventHouseParameters.
+             */
+            public Builder sinkEventHouseParameters(SinkEventHouseParameters sinkEventHouseParameters) {
+                this.sinkEventHouseParameters = sinkEventHouseParameters;
                 return this;
             }
 
