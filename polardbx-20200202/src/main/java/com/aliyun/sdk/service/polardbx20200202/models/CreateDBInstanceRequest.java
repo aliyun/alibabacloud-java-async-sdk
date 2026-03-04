@@ -82,6 +82,10 @@ public class CreateDBInstanceRequest extends Request {
     private String networkType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OriginMinorVersion")
+    private String originMinorVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
@@ -114,6 +118,10 @@ public class CreateDBInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Series")
     private String series;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    private String storageType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TertiaryZone")
@@ -157,6 +165,7 @@ public class CreateDBInstanceRequest extends Request {
         this.isColumnarReadDBInstance = builder.isColumnarReadDBInstance;
         this.isReadDBInstance = builder.isReadDBInstance;
         this.networkType = builder.networkType;
+        this.originMinorVersion = builder.originMinorVersion;
         this.payType = builder.payType;
         this.period = builder.period;
         this.primaryDBInstanceName = builder.primaryDBInstanceName;
@@ -165,6 +174,7 @@ public class CreateDBInstanceRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.secondaryZone = builder.secondaryZone;
         this.series = builder.series;
+        this.storageType = builder.storageType;
         this.tertiaryZone = builder.tertiaryZone;
         this.topologyType = builder.topologyType;
         this.usedTime = builder.usedTime;
@@ -292,6 +302,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return originMinorVersion
+     */
+    public String getOriginMinorVersion() {
+        return this.originMinorVersion;
+    }
+
+    /**
      * @return payType
      */
     public String getPayType() {
@@ -345,6 +362,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getSeries() {
         return this.series;
+    }
+
+    /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
     }
 
     /**
@@ -405,6 +429,7 @@ public class CreateDBInstanceRequest extends Request {
         private Boolean isColumnarReadDBInstance; 
         private Boolean isReadDBInstance; 
         private String networkType; 
+        private String originMinorVersion; 
         private String payType; 
         private String period; 
         private String primaryDBInstanceName; 
@@ -413,6 +438,7 @@ public class CreateDBInstanceRequest extends Request {
         private String resourceGroupId; 
         private String secondaryZone; 
         private String series; 
+        private String storageType; 
         private String tertiaryZone; 
         private String topologyType; 
         private Integer usedTime; 
@@ -441,6 +467,7 @@ public class CreateDBInstanceRequest extends Request {
             this.isColumnarReadDBInstance = request.isColumnarReadDBInstance;
             this.isReadDBInstance = request.isReadDBInstance;
             this.networkType = request.networkType;
+            this.originMinorVersion = request.originMinorVersion;
             this.payType = request.payType;
             this.period = request.period;
             this.primaryDBInstanceName = request.primaryDBInstanceName;
@@ -449,6 +476,7 @@ public class CreateDBInstanceRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.secondaryZone = request.secondaryZone;
             this.series = request.series;
+            this.storageType = request.storageType;
             this.tertiaryZone = request.tertiaryZone;
             this.topologyType = request.topologyType;
             this.usedTime = request.usedTime;
@@ -597,6 +625,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * OriginMinorVersion.
+         */
+        public Builder originMinorVersion(String originMinorVersion) {
+            this.putQueryParameter("OriginMinorVersion", originMinorVersion);
+            this.originMinorVersion = originMinorVersion;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -671,6 +708,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder series(String series) {
             this.putQueryParameter("Series", series);
             this.series = series;
+            return this;
+        }
+
+        /**
+         * StorageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 
