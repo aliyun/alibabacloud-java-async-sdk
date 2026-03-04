@@ -38,6 +38,9 @@ public class InitContainerConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("SecretMountDesc")
+    private String secretMountDesc;
+
     private InitContainerConfig(Builder builder) {
         this.command = builder.command;
         this.commandArgs = builder.commandArgs;
@@ -46,6 +49,7 @@ public class InitContainerConfig extends TeaModel {
         this.envs = builder.envs;
         this.imageUrl = builder.imageUrl;
         this.name = builder.name;
+        this.secretMountDesc = builder.secretMountDesc;
     }
 
     public static Builder builder() {
@@ -109,6 +113,13 @@ public class InitContainerConfig extends TeaModel {
         return this.name;
     }
 
+    /**
+     * @return secretMountDesc
+     */
+    public String getSecretMountDesc() {
+        return this.secretMountDesc;
+    }
+
     public static final class Builder {
         private String command; 
         private String commandArgs; 
@@ -117,6 +128,7 @@ public class InitContainerConfig extends TeaModel {
         private String envs; 
         private String imageUrl; 
         private String name; 
+        private String secretMountDesc; 
 
         private Builder() {
         } 
@@ -129,6 +141,7 @@ public class InitContainerConfig extends TeaModel {
             this.envs = model.envs;
             this.imageUrl = model.imageUrl;
             this.name = model.name;
+            this.secretMountDesc = model.secretMountDesc;
         } 
 
         /**
@@ -184,6 +197,14 @@ public class InitContainerConfig extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * SecretMountDesc.
+         */
+        public Builder secretMountDesc(String secretMountDesc) {
+            this.secretMountDesc = secretMountDesc;
             return this;
         }
 

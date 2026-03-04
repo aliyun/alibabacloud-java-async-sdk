@@ -645,6 +645,129 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationConfigResponseBody</p>
      */
+    public static class SecretMountDesc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("MountPath")
+        private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("SecretId")
+        private Long secretId;
+
+        @com.aliyun.core.annotation.NameInMap("SecretName")
+        private String secretName;
+
+        private SecretMountDesc(Builder builder) {
+            this.key = builder.key;
+            this.mountPath = builder.mountPath;
+            this.secretId = builder.secretId;
+            this.secretName = builder.secretName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecretMountDesc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return secretId
+         */
+        public Long getSecretId() {
+            return this.secretId;
+        }
+
+        /**
+         * @return secretName
+         */
+        public String getSecretName() {
+            return this.secretName;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String mountPath; 
+            private Long secretId; 
+            private String secretName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecretMountDesc model) {
+                this.key = model.key;
+                this.mountPath = model.mountPath;
+                this.secretId = model.secretId;
+                this.secretName = model.secretName;
+            } 
+
+            /**
+             * <p>The key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The mount path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp</p>
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * SecretId.
+             */
+            public Builder secretId(Long secretId) {
+                this.secretId = secretId;
+                return this;
+            }
+
+            /**
+             * SecretName.
+             */
+            public Builder secretName(String secretName) {
+                this.secretName = secretName;
+                return this;
+            }
+
+            public SecretMountDesc build() {
+                return new SecretMountDesc(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationConfigResponseBody</p>
+     */
     public static class InitContainersConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
@@ -667,6 +790,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("SecretMountDesc")
+        private java.util.List<SecretMountDesc> secretMountDesc;
+
         private InitContainersConfig(Builder builder) {
             this.command = builder.command;
             this.commandArgs = builder.commandArgs;
@@ -675,6 +801,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.envs = builder.envs;
             this.imageUrl = builder.imageUrl;
             this.name = builder.name;
+            this.secretMountDesc = builder.secretMountDesc;
         }
 
         public static Builder builder() {
@@ -734,6 +861,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return secretMountDesc
+         */
+        public java.util.List<SecretMountDesc> getSecretMountDesc() {
+            return this.secretMountDesc;
+        }
+
         public static final class Builder {
             private String command; 
             private String commandArgs; 
@@ -742,6 +876,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String envs; 
             private String imageUrl; 
             private String name; 
+            private java.util.List<SecretMountDesc> secretMountDesc; 
 
             private Builder() {
             } 
@@ -754,6 +889,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.envs = model.envs;
                 this.imageUrl = model.imageUrl;
                 this.name = model.name;
+                this.secretMountDesc = model.secretMountDesc;
             } 
 
             /**
@@ -849,6 +985,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * SecretMountDesc.
+             */
+            public Builder secretMountDesc(java.util.List<SecretMountDesc> secretMountDesc) {
+                this.secretMountDesc = secretMountDesc;
                 return this;
             }
 
@@ -1079,7 +1223,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationConfigResponseBody</p>
      */
-    public static class SecretMountDesc extends TeaModel {
+    public static class DataSecretMountDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
@@ -1092,7 +1236,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecretName")
         private String secretName;
 
-        private SecretMountDesc(Builder builder) {
+        private DataSecretMountDesc(Builder builder) {
             this.key = builder.key;
             this.mountPath = builder.mountPath;
             this.secretId = builder.secretId;
@@ -1103,7 +1247,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static SecretMountDesc create() {
+        public static DataSecretMountDesc create() {
             return builder().build();
         }
 
@@ -1144,7 +1288,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(SecretMountDesc model) {
+            private Builder(DataSecretMountDesc model) {
                 this.key = model.key;
                 this.mountPath = model.mountPath;
                 this.secretId = model.secretId;
@@ -1195,8 +1339,8 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 return this;
             }
 
-            public SecretMountDesc build() {
-                return new SecretMountDesc(this);
+            public DataSecretMountDesc build() {
+                return new DataSecretMountDesc(this);
             } 
 
         } 
@@ -2058,7 +2202,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         private String resourceType;
 
         @com.aliyun.core.annotation.NameInMap("SecretMountDesc")
-        private java.util.List<SecretMountDesc> secretMountDesc;
+        private java.util.List<DataSecretMountDesc> secretMountDesc;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
@@ -2819,7 +2963,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         /**
          * @return secretMountDesc
          */
-        public java.util.List<SecretMountDesc> getSecretMountDesc() {
+        public java.util.List<DataSecretMountDesc> getSecretMountDesc() {
             return this.secretMountDesc;
         }
 
@@ -3021,7 +3165,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String regionId; 
             private Integer replicas; 
             private String resourceType; 
-            private java.util.List<SecretMountDesc> secretMountDesc; 
+            private java.util.List<DataSecretMountDesc> secretMountDesc; 
             private String securityGroupId; 
             private java.util.Map<String, String> serviceTags; 
             private java.util.List<SidecarContainersConfig> sidecarContainersConfig; 
@@ -4225,7 +4369,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             /**
              * <p>Secret mount description.</p>
              */
-            public Builder secretMountDesc(java.util.List<SecretMountDesc> secretMountDesc) {
+            public Builder secretMountDesc(java.util.List<DataSecretMountDesc> secretMountDesc) {
                 this.secretMountDesc = secretMountDesc;
                 return this;
             }
