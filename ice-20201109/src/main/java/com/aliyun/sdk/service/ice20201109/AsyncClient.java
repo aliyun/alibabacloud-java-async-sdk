@@ -486,6 +486,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVodPackagingGroupResponse> createVodPackagingGroup(CreateVodPackagingGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateYikeAssetUpload  CreateYikeAssetUploadRequest
+     * @return CreateYikeAssetUploadResponse
+     */
+    CompletableFuture<CreateYikeAssetUploadResponse> createYikeAssetUpload(CreateYikeAssetUploadRequest request);
+
+    /**
      * @param request the request parameters of DecryptKMSDataKey  DecryptKMSDataKeyRequest
      * @return DecryptKMSDataKeyResponse
      */
@@ -1478,6 +1484,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWorkflowTaskResponse> getWorkflowTask(GetWorkflowTaskRequest request);
 
     /**
+     * @param request the request parameters of GetYikeAIAppJob  GetYikeAIAppJobRequest
+     * @return GetYikeAIAppJobResponse
+     */
+    CompletableFuture<GetYikeAIAppJobResponse> getYikeAIAppJob(GetYikeAIAppJobRequest request);
+
+    /**
+     * @param request the request parameters of GetYikeAssetMediaInfo  GetYikeAssetMediaInfoRequest
+     * @return GetYikeAssetMediaInfoResponse
+     */
+    CompletableFuture<GetYikeAssetMediaInfoResponse> getYikeAssetMediaInfo(GetYikeAssetMediaInfoRequest request);
+
+    /**
      * @param request the request parameters of InsertMediaToSearchLib  InsertMediaToSearchLibRequest
      * @return InsertMediaToSearchLibResponse
      */
@@ -1957,6 +1975,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWorkflowTasksResponse> listWorkflowTasks(ListWorkflowTasksRequest request);
 
     /**
+     * @param request the request parameters of ListYikeAssetFolders  ListYikeAssetFoldersRequest
+     * @return ListYikeAssetFoldersResponse
+     */
+    CompletableFuture<ListYikeAssetFoldersResponse> listYikeAssetFolders(ListYikeAssetFoldersRequest request);
+
+    /**
+     * @param request the request parameters of ListYikeProductions  ListYikeProductionsRequest
+     * @return ListYikeProductionsResponse
+     */
+    CompletableFuture<ListYikeProductionsResponse> listYikeProductions(ListYikeProductionsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Before this operation, you must add a source to the flow.</p>
      * <ul>
@@ -2105,6 +2135,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RegisterMediaStreamResponse
      */
     CompletableFuture<RegisterMediaStreamResponse> registerMediaStream(RegisterMediaStreamRequest request);
+
+    /**
+     * @param request the request parameters of RegisterYikeAssetMediaInfo  RegisterYikeAssetMediaInfoRequest
+     * @return RegisterYikeAssetMediaInfoResponse
+     */
+    CompletableFuture<RegisterYikeAssetMediaInfoResponse> registerYikeAssetMediaInfo(RegisterYikeAssetMediaInfoRequest request);
 
     /**
      * @param request the request parameters of ResumeMediaConnectFlowOutput  ResumeMediaConnectFlowOutputRequest
@@ -2747,6 +2783,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitVideoTranslationJobResponse
      */
     CompletableFuture<SubmitVideoTranslationJobResponse> submitVideoTranslationJob(SubmitVideoTranslationJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitYikeAIAppJob  SubmitYikeAIAppJobRequest
+     * @return SubmitYikeAIAppJobResponse
+     */
+    CompletableFuture<SubmitYikeAIAppJobResponse> submitYikeAIAppJob(SubmitYikeAIAppJobRequest request);
 
     /**
      * @param request the request parameters of TakeoverAIAgentCall  TakeoverAIAgentCallRequest
