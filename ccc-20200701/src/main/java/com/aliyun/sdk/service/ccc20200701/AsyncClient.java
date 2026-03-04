@@ -965,6 +965,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMultiChannelRecordingsResponse> listMultiChannelRecordings(ListMultiChannelRecordingsRequest request);
 
     /**
+     * @param request the request parameters of ListNotificationRecords  ListNotificationRecordsRequest
+     * @return ListNotificationRecordsResponse
+     */
+    CompletableFuture<ListNotificationRecordsResponse> listNotificationRecords(ListNotificationRecordsRequest request);
+
+    /**
      * @param request the request parameters of ListOutboundNumbersOfUser  ListOutboundNumbersOfUserRequest
      * @return ListOutboundNumbersOfUserResponse
      */
@@ -1517,6 +1523,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSchemaPropertyResponse
      */
     CompletableFuture<UpdateSchemaPropertyResponse> updateSchemaProperty(UpdateSchemaPropertyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSubscription  UpdateSubscriptionRequest
+     * @return UpdateSubscriptionResponse
+     */
+    CompletableFuture<UpdateSubscriptionResponse> updateSubscription(UpdateSubscriptionRequest request);
 
     /**
      * @param request the request parameters of UpdateTicket  UpdateTicketRequest
