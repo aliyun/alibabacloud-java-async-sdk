@@ -26,6 +26,9 @@ public class PathConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("path")
     private String path;
 
+    @com.aliyun.core.annotation.NameInMap("removeBasePathOnForward")
+    private Boolean removeBasePathOnForward;
+
     @com.aliyun.core.annotation.NameInMap("resourceName")
     private String resourceName;
 
@@ -36,6 +39,7 @@ public class PathConfig extends TeaModel {
         this.agentRuntimeEndpointName = builder.agentRuntimeEndpointName;
         this.methods = builder.methods;
         this.path = builder.path;
+        this.removeBasePathOnForward = builder.removeBasePathOnForward;
         this.resourceName = builder.resourceName;
         this.resourceType = builder.resourceType;
     }
@@ -74,6 +78,13 @@ public class PathConfig extends TeaModel {
     }
 
     /**
+     * @return removeBasePathOnForward
+     */
+    public Boolean getRemoveBasePathOnForward() {
+        return this.removeBasePathOnForward;
+    }
+
+    /**
      * @return resourceName
      */
     public String getResourceName() {
@@ -91,6 +102,7 @@ public class PathConfig extends TeaModel {
         private String agentRuntimeEndpointName; 
         private java.util.List<String> methods; 
         private String path; 
+        private Boolean removeBasePathOnForward; 
         private String resourceName; 
         private String resourceType; 
 
@@ -101,6 +113,7 @@ public class PathConfig extends TeaModel {
             this.agentRuntimeEndpointName = model.agentRuntimeEndpointName;
             this.methods = model.methods;
             this.path = model.path;
+            this.removeBasePathOnForward = model.removeBasePathOnForward;
             this.resourceName = model.resourceName;
             this.resourceType = model.resourceType;
         } 
@@ -132,6 +145,14 @@ public class PathConfig extends TeaModel {
          */
         public Builder path(String path) {
             this.path = path;
+            return this;
+        }
+
+        /**
+         * removeBasePathOnForward.
+         */
+        public Builder removeBasePathOnForward(Boolean removeBasePathOnForward) {
+            this.removeBasePathOnForward = removeBasePathOnForward;
             return this;
         }
 

@@ -117,6 +117,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>创建工作空间</p>
+     * 
+     * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
+    CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>删除指定的智能体运行时实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
      * 
      * @param request the request parameters of DeleteAgentRuntime  DeleteAgentRuntimeRequest
@@ -198,6 +207,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteTemplateResponse
      */
     CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>删除工作空间</p>
+     * 
+     * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
+     * @return DeleteWorkspaceResponse
+     */
+    CompletableFuture<DeleteWorkspaceResponse> deleteWorkspace(DeleteWorkspaceRequest request);
 
     /**
      * @param request the request parameters of GetAccessToken  GetAccessTokenRequest
@@ -291,6 +309,21 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTemplateResponse
      */
     CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>查看工作空间</p>
+     * 
+     * @param request the request parameters of GetWorkspace  GetWorkspaceRequest
+     * @return GetWorkspaceResponse
+     */
+    CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of GetWorkspaceDiscoveryEndpoints  GetWorkspaceDiscoveryEndpointsRequest
+     * @return GetWorkspaceDiscoveryEndpointsResponse
+     */
+    CompletableFuture<GetWorkspaceDiscoveryEndpointsResponse> getWorkspaceDiscoveryEndpoints(GetWorkspaceDiscoveryEndpointsRequest request);
 
     /**
      * <b>description</b> :
@@ -477,5 +510,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateTemplateResponse
      */
     CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>更新工作空间</p>
+     * 
+     * @param request the request parameters of UpdateWorkspace  UpdateWorkspaceRequest
+     * @return UpdateWorkspaceResponse
+     */
+    CompletableFuture<UpdateWorkspaceResponse> updateWorkspace(UpdateWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWorkspaceDiscoveryEndpoints  UpdateWorkspaceDiscoveryEndpointsRequest
+     * @return UpdateWorkspaceDiscoveryEndpointsResponse
+     */
+    CompletableFuture<UpdateWorkspaceDiscoveryEndpointsResponse> updateWorkspaceDiscoveryEndpoints(UpdateWorkspaceDiscoveryEndpointsRequest request);
 
 }

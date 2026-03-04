@@ -37,6 +37,10 @@ public class ListMemoryCollectionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private ListMemoryCollectionsRequest(Builder builder) {
         super(builder);
         this.memoryCollectionName = builder.memoryCollectionName;
@@ -44,6 +48,7 @@ public class ListMemoryCollectionsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.status = builder.status;
         this.type = builder.type;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class ListMemoryCollectionsRequest extends Request {
         return this.type;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListMemoryCollectionsRequest, Builder> {
         private String memoryCollectionName; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String status; 
         private String type; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class ListMemoryCollectionsRequest extends Request {
             this.pageSize = request.pageSize;
             this.status = request.status;
             this.type = request.type;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -156,6 +170,15 @@ public class ListMemoryCollectionsRequest extends Request {
         public Builder type(String type) {
             this.putQueryParameter("type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("workspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

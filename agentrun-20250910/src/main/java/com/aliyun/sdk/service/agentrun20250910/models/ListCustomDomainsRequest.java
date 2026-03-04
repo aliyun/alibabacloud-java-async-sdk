@@ -22,6 +22,10 @@ public class ListCustomDomainsRequest extends Request {
     private String domainName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("domainType")
+    private String domainType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
@@ -40,6 +44,7 @@ public class ListCustomDomainsRequest extends Request {
     private ListCustomDomainsRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
+        this.domainType = builder.domainType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceName = builder.resourceName;
@@ -64,6 +69,13 @@ public class ListCustomDomainsRequest extends Request {
      */
     public String getDomainName() {
         return this.domainName;
+    }
+
+    /**
+     * @return domainType
+     */
+    public String getDomainType() {
+        return this.domainType;
     }
 
     /**
@@ -96,6 +108,7 @@ public class ListCustomDomainsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListCustomDomainsRequest, Builder> {
         private String domainName; 
+        private String domainType; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceName; 
@@ -108,6 +121,7 @@ public class ListCustomDomainsRequest extends Request {
         private Builder(ListCustomDomainsRequest request) {
             super(request);
             this.domainName = request.domainName;
+            this.domainType = request.domainType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceName = request.resourceName;
@@ -120,6 +134,15 @@ public class ListCustomDomainsRequest extends Request {
         public Builder domainName(String domainName) {
             this.putQueryParameter("domainName", domainName);
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * domainType.
+         */
+        public Builder domainType(String domainType) {
+            this.putQueryParameter("domainType", domainType);
+            this.domainType = domainType;
             return this;
         }
 

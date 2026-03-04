@@ -53,6 +53,9 @@ public class MemoryCollection extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("vectorStoreConfig")
     private VectorStoreConfig vectorStoreConfig;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private MemoryCollection(Builder builder) {
         this.createdAt = builder.createdAt;
         this.description = builder.description;
@@ -66,6 +69,7 @@ public class MemoryCollection extends TeaModel {
         this.memoryCollectionName = builder.memoryCollectionName;
         this.networkConfiguration = builder.networkConfiguration;
         this.vectorStoreConfig = builder.vectorStoreConfig;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -164,6 +168,13 @@ public class MemoryCollection extends TeaModel {
         return this.vectorStoreConfig;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private String createdAt; 
         private String description; 
@@ -177,6 +188,7 @@ public class MemoryCollection extends TeaModel {
         private String memoryCollectionName; 
         private NetworkConfiguration networkConfiguration; 
         private VectorStoreConfig vectorStoreConfig; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -194,6 +206,7 @@ public class MemoryCollection extends TeaModel {
             this.memoryCollectionName = model.memoryCollectionName;
             this.networkConfiguration = model.networkConfiguration;
             this.vectorStoreConfig = model.vectorStoreConfig;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -289,6 +302,14 @@ public class MemoryCollection extends TeaModel {
          */
         public Builder vectorStoreConfig(VectorStoreConfig vectorStoreConfig) {
             this.vectorStoreConfig = vectorStoreConfig;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

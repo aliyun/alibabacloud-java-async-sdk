@@ -41,6 +41,9 @@ public class UpdateMemoryCollectionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("vectorStoreConfig")
     private VectorStoreConfig vectorStoreConfig;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private UpdateMemoryCollectionInput(Builder builder) {
         this.description = builder.description;
         this.embedderConfig = builder.embedderConfig;
@@ -50,6 +53,7 @@ public class UpdateMemoryCollectionInput extends TeaModel {
         this.llmConfig = builder.llmConfig;
         this.networkConfiguration = builder.networkConfiguration;
         this.vectorStoreConfig = builder.vectorStoreConfig;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -120,6 +124,13 @@ public class UpdateMemoryCollectionInput extends TeaModel {
         return this.vectorStoreConfig;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private String description; 
         private EmbedderConfig embedderConfig; 
@@ -129,6 +140,7 @@ public class UpdateMemoryCollectionInput extends TeaModel {
         private LLMConfig llmConfig; 
         private NetworkConfiguration networkConfiguration; 
         private VectorStoreConfig vectorStoreConfig; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -142,6 +154,7 @@ public class UpdateMemoryCollectionInput extends TeaModel {
             this.llmConfig = model.llmConfig;
             this.networkConfiguration = model.networkConfiguration;
             this.vectorStoreConfig = model.vectorStoreConfig;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -205,6 +218,14 @@ public class UpdateMemoryCollectionInput extends TeaModel {
          */
         public Builder vectorStoreConfig(VectorStoreConfig vectorStoreConfig) {
             this.vectorStoreConfig = vectorStoreConfig;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 
