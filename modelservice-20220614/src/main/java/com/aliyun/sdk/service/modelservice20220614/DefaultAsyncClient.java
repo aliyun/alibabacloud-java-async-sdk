@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of GetMonthAmount  GetMonthAmountRequest
+     * @return GetMonthAmountResponse
+     */
     @Override
     public CompletableFuture<GetMonthAmountResponse> getMonthAmount(GetMonthAmountRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUser  GetUserRequest
+     * @return GetUserResponse
+     */
     @Override
     public CompletableFuture<GetUserResponse> getUser(GetUserRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDayAmount  ListDayAmountRequest
+     * @return ListDayAmountResponse
+     */
     @Override
     public CompletableFuture<ListDayAmountResponse> listDayAmount(ListDayAmountRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRechargeBills  ListRechargeBillsRequest
+     * @return ListRechargeBillsResponse
+     */
     @Override
     public CompletableFuture<ListRechargeBillsResponse> listRechargeBills(ListRechargeBillsRequest request) {
         try {

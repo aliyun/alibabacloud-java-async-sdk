@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.modelservice20220614.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMonthAmountResponseBody} extends {@link TeaModel}
  *
  * <p>GetMonthAmountResponseBody</p>
@@ -40,6 +46,10 @@ public class GetMonthAmountResponseBody extends TeaModel {
 
     public static GetMonthAmountResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -83,6 +93,17 @@ public class GetMonthAmountResponseBody extends TeaModel {
         private Integer prepayAmount; 
         private String requestId; 
         private Integer totalAmount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMonthAmountResponseBody model) {
+            this.backgroundAmount = model.backgroundAmount;
+            this.postpayAmount = model.postpayAmount;
+            this.prepayAmount = model.prepayAmount;
+            this.requestId = model.requestId;
+            this.totalAmount = model.totalAmount;
+        } 
 
         /**
          * BackgroundAmount.

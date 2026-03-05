@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.modelservice20220614.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserResponseBody</p>
@@ -44,6 +50,10 @@ public class GetUserResponseBody extends TeaModel {
 
     public static GetUserResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -95,6 +105,18 @@ public class GetUserResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String token; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserResponseBody model) {
+            this.appId = model.appId;
+            this.code = model.code;
+            this.host = model.host;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.token = model.token;
+        } 
 
         /**
          * AppId.

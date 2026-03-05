@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.modelservice20220614.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRechargeBillsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRechargeBillsResponseBody</p>
  */
 public class ListRechargeBillsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanseInfos")
-    private java.util.List < InstanseInfos> instanseInfos;
+    private java.util.List<InstanseInfos> instanseInfos;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,10 +44,14 @@ public class ListRechargeBillsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanseInfos
      */
-    public java.util.List < InstanseInfos> getInstanseInfos() {
+    public java.util.List<InstanseInfos> getInstanseInfos() {
         return this.instanseInfos;
     }
 
@@ -67,15 +77,25 @@ public class ListRechargeBillsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanseInfos> instanseInfos; 
+        private java.util.List<InstanseInfos> instanseInfos; 
         private String requestId; 
         private Integer residueAmount; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListRechargeBillsResponseBody model) {
+            this.instanseInfos = model.instanseInfos;
+            this.requestId = model.requestId;
+            this.residueAmount = model.residueAmount;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * InstanseInfos.
          */
-        public Builder instanseInfos(java.util.List < InstanseInfos> instanseInfos) {
+        public Builder instanseInfos(java.util.List<InstanseInfos> instanseInfos) {
             this.instanseInfos = instanseInfos;
             return this;
         }
@@ -110,6 +130,12 @@ public class ListRechargeBillsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRechargeBillsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRechargeBillsResponseBody</p>
+     */
     public static class InstanseInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrTimes")
         private Integer currTimes;
@@ -183,6 +209,17 @@ public class ListRechargeBillsResponseBody extends TeaModel {
             private Integer initTimes; 
             private String instanceId; 
             private String source; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanseInfos model) {
+                this.currTimes = model.currTimes;
+                this.gmtEndTime = model.gmtEndTime;
+                this.initTimes = model.initTimes;
+                this.instanceId = model.instanceId;
+                this.source = model.source;
+            } 
 
             /**
              * CurrTimes.
