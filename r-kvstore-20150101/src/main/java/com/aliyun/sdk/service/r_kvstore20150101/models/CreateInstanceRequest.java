@@ -90,6 +90,10 @@ public class CreateInstanceRequest extends Request {
     private String instanceClass;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceEndpointType")
+    private String instanceEndpointType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
@@ -233,6 +237,7 @@ public class CreateInstanceRequest extends Request {
         this.globalInstanceId = builder.globalInstanceId;
         this.globalSecurityGroupIds = builder.globalSecurityGroupIds;
         this.instanceClass = builder.instanceClass;
+        this.instanceEndpointType = builder.instanceEndpointType;
         this.instanceName = builder.instanceName;
         this.instanceType = builder.instanceType;
         this.networkType = builder.networkType;
@@ -402,6 +407,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getInstanceClass() {
         return this.instanceClass;
+    }
+
+    /**
+     * @return instanceEndpointType
+     */
+    public String getInstanceEndpointType() {
+        return this.instanceEndpointType;
     }
 
     /**
@@ -633,6 +645,7 @@ public class CreateInstanceRequest extends Request {
         private String globalInstanceId; 
         private String globalSecurityGroupIds; 
         private String instanceClass; 
+        private String instanceEndpointType; 
         private String instanceName; 
         private String instanceType; 
         private String networkType; 
@@ -688,6 +701,7 @@ public class CreateInstanceRequest extends Request {
             this.globalInstanceId = request.globalInstanceId;
             this.globalSecurityGroupIds = request.globalSecurityGroupIds;
             this.instanceClass = request.instanceClass;
+            this.instanceEndpointType = request.instanceEndpointType;
             this.instanceName = request.instanceName;
             this.instanceType = request.instanceType;
             this.networkType = request.networkType;
@@ -994,6 +1008,15 @@ public class CreateInstanceRequest extends Request {
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
             this.instanceClass = instanceClass;
+            return this;
+        }
+
+        /**
+         * InstanceEndpointType.
+         */
+        public Builder instanceEndpointType(String instanceEndpointType) {
+            this.putQueryParameter("InstanceEndpointType", instanceEndpointType);
+            this.instanceEndpointType = instanceEndpointType;
             return this;
         }
 

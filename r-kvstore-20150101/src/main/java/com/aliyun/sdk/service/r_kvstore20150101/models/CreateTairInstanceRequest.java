@@ -83,6 +83,10 @@ public class CreateTairInstanceRequest extends Request {
     private String instanceClass;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceEndpointType")
+    private String instanceEndpointType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
@@ -228,6 +232,7 @@ public class CreateTairInstanceRequest extends Request {
         this.globalInstanceId = builder.globalInstanceId;
         this.globalSecurityGroupIds = builder.globalSecurityGroupIds;
         this.instanceClass = builder.instanceClass;
+        this.instanceEndpointType = builder.instanceEndpointType;
         this.instanceName = builder.instanceName;
         this.instanceType = builder.instanceType;
         this.ownerAccount = builder.ownerAccount;
@@ -383,6 +388,13 @@ public class CreateTairInstanceRequest extends Request {
      */
     public String getInstanceClass() {
         return this.instanceClass;
+    }
+
+    /**
+     * @return instanceEndpointType
+     */
+    public String getInstanceEndpointType() {
+        return this.instanceEndpointType;
     }
 
     /**
@@ -612,6 +624,7 @@ public class CreateTairInstanceRequest extends Request {
         private String globalInstanceId; 
         private String globalSecurityGroupIds; 
         private String instanceClass; 
+        private String instanceEndpointType; 
         private String instanceName; 
         private String instanceType; 
         private String ownerAccount; 
@@ -665,6 +678,7 @@ public class CreateTairInstanceRequest extends Request {
             this.globalInstanceId = request.globalInstanceId;
             this.globalSecurityGroupIds = request.globalSecurityGroupIds;
             this.instanceClass = request.instanceClass;
+            this.instanceEndpointType = request.instanceEndpointType;
             this.instanceName = request.instanceName;
             this.instanceType = request.instanceType;
             this.ownerAccount = request.ownerAccount;
@@ -934,6 +948,15 @@ public class CreateTairInstanceRequest extends Request {
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
             this.instanceClass = instanceClass;
+            return this;
+        }
+
+        /**
+         * InstanceEndpointType.
+         */
+        public Builder instanceEndpointType(String instanceEndpointType) {
+            this.putQueryParameter("InstanceEndpointType", instanceEndpointType);
+            this.instanceEndpointType = instanceEndpointType;
             return this;
         }
 
