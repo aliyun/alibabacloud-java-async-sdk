@@ -1562,6 +1562,135 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationConfigResponseBody</p>
      */
+    public static class SidecarContainersConfigSecretMountDesc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("MountPath")
+        private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("SecretId")
+        private Long secretId;
+
+        @com.aliyun.core.annotation.NameInMap("SecretName")
+        private String secretName;
+
+        private SidecarContainersConfigSecretMountDesc(Builder builder) {
+            this.key = builder.key;
+            this.mountPath = builder.mountPath;
+            this.secretId = builder.secretId;
+            this.secretName = builder.secretName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SidecarContainersConfigSecretMountDesc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return secretId
+         */
+        public Long getSecretId() {
+            return this.secretId;
+        }
+
+        /**
+         * @return secretName
+         */
+        public String getSecretName() {
+            return this.secretName;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String mountPath; 
+            private Long secretId; 
+            private String secretName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SidecarContainersConfigSecretMountDesc model) {
+                this.key = model.key;
+                this.mountPath = model.mountPath;
+                this.secretId = model.secretId;
+                this.secretName = model.secretName;
+            } 
+
+            /**
+             * <p>The ConfigMap key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>Mount path of the data volume within the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/cache</p>
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * <p>The secret ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>520</p>
+             */
+            public Builder secretId(Long secretId) {
+                this.secretId = secretId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dummy-name-opaque-894</p>
+             */
+            public Builder secretName(String secretName) {
+                this.secretName = secretName;
+                return this;
+            }
+
+            public SidecarContainersConfigSecretMountDesc build() {
+                return new SidecarContainersConfigSecretMountDesc(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationConfigResponseBody</p>
+     */
     public static class SidecarContainersConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcrInstanceId")
         private String acrInstanceId;
@@ -1587,11 +1716,20 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
+        @com.aliyun.core.annotation.NameInMap("Liveness")
+        private String liveness;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Readiness")
+        private String readiness;
+
+        @com.aliyun.core.annotation.NameInMap("SecretMountDesc")
+        private java.util.List<SidecarContainersConfigSecretMountDesc> secretMountDesc;
 
         private SidecarContainersConfig(Builder builder) {
             this.acrInstanceId = builder.acrInstanceId;
@@ -1602,8 +1740,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.emptyDirDesc = builder.emptyDirDesc;
             this.envs = builder.envs;
             this.imageUrl = builder.imageUrl;
+            this.liveness = builder.liveness;
             this.memory = builder.memory;
             this.name = builder.name;
+            this.readiness = builder.readiness;
+            this.secretMountDesc = builder.secretMountDesc;
         }
 
         public static Builder builder() {
@@ -1671,6 +1812,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return liveness
+         */
+        public String getLiveness() {
+            return this.liveness;
+        }
+
+        /**
          * @return memory
          */
         public Integer getMemory() {
@@ -1684,6 +1832,20 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return readiness
+         */
+        public String getReadiness() {
+            return this.readiness;
+        }
+
+        /**
+         * @return secretMountDesc
+         */
+        public java.util.List<SidecarContainersConfigSecretMountDesc> getSecretMountDesc() {
+            return this.secretMountDesc;
+        }
+
         public static final class Builder {
             private String acrInstanceId; 
             private String command; 
@@ -1693,8 +1855,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private java.util.List<SidecarContainersConfigEmptyDirDesc> emptyDirDesc; 
             private String envs; 
             private String imageUrl; 
+            private String liveness; 
             private Integer memory; 
             private String name; 
+            private String readiness; 
+            private java.util.List<SidecarContainersConfigSecretMountDesc> secretMountDesc; 
 
             private Builder() {
             } 
@@ -1708,8 +1873,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.emptyDirDesc = model.emptyDirDesc;
                 this.envs = model.envs;
                 this.imageUrl = model.imageUrl;
+                this.liveness = model.liveness;
                 this.memory = model.memory;
                 this.name = model.name;
+                this.readiness = model.readiness;
+                this.secretMountDesc = model.secretMountDesc;
             } 
 
             /**
@@ -1830,6 +1998,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
+             * Liveness.
+             */
+            public Builder liveness(String liveness) {
+                this.liveness = liveness;
+                return this;
+            }
+
+            /**
              * <p>Set the memory limit of the primary container that can be used by Sidecar container.</p>
              * 
              * <strong>example:</strong>
@@ -1848,6 +2024,22 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Readiness.
+             */
+            public Builder readiness(String readiness) {
+                this.readiness = readiness;
+                return this;
+            }
+
+            /**
+             * SecretMountDesc.
+             */
+            public Builder secretMountDesc(java.util.List<SidecarContainersConfigSecretMountDesc> secretMountDesc) {
+                this.secretMountDesc = secretMountDesc;
                 return this;
             }
 

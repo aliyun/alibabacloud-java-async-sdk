@@ -41,11 +41,20 @@ public class SidecarContainerConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
+    @com.aliyun.core.annotation.NameInMap("Liveness")
+    private String liveness;
+
     @com.aliyun.core.annotation.NameInMap("Memory")
     private Integer memory;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
+
+    @com.aliyun.core.annotation.NameInMap("Readiness")
+    private String readiness;
+
+    @com.aliyun.core.annotation.NameInMap("SecretMountDesc")
+    private String secretMountDesc;
 
     private SidecarContainerConfig(Builder builder) {
         this.acrInstanceId = builder.acrInstanceId;
@@ -56,8 +65,11 @@ public class SidecarContainerConfig extends TeaModel {
         this.emptyDirDesc = builder.emptyDirDesc;
         this.envs = builder.envs;
         this.imageUrl = builder.imageUrl;
+        this.liveness = builder.liveness;
         this.memory = builder.memory;
         this.name = builder.name;
+        this.readiness = builder.readiness;
+        this.secretMountDesc = builder.secretMountDesc;
     }
 
     public static Builder builder() {
@@ -129,6 +141,13 @@ public class SidecarContainerConfig extends TeaModel {
     }
 
     /**
+     * @return liveness
+     */
+    public String getLiveness() {
+        return this.liveness;
+    }
+
+    /**
      * @return memory
      */
     public Integer getMemory() {
@@ -142,6 +161,20 @@ public class SidecarContainerConfig extends TeaModel {
         return this.name;
     }
 
+    /**
+     * @return readiness
+     */
+    public String getReadiness() {
+        return this.readiness;
+    }
+
+    /**
+     * @return secretMountDesc
+     */
+    public String getSecretMountDesc() {
+        return this.secretMountDesc;
+    }
+
     public static final class Builder {
         private String acrInstanceId; 
         private String command; 
@@ -151,8 +184,11 @@ public class SidecarContainerConfig extends TeaModel {
         private String emptyDirDesc; 
         private String envs; 
         private String imageUrl; 
+        private String liveness; 
         private Integer memory; 
         private String name; 
+        private String readiness; 
+        private String secretMountDesc; 
 
         private Builder() {
         } 
@@ -166,8 +202,11 @@ public class SidecarContainerConfig extends TeaModel {
             this.emptyDirDesc = model.emptyDirDesc;
             this.envs = model.envs;
             this.imageUrl = model.imageUrl;
+            this.liveness = model.liveness;
             this.memory = model.memory;
             this.name = model.name;
+            this.readiness = model.readiness;
+            this.secretMountDesc = model.secretMountDesc;
         } 
 
         /**
@@ -235,6 +274,14 @@ public class SidecarContainerConfig extends TeaModel {
         }
 
         /**
+         * Liveness.
+         */
+        public Builder liveness(String liveness) {
+            this.liveness = liveness;
+            return this;
+        }
+
+        /**
          * Memory.
          */
         public Builder memory(Integer memory) {
@@ -247,6 +294,22 @@ public class SidecarContainerConfig extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * Readiness.
+         */
+        public Builder readiness(String readiness) {
+            this.readiness = readiness;
+            return this;
+        }
+
+        /**
+         * SecretMountDesc.
+         */
+        public Builder secretMountDesc(String secretMountDesc) {
+            this.secretMountDesc = secretMountDesc;
             return this;
         }
 
