@@ -814,6 +814,9 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
 
+        @com.aliyun.core.annotation.NameInMap("PromotionId")
+        private String promotionId;
+
         @com.aliyun.core.annotation.NameInMap("VisibleType")
         private String visibleType;
 
@@ -829,6 +832,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.payType = builder.payType;
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
+            this.promotionId = builder.promotionId;
             this.visibleType = builder.visibleType;
         }
 
@@ -918,6 +922,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
+         * @return promotionId
+         */
+        public String getPromotionId() {
+            return this.promotionId;
+        }
+
+        /**
          * @return visibleType
          */
         public String getVisibleType() {
@@ -936,6 +947,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             private String payType; 
             private Integer period; 
             private String periodUnit; 
+            private String promotionId; 
             private String visibleType; 
 
             private Builder() {
@@ -953,6 +965,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
                 this.payType = model.payType;
                 this.period = model.period;
                 this.periodUnit = model.periodUnit;
+                this.promotionId = model.promotionId;
                 this.visibleType = model.visibleType;
             } 
 
@@ -1069,6 +1082,14 @@ public class CreateAndroidInstanceGroupRequest extends Request {
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
+                return this;
+            }
+
+            /**
+             * PromotionId.
+             */
+            public Builder promotionId(String promotionId) {
+                this.promotionId = promotionId;
                 return this;
             }
 
