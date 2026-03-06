@@ -35,6 +35,9 @@ public class QuotaDetails extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DesiredMinQuota")
     private ResourceAmount desiredMinQuota;
 
+    @com.aliyun.core.annotation.NameInMap("NodeStatistics")
+    private QuotaNodeStatistics nodeStatistics;
+
     @com.aliyun.core.annotation.NameInMap("RequestedQuota")
     private ResourceAmount requestedQuota;
 
@@ -57,6 +60,7 @@ public class QuotaDetails extends TeaModel {
         this.ancestorsAllocatedQuota = builder.ancestorsAllocatedQuota;
         this.descendantsAllocatedQuota = builder.descendantsAllocatedQuota;
         this.desiredMinQuota = builder.desiredMinQuota;
+        this.nodeStatistics = builder.nodeStatistics;
         this.requestedQuota = builder.requestedQuota;
         this.selfAllocatedQuota = builder.selfAllocatedQuota;
         this.selfSubmittedQuota = builder.selfSubmittedQuota;
@@ -119,6 +123,13 @@ public class QuotaDetails extends TeaModel {
     }
 
     /**
+     * @return nodeStatistics
+     */
+    public QuotaNodeStatistics getNodeStatistics() {
+        return this.nodeStatistics;
+    }
+
+    /**
      * @return requestedQuota
      */
     public ResourceAmount getRequestedQuota() {
@@ -160,6 +171,7 @@ public class QuotaDetails extends TeaModel {
         private ResourceAmount ancestorsAllocatedQuota; 
         private ResourceAmount descendantsAllocatedQuota; 
         private ResourceAmount desiredMinQuota; 
+        private QuotaNodeStatistics nodeStatistics; 
         private ResourceAmount requestedQuota; 
         private ResourceAmount selfAllocatedQuota; 
         private ResourceAmount selfSubmittedQuota; 
@@ -176,6 +188,7 @@ public class QuotaDetails extends TeaModel {
             this.ancestorsAllocatedQuota = model.ancestorsAllocatedQuota;
             this.descendantsAllocatedQuota = model.descendantsAllocatedQuota;
             this.desiredMinQuota = model.desiredMinQuota;
+            this.nodeStatistics = model.nodeStatistics;
             this.requestedQuota = model.requestedQuota;
             this.selfAllocatedQuota = model.selfAllocatedQuota;
             this.selfSubmittedQuota = model.selfSubmittedQuota;
@@ -228,6 +241,14 @@ public class QuotaDetails extends TeaModel {
          */
         public Builder desiredMinQuota(ResourceAmount desiredMinQuota) {
             this.desiredMinQuota = desiredMinQuota;
+            return this;
+        }
+
+        /**
+         * NodeStatistics.
+         */
+        public Builder nodeStatistics(QuotaNodeStatistics nodeStatistics) {
+            this.nodeStatistics = nodeStatistics;
             return this;
         }
 
