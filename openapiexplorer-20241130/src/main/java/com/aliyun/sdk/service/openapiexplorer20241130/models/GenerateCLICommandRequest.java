@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenerateCLICommandRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("aggregatePagination")
+    private Boolean aggregatePagination;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("api")
     @com.aliyun.core.annotation.Validation(required = true)
     private String api;
@@ -47,6 +51,7 @@ public class GenerateCLICommandRequest extends Request {
 
     private GenerateCLICommandRequest(Builder builder) {
         super(builder);
+        this.aggregatePagination = builder.aggregatePagination;
         this.api = builder.api;
         this.apiParams = builder.apiParams;
         this.apiVersion = builder.apiVersion;
@@ -66,6 +71,13 @@ public class GenerateCLICommandRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aggregatePagination
+     */
+    public Boolean getAggregatePagination() {
+        return this.aggregatePagination;
     }
 
     /**
@@ -111,6 +123,7 @@ public class GenerateCLICommandRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateCLICommandRequest, Builder> {
+        private Boolean aggregatePagination; 
         private String api; 
         private java.util.Map<String, ?> apiParams; 
         private String apiVersion; 
@@ -124,6 +137,7 @@ public class GenerateCLICommandRequest extends Request {
 
         private Builder(GenerateCLICommandRequest request) {
             super(request);
+            this.aggregatePagination = request.aggregatePagination;
             this.api = request.api;
             this.apiParams = request.apiParams;
             this.apiVersion = request.apiVersion;
@@ -131,6 +145,15 @@ public class GenerateCLICommandRequest extends Request {
             this.product = request.product;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * aggregatePagination.
+         */
+        public Builder aggregatePagination(Boolean aggregatePagination) {
+            this.putBodyParameter("aggregatePagination", aggregatePagination);
+            this.aggregatePagination = aggregatePagination;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

@@ -20,8 +20,12 @@ public class GenerateCLICommandResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("cli")
     private String cli;
 
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
     private GenerateCLICommandResponseBody(Builder builder) {
         this.cli = builder.cli;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -43,14 +47,23 @@ public class GenerateCLICommandResponseBody extends TeaModel {
         return this.cli;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
         private String cli; 
+        private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(GenerateCLICommandResponseBody model) {
             this.cli = model.cli;
+            this.requestId = model.requestId;
         } 
 
         /**
@@ -58,6 +71,14 @@ public class GenerateCLICommandResponseBody extends TeaModel {
          */
         public Builder cli(String cli) {
             this.cli = cli;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
