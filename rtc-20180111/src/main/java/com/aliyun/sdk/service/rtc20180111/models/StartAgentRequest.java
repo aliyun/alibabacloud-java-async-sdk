@@ -856,6 +856,9 @@ public class StartAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
+        @com.aliyun.core.annotation.NameInMap("BizParams")
+        private Object bizParams;
+
         @com.aliyun.core.annotation.NameInMap("HistoryDepth")
         private Integer historyDepth;
 
@@ -892,6 +895,7 @@ public class StartAgentRequest extends Request {
         private LLMConfig(Builder builder) {
             this.apiKey = builder.apiKey;
             this.appId = builder.appId;
+            this.bizParams = builder.bizParams;
             this.historyDepth = builder.historyDepth;
             this.maxToken = builder.maxToken;
             this.model = builder.model;
@@ -925,6 +929,13 @@ public class StartAgentRequest extends Request {
          */
         public String getAppId() {
             return this.appId;
+        }
+
+        /**
+         * @return bizParams
+         */
+        public Object getBizParams() {
+            return this.bizParams;
         }
 
         /**
@@ -1007,6 +1018,7 @@ public class StartAgentRequest extends Request {
         public static final class Builder {
             private String apiKey; 
             private String appId; 
+            private Object bizParams; 
             private Integer historyDepth; 
             private Integer maxToken; 
             private String model; 
@@ -1025,6 +1037,7 @@ public class StartAgentRequest extends Request {
             private Builder(LLMConfig model) {
                 this.apiKey = model.apiKey;
                 this.appId = model.appId;
+                this.bizParams = model.bizParams;
                 this.historyDepth = model.historyDepth;
                 this.maxToken = model.maxToken;
                 this.model = model.model;
@@ -1054,6 +1067,14 @@ public class StartAgentRequest extends Request {
              */
             public Builder appId(String appId) {
                 this.appId = appId;
+                return this;
+            }
+
+            /**
+             * BizParams.
+             */
+            public Builder bizParams(Object bizParams) {
+                this.bizParams = bizParams;
                 return this;
             }
 
@@ -1375,6 +1396,9 @@ public class StartAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ChatMode")
         private Integer chatMode;
 
+        @com.aliyun.core.annotation.NameInMap("EnableVideoUnderstanding")
+        private Boolean enableVideoUnderstanding;
+
         @com.aliyun.core.annotation.NameInMap("Greeting")
         private String greeting;
 
@@ -1390,17 +1414,22 @@ public class StartAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("TTSConfig")
         private TTSConfig TTSConfig;
 
+        @com.aliyun.core.annotation.NameInMap("preferVideo")
+        private Integer preferVideo;
+
         private VoiceChatConfig(Builder builder) {
             this.ASRConfig = builder.ASRConfig;
             this.agentSilenceConfig = builder.agentSilenceConfig;
             this.ambientSoundConfig = builder.ambientSoundConfig;
             this.backChannelConfig = builder.backChannelConfig;
             this.chatMode = builder.chatMode;
+            this.enableVideoUnderstanding = builder.enableVideoUnderstanding;
             this.greeting = builder.greeting;
             this.interruptConfig = builder.interruptConfig;
             this.interruptMode = builder.interruptMode;
             this.LLMConfig = builder.LLMConfig;
             this.TTSConfig = builder.TTSConfig;
+            this.preferVideo = builder.preferVideo;
         }
 
         public static Builder builder() {
@@ -1447,6 +1476,13 @@ public class StartAgentRequest extends Request {
         }
 
         /**
+         * @return enableVideoUnderstanding
+         */
+        public Boolean getEnableVideoUnderstanding() {
+            return this.enableVideoUnderstanding;
+        }
+
+        /**
          * @return greeting
          */
         public String getGreeting() {
@@ -1481,17 +1517,26 @@ public class StartAgentRequest extends Request {
             return this.TTSConfig;
         }
 
+        /**
+         * @return preferVideo
+         */
+        public Integer getPreferVideo() {
+            return this.preferVideo;
+        }
+
         public static final class Builder {
             private ASRConfig ASRConfig; 
             private AgentSilenceConfig agentSilenceConfig; 
             private AmbientSoundConfig ambientSoundConfig; 
             private BackChannelConfig backChannelConfig; 
             private Integer chatMode; 
+            private Boolean enableVideoUnderstanding; 
             private String greeting; 
             private InterruptConfig interruptConfig; 
             private Integer interruptMode; 
             private LLMConfig LLMConfig; 
             private TTSConfig TTSConfig; 
+            private Integer preferVideo; 
 
             private Builder() {
             } 
@@ -1502,11 +1547,13 @@ public class StartAgentRequest extends Request {
                 this.ambientSoundConfig = model.ambientSoundConfig;
                 this.backChannelConfig = model.backChannelConfig;
                 this.chatMode = model.chatMode;
+                this.enableVideoUnderstanding = model.enableVideoUnderstanding;
                 this.greeting = model.greeting;
                 this.interruptConfig = model.interruptConfig;
                 this.interruptMode = model.interruptMode;
                 this.LLMConfig = model.LLMConfig;
                 this.TTSConfig = model.TTSConfig;
+                this.preferVideo = model.preferVideo;
             } 
 
             /**
@@ -1550,6 +1597,14 @@ public class StartAgentRequest extends Request {
             }
 
             /**
+             * EnableVideoUnderstanding.
+             */
+            public Builder enableVideoUnderstanding(Boolean enableVideoUnderstanding) {
+                this.enableVideoUnderstanding = enableVideoUnderstanding;
+                return this;
+            }
+
+            /**
              * Greeting.
              */
             public Builder greeting(String greeting) {
@@ -1586,6 +1641,14 @@ public class StartAgentRequest extends Request {
              */
             public Builder TTSConfig(TTSConfig TTSConfig) {
                 this.TTSConfig = TTSConfig;
+                return this;
+            }
+
+            /**
+             * preferVideo.
+             */
+            public Builder preferVideo(Integer preferVideo) {
+                this.preferVideo = preferVideo;
                 return this;
             }
 

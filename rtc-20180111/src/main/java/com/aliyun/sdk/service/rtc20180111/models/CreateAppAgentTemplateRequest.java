@@ -43,6 +43,10 @@ public class CreateAppAgentTemplateRequest extends Request {
     private Integer chatMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableVideoUnderstanding")
+    private Boolean enableVideoUnderstanding;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Greeting")
     private String greeting;
 
@@ -64,6 +68,10 @@ public class CreateAppAgentTemplateRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferVideo")
+    private Integer preferVideo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TtsConfig")
     private TtsConfig ttsConfig;
 
@@ -79,11 +87,13 @@ public class CreateAppAgentTemplateRequest extends Request {
         this.asrConfig = builder.asrConfig;
         this.backChannelConfig = builder.backChannelConfig;
         this.chatMode = builder.chatMode;
+        this.enableVideoUnderstanding = builder.enableVideoUnderstanding;
         this.greeting = builder.greeting;
         this.interruptConfig = builder.interruptConfig;
         this.interruptMode = builder.interruptMode;
         this.llmConfig = builder.llmConfig;
         this.name = builder.name;
+        this.preferVideo = builder.preferVideo;
         this.ttsConfig = builder.ttsConfig;
         this.type = builder.type;
     }
@@ -144,6 +154,13 @@ public class CreateAppAgentTemplateRequest extends Request {
     }
 
     /**
+     * @return enableVideoUnderstanding
+     */
+    public Boolean getEnableVideoUnderstanding() {
+        return this.enableVideoUnderstanding;
+    }
+
+    /**
      * @return greeting
      */
     public String getGreeting() {
@@ -179,6 +196,13 @@ public class CreateAppAgentTemplateRequest extends Request {
     }
 
     /**
+     * @return preferVideo
+     */
+    public Integer getPreferVideo() {
+        return this.preferVideo;
+    }
+
+    /**
      * @return ttsConfig
      */
     public TtsConfig getTtsConfig() {
@@ -199,11 +223,13 @@ public class CreateAppAgentTemplateRequest extends Request {
         private AsrConfig asrConfig; 
         private BackChannelConfig backChannelConfig; 
         private Integer chatMode; 
+        private Boolean enableVideoUnderstanding; 
         private String greeting; 
         private InterruptConfig interruptConfig; 
         private Integer interruptMode; 
         private LlmConfig llmConfig; 
         private String name; 
+        private Integer preferVideo; 
         private TtsConfig ttsConfig; 
         private Integer type; 
 
@@ -219,11 +245,13 @@ public class CreateAppAgentTemplateRequest extends Request {
             this.asrConfig = request.asrConfig;
             this.backChannelConfig = request.backChannelConfig;
             this.chatMode = request.chatMode;
+            this.enableVideoUnderstanding = request.enableVideoUnderstanding;
             this.greeting = request.greeting;
             this.interruptConfig = request.interruptConfig;
             this.interruptMode = request.interruptMode;
             this.llmConfig = request.llmConfig;
             this.name = request.name;
+            this.preferVideo = request.preferVideo;
             this.ttsConfig = request.ttsConfig;
             this.type = request.type;
         } 
@@ -290,6 +318,15 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
+         * EnableVideoUnderstanding.
+         */
+        public Builder enableVideoUnderstanding(Boolean enableVideoUnderstanding) {
+            this.putQueryParameter("EnableVideoUnderstanding", enableVideoUnderstanding);
+            this.enableVideoUnderstanding = enableVideoUnderstanding;
+            return this;
+        }
+
+        /**
          * Greeting.
          */
         public Builder greeting(String greeting) {
@@ -336,6 +373,15 @@ public class CreateAppAgentTemplateRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * PreferVideo.
+         */
+        public Builder preferVideo(Integer preferVideo) {
+            this.putQueryParameter("PreferVideo", preferVideo);
+            this.preferVideo = preferVideo;
             return this;
         }
 

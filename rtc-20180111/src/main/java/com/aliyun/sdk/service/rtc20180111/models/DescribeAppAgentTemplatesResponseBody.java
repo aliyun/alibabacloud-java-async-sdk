@@ -1232,6 +1232,9 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("EnableVideoUnderstanding")
+        private Boolean enableVideoUnderstanding;
+
         @com.aliyun.core.annotation.NameInMap("Greeting")
         private String greeting;
 
@@ -1250,6 +1253,9 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("PreferVideo")
+        private Integer preferVideo;
+
         @com.aliyun.core.annotation.NameInMap("TtsConfig")
         private TtsConfig ttsConfig;
 
@@ -1263,12 +1269,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
             this.backChannelConfig = builder.backChannelConfig;
             this.chatMode = builder.chatMode;
             this.createTime = builder.createTime;
+            this.enableVideoUnderstanding = builder.enableVideoUnderstanding;
             this.greeting = builder.greeting;
             this.id = builder.id;
             this.interruptConfig = builder.interruptConfig;
             this.interruptMode = builder.interruptMode;
             this.llmConfig = builder.llmConfig;
             this.name = builder.name;
+            this.preferVideo = builder.preferVideo;
             this.ttsConfig = builder.ttsConfig;
             this.type = builder.type;
         }
@@ -1324,6 +1332,13 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableVideoUnderstanding
+         */
+        public Boolean getEnableVideoUnderstanding() {
+            return this.enableVideoUnderstanding;
+        }
+
+        /**
          * @return greeting
          */
         public String getGreeting() {
@@ -1366,6 +1381,13 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return preferVideo
+         */
+        public Integer getPreferVideo() {
+            return this.preferVideo;
+        }
+
+        /**
          * @return ttsConfig
          */
         public TtsConfig getTtsConfig() {
@@ -1386,12 +1408,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
             private BackChannelConfig backChannelConfig; 
             private Integer chatMode; 
             private String createTime; 
+            private Boolean enableVideoUnderstanding; 
             private String greeting; 
             private String id; 
             private InterruptConfig interruptConfig; 
             private Integer interruptMode; 
             private LlmConfig llmConfig; 
             private String name; 
+            private Integer preferVideo; 
             private TtsConfig ttsConfig; 
             private Integer type; 
 
@@ -1405,12 +1429,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
                 this.backChannelConfig = model.backChannelConfig;
                 this.chatMode = model.chatMode;
                 this.createTime = model.createTime;
+                this.enableVideoUnderstanding = model.enableVideoUnderstanding;
                 this.greeting = model.greeting;
                 this.id = model.id;
                 this.interruptConfig = model.interruptConfig;
                 this.interruptMode = model.interruptMode;
                 this.llmConfig = model.llmConfig;
                 this.name = model.name;
+                this.preferVideo = model.preferVideo;
                 this.ttsConfig = model.ttsConfig;
                 this.type = model.type;
             } 
@@ -1464,6 +1490,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
             }
 
             /**
+             * EnableVideoUnderstanding.
+             */
+            public Builder enableVideoUnderstanding(Boolean enableVideoUnderstanding) {
+                this.enableVideoUnderstanding = enableVideoUnderstanding;
+                return this;
+            }
+
+            /**
              * Greeting.
              */
             public Builder greeting(String greeting) {
@@ -1508,6 +1542,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * PreferVideo.
+             */
+            public Builder preferVideo(Integer preferVideo) {
+                this.preferVideo = preferVideo;
                 return this;
             }
 
