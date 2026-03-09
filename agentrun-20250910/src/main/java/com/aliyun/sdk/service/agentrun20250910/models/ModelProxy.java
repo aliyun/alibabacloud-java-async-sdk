@@ -77,6 +77,9 @@ public class ModelProxy extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("statusReason")
     private String statusReason;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private ModelProxy(Builder builder) {
         this.cpu = builder.cpu;
         this.createdAt = builder.createdAt;
@@ -98,6 +101,7 @@ public class ModelProxy extends TeaModel {
         this.serviceRegionId = builder.serviceRegionId;
         this.status = builder.status;
         this.statusReason = builder.statusReason;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -252,6 +256,13 @@ public class ModelProxy extends TeaModel {
         return this.statusReason;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private Float cpu; 
         private String createdAt; 
@@ -273,6 +284,7 @@ public class ModelProxy extends TeaModel {
         private String serviceRegionId; 
         private String status; 
         private String statusReason; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -298,6 +310,7 @@ public class ModelProxy extends TeaModel {
             this.serviceRegionId = model.serviceRegionId;
             this.status = model.status;
             this.statusReason = model.statusReason;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -457,6 +470,14 @@ public class ModelProxy extends TeaModel {
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

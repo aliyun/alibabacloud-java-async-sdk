@@ -38,6 +38,9 @@ public class UpdateModelProxyInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("proxyConfig")
     private ProxyConfig proxyConfig;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private UpdateModelProxyInput(Builder builder) {
         this.armsConfiguration = builder.armsConfiguration;
         this.credentialName = builder.credentialName;
@@ -46,6 +49,7 @@ public class UpdateModelProxyInput extends TeaModel {
         this.logConfiguration = builder.logConfiguration;
         this.networkConfiguration = builder.networkConfiguration;
         this.proxyConfig = builder.proxyConfig;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -109,6 +113,13 @@ public class UpdateModelProxyInput extends TeaModel {
         return this.proxyConfig;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private ArmsConfiguration armsConfiguration; 
         private String credentialName; 
@@ -117,6 +128,7 @@ public class UpdateModelProxyInput extends TeaModel {
         private LogConfiguration logConfiguration; 
         private NetworkConfiguration networkConfiguration; 
         private ProxyConfig proxyConfig; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -129,6 +141,7 @@ public class UpdateModelProxyInput extends TeaModel {
             this.logConfiguration = model.logConfiguration;
             this.networkConfiguration = model.networkConfiguration;
             this.proxyConfig = model.proxyConfig;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -184,6 +197,14 @@ public class UpdateModelProxyInput extends TeaModel {
          */
         public Builder proxyConfig(ProxyConfig proxyConfig) {
             this.proxyConfig = proxyConfig;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

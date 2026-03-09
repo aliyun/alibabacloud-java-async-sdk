@@ -33,12 +33,17 @@ public class ListModelProxiesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private ListModelProxiesRequest(Builder builder) {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.proxyMode = builder.proxyMode;
         this.status = builder.status;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class ListModelProxiesRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListModelProxiesRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String proxyMode; 
         private String status; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class ListModelProxiesRequest extends Request {
             this.pageSize = request.pageSize;
             this.proxyMode = request.proxyMode;
             this.status = request.status;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -136,6 +150,15 @@ public class ListModelProxiesRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("workspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

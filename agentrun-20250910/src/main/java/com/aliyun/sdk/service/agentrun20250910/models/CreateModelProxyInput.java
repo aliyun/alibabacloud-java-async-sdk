@@ -64,6 +64,9 @@ public class CreateModelProxyInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("serviceRegionId")
     private String serviceRegionId;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private CreateModelProxyInput(Builder builder) {
         this.armsConfiguration = builder.armsConfiguration;
         this.cpu = builder.cpu;
@@ -79,6 +82,7 @@ public class CreateModelProxyInput extends TeaModel {
         this.proxyConfig = builder.proxyConfig;
         this.proxyMode = builder.proxyMode;
         this.serviceRegionId = builder.serviceRegionId;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -191,6 +195,13 @@ public class CreateModelProxyInput extends TeaModel {
         return this.serviceRegionId;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private ArmsConfiguration armsConfiguration; 
         private Float cpu; 
@@ -206,6 +217,7 @@ public class CreateModelProxyInput extends TeaModel {
         private ProxyConfig proxyConfig; 
         private String proxyMode; 
         private String serviceRegionId; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -225,6 +237,7 @@ public class CreateModelProxyInput extends TeaModel {
             this.proxyConfig = model.proxyConfig;
             this.proxyMode = model.proxyMode;
             this.serviceRegionId = model.serviceRegionId;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -336,6 +349,14 @@ public class CreateModelProxyInput extends TeaModel {
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.serviceRegionId = serviceRegionId;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 
