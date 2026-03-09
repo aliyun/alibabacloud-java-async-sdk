@@ -2952,6 +2952,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRCMetricListResponse> describeRCMetricList(DescribeRCMetricListRequest request);
 
     /**
+     * @param request the request parameters of DescribeRCNetworkInterfaces  DescribeRCNetworkInterfacesRequest
+     * @return DescribeRCNetworkInterfacesResponse
+     */
+    CompletableFuture<DescribeRCNetworkInterfacesResponse> describeRCNetworkInterfaces(DescribeRCNetworkInterfacesRequest request);
+
+    /**
      * @param request the request parameters of DescribeRCNodePool  DescribeRCNodePoolRequest
      * @return DescribeRCNodePoolResponse
      */

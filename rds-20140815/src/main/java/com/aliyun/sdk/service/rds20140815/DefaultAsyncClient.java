@@ -5526,6 +5526,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeRCNetworkInterfaces  DescribeRCNetworkInterfacesRequest
+     * @return DescribeRCNetworkInterfacesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRCNetworkInterfacesResponse> describeRCNetworkInterfaces(DescribeRCNetworkInterfacesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRCNetworkInterfaces").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRCNetworkInterfacesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRCNetworkInterfacesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeRCNodePool  DescribeRCNodePoolRequest
      * @return DescribeRCNodePoolResponse
      */
