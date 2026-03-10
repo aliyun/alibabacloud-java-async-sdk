@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class IndexJsonKey extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("chn")
-    private String chn;
+    private Boolean chn;
 
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
@@ -43,7 +43,7 @@ public class IndexJsonKey extends TeaModel {
     /**
      * @return chn
      */
-    public String getChn() {
+    public Boolean getChn() {
         return this.chn;
     }
 
@@ -55,7 +55,7 @@ public class IndexJsonKey extends TeaModel {
     }
 
     public static final class Builder {
-        private String chn; 
+        private Boolean chn; 
         private String type; 
 
         private Builder() {
@@ -69,7 +69,7 @@ public class IndexJsonKey extends TeaModel {
         /**
          * chn.
          */
-        public Builder chn(String chn) {
+        public Builder chn(Boolean chn) {
             this.chn = chn;
             return this;
         }

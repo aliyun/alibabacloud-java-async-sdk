@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddMemories  AddMemoriesRequest
+     * @return AddMemoriesResponse
+     */
+    CompletableFuture<AddMemoriesResponse> addMemories(AddMemoriesRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -96,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateIntegrationPolicyResponse
      */
     CompletableFuture<CreateIntegrationPolicyResponse> createIntegrationPolicy(CreateIntegrationPolicyRequest request);
+
+    /**
+     * @param request the request parameters of CreateMemoryStore  CreateMemoryStoreRequest
+     * @return CreateMemoryStoreResponse
+     */
+    CompletableFuture<CreateMemoryStoreResponse> createMemoryStore(CreateMemoryStoreRequest request);
 
     /**
      * @param request the request parameters of CreatePrometheusInstance  CreatePrometheusInstanceRequest
@@ -207,6 +219,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteIntegrationPolicyResponse
      */
     CompletableFuture<DeleteIntegrationPolicyResponse> deleteIntegrationPolicy(DeleteIntegrationPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMemories  DeleteMemoriesRequest
+     * @return DeleteMemoriesResponse
+     */
+    CompletableFuture<DeleteMemoriesResponse> deleteMemories(DeleteMemoriesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMemory  DeleteMemoryRequest
+     * @return DeleteMemoryResponse
+     */
+    CompletableFuture<DeleteMemoryResponse> deleteMemory(DeleteMemoryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMemoryStore  DeleteMemoryStoreRequest
+     * @return DeleteMemoryStoreResponse
+     */
+    CompletableFuture<DeleteMemoryStoreResponse> deleteMemoryStore(DeleteMemoryStoreRequest request);
 
     /**
      * <b>description</b> :
@@ -363,6 +393,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetIntegrationVersionForCSResponse
      */
     CompletableFuture<GetIntegrationVersionForCSResponse> getIntegrationVersionForCS(GetIntegrationVersionForCSRequest request);
+
+    /**
+     * @param request the request parameters of GetMemories  GetMemoriesRequest
+     * @return GetMemoriesResponse
+     */
+    CompletableFuture<GetMemoriesResponse> getMemories(GetMemoriesRequest request);
+
+    /**
+     * @param request the request parameters of GetMemory  GetMemoryRequest
+     * @return GetMemoryResponse
+     */
+    CompletableFuture<GetMemoryResponse> getMemory(GetMemoryRequest request);
+
+    /**
+     * @param request the request parameters of GetMemoryHistory  GetMemoryHistoryRequest
+     * @return GetMemoryHistoryResponse
+     */
+    CompletableFuture<GetMemoryHistoryResponse> getMemoryHistory(GetMemoryHistoryRequest request);
+
+    /**
+     * @param request the request parameters of GetMemoryStore  GetMemoryStoreRequest
+     * @return GetMemoryStoreResponse
+     */
+    CompletableFuture<GetMemoryStoreResponse> getMemoryStore(GetMemoryStoreRequest request);
 
     /**
      * <b>description</b> :
@@ -561,6 +615,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListIntegrationPolicyStorageRequirementsResponse> listIntegrationPolicyStorageRequirements(ListIntegrationPolicyStorageRequirementsRequest request);
 
     /**
+     * @param request the request parameters of ListMemoryStores  ListMemoryStoresRequest
+     * @return ListMemoryStoresResponse
+     */
+    CompletableFuture<ListMemoryStoresResponse> listMemoryStores(ListMemoryStoresRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Get the list of Prometheus instance dashboards.</p>
      * 
@@ -627,6 +687,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutWorkspaceResponse> putWorkspace(PutWorkspaceRequest request);
 
     /**
+     * @param request the request parameters of SearchMemories  SearchMemoriesRequest
+     * @return SearchMemoriesResponse
+     */
+    CompletableFuture<SearchMemoriesResponse> searchMemories(SearchMemoriesRequest request);
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -685,6 +751,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateIntegrationPolicyResponse
      */
     CompletableFuture<UpdateIntegrationPolicyResponse> updateIntegrationPolicy(UpdateIntegrationPolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMemory  UpdateMemoryRequest
+     * @return UpdateMemoryResponse
+     */
+    CompletableFuture<UpdateMemoryResponse> updateMemory(UpdateMemoryRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMemoryStore  UpdateMemoryStoreRequest
+     * @return UpdateMemoryStoreResponse
+     */
+    CompletableFuture<UpdateMemoryStoreResponse> updateMemoryStore(UpdateMemoryStoreRequest request);
 
     /**
      * @param request the request parameters of UpdateNotifyStrategy  UpdateNotifyStrategyRequest

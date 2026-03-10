@@ -33,12 +33,10 @@ public class UpdateDigitalEmployeeSkillRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
-    @com.aliyun.core.annotation.Validation(maxLength = 512)
     private String description;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("displayName")
-    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String displayName;
 
     @com.aliyun.core.annotation.Body
