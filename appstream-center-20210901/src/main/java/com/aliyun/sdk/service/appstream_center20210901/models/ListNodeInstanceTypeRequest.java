@@ -34,6 +34,10 @@ public class ListNodeInstanceTypeRequest extends Request {
     private Integer gpuMemory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeForModify")
+    private String instanceTypeForModify;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
@@ -52,6 +56,10 @@ public class ListNodeInstanceTypeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
+    private String orderType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OsType")
@@ -82,11 +90,13 @@ public class ListNodeInstanceTypeRequest extends Request {
         this.cpu = builder.cpu;
         this.gpu = builder.gpu;
         this.gpuMemory = builder.gpuMemory;
+        this.instanceTypeForModify = builder.instanceTypeForModify;
         this.language = builder.language;
         this.memory = builder.memory;
         this.nodeInstanceType = builder.nodeInstanceType;
         this.nodeInstanceTypeFamily = builder.nodeInstanceTypeFamily;
         this.orderBy = builder.orderBy;
+        this.orderType = builder.orderType;
         this.osType = builder.osType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -136,6 +146,13 @@ public class ListNodeInstanceTypeRequest extends Request {
     }
 
     /**
+     * @return instanceTypeForModify
+     */
+    public String getInstanceTypeForModify() {
+        return this.instanceTypeForModify;
+    }
+
+    /**
      * @return language
      */
     public String getLanguage() {
@@ -168,6 +185,13 @@ public class ListNodeInstanceTypeRequest extends Request {
      */
     public String getOrderBy() {
         return this.orderBy;
+    }
+
+    /**
+     * @return orderType
+     */
+    public String getOrderType() {
+        return this.orderType;
     }
 
     /**
@@ -210,11 +234,13 @@ public class ListNodeInstanceTypeRequest extends Request {
         private Float cpu; 
         private Float gpu; 
         private Integer gpuMemory; 
+        private String instanceTypeForModify; 
         private String language; 
         private Integer memory; 
         private String nodeInstanceType; 
         private String nodeInstanceTypeFamily; 
         private String orderBy; 
+        private String orderType; 
         private String osType; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -231,11 +257,13 @@ public class ListNodeInstanceTypeRequest extends Request {
             this.cpu = request.cpu;
             this.gpu = request.gpu;
             this.gpuMemory = request.gpuMemory;
+            this.instanceTypeForModify = request.instanceTypeForModify;
             this.language = request.language;
             this.memory = request.memory;
             this.nodeInstanceType = request.nodeInstanceType;
             this.nodeInstanceTypeFamily = request.nodeInstanceTypeFamily;
             this.orderBy = request.orderBy;
+            this.orderType = request.orderType;
             this.osType = request.osType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -284,6 +312,15 @@ public class ListNodeInstanceTypeRequest extends Request {
         public Builder gpuMemory(Integer gpuMemory) {
             this.putQueryParameter("GpuMemory", gpuMemory);
             this.gpuMemory = gpuMemory;
+            return this;
+        }
+
+        /**
+         * InstanceTypeForModify.
+         */
+        public Builder instanceTypeForModify(String instanceTypeForModify) {
+            this.putQueryParameter("InstanceTypeForModify", instanceTypeForModify);
+            this.instanceTypeForModify = instanceTypeForModify;
             return this;
         }
 
@@ -340,6 +377,15 @@ public class ListNodeInstanceTypeRequest extends Request {
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
             this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+         * OrderType.
+         */
+        public Builder orderType(String orderType) {
+            this.putQueryParameter("OrderType", orderType);
+            this.orderType = orderType;
             return this;
         }
 
