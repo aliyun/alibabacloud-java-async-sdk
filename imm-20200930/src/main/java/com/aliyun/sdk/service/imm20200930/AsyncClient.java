@@ -361,6 +361,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFileUncompressionTaskResponse> createFileUncompressionTask(CreateFileUncompressionTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateHighlightTask  CreateHighlightTaskRequest
+     * @return CreateHighlightTaskResponse
+     */
+    CompletableFuture<CreateHighlightTaskResponse> createHighlightTask(CreateHighlightTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
      *     **
