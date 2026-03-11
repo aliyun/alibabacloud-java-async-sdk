@@ -805,6 +805,9 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("LimitedBandwidth")
         private Integer limitedBandwidth;
 
+        @com.aliyun.core.annotation.NameInMap("PaidCallbackUrl")
+        private String paidCallbackUrl;
+
         @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
@@ -829,6 +832,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.ipRatio = builder.ipRatio;
             this.isp = builder.isp;
             this.limitedBandwidth = builder.limitedBandwidth;
+            this.paidCallbackUrl = builder.paidCallbackUrl;
             this.payType = builder.payType;
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
@@ -901,6 +905,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
+         * @return paidCallbackUrl
+         */
+        public String getPaidCallbackUrl() {
+            return this.paidCallbackUrl;
+        }
+
+        /**
          * @return payType
          */
         public String getPayType() {
@@ -944,6 +955,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             private Integer ipRatio; 
             private String isp; 
             private Integer limitedBandwidth; 
+            private String paidCallbackUrl; 
             private String payType; 
             private Integer period; 
             private String periodUnit; 
@@ -962,6 +974,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
                 this.ipRatio = model.ipRatio;
                 this.isp = model.isp;
                 this.limitedBandwidth = model.limitedBandwidth;
+                this.paidCallbackUrl = model.paidCallbackUrl;
                 this.payType = model.payType;
                 this.period = model.period;
                 this.periodUnit = model.periodUnit;
@@ -1046,6 +1059,14 @@ public class CreateAndroidInstanceGroupRequest extends Request {
              */
             public Builder limitedBandwidth(Integer limitedBandwidth) {
                 this.limitedBandwidth = limitedBandwidth;
+                return this;
+            }
+
+            /**
+             * PaidCallbackUrl.
+             */
+            public Builder paidCallbackUrl(String paidCallbackUrl) {
+                this.paidCallbackUrl = paidCallbackUrl;
                 return this;
             }
 
