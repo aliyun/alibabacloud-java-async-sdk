@@ -23,6 +23,9 @@ public class CreateSandboxInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ossMountConfig")
     private OSSMountConfig ossMountConfig;
 
+    @com.aliyun.core.annotation.NameInMap("polarFsConfig")
+    private PolarFsConfig polarFsConfig;
+
     @com.aliyun.core.annotation.NameInMap("sandboxId")
     private String sandboxId;
 
@@ -42,6 +45,7 @@ public class CreateSandboxInput extends TeaModel {
     private CreateSandboxInput(Builder builder) {
         this.nasConfig = builder.nasConfig;
         this.ossMountConfig = builder.ossMountConfig;
+        this.polarFsConfig = builder.polarFsConfig;
         this.sandboxId = builder.sandboxId;
         this.sandboxIdleTimeoutInSeconds = builder.sandboxIdleTimeoutInSeconds;
         this.sandboxIdleTimeoutSeconds = builder.sandboxIdleTimeoutSeconds;
@@ -75,6 +79,13 @@ public class CreateSandboxInput extends TeaModel {
     }
 
     /**
+     * @return polarFsConfig
+     */
+    public PolarFsConfig getPolarFsConfig() {
+        return this.polarFsConfig;
+    }
+
+    /**
      * @return sandboxId
      */
     public String getSandboxId() {
@@ -105,6 +116,7 @@ public class CreateSandboxInput extends TeaModel {
     public static final class Builder {
         private NASConfig nasConfig; 
         private OSSMountConfig ossMountConfig; 
+        private PolarFsConfig polarFsConfig; 
         private String sandboxId; 
         private Integer sandboxIdleTimeoutInSeconds; 
         private Integer sandboxIdleTimeoutSeconds; 
@@ -116,6 +128,7 @@ public class CreateSandboxInput extends TeaModel {
         private Builder(CreateSandboxInput model) {
             this.nasConfig = model.nasConfig;
             this.ossMountConfig = model.ossMountConfig;
+            this.polarFsConfig = model.polarFsConfig;
             this.sandboxId = model.sandboxId;
             this.sandboxIdleTimeoutInSeconds = model.sandboxIdleTimeoutInSeconds;
             this.sandboxIdleTimeoutSeconds = model.sandboxIdleTimeoutSeconds;
@@ -135,6 +148,14 @@ public class CreateSandboxInput extends TeaModel {
          */
         public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
             this.ossMountConfig = ossMountConfig;
+            return this;
+        }
+
+        /**
+         * polarFsConfig.
+         */
+        public Builder polarFsConfig(PolarFsConfig polarFsConfig) {
+            this.polarFsConfig = polarFsConfig;
             return this;
         }
 
