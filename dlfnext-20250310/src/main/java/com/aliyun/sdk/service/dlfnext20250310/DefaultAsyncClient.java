@@ -778,6 +778,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetVpcConfig  GetVpcConfigRequest
+     * @return GetVpcConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetVpcConfigResponse> getVpcConfig(GetVpcConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetVpcConfig").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/auth/vpc").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetVpcConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetVpcConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GrantRoleToUsers  GrantRoleToUsersRequest
      * @return GrantRoleToUsersResponse
      */
