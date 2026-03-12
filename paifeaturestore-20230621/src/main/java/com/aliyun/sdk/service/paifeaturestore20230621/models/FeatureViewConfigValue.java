@@ -32,12 +32,16 @@ public class FeatureViewConfigValue extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Snapshot")
     private Snapshot snapshot;
 
+    @com.aliyun.core.annotation.NameInMap("SecondJoinKey")
+    private String secondJoinKey;
+
     private FeatureViewConfigValue(Builder builder) {
         this.partitions = builder.partitions;
         this.eventTime = builder.eventTime;
         this.equal = builder.equal;
         this.useMock = builder.useMock;
         this.snapshot = builder.snapshot;
+        this.secondJoinKey = builder.secondJoinKey;
     }
 
     public static Builder builder() {
@@ -87,12 +91,20 @@ public class FeatureViewConfigValue extends TeaModel {
         return this.snapshot;
     }
 
+    /**
+     * @return secondJoinKey
+     */
+    public String getSecondJoinKey() {
+        return this.secondJoinKey;
+    }
+
     public static final class Builder {
         private java.util.Map<String, FeatureViewConfigValuePartitionsValue> partitions; 
         private String eventTime; 
         private Boolean equal; 
         private Boolean useMock; 
         private Snapshot snapshot; 
+        private String secondJoinKey; 
 
         private Builder() {
         } 
@@ -103,6 +115,7 @@ public class FeatureViewConfigValue extends TeaModel {
             this.equal = model.equal;
             this.useMock = model.useMock;
             this.snapshot = model.snapshot;
+            this.secondJoinKey = model.secondJoinKey;
         } 
 
         /**
@@ -142,6 +155,14 @@ public class FeatureViewConfigValue extends TeaModel {
          */
         public Builder snapshot(Snapshot snapshot) {
             this.snapshot = snapshot;
+            return this;
+        }
+
+        /**
+         * SecondJoinKey.
+         */
+        public Builder secondJoinKey(String secondJoinKey) {
+            this.secondJoinKey = secondJoinKey;
             return this;
         }
 
