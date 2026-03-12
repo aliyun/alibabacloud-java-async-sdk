@@ -149,6 +149,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchGetMediaInfosResponse> batchGetMediaInfos(BatchGetMediaInfosRequest request);
 
     /**
+     * @param request the request parameters of BatchGetYikeAIAppJob  BatchGetYikeAIAppJobRequest
+     * @return BatchGetYikeAIAppJobResponse
+     */
+    CompletableFuture<BatchGetYikeAIAppJobResponse> batchGetYikeAIAppJob(BatchGetYikeAIAppJobRequest request);
+
+    /**
+     * @param request the request parameters of BatchGetYikeAssetMediaInfos  BatchGetYikeAssetMediaInfosRequest
+     * @return BatchGetYikeAssetMediaInfosResponse
+     */
+    CompletableFuture<BatchGetYikeAssetMediaInfosResponse> batchGetYikeAssetMediaInfos(BatchGetYikeAssetMediaInfosRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You can cancel a media fingerprint analysis job only if the job is in the Queuing state.</p>
      * <ul>
@@ -840,6 +852,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteVodPackagingGroupResponse
      */
     CompletableFuture<DeleteVodPackagingGroupResponse> deleteVodPackagingGroup(DeleteVodPackagingGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteYikeAssetMediaInfos  DeleteYikeAssetMediaInfosRequest
+     * @return DeleteYikeAssetMediaInfosResponse
+     */
+    CompletableFuture<DeleteYikeAssetMediaInfosResponse> deleteYikeAssetMediaInfos(DeleteYikeAssetMediaInfosRequest request);
 
     /**
      * <b>description</b> :

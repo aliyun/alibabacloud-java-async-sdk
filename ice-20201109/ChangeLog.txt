@@ -1,3 +1,6 @@
+2026-03-12 Version: 6.0.29
+- Generated java-async 2020-11-09 for ICE.
+
 2026-03-04 Version: 6.0.28
 - Generated java-async 2020-11-09 for ICE.
 
