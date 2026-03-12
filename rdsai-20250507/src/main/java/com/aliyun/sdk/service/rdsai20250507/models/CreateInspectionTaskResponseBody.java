@@ -93,7 +93,7 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Indicates whether the result is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +109,10 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +120,10 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +176,10 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The ID of the inspection task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9adf8567-b619-4d37-8ff2-01d38a76****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

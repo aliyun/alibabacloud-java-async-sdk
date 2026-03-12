@@ -80,7 +80,7 @@ public class ModifyScheduledTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The response message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -88,7 +88,10 @@ public class ModifyScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ModifyScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

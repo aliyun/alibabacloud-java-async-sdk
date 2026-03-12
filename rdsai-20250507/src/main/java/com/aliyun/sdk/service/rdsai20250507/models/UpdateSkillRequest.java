@@ -116,7 +116,7 @@ public class UpdateSkillRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>The content of the skill.</p>
          */
         public Builder content(java.util.Map<String, ?> content) {
             String contentShrink = shrink(content, "Content", "json");
@@ -126,7 +126,7 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * Dbtypes.
+         * <p>The list of database engines.</p>
          */
         public Builder dbtypes(java.util.List<String> dbtypes) {
             String dbtypesShrink = shrink(dbtypes, "Dbtypes", "json");
@@ -136,7 +136,7 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the Skill. It can be up to 1000 characters in length.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -145,7 +145,10 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the skill, which can contain only lowercase letters, numbers, and hyphens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql-optimization</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -154,6 +157,7 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

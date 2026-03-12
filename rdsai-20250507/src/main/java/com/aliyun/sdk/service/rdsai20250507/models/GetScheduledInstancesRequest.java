@@ -88,7 +88,10 @@ public class GetScheduledInstancesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -97,7 +100,10 @@ public class GetScheduledInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records on each page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -106,6 +112,7 @@ public class GetScheduledInstancesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the scheduled inspection configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

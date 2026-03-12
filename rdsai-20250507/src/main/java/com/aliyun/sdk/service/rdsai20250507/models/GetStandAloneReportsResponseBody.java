@@ -132,7 +132,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The response message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -140,7 +140,10 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -148,7 +151,10 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records on each page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -156,7 +162,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Reports.
+         * <p>The reports.</p>
          */
         public Builder reports(java.util.List<Reports> reports) {
             this.reports = reports;
@@ -164,7 +170,10 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +181,10 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +192,10 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -206,6 +221,9 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
+        @com.aliyun.core.annotation.NameInMap("ReportLanguage")
+        private String reportLanguage;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
@@ -218,6 +236,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         private Reports(Builder builder) {
             this.createdTime = builder.createdTime;
             this.endTime = builder.endTime;
+            this.reportLanguage = builder.reportLanguage;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.taskId = builder.taskId;
@@ -246,6 +265,13 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
 
         /**
+         * @return reportLanguage
+         */
+        public String getReportLanguage() {
+            return this.reportLanguage;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -269,6 +295,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public static final class Builder {
             private String createdTime; 
             private String endTime; 
+            private String reportLanguage; 
             private String startTime; 
             private String status; 
             private String taskId; 
@@ -279,13 +306,17 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             private Builder(Reports model) {
                 this.createdTime = model.createdTime;
                 this.endTime = model.endTime;
+                this.reportLanguage = model.reportLanguage;
                 this.startTime = model.startTime;
                 this.status = model.status;
                 this.taskId = model.taskId;
             } 
 
             /**
-             * CreatedTime.
+             * <p>The creation time of the inspection task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-22T08:20:31Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -293,7 +324,10 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the inspection. The time is in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-23T08:20:31Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -301,7 +335,18 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * ReportLanguage.
+             */
+            public Builder reportLanguage(String reportLanguage) {
+                this.reportLanguage = reportLanguage;
+                return this;
+            }
+
+            /**
+             * <p>The start time of the inspection. The time is in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-23T08:00:31Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -309,7 +354,10 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the inspection task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -317,7 +365,10 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the inspection report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0f19210c-7bb8-4e38-a099-f94152df****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

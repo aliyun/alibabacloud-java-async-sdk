@@ -132,7 +132,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The response message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -140,7 +140,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -148,7 +151,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -156,7 +162,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +173,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Schedules.
+         * <p>The list of scheduled inspection tasks.</p>
          */
         public Builder schedules(java.util.List<Schedules> schedules) {
             this.schedules = schedules;
@@ -172,7 +181,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +192,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -215,6 +230,9 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("ReportLanguage")
+        private String reportLanguage;
+
         @com.aliyun.core.annotation.NameInMap("ScheduledId")
         private String scheduledId;
 
@@ -230,6 +248,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             this.frequency = builder.frequency;
             this.instanceCount = builder.instanceCount;
             this.name = builder.name;
+            this.reportLanguage = builder.reportLanguage;
             this.scheduledId = builder.scheduledId;
             this.taskStartTime = builder.taskStartTime;
             this.timeRange = builder.timeRange;
@@ -279,6 +298,13 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return reportLanguage
+         */
+        public String getReportLanguage() {
+            return this.reportLanguage;
+        }
+
+        /**
          * @return scheduledId
          */
         public String getScheduledId() {
@@ -305,6 +331,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             private String frequency; 
             private Long instanceCount; 
             private String name; 
+            private String reportLanguage; 
             private String scheduledId; 
             private String taskStartTime; 
             private String timeRange; 
@@ -318,13 +345,17 @@ public class ListScheduledTasksResponseBody extends TeaModel {
                 this.frequency = model.frequency;
                 this.instanceCount = model.instanceCount;
                 this.name = model.name;
+                this.reportLanguage = model.reportLanguage;
                 this.scheduledId = model.scheduledId;
                 this.taskStartTime = model.taskStartTime;
                 this.timeRange = model.timeRange;
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-04T06:51:24Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -332,7 +363,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the inspection task.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -340,7 +371,21 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Frequency.
+             * <p>The new inspection frequency. Separate multiple values with commas (,). Default value: DAILY. Valid values:</p>
+             * <ul>
+             * <li>DAILY</li>
+             * <li>Monday</li>
+             * <li>Tuesday</li>
+             * <li>Wednesday</li>
+             * <li>Thursday</li>
+             * <li>Friday</li>
+             * <li>Saturday</li>
+             * <li>Sunday</li>
+             * </ul>
+             * <h3><a href="#daily--dailymonday--daily-"></a>Note: DAILY takes precedence over other values. For example, if you set this parameter to DAILY,Monday, the backend will use DAILY as the inspection frequency.</h3>
+             * 
+             * <strong>example:</strong>
+             * <p>Monday</p>
              */
             public Builder frequency(String frequency) {
                 this.frequency = frequency;
@@ -348,7 +393,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * <p>The number of instances covered by the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceCount(Long instanceCount) {
                 this.instanceCount = instanceCount;
@@ -356,7 +404,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the task.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -364,7 +412,18 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduledId.
+             * ReportLanguage.
+             */
+            public Builder reportLanguage(String reportLanguage) {
+                this.reportLanguage = reportLanguage;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the scheduled inspection configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9d246af2-a0cd-4f69-857d-3785048f****</p>
              */
             public Builder scheduledId(String scheduledId) {
                 this.scheduledId = scheduledId;
@@ -372,7 +431,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStartTime.
+             * <p>The actual start time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18:00:00Z</p>
              */
             public Builder taskStartTime(String taskStartTime) {
                 this.taskStartTime = taskStartTime;
@@ -380,7 +442,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TimeRange.
+             * <p>The inspection time range. The default value is the latest 24 hours. Valid values: 1 to 168. The maximum value is 7 days.</p>
              */
             public Builder timeRange(String timeRange) {
                 this.timeRange = timeRange;

@@ -132,7 +132,7 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Instances.
+         * <p>The list of instances included in the inspection configuration.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -140,7 +140,7 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -148,7 +148,10 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -156,7 +159,10 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records on each page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +170,10 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +181,10 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +192,10 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -285,7 +300,10 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * EngineType.
+             * <p>The engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -293,7 +311,7 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDesc.
+             * <p>The instance description.</p>
              */
             public Builder instanceDesc(String instanceDesc) {
                 this.instanceDesc = instanceDesc;
@@ -301,7 +319,10 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2zep6e5u6l2yu****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -309,7 +330,10 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -317,7 +341,10 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -87,7 +87,10 @@ public class ListScheduledTasksRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -96,7 +99,10 @@ public class ListScheduledTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records on each page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -105,7 +111,10 @@ public class ListScheduledTasksRequest extends Request {
         }
 
         /**
-         * ScheduledId.
+         * <p>The ID of the scheduled inspection configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>847268a4-196f-416b-aa12-bfe0c115****</p>
          */
         public Builder scheduledId(String scheduledId) {
             this.putQueryParameter("ScheduledId", scheduledId);

@@ -106,7 +106,7 @@ public class ListSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of skills.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListSkillResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListSkillResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListSkillResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListSkillResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -282,7 +294,7 @@ public class ListSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The content of the skill.</p>
              */
             public Builder content(java.util.Map<String, ?> content) {
                 this.content = content;
@@ -290,7 +302,10 @@ public class ListSkillResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The creation time of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-04T21:14:45Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -298,7 +313,7 @@ public class ListSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Dbtypes.
+             * <p>The list of database engines.</p>
              */
             public Builder dbtypes(java.util.List<String> dbtypes) {
                 this.dbtypes = dbtypes;
@@ -306,7 +321,7 @@ public class ListSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the skill.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -314,7 +329,10 @@ public class ListSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique identifier of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9a2ba261-7bb2-41a7-9c6e-1799fb5b****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -322,7 +340,10 @@ public class ListSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sql-review</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +351,10 @@ public class ListSkillResponseBody extends TeaModel {
             }
 
             /**
-             * SkillType.
+             * <p>The type of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder skillType(String skillType) {
                 this.skillType = skillType;
@@ -338,7 +362,10 @@ public class ListSkillResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAt.
+             * <p>The update time of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-04T21:14:45Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;

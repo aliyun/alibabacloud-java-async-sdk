@@ -60,6 +60,7 @@ public class DeleteSkillRequest extends Request {
         } 
 
         /**
+         * <p>The unique identifier of the skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

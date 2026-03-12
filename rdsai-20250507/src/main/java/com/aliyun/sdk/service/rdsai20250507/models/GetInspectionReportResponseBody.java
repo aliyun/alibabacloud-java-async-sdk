@@ -93,7 +93,7 @@ public class GetInspectionReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The details of the result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class GetInspectionReportResponseBody extends TeaModel {
         }
 
         /**
-         * MarkdownText.
+         * <p>The report text in the markdown format.</p>
          */
         public Builder markdownText(String markdownText) {
             this.markdownText = markdownText;
@@ -109,7 +109,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +120,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The inspection report ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9d246af2-a0cd-4f69-857d-3785048f****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -183,7 +189,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DBInstanceStatus</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -191,7 +200,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -284,7 +296,7 @@ public class GetInspectionReportResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The returned results.</p>
              */
             public Builder data(java.util.List<ItemsData> data) {
                 this.data = data;
@@ -292,7 +304,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The level of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -300,7 +315,7 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The response message.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -308,7 +323,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance_runningstatus</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -375,7 +393,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             } 
 
             /**
-             * Group.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance_info</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -383,7 +404,7 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>The items in the result.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -476,7 +497,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             } 
 
             /**
-             * Error.
+             * <p>The number of errors in the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder error(Long error) {
                 this.error = error;
@@ -484,7 +508,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * Failed.
+             * <p>The number of failures in the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder failed(Long failed) {
                 this.failed = failed;
@@ -492,7 +519,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * Normal.
+             * <p>The number of normal records in the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder normal(Long normal) {
                 this.normal = normal;
@@ -500,7 +530,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * Warning.
+             * <p>The number of warnings in the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder warning(Long warning) {
                 this.warning = warning;
@@ -658,7 +691,7 @@ public class GetInspectionReportResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The returned results.</p>
              */
             public Builder data(java.util.List<DataData> data) {
                 this.data = data;
@@ -666,7 +699,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the inspection. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-31T02:05:04Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -674,7 +710,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * <p>The engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -682,7 +721,7 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDesc.
+             * <p>The description of the instance.</p>
              */
             public Builder instanceDesc(String instanceDesc) {
                 this.instanceDesc = instanceDesc;
@@ -690,7 +729,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2zep6e5u6l2yu****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -698,7 +740,7 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * LevelSummary.
+             * <p>The hierarchical summary of the report.</p>
              */
             public Builder levelSummary(LevelSummary levelSummary) {
                 this.levelSummary = levelSummary;
@@ -706,7 +748,11 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * MarkdownText.
+             * <p>The report text in the markdown format.</p>
+             * <ul>
+             * <li>If the InstanceId parameter is not specified, all content of the inspection report is returned. However, the MarkdownText field is empty.</li>
+             * <li>If the InstanceId parameter is specified, the content related to the instance is returned in the MarkdownText field.</li>
+             * </ul>
              */
             public Builder markdownText(String markdownText) {
                 this.markdownText = markdownText;
@@ -714,7 +760,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -722,7 +771,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the inspection task. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-06T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

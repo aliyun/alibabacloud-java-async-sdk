@@ -104,7 +104,7 @@ public class CreateSkillRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>The content of the skill.</p>
          */
         public Builder content(java.util.Map<String, ?> content) {
             String contentShrink = shrink(content, "Content", "json");
@@ -114,6 +114,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
+         * <p>The list of database engines.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dbtypes(java.util.List<String> dbtypes) {
@@ -124,6 +125,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
+         * <p>The description of the skill. It can be up to 1000 characters in length.</p>
          * <p>This parameter is required.</p>
          */
         public Builder description(String description) {
@@ -133,6 +135,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
+         * <p>The name of the skill, which can contain only lowercase letters, numbers, and hyphens.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

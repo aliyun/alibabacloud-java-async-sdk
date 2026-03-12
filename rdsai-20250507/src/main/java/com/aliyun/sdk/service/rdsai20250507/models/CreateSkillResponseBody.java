@@ -145,7 +145,7 @@ public class CreateSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The database engine-specific content.</p>
          */
         public Builder content(java.util.Map<String, ?> content) {
             this.content = content;
@@ -153,7 +153,10 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedAt.
+         * <p>The creation time of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-02-04T21:14:45Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -161,7 +164,7 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Dbtypes.
+         * <p>The list of database engines.</p>
          */
         public Builder dbtypes(java.util.List<String> dbtypes) {
             this.dbtypes = dbtypes;
@@ -169,7 +172,7 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the skill.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -177,7 +180,10 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The unique identifier of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82cf3d62-0add-47bd-869f-877131f7****</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -185,7 +191,10 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query-optimization</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -193,7 +202,10 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +213,10 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * SkillType.
+         * <p>The type of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder skillType(String skillType) {
             this.skillType = skillType;

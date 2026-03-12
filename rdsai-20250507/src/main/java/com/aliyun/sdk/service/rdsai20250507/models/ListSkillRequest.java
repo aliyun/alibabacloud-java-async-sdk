@@ -87,7 +87,16 @@ public class ListSkillRequest extends Request {
         } 
 
         /**
-         * Language.
+         * <p>The languages supported by the skills.</p>
+         * <ul>
+         * <li>zh-CN: Simplified Chinese</li>
+         * <li>zh-TW: Traditional Chinese</li>
+         * <li>en-US: English</li>
+         * <li>ja-JP: Japanese</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -96,7 +105,10 @@ public class ListSkillRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -105,7 +117,10 @@ public class ListSkillRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records to return on each page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

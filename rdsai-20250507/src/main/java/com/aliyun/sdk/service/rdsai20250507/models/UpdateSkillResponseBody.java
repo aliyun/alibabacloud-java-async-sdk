@@ -145,7 +145,7 @@ public class UpdateSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The content of the skill.</p>
          */
         public Builder content(java.util.Map<String, ?> content) {
             this.content = content;
@@ -153,7 +153,7 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Dbtypes.
+         * <p>The list of database engines.</p>
          */
         public Builder dbtypes(java.util.List<String> dbtypes) {
             this.dbtypes = dbtypes;
@@ -161,7 +161,7 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the skill. It can be up to 1000 characters in length.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -169,7 +169,10 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The unique identifier of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -177,7 +180,10 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the skill, which can contain only lowercase letters, numbers, and hyphens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql-review</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -185,7 +191,10 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +202,10 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * SkillType.
+         * <p>The skill type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder skillType(String skillType) {
             this.skillType = skillType;
@@ -201,7 +213,10 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * UpdatedAt.
+         * <p>The update time of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-02-04T21:14:45Z</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;

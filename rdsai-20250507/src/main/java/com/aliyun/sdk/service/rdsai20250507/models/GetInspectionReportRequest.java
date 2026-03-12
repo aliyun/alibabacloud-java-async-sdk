@@ -74,7 +74,10 @@ public class GetInspectionReportRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The inspected instance. If you do not specify this parameter, the complete report is returned. If you specify this parameter, only the content related to the instance is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2zep6e5u6l2yu****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -83,6 +86,7 @@ public class GetInspectionReportRequest extends Request {
         }
 
         /**
+         * <p>The ID of the inspection report.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

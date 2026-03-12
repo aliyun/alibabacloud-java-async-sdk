@@ -132,7 +132,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The response message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -140,7 +140,10 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -148,7 +151,10 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of reports returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -156,7 +162,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Reports.
+         * <p>The details of the report.</p>
          */
         public Builder reports(java.util.List<Reports> reports) {
             this.reports = reports;
@@ -164,7 +170,10 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +181,10 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +192,10 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned reports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -206,6 +221,9 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
+        @com.aliyun.core.annotation.NameInMap("ReportLanguage")
+        private String reportLanguage;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
@@ -218,6 +236,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         private Reports(Builder builder) {
             this.createdTime = builder.createdTime;
             this.endTime = builder.endTime;
+            this.reportLanguage = builder.reportLanguage;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.taskId = builder.taskId;
@@ -246,6 +265,13 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
 
         /**
+         * @return reportLanguage
+         */
+        public String getReportLanguage() {
+            return this.reportLanguage;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -269,6 +295,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         public static final class Builder {
             private String createdTime; 
             private String endTime; 
+            private String reportLanguage; 
             private String startTime; 
             private String status; 
             private String taskId; 
@@ -279,13 +306,17 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             private Builder(Reports model) {
                 this.createdTime = model.createdTime;
                 this.endTime = model.endTime;
+                this.reportLanguage = model.reportLanguage;
                 this.startTime = model.startTime;
                 this.status = model.status;
                 this.taskId = model.taskId;
             } 
 
             /**
-             * CreatedTime.
+             * <p>The creation time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01T22:59:59Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -293,7 +324,10 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01T23:59:59Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -301,7 +335,18 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * ReportLanguage.
+             */
+            public Builder reportLanguage(String reportLanguage) {
+                this.reportLanguage = reportLanguage;
+                return this;
+            }
+
+            /**
+             * <p>The start time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01T00:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -309,7 +354,10 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -317,7 +365,10 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65f0053b-f933-49f5-bf65-4e4593e1****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

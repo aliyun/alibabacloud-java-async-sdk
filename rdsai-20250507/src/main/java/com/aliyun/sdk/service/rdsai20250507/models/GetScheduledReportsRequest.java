@@ -116,7 +116,10 @@ public class GetScheduledReportsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The task end time based on which the reports are filtered. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. If you leave this parameter unspecified, all reports are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-25T02:02:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -125,7 +128,10 @@ public class GetScheduledReportsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -134,7 +140,10 @@ public class GetScheduledReportsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of reports returned on each page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -143,6 +152,7 @@ public class GetScheduledReportsRequest extends Request {
         }
 
         /**
+         * <p>The inspection task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +165,10 @@ public class GetScheduledReportsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The task start time based on which the reports are filtered. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. If you leave this parameter unspecified, all reports are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-25T01:02:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

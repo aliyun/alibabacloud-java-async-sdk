@@ -101,7 +101,10 @@ public class GetStandAloneReportsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The task end time based on which the reports are filtered. If you do not specify this parameter, all reports are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-19T02:20:20Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -110,7 +113,10 @@ public class GetStandAloneReportsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -119,7 +125,10 @@ public class GetStandAloneReportsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records on each page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -128,7 +137,10 @@ public class GetStandAloneReportsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The task start time based on which the reports are filtered. If you do not specify this parameter, all reports are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T02:09:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

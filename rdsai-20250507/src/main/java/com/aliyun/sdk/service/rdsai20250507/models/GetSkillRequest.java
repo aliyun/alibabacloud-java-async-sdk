@@ -74,7 +74,16 @@ public class GetSkillRequest extends Request {
         } 
 
         /**
-         * Language.
+         * <p>The languages supported by the skill. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Simplified Chinese</li>
+         * <li>zh-TW: Traditional Chinese</li>
+         * <li>en-US: English</li>
+         * <li>ja-JP: Japanese</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -83,6 +92,7 @@ public class GetSkillRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

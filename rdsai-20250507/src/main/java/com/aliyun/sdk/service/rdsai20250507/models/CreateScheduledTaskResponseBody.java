@@ -93,7 +93,7 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The returned message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +101,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D984FD38-6C2D-55DF-B0D7-8BCAC2E1F8C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ScheduledId.
+         * <p>The ID of the scheduled inspection configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>847268a4-196f-416b-aa12-bfe0c115****</p>
          */
         public Builder scheduledId(String scheduledId) {
             this.scheduledId = scheduledId;
@@ -117,7 +123,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -60,6 +60,7 @@ public class DeleteScheduledTaskRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the scheduled inspection configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
