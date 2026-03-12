@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Runtime} extends {@link TeaModel}
+ * {@link GetRuntimeResponseBody} extends {@link TeaModel}
  *
- * <p>Runtime</p>
+ * <p>GetRuntimeResponseBody</p>
  */
-public class Runtime extends TeaModel {
+public class GetRuntimeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
@@ -43,6 +43,9 @@ public class Runtime extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List<Labels> labels;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
@@ -77,7 +80,7 @@ public class Runtime extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    private Runtime(Builder builder) {
+    private GetRuntimeResponseBody(Builder builder) {
         this.accessibility = builder.accessibility;
         this.creator = builder.creator;
         this.credentialConfig = builder.credentialConfig;
@@ -87,6 +90,7 @@ public class Runtime extends TeaModel {
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.labels = builder.labels;
+        this.requestId = builder.requestId;
         this.resourceId = builder.resourceId;
         this.runTimeout = builder.runTimeout;
         this.runtimeId = builder.runtimeId;
@@ -104,7 +108,7 @@ public class Runtime extends TeaModel {
         return new Builder();
     }
 
-    public static Runtime create() {
+    public static GetRuntimeResponseBody create() {
         return builder().build();
     }
 
@@ -173,6 +177,13 @@ public class Runtime extends TeaModel {
      */
     public java.util.List<Labels> getLabels() {
         return this.labels;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -262,6 +273,7 @@ public class Runtime extends TeaModel {
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private java.util.List<Labels> labels; 
+        private String requestId; 
         private String resourceId; 
         private Integer runTimeout; 
         private String runtimeId; 
@@ -277,7 +289,7 @@ public class Runtime extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(Runtime model) {
+        private Builder(GetRuntimeResponseBody model) {
             this.accessibility = model.accessibility;
             this.creator = model.creator;
             this.credentialConfig = model.credentialConfig;
@@ -287,6 +299,7 @@ public class Runtime extends TeaModel {
             this.gmtCreateTime = model.gmtCreateTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.labels = model.labels;
+            this.requestId = model.requestId;
             this.resourceId = model.resourceId;
             this.runTimeout = model.runTimeout;
             this.runtimeId = model.runtimeId;
@@ -369,6 +382,14 @@ public class Runtime extends TeaModel {
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -460,17 +481,17 @@ public class Runtime extends TeaModel {
             return this;
         }
 
-        public Runtime build() {
-            return new Runtime(this);
+        public GetRuntimeResponseBody build() {
+            return new GetRuntimeResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link Runtime} extends {@link TeaModel}
+     * {@link GetRuntimeResponseBody} extends {@link TeaModel}
      *
-     * <p>Runtime</p>
+     * <p>GetRuntimeResponseBody</p>
      */
     public static class Roles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssumeRoleFor")
@@ -533,6 +554,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>AssumeRoleFor</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1095******785714</p>
              */
             public Builder assumeRoleFor(String assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -541,6 +565,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>角色名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1095******785714:role/testrole</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -549,6 +576,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>角色类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -564,9 +594,9 @@ public class Runtime extends TeaModel {
     }
     /**
      * 
-     * {@link Runtime} extends {@link TeaModel}
+     * {@link GetRuntimeResponseBody} extends {@link TeaModel}
      *
-     * <p>Runtime</p>
+     * <p>GetRuntimeResponseBody</p>
      */
     public static class CredentialConfigItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
@@ -629,6 +659,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>Key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -645,6 +678,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Role</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -660,9 +696,9 @@ public class Runtime extends TeaModel {
     }
     /**
      * 
-     * {@link Runtime} extends {@link TeaModel}
+     * {@link GetRuntimeResponseBody} extends {@link TeaModel}
      *
-     * <p>Runtime</p>
+     * <p>GetRuntimeResponseBody</p>
      */
     public static class CredentialConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliyunEnvRoleKey")
@@ -725,6 +761,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>AliyunEnvRoleKey</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder aliyunEnvRoleKey(String aliyunEnvRoleKey) {
                 this.aliyunEnvRoleKey = aliyunEnvRoleKey;
@@ -741,6 +780,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>是否启用Credential注入</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableCredentialInject(Boolean enableCredentialInject) {
                 this.enableCredentialInject = enableCredentialInject;
@@ -756,9 +798,9 @@ public class Runtime extends TeaModel {
     }
     /**
      * 
-     * {@link Runtime} extends {@link TeaModel}
+     * {@link GetRuntimeResponseBody} extends {@link TeaModel}
      *
-     * <p>Runtime</p>
+     * <p>GetRuntimeResponseBody</p>
      */
     public static class DataSources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetId")
@@ -821,6 +863,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>数据集ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-umns******zij4szhc</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -829,6 +874,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>挂载路径</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -837,6 +885,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>统一资源识别码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/langstudio/source/</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -852,9 +903,9 @@ public class Runtime extends TeaModel {
     }
     /**
      * 
-     * {@link Runtime} extends {@link TeaModel}
+     * {@link GetRuntimeResponseBody} extends {@link TeaModel}
      *
-     * <p>Runtime</p>
+     * <p>GetRuntimeResponseBody</p>
      */
     public static class EcsSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPU")
@@ -969,6 +1020,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>CPU数量</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder CPU(Integer CPU) {
                 this.CPU = CPU;
@@ -977,6 +1031,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>驱动版本</p>
+             * 
+             * <strong>example:</strong>
+             * <p>535.161.08</p>
              */
             public Builder driver(String driver) {
                 this.driver = driver;
@@ -985,6 +1042,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>GPU数量</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder GPU(Integer GPU) {
                 this.GPU = GPU;
@@ -993,6 +1053,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>GPU类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V100</p>
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -1001,6 +1064,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>实例类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c6.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1009,6 +1075,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>内存信息</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -1017,6 +1086,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>共享内存</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder sharedMemory(Integer sharedMemory) {
                 this.sharedMemory = sharedMemory;
@@ -1032,9 +1104,9 @@ public class Runtime extends TeaModel {
     }
     /**
      * 
-     * {@link Runtime} extends {@link TeaModel}
+     * {@link GetRuntimeResponseBody} extends {@link TeaModel}
      *
-     * <p>Runtime</p>
+     * <p>GetRuntimeResponseBody</p>
      */
     public static class Envs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
@@ -1084,6 +1156,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>环境键</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1092,6 +1167,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>环境值</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1107,9 +1185,9 @@ public class Runtime extends TeaModel {
     }
     /**
      * 
-     * {@link Runtime} extends {@link TeaModel}
+     * {@link GetRuntimeResponseBody} extends {@link TeaModel}
      *
-     * <p>Runtime</p>
+     * <p>GetRuntimeResponseBody</p>
      */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
@@ -1159,6 +1237,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>标签键</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1167,6 +1248,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>标签值</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1182,9 +1266,9 @@ public class Runtime extends TeaModel {
     }
     /**
      * 
-     * {@link Runtime} extends {@link TeaModel}
+     * {@link GetRuntimeResponseBody} extends {@link TeaModel}
      *
-     * <p>Runtime</p>
+     * <p>GetRuntimeResponseBody</p>
      */
     public static class UserVpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultRoute")
@@ -1273,6 +1357,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>默认路由</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eth0</p>
              */
             public Builder defaultRoute(String defaultRoute) {
                 this.defaultRoute = defaultRoute;
@@ -1289,6 +1376,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>安全组ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-wz9i****1129</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1297,6 +1387,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>交换机ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-wz9r****ng10</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1305,6 +1398,9 @@ public class Runtime extends TeaModel {
 
             /**
              * <p>VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz90****5v23</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -47,6 +47,9 @@ public class FlowTemplate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FlowType")
     private String flowType;
 
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Labels> labels;
+
     @com.aliyun.core.annotation.NameInMap("Locale")
     private String locale;
 
@@ -79,6 +82,7 @@ public class FlowTemplate extends TeaModel {
         this.flowStoragePath = builder.flowStoragePath;
         this.flowTemplateId = builder.flowTemplateId;
         this.flowType = builder.flowType;
+        this.labels = builder.labels;
         this.locale = builder.locale;
         this.referenceCount = builder.referenceCount;
         this.templateGroup = builder.templateGroup;
@@ -171,6 +175,13 @@ public class FlowTemplate extends TeaModel {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.List<Labels> getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return locale
      */
     public String getLocale() {
@@ -230,6 +241,7 @@ public class FlowTemplate extends TeaModel {
         private String flowStoragePath; 
         private String flowTemplateId; 
         private String flowType; 
+        private java.util.List<Labels> labels; 
         private String locale; 
         private Integer referenceCount; 
         private String templateGroup; 
@@ -252,6 +264,7 @@ public class FlowTemplate extends TeaModel {
             this.flowStoragePath = model.flowStoragePath;
             this.flowTemplateId = model.flowTemplateId;
             this.flowType = model.flowType;
+            this.labels = model.labels;
             this.locale = model.locale;
             this.referenceCount = model.referenceCount;
             this.templateGroup = model.templateGroup;
@@ -342,6 +355,14 @@ public class FlowTemplate extends TeaModel {
         }
 
         /**
+         * Labels.
+         */
+        public Builder labels(java.util.List<Labels> labels) {
+            this.labels = labels;
+            return this;
+        }
+
+        /**
          * Locale.
          */
         public Builder locale(String locale) {
@@ -403,4 +424,79 @@ public class FlowTemplate extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlowTemplate} extends {@link TeaModel}
+     *
+     * <p>FlowTemplate</p>
+     */
+    public static class Labels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Labels(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>标签Key</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>标签Value</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
 }

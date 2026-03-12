@@ -1985,13 +1985,25 @@ public class FlowRun extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowSource")
         private EvaluationConfigsFlowSource flowSource;
 
+        @com.aliyun.core.annotation.NameInMap("Inputs")
+        private String inputs;
+
         @com.aliyun.core.annotation.NameInMap("InputsOverrideConfig")
         private String inputsOverrideConfig;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
 
         private EvaluationConfigs(Builder builder) {
             this.dataColumnMapping = builder.dataColumnMapping;
             this.flowSource = builder.flowSource;
+            this.inputs = builder.inputs;
             this.inputsOverrideConfig = builder.inputsOverrideConfig;
+            this.name = builder.name;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -2017,16 +2029,40 @@ public class FlowRun extends TeaModel {
         }
 
         /**
+         * @return inputs
+         */
+        public String getInputs() {
+            return this.inputs;
+        }
+
+        /**
          * @return inputsOverrideConfig
          */
         public String getInputsOverrideConfig() {
             return this.inputsOverrideConfig;
         }
 
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private java.util.Map<String, String> dataColumnMapping; 
             private EvaluationConfigsFlowSource flowSource; 
+            private String inputs; 
             private String inputsOverrideConfig; 
+            private String name; 
+            private String type; 
 
             private Builder() {
             } 
@@ -2034,7 +2070,10 @@ public class FlowRun extends TeaModel {
             private Builder(EvaluationConfigs model) {
                 this.dataColumnMapping = model.dataColumnMapping;
                 this.flowSource = model.flowSource;
+                this.inputs = model.inputs;
                 this.inputsOverrideConfig = model.inputsOverrideConfig;
+                this.name = model.name;
+                this.type = model.type;
             } 
 
             /**
@@ -2054,10 +2093,34 @@ public class FlowRun extends TeaModel {
             }
 
             /**
+             * <p>评测输入</p>
+             */
+            public Builder inputs(String inputs) {
+                this.inputs = inputs;
+                return this;
+            }
+
+            /**
              * <p>输入配置</p>
              */
             public Builder inputsOverrideConfig(String inputsOverrideConfig) {
                 this.inputsOverrideConfig = inputsOverrideConfig;
+                return this;
+            }
+
+            /**
+             * <p>评测名称</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>评测类型</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

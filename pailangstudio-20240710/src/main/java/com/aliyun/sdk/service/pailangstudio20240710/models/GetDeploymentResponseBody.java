@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Deployment} extends {@link TeaModel}
+ * {@link GetDeploymentResponseBody} extends {@link TeaModel}
  *
- * <p>Deployment</p>
+ * <p>GetDeploymentResponseBody</p>
  */
-public class Deployment extends TeaModel {
+public class GetDeploymentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
@@ -62,6 +62,9 @@ public class Deployment extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OperationType")
     private String operationType;
 
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
@@ -80,7 +83,7 @@ public class Deployment extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    private Deployment(Builder builder) {
+    private GetDeploymentResponseBody(Builder builder) {
         this.accessibility = builder.accessibility;
         this.autoApproval = builder.autoApproval;
         this.chatHistoryConfig = builder.chatHistoryConfig;
@@ -96,6 +99,7 @@ public class Deployment extends TeaModel {
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.operationType = builder.operationType;
+        this.requestId = builder.requestId;
         this.resourceId = builder.resourceId;
         this.resourceSnapshotId = builder.resourceSnapshotId;
         this.resourceType = builder.resourceType;
@@ -108,7 +112,7 @@ public class Deployment extends TeaModel {
         return new Builder();
     }
 
-    public static Deployment create() {
+    public static GetDeploymentResponseBody create() {
         return builder().build();
     }
 
@@ -222,6 +226,13 @@ public class Deployment extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -279,6 +290,7 @@ public class Deployment extends TeaModel {
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String operationType; 
+        private String requestId; 
         private String resourceId; 
         private String resourceSnapshotId; 
         private String resourceType; 
@@ -289,7 +301,7 @@ public class Deployment extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(Deployment model) {
+        private Builder(GetDeploymentResponseBody model) {
             this.accessibility = model.accessibility;
             this.autoApproval = model.autoApproval;
             this.chatHistoryConfig = model.chatHistoryConfig;
@@ -305,6 +317,7 @@ public class Deployment extends TeaModel {
             this.gmtCreateTime = model.gmtCreateTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.operationType = model.operationType;
+            this.requestId = model.requestId;
             this.resourceId = model.resourceId;
             this.resourceSnapshotId = model.resourceSnapshotId;
             this.resourceType = model.resourceType;
@@ -434,6 +447,14 @@ public class Deployment extends TeaModel {
         }
 
         /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
          * ResourceId.
          */
         public Builder resourceId(String resourceId) {
@@ -481,17 +502,17 @@ public class Deployment extends TeaModel {
             return this;
         }
 
-        public Deployment build() {
-            return new Deployment(this);
+        public GetDeploymentResponseBody build() {
+            return new GetDeploymentResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link Deployment} extends {@link TeaModel}
+     * {@link GetDeploymentResponseBody} extends {@link TeaModel}
      *
-     * <p>Deployment</p>
+     * <p>GetDeploymentResponseBody</p>
      */
     public static class ChatHistoryConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionName")
@@ -541,6 +562,9 @@ public class Deployment extends TeaModel {
 
             /**
              * <p>连接名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rdsconnection</p>
              */
             public Builder connectionName(String connectionName) {
                 this.connectionName = connectionName;
@@ -549,6 +573,9 @@ public class Deployment extends TeaModel {
 
             /**
              * <p>存储类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -564,9 +591,9 @@ public class Deployment extends TeaModel {
     }
     /**
      * 
-     * {@link Deployment} extends {@link TeaModel}
+     * {@link GetDeploymentResponseBody} extends {@link TeaModel}
      *
-     * <p>Deployment</p>
+     * <p>GetDeploymentResponseBody</p>
      */
     public static class ContentModerationConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableInputModeration")
@@ -629,6 +656,9 @@ public class Deployment extends TeaModel {
 
             /**
              * <p>启用输入内容审查</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableInputModeration(Boolean enableInputModeration) {
                 this.enableInputModeration = enableInputModeration;
@@ -637,6 +667,9 @@ public class Deployment extends TeaModel {
 
             /**
              * <p>启用输出内容审查</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableOutputModeration(Boolean enableOutputModeration) {
                 this.enableOutputModeration = enableOutputModeration;
@@ -645,6 +678,9 @@ public class Deployment extends TeaModel {
 
             /**
              * <p>流式输出内容送审缓存大小</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder streamingModerationThreshold(Integer streamingModerationThreshold) {
                 this.streamingModerationThreshold = streamingModerationThreshold;
@@ -660,9 +696,9 @@ public class Deployment extends TeaModel {
     }
     /**
      * 
-     * {@link Deployment} extends {@link TeaModel}
+     * {@link GetDeploymentResponseBody} extends {@link TeaModel}
      *
-     * <p>Deployment</p>
+     * <p>GetDeploymentResponseBody</p>
      */
     public static class DeploymentStages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
@@ -790,6 +826,9 @@ public class Deployment extends TeaModel {
 
             /**
              * <p>描述</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create snapshot for deployment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -798,6 +837,9 @@ public class Deployment extends TeaModel {
 
             /**
              * <p>错误信息</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is error</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -806,6 +848,9 @@ public class Deployment extends TeaModel {
 
             /**
              * <p>结束时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-23T10:35:38+08:00</p>
              */
             public Builder gmtEndTime(String gmtEndTime) {
                 this.gmtEndTime = gmtEndTime;
@@ -814,6 +859,9 @@ public class Deployment extends TeaModel {
 
             /**
              * <p>开始时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-23T10:25:38+08:00</p>
              */
             public Builder gmtStartTime(String gmtStartTime) {
                 this.gmtStartTime = gmtStartTime;
@@ -822,6 +870,9 @@ public class Deployment extends TeaModel {
 
             /**
              * <p>阶段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder stage(Integer stage) {
                 this.stage = stage;
@@ -830,6 +881,9 @@ public class Deployment extends TeaModel {
 
             /**
              * <p>阶段信息</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;SnapshotId&quot;:&quot;snap-i8j29kw8nubqb0hotn&quot;}</p>
              */
             public Builder stageInfo(String stageInfo) {
                 this.stageInfo = stageInfo;
@@ -838,6 +892,9 @@ public class Deployment extends TeaModel {
 
             /**
              * <p>阶段名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrepareSnapshot</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -846,6 +903,9 @@ public class Deployment extends TeaModel {
 
             /**
              * <p>阶段状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder stageStatus(String stageStatus) {
                 this.stageStatus = stageStatus;
