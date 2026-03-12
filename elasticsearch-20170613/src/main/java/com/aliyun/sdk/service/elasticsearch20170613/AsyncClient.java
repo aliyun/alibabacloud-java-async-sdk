@@ -453,6 +453,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTransferableNodesResponse> getTransferableNodes(GetTransferableNodesRequest request);
 
     /**
+     * @param request the request parameters of GrayPublish  GrayPublishRequest
+     * @return GrayPublishResponse
+     */
+    CompletableFuture<GrayPublishResponse> grayPublish(GrayPublishRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.</p>
