@@ -50,6 +50,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteGatewayResponse> deleteGateway(DeleteGatewayRequest request);
 
     /**
+     * @param request the request parameters of DescribeConfigHistory  DescribeConfigHistoryRequest
+     * @return DescribeConfigHistoryResponse
+     */
+    CompletableFuture<DescribeConfigHistoryResponse> describeConfigHistory(DescribeConfigHistoryRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInstanceConfigs  DescribeInstanceConfigsRequest
+     * @return DescribeInstanceConfigsResponse
+     */
+    CompletableFuture<DescribeInstanceConfigsResponse> describeInstanceConfigs(DescribeInstanceConfigsRequest request);
+
+    /**
      * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
      * @return DescribeInstancesResponse
      */
@@ -182,6 +194,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDiskTypeResponse> modifyDiskType(ModifyDiskTypeRequest request);
 
     /**
+     * @param request the request parameters of ModifyInstanceConfig  ModifyInstanceConfigRequest
+     * @return ModifyInstanceConfigResponse
+     */
+    CompletableFuture<ModifyInstanceConfigResponse> modifyInstanceConfig(ModifyInstanceConfigRequest request);
+
+    /**
+     * @param request the request parameters of ModifyInstanceConfigPreCheck  ModifyInstanceConfigPreCheckRequest
+     * @return ModifyInstanceConfigPreCheckResponse
+     */
+    CompletableFuture<ModifyInstanceConfigPreCheckResponse> modifyInstanceConfigPreCheck(ModifyInstanceConfigPreCheckRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
      * <ul>
@@ -253,6 +277,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResumeInstanceResponse
      */
     CompletableFuture<ResumeInstanceResponse> resumeInstance(ResumeInstanceRequest request);
+
+    /**
+     * @param request the request parameters of RollbackConfigModification  RollbackConfigModificationRequest
+     * @return RollbackConfigModificationResponse
+     */
+    CompletableFuture<RollbackConfigModificationResponse> rollbackConfigModification(RollbackConfigModificationRequest request);
 
     /**
      * @param request the request parameters of TagResources  TagResourcesRequest
