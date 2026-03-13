@@ -107,10 +107,14 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
+        @com.aliyun.core.annotation.NameInMap("Versions")
+        private Object versions;
+
         private Data(Builder builder) {
             this.code = builder.code;
             this.directories = builder.directories;
             this.version = builder.version;
+            this.versions = builder.versions;
         }
 
         public static Builder builder() {
@@ -142,10 +146,18 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
             return this.version;
         }
 
+        /**
+         * @return versions
+         */
+        public Object getVersions() {
+            return this.versions;
+        }
+
         public static final class Builder {
             private String code; 
             private Object directories; 
             private String version; 
+            private Object versions; 
 
             private Builder() {
             } 
@@ -154,6 +166,7 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
                 this.code = model.code;
                 this.directories = model.directories;
                 this.version = model.version;
+                this.versions = model.versions;
             } 
 
             /**
@@ -190,6 +203,14 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
              */
             public Builder version(String version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * Versions.
+             */
+            public Builder versions(Object versions) {
+                this.versions = versions;
                 return this;
             }
 
