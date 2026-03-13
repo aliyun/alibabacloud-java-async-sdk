@@ -694,6 +694,318 @@ public class VideoModerationResultResponseBody extends TeaModel {
      *
      * <p>VideoModerationResultResponseBody</p>
      */
+    public static class AIGC extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContentProducer")
+        private String contentProducer;
+
+        @com.aliyun.core.annotation.NameInMap("ContentPropagator")
+        private String contentPropagator;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        @com.aliyun.core.annotation.NameInMap("ProduceID")
+        private String produceID;
+
+        @com.aliyun.core.annotation.NameInMap("PropagateID")
+        private String propagateID;
+
+        @com.aliyun.core.annotation.NameInMap("ReservedCode1")
+        private String reservedCode1;
+
+        @com.aliyun.core.annotation.NameInMap("ReservedCode2")
+        private String reservedCode2;
+
+        private AIGC(Builder builder) {
+            this.contentProducer = builder.contentProducer;
+            this.contentPropagator = builder.contentPropagator;
+            this.label = builder.label;
+            this.produceID = builder.produceID;
+            this.propagateID = builder.propagateID;
+            this.reservedCode1 = builder.reservedCode1;
+            this.reservedCode2 = builder.reservedCode2;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AIGC create() {
+            return builder().build();
+        }
+
+        /**
+         * @return contentProducer
+         */
+        public String getContentProducer() {
+            return this.contentProducer;
+        }
+
+        /**
+         * @return contentPropagator
+         */
+        public String getContentPropagator() {
+            return this.contentPropagator;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return produceID
+         */
+        public String getProduceID() {
+            return this.produceID;
+        }
+
+        /**
+         * @return propagateID
+         */
+        public String getPropagateID() {
+            return this.propagateID;
+        }
+
+        /**
+         * @return reservedCode1
+         */
+        public String getReservedCode1() {
+            return this.reservedCode1;
+        }
+
+        /**
+         * @return reservedCode2
+         */
+        public String getReservedCode2() {
+            return this.reservedCode2;
+        }
+
+        public static final class Builder {
+            private String contentProducer; 
+            private String contentPropagator; 
+            private String label; 
+            private String produceID; 
+            private String propagateID; 
+            private String reservedCode1; 
+            private String reservedCode2; 
+
+            private Builder() {
+            } 
+
+            private Builder(AIGC model) {
+                this.contentProducer = model.contentProducer;
+                this.contentPropagator = model.contentPropagator;
+                this.label = model.label;
+                this.produceID = model.produceID;
+                this.propagateID = model.propagateID;
+                this.reservedCode1 = model.reservedCode1;
+                this.reservedCode2 = model.reservedCode2;
+            } 
+
+            /**
+             * ContentProducer.
+             */
+            public Builder contentProducer(String contentProducer) {
+                this.contentProducer = contentProducer;
+                return this;
+            }
+
+            /**
+             * ContentPropagator.
+             */
+            public Builder contentPropagator(String contentPropagator) {
+                this.contentPropagator = contentPropagator;
+                return this;
+            }
+
+            /**
+             * <p>The voice label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>profanity</p>
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * ProduceID.
+             */
+            public Builder produceID(String produceID) {
+                this.produceID = produceID;
+                return this;
+            }
+
+            /**
+             * PropagateID.
+             */
+            public Builder propagateID(String propagateID) {
+                this.propagateID = propagateID;
+                return this;
+            }
+
+            /**
+             * ReservedCode1.
+             */
+            public Builder reservedCode1(String reservedCode1) {
+                this.reservedCode1 = reservedCode1;
+                return this;
+            }
+
+            /**
+             * ReservedCode2.
+             */
+            public Builder reservedCode2(String reservedCode2) {
+                this.reservedCode2 = reservedCode2;
+                return this;
+            }
+
+            public AIGC build() {
+                return new AIGC(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
+    public static class AigcData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AIGC")
+        private AIGC AIGC;
+
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private String result;
+
+        private AigcData(Builder builder) {
+            this.AIGC = builder.AIGC;
+            this.result = builder.result;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AigcData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return AIGC
+         */
+        public AIGC getAIGC() {
+            return this.AIGC;
+        }
+
+        /**
+         * @return result
+         */
+        public String getResult() {
+            return this.result;
+        }
+
+        public static final class Builder {
+            private AIGC AIGC; 
+            private String result; 
+
+            private Builder() {
+            } 
+
+            private Builder(AigcData model) {
+                this.AIGC = model.AIGC;
+                this.result = model.result;
+            } 
+
+            /**
+             * AIGC.
+             */
+            public Builder AIGC(AIGC AIGC) {
+                this.AIGC = AIGC;
+                return this;
+            }
+
+            /**
+             * Result.
+             */
+            public Builder result(String result) {
+                this.result = result;
+                return this;
+            }
+
+            public AigcData build() {
+                return new AigcData(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
+    public static class Ext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AigcData")
+        private AigcData aigcData;
+
+        private Ext(Builder builder) {
+            this.aigcData = builder.aigcData;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ext create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aigcData
+         */
+        public AigcData getAigcData() {
+            return this.aigcData;
+        }
+
+        public static final class Builder {
+            private AigcData aigcData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ext model) {
+                this.aigcData = model.aigcData;
+            } 
+
+            /**
+             * AigcData.
+             */
+            public Builder aigcData(AigcData aigcData) {
+                this.aigcData = aigcData;
+                return this;
+            }
+
+            public Ext build() {
+                return new Ext(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class FrameSummarys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1964,6 +2276,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
+        @com.aliyun.core.annotation.NameInMap("Ext")
+        private Ext ext;
+
         @com.aliyun.core.annotation.NameInMap("FrameResult")
         private FrameResult frameResult;
 
@@ -1982,6 +2297,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.audioResult = builder.audioResult;
             this.dataId = builder.dataId;
+            this.ext = builder.ext;
             this.frameResult = builder.frameResult;
             this.liveId = builder.liveId;
             this.manualTaskId = builder.manualTaskId;
@@ -2009,6 +2325,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
          */
         public String getDataId() {
             return this.dataId;
+        }
+
+        /**
+         * @return ext
+         */
+        public Ext getExt() {
+            return this.ext;
         }
 
         /**
@@ -2049,6 +2372,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public static final class Builder {
             private AudioResult audioResult; 
             private String dataId; 
+            private Ext ext; 
             private FrameResult frameResult; 
             private String liveId; 
             private String manualTaskId; 
@@ -2061,6 +2385,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.audioResult = model.audioResult;
                 this.dataId = model.dataId;
+                this.ext = model.ext;
                 this.frameResult = model.frameResult;
                 this.liveId = model.liveId;
                 this.manualTaskId = model.manualTaskId;
@@ -2084,6 +2409,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
+                return this;
+            }
+
+            /**
+             * Ext.
+             */
+            public Builder ext(Ext ext) {
+                this.ext = ext;
                 return this;
             }
 
