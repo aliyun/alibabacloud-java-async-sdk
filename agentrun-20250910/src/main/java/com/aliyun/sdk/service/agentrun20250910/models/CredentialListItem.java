@@ -32,6 +32,9 @@ public class CredentialListItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("credentialSourceType")
     private String credentialSourceType;
 
+    @com.aliyun.core.annotation.NameInMap("description")
+    private String description;
+
     @com.aliyun.core.annotation.NameInMap("enabled")
     private Boolean enabled;
 
@@ -47,6 +50,7 @@ public class CredentialListItem extends TeaModel {
         this.credentialId = builder.credentialId;
         this.credentialName = builder.credentialName;
         this.credentialSourceType = builder.credentialSourceType;
+        this.description = builder.description;
         this.enabled = builder.enabled;
         this.relatedResourceCount = builder.relatedResourceCount;
         this.updatedAt = builder.updatedAt;
@@ -100,6 +104,13 @@ public class CredentialListItem extends TeaModel {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return enabled
      */
     public Boolean getEnabled() {
@@ -126,6 +137,7 @@ public class CredentialListItem extends TeaModel {
         private String credentialId; 
         private String credentialName; 
         private String credentialSourceType; 
+        private String description; 
         private Boolean enabled; 
         private Integer relatedResourceCount; 
         private String updatedAt; 
@@ -139,6 +151,7 @@ public class CredentialListItem extends TeaModel {
             this.credentialId = model.credentialId;
             this.credentialName = model.credentialName;
             this.credentialSourceType = model.credentialSourceType;
+            this.description = model.description;
             this.enabled = model.enabled;
             this.relatedResourceCount = model.relatedResourceCount;
             this.updatedAt = model.updatedAt;
@@ -181,6 +194,14 @@ public class CredentialListItem extends TeaModel {
          */
         public Builder credentialSourceType(String credentialSourceType) {
             this.credentialSourceType = credentialSourceType;
+            return this;
+        }
+
+        /**
+         * description.
+         */
+        public Builder description(String description) {
+            this.description = description;
             return this;
         }
 

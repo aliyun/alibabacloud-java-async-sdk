@@ -30,7 +30,7 @@ public class Credential extends TeaModel {
     private String credentialName;
 
     @com.aliyun.core.annotation.NameInMap("credentialPublicConfig")
-    private java.util.Map<String, String> credentialPublicConfig;
+    private CredentialPublicConfig credentialPublicConfig;
 
     @com.aliyun.core.annotation.NameInMap("credentialSecret")
     private String credentialSecret;
@@ -107,7 +107,7 @@ public class Credential extends TeaModel {
     /**
      * @return credentialPublicConfig
      */
-    public java.util.Map<String, String> getCredentialPublicConfig() {
+    public CredentialPublicConfig getCredentialPublicConfig() {
         return this.credentialPublicConfig;
     }
 
@@ -158,7 +158,7 @@ public class Credential extends TeaModel {
         private String credentialAuthType; 
         private String credentialId; 
         private String credentialName; 
-        private java.util.Map<String, String> credentialPublicConfig; 
+        private CredentialPublicConfig credentialPublicConfig; 
         private String credentialSecret; 
         private String credentialSourceType; 
         private String description; 
@@ -218,7 +218,7 @@ public class Credential extends TeaModel {
         /**
          * credentialPublicConfig.
          */
-        public Builder credentialPublicConfig(java.util.Map<String, String> credentialPublicConfig) {
+        public Builder credentialPublicConfig(CredentialPublicConfig credentialPublicConfig) {
             this.credentialPublicConfig = credentialPublicConfig;
             return this;
         }

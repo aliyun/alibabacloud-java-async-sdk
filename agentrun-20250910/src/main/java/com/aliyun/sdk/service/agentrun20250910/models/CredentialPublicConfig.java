@@ -26,6 +26,12 @@ public class CredentialPublicConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("headerKey")
     private String headerKey;
 
+    @com.aliyun.core.annotation.NameInMap("jwks")
+    private String jwks;
+
+    @com.aliyun.core.annotation.NameInMap("prefix")
+    private String prefix;
+
     @com.aliyun.core.annotation.NameInMap("provider")
     private String provider;
 
@@ -39,6 +45,8 @@ public class CredentialPublicConfig extends TeaModel {
         this.authConfig = builder.authConfig;
         this.authType = builder.authType;
         this.headerKey = builder.headerKey;
+        this.jwks = builder.jwks;
+        this.prefix = builder.prefix;
         this.provider = builder.provider;
         this.remoteConfig = builder.remoteConfig;
         this.users = builder.users;
@@ -78,6 +86,20 @@ public class CredentialPublicConfig extends TeaModel {
     }
 
     /**
+     * @return jwks
+     */
+    public String getJwks() {
+        return this.jwks;
+    }
+
+    /**
+     * @return prefix
+     */
+    public String getPrefix() {
+        return this.prefix;
+    }
+
+    /**
      * @return provider
      */
     public String getProvider() {
@@ -102,6 +124,8 @@ public class CredentialPublicConfig extends TeaModel {
         private java.util.Map<String, String> authConfig; 
         private String authType; 
         private String headerKey; 
+        private String jwks; 
+        private String prefix; 
         private String provider; 
         private RemoteConfig remoteConfig; 
         private java.util.List<Users> users; 
@@ -113,6 +137,8 @@ public class CredentialPublicConfig extends TeaModel {
             this.authConfig = model.authConfig;
             this.authType = model.authType;
             this.headerKey = model.headerKey;
+            this.jwks = model.jwks;
+            this.prefix = model.prefix;
             this.provider = model.provider;
             this.remoteConfig = model.remoteConfig;
             this.users = model.users;
@@ -139,6 +165,22 @@ public class CredentialPublicConfig extends TeaModel {
          */
         public Builder headerKey(String headerKey) {
             this.headerKey = headerKey;
+            return this;
+        }
+
+        /**
+         * jwks.
+         */
+        public Builder jwks(String jwks) {
+            this.jwks = jwks;
+            return this;
+        }
+
+        /**
+         * prefix.
+         */
+        public Builder prefix(String prefix) {
+            this.prefix = prefix;
             return this;
         }
 

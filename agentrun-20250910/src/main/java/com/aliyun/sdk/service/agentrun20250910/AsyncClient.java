@@ -429,6 +429,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>获取工作空间列表</p>
+     * 
+     * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
+     * @return ListWorkspacesResponse
+     */
+    CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</p>
      * 
      * @param request the request parameters of PublishRuntimeVersion  PublishRuntimeVersionRequest
