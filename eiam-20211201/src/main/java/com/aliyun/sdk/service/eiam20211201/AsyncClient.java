@@ -842,6 +842,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateUploadAuthResponse> generateUploadAuth(GenerateUploadAuthRequest request);
 
     /**
+     * @param request the request parameters of GenerateWebAuthnAuthenticatorRegistrationUrl  GenerateWebAuthnAuthenticatorRegistrationUrlRequest
+     * @return GenerateWebAuthnAuthenticatorRegistrationUrlResponse
+     */
+    CompletableFuture<GenerateWebAuthnAuthenticatorRegistrationUrlResponse> generateWebAuthnAuthenticatorRegistrationUrl(GenerateWebAuthnAuthenticatorRegistrationUrlRequest request);
+
+    /**
      * @param request the request parameters of GetApplication  GetApplicationRequest
      * @return GetApplicationResponse
      */

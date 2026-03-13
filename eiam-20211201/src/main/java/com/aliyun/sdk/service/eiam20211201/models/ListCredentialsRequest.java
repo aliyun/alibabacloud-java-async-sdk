@@ -26,6 +26,10 @@ public class ListCredentialsRequest extends Request {
     private java.util.List<String> credentialIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CredentialTypes")
+    private java.util.List<String> credentialTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
     private java.util.List<Filter> filter;
 
@@ -50,6 +54,7 @@ public class ListCredentialsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.credentialIds = builder.credentialIds;
+        this.credentialTypes = builder.credentialTypes;
         this.filter = builder.filter;
         this.instanceId = builder.instanceId;
         this.maxResults = builder.maxResults;
@@ -82,6 +87,13 @@ public class ListCredentialsRequest extends Request {
      */
     public java.util.List<String> getCredentialIds() {
         return this.credentialIds;
+    }
+
+    /**
+     * @return credentialTypes
+     */
+    public java.util.List<String> getCredentialTypes() {
+        return this.credentialTypes;
     }
 
     /**
@@ -122,6 +134,7 @@ public class ListCredentialsRequest extends Request {
     public static final class Builder extends Request.Builder<ListCredentialsRequest, Builder> {
         private String regionId; 
         private java.util.List<String> credentialIds; 
+        private java.util.List<String> credentialTypes; 
         private java.util.List<Filter> filter; 
         private String instanceId; 
         private Integer maxResults; 
@@ -136,6 +149,7 @@ public class ListCredentialsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.credentialIds = request.credentialIds;
+            this.credentialTypes = request.credentialTypes;
             this.filter = request.filter;
             this.instanceId = request.instanceId;
             this.maxResults = request.maxResults;
@@ -158,6 +172,15 @@ public class ListCredentialsRequest extends Request {
         public Builder credentialIds(java.util.List<String> credentialIds) {
             this.putQueryParameter("CredentialIds", credentialIds);
             this.credentialIds = credentialIds;
+            return this;
+        }
+
+        /**
+         * CredentialTypes.
+         */
+        public Builder credentialTypes(java.util.List<String> credentialTypes) {
+            this.putQueryParameter("CredentialTypes", credentialTypes);
+            this.credentialTypes = credentialTypes;
             return this;
         }
 
