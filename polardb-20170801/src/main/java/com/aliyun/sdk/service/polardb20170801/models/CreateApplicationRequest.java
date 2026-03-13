@@ -905,6 +905,12 @@ public class CreateApplicationRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("EmbedderModel")
         private String embedderModel;
 
+        @com.aliyun.core.annotation.NameInMap("EmbedderModelDimension")
+        private Integer embedderModelDimension;
+
+        @com.aliyun.core.annotation.NameInMap("GraphLlmModel")
+        private String graphLlmModel;
+
         @com.aliyun.core.annotation.NameInMap("LlmModel")
         private String llmModel;
 
@@ -914,14 +920,20 @@ public class CreateApplicationRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RerankerModel")
         private String rerankerModel;
 
+        @com.aliyun.core.annotation.NameInMap("Shard")
+        private Integer shard;
+
         private MemApplicationSpec(Builder builder) {
             this.dbName = builder.dbName;
             this.dbPassword = builder.dbPassword;
             this.dbUser = builder.dbUser;
             this.embedderModel = builder.embedderModel;
+            this.embedderModelDimension = builder.embedderModelDimension;
+            this.graphLlmModel = builder.graphLlmModel;
             this.llmModel = builder.llmModel;
             this.projectName = builder.projectName;
             this.rerankerModel = builder.rerankerModel;
+            this.shard = builder.shard;
         }
 
         public static Builder builder() {
@@ -961,6 +973,20 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
+         * @return embedderModelDimension
+         */
+        public Integer getEmbedderModelDimension() {
+            return this.embedderModelDimension;
+        }
+
+        /**
+         * @return graphLlmModel
+         */
+        public String getGraphLlmModel() {
+            return this.graphLlmModel;
+        }
+
+        /**
          * @return llmModel
          */
         public String getLlmModel() {
@@ -981,14 +1007,24 @@ public class CreateApplicationRequest extends Request {
             return this.rerankerModel;
         }
 
+        /**
+         * @return shard
+         */
+        public Integer getShard() {
+            return this.shard;
+        }
+
         public static final class Builder {
             private String dbName; 
             private String dbPassword; 
             private String dbUser; 
             private String embedderModel; 
+            private Integer embedderModelDimension; 
+            private String graphLlmModel; 
             private String llmModel; 
             private String projectName; 
             private String rerankerModel; 
+            private Integer shard; 
 
             private Builder() {
             } 
@@ -998,9 +1034,12 @@ public class CreateApplicationRequest extends Request {
                 this.dbPassword = model.dbPassword;
                 this.dbUser = model.dbUser;
                 this.embedderModel = model.embedderModel;
+                this.embedderModelDimension = model.embedderModelDimension;
+                this.graphLlmModel = model.graphLlmModel;
                 this.llmModel = model.llmModel;
                 this.projectName = model.projectName;
                 this.rerankerModel = model.rerankerModel;
+                this.shard = model.shard;
             } 
 
             /**
@@ -1036,6 +1075,22 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
+             * EmbedderModelDimension.
+             */
+            public Builder embedderModelDimension(Integer embedderModelDimension) {
+                this.embedderModelDimension = embedderModelDimension;
+                return this;
+            }
+
+            /**
+             * GraphLlmModel.
+             */
+            public Builder graphLlmModel(String graphLlmModel) {
+                this.graphLlmModel = graphLlmModel;
+                return this;
+            }
+
+            /**
              * LlmModel.
              */
             public Builder llmModel(String llmModel) {
@@ -1056,6 +1111,14 @@ public class CreateApplicationRequest extends Request {
              */
             public Builder rerankerModel(String rerankerModel) {
                 this.rerankerModel = rerankerModel;
+                return this;
+            }
+
+            /**
+             * Shard.
+             */
+            public Builder shard(Integer shard) {
+                this.shard = shard;
                 return this;
             }
 
