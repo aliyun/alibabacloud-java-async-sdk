@@ -182,6 +182,9 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
      * <p>TripBusinessInstanceQueryResponseBody</p>
      */
     public static class Module extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("business_data")
+        private String businessData;
+
         @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
@@ -195,6 +198,7 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
         private String status;
 
         private Module(Builder builder) {
+            this.businessData = builder.businessData;
             this.creator = builder.creator;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -207,6 +211,13 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
 
         public static Module create() {
             return builder().build();
+        }
+
+        /**
+         * @return businessData
+         */
+        public String getBusinessData() {
+            return this.businessData;
         }
 
         /**
@@ -238,6 +249,7 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String businessData; 
             private String creator; 
             private Long gmtCreate; 
             private Long gmtModified; 
@@ -247,11 +259,20 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
             } 
 
             private Builder(Module model) {
+                this.businessData = model.businessData;
                 this.creator = model.creator;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
                 this.status = model.status;
             } 
+
+            /**
+             * business_data.
+             */
+            public Builder businessData(String businessData) {
+                this.businessData = businessData;
+                return this;
+            }
 
             /**
              * creator.

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link TrainBillSettlementQueryRequest} extends {@link RequestModel}
+ * {@link IeCarBillSettlementQueryRequest} extends {@link RequestModel}
  *
- * <p>TrainBillSettlementQueryRequest</p>
+ * <p>IeCarBillSettlementQueryRequest</p>
  */
-public class TrainBillSettlementQueryRequest extends Request {
+public class IeCarBillSettlementQueryRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("bill_batch")
     private String billBatch;
@@ -63,7 +63,7 @@ public class TrainBillSettlementQueryRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
-    private TrainBillSettlementQueryRequest(Builder builder) {
+    private IeCarBillSettlementQueryRequest(Builder builder) {
         super(builder);
         this.billBatch = builder.billBatch;
         this.billRecordTimeEnd = builder.billRecordTimeEnd;
@@ -82,7 +82,7 @@ public class TrainBillSettlementQueryRequest extends Request {
         return new Builder();
     }
 
-    public static TrainBillSettlementQueryRequest create() {
+    public static IeCarBillSettlementQueryRequest create() {
         return builder().build();
     }
 
@@ -168,7 +168,7 @@ public class TrainBillSettlementQueryRequest extends Request {
         return this.xAcsBtripSoCorpToken;
     }
 
-    public static final class Builder extends Request.Builder<TrainBillSettlementQueryRequest, Builder> {
+    public static final class Builder extends Request.Builder<IeCarBillSettlementQueryRequest, Builder> {
         private String billBatch; 
         private String billRecordTimeEnd; 
         private String billRecordTimeStart; 
@@ -185,7 +185,7 @@ public class TrainBillSettlementQueryRequest extends Request {
             super();
         } 
 
-        private Builder(TrainBillSettlementQueryRequest request) {
+        private Builder(IeCarBillSettlementQueryRequest request) {
             super(request);
             this.billBatch = request.billBatch;
             this.billRecordTimeEnd = request.billRecordTimeEnd;
@@ -252,7 +252,7 @@ public class TrainBillSettlementQueryRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -306,8 +306,8 @@ public class TrainBillSettlementQueryRequest extends Request {
         }
 
         @Override
-        public TrainBillSettlementQueryRequest build() {
-            return new TrainBillSettlementQueryRequest(this);
+        public IeCarBillSettlementQueryRequest build() {
+            return new IeCarBillSettlementQueryRequest(this);
         } 
 
     } 

@@ -479,6 +479,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("seal_price")
         private Double sealPrice;
 
+        @com.aliyun.core.annotation.NameInMap("segment_list")
+        private String segmentList;
+
         @com.aliyun.core.annotation.NameInMap("segment_type")
         private String segmentType;
 
@@ -654,6 +657,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.remark = builder.remark;
             this.repeatRefund = builder.repeatRefund;
             this.sealPrice = builder.sealPrice;
+            this.segmentList = builder.segmentList;
             this.segmentType = builder.segmentType;
             this.serviceFee = builder.serviceFee;
             this.settleTypeDesc = builder.settleTypeDesc;
@@ -1343,6 +1347,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return segmentList
+         */
+        public String getSegmentList() {
+            return this.segmentList;
+        }
+
+        /**
          * @return segmentType
          */
         public String getSegmentType() {
@@ -1625,6 +1636,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String remark; 
             private String repeatRefund; 
             private Double sealPrice; 
+            private String segmentList; 
             private String segmentType; 
             private Double serviceFee; 
             private String settleTypeDesc; 
@@ -1750,6 +1762,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
                 this.remark = model.remark;
                 this.repeatRefund = model.repeatRefund;
                 this.sealPrice = model.sealPrice;
+                this.segmentList = model.segmentList;
                 this.segmentType = model.segmentType;
                 this.serviceFee = model.serviceFee;
                 this.settleTypeDesc = model.settleTypeDesc;
@@ -2520,6 +2533,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder sealPrice(Double sealPrice) {
                 this.sealPrice = sealPrice;
+                return this;
+            }
+
+            /**
+             * segment_list.
+             */
+            public Builder segmentList(String segmentList) {
+                this.segmentList = segmentList;
                 return this;
             }
 

@@ -926,6 +926,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("order_status")
         private Integer orderStatus;
 
+        @com.aliyun.core.annotation.NameInMap("replenish_order_ids")
+        private String replenishOrderIds;
+
+        @com.aliyun.core.annotation.NameInMap("replenish_original_order_id")
+        private String replenishOriginalOrderId;
+
         @com.aliyun.core.annotation.NameInMap("thirdPart_business_id")
         private String thirdPartBusinessId;
 
@@ -963,6 +969,8 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             this.itineraryId = builder.itineraryId;
             this.orderId = builder.orderId;
             this.orderStatus = builder.orderStatus;
+            this.replenishOrderIds = builder.replenishOrderIds;
+            this.replenishOriginalOrderId = builder.replenishOriginalOrderId;
             this.thirdPartBusinessId = builder.thirdPartBusinessId;
             this.thirdpartApplyId = builder.thirdpartApplyId;
             this.thirdpartDepartId = builder.thirdpartDepartId;
@@ -1086,6 +1094,20 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return replenishOrderIds
+         */
+        public String getReplenishOrderIds() {
+            return this.replenishOrderIds;
+        }
+
+        /**
+         * @return replenishOriginalOrderId
+         */
+        public String getReplenishOriginalOrderId() {
+            return this.replenishOriginalOrderId;
+        }
+
+        /**
          * @return thirdPartBusinessId
          */
         public String getThirdPartBusinessId() {
@@ -1150,6 +1172,8 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String itineraryId; 
             private Long orderId; 
             private Integer orderStatus; 
+            private String replenishOrderIds; 
+            private String replenishOriginalOrderId; 
             private String thirdPartBusinessId; 
             private String thirdpartApplyId; 
             private String thirdpartDepartId; 
@@ -1177,6 +1201,8 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
                 this.itineraryId = model.itineraryId;
                 this.orderId = model.orderId;
                 this.orderStatus = model.orderStatus;
+                this.replenishOrderIds = model.replenishOrderIds;
+                this.replenishOriginalOrderId = model.replenishOriginalOrderId;
                 this.thirdPartBusinessId = model.thirdPartBusinessId;
                 this.thirdpartApplyId = model.thirdpartApplyId;
                 this.thirdpartDepartId = model.thirdpartDepartId;
@@ -1303,6 +1329,22 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
+                return this;
+            }
+
+            /**
+             * replenish_order_ids.
+             */
+            public Builder replenishOrderIds(String replenishOrderIds) {
+                this.replenishOrderIds = replenishOrderIds;
+                return this;
+            }
+
+            /**
+             * replenish_original_order_id.
+             */
+            public Builder replenishOriginalOrderId(String replenishOriginalOrderId) {
+                this.replenishOriginalOrderId = replenishOriginalOrderId;
                 return this;
             }
 

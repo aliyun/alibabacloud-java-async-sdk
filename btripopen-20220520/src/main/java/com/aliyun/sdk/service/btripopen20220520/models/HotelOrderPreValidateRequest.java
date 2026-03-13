@@ -51,6 +51,10 @@ public class HotelOrderPreValidateRequest extends Request {
     private java.util.List<OccupantInfoList> occupantInfoList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("rate_key")
+    private String rateKey;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("rate_plan_id")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long ratePlanId;
@@ -93,6 +97,7 @@ public class HotelOrderPreValidateRequest extends Request {
         this.itemId = builder.itemId;
         this.numberOfAdultsPerRoom = builder.numberOfAdultsPerRoom;
         this.occupantInfoList = builder.occupantInfoList;
+        this.rateKey = builder.rateKey;
         this.ratePlanId = builder.ratePlanId;
         this.roomId = builder.roomId;
         this.roomNum = builder.roomNum;
@@ -165,6 +170,13 @@ public class HotelOrderPreValidateRequest extends Request {
     }
 
     /**
+     * @return rateKey
+     */
+    public String getRateKey() {
+        return this.rateKey;
+    }
+
+    /**
      * @return ratePlanId
      */
     public Long getRatePlanId() {
@@ -221,6 +233,7 @@ public class HotelOrderPreValidateRequest extends Request {
         private Long itemId; 
         private Integer numberOfAdultsPerRoom; 
         private java.util.List<OccupantInfoList> occupantInfoList; 
+        private String rateKey; 
         private Long ratePlanId; 
         private Long roomId; 
         private Integer roomNum; 
@@ -242,6 +255,7 @@ public class HotelOrderPreValidateRequest extends Request {
             this.itemId = request.itemId;
             this.numberOfAdultsPerRoom = request.numberOfAdultsPerRoom;
             this.occupantInfoList = request.occupantInfoList;
+            this.rateKey = request.rateKey;
             this.ratePlanId = request.ratePlanId;
             this.roomId = request.roomId;
             this.roomNum = request.roomNum;
@@ -325,6 +339,15 @@ public class HotelOrderPreValidateRequest extends Request {
             String occupantInfoListShrink = shrink(occupantInfoList, "occupant_info_list", "json");
             this.putQueryParameter("occupant_info_list", occupantInfoListShrink);
             this.occupantInfoList = occupantInfoList;
+            return this;
+        }
+
+        /**
+         * rate_key.
+         */
+        public Builder rateKey(String rateKey) {
+            this.putQueryParameter("rate_key", rateKey);
+            this.rateKey = rateKey;
             return this;
         }
 

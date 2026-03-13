@@ -932,6 +932,9 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_hotel_cancel_policy_d_t_o")
         private BtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO;
 
+        @com.aliyun.core.annotation.NameInMap("cert_type_list")
+        private java.util.List<String> certTypeList;
+
         @com.aliyun.core.annotation.NameInMap("earliest_check_in_time")
         private String earliestCheckInTime;
 
@@ -962,6 +965,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         private RatePlanInfo(Builder builder) {
             this.bedDesc = builder.bedDesc;
             this.btripHotelCancelPolicyDTO = builder.btripHotelCancelPolicyDTO;
+            this.certTypeList = builder.certTypeList;
             this.earliestCheckInTime = builder.earliestCheckInTime;
             this.latestCheckOutTime = builder.latestCheckOutTime;
             this.maxBookingNum = builder.maxBookingNum;
@@ -993,6 +997,13 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
          */
         public BtripHotelCancelPolicyDTO getBtripHotelCancelPolicyDTO() {
             return this.btripHotelCancelPolicyDTO;
+        }
+
+        /**
+         * @return certTypeList
+         */
+        public java.util.List<String> getCertTypeList() {
+            return this.certTypeList;
         }
 
         /**
@@ -1061,6 +1072,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         public static final class Builder {
             private String bedDesc; 
             private BtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO; 
+            private java.util.List<String> certTypeList; 
             private String earliestCheckInTime; 
             private String latestCheckOutTime; 
             private Integer maxBookingNum; 
@@ -1077,6 +1089,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private Builder(RatePlanInfo model) {
                 this.bedDesc = model.bedDesc;
                 this.btripHotelCancelPolicyDTO = model.btripHotelCancelPolicyDTO;
+                this.certTypeList = model.certTypeList;
                 this.earliestCheckInTime = model.earliestCheckInTime;
                 this.latestCheckOutTime = model.latestCheckOutTime;
                 this.maxBookingNum = model.maxBookingNum;
@@ -1101,6 +1114,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
              */
             public Builder btripHotelCancelPolicyDTO(BtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO) {
                 this.btripHotelCancelPolicyDTO = btripHotelCancelPolicyDTO;
+                return this;
+            }
+
+            /**
+             * cert_type_list.
+             */
+            public Builder certTypeList(java.util.List<String> certTypeList) {
+                this.certTypeList = certTypeList;
                 return this;
             }
 

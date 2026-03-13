@@ -34,6 +34,10 @@ public class FlightItineraryScanQueryRequest extends Request {
     private String itineraryNum;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order_id")
+    private Long orderId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("page_no")
     private Integer pageNo;
 
@@ -56,6 +60,7 @@ public class FlightItineraryScanQueryRequest extends Request {
         this.billId = builder.billId;
         this.invoiceSubTaskId = builder.invoiceSubTaskId;
         this.itineraryNum = builder.itineraryNum;
+        this.orderId = builder.orderId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.ticketNo = builder.ticketNo;
@@ -104,6 +109,13 @@ public class FlightItineraryScanQueryRequest extends Request {
     }
 
     /**
+     * @return orderId
+     */
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
+    /**
      * @return pageNo
      */
     public Integer getPageNo() {
@@ -136,6 +148,7 @@ public class FlightItineraryScanQueryRequest extends Request {
         private Long billId; 
         private Long invoiceSubTaskId; 
         private String itineraryNum; 
+        private Long orderId; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String ticketNo; 
@@ -151,6 +164,7 @@ public class FlightItineraryScanQueryRequest extends Request {
             this.billId = request.billId;
             this.invoiceSubTaskId = request.invoiceSubTaskId;
             this.itineraryNum = request.itineraryNum;
+            this.orderId = request.orderId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.ticketNo = request.ticketNo;
@@ -190,6 +204,15 @@ public class FlightItineraryScanQueryRequest extends Request {
         public Builder itineraryNum(String itineraryNum) {
             this.putQueryParameter("itinerary_num", itineraryNum);
             this.itineraryNum = itineraryNum;
+            return this;
+        }
+
+        /**
+         * order_id.
+         */
+        public Builder orderId(Long orderId) {
+            this.putQueryParameter("order_id", orderId);
+            this.orderId = orderId;
             return this;
         }
 

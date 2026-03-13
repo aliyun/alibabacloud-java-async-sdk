@@ -2128,6 +2128,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of IeCarBillSettlementQuery  IeCarBillSettlementQueryRequest
+     * @return IeCarBillSettlementQueryResponse
+     */
+    @Override
+    public CompletableFuture<IeCarBillSettlementQueryResponse> ieCarBillSettlementQuery(IeCarBillSettlementQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IeCarBillSettlementQuery").setMethod(HttpMethod.GET).setPathRegex("/open/v1/ieCar-bill-settlement-query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IeCarBillSettlementQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IeCarBillSettlementQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of IeFlightBillSettlementQuery  IeFlightBillSettlementQueryRequest
      * @return IeFlightBillSettlementQueryResponse
      */
@@ -3040,6 +3058,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ProjectModifyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryCompenInfosForOp  QueryCompenInfosForOpRequest
+     * @return QueryCompenInfosForOpResponse
+     */
+    @Override
+    public CompletableFuture<QueryCompenInfosForOpResponse> queryCompenInfosForOp(QueryCompenInfosForOpRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryCompenInfosForOp").setMethod(HttpMethod.GET).setPathRegex("/compen/v1/queryCompenInfosForOp").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryCompenInfosForOpResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryCompenInfosForOpResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

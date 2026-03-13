@@ -22,6 +22,14 @@ public class HotelBillSettlementQueryRequest extends Request {
     private String billBatch;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bill_record_time_end")
+    private String billRecordTimeEnd;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bill_record_time_start")
+    private String billRecordTimeStart;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("order_id")
     private Long orderId;
 
@@ -58,6 +66,8 @@ public class HotelBillSettlementQueryRequest extends Request {
     private HotelBillSettlementQueryRequest(Builder builder) {
         super(builder);
         this.billBatch = builder.billBatch;
+        this.billRecordTimeEnd = builder.billRecordTimeEnd;
+        this.billRecordTimeStart = builder.billRecordTimeStart;
         this.orderId = builder.orderId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
@@ -86,6 +96,20 @@ public class HotelBillSettlementQueryRequest extends Request {
      */
     public String getBillBatch() {
         return this.billBatch;
+    }
+
+    /**
+     * @return billRecordTimeEnd
+     */
+    public String getBillRecordTimeEnd() {
+        return this.billRecordTimeEnd;
+    }
+
+    /**
+     * @return billRecordTimeStart
+     */
+    public String getBillRecordTimeStart() {
+        return this.billRecordTimeStart;
     }
 
     /**
@@ -146,6 +170,8 @@ public class HotelBillSettlementQueryRequest extends Request {
 
     public static final class Builder extends Request.Builder<HotelBillSettlementQueryRequest, Builder> {
         private String billBatch; 
+        private String billRecordTimeEnd; 
+        private String billRecordTimeStart; 
         private Long orderId; 
         private Integer pageNo; 
         private Integer pageSize; 
@@ -162,6 +188,8 @@ public class HotelBillSettlementQueryRequest extends Request {
         private Builder(HotelBillSettlementQueryRequest request) {
             super(request);
             this.billBatch = request.billBatch;
+            this.billRecordTimeEnd = request.billRecordTimeEnd;
+            this.billRecordTimeStart = request.billRecordTimeStart;
             this.orderId = request.orderId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
@@ -178,6 +206,24 @@ public class HotelBillSettlementQueryRequest extends Request {
         public Builder billBatch(String billBatch) {
             this.putQueryParameter("bill_batch", billBatch);
             this.billBatch = billBatch;
+            return this;
+        }
+
+        /**
+         * bill_record_time_end.
+         */
+        public Builder billRecordTimeEnd(String billRecordTimeEnd) {
+            this.putQueryParameter("bill_record_time_end", billRecordTimeEnd);
+            this.billRecordTimeEnd = billRecordTimeEnd;
+            return this;
+        }
+
+        /**
+         * bill_record_time_start.
+         */
+        public Builder billRecordTimeStart(String billRecordTimeStart) {
+            this.putQueryParameter("bill_record_time_start", billRecordTimeStart);
+            this.billRecordTimeStart = billRecordTimeStart;
             return this;
         }
 

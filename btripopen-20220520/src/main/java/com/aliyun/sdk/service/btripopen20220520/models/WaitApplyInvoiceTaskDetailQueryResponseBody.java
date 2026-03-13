@@ -203,6 +203,9 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_special_invoice_fee")
         private String hotelSpecialInvoiceFee;
 
+        @com.aliyun.core.annotation.NameInMap("ie_vehicle_normal_invoice_fee")
+        private String ieVehicleNormalInvoiceFee;
+
         @com.aliyun.core.annotation.NameInMap("international_flight_invoice_fee")
         private String internationalFlightInvoiceFee;
 
@@ -229,6 +232,9 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("meal_normal_invoice_fee")
         private String mealNormalInvoiceFee;
+
+        @com.aliyun.core.annotation.NameInMap("meal_tc7_normal_invoice_fee")
+        private String mealTc7NormalInvoiceFee;
 
         @com.aliyun.core.annotation.NameInMap("penalty_fee")
         private String penaltyFee;
@@ -267,6 +273,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             this.fuPointInvoiceFee = builder.fuPointInvoiceFee;
             this.hotelNormalInvoiceFee = builder.hotelNormalInvoiceFee;
             this.hotelSpecialInvoiceFee = builder.hotelSpecialInvoiceFee;
+            this.ieVehicleNormalInvoiceFee = builder.ieVehicleNormalInvoiceFee;
             this.internationalFlightInvoiceFee = builder.internationalFlightInvoiceFee;
             this.internationalHotelInvoiceFee = builder.internationalHotelInvoiceFee;
             this.invoiceThirdPartId = builder.invoiceThirdPartId;
@@ -276,6 +283,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             this.mailFullAddress = builder.mailFullAddress;
             this.mailProvince = builder.mailProvince;
             this.mealNormalInvoiceFee = builder.mealNormalInvoiceFee;
+            this.mealTc7NormalInvoiceFee = builder.mealTc7NormalInvoiceFee;
             this.penaltyFee = builder.penaltyFee;
             this.remark = builder.remark;
             this.serviceFee = builder.serviceFee;
@@ -339,6 +347,13 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return ieVehicleNormalInvoiceFee
+         */
+        public String getIeVehicleNormalInvoiceFee() {
+            return this.ieVehicleNormalInvoiceFee;
+        }
+
+        /**
          * @return internationalFlightInvoiceFee
          */
         public String getInternationalFlightInvoiceFee() {
@@ -399,6 +414,13 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
          */
         public String getMealNormalInvoiceFee() {
             return this.mealNormalInvoiceFee;
+        }
+
+        /**
+         * @return mealTc7NormalInvoiceFee
+         */
+        public String getMealTc7NormalInvoiceFee() {
+            return this.mealTc7NormalInvoiceFee;
         }
 
         /**
@@ -478,6 +500,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             private String fuPointInvoiceFee; 
             private String hotelNormalInvoiceFee; 
             private String hotelSpecialInvoiceFee; 
+            private String ieVehicleNormalInvoiceFee; 
             private String internationalFlightInvoiceFee; 
             private String internationalHotelInvoiceFee; 
             private String invoiceThirdPartId; 
@@ -487,6 +510,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             private String mailFullAddress; 
             private String mailProvince; 
             private String mealNormalInvoiceFee; 
+            private String mealTc7NormalInvoiceFee; 
             private String penaltyFee; 
             private String remark; 
             private String serviceFee; 
@@ -508,6 +532,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
                 this.fuPointInvoiceFee = model.fuPointInvoiceFee;
                 this.hotelNormalInvoiceFee = model.hotelNormalInvoiceFee;
                 this.hotelSpecialInvoiceFee = model.hotelSpecialInvoiceFee;
+                this.ieVehicleNormalInvoiceFee = model.ieVehicleNormalInvoiceFee;
                 this.internationalFlightInvoiceFee = model.internationalFlightInvoiceFee;
                 this.internationalHotelInvoiceFee = model.internationalHotelInvoiceFee;
                 this.invoiceThirdPartId = model.invoiceThirdPartId;
@@ -517,6 +542,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
                 this.mailFullAddress = model.mailFullAddress;
                 this.mailProvince = model.mailProvince;
                 this.mealNormalInvoiceFee = model.mealNormalInvoiceFee;
+                this.mealTc7NormalInvoiceFee = model.mealTc7NormalInvoiceFee;
                 this.penaltyFee = model.penaltyFee;
                 this.remark = model.remark;
                 this.serviceFee = model.serviceFee;
@@ -574,6 +600,14 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
              */
             public Builder hotelSpecialInvoiceFee(String hotelSpecialInvoiceFee) {
                 this.hotelSpecialInvoiceFee = hotelSpecialInvoiceFee;
+                return this;
+            }
+
+            /**
+             * ie_vehicle_normal_invoice_fee.
+             */
+            public Builder ieVehicleNormalInvoiceFee(String ieVehicleNormalInvoiceFee) {
+                this.ieVehicleNormalInvoiceFee = ieVehicleNormalInvoiceFee;
                 return this;
             }
 
@@ -646,6 +680,14 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
              */
             public Builder mealNormalInvoiceFee(String mealNormalInvoiceFee) {
                 this.mealNormalInvoiceFee = mealNormalInvoiceFee;
+                return this;
+            }
+
+            /**
+             * meal_tc7_normal_invoice_fee.
+             */
+            public Builder mealTc7NormalInvoiceFee(String mealTc7NormalInvoiceFee) {
+                this.mealTc7NormalInvoiceFee = mealTc7NormalInvoiceFee;
                 return this;
             }
 

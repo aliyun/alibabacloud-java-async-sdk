@@ -716,6 +716,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<IFlightOrderListQueryResponse> iFlightOrderListQuery(IFlightOrderListQueryRequest request);
 
     /**
+     * @param request the request parameters of IeCarBillSettlementQuery  IeCarBillSettlementQueryRequest
+     * @return IeCarBillSettlementQueryResponse
+     */
+    CompletableFuture<IeCarBillSettlementQueryResponse> ieCarBillSettlementQuery(IeCarBillSettlementQueryRequest request);
+
+    /**
      * @param request the request parameters of IeFlightBillSettlementQuery  IeFlightBillSettlementQueryRequest
      * @return IeFlightBillSettlementQueryResponse
      */
@@ -1020,6 +1026,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ProjectModifyResponse
      */
     CompletableFuture<ProjectModifyResponse> projectModify(ProjectModifyRequest request);
+
+    /**
+     * @param request the request parameters of QueryCompenInfosForOp  QueryCompenInfosForOpRequest
+     * @return QueryCompenInfosForOpResponse
+     */
+    CompletableFuture<QueryCompenInfosForOpResponse> queryCompenInfosForOp(QueryCompenInfosForOpRequest request);
 
     /**
      * @param request the request parameters of QueryCorpDetailInfo  QueryCorpDetailInfoRequest

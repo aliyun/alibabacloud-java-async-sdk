@@ -233,6 +233,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("room_type")
         private String roomType;
 
+        @com.aliyun.core.annotation.NameInMap("star")
+        private String star;
+
         private HotelInfo(Builder builder) {
             this.brandCode = builder.brandCode;
             this.brandGroup = builder.brandGroup;
@@ -250,6 +253,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             this.night = builder.night;
             this.roomNum = builder.roomNum;
             this.roomType = builder.roomType;
+            this.star = builder.star;
         }
 
         public static Builder builder() {
@@ -372,6 +376,13 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             return this.roomType;
         }
 
+        /**
+         * @return star
+         */
+        public String getStar() {
+            return this.star;
+        }
+
         public static final class Builder {
             private String brandCode; 
             private String brandGroup; 
@@ -389,6 +400,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private Integer night; 
             private Integer roomNum; 
             private String roomType; 
+            private String star; 
 
             private Builder() {
             } 
@@ -410,6 +422,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
                 this.night = model.night;
                 this.roomNum = model.roomNum;
                 this.roomType = model.roomType;
+                this.star = model.star;
             } 
 
             /**
@@ -537,6 +550,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
              */
             public Builder roomType(String roomType) {
                 this.roomType = roomType;
+                return this;
+            }
+
+            /**
+             * star.
+             */
+            public Builder star(String star) {
+                this.star = star;
                 return this;
             }
 

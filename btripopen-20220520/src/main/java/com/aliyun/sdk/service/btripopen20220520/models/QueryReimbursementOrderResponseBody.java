@@ -992,11 +992,15 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private String amount;
 
+        @com.aliyun.core.annotation.NameInMap("payee_account_number")
+        private String payeeAccountNumber;
+
         @com.aliyun.core.annotation.NameInMap("payee_user_id")
         private String payeeUserId;
 
         private PaymentInfos(Builder builder) {
             this.amount = builder.amount;
+            this.payeeAccountNumber = builder.payeeAccountNumber;
             this.payeeUserId = builder.payeeUserId;
         }
 
@@ -1016,6 +1020,13 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
 
         /**
+         * @return payeeAccountNumber
+         */
+        public String getPayeeAccountNumber() {
+            return this.payeeAccountNumber;
+        }
+
+        /**
          * @return payeeUserId
          */
         public String getPayeeUserId() {
@@ -1024,6 +1035,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private String amount; 
+            private String payeeAccountNumber; 
             private String payeeUserId; 
 
             private Builder() {
@@ -1031,6 +1043,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
             private Builder(PaymentInfos model) {
                 this.amount = model.amount;
+                this.payeeAccountNumber = model.payeeAccountNumber;
                 this.payeeUserId = model.payeeUserId;
             } 
 
@@ -1039,6 +1052,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
              */
             public Builder amount(String amount) {
                 this.amount = amount;
+                return this;
+            }
+
+            /**
+             * payee_account_number.
+             */
+            public Builder payeeAccountNumber(String payeeAccountNumber) {
+                this.payeeAccountNumber = payeeAccountNumber;
                 return this;
             }
 

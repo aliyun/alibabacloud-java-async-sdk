@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class TrainTicketScanQueryRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("bill_date")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String billDate;
 
     @com.aliyun.core.annotation.Query
@@ -27,8 +26,20 @@ public class TrainTicketScanQueryRequest extends Request {
     private Long billId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("invoice_date_end")
+    private String invoiceDateEnd;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("invoice_date_start")
+    private String invoiceDateStart;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("invoice_sub_task_id")
     private Long invoiceSubTaskId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order_id")
+    private Long orderId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("page_no")
@@ -55,7 +66,10 @@ public class TrainTicketScanQueryRequest extends Request {
         super(builder);
         this.billDate = builder.billDate;
         this.billId = builder.billId;
+        this.invoiceDateEnd = builder.invoiceDateEnd;
+        this.invoiceDateStart = builder.invoiceDateStart;
         this.invoiceSubTaskId = builder.invoiceSubTaskId;
+        this.orderId = builder.orderId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.serialNumber = builder.serialNumber;
@@ -91,10 +105,31 @@ public class TrainTicketScanQueryRequest extends Request {
     }
 
     /**
+     * @return invoiceDateEnd
+     */
+    public String getInvoiceDateEnd() {
+        return this.invoiceDateEnd;
+    }
+
+    /**
+     * @return invoiceDateStart
+     */
+    public String getInvoiceDateStart() {
+        return this.invoiceDateStart;
+    }
+
+    /**
      * @return invoiceSubTaskId
      */
     public Long getInvoiceSubTaskId() {
         return this.invoiceSubTaskId;
+    }
+
+    /**
+     * @return orderId
+     */
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -135,7 +170,10 @@ public class TrainTicketScanQueryRequest extends Request {
     public static final class Builder extends Request.Builder<TrainTicketScanQueryRequest, Builder> {
         private String billDate; 
         private Long billId; 
+        private String invoiceDateEnd; 
+        private String invoiceDateStart; 
         private Long invoiceSubTaskId; 
+        private Long orderId; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String serialNumber; 
@@ -150,7 +188,10 @@ public class TrainTicketScanQueryRequest extends Request {
             super(request);
             this.billDate = request.billDate;
             this.billId = request.billId;
+            this.invoiceDateEnd = request.invoiceDateEnd;
+            this.invoiceDateStart = request.invoiceDateStart;
             this.invoiceSubTaskId = request.invoiceSubTaskId;
+            this.orderId = request.orderId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.serialNumber = request.serialNumber;
@@ -159,10 +200,7 @@ public class TrainTicketScanQueryRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-12-01</p>
+         * bill_date.
          */
         public Builder billDate(String billDate) {
             this.putQueryParameter("bill_date", billDate);
@@ -180,11 +218,38 @@ public class TrainTicketScanQueryRequest extends Request {
         }
 
         /**
+         * invoice_date_end.
+         */
+        public Builder invoiceDateEnd(String invoiceDateEnd) {
+            this.putQueryParameter("invoice_date_end", invoiceDateEnd);
+            this.invoiceDateEnd = invoiceDateEnd;
+            return this;
+        }
+
+        /**
+         * invoice_date_start.
+         */
+        public Builder invoiceDateStart(String invoiceDateStart) {
+            this.putQueryParameter("invoice_date_start", invoiceDateStart);
+            this.invoiceDateStart = invoiceDateStart;
+            return this;
+        }
+
+        /**
          * invoice_sub_task_id.
          */
         public Builder invoiceSubTaskId(Long invoiceSubTaskId) {
             this.putQueryParameter("invoice_sub_task_id", invoiceSubTaskId);
             this.invoiceSubTaskId = invoiceSubTaskId;
+            return this;
+        }
+
+        /**
+         * order_id.
+         */
+        public Builder orderId(Long orderId) {
+            this.putQueryParameter("order_id", orderId);
+            this.orderId = orderId;
             return this;
         }
 

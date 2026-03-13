@@ -209,8 +209,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("department")
         private String department;
 
+        @com.aliyun.core.annotation.NameInMap("electronic_ticket_no")
+        private String electronicTicketNo;
+
         @com.aliyun.core.annotation.NameInMap("fee_type_show_code")
         private Integer feeTypeShowCode;
+
+        @com.aliyun.core.annotation.NameInMap("has_changed")
+        private Boolean hasChanged;
 
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
@@ -229,6 +235,9 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
+
+        @com.aliyun.core.annotation.NameInMap("origin_ticket_no")
+        private String originTicketNo;
 
         @com.aliyun.core.annotation.NameInMap("oss_url")
         private String ossUrl;
@@ -272,6 +281,9 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("train_no")
         private String trainNo;
 
+        @com.aliyun.core.annotation.NameInMap("xml_url")
+        private String xmlUrl;
+
         private Items(Builder builder) {
             this.applyId = builder.applyId;
             this.arrStation = builder.arrStation;
@@ -281,13 +293,16 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             this.depStation = builder.depStation;
             this.depTime = builder.depTime;
             this.department = builder.department;
+            this.electronicTicketNo = builder.electronicTicketNo;
             this.feeTypeShowCode = builder.feeTypeShowCode;
+            this.hasChanged = builder.hasChanged;
             this.id = builder.id;
             this.invoiceDate = builder.invoiceDate;
             this.invoiceMaterial = builder.invoiceMaterial;
             this.invoiceTitle = builder.invoiceTitle;
             this.ofdUrl = builder.ofdUrl;
             this.orderId = builder.orderId;
+            this.originTicketNo = builder.originTicketNo;
             this.ossUrl = builder.ossUrl;
             this.passenger = builder.passenger;
             this.pdfUrl = builder.pdfUrl;
@@ -302,6 +317,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             this.taxRate = builder.taxRate;
             this.ticketNo = builder.ticketNo;
             this.trainNo = builder.trainNo;
+            this.xmlUrl = builder.xmlUrl;
         }
 
         public static Builder builder() {
@@ -369,10 +385,24 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return electronicTicketNo
+         */
+        public String getElectronicTicketNo() {
+            return this.electronicTicketNo;
+        }
+
+        /**
          * @return feeTypeShowCode
          */
         public Integer getFeeTypeShowCode() {
             return this.feeTypeShowCode;
+        }
+
+        /**
+         * @return hasChanged
+         */
+        public Boolean getHasChanged() {
+            return this.hasChanged;
         }
 
         /**
@@ -415,6 +445,13 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
          */
         public Long getOrderId() {
             return this.orderId;
+        }
+
+        /**
+         * @return originTicketNo
+         */
+        public String getOriginTicketNo() {
+            return this.originTicketNo;
         }
 
         /**
@@ -515,6 +552,13 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             return this.trainNo;
         }
 
+        /**
+         * @return xmlUrl
+         */
+        public String getXmlUrl() {
+            return this.xmlUrl;
+        }
+
         public static final class Builder {
             private String applyId; 
             private String arrStation; 
@@ -524,13 +568,16 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             private String depStation; 
             private String depTime; 
             private String department; 
+            private String electronicTicketNo; 
             private Integer feeTypeShowCode; 
+            private Boolean hasChanged; 
             private String id; 
             private String invoiceDate; 
             private Integer invoiceMaterial; 
             private String invoiceTitle; 
             private String ofdUrl; 
             private Long orderId; 
+            private String originTicketNo; 
             private String ossUrl; 
             private String passenger; 
             private String pdfUrl; 
@@ -545,6 +592,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             private String taxRate; 
             private String ticketNo; 
             private String trainNo; 
+            private String xmlUrl; 
 
             private Builder() {
             } 
@@ -558,13 +606,16 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
                 this.depStation = model.depStation;
                 this.depTime = model.depTime;
                 this.department = model.department;
+                this.electronicTicketNo = model.electronicTicketNo;
                 this.feeTypeShowCode = model.feeTypeShowCode;
+                this.hasChanged = model.hasChanged;
                 this.id = model.id;
                 this.invoiceDate = model.invoiceDate;
                 this.invoiceMaterial = model.invoiceMaterial;
                 this.invoiceTitle = model.invoiceTitle;
                 this.ofdUrl = model.ofdUrl;
                 this.orderId = model.orderId;
+                this.originTicketNo = model.originTicketNo;
                 this.ossUrl = model.ossUrl;
                 this.passenger = model.passenger;
                 this.pdfUrl = model.pdfUrl;
@@ -579,6 +630,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
                 this.taxRate = model.taxRate;
                 this.ticketNo = model.ticketNo;
                 this.trainNo = model.trainNo;
+                this.xmlUrl = model.xmlUrl;
             } 
 
             /**
@@ -646,10 +698,26 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * electronic_ticket_no.
+             */
+            public Builder electronicTicketNo(String electronicTicketNo) {
+                this.electronicTicketNo = electronicTicketNo;
+                return this;
+            }
+
+            /**
              * fee_type_show_code.
              */
             public Builder feeTypeShowCode(Integer feeTypeShowCode) {
                 this.feeTypeShowCode = feeTypeShowCode;
+                return this;
+            }
+
+            /**
+             * has_changed.
+             */
+            public Builder hasChanged(Boolean hasChanged) {
+                this.hasChanged = hasChanged;
                 return this;
             }
 
@@ -698,6 +766,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
+                return this;
+            }
+
+            /**
+             * origin_ticket_no.
+             */
+            public Builder originTicketNo(String originTicketNo) {
+                this.originTicketNo = originTicketNo;
                 return this;
             }
 
@@ -816,6 +892,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
              */
             public Builder trainNo(String trainNo) {
                 this.trainNo = trainNo;
+                return this;
+            }
+
+            /**
+             * xml_url.
+             */
+            public Builder xmlUrl(String xmlUrl) {
+                this.xmlUrl = xmlUrl;
                 return this;
             }
 

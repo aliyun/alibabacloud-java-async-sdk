@@ -248,6 +248,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("base_location")
         private String baseLocation;
 
+        @com.aliyun.core.annotation.NameInMap("before_ticket_no")
+        private String beforeTicketNo;
+
         @com.aliyun.core.annotation.NameInMap("bill_record_time")
         private String billRecordTime;
 
@@ -494,6 +497,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("seal_price")
         private Double sealPrice;
 
+        @com.aliyun.core.annotation.NameInMap("segment_list")
+        private String segmentList;
+
         @com.aliyun.core.annotation.NameInMap("service_fee")
         private Double serviceFee;
 
@@ -595,6 +601,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             this.arrStation = builder.arrStation;
             this.arrTime = builder.arrTime;
             this.baseLocation = builder.baseLocation;
+            this.beforeTicketNo = builder.beforeTicketNo;
             this.billRecordTime = builder.billRecordTime;
             this.bookChannel = builder.bookChannel;
             this.bookMode = builder.bookMode;
@@ -677,6 +684,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             this.remark = builder.remark;
             this.repeatRefund = builder.repeatRefund;
             this.sealPrice = builder.sealPrice;
+            this.segmentList = builder.segmentList;
             this.serviceFee = builder.serviceFee;
             this.settleTypeDesc = builder.settleTypeDesc;
             this.settlementFee = builder.settlementFee;
@@ -865,6 +873,13 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getBaseLocation() {
             return this.baseLocation;
+        }
+
+        /**
+         * @return beforeTicketNo
+         */
+        public String getBeforeTicketNo() {
+            return this.beforeTicketNo;
         }
 
         /**
@@ -1442,6 +1457,13 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return segmentList
+         */
+        public String getSegmentList() {
+            return this.segmentList;
+        }
+
+        /**
          * @return serviceFee
          */
         public Double getServiceFee() {
@@ -1646,6 +1668,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             private String arrStation; 
             private String arrTime; 
             private String baseLocation; 
+            private String beforeTicketNo; 
             private String billRecordTime; 
             private String bookChannel; 
             private String bookMode; 
@@ -1728,6 +1751,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             private String remark; 
             private String repeatRefund; 
             private Double sealPrice; 
+            private String segmentList; 
             private Double serviceFee; 
             private String settleTypeDesc; 
             private Double settlementFee; 
@@ -1781,6 +1805,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
                 this.arrStation = model.arrStation;
                 this.arrTime = model.arrTime;
                 this.baseLocation = model.baseLocation;
+                this.beforeTicketNo = model.beforeTicketNo;
                 this.billRecordTime = model.billRecordTime;
                 this.bookChannel = model.bookChannel;
                 this.bookMode = model.bookMode;
@@ -1863,6 +1888,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
                 this.remark = model.remark;
                 this.repeatRefund = model.repeatRefund;
                 this.sealPrice = model.sealPrice;
+                this.segmentList = model.segmentList;
                 this.serviceFee = model.serviceFee;
                 this.settleTypeDesc = model.settleTypeDesc;
                 this.settlementFee = model.settlementFee;
@@ -2064,6 +2090,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder baseLocation(String baseLocation) {
                 this.baseLocation = baseLocation;
+                return this;
+            }
+
+            /**
+             * before_ticket_no.
+             */
+            public Builder beforeTicketNo(String beforeTicketNo) {
+                this.beforeTicketNo = beforeTicketNo;
                 return this;
             }
 
@@ -2720,6 +2754,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder sealPrice(Double sealPrice) {
                 this.sealPrice = sealPrice;
+                return this;
+            }
+
+            /**
+             * segment_list.
+             */
+            public Builder segmentList(String segmentList) {
+                this.segmentList = segmentList;
                 return this;
             }
 

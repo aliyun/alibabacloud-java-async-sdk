@@ -30,6 +30,10 @@ public class InvoiceModifyRequest extends Request {
     private String bankNo;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mail_third_part_id")
+    private String mailThirdPartId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tax_no")
     private String taxNo;
 
@@ -65,6 +69,7 @@ public class InvoiceModifyRequest extends Request {
         this.address = builder.address;
         this.bankName = builder.bankName;
         this.bankNo = builder.bankNo;
+        this.mailThirdPartId = builder.mailThirdPartId;
         this.taxNo = builder.taxNo;
         this.tel = builder.tel;
         this.thirdPartId = builder.thirdPartId;
@@ -106,6 +111,13 @@ public class InvoiceModifyRequest extends Request {
      */
     public String getBankNo() {
         return this.bankNo;
+    }
+
+    /**
+     * @return mailThirdPartId
+     */
+    public String getMailThirdPartId() {
+        return this.mailThirdPartId;
     }
 
     /**
@@ -161,6 +173,7 @@ public class InvoiceModifyRequest extends Request {
         private String address; 
         private String bankName; 
         private String bankNo; 
+        private String mailThirdPartId; 
         private String taxNo; 
         private String tel; 
         private String thirdPartId; 
@@ -178,6 +191,7 @@ public class InvoiceModifyRequest extends Request {
             this.address = request.address;
             this.bankName = request.bankName;
             this.bankNo = request.bankNo;
+            this.mailThirdPartId = request.mailThirdPartId;
             this.taxNo = request.taxNo;
             this.tel = request.tel;
             this.thirdPartId = request.thirdPartId;
@@ -211,6 +225,15 @@ public class InvoiceModifyRequest extends Request {
         public Builder bankNo(String bankNo) {
             this.putBodyParameter("bank_no", bankNo);
             this.bankNo = bankNo;
+            return this;
+        }
+
+        /**
+         * mail_third_part_id.
+         */
+        public Builder mailThirdPartId(String mailThirdPartId) {
+            this.putBodyParameter("mail_third_part_id", mailThirdPartId);
+            this.mailThirdPartId = mailThirdPartId;
             return this;
         }
 

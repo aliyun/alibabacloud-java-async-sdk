@@ -1028,6 +1028,9 @@ public class CarOrderQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_title")
         private String btripTitle;
 
+        @com.aliyun.core.annotation.NameInMap("car_order_source_type")
+        private Long carOrderSourceType;
+
         @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
@@ -1080,6 +1083,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             this.applyId = builder.applyId;
             this.btripCause = builder.btripCause;
             this.btripTitle = builder.btripTitle;
+            this.carOrderSourceType = builder.carOrderSourceType;
             this.corpId = builder.corpId;
             this.corpName = builder.corpName;
             this.departId = builder.departId;
@@ -1125,6 +1129,13 @@ public class CarOrderQueryResponseBody extends TeaModel {
          */
         public String getBtripTitle() {
             return this.btripTitle;
+        }
+
+        /**
+         * @return carOrderSourceType
+         */
+        public Long getCarOrderSourceType() {
+            return this.carOrderSourceType;
         }
 
         /**
@@ -1243,6 +1254,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private String applyId; 
             private String btripCause; 
             private String btripTitle; 
+            private Long carOrderSourceType; 
             private String corpId; 
             private String corpName; 
             private String departId; 
@@ -1267,6 +1279,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
                 this.applyId = model.applyId;
                 this.btripCause = model.btripCause;
                 this.btripTitle = model.btripTitle;
+                this.carOrderSourceType = model.carOrderSourceType;
                 this.corpId = model.corpId;
                 this.corpName = model.corpName;
                 this.departId = model.departId;
@@ -1306,6 +1319,14 @@ public class CarOrderQueryResponseBody extends TeaModel {
              */
             public Builder btripTitle(String btripTitle) {
                 this.btripTitle = btripTitle;
+                return this;
+            }
+
+            /**
+             * car_order_source_type.
+             */
+            public Builder carOrderSourceType(Long carOrderSourceType) {
+                this.carOrderSourceType = carOrderSourceType;
                 return this;
             }
 

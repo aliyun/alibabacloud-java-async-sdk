@@ -22,6 +22,14 @@ public class CooperatorFlightBillSettlementQueryRequest extends Request {
     private String billBatch;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bill_record_time_end")
+    private String billRecordTimeEnd;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bill_record_time_start")
+    private String billRecordTimeStart;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("cooperator_id")
     private String cooperatorId;
 
@@ -62,6 +70,8 @@ public class CooperatorFlightBillSettlementQueryRequest extends Request {
     private CooperatorFlightBillSettlementQueryRequest(Builder builder) {
         super(builder);
         this.billBatch = builder.billBatch;
+        this.billRecordTimeEnd = builder.billRecordTimeEnd;
+        this.billRecordTimeStart = builder.billRecordTimeStart;
         this.cooperatorId = builder.cooperatorId;
         this.orderId = builder.orderId;
         this.pageNo = builder.pageNo;
@@ -91,6 +101,20 @@ public class CooperatorFlightBillSettlementQueryRequest extends Request {
      */
     public String getBillBatch() {
         return this.billBatch;
+    }
+
+    /**
+     * @return billRecordTimeEnd
+     */
+    public String getBillRecordTimeEnd() {
+        return this.billRecordTimeEnd;
+    }
+
+    /**
+     * @return billRecordTimeStart
+     */
+    public String getBillRecordTimeStart() {
+        return this.billRecordTimeStart;
     }
 
     /**
@@ -158,6 +182,8 @@ public class CooperatorFlightBillSettlementQueryRequest extends Request {
 
     public static final class Builder extends Request.Builder<CooperatorFlightBillSettlementQueryRequest, Builder> {
         private String billBatch; 
+        private String billRecordTimeEnd; 
+        private String billRecordTimeStart; 
         private String cooperatorId; 
         private Long orderId; 
         private Integer pageNo; 
@@ -175,6 +201,8 @@ public class CooperatorFlightBillSettlementQueryRequest extends Request {
         private Builder(CooperatorFlightBillSettlementQueryRequest request) {
             super(request);
             this.billBatch = request.billBatch;
+            this.billRecordTimeEnd = request.billRecordTimeEnd;
+            this.billRecordTimeStart = request.billRecordTimeStart;
             this.cooperatorId = request.cooperatorId;
             this.orderId = request.orderId;
             this.pageNo = request.pageNo;
@@ -192,6 +220,24 @@ public class CooperatorFlightBillSettlementQueryRequest extends Request {
         public Builder billBatch(String billBatch) {
             this.putQueryParameter("bill_batch", billBatch);
             this.billBatch = billBatch;
+            return this;
+        }
+
+        /**
+         * bill_record_time_end.
+         */
+        public Builder billRecordTimeEnd(String billRecordTimeEnd) {
+            this.putQueryParameter("bill_record_time_end", billRecordTimeEnd);
+            this.billRecordTimeEnd = billRecordTimeEnd;
+            return this;
+        }
+
+        /**
+         * bill_record_time_start.
+         */
+        public Builder billRecordTimeStart(String billRecordTimeStart) {
+            this.putQueryParameter("bill_record_time_start", billRecordTimeStart);
+            this.billRecordTimeStart = billRecordTimeStart;
             return this;
         }
 

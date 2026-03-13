@@ -197,6 +197,9 @@ public class CommonApplyQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
+        @com.aliyun.core.annotation.NameInMap("order_id")
+        private Long orderId;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
@@ -222,6 +225,7 @@ public class CommonApplyQueryResponseBody extends TeaModel {
             this.corpId = builder.corpId;
             this.extendValue = builder.extendValue;
             this.gmtCreate = builder.gmtCreate;
+            this.orderId = builder.orderId;
             this.status = builder.status;
             this.thirdpartCorpId = builder.thirdpartCorpId;
             this.thirdpartId = builder.thirdpartId;
@@ -281,6 +285,13 @@ public class CommonApplyQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return orderId
+         */
+        public Long getOrderId() {
+            return this.orderId;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -329,6 +340,7 @@ public class CommonApplyQueryResponseBody extends TeaModel {
             private String corpId; 
             private String extendValue; 
             private String gmtCreate; 
+            private Long orderId; 
             private Integer status; 
             private String thirdpartCorpId; 
             private String thirdpartId; 
@@ -346,6 +358,7 @@ public class CommonApplyQueryResponseBody extends TeaModel {
                 this.corpId = model.corpId;
                 this.extendValue = model.extendValue;
                 this.gmtCreate = model.gmtCreate;
+                this.orderId = model.orderId;
                 this.status = model.status;
                 this.thirdpartCorpId = model.thirdpartCorpId;
                 this.thirdpartId = model.thirdpartId;
@@ -399,6 +412,14 @@ public class CommonApplyQueryResponseBody extends TeaModel {
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * order_id.
+             */
+            public Builder orderId(Long orderId) {
+                this.orderId = orderId;
                 return this;
             }
 

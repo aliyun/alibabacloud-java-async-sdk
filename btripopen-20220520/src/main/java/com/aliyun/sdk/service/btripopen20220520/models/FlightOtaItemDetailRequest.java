@@ -23,9 +23,17 @@ public class FlightOtaItemDetailRequest extends Request {
     private String isvName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order_id")
+    private String orderId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ota_item_id")
     @com.aliyun.core.annotation.Validation(required = true)
     private String otaItemId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
+    private String outOrderId;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
@@ -34,7 +42,9 @@ public class FlightOtaItemDetailRequest extends Request {
     private FlightOtaItemDetailRequest(Builder builder) {
         super(builder);
         this.isvName = builder.isvName;
+        this.orderId = builder.orderId;
         this.otaItemId = builder.otaItemId;
+        this.outOrderId = builder.outOrderId;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
 
@@ -59,10 +69,24 @@ public class FlightOtaItemDetailRequest extends Request {
     }
 
     /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    /**
      * @return otaItemId
      */
     public String getOtaItemId() {
         return this.otaItemId;
+    }
+
+    /**
+     * @return outOrderId
+     */
+    public String getOutOrderId() {
+        return this.outOrderId;
     }
 
     /**
@@ -74,7 +98,9 @@ public class FlightOtaItemDetailRequest extends Request {
 
     public static final class Builder extends Request.Builder<FlightOtaItemDetailRequest, Builder> {
         private String isvName; 
+        private String orderId; 
         private String otaItemId; 
+        private String outOrderId; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -84,7 +110,9 @@ public class FlightOtaItemDetailRequest extends Request {
         private Builder(FlightOtaItemDetailRequest request) {
             super(request);
             this.isvName = request.isvName;
+            this.orderId = request.orderId;
             this.otaItemId = request.otaItemId;
+            this.outOrderId = request.outOrderId;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
@@ -101,6 +129,15 @@ public class FlightOtaItemDetailRequest extends Request {
         }
 
         /**
+         * order_id.
+         */
+        public Builder orderId(String orderId) {
+            this.putQueryParameter("order_id", orderId);
+            this.orderId = orderId;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,6 +146,15 @@ public class FlightOtaItemDetailRequest extends Request {
         public Builder otaItemId(String otaItemId) {
             this.putQueryParameter("ota_item_id", otaItemId);
             this.otaItemId = otaItemId;
+            return this;
+        }
+
+        /**
+         * out_order_id.
+         */
+        public Builder outOrderId(String outOrderId) {
+            this.putQueryParameter("out_order_id", outOrderId);
+            this.outOrderId = outOrderId;
             return this;
         }
 

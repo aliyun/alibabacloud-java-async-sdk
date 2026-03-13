@@ -74,6 +74,10 @@ public class HotelOrderCreateRequest extends Request {
     private String itineraryNo;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("member_info")
+    private MemberInfo memberInfo;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("occupant_info_list")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<OccupantInfoList> occupantInfoList;
@@ -140,6 +144,7 @@ public class HotelOrderCreateRequest extends Request {
         this.invoiceInfo = builder.invoiceInfo;
         this.itemId = builder.itemId;
         this.itineraryNo = builder.itineraryNo;
+        this.memberInfo = builder.memberInfo;
         this.occupantInfoList = builder.occupantInfoList;
         this.personPayPrice = builder.personPayPrice;
         this.promotionInfo = builder.promotionInfo;
@@ -251,6 +256,13 @@ public class HotelOrderCreateRequest extends Request {
     }
 
     /**
+     * @return memberInfo
+     */
+    public MemberInfo getMemberInfo() {
+        return this.memberInfo;
+    }
+
+    /**
      * @return occupantInfoList
      */
     public java.util.List<OccupantInfoList> getOccupantInfoList() {
@@ -340,6 +352,7 @@ public class HotelOrderCreateRequest extends Request {
         private InvoiceInfo invoiceInfo; 
         private Long itemId; 
         private String itineraryNo; 
+        private MemberInfo memberInfo; 
         private java.util.List<OccupantInfoList> occupantInfoList; 
         private Long personPayPrice; 
         private PromotionInfo promotionInfo; 
@@ -370,6 +383,7 @@ public class HotelOrderCreateRequest extends Request {
             this.invoiceInfo = request.invoiceInfo;
             this.itemId = request.itemId;
             this.itineraryNo = request.itineraryNo;
+            this.memberInfo = request.memberInfo;
             this.occupantInfoList = request.occupantInfoList;
             this.personPayPrice = request.personPayPrice;
             this.promotionInfo = request.promotionInfo;
@@ -513,6 +527,16 @@ public class HotelOrderCreateRequest extends Request {
         public Builder itineraryNo(String itineraryNo) {
             this.putBodyParameter("itinerary_no", itineraryNo);
             this.itineraryNo = itineraryNo;
+            return this;
+        }
+
+        /**
+         * member_info.
+         */
+        public Builder memberInfo(MemberInfo memberInfo) {
+            String memberInfoShrink = shrink(memberInfo, "member_info", "json");
+            this.putBodyParameter("member_info", memberInfoShrink);
+            this.memberInfo = memberInfo;
             return this;
         }
 
@@ -1044,12 +1068,273 @@ public class HotelOrderCreateRequest extends Request {
      *
      * <p>HotelOrderCreateRequest</p>
      */
+    public static class MemberInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("card_no")
+        private String cardNo;
+
+        @com.aliyun.core.annotation.NameInMap("real_name")
+        private String realName;
+
+        private MemberInfo(Builder builder) {
+            this.cardNo = builder.cardNo;
+            this.realName = builder.realName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MemberInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cardNo
+         */
+        public String getCardNo() {
+            return this.cardNo;
+        }
+
+        /**
+         * @return realName
+         */
+        public String getRealName() {
+            return this.realName;
+        }
+
+        public static final class Builder {
+            private String cardNo; 
+            private String realName; 
+
+            private Builder() {
+            } 
+
+            private Builder(MemberInfo model) {
+                this.cardNo = model.cardNo;
+                this.realName = model.realName;
+            } 
+
+            /**
+             * card_no.
+             */
+            public Builder cardNo(String cardNo) {
+                this.cardNo = cardNo;
+                return this;
+            }
+
+            /**
+             * real_name.
+             */
+            public Builder realName(String realName) {
+                this.realName = realName;
+                return this;
+            }
+
+            public MemberInfo build() {
+                return new MemberInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HotelOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>HotelOrderCreateRequest</p>
+     */
+    public static class CostCenterInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cost_center_id")
+        private String costCenterId;
+
+        @com.aliyun.core.annotation.NameInMap("cost_center_name")
+        private String costCenterName;
+
+        @com.aliyun.core.annotation.NameInMap("cost_center_no")
+        private String costCenterNo;
+
+        @com.aliyun.core.annotation.NameInMap("invoice_id")
+        private String invoiceId;
+
+        @com.aliyun.core.annotation.NameInMap("invoice_title")
+        private String invoiceTitle;
+
+        @com.aliyun.core.annotation.NameInMap("project_code")
+        private String projectCode;
+
+        @com.aliyun.core.annotation.NameInMap("project_title")
+        private String projectTitle;
+
+        private CostCenterInfo(Builder builder) {
+            this.costCenterId = builder.costCenterId;
+            this.costCenterName = builder.costCenterName;
+            this.costCenterNo = builder.costCenterNo;
+            this.invoiceId = builder.invoiceId;
+            this.invoiceTitle = builder.invoiceTitle;
+            this.projectCode = builder.projectCode;
+            this.projectTitle = builder.projectTitle;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CostCenterInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return costCenterId
+         */
+        public String getCostCenterId() {
+            return this.costCenterId;
+        }
+
+        /**
+         * @return costCenterName
+         */
+        public String getCostCenterName() {
+            return this.costCenterName;
+        }
+
+        /**
+         * @return costCenterNo
+         */
+        public String getCostCenterNo() {
+            return this.costCenterNo;
+        }
+
+        /**
+         * @return invoiceId
+         */
+        public String getInvoiceId() {
+            return this.invoiceId;
+        }
+
+        /**
+         * @return invoiceTitle
+         */
+        public String getInvoiceTitle() {
+            return this.invoiceTitle;
+        }
+
+        /**
+         * @return projectCode
+         */
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        /**
+         * @return projectTitle
+         */
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
+        public static final class Builder {
+            private String costCenterId; 
+            private String costCenterName; 
+            private String costCenterNo; 
+            private String invoiceId; 
+            private String invoiceTitle; 
+            private String projectCode; 
+            private String projectTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(CostCenterInfo model) {
+                this.costCenterId = model.costCenterId;
+                this.costCenterName = model.costCenterName;
+                this.costCenterNo = model.costCenterNo;
+                this.invoiceId = model.invoiceId;
+                this.invoiceTitle = model.invoiceTitle;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+            } 
+
+            /**
+             * cost_center_id.
+             */
+            public Builder costCenterId(String costCenterId) {
+                this.costCenterId = costCenterId;
+                return this;
+            }
+
+            /**
+             * cost_center_name.
+             */
+            public Builder costCenterName(String costCenterName) {
+                this.costCenterName = costCenterName;
+                return this;
+            }
+
+            /**
+             * cost_center_no.
+             */
+            public Builder costCenterNo(String costCenterNo) {
+                this.costCenterNo = costCenterNo;
+                return this;
+            }
+
+            /**
+             * invoice_id.
+             */
+            public Builder invoiceId(String invoiceId) {
+                this.invoiceId = invoiceId;
+                return this;
+            }
+
+            /**
+             * invoice_title.
+             */
+            public Builder invoiceTitle(String invoiceTitle) {
+                this.invoiceTitle = invoiceTitle;
+                return this;
+            }
+
+            /**
+             * project_code.
+             */
+            public Builder projectCode(String projectCode) {
+                this.projectCode = projectCode;
+                return this;
+            }
+
+            /**
+             * project_title.
+             */
+            public Builder projectTitle(String projectTitle) {
+                this.projectTitle = projectTitle;
+                return this;
+            }
+
+            public CostCenterInfo build() {
+                return new CostCenterInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HotelOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>HotelOrderCreateRequest</p>
+     */
     public static class OccupantInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("card_no")
         private String cardNo;
 
         @com.aliyun.core.annotation.NameInMap("card_type")
         private Integer cardType;
+
+        @com.aliyun.core.annotation.NameInMap("cascade_dept_name")
+        private String cascadeDeptName;
+
+        @com.aliyun.core.annotation.NameInMap("cost_center_info")
+        private CostCenterInfo costCenterInfo;
 
         @com.aliyun.core.annotation.NameInMap("customer_type")
         private Integer customerType;
@@ -1068,6 +1353,9 @@ public class HotelOrderCreateRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("first_name")
         private String firstName;
+
+        @com.aliyun.core.annotation.NameInMap("is_booker")
+        private Boolean isBooker;
 
         @com.aliyun.core.annotation.NameInMap("last_name")
         private String lastName;
@@ -1092,12 +1380,15 @@ public class HotelOrderCreateRequest extends Request {
         private OccupantInfoList(Builder builder) {
             this.cardNo = builder.cardNo;
             this.cardType = builder.cardType;
+            this.cascadeDeptName = builder.cascadeDeptName;
+            this.costCenterInfo = builder.costCenterInfo;
             this.customerType = builder.customerType;
             this.departmentId = builder.departmentId;
             this.departmentName = builder.departmentName;
             this.email = builder.email;
             this.employeeType = builder.employeeType;
             this.firstName = builder.firstName;
+            this.isBooker = builder.isBooker;
             this.lastName = builder.lastName;
             this.name = builder.name;
             this.phone = builder.phone;
@@ -1126,6 +1417,20 @@ public class HotelOrderCreateRequest extends Request {
          */
         public Integer getCardType() {
             return this.cardType;
+        }
+
+        /**
+         * @return cascadeDeptName
+         */
+        public String getCascadeDeptName() {
+            return this.cascadeDeptName;
+        }
+
+        /**
+         * @return costCenterInfo
+         */
+        public CostCenterInfo getCostCenterInfo() {
+            return this.costCenterInfo;
         }
 
         /**
@@ -1168,6 +1473,13 @@ public class HotelOrderCreateRequest extends Request {
          */
         public String getFirstName() {
             return this.firstName;
+        }
+
+        /**
+         * @return isBooker
+         */
+        public Boolean getIsBooker() {
+            return this.isBooker;
         }
 
         /**
@@ -1215,12 +1527,15 @@ public class HotelOrderCreateRequest extends Request {
         public static final class Builder {
             private String cardNo; 
             private Integer cardType; 
+            private String cascadeDeptName; 
+            private CostCenterInfo costCenterInfo; 
             private Integer customerType; 
             private String departmentId; 
             private String departmentName; 
             private String email; 
             private Integer employeeType; 
             private String firstName; 
+            private Boolean isBooker; 
             private String lastName; 
             private String name; 
             private String phone; 
@@ -1234,12 +1549,15 @@ public class HotelOrderCreateRequest extends Request {
             private Builder(OccupantInfoList model) {
                 this.cardNo = model.cardNo;
                 this.cardType = model.cardType;
+                this.cascadeDeptName = model.cascadeDeptName;
+                this.costCenterInfo = model.costCenterInfo;
                 this.customerType = model.customerType;
                 this.departmentId = model.departmentId;
                 this.departmentName = model.departmentName;
                 this.email = model.email;
                 this.employeeType = model.employeeType;
                 this.firstName = model.firstName;
+                this.isBooker = model.isBooker;
                 this.lastName = model.lastName;
                 this.name = model.name;
                 this.phone = model.phone;
@@ -1261,6 +1579,22 @@ public class HotelOrderCreateRequest extends Request {
              */
             public Builder cardType(Integer cardType) {
                 this.cardType = cardType;
+                return this;
+            }
+
+            /**
+             * cascade_dept_name.
+             */
+            public Builder cascadeDeptName(String cascadeDeptName) {
+                this.cascadeDeptName = cascadeDeptName;
+                return this;
+            }
+
+            /**
+             * cost_center_info.
+             */
+            public Builder costCenterInfo(CostCenterInfo costCenterInfo) {
+                this.costCenterInfo = costCenterInfo;
                 return this;
             }
 
@@ -1309,6 +1643,14 @@ public class HotelOrderCreateRequest extends Request {
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
+                return this;
+            }
+
+            /**
+             * is_booker.
+             */
+            public Builder isBooker(Boolean isBooker) {
+                this.isBooker = isBooker;
                 return this;
             }
 

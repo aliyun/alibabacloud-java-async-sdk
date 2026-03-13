@@ -506,6 +506,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bill_date")
         private String billDate;
 
+        @com.aliyun.core.annotation.NameInMap("blue_or_red")
+        private Integer blueOrRed;
+
         @com.aliyun.core.annotation.NameInMap("build")
         private String build;
 
@@ -551,6 +554,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("oss_url")
         private String ossUrl;
 
+        @com.aliyun.core.annotation.NameInMap("other_taxes")
+        private String otherTaxes;
+
         @com.aliyun.core.annotation.NameInMap("passenger_name")
         private String passengerName;
 
@@ -590,10 +596,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("validation_code")
         private String validationCode;
 
+        @com.aliyun.core.annotation.NameInMap("xml_oss_url")
+        private String xmlOssUrl;
+
         private Items(Builder builder) {
             this.agentCode = builder.agentCode;
             this.applyId = builder.applyId;
             this.billDate = builder.billDate;
+            this.blueOrRed = builder.blueOrRed;
             this.build = builder.build;
             this.costCenter = builder.costCenter;
             this.department = builder.department;
@@ -609,6 +619,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             this.ofdOssUrl = builder.ofdOssUrl;
             this.orderId = builder.orderId;
             this.ossUrl = builder.ossUrl;
+            this.otherTaxes = builder.otherTaxes;
             this.passengerName = builder.passengerName;
             this.pdfOssUrl = builder.pdfOssUrl;
             this.project = builder.project;
@@ -622,6 +633,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             this.ticketPrice = builder.ticketPrice;
             this.totalPrice = builder.totalPrice;
             this.validationCode = builder.validationCode;
+            this.xmlOssUrl = builder.xmlOssUrl;
         }
 
         public static Builder builder() {
@@ -651,6 +663,13 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
          */
         public String getBillDate() {
             return this.billDate;
+        }
+
+        /**
+         * @return blueOrRed
+         */
+        public Integer getBlueOrRed() {
+            return this.blueOrRed;
         }
 
         /**
@@ -759,6 +778,13 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return otherTaxes
+         */
+        public String getOtherTaxes() {
+            return this.otherTaxes;
+        }
+
+        /**
          * @return passengerName
          */
         public String getPassengerName() {
@@ -849,10 +875,18 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             return this.validationCode;
         }
 
+        /**
+         * @return xmlOssUrl
+         */
+        public String getXmlOssUrl() {
+            return this.xmlOssUrl;
+        }
+
         public static final class Builder {
             private String agentCode; 
             private String applyId; 
             private String billDate; 
+            private Integer blueOrRed; 
             private String build; 
             private String costCenter; 
             private String department; 
@@ -868,6 +902,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             private String ofdOssUrl; 
             private Long orderId; 
             private String ossUrl; 
+            private String otherTaxes; 
             private String passengerName; 
             private String pdfOssUrl; 
             private String project; 
@@ -881,6 +916,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             private String ticketPrice; 
             private String totalPrice; 
             private String validationCode; 
+            private String xmlOssUrl; 
 
             private Builder() {
             } 
@@ -889,6 +925,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
                 this.agentCode = model.agentCode;
                 this.applyId = model.applyId;
                 this.billDate = model.billDate;
+                this.blueOrRed = model.blueOrRed;
                 this.build = model.build;
                 this.costCenter = model.costCenter;
                 this.department = model.department;
@@ -904,6 +941,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
                 this.ofdOssUrl = model.ofdOssUrl;
                 this.orderId = model.orderId;
                 this.ossUrl = model.ossUrl;
+                this.otherTaxes = model.otherTaxes;
                 this.passengerName = model.passengerName;
                 this.pdfOssUrl = model.pdfOssUrl;
                 this.project = model.project;
@@ -917,6 +955,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
                 this.ticketPrice = model.ticketPrice;
                 this.totalPrice = model.totalPrice;
                 this.validationCode = model.validationCode;
+                this.xmlOssUrl = model.xmlOssUrl;
             } 
 
             /**
@@ -943,6 +982,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
              */
             public Builder billDate(String billDate) {
                 this.billDate = billDate;
+                return this;
+            }
+
+            /**
+             * blue_or_red.
+             */
+            public Builder blueOrRed(Integer blueOrRed) {
+                this.blueOrRed = blueOrRed;
                 return this;
             }
 
@@ -1073,6 +1120,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * other_taxes.
+             */
+            public Builder otherTaxes(String otherTaxes) {
+                this.otherTaxes = otherTaxes;
+                return this;
+            }
+
+            /**
              * passenger_name.
              */
             public Builder passengerName(String passengerName) {
@@ -1176,6 +1231,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
              */
             public Builder validationCode(String validationCode) {
                 this.validationCode = validationCode;
+                return this;
+            }
+
+            /**
+             * xml_oss_url.
+             */
+            public Builder xmlOssUrl(String xmlOssUrl) {
+                this.xmlOssUrl = xmlOssUrl;
                 return this;
             }
 

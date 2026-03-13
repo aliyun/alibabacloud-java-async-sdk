@@ -896,6 +896,12 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_airport")
         private String arrAirport;
 
+        @com.aliyun.core.annotation.NameInMap("arr_apt_prefecture_ad_code")
+        private String arrAptPrefectureAdCode;
+
+        @com.aliyun.core.annotation.NameInMap("arr_apt_prefecture_name")
+        private String arrAptPrefectureName;
+
         @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
 
@@ -922,6 +928,12 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("dep_airport")
         private String depAirport;
+
+        @com.aliyun.core.annotation.NameInMap("dep_apt_prefecture_ad_code")
+        private String depAptPrefectureAdCode;
+
+        @com.aliyun.core.annotation.NameInMap("dep_apt_prefecture_name")
+        private String depAptPrefectureName;
 
         @com.aliyun.core.annotation.NameInMap("dep_city")
         private String depCity;
@@ -1010,6 +1022,8 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         private Module(Builder builder) {
             this.applyId = builder.applyId;
             this.arrAirport = builder.arrAirport;
+            this.arrAptPrefectureAdCode = builder.arrAptPrefectureAdCode;
+            this.arrAptPrefectureName = builder.arrAptPrefectureName;
             this.arrCity = builder.arrCity;
             this.arrCityAdCode = builder.arrCityAdCode;
             this.btripTitle = builder.btripTitle;
@@ -1019,6 +1033,8 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             this.corpName = builder.corpName;
             this.costCenter = builder.costCenter;
             this.depAirport = builder.depAirport;
+            this.depAptPrefectureAdCode = builder.depAptPrefectureAdCode;
+            this.depAptPrefectureName = builder.depAptPrefectureName;
             this.depCity = builder.depCity;
             this.depCityAdCode = builder.depCityAdCode;
             this.depDate = builder.depDate;
@@ -1069,6 +1085,20 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
          */
         public String getArrAirport() {
             return this.arrAirport;
+        }
+
+        /**
+         * @return arrAptPrefectureAdCode
+         */
+        public String getArrAptPrefectureAdCode() {
+            return this.arrAptPrefectureAdCode;
+        }
+
+        /**
+         * @return arrAptPrefectureName
+         */
+        public String getArrAptPrefectureName() {
+            return this.arrAptPrefectureName;
         }
 
         /**
@@ -1132,6 +1162,20 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
          */
         public String getDepAirport() {
             return this.depAirport;
+        }
+
+        /**
+         * @return depAptPrefectureAdCode
+         */
+        public String getDepAptPrefectureAdCode() {
+            return this.depAptPrefectureAdCode;
+        }
+
+        /**
+         * @return depAptPrefectureName
+         */
+        public String getDepAptPrefectureName() {
+            return this.depAptPrefectureName;
         }
 
         /**
@@ -1333,6 +1377,8 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Long applyId; 
             private String arrAirport; 
+            private String arrAptPrefectureAdCode; 
+            private String arrAptPrefectureName; 
             private String arrCity; 
             private String arrCityAdCode; 
             private String btripTitle; 
@@ -1342,6 +1388,8 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             private String corpName; 
             private CostCenter costCenter; 
             private String depAirport; 
+            private String depAptPrefectureAdCode; 
+            private String depAptPrefectureName; 
             private String depCity; 
             private String depCityAdCode; 
             private String depDate; 
@@ -1377,6 +1425,8 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             private Builder(Module model) {
                 this.applyId = model.applyId;
                 this.arrAirport = model.arrAirport;
+                this.arrAptPrefectureAdCode = model.arrAptPrefectureAdCode;
+                this.arrAptPrefectureName = model.arrAptPrefectureName;
                 this.arrCity = model.arrCity;
                 this.arrCityAdCode = model.arrCityAdCode;
                 this.btripTitle = model.btripTitle;
@@ -1386,6 +1436,8 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
                 this.corpName = model.corpName;
                 this.costCenter = model.costCenter;
                 this.depAirport = model.depAirport;
+                this.depAptPrefectureAdCode = model.depAptPrefectureAdCode;
+                this.depAptPrefectureName = model.depAptPrefectureName;
                 this.depCity = model.depCity;
                 this.depCityAdCode = model.depCityAdCode;
                 this.depDate = model.depDate;
@@ -1429,6 +1481,22 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
              */
             public Builder arrAirport(String arrAirport) {
                 this.arrAirport = arrAirport;
+                return this;
+            }
+
+            /**
+             * arr_apt_prefecture_ad_code.
+             */
+            public Builder arrAptPrefectureAdCode(String arrAptPrefectureAdCode) {
+                this.arrAptPrefectureAdCode = arrAptPrefectureAdCode;
+                return this;
+            }
+
+            /**
+             * arr_apt_prefecture_name.
+             */
+            public Builder arrAptPrefectureName(String arrAptPrefectureName) {
+                this.arrAptPrefectureName = arrAptPrefectureName;
                 return this;
             }
 
@@ -1501,6 +1569,22 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
              */
             public Builder depAirport(String depAirport) {
                 this.depAirport = depAirport;
+                return this;
+            }
+
+            /**
+             * dep_apt_prefecture_ad_code.
+             */
+            public Builder depAptPrefectureAdCode(String depAptPrefectureAdCode) {
+                this.depAptPrefectureAdCode = depAptPrefectureAdCode;
+                return this;
+            }
+
+            /**
+             * dep_apt_prefecture_name.
+             */
+            public Builder depAptPrefectureName(String depAptPrefectureName) {
+                this.depAptPrefectureName = depAptPrefectureName;
                 return this;
             }
 

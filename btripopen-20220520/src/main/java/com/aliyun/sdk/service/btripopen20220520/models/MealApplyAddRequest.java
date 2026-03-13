@@ -27,6 +27,10 @@ public class MealApplyAddRequest extends Request {
     private Long costCenterId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extend_field")
+    private String extendField;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("invoice_id")
     private Long invoiceId;
 
@@ -78,6 +82,7 @@ public class MealApplyAddRequest extends Request {
         super(builder);
         this.applyUser = builder.applyUser;
         this.costCenterId = builder.costCenterId;
+        this.extendField = builder.extendField;
         this.invoiceId = builder.invoiceId;
         this.itineraryList = builder.itineraryList;
         this.mealAmount = builder.mealAmount;
@@ -116,6 +121,13 @@ public class MealApplyAddRequest extends Request {
      */
     public Long getCostCenterId() {
         return this.costCenterId;
+    }
+
+    /**
+     * @return extendField
+     */
+    public String getExtendField() {
+        return this.extendField;
     }
 
     /**
@@ -198,6 +210,7 @@ public class MealApplyAddRequest extends Request {
     public static final class Builder extends Request.Builder<MealApplyAddRequest, Builder> {
         private ApplyUser applyUser; 
         private Long costCenterId; 
+        private String extendField; 
         private Long invoiceId; 
         private java.util.List<ItineraryList> itineraryList; 
         private Long mealAmount; 
@@ -218,6 +231,7 @@ public class MealApplyAddRequest extends Request {
             super(request);
             this.applyUser = request.applyUser;
             this.costCenterId = request.costCenterId;
+            this.extendField = request.extendField;
             this.invoiceId = request.invoiceId;
             this.itineraryList = request.itineraryList;
             this.mealAmount = request.mealAmount;
@@ -247,6 +261,15 @@ public class MealApplyAddRequest extends Request {
         public Builder costCenterId(Long costCenterId) {
             this.putBodyParameter("cost_center_id", costCenterId);
             this.costCenterId = costCenterId;
+            return this;
+        }
+
+        /**
+         * extend_field.
+         */
+        public Builder extendField(String extendField) {
+            this.putBodyParameter("extend_field", extendField);
+            this.extendField = extendField;
             return this;
         }
 

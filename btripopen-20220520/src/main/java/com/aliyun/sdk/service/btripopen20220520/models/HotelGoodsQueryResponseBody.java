@@ -941,6 +941,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("company_aassist")
         private String companyAassist;
 
+        @com.aliyun.core.annotation.NameInMap("company_assist_type")
+        private String companyAssistType;
+
         @com.aliyun.core.annotation.NameInMap("confirm_type")
         private Integer confirmType;
 
@@ -961,6 +964,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("hotel_detail_rate_price_d_t_o")
         private java.util.List<HotelDetailRatePriceDTO> hotelDetailRatePriceDTO;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_member_benefit")
+        private java.util.Map<String, String> hotelMemberBenefit;
 
         @com.aliyun.core.annotation.NameInMap("instant_confirm")
         private Boolean instantConfirm;
@@ -995,6 +1001,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("min_days")
         private Integer minDays;
 
+        @com.aliyun.core.annotation.NameInMap("need_certificate")
+        private Boolean needCertificate;
+
         @com.aliyun.core.annotation.NameInMap("nod")
         private Integer nod;
 
@@ -1015,6 +1024,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("rate_id")
         private Long rateId;
+
+        @com.aliyun.core.annotation.NameInMap("rate_key")
+        private String rateKey;
 
         @com.aliyun.core.annotation.NameInMap("rate_plan_name")
         private String ratePlanName;
@@ -1053,6 +1065,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             this.cancelPolicyDesc = builder.cancelPolicyDesc;
             this.cancelPolicyType = builder.cancelPolicyType;
             this.companyAassist = builder.companyAassist;
+            this.companyAssistType = builder.companyAssistType;
             this.confirmType = builder.confirmType;
             this.currencyCode = builder.currencyCode;
             this.dailyPriceFormatYuan = builder.dailyPriceFormatYuan;
@@ -1060,6 +1073,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             this.discountDesc = builder.discountDesc;
             this.endTimeDaily = builder.endTimeDaily;
             this.hotelDetailRatePriceDTO = builder.hotelDetailRatePriceDTO;
+            this.hotelMemberBenefit = builder.hotelMemberBenefit;
             this.instantConfirm = builder.instantConfirm;
             this.inventoryDesc = builder.inventoryDesc;
             this.inventoryPrice = builder.inventoryPrice;
@@ -1071,6 +1085,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             this.maxOccupancy = builder.maxOccupancy;
             this.minAdvHours = builder.minAdvHours;
             this.minDays = builder.minDays;
+            this.needCertificate = builder.needCertificate;
             this.nod = builder.nod;
             this.nop = builder.nop;
             this.orderShipTime = builder.orderShipTime;
@@ -1078,6 +1093,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             this.priceType = builder.priceType;
             this.promotionInfo = builder.promotionInfo;
             this.rateId = builder.rateId;
+            this.rateKey = builder.rateKey;
             this.ratePlanName = builder.ratePlanName;
             this.rpId = builder.rpId;
             this.sellerId = builder.sellerId;
@@ -1161,6 +1177,13 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return companyAssistType
+         */
+        public String getCompanyAssistType() {
+            return this.companyAssistType;
+        }
+
+        /**
          * @return confirmType
          */
         public Integer getConfirmType() {
@@ -1207,6 +1230,13 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
          */
         public java.util.List<HotelDetailRatePriceDTO> getHotelDetailRatePriceDTO() {
             return this.hotelDetailRatePriceDTO;
+        }
+
+        /**
+         * @return hotelMemberBenefit
+         */
+        public java.util.Map<String, String> getHotelMemberBenefit() {
+            return this.hotelMemberBenefit;
         }
 
         /**
@@ -1287,6 +1317,13 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return needCertificate
+         */
+        public Boolean getNeedCertificate() {
+            return this.needCertificate;
+        }
+
+        /**
          * @return nod
          */
         public Integer getNod() {
@@ -1333,6 +1370,13 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
          */
         public Long getRateId() {
             return this.rateId;
+        }
+
+        /**
+         * @return rateKey
+         */
+        public String getRateKey() {
+            return this.rateKey;
         }
 
         /**
@@ -1408,6 +1452,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private String cancelPolicyDesc; 
             private Integer cancelPolicyType; 
             private String companyAassist; 
+            private String companyAssistType; 
             private Integer confirmType; 
             private String currencyCode; 
             private String dailyPriceFormatYuan; 
@@ -1415,6 +1460,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private DiscountDesc discountDesc; 
             private String endTimeDaily; 
             private java.util.List<HotelDetailRatePriceDTO> hotelDetailRatePriceDTO; 
+            private java.util.Map<String, String> hotelMemberBenefit; 
             private Boolean instantConfirm; 
             private String inventoryDesc; 
             private String inventoryPrice; 
@@ -1426,6 +1472,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private Integer maxOccupancy; 
             private Integer minAdvHours; 
             private Integer minDays; 
+            private Boolean needCertificate; 
             private Integer nod; 
             private Integer nop; 
             private Integer orderShipTime; 
@@ -1433,6 +1480,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private Integer priceType; 
             private String promotionInfo; 
             private Long rateId; 
+            private String rateKey; 
             private String ratePlanName; 
             private Long rpId; 
             private Long sellerId; 
@@ -1456,6 +1504,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
                 this.cancelPolicyDesc = model.cancelPolicyDesc;
                 this.cancelPolicyType = model.cancelPolicyType;
                 this.companyAassist = model.companyAassist;
+                this.companyAssistType = model.companyAssistType;
                 this.confirmType = model.confirmType;
                 this.currencyCode = model.currencyCode;
                 this.dailyPriceFormatYuan = model.dailyPriceFormatYuan;
@@ -1463,6 +1512,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
                 this.discountDesc = model.discountDesc;
                 this.endTimeDaily = model.endTimeDaily;
                 this.hotelDetailRatePriceDTO = model.hotelDetailRatePriceDTO;
+                this.hotelMemberBenefit = model.hotelMemberBenefit;
                 this.instantConfirm = model.instantConfirm;
                 this.inventoryDesc = model.inventoryDesc;
                 this.inventoryPrice = model.inventoryPrice;
@@ -1474,6 +1524,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
                 this.maxOccupancy = model.maxOccupancy;
                 this.minAdvHours = model.minAdvHours;
                 this.minDays = model.minDays;
+                this.needCertificate = model.needCertificate;
                 this.nod = model.nod;
                 this.nop = model.nop;
                 this.orderShipTime = model.orderShipTime;
@@ -1481,6 +1532,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
                 this.priceType = model.priceType;
                 this.promotionInfo = model.promotionInfo;
                 this.rateId = model.rateId;
+                this.rateKey = model.rateKey;
                 this.ratePlanName = model.ratePlanName;
                 this.rpId = model.rpId;
                 this.sellerId = model.sellerId;
@@ -1565,6 +1617,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
+             * company_assist_type.
+             */
+            public Builder companyAssistType(String companyAssistType) {
+                this.companyAssistType = companyAssistType;
+                return this;
+            }
+
+            /**
              * confirm_type.
              */
             public Builder confirmType(Integer confirmType) {
@@ -1617,6 +1677,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
              */
             public Builder hotelDetailRatePriceDTO(java.util.List<HotelDetailRatePriceDTO> hotelDetailRatePriceDTO) {
                 this.hotelDetailRatePriceDTO = hotelDetailRatePriceDTO;
+                return this;
+            }
+
+            /**
+             * hotel_member_benefit.
+             */
+            public Builder hotelMemberBenefit(java.util.Map<String, String> hotelMemberBenefit) {
+                this.hotelMemberBenefit = hotelMemberBenefit;
                 return this;
             }
 
@@ -1709,6 +1777,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
+             * need_certificate.
+             */
+            public Builder needCertificate(Boolean needCertificate) {
+                this.needCertificate = needCertificate;
+                return this;
+            }
+
+            /**
              * nod.
              */
             public Builder nod(Integer nod) {
@@ -1761,6 +1837,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
              */
             public Builder rateId(Long rateId) {
                 this.rateId = rateId;
+                return this;
+            }
+
+            /**
+             * rate_key.
+             */
+            public Builder rateKey(String rateKey) {
+                this.rateKey = rateKey;
                 return this;
             }
 
@@ -2360,6 +2444,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("early_arrival_time")
         private String earlyArrivalTime;
 
+        @com.aliyun.core.annotation.NameInMap("hotel_group_desc")
+        private String hotelGroupDesc;
+
         @com.aliyun.core.annotation.NameInMap("hotel_id")
         private Long hotelId;
 
@@ -2384,6 +2471,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             this.descriptions = builder.descriptions;
             this.dinamicBannerPicUrls = builder.dinamicBannerPicUrls;
             this.earlyArrivalTime = builder.earlyArrivalTime;
+            this.hotelGroupDesc = builder.hotelGroupDesc;
             this.hotelId = builder.hotelId;
             this.hotelName = builder.hotelName;
             this.lateArrivalTime = builder.lateArrivalTime;
@@ -2456,6 +2544,13 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return hotelGroupDesc
+         */
+        public String getHotelGroupDesc() {
+            return this.hotelGroupDesc;
+        }
+
+        /**
          * @return hotelId
          */
         public Long getHotelId() {
@@ -2499,6 +2594,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private java.util.List<String> descriptions; 
             private java.util.List<String> dinamicBannerPicUrls; 
             private String earlyArrivalTime; 
+            private String hotelGroupDesc; 
             private Long hotelId; 
             private String hotelName; 
             private String lateArrivalTime; 
@@ -2517,6 +2613,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
                 this.descriptions = model.descriptions;
                 this.dinamicBannerPicUrls = model.dinamicBannerPicUrls;
                 this.earlyArrivalTime = model.earlyArrivalTime;
+                this.hotelGroupDesc = model.hotelGroupDesc;
                 this.hotelId = model.hotelId;
                 this.hotelName = model.hotelName;
                 this.lateArrivalTime = model.lateArrivalTime;
@@ -2585,6 +2682,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
              */
             public Builder earlyArrivalTime(String earlyArrivalTime) {
                 this.earlyArrivalTime = earlyArrivalTime;
+                return this;
+            }
+
+            /**
+             * hotel_group_desc.
+             */
+            public Builder hotelGroupDesc(String hotelGroupDesc) {
+                this.hotelGroupDesc = hotelGroupDesc;
                 return this;
             }
 

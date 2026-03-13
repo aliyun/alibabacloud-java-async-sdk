@@ -455,6 +455,9 @@ public class MealApplyQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cost_center_id")
         private Long costCenterId;
 
+        @com.aliyun.core.annotation.NameInMap("extend_field")
+        private String extendField;
+
         @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
@@ -491,6 +494,7 @@ public class MealApplyQueryResponseBody extends TeaModel {
         private Module(Builder builder) {
             this.applyUser = builder.applyUser;
             this.costCenterId = builder.costCenterId;
+            this.extendField = builder.extendField;
             this.gmtCreate = builder.gmtCreate;
             this.invoiceId = builder.invoiceId;
             this.itineraryList = builder.itineraryList;
@@ -524,6 +528,13 @@ public class MealApplyQueryResponseBody extends TeaModel {
          */
         public Long getCostCenterId() {
             return this.costCenterId;
+        }
+
+        /**
+         * @return extendField
+         */
+        public String getExtendField() {
+            return this.extendField;
         }
 
         /**
@@ -606,6 +617,7 @@ public class MealApplyQueryResponseBody extends TeaModel {
         public static final class Builder {
             private ApplyUser applyUser; 
             private Long costCenterId; 
+            private String extendField; 
             private String gmtCreate; 
             private Long invoiceId; 
             private java.util.List<ItineraryList> itineraryList; 
@@ -624,6 +636,7 @@ public class MealApplyQueryResponseBody extends TeaModel {
             private Builder(Module model) {
                 this.applyUser = model.applyUser;
                 this.costCenterId = model.costCenterId;
+                this.extendField = model.extendField;
                 this.gmtCreate = model.gmtCreate;
                 this.invoiceId = model.invoiceId;
                 this.itineraryList = model.itineraryList;
@@ -650,6 +663,14 @@ public class MealApplyQueryResponseBody extends TeaModel {
              */
             public Builder costCenterId(Long costCenterId) {
                 this.costCenterId = costCenterId;
+                return this;
+            }
+
+            /**
+             * extend_field.
+             */
+            public Builder extendField(String extendField) {
+                this.extendField = extendField;
                 return this;
             }
 
