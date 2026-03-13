@@ -52,6 +52,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnrollAccountResponse> enrollAccount(EnrollAccountRequest request);
 
     /**
+     * @param request the request parameters of GenerateEvaluationReport  GenerateEvaluationReportRequest
+     * @return GenerateEvaluationReportResponse
+     */
+    CompletableFuture<GenerateEvaluationReportResponse> generateEvaluationReport(GenerateEvaluationReportRequest request);
+
+    /**
      * @param request the request parameters of GetAccountFactoryBaseline  GetAccountFactoryBaselineRequest
      * @return GetAccountFactoryBaselineResponse
      */

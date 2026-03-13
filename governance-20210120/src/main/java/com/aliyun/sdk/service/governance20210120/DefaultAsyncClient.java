@@ -120,6 +120,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GenerateEvaluationReport  GenerateEvaluationReportRequest
+     * @return GenerateEvaluationReportResponse
+     */
+    @Override
+    public CompletableFuture<GenerateEvaluationReportResponse> generateEvaluationReport(GenerateEvaluationReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateEvaluationReport").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateEvaluationReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateEvaluationReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAccountFactoryBaseline  GetAccountFactoryBaselineRequest
      * @return GetAccountFactoryBaselineResponse
      */
