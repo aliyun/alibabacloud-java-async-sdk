@@ -1220,6 +1220,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeBaseRuleChangeLog  DescribeBaseRuleChangeLogRequest
+     * @return DescribeBaseRuleChangeLogResponse
+     */
+    @Override
+    public CompletableFuture<DescribeBaseRuleChangeLogResponse> describeBaseRuleChangeLog(DescribeBaseRuleChangeLogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeBaseRuleChangeLog").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeBaseRuleChangeLogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeBaseRuleChangeLogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeBaseSystemRules  DescribeBaseSystemRulesRequest
      * @return DescribeBaseSystemRulesResponse
      */
@@ -1886,6 +1904,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeElasticBills  DescribeElasticBillsRequest
+     * @return DescribeElasticBillsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeElasticBillsResponse> describeElasticBills(DescribeElasticBillsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeElasticBills").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeElasticBillsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeElasticBillsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeFlowChart  DescribeFlowChartRequest
      * @return DescribeFlowChartResponse
      */
@@ -2492,6 +2528,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribePocFunctionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePrepayDailyBills  DescribePrepayDailyBillsRequest
+     * @return DescribePrepayDailyBillsResponse
+     */
+    @Override
+    public CompletableFuture<DescribePrepayDailyBillsResponse> describePrepayDailyBills(DescribePrepayDailyBillsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePrepayDailyBills").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePrepayDailyBillsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePrepayDailyBillsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

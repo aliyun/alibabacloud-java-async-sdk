@@ -407,6 +407,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeApisecUserOperationsResponse> describeApisecUserOperations(DescribeApisecUserOperationsRequest request);
 
     /**
+     * @param request the request parameters of DescribeBaseRuleChangeLog  DescribeBaseRuleChangeLogRequest
+     * @return DescribeBaseRuleChangeLogResponse
+     */
+    CompletableFuture<DescribeBaseRuleChangeLogResponse> describeBaseRuleChangeLog(DescribeBaseRuleChangeLogRequest request);
+
+    /**
      * @param request the request parameters of DescribeBaseSystemRules  DescribeBaseSystemRulesRequest
      * @return DescribeBaseSystemRulesResponse
      */
@@ -629,6 +635,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDomainsResponse> describeDomains(DescribeDomainsRequest request);
 
     /**
+     * @param request the request parameters of DescribeElasticBills  DescribeElasticBillsRequest
+     * @return DescribeElasticBillsResponse
+     */
+    CompletableFuture<DescribeElasticBillsResponse> describeElasticBills(DescribeElasticBillsRequest request);
+
+    /**
      * @param request the request parameters of DescribeFlowChart  DescribeFlowChartRequest
      * @return DescribeFlowChartResponse
      */
@@ -831,6 +843,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePocFunctionsResponse
      */
     CompletableFuture<DescribePocFunctionsResponse> describePocFunctions(DescribePocFunctionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePrepayDailyBills  DescribePrepayDailyBillsRequest
+     * @return DescribePrepayDailyBillsResponse
+     */
+    CompletableFuture<DescribePrepayDailyBillsResponse> describePrepayDailyBills(DescribePrepayDailyBillsRequest request);
 
     /**
      * @param request the request parameters of DescribeProductInstances  DescribeProductInstancesRequest

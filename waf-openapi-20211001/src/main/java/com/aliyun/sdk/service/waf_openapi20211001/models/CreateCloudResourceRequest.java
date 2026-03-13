@@ -755,14 +755,12 @@ public class CreateCloudResourceRequest extends Request {
         private Integer maxBodySize;
 
         @com.aliyun.core.annotation.NameInMap("ReadTimeout")
-        @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer readTimeout;
 
         @com.aliyun.core.annotation.NameInMap("RequestHeaders")
         private java.util.List<RequestHeaders> requestHeaders;
 
         @com.aliyun.core.annotation.NameInMap("WriteTimeout")
-        @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer writeTimeout;
 
         @com.aliyun.core.annotation.NameInMap("XffHeaderMode")

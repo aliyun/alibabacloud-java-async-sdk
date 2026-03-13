@@ -1015,7 +1015,6 @@ public class ModifyDomainRequest extends Request {
         private Boolean proxyProtocol;
 
         @com.aliyun.core.annotation.NameInMap("ReadTimeout")
-        @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer readTimeout;
 
         @com.aliyun.core.annotation.NameInMap("RequestHeaders")
@@ -1040,7 +1039,6 @@ public class ModifyDomainRequest extends Request {
         private Boolean webServerType;
 
         @com.aliyun.core.annotation.NameInMap("WriteTimeout")
-        @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer writeTimeout;
 
         @com.aliyun.core.annotation.NameInMap("XClientIp")
