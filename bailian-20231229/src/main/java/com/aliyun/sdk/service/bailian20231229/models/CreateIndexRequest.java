@@ -106,6 +106,10 @@ public class CreateIndexRequest extends Request {
     private java.util.List<String> tableIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("channelType")
+    private String channelType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("chunkMode")
     private String chunkMode;
 
@@ -173,6 +177,7 @@ public class CreateIndexRequest extends Request {
         this.sourceType = builder.sourceType;
         this.structureType = builder.structureType;
         this.tableIds = builder.tableIds;
+        this.channelType = builder.channelType;
         this.chunkMode = builder.chunkMode;
         this.connectId = builder.connectId;
         this.database = builder.database;
@@ -347,6 +352,13 @@ public class CreateIndexRequest extends Request {
     }
 
     /**
+     * @return channelType
+     */
+    public String getChannelType() {
+        return this.channelType;
+    }
+
+    /**
      * @return chunkMode
      */
     public String getChunkMode() {
@@ -445,6 +457,7 @@ public class CreateIndexRequest extends Request {
         private String sourceType; 
         private String structureType; 
         private java.util.List<String> tableIds; 
+        private String channelType; 
         private String chunkMode; 
         private String connectId; 
         private String database; 
@@ -484,6 +497,7 @@ public class CreateIndexRequest extends Request {
             this.sourceType = request.sourceType;
             this.structureType = request.structureType;
             this.tableIds = request.tableIds;
+            this.channelType = request.channelType;
             this.chunkMode = request.chunkMode;
             this.connectId = request.connectId;
             this.database = request.database;
@@ -791,6 +805,15 @@ public class CreateIndexRequest extends Request {
             String tableIdsShrink = shrink(tableIds, "TableIds", "json");
             this.putQueryParameter("TableIds", tableIdsShrink);
             this.tableIds = tableIds;
+            return this;
+        }
+
+        /**
+         * channelType.
+         */
+        public Builder channelType(String channelType) {
+            this.putQueryParameter("channelType", channelType);
+            this.channelType = channelType;
             return this;
         }
 
