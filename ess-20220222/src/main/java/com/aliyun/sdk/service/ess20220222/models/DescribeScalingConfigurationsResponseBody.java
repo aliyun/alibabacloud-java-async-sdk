@@ -1270,6 +1270,147 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
      *
      * <p>DescribeScalingConfigurationsResponseBody</p>
      */
+    public static class InstanceTypeCandidateOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowCidrBlocks")
+        private java.util.List<String> allowCidrBlocks;
+
+        @com.aliyun.core.annotation.NameInMap("AllowCrossAz")
+        private Boolean allowCrossAz;
+
+        @com.aliyun.core.annotation.NameInMap("AllowDifferentGeneration")
+        private Boolean allowDifferentGeneration;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("MaxPrice")
+        private Float maxPrice;
+
+        private InstanceTypeCandidateOptions(Builder builder) {
+            this.allowCidrBlocks = builder.allowCidrBlocks;
+            this.allowCrossAz = builder.allowCrossAz;
+            this.allowDifferentGeneration = builder.allowDifferentGeneration;
+            this.enabled = builder.enabled;
+            this.maxPrice = builder.maxPrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceTypeCandidateOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowCidrBlocks
+         */
+        public java.util.List<String> getAllowCidrBlocks() {
+            return this.allowCidrBlocks;
+        }
+
+        /**
+         * @return allowCrossAz
+         */
+        public Boolean getAllowCrossAz() {
+            return this.allowCrossAz;
+        }
+
+        /**
+         * @return allowDifferentGeneration
+         */
+        public Boolean getAllowDifferentGeneration() {
+            return this.allowDifferentGeneration;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return maxPrice
+         */
+        public Float getMaxPrice() {
+            return this.maxPrice;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> allowCidrBlocks; 
+            private Boolean allowCrossAz; 
+            private Boolean allowDifferentGeneration; 
+            private Boolean enabled; 
+            private Float maxPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeCandidateOptions model) {
+                this.allowCidrBlocks = model.allowCidrBlocks;
+                this.allowCrossAz = model.allowCrossAz;
+                this.allowDifferentGeneration = model.allowDifferentGeneration;
+                this.enabled = model.enabled;
+                this.maxPrice = model.maxPrice;
+            } 
+
+            /**
+             * AllowCidrBlocks.
+             */
+            public Builder allowCidrBlocks(java.util.List<String> allowCidrBlocks) {
+                this.allowCidrBlocks = allowCidrBlocks;
+                return this;
+            }
+
+            /**
+             * AllowCrossAz.
+             */
+            public Builder allowCrossAz(Boolean allowCrossAz) {
+                this.allowCrossAz = allowCrossAz;
+                return this;
+            }
+
+            /**
+             * AllowDifferentGeneration.
+             */
+            public Builder allowDifferentGeneration(Boolean allowDifferentGeneration) {
+                this.allowDifferentGeneration = allowDifferentGeneration;
+                return this;
+            }
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * <p>The maximum hourly price for the pay-as-you-go or preemptible instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder maxPrice(Float maxPrice) {
+                this.maxPrice = maxPrice;
+                return this;
+            }
+
+            public InstanceTypeCandidateOptions build() {
+                return new InstanceTypeCandidateOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeScalingConfigurationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScalingConfigurationsResponseBody</p>
+     */
     public static class NetworkInterfaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -1858,6 +1999,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeCandidateOptions")
+        private InstanceTypeCandidateOptions instanceTypeCandidateOptions;
+
         @com.aliyun.core.annotation.NameInMap("InstanceTypes")
         private java.util.List<String> instanceTypes;
 
@@ -2030,6 +2174,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.instancePatternInfos = builder.instancePatternInfos;
             this.instanceType = builder.instanceType;
+            this.instanceTypeCandidateOptions = builder.instanceTypeCandidateOptions;
             this.instanceTypes = builder.instanceTypes;
             this.internetChargeType = builder.internetChargeType;
             this.internetMaxBandwidthIn = builder.internetMaxBandwidthIn;
@@ -2255,6 +2400,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          */
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        /**
+         * @return instanceTypeCandidateOptions
+         */
+        public InstanceTypeCandidateOptions getInstanceTypeCandidateOptions() {
+            return this.instanceTypeCandidateOptions;
         }
 
         /**
@@ -2625,6 +2777,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String instanceName; 
             private java.util.List<InstancePatternInfos> instancePatternInfos; 
             private String instanceType; 
+            private InstanceTypeCandidateOptions instanceTypeCandidateOptions; 
             private java.util.List<String> instanceTypes; 
             private String internetChargeType; 
             private Integer internetMaxBandwidthIn; 
@@ -2703,6 +2856,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
                 this.instanceName = model.instanceName;
                 this.instancePatternInfos = model.instancePatternInfos;
                 this.instanceType = model.instanceType;
+                this.instanceTypeCandidateOptions = model.instanceTypeCandidateOptions;
                 this.instanceTypes = model.instanceTypes;
                 this.internetChargeType = model.internetChargeType;
                 this.internetMaxBandwidthIn = model.internetMaxBandwidthIn;
@@ -3054,6 +3208,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * InstanceTypeCandidateOptions.
+             */
+            public Builder instanceTypeCandidateOptions(InstanceTypeCandidateOptions instanceTypeCandidateOptions) {
+                this.instanceTypeCandidateOptions = instanceTypeCandidateOptions;
                 return this;
             }
 

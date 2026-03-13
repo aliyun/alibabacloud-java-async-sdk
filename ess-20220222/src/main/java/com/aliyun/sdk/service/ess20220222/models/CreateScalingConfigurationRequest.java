@@ -114,6 +114,10 @@ public class CreateScalingConfigurationRequest extends Request {
     private String instanceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeCandidateOptions")
+    private InstanceTypeCandidateOptions instanceTypeCandidateOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypeOverrides")
     private java.util.List<InstanceTypeOverrides> instanceTypeOverrides;
 
@@ -288,6 +292,7 @@ public class CreateScalingConfigurationRequest extends Request {
         this.instanceName = builder.instanceName;
         this.instancePatternInfos = builder.instancePatternInfos;
         this.instanceType = builder.instanceType;
+        this.instanceTypeCandidateOptions = builder.instanceTypeCandidateOptions;
         this.instanceTypeOverrides = builder.instanceTypeOverrides;
         this.instanceTypes = builder.instanceTypes;
         this.internetChargeType = builder.internetChargeType;
@@ -506,6 +511,13 @@ public class CreateScalingConfigurationRequest extends Request {
      */
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    /**
+     * @return instanceTypeCandidateOptions
+     */
+    public InstanceTypeCandidateOptions getInstanceTypeCandidateOptions() {
+        return this.instanceTypeCandidateOptions;
     }
 
     /**
@@ -792,6 +804,7 @@ public class CreateScalingConfigurationRequest extends Request {
         private String instanceName; 
         private java.util.List<InstancePatternInfos> instancePatternInfos; 
         private String instanceType; 
+        private InstanceTypeCandidateOptions instanceTypeCandidateOptions; 
         private java.util.List<InstanceTypeOverrides> instanceTypeOverrides; 
         private java.util.List<String> instanceTypes; 
         private String internetChargeType; 
@@ -860,6 +873,7 @@ public class CreateScalingConfigurationRequest extends Request {
             this.instanceName = request.instanceName;
             this.instancePatternInfos = request.instancePatternInfos;
             this.instanceType = request.instanceType;
+            this.instanceTypeCandidateOptions = request.instanceTypeCandidateOptions;
             this.instanceTypeOverrides = request.instanceTypeOverrides;
             this.instanceTypes = request.instanceTypes;
             this.internetChargeType = request.internetChargeType;
@@ -1209,6 +1223,15 @@ public class CreateScalingConfigurationRequest extends Request {
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
             this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * InstanceTypeCandidateOptions.
+         */
+        public Builder instanceTypeCandidateOptions(InstanceTypeCandidateOptions instanceTypeCandidateOptions) {
+            this.putQueryParameter("InstanceTypeCandidateOptions", instanceTypeCandidateOptions);
+            this.instanceTypeCandidateOptions = instanceTypeCandidateOptions;
             return this;
         }
 
@@ -3334,6 +3357,150 @@ public class CreateScalingConfigurationRequest extends Request {
 
             public InstancePatternInfos build() {
                 return new InstancePatternInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateScalingConfigurationRequest</p>
+     */
+    public static class InstanceTypeCandidateOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowCidrBlocks")
+        private java.util.List<String> allowCidrBlocks;
+
+        @com.aliyun.core.annotation.NameInMap("AllowCrossAz")
+        private Boolean allowCrossAz;
+
+        @com.aliyun.core.annotation.NameInMap("AllowDifferentGeneration")
+        private Boolean allowDifferentGeneration;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("MaxPrice")
+        private Float maxPrice;
+
+        private InstanceTypeCandidateOptions(Builder builder) {
+            this.allowCidrBlocks = builder.allowCidrBlocks;
+            this.allowCrossAz = builder.allowCrossAz;
+            this.allowDifferentGeneration = builder.allowDifferentGeneration;
+            this.enabled = builder.enabled;
+            this.maxPrice = builder.maxPrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceTypeCandidateOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowCidrBlocks
+         */
+        public java.util.List<String> getAllowCidrBlocks() {
+            return this.allowCidrBlocks;
+        }
+
+        /**
+         * @return allowCrossAz
+         */
+        public Boolean getAllowCrossAz() {
+            return this.allowCrossAz;
+        }
+
+        /**
+         * @return allowDifferentGeneration
+         */
+        public Boolean getAllowDifferentGeneration() {
+            return this.allowDifferentGeneration;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return maxPrice
+         */
+        public Float getMaxPrice() {
+            return this.maxPrice;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> allowCidrBlocks; 
+            private Boolean allowCrossAz; 
+            private Boolean allowDifferentGeneration; 
+            private Boolean enabled; 
+            private Float maxPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeCandidateOptions model) {
+                this.allowCidrBlocks = model.allowCidrBlocks;
+                this.allowCrossAz = model.allowCrossAz;
+                this.allowDifferentGeneration = model.allowDifferentGeneration;
+                this.enabled = model.enabled;
+                this.maxPrice = model.maxPrice;
+            } 
+
+            /**
+             * AllowCidrBlocks.
+             */
+            public Builder allowCidrBlocks(java.util.List<String> allowCidrBlocks) {
+                this.allowCidrBlocks = allowCidrBlocks;
+                return this;
+            }
+
+            /**
+             * AllowCrossAz.
+             */
+            public Builder allowCrossAz(Boolean allowCrossAz) {
+                this.allowCrossAz = allowCrossAz;
+                return this;
+            }
+
+            /**
+             * AllowDifferentGeneration.
+             */
+            public Builder allowDifferentGeneration(Boolean allowDifferentGeneration) {
+                this.allowDifferentGeneration = allowDifferentGeneration;
+                return this;
+            }
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * <p>The maximum hourly price of pay-as-you-go or preemptible instances in intelligent configuration mode. You can specify this parameter to filter the available instance types.</p>
+             * <blockquote>
+             * <p> If you set SpotStrategy to SpotWithPriceLimit, you must specify this parameter. In other cases, this parameter is optional.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder maxPrice(Float maxPrice) {
+                this.maxPrice = maxPrice;
+                return this;
+            }
+
+            public InstanceTypeCandidateOptions build() {
+                return new InstanceTypeCandidateOptions(this);
             } 
 
         } 
