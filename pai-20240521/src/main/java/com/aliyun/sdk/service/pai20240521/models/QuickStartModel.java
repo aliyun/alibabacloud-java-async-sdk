@@ -1,0 +1,574 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.pai20240521.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link QuickStartModel} extends {@link TeaModel}
+ *
+ * <p>QuickStartModel</p>
+ */
+public class QuickStartModel extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.NameInMap("DeploymentCount")
+    private Long deploymentCount;
+
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    private String domain;
+
+    @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+    private java.util.Map<String, ?> extraInfo;
+
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
+    private String gmtCreateTime;
+
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
+    private String gmtModifiedTime;
+
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Label> labels;
+
+    @com.aliyun.core.annotation.NameInMap("LatestVersion")
+    private ModelVersion latestVersion;
+
+    @com.aliyun.core.annotation.NameInMap("ModelDescription")
+    private String modelDescription;
+
+    @com.aliyun.core.annotation.NameInMap("ModelDoc")
+    private String modelDoc;
+
+    @com.aliyun.core.annotation.NameInMap("ModelId")
+    private String modelId;
+
+    @com.aliyun.core.annotation.NameInMap("ModelName")
+    private String modelName;
+
+    @com.aliyun.core.annotation.NameInMap("OrderNumber")
+    private Long orderNumber;
+
+    @com.aliyun.core.annotation.NameInMap("Origin")
+    private String origin;
+
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private String ownerId;
+
+    @com.aliyun.core.annotation.NameInMap("Provider")
+    private String provider;
+
+    @com.aliyun.core.annotation.NameInMap("QuickStartModelDescription")
+    private java.util.Map<String, ?> quickStartModelDescription;
+
+    @com.aliyun.core.annotation.NameInMap("QuickStartModelName")
+    private java.util.Map<String, ?> quickStartModelName;
+
+    @com.aliyun.core.annotation.NameInMap("RelatedModelId")
+    private String relatedModelId;
+
+    @com.aliyun.core.annotation.NameInMap("Task")
+    private String task;
+
+    @com.aliyun.core.annotation.NameInMap("TrainingCount")
+    private Long trainingCount;
+
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    private String userId;
+
+    @com.aliyun.core.annotation.NameInMap("ViewCount")
+    private Long viewCount;
+
+    @com.aliyun.core.annotation.NameInMap("ViewCount7Days")
+    private Long viewCount7Days;
+
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
+    private QuickStartModel(Builder builder) {
+        this.accessibility = builder.accessibility;
+        this.deploymentCount = builder.deploymentCount;
+        this.domain = builder.domain;
+        this.extraInfo = builder.extraInfo;
+        this.gmtCreateTime = builder.gmtCreateTime;
+        this.gmtModifiedTime = builder.gmtModifiedTime;
+        this.labels = builder.labels;
+        this.latestVersion = builder.latestVersion;
+        this.modelDescription = builder.modelDescription;
+        this.modelDoc = builder.modelDoc;
+        this.modelId = builder.modelId;
+        this.modelName = builder.modelName;
+        this.orderNumber = builder.orderNumber;
+        this.origin = builder.origin;
+        this.ownerId = builder.ownerId;
+        this.provider = builder.provider;
+        this.quickStartModelDescription = builder.quickStartModelDescription;
+        this.quickStartModelName = builder.quickStartModelName;
+        this.relatedModelId = builder.relatedModelId;
+        this.task = builder.task;
+        this.trainingCount = builder.trainingCount;
+        this.userId = builder.userId;
+        this.viewCount = builder.viewCount;
+        this.viewCount7Days = builder.viewCount7Days;
+        this.workspaceId = builder.workspaceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static QuickStartModel create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
+    }
+
+    /**
+     * @return deploymentCount
+     */
+    public Long getDeploymentCount() {
+        return this.deploymentCount;
+    }
+
+    /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
+    }
+
+    /**
+     * @return extraInfo
+     */
+    public java.util.Map<String, ?> getExtraInfo() {
+        return this.extraInfo;
+    }
+
+    /**
+     * @return gmtCreateTime
+     */
+    public String getGmtCreateTime() {
+        return this.gmtCreateTime;
+    }
+
+    /**
+     * @return gmtModifiedTime
+     */
+    public String getGmtModifiedTime() {
+        return this.gmtModifiedTime;
+    }
+
+    /**
+     * @return labels
+     */
+    public java.util.List<Label> getLabels() {
+        return this.labels;
+    }
+
+    /**
+     * @return latestVersion
+     */
+    public ModelVersion getLatestVersion() {
+        return this.latestVersion;
+    }
+
+    /**
+     * @return modelDescription
+     */
+    public String getModelDescription() {
+        return this.modelDescription;
+    }
+
+    /**
+     * @return modelDoc
+     */
+    public String getModelDoc() {
+        return this.modelDoc;
+    }
+
+    /**
+     * @return modelId
+     */
+    public String getModelId() {
+        return this.modelId;
+    }
+
+    /**
+     * @return modelName
+     */
+    public String getModelName() {
+        return this.modelName;
+    }
+
+    /**
+     * @return orderNumber
+     */
+    public Long getOrderNumber() {
+        return this.orderNumber;
+    }
+
+    /**
+     * @return origin
+     */
+    public String getOrigin() {
+        return this.origin;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public String getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return provider
+     */
+    public String getProvider() {
+        return this.provider;
+    }
+
+    /**
+     * @return quickStartModelDescription
+     */
+    public java.util.Map<String, ?> getQuickStartModelDescription() {
+        return this.quickStartModelDescription;
+    }
+
+    /**
+     * @return quickStartModelName
+     */
+    public java.util.Map<String, ?> getQuickStartModelName() {
+        return this.quickStartModelName;
+    }
+
+    /**
+     * @return relatedModelId
+     */
+    public String getRelatedModelId() {
+        return this.relatedModelId;
+    }
+
+    /**
+     * @return task
+     */
+    public String getTask() {
+        return this.task;
+    }
+
+    /**
+     * @return trainingCount
+     */
+    public Long getTrainingCount() {
+        return this.trainingCount;
+    }
+
+    /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
+     * @return viewCount
+     */
+    public Long getViewCount() {
+        return this.viewCount;
+    }
+
+    /**
+     * @return viewCount7Days
+     */
+    public Long getViewCount7Days() {
+        return this.viewCount7Days;
+    }
+
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public static final class Builder {
+        private String accessibility; 
+        private Long deploymentCount; 
+        private String domain; 
+        private java.util.Map<String, ?> extraInfo; 
+        private String gmtCreateTime; 
+        private String gmtModifiedTime; 
+        private java.util.List<Label> labels; 
+        private ModelVersion latestVersion; 
+        private String modelDescription; 
+        private String modelDoc; 
+        private String modelId; 
+        private String modelName; 
+        private Long orderNumber; 
+        private String origin; 
+        private String ownerId; 
+        private String provider; 
+        private java.util.Map<String, ?> quickStartModelDescription; 
+        private java.util.Map<String, ?> quickStartModelName; 
+        private String relatedModelId; 
+        private String task; 
+        private Long trainingCount; 
+        private String userId; 
+        private Long viewCount; 
+        private Long viewCount7Days; 
+        private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuickStartModel model) {
+            this.accessibility = model.accessibility;
+            this.deploymentCount = model.deploymentCount;
+            this.domain = model.domain;
+            this.extraInfo = model.extraInfo;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.labels = model.labels;
+            this.latestVersion = model.latestVersion;
+            this.modelDescription = model.modelDescription;
+            this.modelDoc = model.modelDoc;
+            this.modelId = model.modelId;
+            this.modelName = model.modelName;
+            this.orderNumber = model.orderNumber;
+            this.origin = model.origin;
+            this.ownerId = model.ownerId;
+            this.provider = model.provider;
+            this.quickStartModelDescription = model.quickStartModelDescription;
+            this.quickStartModelName = model.quickStartModelName;
+            this.relatedModelId = model.relatedModelId;
+            this.task = model.task;
+            this.trainingCount = model.trainingCount;
+            this.userId = model.userId;
+            this.viewCount = model.viewCount;
+            this.viewCount7Days = model.viewCount7Days;
+            this.workspaceId = model.workspaceId;
+        } 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * DeploymentCount.
+         */
+        public Builder deploymentCount(Long deploymentCount) {
+            this.deploymentCount = deploymentCount;
+            return this;
+        }
+
+        /**
+         * Domain.
+         */
+        public Builder domain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
+            this.extraInfo = extraInfo;
+            return this;
+        }
+
+        /**
+         * GmtCreateTime.
+         */
+        public Builder gmtCreateTime(String gmtCreateTime) {
+            this.gmtCreateTime = gmtCreateTime;
+            return this;
+        }
+
+        /**
+         * GmtModifiedTime.
+         */
+        public Builder gmtModifiedTime(String gmtModifiedTime) {
+            this.gmtModifiedTime = gmtModifiedTime;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(java.util.List<Label> labels) {
+            this.labels = labels;
+            return this;
+        }
+
+        /**
+         * LatestVersion.
+         */
+        public Builder latestVersion(ModelVersion latestVersion) {
+            this.latestVersion = latestVersion;
+            return this;
+        }
+
+        /**
+         * ModelDescription.
+         */
+        public Builder modelDescription(String modelDescription) {
+            this.modelDescription = modelDescription;
+            return this;
+        }
+
+        /**
+         * ModelDoc.
+         */
+        public Builder modelDoc(String modelDoc) {
+            this.modelDoc = modelDoc;
+            return this;
+        }
+
+        /**
+         * ModelId.
+         */
+        public Builder modelId(String modelId) {
+            this.modelId = modelId;
+            return this;
+        }
+
+        /**
+         * ModelName.
+         */
+        public Builder modelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+
+        /**
+         * OrderNumber.
+         */
+        public Builder orderNumber(Long orderNumber) {
+            this.orderNumber = orderNumber;
+            return this;
+        }
+
+        /**
+         * Origin.
+         */
+        public Builder origin(String origin) {
+            this.origin = origin;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(String ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Provider.
+         */
+        public Builder provider(String provider) {
+            this.provider = provider;
+            return this;
+        }
+
+        /**
+         * QuickStartModelDescription.
+         */
+        public Builder quickStartModelDescription(java.util.Map<String, ?> quickStartModelDescription) {
+            this.quickStartModelDescription = quickStartModelDescription;
+            return this;
+        }
+
+        /**
+         * QuickStartModelName.
+         */
+        public Builder quickStartModelName(java.util.Map<String, ?> quickStartModelName) {
+            this.quickStartModelName = quickStartModelName;
+            return this;
+        }
+
+        /**
+         * RelatedModelId.
+         */
+        public Builder relatedModelId(String relatedModelId) {
+            this.relatedModelId = relatedModelId;
+            return this;
+        }
+
+        /**
+         * Task.
+         */
+        public Builder task(String task) {
+            this.task = task;
+            return this;
+        }
+
+        /**
+         * TrainingCount.
+         */
+        public Builder trainingCount(Long trainingCount) {
+            this.trainingCount = trainingCount;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+
+        /**
+         * ViewCount.
+         */
+        public Builder viewCount(Long viewCount) {
+            this.viewCount = viewCount;
+            return this;
+        }
+
+        /**
+         * ViewCount7Days.
+         */
+        public Builder viewCount7Days(Long viewCount7Days) {
+            this.viewCount7Days = viewCount7Days;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+
+        public QuickStartModel build() {
+            return new QuickStartModel(this);
+        } 
+
+    } 
+
+}
