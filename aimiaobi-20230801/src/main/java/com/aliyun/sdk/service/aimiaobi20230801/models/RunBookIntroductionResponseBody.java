@@ -298,7 +298,85 @@ public class RunBookIntroductionResponseBody extends TeaModel {
      *
      * <p>RunBookIntroductionResponseBody</p>
      */
+    public static class Introductions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Summary")
+        private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
+        private Introductions(Builder builder) {
+            this.summary = builder.summary;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Introductions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return summary
+         */
+        public String getSummary() {
+            return this.summary;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private String summary; 
+            private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Introductions model) {
+                this.summary = model.summary;
+                this.title = model.title;
+            } 
+
+            /**
+             * Summary.
+             */
+            public Builder summary(String summary) {
+                this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public Introductions build() {
+                return new Introductions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunBookIntroductionResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunBookIntroductionResponseBody</p>
+     */
     public static class Output extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Introductions")
+        private java.util.List<Introductions> introductions;
+
         @com.aliyun.core.annotation.NameInMap("KeyPoint")
         private String keyPoint;
 
@@ -306,6 +384,7 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         private String summary;
 
         private Output(Builder builder) {
+            this.introductions = builder.introductions;
             this.keyPoint = builder.keyPoint;
             this.summary = builder.summary;
         }
@@ -316,6 +395,13 @@ public class RunBookIntroductionResponseBody extends TeaModel {
 
         public static Output create() {
             return builder().build();
+        }
+
+        /**
+         * @return introductions
+         */
+        public java.util.List<Introductions> getIntroductions() {
+            return this.introductions;
         }
 
         /**
@@ -333,6 +419,7 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<Introductions> introductions; 
             private String keyPoint; 
             private String summary; 
 
@@ -340,9 +427,18 @@ public class RunBookIntroductionResponseBody extends TeaModel {
             } 
 
             private Builder(Output model) {
+                this.introductions = model.introductions;
                 this.keyPoint = model.keyPoint;
                 this.summary = model.summary;
             } 
+
+            /**
+             * Introductions.
+             */
+            public Builder introductions(java.util.List<Introductions> introductions) {
+                this.introductions = introductions;
+                return this;
+            }
 
             /**
              * KeyPoint.
