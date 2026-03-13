@@ -359,6 +359,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListVpcBindingsResponse> listVpcBindings(ListVpcBindingsRequest request);
 
     /**
+     * @param request the request parameters of PauseSession  PauseSessionRequest
+     * @return PauseSessionResponse
+     */
+    CompletableFuture<PauseSessionResponse> pauseSession(PauseSessionRequest request);
+
+    /**
      * @param request the request parameters of PublishFunctionVersion  PublishFunctionVersionRequest
      * @return PublishFunctionVersionResponse
      */
@@ -393,6 +399,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PutScalingConfigResponse
      */
     CompletableFuture<PutScalingConfigResponse> putScalingConfig(PutScalingConfigRequest request);
+
+    /**
+     * @param request the request parameters of ResumeSession  ResumeSessionRequest
+     * @return ResumeSessionResponse
+     */
+    CompletableFuture<ResumeSessionResponse> resumeSession(ResumeSessionRequest request);
 
     /**
      * @param request the request parameters of StopAsyncTask  StopAsyncTaskRequest

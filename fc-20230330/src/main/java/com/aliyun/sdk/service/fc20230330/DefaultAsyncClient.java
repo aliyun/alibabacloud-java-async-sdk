@@ -1038,6 +1038,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of PauseSession  PauseSessionRequest
+     * @return PauseSessionResponse
+     */
+    @Override
+    public CompletableFuture<PauseSessionResponse> pauseSession(PauseSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PauseSession").setMethod(HttpMethod.PUT).setPathRegex("/2023-03-30/functions/{functionName}/sessions/{sessionId}/pause").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PauseSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PauseSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of PublishFunctionVersion  PublishFunctionVersionRequest
      * @return PublishFunctionVersionResponse
      */
@@ -1140,6 +1158,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PutScalingConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ResumeSession  ResumeSessionRequest
+     * @return ResumeSessionResponse
+     */
+    @Override
+    public CompletableFuture<ResumeSessionResponse> resumeSession(ResumeSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ResumeSession").setMethod(HttpMethod.PUT).setPathRegex("/2023-03-30/functions/{functionName}/sessions/{sessionId}/resume").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResumeSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResumeSessionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
