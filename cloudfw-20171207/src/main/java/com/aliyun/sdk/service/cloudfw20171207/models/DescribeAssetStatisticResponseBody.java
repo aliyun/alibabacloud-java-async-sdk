@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAssetStatisticResponseBody</p>
  */
 public class DescribeAssetStatisticResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AutoResourceEnable")
+    private Boolean autoResourceEnable;
+
     @com.aliyun.core.annotation.NameInMap("GeneralInstanceSpecStatistic")
     private GeneralInstanceSpecStatistic generalInstanceSpecStatistic;
 
@@ -27,6 +30,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
     private ResourceSpecStatistic resourceSpecStatistic;
 
     private DescribeAssetStatisticResponseBody(Builder builder) {
+        this.autoResourceEnable = builder.autoResourceEnable;
         this.generalInstanceSpecStatistic = builder.generalInstanceSpecStatistic;
         this.requestId = builder.requestId;
         this.resourceSpecStatistic = builder.resourceSpecStatistic;
@@ -42,6 +46,13 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoResourceEnable
+     */
+    public Boolean getAutoResourceEnable() {
+        return this.autoResourceEnable;
     }
 
     /**
@@ -66,6 +77,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean autoResourceEnable; 
         private GeneralInstanceSpecStatistic generalInstanceSpecStatistic; 
         private String requestId; 
         private ResourceSpecStatistic resourceSpecStatistic; 
@@ -74,10 +86,19 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeAssetStatisticResponseBody model) {
+            this.autoResourceEnable = model.autoResourceEnable;
             this.generalInstanceSpecStatistic = model.generalInstanceSpecStatistic;
             this.requestId = model.requestId;
             this.resourceSpecStatistic = model.resourceSpecStatistic;
         } 
+
+        /**
+         * AutoResourceEnable.
+         */
+        public Builder autoResourceEnable(Boolean autoResourceEnable) {
+            this.autoResourceEnable = autoResourceEnable;
+            return this;
+        }
 
         /**
          * GeneralInstanceSpecStatistic.
