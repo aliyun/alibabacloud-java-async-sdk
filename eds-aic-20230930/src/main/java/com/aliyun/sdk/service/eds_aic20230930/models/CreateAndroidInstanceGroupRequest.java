@@ -99,6 +99,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     private String officeSiteId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaidCallBackUrl")
+    private String paidCallBackUrl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
@@ -147,6 +151,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         this.networkType = builder.networkType;
         this.numberOfInstances = builder.numberOfInstances;
         this.officeSiteId = builder.officeSiteId;
+        this.paidCallBackUrl = builder.paidCallBackUrl;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
@@ -303,6 +308,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return paidCallBackUrl
+     */
+    public String getPaidCallBackUrl() {
+        return this.paidCallBackUrl;
+    }
+
+    /**
      * @return period
      */
     public Integer getPeriod() {
@@ -371,6 +383,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         private String networkType; 
         private Integer numberOfInstances; 
         private String officeSiteId; 
+        private String paidCallBackUrl; 
         private Integer period; 
         private String periodUnit; 
         private String policyGroupId; 
@@ -404,6 +417,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.networkType = request.networkType;
             this.numberOfInstances = request.numberOfInstances;
             this.officeSiteId = request.officeSiteId;
+            this.paidCallBackUrl = request.paidCallBackUrl;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
@@ -679,6 +693,15 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
             this.officeSiteId = officeSiteId;
+            return this;
+        }
+
+        /**
+         * PaidCallBackUrl.
+         */
+        public Builder paidCallBackUrl(String paidCallBackUrl) {
+            this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
+            this.paidCallBackUrl = paidCallBackUrl;
             return this;
         }
 

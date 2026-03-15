@@ -37,6 +37,10 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceTasks")
     private java.util.List<InstanceTasks> instanceTasks;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ports")
+    private java.util.List<String> ports;
+
     private BatchGetAcpConnectionTicketRequest(Builder builder) {
         super(builder);
         this.connectionMode = builder.connectionMode;
@@ -44,6 +48,7 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
         this.instanceGroupId = builder.instanceGroupId;
         this.instanceIds = builder.instanceIds;
         this.instanceTasks = builder.instanceTasks;
+        this.ports = builder.ports;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
         return this.instanceTasks;
     }
 
+    /**
+     * @return ports
+     */
+    public java.util.List<String> getPorts() {
+        return this.ports;
+    }
+
     public static final class Builder extends Request.Builder<BatchGetAcpConnectionTicketRequest, Builder> {
         private String connectionMode; 
         private String endUserId; 
         private String instanceGroupId; 
         private java.util.List<String> instanceIds; 
         private java.util.List<InstanceTasks> instanceTasks; 
+        private java.util.List<String> ports; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
             this.instanceGroupId = request.instanceGroupId;
             this.instanceIds = request.instanceIds;
             this.instanceTasks = request.instanceTasks;
+            this.ports = request.ports;
         } 
 
         /**
@@ -162,6 +176,15 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
         public Builder instanceTasks(java.util.List<InstanceTasks> instanceTasks) {
             this.putQueryParameter("InstanceTasks", instanceTasks);
             this.instanceTasks = instanceTasks;
+            return this;
+        }
+
+        /**
+         * Ports.
+         */
+        public Builder ports(java.util.List<String> ports) {
+            this.putQueryParameter("Ports", ports);
+            this.ports = ports;
             return this;
         }
 

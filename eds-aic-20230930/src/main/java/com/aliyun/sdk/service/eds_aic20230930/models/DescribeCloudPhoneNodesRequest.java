@@ -57,6 +57,10 @@ public class DescribeCloudPhoneNodesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
     private DescribeCloudPhoneNodesRequest(Builder builder) {
         super(builder);
         this.bandwidthPackageId = builder.bandwidthPackageId;
@@ -69,6 +73,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         this.nodeNameList = builder.nodeNameList;
         this.serverType = builder.serverType;
         this.status = builder.status;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -154,6 +159,13 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<DescribeCloudPhoneNodesRequest, Builder> {
         private String bandwidthPackageId; 
         private String bizRegionId; 
@@ -165,6 +177,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         private java.util.List<String> nodeNameList; 
         private String serverType; 
         private String status; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -182,6 +195,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
             this.nodeNameList = request.nodeNameList;
             this.serverType = request.serverType;
             this.status = request.status;
+            this.tags = request.tags;
         } 
 
         /**
@@ -308,6 +322,15 @@ public class DescribeCloudPhoneNodesRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public DescribeCloudPhoneNodesRequest build() {
             return new DescribeCloudPhoneNodesRequest(this);
@@ -315,4 +338,79 @@ public class DescribeCloudPhoneNodesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudPhoneNodesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudPhoneNodesRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }
