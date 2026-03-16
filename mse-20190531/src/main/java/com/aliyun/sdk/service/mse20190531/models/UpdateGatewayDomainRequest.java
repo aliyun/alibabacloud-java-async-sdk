@@ -22,6 +22,10 @@ public class UpdateGatewayDomainRequest extends Request {
     private String acceptLanguage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaCertIdentifier")
+    private String caCertIdentifier;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertIdentifier")
     private String certIdentifier;
 
@@ -36,6 +40,10 @@ public class UpdateGatewayDomainRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MtlsEnabled")
+    private Boolean mtlsEnabled;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MustHttps")
@@ -60,10 +68,12 @@ public class UpdateGatewayDomainRequest extends Request {
     private UpdateGatewayDomainRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.caCertIdentifier = builder.caCertIdentifier;
         this.certIdentifier = builder.certIdentifier;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.http2 = builder.http2;
         this.id = builder.id;
+        this.mtlsEnabled = builder.mtlsEnabled;
         this.mustHttps = builder.mustHttps;
         this.protocol = builder.protocol;
         this.tlsCipherSuitesConfigJSON = builder.tlsCipherSuitesConfigJSON;
@@ -92,6 +102,13 @@ public class UpdateGatewayDomainRequest extends Request {
     }
 
     /**
+     * @return caCertIdentifier
+     */
+    public String getCaCertIdentifier() {
+        return this.caCertIdentifier;
+    }
+
+    /**
      * @return certIdentifier
      */
     public String getCertIdentifier() {
@@ -117,6 +134,13 @@ public class UpdateGatewayDomainRequest extends Request {
      */
     public Long getId() {
         return this.id;
+    }
+
+    /**
+     * @return mtlsEnabled
+     */
+    public Boolean getMtlsEnabled() {
+        return this.mtlsEnabled;
     }
 
     /**
@@ -156,10 +180,12 @@ public class UpdateGatewayDomainRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateGatewayDomainRequest, Builder> {
         private String acceptLanguage; 
+        private String caCertIdentifier; 
         private String certIdentifier; 
         private String gatewayUniqueId; 
         private String http2; 
         private Long id; 
+        private Boolean mtlsEnabled; 
         private Boolean mustHttps; 
         private String protocol; 
         private TlsCipherSuitesConfigJSON tlsCipherSuitesConfigJSON; 
@@ -173,10 +199,12 @@ public class UpdateGatewayDomainRequest extends Request {
         private Builder(UpdateGatewayDomainRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.caCertIdentifier = request.caCertIdentifier;
             this.certIdentifier = request.certIdentifier;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.http2 = request.http2;
             this.id = request.id;
+            this.mtlsEnabled = request.mtlsEnabled;
             this.mustHttps = request.mustHttps;
             this.protocol = request.protocol;
             this.tlsCipherSuitesConfigJSON = request.tlsCipherSuitesConfigJSON;
@@ -197,6 +225,15 @@ public class UpdateGatewayDomainRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * CaCertIdentifier.
+         */
+        public Builder caCertIdentifier(String caCertIdentifier) {
+            this.putQueryParameter("CaCertIdentifier", caCertIdentifier);
+            this.caCertIdentifier = caCertIdentifier;
             return this;
         }
 
@@ -250,6 +287,15 @@ public class UpdateGatewayDomainRequest extends Request {
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * MtlsEnabled.
+         */
+        public Builder mtlsEnabled(Boolean mtlsEnabled) {
+            this.putQueryParameter("MtlsEnabled", mtlsEnabled);
+            this.mtlsEnabled = mtlsEnabled;
             return this;
         }
 

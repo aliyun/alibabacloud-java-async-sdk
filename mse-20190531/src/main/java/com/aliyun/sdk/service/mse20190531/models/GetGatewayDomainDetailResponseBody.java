@@ -282,6 +282,9 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeforeDate")
         private Long beforeDate;
 
+        @com.aliyun.core.annotation.NameInMap("CaCertIdentifier")
+        private String caCertIdentifier;
+
         @com.aliyun.core.annotation.NameInMap("CertIdentifier")
         private String certIdentifier;
 
@@ -321,6 +324,9 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
+        @com.aliyun.core.annotation.NameInMap("MtlsEnabled")
+        private Boolean mtlsEnabled;
+
         @com.aliyun.core.annotation.NameInMap("MustHttps")
         private Boolean mustHttps;
 
@@ -346,6 +352,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             this.afterDate = builder.afterDate;
             this.algorithm = builder.algorithm;
             this.beforeDate = builder.beforeDate;
+            this.caCertIdentifier = builder.caCertIdentifier;
             this.certIdentifier = builder.certIdentifier;
             this.certName = builder.certName;
             this.commonName = builder.commonName;
@@ -359,6 +366,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             this.id = builder.id;
             this.isManaged = builder.isManaged;
             this.issuer = builder.issuer;
+            this.mtlsEnabled = builder.mtlsEnabled;
             this.mustHttps = builder.mustHttps;
             this.name = builder.name;
             this.protocol = builder.protocol;
@@ -395,6 +403,13 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
          */
         public Long getBeforeDate() {
             return this.beforeDate;
+        }
+
+        /**
+         * @return caCertIdentifier
+         */
+        public String getCaCertIdentifier() {
+            return this.caCertIdentifier;
         }
 
         /**
@@ -489,6 +504,13 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return mtlsEnabled
+         */
+        public Boolean getMtlsEnabled() {
+            return this.mtlsEnabled;
+        }
+
+        /**
          * @return mustHttps
          */
         public Boolean getMustHttps() {
@@ -541,6 +563,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             private Long afterDate; 
             private String algorithm; 
             private Long beforeDate; 
+            private String caCertIdentifier; 
             private String certIdentifier; 
             private String certName; 
             private String commonName; 
@@ -554,6 +577,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             private Long id; 
             private Boolean isManaged; 
             private String issuer; 
+            private Boolean mtlsEnabled; 
             private Boolean mustHttps; 
             private String name; 
             private String protocol; 
@@ -569,6 +593,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
                 this.afterDate = model.afterDate;
                 this.algorithm = model.algorithm;
                 this.beforeDate = model.beforeDate;
+                this.caCertIdentifier = model.caCertIdentifier;
                 this.certIdentifier = model.certIdentifier;
                 this.certName = model.certName;
                 this.commonName = model.commonName;
@@ -582,6 +607,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
                 this.id = model.id;
                 this.isManaged = model.isManaged;
                 this.issuer = model.issuer;
+                this.mtlsEnabled = model.mtlsEnabled;
                 this.mustHttps = model.mustHttps;
                 this.name = model.name;
                 this.protocol = model.protocol;
@@ -621,6 +647,14 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
              */
             public Builder beforeDate(Long beforeDate) {
                 this.beforeDate = beforeDate;
+                return this;
+            }
+
+            /**
+             * CaCertIdentifier.
+             */
+            public Builder caCertIdentifier(String caCertIdentifier) {
+                this.caCertIdentifier = caCertIdentifier;
                 return this;
             }
 
@@ -766,6 +800,14 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
+                return this;
+            }
+
+            /**
+             * MtlsEnabled.
+             */
+            public Builder mtlsEnabled(Boolean mtlsEnabled) {
+                this.mtlsEnabled = mtlsEnabled;
                 return this;
             }
 

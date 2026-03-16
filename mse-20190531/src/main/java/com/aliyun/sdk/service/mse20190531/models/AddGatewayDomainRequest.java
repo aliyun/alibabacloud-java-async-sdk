@@ -22,6 +22,10 @@ public class AddGatewayDomainRequest extends Request {
     private String acceptLanguage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaCertIdentifier")
+    private String caCertIdentifier;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertIdentifier")
     private String certIdentifier;
 
@@ -32,6 +36,10 @@ public class AddGatewayDomainRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Http2")
     private String http2;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MtlsEnabled")
+    private Boolean mtlsEnabled;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MustHttps")
@@ -60,9 +68,11 @@ public class AddGatewayDomainRequest extends Request {
     private AddGatewayDomainRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.caCertIdentifier = builder.caCertIdentifier;
         this.certIdentifier = builder.certIdentifier;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.http2 = builder.http2;
+        this.mtlsEnabled = builder.mtlsEnabled;
         this.mustHttps = builder.mustHttps;
         this.name = builder.name;
         this.protocol = builder.protocol;
@@ -92,6 +102,13 @@ public class AddGatewayDomainRequest extends Request {
     }
 
     /**
+     * @return caCertIdentifier
+     */
+    public String getCaCertIdentifier() {
+        return this.caCertIdentifier;
+    }
+
+    /**
      * @return certIdentifier
      */
     public String getCertIdentifier() {
@@ -110,6 +127,13 @@ public class AddGatewayDomainRequest extends Request {
      */
     public String getHttp2() {
         return this.http2;
+    }
+
+    /**
+     * @return mtlsEnabled
+     */
+    public Boolean getMtlsEnabled() {
+        return this.mtlsEnabled;
     }
 
     /**
@@ -156,9 +180,11 @@ public class AddGatewayDomainRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddGatewayDomainRequest, Builder> {
         private String acceptLanguage; 
+        private String caCertIdentifier; 
         private String certIdentifier; 
         private String gatewayUniqueId; 
         private String http2; 
+        private Boolean mtlsEnabled; 
         private Boolean mustHttps; 
         private String name; 
         private String protocol; 
@@ -173,9 +199,11 @@ public class AddGatewayDomainRequest extends Request {
         private Builder(AddGatewayDomainRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.caCertIdentifier = request.caCertIdentifier;
             this.certIdentifier = request.certIdentifier;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.http2 = request.http2;
+            this.mtlsEnabled = request.mtlsEnabled;
             this.mustHttps = request.mustHttps;
             this.name = request.name;
             this.protocol = request.protocol;
@@ -197,6 +225,15 @@ public class AddGatewayDomainRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * CaCertIdentifier.
+         */
+        public Builder caCertIdentifier(String caCertIdentifier) {
+            this.putQueryParameter("CaCertIdentifier", caCertIdentifier);
+            this.caCertIdentifier = caCertIdentifier;
             return this;
         }
 
@@ -238,6 +275,15 @@ public class AddGatewayDomainRequest extends Request {
         public Builder http2(String http2) {
             this.putQueryParameter("Http2", http2);
             this.http2 = http2;
+            return this;
+        }
+
+        /**
+         * MtlsEnabled.
+         */
+        public Builder mtlsEnabled(Boolean mtlsEnabled) {
+            this.putQueryParameter("MtlsEnabled", mtlsEnabled);
+            this.mtlsEnabled = mtlsEnabled;
             return this;
         }
 
