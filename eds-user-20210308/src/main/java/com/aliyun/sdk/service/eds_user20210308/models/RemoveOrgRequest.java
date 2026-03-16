@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RemoveOrgRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OrgId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String orgId;
 
     private RemoveOrgRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.orgId = builder.orgId;
     }
 
@@ -41,6 +46,13 @@ public class RemoveOrgRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return orgId
      */
     public String getOrgId() {
@@ -48,6 +60,7 @@ public class RemoveOrgRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveOrgRequest, Builder> {
+        private String businessChannel; 
         private String orgId; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class RemoveOrgRequest extends Request {
 
         private Builder(RemoveOrgRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.orgId = request.orgId;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putBodyParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The organization ID.</p>

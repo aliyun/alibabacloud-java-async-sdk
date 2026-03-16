@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChangeUserPasswordRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
@@ -27,6 +31,7 @@ public class ChangeUserPasswordRequest extends Request {
 
     private ChangeUserPasswordRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.endUserId = builder.endUserId;
         this.newPassword = builder.newPassword;
     }
@@ -45,6 +50,13 @@ public class ChangeUserPasswordRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return endUserId
      */
     public String getEndUserId() {
@@ -59,6 +71,7 @@ public class ChangeUserPasswordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChangeUserPasswordRequest, Builder> {
+        private String businessChannel; 
         private String endUserId; 
         private String newPassword; 
 
@@ -68,9 +81,19 @@ public class ChangeUserPasswordRequest extends Request {
 
         private Builder(ChangeUserPasswordRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.endUserId = request.endUserId;
             this.newPassword = request.newPassword;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putBodyParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * EndUserId.

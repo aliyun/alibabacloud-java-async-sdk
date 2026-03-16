@@ -440,6 +440,9 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
      * <p>DescribeResourceGroupsResponseBody</p>
      */
     public static class ResourceGroup extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AliyunResourceGroupId")
+        private String aliyunResourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("AppRules")
         private java.util.List<AppRules> appRules;
 
@@ -465,6 +468,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         private java.util.List<Timers> timers;
 
         private ResourceGroup(Builder builder) {
+            this.aliyunResourceGroupId = builder.aliyunResourceGroupId;
             this.appRules = builder.appRules;
             this.authCount = builder.authCount;
             this.createTime = builder.createTime;
@@ -481,6 +485,13 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
 
         public static ResourceGroup create() {
             return builder().build();
+        }
+
+        /**
+         * @return aliyunResourceGroupId
+         */
+        public String getAliyunResourceGroupId() {
+            return this.aliyunResourceGroupId;
         }
 
         /**
@@ -540,6 +551,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String aliyunResourceGroupId; 
             private java.util.List<AppRules> appRules; 
             private String authCount; 
             private String createTime; 
@@ -553,6 +565,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             } 
 
             private Builder(ResourceGroup model) {
+                this.aliyunResourceGroupId = model.aliyunResourceGroupId;
                 this.appRules = model.appRules;
                 this.authCount = model.authCount;
                 this.createTime = model.createTime;
@@ -562,6 +575,14 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
                 this.resourceGroupName = model.resourceGroupName;
                 this.timers = model.timers;
             } 
+
+            /**
+             * AliyunResourceGroupId.
+             */
+            public Builder aliyunResourceGroupId(String aliyunResourceGroupId) {
+                this.aliyunResourceGroupId = aliyunResourceGroupId;
+                return this;
+            }
 
             /**
              * AppRules.

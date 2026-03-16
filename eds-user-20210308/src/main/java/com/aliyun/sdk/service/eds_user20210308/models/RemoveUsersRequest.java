@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RemoveUsersRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Users")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> users;
 
     private RemoveUsersRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.users = builder.users;
     }
 
@@ -41,6 +46,13 @@ public class RemoveUsersRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return users
      */
     public java.util.List<String> getUsers() {
@@ -48,6 +60,7 @@ public class RemoveUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveUsersRequest, Builder> {
+        private String businessChannel; 
         private java.util.List<String> users; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class RemoveUsersRequest extends Request {
 
         private Builder(RemoveUsersRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.users = request.users;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putBodyParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The usernames of the convenience users that you want to remove.</p>

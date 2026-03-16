@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemovePropertyRequest</p>
  */
 public class RemovePropertyRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PropertyId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -24,6 +28,7 @@ public class RemovePropertyRequest extends Request {
 
     private RemovePropertyRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.propertyId = builder.propertyId;
     }
 
@@ -41,6 +46,13 @@ public class RemovePropertyRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return propertyId
      */
     public Long getPropertyId() {
@@ -48,6 +60,7 @@ public class RemovePropertyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemovePropertyRequest, Builder> {
+        private String businessChannel; 
         private Long propertyId; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class RemovePropertyRequest extends Request {
 
         private Builder(RemovePropertyRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.propertyId = request.propertyId;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The ID of the property. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property ID.</p>

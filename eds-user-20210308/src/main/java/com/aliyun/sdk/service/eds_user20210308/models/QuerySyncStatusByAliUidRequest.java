@@ -17,8 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySyncStatusByAliUidRequest</p>
  */
 public class QuerySyncStatusByAliUidRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
     private QuerySyncStatusByAliUidRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
     }
 
     public static Builder builder() {
@@ -34,7 +39,15 @@ public class QuerySyncStatusByAliUidRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
     public static final class Builder extends Request.Builder<QuerySyncStatusByAliUidRequest, Builder> {
+        private String businessChannel; 
 
         private Builder() {
             super();
@@ -42,7 +55,17 @@ public class QuerySyncStatusByAliUidRequest extends Request {
 
         private Builder(QuerySyncStatusByAliUidRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         @Override
         public QuerySyncStatusByAliUidRequest build() {

@@ -21,6 +21,10 @@ public class DescribeUsersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
     private java.util.List<String> endUserIds;
@@ -36,6 +40,10 @@ public class DescribeUsersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterMap")
+    private java.util.Map<String, String> filterMap;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FilterWithAssignedResource")
@@ -81,10 +89,12 @@ public class DescribeUsersRequest extends Request {
     private DescribeUsersRequest(Builder builder) {
         super(builder);
         this.bizType = builder.bizType;
+        this.businessChannel = builder.businessChannel;
         this.endUserIds = builder.endUserIds;
         this.excludeEndUserIds = builder.excludeEndUserIds;
         this.excludeGroupId = builder.excludeGroupId;
         this.filter = builder.filter;
+        this.filterMap = builder.filterMap;
         this.filterWithAssignedResource = builder.filterWithAssignedResource;
         this.filterWithAssignedResources = builder.filterWithAssignedResources;
         this.groupId = builder.groupId;
@@ -118,6 +128,13 @@ public class DescribeUsersRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return endUserIds
      */
     public java.util.List<String> getEndUserIds() {
@@ -143,6 +160,13 @@ public class DescribeUsersRequest extends Request {
      */
     public String getFilter() {
         return this.filter;
+    }
+
+    /**
+     * @return filterMap
+     */
+    public java.util.Map<String, String> getFilterMap() {
+        return this.filterMap;
     }
 
     /**
@@ -217,10 +241,12 @@ public class DescribeUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeUsersRequest, Builder> {
         private String bizType; 
+        private String businessChannel; 
         private java.util.List<String> endUserIds; 
         private java.util.List<String> excludeEndUserIds; 
         private String excludeGroupId; 
         private String filter; 
+        private java.util.Map<String, String> filterMap; 
         private java.util.Map<String, String> filterWithAssignedResource; 
         private java.util.Map<String, Boolean> filterWithAssignedResources; 
         private String groupId; 
@@ -239,10 +265,12 @@ public class DescribeUsersRequest extends Request {
         private Builder(DescribeUsersRequest request) {
             super(request);
             this.bizType = request.bizType;
+            this.businessChannel = request.businessChannel;
             this.endUserIds = request.endUserIds;
             this.excludeEndUserIds = request.excludeEndUserIds;
             this.excludeGroupId = request.excludeGroupId;
             this.filter = request.filter;
+            this.filterMap = request.filterMap;
             this.filterWithAssignedResource = request.filterWithAssignedResource;
             this.filterWithAssignedResources = request.filterWithAssignedResources;
             this.groupId = request.groupId;
@@ -261,6 +289,15 @@ public class DescribeUsersRequest extends Request {
         public Builder bizType(String bizType) {
             this.putBodyParameter("BizType", bizType);
             this.bizType = bizType;
+            return this;
+        }
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
             return this;
         }
 
@@ -300,6 +337,16 @@ public class DescribeUsersRequest extends Request {
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * FilterMap.
+         */
+        public Builder filterMap(java.util.Map<String, String> filterMap) {
+            String filterMapShrink = shrink(filterMap, "FilterMap", "json");
+            this.putQueryParameter("FilterMap", filterMapShrink);
+            this.filterMap = filterMap;
             return this;
         }
 

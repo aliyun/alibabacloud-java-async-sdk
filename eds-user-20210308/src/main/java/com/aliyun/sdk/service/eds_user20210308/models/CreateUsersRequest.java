@@ -22,6 +22,10 @@ public class CreateUsersRequest extends Request {
     private String autoLockTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsLocalAdmin")
     private Boolean isLocalAdmin;
 
@@ -42,6 +46,7 @@ public class CreateUsersRequest extends Request {
     private CreateUsersRequest(Builder builder) {
         super(builder);
         this.autoLockTime = builder.autoLockTime;
+        this.businessChannel = builder.businessChannel;
         this.isLocalAdmin = builder.isLocalAdmin;
         this.password = builder.password;
         this.passwordExpireDays = builder.passwordExpireDays;
@@ -66,6 +71,13 @@ public class CreateUsersRequest extends Request {
      */
     public String getAutoLockTime() {
         return this.autoLockTime;
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -98,6 +110,7 @@ public class CreateUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateUsersRequest, Builder> {
         private String autoLockTime; 
+        private String businessChannel; 
         private Boolean isLocalAdmin; 
         private String password; 
         private String passwordExpireDays; 
@@ -110,6 +123,7 @@ public class CreateUsersRequest extends Request {
         private Builder(CreateUsersRequest request) {
             super(request);
             this.autoLockTime = request.autoLockTime;
+            this.businessChannel = request.businessChannel;
             this.isLocalAdmin = request.isLocalAdmin;
             this.password = request.password;
             this.passwordExpireDays = request.passwordExpireDays;
@@ -125,6 +139,15 @@ public class CreateUsersRequest extends Request {
         public Builder autoLockTime(String autoLockTime) {
             this.putQueryParameter("AutoLockTime", autoLockTime);
             this.autoLockTime = autoLockTime;
+            return this;
+        }
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
             return this;
         }
 

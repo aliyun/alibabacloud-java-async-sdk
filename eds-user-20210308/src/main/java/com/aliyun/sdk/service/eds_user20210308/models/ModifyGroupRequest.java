@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -33,6 +37,7 @@ public class ModifyGroupRequest extends Request {
 
     private ModifyGroupRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.description = builder.description;
         this.groupId = builder.groupId;
         this.newGroupName = builder.newGroupName;
@@ -49,6 +54,13 @@ public class ModifyGroupRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -73,6 +85,7 @@ public class ModifyGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyGroupRequest, Builder> {
+        private String businessChannel; 
         private String description; 
         private String groupId; 
         private String newGroupName; 
@@ -83,10 +96,20 @@ public class ModifyGroupRequest extends Request {
 
         private Builder(ModifyGroupRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.description = request.description;
             this.groupId = request.groupId;
             this.newGroupName = request.newGroupName;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The new description of the user group.</p>

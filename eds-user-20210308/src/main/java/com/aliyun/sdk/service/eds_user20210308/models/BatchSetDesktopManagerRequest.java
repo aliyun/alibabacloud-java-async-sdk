@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class BatchSetDesktopManagerRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IsDesktopManager")
     private String isDesktopManager;
 
@@ -28,6 +32,7 @@ public class BatchSetDesktopManagerRequest extends Request {
 
     private BatchSetDesktopManagerRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.isDesktopManager = builder.isDesktopManager;
         this.users = builder.users;
     }
@@ -46,6 +51,13 @@ public class BatchSetDesktopManagerRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return isDesktopManager
      */
     public String getIsDesktopManager() {
@@ -60,6 +72,7 @@ public class BatchSetDesktopManagerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchSetDesktopManagerRequest, Builder> {
+        private String businessChannel; 
         private String isDesktopManager; 
         private java.util.List<String> users; 
 
@@ -69,9 +82,19 @@ public class BatchSetDesktopManagerRequest extends Request {
 
         private Builder(BatchSetDesktopManagerRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.isDesktopManager = request.isDesktopManager;
             this.users = request.users;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putBodyParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>Whether the convenience account has the local administrator permissions on cloud computers.</p>

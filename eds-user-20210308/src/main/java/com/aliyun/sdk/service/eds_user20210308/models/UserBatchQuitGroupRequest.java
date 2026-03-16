@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UserBatchQuitGroupRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
     private java.util.List<String> endUserIds;
 
@@ -27,6 +31,7 @@ public class UserBatchQuitGroupRequest extends Request {
 
     private UserBatchQuitGroupRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.endUserIds = builder.endUserIds;
         this.groupId = builder.groupId;
     }
@@ -45,6 +50,13 @@ public class UserBatchQuitGroupRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return endUserIds
      */
     public java.util.List<String> getEndUserIds() {
@@ -59,6 +71,7 @@ public class UserBatchQuitGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UserBatchQuitGroupRequest, Builder> {
+        private String businessChannel; 
         private java.util.List<String> endUserIds; 
         private String groupId; 
 
@@ -68,9 +81,19 @@ public class UserBatchQuitGroupRequest extends Request {
 
         private Builder(UserBatchQuitGroupRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.endUserIds = request.endUserIds;
             this.groupId = request.groupId;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putBodyParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The user IDs.</p>

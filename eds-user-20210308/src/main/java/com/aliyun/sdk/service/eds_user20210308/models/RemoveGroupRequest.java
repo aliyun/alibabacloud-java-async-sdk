@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RemoveGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
@@ -27,6 +31,7 @@ public class RemoveGroupRequest extends Request {
 
     private RemoveGroupRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.groupId = builder.groupId;
         this.groupIds = builder.groupIds;
     }
@@ -45,6 +50,13 @@ public class RemoveGroupRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return groupId
      */
     public String getGroupId() {
@@ -59,6 +71,7 @@ public class RemoveGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveGroupRequest, Builder> {
+        private String businessChannel; 
         private String groupId; 
         private java.util.List<String> groupIds; 
 
@@ -68,9 +81,19 @@ public class RemoveGroupRequest extends Request {
 
         private Builder(RemoveGroupRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.groupId = request.groupId;
             this.groupIds = request.groupIds;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The ID of the user group to be deleted.</p>

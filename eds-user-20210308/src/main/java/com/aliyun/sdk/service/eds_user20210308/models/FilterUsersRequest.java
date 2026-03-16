@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class FilterUsersRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExcludeEndUserIds")
     private java.util.List<String> excludeEndUserIds;
 
@@ -26,12 +30,20 @@ public class FilterUsersRequest extends Request {
     private String filter;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterMap")
+    private java.util.Map<String, String> filterMap;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeDesktopCount")
     private Boolean includeDesktopCount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeDesktopGroupCount")
     private Boolean includeDesktopGroupCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeEndUserIds")
+    private java.util.List<String> includeEndUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeOrgInfo")
@@ -80,10 +92,13 @@ public class FilterUsersRequest extends Request {
 
     private FilterUsersRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.excludeEndUserIds = builder.excludeEndUserIds;
         this.filter = builder.filter;
+        this.filterMap = builder.filterMap;
         this.includeDesktopCount = builder.includeDesktopCount;
         this.includeDesktopGroupCount = builder.includeDesktopGroupCount;
+        this.includeEndUserIds = builder.includeEndUserIds;
         this.includeOrgInfo = builder.includeOrgInfo;
         this.includeSupportIdps = builder.includeSupportIdps;
         this.isQueryAllSubOrgs = builder.isQueryAllSubOrgs;
@@ -111,6 +126,13 @@ public class FilterUsersRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return excludeEndUserIds
      */
     public java.util.List<String> getExcludeEndUserIds() {
@@ -125,6 +147,13 @@ public class FilterUsersRequest extends Request {
     }
 
     /**
+     * @return filterMap
+     */
+    public java.util.Map<String, String> getFilterMap() {
+        return this.filterMap;
+    }
+
+    /**
      * @return includeDesktopCount
      */
     public Boolean getIncludeDesktopCount() {
@@ -136,6 +165,13 @@ public class FilterUsersRequest extends Request {
      */
     public Boolean getIncludeDesktopGroupCount() {
         return this.includeDesktopGroupCount;
+    }
+
+    /**
+     * @return includeEndUserIds
+     */
+    public java.util.List<String> getIncludeEndUserIds() {
+        return this.includeEndUserIds;
     }
 
     /**
@@ -216,10 +252,13 @@ public class FilterUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<FilterUsersRequest, Builder> {
+        private String businessChannel; 
         private java.util.List<String> excludeEndUserIds; 
         private String filter; 
+        private java.util.Map<String, String> filterMap; 
         private Boolean includeDesktopCount; 
         private Boolean includeDesktopGroupCount; 
+        private java.util.List<String> includeEndUserIds; 
         private Boolean includeOrgInfo; 
         private Boolean includeSupportIdps; 
         private Boolean isQueryAllSubOrgs; 
@@ -238,10 +277,13 @@ public class FilterUsersRequest extends Request {
 
         private Builder(FilterUsersRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.excludeEndUserIds = request.excludeEndUserIds;
             this.filter = request.filter;
+            this.filterMap = request.filterMap;
             this.includeDesktopCount = request.includeDesktopCount;
             this.includeDesktopGroupCount = request.includeDesktopGroupCount;
+            this.includeEndUserIds = request.includeEndUserIds;
             this.includeOrgInfo = request.includeOrgInfo;
             this.includeSupportIdps = request.includeSupportIdps;
             this.isQueryAllSubOrgs = request.isQueryAllSubOrgs;
@@ -254,6 +296,15 @@ public class FilterUsersRequest extends Request {
             this.propertyKeyValueFilterParam = request.propertyKeyValueFilterParam;
             this.status = request.status;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The list of usernames to be precisely excluded.</p>
@@ -273,6 +324,16 @@ public class FilterUsersRequest extends Request {
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * FilterMap.
+         */
+        public Builder filterMap(java.util.Map<String, String> filterMap) {
+            String filterMapShrink = shrink(filterMap, "FilterMap", "json");
+            this.putQueryParameter("FilterMap", filterMapShrink);
+            this.filterMap = filterMap;
             return this;
         }
 
@@ -329,6 +390,15 @@ public class FilterUsersRequest extends Request {
         public Builder includeDesktopGroupCount(Boolean includeDesktopGroupCount) {
             this.putQueryParameter("IncludeDesktopGroupCount", includeDesktopGroupCount);
             this.includeDesktopGroupCount = includeDesktopGroupCount;
+            return this;
+        }
+
+        /**
+         * IncludeEndUserIds.
+         */
+        public Builder includeEndUserIds(java.util.List<String> includeEndUserIds) {
+            this.putQueryParameter("IncludeEndUserIds", includeEndUserIds);
+            this.includeEndUserIds = includeEndUserIds;
             return this;
         }
 

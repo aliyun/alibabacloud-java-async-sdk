@@ -21,6 +21,10 @@ public class UnlockUsersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AutoLockTime")
     private String autoLockTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Users")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -29,6 +33,7 @@ public class UnlockUsersRequest extends Request {
     private UnlockUsersRequest(Builder builder) {
         super(builder);
         this.autoLockTime = builder.autoLockTime;
+        this.businessChannel = builder.businessChannel;
         this.users = builder.users;
     }
 
@@ -53,6 +58,13 @@ public class UnlockUsersRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return users
      */
     public java.util.List<String> getUsers() {
@@ -61,6 +73,7 @@ public class UnlockUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<UnlockUsersRequest, Builder> {
         private String autoLockTime; 
+        private String businessChannel; 
         private java.util.List<String> users; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class UnlockUsersRequest extends Request {
         private Builder(UnlockUsersRequest request) {
             super(request);
             this.autoLockTime = request.autoLockTime;
+            this.businessChannel = request.businessChannel;
             this.users = request.users;
         } 
 
@@ -82,6 +96,15 @@ public class UnlockUsersRequest extends Request {
         public Builder autoLockTime(String autoLockTime) {
             this.putQueryParameter("AutoLockTime", autoLockTime);
             this.autoLockTime = autoLockTime;
+            return this;
+        }
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
             return this;
         }
 

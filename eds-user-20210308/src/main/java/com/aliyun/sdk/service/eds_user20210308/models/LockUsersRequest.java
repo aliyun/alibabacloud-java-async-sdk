@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class LockUsersRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogoutSession")
     private Boolean logoutSession;
 
@@ -28,6 +32,7 @@ public class LockUsersRequest extends Request {
 
     private LockUsersRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.logoutSession = builder.logoutSession;
         this.users = builder.users;
     }
@@ -46,6 +51,13 @@ public class LockUsersRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return logoutSession
      */
     public Boolean getLogoutSession() {
@@ -60,6 +72,7 @@ public class LockUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<LockUsersRequest, Builder> {
+        private String businessChannel; 
         private Boolean logoutSession; 
         private java.util.List<String> users; 
 
@@ -69,9 +82,19 @@ public class LockUsersRequest extends Request {
 
         private Builder(LockUsersRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.logoutSession = request.logoutSession;
             this.users = request.users;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * LogoutSession.

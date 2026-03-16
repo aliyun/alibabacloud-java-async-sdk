@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateOrgRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrgName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String orgName;
@@ -29,6 +33,7 @@ public class CreateOrgRequest extends Request {
 
     private CreateOrgRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.orgName = builder.orgName;
         this.parentOrgId = builder.parentOrgId;
     }
@@ -47,6 +52,13 @@ public class CreateOrgRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return orgName
      */
     public String getOrgName() {
@@ -61,6 +73,7 @@ public class CreateOrgRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateOrgRequest, Builder> {
+        private String businessChannel; 
         private String orgName; 
         private String parentOrgId; 
 
@@ -70,9 +83,19 @@ public class CreateOrgRequest extends Request {
 
         private Builder(CreateOrgRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.orgName = request.orgName;
             this.parentOrgId = request.parentOrgId;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The name of the organization.</p>

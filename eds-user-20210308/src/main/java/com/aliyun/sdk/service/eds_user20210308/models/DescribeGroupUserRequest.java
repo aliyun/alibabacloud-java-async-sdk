@@ -22,6 +22,10 @@ public class DescribeGroupUserRequest extends Request {
     private String bizType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
@@ -44,6 +48,7 @@ public class DescribeGroupUserRequest extends Request {
     private DescribeGroupUserRequest(Builder builder) {
         super(builder);
         this.bizType = builder.bizType;
+        this.businessChannel = builder.businessChannel;
         this.filter = builder.filter;
         this.groupId = builder.groupId;
         this.maxResults = builder.maxResults;
@@ -69,6 +74,13 @@ public class DescribeGroupUserRequest extends Request {
      */
     public String getBizType() {
         return this.bizType;
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -108,6 +120,7 @@ public class DescribeGroupUserRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeGroupUserRequest, Builder> {
         private String bizType; 
+        private String businessChannel; 
         private String filter; 
         private String groupId; 
         private Integer maxResults; 
@@ -121,6 +134,7 @@ public class DescribeGroupUserRequest extends Request {
         private Builder(DescribeGroupUserRequest request) {
             super(request);
             this.bizType = request.bizType;
+            this.businessChannel = request.businessChannel;
             this.filter = request.filter;
             this.groupId = request.groupId;
             this.maxResults = request.maxResults;
@@ -139,6 +153,15 @@ public class DescribeGroupUserRequest extends Request {
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
             this.bizType = bizType;
+            return this;
+        }
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
             return this;
         }
 

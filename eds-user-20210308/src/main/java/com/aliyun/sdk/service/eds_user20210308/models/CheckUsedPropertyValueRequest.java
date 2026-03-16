@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CheckUsedPropertyValueRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PropertyId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long propertyId;
@@ -29,6 +33,7 @@ public class CheckUsedPropertyValueRequest extends Request {
 
     private CheckUsedPropertyValueRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.propertyId = builder.propertyId;
         this.propertyValueId = builder.propertyValueId;
     }
@@ -47,6 +52,13 @@ public class CheckUsedPropertyValueRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return propertyId
      */
     public Long getPropertyId() {
@@ -61,6 +73,7 @@ public class CheckUsedPropertyValueRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CheckUsedPropertyValueRequest, Builder> {
+        private String businessChannel; 
         private Long propertyId; 
         private Long propertyValueId; 
 
@@ -70,9 +83,19 @@ public class CheckUsedPropertyValueRequest extends Request {
 
         private Builder(CheckUsedPropertyValueRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.propertyId = request.propertyId;
             this.propertyValueId = request.propertyValueId;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query property ID.</p>

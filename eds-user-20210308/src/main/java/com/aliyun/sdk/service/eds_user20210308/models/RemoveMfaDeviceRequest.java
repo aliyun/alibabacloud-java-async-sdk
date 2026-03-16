@@ -22,6 +22,10 @@ public class RemoveMfaDeviceRequest extends Request {
     private String adDomain;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SerialNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private String serialNumber;
@@ -29,6 +33,7 @@ public class RemoveMfaDeviceRequest extends Request {
     private RemoveMfaDeviceRequest(Builder builder) {
         super(builder);
         this.adDomain = builder.adDomain;
+        this.businessChannel = builder.businessChannel;
         this.serialNumber = builder.serialNumber;
     }
 
@@ -53,6 +58,13 @@ public class RemoveMfaDeviceRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return serialNumber
      */
     public String getSerialNumber() {
@@ -61,6 +73,7 @@ public class RemoveMfaDeviceRequest extends Request {
 
     public static final class Builder extends Request.Builder<RemoveMfaDeviceRequest, Builder> {
         private String adDomain; 
+        private String businessChannel; 
         private String serialNumber; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class RemoveMfaDeviceRequest extends Request {
         private Builder(RemoveMfaDeviceRequest request) {
             super(request);
             this.adDomain = request.adDomain;
+            this.businessChannel = request.businessChannel;
             this.serialNumber = request.serialNumber;
         } 
 
@@ -82,6 +96,15 @@ public class RemoveMfaDeviceRequest extends Request {
         public Builder adDomain(String adDomain) {
             this.putQueryParameter("AdDomain", adDomain);
             this.adDomain = adDomain;
+            return this;
+        }
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
             return this;
         }
 

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsResourceGroupWithOfficeSite")
     private Long isResourceGroupWithOfficeSite;
 
@@ -31,6 +35,7 @@ public class CreateResourceGroupRequest extends Request {
 
     private CreateResourceGroupRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.isResourceGroupWithOfficeSite = builder.isResourceGroupWithOfficeSite;
         this.platform = builder.platform;
         this.resourceGroupName = builder.resourceGroupName;
@@ -47,6 +52,13 @@ public class CreateResourceGroupRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -71,6 +83,7 @@ public class CreateResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateResourceGroupRequest, Builder> {
+        private String businessChannel; 
         private Long isResourceGroupWithOfficeSite; 
         private String platform; 
         private String resourceGroupName; 
@@ -81,10 +94,20 @@ public class CreateResourceGroupRequest extends Request {
 
         private Builder(CreateResourceGroupRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.isResourceGroupWithOfficeSite = request.isResourceGroupWithOfficeSite;
             this.platform = request.platform;
             this.resourceGroupName = request.resourceGroupName;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <blockquote>

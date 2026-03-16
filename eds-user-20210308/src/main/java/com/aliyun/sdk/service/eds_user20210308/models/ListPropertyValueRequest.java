@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPropertyValueRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PropertyId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long propertyId;
 
     private ListPropertyValueRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.propertyId = builder.propertyId;
     }
 
@@ -41,6 +46,13 @@ public class ListPropertyValueRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return propertyId
      */
     public Long getPropertyId() {
@@ -48,6 +60,7 @@ public class ListPropertyValueRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListPropertyValueRequest, Builder> {
+        private String businessChannel; 
         private Long propertyId; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class ListPropertyValueRequest extends Request {
 
         private Builder(ListPropertyValueRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.propertyId = request.propertyId;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The ID of the property. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property ID.</p>

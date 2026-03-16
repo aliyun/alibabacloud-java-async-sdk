@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePropertyRequest</p>
  */
 public class UpdatePropertyRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PropertyId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -33,6 +37,7 @@ public class UpdatePropertyRequest extends Request {
 
     private UpdatePropertyRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.propertyId = builder.propertyId;
         this.propertyKey = builder.propertyKey;
         this.propertyValues = builder.propertyValues;
@@ -49,6 +54,13 @@ public class UpdatePropertyRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -73,6 +85,7 @@ public class UpdatePropertyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdatePropertyRequest, Builder> {
+        private String businessChannel; 
         private Long propertyId; 
         private String propertyKey; 
         private java.util.List<PropertyValues> propertyValues; 
@@ -83,10 +96,20 @@ public class UpdatePropertyRequest extends Request {
 
         private Builder(UpdatePropertyRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.propertyId = request.propertyId;
             this.propertyKey = request.propertyKey;
             this.propertyValues = request.propertyValues;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The ID of the property that you want to modify. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property ID.</p>

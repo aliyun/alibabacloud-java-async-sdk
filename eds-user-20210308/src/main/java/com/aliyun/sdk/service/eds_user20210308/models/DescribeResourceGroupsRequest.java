@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeResourceGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunResourceGroupIds")
+    private java.util.List<String> aliyunResourceGroupIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NeedContainResourceGroupWithOfficeSite")
     private Long needContainResourceGroupWithOfficeSite;
 
@@ -43,6 +51,8 @@ public class DescribeResourceGroupsRequest extends Request {
 
     private DescribeResourceGroupsRequest(Builder builder) {
         super(builder);
+        this.aliyunResourceGroupIds = builder.aliyunResourceGroupIds;
+        this.businessChannel = builder.businessChannel;
         this.needContainResourceGroupWithOfficeSite = builder.needContainResourceGroupWithOfficeSite;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -62,6 +72,20 @@ public class DescribeResourceGroupsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aliyunResourceGroupIds
+     */
+    public java.util.List<String> getAliyunResourceGroupIds() {
+        return this.aliyunResourceGroupIds;
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -107,6 +131,8 @@ public class DescribeResourceGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeResourceGroupsRequest, Builder> {
+        private java.util.List<String> aliyunResourceGroupIds; 
+        private String businessChannel; 
         private Long needContainResourceGroupWithOfficeSite; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -120,6 +146,8 @@ public class DescribeResourceGroupsRequest extends Request {
 
         private Builder(DescribeResourceGroupsRequest request) {
             super(request);
+            this.aliyunResourceGroupIds = request.aliyunResourceGroupIds;
+            this.businessChannel = request.businessChannel;
             this.needContainResourceGroupWithOfficeSite = request.needContainResourceGroupWithOfficeSite;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -127,6 +155,24 @@ public class DescribeResourceGroupsRequest extends Request {
             this.resourceGroupIds = request.resourceGroupIds;
             this.resourceGroupName = request.resourceGroupName;
         } 
+
+        /**
+         * AliyunResourceGroupIds.
+         */
+        public Builder aliyunResourceGroupIds(java.util.List<String> aliyunResourceGroupIds) {
+            this.putQueryParameter("AliyunResourceGroupIds", aliyunResourceGroupIds);
+            this.aliyunResourceGroupIds = aliyunResourceGroupIds;
+            return this;
+        }
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <blockquote>

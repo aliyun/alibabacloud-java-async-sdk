@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UserBatchJoinGroupRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
     private java.util.List<String> endUserIds;
 
@@ -28,6 +32,7 @@ public class UserBatchJoinGroupRequest extends Request {
 
     private UserBatchJoinGroupRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.endUserIds = builder.endUserIds;
         this.groupId = builder.groupId;
     }
@@ -46,6 +51,13 @@ public class UserBatchJoinGroupRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return endUserIds
      */
     public java.util.List<String> getEndUserIds() {
@@ -60,6 +72,7 @@ public class UserBatchJoinGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UserBatchJoinGroupRequest, Builder> {
+        private String businessChannel; 
         private java.util.List<String> endUserIds; 
         private String groupId; 
 
@@ -69,9 +82,19 @@ public class UserBatchJoinGroupRequest extends Request {
 
         private Builder(UserBatchJoinGroupRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.endUserIds = request.endUserIds;
             this.groupId = request.groupId;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putBodyParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The list of user IDs.</p>

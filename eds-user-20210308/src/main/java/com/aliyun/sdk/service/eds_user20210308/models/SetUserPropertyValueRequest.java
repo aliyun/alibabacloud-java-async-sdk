@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SetUserPropertyValueRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PropertyId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long propertyId;
@@ -39,6 +43,7 @@ public class SetUserPropertyValueRequest extends Request {
 
     private SetUserPropertyValueRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.propertyId = builder.propertyId;
         this.propertyValueId = builder.propertyValueId;
         this.userId = builder.userId;
@@ -56,6 +61,13 @@ public class SetUserPropertyValueRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -87,6 +99,7 @@ public class SetUserPropertyValueRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetUserPropertyValueRequest, Builder> {
+        private String businessChannel; 
         private Long propertyId; 
         private Long propertyValueId; 
         private Long userId; 
@@ -98,11 +111,21 @@ public class SetUserPropertyValueRequest extends Request {
 
         private Builder(SetUserPropertyValueRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.propertyId = request.propertyId;
             this.propertyValueId = request.propertyValueId;
             this.userId = request.userId;
             this.userName = request.userName;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putBodyParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the property ID.</p>

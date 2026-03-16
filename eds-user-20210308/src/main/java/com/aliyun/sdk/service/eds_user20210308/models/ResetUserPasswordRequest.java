@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ResetUserPasswordRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NotifyType")
     private Integer notifyType;
 
@@ -28,6 +32,7 @@ public class ResetUserPasswordRequest extends Request {
 
     private ResetUserPasswordRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.notifyType = builder.notifyType;
         this.users = builder.users;
     }
@@ -46,6 +51,13 @@ public class ResetUserPasswordRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return notifyType
      */
     public Integer getNotifyType() {
@@ -60,6 +72,7 @@ public class ResetUserPasswordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ResetUserPasswordRequest, Builder> {
+        private String businessChannel; 
         private Integer notifyType; 
         private java.util.List<String> users; 
 
@@ -69,9 +82,19 @@ public class ResetUserPasswordRequest extends Request {
 
         private Builder(ResetUserPasswordRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.notifyType = request.notifyType;
             this.users = request.users;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putBodyParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The method to notify the user after the password is reset.</p>

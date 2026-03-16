@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -27,6 +31,7 @@ public class DeleteResourceGroupRequest extends Request {
 
     private DeleteResourceGroupRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceGroupIds = builder.resourceGroupIds;
     }
@@ -45,6 +50,13 @@ public class DeleteResourceGroupRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -59,6 +71,7 @@ public class DeleteResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteResourceGroupRequest, Builder> {
+        private String businessChannel; 
         private String resourceGroupId; 
         private java.util.List<String> resourceGroupIds; 
 
@@ -68,9 +81,19 @@ public class DeleteResourceGroupRequest extends Request {
 
         private Builder(DeleteResourceGroupRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceGroupIds = request.resourceGroupIds;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <blockquote>

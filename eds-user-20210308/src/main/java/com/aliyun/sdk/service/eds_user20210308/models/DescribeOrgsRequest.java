@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeOrgsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Long maxResults;
@@ -40,6 +44,7 @@ public class DescribeOrgsRequest extends Request {
 
     private DescribeOrgsRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orgName = builder.orgName;
@@ -58,6 +63,13 @@ public class DescribeOrgsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -96,6 +108,7 @@ public class DescribeOrgsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeOrgsRequest, Builder> {
+        private String businessChannel; 
         private Long maxResults; 
         private String nextToken; 
         private String orgName; 
@@ -108,12 +121,22 @@ public class DescribeOrgsRequest extends Request {
 
         private Builder(DescribeOrgsRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orgName = request.orgName;
             this.parentOrgId = request.parentOrgId;
             this.showExtras = request.showExtras;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The maximum number of entries to return. Valid values: 1 to 100.<br>Default value: 100.</p>

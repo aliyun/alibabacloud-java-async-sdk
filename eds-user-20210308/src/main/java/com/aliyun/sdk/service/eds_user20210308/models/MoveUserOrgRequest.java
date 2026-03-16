@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class MoveUserOrgRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> endUserIds;
@@ -29,6 +33,7 @@ public class MoveUserOrgRequest extends Request {
 
     private MoveUserOrgRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.endUserIds = builder.endUserIds;
         this.orgId = builder.orgId;
     }
@@ -47,6 +52,13 @@ public class MoveUserOrgRequest extends Request {
     }
 
     /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
+    /**
      * @return endUserIds
      */
     public java.util.List<String> getEndUserIds() {
@@ -61,6 +73,7 @@ public class MoveUserOrgRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<MoveUserOrgRequest, Builder> {
+        private String businessChannel; 
         private java.util.List<String> endUserIds; 
         private String orgId; 
 
@@ -70,9 +83,19 @@ public class MoveUserOrgRequest extends Request {
 
         private Builder(MoveUserOrgRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.endUserIds = request.endUserIds;
             this.orgId = request.orgId;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putBodyParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The user IDs.</p>
