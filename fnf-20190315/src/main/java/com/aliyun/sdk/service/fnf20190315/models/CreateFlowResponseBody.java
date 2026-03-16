@@ -44,6 +44,9 @@ public class CreateFlowResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @com.aliyun.core.annotation.NameInMap("RoleArn")
     private String roleArn;
 
@@ -60,6 +63,7 @@ public class CreateFlowResponseBody extends TeaModel {
         this.lastModifiedTime = builder.lastModifiedTime;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.roleArn = builder.roleArn;
         this.type = builder.type;
     }
@@ -140,6 +144,13 @@ public class CreateFlowResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return roleArn
      */
     public String getRoleArn() {
@@ -163,6 +174,7 @@ public class CreateFlowResponseBody extends TeaModel {
         private String lastModifiedTime; 
         private String name; 
         private String requestId; 
+        private String resourceGroupId; 
         private String roleArn; 
         private String type; 
 
@@ -179,6 +191,7 @@ public class CreateFlowResponseBody extends TeaModel {
             this.lastModifiedTime = model.lastModifiedTime;
             this.name = model.name;
             this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
             this.roleArn = model.roleArn;
             this.type = model.type;
         } 
@@ -276,6 +289,14 @@ public class CreateFlowResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

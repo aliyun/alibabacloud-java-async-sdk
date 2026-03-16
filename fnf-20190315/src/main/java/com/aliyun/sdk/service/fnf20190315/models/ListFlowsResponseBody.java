@@ -296,6 +296,9 @@ public class ListFlowsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
@@ -311,6 +314,7 @@ public class ListFlowsResponseBody extends TeaModel {
             this.id = builder.id;
             this.lastModifiedTime = builder.lastModifiedTime;
             this.name = builder.name;
+            this.resourceGroupId = builder.resourceGroupId;
             this.roleArn = builder.roleArn;
             this.type = builder.type;
         }
@@ -380,6 +384,13 @@ public class ListFlowsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return roleArn
          */
         public String getRoleArn() {
@@ -402,6 +413,7 @@ public class ListFlowsResponseBody extends TeaModel {
             private String id; 
             private String lastModifiedTime; 
             private String name; 
+            private String resourceGroupId; 
             private String roleArn; 
             private String type; 
 
@@ -417,6 +429,7 @@ public class ListFlowsResponseBody extends TeaModel {
                 this.id = model.id;
                 this.lastModifiedTime = model.lastModifiedTime;
                 this.name = model.name;
+                this.resourceGroupId = model.resourceGroupId;
                 this.roleArn = model.roleArn;
                 this.type = model.type;
             } 
@@ -503,6 +516,14 @@ public class ListFlowsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

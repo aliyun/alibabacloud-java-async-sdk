@@ -45,6 +45,10 @@ public class CreateFlowRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RoleArn")
     private String roleArn;
 
@@ -61,6 +65,7 @@ public class CreateFlowRequest extends Request {
         this.executionMode = builder.executionMode;
         this.externalStorageLocation = builder.externalStorageLocation;
         this.name = builder.name;
+        this.resourceGroupId = builder.resourceGroupId;
         this.roleArn = builder.roleArn;
         this.type = builder.type;
     }
@@ -121,6 +126,13 @@ public class CreateFlowRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return roleArn
      */
     public String getRoleArn() {
@@ -141,6 +153,7 @@ public class CreateFlowRequest extends Request {
         private String executionMode; 
         private String externalStorageLocation; 
         private String name; 
+        private String resourceGroupId; 
         private String roleArn; 
         private String type; 
 
@@ -156,6 +169,7 @@ public class CreateFlowRequest extends Request {
             this.executionMode = request.executionMode;
             this.externalStorageLocation = request.externalStorageLocation;
             this.name = request.name;
+            this.resourceGroupId = request.resourceGroupId;
             this.roleArn = request.roleArn;
             this.type = request.type;
         } 
@@ -239,6 +253,15 @@ public class CreateFlowRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

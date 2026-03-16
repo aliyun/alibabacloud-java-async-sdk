@@ -25,10 +25,15 @@ public class ListFlowsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private ListFlowsRequest(Builder builder) {
         super(builder);
         this.limit = builder.limit;
         this.nextToken = builder.nextToken;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class ListFlowsRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ListFlowsRequest, Builder> {
         private Integer limit; 
         private String nextToken; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class ListFlowsRequest extends Request {
             super(request);
             this.limit = request.limit;
             this.nextToken = request.nextToken;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -93,6 +107,15 @@ public class ListFlowsRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
