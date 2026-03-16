@@ -31,11 +31,21 @@ public class ModifySupabaseProjectSecurityIpsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String securityIPList;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateDb")
+    private Boolean updateDb;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateWeb")
+    private Boolean updateWeb;
+
     private ModifySupabaseProjectSecurityIpsRequest(Builder builder) {
         super(builder);
         this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.securityIPList = builder.securityIPList;
+        this.updateDb = builder.updateDb;
+        this.updateWeb = builder.updateWeb;
     }
 
     public static Builder builder() {
@@ -72,10 +82,26 @@ public class ModifySupabaseProjectSecurityIpsRequest extends Request {
         return this.securityIPList;
     }
 
+    /**
+     * @return updateDb
+     */
+    public Boolean getUpdateDb() {
+        return this.updateDb;
+    }
+
+    /**
+     * @return updateWeb
+     */
+    public Boolean getUpdateWeb() {
+        return this.updateWeb;
+    }
+
     public static final class Builder extends Request.Builder<ModifySupabaseProjectSecurityIpsRequest, Builder> {
         private String projectId; 
         private String regionId; 
         private String securityIPList; 
+        private Boolean updateDb; 
+        private Boolean updateWeb; 
 
         private Builder() {
             super();
@@ -86,6 +112,8 @@ public class ModifySupabaseProjectSecurityIpsRequest extends Request {
             this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.securityIPList = request.securityIPList;
+            this.updateDb = request.updateDb;
+            this.updateWeb = request.updateWeb;
         } 
 
         /**
@@ -130,6 +158,24 @@ public class ModifySupabaseProjectSecurityIpsRequest extends Request {
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
             this.securityIPList = securityIPList;
+            return this;
+        }
+
+        /**
+         * UpdateDb.
+         */
+        public Builder updateDb(Boolean updateDb) {
+            this.putQueryParameter("UpdateDb", updateDb);
+            this.updateDb = updateDb;
+            return this;
+        }
+
+        /**
+         * UpdateWeb.
+         */
+        public Builder updateWeb(Boolean updateWeb) {
+            this.putQueryParameter("UpdateWeb", updateWeb);
+            this.updateWeb = updateWeb;
             return this;
         }
 

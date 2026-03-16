@@ -20,6 +20,9 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("DBSecurityIpList")
+    private String DBSecurityIpList;
+
     @com.aliyun.core.annotation.NameInMap("DashboardPassword")
     private String dashboardPassword;
 
@@ -88,6 +91,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
 
     private GetSupabaseProjectResponseBody(Builder builder) {
         this.createTime = builder.createTime;
+        this.DBSecurityIpList = builder.DBSecurityIpList;
         this.dashboardPassword = builder.dashboardPassword;
         this.dashboardUserName = builder.dashboardUserName;
         this.diskPerformanceLevel = builder.diskPerformanceLevel;
@@ -129,6 +133,13 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return DBSecurityIpList
+     */
+    public String getDBSecurityIpList() {
+        return this.DBSecurityIpList;
     }
 
     /**
@@ -287,6 +298,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
 
     public static final class Builder {
         private String createTime; 
+        private String DBSecurityIpList; 
         private String dashboardPassword; 
         private String dashboardUserName; 
         private String diskPerformanceLevel; 
@@ -315,6 +327,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
 
         private Builder(GetSupabaseProjectResponseBody model) {
             this.createTime = model.createTime;
+            this.DBSecurityIpList = model.DBSecurityIpList;
             this.dashboardPassword = model.dashboardPassword;
             this.dashboardUserName = model.dashboardUserName;
             this.diskPerformanceLevel = model.diskPerformanceLevel;
@@ -347,6 +360,14 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * DBSecurityIpList.
+         */
+        public Builder DBSecurityIpList(String DBSecurityIpList) {
+            this.DBSecurityIpList = DBSecurityIpList;
             return this;
         }
 
