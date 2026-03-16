@@ -863,6 +863,81 @@ public class CreateTaskRequest extends Request {
      *
      * <p>CreateTaskRequest</p>
      */
+    public static class TranslationHotwordMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bizType")
+        private String bizType;
+
+        @com.aliyun.core.annotation.NameInMap("bizUserId")
+        private String bizUserId;
+
+        private TranslationHotwordMap(Builder builder) {
+            this.bizType = builder.bizType;
+            this.bizUserId = builder.bizUserId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TranslationHotwordMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bizType
+         */
+        public String getBizType() {
+            return this.bizType;
+        }
+
+        /**
+         * @return bizUserId
+         */
+        public String getBizUserId() {
+            return this.bizUserId;
+        }
+
+        public static final class Builder {
+            private String bizType; 
+            private String bizUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranslationHotwordMap model) {
+                this.bizType = model.bizType;
+                this.bizUserId = model.bizUserId;
+            } 
+
+            /**
+             * bizType.
+             */
+            public Builder bizType(String bizType) {
+                this.bizType = bizType;
+                return this;
+            }
+
+            /**
+             * bizUserId.
+             */
+            public Builder bizUserId(String bizUserId) {
+                this.bizUserId = bizUserId;
+                return this;
+            }
+
+            public TranslationHotwordMap build() {
+                return new TranslationHotwordMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class ExtraParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainEducationEnabled")
         private Boolean domainEducationEnabled;
@@ -882,6 +957,9 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("TranslateLlmSceneEnabled")
         private Boolean translateLlmSceneEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("TranslationHotwordMap")
+        private TranslationHotwordMap translationHotwordMap;
+
         private ExtraParams(Builder builder) {
             this.domainEducationEnabled = builder.domainEducationEnabled;
             this.fullTextSummaryFormat = builder.fullTextSummaryFormat;
@@ -889,6 +967,7 @@ public class CreateTaskRequest extends Request {
             this.nfixEnabled = builder.nfixEnabled;
             this.ocrAuxiliaryEnabled = builder.ocrAuxiliaryEnabled;
             this.translateLlmSceneEnabled = builder.translateLlmSceneEnabled;
+            this.translationHotwordMap = builder.translationHotwordMap;
         }
 
         public static Builder builder() {
@@ -941,6 +1020,13 @@ public class CreateTaskRequest extends Request {
             return this.translateLlmSceneEnabled;
         }
 
+        /**
+         * @return translationHotwordMap
+         */
+        public TranslationHotwordMap getTranslationHotwordMap() {
+            return this.translationHotwordMap;
+        }
+
         public static final class Builder {
             private Boolean domainEducationEnabled; 
             private String fullTextSummaryFormat; 
@@ -948,6 +1034,7 @@ public class CreateTaskRequest extends Request {
             private Boolean nfixEnabled; 
             private Boolean ocrAuxiliaryEnabled; 
             private Boolean translateLlmSceneEnabled; 
+            private TranslationHotwordMap translationHotwordMap; 
 
             private Builder() {
             } 
@@ -959,6 +1046,7 @@ public class CreateTaskRequest extends Request {
                 this.nfixEnabled = model.nfixEnabled;
                 this.ocrAuxiliaryEnabled = model.ocrAuxiliaryEnabled;
                 this.translateLlmSceneEnabled = model.translateLlmSceneEnabled;
+                this.translationHotwordMap = model.translationHotwordMap;
             } 
 
             /**
@@ -1006,6 +1094,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder translateLlmSceneEnabled(Boolean translateLlmSceneEnabled) {
                 this.translateLlmSceneEnabled = translateLlmSceneEnabled;
+                return this;
+            }
+
+            /**
+             * TranslationHotwordMap.
+             */
+            public Builder translationHotwordMap(TranslationHotwordMap translationHotwordMap) {
+                this.translationHotwordMap = translationHotwordMap;
                 return this;
             }
 
