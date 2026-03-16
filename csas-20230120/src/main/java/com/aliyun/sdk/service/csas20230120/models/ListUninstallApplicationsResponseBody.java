@@ -131,6 +131,9 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DevType")
         private String devType;
 
+        @com.aliyun.core.annotation.NameInMap("FullDepartment")
+        private java.util.List<String> fullDepartment;
+
         @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
@@ -161,6 +164,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             this.department = builder.department;
             this.devTag = builder.devTag;
             this.devType = builder.devType;
+            this.fullDepartment = builder.fullDepartment;
             this.hostname = builder.hostname;
             this.idpName = builder.idpName;
             this.isUninstall = builder.isUninstall;
@@ -212,6 +216,13 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
          */
         public String getDevType() {
             return this.devType;
+        }
+
+        /**
+         * @return fullDepartment
+         */
+        public java.util.List<String> getFullDepartment() {
+            return this.fullDepartment;
         }
 
         /**
@@ -276,6 +287,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             private String department; 
             private String devTag; 
             private String devType; 
+            private java.util.List<String> fullDepartment; 
             private String hostname; 
             private String idpName; 
             private Boolean isUninstall; 
@@ -294,6 +306,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
                 this.department = model.department;
                 this.devTag = model.devTag;
                 this.devType = model.devType;
+                this.fullDepartment = model.fullDepartment;
                 this.hostname = model.hostname;
                 this.idpName = model.idpName;
                 this.isUninstall = model.isUninstall;
@@ -341,6 +354,14 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
              */
             public Builder devType(String devType) {
                 this.devType = devType;
+                return this;
+            }
+
+            /**
+             * FullDepartment.
+             */
+            public Builder fullDepartment(java.util.List<String> fullDepartment) {
+                this.fullDepartment = fullDepartment;
                 return this;
             }
 

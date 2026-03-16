@@ -122,6 +122,9 @@ public class ListUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
+        @com.aliyun.core.annotation.NameInMap("FullDepartment")
+        private java.util.List<String> fullDepartment;
+
         @com.aliyun.core.annotation.NameInMap("IdpName")
         private String idpName;
 
@@ -140,6 +143,7 @@ public class ListUsersResponseBody extends TeaModel {
         private Users(Builder builder) {
             this.department = builder.department;
             this.email = builder.email;
+            this.fullDepartment = builder.fullDepartment;
             this.idpName = builder.idpName;
             this.phone = builder.phone;
             this.saseUserId = builder.saseUserId;
@@ -167,6 +171,13 @@ public class ListUsersResponseBody extends TeaModel {
          */
         public String getEmail() {
             return this.email;
+        }
+
+        /**
+         * @return fullDepartment
+         */
+        public java.util.List<String> getFullDepartment() {
+            return this.fullDepartment;
         }
 
         /**
@@ -207,6 +218,7 @@ public class ListUsersResponseBody extends TeaModel {
         public static final class Builder {
             private String department; 
             private String email; 
+            private java.util.List<String> fullDepartment; 
             private String idpName; 
             private String phone; 
             private String saseUserId; 
@@ -219,6 +231,7 @@ public class ListUsersResponseBody extends TeaModel {
             private Builder(Users model) {
                 this.department = model.department;
                 this.email = model.email;
+                this.fullDepartment = model.fullDepartment;
                 this.idpName = model.idpName;
                 this.phone = model.phone;
                 this.saseUserId = model.saseUserId;
@@ -239,6 +252,14 @@ public class ListUsersResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
+                return this;
+            }
+
+            /**
+             * FullDepartment.
+             */
+            public Builder fullDepartment(java.util.List<String> fullDepartment) {
+                this.fullDepartment = fullDepartment;
                 return this;
             }
 

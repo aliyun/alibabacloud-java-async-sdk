@@ -134,6 +134,9 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
         @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
+        @com.aliyun.core.annotation.NameInMap("FullDepartment")
+        private java.util.List<String> fullDepartment;
+
         @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
@@ -159,6 +162,7 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             this.description = builder.description;
             this.deviceTag = builder.deviceTag;
             this.deviceType = builder.deviceType;
+            this.fullDepartment = builder.fullDepartment;
             this.hostname = builder.hostname;
             this.isUsed = builder.isUsed;
             this.mac = builder.mac;
@@ -218,6 +222,13 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
         }
 
         /**
+         * @return fullDepartment
+         */
+        public java.util.List<String> getFullDepartment() {
+            return this.fullDepartment;
+        }
+
+        /**
          * @return hostname
          */
         public String getHostname() {
@@ -266,6 +277,7 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             private String description; 
             private String deviceTag; 
             private String deviceType; 
+            private java.util.List<String> fullDepartment; 
             private String hostname; 
             private Boolean isUsed; 
             private String mac; 
@@ -283,6 +295,7 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
                 this.description = model.description;
                 this.deviceTag = model.deviceTag;
                 this.deviceType = model.deviceType;
+                this.fullDepartment = model.fullDepartment;
                 this.hostname = model.hostname;
                 this.isUsed = model.isUsed;
                 this.mac = model.mac;
@@ -336,6 +349,14 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
+                return this;
+            }
+
+            /**
+             * FullDepartment.
+             */
+            public Builder fullDepartment(java.util.List<String> fullDepartment) {
+                this.fullDepartment = fullDepartment;
                 return this;
             }
 

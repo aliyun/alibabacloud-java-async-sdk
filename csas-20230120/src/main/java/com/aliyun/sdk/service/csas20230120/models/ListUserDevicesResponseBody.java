@@ -203,6 +203,15 @@ public class ListUserDevicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
 
+        @com.aliyun.core.annotation.NameInMap("City")
+        private String city;
+
+        @com.aliyun.core.annotation.NameInMap("Continent")
+        private String continent;
+
+        @com.aliyun.core.annotation.NameInMap("Country")
+        private String country;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -236,6 +245,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EdrStatus")
         private String edrStatus;
 
+        @com.aliyun.core.annotation.NameInMap("FullDepartment")
+        private java.util.List<String> fullDepartment;
+
         @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
@@ -244,6 +256,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("InnerIP")
         private String innerIP;
+
+        @com.aliyun.core.annotation.NameInMap("JoinAdDomain")
+        private Boolean joinAdDomain;
 
         @com.aliyun.core.annotation.NameInMap("Mac")
         private String mac;
@@ -262,6 +277,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PaStatus")
         private String paStatus;
+
+        @com.aliyun.core.annotation.NameInMap("Province")
+        private String province;
 
         @com.aliyun.core.annotation.NameInMap("SaseUserId")
         private String saseUserId;
@@ -301,6 +319,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
             this.appVersion = builder.appVersion;
             this.autoLoginStatus = builder.autoLoginStatus;
             this.CPU = builder.CPU;
+            this.city = builder.city;
+            this.continent = builder.continent;
+            this.country = builder.country;
             this.createTime = builder.createTime;
             this.department = builder.department;
             this.deviceBelong = builder.deviceBelong;
@@ -312,15 +333,18 @@ public class ListUserDevicesResponseBody extends TeaModel {
             this.disk = builder.disk;
             this.dlpStatus = builder.dlpStatus;
             this.edrStatus = builder.edrStatus;
+            this.fullDepartment = builder.fullDepartment;
             this.hostname = builder.hostname;
             this.iaStatus = builder.iaStatus;
             this.innerIP = builder.innerIP;
+            this.joinAdDomain = builder.joinAdDomain;
             this.mac = builder.mac;
             this.matchDeviceGroupIds = builder.matchDeviceGroupIds;
             this.memory = builder.memory;
             this.nacStatus = builder.nacStatus;
             this.netInterfaceInfo = builder.netInterfaceInfo;
             this.paStatus = builder.paStatus;
+            this.province = builder.province;
             this.saseUserId = builder.saseUserId;
             this.sharingStatus = builder.sharingStatus;
             this.snBaseBoard = builder.snBaseBoard;
@@ -368,6 +392,27 @@ public class ListUserDevicesResponseBody extends TeaModel {
          */
         public String getCPU() {
             return this.CPU;
+        }
+
+        /**
+         * @return city
+         */
+        public String getCity() {
+            return this.city;
+        }
+
+        /**
+         * @return continent
+         */
+        public String getContinent() {
+            return this.continent;
+        }
+
+        /**
+         * @return country
+         */
+        public String getCountry() {
+            return this.country;
         }
 
         /**
@@ -448,6 +493,13 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return fullDepartment
+         */
+        public java.util.List<String> getFullDepartment() {
+            return this.fullDepartment;
+        }
+
+        /**
          * @return hostname
          */
         public String getHostname() {
@@ -466,6 +518,13 @@ public class ListUserDevicesResponseBody extends TeaModel {
          */
         public String getInnerIP() {
             return this.innerIP;
+        }
+
+        /**
+         * @return joinAdDomain
+         */
+        public Boolean getJoinAdDomain() {
+            return this.joinAdDomain;
         }
 
         /**
@@ -508,6 +567,13 @@ public class ListUserDevicesResponseBody extends TeaModel {
          */
         public String getPaStatus() {
             return this.paStatus;
+        }
+
+        /**
+         * @return province
+         */
+        public String getProvince() {
+            return this.province;
         }
 
         /**
@@ -592,6 +658,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
             private String appVersion; 
             private String autoLoginStatus; 
             private String CPU; 
+            private String city; 
+            private String continent; 
+            private String country; 
             private String createTime; 
             private String department; 
             private String deviceBelong; 
@@ -603,15 +672,18 @@ public class ListUserDevicesResponseBody extends TeaModel {
             private String disk; 
             private String dlpStatus; 
             private String edrStatus; 
+            private java.util.List<String> fullDepartment; 
             private String hostname; 
             private String iaStatus; 
             private String innerIP; 
+            private Boolean joinAdDomain; 
             private String mac; 
             private java.util.List<String> matchDeviceGroupIds; 
             private String memory; 
             private String nacStatus; 
             private java.util.List<NetInterfaceInfo> netInterfaceInfo; 
             private String paStatus; 
+            private String province; 
             private String saseUserId; 
             private Boolean sharingStatus; 
             private String snBaseBoard; 
@@ -632,6 +704,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
                 this.appVersion = model.appVersion;
                 this.autoLoginStatus = model.autoLoginStatus;
                 this.CPU = model.CPU;
+                this.city = model.city;
+                this.continent = model.continent;
+                this.country = model.country;
                 this.createTime = model.createTime;
                 this.department = model.department;
                 this.deviceBelong = model.deviceBelong;
@@ -643,15 +718,18 @@ public class ListUserDevicesResponseBody extends TeaModel {
                 this.disk = model.disk;
                 this.dlpStatus = model.dlpStatus;
                 this.edrStatus = model.edrStatus;
+                this.fullDepartment = model.fullDepartment;
                 this.hostname = model.hostname;
                 this.iaStatus = model.iaStatus;
                 this.innerIP = model.innerIP;
+                this.joinAdDomain = model.joinAdDomain;
                 this.mac = model.mac;
                 this.matchDeviceGroupIds = model.matchDeviceGroupIds;
                 this.memory = model.memory;
                 this.nacStatus = model.nacStatus;
                 this.netInterfaceInfo = model.netInterfaceInfo;
                 this.paStatus = model.paStatus;
+                this.province = model.province;
                 this.saseUserId = model.saseUserId;
                 this.sharingStatus = model.sharingStatus;
                 this.snBaseBoard = model.snBaseBoard;
@@ -694,6 +772,30 @@ public class ListUserDevicesResponseBody extends TeaModel {
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
+                return this;
+            }
+
+            /**
+             * City.
+             */
+            public Builder city(String city) {
+                this.city = city;
+                return this;
+            }
+
+            /**
+             * Continent.
+             */
+            public Builder continent(String continent) {
+                this.continent = continent;
+                return this;
+            }
+
+            /**
+             * Country.
+             */
+            public Builder country(String country) {
+                this.country = country;
                 return this;
             }
 
@@ -786,6 +888,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
+             * FullDepartment.
+             */
+            public Builder fullDepartment(java.util.List<String> fullDepartment) {
+                this.fullDepartment = fullDepartment;
+                return this;
+            }
+
+            /**
              * Hostname.
              */
             public Builder hostname(String hostname) {
@@ -806,6 +916,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
              */
             public Builder innerIP(String innerIP) {
                 this.innerIP = innerIP;
+                return this;
+            }
+
+            /**
+             * JoinAdDomain.
+             */
+            public Builder joinAdDomain(Boolean joinAdDomain) {
+                this.joinAdDomain = joinAdDomain;
                 return this;
             }
 
@@ -854,6 +972,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
              */
             public Builder paStatus(String paStatus) {
                 this.paStatus = paStatus;
+                return this;
+            }
+
+            /**
+             * Province.
+             */
+            public Builder province(String province) {
+                this.province = province;
                 return this;
             }
 
