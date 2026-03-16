@@ -101,6 +101,9 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
+        @com.aliyun.core.annotation.NameInMap("Skippable")
+        private Boolean skippable;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -109,6 +112,7 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
 
         private CheckResults(Builder builder) {
             this.message = builder.message;
+            this.skippable = builder.skippable;
             this.type = builder.type;
             this.value = builder.value;
         }
@@ -129,6 +133,13 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
         }
 
         /**
+         * @return skippable
+         */
+        public Boolean getSkippable() {
+            return this.skippable;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -144,6 +155,7 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
 
         public static final class Builder {
             private String message; 
+            private Boolean skippable; 
             private String type; 
             private String value; 
 
@@ -152,6 +164,7 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
 
             private Builder(CheckResults model) {
                 this.message = model.message;
+                this.skippable = model.skippable;
                 this.type = model.type;
                 this.value = model.value;
             } 
@@ -164,6 +177,14 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
              */
             public Builder message(String message) {
                 this.message = message;
+                return this;
+            }
+
+            /**
+             * Skippable.
+             */
+            public Builder skippable(Boolean skippable) {
+                this.skippable = skippable;
                 return this;
             }
 
