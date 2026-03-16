@@ -26,6 +26,10 @@ public class QuickAddTaskRequest extends Request {
     private java.util.List<CallTimeList> callTimeList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallTimeStrList")
+    private java.util.List<CallTimeStrList> callTimeStrList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
@@ -67,6 +71,7 @@ public class QuickAddTaskRequest extends Request {
         super(builder);
         this.agentGroupId = builder.agentGroupId;
         this.callTimeList = builder.callTimeList;
+        this.callTimeStrList = builder.callTimeStrList;
         this.name = builder.name;
         this.ownerId = builder.ownerId;
         this.referenceTaskId = builder.referenceTaskId;
@@ -103,6 +108,13 @@ public class QuickAddTaskRequest extends Request {
      */
     public java.util.List<CallTimeList> getCallTimeList() {
         return this.callTimeList;
+    }
+
+    /**
+     * @return callTimeStrList
+     */
+    public java.util.List<CallTimeStrList> getCallTimeStrList() {
+        return this.callTimeStrList;
     }
 
     /**
@@ -171,6 +183,7 @@ public class QuickAddTaskRequest extends Request {
     public static final class Builder extends Request.Builder<QuickAddTaskRequest, Builder> {
         private Long agentGroupId; 
         private java.util.List<CallTimeList> callTimeList; 
+        private java.util.List<CallTimeStrList> callTimeStrList; 
         private String name; 
         private Long ownerId; 
         private Long referenceTaskId; 
@@ -189,6 +202,7 @@ public class QuickAddTaskRequest extends Request {
             super(request);
             this.agentGroupId = request.agentGroupId;
             this.callTimeList = request.callTimeList;
+            this.callTimeStrList = request.callTimeStrList;
             this.name = request.name;
             this.ownerId = request.ownerId;
             this.referenceTaskId = request.referenceTaskId;
@@ -219,6 +233,19 @@ public class QuickAddTaskRequest extends Request {
             String callTimeListShrink = shrink(callTimeList, "CallTimeList", "json");
             this.putQueryParameter("CallTimeList", callTimeListShrink);
             this.callTimeList = callTimeList;
+            return this;
+        }
+
+        /**
+         * <p>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
+         */
+        public Builder callTimeStrList(java.util.List<CallTimeStrList> callTimeStrList) {
+            String callTimeStrListShrink = shrink(callTimeStrList, "CallTimeStrList", "json");
+            this.putQueryParameter("CallTimeStrList", callTimeStrListShrink);
+            this.callTimeStrList = callTimeStrList;
             return this;
         }
 
@@ -379,6 +406,60 @@ public class QuickAddTaskRequest extends Request {
 
             public CallTimeList build() {
                 return new CallTimeList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QuickAddTaskRequest} extends {@link TeaModel}
+     *
+     * <p>QuickAddTaskRequest</p>
+     */
+    public static class CallTimeStrList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CallTime")
+        private java.util.List<String> callTime;
+
+        private CallTimeStrList(Builder builder) {
+            this.callTime = builder.callTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CallTimeStrList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return callTime
+         */
+        public java.util.List<String> getCallTime() {
+            return this.callTime;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> callTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallTimeStrList model) {
+                this.callTime = model.callTime;
+            } 
+
+            /**
+             * <p>外呼时间</p>
+             */
+            public Builder callTime(java.util.List<String> callTime) {
+                this.callTime = callTime;
+                return this;
+            }
+
+            public CallTimeStrList build() {
+                return new CallTimeStrList(this);
             } 
 
         } 

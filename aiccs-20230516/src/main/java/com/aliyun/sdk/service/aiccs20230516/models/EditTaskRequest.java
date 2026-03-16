@@ -22,6 +22,10 @@ public class EditTaskRequest extends Request {
     private java.util.List<CallTimeList> callTimeList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallTimeStrList")
+    private java.util.List<CallTimeStrList> callTimeStrList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CallbackUrl")
     private String callbackUrl;
 
@@ -109,6 +113,7 @@ public class EditTaskRequest extends Request {
     private EditTaskRequest(Builder builder) {
         super(builder);
         this.callTimeList = builder.callTimeList;
+        this.callTimeStrList = builder.callTimeStrList;
         this.callbackUrl = builder.callbackUrl;
         this.flashSmsTemplateId = builder.flashSmsTemplateId;
         this.flashSmsType = builder.flashSmsType;
@@ -150,6 +155,13 @@ public class EditTaskRequest extends Request {
      */
     public java.util.List<CallTimeList> getCallTimeList() {
         return this.callTimeList;
+    }
+
+    /**
+     * @return callTimeStrList
+     */
+    public java.util.List<CallTimeStrList> getCallTimeStrList() {
+        return this.callTimeStrList;
     }
 
     /**
@@ -301,6 +313,7 @@ public class EditTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<EditTaskRequest, Builder> {
         private java.util.List<CallTimeList> callTimeList; 
+        private java.util.List<CallTimeStrList> callTimeStrList; 
         private String callbackUrl; 
         private Long flashSmsTemplateId; 
         private Long flashSmsType; 
@@ -330,6 +343,7 @@ public class EditTaskRequest extends Request {
         private Builder(EditTaskRequest request) {
             super(request);
             this.callTimeList = request.callTimeList;
+            this.callTimeStrList = request.callTimeStrList;
             this.callbackUrl = request.callbackUrl;
             this.flashSmsTemplateId = request.flashSmsTemplateId;
             this.flashSmsType = request.flashSmsType;
@@ -355,11 +369,27 @@ public class EditTaskRequest extends Request {
 
         /**
          * <p>外呼时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder callTimeList(java.util.List<CallTimeList> callTimeList) {
             String callTimeListShrink = shrink(callTimeList, "CallTimeList", "json");
             this.putQueryParameter("CallTimeList", callTimeListShrink);
             this.callTimeList = callTimeList;
+            return this;
+        }
+
+        /**
+         * <p>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
+         */
+        public Builder callTimeStrList(java.util.List<CallTimeStrList> callTimeStrList) {
+            String callTimeStrListShrink = shrink(callTimeStrList, "CallTimeStrList", "json");
+            this.putQueryParameter("CallTimeStrList", callTimeStrListShrink);
+            this.callTimeStrList = callTimeStrList;
             return this;
         }
 
@@ -657,6 +687,60 @@ public class EditTaskRequest extends Request {
 
             public CallTimeList build() {
                 return new CallTimeList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link EditTaskRequest} extends {@link TeaModel}
+     *
+     * <p>EditTaskRequest</p>
+     */
+    public static class CallTimeStrList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CallTime")
+        private java.util.List<String> callTime;
+
+        private CallTimeStrList(Builder builder) {
+            this.callTime = builder.callTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CallTimeStrList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return callTime
+         */
+        public java.util.List<String> getCallTime() {
+            return this.callTime;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> callTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallTimeStrList model) {
+                this.callTime = model.callTime;
+            } 
+
+            /**
+             * CallTime.
+             */
+            public Builder callTime(java.util.List<String> callTime) {
+                this.callTime = callTime;
+                return this;
+            }
+
+            public CallTimeStrList build() {
+                return new CallTimeStrList(this);
             } 
 
         } 
