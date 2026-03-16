@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CheckImageExists  CheckImageExistsRequest
+     * @return CheckImageExistsResponse
+     */
+    CompletableFuture<CheckImageExistsResponse> checkImageExists(CheckImageExistsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This operation deletes images from an Image Search instance.</p>
      * <blockquote>
