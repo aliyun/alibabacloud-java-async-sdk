@@ -83,6 +83,9 @@ public class Template extends TeaModel {
     @Deprecated
     private String sandboxTTLInSeconds;
 
+    @com.aliyun.core.annotation.NameInMap("scalingStatus")
+    private ScalingStatus scalingStatus;
+
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
@@ -134,6 +137,7 @@ public class Template extends TeaModel {
         this.resourceName = builder.resourceName;
         this.sandboxIdleTimeoutInSeconds = builder.sandboxIdleTimeoutInSeconds;
         this.sandboxTTLInSeconds = builder.sandboxTTLInSeconds;
+        this.scalingStatus = builder.scalingStatus;
         this.status = builder.status;
         this.statusReason = builder.statusReason;
         this.templateArn = builder.templateArn;
@@ -305,6 +309,13 @@ public class Template extends TeaModel {
     }
 
     /**
+     * @return scalingStatus
+     */
+    public ScalingStatus getScalingStatus() {
+        return this.scalingStatus;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -389,6 +400,7 @@ public class Template extends TeaModel {
         private String resourceName; 
         private String sandboxIdleTimeoutInSeconds; 
         private String sandboxTTLInSeconds; 
+        private ScalingStatus scalingStatus; 
         private String status; 
         private String statusReason; 
         private String templateArn; 
@@ -424,6 +436,7 @@ public class Template extends TeaModel {
             this.resourceName = model.resourceName;
             this.sandboxIdleTimeoutInSeconds = model.sandboxIdleTimeoutInSeconds;
             this.sandboxTTLInSeconds = model.sandboxTTLInSeconds;
+            this.scalingStatus = model.scalingStatus;
             this.status = model.status;
             this.statusReason = model.statusReason;
             this.templateArn = model.templateArn;
@@ -600,6 +613,14 @@ public class Template extends TeaModel {
          */
         public Builder sandboxTTLInSeconds(String sandboxTTLInSeconds) {
             this.sandboxTTLInSeconds = sandboxTTLInSeconds;
+            return this;
+        }
+
+        /**
+         * scalingStatus.
+         */
+        public Builder scalingStatus(ScalingStatus scalingStatus) {
+            this.scalingStatus = scalingStatus;
             return this;
         }
 

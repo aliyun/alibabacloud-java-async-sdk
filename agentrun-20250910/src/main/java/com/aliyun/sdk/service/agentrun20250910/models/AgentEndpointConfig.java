@@ -23,12 +23,16 @@ public class AgentEndpointConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("customDomainUrl")
     private String customDomainUrl;
 
+    @com.aliyun.core.annotation.NameInMap("endpointName")
+    private String endpointName;
+
     @com.aliyun.core.annotation.NameInMap("endpointUrl")
     private String endpointUrl;
 
     private AgentEndpointConfig(Builder builder) {
         this.agentName = builder.agentName;
         this.customDomainUrl = builder.customDomainUrl;
+        this.endpointName = builder.endpointName;
         this.endpointUrl = builder.endpointUrl;
     }
 
@@ -59,6 +63,13 @@ public class AgentEndpointConfig extends TeaModel {
     }
 
     /**
+     * @return endpointName
+     */
+    public String getEndpointName() {
+        return this.endpointName;
+    }
+
+    /**
      * @return endpointUrl
      */
     public String getEndpointUrl() {
@@ -68,6 +79,7 @@ public class AgentEndpointConfig extends TeaModel {
     public static final class Builder {
         private String agentName; 
         private String customDomainUrl; 
+        private String endpointName; 
         private String endpointUrl; 
 
         private Builder() {
@@ -76,6 +88,7 @@ public class AgentEndpointConfig extends TeaModel {
         private Builder(AgentEndpointConfig model) {
             this.agentName = model.agentName;
             this.customDomainUrl = model.customDomainUrl;
+            this.endpointName = model.endpointName;
             this.endpointUrl = model.endpointUrl;
         } 
 
@@ -92,6 +105,14 @@ public class AgentEndpointConfig extends TeaModel {
          */
         public Builder customDomainUrl(String customDomainUrl) {
             this.customDomainUrl = customDomainUrl;
+            return this;
+        }
+
+        /**
+         * <p>端点名称</p>
+         */
+        public Builder endpointName(String endpointName) {
+            this.endpointName = endpointName;
             return this;
         }
 

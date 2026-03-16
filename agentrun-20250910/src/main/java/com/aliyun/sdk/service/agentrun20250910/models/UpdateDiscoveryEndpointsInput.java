@@ -18,6 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateDiscoveryEndpointsInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("credentialName")
+    @Deprecated
     private String credentialName;
 
     @com.aliyun.core.annotation.NameInMap("discoveryEndpoints")

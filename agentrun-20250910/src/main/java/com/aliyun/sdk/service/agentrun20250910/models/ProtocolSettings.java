@@ -22,42 +22,59 @@ public class ProtocolSettings extends TeaModel {
     private String a2AAgentCard;
 
     @com.aliyun.core.annotation.NameInMap("a2aAgentCard")
+    @Deprecated
     private String a2aAgentCard;
 
     @com.aliyun.core.annotation.NameInMap("a2aAgentCardUrl")
+    @Deprecated
     private String a2aAgentCardUrl;
 
+    @com.aliyun.core.annotation.NameInMap("config")
+    private String config;
+
     @com.aliyun.core.annotation.NameInMap("headers")
+    @Deprecated
     private String headers;
 
     @com.aliyun.core.annotation.NameInMap("inputBodyJsonSchema")
+    @Deprecated
     private String inputBodyJsonSchema;
 
     @com.aliyun.core.annotation.NameInMap("method")
+    @Deprecated
     private String method;
 
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("outputBodyJsonSchema")
+    @Deprecated
     private String outputBodyJsonSchema;
 
     @com.aliyun.core.annotation.NameInMap("path")
+    @Deprecated
     private String path;
 
     @com.aliyun.core.annotation.NameInMap("pathPrefix")
+    @Deprecated
     private String pathPrefix;
 
     @com.aliyun.core.annotation.NameInMap("requestContentType")
+    @Deprecated
     private String requestContentType;
 
     @com.aliyun.core.annotation.NameInMap("responseContentType")
+    @Deprecated
     private String responseContentType;
+
+    @com.aliyun.core.annotation.NameInMap("type")
+    private String type;
 
     private ProtocolSettings(Builder builder) {
         this.a2AAgentCard = builder.a2AAgentCard;
         this.a2aAgentCard = builder.a2aAgentCard;
         this.a2aAgentCardUrl = builder.a2aAgentCardUrl;
+        this.config = builder.config;
         this.headers = builder.headers;
         this.inputBodyJsonSchema = builder.inputBodyJsonSchema;
         this.method = builder.method;
@@ -67,6 +84,7 @@ public class ProtocolSettings extends TeaModel {
         this.pathPrefix = builder.pathPrefix;
         this.requestContentType = builder.requestContentType;
         this.responseContentType = builder.responseContentType;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -100,6 +118,13 @@ public class ProtocolSettings extends TeaModel {
      */
     public String getA2aAgentCardUrl() {
         return this.a2aAgentCardUrl;
+    }
+
+    /**
+     * @return config
+     */
+    public String getConfig() {
+        return this.config;
     }
 
     /**
@@ -165,10 +190,18 @@ public class ProtocolSettings extends TeaModel {
         return this.responseContentType;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder {
         private String a2AAgentCard; 
         private String a2aAgentCard; 
         private String a2aAgentCardUrl; 
+        private String config; 
         private String headers; 
         private String inputBodyJsonSchema; 
         private String method; 
@@ -178,6 +211,7 @@ public class ProtocolSettings extends TeaModel {
         private String pathPrefix; 
         private String requestContentType; 
         private String responseContentType; 
+        private String type; 
 
         private Builder() {
         } 
@@ -186,6 +220,7 @@ public class ProtocolSettings extends TeaModel {
             this.a2AAgentCard = model.a2AAgentCard;
             this.a2aAgentCard = model.a2aAgentCard;
             this.a2aAgentCardUrl = model.a2aAgentCardUrl;
+            this.config = model.config;
             this.headers = model.headers;
             this.inputBodyJsonSchema = model.inputBodyJsonSchema;
             this.method = model.method;
@@ -195,10 +230,11 @@ public class ProtocolSettings extends TeaModel {
             this.pathPrefix = model.pathPrefix;
             this.requestContentType = model.requestContentType;
             this.responseContentType = model.responseContentType;
+            this.type = model.type;
         } 
 
         /**
-         * <p>A2A Agent Card</p>
+         * A2AAgentCard.
          */
         public Builder a2AAgentCard(String a2AAgentCard) {
             this.a2AAgentCard = a2AAgentCard;
@@ -218,6 +254,14 @@ public class ProtocolSettings extends TeaModel {
          */
         public Builder a2aAgentCardUrl(String a2aAgentCardUrl) {
             this.a2aAgentCardUrl = a2aAgentCardUrl;
+            return this;
+        }
+
+        /**
+         * <p>协议配置的 JSON 字符串</p>
+         */
+        public Builder config(String config) {
+            this.config = config;
             return this;
         }
 
@@ -246,7 +290,7 @@ public class ProtocolSettings extends TeaModel {
         }
 
         /**
-         * <p>协议名称</p>
+         * <p>可选展示名/别名，不再作为协议类型标识</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -270,7 +314,7 @@ public class ProtocolSettings extends TeaModel {
         }
 
         /**
-         * <p>协议路径前缀</p>
+         * <p>协议路径前缀，建议使用 config</p>
          */
         public Builder pathPrefix(String pathPrefix) {
             this.pathPrefix = pathPrefix;
@@ -290,6 +334,14 @@ public class ProtocolSettings extends TeaModel {
          */
         public Builder responseContentType(String responseContentType) {
             this.responseContentType = responseContentType;
+            return this;
+        }
+
+        /**
+         * <p>协议类型标识，用于校验与去重；合法取值由后端校验</p>
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 

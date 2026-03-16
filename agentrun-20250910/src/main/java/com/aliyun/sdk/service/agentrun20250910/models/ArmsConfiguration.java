@@ -20,11 +20,15 @@ public class ArmsConfiguration extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("armsLicenseKey")
     private String armsLicenseKey;
 
+    @com.aliyun.core.annotation.NameInMap("cmsWorkspace")
+    private String cmsWorkspace;
+
     @com.aliyun.core.annotation.NameInMap("enableArms")
     private Boolean enableArms;
 
     private ArmsConfiguration(Builder builder) {
         this.armsLicenseKey = builder.armsLicenseKey;
+        this.cmsWorkspace = builder.cmsWorkspace;
         this.enableArms = builder.enableArms;
     }
 
@@ -48,6 +52,13 @@ public class ArmsConfiguration extends TeaModel {
     }
 
     /**
+     * @return cmsWorkspace
+     */
+    public String getCmsWorkspace() {
+        return this.cmsWorkspace;
+    }
+
+    /**
      * @return enableArms
      */
     public Boolean getEnableArms() {
@@ -56,6 +67,7 @@ public class ArmsConfiguration extends TeaModel {
 
     public static final class Builder {
         private String armsLicenseKey; 
+        private String cmsWorkspace; 
         private Boolean enableArms; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class ArmsConfiguration extends TeaModel {
 
         private Builder(ArmsConfiguration model) {
             this.armsLicenseKey = model.armsLicenseKey;
+            this.cmsWorkspace = model.cmsWorkspace;
             this.enableArms = model.enableArms;
         } 
 
@@ -74,6 +87,14 @@ public class ArmsConfiguration extends TeaModel {
          */
         public Builder armsLicenseKey(String armsLicenseKey) {
             this.armsLicenseKey = armsLicenseKey;
+            return this;
+        }
+
+        /**
+         * cmsWorkspace.
+         */
+        public Builder cmsWorkspace(String cmsWorkspace) {
+            this.cmsWorkspace = cmsWorkspace;
             return this;
         }
 

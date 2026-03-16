@@ -74,6 +74,9 @@ public class CreateTemplateInput extends TeaModel {
     @com.aliyun.core.annotation.Validation(maximum = 21600, minimum = 1)
     private Integer sandboxTTLInSeconds;
 
+    @com.aliyun.core.annotation.NameInMap("scalingConfig")
+    private ScalingConfig scalingConfig;
+
     @com.aliyun.core.annotation.NameInMap("templateConfiguration")
     private java.util.Map<String, ?> templateConfiguration;
 
@@ -106,6 +109,7 @@ public class CreateTemplateInput extends TeaModel {
         this.ossConfiguration = builder.ossConfiguration;
         this.sandboxIdleTimeoutInSeconds = builder.sandboxIdleTimeoutInSeconds;
         this.sandboxTTLInSeconds = builder.sandboxTTLInSeconds;
+        this.scalingConfig = builder.scalingConfig;
         this.templateConfiguration = builder.templateConfiguration;
         this.templateName = builder.templateName;
         this.templateType = builder.templateType;
@@ -244,6 +248,13 @@ public class CreateTemplateInput extends TeaModel {
     }
 
     /**
+     * @return scalingConfig
+     */
+    public ScalingConfig getScalingConfig() {
+        return this.scalingConfig;
+    }
+
+    /**
      * @return templateConfiguration
      */
     public java.util.Map<String, ?> getTemplateConfiguration() {
@@ -289,6 +300,7 @@ public class CreateTemplateInput extends TeaModel {
         private java.util.List<OssConfiguration> ossConfiguration; 
         private Integer sandboxIdleTimeoutInSeconds; 
         private Integer sandboxTTLInSeconds; 
+        private ScalingConfig scalingConfig; 
         private java.util.Map<String, ?> templateConfiguration; 
         private String templateName; 
         private String templateType; 
@@ -315,6 +327,7 @@ public class CreateTemplateInput extends TeaModel {
             this.ossConfiguration = model.ossConfiguration;
             this.sandboxIdleTimeoutInSeconds = model.sandboxIdleTimeoutInSeconds;
             this.sandboxTTLInSeconds = model.sandboxTTLInSeconds;
+            this.scalingConfig = model.scalingConfig;
             this.templateConfiguration = model.templateConfiguration;
             this.templateName = model.templateName;
             this.templateType = model.templateType;
@@ -456,6 +469,14 @@ public class CreateTemplateInput extends TeaModel {
          */
         public Builder sandboxTTLInSeconds(Integer sandboxTTLInSeconds) {
             this.sandboxTTLInSeconds = sandboxTTLInSeconds;
+            return this;
+        }
+
+        /**
+         * scalingConfig.
+         */
+        public Builder scalingConfig(ScalingConfig scalingConfig) {
+            this.scalingConfig = scalingConfig;
             return this;
         }
 

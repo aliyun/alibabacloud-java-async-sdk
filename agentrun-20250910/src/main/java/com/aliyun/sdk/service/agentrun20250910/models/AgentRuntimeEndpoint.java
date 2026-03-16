@@ -32,6 +32,9 @@ public class AgentRuntimeEndpoint extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("disablePublicNetworkAccess")
+    private Boolean disablePublicNetworkAccess;
+
     @com.aliyun.core.annotation.NameInMap("endpointPublicUrl")
     private String endpointPublicUrl;
 
@@ -53,6 +56,7 @@ public class AgentRuntimeEndpoint extends TeaModel {
         this.agentRuntimeEndpointName = builder.agentRuntimeEndpointName;
         this.agentRuntimeId = builder.agentRuntimeId;
         this.description = builder.description;
+        this.disablePublicNetworkAccess = builder.disablePublicNetworkAccess;
         this.endpointPublicUrl = builder.endpointPublicUrl;
         this.routingConfiguration = builder.routingConfiguration;
         this.status = builder.status;
@@ -108,6 +112,13 @@ public class AgentRuntimeEndpoint extends TeaModel {
     }
 
     /**
+     * @return disablePublicNetworkAccess
+     */
+    public Boolean getDisablePublicNetworkAccess() {
+        return this.disablePublicNetworkAccess;
+    }
+
+    /**
      * @return endpointPublicUrl
      */
     public String getEndpointPublicUrl() {
@@ -148,6 +159,7 @@ public class AgentRuntimeEndpoint extends TeaModel {
         private String agentRuntimeEndpointName; 
         private String agentRuntimeId; 
         private String description; 
+        private Boolean disablePublicNetworkAccess; 
         private String endpointPublicUrl; 
         private RoutingConfiguration routingConfiguration; 
         private String status; 
@@ -163,6 +175,7 @@ public class AgentRuntimeEndpoint extends TeaModel {
             this.agentRuntimeEndpointName = model.agentRuntimeEndpointName;
             this.agentRuntimeId = model.agentRuntimeId;
             this.description = model.description;
+            this.disablePublicNetworkAccess = model.disablePublicNetworkAccess;
             this.endpointPublicUrl = model.endpointPublicUrl;
             this.routingConfiguration = model.routingConfiguration;
             this.status = model.status;
@@ -207,6 +220,14 @@ public class AgentRuntimeEndpoint extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>是否禁用该端点的公网访问</p>
+         */
+        public Builder disablePublicNetworkAccess(Boolean disablePublicNetworkAccess) {
+            this.disablePublicNetworkAccess = disablePublicNetworkAccess;
             return this;
         }
 
