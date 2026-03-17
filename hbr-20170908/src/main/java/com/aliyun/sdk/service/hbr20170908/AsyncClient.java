@@ -254,6 +254,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteClientResponse> deleteClient(DeleteClientRequest request);
 
     /**
+     * @param request the request parameters of DeleteContainerCluster  DeleteContainerClusterRequest
+     * @return DeleteContainerClusterResponse
+     */
+    CompletableFuture<DeleteContainerClusterResponse> deleteContainerCluster(DeleteContainerClusterRequest request);
+
+    /**
      * @param request the request parameters of DeleteCrossAccount  DeleteCrossAccountRequest
      * @return DeleteCrossAccountResponse
      */
@@ -360,6 +366,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeContainerClusterResponse
      */
     CompletableFuture<DescribeContainerClusterResponse> describeContainerCluster(DescribeContainerClusterRequest request);
+
+    /**
+     * @param request the request parameters of DescribeContainerResource  DescribeContainerResourceRequest
+     * @return DescribeContainerResourceResponse
+     */
+    CompletableFuture<DescribeContainerResourceResponse> describeContainerResource(DescribeContainerResourceRequest request);
 
     /**
      * @param request the request parameters of DescribeCrossAccounts  DescribeCrossAccountsRequest
