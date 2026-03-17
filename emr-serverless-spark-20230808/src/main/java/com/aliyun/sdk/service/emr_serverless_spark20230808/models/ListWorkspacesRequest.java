@@ -34,6 +34,10 @@ public class ListWorkspacesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
@@ -47,6 +51,7 @@ public class ListWorkspacesRequest extends Request {
         this.name = builder.name;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.state = builder.state;
         this.tag = builder.tag;
     }
@@ -93,6 +98,13 @@ public class ListWorkspacesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return state
      */
     public String getState() {
@@ -111,6 +123,7 @@ public class ListWorkspacesRequest extends Request {
         private String name; 
         private String nextToken; 
         private String regionId; 
+        private String resourceGroupId; 
         private String state; 
         private java.util.List<Tag> tag; 
 
@@ -124,6 +137,7 @@ public class ListWorkspacesRequest extends Request {
             this.name = request.name;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.state = request.state;
             this.tag = request.tag;
         } 
@@ -173,6 +187,15 @@ public class ListWorkspacesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -626,6 +626,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("releaseType")
         private String releaseType;
 
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("resourceSpec")
         private String resourceSpec;
 
@@ -663,6 +666,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             this.prePaidQuota = builder.prePaidQuota;
             this.regionId = builder.regionId;
             this.releaseType = builder.releaseType;
+            this.resourceGroupId = builder.resourceGroupId;
             this.resourceSpec = builder.resourceSpec;
             this.stateChangeReason = builder.stateChangeReason;
             this.storage = builder.storage;
@@ -786,6 +790,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return resourceSpec
          */
         public String getResourceSpec() {
@@ -850,6 +861,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private PrePaidQuota prePaidQuota; 
             private String regionId; 
             private String releaseType; 
+            private String resourceGroupId; 
             private String resourceSpec; 
             private StateChangeReason stateChangeReason; 
             private String storage; 
@@ -877,6 +889,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
                 this.prePaidQuota = model.prePaidQuota;
                 this.regionId = model.regionId;
                 this.releaseType = model.releaseType;
+                this.resourceGroupId = model.resourceGroupId;
                 this.resourceSpec = model.resourceSpec;
                 this.stateChangeReason = model.stateChangeReason;
                 this.storage = model.storage;
@@ -1049,6 +1062,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
              */
             public Builder releaseType(String releaseType) {
                 this.releaseType = releaseType;
+                return this;
+            }
+
+            /**
+             * resourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

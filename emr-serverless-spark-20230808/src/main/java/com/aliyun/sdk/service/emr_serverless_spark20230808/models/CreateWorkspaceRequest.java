@@ -70,6 +70,10 @@ public class CreateWorkspaceRequest extends Request {
     private String releaseType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resourceSpec")
     private ResourceSpec resourceSpec;
 
@@ -100,6 +104,7 @@ public class CreateWorkspaceRequest extends Request {
         this.paymentType = builder.paymentType;
         this.ramRoleName = builder.ramRoleName;
         this.releaseType = builder.releaseType;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceSpec = builder.resourceSpec;
         this.tag = builder.tag;
         this.workspaceName = builder.workspaceName;
@@ -211,6 +216,13 @@ public class CreateWorkspaceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceSpec
      */
     public ResourceSpec getResourceSpec() {
@@ -252,6 +264,7 @@ public class CreateWorkspaceRequest extends Request {
         private String paymentType; 
         private String ramRoleName; 
         private String releaseType; 
+        private String resourceGroupId; 
         private ResourceSpec resourceSpec; 
         private java.util.List<Tag> tag; 
         private String workspaceName; 
@@ -276,6 +289,7 @@ public class CreateWorkspaceRequest extends Request {
             this.paymentType = request.paymentType;
             this.ramRoleName = request.ramRoleName;
             this.releaseType = request.releaseType;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceSpec = request.resourceSpec;
             this.tag = request.tag;
             this.workspaceName = request.workspaceName;
@@ -439,6 +453,15 @@ public class CreateWorkspaceRequest extends Request {
         public Builder releaseType(String releaseType) {
             this.putBodyParameter("releaseType", releaseType);
             this.releaseType = releaseType;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
