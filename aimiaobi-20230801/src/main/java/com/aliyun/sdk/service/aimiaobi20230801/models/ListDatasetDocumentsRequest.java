@@ -82,6 +82,10 @@ public class ListDatasetDocumentsRequest extends Request {
     private java.util.List<String> includeFields;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -132,6 +136,7 @@ public class ListDatasetDocumentsRequest extends Request {
         this.extend2 = builder.extend2;
         this.extend3 = builder.extend3;
         this.includeFields = builder.includeFields;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.query = builder.query;
@@ -268,6 +273,13 @@ public class ListDatasetDocumentsRequest extends Request {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -340,6 +352,7 @@ public class ListDatasetDocumentsRequest extends Request {
         private String extend2; 
         private String extend3; 
         private java.util.List<String> includeFields; 
+        private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String query; 
@@ -371,6 +384,7 @@ public class ListDatasetDocumentsRequest extends Request {
             this.extend2 = request.extend2;
             this.extend3 = request.extend3;
             this.includeFields = request.includeFields;
+            this.nextToken = request.nextToken;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.query = request.query;
@@ -527,6 +541,15 @@ public class ListDatasetDocumentsRequest extends Request {
             String includeFieldsShrink = shrink(includeFields, "IncludeFields", "json");
             this.putBodyParameter("IncludeFields", includeFieldsShrink);
             this.includeFields = includeFields;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putBodyParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

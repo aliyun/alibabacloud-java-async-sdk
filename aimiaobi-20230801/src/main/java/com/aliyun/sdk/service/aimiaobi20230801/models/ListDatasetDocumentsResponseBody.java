@@ -29,6 +29,9 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -49,6 +52,7 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -97,6 +101,13 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -136,6 +147,7 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
+        private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -150,6 +162,7 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
             this.data = model.data;
             this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
+            this.nextToken = model.nextToken;
             this.pageNumber = model.pageNumber;
             this.pageSize = model.pageSize;
             this.requestId = model.requestId;
@@ -186,6 +199,14 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 

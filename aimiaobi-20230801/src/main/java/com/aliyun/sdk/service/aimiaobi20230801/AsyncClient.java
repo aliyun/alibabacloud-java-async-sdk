@@ -1165,6 +1165,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SaveMaterialDocumentResponse> saveMaterialDocument(SaveMaterialDocumentRequest request);
 
     /**
+     * @param request the request parameters of SaveOrUpdateOssConfig  SaveOrUpdateOssConfigRequest
+     * @return SaveOrUpdateOssConfigResponse
+     */
+    CompletableFuture<SaveOrUpdateOssConfigResponse> saveOrUpdateOssConfig(SaveOrUpdateOssConfigRequest request);
+
+    /**
      * @param request the request parameters of SaveStyleLearningResult  SaveStyleLearningResultRequest
      * @return SaveStyleLearningResultResponse
      */
