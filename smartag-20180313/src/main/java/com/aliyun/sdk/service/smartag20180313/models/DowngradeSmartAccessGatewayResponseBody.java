@@ -1,0 +1,97 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.smartag20180313.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link DowngradeSmartAccessGatewayResponseBody} extends {@link TeaModel}
+ *
+ * <p>DowngradeSmartAccessGatewayResponseBody</p>
+ */
+public class DowngradeSmartAccessGatewayResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    private String orderId;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    private DowngradeSmartAccessGatewayResponseBody(Builder builder) {
+        this.orderId = builder.orderId;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DowngradeSmartAccessGatewayResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private String orderId; 
+        private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DowngradeSmartAccessGatewayResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20337777855****</p>
+         */
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A6B9EB0F-57DB-4843-A372-04678ABF490E</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public DowngradeSmartAccessGatewayResponseBody build() {
+            return new DowngradeSmartAccessGatewayResponseBody(this);
+        } 
+
+    } 
+
+}
