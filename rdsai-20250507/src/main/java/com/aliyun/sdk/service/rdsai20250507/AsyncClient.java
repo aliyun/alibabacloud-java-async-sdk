@@ -55,6 +55,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCustomAgentResponse> createCustomAgent(CreateCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of CreateEdgeFunction  CreateEdgeFunctionRequest
+     * @return CreateEdgeFunctionResponse
+     */
+    CompletableFuture<CreateEdgeFunctionResponse> createEdgeFunction(CreateEdgeFunctionRequest request);
+
+    /**
      * @param request the request parameters of CreateInspectionTask  CreateInspectionTaskRequest
      * @return CreateInspectionTaskResponse
      */
@@ -95,6 +101,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCustomAgentResponse> deleteCustomAgent(DeleteCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of DeleteEdgeFunction  DeleteEdgeFunctionRequest
+     * @return DeleteEdgeFunctionResponse
+     */
+    CompletableFuture<DeleteEdgeFunctionResponse> deleteEdgeFunction(DeleteEdgeFunctionRequest request);
+
+    /**
      * @param request the request parameters of DeleteScheduledTask  DeleteScheduledTaskRequest
      * @return DeleteScheduledTaskResponse
      */
@@ -129,6 +141,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAppInstancesResponse
      */
     CompletableFuture<DescribeAppInstancesResponse> describeAppInstances(DescribeAppInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeEdgeFunctions  DescribeEdgeFunctionsRequest
+     * @return DescribeEdgeFunctionsResponse
+     */
+    CompletableFuture<DescribeEdgeFunctionsResponse> describeEdgeFunctions(DescribeEdgeFunctionsRequest request);
 
     /**
      * @param request the request parameters of DescribeEventsList  DescribeEventsListRequest
@@ -420,6 +438,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCustomAgentResponse
      */
     CompletableFuture<UpdateCustomAgentResponse> updateCustomAgent(UpdateCustomAgentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateEdgeFunction  UpdateEdgeFunctionRequest
+     * @return UpdateEdgeFunctionResponse
+     */
+    CompletableFuture<UpdateEdgeFunctionResponse> updateEdgeFunction(UpdateEdgeFunctionRequest request);
 
     /**
      * @param request the request parameters of UpdateSkill  UpdateSkillRequest

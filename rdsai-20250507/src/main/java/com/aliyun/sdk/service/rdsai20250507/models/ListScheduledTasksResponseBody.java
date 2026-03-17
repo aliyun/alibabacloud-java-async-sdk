@@ -230,8 +230,14 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
         @com.aliyun.core.annotation.NameInMap("ReportLanguage")
         private String reportLanguage;
+
+        @com.aliyun.core.annotation.NameInMap("ReportType")
+        private String reportType;
 
         @com.aliyun.core.annotation.NameInMap("ScheduledId")
         private String scheduledId;
@@ -248,7 +254,9 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             this.frequency = builder.frequency;
             this.instanceCount = builder.instanceCount;
             this.name = builder.name;
+            this.regionId = builder.regionId;
             this.reportLanguage = builder.reportLanguage;
+            this.reportType = builder.reportType;
             this.scheduledId = builder.scheduledId;
             this.taskStartTime = builder.taskStartTime;
             this.timeRange = builder.timeRange;
@@ -298,10 +306,24 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
          * @return reportLanguage
          */
         public String getReportLanguage() {
             return this.reportLanguage;
+        }
+
+        /**
+         * @return reportType
+         */
+        public String getReportType() {
+            return this.reportType;
         }
 
         /**
@@ -331,7 +353,9 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             private String frequency; 
             private Long instanceCount; 
             private String name; 
+            private String regionId; 
             private String reportLanguage; 
+            private String reportType; 
             private String scheduledId; 
             private String taskStartTime; 
             private String timeRange; 
@@ -345,7 +369,9 @@ public class ListScheduledTasksResponseBody extends TeaModel {
                 this.frequency = model.frequency;
                 this.instanceCount = model.instanceCount;
                 this.name = model.name;
+                this.regionId = model.regionId;
                 this.reportLanguage = model.reportLanguage;
+                this.reportType = model.reportType;
                 this.scheduledId = model.scheduledId;
                 this.taskStartTime = model.taskStartTime;
                 this.timeRange = model.timeRange;
@@ -412,10 +438,26 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
              * ReportLanguage.
              */
             public Builder reportLanguage(String reportLanguage) {
                 this.reportLanguage = reportLanguage;
+                return this;
+            }
+
+            /**
+             * ReportType.
+             */
+            public Builder reportType(String reportType) {
+                this.reportType = reportType;
                 return this;
             }
 

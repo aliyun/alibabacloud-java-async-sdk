@@ -22,6 +22,10 @@ public class GetInspectionReportRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportType")
+    private String reportType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
@@ -29,6 +33,7 @@ public class GetInspectionReportRequest extends Request {
     private GetInspectionReportRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.reportType = builder.reportType;
         this.taskId = builder.taskId;
     }
 
@@ -53,6 +58,13 @@ public class GetInspectionReportRequest extends Request {
     }
 
     /**
+     * @return reportType
+     */
+    public String getReportType() {
+        return this.reportType;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -61,6 +73,7 @@ public class GetInspectionReportRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetInspectionReportRequest, Builder> {
         private String instanceId; 
+        private String reportType; 
         private String taskId; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class GetInspectionReportRequest extends Request {
         private Builder(GetInspectionReportRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.reportType = request.reportType;
             this.taskId = request.taskId;
         } 
 
@@ -82,6 +96,15 @@ public class GetInspectionReportRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ReportType.
+         */
+        public Builder reportType(String reportType) {
+            this.putQueryParameter("ReportType", reportType);
+            this.reportType = reportType;
             return this;
         }
 

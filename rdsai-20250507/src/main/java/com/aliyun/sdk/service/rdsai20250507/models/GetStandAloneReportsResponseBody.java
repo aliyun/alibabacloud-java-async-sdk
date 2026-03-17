@@ -221,8 +221,14 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
         @com.aliyun.core.annotation.NameInMap("ReportLanguage")
         private String reportLanguage;
+
+        @com.aliyun.core.annotation.NameInMap("ReportType")
+        private String reportType;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
@@ -236,7 +242,9 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         private Reports(Builder builder) {
             this.createdTime = builder.createdTime;
             this.endTime = builder.endTime;
+            this.regionId = builder.regionId;
             this.reportLanguage = builder.reportLanguage;
+            this.reportType = builder.reportType;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.taskId = builder.taskId;
@@ -265,10 +273,24 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
          * @return reportLanguage
          */
         public String getReportLanguage() {
             return this.reportLanguage;
+        }
+
+        /**
+         * @return reportType
+         */
+        public String getReportType() {
+            return this.reportType;
         }
 
         /**
@@ -295,7 +317,9 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public static final class Builder {
             private String createdTime; 
             private String endTime; 
+            private String regionId; 
             private String reportLanguage; 
+            private String reportType; 
             private String startTime; 
             private String status; 
             private String taskId; 
@@ -306,7 +330,9 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             private Builder(Reports model) {
                 this.createdTime = model.createdTime;
                 this.endTime = model.endTime;
+                this.regionId = model.regionId;
                 this.reportLanguage = model.reportLanguage;
+                this.reportType = model.reportType;
                 this.startTime = model.startTime;
                 this.status = model.status;
                 this.taskId = model.taskId;
@@ -335,10 +361,26 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             }
 
             /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
              * ReportLanguage.
              */
             public Builder reportLanguage(String reportLanguage) {
                 this.reportLanguage = reportLanguage;
+                return this;
+            }
+
+            /**
+             * ReportType.
+             */
+            public Builder reportType(String reportType) {
+                this.reportType = reportType;
                 return this;
             }
 

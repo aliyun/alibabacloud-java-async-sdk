@@ -30,6 +30,10 @@ public class GetStandAloneReportsRequest extends Request {
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportType")
+    private String reportType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
@@ -38,6 +42,7 @@ public class GetStandAloneReportsRequest extends Request {
         this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.reportType = builder.reportType;
         this.startTime = builder.startTime;
     }
 
@@ -76,6 +81,13 @@ public class GetStandAloneReportsRequest extends Request {
     }
 
     /**
+     * @return reportType
+     */
+    public String getReportType() {
+        return this.reportType;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -86,6 +98,7 @@ public class GetStandAloneReportsRequest extends Request {
         private String endTime; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String reportType; 
         private String startTime; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class GetStandAloneReportsRequest extends Request {
             this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.reportType = request.reportType;
             this.startTime = request.startTime;
         } 
 
@@ -133,6 +147,15 @@ public class GetStandAloneReportsRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ReportType.
+         */
+        public Builder reportType(String reportType) {
+            this.putQueryParameter("ReportType", reportType);
+            this.reportType = reportType;
             return this;
         }
 

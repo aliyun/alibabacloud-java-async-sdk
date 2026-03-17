@@ -27,7 +27,6 @@ public class CreateScheduledTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceIds;
 
     @com.aliyun.core.annotation.Query
@@ -36,8 +35,16 @@ public class CreateScheduledTaskRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReportLanguage")
     private String reportLanguage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportType")
+    private String reportType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -53,7 +60,9 @@ public class CreateScheduledTaskRequest extends Request {
         this.frequency = builder.frequency;
         this.instanceIds = builder.instanceIds;
         this.name = builder.name;
+        this.regionId = builder.regionId;
         this.reportLanguage = builder.reportLanguage;
+        this.reportType = builder.reportType;
         this.startTime = builder.startTime;
         this.timeRange = builder.timeRange;
     }
@@ -100,10 +109,24 @@ public class CreateScheduledTaskRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return reportLanguage
      */
     public String getReportLanguage() {
         return this.reportLanguage;
+    }
+
+    /**
+     * @return reportType
+     */
+    public String getReportType() {
+        return this.reportType;
     }
 
     /**
@@ -125,7 +148,9 @@ public class CreateScheduledTaskRequest extends Request {
         private String frequency; 
         private String instanceIds; 
         private String name; 
+        private String regionId; 
         private String reportLanguage; 
+        private String reportType; 
         private String startTime; 
         private String timeRange; 
 
@@ -139,7 +164,9 @@ public class CreateScheduledTaskRequest extends Request {
             this.frequency = request.frequency;
             this.instanceIds = request.instanceIds;
             this.name = request.name;
+            this.regionId = request.regionId;
             this.reportLanguage = request.reportLanguage;
+            this.reportType = request.reportType;
             this.startTime = request.startTime;
             this.timeRange = request.timeRange;
         } 
@@ -177,7 +204,6 @@ public class CreateScheduledTaskRequest extends Request {
 
         /**
          * <p>The IDs of the related instances. Separate multiple IDs with commas (,).</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze6mk259v322****,rm-2zef3b65430j0****</p>
@@ -199,11 +225,29 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * ReportLanguage.
          */
         public Builder reportLanguage(String reportLanguage) {
             this.putQueryParameter("ReportLanguage", reportLanguage);
             this.reportLanguage = reportLanguage;
+            return this;
+        }
+
+        /**
+         * ReportType.
+         */
+        public Builder reportType(String reportType) {
+            this.putQueryParameter("ReportType", reportType);
+            this.reportType = reportType;
             return this;
         }
 
