@@ -131,7 +131,7 @@ public class CreateCheckItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>创建成功返回的检查项ID。</p>
+             * <p>The ID of the inspection item returned upon successful creation.</p>
              * 
              * <strong>example:</strong>
              * <p>100000000001</p>

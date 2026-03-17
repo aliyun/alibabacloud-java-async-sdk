@@ -2284,7 +2284,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRestorePlansResponse> describeRestorePlans(DescribeRestorePlansRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeRiskCheckItemResult is deprecated  * @description 该接口已下线，使用升级接口ListCheckInstanceResult替换。
+     * @deprecated OpenAPI DescribeRiskCheckItemResult is deprecated  * @description This interface has been deprecated. Use the upgraded interface ListCheckInstanceResult instead.
      * 
      * @param request the request parameters of DescribeRiskCheckItemResult  DescribeRiskCheckItemResultRequest
      * @return DescribeRiskCheckItemResultResponse

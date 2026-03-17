@@ -73,9 +73,9 @@ public class DescribeVersionConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account that uses Security Center.</p>
+         * <p>The Alibaba Cloud account ID using the Cloud Security Center service.   </p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a> operation to query the IDs of Alibaba Cloud accounts.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a> API to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeVersionConfigRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>

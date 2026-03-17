@@ -101,11 +101,15 @@ public class GetSupportedModulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Module")
         private String module;
 
+        @com.aliyun.core.annotation.NameInMap("ModuleAuth")
+        private Boolean moduleAuth;
+
         @com.aliyun.core.annotation.NameInMap("ModuleDisp")
         private String moduleDisp;
 
         private SupportedModules(Builder builder) {
             this.module = builder.module;
+            this.moduleAuth = builder.moduleAuth;
             this.moduleDisp = builder.moduleDisp;
         }
 
@@ -125,6 +129,13 @@ public class GetSupportedModulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return moduleAuth
+         */
+        public Boolean getModuleAuth() {
+            return this.moduleAuth;
+        }
+
+        /**
          * @return moduleDisp
          */
         public String getModuleDisp() {
@@ -133,6 +144,7 @@ public class GetSupportedModulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String module; 
+            private Boolean moduleAuth; 
             private String moduleDisp; 
 
             private Builder() {
@@ -140,6 +152,7 @@ public class GetSupportedModulesResponseBody extends TeaModel {
 
             private Builder(SupportedModules model) {
                 this.module = model.module;
+                this.moduleAuth = model.moduleAuth;
                 this.moduleDisp = model.moduleDisp;
             } 
 
@@ -157,6 +170,14 @@ public class GetSupportedModulesResponseBody extends TeaModel {
              */
             public Builder module(String module) {
                 this.module = module;
+                return this;
+            }
+
+            /**
+             * ModuleAuth.
+             */
+            public Builder moduleAuth(Boolean moduleAuth) {
+                this.moduleAuth = moduleAuth;
                 return this;
             }
 
