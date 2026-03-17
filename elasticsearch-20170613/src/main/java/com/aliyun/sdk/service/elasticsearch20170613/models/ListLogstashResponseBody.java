@@ -515,6 +515,9 @@ public class ListLogstashResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("endTime")
+        private Long endTime;
+
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
@@ -546,6 +549,7 @@ public class ListLogstashResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.createdAt = builder.createdAt;
             this.description = builder.description;
+            this.endTime = builder.endTime;
             this.instanceId = builder.instanceId;
             this.networkConfig = builder.networkConfig;
             this.nodeAmount = builder.nodeAmount;
@@ -584,6 +588,13 @@ public class ListLogstashResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
         }
 
         /**
@@ -653,6 +664,7 @@ public class ListLogstashResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String createdAt; 
             private String description; 
+            private Long endTime; 
             private String instanceId; 
             private NetworkConfig networkConfig; 
             private Integer nodeAmount; 
@@ -670,6 +682,7 @@ public class ListLogstashResponseBody extends TeaModel {
                 this.tags = model.tags;
                 this.createdAt = model.createdAt;
                 this.description = model.description;
+                this.endTime = model.endTime;
                 this.instanceId = model.instanceId;
                 this.networkConfig = model.networkConfig;
                 this.nodeAmount = model.nodeAmount;
@@ -708,6 +721,14 @@ public class ListLogstashResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * endTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
                 return this;
             }
 

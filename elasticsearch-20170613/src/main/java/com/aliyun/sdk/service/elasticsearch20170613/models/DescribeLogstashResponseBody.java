@@ -645,6 +645,9 @@ public class DescribeLogstashResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("endTime")
+        private Long endTime;
+
         @com.aliyun.core.annotation.NameInMap("endpointList")
         private java.util.List<EndpointList> endpointList;
 
@@ -683,6 +686,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             this.config = builder.config;
             this.createdAt = builder.createdAt;
             this.description = builder.description;
+            this.endTime = builder.endTime;
             this.endpointList = builder.endpointList;
             this.instanceId = builder.instanceId;
             this.networkConfig = builder.networkConfig;
@@ -750,6 +754,13 @@ public class DescribeLogstashResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
         }
 
         /**
@@ -830,6 +841,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private java.util.Map<String, ?> config; 
             private String createdAt; 
             private String description; 
+            private Long endTime; 
             private java.util.List<EndpointList> endpointList; 
             private String instanceId; 
             private NetworkConfig networkConfig; 
@@ -852,6 +864,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
                 this.config = model.config;
                 this.createdAt = model.createdAt;
                 this.description = model.description;
+                this.endTime = model.endTime;
                 this.endpointList = model.endpointList;
                 this.instanceId = model.instanceId;
                 this.networkConfig = model.networkConfig;
@@ -943,6 +956,14 @@ public class DescribeLogstashResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * endTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
                 return this;
             }
 
