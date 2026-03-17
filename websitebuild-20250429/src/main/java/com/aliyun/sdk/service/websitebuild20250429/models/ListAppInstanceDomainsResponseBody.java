@@ -596,6 +596,102 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
      *
      * <p>ListAppInstanceDomainsResponseBody</p>
      */
+    public static class Qualification extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IcpRecordNumber")
+        private String icpRecordNumber;
+
+        @com.aliyun.core.annotation.NameInMap("IcpSiteRecordNumber")
+        private String icpSiteRecordNumber;
+
+        @com.aliyun.core.annotation.NameInMap("PoliceRecordNumber")
+        private String policeRecordNumber;
+
+        private Qualification(Builder builder) {
+            this.icpRecordNumber = builder.icpRecordNumber;
+            this.icpSiteRecordNumber = builder.icpSiteRecordNumber;
+            this.policeRecordNumber = builder.policeRecordNumber;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Qualification create() {
+            return builder().build();
+        }
+
+        /**
+         * @return icpRecordNumber
+         */
+        public String getIcpRecordNumber() {
+            return this.icpRecordNumber;
+        }
+
+        /**
+         * @return icpSiteRecordNumber
+         */
+        public String getIcpSiteRecordNumber() {
+            return this.icpSiteRecordNumber;
+        }
+
+        /**
+         * @return policeRecordNumber
+         */
+        public String getPoliceRecordNumber() {
+            return this.policeRecordNumber;
+        }
+
+        public static final class Builder {
+            private String icpRecordNumber; 
+            private String icpSiteRecordNumber; 
+            private String policeRecordNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(Qualification model) {
+                this.icpRecordNumber = model.icpRecordNumber;
+                this.icpSiteRecordNumber = model.icpSiteRecordNumber;
+                this.policeRecordNumber = model.policeRecordNumber;
+            } 
+
+            /**
+             * IcpRecordNumber.
+             */
+            public Builder icpRecordNumber(String icpRecordNumber) {
+                this.icpRecordNumber = icpRecordNumber;
+                return this;
+            }
+
+            /**
+             * IcpSiteRecordNumber.
+             */
+            public Builder icpSiteRecordNumber(String icpSiteRecordNumber) {
+                this.icpSiteRecordNumber = icpSiteRecordNumber;
+                return this;
+            }
+
+            /**
+             * PoliceRecordNumber.
+             */
+            public Builder policeRecordNumber(String policeRecordNumber) {
+                this.policeRecordNumber = policeRecordNumber;
+                return this;
+            }
+
+            public Qualification build() {
+                return new Qualification(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAppInstanceDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInstanceDomainsResponseBody</p>
+     */
     public static class DnsRecord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
@@ -1050,6 +1146,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ownership")
         private Ownership ownership;
 
+        @com.aliyun.core.annotation.NameInMap("Qualification")
+        private Qualification qualification;
+
         @com.aliyun.core.annotation.NameInMap("Resolution")
         private Resolution resolution;
 
@@ -1062,6 +1161,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             this.domainName = builder.domainName;
             this.overallStatus = builder.overallStatus;
             this.ownership = builder.ownership;
+            this.qualification = builder.qualification;
             this.resolution = builder.resolution;
             this.verification = builder.verification;
         }
@@ -1110,6 +1210,13 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return qualification
+         */
+        public Qualification getQualification() {
+            return this.qualification;
+        }
+
+        /**
          * @return resolution
          */
         public Resolution getResolution() {
@@ -1129,6 +1236,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             private String domainName; 
             private String overallStatus; 
             private Ownership ownership; 
+            private Qualification qualification; 
             private Resolution resolution; 
             private Verification verification; 
 
@@ -1141,6 +1249,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
                 this.domainName = model.domainName;
                 this.overallStatus = model.overallStatus;
                 this.ownership = model.ownership;
+                this.qualification = model.qualification;
                 this.resolution = model.resolution;
                 this.verification = model.verification;
             } 
@@ -1191,6 +1300,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
              */
             public Builder ownership(Ownership ownership) {
                 this.ownership = ownership;
+                return this;
+            }
+
+            /**
+             * Qualification.
+             */
+            public Builder qualification(Qualification qualification) {
+                this.qualification = qualification;
                 return this;
             }
 
@@ -1422,6 +1539,102 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
             public NextOwnership build() {
                 return new NextOwnership(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAppInstanceDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInstanceDomainsResponseBody</p>
+     */
+    public static class NextQualification extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IcpRecordNumber")
+        private String icpRecordNumber;
+
+        @com.aliyun.core.annotation.NameInMap("IcpSiteRecordNumber")
+        private String icpSiteRecordNumber;
+
+        @com.aliyun.core.annotation.NameInMap("PoliceRecordNumber")
+        private String policeRecordNumber;
+
+        private NextQualification(Builder builder) {
+            this.icpRecordNumber = builder.icpRecordNumber;
+            this.icpSiteRecordNumber = builder.icpSiteRecordNumber;
+            this.policeRecordNumber = builder.policeRecordNumber;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NextQualification create() {
+            return builder().build();
+        }
+
+        /**
+         * @return icpRecordNumber
+         */
+        public String getIcpRecordNumber() {
+            return this.icpRecordNumber;
+        }
+
+        /**
+         * @return icpSiteRecordNumber
+         */
+        public String getIcpSiteRecordNumber() {
+            return this.icpSiteRecordNumber;
+        }
+
+        /**
+         * @return policeRecordNumber
+         */
+        public String getPoliceRecordNumber() {
+            return this.policeRecordNumber;
+        }
+
+        public static final class Builder {
+            private String icpRecordNumber; 
+            private String icpSiteRecordNumber; 
+            private String policeRecordNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextQualification model) {
+                this.icpRecordNumber = model.icpRecordNumber;
+                this.icpSiteRecordNumber = model.icpSiteRecordNumber;
+                this.policeRecordNumber = model.policeRecordNumber;
+            } 
+
+            /**
+             * IcpRecordNumber.
+             */
+            public Builder icpRecordNumber(String icpRecordNumber) {
+                this.icpRecordNumber = icpRecordNumber;
+                return this;
+            }
+
+            /**
+             * IcpSiteRecordNumber.
+             */
+            public Builder icpSiteRecordNumber(String icpSiteRecordNumber) {
+                this.icpSiteRecordNumber = icpSiteRecordNumber;
+                return this;
+            }
+
+            /**
+             * PoliceRecordNumber.
+             */
+            public Builder policeRecordNumber(String policeRecordNumber) {
+                this.policeRecordNumber = policeRecordNumber;
+                return this;
+            }
+
+            public NextQualification build() {
+                return new NextQualification(this);
             } 
 
         } 
@@ -1863,6 +2076,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ownership")
         private NextOwnership ownership;
 
+        @com.aliyun.core.annotation.NameInMap("Qualification")
+        private NextQualification qualification;
+
         @com.aliyun.core.annotation.NameInMap("Resolution")
         private NextResolution resolution;
 
@@ -1875,6 +2091,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             this.domainName = builder.domainName;
             this.overallStatus = builder.overallStatus;
             this.ownership = builder.ownership;
+            this.qualification = builder.qualification;
             this.resolution = builder.resolution;
             this.verification = builder.verification;
         }
@@ -1923,6 +2140,13 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return qualification
+         */
+        public NextQualification getQualification() {
+            return this.qualification;
+        }
+
+        /**
          * @return resolution
          */
         public NextResolution getResolution() {
@@ -1942,6 +2166,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             private String domainName; 
             private String overallStatus; 
             private NextOwnership ownership; 
+            private NextQualification qualification; 
             private NextResolution resolution; 
             private NextVerification verification; 
 
@@ -1954,6 +2179,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
                 this.domainName = model.domainName;
                 this.overallStatus = model.overallStatus;
                 this.ownership = model.ownership;
+                this.qualification = model.qualification;
                 this.resolution = model.resolution;
                 this.verification = model.verification;
             } 
@@ -2004,6 +2230,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
              */
             public Builder ownership(NextOwnership ownership) {
                 this.ownership = ownership;
+                return this;
+            }
+
+            /**
+             * Qualification.
+             */
+            public Builder qualification(NextQualification qualification) {
+                this.qualification = qualification;
                 return this;
             }
 

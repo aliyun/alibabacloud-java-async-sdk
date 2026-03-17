@@ -26,10 +26,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateSupabaseForAdminResponse> allocateSupabaseForAdmin(AllocateSupabaseForAdminRequest request);
 
     /**
+     * @param request the request parameters of BatchCheckResourceMeasure  BatchCheckResourceMeasureRequest
+     * @return BatchCheckResourceMeasureResponse
+     */
+    CompletableFuture<BatchCheckResourceMeasureResponse> batchCheckResourceMeasure(BatchCheckResourceMeasureRequest request);
+
+    /**
      * @param request the request parameters of BindAppDomain  BindAppDomainRequest
      * @return BindAppDomainResponse
      */
     CompletableFuture<BindAppDomainResponse> bindAppDomain(BindAppDomainRequest request);
+
+    /**
+     * @param request the request parameters of CheckResourceMeasure  CheckResourceMeasureRequest
+     * @return CheckResourceMeasureResponse
+     */
+    CompletableFuture<CheckResourceMeasureResponse> checkResourceMeasure(CheckResourceMeasureRequest request);
 
     /**
      * @param request the request parameters of CreateAppInstance  CreateAppInstanceRequest
@@ -42,6 +54,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateAppInstanceTicketResponse
      */
     CompletableFuture<CreateAppInstanceTicketResponse> createAppInstanceTicket(CreateAppInstanceTicketRequest request);
+
+    /**
+     * @param request the request parameters of CreateAppTokenService  CreateAppTokenServiceRequest
+     * @return CreateAppTokenServiceResponse
+     */
+    CompletableFuture<CreateAppTokenServiceResponse> createAppTokenService(CreateAppTokenServiceRequest request);
 
     /**
      * @param request the request parameters of CreateLogoTask  CreateLogoTaskRequest
@@ -104,10 +122,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAppInstanceResponse> getAppInstance(GetAppInstanceRequest request);
 
     /**
+     * @param request the request parameters of GetAppInstanceForAdmin  GetAppInstanceForAdminRequest
+     * @return GetAppInstanceForAdminResponse
+     */
+    CompletableFuture<GetAppInstanceForAdminResponse> getAppInstanceForAdmin(GetAppInstanceForAdminRequest request);
+
+    /**
+     * @param request the request parameters of GetAppInstanceForPartner  GetAppInstanceForPartnerRequest
+     * @return GetAppInstanceForPartnerResponse
+     */
+    CompletableFuture<GetAppInstanceForPartnerResponse> getAppInstanceForPartner(GetAppInstanceForPartnerRequest request);
+
+    /**
      * @param request the request parameters of GetAppPluginConfig  GetAppPluginConfigRequest
      * @return GetAppPluginConfigResponse
      */
     CompletableFuture<GetAppPluginConfigResponse> getAppPluginConfig(GetAppPluginConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetAppRecommendedCommodities  GetAppRecommendedCommoditiesRequest
+     * @return GetAppRecommendedCommoditiesResponse
+     */
+    CompletableFuture<GetAppRecommendedCommoditiesResponse> getAppRecommendedCommodities(GetAppRecommendedCommoditiesRequest request);
+
+    /**
+     * @param request the request parameters of GetAppTokenService  GetAppTokenServiceRequest
+     * @return GetAppTokenServiceResponse
+     */
+    CompletableFuture<GetAppTokenServiceResponse> getAppTokenService(GetAppTokenServiceRequest request);
 
     /**
      * @param request the request parameters of GetCreateLogoTask  GetCreateLogoTaskRequest
@@ -144,6 +186,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return IntrospectAppInstanceTicketForPreviewResponse
      */
     CompletableFuture<IntrospectAppInstanceTicketForPreviewResponse> introspectAppInstanceTicketForPreview(IntrospectAppInstanceTicketForPreviewRequest request);
+
+    /**
+     * @param request the request parameters of ListAppCommoditySpecificationsForPartner  ListAppCommoditySpecificationsForPartnerRequest
+     * @return ListAppCommoditySpecificationsForPartnerResponse
+     */
+    CompletableFuture<ListAppCommoditySpecificationsForPartnerResponse> listAppCommoditySpecificationsForPartner(ListAppCommoditySpecificationsForPartnerRequest request);
+
+    /**
+     * @param request the request parameters of ListAppCommoditySpecificationsV2ForPartner  ListAppCommoditySpecificationsV2ForPartnerRequest
+     * @return ListAppCommoditySpecificationsV2ForPartnerResponse
+     */
+    CompletableFuture<ListAppCommoditySpecificationsV2ForPartnerResponse> listAppCommoditySpecificationsV2ForPartner(ListAppCommoditySpecificationsV2ForPartnerRequest request);
 
     /**
      * @param request the request parameters of ListAppDomainRedirectRecords  ListAppDomainRedirectRecordsRequest
@@ -218,6 +272,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateSupabaseForAdminResponse> operateSupabaseForAdmin(OperateSupabaseForAdminRequest request);
 
     /**
+     * @param request the request parameters of PushResourceMeasure  PushResourceMeasureRequest
+     * @return PushResourceMeasureResponse
+     */
+    CompletableFuture<PushResourceMeasureResponse> pushResourceMeasure(PushResourceMeasureRequest request);
+
+    /**
+     * @param request the request parameters of QueryInspirationAccountDetails  QueryInspirationAccountDetailsRequest
+     * @return QueryInspirationAccountDetailsResponse
+     */
+    CompletableFuture<QueryInspirationAccountDetailsResponse> queryInspirationAccountDetails(QueryInspirationAccountDetailsRequest request);
+
+    /**
+     * @param request the request parameters of QueryInspirationBalance  QueryInspirationBalanceRequest
+     * @return QueryInspirationBalanceResponse
+     */
+    CompletableFuture<QueryInspirationBalanceResponse> queryInspirationBalance(QueryInspirationBalanceRequest request);
+
+    /**
+     * @param request the request parameters of QueryInspirationConsumeRecords  QueryInspirationConsumeRecordsRequest
+     * @return QueryInspirationConsumeRecordsResponse
+     */
+    CompletableFuture<QueryInspirationConsumeRecordsResponse> queryInspirationConsumeRecords(QueryInspirationConsumeRecordsRequest request);
+
+    /**
      * @param request the request parameters of QueryMaterialDirectoryTree  QueryMaterialDirectoryTreeRequest
      * @return QueryMaterialDirectoryTreeResponse
      */
@@ -252,6 +330,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryMaterialTaskListResponse
      */
     CompletableFuture<QueryMaterialTaskListResponse> queryMaterialTaskList(QueryMaterialTaskListRequest request);
+
+    /**
+     * @param request the request parameters of QuerySupabaseAuthConfigsForAdmin  QuerySupabaseAuthConfigsForAdminRequest
+     * @return QuerySupabaseAuthConfigsForAdminResponse
+     */
+    CompletableFuture<QuerySupabaseAuthConfigsForAdminResponse> querySupabaseAuthConfigsForAdmin(QuerySupabaseAuthConfigsForAdminRequest request);
+
+    /**
+     * @param request the request parameters of QuerySupabaseConfigsForAdmin  QuerySupabaseConfigsForAdminRequest
+     * @return QuerySupabaseConfigsForAdminResponse
+     */
+    CompletableFuture<QuerySupabaseConfigsForAdminResponse> querySupabaseConfigsForAdmin(QuerySupabaseConfigsForAdminRequest request);
 
     /**
      * @param request the request parameters of QuerySupabaseInstanceInfoForAdmin  QuerySupabaseInstanceInfoForAdminRequest
