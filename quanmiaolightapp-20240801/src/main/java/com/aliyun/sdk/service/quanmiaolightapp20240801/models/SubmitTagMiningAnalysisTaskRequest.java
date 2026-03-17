@@ -31,6 +31,10 @@ public class SubmitTagMiningAnalysisTaskRequest extends Request {
     private String apiKey;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("batchTask")
+    private Boolean batchTask;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("businessType")
     private String businessType;
 
@@ -68,6 +72,7 @@ public class SubmitTagMiningAnalysisTaskRequest extends Request {
         this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
         this.apiKey = builder.apiKey;
+        this.batchTask = builder.batchTask;
         this.businessType = builder.businessType;
         this.contents = builder.contents;
         this.extraInfo = builder.extraInfo;
@@ -110,6 +115,13 @@ public class SubmitTagMiningAnalysisTaskRequest extends Request {
      */
     public String getApiKey() {
         return this.apiKey;
+    }
+
+    /**
+     * @return batchTask
+     */
+    public Boolean getBatchTask() {
+        return this.batchTask;
     }
 
     /**
@@ -172,6 +184,7 @@ public class SubmitTagMiningAnalysisTaskRequest extends Request {
         private String regionId; 
         private String workspaceId; 
         private String apiKey; 
+        private Boolean batchTask; 
         private String businessType; 
         private java.util.List<String> contents; 
         private String extraInfo; 
@@ -190,6 +203,7 @@ public class SubmitTagMiningAnalysisTaskRequest extends Request {
             this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
             this.apiKey = request.apiKey;
+            this.batchTask = request.batchTask;
             this.businessType = request.businessType;
             this.contents = request.contents;
             this.extraInfo = request.extraInfo;
@@ -227,6 +241,15 @@ public class SubmitTagMiningAnalysisTaskRequest extends Request {
         public Builder apiKey(String apiKey) {
             this.putBodyParameter("apiKey", apiKey);
             this.apiKey = apiKey;
+            return this;
+        }
+
+        /**
+         * batchTask.
+         */
+        public Builder batchTask(Boolean batchTask) {
+            this.putBodyParameter("batchTask", batchTask);
+            this.batchTask = batchTask;
             return this;
         }
 

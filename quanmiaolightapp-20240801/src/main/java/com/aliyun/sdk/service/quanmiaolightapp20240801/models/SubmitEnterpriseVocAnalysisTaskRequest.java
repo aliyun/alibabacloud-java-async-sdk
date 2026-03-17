@@ -30,6 +30,10 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
     private String apiKey;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("batchTask")
+    private Boolean batchTask;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("contents")
     private java.util.List<Contents> contents;
 
@@ -54,6 +58,10 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
     private String outputFormat;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("positiveFilter")
+    private Boolean positiveFilter;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceTrace")
     private Boolean sourceTrace;
 
@@ -74,12 +82,14 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
         this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
         this.apiKey = builder.apiKey;
+        this.batchTask = builder.batchTask;
         this.contents = builder.contents;
         this.extraInfo = builder.extraInfo;
         this.fileKey = builder.fileKey;
         this.filterTags = builder.filterTags;
         this.modelId = builder.modelId;
         this.outputFormat = builder.outputFormat;
+        this.positiveFilter = builder.positiveFilter;
         this.sourceTrace = builder.sourceTrace;
         this.tags = builder.tags;
         this.taskDescription = builder.taskDescription;
@@ -118,6 +128,13 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
      */
     public String getApiKey() {
         return this.apiKey;
+    }
+
+    /**
+     * @return batchTask
+     */
+    public Boolean getBatchTask() {
+        return this.batchTask;
     }
 
     /**
@@ -163,6 +180,13 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
     }
 
     /**
+     * @return positiveFilter
+     */
+    public Boolean getPositiveFilter() {
+        return this.positiveFilter;
+    }
+
+    /**
      * @return sourceTrace
      */
     public Boolean getSourceTrace() {
@@ -194,12 +218,14 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
         private String regionId; 
         private String workspaceId; 
         private String apiKey; 
+        private Boolean batchTask; 
         private java.util.List<Contents> contents; 
         private String extraInfo; 
         private String fileKey; 
         private java.util.List<FilterTags> filterTags; 
         private String modelId; 
         private String outputFormat; 
+        private Boolean positiveFilter; 
         private Boolean sourceTrace; 
         private java.util.List<Tags> tags; 
         private String taskDescription; 
@@ -214,12 +240,14 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
             this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
             this.apiKey = request.apiKey;
+            this.batchTask = request.batchTask;
             this.contents = request.contents;
             this.extraInfo = request.extraInfo;
             this.fileKey = request.fileKey;
             this.filterTags = request.filterTags;
             this.modelId = request.modelId;
             this.outputFormat = request.outputFormat;
+            this.positiveFilter = request.positiveFilter;
             this.sourceTrace = request.sourceTrace;
             this.tags = request.tags;
             this.taskDescription = request.taskDescription;
@@ -250,6 +278,15 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
         public Builder apiKey(String apiKey) {
             this.putBodyParameter("apiKey", apiKey);
             this.apiKey = apiKey;
+            return this;
+        }
+
+        /**
+         * batchTask.
+         */
+        public Builder batchTask(Boolean batchTask) {
+            this.putBodyParameter("batchTask", batchTask);
+            this.batchTask = batchTask;
             return this;
         }
 
@@ -306,6 +343,15 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
         public Builder outputFormat(String outputFormat) {
             this.putBodyParameter("outputFormat", outputFormat);
             this.outputFormat = outputFormat;
+            return this;
+        }
+
+        /**
+         * positiveFilter.
+         */
+        public Builder positiveFilter(Boolean positiveFilter) {
+            this.putBodyParameter("positiveFilter", positiveFilter);
+            this.positiveFilter = positiveFilter;
             return this;
         }
 
