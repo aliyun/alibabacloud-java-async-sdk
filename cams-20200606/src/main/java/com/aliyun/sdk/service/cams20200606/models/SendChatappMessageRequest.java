@@ -22,6 +22,10 @@ public class SendChatappMessageRequest extends Request {
     private String adAccountId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
+    private String category;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String channelType;
@@ -158,6 +162,7 @@ public class SendChatappMessageRequest extends Request {
     private SendChatappMessageRequest(Builder builder) {
         super(builder);
         this.adAccountId = builder.adAccountId;
+        this.category = builder.category;
         this.channelType = builder.channelType;
         this.content = builder.content;
         this.contextMessageId = builder.contextMessageId;
@@ -210,6 +215,13 @@ public class SendChatappMessageRequest extends Request {
      */
     public String getAdAccountId() {
         return this.adAccountId;
+    }
+
+    /**
+     * @return category
+     */
+    public String getCategory() {
+        return this.category;
     }
 
     /**
@@ -438,6 +450,7 @@ public class SendChatappMessageRequest extends Request {
 
     public static final class Builder extends Request.Builder<SendChatappMessageRequest, Builder> {
         private String adAccountId; 
+        private String category; 
         private String channelType; 
         private String content; 
         private String contextMessageId; 
@@ -478,6 +491,7 @@ public class SendChatappMessageRequest extends Request {
         private Builder(SendChatappMessageRequest request) {
             super(request);
             this.adAccountId = request.adAccountId;
+            this.category = request.category;
             this.channelType = request.channelType;
             this.content = request.content;
             this.contextMessageId = request.contextMessageId;
@@ -518,6 +532,15 @@ public class SendChatappMessageRequest extends Request {
         public Builder adAccountId(String adAccountId) {
             this.putQueryParameter("AdAccountId", adAccountId);
             this.adAccountId = adAccountId;
+            return this;
+        }
+
+        /**
+         * Category.
+         */
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
             return this;
         }
 
