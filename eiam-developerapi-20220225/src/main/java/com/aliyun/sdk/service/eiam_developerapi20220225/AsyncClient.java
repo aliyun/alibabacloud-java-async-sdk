@@ -95,6 +95,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateTokenResponse> generateToken(GenerateTokenRequest request);
 
     /**
+     * @param request the request parameters of GenerateTokenByAuthorizationServer  GenerateTokenByAuthorizationServerRequest
+     * @return GenerateTokenByAuthorizationServerResponse
+     */
+    CompletableFuture<GenerateTokenByAuthorizationServerResponse> generateTokenByAuthorizationServer(GenerateTokenByAuthorizationServerRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * </blockquote>

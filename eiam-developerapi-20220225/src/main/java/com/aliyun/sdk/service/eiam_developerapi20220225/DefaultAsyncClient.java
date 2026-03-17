@@ -259,6 +259,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GenerateTokenByAuthorizationServer  GenerateTokenByAuthorizationServerRequest
+     * @return GenerateTokenByAuthorizationServerResponse
+     */
+    @Override
+    public CompletableFuture<GenerateTokenByAuthorizationServerResponse> generateTokenByAuthorizationServer(GenerateTokenByAuthorizationServerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GenerateTokenByAuthorizationServer").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/authorizationServer/{authorizationServerId}/oauth2/token").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateTokenByAuthorizationServerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateTokenByAuthorizationServerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * </blockquote>
