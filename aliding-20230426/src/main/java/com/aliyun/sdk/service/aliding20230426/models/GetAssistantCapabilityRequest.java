@@ -21,6 +21,10 @@ public class GetAssistantCapabilityRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("accountId")
     private String accountId;
 
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("aiLogContextJson")
+    private String aiLogContextJson;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("assistantId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -62,6 +66,7 @@ public class GetAssistantCapabilityRequest extends Request {
     private GetAssistantCapabilityRequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
+        this.aiLogContextJson = builder.aiLogContextJson;
         this.assistantId = builder.assistantId;
         this.extLoginUser = builder.extLoginUser;
         this.messages = builder.messages;
@@ -91,6 +96,13 @@ public class GetAssistantCapabilityRequest extends Request {
      */
     public String getAccountId() {
         return this.accountId;
+    }
+
+    /**
+     * @return aiLogContextJson
+     */
+    public String getAiLogContextJson() {
+        return this.aiLogContextJson;
     }
 
     /**
@@ -158,6 +170,7 @@ public class GetAssistantCapabilityRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetAssistantCapabilityRequest, Builder> {
         private String accountId; 
+        private String aiLogContextJson; 
         private String assistantId; 
         private ExtLoginUser extLoginUser; 
         private java.util.List<Messages> messages; 
@@ -175,6 +188,7 @@ public class GetAssistantCapabilityRequest extends Request {
         private Builder(GetAssistantCapabilityRequest request) {
             super(request);
             this.accountId = request.accountId;
+            this.aiLogContextJson = request.aiLogContextJson;
             this.assistantId = request.assistantId;
             this.extLoginUser = request.extLoginUser;
             this.messages = request.messages;
@@ -192,6 +206,15 @@ public class GetAssistantCapabilityRequest extends Request {
         public Builder accountId(String accountId) {
             this.putHeaderParameter("accountId", accountId);
             this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * aiLogContextJson.
+         */
+        public Builder aiLogContextJson(String aiLogContextJson) {
+            this.putHeaderParameter("aiLogContextJson", aiLogContextJson);
+            this.aiLogContextJson = aiLogContextJson;
             return this;
         }
 

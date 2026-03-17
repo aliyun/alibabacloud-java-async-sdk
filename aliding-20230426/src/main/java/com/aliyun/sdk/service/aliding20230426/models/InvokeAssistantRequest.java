@@ -22,12 +22,19 @@ public class InvokeAssistantRequest extends Request {
     private String accountId;
 
     @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("aiLogContextJson")
+    private String aiLogContextJson;
+
+    @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("alidingSsoTicket")
     private String alidingSsoTicket;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("allowStructViewContent")
+    private Boolean allowStructViewContent;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("assistantId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String assistantId;
 
     @com.aliyun.core.annotation.Body
@@ -52,12 +59,20 @@ public class InvokeAssistantRequest extends Request {
     private String sessionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceIdOfAssistantId")
+    private String sourceIdOfAssistantId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceIdOfOriginalAssistantId")
     private String sourceIdOfOriginalAssistantId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceTypeOfAssistantId")
+    private Integer sourceTypeOfAssistantId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceTypeOfOriginalAssistantId")
-    private String sourceTypeOfOriginalAssistantId;
+    private Integer sourceTypeOfOriginalAssistantId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("stream")
@@ -66,14 +81,18 @@ public class InvokeAssistantRequest extends Request {
     private InvokeAssistantRequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
+        this.aiLogContextJson = builder.aiLogContextJson;
         this.alidingSsoTicket = builder.alidingSsoTicket;
+        this.allowStructViewContent = builder.allowStructViewContent;
         this.assistantId = builder.assistantId;
         this.clientEnum = builder.clientEnum;
         this.extLoginUser = builder.extLoginUser;
         this.messages = builder.messages;
         this.originalAssistantId = builder.originalAssistantId;
         this.sessionId = builder.sessionId;
+        this.sourceIdOfAssistantId = builder.sourceIdOfAssistantId;
         this.sourceIdOfOriginalAssistantId = builder.sourceIdOfOriginalAssistantId;
+        this.sourceTypeOfAssistantId = builder.sourceTypeOfAssistantId;
         this.sourceTypeOfOriginalAssistantId = builder.sourceTypeOfOriginalAssistantId;
         this.stream = builder.stream;
     }
@@ -99,10 +118,24 @@ public class InvokeAssistantRequest extends Request {
     }
 
     /**
+     * @return aiLogContextJson
+     */
+    public String getAiLogContextJson() {
+        return this.aiLogContextJson;
+    }
+
+    /**
      * @return alidingSsoTicket
      */
     public String getAlidingSsoTicket() {
         return this.alidingSsoTicket;
+    }
+
+    /**
+     * @return allowStructViewContent
+     */
+    public Boolean getAllowStructViewContent() {
+        return this.allowStructViewContent;
     }
 
     /**
@@ -148,6 +181,13 @@ public class InvokeAssistantRequest extends Request {
     }
 
     /**
+     * @return sourceIdOfAssistantId
+     */
+    public String getSourceIdOfAssistantId() {
+        return this.sourceIdOfAssistantId;
+    }
+
+    /**
      * @return sourceIdOfOriginalAssistantId
      */
     public String getSourceIdOfOriginalAssistantId() {
@@ -155,9 +195,16 @@ public class InvokeAssistantRequest extends Request {
     }
 
     /**
+     * @return sourceTypeOfAssistantId
+     */
+    public Integer getSourceTypeOfAssistantId() {
+        return this.sourceTypeOfAssistantId;
+    }
+
+    /**
      * @return sourceTypeOfOriginalAssistantId
      */
-    public String getSourceTypeOfOriginalAssistantId() {
+    public Integer getSourceTypeOfOriginalAssistantId() {
         return this.sourceTypeOfOriginalAssistantId;
     }
 
@@ -170,15 +217,19 @@ public class InvokeAssistantRequest extends Request {
 
     public static final class Builder extends Request.Builder<InvokeAssistantRequest, Builder> {
         private String accountId; 
+        private String aiLogContextJson; 
         private String alidingSsoTicket; 
+        private Boolean allowStructViewContent; 
         private String assistantId; 
         private String clientEnum; 
         private ExtLoginUser extLoginUser; 
         private java.util.List<Messages> messages; 
         private String originalAssistantId; 
         private String sessionId; 
+        private String sourceIdOfAssistantId; 
         private String sourceIdOfOriginalAssistantId; 
-        private String sourceTypeOfOriginalAssistantId; 
+        private Integer sourceTypeOfAssistantId; 
+        private Integer sourceTypeOfOriginalAssistantId; 
         private Boolean stream; 
 
         private Builder() {
@@ -188,14 +239,18 @@ public class InvokeAssistantRequest extends Request {
         private Builder(InvokeAssistantRequest request) {
             super(request);
             this.accountId = request.accountId;
+            this.aiLogContextJson = request.aiLogContextJson;
             this.alidingSsoTicket = request.alidingSsoTicket;
+            this.allowStructViewContent = request.allowStructViewContent;
             this.assistantId = request.assistantId;
             this.clientEnum = request.clientEnum;
             this.extLoginUser = request.extLoginUser;
             this.messages = request.messages;
             this.originalAssistantId = request.originalAssistantId;
             this.sessionId = request.sessionId;
+            this.sourceIdOfAssistantId = request.sourceIdOfAssistantId;
             this.sourceIdOfOriginalAssistantId = request.sourceIdOfOriginalAssistantId;
+            this.sourceTypeOfAssistantId = request.sourceTypeOfAssistantId;
             this.sourceTypeOfOriginalAssistantId = request.sourceTypeOfOriginalAssistantId;
             this.stream = request.stream;
         } 
@@ -210,6 +265,15 @@ public class InvokeAssistantRequest extends Request {
         }
 
         /**
+         * aiLogContextJson.
+         */
+        public Builder aiLogContextJson(String aiLogContextJson) {
+            this.putHeaderParameter("aiLogContextJson", aiLogContextJson);
+            this.aiLogContextJson = aiLogContextJson;
+            return this;
+        }
+
+        /**
          * alidingSsoTicket.
          */
         public Builder alidingSsoTicket(String alidingSsoTicket) {
@@ -219,10 +283,16 @@ public class InvokeAssistantRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>assistantId1</p>
+         * allowStructViewContent.
+         */
+        public Builder allowStructViewContent(Boolean allowStructViewContent) {
+            this.putBodyParameter("allowStructViewContent", allowStructViewContent);
+            this.allowStructViewContent = allowStructViewContent;
+            return this;
+        }
+
+        /**
+         * assistantId.
          */
         public Builder assistantId(String assistantId) {
             this.putBodyParameter("assistantId", assistantId);
@@ -276,6 +346,15 @@ public class InvokeAssistantRequest extends Request {
         }
 
         /**
+         * sourceIdOfAssistantId.
+         */
+        public Builder sourceIdOfAssistantId(String sourceIdOfAssistantId) {
+            this.putBodyParameter("sourceIdOfAssistantId", sourceIdOfAssistantId);
+            this.sourceIdOfAssistantId = sourceIdOfAssistantId;
+            return this;
+        }
+
+        /**
          * sourceIdOfOriginalAssistantId.
          */
         public Builder sourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
@@ -285,9 +364,18 @@ public class InvokeAssistantRequest extends Request {
         }
 
         /**
+         * sourceTypeOfAssistantId.
+         */
+        public Builder sourceTypeOfAssistantId(Integer sourceTypeOfAssistantId) {
+            this.putBodyParameter("sourceTypeOfAssistantId", sourceTypeOfAssistantId);
+            this.sourceTypeOfAssistantId = sourceTypeOfAssistantId;
+            return this;
+        }
+
+        /**
          * sourceTypeOfOriginalAssistantId.
          */
-        public Builder sourceTypeOfOriginalAssistantId(String sourceTypeOfOriginalAssistantId) {
+        public Builder sourceTypeOfOriginalAssistantId(Integer sourceTypeOfOriginalAssistantId) {
             this.putBodyParameter("sourceTypeOfOriginalAssistantId", sourceTypeOfOriginalAssistantId);
             this.sourceTypeOfOriginalAssistantId = sourceTypeOfOriginalAssistantId;
             return this;

@@ -23,7 +23,6 @@ public class CreateThreadRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("assistantId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String assistantId;
 
     @com.aliyun.core.annotation.Body
@@ -39,8 +38,16 @@ public class CreateThreadRequest extends Request {
     private String originalAssistantId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceIdOfAssistantId")
+    private String sourceIdOfAssistantId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceIdOfOriginalAssistantId")
     private String sourceIdOfOriginalAssistantId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceTypeOfAssistantId")
+    private Integer sourceTypeOfAssistantId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceTypeOfOriginalAssistantId")
@@ -53,7 +60,9 @@ public class CreateThreadRequest extends Request {
         this.clientEnum = builder.clientEnum;
         this.extLoginUser = builder.extLoginUser;
         this.originalAssistantId = builder.originalAssistantId;
+        this.sourceIdOfAssistantId = builder.sourceIdOfAssistantId;
         this.sourceIdOfOriginalAssistantId = builder.sourceIdOfOriginalAssistantId;
+        this.sourceTypeOfAssistantId = builder.sourceTypeOfAssistantId;
         this.sourceTypeOfOriginalAssistantId = builder.sourceTypeOfOriginalAssistantId;
     }
 
@@ -106,10 +115,24 @@ public class CreateThreadRequest extends Request {
     }
 
     /**
+     * @return sourceIdOfAssistantId
+     */
+    public String getSourceIdOfAssistantId() {
+        return this.sourceIdOfAssistantId;
+    }
+
+    /**
      * @return sourceIdOfOriginalAssistantId
      */
     public String getSourceIdOfOriginalAssistantId() {
         return this.sourceIdOfOriginalAssistantId;
+    }
+
+    /**
+     * @return sourceTypeOfAssistantId
+     */
+    public Integer getSourceTypeOfAssistantId() {
+        return this.sourceTypeOfAssistantId;
     }
 
     /**
@@ -125,7 +148,9 @@ public class CreateThreadRequest extends Request {
         private String clientEnum; 
         private ExtLoginUser extLoginUser; 
         private String originalAssistantId; 
+        private String sourceIdOfAssistantId; 
         private String sourceIdOfOriginalAssistantId; 
+        private Integer sourceTypeOfAssistantId; 
         private Integer sourceTypeOfOriginalAssistantId; 
 
         private Builder() {
@@ -139,7 +164,9 @@ public class CreateThreadRequest extends Request {
             this.clientEnum = request.clientEnum;
             this.extLoginUser = request.extLoginUser;
             this.originalAssistantId = request.originalAssistantId;
+            this.sourceIdOfAssistantId = request.sourceIdOfAssistantId;
             this.sourceIdOfOriginalAssistantId = request.sourceIdOfOriginalAssistantId;
+            this.sourceTypeOfAssistantId = request.sourceTypeOfAssistantId;
             this.sourceTypeOfOriginalAssistantId = request.sourceTypeOfOriginalAssistantId;
         } 
 
@@ -153,10 +180,7 @@ public class CreateThreadRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>assistantId1</p>
+         * assistantId.
          */
         public Builder assistantId(String assistantId) {
             this.putBodyParameter("assistantId", assistantId);
@@ -192,11 +216,29 @@ public class CreateThreadRequest extends Request {
         }
 
         /**
+         * sourceIdOfAssistantId.
+         */
+        public Builder sourceIdOfAssistantId(String sourceIdOfAssistantId) {
+            this.putBodyParameter("sourceIdOfAssistantId", sourceIdOfAssistantId);
+            this.sourceIdOfAssistantId = sourceIdOfAssistantId;
+            return this;
+        }
+
+        /**
          * sourceIdOfOriginalAssistantId.
          */
         public Builder sourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
             this.putBodyParameter("sourceIdOfOriginalAssistantId", sourceIdOfOriginalAssistantId);
             this.sourceIdOfOriginalAssistantId = sourceIdOfOriginalAssistantId;
+            return this;
+        }
+
+        /**
+         * sourceTypeOfAssistantId.
+         */
+        public Builder sourceTypeOfAssistantId(Integer sourceTypeOfAssistantId) {
+            this.putBodyParameter("sourceTypeOfAssistantId", sourceTypeOfAssistantId);
+            this.sourceTypeOfAssistantId = sourceTypeOfAssistantId;
             return this;
         }
 

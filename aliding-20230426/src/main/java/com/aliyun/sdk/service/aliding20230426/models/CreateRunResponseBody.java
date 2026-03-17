@@ -1984,6 +1984,102 @@ public class CreateRunResponseBody extends TeaModel {
      *
      * <p>CreateRunResponseBody</p>
      */
+    public static class InfoPart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cateIdList")
+        private java.util.List<String> cateIdList;
+
+        @com.aliyun.core.annotation.NameInMap("needFeedback")
+        private Boolean needFeedback;
+
+        @com.aliyun.core.annotation.NameInMap("origin")
+        private String origin;
+
+        private InfoPart(Builder builder) {
+            this.cateIdList = builder.cateIdList;
+            this.needFeedback = builder.needFeedback;
+            this.origin = builder.origin;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InfoPart create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cateIdList
+         */
+        public java.util.List<String> getCateIdList() {
+            return this.cateIdList;
+        }
+
+        /**
+         * @return needFeedback
+         */
+        public Boolean getNeedFeedback() {
+            return this.needFeedback;
+        }
+
+        /**
+         * @return origin
+         */
+        public String getOrigin() {
+            return this.origin;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> cateIdList; 
+            private Boolean needFeedback; 
+            private String origin; 
+
+            private Builder() {
+            } 
+
+            private Builder(InfoPart model) {
+                this.cateIdList = model.cateIdList;
+                this.needFeedback = model.needFeedback;
+                this.origin = model.origin;
+            } 
+
+            /**
+             * cateIdList.
+             */
+            public Builder cateIdList(java.util.List<String> cateIdList) {
+                this.cateIdList = cateIdList;
+                return this;
+            }
+
+            /**
+             * needFeedback.
+             */
+            public Builder needFeedback(Boolean needFeedback) {
+                this.needFeedback = needFeedback;
+                return this;
+            }
+
+            /**
+             * origin.
+             */
+            public Builder origin(String origin) {
+                this.origin = origin;
+                return this;
+            }
+
+            public InfoPart build() {
+                return new InfoPart(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRunResponseBody</p>
+     */
     public static class PartsReasonPart extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("reason")
         private String reason;
@@ -2486,6 +2582,9 @@ public class CreateRunResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("finish")
         private Boolean finish;
 
+        @com.aliyun.core.annotation.NameInMap("infoPart")
+        private InfoPart infoPart;
+
         @com.aliyun.core.annotation.NameInMap("partDesc")
         private String partDesc;
 
@@ -2512,6 +2611,7 @@ public class CreateRunResponseBody extends TeaModel {
             this.append = builder.append;
             this.dataPart = builder.dataPart;
             this.finish = builder.finish;
+            this.infoPart = builder.infoPart;
             this.partDesc = builder.partDesc;
             this.partId = builder.partId;
             this.reasonPart = builder.reasonPart;
@@ -2548,6 +2648,13 @@ public class CreateRunResponseBody extends TeaModel {
          */
         public Boolean getFinish() {
             return this.finish;
+        }
+
+        /**
+         * @return infoPart
+         */
+        public InfoPart getInfoPart() {
+            return this.infoPart;
         }
 
         /**
@@ -2603,6 +2710,7 @@ public class CreateRunResponseBody extends TeaModel {
             private Boolean append; 
             private PartsDataPart dataPart; 
             private Boolean finish; 
+            private InfoPart infoPart; 
             private String partDesc; 
             private String partId; 
             private PartsReasonPart reasonPart; 
@@ -2618,6 +2726,7 @@ public class CreateRunResponseBody extends TeaModel {
                 this.append = model.append;
                 this.dataPart = model.dataPart;
                 this.finish = model.finish;
+                this.infoPart = model.infoPart;
                 this.partDesc = model.partDesc;
                 this.partId = model.partId;
                 this.reasonPart = model.reasonPart;
@@ -2648,6 +2757,14 @@ public class CreateRunResponseBody extends TeaModel {
              */
             public Builder finish(Boolean finish) {
                 this.finish = finish;
+                return this;
+            }
+
+            /**
+             * infoPart.
+             */
+            public Builder infoPart(InfoPart infoPart) {
+                this.infoPart = infoPart;
                 return this;
             }
 

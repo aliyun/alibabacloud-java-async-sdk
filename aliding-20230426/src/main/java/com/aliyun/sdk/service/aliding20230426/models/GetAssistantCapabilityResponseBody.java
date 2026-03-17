@@ -29,11 +29,15 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("thread")
+    private Thread thread;
+
     private GetAssistantCapabilityResponseBody(Builder builder) {
         this.assistantDescription = builder.assistantDescription;
         this.canHandle = builder.canHandle;
         this.capabilityAssessment = builder.capabilityAssessment;
         this.requestId = builder.requestId;
+        this.thread = builder.thread;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return thread
+     */
+    public Thread getThread() {
+        return this.thread;
+    }
+
     public static final class Builder {
         private String assistantDescription; 
         private Boolean canHandle; 
         private CapabilityAssessment capabilityAssessment; 
         private String requestId; 
+        private Thread thread; 
 
         private Builder() {
         } 
@@ -90,6 +102,7 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
             this.canHandle = model.canHandle;
             this.capabilityAssessment = model.capabilityAssessment;
             this.requestId = model.requestId;
+            this.thread = model.thread;
         } 
 
         /**
@@ -121,6 +134,14 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * thread.
+         */
+        public Builder thread(Thread thread) {
+            this.thread = thread;
             return this;
         }
 
@@ -296,6 +317,102 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
 
             public CapabilityAssessment build() {
                 return new CapabilityAssessment(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAssistantCapabilityResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAssistantCapabilityResponseBody</p>
+     */
+    public static class Thread extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("createAt")
+        private Long createAt;
+
+        @com.aliyun.core.annotation.NameInMap("id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        private Thread(Builder builder) {
+            this.createAt = builder.createAt;
+            this.id = builder.id;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Thread create() {
+            return builder().build();
+        }
+
+        /**
+         * @return createAt
+         */
+        public Long getCreateAt() {
+            return this.createAt;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private Long createAt; 
+            private String id; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Thread model) {
+                this.createAt = model.createAt;
+                this.id = model.id;
+                this.status = model.status;
+            } 
+
+            /**
+             * createAt.
+             */
+            public Builder createAt(Long createAt) {
+                this.createAt = createAt;
+                return this;
+            }
+
+            /**
+             * id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public Thread build() {
+                return new Thread(this);
             } 
 
         } 
