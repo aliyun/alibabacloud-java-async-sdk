@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyCustomAgentRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallbackConfig")
+    private CallbackConfig callbackConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomAgentId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String customAgentId;
@@ -72,6 +76,7 @@ public class ModifyCustomAgentRequest extends Request {
 
     private ModifyCustomAgentRequest(Builder builder) {
         super(builder);
+        this.callbackConfig = builder.callbackConfig;
         this.customAgentId = builder.customAgentId;
         this.DMSUnit = builder.DMSUnit;
         this.dataJson = builder.dataJson;
@@ -98,6 +103,13 @@ public class ModifyCustomAgentRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return callbackConfig
+     */
+    public CallbackConfig getCallbackConfig() {
+        return this.callbackConfig;
     }
 
     /**
@@ -192,6 +204,7 @@ public class ModifyCustomAgentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyCustomAgentRequest, Builder> {
+        private CallbackConfig callbackConfig; 
         private String customAgentId; 
         private String DMSUnit; 
         private String dataJson; 
@@ -212,6 +225,7 @@ public class ModifyCustomAgentRequest extends Request {
 
         private Builder(ModifyCustomAgentRequest request) {
             super(request);
+            this.callbackConfig = request.callbackConfig;
             this.customAgentId = request.customAgentId;
             this.DMSUnit = request.DMSUnit;
             this.dataJson = request.dataJson;
@@ -226,6 +240,16 @@ public class ModifyCustomAgentRequest extends Request {
             this.webReportConfig = request.webReportConfig;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * CallbackConfig.
+         */
+        public Builder callbackConfig(CallbackConfig callbackConfig) {
+            String callbackConfigShrink = shrink(callbackConfig, "CallbackConfig", "json");
+            this.putQueryParameter("CallbackConfig", callbackConfigShrink);
+            this.callbackConfig = callbackConfig;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -357,6 +381,144 @@ public class ModifyCustomAgentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCustomAgentRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCustomAgentRequest</p>
+     */
+    public static class CallbackConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CallbackArgs")
+        private String callbackArgs;
+
+        @com.aliyun.core.annotation.NameInMap("CallbackPrompt")
+        private String callbackPrompt;
+
+        @com.aliyun.core.annotation.NameInMap("CallbackTime")
+        private Integer callbackTime;
+
+        @com.aliyun.core.annotation.NameInMap("ToolId")
+        private String toolId;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private CallbackConfig(Builder builder) {
+            this.callbackArgs = builder.callbackArgs;
+            this.callbackPrompt = builder.callbackPrompt;
+            this.callbackTime = builder.callbackTime;
+            this.toolId = builder.toolId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CallbackConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return callbackArgs
+         */
+        public String getCallbackArgs() {
+            return this.callbackArgs;
+        }
+
+        /**
+         * @return callbackPrompt
+         */
+        public String getCallbackPrompt() {
+            return this.callbackPrompt;
+        }
+
+        /**
+         * @return callbackTime
+         */
+        public Integer getCallbackTime() {
+            return this.callbackTime;
+        }
+
+        /**
+         * @return toolId
+         */
+        public String getToolId() {
+            return this.toolId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String callbackArgs; 
+            private String callbackPrompt; 
+            private Integer callbackTime; 
+            private String toolId; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallbackConfig model) {
+                this.callbackArgs = model.callbackArgs;
+                this.callbackPrompt = model.callbackPrompt;
+                this.callbackTime = model.callbackTime;
+                this.toolId = model.toolId;
+                this.type = model.type;
+            } 
+
+            /**
+             * CallbackArgs.
+             */
+            public Builder callbackArgs(String callbackArgs) {
+                this.callbackArgs = callbackArgs;
+                return this;
+            }
+
+            /**
+             * CallbackPrompt.
+             */
+            public Builder callbackPrompt(String callbackPrompt) {
+                this.callbackPrompt = callbackPrompt;
+                return this;
+            }
+
+            /**
+             * CallbackTime.
+             */
+            public Builder callbackTime(Integer callbackTime) {
+                this.callbackTime = callbackTime;
+                return this;
+            }
+
+            /**
+             * ToolId.
+             */
+            public Builder toolId(String toolId) {
+                this.toolId = toolId;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public CallbackConfig build() {
+                return new CallbackConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ModifyCustomAgentRequest} extends {@link TeaModel}
