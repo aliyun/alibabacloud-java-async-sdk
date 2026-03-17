@@ -1647,6 +1647,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PauseInstanceResponse> pauseInstance(PauseInstanceRequest request);
 
     /**
+     * @param request the request parameters of PauseSupabaseProject  PauseSupabaseProjectRequest
+     * @return PauseSupabaseProjectResponse
+     */
+    CompletableFuture<PauseSupabaseProjectResponse> pauseSupabaseProject(PauseSupabaseProjectRequest request);
+
+    /**
      * @param request the request parameters of QueryCollectionData  QueryCollectionDataRequest
      * @return QueryCollectionDataResponse
      */
@@ -1728,6 +1734,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResumeInstanceResponse
      */
     CompletableFuture<ResumeInstanceResponse> resumeInstance(ResumeInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ResumeSupabaseProject  ResumeSupabaseProjectRequest
+     * @return ResumeSupabaseProjectResponse
+     */
+    CompletableFuture<ResumeSupabaseProjectResponse> resumeSupabaseProject(ResumeSupabaseProjectRequest request);
 
     /**
      * <b>description</b> :
