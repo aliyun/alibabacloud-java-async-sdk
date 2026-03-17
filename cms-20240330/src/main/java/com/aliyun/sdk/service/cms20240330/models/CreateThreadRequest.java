@@ -23,6 +23,10 @@ public class CreateThreadRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("attributes")
+    private java.util.Map<String, String> attributes;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
@@ -33,6 +37,7 @@ public class CreateThreadRequest extends Request {
     private CreateThreadRequest(Builder builder) {
         super(builder);
         this.name = builder.name;
+        this.attributes = builder.attributes;
         this.title = builder.title;
         this.variables = builder.variables;
     }
@@ -58,6 +63,13 @@ public class CreateThreadRequest extends Request {
     }
 
     /**
+     * @return attributes
+     */
+    public java.util.Map<String, String> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -73,6 +85,7 @@ public class CreateThreadRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateThreadRequest, Builder> {
         private String name; 
+        private java.util.Map<String, String> attributes; 
         private String title; 
         private Variables variables; 
 
@@ -83,6 +96,7 @@ public class CreateThreadRequest extends Request {
         private Builder(CreateThreadRequest request) {
             super(request);
             this.name = request.name;
+            this.attributes = request.attributes;
             this.title = request.title;
             this.variables = request.variables;
         } 
@@ -96,6 +110,15 @@ public class CreateThreadRequest extends Request {
         public Builder name(String name) {
             this.putPathParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * attributes.
+         */
+        public Builder attributes(java.util.Map<String, String> attributes) {
+            this.putBodyParameter("attributes", attributes);
+            this.attributes = attributes;
             return this;
         }
 

@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetThreadResponseBody</p>
  */
 public class GetThreadResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("attributes")
+    private java.util.Map<String, String> attributes;
+
     @com.aliyun.core.annotation.NameInMap("createTime")
     private String createTime;
 
@@ -45,6 +48,7 @@ public class GetThreadResponseBody extends TeaModel {
     private Long version;
 
     private GetThreadResponseBody(Builder builder) {
+        this.attributes = builder.attributes;
         this.createTime = builder.createTime;
         this.digitalEmployeeName = builder.digitalEmployeeName;
         this.requestId = builder.requestId;
@@ -66,6 +70,13 @@ public class GetThreadResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return attributes
+     */
+    public java.util.Map<String, String> getAttributes() {
+        return this.attributes;
     }
 
     /**
@@ -132,6 +143,7 @@ public class GetThreadResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.Map<String, String> attributes; 
         private String createTime; 
         private String digitalEmployeeName; 
         private String requestId; 
@@ -146,6 +158,7 @@ public class GetThreadResponseBody extends TeaModel {
         } 
 
         private Builder(GetThreadResponseBody model) {
+            this.attributes = model.attributes;
             this.createTime = model.createTime;
             this.digitalEmployeeName = model.digitalEmployeeName;
             this.requestId = model.requestId;
@@ -156,6 +169,14 @@ public class GetThreadResponseBody extends TeaModel {
             this.variables = model.variables;
             this.version = model.version;
         } 
+
+        /**
+         * attributes.
+         */
+        public Builder attributes(java.util.Map<String, String> attributes) {
+            this.attributes = attributes;
+            return this;
+        }
 
         /**
          * createTime.

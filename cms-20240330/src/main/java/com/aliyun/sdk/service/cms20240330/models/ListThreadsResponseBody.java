@@ -260,6 +260,9 @@ public class ListThreadsResponseBody extends TeaModel {
      * <p>ListThreadsResponseBody</p>
      */
     public static class Threads extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("attributes")
+        private java.util.Map<String, String> attributes;
+
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
@@ -285,6 +288,7 @@ public class ListThreadsResponseBody extends TeaModel {
         private Long version;
 
         private Threads(Builder builder) {
+            this.attributes = builder.attributes;
             this.createTime = builder.createTime;
             this.digitalEmployeeName = builder.digitalEmployeeName;
             this.status = builder.status;
@@ -301,6 +305,13 @@ public class ListThreadsResponseBody extends TeaModel {
 
         public static Threads create() {
             return builder().build();
+        }
+
+        /**
+         * @return attributes
+         */
+        public java.util.Map<String, String> getAttributes() {
+            return this.attributes;
         }
 
         /**
@@ -360,6 +371,7 @@ public class ListThreadsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map<String, String> attributes; 
             private String createTime; 
             private String digitalEmployeeName; 
             private String status; 
@@ -373,6 +385,7 @@ public class ListThreadsResponseBody extends TeaModel {
             } 
 
             private Builder(Threads model) {
+                this.attributes = model.attributes;
                 this.createTime = model.createTime;
                 this.digitalEmployeeName = model.digitalEmployeeName;
                 this.status = model.status;
@@ -382,6 +395,14 @@ public class ListThreadsResponseBody extends TeaModel {
                 this.variables = model.variables;
                 this.version = model.version;
             } 
+
+            /**
+             * attributes.
+             */
+            public Builder attributes(java.util.Map<String, String> attributes) {
+                this.attributes = attributes;
+                return this;
+            }
 
             /**
              * createTime.

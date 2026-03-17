@@ -28,6 +28,10 @@ public class UpdateThreadRequest extends Request {
     private String threadId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("attributes")
+    private java.util.Map<String, String> attributes;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
@@ -39,6 +43,7 @@ public class UpdateThreadRequest extends Request {
         super(builder);
         this.name = builder.name;
         this.threadId = builder.threadId;
+        this.attributes = builder.attributes;
         this.status = builder.status;
         this.title = builder.title;
     }
@@ -71,6 +76,13 @@ public class UpdateThreadRequest extends Request {
     }
 
     /**
+     * @return attributes
+     */
+    public java.util.Map<String, String> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -87,6 +99,7 @@ public class UpdateThreadRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateThreadRequest, Builder> {
         private String name; 
         private String threadId; 
+        private java.util.Map<String, String> attributes; 
         private String status; 
         private String title; 
 
@@ -98,6 +111,7 @@ public class UpdateThreadRequest extends Request {
             super(request);
             this.name = request.name;
             this.threadId = request.threadId;
+            this.attributes = request.attributes;
             this.status = request.status;
             this.title = request.title;
         } 
@@ -123,6 +137,15 @@ public class UpdateThreadRequest extends Request {
         public Builder threadId(String threadId) {
             this.putPathParameter("threadId", threadId);
             this.threadId = threadId;
+            return this;
+        }
+
+        /**
+         * attributes.
+         */
+        public Builder attributes(java.util.Map<String, String> attributes) {
+            this.putBodyParameter("attributes", attributes);
+            this.attributes = attributes;
             return this;
         }
 
