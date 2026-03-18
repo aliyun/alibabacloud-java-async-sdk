@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddBackupPolicy  AddBackupPolicyRequest
+     * @return AddBackupPolicyResponse
+     */
+    CompletableFuture<AddBackupPolicyResponse> addBackupPolicy(AddBackupPolicyRequest request);
+
+    /**
      * @param request the request parameters of AddGateway  AddGatewayRequest
      * @return AddGatewayResponse
      */
@@ -32,10 +38,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
+     * @param request the request parameters of CheckInventory  CheckInventoryRequest
+     * @return CheckInventoryResponse
+     */
+    CompletableFuture<CheckInventoryResponse> checkInventory(CheckInventoryRequest request);
+
+    /**
+     * @param request the request parameters of CreateAgentResource  CreateAgentResourceRequest
+     * @return CreateAgentResourceResponse
+     */
+    CompletableFuture<CreateAgentResourceResponse> createAgentResource(CreateAgentResourceRequest request);
+
+    /**
      * @param request the request parameters of CreateInstanceV1  CreateInstanceV1Request
      * @return CreateInstanceV1Response
      */
     CompletableFuture<CreateInstanceV1Response> createInstanceV1(CreateInstanceV1Request request);
+
+    /**
+     * @param request the request parameters of CreateScalingRule  CreateScalingRuleRequest
+     * @return CreateScalingRuleResponse
+     */
+    CompletableFuture<CreateScalingRuleResponse> createScalingRule(CreateScalingRuleRequest request);
 
     /**
      * @param request the request parameters of CreateServiceLinkedRole  CreateServiceLinkedRoleRequest
@@ -44,10 +68,52 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
 
     /**
+     * @param request the request parameters of DeleteBackup  DeleteBackupRequest
+     * @return DeleteBackupResponse
+     */
+    CompletableFuture<DeleteBackupResponse> deleteBackup(DeleteBackupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteBackupPolicy  DeleteBackupPolicyRequest
+     * @return DeleteBackupPolicyResponse
+     */
+    CompletableFuture<DeleteBackupPolicyResponse> deleteBackupPolicy(DeleteBackupPolicyRequest request);
+
+    /**
      * @param request the request parameters of DeleteGateway  DeleteGatewayRequest
      * @return DeleteGatewayResponse
      */
     CompletableFuture<DeleteGatewayResponse> deleteGateway(DeleteGatewayRequest request);
+
+    /**
+     * @param request the request parameters of DeleteInnerIpWhitelistGroup  DeleteInnerIpWhitelistGroupRequest
+     * @return DeleteInnerIpWhitelistGroupResponse
+     */
+    CompletableFuture<DeleteInnerIpWhitelistGroupResponse> deleteInnerIpWhitelistGroup(DeleteInnerIpWhitelistGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteScalingRule  DeleteScalingRuleRequest
+     * @return DeleteScalingRuleResponse
+     */
+    CompletableFuture<DeleteScalingRuleResponse> deleteScalingRule(DeleteScalingRuleRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAvailableZones  DescribeAvailableZonesRequest
+     * @return DescribeAvailableZonesResponse
+     */
+    CompletableFuture<DescribeAvailableZonesResponse> describeAvailableZones(DescribeAvailableZonesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBackupPolicies  DescribeBackupPoliciesRequest
+     * @return DescribeBackupPoliciesResponse
+     */
+    CompletableFuture<DescribeBackupPoliciesResponse> describeBackupPolicies(DescribeBackupPoliciesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
+     * @return DescribeBackupsResponse
+     */
+    CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request);
 
     /**
      * @param request the request parameters of DescribeConfigHistory  DescribeConfigHistoryRequest
@@ -56,10 +122,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeConfigHistoryResponse> describeConfigHistory(DescribeConfigHistoryRequest request);
 
     /**
+     * @param request the request parameters of DescribeEventNames  DescribeEventNamesRequest
+     * @return DescribeEventNamesResponse
+     */
+    CompletableFuture<DescribeEventNamesResponse> describeEventNames(DescribeEventNamesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInnerIpWhitelistGroups  DescribeInnerIpWhitelistGroupsRequest
+     * @return DescribeInnerIpWhitelistGroupsResponse
+     */
+    CompletableFuture<DescribeInnerIpWhitelistGroupsResponse> describeInnerIpWhitelistGroups(DescribeInnerIpWhitelistGroupsRequest request);
+
+    /**
      * @param request the request parameters of DescribeInstanceConfigs  DescribeInstanceConfigsRequest
      * @return DescribeInstanceConfigsResponse
      */
     CompletableFuture<DescribeInstanceConfigsResponse> describeInstanceConfigs(DescribeInstanceConfigsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInstanceDiagnosisResult  DescribeInstanceDiagnosisResultRequest
+     * @return DescribeInstanceDiagnosisResultResponse
+     */
+    CompletableFuture<DescribeInstanceDiagnosisResultResponse> describeInstanceDiagnosisResult(DescribeInstanceDiagnosisResultRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInstanceMetaToken  DescribeInstanceMetaTokenRequest
+     * @return DescribeInstanceMetaTokenResponse
+     */
+    CompletableFuture<DescribeInstanceMetaTokenResponse> describeInstanceMetaToken(DescribeInstanceMetaTokenRequest request);
 
     /**
      * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
@@ -74,10 +164,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeNodeGroupsResponse> describeNodeGroups(DescribeNodeGroupsRequest request);
 
     /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
+    CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeResourceConstraints  DescribeResourceConstraintsRequest
+     * @return DescribeResourceConstraintsResponse
+     */
+    CompletableFuture<DescribeResourceConstraintsResponse> describeResourceConstraints(DescribeResourceConstraintsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSystemTimezone  DescribeSystemTimezoneRequest
+     * @return DescribeSystemTimezoneResponse
+     */
+    CompletableFuture<DescribeSystemTimezoneResponse> describeSystemTimezone(DescribeSystemTimezoneRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTimeTriggerScalingRules  DescribeTimeTriggerScalingRulesRequest
+     * @return DescribeTimeTriggerScalingRulesResponse
+     */
+    CompletableFuture<DescribeTimeTriggerScalingRulesResponse> describeTimeTriggerScalingRules(DescribeTimeTriggerScalingRulesRequest request);
+
+    /**
      * @param request the request parameters of DisableSSLConnection  DisableSSLConnectionRequest
      * @return DisableSSLConnectionResponse
      */
     CompletableFuture<DisableSSLConnectionResponse> disableSSLConnection(DisableSSLConnectionRequest request);
+
+    /**
+     * @param request the request parameters of EnableInternalSlb  EnableInternalSlbRequest
+     * @return EnableInternalSlbResponse
+     */
+    CompletableFuture<EnableInternalSlbResponse> enableInternalSlb(EnableInternalSlbRequest request);
+
+    /**
+     * @param request the request parameters of EnableMultiAz  EnableMultiAzRequest
+     * @return EnableMultiAzResponse
+     */
+    CompletableFuture<EnableMultiAzResponse> enableMultiAz(EnableMultiAzRequest request);
 
     /**
      * @param request the request parameters of EnableSSLConnection  EnableSSLConnectionRequest
@@ -92,6 +218,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceFeatureGateResponse> getInstanceFeatureGate(GetInstanceFeatureGateRequest request);
 
     /**
+     * @param request the request parameters of GetNodeGroupFeatureGate  GetNodeGroupFeatureGateRequest
+     * @return GetNodeGroupFeatureGateResponse
+     */
+    CompletableFuture<GetNodeGroupFeatureGateResponse> getNodeGroupFeatureGate(GetNodeGroupFeatureGateRequest request);
+
+    /**
      * @param request the request parameters of IsolateLeader  IsolateLeaderRequest
      * @return IsolateLeaderResponse
      */
@@ -102,6 +234,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListGatewayResponse
      */
     CompletableFuture<ListGatewayResponse> listGateway(ListGatewayRequest request);
+
+    /**
+     * @param request the request parameters of ListOperationActivity  ListOperationActivityRequest
+     * @return ListOperationActivityResponse
+     */
+    CompletableFuture<ListOperationActivityResponse> listOperationActivity(ListOperationActivityRequest request);
+
+    /**
+     * @param request the request parameters of ListOperationHistory  ListOperationHistoryRequest
+     * @return ListOperationHistoryResponse
+     */
+    CompletableFuture<ListOperationHistoryResponse> listOperationHistory(ListOperationHistoryRequest request);
 
     /**
      * @param request the request parameters of ModifyChargeType  ModifyChargeTypeRequest
@@ -194,6 +338,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDiskTypeResponse> modifyDiskType(ModifyDiskTypeRequest request);
 
     /**
+     * @param request the request parameters of ModifyHostAlias  ModifyHostAliasRequest
+     * @return ModifyHostAliasResponse
+     */
+    CompletableFuture<ModifyHostAliasResponse> modifyHostAlias(ModifyHostAliasRequest request);
+
+    /**
      * @param request the request parameters of ModifyInstanceConfig  ModifyInstanceConfigRequest
      * @return ModifyInstanceConfigResponse
      */
@@ -204,6 +354,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyInstanceConfigPreCheckResponse
      */
     CompletableFuture<ModifyInstanceConfigPreCheckResponse> modifyInstanceConfigPreCheck(ModifyInstanceConfigPreCheckRequest request);
+
+    /**
+     * @param request the request parameters of ModifyMaintainableTime  ModifyMaintainableTimeRequest
+     * @return ModifyMaintainableTimeResponse
+     */
+    CompletableFuture<ModifyMaintainableTimeResponse> modifyMaintainableTime(ModifyMaintainableTimeRequest request);
 
     /**
      * <b>description</b> :
@@ -229,10 +385,124 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyNodeNumberPreCheckResponse> modifyNodeNumberPreCheck(ModifyNodeNumberPreCheckRequest request);
 
     /**
+     * @param request the request parameters of ModifyScalingRule  ModifyScalingRuleRequest
+     * @return ModifyScalingRuleResponse
+     */
+    CompletableFuture<ModifyScalingRuleResponse> modifyScalingRule(ModifyScalingRuleRequest request);
+
+    /**
+     * @param request the request parameters of ModifySpecType  ModifySpecTypeRequest
+     * @return ModifySpecTypeResponse
+     */
+    CompletableFuture<ModifySpecTypeResponse> modifySpecType(ModifySpecTypeRequest request);
+
+    /**
+     * @param request the request parameters of ModifySpecTypePreCheck  ModifySpecTypePreCheckRequest
+     * @return ModifySpecTypePreCheckResponse
+     */
+    CompletableFuture<ModifySpecTypePreCheckResponse> modifySpecTypePreCheck(ModifySpecTypePreCheckRequest request);
+
+    /**
+     * @param request the request parameters of ModifyUserPassword  ModifyUserPasswordRequest
+     * @return ModifyUserPasswordResponse
+     */
+    CompletableFuture<ModifyUserPasswordResponse> modifyUserPassword(ModifyUserPasswordRequest request);
+
+    /**
+     * @param request the request parameters of QueryEnableMultiAzPrice  QueryEnableMultiAzPriceRequest
+     * @return QueryEnableMultiAzPriceResponse
+     */
+    CompletableFuture<QueryEnableMultiAzPriceResponse> queryEnableMultiAzPrice(QueryEnableMultiAzPriceRequest request);
+
+    /**
+     * @param request the request parameters of QueryMinorVersion  QueryMinorVersionRequest
+     * @return QueryMinorVersionResponse
+     */
+    CompletableFuture<QueryMinorVersionResponse> queryMinorVersion(QueryMinorVersionRequest request);
+
+    /**
+     * @param request the request parameters of QueryModifyChargeTypePrice  QueryModifyChargeTypePriceRequest
+     * @return QueryModifyChargeTypePriceResponse
+     */
+    CompletableFuture<QueryModifyChargeTypePriceResponse> queryModifyChargeTypePrice(QueryModifyChargeTypePriceRequest request);
+
+    /**
+     * @param request the request parameters of QueryModifyCuPrice  QueryModifyCuPriceRequest
+     * @return QueryModifyCuPriceResponse
+     */
+    CompletableFuture<QueryModifyCuPriceResponse> queryModifyCuPrice(QueryModifyCuPriceRequest request);
+
+    /**
+     * @param request the request parameters of QueryModifyDiskNumberPrice  QueryModifyDiskNumberPriceRequest
+     * @return QueryModifyDiskNumberPriceResponse
+     */
+    CompletableFuture<QueryModifyDiskNumberPriceResponse> queryModifyDiskNumberPrice(QueryModifyDiskNumberPriceRequest request);
+
+    /**
+     * @param request the request parameters of QueryModifyDiskPerformanceLevelPrice  QueryModifyDiskPerformanceLevelPriceRequest
+     * @return QueryModifyDiskPerformanceLevelPriceResponse
+     */
+    CompletableFuture<QueryModifyDiskPerformanceLevelPriceResponse> queryModifyDiskPerformanceLevelPrice(QueryModifyDiskPerformanceLevelPriceRequest request);
+
+    /**
+     * @param request the request parameters of QueryModifyDiskSizePrice  QueryModifyDiskSizePriceRequest
+     * @return QueryModifyDiskSizePriceResponse
+     */
+    CompletableFuture<QueryModifyDiskSizePriceResponse> queryModifyDiskSizePrice(QueryModifyDiskSizePriceRequest request);
+
+    /**
+     * @param request the request parameters of QueryModifyDiskTypePrice  QueryModifyDiskTypePriceRequest
+     * @return QueryModifyDiskTypePriceResponse
+     */
+    CompletableFuture<QueryModifyDiskTypePriceResponse> queryModifyDiskTypePrice(QueryModifyDiskTypePriceRequest request);
+
+    /**
+     * @param request the request parameters of QueryModifyNodeNumberPrice  QueryModifyNodeNumberPriceRequest
+     * @return QueryModifyNodeNumberPriceResponse
+     */
+    CompletableFuture<QueryModifyNodeNumberPriceResponse> queryModifyNodeNumberPrice(QueryModifyNodeNumberPriceRequest request);
+
+    /**
+     * @param request the request parameters of QueryModifySpecTypePrice  QueryModifySpecTypePriceRequest
+     * @return QueryModifySpecTypePriceResponse
+     */
+    CompletableFuture<QueryModifySpecTypePriceResponse> queryModifySpecTypePrice(QueryModifySpecTypePriceRequest request);
+
+    /**
+     * @param request the request parameters of QueryPriceV1  QueryPriceV1Request
+     * @return QueryPriceV1Response
+     */
+    CompletableFuture<QueryPriceV1Response> queryPriceV1(QueryPriceV1Request request);
+
+    /**
+     * @param request the request parameters of QueryRefundPrice  QueryRefundPriceRequest
+     * @return QueryRefundPriceResponse
+     */
+    CompletableFuture<QueryRefundPriceResponse> queryRefundPrice(QueryRefundPriceRequest request);
+
+    /**
+     * @param request the request parameters of QueryRenewPrice  QueryRenewPriceRequest
+     * @return QueryRenewPriceResponse
+     */
+    CompletableFuture<QueryRenewPriceResponse> queryRenewPrice(QueryRenewPriceRequest request);
+
+    /**
+     * @param request the request parameters of QueryUnpaidOrder  QueryUnpaidOrderRequest
+     * @return QueryUnpaidOrderResponse
+     */
+    CompletableFuture<QueryUnpaidOrderResponse> queryUnpaidOrder(QueryUnpaidOrderRequest request);
+
+    /**
      * @param request the request parameters of QueryUpgradableVersions  QueryUpgradableVersionsRequest
      * @return QueryUpgradableVersionsResponse
      */
     CompletableFuture<QueryUpgradableVersionsResponse> queryUpgradableVersions(QueryUpgradableVersionsRequest request);
+
+    /**
+     * @param request the request parameters of RebootECS  RebootECSRequest
+     * @return RebootECSResponse
+     */
+    CompletableFuture<RebootECSResponse> rebootECS(RebootECSRequest request);
 
     /**
      * <b>description</b> :
@@ -244,6 +514,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ReleaseInstanceResponse
      */
     CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request);
+
+    /**
+     * @param request the request parameters of RenewInstance  RenewInstanceRequest
+     * @return RenewInstanceResponse
+     */
+    CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request);
 
     /**
      * <b>description</b> :
@@ -285,10 +561,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RollbackConfigModificationResponse> rollbackConfigModification(RollbackConfigModificationRequest request);
 
     /**
+     * @param request the request parameters of SwitchActiveStandbyZones  SwitchActiveStandbyZonesRequest
+     * @return SwitchActiveStandbyZonesResponse
+     */
+    CompletableFuture<SwitchActiveStandbyZonesResponse> switchActiveStandbyZones(SwitchActiveStandbyZonesRequest request);
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ToggleAutoMinorVersionUpgrade  ToggleAutoMinorVersionUpgradeRequest
+     * @return ToggleAutoMinorVersionUpgradeResponse
+     */
+    CompletableFuture<ToggleAutoMinorVersionUpgradeResponse> toggleAutoMinorVersionUpgrade(ToggleAutoMinorVersionUpgradeRequest request);
 
     /**
      * @param request the request parameters of TogglePublicSlb  TogglePublicSlbRequest
@@ -303,16 +591,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request);
 
     /**
+     * @param request the request parameters of UpdateBackup  UpdateBackupRequest
+     * @return UpdateBackupResponse
+     */
+    CompletableFuture<UpdateBackupResponse> updateBackup(UpdateBackupRequest request);
+
+    /**
+     * @param request the request parameters of UpdateBackupPolicy  UpdateBackupPolicyRequest
+     * @return UpdateBackupPolicyResponse
+     */
+    CompletableFuture<UpdateBackupPolicyResponse> updateBackupPolicy(UpdateBackupPolicyRequest request);
+
+    /**
      * @param request the request parameters of UpdateGateway  UpdateGatewayRequest
      * @return UpdateGatewayResponse
      */
     CompletableFuture<UpdateGatewayResponse> updateGateway(UpdateGatewayRequest request);
 
     /**
+     * @param request the request parameters of UpdateInnerIpWhitelistGroup  UpdateInnerIpWhitelistGroupRequest
+     * @return UpdateInnerIpWhitelistGroupResponse
+     */
+    CompletableFuture<UpdateInnerIpWhitelistGroupResponse> updateInnerIpWhitelistGroup(UpdateInnerIpWhitelistGroupRequest request);
+
+    /**
      * @param request the request parameters of UpdateInstanceName  UpdateInstanceNameRequest
      * @return UpdateInstanceNameResponse
      */
     CompletableFuture<UpdateInstanceNameResponse> updateInstanceName(UpdateInstanceNameRequest request);
+
+    /**
+     * @param request the request parameters of UpdateNodeGroupDescription  UpdateNodeGroupDescriptionRequest
+     * @return UpdateNodeGroupDescriptionResponse
+     */
+    CompletableFuture<UpdateNodeGroupDescriptionResponse> updateNodeGroupDescription(UpdateNodeGroupDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePublicNetworkStatus  UpdatePublicNetworkStatusRequest
+     * @return UpdatePublicNetworkStatusResponse
+     */
+    CompletableFuture<UpdatePublicNetworkStatusResponse> updatePublicNetworkStatus(UpdatePublicNetworkStatusRequest request);
 
     /**
      * <b>description</b> :

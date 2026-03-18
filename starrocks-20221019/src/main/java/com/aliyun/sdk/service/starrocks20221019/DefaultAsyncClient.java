@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddBackupPolicy  AddBackupPolicyRequest
+     * @return AddBackupPolicyResponse
+     */
+    @Override
+    public CompletableFuture<AddBackupPolicyResponse> addBackupPolicy(AddBackupPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddBackupPolicy").setMethod(HttpMethod.POST).setPathRegex("/webapi/backupRestore/policy/add").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddBackupPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddBackupPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddGateway  AddGatewayRequest
      * @return AddGatewayResponse
      */
@@ -76,6 +94,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CheckInventory  CheckInventoryRequest
+     * @return CheckInventoryResponse
+     */
+    @Override
+    public CompletableFuture<CheckInventoryResponse> checkInventory(CheckInventoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CheckInventory").setMethod(HttpMethod.POST).setPathRegex("/webapi/check/inventory").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckInventoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckInventoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAgentResource  CreateAgentResourceRequest
+     * @return CreateAgentResourceResponse
+     */
+    @Override
+    public CompletableFuture<CreateAgentResourceResponse> createAgentResource(CreateAgentResourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAgentResource").setMethod(HttpMethod.POST).setPathRegex("/webapi/lifecycle/createAgentNodeGroup").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAgentResourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAgentResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateInstanceV1  CreateInstanceV1Request
      * @return CreateInstanceV1Response
      */
@@ -88,6 +142,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateInstanceV1Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateScalingRule  CreateScalingRuleRequest
+     * @return CreateScalingRuleResponse
+     */
+    @Override
+    public CompletableFuture<CreateScalingRuleResponse> createScalingRule(CreateScalingRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateScalingRule").setMethod(HttpMethod.POST).setPathRegex("/webapi/scalingRule/createScalingRule").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateScalingRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateScalingRuleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -112,6 +184,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteBackup  DeleteBackupRequest
+     * @return DeleteBackupResponse
+     */
+    @Override
+    public CompletableFuture<DeleteBackupResponse> deleteBackup(DeleteBackupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteBackup").setMethod(HttpMethod.POST).setPathRegex("/webapi/backup/manage/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteBackupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteBackupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteBackupPolicy  DeleteBackupPolicyRequest
+     * @return DeleteBackupPolicyResponse
+     */
+    @Override
+    public CompletableFuture<DeleteBackupPolicyResponse> deleteBackupPolicy(DeleteBackupPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteBackupPolicy").setMethod(HttpMethod.POST).setPathRegex("/webapi/backupRestore/policy/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteBackupPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteBackupPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteGateway  DeleteGatewayRequest
      * @return DeleteGatewayResponse
      */
@@ -124,6 +232,96 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteInnerIpWhitelistGroup  DeleteInnerIpWhitelistGroupRequest
+     * @return DeleteInnerIpWhitelistGroupResponse
+     */
+    @Override
+    public CompletableFuture<DeleteInnerIpWhitelistGroupResponse> deleteInnerIpWhitelistGroup(DeleteInnerIpWhitelistGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteInnerIpWhitelistGroup").setMethod(HttpMethod.POST).setPathRegex("/webapi/securityGroup/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteInnerIpWhitelistGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteInnerIpWhitelistGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteScalingRule  DeleteScalingRuleRequest
+     * @return DeleteScalingRuleResponse
+     */
+    @Override
+    public CompletableFuture<DeleteScalingRuleResponse> deleteScalingRule(DeleteScalingRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteScalingRule").setMethod(HttpMethod.POST).setPathRegex("/webapi/scalingRule/deleteScalingRule").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteScalingRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteScalingRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAvailableZones  DescribeAvailableZonesRequest
+     * @return DescribeAvailableZonesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAvailableZonesResponse> describeAvailableZones(DescribeAvailableZonesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeAvailableZones").setMethod(HttpMethod.POST).setPathRegex("/webapi/zone/describeZones").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAvailableZonesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAvailableZonesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeBackupPolicies  DescribeBackupPoliciesRequest
+     * @return DescribeBackupPoliciesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeBackupPoliciesResponse> describeBackupPolicies(DescribeBackupPoliciesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeBackupPolicies").setMethod(HttpMethod.POST).setPathRegex("/webapi/backupRestore/policy/describe").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeBackupPoliciesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeBackupPoliciesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
+     * @return DescribeBackupsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeBackups").setMethod(HttpMethod.POST).setPathRegex("/webapi/backup/manage/describe").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeBackupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeBackupsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -148,6 +346,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeEventNames  DescribeEventNamesRequest
+     * @return DescribeEventNamesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeEventNamesResponse> describeEventNames(DescribeEventNamesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeEventNames").setMethod(HttpMethod.POST).setPathRegex("/webapi/event/describeEventNames").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeEventNamesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeEventNamesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInnerIpWhitelistGroups  DescribeInnerIpWhitelistGroupsRequest
+     * @return DescribeInnerIpWhitelistGroupsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInnerIpWhitelistGroupsResponse> describeInnerIpWhitelistGroups(DescribeInnerIpWhitelistGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeInnerIpWhitelistGroups").setMethod(HttpMethod.POST).setPathRegex("/webapi/securityGroup/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInnerIpWhitelistGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInnerIpWhitelistGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeInstanceConfigs  DescribeInstanceConfigsRequest
      * @return DescribeInstanceConfigsResponse
      */
@@ -160,6 +394,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeInstanceConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInstanceDiagnosisResult  DescribeInstanceDiagnosisResultRequest
+     * @return DescribeInstanceDiagnosisResultResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInstanceDiagnosisResultResponse> describeInstanceDiagnosisResult(DescribeInstanceDiagnosisResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeInstanceDiagnosisResult").setMethod(HttpMethod.POST).setPathRegex("/webapi/diagnosis/describe").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInstanceDiagnosisResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInstanceDiagnosisResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInstanceMetaToken  DescribeInstanceMetaTokenRequest
+     * @return DescribeInstanceMetaTokenResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInstanceMetaTokenResponse> describeInstanceMetaToken(DescribeInstanceMetaTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeInstanceMetaToken").setMethod(HttpMethod.POST).setPathRegex("/webapi/migration/getMetaToken").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInstanceMetaTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInstanceMetaTokenResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -202,6 +472,78 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeRegions").setMethod(HttpMethod.POST).setPathRegex("/webapi/region/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRegionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRegionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeResourceConstraints  DescribeResourceConstraintsRequest
+     * @return DescribeResourceConstraintsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeResourceConstraintsResponse> describeResourceConstraints(DescribeResourceConstraintsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeResourceConstraints").setMethod(HttpMethod.GET).setPathRegex("/webapi/starrocks/describeResourceConstraints").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeResourceConstraintsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeResourceConstraintsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSystemTimezone  DescribeSystemTimezoneRequest
+     * @return DescribeSystemTimezoneResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSystemTimezoneResponse> describeSystemTimezone(DescribeSystemTimezoneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeSystemTimezone").setMethod(HttpMethod.POST).setPathRegex("/webapi/timezone/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSystemTimezoneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSystemTimezoneResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeTimeTriggerScalingRules  DescribeTimeTriggerScalingRulesRequest
+     * @return DescribeTimeTriggerScalingRulesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeTimeTriggerScalingRulesResponse> describeTimeTriggerScalingRules(DescribeTimeTriggerScalingRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeTimeTriggerScalingRules").setMethod(HttpMethod.POST).setPathRegex("/webapi/scalingRule/describeTimeTriggerScalingRules").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeTimeTriggerScalingRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeTimeTriggerScalingRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DisableSSLConnection  DisableSSLConnectionRequest
      * @return DisableSSLConnectionResponse
      */
@@ -214,6 +556,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DisableSSLConnectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableInternalSlb  EnableInternalSlbRequest
+     * @return EnableInternalSlbResponse
+     */
+    @Override
+    public CompletableFuture<EnableInternalSlbResponse> enableInternalSlb(EnableInternalSlbRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EnableInternalSlb").setMethod(HttpMethod.POST).setPathRegex("/webapi/gateway/enableInternalSlb").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableInternalSlbResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableInternalSlbResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableMultiAz  EnableMultiAzRequest
+     * @return EnableMultiAzResponse
+     */
+    @Override
+    public CompletableFuture<EnableMultiAzResponse> enableMultiAz(EnableMultiAzRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EnableMultiAz").setMethod(HttpMethod.POST).setPathRegex("/webapi/lifecycle/enableMultiAz").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableMultiAzResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableMultiAzResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -256,6 +634,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetNodeGroupFeatureGate  GetNodeGroupFeatureGateRequest
+     * @return GetNodeGroupFeatureGateResponse
+     */
+    @Override
+    public CompletableFuture<GetNodeGroupFeatureGateResponse> getNodeGroupFeatureGate(GetNodeGroupFeatureGateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetNodeGroupFeatureGate").setMethod(HttpMethod.POST).setPathRegex("/webapi/features/nodeGroupFeatureGate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetNodeGroupFeatureGateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetNodeGroupFeatureGateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of IsolateLeader  IsolateLeaderRequest
      * @return IsolateLeaderResponse
      */
@@ -286,6 +682,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListOperationActivity  ListOperationActivityRequest
+     * @return ListOperationActivityResponse
+     */
+    @Override
+    public CompletableFuture<ListOperationActivityResponse> listOperationActivity(ListOperationActivityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListOperationActivity").setMethod(HttpMethod.POST).setPathRegex("/webapi/operation/listOperationActivity").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOperationActivityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOperationActivityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListOperationHistory  ListOperationHistoryRequest
+     * @return ListOperationHistoryResponse
+     */
+    @Override
+    public CompletableFuture<ListOperationHistoryResponse> listOperationHistory(ListOperationHistoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListOperationHistory").setMethod(HttpMethod.POST).setPathRegex("/webapi/operation/listOperationHistory").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOperationHistoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOperationHistoryResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -466,6 +898,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyHostAlias  ModifyHostAliasRequest
+     * @return ModifyHostAliasResponse
+     */
+    @Override
+    public CompletableFuture<ModifyHostAliasResponse> modifyHostAlias(ModifyHostAliasRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModifyHostAlias").setMethod(HttpMethod.POST).setPathRegex("/webapi/network/modifyHostAlias").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyHostAliasResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyHostAliasResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifyInstanceConfig  ModifyInstanceConfigRequest
      * @return ModifyInstanceConfigResponse
      */
@@ -496,6 +946,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyInstanceConfigPreCheckResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyMaintainableTime  ModifyMaintainableTimeRequest
+     * @return ModifyMaintainableTimeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyMaintainableTimeResponse> modifyMaintainableTime(ModifyMaintainableTimeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModifyMaintainableTime").setMethod(HttpMethod.POST).setPathRegex("/webapi/starrocks/modifyMaintainableTime").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyMaintainableTimeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyMaintainableTimeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -549,6 +1017,330 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyScalingRule  ModifyScalingRuleRequest
+     * @return ModifyScalingRuleResponse
+     */
+    @Override
+    public CompletableFuture<ModifyScalingRuleResponse> modifyScalingRule(ModifyScalingRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModifyScalingRule").setMethod(HttpMethod.POST).setPathRegex("/webapi/scalingRule/modifyScalingRule").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyScalingRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyScalingRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifySpecType  ModifySpecTypeRequest
+     * @return ModifySpecTypeResponse
+     */
+    @Override
+    public CompletableFuture<ModifySpecTypeResponse> modifySpecType(ModifySpecTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModifySpecType").setMethod(HttpMethod.POST).setPathRegex("/webapi/resourceChange/modifySpecType").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifySpecTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifySpecTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifySpecTypePreCheck  ModifySpecTypePreCheckRequest
+     * @return ModifySpecTypePreCheckResponse
+     */
+    @Override
+    public CompletableFuture<ModifySpecTypePreCheckResponse> modifySpecTypePreCheck(ModifySpecTypePreCheckRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModifySpecTypePreCheck").setMethod(HttpMethod.POST).setPathRegex("/webapi/resourceChange/modifySpecTypePreCheck").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifySpecTypePreCheckResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifySpecTypePreCheckResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyUserPassword  ModifyUserPasswordRequest
+     * @return ModifyUserPasswordResponse
+     */
+    @Override
+    public CompletableFuture<ModifyUserPasswordResponse> modifyUserPassword(ModifyUserPasswordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModifyUserPassword").setMethod(HttpMethod.POST).setPathRegex("/webapi/password/modify").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyUserPasswordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyUserPasswordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryEnableMultiAzPrice  QueryEnableMultiAzPriceRequest
+     * @return QueryEnableMultiAzPriceResponse
+     */
+    @Override
+    public CompletableFuture<QueryEnableMultiAzPriceResponse> queryEnableMultiAzPrice(QueryEnableMultiAzPriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryEnableMultiAzPrice").setMethod(HttpMethod.POST).setPathRegex("/webapi/priceInquiry/enableMultiAz").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryEnableMultiAzPriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryEnableMultiAzPriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryMinorVersion  QueryMinorVersionRequest
+     * @return QueryMinorVersionResponse
+     */
+    @Override
+    public CompletableFuture<QueryMinorVersionResponse> queryMinorVersion(QueryMinorVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryMinorVersion").setMethod(HttpMethod.POST).setPathRegex("/webapi/starrocks/queryAppDefineVersion").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryMinorVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryMinorVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryModifyChargeTypePrice  QueryModifyChargeTypePriceRequest
+     * @return QueryModifyChargeTypePriceResponse
+     */
+    @Override
+    public CompletableFuture<QueryModifyChargeTypePriceResponse> queryModifyChargeTypePrice(QueryModifyChargeTypePriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryModifyChargeTypePrice").setMethod(HttpMethod.POST).setPathRegex("/webapi/buy/query_modify_charge_type_price").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryModifyChargeTypePriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryModifyChargeTypePriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryModifyCuPrice  QueryModifyCuPriceRequest
+     * @return QueryModifyCuPriceResponse
+     */
+    @Override
+    public CompletableFuture<QueryModifyCuPriceResponse> queryModifyCuPrice(QueryModifyCuPriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryModifyCuPrice").setMethod(HttpMethod.POST).setPathRegex("/webapi/priceInquiry/modifyCu").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryModifyCuPriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryModifyCuPriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryModifyDiskNumberPrice  QueryModifyDiskNumberPriceRequest
+     * @return QueryModifyDiskNumberPriceResponse
+     */
+    @Override
+    public CompletableFuture<QueryModifyDiskNumberPriceResponse> queryModifyDiskNumberPrice(QueryModifyDiskNumberPriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryModifyDiskNumberPrice").setMethod(HttpMethod.POST).setPathRegex("/webapi/priceInquiry/modifyDiskNumber").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryModifyDiskNumberPriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryModifyDiskNumberPriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryModifyDiskPerformanceLevelPrice  QueryModifyDiskPerformanceLevelPriceRequest
+     * @return QueryModifyDiskPerformanceLevelPriceResponse
+     */
+    @Override
+    public CompletableFuture<QueryModifyDiskPerformanceLevelPriceResponse> queryModifyDiskPerformanceLevelPrice(QueryModifyDiskPerformanceLevelPriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryModifyDiskPerformanceLevelPrice").setMethod(HttpMethod.POST).setPathRegex("/webapi/priceInquiry/modifyDiskPerformanceLevel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryModifyDiskPerformanceLevelPriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryModifyDiskPerformanceLevelPriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryModifyDiskSizePrice  QueryModifyDiskSizePriceRequest
+     * @return QueryModifyDiskSizePriceResponse
+     */
+    @Override
+    public CompletableFuture<QueryModifyDiskSizePriceResponse> queryModifyDiskSizePrice(QueryModifyDiskSizePriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryModifyDiskSizePrice").setMethod(HttpMethod.POST).setPathRegex("/webapi/priceInquiry/modifyDiskSize").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryModifyDiskSizePriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryModifyDiskSizePriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryModifyDiskTypePrice  QueryModifyDiskTypePriceRequest
+     * @return QueryModifyDiskTypePriceResponse
+     */
+    @Override
+    public CompletableFuture<QueryModifyDiskTypePriceResponse> queryModifyDiskTypePrice(QueryModifyDiskTypePriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryModifyDiskTypePrice").setMethod(HttpMethod.POST).setPathRegex("/webapi/priceInquiry/modifyDiskType").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryModifyDiskTypePriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryModifyDiskTypePriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryModifyNodeNumberPrice  QueryModifyNodeNumberPriceRequest
+     * @return QueryModifyNodeNumberPriceResponse
+     */
+    @Override
+    public CompletableFuture<QueryModifyNodeNumberPriceResponse> queryModifyNodeNumberPrice(QueryModifyNodeNumberPriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryModifyNodeNumberPrice").setMethod(HttpMethod.POST).setPathRegex("/webapi/priceInquiry/modifyNodeNumber").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryModifyNodeNumberPriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryModifyNodeNumberPriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryModifySpecTypePrice  QueryModifySpecTypePriceRequest
+     * @return QueryModifySpecTypePriceResponse
+     */
+    @Override
+    public CompletableFuture<QueryModifySpecTypePriceResponse> queryModifySpecTypePrice(QueryModifySpecTypePriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryModifySpecTypePrice").setMethod(HttpMethod.POST).setPathRegex("/webapi/priceInquiry/modifySpecType").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryModifySpecTypePriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryModifySpecTypePriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryPriceV1  QueryPriceV1Request
+     * @return QueryPriceV1Response
+     */
+    @Override
+    public CompletableFuture<QueryPriceV1Response> queryPriceV1(QueryPriceV1Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryPriceV1").setMethod(HttpMethod.POST).setPathRegex("/webapi/price/create").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryPriceV1Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryPriceV1Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryRefundPrice  QueryRefundPriceRequest
+     * @return QueryRefundPriceResponse
+     */
+    @Override
+    public CompletableFuture<QueryRefundPriceResponse> queryRefundPrice(QueryRefundPriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryRefundPrice").setMethod(HttpMethod.POST).setPathRegex("/webapi/buy/queryRefundPrice").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRefundPriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryRefundPriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryRenewPrice  QueryRenewPriceRequest
+     * @return QueryRenewPriceResponse
+     */
+    @Override
+    public CompletableFuture<QueryRenewPriceResponse> queryRenewPrice(QueryRenewPriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryRenewPrice").setMethod(HttpMethod.POST).setPathRegex("/webapi/price/renew").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRenewPriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryRenewPriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryUnpaidOrder  QueryUnpaidOrderRequest
+     * @return QueryUnpaidOrderResponse
+     */
+    @Override
+    public CompletableFuture<QueryUnpaidOrderResponse> queryUnpaidOrder(QueryUnpaidOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryUnpaidOrder").setMethod(HttpMethod.POST).setPathRegex("/webapi/order/queryUnpaidOrder").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryUnpaidOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryUnpaidOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QueryUpgradableVersions  QueryUpgradableVersionsRequest
      * @return QueryUpgradableVersionsResponse
      */
@@ -561,6 +1353,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryUpgradableVersionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RebootECS  RebootECSRequest
+     * @return RebootECSResponse
+     */
+    @Override
+    public CompletableFuture<RebootECSResponse> rebootECS(RebootECSRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RebootECS").setMethod(HttpMethod.POST).setPathRegex("/webapi/event/rebootEcs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RebootECSResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RebootECSResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -584,6 +1394,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ReleaseInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RenewInstance  RenewInstanceRequest
+     * @return RenewInstanceResponse
+     */
+    @Override
+    public CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RenewInstance").setMethod(HttpMethod.POST).setPathRegex("/webapi/order/renew_instance").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RenewInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RenewInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -701,6 +1529,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SwitchActiveStandbyZones  SwitchActiveStandbyZonesRequest
+     * @return SwitchActiveStandbyZonesResponse
+     */
+    @Override
+    public CompletableFuture<SwitchActiveStandbyZonesResponse> switchActiveStandbyZones(SwitchActiveStandbyZonesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SwitchActiveStandbyZones").setMethod(HttpMethod.POST).setPathRegex("/webapi/recovery/switchZones").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SwitchActiveStandbyZonesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SwitchActiveStandbyZonesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -713,6 +1559,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ToggleAutoMinorVersionUpgrade  ToggleAutoMinorVersionUpgradeRequest
+     * @return ToggleAutoMinorVersionUpgradeResponse
+     */
+    @Override
+    public CompletableFuture<ToggleAutoMinorVersionUpgradeResponse> toggleAutoMinorVersionUpgrade(ToggleAutoMinorVersionUpgradeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ToggleAutoMinorVersionUpgrade").setMethod(HttpMethod.POST).setPathRegex("/webapi/starrocks/toggleAutoMinorVersionUpgrade").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ToggleAutoMinorVersionUpgradeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ToggleAutoMinorVersionUpgradeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -755,6 +1619,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateBackup  UpdateBackupRequest
+     * @return UpdateBackupResponse
+     */
+    @Override
+    public CompletableFuture<UpdateBackupResponse> updateBackup(UpdateBackupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateBackup").setMethod(HttpMethod.POST).setPathRegex("/webapi/backup/manage/update").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateBackupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateBackupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateBackupPolicy  UpdateBackupPolicyRequest
+     * @return UpdateBackupPolicyResponse
+     */
+    @Override
+    public CompletableFuture<UpdateBackupPolicyResponse> updateBackupPolicy(UpdateBackupPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateBackupPolicy").setMethod(HttpMethod.POST).setPathRegex("/webapi/backupRestore/policy/update").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateBackupPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateBackupPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateGateway  UpdateGatewayRequest
      * @return UpdateGatewayResponse
      */
@@ -773,6 +1673,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateInnerIpWhitelistGroup  UpdateInnerIpWhitelistGroupRequest
+     * @return UpdateInnerIpWhitelistGroupResponse
+     */
+    @Override
+    public CompletableFuture<UpdateInnerIpWhitelistGroupResponse> updateInnerIpWhitelistGroup(UpdateInnerIpWhitelistGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateInnerIpWhitelistGroup").setMethod(HttpMethod.POST).setPathRegex("/webapi/securityGroup/update").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateInnerIpWhitelistGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateInnerIpWhitelistGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateInstanceName  UpdateInstanceNameRequest
      * @return UpdateInstanceNameResponse
      */
@@ -785,6 +1703,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateInstanceNameResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateNodeGroupDescription  UpdateNodeGroupDescriptionRequest
+     * @return UpdateNodeGroupDescriptionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateNodeGroupDescriptionResponse> updateNodeGroupDescription(UpdateNodeGroupDescriptionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateNodeGroupDescription").setMethod(HttpMethod.POST).setPathRegex("/webapi/nodegroup/updateDescription").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateNodeGroupDescriptionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateNodeGroupDescriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdatePublicNetworkStatus  UpdatePublicNetworkStatusRequest
+     * @return UpdatePublicNetworkStatusResponse
+     */
+    @Override
+    public CompletableFuture<UpdatePublicNetworkStatusResponse> updatePublicNetworkStatus(UpdatePublicNetworkStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdatePublicNetworkStatus").setMethod(HttpMethod.POST).setPathRegex("/webapi/network/updatePublicNetworkStatus").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdatePublicNetworkStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdatePublicNetworkStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
