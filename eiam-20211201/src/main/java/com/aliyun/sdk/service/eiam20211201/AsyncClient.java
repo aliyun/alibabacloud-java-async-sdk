@@ -218,6 +218,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCredentialResponse> createCredential(CreateCredentialRequest request);
 
     /**
+     * @param request the request parameters of CreateCredentialProvider  CreateCredentialProviderRequest
+     * @return CreateCredentialProviderResponse
+     */
+    CompletableFuture<CreateCredentialProviderResponse> createCredentialProvider(CreateCredentialProviderRequest request);
+
+    /**
      * @param request the request parameters of CreateCustomField  CreateCustomFieldRequest
      * @return CreateCustomFieldResponse
      */
@@ -390,6 +396,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCredentialResponse
      */
     CompletableFuture<DeleteCredentialResponse> deleteCredential(DeleteCredentialRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCredentialProvider  DeleteCredentialProviderRequest
+     * @return DeleteCredentialProviderResponse
+     */
+    CompletableFuture<DeleteCredentialProviderResponse> deleteCredentialProvider(DeleteCredentialProviderRequest request);
 
     /**
      * @param request the request parameters of DeleteCustomField  DeleteCustomFieldRequest
@@ -587,6 +599,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableCredentialResponse> disableCredential(DisableCredentialRequest request);
 
     /**
+     * @param request the request parameters of DisableCredentialProvider  DisableCredentialProviderRequest
+     * @return DisableCredentialProviderResponse
+     */
+    CompletableFuture<DisableCredentialProviderResponse> disableCredentialProvider(DisableCredentialProviderRequest request);
+
+    /**
      * @param request the request parameters of DisableCustomField  DisableCustomFieldRequest
      * @return DisableCustomFieldResponse
      */
@@ -744,6 +762,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableCredentialResponse
      */
     CompletableFuture<EnableCredentialResponse> enableCredential(EnableCredentialRequest request);
+
+    /**
+     * @param request the request parameters of EnableCredentialProvider  EnableCredentialProviderRequest
+     * @return EnableCredentialProviderResponse
+     */
+    CompletableFuture<EnableCredentialProviderResponse> enableCredentialProvider(EnableCredentialProviderRequest request);
 
     /**
      * @param request the request parameters of EnableCustomField  EnableCustomFieldRequest
@@ -957,6 +981,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCredentialResponse
      */
     CompletableFuture<GetCredentialResponse> getCredential(GetCredentialRequest request);
+
+    /**
+     * @param request the request parameters of GetCredentialProvider  GetCredentialProviderRequest
+     * @return GetCredentialProviderResponse
+     */
+    CompletableFuture<GetCredentialProviderResponse> getCredentialProvider(GetCredentialProviderRequest request);
 
     /**
      * @param request the request parameters of GetCustomField  GetCustomFieldRequest
@@ -1335,6 +1365,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListConditionalAccessPoliciesForUserResponse
      */
     CompletableFuture<ListConditionalAccessPoliciesForUserResponse> listConditionalAccessPoliciesForUser(ListConditionalAccessPoliciesForUserRequest request);
+
+    /**
+     * @param request the request parameters of ListCredentialProviders  ListCredentialProvidersRequest
+     * @return ListCredentialProvidersResponse
+     */
+    CompletableFuture<ListCredentialProvidersResponse> listCredentialProviders(ListCredentialProvidersRequest request);
 
     /**
      * @param request the request parameters of ListCredentials  ListCredentialsRequest
@@ -1968,6 +2004,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCredentialDescriptionResponse
      */
     CompletableFuture<UpdateCredentialDescriptionResponse> updateCredentialDescription(UpdateCredentialDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCredentialProvider  UpdateCredentialProviderRequest
+     * @return UpdateCredentialProviderResponse
+     */
+    CompletableFuture<UpdateCredentialProviderResponse> updateCredentialProvider(UpdateCredentialProviderRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCredentialProviderDescription  UpdateCredentialProviderDescriptionRequest
+     * @return UpdateCredentialProviderDescriptionResponse
+     */
+    CompletableFuture<UpdateCredentialProviderDescriptionResponse> updateCredentialProviderDescription(UpdateCredentialProviderDescriptionRequest request);
 
     /**
      * @param request the request parameters of UpdateCustomPrivacyPolicy  UpdateCustomPrivacyPolicyRequest
