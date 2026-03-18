@@ -220,6 +220,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of FetchOAuthAuthenticationToken  FetchOAuthAuthenticationTokenRequest
+     * @return FetchOAuthAuthenticationTokenResponse
+     */
+    @Override
+    public CompletableFuture<FetchOAuthAuthenticationTokenResponse> fetchOAuthAuthenticationToken(FetchOAuthAuthenticationTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FetchOAuthAuthenticationToken").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/authenticationTokens/_/actions/fetchOAuthAccessToken").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FetchOAuthAuthenticationTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FetchOAuthAuthenticationTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GenerateDeviceCode  GenerateDeviceCodeRequest
      * @return GenerateDeviceCodeResponse
      */
@@ -232,6 +250,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GenerateDeviceCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GenerateJwtAuthenticationToken  GenerateJwtAuthenticationTokenRequest
+     * @return GenerateJwtAuthenticationTokenResponse
+     */
+    @Override
+    public CompletableFuture<GenerateJwtAuthenticationTokenResponse> generateJwtAuthenticationToken(GenerateJwtAuthenticationTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GenerateJwtAuthenticationToken").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/authenticationTokens/_/actions/generateJwt").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateJwtAuthenticationTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateJwtAuthenticationTokenResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -464,6 +500,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAuthenticationTokens  ListAuthenticationTokensRequest
+     * @return ListAuthenticationTokensResponse
+     */
+    @Override
+    public CompletableFuture<ListAuthenticationTokensResponse> listAuthenticationTokens(ListAuthenticationTokensRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAuthenticationTokens").setMethod(HttpMethod.GET).setPathRegex("/v2/{instanceId}/authenticationTokens").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAuthenticationTokensResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAuthenticationTokensResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListGroups  ListGroupsRequest
      * @return ListGroupsResponse
      */
@@ -608,6 +662,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ObtainJwtAuthenticationTokenByDerivedShortToken  ObtainJwtAuthenticationTokenByDerivedShortTokenRequest
+     * @return ObtainJwtAuthenticationTokenByDerivedShortTokenResponse
+     */
+    @Override
+    public CompletableFuture<ObtainJwtAuthenticationTokenByDerivedShortTokenResponse> obtainJwtAuthenticationTokenByDerivedShortToken(ObtainJwtAuthenticationTokenByDerivedShortTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ObtainJwtAuthenticationTokenByDerivedShortToken").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/authenticationTokens/_/actions/obtainJwtByDerivedShortToken").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ObtainJwtAuthenticationTokenByDerivedShortTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ObtainJwtAuthenticationTokenByDerivedShortTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of PatchGroup  PatchGroupRequest
      * @return PatchGroupResponse
      */
@@ -668,6 +740,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ReinstateAuthenticationToken  ReinstateAuthenticationTokenRequest
+     * @return ReinstateAuthenticationTokenResponse
+     */
+    @Override
+    public CompletableFuture<ReinstateAuthenticationTokenResponse> reinstateAuthenticationToken(ReinstateAuthenticationTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ReinstateAuthenticationToken").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/authenticationTokens/_/actions/reinstate").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReinstateAuthenticationTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReinstateAuthenticationTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReinstateAuthenticationTokenByConsumer  ReinstateAuthenticationTokenByConsumerRequest
+     * @return ReinstateAuthenticationTokenByConsumerResponse
+     */
+    @Override
+    public CompletableFuture<ReinstateAuthenticationTokenByConsumerResponse> reinstateAuthenticationTokenByConsumer(ReinstateAuthenticationTokenByConsumerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ReinstateAuthenticationTokenByConsumer").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/authenticationTokens/_/actions/reinstateByConsumer").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReinstateAuthenticationTokenByConsumerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReinstateAuthenticationTokenByConsumerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RemoveUserFromOrganizationalUnits  RemoveUserFromOrganizationalUnitsRequest
      * @return RemoveUserFromOrganizationalUnitsResponse
      */
@@ -698,6 +806,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RemoveUsersFromGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RevokeAuthenticationToken  RevokeAuthenticationTokenRequest
+     * @return RevokeAuthenticationTokenResponse
+     */
+    @Override
+    public CompletableFuture<RevokeAuthenticationTokenResponse> revokeAuthenticationToken(RevokeAuthenticationTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RevokeAuthenticationToken").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/authenticationTokens/_/actions/revoke").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeAuthenticationTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokeAuthenticationTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RevokeAuthenticationTokenByConsumer  RevokeAuthenticationTokenByConsumerRequest
+     * @return RevokeAuthenticationTokenByConsumerResponse
+     */
+    @Override
+    public CompletableFuture<RevokeAuthenticationTokenByConsumerResponse> revokeAuthenticationTokenByConsumer(RevokeAuthenticationTokenByConsumerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RevokeAuthenticationTokenByConsumer").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/authenticationTokens/_/actions/revokeByConsumer").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeAuthenticationTokenByConsumerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokeAuthenticationTokenByConsumerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -752,6 +896,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateUserPasswordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ValidateAuthenticationToken  ValidateAuthenticationTokenRequest
+     * @return ValidateAuthenticationTokenResponse
+     */
+    @Override
+    public CompletableFuture<ValidateAuthenticationTokenResponse> validateAuthenticationToken(ValidateAuthenticationTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ValidateAuthenticationToken").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/authenticationTokens/_/actions/validate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ValidateAuthenticationTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ValidateAuthenticationTokenResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

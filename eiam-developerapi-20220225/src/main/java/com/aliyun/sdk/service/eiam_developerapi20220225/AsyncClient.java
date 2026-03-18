@@ -80,10 +80,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableUserResponse> enableUser(EnableUserRequest request);
 
     /**
+     * @param request the request parameters of FetchOAuthAuthenticationToken  FetchOAuthAuthenticationTokenRequest
+     * @return FetchOAuthAuthenticationTokenResponse
+     */
+    CompletableFuture<FetchOAuthAuthenticationTokenResponse> fetchOAuthAuthenticationToken(FetchOAuthAuthenticationTokenRequest request);
+
+    /**
      * @param request the request parameters of GenerateDeviceCode  GenerateDeviceCodeRequest
      * @return GenerateDeviceCodeResponse
      */
     CompletableFuture<GenerateDeviceCodeResponse> generateDeviceCode(GenerateDeviceCodeRequest request);
+
+    /**
+     * @param request the request parameters of GenerateJwtAuthenticationToken  GenerateJwtAuthenticationTokenRequest
+     * @return GenerateJwtAuthenticationTokenResponse
+     */
+    CompletableFuture<GenerateJwtAuthenticationTokenResponse> generateJwtAuthenticationToken(GenerateJwtAuthenticationTokenRequest request);
 
     /**
      * <b>description</b> :
@@ -168,6 +180,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserInfoResponse> getUserInfo(GetUserInfoRequest request);
 
     /**
+     * @param request the request parameters of ListAuthenticationTokens  ListAuthenticationTokensRequest
+     * @return ListAuthenticationTokensResponse
+     */
+    CompletableFuture<ListAuthenticationTokensResponse> listAuthenticationTokens(ListAuthenticationTokensRequest request);
+
+    /**
      * @param request the request parameters of ListGroups  ListGroupsRequest
      * @return ListGroupsResponse
      */
@@ -216,6 +234,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ObtainCredentialResponse> obtainCredential(ObtainCredentialRequest request);
 
     /**
+     * @param request the request parameters of ObtainJwtAuthenticationTokenByDerivedShortToken  ObtainJwtAuthenticationTokenByDerivedShortTokenRequest
+     * @return ObtainJwtAuthenticationTokenByDerivedShortTokenResponse
+     */
+    CompletableFuture<ObtainJwtAuthenticationTokenByDerivedShortTokenResponse> obtainJwtAuthenticationTokenByDerivedShortToken(ObtainJwtAuthenticationTokenByDerivedShortTokenRequest request);
+
+    /**
      * @param request the request parameters of PatchGroup  PatchGroupRequest
      * @return PatchGroupResponse
      */
@@ -240,6 +264,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PatchUserResponse> patchUser(PatchUserRequest request);
 
     /**
+     * @param request the request parameters of ReinstateAuthenticationToken  ReinstateAuthenticationTokenRequest
+     * @return ReinstateAuthenticationTokenResponse
+     */
+    CompletableFuture<ReinstateAuthenticationTokenResponse> reinstateAuthenticationToken(ReinstateAuthenticationTokenRequest request);
+
+    /**
+     * @param request the request parameters of ReinstateAuthenticationTokenByConsumer  ReinstateAuthenticationTokenByConsumerRequest
+     * @return ReinstateAuthenticationTokenByConsumerResponse
+     */
+    CompletableFuture<ReinstateAuthenticationTokenByConsumerResponse> reinstateAuthenticationTokenByConsumer(ReinstateAuthenticationTokenByConsumerRequest request);
+
+    /**
      * @param request the request parameters of RemoveUserFromOrganizationalUnits  RemoveUserFromOrganizationalUnitsRequest
      * @return RemoveUserFromOrganizationalUnitsResponse
      */
@@ -250,6 +286,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveUsersFromGroupResponse
      */
     CompletableFuture<RemoveUsersFromGroupResponse> removeUsersFromGroup(RemoveUsersFromGroupRequest request);
+
+    /**
+     * @param request the request parameters of RevokeAuthenticationToken  RevokeAuthenticationTokenRequest
+     * @return RevokeAuthenticationTokenResponse
+     */
+    CompletableFuture<RevokeAuthenticationTokenResponse> revokeAuthenticationToken(RevokeAuthenticationTokenRequest request);
+
+    /**
+     * @param request the request parameters of RevokeAuthenticationTokenByConsumer  RevokeAuthenticationTokenByConsumerRequest
+     * @return RevokeAuthenticationTokenByConsumerResponse
+     */
+    CompletableFuture<RevokeAuthenticationTokenByConsumerResponse> revokeAuthenticationTokenByConsumer(RevokeAuthenticationTokenByConsumerRequest request);
 
     /**
      * @param request the request parameters of RevokeToken  RevokeTokenRequest
@@ -268,5 +316,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateUserPasswordResponse
      */
     CompletableFuture<UpdateUserPasswordResponse> updateUserPassword(UpdateUserPasswordRequest request);
+
+    /**
+     * @param request the request parameters of ValidateAuthenticationToken  ValidateAuthenticationTokenRequest
+     * @return ValidateAuthenticationTokenResponse
+     */
+    CompletableFuture<ValidateAuthenticationTokenResponse> validateAuthenticationToken(ValidateAuthenticationTokenRequest request);
 
 }
