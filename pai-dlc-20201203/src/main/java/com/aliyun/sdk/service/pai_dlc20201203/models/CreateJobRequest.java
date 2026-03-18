@@ -927,6 +927,9 @@ public class CreateJobRequest extends Request {
      * <p>CreateJobRequest</p>
      */
     public static class DataSources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
+        private String accessPointId;
+
         @com.aliyun.core.annotation.NameInMap("DataSourceId")
         private String dataSourceId;
 
@@ -945,16 +948,21 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Options")
         private String options;
 
+        @com.aliyun.core.annotation.NameInMap("RoleChain")
+        private String roleChain;
+
         @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private DataSources(Builder builder) {
+            this.accessPointId = builder.accessPointId;
             this.dataSourceId = builder.dataSourceId;
             this.dataSourceVersion = builder.dataSourceVersion;
             this.enableCache = builder.enableCache;
             this.mountAccess = builder.mountAccess;
             this.mountPath = builder.mountPath;
             this.options = builder.options;
+            this.roleChain = builder.roleChain;
             this.uri = builder.uri;
         }
 
@@ -964,6 +972,13 @@ public class CreateJobRequest extends Request {
 
         public static DataSources create() {
             return builder().build();
+        }
+
+        /**
+         * @return accessPointId
+         */
+        public String getAccessPointId() {
+            return this.accessPointId;
         }
 
         /**
@@ -1009,6 +1024,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return roleChain
+         */
+        public String getRoleChain() {
+            return this.roleChain;
+        }
+
+        /**
          * @return uri
          */
         public String getUri() {
@@ -1016,26 +1038,38 @@ public class CreateJobRequest extends Request {
         }
 
         public static final class Builder {
+            private String accessPointId; 
             private String dataSourceId; 
             private String dataSourceVersion; 
             private Boolean enableCache; 
             private String mountAccess; 
             private String mountPath; 
             private String options; 
+            private String roleChain; 
             private String uri; 
 
             private Builder() {
             } 
 
             private Builder(DataSources model) {
+                this.accessPointId = model.accessPointId;
                 this.dataSourceId = model.dataSourceId;
                 this.dataSourceVersion = model.dataSourceVersion;
                 this.enableCache = model.enableCache;
                 this.mountAccess = model.mountAccess;
                 this.mountPath = model.mountPath;
                 this.options = model.options;
+                this.roleChain = model.roleChain;
                 this.uri = model.uri;
             } 
+
+            /**
+             * AccessPointId.
+             */
+            public Builder accessPointId(String accessPointId) {
+                this.accessPointId = accessPointId;
+                return this;
+            }
 
             /**
              * <p>The data source ID.</p>
@@ -1095,6 +1129,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder options(String options) {
                 this.options = options;
+                return this;
+            }
+
+            /**
+             * RoleChain.
+             */
+            public Builder roleChain(String roleChain) {
+                this.roleChain = roleChain;
                 return this;
             }
 

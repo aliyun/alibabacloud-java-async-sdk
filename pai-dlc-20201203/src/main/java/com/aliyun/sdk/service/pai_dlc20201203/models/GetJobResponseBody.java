@@ -113,6 +113,9 @@ public class GetJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RestartTimes")
     private String restartTimes;
 
+    @com.aliyun.core.annotation.NameInMap("RoleSystemEnvs")
+    private java.util.Map<String, java.util.Map<String, ?>> roleSystemEnvs;
+
     @com.aliyun.core.annotation.NameInMap("Settings")
     private JobSettings settings;
 
@@ -182,6 +185,7 @@ public class GetJobResponseBody extends TeaModel {
         this.resourceType = builder.resourceType;
         this.restartRecord = builder.restartRecord;
         this.restartTimes = builder.restartTimes;
+        this.roleSystemEnvs = builder.roleSystemEnvs;
         this.settings = builder.settings;
         this.status = builder.status;
         this.statusHistory = builder.statusHistory;
@@ -433,6 +437,13 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return roleSystemEnvs
+     */
+    public java.util.Map<String, java.util.Map<String, ?>> getRoleSystemEnvs() {
+        return this.roleSystemEnvs;
+    }
+
+    /**
      * @return settings
      */
     public JobSettings getSettings() {
@@ -549,6 +560,7 @@ public class GetJobResponseBody extends TeaModel {
         private String resourceType; 
         private java.util.List<RestartRecord> restartRecord; 
         private String restartTimes; 
+        private java.util.Map<String, java.util.Map<String, ?>> roleSystemEnvs; 
         private JobSettings settings; 
         private String status; 
         private java.util.List<StatusTransitionItem> statusHistory; 
@@ -598,6 +610,7 @@ public class GetJobResponseBody extends TeaModel {
             this.resourceType = model.resourceType;
             this.restartRecord = model.restartRecord;
             this.restartTimes = model.restartTimes;
+            this.roleSystemEnvs = model.roleSystemEnvs;
             this.settings = model.settings;
             this.status = model.status;
             this.statusHistory = model.statusHistory;
@@ -935,6 +948,14 @@ public class GetJobResponseBody extends TeaModel {
          */
         public Builder restartTimes(String restartTimes) {
             this.restartTimes = restartTimes;
+            return this;
+        }
+
+        /**
+         * RoleSystemEnvs.
+         */
+        public Builder roleSystemEnvs(java.util.Map<String, java.util.Map<String, ?>> roleSystemEnvs) {
+            this.roleSystemEnvs = roleSystemEnvs;
             return this;
         }
 

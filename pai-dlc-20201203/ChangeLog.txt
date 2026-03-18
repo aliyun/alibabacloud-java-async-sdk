@@ -1,3 +1,6 @@
+2026-03-18 Version: 1.2.40
+- Generated java-async 2020-12-03 for pai-dlc.
+
 2026-02-12 Version: 1.2.39
 - Generated java-async 2020-12-03 for pai-dlc.
 

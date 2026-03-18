@@ -48,6 +48,9 @@ public class JobSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PodCount")
     private Long podCount;
 
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
+    private String quotaId;
+
     @com.aliyun.core.annotation.NameInMap("ResourceConfig")
     private ResourceConfig resourceConfig;
 
@@ -84,6 +87,7 @@ public class JobSpec extends TeaModel {
         this.isChief = builder.isChief;
         this.localMountSpecs = builder.localMountSpecs;
         this.podCount = builder.podCount;
+        this.quotaId = builder.quotaId;
         this.resourceConfig = builder.resourceConfig;
         this.restartPolicy = builder.restartPolicy;
         this.serviceSpec = builder.serviceSpec;
@@ -177,6 +181,13 @@ public class JobSpec extends TeaModel {
     }
 
     /**
+     * @return quotaId
+     */
+    public String getQuotaId() {
+        return this.quotaId;
+    }
+
+    /**
      * @return resourceConfig
      */
     public ResourceConfig getResourceConfig() {
@@ -243,6 +254,7 @@ public class JobSpec extends TeaModel {
         private Boolean isChief; 
         private java.util.List<LocalMountSpec> localMountSpecs; 
         private Long podCount; 
+        private String quotaId; 
         private ResourceConfig resourceConfig; 
         private String restartPolicy; 
         private ServiceSpec serviceSpec; 
@@ -266,6 +278,7 @@ public class JobSpec extends TeaModel {
             this.isChief = model.isChief;
             this.localMountSpecs = model.localMountSpecs;
             this.podCount = model.podCount;
+            this.quotaId = model.quotaId;
             this.resourceConfig = model.resourceConfig;
             this.restartPolicy = model.restartPolicy;
             this.serviceSpec = model.serviceSpec;
@@ -353,6 +366,14 @@ public class JobSpec extends TeaModel {
          */
         public Builder podCount(Long podCount) {
             this.podCount = podCount;
+            return this;
+        }
+
+        /**
+         * QuotaId.
+         */
+        public Builder quotaId(String quotaId) {
+            this.quotaId = quotaId;
             return this;
         }
 
