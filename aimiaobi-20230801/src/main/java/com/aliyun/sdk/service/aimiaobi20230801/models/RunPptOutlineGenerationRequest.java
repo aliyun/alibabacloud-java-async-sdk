@@ -22,6 +22,10 @@ public class RunPptOutlineGenerationRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalUserId")
+    private String externalUserId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Prompt")
     @com.aliyun.core.annotation.Validation(required = true)
     private String prompt;
@@ -34,6 +38,7 @@ public class RunPptOutlineGenerationRequest extends Request {
     private RunPptOutlineGenerationRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.externalUserId = builder.externalUserId;
         this.prompt = builder.prompt;
         this.workspaceId = builder.workspaceId;
     }
@@ -59,6 +64,13 @@ public class RunPptOutlineGenerationRequest extends Request {
     }
 
     /**
+     * @return externalUserId
+     */
+    public String getExternalUserId() {
+        return this.externalUserId;
+    }
+
+    /**
      * @return prompt
      */
     public String getPrompt() {
@@ -74,6 +86,7 @@ public class RunPptOutlineGenerationRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunPptOutlineGenerationRequest, Builder> {
         private String regionId; 
+        private String externalUserId; 
         private String prompt; 
         private String workspaceId; 
 
@@ -84,6 +97,7 @@ public class RunPptOutlineGenerationRequest extends Request {
         private Builder(RunPptOutlineGenerationRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.externalUserId = request.externalUserId;
             this.prompt = request.prompt;
             this.workspaceId = request.workspaceId;
         } 
@@ -94,6 +108,15 @@ public class RunPptOutlineGenerationRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ExternalUserId.
+         */
+        public Builder externalUserId(String externalUserId) {
+            this.putBodyParameter("ExternalUserId", externalUserId);
+            this.externalUserId = externalUserId;
             return this;
         }
 

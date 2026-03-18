@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class InitiatePptCreationRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalUserId")
+    private String externalUserId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Outline")
     private String outline;
 
@@ -32,6 +36,7 @@ public class InitiatePptCreationRequest extends Request {
 
     private InitiatePptCreationRequest(Builder builder) {
         super(builder);
+        this.externalUserId = builder.externalUserId;
         this.outline = builder.outline;
         this.taskId = builder.taskId;
         this.workspaceId = builder.workspaceId;
@@ -48,6 +53,13 @@ public class InitiatePptCreationRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return externalUserId
+     */
+    public String getExternalUserId() {
+        return this.externalUserId;
     }
 
     /**
@@ -72,6 +84,7 @@ public class InitiatePptCreationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<InitiatePptCreationRequest, Builder> {
+        private String externalUserId; 
         private String outline; 
         private String taskId; 
         private String workspaceId; 
@@ -82,10 +95,20 @@ public class InitiatePptCreationRequest extends Request {
 
         private Builder(InitiatePptCreationRequest request) {
             super(request);
+            this.externalUserId = request.externalUserId;
             this.outline = request.outline;
             this.taskId = request.taskId;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * ExternalUserId.
+         */
+        public Builder externalUserId(String externalUserId) {
+            this.putBodyParameter("ExternalUserId", externalUserId);
+            this.externalUserId = externalUserId;
+            return this;
+        }
 
         /**
          * Outline.

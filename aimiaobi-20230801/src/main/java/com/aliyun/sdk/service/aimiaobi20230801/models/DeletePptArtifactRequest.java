@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeletePptArtifactRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalUserId")
+    private String externalUserId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PptArtifactId")
     private String pptArtifactId;
 
@@ -27,6 +31,7 @@ public class DeletePptArtifactRequest extends Request {
 
     private DeletePptArtifactRequest(Builder builder) {
         super(builder);
+        this.externalUserId = builder.externalUserId;
         this.pptArtifactId = builder.pptArtifactId;
         this.workspaceId = builder.workspaceId;
     }
@@ -45,6 +50,13 @@ public class DeletePptArtifactRequest extends Request {
     }
 
     /**
+     * @return externalUserId
+     */
+    public String getExternalUserId() {
+        return this.externalUserId;
+    }
+
+    /**
      * @return pptArtifactId
      */
     public String getPptArtifactId() {
@@ -59,6 +71,7 @@ public class DeletePptArtifactRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeletePptArtifactRequest, Builder> {
+        private String externalUserId; 
         private String pptArtifactId; 
         private String workspaceId; 
 
@@ -68,9 +81,19 @@ public class DeletePptArtifactRequest extends Request {
 
         private Builder(DeletePptArtifactRequest request) {
             super(request);
+            this.externalUserId = request.externalUserId;
             this.pptArtifactId = request.pptArtifactId;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * ExternalUserId.
+         */
+        public Builder externalUserId(String externalUserId) {
+            this.putBodyParameter("ExternalUserId", externalUserId);
+            this.externalUserId = externalUserId;
+            return this;
+        }
 
         /**
          * PptArtifactId.

@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPptArtifactsRequest</p>
  */
 public class ListPptArtifactsRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalUserId")
+    private String externalUserId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -35,6 +39,7 @@ public class ListPptArtifactsRequest extends Request {
 
     private ListPptArtifactsRequest(Builder builder) {
         super(builder);
+        this.externalUserId = builder.externalUserId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.query = builder.query;
@@ -52,6 +57,13 @@ public class ListPptArtifactsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return externalUserId
+     */
+    public String getExternalUserId() {
+        return this.externalUserId;
     }
 
     /**
@@ -83,6 +95,7 @@ public class ListPptArtifactsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListPptArtifactsRequest, Builder> {
+        private String externalUserId; 
         private Integer maxResults; 
         private String nextToken; 
         private String query; 
@@ -94,11 +107,21 @@ public class ListPptArtifactsRequest extends Request {
 
         private Builder(ListPptArtifactsRequest request) {
             super(request);
+            this.externalUserId = request.externalUserId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.query = request.query;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * ExternalUserId.
+         */
+        public Builder externalUserId(String externalUserId) {
+            this.putBodyParameter("ExternalUserId", externalUserId);
+            this.externalUserId = externalUserId;
+            return this;
+        }
 
         /**
          * MaxResults.
