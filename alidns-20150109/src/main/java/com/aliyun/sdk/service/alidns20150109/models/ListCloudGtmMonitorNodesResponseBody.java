@@ -188,6 +188,9 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultSelected")
         private Boolean defaultSelected;
 
+        @com.aliyun.core.annotation.NameInMap("EnableStatus")
+        private String enableStatus;
+
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
@@ -212,6 +215,7 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             this.countryCode = builder.countryCode;
             this.countryName = builder.countryName;
             this.defaultSelected = builder.defaultSelected;
+            this.enableStatus = builder.enableStatus;
             this.groupName = builder.groupName;
             this.groupType = builder.groupType;
             this.ips = builder.ips;
@@ -264,6 +268,13 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableStatus
+         */
+        public String getEnableStatus() {
+            return this.enableStatus;
+        }
+
+        /**
          * @return groupName
          */
         public String getGroupName() {
@@ -311,6 +322,7 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             private String countryCode; 
             private String countryName; 
             private Boolean defaultSelected; 
+            private String enableStatus; 
             private String groupName; 
             private String groupType; 
             private Ips ips; 
@@ -327,6 +339,7 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
                 this.countryCode = model.countryCode;
                 this.countryName = model.countryName;
                 this.defaultSelected = model.defaultSelected;
+                this.enableStatus = model.enableStatus;
                 this.groupName = model.groupName;
                 this.groupType = model.groupType;
                 this.ips = model.ips;
@@ -391,6 +404,14 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
              */
             public Builder defaultSelected(Boolean defaultSelected) {
                 this.defaultSelected = defaultSelected;
+                return this;
+            }
+
+            /**
+             * EnableStatus.
+             */
+            public Builder enableStatus(String enableStatus) {
+                this.enableStatus = enableStatus;
                 return this;
             }
 
@@ -599,6 +620,9 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultSelected")
         private Boolean defaultSelected;
 
+        @com.aliyun.core.annotation.NameInMap("EnableStatus")
+        private String enableStatus;
+
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
@@ -623,6 +647,7 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             this.countryCode = builder.countryCode;
             this.countryName = builder.countryName;
             this.defaultSelected = builder.defaultSelected;
+            this.enableStatus = builder.enableStatus;
             this.groupName = builder.groupName;
             this.groupType = builder.groupType;
             this.ips = builder.ips;
@@ -675,6 +700,13 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableStatus
+         */
+        public String getEnableStatus() {
+            return this.enableStatus;
+        }
+
+        /**
          * @return groupName
          */
         public String getGroupName() {
@@ -722,6 +754,7 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             private String countryCode; 
             private String countryName; 
             private Boolean defaultSelected; 
+            private String enableStatus; 
             private String groupName; 
             private String groupType; 
             private Ipv6IspCityNodeIps ips; 
@@ -738,6 +771,7 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
                 this.countryCode = model.countryCode;
                 this.countryName = model.countryName;
                 this.defaultSelected = model.defaultSelected;
+                this.enableStatus = model.enableStatus;
                 this.groupName = model.groupName;
                 this.groupType = model.groupType;
                 this.ips = model.ips;
@@ -802,6 +836,14 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
              */
             public Builder defaultSelected(Boolean defaultSelected) {
                 this.defaultSelected = defaultSelected;
+                return this;
+            }
+
+            /**
+             * EnableStatus.
+             */
+            public Builder enableStatus(String enableStatus) {
+                this.enableStatus = enableStatus;
                 return this;
             }
 
