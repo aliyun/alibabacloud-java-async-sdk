@@ -23,9 +23,13 @@ public class GenerateCLICommandResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("unifiedCli")
+    private String unifiedCli;
+
     private GenerateCLICommandResponseBody(Builder builder) {
         this.cli = builder.cli;
         this.requestId = builder.requestId;
+        this.unifiedCli = builder.unifiedCli;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class GenerateCLICommandResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return unifiedCli
+     */
+    public String getUnifiedCli() {
+        return this.unifiedCli;
+    }
+
     public static final class Builder {
         private String cli; 
         private String requestId; 
+        private String unifiedCli; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class GenerateCLICommandResponseBody extends TeaModel {
         private Builder(GenerateCLICommandResponseBody model) {
             this.cli = model.cli;
             this.requestId = model.requestId;
+            this.unifiedCli = model.unifiedCli;
         } 
 
         /**
@@ -79,6 +92,14 @@ public class GenerateCLICommandResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * unifiedCli.
+         */
+        public Builder unifiedCli(String unifiedCli) {
+            this.unifiedCli = unifiedCli;
             return this;
         }
 
