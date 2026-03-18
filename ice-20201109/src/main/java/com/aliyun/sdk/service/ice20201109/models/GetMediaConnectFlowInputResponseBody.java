@@ -152,6 +152,9 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupCreateTime")
         private String backupCreateTime;
 
+        @com.aliyun.core.annotation.NameInMap("BackupInnerInputUrl")
+        private String backupInnerInputUrl;
+
         @com.aliyun.core.annotation.NameInMap("BackupInputName")
         private String backupInputName;
 
@@ -178,6 +181,9 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("InnerInputUrl")
+        private String innerInputUrl;
 
         @com.aliyun.core.annotation.NameInMap("InputName")
         private String inputName;
@@ -212,6 +218,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         private Content(Builder builder) {
             this.backupCidrs = builder.backupCidrs;
             this.backupCreateTime = builder.backupCreateTime;
+            this.backupInnerInputUrl = builder.backupInnerInputUrl;
             this.backupInputName = builder.backupInputName;
             this.backupInputStatus = builder.backupInputStatus;
             this.backupInputUrl = builder.backupInputUrl;
@@ -221,6 +228,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             this.backupSrtPbkeyLen = builder.backupSrtPbkeyLen;
             this.cidrs = builder.cidrs;
             this.createTime = builder.createTime;
+            this.innerInputUrl = builder.innerInputUrl;
             this.inputName = builder.inputName;
             this.inputProtocol = builder.inputProtocol;
             this.inputStatus = builder.inputStatus;
@@ -253,6 +261,13 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
          */
         public String getBackupCreateTime() {
             return this.backupCreateTime;
+        }
+
+        /**
+         * @return backupInnerInputUrl
+         */
+        public String getBackupInnerInputUrl() {
+            return this.backupInnerInputUrl;
         }
 
         /**
@@ -316,6 +331,13 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return innerInputUrl
+         */
+        public String getInnerInputUrl() {
+            return this.innerInputUrl;
         }
 
         /**
@@ -391,6 +413,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public static final class Builder {
             private String backupCidrs; 
             private String backupCreateTime; 
+            private String backupInnerInputUrl; 
             private String backupInputName; 
             private String backupInputStatus; 
             private String backupInputUrl; 
@@ -400,6 +423,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             private Integer backupSrtPbkeyLen; 
             private String cidrs; 
             private String createTime; 
+            private String innerInputUrl; 
             private String inputName; 
             private String inputProtocol; 
             private String inputStatus; 
@@ -417,6 +441,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             private Builder(Content model) {
                 this.backupCidrs = model.backupCidrs;
                 this.backupCreateTime = model.backupCreateTime;
+                this.backupInnerInputUrl = model.backupInnerInputUrl;
                 this.backupInputName = model.backupInputName;
                 this.backupInputStatus = model.backupInputStatus;
                 this.backupInputUrl = model.backupInputUrl;
@@ -426,6 +451,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
                 this.backupSrtPbkeyLen = model.backupSrtPbkeyLen;
                 this.cidrs = model.cidrs;
                 this.createTime = model.createTime;
+                this.innerInputUrl = model.innerInputUrl;
                 this.inputName = model.inputName;
                 this.inputProtocol = model.inputProtocol;
                 this.inputStatus = model.inputStatus;
@@ -451,6 +477,14 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
              */
             public Builder backupCreateTime(String backupCreateTime) {
                 this.backupCreateTime = backupCreateTime;
+                return this;
+            }
+
+            /**
+             * BackupInnerInputUrl.
+             */
+            public Builder backupInnerInputUrl(String backupInnerInputUrl) {
+                this.backupInnerInputUrl = backupInnerInputUrl;
                 return this;
             }
 
@@ -529,6 +563,14 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * InnerInputUrl.
+             */
+            public Builder innerInputUrl(String innerInputUrl) {
+                this.innerInputUrl = innerInputUrl;
                 return this;
             }
 

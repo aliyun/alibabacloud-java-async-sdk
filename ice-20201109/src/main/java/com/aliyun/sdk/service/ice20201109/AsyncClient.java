@@ -1514,6 +1514,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetYikeAssetMediaInfoResponse> getYikeAssetMediaInfo(GetYikeAssetMediaInfoRequest request);
 
     /**
+     * @param request the request parameters of GetYikeStoryboardJob  GetYikeStoryboardJobRequest
+     * @return GetYikeStoryboardJobResponse
+     */
+    CompletableFuture<GetYikeStoryboardJobResponse> getYikeStoryboardJob(GetYikeStoryboardJobRequest request);
+
+    /**
      * @param request the request parameters of InsertMediaToSearchLib  InsertMediaToSearchLibRequest
      * @return InsertMediaToSearchLibResponse
      */
@@ -2015,6 +2021,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OpenMediaConnectFlowFailoverResponse
      */
     CompletableFuture<OpenMediaConnectFlowFailoverResponse> openMediaConnectFlowFailover(OpenMediaConnectFlowFailoverRequest request);
+
+    /**
+     * @param request the request parameters of PrecheckYikeAIAppJob  PrecheckYikeAIAppJobRequest
+     * @return PrecheckYikeAIAppJobResponse
+     */
+    CompletableFuture<PrecheckYikeAIAppJobResponse> precheckYikeAIAppJob(PrecheckYikeAIAppJobRequest request);
 
     /**
      * @param request the request parameters of QueryCopyrightExtractJob  QueryCopyrightExtractJobRequest
@@ -2807,6 +2819,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitYikeAIAppJobResponse
      */
     CompletableFuture<SubmitYikeAIAppJobResponse> submitYikeAIAppJob(SubmitYikeAIAppJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitYikeStoryboardJob  SubmitYikeStoryboardJobRequest
+     * @return SubmitYikeStoryboardJobResponse
+     */
+    CompletableFuture<SubmitYikeStoryboardJobResponse> submitYikeStoryboardJob(SubmitYikeStoryboardJobRequest request);
 
     /**
      * @param request the request parameters of TakeoverAIAgentCall  TakeoverAIAgentCallRequest

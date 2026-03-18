@@ -26,10 +26,15 @@ public class CreateYikeAssetUploadRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String fileExt;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileType")
+    private String fileType;
+
     private CreateYikeAssetUploadRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.fileExt = builder.fileExt;
+        this.fileType = builder.fileType;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class CreateYikeAssetUploadRequest extends Request {
         return this.fileExt;
     }
 
+    /**
+     * @return fileType
+     */
+    public String getFileType() {
+        return this.fileType;
+    }
+
     public static final class Builder extends Request.Builder<CreateYikeAssetUploadRequest, Builder> {
         private String regionId; 
         private String fileExt; 
+        private String fileType; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class CreateYikeAssetUploadRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.fileExt = request.fileExt;
+            this.fileType = request.fileType;
         } 
 
         /**
@@ -91,6 +105,15 @@ public class CreateYikeAssetUploadRequest extends Request {
         public Builder fileExt(String fileExt) {
             this.putQueryParameter("FileExt", fileExt);
             this.fileExt = fileExt;
+            return this;
+        }
+
+        /**
+         * FileType.
+         */
+        public Builder fileType(String fileType) {
+            this.putQueryParameter("FileType", fileType);
+            this.fileType = fileType;
             return this;
         }
 

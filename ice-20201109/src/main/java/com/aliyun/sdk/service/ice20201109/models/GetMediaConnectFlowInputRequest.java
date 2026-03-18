@@ -22,9 +22,14 @@ public class GetMediaConnectFlowInputRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String flowId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithInternalVip")
+    private String withInternalVip;
+
     private GetMediaConnectFlowInputRequest(Builder builder) {
         super(builder);
         this.flowId = builder.flowId;
+        this.withInternalVip = builder.withInternalVip;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class GetMediaConnectFlowInputRequest extends Request {
         return this.flowId;
     }
 
+    /**
+     * @return withInternalVip
+     */
+    public String getWithInternalVip() {
+        return this.withInternalVip;
+    }
+
     public static final class Builder extends Request.Builder<GetMediaConnectFlowInputRequest, Builder> {
         private String flowId; 
+        private String withInternalVip; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class GetMediaConnectFlowInputRequest extends Request {
         private Builder(GetMediaConnectFlowInputRequest request) {
             super(request);
             this.flowId = request.flowId;
+            this.withInternalVip = request.withInternalVip;
         } 
 
         /**
@@ -69,6 +83,15 @@ public class GetMediaConnectFlowInputRequest extends Request {
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);
             this.flowId = flowId;
+            return this;
+        }
+
+        /**
+         * WithInternalVip.
+         */
+        public Builder withInternalVip(String withInternalVip) {
+            this.putQueryParameter("WithInternalVip", withInternalVip);
+            this.withInternalVip = withInternalVip;
             return this;
         }
 

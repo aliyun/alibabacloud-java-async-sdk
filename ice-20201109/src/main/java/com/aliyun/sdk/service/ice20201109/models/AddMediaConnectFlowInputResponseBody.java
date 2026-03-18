@@ -146,10 +146,14 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
      * <p>AddMediaConnectFlowInputResponseBody</p>
      */
     public static class Content extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InnerInputUrl")
+        private String innerInputUrl;
+
         @com.aliyun.core.annotation.NameInMap("InputUrl")
         private String inputUrl;
 
         private Content(Builder builder) {
+            this.innerInputUrl = builder.innerInputUrl;
             this.inputUrl = builder.inputUrl;
         }
 
@@ -162,6 +166,13 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
         }
 
         /**
+         * @return innerInputUrl
+         */
+        public String getInnerInputUrl() {
+            return this.innerInputUrl;
+        }
+
+        /**
          * @return inputUrl
          */
         public String getInputUrl() {
@@ -169,14 +180,24 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String innerInputUrl; 
             private String inputUrl; 
 
             private Builder() {
             } 
 
             private Builder(Content model) {
+                this.innerInputUrl = model.innerInputUrl;
                 this.inputUrl = model.inputUrl;
             } 
+
+            /**
+             * InnerInputUrl.
+             */
+            public Builder innerInputUrl(String innerInputUrl) {
+                this.innerInputUrl = innerInputUrl;
+                return this;
+            }
 
             /**
              * <p>The source URL.</p>

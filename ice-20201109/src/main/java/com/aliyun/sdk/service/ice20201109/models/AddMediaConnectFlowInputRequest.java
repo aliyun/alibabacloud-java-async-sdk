@@ -64,6 +64,10 @@ public class AddMediaConnectFlowInputRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SrtPbkeyLen")
     private String srtPbkeyLen;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithInternalVip")
+    private String withInternalVip;
+
     private AddMediaConnectFlowInputRequest(Builder builder) {
         super(builder);
         this.cidrs = builder.cidrs;
@@ -77,6 +81,7 @@ public class AddMediaConnectFlowInputRequest extends Request {
         this.srtLatency = builder.srtLatency;
         this.srtPassphrase = builder.srtPassphrase;
         this.srtPbkeyLen = builder.srtPbkeyLen;
+        this.withInternalVip = builder.withInternalVip;
     }
 
     public static Builder builder() {
@@ -169,6 +174,13 @@ public class AddMediaConnectFlowInputRequest extends Request {
         return this.srtPbkeyLen;
     }
 
+    /**
+     * @return withInternalVip
+     */
+    public String getWithInternalVip() {
+        return this.withInternalVip;
+    }
+
     public static final class Builder extends Request.Builder<AddMediaConnectFlowInputRequest, Builder> {
         private String cidrs; 
         private String flowId; 
@@ -181,6 +193,7 @@ public class AddMediaConnectFlowInputRequest extends Request {
         private Integer srtLatency; 
         private String srtPassphrase; 
         private String srtPbkeyLen; 
+        private String withInternalVip; 
 
         private Builder() {
             super();
@@ -199,6 +212,7 @@ public class AddMediaConnectFlowInputRequest extends Request {
             this.srtLatency = request.srtLatency;
             this.srtPassphrase = request.srtPassphrase;
             this.srtPbkeyLen = request.srtPbkeyLen;
+            this.withInternalVip = request.withInternalVip;
         } 
 
         /**
@@ -348,6 +362,15 @@ public class AddMediaConnectFlowInputRequest extends Request {
         public Builder srtPbkeyLen(String srtPbkeyLen) {
             this.putQueryParameter("SrtPbkeyLen", srtPbkeyLen);
             this.srtPbkeyLen = srtPbkeyLen;
+            return this;
+        }
+
+        /**
+         * WithInternalVip.
+         */
+        public Builder withInternalVip(String withInternalVip) {
+            this.putQueryParameter("WithInternalVip", withInternalVip);
+            this.withInternalVip = withInternalVip;
             return this;
         }
 
