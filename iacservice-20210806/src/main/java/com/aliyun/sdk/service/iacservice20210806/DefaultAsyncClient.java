@@ -815,6 +815,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetStackExecutionResult  GetStackExecutionResultRequest
+     * @return GetStackExecutionResultResponse
+     */
+    @Override
+    public CompletableFuture<GetStackExecutionResultResponse> getStackExecutionResult(GetStackExecutionResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetStackExecutionResult").setMethod(HttpMethod.GET).setPathRegex("/stacks/trigger/{triggerId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetStackExecutionResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetStackExecutionResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTask  GetTaskRequest
      * @return GetTaskResponse
      */
@@ -1259,6 +1277,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RemoveSharedAccountsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TriggerStackExecution  TriggerStackExecutionRequest
+     * @return TriggerStackExecutionResponse
+     */
+    @Override
+    public CompletableFuture<TriggerStackExecutionResponse> triggerStackExecution(TriggerStackExecutionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TriggerStackExecution").setMethod(HttpMethod.POST).setPathRegex("/stacks/trigger").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TriggerStackExecutionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TriggerStackExecutionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

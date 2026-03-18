@@ -278,6 +278,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceTypeResponse> getResourceType(GetResourceTypeRequest request);
 
     /**
+     * @param request the request parameters of GetStackExecutionResult  GetStackExecutionResultRequest
+     * @return GetStackExecutionResultResponse
+     */
+    CompletableFuture<GetStackExecutionResultResponse> getStackExecutionResult(GetStackExecutionResultRequest request);
+
+    /**
      * @param request the request parameters of GetTask  GetTaskRequest
      * @return GetTaskResponse
      */
@@ -426,6 +432,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveSharedAccountsResponse
      */
     CompletableFuture<RemoveSharedAccountsResponse> removeSharedAccounts(RemoveSharedAccountsRequest request);
+
+    /**
+     * @param request the request parameters of TriggerStackExecution  TriggerStackExecutionRequest
+     * @return TriggerStackExecutionResponse
+     */
+    CompletableFuture<TriggerStackExecutionResponse> triggerStackExecution(TriggerStackExecutionRequest request);
 
     /**
      * @param request the request parameters of UpdateExplorerModuleAttribute  UpdateExplorerModuleAttributeRequest
