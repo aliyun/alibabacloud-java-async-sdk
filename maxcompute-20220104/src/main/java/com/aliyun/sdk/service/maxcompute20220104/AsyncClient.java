@@ -70,6 +70,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
     /**
+     * @param request the request parameters of CreateQuota  CreateQuotaRequest
+     * @return CreateQuotaResponse
+     */
+    CompletableFuture<CreateQuotaResponse> createQuota(CreateQuotaRequest request);
+
+    /**
      * @param request the request parameters of CreateQuotaPlan  CreateQuotaPlanRequest
      * @return CreateQuotaPlanResponse
      */

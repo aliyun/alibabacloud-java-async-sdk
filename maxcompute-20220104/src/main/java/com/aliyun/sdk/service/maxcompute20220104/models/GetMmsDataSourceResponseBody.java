@@ -116,6 +116,9 @@ public class GetMmsDataSourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("required")
         private Boolean required;
 
+        @com.aliyun.core.annotation.NameInMap("subItems")
+        private java.util.Map<String, ?> subItems;
+
         @com.aliyun.core.annotation.NameInMap("subType")
         private String subType;
 
@@ -133,6 +136,7 @@ public class GetMmsDataSourceResponseBody extends TeaModel {
             this.name = builder.name;
             this.placeHolder = builder.placeHolder;
             this.required = builder.required;
+            this.subItems = builder.subItems;
             this.subType = builder.subType;
             this.type = builder.type;
             this.value = builder.value;
@@ -196,6 +200,13 @@ public class GetMmsDataSourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return subItems
+         */
+        public java.util.Map<String, ?> getSubItems() {
+            return this.subItems;
+        }
+
+        /**
          * @return subType
          */
         public String getSubType() {
@@ -224,6 +235,7 @@ public class GetMmsDataSourceResponseBody extends TeaModel {
             private String name; 
             private String placeHolder; 
             private Boolean required; 
+            private java.util.Map<String, ?> subItems; 
             private String subType; 
             private String type; 
             private Object value; 
@@ -239,6 +251,7 @@ public class GetMmsDataSourceResponseBody extends TeaModel {
                 this.name = model.name;
                 this.placeHolder = model.placeHolder;
                 this.required = model.required;
+                this.subItems = model.subItems;
                 this.subType = model.subType;
                 this.type = model.type;
                 this.value = model.value;
@@ -297,6 +310,14 @@ public class GetMmsDataSourceResponseBody extends TeaModel {
              */
             public Builder required(Boolean required) {
                 this.required = required;
+                return this;
+            }
+
+            /**
+             * subItems.
+             */
+            public Builder subItems(java.util.Map<String, ?> subItems) {
+                this.subItems = subItems;
                 return this;
             }
 

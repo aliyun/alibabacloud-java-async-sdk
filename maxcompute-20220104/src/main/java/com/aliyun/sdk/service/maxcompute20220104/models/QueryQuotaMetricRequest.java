@@ -31,6 +31,10 @@ public class QueryQuotaMetricRequest extends Request {
     private String nickname;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("subMetric")
+    private String subMetric;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("subQuotaNickname")
     private String subQuotaNickname;
 
@@ -53,6 +57,7 @@ public class QueryQuotaMetricRequest extends Request {
         this.metric = builder.metric;
         this.interval = builder.interval;
         this.nickname = builder.nickname;
+        this.subMetric = builder.subMetric;
         this.subQuotaNickname = builder.subQuotaNickname;
         this.endTime = builder.endTime;
         this.startTime = builder.startTime;
@@ -94,6 +99,13 @@ public class QueryQuotaMetricRequest extends Request {
     }
 
     /**
+     * @return subMetric
+     */
+    public String getSubMetric() {
+        return this.subMetric;
+    }
+
+    /**
      * @return subQuotaNickname
      */
     public String getSubQuotaNickname() {
@@ -125,6 +137,7 @@ public class QueryQuotaMetricRequest extends Request {
         private String metric; 
         private Long interval; 
         private String nickname; 
+        private String subMetric; 
         private String subQuotaNickname; 
         private Long endTime; 
         private Long startTime; 
@@ -139,6 +152,7 @@ public class QueryQuotaMetricRequest extends Request {
             this.metric = request.metric;
             this.interval = request.interval;
             this.nickname = request.nickname;
+            this.subMetric = request.subMetric;
             this.subQuotaNickname = request.subQuotaNickname;
             this.endTime = request.endTime;
             this.startTime = request.startTime;
@@ -172,6 +186,15 @@ public class QueryQuotaMetricRequest extends Request {
         public Builder nickname(String nickname) {
             this.putBodyParameter("nickname", nickname);
             this.nickname = nickname;
+            return this;
+        }
+
+        /**
+         * subMetric.
+         */
+        public Builder subMetric(String subMetric) {
+            this.putBodyParameter("subMetric", subMetric);
+            this.subMetric = subMetric;
             return this;
         }
 
