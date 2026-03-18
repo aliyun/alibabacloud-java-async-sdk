@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -57,6 +62,10 @@ public class DescribeRdStatusResponseBody extends TeaModel {
 
     public static DescribeRdStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -133,6 +142,21 @@ public class DescribeRdStatusResponseBody extends TeaModel {
         private String rootUid; 
         private Boolean servicePrincipalEnabled; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRdStatusResponseBody model) {
+            this.currentUid = model.currentUid;
+            this.currentUidType = model.currentUidType;
+            this.enabled = model.enabled;
+            this.localEnable = model.localEnable;
+            this.masterUid = model.masterUid;
+            this.remoteEnable = model.remoteEnable;
+            this.requestId = model.requestId;
+            this.rootUid = model.rootUid;
+            this.servicePrincipalEnabled = model.servicePrincipalEnabled;
+        } 
+
         /**
          * <p>The Alibaba Cloud account ID of the current account.</p>
          * 
@@ -147,9 +171,9 @@ public class DescribeRdStatusResponseBody extends TeaModel {
         /**
          * <p>The type of the Alibaba Cloud account. Valid values:</p>
          * <ul>
-         * <li><strong>MasterAccount</strong>: management account</li>
-         * <li><strong>DelegatedAdminAccount</strong>: delegated administrator account</li>
-         * <li><strong>MasterAccount</strong>: member</li>
+         * <li><strong>MasterAccount</strong>: management account.</li>
+         * <li><strong>DelegatedAdminAccount</strong>: delegated administrator account.</li>
+         * <li><strong>MemberAccount</strong>: member.</li>
          * </ul>
          * 
          * <strong>example:</strong>

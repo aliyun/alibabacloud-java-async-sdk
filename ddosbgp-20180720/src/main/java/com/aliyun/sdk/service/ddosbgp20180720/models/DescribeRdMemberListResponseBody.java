@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRdMemberListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MemberList")
-    private java.util.List < MemberList> memberList;
+    private java.util.List<MemberList> memberList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return memberList
      */
-    public java.util.List < MemberList> getMemberList() {
+    public java.util.List<MemberList> getMemberList() {
         return this.memberList;
     }
 
@@ -57,14 +66,23 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MemberList> memberList; 
+        private java.util.List<MemberList> memberList; 
         private String requestId; 
         private Long total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRdMemberListResponseBody model) {
+            this.memberList = model.memberList;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
-         * <p>The list of the members.</p>
+         * <p>The information about the members.</p>
          */
-        public Builder memberList(java.util.List < MemberList> memberList) {
+        public Builder memberList(java.util.List<MemberList> memberList) {
             this.memberList = memberList;
             return this;
         }
@@ -152,6 +170,15 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
             private Long gmtCreate; 
             private String name; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(MemberList model) {
+                this.gmtCreate = model.gmtCreate;
+                this.name = model.name;
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>The creation time.</p>

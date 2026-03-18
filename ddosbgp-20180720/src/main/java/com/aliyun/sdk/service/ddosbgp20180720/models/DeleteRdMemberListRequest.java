@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteRdMemberListRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemberList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < MemberList> memberList;
+    private java.util.List<MemberList> memberList;
 
     private DeleteRdMemberListRequest(Builder builder) {
         super(builder);
@@ -30,7 +35,7 @@ public class DeleteRdMemberListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -38,12 +43,12 @@ public class DeleteRdMemberListRequest extends Request {
     /**
      * @return memberList
      */
-    public java.util.List < MemberList> getMemberList() {
+    public java.util.List<MemberList> getMemberList() {
         return this.memberList;
     }
 
     public static final class Builder extends Request.Builder<DeleteRdMemberListRequest, Builder> {
-        private java.util.List < MemberList> memberList; 
+        private java.util.List<MemberList> memberList; 
 
         private Builder() {
             super();
@@ -58,7 +63,7 @@ public class DeleteRdMemberListRequest extends Request {
          * <p>The list of the members.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder memberList(java.util.List < MemberList> memberList) {
+        public Builder memberList(java.util.List<MemberList> memberList) {
             String memberListShrink = shrink(memberList, "MemberList", "json");
             this.putQueryParameter("MemberList", memberListShrink);
             this.memberList = memberList;
@@ -103,6 +108,13 @@ public class DeleteRdMemberListRequest extends Request {
 
         public static final class Builder {
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(MemberList model) {
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID of the member.</p>

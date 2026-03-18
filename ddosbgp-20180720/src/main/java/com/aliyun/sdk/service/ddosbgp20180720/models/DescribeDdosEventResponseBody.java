@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDdosEventResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Events")
-    private java.util.List < Events> events;
+    private java.util.List<Events> events;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class DescribeDdosEventResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return events
      */
-    public java.util.List < Events> getEvents() {
+    public java.util.List<Events> getEvents() {
         return this.events;
     }
 
@@ -57,14 +66,23 @@ public class DescribeDdosEventResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Events> events; 
+        private java.util.List<Events> events; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDdosEventResponseBody model) {
+            this.events = model.events;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The details about the DDoS attack event.</p>
          */
-        public Builder events(java.util.List < Events> events) {
+        public Builder events(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
@@ -188,6 +206,18 @@ public class DescribeDdosEventResponseBody extends TeaModel {
             private Integer pps; 
             private Integer startTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.endTime = model.endTime;
+                this.ip = model.ip;
+                this.mbps = model.mbps;
+                this.pps = model.pps;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.</p>

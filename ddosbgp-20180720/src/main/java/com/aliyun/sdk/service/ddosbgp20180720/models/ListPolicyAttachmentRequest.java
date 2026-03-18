@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListPolicyAttachmentRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpPortProtocolList")
-    private java.util.List < IpPortProtocolList> ipPortProtocolList;
+    private java.util.List<IpPortProtocolList> ipPortProtocolList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNo")
@@ -36,6 +41,10 @@ public class ListPolicyAttachmentRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PolicyType")
     private String policyType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortVersion")
+    private String portVersion;
+
     private ListPolicyAttachmentRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -44,6 +53,7 @@ public class ListPolicyAttachmentRequest extends Request {
         this.pageSize = builder.pageSize;
         this.policyId = builder.policyId;
         this.policyType = builder.policyType;
+        this.portVersion = builder.portVersion;
     }
 
     public static Builder builder() {
@@ -54,7 +64,7 @@ public class ListPolicyAttachmentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +79,7 @@ public class ListPolicyAttachmentRequest extends Request {
     /**
      * @return ipPortProtocolList
      */
-    public java.util.List < IpPortProtocolList> getIpPortProtocolList() {
+    public java.util.List<IpPortProtocolList> getIpPortProtocolList() {
         return this.ipPortProtocolList;
     }
 
@@ -101,13 +111,21 @@ public class ListPolicyAttachmentRequest extends Request {
         return this.policyType;
     }
 
+    /**
+     * @return portVersion
+     */
+    public String getPortVersion() {
+        return this.portVersion;
+    }
+
     public static final class Builder extends Request.Builder<ListPolicyAttachmentRequest, Builder> {
         private String regionId; 
-        private java.util.List < IpPortProtocolList> ipPortProtocolList; 
+        private java.util.List<IpPortProtocolList> ipPortProtocolList; 
         private Long pageNo; 
         private Long pageSize; 
         private String policyId; 
         private String policyType; 
+        private String portVersion; 
 
         private Builder() {
             super();
@@ -121,6 +139,7 @@ public class ListPolicyAttachmentRequest extends Request {
             this.pageSize = request.pageSize;
             this.policyId = request.policyId;
             this.policyType = request.policyType;
+            this.portVersion = request.portVersion;
         } 
 
         /**
@@ -135,7 +154,7 @@ public class ListPolicyAttachmentRequest extends Request {
         /**
          * <p>The protected objects.</p>
          */
-        public Builder ipPortProtocolList(java.util.List < IpPortProtocolList> ipPortProtocolList) {
+        public Builder ipPortProtocolList(java.util.List<IpPortProtocolList> ipPortProtocolList) {
             String ipPortProtocolListShrink = shrink(ipPortProtocolList, "IpPortProtocolList", "json");
             this.putQueryParameter("IpPortProtocolList", ipPortProtocolListShrink);
             this.ipPortProtocolList = ipPortProtocolList;
@@ -195,6 +214,15 @@ public class ListPolicyAttachmentRequest extends Request {
             return this;
         }
 
+        /**
+         * PortVersion.
+         */
+        public Builder portVersion(String portVersion) {
+            this.putQueryParameter("PortVersion", portVersion);
+            this.portVersion = portVersion;
+            return this;
+        }
+
         @Override
         public ListPolicyAttachmentRequest build() {
             return new ListPolicyAttachmentRequest(this);
@@ -217,12 +245,16 @@ public class ListPolicyAttachmentRequest extends Request {
         @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
         private Integer port;
 
+        @com.aliyun.core.annotation.NameInMap("PortRange")
+        private String portRange;
+
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private IpPortProtocolList(Builder builder) {
             this.ip = builder.ip;
             this.port = builder.port;
+            this.portRange = builder.portRange;
             this.protocol = builder.protocol;
         }
 
@@ -249,6 +281,13 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
+         * @return portRange
+         */
+        public String getPortRange() {
+            return this.portRange;
+        }
+
+        /**
          * @return protocol
          */
         public String getProtocol() {
@@ -258,7 +297,18 @@ public class ListPolicyAttachmentRequest extends Request {
         public static final class Builder {
             private String ip; 
             private Integer port; 
+            private String portRange; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpPortProtocolList model) {
+                this.ip = model.ip;
+                this.port = model.port;
+                this.portRange = model.portRange;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The IP address of the protected object.</p>
@@ -280,6 +330,14 @@ public class ListPolicyAttachmentRequest extends Request {
              */
             public Builder port(Integer port) {
                 this.port = port;
+                return this;
+            }
+
+            /**
+             * PortRange.
+             */
+            public Builder portRange(String portRange) {
+                this.portRange = portRange;
                 return this;
             }
 

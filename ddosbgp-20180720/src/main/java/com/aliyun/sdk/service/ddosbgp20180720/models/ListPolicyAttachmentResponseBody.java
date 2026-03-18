@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPolicyAttachmentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AttachmentList")
-    private java.util.List < AttachmentList> attachmentList;
+    private java.util.List<AttachmentList> attachmentList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attachmentList
      */
-    public java.util.List < AttachmentList> getAttachmentList() {
+    public java.util.List<AttachmentList> getAttachmentList() {
         return this.attachmentList;
     }
 
@@ -57,14 +66,23 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AttachmentList> attachmentList; 
+        private java.util.List<AttachmentList> attachmentList; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPolicyAttachmentResponseBody model) {
+            this.attachmentList = model.attachmentList;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The records of attachments to the mitigation policy.</p>
          */
-        public Builder attachmentList(java.util.List < AttachmentList> attachmentList) {
+        public Builder attachmentList(java.util.List<AttachmentList> attachmentList) {
             this.attachmentList = attachmentList;
             return this;
         }
@@ -125,6 +143,9 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
+        @com.aliyun.core.annotation.NameInMap("PortRange")
+        private String portRange;
+
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
@@ -139,6 +160,7 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             this.policyRemark = builder.policyRemark;
             this.policyType = builder.policyType;
             this.port = builder.port;
+            this.portRange = builder.portRange;
             this.protocol = builder.protocol;
             this.region = builder.region;
         }
@@ -201,6 +223,13 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
+         * @return portRange
+         */
+        public String getPortRange() {
+            return this.portRange;
+        }
+
+        /**
          * @return protocol
          */
         public String getProtocol() {
@@ -222,8 +251,25 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             private String policyRemark; 
             private String policyType; 
             private Integer port; 
+            private String portRange; 
             private String protocol; 
             private String region; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttachmentList model) {
+                this.ip = model.ip;
+                this.memberUid = model.memberUid;
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+                this.policyRemark = model.policyRemark;
+                this.policyType = model.policyType;
+                this.port = model.port;
+                this.portRange = model.portRange;
+                this.protocol = model.protocol;
+                this.region = model.region;
+            } 
 
             /**
              * <p>The IP address of the protected object.</p>
@@ -303,6 +349,14 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
              */
             public Builder port(Integer port) {
                 this.port = port;
+                return this;
+            }
+
+            /**
+             * PortRange.
+             */
+            public Builder portRange(String portRange) {
+                this.portRange = portRange;
                 return this;
             }
 

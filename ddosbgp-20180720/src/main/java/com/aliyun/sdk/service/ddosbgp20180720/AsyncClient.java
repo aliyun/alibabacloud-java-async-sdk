@@ -64,22 +64,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckGrantResponse> checkGrant(CheckGrantRequest request);
 
     /**
-     * @param request the request parameters of ConfigSchedruleOnDemand  ConfigSchedruleOnDemandRequest
-     * @return ConfigSchedruleOnDemandResponse
-     */
-    CompletableFuture<ConfigSchedruleOnDemandResponse> configSchedruleOnDemand(ConfigSchedruleOnDemandRequest request);
-
-    /**
      * @param request the request parameters of CreatePolicy  CreatePolicyRequest
      * @return CreatePolicyResponse
      */
     CompletableFuture<CreatePolicyResponse> createPolicy(CreatePolicyRequest request);
-
-    /**
-     * @param request the request parameters of CreateSchedruleOnDemand  CreateSchedruleOnDemandRequest
-     * @return CreateSchedruleOnDemandResponse
-     */
-    CompletableFuture<CreateSchedruleOnDemandResponse> createSchedruleOnDemand(CreateSchedruleOnDemandRequest request);
 
     /**
      * <b>description</b> :
@@ -119,12 +107,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRdMemberListResponse
      */
     CompletableFuture<DeleteRdMemberListResponse> deleteRdMemberList(DeleteRdMemberListRequest request);
-
-    /**
-     * @param request the request parameters of DeleteSchedruleOnDemand  DeleteSchedruleOnDemandRequest
-     * @return DeleteSchedruleOnDemandResponse
-     */
-    CompletableFuture<DeleteSchedruleOnDemandResponse> deleteSchedruleOnDemand(DeleteSchedruleOnDemandRequest request);
 
     /**
      * @param request the request parameters of DescribeAssetGroup  DescribeAssetGroupRequest
@@ -167,9 +149,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  </p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Queries the details of all Anti-DDoS Origin instances.</p>
      * 
      * @param request the request parameters of DescribeInstanceList  DescribeInstanceListRequest
      * @return DescribeInstanceListResponse
@@ -181,23 +161,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeInstanceSpecsResponse
      */
     CompletableFuture<DescribeInstanceSpecsResponse> describeInstanceSpecs(DescribeInstanceSpecsRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.</p>
-     * <h3><a href="#qps-"></a>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
-     * @param request the request parameters of DescribeOnDemandDdosEvent  DescribeOnDemandDdosEventRequest
-     * @return DescribeOnDemandDdosEventResponse
-     */
-    CompletableFuture<DescribeOnDemandDdosEventResponse> describeOnDemandDdosEvent(DescribeOnDemandDdosEventRequest request);
-
-    /**
-     * @param request the request parameters of DescribeOnDemandInstanceStatus  DescribeOnDemandInstanceStatusRequest
-     * @return DescribeOnDemandInstanceStatusResponse
-     */
-    CompletableFuture<DescribeOnDemandInstanceStatusResponse> describeOnDemandInstanceStatus(DescribeOnDemandInstanceStatusRequest request);
 
     /**
      * <b>description</b> :
@@ -307,6 +270,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Modifies a mitigation policy.</p>
+     * 
      * @param request the request parameters of ModifyPolicy  ModifyPolicyRequest
      * @return ModifyPolicyResponse
      */
@@ -339,22 +305,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request);
 
     /**
-     * @param request the request parameters of QuerySchedruleOnDemand  QuerySchedruleOnDemandRequest
-     * @return QuerySchedruleOnDemandResponse
-     */
-    CompletableFuture<QuerySchedruleOnDemandResponse> querySchedruleOnDemand(QuerySchedruleOnDemandRequest request);
-
-    /**
      * @param request the request parameters of ReleaseDdosOriginInstance  ReleaseDdosOriginInstanceRequest
      * @return ReleaseDdosOriginInstanceResponse
      */
     CompletableFuture<ReleaseDdosOriginInstanceResponse> releaseDdosOriginInstance(ReleaseDdosOriginInstanceRequest request);
-
-    /**
-     * @param request the request parameters of SetInstanceModeOnDemand  SetInstanceModeOnDemandRequest
-     * @return SetInstanceModeOnDemandResponse
-     */
-    CompletableFuture<SetInstanceModeOnDemandResponse> setInstanceModeOnDemand(SetInstanceModeOnDemandRequest request);
 
     /**
      * <b>description</b> :

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceSpecsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceSpecs")
-    private java.util.List < InstanceSpecs> instanceSpecs;
+    private java.util.List<InstanceSpecs> instanceSpecs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceSpecs
      */
-    public java.util.List < InstanceSpecs> getInstanceSpecs() {
+    public java.util.List<InstanceSpecs> getInstanceSpecs() {
         return this.instanceSpecs;
     }
 
@@ -46,13 +55,21 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceSpecs> instanceSpecs; 
+        private java.util.List<InstanceSpecs> instanceSpecs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceSpecsResponseBody model) {
+            this.instanceSpecs = model.instanceSpecs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The specifications of the Anti-DDoS Origin instance, including whether best-effort protection is enabled, the number of available best-effort protection sessions, and the number of used best-effort protection sessions.</p>
          */
-        public Builder instanceSpecs(java.util.List < InstanceSpecs> instanceSpecs) {
+        public Builder instanceSpecs(java.util.List<InstanceSpecs> instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
             return this;
         }
@@ -213,6 +230,22 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer normalBandwidth; 
             private Integer packAdvThre; 
             private Integer packBasicThre; 
+
+            private Builder() {
+            } 
+
+            private Builder(PackConfig model) {
+                this.bandwidth = model.bandwidth;
+                this.bindIpCount = model.bindIpCount;
+                this.elasticBwMbps = model.elasticBwMbps;
+                this.elasticBwMode = model.elasticBwMode;
+                this.ipAdvanceThre = model.ipAdvanceThre;
+                this.ipBasicThre = model.ipBasicThre;
+                this.ipSpec = model.ipSpec;
+                this.normalBandwidth = model.normalBandwidth;
+                this.packAdvThre = model.packAdvThre;
+                this.packBasicThre = model.packBasicThre;
+            } 
 
             /**
              * <p>The bandwidth. Unit: Gbit/s.</p>
@@ -462,6 +495,21 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private PackConfig packConfig; 
             private String region; 
             private Integer totalDefenseTimes; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceSpecs model) {
+                this.availableDefenseTimes = model.availableDefenseTimes;
+                this.availableDeleteBlackholeCount = model.availableDeleteBlackholeCount;
+                this.defenseTimesPercent = model.defenseTimesPercent;
+                this.downgradeStatus = model.downgradeStatus;
+                this.instanceId = model.instanceId;
+                this.isFullDefenseMode = model.isFullDefenseMode;
+                this.packConfig = model.packConfig;
+                this.region = model.region;
+                this.totalDefenseTimes = model.totalDefenseTimes;
+            } 
 
             /**
              * <p>The available best-effort protection sessions.</p>

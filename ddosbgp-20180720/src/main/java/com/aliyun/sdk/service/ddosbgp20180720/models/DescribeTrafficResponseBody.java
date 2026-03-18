@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeTrafficResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FlowList")
-    private java.util.List < FlowList> flowList;
+    private java.util.List<FlowList> flowList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeTrafficResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return flowList
      */
-    public java.util.List < FlowList> getFlowList() {
+    public java.util.List<FlowList> getFlowList() {
         return this.flowList;
     }
 
@@ -46,13 +55,21 @@ public class DescribeTrafficResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FlowList> flowList; 
+        private java.util.List<FlowList> flowList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTrafficResponseBody model) {
+            this.flowList = model.flowList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried traffic statistics.</p>
          */
-        public Builder flowList(java.util.List < FlowList> flowList) {
+        public Builder flowList(java.util.List<FlowList> flowList) {
             this.flowList = flowList;
             return this;
         }
@@ -177,6 +194,19 @@ public class DescribeTrafficResponseBody extends TeaModel {
             private String name; 
             private Integer pps; 
             private Integer time; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlowList model) {
+                this.attackBps = model.attackBps;
+                this.attackPps = model.attackPps;
+                this.flowType = model.flowType;
+                this.kbps = model.kbps;
+                this.name = model.name;
+                this.pps = model.pps;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The bandwidth of attack traffic. Unit: bit/s.</p>

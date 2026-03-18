@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SlsConfigStatus")
-    private java.util.List < SlsConfigStatus> slsConfigStatus;
+    private java.util.List<SlsConfigStatus> slsConfigStatus;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -35,6 +40,10 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -45,7 +54,7 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
     /**
      * @return slsConfigStatus
      */
-    public java.util.List < SlsConfigStatus> getSlsConfigStatus() {
+    public java.util.List<SlsConfigStatus> getSlsConfigStatus() {
         return this.slsConfigStatus;
     }
 
@@ -58,8 +67,17 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SlsConfigStatus> slsConfigStatus; 
+        private java.util.List<SlsConfigStatus> slsConfigStatus; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOpenedAccessLogInstancesResponseBody model) {
+            this.requestId = model.requestId;
+            this.slsConfigStatus = model.slsConfigStatus;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -73,9 +91,9 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration of log analysis for the Anti-DDoS Origin instance.</p>
+         * <p>The configuration of log analysis for the Anti-DDoS Origin instances.</p>
          */
-        public Builder slsConfigStatus(java.util.List < SlsConfigStatus> slsConfigStatus) {
+        public Builder slsConfigStatus(java.util.List<SlsConfigStatus> slsConfigStatus) {
             this.slsConfigStatus = slsConfigStatus;
             return this;
         }
@@ -140,6 +158,14 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enable; 
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlsConfigStatus model) {
+                this.enable = model.enable;
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * <p>Indicates whether log analysis was enabled for the Anti-DDoS Origin instance. Valid values:</p>

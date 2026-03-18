@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,6 +27,10 @@ public class CreatePolicyRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortVersion")
+    private String portVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -30,6 +39,7 @@ public class CreatePolicyRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.name = builder.name;
+        this.portVersion = builder.portVersion;
         this.type = builder.type;
     }
 
@@ -41,7 +51,7 @@ public class CreatePolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -61,6 +71,13 @@ public class CreatePolicyRequest extends Request {
     }
 
     /**
+     * @return portVersion
+     */
+    public String getPortVersion() {
+        return this.portVersion;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -70,6 +87,7 @@ public class CreatePolicyRequest extends Request {
     public static final class Builder extends Request.Builder<CreatePolicyRequest, Builder> {
         private String regionId; 
         private String name; 
+        private String portVersion; 
         private String type; 
 
         private Builder() {
@@ -80,6 +98,7 @@ public class CreatePolicyRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.name = request.name;
+            this.portVersion = request.portVersion;
             this.type = request.type;
         } 
 
@@ -102,6 +121,15 @@ public class CreatePolicyRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * PortVersion.
+         */
+        public Builder portVersion(String portVersion) {
+            this.putQueryParameter("PortVersion", portVersion);
+            this.portVersion = portVersion;
             return this;
         }
 

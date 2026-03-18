@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataList")
-    private java.util.List < DataList> dataList;
+    private java.util.List<DataList> dataList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataList
      */
-    public java.util.List < DataList> getDataList() {
+    public java.util.List<DataList> getDataList() {
         return this.dataList;
     }
 
@@ -57,14 +66,23 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataList> dataList; 
+        private java.util.List<DataList> dataList; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAssetGroupToInstanceResponseBody model) {
+            this.dataList = model.dataList;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The response parameters.</p>
          */
-        public Builder dataList(java.util.List < DataList> dataList) {
+        public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
             return this;
         }
@@ -176,6 +194,17 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             private String name; 
             private String region; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.instanceId = model.instanceId;
+                this.memberUid = model.memberUid;
+                this.name = model.name;
+                this.region = model.region;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the Anti-DDoS Origin instance of a paid edition.</p>

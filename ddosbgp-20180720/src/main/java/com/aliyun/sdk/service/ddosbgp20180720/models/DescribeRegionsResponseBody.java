@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Regions")
-    private java.util.List < Regions> regions;
+    private java.util.List<Regions> regions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -39,6 +44,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -49,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     /**
      * @return regions
      */
-    public java.util.List < Regions> getRegions() {
+    public java.util.List<Regions> getRegions() {
         return this.regions;
     }
 
@@ -69,9 +78,19 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Regions> regions; 
+        private java.util.List<Regions> regions; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.code = model.code;
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -87,7 +106,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * <p>The information about the regions of cloud assets that can be protected by Anti-DDoS Origin. The information includes region IDs and names.</p>
          */
-        public Builder regions(java.util.List < Regions> regions) {
+        public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
             return this;
         }
@@ -179,6 +198,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionEnName; 
             private String regionId; 
             private String regionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.regionEnName = model.regionEnName;
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+            } 
 
             /**
              * <p>The English name of the region.</p>

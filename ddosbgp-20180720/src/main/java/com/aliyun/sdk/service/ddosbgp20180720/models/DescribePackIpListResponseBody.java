@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("IpList")
-    private java.util.List < IpList> ipList;
+    private java.util.List<IpList> ipList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -43,6 +48,10 @@ public class DescribePackIpListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,7 +62,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
     /**
      * @return ipList
      */
-    public java.util.List < IpList> getIpList() {
+    public java.util.List<IpList> getIpList() {
         return this.ipList;
     }
 
@@ -80,10 +89,21 @@ public class DescribePackIpListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < IpList> ipList; 
+        private java.util.List<IpList> ipList; 
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePackIpListResponseBody model) {
+            this.code = model.code;
+            this.ipList = model.ipList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status code of the request.</p>
@@ -100,7 +120,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
         /**
          * <p>The IP addresses that are protected by the instance.</p>
          */
-        public Builder ipList(java.util.List < IpList> ipList) {
+        public Builder ipList(java.util.List<IpList> ipList) {
             this.ipList = ipList;
             return this;
         }
@@ -275,6 +295,21 @@ public class DescribePackIpListResponseBody extends TeaModel {
             private String region; 
             private String remark; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpList model) {
+                this.ip = model.ip;
+                this.memberUid = model.memberUid;
+                this.nsmExpireAt = model.nsmExpireAt;
+                this.nsmStartAt = model.nsmStartAt;
+                this.nsmStatus = model.nsmStatus;
+                this.product = model.product;
+                this.region = model.region;
+                this.remark = model.remark;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The IP address.</p>

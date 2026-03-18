@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeExcpetionCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exceptionIpCount
      */
@@ -60,6 +69,15 @@ public class DescribeExcpetionCountResponseBody extends TeaModel {
         private Integer exceptionIpCount; 
         private Integer expireTimeCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExcpetionCountResponseBody model) {
+            this.exceptionIpCount = model.exceptionIpCount;
+            this.expireTimeCount = model.expireTimeCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of assets that are in an abnormal state.</p>

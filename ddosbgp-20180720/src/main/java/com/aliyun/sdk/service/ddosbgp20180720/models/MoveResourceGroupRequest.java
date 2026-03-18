@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -48,7 +53,7 @@ public class MoveResourceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,6 +105,7 @@ public class MoveResourceGroupRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the resource group to which you want to move the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,6 +118,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +131,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,6 +144,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Set the value to <strong>instance</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

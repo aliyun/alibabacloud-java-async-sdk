@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,6 +33,7 @@ public class AddIpRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    @Deprecated
     private String resourceGroupId;
 
     private AddIpRequest(Builder builder) {
@@ -46,7 +52,7 @@ public class AddIpRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,12 +120,10 @@ public class AddIpRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses that you want to add to the Anti-DDoS Origin instance. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that includes the following field:</p>
+         * <p>The IP addresses that you want to add to the Anti-DDoS Origin instance. This parameter is a string consisting of JSON arrays. Each element in a JSON array is a JSON struct that includes the following fields:</p>
          * <ul>
-         * <li><p><strong>ip</strong>: required. The IP address that you want to add. Data type: string.</p>
-         * <p>**</p>
-         * <p><strong>Note</strong> The IP address must be the IP address of an asset that belongs to the current Alibaba Cloud account.</p>
-         * </li>
+         * <li><strong>ip</strong>: required. The IP address that you want to add. Data type: string.</li>
+         * <li><strong>member_uid</strong>: optional. The member to which the asset belongs. Data type: string. This field is required only if the asset of a member is queried. Example: [{&quot;ip&quot;:&quot;121.41.XX.XX&quot;,&quot;member_uid&quot;:&quot;120100811162****&quot;}].</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

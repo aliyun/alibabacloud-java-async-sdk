@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DettachAssetGroupToInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssetGroupList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AssetGroupList> assetGroupList;
+    private java.util.List<AssetGroupList> assetGroupList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -41,7 +46,7 @@ public class DettachAssetGroupToInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,7 +54,7 @@ public class DettachAssetGroupToInstanceRequest extends Request {
     /**
      * @return assetGroupList
      */
-    public java.util.List < AssetGroupList> getAssetGroupList() {
+    public java.util.List<AssetGroupList> getAssetGroupList() {
         return this.assetGroupList;
     }
 
@@ -68,7 +73,7 @@ public class DettachAssetGroupToInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DettachAssetGroupToInstanceRequest, Builder> {
-        private java.util.List < AssetGroupList> assetGroupList; 
+        private java.util.List<AssetGroupList> assetGroupList; 
         private String instanceId; 
         private String regionId; 
 
@@ -87,7 +92,7 @@ public class DettachAssetGroupToInstanceRequest extends Request {
          * <p>The information about the asset that you want to dissociate.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder assetGroupList(java.util.List < AssetGroupList> assetGroupList) {
+        public Builder assetGroupList(java.util.List<AssetGroupList> assetGroupList) {
             String assetGroupListShrink = shrink(assetGroupList, "AssetGroupList", "json");
             this.putQueryParameter("AssetGroupList", assetGroupListShrink);
             this.assetGroupList = assetGroupList;
@@ -190,6 +195,15 @@ public class DettachAssetGroupToInstanceRequest extends Request {
             private String name; 
             private String region; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssetGroupList model) {
+                this.name = model.name;
+                this.region = model.region;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</p>

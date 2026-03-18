@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAssetGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AssetGroupList")
-    private java.util.List < AssetGroupList> assetGroupList;
+    private java.util.List<AssetGroupList> assetGroupList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assetGroupList
      */
-    public java.util.List < AssetGroupList> getAssetGroupList() {
+    public java.util.List<AssetGroupList> getAssetGroupList() {
         return this.assetGroupList;
     }
 
@@ -57,14 +66,23 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AssetGroupList> assetGroupList; 
+        private java.util.List<AssetGroupList> assetGroupList; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAssetGroupResponseBody model) {
+            this.assetGroupList = model.assetGroupList;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The information about the asset.</p>
          */
-        public Builder assetGroupList(java.util.List < AssetGroupList> assetGroupList) {
+        public Builder assetGroupList(java.util.List<AssetGroupList> assetGroupList) {
             this.assetGroupList = assetGroupList;
             return this;
         }
@@ -152,6 +170,15 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
             private String name; 
             private String region; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssetGroupList model) {
+                this.name = model.name;
+                this.region = model.region;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the asset.</p>

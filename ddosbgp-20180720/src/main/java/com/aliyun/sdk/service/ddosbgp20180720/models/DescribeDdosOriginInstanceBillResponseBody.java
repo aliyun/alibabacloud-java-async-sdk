@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,10 +24,10 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     private Long debtStatus;
 
     @com.aliyun.core.annotation.NameInMap("FlowList")
-    private java.util.List < FlowList> flowList;
+    private java.util.List<FlowList> flowList;
 
     @com.aliyun.core.annotation.NameInMap("FlowRegion")
-    private java.util.Map < String, ? > flowRegion;
+    private java.util.Map<String, ?> flowRegion;
 
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
@@ -31,22 +36,22 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     private Long ipCount;
 
     @com.aliyun.core.annotation.NameInMap("IpCountOrFunctionList")
-    private java.util.List < IpCountOrFunctionList> ipCountOrFunctionList;
+    private java.util.List<IpCountOrFunctionList> ipCountOrFunctionList;
 
     @com.aliyun.core.annotation.NameInMap("IpInfo")
     private String ipInfo;
 
     @com.aliyun.core.annotation.NameInMap("MonthlySummaryList")
-    private java.util.List < MonthlySummaryList> monthlySummaryList;
+    private java.util.List<MonthlySummaryList> monthlySummaryList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StandardAssetsFlowList")
-    private java.util.List < StandardAssetsFlowList> standardAssetsFlowList;
+    private java.util.List<StandardAssetsFlowList> standardAssetsFlowList;
 
     @com.aliyun.core.annotation.NameInMap("StandardAssetsFlowRegion")
-    private java.util.Map < String, ? > standardAssetsFlowRegion;
+    private java.util.Map<String, ?> standardAssetsFlowRegion;
 
     @com.aliyun.core.annotation.NameInMap("StandardAssetsTotalFlowCn")
     private Long standardAssetsTotalFlowCn;
@@ -91,6 +96,10 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assetStatus
      */
@@ -108,14 +117,14 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     /**
      * @return flowList
      */
-    public java.util.List < FlowList> getFlowList() {
+    public java.util.List<FlowList> getFlowList() {
         return this.flowList;
     }
 
     /**
      * @return flowRegion
      */
-    public java.util.Map < String, ? > getFlowRegion() {
+    public java.util.Map<String, ?> getFlowRegion() {
         return this.flowRegion;
     }
 
@@ -136,7 +145,7 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     /**
      * @return ipCountOrFunctionList
      */
-    public java.util.List < IpCountOrFunctionList> getIpCountOrFunctionList() {
+    public java.util.List<IpCountOrFunctionList> getIpCountOrFunctionList() {
         return this.ipCountOrFunctionList;
     }
 
@@ -150,7 +159,7 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     /**
      * @return monthlySummaryList
      */
-    public java.util.List < MonthlySummaryList> getMonthlySummaryList() {
+    public java.util.List<MonthlySummaryList> getMonthlySummaryList() {
         return this.monthlySummaryList;
     }
 
@@ -164,14 +173,14 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     /**
      * @return standardAssetsFlowList
      */
-    public java.util.List < StandardAssetsFlowList> getStandardAssetsFlowList() {
+    public java.util.List<StandardAssetsFlowList> getStandardAssetsFlowList() {
         return this.standardAssetsFlowList;
     }
 
     /**
      * @return standardAssetsFlowRegion
      */
-    public java.util.Map < String, ? > getStandardAssetsFlowRegion() {
+    public java.util.Map<String, ?> getStandardAssetsFlowRegion() {
         return this.standardAssetsFlowRegion;
     }
 
@@ -213,21 +222,44 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     public static final class Builder {
         private Integer assetStatus; 
         private Long debtStatus; 
-        private java.util.List < FlowList> flowList; 
-        private java.util.Map < String, ? > flowRegion; 
+        private java.util.List<FlowList> flowList; 
+        private java.util.Map<String, ?> flowRegion; 
         private String instanceId; 
         private Long ipCount; 
-        private java.util.List < IpCountOrFunctionList> ipCountOrFunctionList; 
+        private java.util.List<IpCountOrFunctionList> ipCountOrFunctionList; 
         private String ipInfo; 
-        private java.util.List < MonthlySummaryList> monthlySummaryList; 
+        private java.util.List<MonthlySummaryList> monthlySummaryList; 
         private String requestId; 
-        private java.util.List < StandardAssetsFlowList> standardAssetsFlowList; 
-        private java.util.Map < String, ? > standardAssetsFlowRegion; 
+        private java.util.List<StandardAssetsFlowList> standardAssetsFlowList; 
+        private java.util.Map<String, ?> standardAssetsFlowRegion; 
         private Long standardAssetsTotalFlowCn; 
         private Long standardAssetsTotalFlowOv; 
         private Long status; 
         private Long totalFlowCn; 
         private Long totalFlowOv; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDdosOriginInstanceBillResponseBody model) {
+            this.assetStatus = model.assetStatus;
+            this.debtStatus = model.debtStatus;
+            this.flowList = model.flowList;
+            this.flowRegion = model.flowRegion;
+            this.instanceId = model.instanceId;
+            this.ipCount = model.ipCount;
+            this.ipCountOrFunctionList = model.ipCountOrFunctionList;
+            this.ipInfo = model.ipInfo;
+            this.monthlySummaryList = model.monthlySummaryList;
+            this.requestId = model.requestId;
+            this.standardAssetsFlowList = model.standardAssetsFlowList;
+            this.standardAssetsFlowRegion = model.standardAssetsFlowRegion;
+            this.standardAssetsTotalFlowCn = model.standardAssetsTotalFlowCn;
+            this.standardAssetsTotalFlowOv = model.standardAssetsTotalFlowOv;
+            this.status = model.status;
+            this.totalFlowCn = model.totalFlowCn;
+            this.totalFlowOv = model.totalFlowOv;
+        } 
 
         /**
          * <p>The asset status.</p>
@@ -262,7 +294,7 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         /**
          * <p>The details about the traffic of EIPs with Anti-DDoS (Enhanced) enabled.</p>
          */
-        public Builder flowList(java.util.List < FlowList> flowList) {
+        public Builder flowList(java.util.List<FlowList> flowList) {
             this.flowList = flowList;
             return this;
         }
@@ -273,7 +305,7 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{&quot;cn-hongkong&quot;: 166491566}</p>
          */
-        public Builder flowRegion(java.util.Map < String, ? > flowRegion) {
+        public Builder flowRegion(java.util.Map<String, ?> flowRegion) {
             this.flowRegion = flowRegion;
             return this;
         }
@@ -303,7 +335,7 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         /**
          * <p>The protected IP addresses and enabled features.</p>
          */
-        public Builder ipCountOrFunctionList(java.util.List < IpCountOrFunctionList> ipCountOrFunctionList) {
+        public Builder ipCountOrFunctionList(java.util.List<IpCountOrFunctionList> ipCountOrFunctionList) {
             this.ipCountOrFunctionList = ipCountOrFunctionList;
             return this;
         }
@@ -328,7 +360,7 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         /**
          * <p>The information about the monthly summary bills.</p>
          */
-        public Builder monthlySummaryList(java.util.List < MonthlySummaryList> monthlySummaryList) {
+        public Builder monthlySummaryList(java.util.List<MonthlySummaryList> monthlySummaryList) {
             this.monthlySummaryList = monthlySummaryList;
             return this;
         }
@@ -347,7 +379,7 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         /**
          * <p>The details about the traffic of regular Alibaba Cloud services.</p>
          */
-        public Builder standardAssetsFlowList(java.util.List < StandardAssetsFlowList> standardAssetsFlowList) {
+        public Builder standardAssetsFlowList(java.util.List<StandardAssetsFlowList> standardAssetsFlowList) {
             this.standardAssetsFlowList = standardAssetsFlowList;
             return this;
         }
@@ -358,7 +390,7 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{&quot;cn-hongkong&quot;: 166491566}</p>
          */
-        public Builder standardAssetsFlowRegion(java.util.Map < String, ? > standardAssetsFlowRegion) {
+        public Builder standardAssetsFlowRegion(java.util.Map<String, ?> standardAssetsFlowRegion) {
             this.standardAssetsFlowRegion = standardAssetsFlowRegion;
             return this;
         }
@@ -445,6 +477,9 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
+        @com.aliyun.core.annotation.NameInMap("TotalBillFlow")
+        private Long totalBillFlow;
+
         @com.aliyun.core.annotation.NameInMap("TotalFlow")
         private Long totalFlow;
 
@@ -452,6 +487,7 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             this.memberFlow = builder.memberFlow;
             this.regionFlow = builder.regionFlow;
             this.time = builder.time;
+            this.totalBillFlow = builder.totalBillFlow;
             this.totalFlow = builder.totalFlow;
         }
 
@@ -485,6 +521,13 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalBillFlow
+         */
+        public Long getTotalBillFlow() {
+            return this.totalBillFlow;
+        }
+
+        /**
          * @return totalFlow
          */
         public Long getTotalFlow() {
@@ -495,7 +538,19 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             private String memberFlow; 
             private String regionFlow; 
             private Long time; 
+            private Long totalBillFlow; 
             private Long totalFlow; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlowList model) {
+                this.memberFlow = model.memberFlow;
+                this.regionFlow = model.regionFlow;
+                this.time = model.time;
+                this.totalBillFlow = model.totalBillFlow;
+                this.totalFlow = model.totalFlow;
+            } 
 
             /**
              * <p>The traffic distribution by region. The JSON struct contains the following fields:</p>
@@ -543,6 +598,17 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
              */
             public Builder time(Long time) {
                 this.time = time;
+                return this;
+            }
+
+            /**
+             * <p>The total IP traffic of regular Alibaba Cloud services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6302081067</p>
+             */
+            public Builder totalBillFlow(Long totalBillFlow) {
+                this.totalBillFlow = totalBillFlow;
                 return this;
             }
 
@@ -643,6 +709,17 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             private Long ipCntOv; 
             private String memberIpCnt; 
             private Long time; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpCountOrFunctionList model) {
+                this.coverage = model.coverage;
+                this.ipCntCn = model.ipCntCn;
+                this.ipCntOv = model.ipCntOv;
+                this.memberIpCnt = model.memberIpCnt;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The application scope of the instance. Valid values:</p>
@@ -849,6 +926,21 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             private Long standardAssetsFlowIntl; 
             private String uid; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonthlySummaryList model) {
+                this.enableDays = model.enableDays;
+                this.flowCn = model.flowCn;
+                this.flowIntl = model.flowIntl;
+                this.ipCountCn = model.ipCountCn;
+                this.ipCountIntl = model.ipCountIntl;
+                this.memberUid = model.memberUid;
+                this.standardAssetsFlowCn = model.standardAssetsFlowCn;
+                this.standardAssetsFlowIntl = model.standardAssetsFlowIntl;
+                this.uid = model.uid;
+            } 
+
             /**
              * <p>The number of days that the instance is activated.</p>
              * 
@@ -1028,6 +1120,16 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             private String regionFlow; 
             private Long time; 
             private Long totalFlow; 
+
+            private Builder() {
+            } 
+
+            private Builder(StandardAssetsFlowList model) {
+                this.memberFlow = model.memberFlow;
+                this.regionFlow = model.regionFlow;
+                this.time = model.time;
+                this.totalFlow = model.totalFlow;
+            } 
 
             /**
              * <p>The traffic distribution by region. The JSON struct contains the following fields:</p>

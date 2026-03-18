@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,6 +39,10 @@ public class ModifyPolicyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortVersion")
+    private String portVersion;
+
     private ModifyPolicyRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -41,6 +50,7 @@ public class ModifyPolicyRequest extends Request {
         this.content = builder.content;
         this.id = builder.id;
         this.name = builder.name;
+        this.portVersion = builder.portVersion;
     }
 
     public static Builder builder() {
@@ -51,7 +61,7 @@ public class ModifyPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -91,12 +101,20 @@ public class ModifyPolicyRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return portVersion
+     */
+    public String getPortVersion() {
+        return this.portVersion;
+    }
+
     public static final class Builder extends Request.Builder<ModifyPolicyRequest, Builder> {
         private String regionId; 
         private Integer actionType; 
         private Content content; 
         private String id; 
         private String name; 
+        private String portVersion; 
 
         private Builder() {
             super();
@@ -109,6 +127,7 @@ public class ModifyPolicyRequest extends Request {
             this.content = request.content;
             this.id = request.id;
             this.name = request.name;
+            this.portVersion = request.portVersion;
         } 
 
         /**
@@ -189,6 +208,15 @@ public class ModifyPolicyRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * PortVersion.
+         */
+        public Builder portVersion(String portVersion) {
+            this.putQueryParameter("PortVersion", portVersion);
+            this.portVersion = portVersion;
             return this;
         }
 
@@ -387,6 +415,25 @@ public class ModifyPolicyRequest extends Request {
             private Integer srcPortEnd; 
             private Integer srcPortStart; 
 
+            private Builder() {
+            } 
+
+            private Builder(FingerPrintRuleList model) {
+                this.dstPortEnd = model.dstPortEnd;
+                this.dstPortStart = model.dstPortStart;
+                this.id = model.id;
+                this.matchAction = model.matchAction;
+                this.maxPktLen = model.maxPktLen;
+                this.minPktLen = model.minPktLen;
+                this.offset = model.offset;
+                this.payloadBytes = model.payloadBytes;
+                this.protocol = model.protocol;
+                this.rateValue = model.rateValue;
+                this.seqNo = model.seqNo;
+                this.srcPortEnd = model.srcPortEnd;
+                this.srcPortStart = model.srcPortStart;
+            } 
+
             /**
              * <p>The end of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
              * <p>This parameter is required.</p>
@@ -568,22 +615,113 @@ public class ModifyPolicyRequest extends Request {
      *
      * <p>ModifyPolicyRequest</p>
      */
+    public static class Offset extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("End")
+        private Integer end;
+
+        @com.aliyun.core.annotation.NameInMap("Start")
+        private Integer start;
+
+        private Offset(Builder builder) {
+            this.end = builder.end;
+            this.start = builder.start;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Offset create() {
+            return builder().build();
+        }
+
+        /**
+         * @return end
+         */
+        public Integer getEnd() {
+            return this.end;
+        }
+
+        /**
+         * @return start
+         */
+        public Integer getStart() {
+            return this.start;
+        }
+
+        public static final class Builder {
+            private Integer end; 
+            private Integer start; 
+
+            private Builder() {
+            } 
+
+            private Builder(Offset model) {
+                this.end = model.end;
+                this.start = model.start;
+            } 
+
+            /**
+             * End.
+             */
+            public Builder end(Integer end) {
+                this.end = end;
+                return this;
+            }
+
+            /**
+             * Start.
+             */
+            public Builder start(Integer start) {
+                this.start = start;
+                return this;
+            }
+
+            public Offset build() {
+                return new Offset(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyRequest</p>
+     */
     public static class ConditionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arg")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 4096, minLength = 1)
+        @com.aliyun.core.annotation.Validation(maxLength = 4096, minLength = 1)
         private String arg;
 
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
         @com.aliyun.core.annotation.NameInMap("Depth")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 2048, minimum = 1)
+        @com.aliyun.core.annotation.Validation(maximum = 2048, minimum = 1)
         private Integer depth;
 
+        @com.aliyun.core.annotation.NameInMap("Encode")
+        private String encode;
+
+        @com.aliyun.core.annotation.NameInMap("Offset")
+        private Offset offset;
+
+        @com.aliyun.core.annotation.NameInMap("Pattern")
+        private String pattern;
+
         @com.aliyun.core.annotation.NameInMap("Position")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 2047)
+        @com.aliyun.core.annotation.Validation(maximum = 2047)
         private Integer position;
 
         private ConditionList(Builder builder) {
             this.arg = builder.arg;
+            this.content = builder.content;
             this.depth = builder.depth;
+            this.encode = builder.encode;
+            this.offset = builder.offset;
+            this.pattern = builder.pattern;
             this.position = builder.position;
         }
 
@@ -603,10 +741,38 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
          * @return depth
          */
         public Integer getDepth() {
             return this.depth;
+        }
+
+        /**
+         * @return encode
+         */
+        public String getEncode() {
+            return this.encode;
+        }
+
+        /**
+         * @return offset
+         */
+        public Offset getOffset() {
+            return this.offset;
+        }
+
+        /**
+         * @return pattern
+         */
+        public String getPattern() {
+            return this.pattern;
         }
 
         /**
@@ -618,15 +784,31 @@ public class ModifyPolicyRequest extends Request {
 
         public static final class Builder {
             private String arg; 
+            private String content; 
             private Integer depth; 
+            private String encode; 
+            private Offset offset; 
+            private String pattern; 
             private Integer position; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConditionList model) {
+                this.arg = model.arg;
+                this.content = model.content;
+                this.depth = model.depth;
+                this.encode = model.encode;
+                this.offset = model.offset;
+                this.pattern = model.pattern;
+                this.position = model.position;
+            } 
 
             /**
              * <p>The term that is used for matching.</p>
              * <blockquote>
              * <p> If Method is set to <strong>char</strong>, the value of this parameter must be ASCII strings. If Method is set to <strong>hex</strong>, the value of this parameter must be hexadecimal strings. Maximum length: 2,048.</p>
              * </blockquote>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>abcd</p>
@@ -637,8 +819,15 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
+             * <p>The policy content.</p>
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
              * <p>The number of bytes from the start position for matching. Valid values: <strong>1</strong> to <strong>2048</strong>.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1200</p>
@@ -649,8 +838,34 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
+             * Encode.
+             */
+            public Builder encode(String encode) {
+                this.encode = encode;
+                return this;
+            }
+
+            /**
+             * <p>The offset. Valid values: <strong>0</strong> to <strong>1500</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder offset(Offset offset) {
+                this.offset = offset;
+                return this;
+            }
+
+            /**
+             * Pattern.
+             */
+            public Builder pattern(String pattern) {
+                this.pattern = pattern;
+                return this;
+            }
+
+            /**
              * <p>The start position for matching. Valid values: <strong>0</strong> to <strong>2047</strong>.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -675,23 +890,19 @@ public class ModifyPolicyRequest extends Request {
      */
     public static class L4RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String action;
 
         @com.aliyun.core.annotation.NameInMap("ConditionList")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ConditionList> conditionList;
+        private java.util.List<ConditionList> conditionList;
 
         @com.aliyun.core.annotation.NameInMap("Limited")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 2048)
+        @com.aliyun.core.annotation.Validation(maximum = 2048)
         private Integer limited;
 
         @com.aliyun.core.annotation.NameInMap("Match")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String match;
 
         @com.aliyun.core.annotation.NameInMap("Method")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String method;
 
         @com.aliyun.core.annotation.NameInMap("Name")
@@ -699,7 +910,7 @@ public class ModifyPolicyRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Priority")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
+        @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
         private Integer priority;
 
         private L4RuleList(Builder builder) {
@@ -730,7 +941,7 @@ public class ModifyPolicyRequest extends Request {
         /**
          * @return conditionList
          */
-        public java.util.List < ConditionList> getConditionList() {
+        public java.util.List<ConditionList> getConditionList() {
             return this.conditionList;
         }
 
@@ -771,19 +982,31 @@ public class ModifyPolicyRequest extends Request {
 
         public static final class Builder {
             private String action; 
-            private java.util.List < ConditionList> conditionList; 
+            private java.util.List<ConditionList> conditionList; 
             private Integer limited; 
             private String match; 
             private String method; 
             private String name; 
             private Integer priority; 
 
+            private Builder() {
+            } 
+
+            private Builder(L4RuleList model) {
+                this.action = model.action;
+                this.conditionList = model.conditionList;
+                this.limited = model.limited;
+                this.match = model.match;
+                this.method = model.method;
+                this.name = model.name;
+                this.priority = model.priority;
+            } 
+
             /**
              * <p>The action that is specified in the rule. Valid value:</p>
              * <ul>
              * <li><strong>2</strong>: The traffic is discarded.</li>
              * </ul>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -795,16 +1018,14 @@ public class ModifyPolicyRequest extends Request {
 
             /**
              * <p>The match conditions.</p>
-             * <p>This parameter is required.</p>
              */
-            public Builder conditionList(java.util.List < ConditionList> conditionList) {
+            public Builder conditionList(java.util.List<ConditionList> conditionList) {
                 this.conditionList = conditionList;
                 return this;
             }
 
             /**
              * <p>The minimum number of bytes in a session to trigger matching. Valid values: <strong>0</strong> to <strong>2048</strong>.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -820,7 +1041,6 @@ public class ModifyPolicyRequest extends Request {
              * <li><strong>0</strong>: If the rule is matched, the action specified in the rule is performed.</li>
              * <li><strong>1</strong>: If the rule is not matched, the action specified in the rule is performed.</li>
              * </ul>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -836,7 +1056,6 @@ public class ModifyPolicyRequest extends Request {
              * <li><strong>char</strong>: string match.</li>
              * <li><strong>hex</strong>: hexadecimal string match.</li>
              * </ul>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>char</p>
@@ -863,7 +1082,6 @@ public class ModifyPolicyRequest extends Request {
              * <blockquote>
              * <p> A smaller value indicates a higher priority.</p>
              * </blockquote>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1002,6 +1220,20 @@ public class ModifyPolicyRequest extends Request {
             private Integer seqNo; 
             private Integer srcPortEnd; 
             private Integer srcPortStart; 
+
+            private Builder() {
+            } 
+
+            private Builder(PortRuleList model) {
+                this.dstPortEnd = model.dstPortEnd;
+                this.dstPortStart = model.dstPortStart;
+                this.id = model.id;
+                this.matchAction = model.matchAction;
+                this.protocol = model.protocol;
+                this.seqNo = model.seqNo;
+                this.srcPortEnd = model.srcPortEnd;
+                this.srcPortStart = model.srcPortStart;
+            } 
 
             /**
              * <p>The end of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
@@ -1187,6 +1419,16 @@ public class ModifyPolicyRequest extends Request {
             private Integer exceedLimitTimes; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceBlockList model) {
+                this.blockExpireSeconds = model.blockExpireSeconds;
+                this.everySeconds = model.everySeconds;
+                this.exceedLimitTimes = model.exceedLimitTimes;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The validity period of the blacklist to which the source IP address is added. Unit: seconds.</p>
              * <p>This parameter is required.</p>
@@ -1320,6 +1562,16 @@ public class ModifyPolicyRequest extends Request {
             private Integer synBps; 
             private Integer synPps; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceLimit model) {
+                this.bps = model.bps;
+                this.pps = model.pps;
+                this.synBps = model.synBps;
+                this.synPps = model.synPps;
+            } 
+
             /**
              * <p>The bandwidth limit on source IP addresses. Unit: bytes per second.</p>
              * 
@@ -1379,7 +1631,7 @@ public class ModifyPolicyRequest extends Request {
      */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlackIpList")
-        private java.util.List < String > blackIpList;
+        private java.util.List<String> blackIpList;
 
         @com.aliyun.core.annotation.NameInMap("BlackIpListExpireAt")
         private Long blackIpListExpireAt;
@@ -1394,34 +1646,34 @@ public class ModifyPolicyRequest extends Request {
         private Boolean enableL4Defense;
 
         @com.aliyun.core.annotation.NameInMap("FingerPrintRuleList")
-        private java.util.List < FingerPrintRuleList> fingerPrintRuleList;
+        private java.util.List<FingerPrintRuleList> fingerPrintRuleList;
 
         @com.aliyun.core.annotation.NameInMap("IntelligenceLevel")
         private String intelligenceLevel;
 
         @com.aliyun.core.annotation.NameInMap("L4RuleList")
-        private java.util.List < L4RuleList> l4RuleList;
+        private java.util.List<L4RuleList> l4RuleList;
 
         @com.aliyun.core.annotation.NameInMap("PortRuleList")
-        private java.util.List < PortRuleList> portRuleList;
+        private java.util.List<PortRuleList> portRuleList;
 
         @com.aliyun.core.annotation.NameInMap("ReflectBlockUdpPortList")
-        private java.util.List < Integer > reflectBlockUdpPortList;
+        private java.util.List<Integer> reflectBlockUdpPortList;
 
         @com.aliyun.core.annotation.NameInMap("RegionBlockCountryList")
-        private java.util.List < Integer > regionBlockCountryList;
+        private java.util.List<Integer> regionBlockCountryList;
 
         @com.aliyun.core.annotation.NameInMap("RegionBlockProvinceList")
-        private java.util.List < Integer > regionBlockProvinceList;
+        private java.util.List<Integer> regionBlockProvinceList;
 
         @com.aliyun.core.annotation.NameInMap("SourceBlockList")
-        private java.util.List < SourceBlockList> sourceBlockList;
+        private java.util.List<SourceBlockList> sourceBlockList;
 
         @com.aliyun.core.annotation.NameInMap("SourceLimit")
         private SourceLimit sourceLimit;
 
         @com.aliyun.core.annotation.NameInMap("WhiteIpList")
-        private java.util.List < String > whiteIpList;
+        private java.util.List<String> whiteIpList;
 
         @com.aliyun.core.annotation.NameInMap("WhitenGfbrNets")
         private Boolean whitenGfbrNets;
@@ -1456,7 +1708,7 @@ public class ModifyPolicyRequest extends Request {
         /**
          * @return blackIpList
          */
-        public java.util.List < String > getBlackIpList() {
+        public java.util.List<String> getBlackIpList() {
             return this.blackIpList;
         }
 
@@ -1491,7 +1743,7 @@ public class ModifyPolicyRequest extends Request {
         /**
          * @return fingerPrintRuleList
          */
-        public java.util.List < FingerPrintRuleList> getFingerPrintRuleList() {
+        public java.util.List<FingerPrintRuleList> getFingerPrintRuleList() {
             return this.fingerPrintRuleList;
         }
 
@@ -1505,42 +1757,42 @@ public class ModifyPolicyRequest extends Request {
         /**
          * @return l4RuleList
          */
-        public java.util.List < L4RuleList> getL4RuleList() {
+        public java.util.List<L4RuleList> getL4RuleList() {
             return this.l4RuleList;
         }
 
         /**
          * @return portRuleList
          */
-        public java.util.List < PortRuleList> getPortRuleList() {
+        public java.util.List<PortRuleList> getPortRuleList() {
             return this.portRuleList;
         }
 
         /**
          * @return reflectBlockUdpPortList
          */
-        public java.util.List < Integer > getReflectBlockUdpPortList() {
+        public java.util.List<Integer> getReflectBlockUdpPortList() {
             return this.reflectBlockUdpPortList;
         }
 
         /**
          * @return regionBlockCountryList
          */
-        public java.util.List < Integer > getRegionBlockCountryList() {
+        public java.util.List<Integer> getRegionBlockCountryList() {
             return this.regionBlockCountryList;
         }
 
         /**
          * @return regionBlockProvinceList
          */
-        public java.util.List < Integer > getRegionBlockProvinceList() {
+        public java.util.List<Integer> getRegionBlockProvinceList() {
             return this.regionBlockProvinceList;
         }
 
         /**
          * @return sourceBlockList
          */
-        public java.util.List < SourceBlockList> getSourceBlockList() {
+        public java.util.List<SourceBlockList> getSourceBlockList() {
             return this.sourceBlockList;
         }
 
@@ -1554,7 +1806,7 @@ public class ModifyPolicyRequest extends Request {
         /**
          * @return whiteIpList
          */
-        public java.util.List < String > getWhiteIpList() {
+        public java.util.List<String> getWhiteIpList() {
             return this.whiteIpList;
         }
 
@@ -1566,27 +1818,49 @@ public class ModifyPolicyRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > blackIpList; 
+            private java.util.List<String> blackIpList; 
             private Long blackIpListExpireAt; 
             private Boolean enableDropIcmp; 
             private Boolean enableIntelligence; 
             private Boolean enableL4Defense; 
-            private java.util.List < FingerPrintRuleList> fingerPrintRuleList; 
+            private java.util.List<FingerPrintRuleList> fingerPrintRuleList; 
             private String intelligenceLevel; 
-            private java.util.List < L4RuleList> l4RuleList; 
-            private java.util.List < PortRuleList> portRuleList; 
-            private java.util.List < Integer > reflectBlockUdpPortList; 
-            private java.util.List < Integer > regionBlockCountryList; 
-            private java.util.List < Integer > regionBlockProvinceList; 
-            private java.util.List < SourceBlockList> sourceBlockList; 
+            private java.util.List<L4RuleList> l4RuleList; 
+            private java.util.List<PortRuleList> portRuleList; 
+            private java.util.List<Integer> reflectBlockUdpPortList; 
+            private java.util.List<Integer> regionBlockCountryList; 
+            private java.util.List<Integer> regionBlockProvinceList; 
+            private java.util.List<SourceBlockList> sourceBlockList; 
             private SourceLimit sourceLimit; 
-            private java.util.List < String > whiteIpList; 
+            private java.util.List<String> whiteIpList; 
             private Boolean whitenGfbrNets; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.blackIpList = model.blackIpList;
+                this.blackIpListExpireAt = model.blackIpListExpireAt;
+                this.enableDropIcmp = model.enableDropIcmp;
+                this.enableIntelligence = model.enableIntelligence;
+                this.enableL4Defense = model.enableL4Defense;
+                this.fingerPrintRuleList = model.fingerPrintRuleList;
+                this.intelligenceLevel = model.intelligenceLevel;
+                this.l4RuleList = model.l4RuleList;
+                this.portRuleList = model.portRuleList;
+                this.reflectBlockUdpPortList = model.reflectBlockUdpPortList;
+                this.regionBlockCountryList = model.regionBlockCountryList;
+                this.regionBlockProvinceList = model.regionBlockProvinceList;
+                this.sourceBlockList = model.sourceBlockList;
+                this.sourceLimit = model.sourceLimit;
+                this.whiteIpList = model.whiteIpList;
+                this.whitenGfbrNets = model.whitenGfbrNets;
+            } 
 
             /**
              * <p>The IP addresses in the blacklist.</p>
              */
-            public Builder blackIpList(java.util.List < String > blackIpList) {
+            public Builder blackIpList(java.util.List<String> blackIpList) {
                 this.blackIpList = blackIpList;
                 return this;
             }
@@ -1626,6 +1900,9 @@ public class ModifyPolicyRequest extends Request {
 
             /**
              * <p>Specifies whether to enable port-specific mitigation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableL4Defense(Boolean enableL4Defense) {
                 this.enableL4Defense = enableL4Defense;
@@ -1635,7 +1912,7 @@ public class ModifyPolicyRequest extends Request {
             /**
              * <p>The byte-match filter rules.</p>
              */
-            public Builder fingerPrintRuleList(java.util.List < FingerPrintRuleList> fingerPrintRuleList) {
+            public Builder fingerPrintRuleList(java.util.List<FingerPrintRuleList> fingerPrintRuleList) {
                 this.fingerPrintRuleList = fingerPrintRuleList;
                 return this;
             }
@@ -1659,7 +1936,7 @@ public class ModifyPolicyRequest extends Request {
             /**
              * <p>The port-specific mitigation rules.</p>
              */
-            public Builder l4RuleList(java.util.List < L4RuleList> l4RuleList) {
+            public Builder l4RuleList(java.util.List<L4RuleList> l4RuleList) {
                 this.l4RuleList = l4RuleList;
                 return this;
             }
@@ -1667,7 +1944,7 @@ public class ModifyPolicyRequest extends Request {
             /**
              * <p>The port blocking rules.</p>
              */
-            public Builder portRuleList(java.util.List < PortRuleList> portRuleList) {
+            public Builder portRuleList(java.util.List<PortRuleList> portRuleList) {
                 this.portRuleList = portRuleList;
                 return this;
             }
@@ -1675,7 +1952,7 @@ public class ModifyPolicyRequest extends Request {
             /**
              * <p>The ports whose traffic is filtered out by the filtering policies for UDP reflection attacks.</p>
              */
-            public Builder reflectBlockUdpPortList(java.util.List < Integer > reflectBlockUdpPortList) {
+            public Builder reflectBlockUdpPortList(java.util.List<Integer> reflectBlockUdpPortList) {
                 this.reflectBlockUdpPortList = reflectBlockUdpPortList;
                 return this;
             }
@@ -1683,7 +1960,7 @@ public class ModifyPolicyRequest extends Request {
             /**
              * <p>The countries in the location blacklist.</p>
              */
-            public Builder regionBlockCountryList(java.util.List < Integer > regionBlockCountryList) {
+            public Builder regionBlockCountryList(java.util.List<Integer> regionBlockCountryList) {
                 this.regionBlockCountryList = regionBlockCountryList;
                 return this;
             }
@@ -1691,7 +1968,7 @@ public class ModifyPolicyRequest extends Request {
             /**
              * <p>The provinces in the location blacklist.</p>
              */
-            public Builder regionBlockProvinceList(java.util.List < Integer > regionBlockProvinceList) {
+            public Builder regionBlockProvinceList(java.util.List<Integer> regionBlockProvinceList) {
                 this.regionBlockProvinceList = regionBlockProvinceList;
                 return this;
             }
@@ -1699,7 +1976,7 @@ public class ModifyPolicyRequest extends Request {
             /**
              * <p>The source IP addresses that are added to the blacklist.</p>
              */
-            public Builder sourceBlockList(java.util.List < SourceBlockList> sourceBlockList) {
+            public Builder sourceBlockList(java.util.List<SourceBlockList> sourceBlockList) {
                 this.sourceBlockList = sourceBlockList;
                 return this;
             }
@@ -1715,7 +1992,7 @@ public class ModifyPolicyRequest extends Request {
             /**
              * <p>The IP addresses in the whitelist.</p>
              */
-            public Builder whiteIpList(java.util.List < String > whiteIpList) {
+            public Builder whiteIpList(java.util.List<String> whiteIpList) {
                 this.whiteIpList = whiteIpList;
                 return this;
             }

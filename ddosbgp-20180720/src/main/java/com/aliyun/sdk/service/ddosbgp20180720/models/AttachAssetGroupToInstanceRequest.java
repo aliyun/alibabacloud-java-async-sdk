@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class AttachAssetGroupToInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssetGroupList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AssetGroupList> assetGroupList;
+    private java.util.List<AssetGroupList> assetGroupList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -41,7 +46,7 @@ public class AttachAssetGroupToInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,7 +54,7 @@ public class AttachAssetGroupToInstanceRequest extends Request {
     /**
      * @return assetGroupList
      */
-    public java.util.List < AssetGroupList> getAssetGroupList() {
+    public java.util.List<AssetGroupList> getAssetGroupList() {
         return this.assetGroupList;
     }
 
@@ -68,7 +73,7 @@ public class AttachAssetGroupToInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AttachAssetGroupToInstanceRequest, Builder> {
-        private java.util.List < AssetGroupList> assetGroupList; 
+        private java.util.List<AssetGroupList> assetGroupList; 
         private String instanceId; 
         private String regionId; 
 
@@ -87,7 +92,7 @@ public class AttachAssetGroupToInstanceRequest extends Request {
          * <p>The information about the asset to be associated.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder assetGroupList(java.util.List < AssetGroupList> assetGroupList) {
+        public Builder assetGroupList(java.util.List<AssetGroupList> assetGroupList) {
             String assetGroupListShrink = shrink(assetGroupList, "AssetGroupList", "json");
             this.putQueryParameter("AssetGroupList", assetGroupListShrink);
             this.assetGroupList = assetGroupList;
@@ -202,6 +207,16 @@ public class AttachAssetGroupToInstanceRequest extends Request {
             private String name; 
             private String region; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssetGroupList model) {
+                this.memberUid = model.memberUid;
+                this.name = model.name;
+                this.region = model.region;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The UID of the member to which the asset belongs.</p>

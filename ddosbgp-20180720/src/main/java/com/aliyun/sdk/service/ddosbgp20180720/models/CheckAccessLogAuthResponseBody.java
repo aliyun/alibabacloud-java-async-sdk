@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CheckAccessLogAuthResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessLogAuth
      */
@@ -48,6 +57,14 @@ public class CheckAccessLogAuthResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean accessLogAuth; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckAccessLogAuthResponseBody model) {
+            this.accessLogAuth = model.accessLogAuth;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether Anti-DDoS Origin was authorized to access Simple Log Service. Valid values:</p>

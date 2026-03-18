@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeOpEntitiesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OpEntities")
-    private java.util.List < OpEntities> opEntities;
+    private java.util.List<OpEntities> opEntities;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return opEntities
      */
-    public java.util.List < OpEntities> getOpEntities() {
+    public java.util.List<OpEntities> getOpEntities() {
         return this.opEntities;
     }
 
@@ -57,14 +66,23 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OpEntities> opEntities; 
+        private java.util.List<OpEntities> opEntities; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOpEntitiesResponseBody model) {
+            this.opEntities = model.opEntities;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the operation log.</p>
          */
-        public Builder opEntities(java.util.List < OpEntities> opEntities) {
+        public Builder opEntities(java.util.List<OpEntities> opEntities) {
             this.opEntities = opEntities;
             return this;
         }
@@ -188,6 +206,18 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             private String opAccount; 
             private Integer opAction; 
             private String opDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(OpEntities model) {
+                this.entityObject = model.entityObject;
+                this.entityType = model.entityType;
+                this.gmtCreate = model.gmtCreate;
+                this.opAccount = model.opAccount;
+                this.opAction = model.opAction;
+                this.opDesc = model.opDesc;
+            } 
 
             /**
              * <p>The operation object, which is the ID of the instance.</p>
