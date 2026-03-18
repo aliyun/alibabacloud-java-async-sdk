@@ -922,12 +922,20 @@ public class CreateAppRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("cu")
         private Integer cu;
 
+        @com.aliyun.core.annotation.NameInMap("elastic")
+        private Boolean elastic;
+
+        @com.aliyun.core.annotation.NameInMap("minCu")
+        private Integer minCu;
+
         @com.aliyun.core.annotation.NameInMap("storage")
         private Integer storage;
 
         private QuotaInfo(Builder builder) {
             this.appType = builder.appType;
             this.cu = builder.cu;
+            this.elastic = builder.elastic;
+            this.minCu = builder.minCu;
             this.storage = builder.storage;
         }
 
@@ -954,6 +962,20 @@ public class CreateAppRequest extends Request {
         }
 
         /**
+         * @return elastic
+         */
+        public Boolean getElastic() {
+            return this.elastic;
+        }
+
+        /**
+         * @return minCu
+         */
+        public Integer getMinCu() {
+            return this.minCu;
+        }
+
+        /**
          * @return storage
          */
         public Integer getStorage() {
@@ -963,6 +985,8 @@ public class CreateAppRequest extends Request {
         public static final class Builder {
             private String appType; 
             private Integer cu; 
+            private Boolean elastic; 
+            private Integer minCu; 
             private Integer storage; 
 
             private Builder() {
@@ -971,6 +995,8 @@ public class CreateAppRequest extends Request {
             private Builder(QuotaInfo model) {
                 this.appType = model.appType;
                 this.cu = model.cu;
+                this.elastic = model.elastic;
+                this.minCu = model.minCu;
                 this.storage = model.storage;
             } 
 
@@ -987,6 +1013,22 @@ public class CreateAppRequest extends Request {
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
+                return this;
+            }
+
+            /**
+             * elastic.
+             */
+            public Builder elastic(Boolean elastic) {
+                this.elastic = elastic;
+                return this;
+            }
+
+            /**
+             * minCu.
+             */
+            public Builder minCu(Integer minCu) {
+                this.minCu = minCu;
                 return this;
             }
 
