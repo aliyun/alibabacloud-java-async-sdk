@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse> aliyunConsoleOpenApiQueryAliyunConsoleServiceList(AliyunConsoleOpenApiQueryAliyunConsoleServiceListRequest request);
 
     /**
+     * @param request the request parameters of AliyunConsoleOpenApiQueryPaidResource  AliyunConsoleOpenApiQueryPaidResourceRequest
+     * @return AliyunConsoleOpenApiQueryPaidResourceResponse
+     */
+    CompletableFuture<AliyunConsoleOpenApiQueryPaidResourceResponse> aliyunConsoleOpenApiQueryPaidResource(AliyunConsoleOpenApiQueryPaidResourceRequest request);
+
+    /**
      * @param request the request parameters of CountOralEvaluationStatisticsCalls  CountOralEvaluationStatisticsCallsRequest
      * @return CountOralEvaluationStatisticsCallsResponse
      */
@@ -132,14 +138,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExecuteAITeacherSyncDialogueTranslateResponse
      */
     CompletableFuture<ExecuteAITeacherSyncDialogueTranslateResponse> executeAITeacherSyncDialogueTranslate(ExecuteAITeacherSyncDialogueTranslateRequest request);
-
-    /**
-     * @param request the request parameters of ExecuteHundredThousandWhysDialogue  ExecuteHundredThousandWhysDialogueRequest
-     * @return ExecuteHundredThousandWhysDialogueResponse
-     */
-    CompletableFuture<ExecuteHundredThousandWhysDialogueResponse> executeHundredThousandWhysDialogue(ExecuteHundredThousandWhysDialogueRequest request);
-
-    ResponseIterable<ExecuteHundredThousandWhysDialogueResponseBody> executeHundredThousandWhysDialogueWithResponseIterable(ExecuteHundredThousandWhysDialogueRequest request);
 
     /**
      * @param request the request parameters of ExecuteTextbookAssistantDialogue  ExecuteTextbookAssistantDialogueRequest
@@ -250,6 +248,166 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTextbookAssistantSceneDetailsResponse
      */
     CompletableFuture<ListTextbookAssistantSceneDetailsResponse> listTextbookAssistantSceneDetails(ListTextbookAssistantSceneDetailsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterChatCompletions  ModelRouterChatCompletionsRequest
+     * @return ModelRouterChatCompletionsResponse
+     */
+    CompletableFuture<ModelRouterChatCompletionsResponse> modelRouterChatCompletions(ModelRouterChatCompletionsRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> modelRouterChatCompletionsWithAsyncResponseHandler(ModelRouterChatCompletionsRequest request, AsyncResponseHandler<ModelRouterChatCompletionsResponse, ReturnT> responseHandler);
+
+    ResponseIterable<ModelRouterChatCompletionsResponseBody> modelRouterChatCompletionsWithResponseIterable(ModelRouterChatCompletionsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterCopyApiKey  ModelRouterCopyApiKeyRequest
+     * @return ModelRouterCopyApiKeyResponse
+     */
+    CompletableFuture<ModelRouterCopyApiKeyResponse> modelRouterCopyApiKey(ModelRouterCopyApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterCreateApiKey  ModelRouterCreateApiKeyRequest
+     * @return ModelRouterCreateApiKeyResponse
+     */
+    CompletableFuture<ModelRouterCreateApiKeyResponse> modelRouterCreateApiKey(ModelRouterCreateApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterCreateClient  ModelRouterCreateClientRequest
+     * @return ModelRouterCreateClientResponse
+     */
+    CompletableFuture<ModelRouterCreateClientResponse> modelRouterCreateClient(ModelRouterCreateClientRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterCreateConversation  ModelRouterCreateConversationRequest
+     * @return ModelRouterCreateConversationResponse
+     */
+    CompletableFuture<ModelRouterCreateConversationResponse> modelRouterCreateConversation(ModelRouterCreateConversationRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterCreateModel  ModelRouterCreateModelRequest
+     * @return ModelRouterCreateModelResponse
+     */
+    CompletableFuture<ModelRouterCreateModelResponse> modelRouterCreateModel(ModelRouterCreateModelRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterDeleteApiKey  ModelRouterDeleteApiKeyRequest
+     * @return ModelRouterDeleteApiKeyResponse
+     */
+    CompletableFuture<ModelRouterDeleteApiKeyResponse> modelRouterDeleteApiKey(ModelRouterDeleteApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterDeleteClient  ModelRouterDeleteClientRequest
+     * @return ModelRouterDeleteClientResponse
+     */
+    CompletableFuture<ModelRouterDeleteClientResponse> modelRouterDeleteClient(ModelRouterDeleteClientRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterDeleteConversation  ModelRouterDeleteConversationRequest
+     * @return ModelRouterDeleteConversationResponse
+     */
+    CompletableFuture<ModelRouterDeleteConversationResponse> modelRouterDeleteConversation(ModelRouterDeleteConversationRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterDeleteModel  ModelRouterDeleteModelRequest
+     * @return ModelRouterDeleteModelResponse
+     */
+    CompletableFuture<ModelRouterDeleteModelResponse> modelRouterDeleteModel(ModelRouterDeleteModelRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryApiKey  ModelRouterQueryApiKeyRequest
+     * @return ModelRouterQueryApiKeyResponse
+     */
+    CompletableFuture<ModelRouterQueryApiKeyResponse> modelRouterQueryApiKey(ModelRouterQueryApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryApiKeyList  ModelRouterQueryApiKeyListRequest
+     * @return ModelRouterQueryApiKeyListResponse
+     */
+    CompletableFuture<ModelRouterQueryApiKeyListResponse> modelRouterQueryApiKeyList(ModelRouterQueryApiKeyListRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryClientList  ModelRouterQueryClientListRequest
+     * @return ModelRouterQueryClientListResponse
+     */
+    CompletableFuture<ModelRouterQueryClientListResponse> modelRouterQueryClientList(ModelRouterQueryClientListRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryConversation  ModelRouterQueryConversationRequest
+     * @return ModelRouterQueryConversationResponse
+     */
+    CompletableFuture<ModelRouterQueryConversationResponse> modelRouterQueryConversation(ModelRouterQueryConversationRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryConversationList  ModelRouterQueryConversationListRequest
+     * @return ModelRouterQueryConversationListResponse
+     */
+    CompletableFuture<ModelRouterQueryConversationListResponse> modelRouterQueryConversationList(ModelRouterQueryConversationListRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryModel  ModelRouterQueryModelRequest
+     * @return ModelRouterQueryModelResponse
+     */
+    CompletableFuture<ModelRouterQueryModelResponse> modelRouterQueryModel(ModelRouterQueryModelRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryModelList  ModelRouterQueryModelListRequest
+     * @return ModelRouterQueryModelListResponse
+     */
+    CompletableFuture<ModelRouterQueryModelListResponse> modelRouterQueryModelList(ModelRouterQueryModelListRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryModelWithApiKey  ModelRouterQueryModelWithApiKeyRequest
+     * @return ModelRouterQueryModelWithApiKeyResponse
+     */
+    CompletableFuture<ModelRouterQueryModelWithApiKeyResponse> modelRouterQueryModelWithApiKey(ModelRouterQueryModelWithApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryNacosProviders  ModelRouterQueryNacosProvidersRequest
+     * @return ModelRouterQueryNacosProvidersResponse
+     */
+    CompletableFuture<ModelRouterQueryNacosProvidersResponse> modelRouterQueryNacosProviders(ModelRouterQueryNacosProvidersRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryNacosTags  ModelRouterQueryNacosTagsRequest
+     * @return ModelRouterQueryNacosTagsResponse
+     */
+    CompletableFuture<ModelRouterQueryNacosTagsResponse> modelRouterQueryNacosTags(ModelRouterQueryNacosTagsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryObservationCharts  ModelRouterQueryObservationChartsRequest
+     * @return ModelRouterQueryObservationChartsResponse
+     */
+    CompletableFuture<ModelRouterQueryObservationChartsResponse> modelRouterQueryObservationCharts(ModelRouterQueryObservationChartsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryObservationLogs  ModelRouterQueryObservationLogsRequest
+     * @return ModelRouterQueryObservationLogsResponse
+     */
+    CompletableFuture<ModelRouterQueryObservationLogsResponse> modelRouterQueryObservationLogs(ModelRouterQueryObservationLogsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryObservationMetrics  ModelRouterQueryObservationMetricsRequest
+     * @return ModelRouterQueryObservationMetricsResponse
+     */
+    CompletableFuture<ModelRouterQueryObservationMetricsResponse> modelRouterQueryObservationMetrics(ModelRouterQueryObservationMetricsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterUpdateClient  ModelRouterUpdateClientRequest
+     * @return ModelRouterUpdateClientResponse
+     */
+    CompletableFuture<ModelRouterUpdateClientResponse> modelRouterUpdateClient(ModelRouterUpdateClientRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterUpdateConversation  ModelRouterUpdateConversationRequest
+     * @return ModelRouterUpdateConversationResponse
+     */
+    CompletableFuture<ModelRouterUpdateConversationResponse> modelRouterUpdateConversation(ModelRouterUpdateConversationRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterUpdateModel  ModelRouterUpdateModelRequest
+     * @return ModelRouterUpdateModelResponse
+     */
+    CompletableFuture<ModelRouterUpdateModelResponse> modelRouterUpdateModel(ModelRouterUpdateModelRequest request);
 
     /**
      * @param request the request parameters of PersonalizedTextToImageAddInferenceJob  PersonalizedTextToImageAddInferenceJobRequest

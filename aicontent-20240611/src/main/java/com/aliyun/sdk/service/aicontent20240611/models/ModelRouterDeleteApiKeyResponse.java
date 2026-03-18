@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ExecuteHundredThousandWhysDialogueResponse} extends {@link TeaModel}
+ * {@link ModelRouterDeleteApiKeyResponse} extends {@link TeaModel}
  *
- * <p>ExecuteHundredThousandWhysDialogueResponse</p>
+ * <p>ModelRouterDeleteApiKeyResponse</p>
  */
-public class ExecuteHundredThousandWhysDialogueResponse extends Response {
+public class ModelRouterDeleteApiKeyResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ExecuteHundredThousandWhysDialogueResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ExecuteHundredThousandWhysDialogueResponseBody body;
+    private ModelRouterDeleteApiKeyResponseBody body;
 
-    private ExecuteHundredThousandWhysDialogueResponse(BuilderImpl builder) {
+    private ModelRouterDeleteApiKeyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ExecuteHundredThousandWhysDialogueResponse create() {
+    public static ModelRouterDeleteApiKeyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ExecuteHundredThousandWhysDialogueResponse extends Response {
     /**
      * @return body
      */
-    public ExecuteHundredThousandWhysDialogueResponseBody getBody() {
+    public ModelRouterDeleteApiKeyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ExecuteHundredThousandWhysDialogueResponse, Builder> {
+    public interface Builder extends Response.Builder<ModelRouterDeleteApiKeyResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ExecuteHundredThousandWhysDialogueResponseBody body);
+        Builder body(ModelRouterDeleteApiKeyResponseBody body);
 
         @Override
-        ExecuteHundredThousandWhysDialogueResponse build();
+        ModelRouterDeleteApiKeyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ExecuteHundredThousandWhysDialogueResponse, Builder>
+            extends Response.BuilderImpl<ModelRouterDeleteApiKeyResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ExecuteHundredThousandWhysDialogueResponseBody body; 
+        private ModelRouterDeleteApiKeyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ExecuteHundredThousandWhysDialogueResponse response) {
+        private BuilderImpl(ModelRouterDeleteApiKeyResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ExecuteHundredThousandWhysDialogueResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ExecuteHundredThousandWhysDialogueResponseBody body) {
+        public Builder body(ModelRouterDeleteApiKeyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ExecuteHundredThousandWhysDialogueResponse build() {
-            return new ExecuteHundredThousandWhysDialogueResponse(this);
+        public ModelRouterDeleteApiKeyResponse build() {
+            return new ModelRouterDeleteApiKeyResponse(this);
         } 
 
     } 
