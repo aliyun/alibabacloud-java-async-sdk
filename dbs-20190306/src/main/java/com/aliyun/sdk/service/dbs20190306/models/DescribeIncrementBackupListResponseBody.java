@@ -312,8 +312,23 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointHost")
+        private String sourceEndpointHost;
+
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceId")
+        private String sourceEndpointInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceType")
+        private String sourceEndpointInstanceType;
+
         @com.aliyun.core.annotation.NameInMap("SourceEndpointIpPort")
         private String sourceEndpointIpPort;
+
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointPort")
+        private String sourceEndpointPort;
+
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointRegion")
+        private String sourceEndpointRegion;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
@@ -328,7 +343,12 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             this.backupSize = builder.backupSize;
             this.backupStatus = builder.backupStatus;
             this.endTime = builder.endTime;
+            this.sourceEndpointHost = builder.sourceEndpointHost;
+            this.sourceEndpointInstanceId = builder.sourceEndpointInstanceId;
+            this.sourceEndpointInstanceType = builder.sourceEndpointInstanceType;
             this.sourceEndpointIpPort = builder.sourceEndpointIpPort;
+            this.sourceEndpointPort = builder.sourceEndpointPort;
+            this.sourceEndpointRegion = builder.sourceEndpointRegion;
             this.startTime = builder.startTime;
             this.storageMethod = builder.storageMethod;
         }
@@ -384,10 +404,45 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceEndpointHost
+         */
+        public String getSourceEndpointHost() {
+            return this.sourceEndpointHost;
+        }
+
+        /**
+         * @return sourceEndpointInstanceId
+         */
+        public String getSourceEndpointInstanceId() {
+            return this.sourceEndpointInstanceId;
+        }
+
+        /**
+         * @return sourceEndpointInstanceType
+         */
+        public String getSourceEndpointInstanceType() {
+            return this.sourceEndpointInstanceType;
+        }
+
+        /**
          * @return sourceEndpointIpPort
          */
         public String getSourceEndpointIpPort() {
             return this.sourceEndpointIpPort;
+        }
+
+        /**
+         * @return sourceEndpointPort
+         */
+        public String getSourceEndpointPort() {
+            return this.sourceEndpointPort;
+        }
+
+        /**
+         * @return sourceEndpointRegion
+         */
+        public String getSourceEndpointRegion() {
+            return this.sourceEndpointRegion;
         }
 
         /**
@@ -411,7 +466,12 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             private Long backupSize; 
             private String backupStatus; 
             private Long endTime; 
+            private String sourceEndpointHost; 
+            private String sourceEndpointInstanceId; 
+            private String sourceEndpointInstanceType; 
             private String sourceEndpointIpPort; 
+            private String sourceEndpointPort; 
+            private String sourceEndpointRegion; 
             private Long startTime; 
             private String storageMethod; 
 
@@ -425,7 +485,12 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
                 this.backupSize = model.backupSize;
                 this.backupStatus = model.backupStatus;
                 this.endTime = model.endTime;
+                this.sourceEndpointHost = model.sourceEndpointHost;
+                this.sourceEndpointInstanceId = model.sourceEndpointInstanceId;
+                this.sourceEndpointInstanceType = model.sourceEndpointInstanceType;
                 this.sourceEndpointIpPort = model.sourceEndpointIpPort;
+                this.sourceEndpointPort = model.sourceEndpointPort;
+                this.sourceEndpointRegion = model.sourceEndpointRegion;
                 this.startTime = model.startTime;
                 this.storageMethod = model.storageMethod;
             } 
@@ -503,6 +568,30 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
+             * SourceEndpointHost.
+             */
+            public Builder sourceEndpointHost(String sourceEndpointHost) {
+                this.sourceEndpointHost = sourceEndpointHost;
+                return this;
+            }
+
+            /**
+             * SourceEndpointInstanceId.
+             */
+            public Builder sourceEndpointInstanceId(String sourceEndpointInstanceId) {
+                this.sourceEndpointInstanceId = sourceEndpointInstanceId;
+                return this;
+            }
+
+            /**
+             * SourceEndpointInstanceType.
+             */
+            public Builder sourceEndpointInstanceType(String sourceEndpointInstanceType) {
+                this.sourceEndpointInstanceType = sourceEndpointInstanceType;
+                return this;
+            }
+
+            /**
              * <p>The endpoint that is used to connect to the database.</p>
              * 
              * <strong>example:</strong>
@@ -510,6 +599,22 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
              */
             public Builder sourceEndpointIpPort(String sourceEndpointIpPort) {
                 this.sourceEndpointIpPort = sourceEndpointIpPort;
+                return this;
+            }
+
+            /**
+             * SourceEndpointPort.
+             */
+            public Builder sourceEndpointPort(String sourceEndpointPort) {
+                this.sourceEndpointPort = sourceEndpointPort;
+                return this;
+            }
+
+            /**
+             * SourceEndpointRegion.
+             */
+            public Builder sourceEndpointRegion(String sourceEndpointRegion) {
+                this.sourceEndpointRegion = sourceEndpointRegion;
                 return this;
             }
 

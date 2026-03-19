@@ -31,6 +31,10 @@ public class DisableBackupLogRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableMysqlPhysicalBackupBinlogOnly")
+    private String disableMysqlPhysicalBackupBinlogOnly;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
@@ -39,6 +43,7 @@ public class DisableBackupLogRequest extends Request {
         this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.clientToken = builder.clientToken;
+        this.disableMysqlPhysicalBackupBinlogOnly = builder.disableMysqlPhysicalBackupBinlogOnly;
         this.ownerId = builder.ownerId;
     }
 
@@ -77,6 +82,13 @@ public class DisableBackupLogRequest extends Request {
     }
 
     /**
+     * @return disableMysqlPhysicalBackupBinlogOnly
+     */
+    public String getDisableMysqlPhysicalBackupBinlogOnly() {
+        return this.disableMysqlPhysicalBackupBinlogOnly;
+    }
+
+    /**
      * @return ownerId
      */
     public String getOwnerId() {
@@ -87,6 +99,7 @@ public class DisableBackupLogRequest extends Request {
         private String regionId; 
         private String backupPlanId; 
         private String clientToken; 
+        private String disableMysqlPhysicalBackupBinlogOnly; 
         private String ownerId; 
 
         private Builder() {
@@ -98,6 +111,7 @@ public class DisableBackupLogRequest extends Request {
             this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.clientToken = request.clientToken;
+            this.disableMysqlPhysicalBackupBinlogOnly = request.disableMysqlPhysicalBackupBinlogOnly;
             this.ownerId = request.ownerId;
         } 
 
@@ -132,6 +146,15 @@ public class DisableBackupLogRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DisableMysqlPhysicalBackupBinlogOnly.
+         */
+        public Builder disableMysqlPhysicalBackupBinlogOnly(String disableMysqlPhysicalBackupBinlogOnly) {
+            this.putQueryParameter("DisableMysqlPhysicalBackupBinlogOnly", disableMysqlPhysicalBackupBinlogOnly);
+            this.disableMysqlPhysicalBackupBinlogOnly = disableMysqlPhysicalBackupBinlogOnly;
             return this;
         }
 

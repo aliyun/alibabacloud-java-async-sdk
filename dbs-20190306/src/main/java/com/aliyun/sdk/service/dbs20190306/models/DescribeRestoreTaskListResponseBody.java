@@ -293,11 +293,17 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupGatewayId")
         private Long backupGatewayId;
 
+        @com.aliyun.core.annotation.NameInMap("BackupGatewayIdentifier")
+        private String backupGatewayIdentifier;
+
         @com.aliyun.core.annotation.NameInMap("BackupPlanId")
         private String backupPlanId;
 
         @com.aliyun.core.annotation.NameInMap("BackupSetId")
         private String backupSetId;
+
+        @com.aliyun.core.annotation.NameInMap("BackupSourceOssRegion")
+        private String backupSourceOssRegion;
 
         @com.aliyun.core.annotation.NameInMap("ContinuousRestoreProgress")
         private Integer continuousRestoreProgress;
@@ -311,6 +317,12 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationEndpointDatabaseName")
         private String destinationEndpointDatabaseName;
 
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpointEnableSsl")
+        private String destinationEndpointEnableSsl;
+
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpointHost")
+        private String destinationEndpointHost;
+
         @com.aliyun.core.annotation.NameInMap("DestinationEndpointInstanceID")
         private String destinationEndpointInstanceID;
 
@@ -322,6 +334,9 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DestinationEndpointOracleSID")
         private String destinationEndpointOracleSID;
+
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpointPort")
+        private String destinationEndpointPort;
 
         @com.aliyun.core.annotation.NameInMap("DestinationEndpointRegion")
         private String destinationEndpointRegion;
@@ -340,6 +355,24 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("FullStruforeRestoreProgress")
         private Integer fullStruforeRestoreProgress;
+
+        @com.aliyun.core.annotation.NameInMap("PhysicalBackupRecoverProgress")
+        private Integer physicalBackupRecoverProgress;
+
+        @com.aliyun.core.annotation.NameInMap("PhysicalDatabaseOnlineProgress")
+        private Integer physicalDatabaseOnlineProgress;
+
+        @com.aliyun.core.annotation.NameInMap("PhysicalFullAndIncrementBackupRecoverProgress")
+        private Integer physicalFullAndIncrementBackupRecoverProgress;
+
+        @com.aliyun.core.annotation.NameInMap("PhysicalFullBackupRecoverProgress")
+        private Integer physicalFullBackupRecoverProgress;
+
+        @com.aliyun.core.annotation.NameInMap("PhysicalIncrementBackupRecoverProgress")
+        private Integer physicalIncrementBackupRecoverProgress;
+
+        @com.aliyun.core.annotation.NameInMap("RestoreDestinationMode")
+        private String restoreDestinationMode;
 
         @com.aliyun.core.annotation.NameInMap("RestoreDir")
         private String restoreDir;
@@ -367,22 +400,33 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
 
         private RestoreTaskDetail(Builder builder) {
             this.backupGatewayId = builder.backupGatewayId;
+            this.backupGatewayIdentifier = builder.backupGatewayIdentifier;
             this.backupPlanId = builder.backupPlanId;
             this.backupSetId = builder.backupSetId;
+            this.backupSourceOssRegion = builder.backupSourceOssRegion;
             this.continuousRestoreProgress = builder.continuousRestoreProgress;
             this.crossAliyunId = builder.crossAliyunId;
             this.crossRoleName = builder.crossRoleName;
             this.destinationEndpointDatabaseName = builder.destinationEndpointDatabaseName;
+            this.destinationEndpointEnableSsl = builder.destinationEndpointEnableSsl;
+            this.destinationEndpointHost = builder.destinationEndpointHost;
             this.destinationEndpointInstanceID = builder.destinationEndpointInstanceID;
             this.destinationEndpointInstanceType = builder.destinationEndpointInstanceType;
             this.destinationEndpointIpPort = builder.destinationEndpointIpPort;
             this.destinationEndpointOracleSID = builder.destinationEndpointOracleSID;
+            this.destinationEndpointPort = builder.destinationEndpointPort;
             this.destinationEndpointRegion = builder.destinationEndpointRegion;
             this.destinationEndpointUserName = builder.destinationEndpointUserName;
             this.errMessage = builder.errMessage;
             this.fullDataRestoreProgress = builder.fullDataRestoreProgress;
             this.fullStruAfterRestoreProgress = builder.fullStruAfterRestoreProgress;
             this.fullStruforeRestoreProgress = builder.fullStruforeRestoreProgress;
+            this.physicalBackupRecoverProgress = builder.physicalBackupRecoverProgress;
+            this.physicalDatabaseOnlineProgress = builder.physicalDatabaseOnlineProgress;
+            this.physicalFullAndIncrementBackupRecoverProgress = builder.physicalFullAndIncrementBackupRecoverProgress;
+            this.physicalFullBackupRecoverProgress = builder.physicalFullBackupRecoverProgress;
+            this.physicalIncrementBackupRecoverProgress = builder.physicalIncrementBackupRecoverProgress;
+            this.restoreDestinationMode = builder.restoreDestinationMode;
             this.restoreDir = builder.restoreDir;
             this.restoreObjects = builder.restoreObjects;
             this.restoreStatus = builder.restoreStatus;
@@ -409,6 +453,13 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
 
         /**
+         * @return backupGatewayIdentifier
+         */
+        public String getBackupGatewayIdentifier() {
+            return this.backupGatewayIdentifier;
+        }
+
+        /**
          * @return backupPlanId
          */
         public String getBackupPlanId() {
@@ -420,6 +471,13 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
          */
         public String getBackupSetId() {
             return this.backupSetId;
+        }
+
+        /**
+         * @return backupSourceOssRegion
+         */
+        public String getBackupSourceOssRegion() {
+            return this.backupSourceOssRegion;
         }
 
         /**
@@ -451,6 +509,20 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
 
         /**
+         * @return destinationEndpointEnableSsl
+         */
+        public String getDestinationEndpointEnableSsl() {
+            return this.destinationEndpointEnableSsl;
+        }
+
+        /**
+         * @return destinationEndpointHost
+         */
+        public String getDestinationEndpointHost() {
+            return this.destinationEndpointHost;
+        }
+
+        /**
          * @return destinationEndpointInstanceID
          */
         public String getDestinationEndpointInstanceID() {
@@ -476,6 +548,13 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
          */
         public String getDestinationEndpointOracleSID() {
             return this.destinationEndpointOracleSID;
+        }
+
+        /**
+         * @return destinationEndpointPort
+         */
+        public String getDestinationEndpointPort() {
+            return this.destinationEndpointPort;
         }
 
         /**
@@ -518,6 +597,48 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
          */
         public Integer getFullStruforeRestoreProgress() {
             return this.fullStruforeRestoreProgress;
+        }
+
+        /**
+         * @return physicalBackupRecoverProgress
+         */
+        public Integer getPhysicalBackupRecoverProgress() {
+            return this.physicalBackupRecoverProgress;
+        }
+
+        /**
+         * @return physicalDatabaseOnlineProgress
+         */
+        public Integer getPhysicalDatabaseOnlineProgress() {
+            return this.physicalDatabaseOnlineProgress;
+        }
+
+        /**
+         * @return physicalFullAndIncrementBackupRecoverProgress
+         */
+        public Integer getPhysicalFullAndIncrementBackupRecoverProgress() {
+            return this.physicalFullAndIncrementBackupRecoverProgress;
+        }
+
+        /**
+         * @return physicalFullBackupRecoverProgress
+         */
+        public Integer getPhysicalFullBackupRecoverProgress() {
+            return this.physicalFullBackupRecoverProgress;
+        }
+
+        /**
+         * @return physicalIncrementBackupRecoverProgress
+         */
+        public Integer getPhysicalIncrementBackupRecoverProgress() {
+            return this.physicalIncrementBackupRecoverProgress;
+        }
+
+        /**
+         * @return restoreDestinationMode
+         */
+        public String getRestoreDestinationMode() {
+            return this.restoreDestinationMode;
         }
 
         /**
@@ -578,22 +699,33 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long backupGatewayId; 
+            private String backupGatewayIdentifier; 
             private String backupPlanId; 
             private String backupSetId; 
+            private String backupSourceOssRegion; 
             private Integer continuousRestoreProgress; 
             private String crossAliyunId; 
             private String crossRoleName; 
             private String destinationEndpointDatabaseName; 
+            private String destinationEndpointEnableSsl; 
+            private String destinationEndpointHost; 
             private String destinationEndpointInstanceID; 
             private String destinationEndpointInstanceType; 
             private String destinationEndpointIpPort; 
             private String destinationEndpointOracleSID; 
+            private String destinationEndpointPort; 
             private String destinationEndpointRegion; 
             private String destinationEndpointUserName; 
             private String errMessage; 
             private Integer fullDataRestoreProgress; 
             private Integer fullStruAfterRestoreProgress; 
             private Integer fullStruforeRestoreProgress; 
+            private Integer physicalBackupRecoverProgress; 
+            private Integer physicalDatabaseOnlineProgress; 
+            private Integer physicalFullAndIncrementBackupRecoverProgress; 
+            private Integer physicalFullBackupRecoverProgress; 
+            private Integer physicalIncrementBackupRecoverProgress; 
+            private String restoreDestinationMode; 
             private String restoreDir; 
             private String restoreObjects; 
             private String restoreStatus; 
@@ -608,22 +740,33 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
 
             private Builder(RestoreTaskDetail model) {
                 this.backupGatewayId = model.backupGatewayId;
+                this.backupGatewayIdentifier = model.backupGatewayIdentifier;
                 this.backupPlanId = model.backupPlanId;
                 this.backupSetId = model.backupSetId;
+                this.backupSourceOssRegion = model.backupSourceOssRegion;
                 this.continuousRestoreProgress = model.continuousRestoreProgress;
                 this.crossAliyunId = model.crossAliyunId;
                 this.crossRoleName = model.crossRoleName;
                 this.destinationEndpointDatabaseName = model.destinationEndpointDatabaseName;
+                this.destinationEndpointEnableSsl = model.destinationEndpointEnableSsl;
+                this.destinationEndpointHost = model.destinationEndpointHost;
                 this.destinationEndpointInstanceID = model.destinationEndpointInstanceID;
                 this.destinationEndpointInstanceType = model.destinationEndpointInstanceType;
                 this.destinationEndpointIpPort = model.destinationEndpointIpPort;
                 this.destinationEndpointOracleSID = model.destinationEndpointOracleSID;
+                this.destinationEndpointPort = model.destinationEndpointPort;
                 this.destinationEndpointRegion = model.destinationEndpointRegion;
                 this.destinationEndpointUserName = model.destinationEndpointUserName;
                 this.errMessage = model.errMessage;
                 this.fullDataRestoreProgress = model.fullDataRestoreProgress;
                 this.fullStruAfterRestoreProgress = model.fullStruAfterRestoreProgress;
                 this.fullStruforeRestoreProgress = model.fullStruforeRestoreProgress;
+                this.physicalBackupRecoverProgress = model.physicalBackupRecoverProgress;
+                this.physicalDatabaseOnlineProgress = model.physicalDatabaseOnlineProgress;
+                this.physicalFullAndIncrementBackupRecoverProgress = model.physicalFullAndIncrementBackupRecoverProgress;
+                this.physicalFullBackupRecoverProgress = model.physicalFullBackupRecoverProgress;
+                this.physicalIncrementBackupRecoverProgress = model.physicalIncrementBackupRecoverProgress;
+                this.restoreDestinationMode = model.restoreDestinationMode;
                 this.restoreDir = model.restoreDir;
                 this.restoreObjects = model.restoreObjects;
                 this.restoreStatus = model.restoreStatus;
@@ -646,6 +789,14 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             }
 
             /**
+             * BackupGatewayIdentifier.
+             */
+            public Builder backupGatewayIdentifier(String backupGatewayIdentifier) {
+                this.backupGatewayIdentifier = backupGatewayIdentifier;
+                return this;
+            }
+
+            /**
              * <p>The ID of the backup schedule.</p>
              * 
              * <strong>example:</strong>
@@ -664,6 +815,14 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
              */
             public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
+                return this;
+            }
+
+            /**
+             * BackupSourceOssRegion.
+             */
+            public Builder backupSourceOssRegion(String backupSourceOssRegion) {
+                this.backupSourceOssRegion = backupSourceOssRegion;
                 return this;
             }
 
@@ -708,6 +867,22 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
              */
             public Builder destinationEndpointDatabaseName(String destinationEndpointDatabaseName) {
                 this.destinationEndpointDatabaseName = destinationEndpointDatabaseName;
+                return this;
+            }
+
+            /**
+             * DestinationEndpointEnableSsl.
+             */
+            public Builder destinationEndpointEnableSsl(String destinationEndpointEnableSsl) {
+                this.destinationEndpointEnableSsl = destinationEndpointEnableSsl;
+                return this;
+            }
+
+            /**
+             * DestinationEndpointHost.
+             */
+            public Builder destinationEndpointHost(String destinationEndpointHost) {
+                this.destinationEndpointHost = destinationEndpointHost;
                 return this;
             }
 
@@ -760,6 +935,14 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
              */
             public Builder destinationEndpointOracleSID(String destinationEndpointOracleSID) {
                 this.destinationEndpointOracleSID = destinationEndpointOracleSID;
+                return this;
+            }
+
+            /**
+             * DestinationEndpointPort.
+             */
+            public Builder destinationEndpointPort(String destinationEndpointPort) {
+                this.destinationEndpointPort = destinationEndpointPort;
                 return this;
             }
 
@@ -826,6 +1009,54 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
              */
             public Builder fullStruforeRestoreProgress(Integer fullStruforeRestoreProgress) {
                 this.fullStruforeRestoreProgress = fullStruforeRestoreProgress;
+                return this;
+            }
+
+            /**
+             * PhysicalBackupRecoverProgress.
+             */
+            public Builder physicalBackupRecoverProgress(Integer physicalBackupRecoverProgress) {
+                this.physicalBackupRecoverProgress = physicalBackupRecoverProgress;
+                return this;
+            }
+
+            /**
+             * PhysicalDatabaseOnlineProgress.
+             */
+            public Builder physicalDatabaseOnlineProgress(Integer physicalDatabaseOnlineProgress) {
+                this.physicalDatabaseOnlineProgress = physicalDatabaseOnlineProgress;
+                return this;
+            }
+
+            /**
+             * PhysicalFullAndIncrementBackupRecoverProgress.
+             */
+            public Builder physicalFullAndIncrementBackupRecoverProgress(Integer physicalFullAndIncrementBackupRecoverProgress) {
+                this.physicalFullAndIncrementBackupRecoverProgress = physicalFullAndIncrementBackupRecoverProgress;
+                return this;
+            }
+
+            /**
+             * PhysicalFullBackupRecoverProgress.
+             */
+            public Builder physicalFullBackupRecoverProgress(Integer physicalFullBackupRecoverProgress) {
+                this.physicalFullBackupRecoverProgress = physicalFullBackupRecoverProgress;
+                return this;
+            }
+
+            /**
+             * PhysicalIncrementBackupRecoverProgress.
+             */
+            public Builder physicalIncrementBackupRecoverProgress(Integer physicalIncrementBackupRecoverProgress) {
+                this.physicalIncrementBackupRecoverProgress = physicalIncrementBackupRecoverProgress;
+                return this;
+            }
+
+            /**
+             * RestoreDestinationMode.
+             */
+            public Builder restoreDestinationMode(String restoreDestinationMode) {
+                this.restoreDestinationMode = restoreDestinationMode;
                 return this;
             }
 

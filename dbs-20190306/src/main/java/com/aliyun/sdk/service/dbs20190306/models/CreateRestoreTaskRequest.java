@@ -22,6 +22,14 @@ public class CreateRestoreTaskRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoOpenDatabase")
+    private String autoOpenDatabase;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoShutdownDatabase")
+    private String autoShutdownDatabase;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupGatewayId")
     private Long backupGatewayId;
 
@@ -45,6 +53,34 @@ public class CreateRestoreTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CrossRoleName")
     private String crossRoleName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestDatabaseInstanceClass")
+    private String destDatabaseInstanceClass;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestDatabaseInstanceDatabaseVersion")
+    private String destDatabaseInstanceDatabaseVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestDatabaseInstanceRegion")
+    private String destDatabaseInstanceRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestDatabaseInstanceStorageSize")
+    private String destDatabaseInstanceStorageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestDatabaseInstanceType")
+    private String destDatabaseInstanceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestDatabaseInstanceVSwitch")
+    private String destDatabaseInstanceVSwitch;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestDatabaseInstanceVpc")
+    private String destDatabaseInstanceVpc;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationEndpointDatabaseName")
@@ -88,8 +124,16 @@ public class CreateRestoreTaskRequest extends Request {
     private String duplicateConflict;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDestinationEndpointSsl")
+    private Boolean enableDestinationEndpointSsl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreDestinationMode")
+    private String restoreDestinationMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RestoreDir")
@@ -112,15 +156,28 @@ public class CreateRestoreTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private Long restoreTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SslCaPem")
+    private String sslCaPem;
+
     private CreateRestoreTaskRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.autoOpenDatabase = builder.autoOpenDatabase;
+        this.autoShutdownDatabase = builder.autoShutdownDatabase;
         this.backupGatewayId = builder.backupGatewayId;
         this.backupPlanId = builder.backupPlanId;
         this.backupSetId = builder.backupSetId;
         this.clientToken = builder.clientToken;
         this.crossAliyunId = builder.crossAliyunId;
         this.crossRoleName = builder.crossRoleName;
+        this.destDatabaseInstanceClass = builder.destDatabaseInstanceClass;
+        this.destDatabaseInstanceDatabaseVersion = builder.destDatabaseInstanceDatabaseVersion;
+        this.destDatabaseInstanceRegion = builder.destDatabaseInstanceRegion;
+        this.destDatabaseInstanceStorageSize = builder.destDatabaseInstanceStorageSize;
+        this.destDatabaseInstanceType = builder.destDatabaseInstanceType;
+        this.destDatabaseInstanceVSwitch = builder.destDatabaseInstanceVSwitch;
+        this.destDatabaseInstanceVpc = builder.destDatabaseInstanceVpc;
         this.destinationEndpointDatabaseName = builder.destinationEndpointDatabaseName;
         this.destinationEndpointIP = builder.destinationEndpointIP;
         this.destinationEndpointInstanceID = builder.destinationEndpointInstanceID;
@@ -131,12 +188,15 @@ public class CreateRestoreTaskRequest extends Request {
         this.destinationEndpointRegion = builder.destinationEndpointRegion;
         this.destinationEndpointUserName = builder.destinationEndpointUserName;
         this.duplicateConflict = builder.duplicateConflict;
+        this.enableDestinationEndpointSsl = builder.enableDestinationEndpointSsl;
         this.ownerId = builder.ownerId;
+        this.restoreDestinationMode = builder.restoreDestinationMode;
         this.restoreDir = builder.restoreDir;
         this.restoreHome = builder.restoreHome;
         this.restoreObjects = builder.restoreObjects;
         this.restoreTaskName = builder.restoreTaskName;
         this.restoreTime = builder.restoreTime;
+        this.sslCaPem = builder.sslCaPem;
     }
 
     public static Builder builder() {
@@ -157,6 +217,20 @@ public class CreateRestoreTaskRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return autoOpenDatabase
+     */
+    public String getAutoOpenDatabase() {
+        return this.autoOpenDatabase;
+    }
+
+    /**
+     * @return autoShutdownDatabase
+     */
+    public String getAutoShutdownDatabase() {
+        return this.autoShutdownDatabase;
     }
 
     /**
@@ -199,6 +273,55 @@ public class CreateRestoreTaskRequest extends Request {
      */
     public String getCrossRoleName() {
         return this.crossRoleName;
+    }
+
+    /**
+     * @return destDatabaseInstanceClass
+     */
+    public String getDestDatabaseInstanceClass() {
+        return this.destDatabaseInstanceClass;
+    }
+
+    /**
+     * @return destDatabaseInstanceDatabaseVersion
+     */
+    public String getDestDatabaseInstanceDatabaseVersion() {
+        return this.destDatabaseInstanceDatabaseVersion;
+    }
+
+    /**
+     * @return destDatabaseInstanceRegion
+     */
+    public String getDestDatabaseInstanceRegion() {
+        return this.destDatabaseInstanceRegion;
+    }
+
+    /**
+     * @return destDatabaseInstanceStorageSize
+     */
+    public String getDestDatabaseInstanceStorageSize() {
+        return this.destDatabaseInstanceStorageSize;
+    }
+
+    /**
+     * @return destDatabaseInstanceType
+     */
+    public String getDestDatabaseInstanceType() {
+        return this.destDatabaseInstanceType;
+    }
+
+    /**
+     * @return destDatabaseInstanceVSwitch
+     */
+    public String getDestDatabaseInstanceVSwitch() {
+        return this.destDatabaseInstanceVSwitch;
+    }
+
+    /**
+     * @return destDatabaseInstanceVpc
+     */
+    public String getDestDatabaseInstanceVpc() {
+        return this.destDatabaseInstanceVpc;
     }
 
     /**
@@ -272,10 +395,24 @@ public class CreateRestoreTaskRequest extends Request {
     }
 
     /**
+     * @return enableDestinationEndpointSsl
+     */
+    public Boolean getEnableDestinationEndpointSsl() {
+        return this.enableDestinationEndpointSsl;
+    }
+
+    /**
      * @return ownerId
      */
     public String getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return restoreDestinationMode
+     */
+    public String getRestoreDestinationMode() {
+        return this.restoreDestinationMode;
     }
 
     /**
@@ -313,14 +450,30 @@ public class CreateRestoreTaskRequest extends Request {
         return this.restoreTime;
     }
 
+    /**
+     * @return sslCaPem
+     */
+    public String getSslCaPem() {
+        return this.sslCaPem;
+    }
+
     public static final class Builder extends Request.Builder<CreateRestoreTaskRequest, Builder> {
         private String regionId; 
+        private String autoOpenDatabase; 
+        private String autoShutdownDatabase; 
         private Long backupGatewayId; 
         private String backupPlanId; 
         private String backupSetId; 
         private String clientToken; 
         private String crossAliyunId; 
         private String crossRoleName; 
+        private String destDatabaseInstanceClass; 
+        private String destDatabaseInstanceDatabaseVersion; 
+        private String destDatabaseInstanceRegion; 
+        private String destDatabaseInstanceStorageSize; 
+        private String destDatabaseInstanceType; 
+        private String destDatabaseInstanceVSwitch; 
+        private String destDatabaseInstanceVpc; 
         private String destinationEndpointDatabaseName; 
         private String destinationEndpointIP; 
         private String destinationEndpointInstanceID; 
@@ -331,12 +484,15 @@ public class CreateRestoreTaskRequest extends Request {
         private String destinationEndpointRegion; 
         private String destinationEndpointUserName; 
         private String duplicateConflict; 
+        private Boolean enableDestinationEndpointSsl; 
         private String ownerId; 
+        private String restoreDestinationMode; 
         private String restoreDir; 
         private String restoreHome; 
         private String restoreObjects; 
         private String restoreTaskName; 
         private Long restoreTime; 
+        private String sslCaPem; 
 
         private Builder() {
             super();
@@ -345,12 +501,21 @@ public class CreateRestoreTaskRequest extends Request {
         private Builder(CreateRestoreTaskRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.autoOpenDatabase = request.autoOpenDatabase;
+            this.autoShutdownDatabase = request.autoShutdownDatabase;
             this.backupGatewayId = request.backupGatewayId;
             this.backupPlanId = request.backupPlanId;
             this.backupSetId = request.backupSetId;
             this.clientToken = request.clientToken;
             this.crossAliyunId = request.crossAliyunId;
             this.crossRoleName = request.crossRoleName;
+            this.destDatabaseInstanceClass = request.destDatabaseInstanceClass;
+            this.destDatabaseInstanceDatabaseVersion = request.destDatabaseInstanceDatabaseVersion;
+            this.destDatabaseInstanceRegion = request.destDatabaseInstanceRegion;
+            this.destDatabaseInstanceStorageSize = request.destDatabaseInstanceStorageSize;
+            this.destDatabaseInstanceType = request.destDatabaseInstanceType;
+            this.destDatabaseInstanceVSwitch = request.destDatabaseInstanceVSwitch;
+            this.destDatabaseInstanceVpc = request.destDatabaseInstanceVpc;
             this.destinationEndpointDatabaseName = request.destinationEndpointDatabaseName;
             this.destinationEndpointIP = request.destinationEndpointIP;
             this.destinationEndpointInstanceID = request.destinationEndpointInstanceID;
@@ -361,12 +526,15 @@ public class CreateRestoreTaskRequest extends Request {
             this.destinationEndpointRegion = request.destinationEndpointRegion;
             this.destinationEndpointUserName = request.destinationEndpointUserName;
             this.duplicateConflict = request.duplicateConflict;
+            this.enableDestinationEndpointSsl = request.enableDestinationEndpointSsl;
             this.ownerId = request.ownerId;
+            this.restoreDestinationMode = request.restoreDestinationMode;
             this.restoreDir = request.restoreDir;
             this.restoreHome = request.restoreHome;
             this.restoreObjects = request.restoreObjects;
             this.restoreTaskName = request.restoreTaskName;
             this.restoreTime = request.restoreTime;
+            this.sslCaPem = request.sslCaPem;
         } 
 
         /**
@@ -375,6 +543,24 @@ public class CreateRestoreTaskRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AutoOpenDatabase.
+         */
+        public Builder autoOpenDatabase(String autoOpenDatabase) {
+            this.putQueryParameter("AutoOpenDatabase", autoOpenDatabase);
+            this.autoOpenDatabase = autoOpenDatabase;
+            return this;
+        }
+
+        /**
+         * AutoShutdownDatabase.
+         */
+        public Builder autoShutdownDatabase(String autoShutdownDatabase) {
+            this.putQueryParameter("AutoShutdownDatabase", autoShutdownDatabase);
+            this.autoShutdownDatabase = autoShutdownDatabase;
             return this;
         }
 
@@ -451,6 +637,69 @@ public class CreateRestoreTaskRequest extends Request {
         public Builder crossRoleName(String crossRoleName) {
             this.putQueryParameter("CrossRoleName", crossRoleName);
             this.crossRoleName = crossRoleName;
+            return this;
+        }
+
+        /**
+         * DestDatabaseInstanceClass.
+         */
+        public Builder destDatabaseInstanceClass(String destDatabaseInstanceClass) {
+            this.putQueryParameter("DestDatabaseInstanceClass", destDatabaseInstanceClass);
+            this.destDatabaseInstanceClass = destDatabaseInstanceClass;
+            return this;
+        }
+
+        /**
+         * DestDatabaseInstanceDatabaseVersion.
+         */
+        public Builder destDatabaseInstanceDatabaseVersion(String destDatabaseInstanceDatabaseVersion) {
+            this.putQueryParameter("DestDatabaseInstanceDatabaseVersion", destDatabaseInstanceDatabaseVersion);
+            this.destDatabaseInstanceDatabaseVersion = destDatabaseInstanceDatabaseVersion;
+            return this;
+        }
+
+        /**
+         * DestDatabaseInstanceRegion.
+         */
+        public Builder destDatabaseInstanceRegion(String destDatabaseInstanceRegion) {
+            this.putQueryParameter("DestDatabaseInstanceRegion", destDatabaseInstanceRegion);
+            this.destDatabaseInstanceRegion = destDatabaseInstanceRegion;
+            return this;
+        }
+
+        /**
+         * DestDatabaseInstanceStorageSize.
+         */
+        public Builder destDatabaseInstanceStorageSize(String destDatabaseInstanceStorageSize) {
+            this.putQueryParameter("DestDatabaseInstanceStorageSize", destDatabaseInstanceStorageSize);
+            this.destDatabaseInstanceStorageSize = destDatabaseInstanceStorageSize;
+            return this;
+        }
+
+        /**
+         * DestDatabaseInstanceType.
+         */
+        public Builder destDatabaseInstanceType(String destDatabaseInstanceType) {
+            this.putQueryParameter("DestDatabaseInstanceType", destDatabaseInstanceType);
+            this.destDatabaseInstanceType = destDatabaseInstanceType;
+            return this;
+        }
+
+        /**
+         * DestDatabaseInstanceVSwitch.
+         */
+        public Builder destDatabaseInstanceVSwitch(String destDatabaseInstanceVSwitch) {
+            this.putQueryParameter("DestDatabaseInstanceVSwitch", destDatabaseInstanceVSwitch);
+            this.destDatabaseInstanceVSwitch = destDatabaseInstanceVSwitch;
+            return this;
+        }
+
+        /**
+         * DestDatabaseInstanceVpc.
+         */
+        public Builder destDatabaseInstanceVpc(String destDatabaseInstanceVpc) {
+            this.putQueryParameter("DestDatabaseInstanceVpc", destDatabaseInstanceVpc);
+            this.destDatabaseInstanceVpc = destDatabaseInstanceVpc;
             return this;
         }
 
@@ -613,11 +862,29 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
+         * EnableDestinationEndpointSsl.
+         */
+        public Builder enableDestinationEndpointSsl(Boolean enableDestinationEndpointSsl) {
+            this.putQueryParameter("EnableDestinationEndpointSsl", enableDestinationEndpointSsl);
+            this.enableDestinationEndpointSsl = enableDestinationEndpointSsl;
+            return this;
+        }
+
+        /**
          * OwnerId.
          */
         public Builder ownerId(String ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RestoreDestinationMode.
+         */
+        public Builder restoreDestinationMode(String restoreDestinationMode) {
+            this.putQueryParameter("RestoreDestinationMode", restoreDestinationMode);
+            this.restoreDestinationMode = restoreDestinationMode;
             return this;
         }
 
@@ -682,6 +949,15 @@ public class CreateRestoreTaskRequest extends Request {
         public Builder restoreTime(Long restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
             this.restoreTime = restoreTime;
+            return this;
+        }
+
+        /**
+         * SslCaPem.
+         */
+        public Builder sslCaPem(String sslCaPem) {
+            this.putQueryParameter("SslCaPem", sslCaPem);
+            this.sslCaPem = sslCaPem;
             return this;
         }
 

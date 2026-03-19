@@ -293,6 +293,9 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupGatewayId")
         private Long backupGatewayId;
 
+        @com.aliyun.core.annotation.NameInMap("BackupGatewayIdentifier")
+        private String backupGatewayIdentifier;
+
         @com.aliyun.core.annotation.NameInMap("BackupMethod")
         private String backupMethod;
 
@@ -310,6 +313,9 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("BackupPlanName")
         private String backupPlanName;
+
+        @com.aliyun.core.annotation.NameInMap("BackupPlanRegion")
+        private String backupPlanRegion;
 
         @com.aliyun.core.annotation.NameInMap("BackupPlanStatus")
         private String backupPlanStatus;
@@ -359,14 +365,41 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
         private Boolean enableBackupLog;
 
+        @com.aliyun.core.annotation.NameInMap("EnableMysqlPhysicalBackupBinLog")
+        private Boolean enableMysqlPhysicalBackupBinLog;
+
         @com.aliyun.core.annotation.NameInMap("EndTimestampForRestore")
         private Long endTimestampForRestore;
 
         @com.aliyun.core.annotation.NameInMap("ErrMessage")
         private String errMessage;
 
+        @com.aliyun.core.annotation.NameInMap("IncrementBackupRetentionPeriod")
+        private String incrementBackupRetentionPeriod;
+
+        @com.aliyun.core.annotation.NameInMap("IncrementDuplicationArchivePeriod")
+        private String incrementDuplicationArchivePeriod;
+
+        @com.aliyun.core.annotation.NameInMap("IncrementDuplicationInfrequentAccessPeriod")
+        private String incrementDuplicationInfrequentAccessPeriod;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
+        private String instanceChargeType;
+
         @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceExpiredTimestamp")
+        private Long instanceExpiredTimestamp;
+
+        @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
+        private String logBackupRetentionPeriod;
+
+        @com.aliyun.core.annotation.NameInMap("LogDuplicationArchivePeriod")
+        private String logDuplicationArchivePeriod;
+
+        @com.aliyun.core.annotation.NameInMap("LogDuplicationInfrequentAccessPeriod")
+        private String logDuplicationInfrequentAccessPeriod;
 
         @com.aliyun.core.annotation.NameInMap("OSSBucketName")
         private String OSSBucketName;
@@ -383,6 +416,12 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceEndpointDatabaseName")
         private String sourceEndpointDatabaseName;
 
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointEnableSsl")
+        private String sourceEndpointEnableSsl;
+
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointHost")
+        private String sourceEndpointHost;
+
         @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceID")
         private String sourceEndpointInstanceID;
 
@@ -395,20 +434,28 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceEndpointOracleSID")
         private String sourceEndpointOracleSID;
 
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointPort")
+        private String sourceEndpointPort;
+
         @com.aliyun.core.annotation.NameInMap("SourceEndpointRegion")
         private String sourceEndpointRegion;
 
         @com.aliyun.core.annotation.NameInMap("SourceEndpointUserName")
         private String sourceEndpointUserName;
 
+        @com.aliyun.core.annotation.NameInMap("StorageEncryptMethod")
+        private String storageEncryptMethod;
+
         private BackupPlanDetail(Builder builder) {
             this.backupGatewayId = builder.backupGatewayId;
+            this.backupGatewayIdentifier = builder.backupGatewayIdentifier;
             this.backupMethod = builder.backupMethod;
             this.backupObjects = builder.backupObjects;
             this.backupPeriod = builder.backupPeriod;
             this.backupPlanCreateTime = builder.backupPlanCreateTime;
             this.backupPlanId = builder.backupPlanId;
             this.backupPlanName = builder.backupPlanName;
+            this.backupPlanRegion = builder.backupPlanRegion;
             this.backupPlanStatus = builder.backupPlanStatus;
             this.backupRetentionPeriod = builder.backupRetentionPeriod;
             this.backupSetDownloadDir = builder.backupSetDownloadDir;
@@ -425,20 +472,33 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             this.duplicationArchivePeriod = builder.duplicationArchivePeriod;
             this.duplicationInfrequentAccessPeriod = builder.duplicationInfrequentAccessPeriod;
             this.enableBackupLog = builder.enableBackupLog;
+            this.enableMysqlPhysicalBackupBinLog = builder.enableMysqlPhysicalBackupBinLog;
             this.endTimestampForRestore = builder.endTimestampForRestore;
             this.errMessage = builder.errMessage;
+            this.incrementBackupRetentionPeriod = builder.incrementBackupRetentionPeriod;
+            this.incrementDuplicationArchivePeriod = builder.incrementDuplicationArchivePeriod;
+            this.incrementDuplicationInfrequentAccessPeriod = builder.incrementDuplicationInfrequentAccessPeriod;
+            this.instanceChargeType = builder.instanceChargeType;
             this.instanceClass = builder.instanceClass;
+            this.instanceExpiredTimestamp = builder.instanceExpiredTimestamp;
+            this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
+            this.logDuplicationArchivePeriod = builder.logDuplicationArchivePeriod;
+            this.logDuplicationInfrequentAccessPeriod = builder.logDuplicationInfrequentAccessPeriod;
             this.OSSBucketName = builder.OSSBucketName;
             this.OSSBucketRegion = builder.OSSBucketRegion;
             this.openBackupSetAutoDownload = builder.openBackupSetAutoDownload;
             this.resourceGroupId = builder.resourceGroupId;
             this.sourceEndpointDatabaseName = builder.sourceEndpointDatabaseName;
+            this.sourceEndpointEnableSsl = builder.sourceEndpointEnableSsl;
+            this.sourceEndpointHost = builder.sourceEndpointHost;
             this.sourceEndpointInstanceID = builder.sourceEndpointInstanceID;
             this.sourceEndpointInstanceType = builder.sourceEndpointInstanceType;
             this.sourceEndpointIpPort = builder.sourceEndpointIpPort;
             this.sourceEndpointOracleSID = builder.sourceEndpointOracleSID;
+            this.sourceEndpointPort = builder.sourceEndpointPort;
             this.sourceEndpointRegion = builder.sourceEndpointRegion;
             this.sourceEndpointUserName = builder.sourceEndpointUserName;
+            this.storageEncryptMethod = builder.storageEncryptMethod;
         }
 
         public static Builder builder() {
@@ -454,6 +514,13 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
          */
         public Long getBackupGatewayId() {
             return this.backupGatewayId;
+        }
+
+        /**
+         * @return backupGatewayIdentifier
+         */
+        public String getBackupGatewayIdentifier() {
+            return this.backupGatewayIdentifier;
         }
 
         /**
@@ -496,6 +563,13 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
          */
         public String getBackupPlanName() {
             return this.backupPlanName;
+        }
+
+        /**
+         * @return backupPlanRegion
+         */
+        public String getBackupPlanRegion() {
+            return this.backupPlanRegion;
         }
 
         /**
@@ -611,6 +685,13 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableMysqlPhysicalBackupBinLog
+         */
+        public Boolean getEnableMysqlPhysicalBackupBinLog() {
+            return this.enableMysqlPhysicalBackupBinLog;
+        }
+
+        /**
          * @return endTimestampForRestore
          */
         public Long getEndTimestampForRestore() {
@@ -625,10 +706,66 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
+         * @return incrementBackupRetentionPeriod
+         */
+        public String getIncrementBackupRetentionPeriod() {
+            return this.incrementBackupRetentionPeriod;
+        }
+
+        /**
+         * @return incrementDuplicationArchivePeriod
+         */
+        public String getIncrementDuplicationArchivePeriod() {
+            return this.incrementDuplicationArchivePeriod;
+        }
+
+        /**
+         * @return incrementDuplicationInfrequentAccessPeriod
+         */
+        public String getIncrementDuplicationInfrequentAccessPeriod() {
+            return this.incrementDuplicationInfrequentAccessPeriod;
+        }
+
+        /**
+         * @return instanceChargeType
+         */
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        /**
          * @return instanceClass
          */
         public String getInstanceClass() {
             return this.instanceClass;
+        }
+
+        /**
+         * @return instanceExpiredTimestamp
+         */
+        public Long getInstanceExpiredTimestamp() {
+            return this.instanceExpiredTimestamp;
+        }
+
+        /**
+         * @return logBackupRetentionPeriod
+         */
+        public String getLogBackupRetentionPeriod() {
+            return this.logBackupRetentionPeriod;
+        }
+
+        /**
+         * @return logDuplicationArchivePeriod
+         */
+        public String getLogDuplicationArchivePeriod() {
+            return this.logDuplicationArchivePeriod;
+        }
+
+        /**
+         * @return logDuplicationInfrequentAccessPeriod
+         */
+        public String getLogDuplicationInfrequentAccessPeriod() {
+            return this.logDuplicationInfrequentAccessPeriod;
         }
 
         /**
@@ -667,6 +804,20 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceEndpointEnableSsl
+         */
+        public String getSourceEndpointEnableSsl() {
+            return this.sourceEndpointEnableSsl;
+        }
+
+        /**
+         * @return sourceEndpointHost
+         */
+        public String getSourceEndpointHost() {
+            return this.sourceEndpointHost;
+        }
+
+        /**
          * @return sourceEndpointInstanceID
          */
         public String getSourceEndpointInstanceID() {
@@ -695,6 +846,13 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceEndpointPort
+         */
+        public String getSourceEndpointPort() {
+            return this.sourceEndpointPort;
+        }
+
+        /**
          * @return sourceEndpointRegion
          */
         public String getSourceEndpointRegion() {
@@ -708,14 +866,23 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             return this.sourceEndpointUserName;
         }
 
+        /**
+         * @return storageEncryptMethod
+         */
+        public String getStorageEncryptMethod() {
+            return this.storageEncryptMethod;
+        }
+
         public static final class Builder {
             private Long backupGatewayId; 
+            private String backupGatewayIdentifier; 
             private String backupMethod; 
             private String backupObjects; 
             private String backupPeriod; 
             private Long backupPlanCreateTime; 
             private String backupPlanId; 
             private String backupPlanName; 
+            private String backupPlanRegion; 
             private String backupPlanStatus; 
             private Integer backupRetentionPeriod; 
             private String backupSetDownloadDir; 
@@ -732,32 +899,47 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             private Integer duplicationArchivePeriod; 
             private Integer duplicationInfrequentAccessPeriod; 
             private Boolean enableBackupLog; 
+            private Boolean enableMysqlPhysicalBackupBinLog; 
             private Long endTimestampForRestore; 
             private String errMessage; 
+            private String incrementBackupRetentionPeriod; 
+            private String incrementDuplicationArchivePeriod; 
+            private String incrementDuplicationInfrequentAccessPeriod; 
+            private String instanceChargeType; 
             private String instanceClass; 
+            private Long instanceExpiredTimestamp; 
+            private String logBackupRetentionPeriod; 
+            private String logDuplicationArchivePeriod; 
+            private String logDuplicationInfrequentAccessPeriod; 
             private String OSSBucketName; 
             private String OSSBucketRegion; 
             private Boolean openBackupSetAutoDownload; 
             private String resourceGroupId; 
             private String sourceEndpointDatabaseName; 
+            private String sourceEndpointEnableSsl; 
+            private String sourceEndpointHost; 
             private String sourceEndpointInstanceID; 
             private String sourceEndpointInstanceType; 
             private String sourceEndpointIpPort; 
             private String sourceEndpointOracleSID; 
+            private String sourceEndpointPort; 
             private String sourceEndpointRegion; 
             private String sourceEndpointUserName; 
+            private String storageEncryptMethod; 
 
             private Builder() {
             } 
 
             private Builder(BackupPlanDetail model) {
                 this.backupGatewayId = model.backupGatewayId;
+                this.backupGatewayIdentifier = model.backupGatewayIdentifier;
                 this.backupMethod = model.backupMethod;
                 this.backupObjects = model.backupObjects;
                 this.backupPeriod = model.backupPeriod;
                 this.backupPlanCreateTime = model.backupPlanCreateTime;
                 this.backupPlanId = model.backupPlanId;
                 this.backupPlanName = model.backupPlanName;
+                this.backupPlanRegion = model.backupPlanRegion;
                 this.backupPlanStatus = model.backupPlanStatus;
                 this.backupRetentionPeriod = model.backupRetentionPeriod;
                 this.backupSetDownloadDir = model.backupSetDownloadDir;
@@ -774,20 +956,33 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
                 this.duplicationArchivePeriod = model.duplicationArchivePeriod;
                 this.duplicationInfrequentAccessPeriod = model.duplicationInfrequentAccessPeriod;
                 this.enableBackupLog = model.enableBackupLog;
+                this.enableMysqlPhysicalBackupBinLog = model.enableMysqlPhysicalBackupBinLog;
                 this.endTimestampForRestore = model.endTimestampForRestore;
                 this.errMessage = model.errMessage;
+                this.incrementBackupRetentionPeriod = model.incrementBackupRetentionPeriod;
+                this.incrementDuplicationArchivePeriod = model.incrementDuplicationArchivePeriod;
+                this.incrementDuplicationInfrequentAccessPeriod = model.incrementDuplicationInfrequentAccessPeriod;
+                this.instanceChargeType = model.instanceChargeType;
                 this.instanceClass = model.instanceClass;
+                this.instanceExpiredTimestamp = model.instanceExpiredTimestamp;
+                this.logBackupRetentionPeriod = model.logBackupRetentionPeriod;
+                this.logDuplicationArchivePeriod = model.logDuplicationArchivePeriod;
+                this.logDuplicationInfrequentAccessPeriod = model.logDuplicationInfrequentAccessPeriod;
                 this.OSSBucketName = model.OSSBucketName;
                 this.OSSBucketRegion = model.OSSBucketRegion;
                 this.openBackupSetAutoDownload = model.openBackupSetAutoDownload;
                 this.resourceGroupId = model.resourceGroupId;
                 this.sourceEndpointDatabaseName = model.sourceEndpointDatabaseName;
+                this.sourceEndpointEnableSsl = model.sourceEndpointEnableSsl;
+                this.sourceEndpointHost = model.sourceEndpointHost;
                 this.sourceEndpointInstanceID = model.sourceEndpointInstanceID;
                 this.sourceEndpointInstanceType = model.sourceEndpointInstanceType;
                 this.sourceEndpointIpPort = model.sourceEndpointIpPort;
                 this.sourceEndpointOracleSID = model.sourceEndpointOracleSID;
+                this.sourceEndpointPort = model.sourceEndpointPort;
                 this.sourceEndpointRegion = model.sourceEndpointRegion;
                 this.sourceEndpointUserName = model.sourceEndpointUserName;
+                this.storageEncryptMethod = model.storageEncryptMethod;
             } 
 
             /**
@@ -798,6 +993,14 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
              */
             public Builder backupGatewayId(Long backupGatewayId) {
                 this.backupGatewayId = backupGatewayId;
+                return this;
+            }
+
+            /**
+             * BackupGatewayIdentifier.
+             */
+            public Builder backupGatewayIdentifier(String backupGatewayIdentifier) {
+                this.backupGatewayIdentifier = backupGatewayIdentifier;
                 return this;
             }
 
@@ -875,6 +1078,14 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
              */
             public Builder backupPlanName(String backupPlanName) {
                 this.backupPlanName = backupPlanName;
+                return this;
+            }
+
+            /**
+             * BackupPlanRegion.
+             */
+            public Builder backupPlanRegion(String backupPlanRegion) {
+                this.backupPlanRegion = backupPlanRegion;
                 return this;
             }
 
@@ -1084,6 +1295,14 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
+             * EnableMysqlPhysicalBackupBinLog.
+             */
+            public Builder enableMysqlPhysicalBackupBinLog(Boolean enableMysqlPhysicalBackupBinLog) {
+                this.enableMysqlPhysicalBackupBinLog = enableMysqlPhysicalBackupBinLog;
+                return this;
+            }
+
+            /**
              * <p>End time of the database restorable period, in timestamp format.</p>
              * 
              * <strong>example:</strong>
@@ -1106,6 +1325,38 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
+             * IncrementBackupRetentionPeriod.
+             */
+            public Builder incrementBackupRetentionPeriod(String incrementBackupRetentionPeriod) {
+                this.incrementBackupRetentionPeriod = incrementBackupRetentionPeriod;
+                return this;
+            }
+
+            /**
+             * IncrementDuplicationArchivePeriod.
+             */
+            public Builder incrementDuplicationArchivePeriod(String incrementDuplicationArchivePeriod) {
+                this.incrementDuplicationArchivePeriod = incrementDuplicationArchivePeriod;
+                return this;
+            }
+
+            /**
+             * IncrementDuplicationInfrequentAccessPeriod.
+             */
+            public Builder incrementDuplicationInfrequentAccessPeriod(String incrementDuplicationInfrequentAccessPeriod) {
+                this.incrementDuplicationInfrequentAccessPeriod = incrementDuplicationInfrequentAccessPeriod;
+                return this;
+            }
+
+            /**
+             * InstanceChargeType.
+             */
+            public Builder instanceChargeType(String instanceChargeType) {
+                this.instanceChargeType = instanceChargeType;
+                return this;
+            }
+
+            /**
              * <p>Instance class, with return values as follows:</p>
              * <ul>
              * <li><strong>micro</strong>: Entry-level</li>
@@ -1120,6 +1371,38 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
+                return this;
+            }
+
+            /**
+             * InstanceExpiredTimestamp.
+             */
+            public Builder instanceExpiredTimestamp(Long instanceExpiredTimestamp) {
+                this.instanceExpiredTimestamp = instanceExpiredTimestamp;
+                return this;
+            }
+
+            /**
+             * LogBackupRetentionPeriod.
+             */
+            public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
+                this.logBackupRetentionPeriod = logBackupRetentionPeriod;
+                return this;
+            }
+
+            /**
+             * LogDuplicationArchivePeriod.
+             */
+            public Builder logDuplicationArchivePeriod(String logDuplicationArchivePeriod) {
+                this.logDuplicationArchivePeriod = logDuplicationArchivePeriod;
+                return this;
+            }
+
+            /**
+             * LogDuplicationInfrequentAccessPeriod.
+             */
+            public Builder logDuplicationInfrequentAccessPeriod(String logDuplicationInfrequentAccessPeriod) {
+                this.logDuplicationInfrequentAccessPeriod = logDuplicationInfrequentAccessPeriod;
                 return this;
             }
 
@@ -1179,6 +1462,22 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
+             * SourceEndpointEnableSsl.
+             */
+            public Builder sourceEndpointEnableSsl(String sourceEndpointEnableSsl) {
+                this.sourceEndpointEnableSsl = sourceEndpointEnableSsl;
+                return this;
+            }
+
+            /**
+             * SourceEndpointHost.
+             */
+            public Builder sourceEndpointHost(String sourceEndpointHost) {
+                this.sourceEndpointHost = sourceEndpointHost;
+                return this;
+            }
+
+            /**
              * <p>Database instance ID.</p>
              * 
              * <strong>example:</strong>
@@ -1231,6 +1530,14 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
+             * SourceEndpointPort.
+             */
+            public Builder sourceEndpointPort(String sourceEndpointPort) {
+                this.sourceEndpointPort = sourceEndpointPort;
+                return this;
+            }
+
+            /**
              * <p>Database region.</p>
              * 
              * <strong>example:</strong>
@@ -1249,6 +1556,14 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
              */
             public Builder sourceEndpointUserName(String sourceEndpointUserName) {
                 this.sourceEndpointUserName = sourceEndpointUserName;
+                return this;
+            }
+
+            /**
+             * StorageEncryptMethod.
+             */
+            public Builder storageEncryptMethod(String storageEncryptMethod) {
+                this.storageEncryptMethod = storageEncryptMethod;
                 return this;
             }
 

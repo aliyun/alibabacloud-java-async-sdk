@@ -31,6 +31,10 @@ public class EnableBackupLogRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableMysqlPhysicalBackupBinlog")
+    private String enableMysqlPhysicalBackupBinlog;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
@@ -39,6 +43,7 @@ public class EnableBackupLogRequest extends Request {
         this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.clientToken = builder.clientToken;
+        this.enableMysqlPhysicalBackupBinlog = builder.enableMysqlPhysicalBackupBinlog;
         this.ownerId = builder.ownerId;
     }
 
@@ -77,6 +82,13 @@ public class EnableBackupLogRequest extends Request {
     }
 
     /**
+     * @return enableMysqlPhysicalBackupBinlog
+     */
+    public String getEnableMysqlPhysicalBackupBinlog() {
+        return this.enableMysqlPhysicalBackupBinlog;
+    }
+
+    /**
      * @return ownerId
      */
     public String getOwnerId() {
@@ -87,6 +99,7 @@ public class EnableBackupLogRequest extends Request {
         private String regionId; 
         private String backupPlanId; 
         private String clientToken; 
+        private String enableMysqlPhysicalBackupBinlog; 
         private String ownerId; 
 
         private Builder() {
@@ -98,6 +111,7 @@ public class EnableBackupLogRequest extends Request {
             this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.clientToken = request.clientToken;
+            this.enableMysqlPhysicalBackupBinlog = request.enableMysqlPhysicalBackupBinlog;
             this.ownerId = request.ownerId;
         } 
 
@@ -132,6 +146,15 @@ public class EnableBackupLogRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * EnableMysqlPhysicalBackupBinlog.
+         */
+        public Builder enableMysqlPhysicalBackupBinlog(String enableMysqlPhysicalBackupBinlog) {
+            this.putQueryParameter("EnableMysqlPhysicalBackupBinlog", enableMysqlPhysicalBackupBinlog);
+            this.enableMysqlPhysicalBackupBinlog = enableMysqlPhysicalBackupBinlog;
             return this;
         }
 

@@ -32,6 +32,10 @@ public class ModifyStorageStrategyRequest extends Request {
     private Integer backupRetentionPeriod;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupStorageEncryptMethod")
+    private String backupStorageEncryptMethod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -46,6 +50,30 @@ public class ModifyStorageStrategyRequest extends Request {
     private Integer duplicationInfrequentAccessPeriod;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncrementBackupRetentionPeriod")
+    private String incrementBackupRetentionPeriod;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncrementDuplicationArchivePeriod")
+    private String incrementDuplicationArchivePeriod;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncrementDuplicationInfrequentAccessPeriod")
+    private String incrementDuplicationInfrequentAccessPeriod;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
+    private String logBackupRetentionPeriod;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogDuplicationArchivePeriod")
+    private String logDuplicationArchivePeriod;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogDuplicationInfrequentAccessPeriod")
+    private String logDuplicationInfrequentAccessPeriod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
@@ -54,9 +82,16 @@ public class ModifyStorageStrategyRequest extends Request {
         this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
+        this.backupStorageEncryptMethod = builder.backupStorageEncryptMethod;
         this.clientToken = builder.clientToken;
         this.duplicationArchivePeriod = builder.duplicationArchivePeriod;
         this.duplicationInfrequentAccessPeriod = builder.duplicationInfrequentAccessPeriod;
+        this.incrementBackupRetentionPeriod = builder.incrementBackupRetentionPeriod;
+        this.incrementDuplicationArchivePeriod = builder.incrementDuplicationArchivePeriod;
+        this.incrementDuplicationInfrequentAccessPeriod = builder.incrementDuplicationInfrequentAccessPeriod;
+        this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
+        this.logDuplicationArchivePeriod = builder.logDuplicationArchivePeriod;
+        this.logDuplicationInfrequentAccessPeriod = builder.logDuplicationInfrequentAccessPeriod;
         this.ownerId = builder.ownerId;
     }
 
@@ -95,6 +130,13 @@ public class ModifyStorageStrategyRequest extends Request {
     }
 
     /**
+     * @return backupStorageEncryptMethod
+     */
+    public String getBackupStorageEncryptMethod() {
+        return this.backupStorageEncryptMethod;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -116,6 +158,48 @@ public class ModifyStorageStrategyRequest extends Request {
     }
 
     /**
+     * @return incrementBackupRetentionPeriod
+     */
+    public String getIncrementBackupRetentionPeriod() {
+        return this.incrementBackupRetentionPeriod;
+    }
+
+    /**
+     * @return incrementDuplicationArchivePeriod
+     */
+    public String getIncrementDuplicationArchivePeriod() {
+        return this.incrementDuplicationArchivePeriod;
+    }
+
+    /**
+     * @return incrementDuplicationInfrequentAccessPeriod
+     */
+    public String getIncrementDuplicationInfrequentAccessPeriod() {
+        return this.incrementDuplicationInfrequentAccessPeriod;
+    }
+
+    /**
+     * @return logBackupRetentionPeriod
+     */
+    public String getLogBackupRetentionPeriod() {
+        return this.logBackupRetentionPeriod;
+    }
+
+    /**
+     * @return logDuplicationArchivePeriod
+     */
+    public String getLogDuplicationArchivePeriod() {
+        return this.logDuplicationArchivePeriod;
+    }
+
+    /**
+     * @return logDuplicationInfrequentAccessPeriod
+     */
+    public String getLogDuplicationInfrequentAccessPeriod() {
+        return this.logDuplicationInfrequentAccessPeriod;
+    }
+
+    /**
      * @return ownerId
      */
     public String getOwnerId() {
@@ -126,9 +210,16 @@ public class ModifyStorageStrategyRequest extends Request {
         private String regionId; 
         private String backupPlanId; 
         private Integer backupRetentionPeriod; 
+        private String backupStorageEncryptMethod; 
         private String clientToken; 
         private Integer duplicationArchivePeriod; 
         private Integer duplicationInfrequentAccessPeriod; 
+        private String incrementBackupRetentionPeriod; 
+        private String incrementDuplicationArchivePeriod; 
+        private String incrementDuplicationInfrequentAccessPeriod; 
+        private String logBackupRetentionPeriod; 
+        private String logDuplicationArchivePeriod; 
+        private String logDuplicationInfrequentAccessPeriod; 
         private String ownerId; 
 
         private Builder() {
@@ -140,9 +231,16 @@ public class ModifyStorageStrategyRequest extends Request {
             this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.backupRetentionPeriod = request.backupRetentionPeriod;
+            this.backupStorageEncryptMethod = request.backupStorageEncryptMethod;
             this.clientToken = request.clientToken;
             this.duplicationArchivePeriod = request.duplicationArchivePeriod;
             this.duplicationInfrequentAccessPeriod = request.duplicationInfrequentAccessPeriod;
+            this.incrementBackupRetentionPeriod = request.incrementBackupRetentionPeriod;
+            this.incrementDuplicationArchivePeriod = request.incrementDuplicationArchivePeriod;
+            this.incrementDuplicationInfrequentAccessPeriod = request.incrementDuplicationInfrequentAccessPeriod;
+            this.logBackupRetentionPeriod = request.logBackupRetentionPeriod;
+            this.logDuplicationArchivePeriod = request.logDuplicationArchivePeriod;
+            this.logDuplicationInfrequentAccessPeriod = request.logDuplicationInfrequentAccessPeriod;
             this.ownerId = request.ownerId;
         } 
 
@@ -181,6 +279,15 @@ public class ModifyStorageStrategyRequest extends Request {
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
             this.backupRetentionPeriod = backupRetentionPeriod;
+            return this;
+        }
+
+        /**
+         * BackupStorageEncryptMethod.
+         */
+        public Builder backupStorageEncryptMethod(String backupStorageEncryptMethod) {
+            this.putQueryParameter("BackupStorageEncryptMethod", backupStorageEncryptMethod);
+            this.backupStorageEncryptMethod = backupStorageEncryptMethod;
             return this;
         }
 
@@ -225,6 +332,60 @@ public class ModifyStorageStrategyRequest extends Request {
         public Builder duplicationInfrequentAccessPeriod(Integer duplicationInfrequentAccessPeriod) {
             this.putQueryParameter("DuplicationInfrequentAccessPeriod", duplicationInfrequentAccessPeriod);
             this.duplicationInfrequentAccessPeriod = duplicationInfrequentAccessPeriod;
+            return this;
+        }
+
+        /**
+         * IncrementBackupRetentionPeriod.
+         */
+        public Builder incrementBackupRetentionPeriod(String incrementBackupRetentionPeriod) {
+            this.putQueryParameter("IncrementBackupRetentionPeriod", incrementBackupRetentionPeriod);
+            this.incrementBackupRetentionPeriod = incrementBackupRetentionPeriod;
+            return this;
+        }
+
+        /**
+         * IncrementDuplicationArchivePeriod.
+         */
+        public Builder incrementDuplicationArchivePeriod(String incrementDuplicationArchivePeriod) {
+            this.putQueryParameter("IncrementDuplicationArchivePeriod", incrementDuplicationArchivePeriod);
+            this.incrementDuplicationArchivePeriod = incrementDuplicationArchivePeriod;
+            return this;
+        }
+
+        /**
+         * IncrementDuplicationInfrequentAccessPeriod.
+         */
+        public Builder incrementDuplicationInfrequentAccessPeriod(String incrementDuplicationInfrequentAccessPeriod) {
+            this.putQueryParameter("IncrementDuplicationInfrequentAccessPeriod", incrementDuplicationInfrequentAccessPeriod);
+            this.incrementDuplicationInfrequentAccessPeriod = incrementDuplicationInfrequentAccessPeriod;
+            return this;
+        }
+
+        /**
+         * LogBackupRetentionPeriod.
+         */
+        public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
+            this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
+            this.logBackupRetentionPeriod = logBackupRetentionPeriod;
+            return this;
+        }
+
+        /**
+         * LogDuplicationArchivePeriod.
+         */
+        public Builder logDuplicationArchivePeriod(String logDuplicationArchivePeriod) {
+            this.putQueryParameter("LogDuplicationArchivePeriod", logDuplicationArchivePeriod);
+            this.logDuplicationArchivePeriod = logDuplicationArchivePeriod;
+            return this;
+        }
+
+        /**
+         * LogDuplicationInfrequentAccessPeriod.
+         */
+        public Builder logDuplicationInfrequentAccessPeriod(String logDuplicationInfrequentAccessPeriod) {
+            this.putQueryParameter("LogDuplicationInfrequentAccessPeriod", logDuplicationInfrequentAccessPeriod);
+            this.logDuplicationInfrequentAccessPeriod = logDuplicationInfrequentAccessPeriod;
             return this;
         }
 

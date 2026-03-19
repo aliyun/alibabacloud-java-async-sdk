@@ -31,6 +31,10 @@ public class DescribeFullBackupListRequest extends Request {
     private String backupSetId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetStatus")
+    private String backupSetStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -51,6 +55,10 @@ public class DescribeFullBackupListRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowProgress")
+    private String showProgress;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShowStorageType")
     private Boolean showStorageType;
 
@@ -63,11 +71,13 @@ public class DescribeFullBackupListRequest extends Request {
         this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.backupSetId = builder.backupSetId;
+        this.backupSetStatus = builder.backupSetStatus;
         this.clientToken = builder.clientToken;
         this.endTimestamp = builder.endTimestamp;
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
+        this.showProgress = builder.showProgress;
         this.showStorageType = builder.showStorageType;
         this.startTimestamp = builder.startTimestamp;
     }
@@ -107,6 +117,13 @@ public class DescribeFullBackupListRequest extends Request {
     }
 
     /**
+     * @return backupSetStatus
+     */
+    public String getBackupSetStatus() {
+        return this.backupSetStatus;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -142,6 +159,13 @@ public class DescribeFullBackupListRequest extends Request {
     }
 
     /**
+     * @return showProgress
+     */
+    public String getShowProgress() {
+        return this.showProgress;
+    }
+
+    /**
      * @return showStorageType
      */
     public Boolean getShowStorageType() {
@@ -159,11 +183,13 @@ public class DescribeFullBackupListRequest extends Request {
         private String regionId; 
         private String backupPlanId; 
         private String backupSetId; 
+        private String backupSetStatus; 
         private String clientToken; 
         private Long endTimestamp; 
         private String ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
+        private String showProgress; 
         private Boolean showStorageType; 
         private Long startTimestamp; 
 
@@ -176,11 +202,13 @@ public class DescribeFullBackupListRequest extends Request {
             this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.backupSetId = request.backupSetId;
+            this.backupSetStatus = request.backupSetStatus;
             this.clientToken = request.clientToken;
             this.endTimestamp = request.endTimestamp;
             this.ownerId = request.ownerId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
+            this.showProgress = request.showProgress;
             this.showStorageType = request.showStorageType;
             this.startTimestamp = request.startTimestamp;
         } 
@@ -216,6 +244,15 @@ public class DescribeFullBackupListRequest extends Request {
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
             this.backupSetId = backupSetId;
+            return this;
+        }
+
+        /**
+         * BackupSetStatus.
+         */
+        public Builder backupSetStatus(String backupSetStatus) {
+            this.putQueryParameter("BackupSetStatus", backupSetStatus);
+            this.backupSetStatus = backupSetStatus;
             return this;
         }
 
@@ -270,6 +307,15 @@ public class DescribeFullBackupListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ShowProgress.
+         */
+        public Builder showProgress(String showProgress) {
+            this.putQueryParameter("ShowProgress", showProgress);
+            this.showProgress = showProgress;
             return this;
         }
 

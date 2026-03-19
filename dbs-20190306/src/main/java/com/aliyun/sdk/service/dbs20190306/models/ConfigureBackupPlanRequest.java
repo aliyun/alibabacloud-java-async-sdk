@@ -68,6 +68,10 @@ public class ConfigureBackupPlanRequest extends Request {
     private String backupStartTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupStorageEncryptMethod")
+    private String backupStorageEncryptMethod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupStorageType")
     private String backupStorageType;
 
@@ -100,6 +104,14 @@ public class ConfigureBackupPlanRequest extends Request {
     private Boolean enableBackupLog;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableMysqlPhysicalBackupBinlog")
+    private String enableMysqlPhysicalBackupBinlog;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSourceEndpointSsl")
+    private String enableSourceEndpointSsl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OSSBucketName")
     private String OSSBucketName;
 
@@ -129,6 +141,10 @@ public class ConfigureBackupPlanRequest extends Request {
     private String sourceEndpointInstanceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointOracleHome")
+    private String sourceEndpointOracleHome;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceEndpointOracleSID")
     private String sourceEndpointOracleSID;
 
@@ -148,6 +164,10 @@ public class ConfigureBackupPlanRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SourceEndpointUserName")
     private String sourceEndpointUserName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SslCaPem")
+    private String sslCaPem;
+
     private ConfigureBackupPlanRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -162,6 +182,7 @@ public class ConfigureBackupPlanRequest extends Request {
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.backupSpeedLimit = builder.backupSpeedLimit;
         this.backupStartTime = builder.backupStartTime;
+        this.backupStorageEncryptMethod = builder.backupStorageEncryptMethod;
         this.backupStorageType = builder.backupStorageType;
         this.backupStrategyType = builder.backupStrategyType;
         this.clientToken = builder.clientToken;
@@ -170,6 +191,8 @@ public class ConfigureBackupPlanRequest extends Request {
         this.duplicationArchivePeriod = builder.duplicationArchivePeriod;
         this.duplicationInfrequentAccessPeriod = builder.duplicationInfrequentAccessPeriod;
         this.enableBackupLog = builder.enableBackupLog;
+        this.enableMysqlPhysicalBackupBinlog = builder.enableMysqlPhysicalBackupBinlog;
+        this.enableSourceEndpointSsl = builder.enableSourceEndpointSsl;
         this.OSSBucketName = builder.OSSBucketName;
         this.ownerId = builder.ownerId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -177,11 +200,13 @@ public class ConfigureBackupPlanRequest extends Request {
         this.sourceEndpointIP = builder.sourceEndpointIP;
         this.sourceEndpointInstanceID = builder.sourceEndpointInstanceID;
         this.sourceEndpointInstanceType = builder.sourceEndpointInstanceType;
+        this.sourceEndpointOracleHome = builder.sourceEndpointOracleHome;
         this.sourceEndpointOracleSID = builder.sourceEndpointOracleSID;
         this.sourceEndpointPassword = builder.sourceEndpointPassword;
         this.sourceEndpointPort = builder.sourceEndpointPort;
         this.sourceEndpointRegion = builder.sourceEndpointRegion;
         this.sourceEndpointUserName = builder.sourceEndpointUserName;
+        this.sslCaPem = builder.sslCaPem;
     }
 
     public static Builder builder() {
@@ -282,6 +307,13 @@ public class ConfigureBackupPlanRequest extends Request {
     }
 
     /**
+     * @return backupStorageEncryptMethod
+     */
+    public String getBackupStorageEncryptMethod() {
+        return this.backupStorageEncryptMethod;
+    }
+
+    /**
      * @return backupStorageType
      */
     public String getBackupStorageType() {
@@ -338,6 +370,20 @@ public class ConfigureBackupPlanRequest extends Request {
     }
 
     /**
+     * @return enableMysqlPhysicalBackupBinlog
+     */
+    public String getEnableMysqlPhysicalBackupBinlog() {
+        return this.enableMysqlPhysicalBackupBinlog;
+    }
+
+    /**
+     * @return enableSourceEndpointSsl
+     */
+    public String getEnableSourceEndpointSsl() {
+        return this.enableSourceEndpointSsl;
+    }
+
+    /**
      * @return OSSBucketName
      */
     public String getOSSBucketName() {
@@ -387,6 +433,13 @@ public class ConfigureBackupPlanRequest extends Request {
     }
 
     /**
+     * @return sourceEndpointOracleHome
+     */
+    public String getSourceEndpointOracleHome() {
+        return this.sourceEndpointOracleHome;
+    }
+
+    /**
      * @return sourceEndpointOracleSID
      */
     public String getSourceEndpointOracleSID() {
@@ -421,6 +474,13 @@ public class ConfigureBackupPlanRequest extends Request {
         return this.sourceEndpointUserName;
     }
 
+    /**
+     * @return sslCaPem
+     */
+    public String getSslCaPem() {
+        return this.sslCaPem;
+    }
+
     public static final class Builder extends Request.Builder<ConfigureBackupPlanRequest, Builder> {
         private String regionId; 
         private Boolean autoStartBackup; 
@@ -434,6 +494,7 @@ public class ConfigureBackupPlanRequest extends Request {
         private Integer backupRetentionPeriod; 
         private Long backupSpeedLimit; 
         private String backupStartTime; 
+        private String backupStorageEncryptMethod; 
         private String backupStorageType; 
         private String backupStrategyType; 
         private String clientToken; 
@@ -442,6 +503,8 @@ public class ConfigureBackupPlanRequest extends Request {
         private Integer duplicationArchivePeriod; 
         private Integer duplicationInfrequentAccessPeriod; 
         private Boolean enableBackupLog; 
+        private String enableMysqlPhysicalBackupBinlog; 
+        private String enableSourceEndpointSsl; 
         private String OSSBucketName; 
         private String ownerId; 
         private String resourceGroupId; 
@@ -449,11 +512,13 @@ public class ConfigureBackupPlanRequest extends Request {
         private String sourceEndpointIP; 
         private String sourceEndpointInstanceID; 
         private String sourceEndpointInstanceType; 
+        private String sourceEndpointOracleHome; 
         private String sourceEndpointOracleSID; 
         private String sourceEndpointPassword; 
         private Integer sourceEndpointPort; 
         private String sourceEndpointRegion; 
         private String sourceEndpointUserName; 
+        private String sslCaPem; 
 
         private Builder() {
             super();
@@ -473,6 +538,7 @@ public class ConfigureBackupPlanRequest extends Request {
             this.backupRetentionPeriod = request.backupRetentionPeriod;
             this.backupSpeedLimit = request.backupSpeedLimit;
             this.backupStartTime = request.backupStartTime;
+            this.backupStorageEncryptMethod = request.backupStorageEncryptMethod;
             this.backupStorageType = request.backupStorageType;
             this.backupStrategyType = request.backupStrategyType;
             this.clientToken = request.clientToken;
@@ -481,6 +547,8 @@ public class ConfigureBackupPlanRequest extends Request {
             this.duplicationArchivePeriod = request.duplicationArchivePeriod;
             this.duplicationInfrequentAccessPeriod = request.duplicationInfrequentAccessPeriod;
             this.enableBackupLog = request.enableBackupLog;
+            this.enableMysqlPhysicalBackupBinlog = request.enableMysqlPhysicalBackupBinlog;
+            this.enableSourceEndpointSsl = request.enableSourceEndpointSsl;
             this.OSSBucketName = request.OSSBucketName;
             this.ownerId = request.ownerId;
             this.resourceGroupId = request.resourceGroupId;
@@ -488,11 +556,13 @@ public class ConfigureBackupPlanRequest extends Request {
             this.sourceEndpointIP = request.sourceEndpointIP;
             this.sourceEndpointInstanceID = request.sourceEndpointInstanceID;
             this.sourceEndpointInstanceType = request.sourceEndpointInstanceType;
+            this.sourceEndpointOracleHome = request.sourceEndpointOracleHome;
             this.sourceEndpointOracleSID = request.sourceEndpointOracleSID;
             this.sourceEndpointPassword = request.sourceEndpointPassword;
             this.sourceEndpointPort = request.sourceEndpointPort;
             this.sourceEndpointRegion = request.sourceEndpointRegion;
             this.sourceEndpointUserName = request.sourceEndpointUserName;
+            this.sslCaPem = request.sslCaPem;
         } 
 
         /**
@@ -664,6 +734,15 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
+         * BackupStorageEncryptMethod.
+         */
+        public Builder backupStorageEncryptMethod(String backupStorageEncryptMethod) {
+            this.putQueryParameter("BackupStorageEncryptMethod", backupStorageEncryptMethod);
+            this.backupStorageEncryptMethod = backupStorageEncryptMethod;
+            return this;
+        }
+
+        /**
          * <p>The storage type. Valid values:</p>
          * <ul>
          * <li>Empty: If you do not specify this parameter, the system stores backup data in your OSS bucket.</li>
@@ -775,6 +854,24 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
+         * EnableMysqlPhysicalBackupBinlog.
+         */
+        public Builder enableMysqlPhysicalBackupBinlog(String enableMysqlPhysicalBackupBinlog) {
+            this.putQueryParameter("EnableMysqlPhysicalBackupBinlog", enableMysqlPhysicalBackupBinlog);
+            this.enableMysqlPhysicalBackupBinlog = enableMysqlPhysicalBackupBinlog;
+            return this;
+        }
+
+        /**
+         * EnableSourceEndpointSsl.
+         */
+        public Builder enableSourceEndpointSsl(String enableSourceEndpointSsl) {
+            this.putQueryParameter("EnableSourceEndpointSsl", enableSourceEndpointSsl);
+            this.enableSourceEndpointSsl = enableSourceEndpointSsl;
+            return this;
+        }
+
+        /**
          * <p>The name of the OSS bucket.</p>
          * <blockquote>
          * <p> By default, the system automatically generates an OSS bucket name.</p>
@@ -877,6 +974,15 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
+         * SourceEndpointOracleHome.
+         */
+        public Builder sourceEndpointOracleHome(String sourceEndpointOracleHome) {
+            this.putQueryParameter("SourceEndpointOracleHome", sourceEndpointOracleHome);
+            this.sourceEndpointOracleHome = sourceEndpointOracleHome;
+            return this;
+        }
+
+        /**
          * <p>The system ID (SID) of the Oracle database.</p>
          * <blockquote>
          * <p>This parameter is required if the database is an Oracle database.</p>
@@ -948,6 +1054,15 @@ public class ConfigureBackupPlanRequest extends Request {
         public Builder sourceEndpointUserName(String sourceEndpointUserName) {
             this.putQueryParameter("SourceEndpointUserName", sourceEndpointUserName);
             this.sourceEndpointUserName = sourceEndpointUserName;
+            return this;
+        }
+
+        /**
+         * SslCaPem.
+         */
+        public Builder sslCaPem(String sslCaPem) {
+            this.putQueryParameter("SslCaPem", sslCaPem);
+            this.sslCaPem = sslCaPem;
             return this;
         }
 

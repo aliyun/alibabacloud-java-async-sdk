@@ -263,6 +263,9 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
      * <p>DescribeFullBackupListResponseBody</p>
      */
     public static class FullBackupFile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackupGatewayIdentifier")
+        private String backupGatewayIdentifier;
+
         @com.aliyun.core.annotation.NameInMap("BackupObjects")
         private String backupObjects;
 
@@ -281,6 +284,12 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
+        @com.aliyun.core.annotation.NameInMap("CrossAliyunId")
+        private String crossAliyunId;
+
+        @com.aliyun.core.annotation.NameInMap("CrossRoleName")
+        private String crossRoleName;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
@@ -290,27 +299,70 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
+        @com.aliyun.core.annotation.NameInMap("LogicalFullBackupProgress")
+        private Integer logicalFullBackupProgress;
+
+        @com.aliyun.core.annotation.NameInMap("LogicalStructureBackupProgress")
+        private Integer logicalStructureBackupProgress;
+
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointEnableSsl")
+        private String sourceEndpointEnableSsl;
+
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointHost")
+        private String sourceEndpointHost;
+
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceId")
+        private String sourceEndpointInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceType")
+        private String sourceEndpointInstanceType;
+
         @com.aliyun.core.annotation.NameInMap("SourceEndpointIpPort")
         private String sourceEndpointIpPort;
 
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointPort")
+        private String sourceEndpointPort;
+
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointRegion")
+        private String sourceEndpointRegion;
+
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointUserName")
+        private String sourceEndpointUserName;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
+
+        @com.aliyun.core.annotation.NameInMap("StorageEncryptMethod")
+        private String storageEncryptMethod;
 
         @com.aliyun.core.annotation.NameInMap("StorageMethod")
         private String storageMethod;
 
         private FullBackupFile(Builder builder) {
+            this.backupGatewayIdentifier = builder.backupGatewayIdentifier;
             this.backupObjects = builder.backupObjects;
             this.backupSetExpiredTime = builder.backupSetExpiredTime;
             this.backupSetId = builder.backupSetId;
             this.backupSize = builder.backupSize;
             this.backupStatus = builder.backupStatus;
             this.createTime = builder.createTime;
+            this.crossAliyunId = builder.crossAliyunId;
+            this.crossRoleName = builder.crossRoleName;
             this.endTime = builder.endTime;
             this.errMessage = builder.errMessage;
             this.finishTime = builder.finishTime;
+            this.logicalFullBackupProgress = builder.logicalFullBackupProgress;
+            this.logicalStructureBackupProgress = builder.logicalStructureBackupProgress;
+            this.sourceEndpointEnableSsl = builder.sourceEndpointEnableSsl;
+            this.sourceEndpointHost = builder.sourceEndpointHost;
+            this.sourceEndpointInstanceId = builder.sourceEndpointInstanceId;
+            this.sourceEndpointInstanceType = builder.sourceEndpointInstanceType;
             this.sourceEndpointIpPort = builder.sourceEndpointIpPort;
+            this.sourceEndpointPort = builder.sourceEndpointPort;
+            this.sourceEndpointRegion = builder.sourceEndpointRegion;
+            this.sourceEndpointUserName = builder.sourceEndpointUserName;
             this.startTime = builder.startTime;
+            this.storageEncryptMethod = builder.storageEncryptMethod;
             this.storageMethod = builder.storageMethod;
         }
 
@@ -320,6 +372,13 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
 
         public static FullBackupFile create() {
             return builder().build();
+        }
+
+        /**
+         * @return backupGatewayIdentifier
+         */
+        public String getBackupGatewayIdentifier() {
+            return this.backupGatewayIdentifier;
         }
 
         /**
@@ -365,6 +424,20 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         }
 
         /**
+         * @return crossAliyunId
+         */
+        public String getCrossAliyunId() {
+            return this.crossAliyunId;
+        }
+
+        /**
+         * @return crossRoleName
+         */
+        public String getCrossRoleName() {
+            return this.crossRoleName;
+        }
+
+        /**
          * @return endTime
          */
         public Long getEndTime() {
@@ -386,10 +459,73 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         }
 
         /**
+         * @return logicalFullBackupProgress
+         */
+        public Integer getLogicalFullBackupProgress() {
+            return this.logicalFullBackupProgress;
+        }
+
+        /**
+         * @return logicalStructureBackupProgress
+         */
+        public Integer getLogicalStructureBackupProgress() {
+            return this.logicalStructureBackupProgress;
+        }
+
+        /**
+         * @return sourceEndpointEnableSsl
+         */
+        public String getSourceEndpointEnableSsl() {
+            return this.sourceEndpointEnableSsl;
+        }
+
+        /**
+         * @return sourceEndpointHost
+         */
+        public String getSourceEndpointHost() {
+            return this.sourceEndpointHost;
+        }
+
+        /**
+         * @return sourceEndpointInstanceId
+         */
+        public String getSourceEndpointInstanceId() {
+            return this.sourceEndpointInstanceId;
+        }
+
+        /**
+         * @return sourceEndpointInstanceType
+         */
+        public String getSourceEndpointInstanceType() {
+            return this.sourceEndpointInstanceType;
+        }
+
+        /**
          * @return sourceEndpointIpPort
          */
         public String getSourceEndpointIpPort() {
             return this.sourceEndpointIpPort;
+        }
+
+        /**
+         * @return sourceEndpointPort
+         */
+        public String getSourceEndpointPort() {
+            return this.sourceEndpointPort;
+        }
+
+        /**
+         * @return sourceEndpointRegion
+         */
+        public String getSourceEndpointRegion() {
+            return this.sourceEndpointRegion;
+        }
+
+        /**
+         * @return sourceEndpointUserName
+         */
+        public String getSourceEndpointUserName() {
+            return this.sourceEndpointUserName;
         }
 
         /**
@@ -400,6 +536,13 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageEncryptMethod
+         */
+        public String getStorageEncryptMethod() {
+            return this.storageEncryptMethod;
+        }
+
+        /**
          * @return storageMethod
          */
         public String getStorageMethod() {
@@ -407,36 +550,70 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String backupGatewayIdentifier; 
             private String backupObjects; 
             private Long backupSetExpiredTime; 
             private String backupSetId; 
             private Long backupSize; 
             private String backupStatus; 
             private Long createTime; 
+            private String crossAliyunId; 
+            private String crossRoleName; 
             private Long endTime; 
             private String errMessage; 
             private Long finishTime; 
+            private Integer logicalFullBackupProgress; 
+            private Integer logicalStructureBackupProgress; 
+            private String sourceEndpointEnableSsl; 
+            private String sourceEndpointHost; 
+            private String sourceEndpointInstanceId; 
+            private String sourceEndpointInstanceType; 
             private String sourceEndpointIpPort; 
+            private String sourceEndpointPort; 
+            private String sourceEndpointRegion; 
+            private String sourceEndpointUserName; 
             private Long startTime; 
+            private String storageEncryptMethod; 
             private String storageMethod; 
 
             private Builder() {
             } 
 
             private Builder(FullBackupFile model) {
+                this.backupGatewayIdentifier = model.backupGatewayIdentifier;
                 this.backupObjects = model.backupObjects;
                 this.backupSetExpiredTime = model.backupSetExpiredTime;
                 this.backupSetId = model.backupSetId;
                 this.backupSize = model.backupSize;
                 this.backupStatus = model.backupStatus;
                 this.createTime = model.createTime;
+                this.crossAliyunId = model.crossAliyunId;
+                this.crossRoleName = model.crossRoleName;
                 this.endTime = model.endTime;
                 this.errMessage = model.errMessage;
                 this.finishTime = model.finishTime;
+                this.logicalFullBackupProgress = model.logicalFullBackupProgress;
+                this.logicalStructureBackupProgress = model.logicalStructureBackupProgress;
+                this.sourceEndpointEnableSsl = model.sourceEndpointEnableSsl;
+                this.sourceEndpointHost = model.sourceEndpointHost;
+                this.sourceEndpointInstanceId = model.sourceEndpointInstanceId;
+                this.sourceEndpointInstanceType = model.sourceEndpointInstanceType;
                 this.sourceEndpointIpPort = model.sourceEndpointIpPort;
+                this.sourceEndpointPort = model.sourceEndpointPort;
+                this.sourceEndpointRegion = model.sourceEndpointRegion;
+                this.sourceEndpointUserName = model.sourceEndpointUserName;
                 this.startTime = model.startTime;
+                this.storageEncryptMethod = model.storageEncryptMethod;
                 this.storageMethod = model.storageMethod;
             } 
+
+            /**
+             * BackupGatewayIdentifier.
+             */
+            public Builder backupGatewayIdentifier(String backupGatewayIdentifier) {
+                this.backupGatewayIdentifier = backupGatewayIdentifier;
+                return this;
+            }
 
             /**
              * BackupObjects.
@@ -487,6 +664,22 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
             }
 
             /**
+             * CrossAliyunId.
+             */
+            public Builder crossAliyunId(String crossAliyunId) {
+                this.crossAliyunId = crossAliyunId;
+                return this;
+            }
+
+            /**
+             * CrossRoleName.
+             */
+            public Builder crossRoleName(String crossRoleName) {
+                this.crossRoleName = crossRoleName;
+                return this;
+            }
+
+            /**
              * EndTime.
              */
             public Builder endTime(Long endTime) {
@@ -511,6 +704,54 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
             }
 
             /**
+             * LogicalFullBackupProgress.
+             */
+            public Builder logicalFullBackupProgress(Integer logicalFullBackupProgress) {
+                this.logicalFullBackupProgress = logicalFullBackupProgress;
+                return this;
+            }
+
+            /**
+             * LogicalStructureBackupProgress.
+             */
+            public Builder logicalStructureBackupProgress(Integer logicalStructureBackupProgress) {
+                this.logicalStructureBackupProgress = logicalStructureBackupProgress;
+                return this;
+            }
+
+            /**
+             * SourceEndpointEnableSsl.
+             */
+            public Builder sourceEndpointEnableSsl(String sourceEndpointEnableSsl) {
+                this.sourceEndpointEnableSsl = sourceEndpointEnableSsl;
+                return this;
+            }
+
+            /**
+             * SourceEndpointHost.
+             */
+            public Builder sourceEndpointHost(String sourceEndpointHost) {
+                this.sourceEndpointHost = sourceEndpointHost;
+                return this;
+            }
+
+            /**
+             * SourceEndpointInstanceId.
+             */
+            public Builder sourceEndpointInstanceId(String sourceEndpointInstanceId) {
+                this.sourceEndpointInstanceId = sourceEndpointInstanceId;
+                return this;
+            }
+
+            /**
+             * SourceEndpointInstanceType.
+             */
+            public Builder sourceEndpointInstanceType(String sourceEndpointInstanceType) {
+                this.sourceEndpointInstanceType = sourceEndpointInstanceType;
+                return this;
+            }
+
+            /**
              * SourceEndpointIpPort.
              */
             public Builder sourceEndpointIpPort(String sourceEndpointIpPort) {
@@ -519,10 +760,42 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
             }
 
             /**
+             * SourceEndpointPort.
+             */
+            public Builder sourceEndpointPort(String sourceEndpointPort) {
+                this.sourceEndpointPort = sourceEndpointPort;
+                return this;
+            }
+
+            /**
+             * SourceEndpointRegion.
+             */
+            public Builder sourceEndpointRegion(String sourceEndpointRegion) {
+                this.sourceEndpointRegion = sourceEndpointRegion;
+                return this;
+            }
+
+            /**
+             * SourceEndpointUserName.
+             */
+            public Builder sourceEndpointUserName(String sourceEndpointUserName) {
+                this.sourceEndpointUserName = sourceEndpointUserName;
+                return this;
+            }
+
+            /**
              * StartTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * StorageEncryptMethod.
+             */
+            public Builder storageEncryptMethod(String storageEncryptMethod) {
+                this.storageEncryptMethod = storageEncryptMethod;
                 return this;
             }
 

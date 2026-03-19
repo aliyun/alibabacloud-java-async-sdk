@@ -47,6 +47,10 @@ public class ModifyBackupSourceEndpointRequest extends Request {
     private String crossRoleName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSourceEndpointSsl")
+    private String enableSourceEndpointSsl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
@@ -68,6 +72,10 @@ public class ModifyBackupSourceEndpointRequest extends Request {
     private String sourceEndpointInstanceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointOracleHome")
+    private String sourceEndpointOracleHome;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceEndpointOracleSID")
     private String sourceEndpointOracleSID;
 
@@ -87,6 +95,10 @@ public class ModifyBackupSourceEndpointRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SourceEndpointUserName")
     private String sourceEndpointUserName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SslCaPem")
+    private String sslCaPem;
+
     private ModifyBackupSourceEndpointRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -96,16 +108,19 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         this.clientToken = builder.clientToken;
         this.crossAliyunId = builder.crossAliyunId;
         this.crossRoleName = builder.crossRoleName;
+        this.enableSourceEndpointSsl = builder.enableSourceEndpointSsl;
         this.ownerId = builder.ownerId;
         this.sourceEndpointDatabaseName = builder.sourceEndpointDatabaseName;
         this.sourceEndpointIP = builder.sourceEndpointIP;
         this.sourceEndpointInstanceID = builder.sourceEndpointInstanceID;
         this.sourceEndpointInstanceType = builder.sourceEndpointInstanceType;
+        this.sourceEndpointOracleHome = builder.sourceEndpointOracleHome;
         this.sourceEndpointOracleSID = builder.sourceEndpointOracleSID;
         this.sourceEndpointPassword = builder.sourceEndpointPassword;
         this.sourceEndpointPort = builder.sourceEndpointPort;
         this.sourceEndpointRegion = builder.sourceEndpointRegion;
         this.sourceEndpointUserName = builder.sourceEndpointUserName;
+        this.sslCaPem = builder.sslCaPem;
     }
 
     public static Builder builder() {
@@ -171,6 +186,13 @@ public class ModifyBackupSourceEndpointRequest extends Request {
     }
 
     /**
+     * @return enableSourceEndpointSsl
+     */
+    public String getEnableSourceEndpointSsl() {
+        return this.enableSourceEndpointSsl;
+    }
+
+    /**
      * @return ownerId
      */
     public String getOwnerId() {
@@ -203,6 +225,13 @@ public class ModifyBackupSourceEndpointRequest extends Request {
      */
     public String getSourceEndpointInstanceType() {
         return this.sourceEndpointInstanceType;
+    }
+
+    /**
+     * @return sourceEndpointOracleHome
+     */
+    public String getSourceEndpointOracleHome() {
+        return this.sourceEndpointOracleHome;
     }
 
     /**
@@ -240,6 +269,13 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         return this.sourceEndpointUserName;
     }
 
+    /**
+     * @return sslCaPem
+     */
+    public String getSslCaPem() {
+        return this.sslCaPem;
+    }
+
     public static final class Builder extends Request.Builder<ModifyBackupSourceEndpointRequest, Builder> {
         private String regionId; 
         private Long backupGatewayId; 
@@ -248,16 +284,19 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         private String clientToken; 
         private String crossAliyunId; 
         private String crossRoleName; 
+        private String enableSourceEndpointSsl; 
         private String ownerId; 
         private String sourceEndpointDatabaseName; 
         private String sourceEndpointIP; 
         private String sourceEndpointInstanceID; 
         private String sourceEndpointInstanceType; 
+        private String sourceEndpointOracleHome; 
         private String sourceEndpointOracleSID; 
         private String sourceEndpointPassword; 
         private Integer sourceEndpointPort; 
         private String sourceEndpointRegion; 
         private String sourceEndpointUserName; 
+        private String sslCaPem; 
 
         private Builder() {
             super();
@@ -272,16 +311,19 @@ public class ModifyBackupSourceEndpointRequest extends Request {
             this.clientToken = request.clientToken;
             this.crossAliyunId = request.crossAliyunId;
             this.crossRoleName = request.crossRoleName;
+            this.enableSourceEndpointSsl = request.enableSourceEndpointSsl;
             this.ownerId = request.ownerId;
             this.sourceEndpointDatabaseName = request.sourceEndpointDatabaseName;
             this.sourceEndpointIP = request.sourceEndpointIP;
             this.sourceEndpointInstanceID = request.sourceEndpointInstanceID;
             this.sourceEndpointInstanceType = request.sourceEndpointInstanceType;
+            this.sourceEndpointOracleHome = request.sourceEndpointOracleHome;
             this.sourceEndpointOracleSID = request.sourceEndpointOracleSID;
             this.sourceEndpointPassword = request.sourceEndpointPassword;
             this.sourceEndpointPort = request.sourceEndpointPort;
             this.sourceEndpointRegion = request.sourceEndpointRegion;
             this.sourceEndpointUserName = request.sourceEndpointUserName;
+            this.sslCaPem = request.sslCaPem;
         } 
 
         /**
@@ -370,6 +412,15 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
+         * EnableSourceEndpointSsl.
+         */
+        public Builder enableSourceEndpointSsl(String enableSourceEndpointSsl) {
+            this.putQueryParameter("EnableSourceEndpointSsl", enableSourceEndpointSsl);
+            this.enableSourceEndpointSsl = enableSourceEndpointSsl;
+            return this;
+        }
+
+        /**
          * OwnerId.
          */
         public Builder ownerId(String ownerId) {
@@ -446,6 +497,15 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
+         * SourceEndpointOracleHome.
+         */
+        public Builder sourceEndpointOracleHome(String sourceEndpointOracleHome) {
+            this.putQueryParameter("SourceEndpointOracleHome", sourceEndpointOracleHome);
+            this.sourceEndpointOracleHome = sourceEndpointOracleHome;
+            return this;
+        }
+
+        /**
          * <p>The SID of the Oracle source database. If the database is an Oracle database, this parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -510,6 +570,15 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         public Builder sourceEndpointUserName(String sourceEndpointUserName) {
             this.putQueryParameter("SourceEndpointUserName", sourceEndpointUserName);
             this.sourceEndpointUserName = sourceEndpointUserName;
+            return this;
+        }
+
+        /**
+         * SslCaPem.
+         */
+        public Builder sslCaPem(String sslCaPem) {
+            this.putQueryParameter("SslCaPem", sslCaPem);
+            this.sslCaPem = sslCaPem;
             return this;
         }
 

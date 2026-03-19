@@ -357,6 +357,18 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
      * <p>DescribeRestoreRangeInfoResponseBody</p>
      */
     public static class DBSRecoverRange extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackupSourceHost")
+        private String backupSourceHost;
+
+        @com.aliyun.core.annotation.NameInMap("BackupSourceInstanceId")
+        private String backupSourceInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("BackupSourceInstanceType")
+        private String backupSourceInstanceType;
+
+        @com.aliyun.core.annotation.NameInMap("BackupSourcePort")
+        private String backupSourcePort;
+
         @com.aliyun.core.annotation.NameInMap("BeginTimestampForRestore")
         private Long beginTimestampForRestore;
 
@@ -376,6 +388,10 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         private String sourceEndpointInstanceType;
 
         private DBSRecoverRange(Builder builder) {
+            this.backupSourceHost = builder.backupSourceHost;
+            this.backupSourceInstanceId = builder.backupSourceInstanceId;
+            this.backupSourceInstanceType = builder.backupSourceInstanceType;
+            this.backupSourcePort = builder.backupSourcePort;
             this.beginTimestampForRestore = builder.beginTimestampForRestore;
             this.endTimestampForRestore = builder.endTimestampForRestore;
             this.fullBackupList = builder.fullBackupList;
@@ -390,6 +406,34 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
 
         public static DBSRecoverRange create() {
             return builder().build();
+        }
+
+        /**
+         * @return backupSourceHost
+         */
+        public String getBackupSourceHost() {
+            return this.backupSourceHost;
+        }
+
+        /**
+         * @return backupSourceInstanceId
+         */
+        public String getBackupSourceInstanceId() {
+            return this.backupSourceInstanceId;
+        }
+
+        /**
+         * @return backupSourceInstanceType
+         */
+        public String getBackupSourceInstanceType() {
+            return this.backupSourceInstanceType;
+        }
+
+        /**
+         * @return backupSourcePort
+         */
+        public String getBackupSourcePort() {
+            return this.backupSourcePort;
         }
 
         /**
@@ -435,6 +479,10 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String backupSourceHost; 
+            private String backupSourceInstanceId; 
+            private String backupSourceInstanceType; 
+            private String backupSourcePort; 
             private Long beginTimestampForRestore; 
             private Long endTimestampForRestore; 
             private FullBackupList fullBackupList; 
@@ -446,6 +494,10 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             } 
 
             private Builder(DBSRecoverRange model) {
+                this.backupSourceHost = model.backupSourceHost;
+                this.backupSourceInstanceId = model.backupSourceInstanceId;
+                this.backupSourceInstanceType = model.backupSourceInstanceType;
+                this.backupSourcePort = model.backupSourcePort;
                 this.beginTimestampForRestore = model.beginTimestampForRestore;
                 this.endTimestampForRestore = model.endTimestampForRestore;
                 this.fullBackupList = model.fullBackupList;
@@ -453,6 +505,38 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
                 this.sourceEndpointInstanceID = model.sourceEndpointInstanceID;
                 this.sourceEndpointInstanceType = model.sourceEndpointInstanceType;
             } 
+
+            /**
+             * BackupSourceHost.
+             */
+            public Builder backupSourceHost(String backupSourceHost) {
+                this.backupSourceHost = backupSourceHost;
+                return this;
+            }
+
+            /**
+             * BackupSourceInstanceId.
+             */
+            public Builder backupSourceInstanceId(String backupSourceInstanceId) {
+                this.backupSourceInstanceId = backupSourceInstanceId;
+                return this;
+            }
+
+            /**
+             * BackupSourceInstanceType.
+             */
+            public Builder backupSourceInstanceType(String backupSourceInstanceType) {
+                this.backupSourceInstanceType = backupSourceInstanceType;
+                return this;
+            }
+
+            /**
+             * BackupSourcePort.
+             */
+            public Builder backupSourcePort(String backupSourcePort) {
+                this.backupSourcePort = backupSourcePort;
+                return this;
+            }
 
             /**
              * <p>The beginning of the time range to which you can restore data.</p>

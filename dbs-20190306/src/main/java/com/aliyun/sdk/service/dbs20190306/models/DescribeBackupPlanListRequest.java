@@ -22,6 +22,10 @@ public class DescribeBackupPlanListRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupMethod")
+    private String backupMethod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupPlanId")
     private String backupPlanId;
 
@@ -57,9 +61,22 @@ public class DescribeBackupPlanListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowBackupStrategyInfo")
+    private Boolean showBackupStrategyInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowRecoverTimeRange")
+    private Boolean showRecoverTimeRange;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowStorageStrategyInfo")
+    private Boolean showStorageStrategyInfo;
+
     private DescribeBackupPlanListRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.backupMethod = builder.backupMethod;
         this.backupPlanId = builder.backupPlanId;
         this.backupPlanName = builder.backupPlanName;
         this.backupPlanStatus = builder.backupPlanStatus;
@@ -69,6 +86,9 @@ public class DescribeBackupPlanListRequest extends Request {
         this.pageSize = builder.pageSize;
         this.region = builder.region;
         this.resourceGroupId = builder.resourceGroupId;
+        this.showBackupStrategyInfo = builder.showBackupStrategyInfo;
+        this.showRecoverTimeRange = builder.showRecoverTimeRange;
+        this.showStorageStrategyInfo = builder.showStorageStrategyInfo;
     }
 
     public static Builder builder() {
@@ -89,6 +109,13 @@ public class DescribeBackupPlanListRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return backupMethod
+     */
+    public String getBackupMethod() {
+        return this.backupMethod;
     }
 
     /**
@@ -154,8 +181,30 @@ public class DescribeBackupPlanListRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return showBackupStrategyInfo
+     */
+    public Boolean getShowBackupStrategyInfo() {
+        return this.showBackupStrategyInfo;
+    }
+
+    /**
+     * @return showRecoverTimeRange
+     */
+    public Boolean getShowRecoverTimeRange() {
+        return this.showRecoverTimeRange;
+    }
+
+    /**
+     * @return showStorageStrategyInfo
+     */
+    public Boolean getShowStorageStrategyInfo() {
+        return this.showStorageStrategyInfo;
+    }
+
     public static final class Builder extends Request.Builder<DescribeBackupPlanListRequest, Builder> {
         private String regionId; 
+        private String backupMethod; 
         private String backupPlanId; 
         private String backupPlanName; 
         private String backupPlanStatus; 
@@ -165,6 +214,9 @@ public class DescribeBackupPlanListRequest extends Request {
         private Integer pageSize; 
         private String region; 
         private String resourceGroupId; 
+        private Boolean showBackupStrategyInfo; 
+        private Boolean showRecoverTimeRange; 
+        private Boolean showStorageStrategyInfo; 
 
         private Builder() {
             super();
@@ -173,6 +225,7 @@ public class DescribeBackupPlanListRequest extends Request {
         private Builder(DescribeBackupPlanListRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.backupMethod = request.backupMethod;
             this.backupPlanId = request.backupPlanId;
             this.backupPlanName = request.backupPlanName;
             this.backupPlanStatus = request.backupPlanStatus;
@@ -182,6 +235,9 @@ public class DescribeBackupPlanListRequest extends Request {
             this.pageSize = request.pageSize;
             this.region = request.region;
             this.resourceGroupId = request.resourceGroupId;
+            this.showBackupStrategyInfo = request.showBackupStrategyInfo;
+            this.showRecoverTimeRange = request.showRecoverTimeRange;
+            this.showStorageStrategyInfo = request.showStorageStrategyInfo;
         } 
 
         /**
@@ -190,6 +246,15 @@ public class DescribeBackupPlanListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * BackupMethod.
+         */
+        public Builder backupMethod(String backupMethod) {
+            this.putQueryParameter("BackupMethod", backupMethod);
+            this.backupMethod = backupMethod;
             return this;
         }
 
@@ -307,6 +372,33 @@ public class DescribeBackupPlanListRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ShowBackupStrategyInfo.
+         */
+        public Builder showBackupStrategyInfo(Boolean showBackupStrategyInfo) {
+            this.putQueryParameter("ShowBackupStrategyInfo", showBackupStrategyInfo);
+            this.showBackupStrategyInfo = showBackupStrategyInfo;
+            return this;
+        }
+
+        /**
+         * ShowRecoverTimeRange.
+         */
+        public Builder showRecoverTimeRange(Boolean showRecoverTimeRange) {
+            this.putQueryParameter("ShowRecoverTimeRange", showRecoverTimeRange);
+            this.showRecoverTimeRange = showRecoverTimeRange;
+            return this;
+        }
+
+        /**
+         * ShowStorageStrategyInfo.
+         */
+        public Builder showStorageStrategyInfo(Boolean showStorageStrategyInfo) {
+            this.putQueryParameter("ShowStorageStrategyInfo", showStorageStrategyInfo);
+            this.showStorageStrategyInfo = showStorageStrategyInfo;
             return this;
         }
 
