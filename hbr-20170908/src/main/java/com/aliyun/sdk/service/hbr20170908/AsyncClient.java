@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddCrossAccountResponse> addCrossAccount(AddCrossAccountRequest request);
 
     /**
+     * @param request the request parameters of BrowseFiles  BrowseFilesRequest
+     * @return BrowseFilesResponse
+     */
+    CompletableFuture<BrowseFilesResponse> browseFiles(BrowseFilesRequest request);
+
+    /**
      * @param request the request parameters of CancelBackupJob  CancelBackupJobRequest
      * @return CancelBackupJobResponse
      */
@@ -561,6 +567,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GenerateRamPolicyResponse
      */
     CompletableFuture<GenerateRamPolicyResponse> generateRamPolicy(GenerateRamPolicyRequest request);
+
+    /**
+     * @param request the request parameters of GetBasicStatistics  GetBasicStatisticsRequest
+     * @return GetBasicStatisticsResponse
+     */
+    CompletableFuture<GetBasicStatisticsResponse> getBasicStatistics(GetBasicStatisticsRequest request);
 
     /**
      * @param request the request parameters of GetTempFileDownloadLink  GetTempFileDownloadLinkRequest

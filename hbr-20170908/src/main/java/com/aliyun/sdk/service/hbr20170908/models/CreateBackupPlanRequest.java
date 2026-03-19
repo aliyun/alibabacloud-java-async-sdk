@@ -73,6 +73,10 @@ public class CreateBackupPlanRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Disabled")
     private Boolean disabled;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Exclude")
     private String exclude;
@@ -163,6 +167,7 @@ public class CreateBackupPlanRequest extends Request {
         this.destSourceType = builder.destSourceType;
         this.detail = builder.detail;
         this.disabled = builder.disabled;
+        this.edition = builder.edition;
         this.exclude = builder.exclude;
         this.fileSystemId = builder.fileSystemId;
         this.include = builder.include;
@@ -292,6 +297,13 @@ public class CreateBackupPlanRequest extends Request {
      */
     public Boolean getDisabled() {
         return this.disabled;
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -435,6 +447,7 @@ public class CreateBackupPlanRequest extends Request {
         private String destSourceType; 
         private java.util.Map<String, ?> detail; 
         private Boolean disabled; 
+        private String edition; 
         private String exclude; 
         private String fileSystemId; 
         private String include; 
@@ -474,6 +487,7 @@ public class CreateBackupPlanRequest extends Request {
             this.destSourceType = request.destSourceType;
             this.detail = request.detail;
             this.disabled = request.disabled;
+            this.edition = request.edition;
             this.exclude = request.exclude;
             this.fileSystemId = request.fileSystemId;
             this.include = request.include;
@@ -671,6 +685,15 @@ public class CreateBackupPlanRequest extends Request {
         public Builder disabled(Boolean disabled) {
             this.putQueryParameter("Disabled", disabled);
             this.disabled = disabled;
+            return this;
+        }
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
             return this;
         }
 
