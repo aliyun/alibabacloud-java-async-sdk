@@ -1078,24 +1078,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ModelRouterQueryModelWithApiKey  ModelRouterQueryModelWithApiKeyRequest
-     * @return ModelRouterQueryModelWithApiKeyResponse
-     */
-    @Override
-    public CompletableFuture<ModelRouterQueryModelWithApiKeyResponse> modelRouterQueryModelWithApiKey(ModelRouterQueryModelWithApiKeyRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryModelWithApiKey").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/models/{id}/with-api-key").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryModelWithApiKeyResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ModelRouterQueryModelWithApiKeyResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of ModelRouterQueryNacosProviders  ModelRouterQueryNacosProvidersRequest
      * @return ModelRouterQueryNacosProvidersResponse
      */

@@ -356,12 +356,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterQueryModelListResponse> modelRouterQueryModelList(ModelRouterQueryModelListRequest request);
 
     /**
-     * @param request the request parameters of ModelRouterQueryModelWithApiKey  ModelRouterQueryModelWithApiKeyRequest
-     * @return ModelRouterQueryModelWithApiKeyResponse
-     */
-    CompletableFuture<ModelRouterQueryModelWithApiKeyResponse> modelRouterQueryModelWithApiKey(ModelRouterQueryModelWithApiKeyRequest request);
-
-    /**
      * @param request the request parameters of ModelRouterQueryNacosProviders  ModelRouterQueryNacosProvidersRequest
      * @return ModelRouterQueryNacosProvidersResponse
      */

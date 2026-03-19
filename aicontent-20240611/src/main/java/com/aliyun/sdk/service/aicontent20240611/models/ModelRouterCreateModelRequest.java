@@ -30,6 +30,14 @@ public class ModelRouterCreateModelRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("maxInputLength")
+    private String maxInputLength;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("maxOutputLength")
+    private String maxOutputLength;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("modelId")
     private String modelId;
 
@@ -54,6 +62,8 @@ public class ModelRouterCreateModelRequest extends Request {
         this.apiKey = builder.apiKey;
         this.baseUrl = builder.baseUrl;
         this.description = builder.description;
+        this.maxInputLength = builder.maxInputLength;
+        this.maxOutputLength = builder.maxOutputLength;
         this.modelId = builder.modelId;
         this.modelType = builder.modelType;
         this.name = builder.name;
@@ -96,6 +106,20 @@ public class ModelRouterCreateModelRequest extends Request {
     }
 
     /**
+     * @return maxInputLength
+     */
+    public String getMaxInputLength() {
+        return this.maxInputLength;
+    }
+
+    /**
+     * @return maxOutputLength
+     */
+    public String getMaxOutputLength() {
+        return this.maxOutputLength;
+    }
+
+    /**
      * @return modelId
      */
     public String getModelId() {
@@ -134,6 +158,8 @@ public class ModelRouterCreateModelRequest extends Request {
         private String apiKey; 
         private String baseUrl; 
         private String description; 
+        private String maxInputLength; 
+        private String maxOutputLength; 
         private String modelId; 
         private String modelType; 
         private String name; 
@@ -149,6 +175,8 @@ public class ModelRouterCreateModelRequest extends Request {
             this.apiKey = request.apiKey;
             this.baseUrl = request.baseUrl;
             this.description = request.description;
+            this.maxInputLength = request.maxInputLength;
+            this.maxOutputLength = request.maxOutputLength;
             this.modelId = request.modelId;
             this.modelType = request.modelType;
             this.name = request.name;
@@ -186,6 +214,24 @@ public class ModelRouterCreateModelRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * maxInputLength.
+         */
+        public Builder maxInputLength(String maxInputLength) {
+            this.putBodyParameter("maxInputLength", maxInputLength);
+            this.maxInputLength = maxInputLength;
+            return this;
+        }
+
+        /**
+         * maxOutputLength.
+         */
+        public Builder maxOutputLength(String maxOutputLength) {
+            this.putBodyParameter("maxOutputLength", maxOutputLength);
+            this.maxOutputLength = maxOutputLength;
             return this;
         }
 
