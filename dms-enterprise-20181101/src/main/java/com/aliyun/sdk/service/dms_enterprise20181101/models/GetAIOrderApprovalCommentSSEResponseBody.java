@@ -26,6 +26,9 @@ public class GetAIOrderApprovalCommentSSEResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
+    @com.aliyun.core.annotation.NameInMap("Output")
+    private Output output;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -36,6 +39,7 @@ public class GetAIOrderApprovalCommentSSEResponseBody extends TeaModel {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
+        this.output = builder.output;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -74,6 +78,13 @@ public class GetAIOrderApprovalCommentSSEResponseBody extends TeaModel {
     }
 
     /**
+     * @return output
+     */
+    public Output getOutput() {
+        return this.output;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -91,6 +102,7 @@ public class GetAIOrderApprovalCommentSSEResponseBody extends TeaModel {
         private String data; 
         private String errorCode; 
         private String errorMessage; 
+        private Output output; 
         private String requestId; 
         private Boolean success; 
 
@@ -101,6 +113,7 @@ public class GetAIOrderApprovalCommentSSEResponseBody extends TeaModel {
             this.data = model.data;
             this.errorCode = model.errorCode;
             this.errorMessage = model.errorMessage;
+            this.output = model.output;
             this.requestId = model.requestId;
             this.success = model.success;
         } 
@@ -130,6 +143,14 @@ public class GetAIOrderApprovalCommentSSEResponseBody extends TeaModel {
         }
 
         /**
+         * Output.
+         */
+        public Builder output(Output output) {
+            this.output = output;
+            return this;
+        }
+
+        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -151,4 +172,58 @@ public class GetAIOrderApprovalCommentSSEResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAIOrderApprovalCommentSSEResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAIOrderApprovalCommentSSEResponseBody</p>
+     */
+    public static class Output extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        private Output(Builder builder) {
+            this.content = builder.content;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Output create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        public static final class Builder {
+            private String content; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.content = model.content;
+            } 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            public Output build() {
+                return new Output(this);
+            } 
+
+        } 
+
+    }
 }
