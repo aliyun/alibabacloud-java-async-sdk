@@ -1844,6 +1844,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListEventRecords  ListEventRecordsRequest
+     * @return ListEventRecordsResponse
+     */
+    @Override
+    public CompletableFuture<ListEventRecordsResponse> listEventRecords(ListEventRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListEventRecords").setMethod(HttpMethod.GET).setPathRegex("/openapi/{eventType}/listEventRecords").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEventRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEventRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListExtendfiles  ListExtendfilesRequest
      * @return ListExtendfilesResponse
      */
@@ -2173,6 +2191,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListStatsEventRecords  ListStatsEventRecordsRequest
+     * @return ListStatsEventRecordsResponse
+     */
+    @Override
+    public CompletableFuture<ListStatsEventRecordsResponse> listStatsEventRecords(ListStatsEventRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListStatsEventRecords").setMethod(HttpMethod.GET).setPathRegex("/openapi/event/statsEventRecords").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListStatsEventRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListStatsEventRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -2305,6 +2341,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyInstanceMaintainTimeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyScheduleExecuteTime  ModifyScheduleExecuteTimeRequest
+     * @return ModifyScheduleExecuteTimeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyScheduleExecuteTimeResponse> modifyScheduleExecuteTime(ModifyScheduleExecuteTimeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModifyScheduleExecuteTime").setMethod(HttpMethod.POST).setPathRegex("/openapi/event/{instanceId}/actions/modify-execute-time").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyScheduleExecuteTimeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyScheduleExecuteTimeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

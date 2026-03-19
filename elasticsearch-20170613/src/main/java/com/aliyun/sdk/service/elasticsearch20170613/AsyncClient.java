@@ -648,6 +648,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEcsInstancesResponse> listEcsInstances(ListEcsInstancesRequest request);
 
     /**
+     * @param request the request parameters of ListEventRecords  ListEventRecordsRequest
+     * @return ListEventRecordsResponse
+     */
+    CompletableFuture<ListEventRecordsResponse> listEventRecords(ListEventRecordsRequest request);
+
+    /**
      * @param request the request parameters of ListExtendfiles  ListExtendfilesRequest
      * @return ListExtendfilesResponse
      */
@@ -761,6 +767,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSnapshotReposByInstanceIdResponse> listSnapshotReposByInstanceId(ListSnapshotReposByInstanceIdRequest request);
 
     /**
+     * @param request the request parameters of ListStatsEventRecords  ListStatsEventRecordsRequest
+     * @return ListStatsEventRecordsResponse
+     */
+    CompletableFuture<ListStatsEventRecordsResponse> listStatsEventRecords(ListStatsEventRecordsRequest request);
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -813,6 +825,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyInstanceMaintainTimeResponse
      */
     CompletableFuture<ModifyInstanceMaintainTimeResponse> modifyInstanceMaintainTime(ModifyInstanceMaintainTimeRequest request);
+
+    /**
+     * @param request the request parameters of ModifyScheduleExecuteTime  ModifyScheduleExecuteTimeRequest
+     * @return ModifyScheduleExecuteTimeResponse
+     */
+    CompletableFuture<ModifyScheduleExecuteTimeResponse> modifyScheduleExecuteTime(ModifyScheduleExecuteTimeRequest request);
 
     /**
      * <b>description</b> :
