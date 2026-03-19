@@ -284,6 +284,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportIntervenesResponse> exportIntervenes(ExportIntervenesRequest request);
 
     /**
+     * @param request the request parameters of ExportPptArtifact  ExportPptArtifactRequest
+     * @return ExportPptArtifactResponse
+     */
+    CompletableFuture<ExportPptArtifactResponse> exportPptArtifact(ExportPptArtifactRequest request);
+
+    /**
      * @param request the request parameters of FeedbackDialogue  FeedbackDialogueRequest
      * @return FeedbackDialogueResponse
      */
@@ -530,10 +536,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPptArtifactResponse> getPptArtifact(GetPptArtifactRequest request);
 
     /**
+     * @param request the request parameters of GetPptArtifactExportResult  GetPptArtifactExportResultRequest
+     * @return GetPptArtifactExportResultResponse
+     */
+    CompletableFuture<GetPptArtifactExportResultResponse> getPptArtifactExportResult(GetPptArtifactExportResultRequest request);
+
+    /**
      * @param request the request parameters of GetPptConfig  GetPptConfigRequest
      * @return GetPptConfigResponse
      */
     CompletableFuture<GetPptConfigResponse> getPptConfig(GetPptConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetPptTemplateSelector  GetPptTemplateSelectorRequest
+     * @return GetPptTemplateSelectorResponse
+     */
+    CompletableFuture<GetPptTemplateSelectorResponse> getPptTemplateSelector(GetPptTemplateSelectorRequest request);
 
     /**
      * @param request the request parameters of GetProperties  GetPropertiesRequest
@@ -768,6 +786,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPptArtifactsResponse
      */
     CompletableFuture<ListPptArtifactsResponse> listPptArtifacts(ListPptArtifactsRequest request);
+
+    /**
+     * @param request the request parameters of ListPptTemplates  ListPptTemplatesRequest
+     * @return ListPptTemplatesResponse
+     */
+    CompletableFuture<ListPptTemplatesResponse> listPptTemplates(ListPptTemplatesRequest request);
 
     /**
      * @param request the request parameters of ListSearchTaskDialogueDatas  ListSearchTaskDialogueDatasRequest
