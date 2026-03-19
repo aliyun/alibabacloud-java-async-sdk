@@ -26,6 +26,10 @@ public class DescribleCertListRequest extends Request {
     private String domain;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainList")
+    private String domainList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -37,6 +41,7 @@ public class DescribleCertListRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.domain = builder.domain;
+        this.domainList = builder.domainList;
         this.resourceGroupId = builder.resourceGroupId;
         this.sourceIp = builder.sourceIp;
     }
@@ -69,6 +74,13 @@ public class DescribleCertListRequest extends Request {
     }
 
     /**
+     * @return domainList
+     */
+    public String getDomainList() {
+        return this.domainList;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -85,6 +97,7 @@ public class DescribleCertListRequest extends Request {
     public static final class Builder extends Request.Builder<DescribleCertListRequest, Builder> {
         private String regionId; 
         private String domain; 
+        private String domainList; 
         private String resourceGroupId; 
         private String sourceIp; 
 
@@ -96,6 +109,7 @@ public class DescribleCertListRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.domain = request.domain;
+            this.domainList = request.domainList;
             this.resourceGroupId = request.resourceGroupId;
             this.sourceIp = request.sourceIp;
         } 
@@ -115,6 +129,15 @@ public class DescribleCertListRequest extends Request {
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * DomainList.
+         */
+        public Builder domainList(String domainList) {
+            this.putQueryParameter("DomainList", domainList);
+            this.domainList = domainList;
             return this;
         }
 
