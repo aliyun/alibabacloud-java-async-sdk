@@ -29,11 +29,15 @@ public class ListMemoryStoresResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("total")
+    private Integer total;
+
     private ListMemoryStoresResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
         this.memoryStores = builder.memoryStores;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
+        this.total = builder.total;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return total
+     */
+    public Integer getTotal() {
+        return this.total;
+    }
+
     public static final class Builder {
         private Integer maxResults; 
         private java.util.List<MemoryStores> memoryStores; 
         private String nextToken; 
         private String requestId; 
+        private Integer total; 
 
         private Builder() {
         } 
@@ -90,6 +102,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
             this.memoryStores = model.memoryStores;
             this.nextToken = model.nextToken;
             this.requestId = model.requestId;
+            this.total = model.total;
         } 
 
         /**
@@ -121,6 +134,14 @@ public class ListMemoryStoresResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * total.
+         */
+        public Builder total(Integer total) {
+            this.total = total;
             return this;
         }
 

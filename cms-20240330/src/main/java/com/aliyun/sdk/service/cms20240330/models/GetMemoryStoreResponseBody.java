@@ -38,6 +38,9 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("shortTermStorage")
+    private ShortTermStorage shortTermStorage;
+
     @com.aliyun.core.annotation.NameInMap("shortTermTtl")
     private Integer shortTermTtl;
 
@@ -55,6 +58,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         this.memoryStoreName = builder.memoryStoreName;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
+        this.shortTermStorage = builder.shortTermStorage;
         this.shortTermTtl = builder.shortTermTtl;
         this.updateTime = builder.updateTime;
         this.workspace = builder.workspace;
@@ -122,6 +126,13 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     }
 
     /**
+     * @return shortTermStorage
+     */
+    public ShortTermStorage getShortTermStorage() {
+        return this.shortTermStorage;
+    }
+
+    /**
      * @return shortTermTtl
      */
     public Integer getShortTermTtl() {
@@ -150,6 +161,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         private String memoryStoreName; 
         private String regionId; 
         private String requestId; 
+        private ShortTermStorage shortTermStorage; 
         private Integer shortTermTtl; 
         private String updateTime; 
         private String workspace; 
@@ -165,6 +177,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             this.memoryStoreName = model.memoryStoreName;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
+            this.shortTermStorage = model.shortTermStorage;
             this.shortTermTtl = model.shortTermTtl;
             this.updateTime = model.updateTime;
             this.workspace = model.workspace;
@@ -230,6 +243,14 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
+         * shortTermStorage.
+         */
+        public Builder shortTermStorage(ShortTermStorage shortTermStorage) {
+            this.shortTermStorage = shortTermStorage;
+            return this;
+        }
+
+        /**
          * shortTermTtl.
          */
         public Builder shortTermTtl(Integer shortTermTtl) {
@@ -262,4 +283,79 @@ public class GetMemoryStoreResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMemoryStoreResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMemoryStoreResponseBody</p>
+     */
+    public static class ShortTermStorage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("logstore")
+        private String logstore;
+
+        @com.aliyun.core.annotation.NameInMap("project")
+        private String project;
+
+        private ShortTermStorage(Builder builder) {
+            this.logstore = builder.logstore;
+            this.project = builder.project;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ShortTermStorage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return logstore
+         */
+        public String getLogstore() {
+            return this.logstore;
+        }
+
+        /**
+         * @return project
+         */
+        public String getProject() {
+            return this.project;
+        }
+
+        public static final class Builder {
+            private String logstore; 
+            private String project; 
+
+            private Builder() {
+            } 
+
+            private Builder(ShortTermStorage model) {
+                this.logstore = model.logstore;
+                this.project = model.project;
+            } 
+
+            /**
+             * logstore.
+             */
+            public Builder logstore(String logstore) {
+                this.logstore = logstore;
+                return this;
+            }
+
+            /**
+             * project.
+             */
+            public Builder project(String project) {
+                this.project = project;
+                return this;
+            }
+
+            public ShortTermStorage build() {
+                return new ShortTermStorage(this);
+            } 
+
+        } 
+
+    }
 }
