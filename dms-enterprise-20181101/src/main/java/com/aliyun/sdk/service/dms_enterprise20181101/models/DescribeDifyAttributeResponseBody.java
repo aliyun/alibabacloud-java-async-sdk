@@ -38,6 +38,9 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
     private DescribeDifyAttributeResponseBody(Builder builder) {
         this.code = builder.code;
         this.errorCode = builder.errorCode;
@@ -46,6 +49,7 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.root = builder.root;
         this.success = builder.success;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -109,6 +113,13 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder {
         private String code; 
         private String errorCode; 
@@ -117,6 +128,7 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         private String requestId; 
         private Root root; 
         private Boolean success; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
         } 
@@ -129,6 +141,7 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.root = model.root;
             this.success = model.success;
+            this.tags = model.tags;
         } 
 
         /**
@@ -187,6 +200,14 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.tags = tags;
+            return this;
+        }
+
         public DescribeDifyAttributeResponseBody build() {
             return new DescribeDifyAttributeResponseBody(this);
         } 
@@ -200,6 +221,9 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
      * <p>DescribeDifyAttributeResponseBody</p>
      */
     public static class Root extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppType")
+        private String appType;
+
         @com.aliyun.core.annotation.NameInMap("AppUuid")
         private String appUuid;
 
@@ -209,8 +233,17 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
+        @com.aliyun.core.annotation.NameInMap("DifyInstanceId")
+        private String difyInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("DifyInstanceName")
+        private String difyInstanceName;
+
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("Replicas")
         private String replicas;
@@ -240,10 +273,14 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         private String zoneId;
 
         private Root(Builder builder) {
+            this.appType = builder.appType;
             this.appUuid = builder.appUuid;
             this.billingInstanceId = builder.billingInstanceId;
             this.chargeType = builder.chargeType;
+            this.difyInstanceId = builder.difyInstanceId;
+            this.difyInstanceName = builder.difyInstanceName;
             this.expireTime = builder.expireTime;
+            this.regionId = builder.regionId;
             this.replicas = builder.replicas;
             this.resourceQuota = builder.resourceQuota;
             this.securityGroupId = builder.securityGroupId;
@@ -261,6 +298,13 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
 
         public static Root create() {
             return builder().build();
+        }
+
+        /**
+         * @return appType
+         */
+        public String getAppType() {
+            return this.appType;
         }
 
         /**
@@ -285,10 +329,31 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return difyInstanceId
+         */
+        public String getDifyInstanceId() {
+            return this.difyInstanceId;
+        }
+
+        /**
+         * @return difyInstanceName
+         */
+        public String getDifyInstanceName() {
+            return this.difyInstanceName;
+        }
+
+        /**
          * @return expireTime
          */
         public Long getExpireTime() {
             return this.expireTime;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
         }
 
         /**
@@ -355,10 +420,14 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appType; 
             private String appUuid; 
             private String billingInstanceId; 
             private String chargeType; 
+            private String difyInstanceId; 
+            private String difyInstanceName; 
             private Long expireTime; 
+            private String regionId; 
             private String replicas; 
             private String resourceQuota; 
             private String securityGroupId; 
@@ -373,10 +442,14 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
             } 
 
             private Builder(Root model) {
+                this.appType = model.appType;
                 this.appUuid = model.appUuid;
                 this.billingInstanceId = model.billingInstanceId;
                 this.chargeType = model.chargeType;
+                this.difyInstanceId = model.difyInstanceId;
+                this.difyInstanceName = model.difyInstanceName;
                 this.expireTime = model.expireTime;
+                this.regionId = model.regionId;
                 this.replicas = model.replicas;
                 this.resourceQuota = model.resourceQuota;
                 this.securityGroupId = model.securityGroupId;
@@ -387,6 +460,14 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
                 this.workspaceId = model.workspaceId;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * AppType.
+             */
+            public Builder appType(String appType) {
+                this.appType = appType;
+                return this;
+            }
 
             /**
              * AppUuid.
@@ -413,10 +494,34 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * DifyInstanceId.
+             */
+            public Builder difyInstanceId(String difyInstanceId) {
+                this.difyInstanceId = difyInstanceId;
+                return this;
+            }
+
+            /**
+             * DifyInstanceName.
+             */
+            public Builder difyInstanceName(String difyInstanceName) {
+                this.difyInstanceName = difyInstanceName;
+                return this;
+            }
+
+            /**
              * ExpireTime.
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 
@@ -494,6 +599,81 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
 
             public Root build() {
                 return new Root(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDifyAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDifyAttributeResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

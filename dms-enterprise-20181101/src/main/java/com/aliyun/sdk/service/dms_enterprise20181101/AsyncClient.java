@@ -819,6 +819,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateSqlFromNLResponse> generateSqlFromNL(GenerateSqlFromNLRequest request);
 
     /**
+     * @param request the request parameters of GetAIOrderApprovalCommentSSE  GetAIOrderApprovalCommentSSERequest
+     * @return GetAIOrderApprovalCommentSSEResponse
+     */
+    CompletableFuture<GetAIOrderApprovalCommentSSEResponse> getAIOrderApprovalCommentSSE(GetAIOrderApprovalCommentSSERequest request);
+
+    ResponseIterable<GetAIOrderApprovalCommentSSEResponseBody> getAIOrderApprovalCommentSSEWithResponseIterable(GetAIOrderApprovalCommentSSERequest request);
+
+    /**
      * @param request the request parameters of GetAbacPolicy  GetAbacPolicyRequest
      * @return GetAbacPolicyResponse
      */

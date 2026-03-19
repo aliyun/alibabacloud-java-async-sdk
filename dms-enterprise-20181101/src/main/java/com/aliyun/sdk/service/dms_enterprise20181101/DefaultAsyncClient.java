@@ -1964,6 +1964,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAIOrderApprovalCommentSSE  GetAIOrderApprovalCommentSSERequest
+     * @return GetAIOrderApprovalCommentSSEResponse
+     */
+    @Override
+    public CompletableFuture<GetAIOrderApprovalCommentSSEResponse> getAIOrderApprovalCommentSSE(GetAIOrderApprovalCommentSSERequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAIOrderApprovalCommentSSE").setMethod(HttpMethod.POST).setPathRegex("/worknode/openapi/services").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAIOrderApprovalCommentSSEResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAIOrderApprovalCommentSSEResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<GetAIOrderApprovalCommentSSEResponseBody> getAIOrderApprovalCommentSSEWithResponseIterable(GetAIOrderApprovalCommentSSERequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("GetAIOrderApprovalCommentSSE").setMethod(HttpMethod.POST).setPathRegex("/worknode/openapi/services").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        GetAIOrderApprovalCommentSSEResponseBodyIterator iterator = GetAIOrderApprovalCommentSSEResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of GetAbacPolicy  GetAbacPolicyRequest
      * @return GetAbacPolicyResponse
      */

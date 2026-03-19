@@ -203,6 +203,12 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppUuid")
         private String appUuid;
 
+        @com.aliyun.core.annotation.NameInMap("DifyInstanceId")
+        private String difyInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("DifyInstanceName")
+        private String difyInstanceName;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -235,6 +241,8 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.appUuid = builder.appUuid;
+            this.difyInstanceId = builder.difyInstanceId;
+            this.difyInstanceName = builder.difyInstanceName;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.replicas = builder.replicas;
@@ -260,6 +268,20 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
          */
         public String getAppUuid() {
             return this.appUuid;
+        }
+
+        /**
+         * @return difyInstanceId
+         */
+        public String getDifyInstanceId() {
+            return this.difyInstanceId;
+        }
+
+        /**
+         * @return difyInstanceName
+         */
+        public String getDifyInstanceName() {
+            return this.difyInstanceName;
         }
 
         /**
@@ -334,6 +356,8 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appUuid; 
+            private String difyInstanceId; 
+            private String difyInstanceName; 
             private String instanceId; 
             private String instanceName; 
             private Integer replicas; 
@@ -350,6 +374,8 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.appUuid = model.appUuid;
+                this.difyInstanceId = model.difyInstanceId;
+                this.difyInstanceName = model.difyInstanceName;
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
                 this.replicas = model.replicas;
@@ -367,6 +393,22 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
              */
             public Builder appUuid(String appUuid) {
                 this.appUuid = appUuid;
+                return this;
+            }
+
+            /**
+             * DifyInstanceId.
+             */
+            public Builder difyInstanceId(String difyInstanceId) {
+                this.difyInstanceId = difyInstanceId;
+                return this;
+            }
+
+            /**
+             * DifyInstanceName.
+             */
+            public Builder difyInstanceName(String difyInstanceName) {
+                this.difyInstanceName = difyInstanceName;
                 return this;
             }
 

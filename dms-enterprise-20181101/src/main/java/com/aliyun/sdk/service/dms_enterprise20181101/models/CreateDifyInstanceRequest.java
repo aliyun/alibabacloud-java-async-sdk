@@ -83,6 +83,10 @@ public class CreateDifyInstanceRequest extends Request {
     private String dbStorageType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DifyInstanceName")
+    private String difyInstanceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -197,6 +201,10 @@ public class CreateDifyInstanceRequest extends Request {
     private String storageType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
@@ -264,7 +272,6 @@ public class CreateDifyInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private CreateDifyInstanceRequest(Builder builder) {
@@ -285,6 +292,7 @@ public class CreateDifyInstanceRequest extends Request {
         this.dbResourceId = builder.dbResourceId;
         this.dbStorageSize = builder.dbStorageSize;
         this.dbStorageType = builder.dbStorageType;
+        this.difyInstanceName = builder.difyInstanceName;
         this.dryRun = builder.dryRun;
         this.edition = builder.edition;
         this.enableExtraEndpoint = builder.enableExtraEndpoint;
@@ -313,6 +321,7 @@ public class CreateDifyInstanceRequest extends Request {
         this.segDiskPerformanceLevel = builder.segDiskPerformanceLevel;
         this.segNodeNum = builder.segNodeNum;
         this.storageType = builder.storageType;
+        this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
         this.vectordbAccount = builder.vectordbAccount;
         this.vectordbCategory = builder.vectordbCategory;
@@ -455,6 +464,13 @@ public class CreateDifyInstanceRequest extends Request {
      */
     public String getDbStorageType() {
         return this.dbStorageType;
+    }
+
+    /**
+     * @return difyInstanceName
+     */
+    public String getDifyInstanceName() {
+        return this.difyInstanceName;
     }
 
     /**
@@ -654,6 +670,13 @@ public class CreateDifyInstanceRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -789,6 +812,7 @@ public class CreateDifyInstanceRequest extends Request {
         private Integer dbResourceId; 
         private String dbStorageSize; 
         private String dbStorageType; 
+        private String difyInstanceName; 
         private Boolean dryRun; 
         private String edition; 
         private Boolean enableExtraEndpoint; 
@@ -817,6 +841,7 @@ public class CreateDifyInstanceRequest extends Request {
         private String segDiskPerformanceLevel; 
         private Integer segNodeNum; 
         private String storageType; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vectordbAccount; 
         private String vectordbCategory; 
@@ -857,6 +882,7 @@ public class CreateDifyInstanceRequest extends Request {
             this.dbResourceId = request.dbResourceId;
             this.dbStorageSize = request.dbStorageSize;
             this.dbStorageType = request.dbStorageType;
+            this.difyInstanceName = request.difyInstanceName;
             this.dryRun = request.dryRun;
             this.edition = request.edition;
             this.enableExtraEndpoint = request.enableExtraEndpoint;
@@ -885,6 +911,7 @@ public class CreateDifyInstanceRequest extends Request {
             this.segDiskPerformanceLevel = request.segDiskPerformanceLevel;
             this.segNodeNum = request.segNodeNum;
             this.storageType = request.storageType;
+            this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
             this.vectordbAccount = request.vectordbAccount;
             this.vectordbCategory = request.vectordbCategory;
@@ -951,6 +978,9 @@ public class CreateDifyInstanceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder dataRegion(String dataRegion) {
             this.putQueryParameter("DataRegion", dataRegion);
@@ -1045,6 +1075,15 @@ public class CreateDifyInstanceRequest extends Request {
         public Builder dbStorageType(String dbStorageType) {
             this.putQueryParameter("DbStorageType", dbStorageType);
             this.dbStorageType = dbStorageType;
+            return this;
+        }
+
+        /**
+         * DifyInstanceName.
+         */
+        public Builder difyInstanceName(String difyInstanceName) {
+            this.putQueryParameter("DifyInstanceName", difyInstanceName);
+            this.difyInstanceName = difyInstanceName;
             return this;
         }
 
@@ -1257,6 +1296,9 @@ public class CreateDifyInstanceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4CU</p>
          */
         public Builder resourceQuota(String resourceQuota) {
             this.putQueryParameter("ResourceQuota", resourceQuota);
@@ -1266,6 +1308,9 @@ public class CreateDifyInstanceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2ze6dig8uby0a3zt4a0h</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1301,7 +1346,19 @@ public class CreateDifyInstanceRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1i05wremlxcy8z5e2im</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1401,6 +1458,9 @@ public class CreateDifyInstanceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-k1a8ha7m1atealnysybeu</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -1445,7 +1505,7 @@ public class CreateDifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1460,4 +1520,79 @@ public class CreateDifyInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDifyInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDifyInstanceRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
