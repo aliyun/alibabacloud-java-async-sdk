@@ -56,6 +56,9 @@ public class UnifiedPageItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("summary")
     private String summary;
 
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.Map<String, ?> tags;
+
     @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
@@ -76,6 +79,7 @@ public class UnifiedPageItem extends TeaModel {
         this.richMainBody = builder.richMainBody;
         this.snippet = builder.snippet;
         this.summary = builder.summary;
+        this.tags = builder.tags;
         this.title = builder.title;
         this.websiteAuthorityScore = builder.websiteAuthorityScore;
     }
@@ -184,6 +188,13 @@ public class UnifiedPageItem extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.Map<String, ?> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -211,6 +222,7 @@ public class UnifiedPageItem extends TeaModel {
         private String richMainBody; 
         private String snippet; 
         private String summary; 
+        private java.util.Map<String, ?> tags; 
         private String title; 
         private Integer websiteAuthorityScore; 
 
@@ -231,6 +243,7 @@ public class UnifiedPageItem extends TeaModel {
             this.richMainBody = model.richMainBody;
             this.snippet = model.snippet;
             this.summary = model.summary;
+            this.tags = model.tags;
             this.title = model.title;
             this.websiteAuthorityScore = model.websiteAuthorityScore;
         } 
@@ -336,6 +349,14 @@ public class UnifiedPageItem extends TeaModel {
          */
         public Builder summary(String summary) {
             this.summary = summary;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
             return this;
         }
 
