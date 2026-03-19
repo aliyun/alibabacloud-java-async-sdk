@@ -22,6 +22,10 @@ public class CreateResourceGroupRequest extends Request {
     private String businessChannel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAliyunResourceGroup")
+    private Boolean enableAliyunResourceGroup;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsResourceGroupWithOfficeSite")
     private Long isResourceGroupWithOfficeSite;
 
@@ -36,6 +40,7 @@ public class CreateResourceGroupRequest extends Request {
     private CreateResourceGroupRequest(Builder builder) {
         super(builder);
         this.businessChannel = builder.businessChannel;
+        this.enableAliyunResourceGroup = builder.enableAliyunResourceGroup;
         this.isResourceGroupWithOfficeSite = builder.isResourceGroupWithOfficeSite;
         this.platform = builder.platform;
         this.resourceGroupName = builder.resourceGroupName;
@@ -62,6 +67,13 @@ public class CreateResourceGroupRequest extends Request {
     }
 
     /**
+     * @return enableAliyunResourceGroup
+     */
+    public Boolean getEnableAliyunResourceGroup() {
+        return this.enableAliyunResourceGroup;
+    }
+
+    /**
      * @return isResourceGroupWithOfficeSite
      */
     public Long getIsResourceGroupWithOfficeSite() {
@@ -84,6 +96,7 @@ public class CreateResourceGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateResourceGroupRequest, Builder> {
         private String businessChannel; 
+        private Boolean enableAliyunResourceGroup; 
         private Long isResourceGroupWithOfficeSite; 
         private String platform; 
         private String resourceGroupName; 
@@ -95,6 +108,7 @@ public class CreateResourceGroupRequest extends Request {
         private Builder(CreateResourceGroupRequest request) {
             super(request);
             this.businessChannel = request.businessChannel;
+            this.enableAliyunResourceGroup = request.enableAliyunResourceGroup;
             this.isResourceGroupWithOfficeSite = request.isResourceGroupWithOfficeSite;
             this.platform = request.platform;
             this.resourceGroupName = request.resourceGroupName;
@@ -106,6 +120,15 @@ public class CreateResourceGroupRequest extends Request {
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
             this.businessChannel = businessChannel;
+            return this;
+        }
+
+        /**
+         * EnableAliyunResourceGroup.
+         */
+        public Builder enableAliyunResourceGroup(Boolean enableAliyunResourceGroup) {
+            this.putQueryParameter("EnableAliyunResourceGroup", enableAliyunResourceGroup);
+            this.enableAliyunResourceGroup = enableAliyunResourceGroup;
             return this;
         }
 
