@@ -141,6 +141,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloneDBInstanceResponse> cloneDBInstance(CloneDBInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateAIService  CreateAIServiceRequest
+     * @return CreateAIServiceResponse
+     */
+    CompletableFuture<CreateAIServiceResponse> createAIService(CreateAIServiceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Before you can use an AnalyticDB for PostgreSQL instance, you must create an initial account for the instance.</p>
      * <ul>
@@ -334,6 +340,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAINodeResponse> deleteAINode(DeleteAINodeRequest request);
 
     /**
+     * @param request the request parameters of DeleteAIService  DeleteAIServiceRequest
+     * @return DeleteAIServiceResponse
+     */
+    CompletableFuture<DeleteAIServiceResponse> deleteAIService(DeleteAIServiceRequest request);
+
+    /**
      * @param request the request parameters of DeleteAccount  DeleteAccountRequest
      * @return DeleteAccountResponse
      */
@@ -519,6 +531,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeployPrivateRAGServiceResponse
      */
     CompletableFuture<DeployPrivateRAGServiceResponse> deployPrivateRAGService(DeployPrivateRAGServiceRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAIService  DescribeAIServiceRequest
+     * @return DescribeAIServiceResponse
+     */
+    CompletableFuture<DescribeAIServiceResponse> describeAIService(DescribeAIServiceRequest request);
 
     /**
      * <b>description</b> :
@@ -1272,6 +1290,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAINodePoolsResponse> listAINodePools(ListAINodePoolsRequest request);
 
     /**
+     * @param request the request parameters of ListAIServices  ListAIServicesRequest
+     * @return ListAIServicesResponse
+     */
+    CompletableFuture<ListAIServicesResponse> listAIServices(ListAIServicesRequest request);
+
+    /**
      * @param request the request parameters of ListBackupJobs  ListBackupJobsRequest
      * @return ListBackupJobsResponse
      */
@@ -1426,6 +1450,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTagResourcesResponse
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ModifyAIServiceSecurityIps  ModifyAIServiceSecurityIpsRequest
+     * @return ModifyAIServiceSecurityIpsResponse
+     */
+    CompletableFuture<ModifyAIServiceSecurityIpsResponse> modifyAIServiceSecurityIps(ModifyAIServiceSecurityIpsRequest request);
 
     /**
      * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest

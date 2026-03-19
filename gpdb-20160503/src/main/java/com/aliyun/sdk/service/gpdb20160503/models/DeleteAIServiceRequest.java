@@ -12,38 +12,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeExtensionRequest} extends {@link RequestModel}
+ * {@link DeleteAIServiceRequest} extends {@link RequestModel}
  *
- * <p>DescribeExtensionRequest</p>
+ * <p>DeleteAIServiceRequest</p>
  */
-public class DescribeExtensionRequest extends Request {
+public class DeleteAIServiceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String databaseName;
+    private String serviceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ExtensionName")
+    @com.aliyun.core.annotation.NameInMap("Type")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String extensionName;
+    private String type;
 
-    private DescribeExtensionRequest(Builder builder) {
+    private DeleteAIServiceRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
-        this.databaseName = builder.databaseName;
-        this.extensionName = builder.extensionName;
+        this.serviceId = builder.serviceId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeExtensionRequest create() {
+    public static DeleteAIServiceRequest create() {
         return builder().build();
     }
 
@@ -60,37 +60,40 @@ public class DescribeExtensionRequest extends Request {
     }
 
     /**
-     * @return databaseName
+     * @return serviceId
      */
-    public String getDatabaseName() {
-        return this.databaseName;
+    public String getServiceId() {
+        return this.serviceId;
     }
 
     /**
-     * @return extensionName
+     * @return type
      */
-    public String getExtensionName() {
-        return this.extensionName;
+    public String getType() {
+        return this.type;
     }
 
-    public static final class Builder extends Request.Builder<DescribeExtensionRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteAIServiceRequest, Builder> {
         private String DBInstanceId; 
-        private String databaseName; 
-        private String extensionName; 
+        private String serviceId; 
+        private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeExtensionRequest request) {
+        private Builder(DeleteAIServiceRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
-            this.databaseName = request.databaseName;
-            this.extensionName = request.extensionName;
+            this.serviceId = request.serviceId;
+            this.type = request.type;
         } 
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -100,25 +103,31 @@ public class DescribeExtensionRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drama-123456</p>
          */
-        public Builder databaseName(String databaseName) {
-            this.putQueryParameter("DatabaseName", databaseName);
-            this.databaseName = databaseName;
+        public Builder serviceId(String serviceId) {
+            this.putQueryParameter("ServiceId", serviceId);
+            this.serviceId = serviceId;
             return this;
         }
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drama</p>
          */
-        public Builder extensionName(String extensionName) {
-            this.putQueryParameter("ExtensionName", extensionName);
-            this.extensionName = extensionName;
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 
         @Override
-        public DescribeExtensionRequest build() {
-            return new DescribeExtensionRequest(this);
+        public DeleteAIServiceRequest build() {
+            return new DeleteAIServiceRequest(this);
         } 
 
     } 
