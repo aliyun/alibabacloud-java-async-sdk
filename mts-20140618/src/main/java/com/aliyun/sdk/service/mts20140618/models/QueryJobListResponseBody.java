@@ -4439,6 +4439,9 @@ public class QueryJobListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileFormat")
         private String fileFormat;
 
+        @com.aliyun.core.annotation.NameInMap("FileMd5")
+        private String fileMd5;
+
         @com.aliyun.core.annotation.NameInMap("FileSize")
         private String fileSize;
 
@@ -4464,6 +4467,7 @@ public class QueryJobListResponseBody extends TeaModel {
             this.bitrate = builder.bitrate;
             this.duration = builder.duration;
             this.fileFormat = builder.fileFormat;
+            this.fileMd5 = builder.fileMd5;
             this.fileSize = builder.fileSize;
             this.format = builder.format;
             this.fps = builder.fps;
@@ -4500,6 +4504,13 @@ public class QueryJobListResponseBody extends TeaModel {
          */
         public String getFileFormat() {
             return this.fileFormat;
+        }
+
+        /**
+         * @return fileMd5
+         */
+        public String getFileMd5() {
+            return this.fileMd5;
         }
 
         /**
@@ -4555,6 +4566,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String bitrate; 
             private String duration; 
             private String fileFormat; 
+            private String fileMd5; 
             private String fileSize; 
             private Format format; 
             private String fps; 
@@ -4570,6 +4582,7 @@ public class QueryJobListResponseBody extends TeaModel {
                 this.bitrate = model.bitrate;
                 this.duration = model.duration;
                 this.fileFormat = model.fileFormat;
+                this.fileMd5 = model.fileMd5;
                 this.fileSize = model.fileSize;
                 this.format = model.format;
                 this.fps = model.fps;
@@ -4609,6 +4622,14 @@ public class QueryJobListResponseBody extends TeaModel {
              */
             public Builder fileFormat(String fileFormat) {
                 this.fileFormat = fileFormat;
+                return this;
+            }
+
+            /**
+             * FileMd5.
+             */
+            public Builder fileMd5(String fileMd5) {
+                this.fileMd5 = fileMd5;
                 return this;
             }
 
