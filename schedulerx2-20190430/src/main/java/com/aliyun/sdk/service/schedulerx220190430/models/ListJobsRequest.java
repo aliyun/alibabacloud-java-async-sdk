@@ -36,6 +36,14 @@ public class ListJobsRequest extends Request {
     private String namespaceSource;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
+    private Integer pageNum;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -50,6 +58,8 @@ public class ListJobsRequest extends Request {
         this.jobName = builder.jobName;
         this.namespace = builder.namespace;
         this.namespaceSource = builder.namespaceSource;
+        this.pageNum = builder.pageNum;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.status = builder.status;
     }
@@ -96,6 +106,20 @@ public class ListJobsRequest extends Request {
     }
 
     /**
+     * @return pageNum
+     */
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -114,6 +138,8 @@ public class ListJobsRequest extends Request {
         private String jobName; 
         private String namespace; 
         private String namespaceSource; 
+        private Integer pageNum; 
+        private Integer pageSize; 
         private String regionId; 
         private String status; 
 
@@ -127,6 +153,8 @@ public class ListJobsRequest extends Request {
             this.jobName = request.jobName;
             this.namespace = request.namespace;
             this.namespaceSource = request.namespaceSource;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.status = request.status;
         } 
@@ -178,6 +206,24 @@ public class ListJobsRequest extends Request {
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
             this.namespaceSource = namespaceSource;
+            return this;
+        }
+
+        /**
+         * PageNum.
+         */
+        public Builder pageNum(Integer pageNum) {
+            this.putQueryParameter("PageNum", pageNum);
+            this.pageNum = pageNum;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

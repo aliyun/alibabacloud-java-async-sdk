@@ -1332,8 +1332,20 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Jobs")
         private java.util.List<Jobs> jobs;
 
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
+        private Integer pageNumber;
+
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        private Integer pageSize;
+
+        @com.aliyun.core.annotation.NameInMap("Total")
+        private Integer total;
+
         private Data(Builder builder) {
             this.jobs = builder.jobs;
+            this.pageNumber = builder.pageNumber;
+            this.pageSize = builder.pageSize;
+            this.total = builder.total;
         }
 
         public static Builder builder() {
@@ -1351,14 +1363,41 @@ public class ListJobsResponseBody extends TeaModel {
             return this.jobs;
         }
 
+        /**
+         * @return pageNumber
+         */
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return total
+         */
+        public Integer getTotal() {
+            return this.total;
+        }
+
         public static final class Builder {
             private java.util.List<Jobs> jobs; 
+            private Integer pageNumber; 
+            private Integer pageSize; 
+            private Integer total; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
                 this.jobs = model.jobs;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
             } 
 
             /**
@@ -1366,6 +1405,33 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder jobs(java.util.List<Jobs> jobs) {
                 this.jobs = jobs;
+                return this;
+            }
+
+            /**
+             * PageNumber.
+             */
+            public Builder pageNumber(Integer pageNumber) {
+                this.pageNumber = pageNumber;
+                return this;
+            }
+
+            /**
+             * <p>The number of tasks that are pulled by a parallel job at a time. Default value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * Total.
+             */
+            public Builder total(Integer total) {
+                this.total = total;
                 return this;
             }
 
