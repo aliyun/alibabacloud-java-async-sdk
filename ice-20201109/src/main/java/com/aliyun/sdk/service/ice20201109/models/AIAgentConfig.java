@@ -1653,12 +1653,16 @@ public class AIAgentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InterruptWords")
         private java.util.List<String> interruptWords;
 
+        @com.aliyun.core.annotation.NameInMap("KeepInterruptWordsForLLM")
+        private Boolean keepInterruptWordsForLLM;
+
         @com.aliyun.core.annotation.NameInMap("NoInterruptMode")
         private String noInterruptMode;
 
         private InterruptConfig(Builder builder) {
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
             this.interruptWords = builder.interruptWords;
+            this.keepInterruptWordsForLLM = builder.keepInterruptWordsForLLM;
             this.noInterruptMode = builder.noInterruptMode;
         }
 
@@ -1685,6 +1689,13 @@ public class AIAgentConfig extends TeaModel {
         }
 
         /**
+         * @return keepInterruptWordsForLLM
+         */
+        public Boolean getKeepInterruptWordsForLLM() {
+            return this.keepInterruptWordsForLLM;
+        }
+
+        /**
          * @return noInterruptMode
          */
         public String getNoInterruptMode() {
@@ -1694,6 +1705,7 @@ public class AIAgentConfig extends TeaModel {
         public static final class Builder {
             private Boolean enableVoiceInterrupt; 
             private java.util.List<String> interruptWords; 
+            private Boolean keepInterruptWordsForLLM; 
             private String noInterruptMode; 
 
             private Builder() {
@@ -1702,6 +1714,7 @@ public class AIAgentConfig extends TeaModel {
             private Builder(InterruptConfig model) {
                 this.enableVoiceInterrupt = model.enableVoiceInterrupt;
                 this.interruptWords = model.interruptWords;
+                this.keepInterruptWordsForLLM = model.keepInterruptWordsForLLM;
                 this.noInterruptMode = model.noInterruptMode;
             } 
 
@@ -1718,6 +1731,14 @@ public class AIAgentConfig extends TeaModel {
              */
             public Builder interruptWords(java.util.List<String> interruptWords) {
                 this.interruptWords = interruptWords;
+                return this;
+            }
+
+            /**
+             * KeepInterruptWordsForLLM.
+             */
+            public Builder keepInterruptWordsForLLM(Boolean keepInterruptWordsForLLM) {
+                this.keepInterruptWordsForLLM = keepInterruptWordsForLLM;
                 return this;
             }
 
