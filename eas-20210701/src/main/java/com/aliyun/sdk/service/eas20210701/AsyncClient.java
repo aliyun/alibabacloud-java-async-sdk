@@ -122,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceCronScalerResponse> createServiceCronScaler(CreateServiceCronScalerRequest request);
 
     /**
+     * @param request the request parameters of CreateServiceInstanceToken  CreateServiceInstanceTokenRequest
+     * @return CreateServiceInstanceTokenResponse
+     */
+    CompletableFuture<CreateServiceInstanceTokenResponse> createServiceInstanceToken(CreateServiceInstanceTokenRequest request);
+
+    /**
      * @param request the request parameters of CreateServiceMirror  CreateServiceMirrorRequest
      * @return CreateServiceMirrorResponse
      */
