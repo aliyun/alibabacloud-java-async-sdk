@@ -227,14 +227,14 @@ public class ListLoadBalancersRequest extends Request {
         } 
 
         /**
-         * <p>The IP version. Valid values:</p>
+         * <p>The IP version of the NLB instance. Valid values:</p>
          * <ul>
-         * <li><strong>Ipv4</strong>: IPv4</li>
+         * <li><strong>Ipv4</strong></li>
          * </ul>
          * <p>Enumeration values:</p>
          * <ul>
          * <li>IPv4: IPv4</li>
-         * <li>DualStack: DualStack</li>
+         * <li>DualStack: dual-stack</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -351,7 +351,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The tags. You can specify at most 20 tags in each call.</p>
+         * <p>The tags. You can specify up to 20 tags in each call.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -360,7 +360,14 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * TrafficMode.
+         * <p>Specifies the traffic processing mode. Valid values:</p>
+         * <ul>
+         * <li><strong>LoadBalance</strong>: load balancing mode. GWLB continues to forward traffic to backend servers.</li>
+         * <li><strong>ByPass</strong>: bypass mode. GWLB directly returns traffic to the GWLB endpoint without forwarding it to the backend servers.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LoadBalance</p>
          */
         public Builder trafficMode(String trafficMode) {
             this.putBodyParameter("TrafficMode", trafficMode);
@@ -446,8 +453,8 @@ public class ListLoadBalancersRequest extends Request {
             } 
 
             /**
-             * <p>The tag key The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key. You cannot specify an empty string as a tag key.</p>
+             * <p>The tag key can be up to 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>testTagKey</p>
@@ -458,7 +465,7 @@ public class ListLoadBalancersRequest extends Request {
             }
 
             /**
-             * <p>The tag value The tag value can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value. It can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>testTagValue</p>

@@ -38,6 +38,10 @@ public class UpdateListenerAttributeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ServerGroupId")
     private String serverGroupId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TcpIdleTimeout")
+    private Integer tcpIdleTimeout;
+
     private UpdateListenerAttributeRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -45,6 +49,7 @@ public class UpdateListenerAttributeRequest extends Request {
         this.listenerDescription = builder.listenerDescription;
         this.listenerId = builder.listenerId;
         this.serverGroupId = builder.serverGroupId;
+        this.tcpIdleTimeout = builder.tcpIdleTimeout;
     }
 
     public static Builder builder() {
@@ -95,12 +100,20 @@ public class UpdateListenerAttributeRequest extends Request {
         return this.serverGroupId;
     }
 
+    /**
+     * @return tcpIdleTimeout
+     */
+    public Integer getTcpIdleTimeout() {
+        return this.tcpIdleTimeout;
+    }
+
     public static final class Builder extends Request.Builder<UpdateListenerAttributeRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
         private String listenerDescription; 
         private String listenerId; 
         private String serverGroupId; 
+        private Integer tcpIdleTimeout; 
 
         private Builder() {
             super();
@@ -113,6 +126,7 @@ public class UpdateListenerAttributeRequest extends Request {
             this.listenerDescription = request.listenerDescription;
             this.listenerId = request.listenerId;
             this.serverGroupId = request.serverGroupId;
+            this.tcpIdleTimeout = request.tcpIdleTimeout;
         } 
 
         /**
@@ -178,6 +192,19 @@ public class UpdateListenerAttributeRequest extends Request {
         public Builder serverGroupId(String serverGroupId) {
             this.putBodyParameter("ServerGroupId", serverGroupId);
             this.serverGroupId = serverGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The timeout period of an idle TCP connection. Unit: seconds.</p>
+         * <p>Valid values: <strong>60</strong> to <strong>6000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350</p>
+         */
+        public Builder tcpIdleTimeout(Integer tcpIdleTimeout) {
+            this.putBodyParameter("TcpIdleTimeout", tcpIdleTimeout);
+            this.tcpIdleTimeout = tcpIdleTimeout;
             return this;
         }
 

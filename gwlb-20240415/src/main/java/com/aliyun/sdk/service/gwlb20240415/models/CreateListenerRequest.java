@@ -43,6 +43,10 @@ public class CreateListenerRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TcpIdleTimeout")
+    private Integer tcpIdleTimeout;
+
     private CreateListenerRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -51,6 +55,7 @@ public class CreateListenerRequest extends Request {
         this.loadBalancerId = builder.loadBalancerId;
         this.serverGroupId = builder.serverGroupId;
         this.tag = builder.tag;
+        this.tcpIdleTimeout = builder.tcpIdleTimeout;
     }
 
     public static Builder builder() {
@@ -108,6 +113,13 @@ public class CreateListenerRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return tcpIdleTimeout
+     */
+    public Integer getTcpIdleTimeout() {
+        return this.tcpIdleTimeout;
+    }
+
     public static final class Builder extends Request.Builder<CreateListenerRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
@@ -115,6 +127,7 @@ public class CreateListenerRequest extends Request {
         private String loadBalancerId; 
         private String serverGroupId; 
         private java.util.List<Tag> tag; 
+        private Integer tcpIdleTimeout; 
 
         private Builder() {
             super();
@@ -128,6 +141,7 @@ public class CreateListenerRequest extends Request {
             this.loadBalancerId = request.loadBalancerId;
             this.serverGroupId = request.serverGroupId;
             this.tag = request.tag;
+            this.tcpIdleTimeout = request.tcpIdleTimeout;
         } 
 
         /**
@@ -207,6 +221,20 @@ public class CreateListenerRequest extends Request {
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * <p>The timeout period of an idle TCP connection. Unit: seconds.</p>
+         * <p>Default value: <strong>350</strong>.</p>
+         * <p>Valid values: <strong>60</strong> to <strong>6000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350</p>
+         */
+        public Builder tcpIdleTimeout(Integer tcpIdleTimeout) {
+            this.putBodyParameter("TcpIdleTimeout", tcpIdleTimeout);
+            this.tcpIdleTimeout = tcpIdleTimeout;
             return this;
         }
 

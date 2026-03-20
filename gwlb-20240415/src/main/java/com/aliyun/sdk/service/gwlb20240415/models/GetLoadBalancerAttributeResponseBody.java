@@ -307,7 +307,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficMode.
+         * <p>Traffic processing mode. Valid values:</p>
+         * <ul>
+         * <li><strong>LoadBalance</strong>: load balancing mode. GWLB forwards traffic to backend servers.</li>
+         * <li><strong>ByPass</strong>: bypass mode. GWLB directly returns traffic to the GWLB endpoint without forwarding it to the backend servers.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LoadBalance</p>
          */
         public Builder trafficMode(String trafficMode) {
             this.trafficMode = trafficMode;

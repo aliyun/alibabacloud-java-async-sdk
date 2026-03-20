@@ -199,7 +199,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the health check feature.</p>
+         * <p>The health check configuration.</p>
          */
         public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
             this.putBodyParameter("HealthCheckConfig", healthCheckConfig);
@@ -211,7 +211,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
          * <p>The scheduling algorithm. Valid values:</p>
          * <ul>
          * <li><strong>5TCH</strong>: specifies consistent hashing that is based on the following factors: source IP address, destination IP address, source port, protocol, and destination port. Requests that contain the same information based on the preceding factors are forwarded to the same backend server.</li>
-         * <li><strong>3TCH</strong>: specifies consistent hashing that is based on the following factors: source IP address, destination IP address, and protocol. Requests that contain the same information based on the preceding factors are forwarded to the same backend server.</li>
+         * <li><strong>3TCH</strong>: indicates consistent hashing that is based on the following factors: source IP address, destination IP address, and protocol. Requests that contain the same information based on the preceding factors are forwarded to the same backend server.</li>
          * <li><strong>2TCH</strong>: specifies consistent hashing that is based on the following factors: source IP address and destination IP address. Requests that contain the same information based on the preceding factors are forwarded to the same backend server.</li>
          * </ul>
          * 
@@ -225,7 +225,14 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * ServerFailoverMode.
+         * <p>Specifies how GWLB processes requests over existing connections when a backend server is not running as expected. Valid values:</p>
+         * <ul>
+         * <li><strong>NoRebalance</strong>: GWLB continues to forward requests over existing connections to the unavailable backend server.</li>
+         * <li><strong>Rebalance</strong>: GWLB forwards requests over existing connections to the remaining healthy backend servers.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoRebalance</p>
          */
         public Builder serverFailoverMode(String serverFailoverMode) {
             this.putBodyParameter("ServerFailoverMode", serverFailoverMode);
@@ -372,6 +379,9 @@ public class UpdateServerGroupAttributeRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private Boolean healthCheckEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("HealthCheckExp")
+        private String healthCheckExp;
+
         @com.aliyun.core.annotation.NameInMap("HealthCheckHttpCode")
         private java.util.List<String> healthCheckHttpCode;
 
@@ -384,6 +394,9 @@ public class UpdateServerGroupAttributeRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
         private String healthCheckProtocol;
 
+        @com.aliyun.core.annotation.NameInMap("HealthCheckReq")
+        private String healthCheckReq;
+
         @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
         private Integer healthyThreshold;
 
@@ -395,10 +408,12 @@ public class UpdateServerGroupAttributeRequest extends Request {
             this.healthCheckConnectTimeout = builder.healthCheckConnectTimeout;
             this.healthCheckDomain = builder.healthCheckDomain;
             this.healthCheckEnabled = builder.healthCheckEnabled;
+            this.healthCheckExp = builder.healthCheckExp;
             this.healthCheckHttpCode = builder.healthCheckHttpCode;
             this.healthCheckInterval = builder.healthCheckInterval;
             this.healthCheckPath = builder.healthCheckPath;
             this.healthCheckProtocol = builder.healthCheckProtocol;
+            this.healthCheckReq = builder.healthCheckReq;
             this.healthyThreshold = builder.healthyThreshold;
             this.unhealthyThreshold = builder.unhealthyThreshold;
         }
@@ -440,6 +455,13 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
+         * @return healthCheckExp
+         */
+        public String getHealthCheckExp() {
+            return this.healthCheckExp;
+        }
+
+        /**
          * @return healthCheckHttpCode
          */
         public java.util.List<String> getHealthCheckHttpCode() {
@@ -468,6 +490,13 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
+         * @return healthCheckReq
+         */
+        public String getHealthCheckReq() {
+            return this.healthCheckReq;
+        }
+
+        /**
          * @return healthyThreshold
          */
         public Integer getHealthyThreshold() {
@@ -486,10 +515,12 @@ public class UpdateServerGroupAttributeRequest extends Request {
             private Integer healthCheckConnectTimeout; 
             private String healthCheckDomain; 
             private Boolean healthCheckEnabled; 
+            private String healthCheckExp; 
             private java.util.List<String> healthCheckHttpCode; 
             private Integer healthCheckInterval; 
             private String healthCheckPath; 
             private String healthCheckProtocol; 
+            private String healthCheckReq; 
             private Integer healthyThreshold; 
             private Integer unhealthyThreshold; 
 
@@ -501,17 +532,19 @@ public class UpdateServerGroupAttributeRequest extends Request {
                 this.healthCheckConnectTimeout = model.healthCheckConnectTimeout;
                 this.healthCheckDomain = model.healthCheckDomain;
                 this.healthCheckEnabled = model.healthCheckEnabled;
+                this.healthCheckExp = model.healthCheckExp;
                 this.healthCheckHttpCode = model.healthCheckHttpCode;
                 this.healthCheckInterval = model.healthCheckInterval;
                 this.healthCheckPath = model.healthCheckPath;
                 this.healthCheckProtocol = model.healthCheckProtocol;
+                this.healthCheckReq = model.healthCheckReq;
                 this.healthyThreshold = model.healthyThreshold;
                 this.unhealthyThreshold = model.unhealthyThreshold;
             } 
 
             /**
-             * <p>The backend server port that is used by health checks.</p>
-             * <p>Valid values: 1 to 65535.</p>
+             * <p>The backend server port that is used for health checks.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -522,8 +555,8 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The maximum timeout period of a health check response.</p>
-             * <p>Unit: seconds</p>
+             * <p>The maximum timeout period for a health check response.</p>
+             * <p>Unit: seconds.</p>
              * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -535,13 +568,13 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The domain name that is used for health checks. Valid values:</p>
+             * <p>The domain name used for health checks. Valid values:</p>
              * <ul>
              * <li><strong>$SERVER_IP</strong>: the internal IP address of a backend server.</li>
              * <li><strong>domain</strong>: a domain name. The domain name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), and periods (.).</li>
              * </ul>
              * <blockquote>
-             * <p>This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
+             * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -553,7 +586,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the health check feature. Valid values:</p>
+             * <p>Specifies whether to enable health checks. Valid values:</p>
              * <ul>
              * <li><strong>true</strong></li>
              * <li><strong>false</strong></li>
@@ -568,6 +601,14 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
+             * HealthCheckExp.
+             */
+            public Builder healthCheckExp(String healthCheckExp) {
+                this.healthCheckExp = healthCheckExp;
+                return this;
+            }
+
+            /**
              * <p>The HTTP status codes that the system returns for health checks.</p>
              */
             public Builder healthCheckHttpCode(java.util.List<String> healthCheckHttpCode) {
@@ -577,7 +618,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
 
             /**
              * <p>The interval at which health checks are performed.</p>
-             * <p>Unit: seconds</p>
+             * <p>Unit: seconds.</p>
              * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -589,10 +630,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The URL that is used for health checks.</p>
-             * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <code>- / . % ? # &amp; </code>The URL must start with a forward slash (/).</p>
+             * <p>The URL used for health checks.</p>
+             * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <code>- / . % ? # &amp; </code>It must start with a forward slash (/).</p>
              * <blockquote>
-             * <p>This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
+             * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -607,7 +648,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
              * <p>The protocol that is used for health checks. Valid values:</p>
              * <ul>
              * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
-             * <li><strong>HTTP</strong>: HTTP health checks simulate a process that uses a web browser to access resources by sending HEAD or GET requests to an instance. These requests are used to check whether the instance is healthy.</li>
+             * <li><strong>HTTP</strong>: HTTP health checks simulate a process that uses a web browser to access resources by sending GET requests to an instance. These requests are used to check whether the instance is healthy.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -619,7 +660,15 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <strong>fail</strong> to <strong>success</strong>.</p>
+             * HealthCheckReq.
+             */
+            public Builder healthCheckReq(String healthCheckReq) {
+                this.healthCheckReq = healthCheckReq;
+                return this;
+            }
+
+            /**
+             * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
              * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -631,7 +680,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <strong>success</strong> to <strong>fail</strong>.</p>
+             * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health check status of the backend server changes from <strong>success</strong> to <strong>fail</strong>.</p>
              * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * 
              * <strong>example:</strong>

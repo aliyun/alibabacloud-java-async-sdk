@@ -255,7 +255,7 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the health check feature.</p>
+         * <p>The health check configurations.</p>
          */
         public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
             this.putBodyParameter("HealthCheckConfig", healthCheckConfig);
@@ -264,9 +264,9 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * <p>The backend protocol. Valid values:</p>
+         * <p>The backend protocol. Valid value:</p>
          * <ul>
-         * <li><strong>GENEVE</strong>(default)</li>
+         * <li><strong>GENEVE</strong> (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,7 +308,14 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * ServerFailoverMode.
+         * <p>Specifies how GWLB processes requests over existing connections when a backend server is not running as expected. Valid values:</p>
+         * <ul>
+         * <li><strong>NoRebalance</strong> (default): GWLB continues to forward requests over existing connections to the unavailable backend server.</li>
+         * <li><strong>Rebalance</strong>: GWLB forwards requests over existing connections to the remaining healthy backend servers.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoRebalance</p>
          */
         public Builder serverFailoverMode(String serverFailoverMode) {
             this.putBodyParameter("ServerFailoverMode", serverFailoverMode);
@@ -330,10 +337,10 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of server group. Valid values:</p>
+         * <p>The type of the server group. Valid values:</p>
          * <ul>
-         * <li><strong>Instance</strong> (default): allows you to specify servers of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
-         * <li><strong>Ip</strong>: allows you to add servers of by specifying IP addresses.</li>
+         * <li><strong>Instance</strong> (default): allows you to specify resources of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
+         * <li><strong>Ip</strong>: allows you to add servers by specifying their IP addresses.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -485,6 +492,9 @@ public class CreateServerGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private Boolean healthCheckEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("HealthCheckExp")
+        private String healthCheckExp;
+
         @com.aliyun.core.annotation.NameInMap("HealthCheckHttpCode")
         private java.util.List<String> healthCheckHttpCode;
 
@@ -497,6 +507,9 @@ public class CreateServerGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
         private String healthCheckProtocol;
 
+        @com.aliyun.core.annotation.NameInMap("HealthCheckReq")
+        private String healthCheckReq;
+
         @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
         private Integer healthyThreshold;
 
@@ -508,10 +521,12 @@ public class CreateServerGroupRequest extends Request {
             this.healthCheckConnectTimeout = builder.healthCheckConnectTimeout;
             this.healthCheckDomain = builder.healthCheckDomain;
             this.healthCheckEnabled = builder.healthCheckEnabled;
+            this.healthCheckExp = builder.healthCheckExp;
             this.healthCheckHttpCode = builder.healthCheckHttpCode;
             this.healthCheckInterval = builder.healthCheckInterval;
             this.healthCheckPath = builder.healthCheckPath;
             this.healthCheckProtocol = builder.healthCheckProtocol;
+            this.healthCheckReq = builder.healthCheckReq;
             this.healthyThreshold = builder.healthyThreshold;
             this.unhealthyThreshold = builder.unhealthyThreshold;
         }
@@ -553,6 +568,13 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
+         * @return healthCheckExp
+         */
+        public String getHealthCheckExp() {
+            return this.healthCheckExp;
+        }
+
+        /**
          * @return healthCheckHttpCode
          */
         public java.util.List<String> getHealthCheckHttpCode() {
@@ -581,6 +603,13 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
+         * @return healthCheckReq
+         */
+        public String getHealthCheckReq() {
+            return this.healthCheckReq;
+        }
+
+        /**
          * @return healthyThreshold
          */
         public Integer getHealthyThreshold() {
@@ -599,10 +628,12 @@ public class CreateServerGroupRequest extends Request {
             private Integer healthCheckConnectTimeout; 
             private String healthCheckDomain; 
             private Boolean healthCheckEnabled; 
+            private String healthCheckExp; 
             private java.util.List<String> healthCheckHttpCode; 
             private Integer healthCheckInterval; 
             private String healthCheckPath; 
             private String healthCheckProtocol; 
+            private String healthCheckReq; 
             private Integer healthyThreshold; 
             private Integer unhealthyThreshold; 
 
@@ -614,16 +645,18 @@ public class CreateServerGroupRequest extends Request {
                 this.healthCheckConnectTimeout = model.healthCheckConnectTimeout;
                 this.healthCheckDomain = model.healthCheckDomain;
                 this.healthCheckEnabled = model.healthCheckEnabled;
+                this.healthCheckExp = model.healthCheckExp;
                 this.healthCheckHttpCode = model.healthCheckHttpCode;
                 this.healthCheckInterval = model.healthCheckInterval;
                 this.healthCheckPath = model.healthCheckPath;
                 this.healthCheckProtocol = model.healthCheckProtocol;
+                this.healthCheckReq = model.healthCheckReq;
                 this.healthyThreshold = model.healthyThreshold;
                 this.unhealthyThreshold = model.unhealthyThreshold;
             } 
 
             /**
-             * <p>The backend server port that is used for health checks.</p>
+             * <p>The backend server port used for health checks.</p>
              * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
              * <p>Default value: <strong>80</strong>.</p>
              * 
@@ -636,8 +669,8 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The maximum timeout period of a health check response.</p>
-             * <p>Unit: seconds</p>
+             * <p>The maximum timeout period for a health check response.</p>
+             * <p>Unit: seconds.</p>
              * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
              * <p>Default value: <strong>5</strong>.</p>
              * 
@@ -650,13 +683,13 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The domain name that you want to use for health checks. Valid values:</p>
+             * <p>The domain name used for health checks. Valid values:</p>
              * <ul>
              * <li><strong>$SERVER_IP</strong> (default): the private IP address of a backend server.</li>
              * <li><strong>domain</strong>: a domain name. The domain name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), and periods (.).</li>
              * </ul>
              * <blockquote>
-             * <p>This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
+             * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -668,7 +701,7 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the health check feature. Valid values:</p>
+             * <p>Specifies whether to enable health checks. Valid values:</p>
              * <ul>
              * <li><strong>true</strong> (default)</li>
              * <li><strong>false</strong></li>
@@ -683,6 +716,14 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
+             * HealthCheckExp.
+             */
+            public Builder healthCheckExp(String healthCheckExp) {
+                this.healthCheckExp = healthCheckExp;
+                return this;
+            }
+
+            /**
              * <p>The HTTP status codes that the system returns for health checks.</p>
              */
             public Builder healthCheckHttpCode(java.util.List<String> healthCheckHttpCode) {
@@ -692,7 +733,7 @@ public class CreateServerGroupRequest extends Request {
 
             /**
              * <p>The interval at which health checks are performed.</p>
-             * <p>Unit: seconds</p>
+             * <p>Unit: seconds.</p>
              * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
              * <p>Default value: <strong>10</strong>.</p>
              * 
@@ -705,11 +746,11 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The URL that is used for health checks.</p>
-             * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&amp;). The URL can also contain the following extended characters: _ ; ~ ! ( ) * [ ] @ $ ^ : &quot; , + =</p>
-             * <p>The URL must start with a forward slash (/).</p>
+             * <p>The path used for health checks.</p>
+             * <p>It must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&amp;). The URL can also contain the following extended characters: _ ; ~ ! ( ) * [ ] @ $ ^ : &quot; , + =</p>
+             * <p>It must start with a forward slash (/).</p>
              * <blockquote>
-             * <p>This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
+             * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -721,10 +762,10 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The protocol that is used for health checks. Valid values:</p>
+             * <p>The protocol used for health checks. Valid values:</p>
              * <ul>
              * <li><strong>TCP</strong> (default): GWLB performs TCP health checks by sending SYN packets to a backend server to check whether the port of the backend server is available to receive requests.</li>
-             * <li><strong>HTTP</strong>: GWLB performs HTTP health checks to check whether backend servers are healthy by sending HEAD or GET requests which simulate access from browsers.</li>
+             * <li><strong>HTTP</strong>: GWLB performs HTTP health checks to check whether backend servers are healthy by sending GET requests which simulate access from browsers.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -736,7 +777,15 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <strong>fail</strong> to <strong>success</strong>.</p>
+             * HealthCheckReq.
+             */
+            public Builder healthCheckReq(String healthCheckReq) {
+                this.healthCheckReq = healthCheckReq;
+                return this;
+            }
+
+            /**
+             * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
              * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * <p>Default value: <strong>2</strong>.</p>
              * 
@@ -749,7 +798,7 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <strong>success</strong> to <strong>fail</strong>.</p>
+             * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health check status of the backend server changes from <strong>success</strong> to <strong>fail</strong>.</p>
              * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * <p>Default value: <strong>2</strong>.</p>
              * 

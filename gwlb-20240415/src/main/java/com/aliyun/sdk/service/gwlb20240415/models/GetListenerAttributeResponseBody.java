@@ -41,6 +41,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.NameInMap("TcpIdleTimeout")
+    private Integer tcpIdleTimeout;
+
     private GetListenerAttributeResponseBody(Builder builder) {
         this.listenerDescription = builder.listenerDescription;
         this.listenerId = builder.listenerId;
@@ -50,6 +53,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.serverGroupId = builder.serverGroupId;
         this.tags = builder.tags;
+        this.tcpIdleTimeout = builder.tcpIdleTimeout;
     }
 
     public static Builder builder() {
@@ -120,6 +124,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         return this.tags;
     }
 
+    /**
+     * @return tcpIdleTimeout
+     */
+    public Integer getTcpIdleTimeout() {
+        return this.tcpIdleTimeout;
+    }
+
     public static final class Builder {
         private String listenerDescription; 
         private String listenerId; 
@@ -129,6 +140,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         private String requestId; 
         private String serverGroupId; 
         private java.util.List<Tags> tags; 
+        private Integer tcpIdleTimeout; 
 
         private Builder() {
         } 
@@ -142,6 +154,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.serverGroupId = model.serverGroupId;
             this.tags = model.tags;
+            this.tcpIdleTimeout = model.tcpIdleTimeout;
         } 
 
         /**
@@ -233,6 +246,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * <p>The timeout period of an idle TCP connection. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350</p>
+         */
+        public Builder tcpIdleTimeout(Integer tcpIdleTimeout) {
+            this.tcpIdleTimeout = tcpIdleTimeout;
             return this;
         }
 

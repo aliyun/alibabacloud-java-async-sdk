@@ -231,7 +231,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The tag keys. You can specify at most 20 tags in each call.</p>
+         * <p>The tags that are added to the instance.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -323,7 +323,7 @@ public class CreateLoadBalancerRequest extends Request {
 
             /**
              * <p>The tag key. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>It can be up to 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>testTagKey</p>
@@ -334,7 +334,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The tag value. The tag value can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value. It can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>testTagValue</p>

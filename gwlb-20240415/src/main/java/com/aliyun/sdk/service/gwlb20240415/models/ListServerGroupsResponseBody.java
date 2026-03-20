@@ -274,6 +274,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private Boolean healthCheckEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("HealthCheckExp")
+        private String healthCheckExp;
+
         @com.aliyun.core.annotation.NameInMap("HealthCheckHttpCode")
         private java.util.List<String> healthCheckHttpCode;
 
@@ -286,6 +289,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
         private String healthCheckProtocol;
 
+        @com.aliyun.core.annotation.NameInMap("HealthCheckReq")
+        private String healthCheckReq;
+
         @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
         private Integer healthyThreshold;
 
@@ -297,10 +303,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             this.healthCheckConnectTimeout = builder.healthCheckConnectTimeout;
             this.healthCheckDomain = builder.healthCheckDomain;
             this.healthCheckEnabled = builder.healthCheckEnabled;
+            this.healthCheckExp = builder.healthCheckExp;
             this.healthCheckHttpCode = builder.healthCheckHttpCode;
             this.healthCheckInterval = builder.healthCheckInterval;
             this.healthCheckPath = builder.healthCheckPath;
             this.healthCheckProtocol = builder.healthCheckProtocol;
+            this.healthCheckReq = builder.healthCheckReq;
             this.healthyThreshold = builder.healthyThreshold;
             this.unhealthyThreshold = builder.unhealthyThreshold;
         }
@@ -342,6 +350,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return healthCheckExp
+         */
+        public String getHealthCheckExp() {
+            return this.healthCheckExp;
+        }
+
+        /**
          * @return healthCheckHttpCode
          */
         public java.util.List<String> getHealthCheckHttpCode() {
@@ -370,6 +385,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return healthCheckReq
+         */
+        public String getHealthCheckReq() {
+            return this.healthCheckReq;
+        }
+
+        /**
          * @return healthyThreshold
          */
         public Integer getHealthyThreshold() {
@@ -388,10 +410,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Integer healthCheckConnectTimeout; 
             private String healthCheckDomain; 
             private Boolean healthCheckEnabled; 
+            private String healthCheckExp; 
             private java.util.List<String> healthCheckHttpCode; 
             private Integer healthCheckInterval; 
             private String healthCheckPath; 
             private String healthCheckProtocol; 
+            private String healthCheckReq; 
             private Integer healthyThreshold; 
             private Integer unhealthyThreshold; 
 
@@ -403,10 +427,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
                 this.healthCheckConnectTimeout = model.healthCheckConnectTimeout;
                 this.healthCheckDomain = model.healthCheckDomain;
                 this.healthCheckEnabled = model.healthCheckEnabled;
+                this.healthCheckExp = model.healthCheckExp;
                 this.healthCheckHttpCode = model.healthCheckHttpCode;
                 this.healthCheckInterval = model.healthCheckInterval;
                 this.healthCheckPath = model.healthCheckPath;
                 this.healthCheckProtocol = model.healthCheckProtocol;
+                this.healthCheckReq = model.healthCheckReq;
                 this.healthyThreshold = model.healthyThreshold;
                 this.unhealthyThreshold = model.unhealthyThreshold;
             } 
@@ -470,6 +496,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * HealthCheckExp.
+             */
+            public Builder healthCheckExp(String healthCheckExp) {
+                this.healthCheckExp = healthCheckExp;
+                return this;
+            }
+
+            /**
              * <p>The HTTP status codes that the system returns for health checks.</p>
              */
             public Builder healthCheckHttpCode(java.util.List<String> healthCheckHttpCode) {
@@ -517,6 +551,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
+                return this;
+            }
+
+            /**
+             * HealthCheckReq.
+             */
+            public Builder healthCheckReq(String healthCheckReq) {
+                this.healthCheckReq = healthCheckReq;
                 return this;
             }
 
@@ -941,7 +983,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ServerFailoverMode.
+             * <p>Specifies how GWLB processes requests over existing connections when a backend server is not running as expected. Valid values:</p>
+             * <ul>
+             * <li><strong>NoRebalance</strong>: GWLB continues to forward requests over existing connections to the unhealthy backend server.</li>
+             * <li><strong>Rebalance</strong>: GWLB forwards requests over existing connections to the remaining healthy backend servers.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NoRebalance</p>
              */
             public Builder serverFailoverMode(String serverFailoverMode) {
                 this.serverFailoverMode = serverFailoverMode;
