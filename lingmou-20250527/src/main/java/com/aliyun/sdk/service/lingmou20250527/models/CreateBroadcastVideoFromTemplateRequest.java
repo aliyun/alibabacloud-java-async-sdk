@@ -153,6 +153,9 @@ public class CreateBroadcastVideoFromTemplateRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("fps")
         private Integer fps;
 
+        @com.aliyun.core.annotation.NameInMap("languageHints")
+        private java.util.List<String> languageHints;
+
         @com.aliyun.core.annotation.NameInMap("resolution")
         private String resolution;
 
@@ -161,6 +164,7 @@ public class CreateBroadcastVideoFromTemplateRequest extends Request {
 
         private VideoOptions(Builder builder) {
             this.fps = builder.fps;
+            this.languageHints = builder.languageHints;
             this.resolution = builder.resolution;
             this.watermark = builder.watermark;
         }
@@ -181,6 +185,13 @@ public class CreateBroadcastVideoFromTemplateRequest extends Request {
         }
 
         /**
+         * @return languageHints
+         */
+        public java.util.List<String> getLanguageHints() {
+            return this.languageHints;
+        }
+
+        /**
          * @return resolution
          */
         public String getResolution() {
@@ -196,6 +207,7 @@ public class CreateBroadcastVideoFromTemplateRequest extends Request {
 
         public static final class Builder {
             private Integer fps; 
+            private java.util.List<String> languageHints; 
             private String resolution; 
             private Boolean watermark; 
 
@@ -204,6 +216,7 @@ public class CreateBroadcastVideoFromTemplateRequest extends Request {
 
             private Builder(VideoOptions model) {
                 this.fps = model.fps;
+                this.languageHints = model.languageHints;
                 this.resolution = model.resolution;
                 this.watermark = model.watermark;
             } 
@@ -213,6 +226,14 @@ public class CreateBroadcastVideoFromTemplateRequest extends Request {
              */
             public Builder fps(Integer fps) {
                 this.fps = fps;
+                return this;
+            }
+
+            /**
+             * languageHints.
+             */
+            public Builder languageHints(java.util.List<String> languageHints) {
+                this.languageHints = languageHints;
                 return this;
             }
 
