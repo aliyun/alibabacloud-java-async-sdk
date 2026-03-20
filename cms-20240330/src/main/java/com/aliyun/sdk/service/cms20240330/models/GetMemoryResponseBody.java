@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMemoryResponseBody</p>
  */
 public class GetMemoryResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("agentId")
+    private String agentId;
+
+    @com.aliyun.core.annotation.NameInMap("appId")
+    private String appId;
+
     @com.aliyun.core.annotation.NameInMap("createdAt")
     private String createdAt;
 
@@ -44,10 +50,18 @@ public class GetMemoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("runId")
+    private String runId;
+
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private String updatedAt;
 
+    @com.aliyun.core.annotation.NameInMap("userId")
+    private String userId;
+
     private GetMemoryResponseBody(Builder builder) {
+        this.agentId = builder.agentId;
+        this.appId = builder.appId;
         this.createdAt = builder.createdAt;
         this.expirationDate = builder.expirationDate;
         this.id = builder.id;
@@ -57,7 +71,9 @@ public class GetMemoryResponseBody extends TeaModel {
         this.organization = builder.organization;
         this.owner = builder.owner;
         this.requestId = builder.requestId;
+        this.runId = builder.runId;
         this.updatedAt = builder.updatedAt;
+        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -70,6 +86,20 @@ public class GetMemoryResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentId
+     */
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
     }
 
     /**
@@ -136,13 +166,29 @@ public class GetMemoryResponseBody extends TeaModel {
     }
 
     /**
+     * @return runId
+     */
+    public String getRunId() {
+        return this.runId;
+    }
+
+    /**
      * @return updatedAt
      */
     public String getUpdatedAt() {
         return this.updatedAt;
     }
 
+    /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
     public static final class Builder {
+        private String agentId; 
+        private String appId; 
         private String createdAt; 
         private String expirationDate; 
         private String id; 
@@ -152,12 +198,16 @@ public class GetMemoryResponseBody extends TeaModel {
         private String organization; 
         private String owner; 
         private String requestId; 
+        private String runId; 
         private String updatedAt; 
+        private String userId; 
 
         private Builder() {
         } 
 
         private Builder(GetMemoryResponseBody model) {
+            this.agentId = model.agentId;
+            this.appId = model.appId;
             this.createdAt = model.createdAt;
             this.expirationDate = model.expirationDate;
             this.id = model.id;
@@ -167,8 +217,26 @@ public class GetMemoryResponseBody extends TeaModel {
             this.organization = model.organization;
             this.owner = model.owner;
             this.requestId = model.requestId;
+            this.runId = model.runId;
             this.updatedAt = model.updatedAt;
+            this.userId = model.userId;
         } 
+
+        /**
+         * agentId.
+         */
+        public Builder agentId(String agentId) {
+            this.agentId = agentId;
+            return this;
+        }
+
+        /**
+         * appId.
+         */
+        public Builder appId(String appId) {
+            this.appId = appId;
+            return this;
+        }
 
         /**
          * createdAt.
@@ -243,10 +311,26 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
+         * runId.
+         */
+        public Builder runId(String runId) {
+            this.runId = runId;
+            return this;
+        }
+
+        /**
          * updatedAt.
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
+            return this;
+        }
+
+        /**
+         * userId.
+         */
+        public Builder userId(String userId) {
+            this.userId = userId;
             return this;
         }
 

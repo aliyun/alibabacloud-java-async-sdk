@@ -60,6 +60,10 @@ public class AddMemoriesRequest extends Request {
     private String runId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("timestamp")
+    private Long timestamp;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
 
@@ -75,6 +79,7 @@ public class AddMemoriesRequest extends Request {
         this.messages = builder.messages;
         this.metadata = builder.metadata;
         this.runId = builder.runId;
+        this.timestamp = builder.timestamp;
         this.userId = builder.userId;
     }
 
@@ -162,6 +167,13 @@ public class AddMemoriesRequest extends Request {
     }
 
     /**
+     * @return timestamp
+     */
+    public Long getTimestamp() {
+        return this.timestamp;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -179,6 +191,7 @@ public class AddMemoriesRequest extends Request {
         private java.util.List<Messages> messages; 
         private java.util.Map<String, ?> metadata; 
         private String runId; 
+        private Long timestamp; 
         private String userId; 
 
         private Builder() {
@@ -197,6 +210,7 @@ public class AddMemoriesRequest extends Request {
             this.messages = request.messages;
             this.metadata = request.metadata;
             this.runId = request.runId;
+            this.timestamp = request.timestamp;
             this.userId = request.userId;
         } 
 
@@ -293,6 +307,15 @@ public class AddMemoriesRequest extends Request {
         public Builder runId(String runId) {
             this.putBodyParameter("runId", runId);
             this.runId = runId;
+            return this;
+        }
+
+        /**
+         * timestamp.
+         */
+        public Builder timestamp(Long timestamp) {
+            this.putBodyParameter("timestamp", timestamp);
+            this.timestamp = timestamp;
             return this;
         }
 

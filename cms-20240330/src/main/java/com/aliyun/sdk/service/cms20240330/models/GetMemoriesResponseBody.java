@@ -218,6 +218,9 @@ public class GetMemoriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agentId")
         private String agentId;
 
+        @com.aliyun.core.annotation.NameInMap("appId")
+        private String appId;
+
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
@@ -251,6 +254,7 @@ public class GetMemoriesResponseBody extends TeaModel {
         private Results(Builder builder) {
             this.actorId = builder.actorId;
             this.agentId = builder.agentId;
+            this.appId = builder.appId;
             this.createdAt = builder.createdAt;
             this.hash = builder.hash;
             this.id = builder.id;
@@ -283,6 +287,13 @@ public class GetMemoriesResponseBody extends TeaModel {
          */
         public String getAgentId() {
             return this.agentId;
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
         }
 
         /**
@@ -358,6 +369,7 @@ public class GetMemoriesResponseBody extends TeaModel {
         public static final class Builder {
             private String actorId; 
             private String agentId; 
+            private String appId; 
             private String createdAt; 
             private String hash; 
             private String id; 
@@ -375,6 +387,7 @@ public class GetMemoriesResponseBody extends TeaModel {
             private Builder(Results model) {
                 this.actorId = model.actorId;
                 this.agentId = model.agentId;
+                this.appId = model.appId;
                 this.createdAt = model.createdAt;
                 this.hash = model.hash;
                 this.id = model.id;
@@ -400,6 +413,14 @@ public class GetMemoriesResponseBody extends TeaModel {
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
+                return this;
+            }
+
+            /**
+             * appId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
                 return this;
             }
 
