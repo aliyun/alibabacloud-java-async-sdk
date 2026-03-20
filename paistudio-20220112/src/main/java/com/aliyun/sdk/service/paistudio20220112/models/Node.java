@@ -60,7 +60,11 @@ public class Node extends TeaModel {
     private String GPUType;
 
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
+    @Deprecated
     private String gmtCreateTime;
+
+    @com.aliyun.core.annotation.NameInMap("GmtCreatedTime")
+    private String gmtCreatedTime;
 
     @com.aliyun.core.annotation.NameInMap("GmtExpiredTime")
     private String gmtExpiredTime;
@@ -159,6 +163,7 @@ public class Node extends TeaModel {
         this.GPUMemory = builder.GPUMemory;
         this.GPUType = builder.GPUType;
         this.gmtCreateTime = builder.gmtCreateTime;
+        this.gmtCreatedTime = builder.gmtCreatedTime;
         this.gmtExpiredTime = builder.gmtExpiredTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.hyperZone = builder.hyperZone;
@@ -303,6 +308,13 @@ public class Node extends TeaModel {
      */
     public String getGmtCreateTime() {
         return this.gmtCreateTime;
+    }
+
+    /**
+     * @return gmtCreatedTime
+     */
+    public String getGmtCreatedTime() {
+        return this.gmtCreatedTime;
     }
 
     /**
@@ -510,6 +522,7 @@ public class Node extends TeaModel {
         private String GPUMemory; 
         private String GPUType; 
         private String gmtCreateTime; 
+        private String gmtCreatedTime; 
         private String gmtExpiredTime; 
         private String gmtModifiedTime; 
         private String hyperZone; 
@@ -557,6 +570,7 @@ public class Node extends TeaModel {
             this.GPUMemory = model.GPUMemory;
             this.GPUType = model.GPUType;
             this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtCreatedTime = model.gmtCreatedTime;
             this.gmtExpiredTime = model.gmtExpiredTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.hyperZone = model.hyperZone;
@@ -703,6 +717,14 @@ public class Node extends TeaModel {
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
+            return this;
+        }
+
+        /**
+         * GmtCreatedTime.
+         */
+        public Builder gmtCreatedTime(String gmtCreatedTime) {
+            this.gmtCreatedTime = gmtCreatedTime;
             return this;
         }
 
