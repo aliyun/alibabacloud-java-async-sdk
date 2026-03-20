@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBInstanceSpecRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocateStrategy")
+    private String allocateStrategy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AllowMajorVersionUpgrade")
     private Boolean allowMajorVersionUpgrade;
 
@@ -148,6 +152,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
     private ModifyDBInstanceSpecRequest(Builder builder) {
         super(builder);
+        this.allocateStrategy = builder.allocateStrategy;
         this.allowMajorVersionUpgrade = builder.allowMajorVersionUpgrade;
         this.autoUseCoupon = builder.autoUseCoupon;
         this.burstingEnabled = builder.burstingEnabled;
@@ -193,6 +198,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allocateStrategy
+     */
+    public String getAllocateStrategy() {
+        return this.allocateStrategy;
     }
 
     /**
@@ -420,6 +432,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceSpecRequest, Builder> {
+        private String allocateStrategy; 
         private Boolean allowMajorVersionUpgrade; 
         private Boolean autoUseCoupon; 
         private Boolean burstingEnabled; 
@@ -459,6 +472,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
         private Builder(ModifyDBInstanceSpecRequest request) {
             super(request);
+            this.allocateStrategy = request.allocateStrategy;
             this.allowMajorVersionUpgrade = request.allowMajorVersionUpgrade;
             this.autoUseCoupon = request.autoUseCoupon;
             this.burstingEnabled = request.burstingEnabled;
@@ -492,6 +506,15 @@ public class ModifyDBInstanceSpecRequest extends Request {
             this.zoneId = request.zoneId;
             this.zoneIdSlave1 = request.zoneIdSlave1;
         } 
+
+        /**
+         * AllocateStrategy.
+         */
+        public Builder allocateStrategy(String allocateStrategy) {
+            this.putQueryParameter("AllocateStrategy", allocateStrategy);
+            this.allocateStrategy = allocateStrategy;
+            return this;
+        }
 
         /**
          * <p>Specifies whether to upgrade the major engine version of an ApsaraDB RDS for SQL Server instance. For more information, see <a href="https://help.aliyun.com/document_detail/127458.html">Upgrade the major engine version</a>. Valid values:</p>

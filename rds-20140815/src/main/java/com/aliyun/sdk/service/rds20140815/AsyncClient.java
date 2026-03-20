@@ -160,6 +160,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachWhitelistTemplateToInstanceResponse> attachWhitelistTemplateToInstance(AttachWhitelistTemplateToInstanceRequest request);
 
     /**
+     * @param request the request parameters of AuthorizeBackupEncryption  AuthorizeBackupEncryptionRequest
+     * @return AuthorizeBackupEncryptionResponse
+     */
+    CompletableFuture<AuthorizeBackupEncryptionResponse> authorizeBackupEncryption(AuthorizeBackupEncryptionRequest request);
+
+    /**
      * @param request the request parameters of AuthorizeRCSecurityGroupPermission  AuthorizeRCSecurityGroupPermissionRequest
      * @return AuthorizeRCSecurityGroupPermissionResponse
      */
@@ -239,6 +245,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckAccountNameAvailableResponse> checkAccountNameAvailable(CheckAccountNameAvailableRequest request);
 
     /**
+     * @param request the request parameters of CheckBackupEncryptionAuthorized  CheckBackupEncryptionAuthorizedRequest
+     * @return CheckBackupEncryptionAuthorizedResponse
+     */
+    CompletableFuture<CheckBackupEncryptionAuthorizedResponse> checkBackupEncryptionAuthorized(CheckBackupEncryptionAuthorizedRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -305,6 +317,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CheckRdsCustomInitResponse
      */
     CompletableFuture<CheckRdsCustomInitResponse> checkRdsCustomInit(CheckRdsCustomInitRequest request);
+
+    /**
+     * @param request the request parameters of CheckRegionSupportBackupEncryption  CheckRegionSupportBackupEncryptionRequest
+     * @return CheckRegionSupportBackupEncryptionResponse
+     */
+    CompletableFuture<CheckRegionSupportBackupEncryptionResponse> checkRegionSupportBackupEncryption(CheckRegionSupportBackupEncryptionRequest request);
 
     /**
      * <b>description</b> :
@@ -3369,6 +3387,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request);
 
     /**
+     * @param request the request parameters of DescribeVpcs  DescribeVpcsRequest
+     * @return DescribeVpcsResponse
+     */
+    CompletableFuture<DescribeVpcsResponse> describeVpcs(DescribeVpcsRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
@@ -3438,6 +3462,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DetachWhitelistTemplateToInstanceResponse
      */
     CompletableFuture<DetachWhitelistTemplateToInstanceResponse> detachWhitelistTemplateToInstance(DetachWhitelistTemplateToInstanceRequest request);
+
+    /**
+     * @param request the request parameters of EnableBackupEncryption  EnableBackupEncryptionRequest
+     * @return EnableBackupEncryptionResponse
+     */
+    CompletableFuture<EnableBackupEncryptionResponse> enableBackupEncryption(EnableBackupEncryptionRequest request);
 
     /**
      * @param request the request parameters of EvaluateLocalExtendDisk  EvaluateLocalExtendDiskRequest
@@ -4620,6 +4650,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyParameterTimedScheduleTaskResponse
      */
     CompletableFuture<ModifyParameterTimedScheduleTaskResponse> modifyParameterTimedScheduleTask(ModifyParameterTimedScheduleTaskRequest request);
+
+    /**
+     * @param request the request parameters of ModifyRCDeploymentSetAttribute  ModifyRCDeploymentSetAttributeRequest
+     * @return ModifyRCDeploymentSetAttributeResponse
+     */
+    CompletableFuture<ModifyRCDeploymentSetAttributeResponse> modifyRCDeploymentSetAttribute(ModifyRCDeploymentSetAttributeRequest request);
 
     /**
      * @param request the request parameters of ModifyRCDiskAttribute  ModifyRCDiskAttributeRequest

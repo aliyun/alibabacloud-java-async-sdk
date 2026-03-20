@@ -112,6 +112,10 @@ public class RunRCInstancesRequest extends Request {
     private String keyPairName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkOptions")
+    private NetworkOptions networkOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
@@ -218,6 +222,7 @@ public class RunRCInstancesRequest extends Request {
         this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
         this.ioOptimized = builder.ioOptimized;
         this.keyPairName = builder.keyPairName;
+        this.networkOptions = builder.networkOptions;
         this.password = builder.password;
         this.passwordInherit = builder.passwordInherit;
         this.period = builder.period;
@@ -415,6 +420,13 @@ public class RunRCInstancesRequest extends Request {
     }
 
     /**
+     * @return networkOptions
+     */
+    public NetworkOptions getNetworkOptions() {
+        return this.networkOptions;
+    }
+
+    /**
      * @return password
      */
     public String getPassword() {
@@ -578,6 +590,7 @@ public class RunRCInstancesRequest extends Request {
         private Integer internetMaxBandwidthOut; 
         private String ioOptimized; 
         private String keyPairName; 
+        private NetworkOptions networkOptions; 
         private String password; 
         private Boolean passwordInherit; 
         private Integer period; 
@@ -628,6 +641,7 @@ public class RunRCInstancesRequest extends Request {
             this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
             this.ioOptimized = request.ioOptimized;
             this.keyPairName = request.keyPairName;
+            this.networkOptions = request.networkOptions;
             this.password = request.password;
             this.passwordInherit = request.passwordInherit;
             this.period = request.period;
@@ -918,6 +932,16 @@ public class RunRCInstancesRequest extends Request {
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
             this.keyPairName = keyPairName;
+            return this;
+        }
+
+        /**
+         * NetworkOptions.
+         */
+        public Builder networkOptions(NetworkOptions networkOptions) {
+            String networkOptionsShrink = shrink(networkOptions, "NetworkOptions", "json");
+            this.putQueryParameter("NetworkOptions", networkOptionsShrink);
+            this.networkOptions = networkOptions;
             return this;
         }
 
@@ -1418,6 +1442,60 @@ public class RunRCInstancesRequest extends Request {
 
             public DataDisk build() {
                 return new DataDisk(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunRCInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunRCInstancesRequest</p>
+     */
+    public static class NetworkOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableJumboFrame")
+        private Boolean enableJumboFrame;
+
+        private NetworkOptions(Builder builder) {
+            this.enableJumboFrame = builder.enableJumboFrame;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableJumboFrame
+         */
+        public Boolean getEnableJumboFrame() {
+            return this.enableJumboFrame;
+        }
+
+        public static final class Builder {
+            private Boolean enableJumboFrame; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkOptions model) {
+                this.enableJumboFrame = model.enableJumboFrame;
+            } 
+
+            /**
+             * EnableJumboFrame.
+             */
+            public Builder enableJumboFrame(Boolean enableJumboFrame) {
+                this.enableJumboFrame = enableJumboFrame;
+                return this;
+            }
+
+            public NetworkOptions build() {
+                return new NetworkOptions(this);
             } 
 
         } 

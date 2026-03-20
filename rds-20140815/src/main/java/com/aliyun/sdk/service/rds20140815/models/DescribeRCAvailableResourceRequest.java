@@ -299,6 +299,9 @@ public class DescribeRCAvailableResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceType</p>
          */
         public Builder destinationResource(String destinationResource) {
             this.putQueryParameter("DestinationResource", destinationResource);

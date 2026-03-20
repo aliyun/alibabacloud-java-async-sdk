@@ -110,6 +110,9 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceTypeId")
         private String instanceTypeId;
 
+        @com.aliyun.core.annotation.NameInMap("JumboFrameSupport")
+        private Boolean jumboFrameSupport;
+
         @com.aliyun.core.annotation.NameInMap("MemorySize")
         private Integer memorySize;
 
@@ -118,6 +121,7 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
             this.diskQuantity = builder.diskQuantity;
             this.instanceTypeFamily = builder.instanceTypeFamily;
             this.instanceTypeId = builder.instanceTypeId;
+            this.jumboFrameSupport = builder.jumboFrameSupport;
             this.memorySize = builder.memorySize;
         }
 
@@ -158,6 +162,13 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return jumboFrameSupport
+         */
+        public Boolean getJumboFrameSupport() {
+            return this.jumboFrameSupport;
+        }
+
+        /**
          * @return memorySize
          */
         public Integer getMemorySize() {
@@ -169,6 +180,7 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
             private Long diskQuantity; 
             private String instanceTypeFamily; 
             private String instanceTypeId; 
+            private Boolean jumboFrameSupport; 
             private Integer memorySize; 
 
             private Builder() {
@@ -179,6 +191,7 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
                 this.diskQuantity = model.diskQuantity;
                 this.instanceTypeFamily = model.instanceTypeFamily;
                 this.instanceTypeId = model.instanceTypeId;
+                this.jumboFrameSupport = model.jumboFrameSupport;
                 this.memorySize = model.memorySize;
             } 
 
@@ -220,6 +233,14 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;
+                return this;
+            }
+
+            /**
+             * JumboFrameSupport.
+             */
+            public Builder jumboFrameSupport(Boolean jumboFrameSupport) {
+                this.jumboFrameSupport = jumboFrameSupport;
                 return this;
             }
 

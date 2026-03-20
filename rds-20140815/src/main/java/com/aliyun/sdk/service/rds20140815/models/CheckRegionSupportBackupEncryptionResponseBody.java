@@ -1,0 +1,91 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.rds20140815.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link CheckRegionSupportBackupEncryptionResponseBody} extends {@link TeaModel}
+ *
+ * <p>CheckRegionSupportBackupEncryptionResponseBody</p>
+ */
+public class CheckRegionSupportBackupEncryptionResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("SupportBackupEncryption")
+    private Boolean supportBackupEncryption;
+
+    private CheckRegionSupportBackupEncryptionResponseBody(Builder builder) {
+        this.requestId = builder.requestId;
+        this.supportBackupEncryption = builder.supportBackupEncryption;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CheckRegionSupportBackupEncryptionResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return supportBackupEncryption
+     */
+    public Boolean getSupportBackupEncryption() {
+        return this.supportBackupEncryption;
+    }
+
+    public static final class Builder {
+        private String requestId; 
+        private Boolean supportBackupEncryption; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckRegionSupportBackupEncryptionResponseBody model) {
+            this.requestId = model.requestId;
+            this.supportBackupEncryption = model.supportBackupEncryption;
+        } 
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SupportBackupEncryption.
+         */
+        public Builder supportBackupEncryption(Boolean supportBackupEncryption) {
+            this.supportBackupEncryption = supportBackupEncryption;
+            return this;
+        }
+
+        public CheckRegionSupportBackupEncryptionResponseBody build() {
+            return new CheckRegionSupportBackupEncryptionResponseBody(this);
+        } 
+
+    } 
+
+}

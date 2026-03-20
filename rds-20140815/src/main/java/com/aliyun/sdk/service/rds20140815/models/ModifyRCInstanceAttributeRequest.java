@@ -22,6 +22,10 @@ public class ModifyRCInstanceAttributeRequest extends Request {
     private Boolean deletionProtection;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableJumboFrame")
+    private Boolean enableJumboFrame;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
@@ -60,6 +64,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
     private ModifyRCInstanceAttributeRequest(Builder builder) {
         super(builder);
         this.deletionProtection = builder.deletionProtection;
+        this.enableJumboFrame = builder.enableJumboFrame;
         this.hostName = builder.hostName;
         this.instanceId = builder.instanceId;
         this.instanceIds = builder.instanceIds;
@@ -89,6 +94,13 @@ public class ModifyRCInstanceAttributeRequest extends Request {
      */
     public Boolean getDeletionProtection() {
         return this.deletionProtection;
+    }
+
+    /**
+     * @return enableJumboFrame
+     */
+    public Boolean getEnableJumboFrame() {
+        return this.enableJumboFrame;
     }
 
     /**
@@ -156,6 +168,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyRCInstanceAttributeRequest, Builder> {
         private Boolean deletionProtection; 
+        private Boolean enableJumboFrame; 
         private String hostName; 
         private String instanceId; 
         private java.util.List<String> instanceIds; 
@@ -173,6 +186,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         private Builder(ModifyRCInstanceAttributeRequest request) {
             super(request);
             this.deletionProtection = request.deletionProtection;
+            this.enableJumboFrame = request.enableJumboFrame;
             this.hostName = request.hostName;
             this.instanceId = request.instanceId;
             this.instanceIds = request.instanceIds;
@@ -197,6 +211,15 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
             this.deletionProtection = deletionProtection;
+            return this;
+        }
+
+        /**
+         * EnableJumboFrame.
+         */
+        public Builder enableJumboFrame(Boolean enableJumboFrame) {
+            this.putQueryParameter("EnableJumboFrame", enableJumboFrame);
+            this.enableJumboFrame = enableJumboFrame;
             return this;
         }
 
