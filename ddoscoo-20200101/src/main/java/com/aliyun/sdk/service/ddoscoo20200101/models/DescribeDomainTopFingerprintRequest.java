@@ -37,6 +37,10 @@ public class DescribeDomainTopFingerprintRequest extends Request {
     private Long limit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
+    private String queryType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Region")
     @com.aliyun.core.annotation.Validation(required = true)
     private String region;
@@ -52,6 +56,7 @@ public class DescribeDomainTopFingerprintRequest extends Request {
         this.endTime = builder.endTime;
         this.interval = builder.interval;
         this.limit = builder.limit;
+        this.queryType = builder.queryType;
         this.region = builder.region;
         this.startTime = builder.startTime;
     }
@@ -98,6 +103,13 @@ public class DescribeDomainTopFingerprintRequest extends Request {
     }
 
     /**
+     * @return queryType
+     */
+    public String getQueryType() {
+        return this.queryType;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -116,6 +128,7 @@ public class DescribeDomainTopFingerprintRequest extends Request {
         private Long endTime; 
         private Long interval; 
         private Long limit; 
+        private String queryType; 
         private String region; 
         private Long startTime; 
 
@@ -129,6 +142,7 @@ public class DescribeDomainTopFingerprintRequest extends Request {
             this.endTime = request.endTime;
             this.interval = request.interval;
             this.limit = request.limit;
+            this.queryType = request.queryType;
             this.region = request.region;
             this.startTime = request.startTime;
         } 
@@ -187,6 +201,15 @@ public class DescribeDomainTopFingerprintRequest extends Request {
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
             this.limit = limit;
+            return this;
+        }
+
+        /**
+         * QueryType.
+         */
+        public Builder queryType(String queryType) {
+            this.putQueryParameter("QueryType", queryType);
+            this.queryType = queryType;
             return this;
         }
 

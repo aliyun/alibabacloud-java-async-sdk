@@ -119,6 +119,9 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status4")
         private Long status4;
 
+        @com.aliyun.core.annotation.NameInMap("Status410Pv")
+        private Long status410Pv;
+
         @com.aliyun.core.annotation.NameInMap("Status5")
         private Long status5;
 
@@ -133,6 +136,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             this.status2 = builder.status2;
             this.status3 = builder.status3;
             this.status4 = builder.status4;
+            this.status410Pv = builder.status410Pv;
             this.status5 = builder.status5;
             this.ups = builder.ups;
         }
@@ -195,6 +199,13 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
         }
 
         /**
+         * @return status410Pv
+         */
+        public Long getStatus410Pv() {
+            return this.status410Pv;
+        }
+
+        /**
          * @return status5
          */
         public Long getStatus5() {
@@ -216,6 +227,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             private Long status2; 
             private Long status3; 
             private Long status4; 
+            private Long status410Pv; 
             private Long status5; 
             private Long ups; 
 
@@ -230,6 +242,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
                 this.status2 = model.status2;
                 this.status3 = model.status3;
                 this.status4 = model.status4;
+                this.status410Pv = model.status410Pv;
                 this.status5 = model.status5;
                 this.ups = model.ups;
             } 
@@ -308,6 +321,14 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
              */
             public Builder status4(Long status4) {
                 this.status4 = status4;
+                return this;
+            }
+
+            /**
+             * Status410Pv.
+             */
+            public Builder status410Pv(Long status410Pv) {
+                this.status410Pv = status410Pv;
                 return this;
             }
 

@@ -35,6 +35,10 @@ public class DescribeDomainH2FingerprintRequest extends Request {
     private Long limit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
+    private String queryType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
@@ -45,6 +49,7 @@ public class DescribeDomainH2FingerprintRequest extends Request {
         this.domain = builder.domain;
         this.endTime = builder.endTime;
         this.limit = builder.limit;
+        this.queryType = builder.queryType;
         this.startTime = builder.startTime;
     }
 
@@ -90,6 +95,13 @@ public class DescribeDomainH2FingerprintRequest extends Request {
     }
 
     /**
+     * @return queryType
+     */
+    public String getQueryType() {
+        return this.queryType;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -101,6 +113,7 @@ public class DescribeDomainH2FingerprintRequest extends Request {
         private String domain; 
         private Long endTime; 
         private Long limit; 
+        private String queryType; 
         private Long startTime; 
 
         private Builder() {
@@ -113,6 +126,7 @@ public class DescribeDomainH2FingerprintRequest extends Request {
             this.domain = request.domain;
             this.endTime = request.endTime;
             this.limit = request.limit;
+            this.queryType = request.queryType;
             this.startTime = request.startTime;
         } 
 
@@ -165,6 +179,15 @@ public class DescribeDomainH2FingerprintRequest extends Request {
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
             this.limit = limit;
+            return this;
+        }
+
+        /**
+         * QueryType.
+         */
+        public Builder queryType(String queryType) {
+            this.putQueryParameter("QueryType", queryType);
+            this.queryType = queryType;
             return this;
         }
 
