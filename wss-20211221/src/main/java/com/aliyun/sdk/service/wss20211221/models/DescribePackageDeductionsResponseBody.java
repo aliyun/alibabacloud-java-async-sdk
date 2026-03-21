@@ -38,6 +38,9 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TotalUsedTime")
     private Long totalUsedTime;
 
+    @com.aliyun.core.annotation.NameInMap("TotalUsedTimeDecimal")
+    private String totalUsedTimeDecimal;
+
     private DescribePackageDeductionsResponseBody(Builder builder) {
         this.deductions = builder.deductions;
         this.pageNum = builder.pageNum;
@@ -46,6 +49,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         this.totalCount = builder.totalCount;
         this.totalUsedCoreTime = builder.totalUsedCoreTime;
         this.totalUsedTime = builder.totalUsedTime;
+        this.totalUsedTimeDecimal = builder.totalUsedTimeDecimal;
     }
 
     public static Builder builder() {
@@ -109,6 +113,13 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         return this.totalUsedTime;
     }
 
+    /**
+     * @return totalUsedTimeDecimal
+     */
+    public String getTotalUsedTimeDecimal() {
+        return this.totalUsedTimeDecimal;
+    }
+
     public static final class Builder {
         private java.util.List<Deductions> deductions; 
         private Integer pageNum; 
@@ -117,6 +128,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         private Long totalCount; 
         private Float totalUsedCoreTime; 
         private Long totalUsedTime; 
+        private String totalUsedTimeDecimal; 
 
         private Builder() {
         } 
@@ -129,6 +141,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             this.totalCount = model.totalCount;
             this.totalUsedCoreTime = model.totalUsedCoreTime;
             this.totalUsedTime = model.totalUsedTime;
+            this.totalUsedTimeDecimal = model.totalUsedTimeDecimal;
         } 
 
         /**
@@ -184,6 +197,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
          */
         public Builder totalUsedTime(Long totalUsedTime) {
             this.totalUsedTime = totalUsedTime;
+            return this;
+        }
+
+        /**
+         * TotalUsedTimeDecimal.
+         */
+        public Builder totalUsedTimeDecimal(String totalUsedTimeDecimal) {
+            this.totalUsedTimeDecimal = totalUsedTimeDecimal;
             return this;
         }
 
@@ -251,6 +272,9 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsedTime")
         private Long usedTime;
 
+        @com.aliyun.core.annotation.NameInMap("UsedTimeDecimal")
+        private String usedTimeDecimal;
+
         @com.aliyun.core.annotation.NameInMap("UsedTimeWithScale")
         private Long usedTimeWithScale;
 
@@ -272,6 +296,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             this.staTime = builder.staTime;
             this.usedCoreTime = builder.usedCoreTime;
             this.usedTime = builder.usedTime;
+            this.usedTimeDecimal = builder.usedTimeDecimal;
             this.usedTimeWithScale = builder.usedTimeWithScale;
         }
 
@@ -403,6 +428,13 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return usedTimeDecimal
+         */
+        public String getUsedTimeDecimal() {
+            return this.usedTimeDecimal;
+        }
+
+        /**
          * @return usedTimeWithScale
          */
         public Long getUsedTimeWithScale() {
@@ -427,6 +459,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             private String staTime; 
             private Float usedCoreTime; 
             private Long usedTime; 
+            private String usedTimeDecimal; 
             private Long usedTimeWithScale; 
 
             private Builder() {
@@ -450,6 +483,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
                 this.staTime = model.staTime;
                 this.usedCoreTime = model.usedCoreTime;
                 this.usedTime = model.usedTime;
+                this.usedTimeDecimal = model.usedTimeDecimal;
                 this.usedTimeWithScale = model.usedTimeWithScale;
             } 
 
@@ -586,6 +620,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
              */
             public Builder usedTime(Long usedTime) {
                 this.usedTime = usedTime;
+                return this;
+            }
+
+            /**
+             * UsedTimeDecimal.
+             */
+            public Builder usedTimeDecimal(String usedTimeDecimal) {
+                this.usedTimeDecimal = usedTimeDecimal;
                 return this;
             }
 
