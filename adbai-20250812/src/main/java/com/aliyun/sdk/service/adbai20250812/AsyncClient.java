@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEmbodiedAIPlatformResponse> createEmbodiedAIPlatform(CreateEmbodiedAIPlatformRequest request);
 
     /**
+     * @param request the request parameters of DeleteAgentPlatform  DeleteAgentPlatformRequest
+     * @return DeleteAgentPlatformResponse
+     */
+    CompletableFuture<DeleteAgentPlatformResponse> deleteAgentPlatform(DeleteAgentPlatformRequest request);
+
+    /**
      * @param request the request parameters of DeleteEmbodiedAIPlatform  DeleteEmbodiedAIPlatformRequest
      * @return DeleteEmbodiedAIPlatformResponse
      */
