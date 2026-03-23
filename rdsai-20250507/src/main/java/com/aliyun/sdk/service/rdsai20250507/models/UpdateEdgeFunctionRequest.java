@@ -27,7 +27,7 @@ public class UpdateEdgeFunctionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomConfig")
-    private java.util.Map<String, ?> customConfig;
+    private java.util.Map<String, String> customConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EdgeFunctionName")
@@ -87,7 +87,7 @@ public class UpdateEdgeFunctionRequest extends Request {
     /**
      * @return customConfig
      */
-    public java.util.Map<String, ?> getCustomConfig() {
+    public java.util.Map<String, String> getCustomConfig() {
         return this.customConfig;
     }
 
@@ -122,7 +122,7 @@ public class UpdateEdgeFunctionRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateEdgeFunctionRequest, Builder> {
         private String clientToken; 
         private Code code; 
-        private java.util.Map<String, ?> customConfig; 
+        private java.util.Map<String, String> customConfig; 
         private String edgeFunctionName; 
         private java.util.Map<String, String> envs; 
         private String instanceName; 
@@ -144,7 +144,10 @@ public class UpdateEdgeFunctionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -153,7 +156,7 @@ public class UpdateEdgeFunctionRequest extends Request {
         }
 
         /**
-         * Code.
+         * <p>The error code that is returned if the request failed. For more information, see the &quot;Error codes&quot; section of the topic.</p>
          */
         public Builder code(Code code) {
             String codeShrink = shrink(code, "Code", "json");
@@ -163,9 +166,12 @@ public class UpdateEdgeFunctionRequest extends Request {
         }
 
         /**
-         * CustomConfig.
+         * <p>The configuration parameters of the edge function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
-        public Builder customConfig(java.util.Map<String, ?> customConfig) {
+        public Builder customConfig(java.util.Map<String, String> customConfig) {
             String customConfigShrink = shrink(customConfig, "CustomConfig", "json");
             this.putQueryParameter("CustomConfig", customConfigShrink);
             this.customConfig = customConfig;
@@ -173,7 +179,7 @@ public class UpdateEdgeFunctionRequest extends Request {
         }
 
         /**
-         * <p>fc-xxxx。</p>
+         * <p>fc-xxxx</p>
          * 
          * <strong>example:</strong>
          * <p>ef-****</p>
@@ -185,7 +191,7 @@ public class UpdateEdgeFunctionRequest extends Request {
         }
 
         /**
-         * Envs.
+         * <p>The environment variables of the edge function.</p>
          */
         public Builder envs(java.util.Map<String, String> envs) {
             String envsShrink = shrink(envs, "Envs", "json");
@@ -195,6 +201,7 @@ public class UpdateEdgeFunctionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the RDS Supabase instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +214,10 @@ public class UpdateEdgeFunctionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -229,6 +239,9 @@ public class UpdateEdgeFunctionRequest extends Request {
      * <p>UpdateEdgeFunctionRequest</p>
      */
     public static class Code extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
+        private String downloadUrl;
+
         @com.aliyun.core.annotation.NameInMap("OssBucketName")
         private String ossBucketName;
 
@@ -239,6 +252,7 @@ public class UpdateEdgeFunctionRequest extends Request {
         private String ossType;
 
         private Code(Builder builder) {
+            this.downloadUrl = builder.downloadUrl;
             this.ossBucketName = builder.ossBucketName;
             this.ossObjectName = builder.ossObjectName;
             this.ossType = builder.ossType;
@@ -250,6 +264,13 @@ public class UpdateEdgeFunctionRequest extends Request {
 
         public static Code create() {
             return builder().build();
+        }
+
+        /**
+         * @return downloadUrl
+         */
+        public String getDownloadUrl() {
+            return this.downloadUrl;
         }
 
         /**
@@ -274,6 +295,7 @@ public class UpdateEdgeFunctionRequest extends Request {
         }
 
         public static final class Builder {
+            private String downloadUrl; 
             private String ossBucketName; 
             private String ossObjectName; 
             private String ossType; 
@@ -282,13 +304,25 @@ public class UpdateEdgeFunctionRequest extends Request {
             } 
 
             private Builder(Code model) {
+                this.downloadUrl = model.downloadUrl;
                 this.ossBucketName = model.ossBucketName;
                 this.ossObjectName = model.ossObjectName;
                 this.ossType = model.ossType;
             } 
 
             /**
-             * OssBucketName.
+             * DownloadUrl.
+             */
+            public Builder downloadUrl(String downloadUrl) {
+                this.downloadUrl = downloadUrl;
+                return this;
+            }
+
+            /**
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code</p>
              */
             public Builder ossBucketName(String ossBucketName) {
                 this.ossBucketName = ossBucketName;
@@ -296,7 +330,10 @@ public class UpdateEdgeFunctionRequest extends Request {
             }
 
             /**
-             * OssObjectName.
+             * <p>The path of the code file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example2.zip</p>
              */
             public Builder ossObjectName(String ossObjectName) {
                 this.ossObjectName = ossObjectName;
@@ -304,7 +341,10 @@ public class UpdateEdgeFunctionRequest extends Request {
             }
 
             /**
-             * OssType.
+             * <p>The storage class of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>supabase</p>
              */
             public Builder ossType(String ossType) {
                 this.ossType = ossType;

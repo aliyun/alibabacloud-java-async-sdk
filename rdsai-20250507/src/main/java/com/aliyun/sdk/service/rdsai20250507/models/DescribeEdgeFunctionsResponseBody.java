@@ -80,7 +80,7 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
         } 
 
         /**
-         * EdgeFunctions.
+         * <p>The list of edge functions.</p>
          */
         public Builder edgeFunctions(java.util.List<EdgeFunctions> edgeFunctions) {
             this.edgeFunctions = edgeFunctions;
@@ -88,7 +88,10 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The ID of the RDS Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -269,7 +272,10 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of vCPUs used by the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -277,7 +283,10 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the function was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-12T21:35:03</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -285,7 +294,10 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * EdgeFunctionName.
+             * <p>The edge function name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ef-****</p>
              */
             public Builder edgeFunctionName(String edgeFunctionName) {
                 this.edgeFunctionName = edgeFunctionName;
@@ -293,7 +305,10 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionUrl.
+             * <p>The URL for accessing the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://fcnext.console.aliyun.com/cn-beijing/functions/fc">https://fcnext.console.aliyun.com/cn-beijing/functions/fc</a>****</p>
              */
             public Builder functionUrl(String functionUrl) {
                 this.functionUrl = functionUrl;
@@ -301,7 +316,10 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * MemorySize.
+             * <p>The memory size. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512</p>
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
@@ -309,7 +327,10 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the function was last created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-25 10:22:54 +0800</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -317,7 +338,10 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * Runtime.
+             * <p>The runtime environment for the function, which includes the Linux environment and the Deno version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom.debian12-deno-2.5.6</p>
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -325,7 +349,10 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance state table</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -333,7 +360,10 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * UrlInternet.
+             * <p>The public URL for accessing the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://fc-bfvmoi****.cn-beijing.fcapp.run">https://fc-bfvmoi****.cn-beijing.fcapp.run</a></p>
              */
             public Builder urlInternet(String urlInternet) {
                 this.urlInternet = urlInternet;
@@ -341,7 +371,10 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * UrlIntranet.
+             * <p>The internal URL for accessing the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://fc-bfvmoi****.cn-beijing-vpc.fcapp.run">https://fc-bfvmoi****.cn-beijing-vpc.fcapp.run</a></p>
              */
             public Builder urlIntranet(String urlIntranet) {
                 this.urlIntranet = urlIntranet;

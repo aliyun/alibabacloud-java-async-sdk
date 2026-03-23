@@ -102,7 +102,10 @@ public class DeleteEdgeFunctionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -111,7 +114,10 @@ public class DeleteEdgeFunctionRequest extends Request {
         }
 
         /**
-         * EdgeFunctionName.
+         * <p>The name of the edge function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ef-****</p>
          */
         public Builder edgeFunctionName(String edgeFunctionName) {
             this.putQueryParameter("EdgeFunctionName", edgeFunctionName);
@@ -120,6 +126,7 @@ public class DeleteEdgeFunctionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the RDS Supabase instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +139,10 @@ public class DeleteEdgeFunctionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -80,7 +80,10 @@ public class CreateEdgeFunctionResponseBody extends TeaModel {
         } 
 
         /**
-         * EdgeFunctionName.
+         * <p>The name of the edge function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ef-****</p>
          */
         public Builder edgeFunctionName(String edgeFunctionName) {
             this.edgeFunctionName = edgeFunctionName;
@@ -88,7 +91,10 @@ public class CreateEdgeFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The ID of the RDS Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;

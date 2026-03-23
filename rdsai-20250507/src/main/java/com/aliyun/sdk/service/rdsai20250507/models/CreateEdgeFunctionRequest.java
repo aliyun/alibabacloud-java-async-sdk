@@ -144,7 +144,10 @@ public class CreateEdgeFunctionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -153,7 +156,7 @@ public class CreateEdgeFunctionRequest extends Request {
         }
 
         /**
-         * Code.
+         * <p>The code parameters.</p>
          */
         public Builder code(Code code) {
             String codeShrink = shrink(code, "Code", "json");
@@ -163,7 +166,7 @@ public class CreateEdgeFunctionRequest extends Request {
         }
 
         /**
-         * CustomConfig.
+         * <p>The configuration parameters of the edge function.</p>
          */
         public Builder customConfig(java.util.Map<String, Integer> customConfig) {
             String customConfigShrink = shrink(customConfig, "CustomConfig", "json");
@@ -173,7 +176,10 @@ public class CreateEdgeFunctionRequest extends Request {
         }
 
         /**
-         * EdgeFunctionName.
+         * <p>The name of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ef-*****</p>
          */
         public Builder edgeFunctionName(String edgeFunctionName) {
             this.putQueryParameter("EdgeFunctionName", edgeFunctionName);
@@ -182,7 +188,7 @@ public class CreateEdgeFunctionRequest extends Request {
         }
 
         /**
-         * Envs.
+         * <p>The environment variables.</p>
          */
         public Builder envs(java.util.Map<String, String> envs) {
             String envsShrink = shrink(envs, "Envs", "json");
@@ -192,6 +198,7 @@ public class CreateEdgeFunctionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the RDS Supabase instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +211,10 @@ public class CreateEdgeFunctionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -226,6 +236,9 @@ public class CreateEdgeFunctionRequest extends Request {
      * <p>CreateEdgeFunctionRequest</p>
      */
     public static class Code extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
+        private String downloadUrl;
+
         @com.aliyun.core.annotation.NameInMap("OssBucketName")
         private String ossBucketName;
 
@@ -236,6 +249,7 @@ public class CreateEdgeFunctionRequest extends Request {
         private String ossType;
 
         private Code(Builder builder) {
+            this.downloadUrl = builder.downloadUrl;
             this.ossBucketName = builder.ossBucketName;
             this.ossObjectName = builder.ossObjectName;
             this.ossType = builder.ossType;
@@ -247,6 +261,13 @@ public class CreateEdgeFunctionRequest extends Request {
 
         public static Code create() {
             return builder().build();
+        }
+
+        /**
+         * @return downloadUrl
+         */
+        public String getDownloadUrl() {
+            return this.downloadUrl;
         }
 
         /**
@@ -271,6 +292,7 @@ public class CreateEdgeFunctionRequest extends Request {
         }
 
         public static final class Builder {
+            private String downloadUrl; 
             private String ossBucketName; 
             private String ossObjectName; 
             private String ossType; 
@@ -279,13 +301,25 @@ public class CreateEdgeFunctionRequest extends Request {
             } 
 
             private Builder(Code model) {
+                this.downloadUrl = model.downloadUrl;
                 this.ossBucketName = model.ossBucketName;
                 this.ossObjectName = model.ossObjectName;
                 this.ossType = model.ossType;
             } 
 
             /**
-             * OssBucketName.
+             * DownloadUrl.
+             */
+            public Builder downloadUrl(String downloadUrl) {
+                this.downloadUrl = downloadUrl;
+                return this;
+            }
+
+            /**
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code</p>
              */
             public Builder ossBucketName(String ossBucketName) {
                 this.ossBucketName = ossBucketName;
@@ -293,7 +327,10 @@ public class CreateEdgeFunctionRequest extends Request {
             }
 
             /**
-             * OssObjectName.
+             * <p>The OSS path of a code file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.zip</p>
              */
             public Builder ossObjectName(String ossObjectName) {
                 this.ossObjectName = ossObjectName;
@@ -301,7 +338,10 @@ public class CreateEdgeFunctionRequest extends Request {
             }
 
             /**
-             * OssType.
+             * <p>The storage class of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>supabase</p>
              */
             public Builder ossType(String ossType) {
                 this.ossType = ossType;

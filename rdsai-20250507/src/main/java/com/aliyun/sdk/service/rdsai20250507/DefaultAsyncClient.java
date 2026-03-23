@@ -132,6 +132,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an edge function, compresses the code into a zip file, and uploads it to Supabase Storage.</p>
+     * 
      * @param request the request parameters of CreateEdgeFunction  CreateEdgeFunctionRequest
      * @return CreateEdgeFunctionResponse
      */
@@ -250,6 +253,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an edge function.</p>
+     * 
      * @param request the request parameters of DeleteEdgeFunction  DeleteEdgeFunctionRequest
      * @return DeleteEdgeFunctionResponse
      */
@@ -352,6 +358,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the list of edge functions or a specified edge function.</p>
+     * 
      * @param request the request parameters of DescribeEdgeFunctions  DescribeEdgeFunctionsRequest
      * @return DescribeEdgeFunctionsResponse
      */
@@ -1057,6 +1066,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates an edge function, including updating code versions, adding environment variables, and modifying configurations.</p>
+     * 
      * @param request the request parameters of UpdateEdgeFunction  UpdateEdgeFunctionRequest
      * @return UpdateEdgeFunctionResponse
      */

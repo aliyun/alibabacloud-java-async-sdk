@@ -80,7 +80,7 @@ public class UpdateEdgeFunctionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>fc-xxxx。</p>
+         * <p>fc-xxxx</p>
          * 
          * <strong>example:</strong>
          * <p>ef-****</p>
@@ -91,7 +91,10 @@ public class UpdateEdgeFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The ID of the RDS Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -99,7 +102,7 @@ public class UpdateEdgeFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
