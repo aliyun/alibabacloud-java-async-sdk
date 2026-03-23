@@ -187,6 +187,7 @@ public class CreateMaskingRulesRequest extends Request {
         } 
 
         /**
+         * <p>instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +200,10 @@ public class CreateMaskingRulesRequest extends Request {
         }
 
         /**
-         * DBName.
+         * <p>Database name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -208,7 +212,10 @@ public class CreateMaskingRulesRequest extends Request {
         }
 
         /**
-         * DefaultAlgo.
+         * <p>Name of the default encryption or masking algorithm</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aes-128-gcm</p>
          */
         public Builder defaultAlgo(String defaultAlgo) {
             this.putQueryParameter("DefaultAlgo", defaultAlgo);
@@ -217,7 +224,11 @@ public class CreateMaskingRulesRequest extends Request {
         }
 
         /**
-         * MaskingAlgo.
+         * <p>Rule algorithm. Multiple algorithms can be selected. Masking Algorithm can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, number of encrypted characters}}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;: &quot;aes-128-gcm&quot;},
+         *         {&quot;name&quot;:&quot;sm4-128-gcm&quot;}]</p>
          */
         public Builder maskingAlgo(String maskingAlgo) {
             this.putQueryParameter("MaskingAlgo", maskingAlgo);
@@ -235,7 +246,10 @@ public class CreateMaskingRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,7 +276,7 @@ public class CreateMaskingRulesRequest extends Request {
         }
 
         /**
-         * RuleConfig.
+         * <p>Rule configuration, in JSON string format, containing matching rules for databases, tables, and columns</p>
          */
         public Builder ruleConfig(RuleConfig ruleConfig) {
             String ruleConfigShrink = shrink(ruleConfig, "RuleConfig", "json");
@@ -272,6 +286,7 @@ public class CreateMaskingRulesRequest extends Request {
         }
 
         /**
+         * <p>Rule Name (only one rule name is supported per request)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -356,7 +371,7 @@ public class CreateMaskingRulesRequest extends Request {
             } 
 
             /**
-             * Columns.
+             * <p>List of columns</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -364,7 +379,7 @@ public class CreateMaskingRulesRequest extends Request {
             }
 
             /**
-             * Databases.
+             * <p>List of databases</p>
              */
             public Builder databases(java.util.List<String> databases) {
                 this.databases = databases;
@@ -372,7 +387,7 @@ public class CreateMaskingRulesRequest extends Request {
             }
 
             /**
-             * Tables.
+             * <p>List of tables</p>
              */
             public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;

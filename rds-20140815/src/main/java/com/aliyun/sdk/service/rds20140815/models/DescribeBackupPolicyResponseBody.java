@@ -17,6 +17,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupPolicyResponseBody</p>
  */
 public class DescribeBackupPolicyResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AdvancedBackupPolicyEnabled")
+    private Boolean advancedBackupPolicyEnabled;
+
+    @com.aliyun.core.annotation.NameInMap("AdvancedDataPolicies")
+    private AdvancedDataPolicies advancedDataPolicies;
+
+    @com.aliyun.core.annotation.NameInMap("AdvancedLogPolicies")
+    private AdvancedLogPolicies advancedLogPolicies;
+
     @com.aliyun.core.annotation.NameInMap("ArchiveBackupKeepCount")
     private String archiveBackupKeepCount;
 
@@ -105,6 +114,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     private Long supportsHighFrequencyBackup;
 
     private DescribeBackupPolicyResponseBody(Builder builder) {
+        this.advancedBackupPolicyEnabled = builder.advancedBackupPolicyEnabled;
+        this.advancedDataPolicies = builder.advancedDataPolicies;
+        this.advancedLogPolicies = builder.advancedLogPolicies;
         this.archiveBackupKeepCount = builder.archiveBackupKeepCount;
         this.archiveBackupKeepPolicy = builder.archiveBackupKeepPolicy;
         this.archiveBackupRetentionPeriod = builder.archiveBackupRetentionPeriod;
@@ -146,6 +158,27 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return advancedBackupPolicyEnabled
+     */
+    public Boolean getAdvancedBackupPolicyEnabled() {
+        return this.advancedBackupPolicyEnabled;
+    }
+
+    /**
+     * @return advancedDataPolicies
+     */
+    public AdvancedDataPolicies getAdvancedDataPolicies() {
+        return this.advancedDataPolicies;
+    }
+
+    /**
+     * @return advancedLogPolicies
+     */
+    public AdvancedLogPolicies getAdvancedLogPolicies() {
+        return this.advancedLogPolicies;
     }
 
     /**
@@ -352,6 +385,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean advancedBackupPolicyEnabled; 
+        private AdvancedDataPolicies advancedDataPolicies; 
+        private AdvancedLogPolicies advancedLogPolicies; 
         private String archiveBackupKeepCount; 
         private String archiveBackupKeepPolicy; 
         private String archiveBackupRetentionPeriod; 
@@ -386,6 +422,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeBackupPolicyResponseBody model) {
+            this.advancedBackupPolicyEnabled = model.advancedBackupPolicyEnabled;
+            this.advancedDataPolicies = model.advancedDataPolicies;
+            this.advancedLogPolicies = model.advancedLogPolicies;
             this.archiveBackupKeepCount = model.archiveBackupKeepCount;
             this.archiveBackupKeepPolicy = model.archiveBackupKeepPolicy;
             this.archiveBackupRetentionPeriod = model.archiveBackupRetentionPeriod;
@@ -416,6 +455,30 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             this.supportVolumeShadowCopy = model.supportVolumeShadowCopy;
             this.supportsHighFrequencyBackup = model.supportsHighFrequencyBackup;
         } 
+
+        /**
+         * AdvancedBackupPolicyEnabled.
+         */
+        public Builder advancedBackupPolicyEnabled(Boolean advancedBackupPolicyEnabled) {
+            this.advancedBackupPolicyEnabled = advancedBackupPolicyEnabled;
+            return this;
+        }
+
+        /**
+         * AdvancedDataPolicies.
+         */
+        public Builder advancedDataPolicies(AdvancedDataPolicies advancedDataPolicies) {
+            this.advancedDataPolicies = advancedDataPolicies;
+            return this;
+        }
+
+        /**
+         * AdvancedLogPolicies.
+         */
+        public Builder advancedLogPolicies(AdvancedLogPolicies advancedLogPolicies) {
+            this.advancedLogPolicies = advancedLogPolicies;
+            return this;
+        }
 
         /**
          * <p>The number of archived backup files that are retained.</p>
@@ -833,4 +896,703 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPolicyResponseBody</p>
+     */
+    public static class AdvancedDataPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActionType")
+        private String actionType;
+
+        @com.aliyun.core.annotation.NameInMap("BakType")
+        private String bakType;
+
+        @com.aliyun.core.annotation.NameInMap("DestRegion")
+        private String destRegion;
+
+        @com.aliyun.core.annotation.NameInMap("DestType")
+        private String destType;
+
+        @com.aliyun.core.annotation.NameInMap("FilterKey")
+        private String filterKey;
+
+        @com.aliyun.core.annotation.NameInMap("FilterType")
+        private String filterType;
+
+        @com.aliyun.core.annotation.NameInMap("FilterValue")
+        private String filterValue;
+
+        @com.aliyun.core.annotation.NameInMap("OnlyPreserveOneEachDay")
+        private Boolean onlyPreserveOneEachDay;
+
+        @com.aliyun.core.annotation.NameInMap("OnlyPreserveOneEachHour")
+        private Boolean onlyPreserveOneEachHour;
+
+        @com.aliyun.core.annotation.NameInMap("RetentionType")
+        private String retentionType;
+
+        @com.aliyun.core.annotation.NameInMap("RetentionValue")
+        private Integer retentionValue;
+
+        @com.aliyun.core.annotation.NameInMap("SrcRegion")
+        private String srcRegion;
+
+        @com.aliyun.core.annotation.NameInMap("SrcType")
+        private String srcType;
+
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
+        private String strategyId;
+
+        private AdvancedDataPolicy(Builder builder) {
+            this.actionType = builder.actionType;
+            this.bakType = builder.bakType;
+            this.destRegion = builder.destRegion;
+            this.destType = builder.destType;
+            this.filterKey = builder.filterKey;
+            this.filterType = builder.filterType;
+            this.filterValue = builder.filterValue;
+            this.onlyPreserveOneEachDay = builder.onlyPreserveOneEachDay;
+            this.onlyPreserveOneEachHour = builder.onlyPreserveOneEachHour;
+            this.retentionType = builder.retentionType;
+            this.retentionValue = builder.retentionValue;
+            this.srcRegion = builder.srcRegion;
+            this.srcType = builder.srcType;
+            this.strategyId = builder.strategyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdvancedDataPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return actionType
+         */
+        public String getActionType() {
+            return this.actionType;
+        }
+
+        /**
+         * @return bakType
+         */
+        public String getBakType() {
+            return this.bakType;
+        }
+
+        /**
+         * @return destRegion
+         */
+        public String getDestRegion() {
+            return this.destRegion;
+        }
+
+        /**
+         * @return destType
+         */
+        public String getDestType() {
+            return this.destType;
+        }
+
+        /**
+         * @return filterKey
+         */
+        public String getFilterKey() {
+            return this.filterKey;
+        }
+
+        /**
+         * @return filterType
+         */
+        public String getFilterType() {
+            return this.filterType;
+        }
+
+        /**
+         * @return filterValue
+         */
+        public String getFilterValue() {
+            return this.filterValue;
+        }
+
+        /**
+         * @return onlyPreserveOneEachDay
+         */
+        public Boolean getOnlyPreserveOneEachDay() {
+            return this.onlyPreserveOneEachDay;
+        }
+
+        /**
+         * @return onlyPreserveOneEachHour
+         */
+        public Boolean getOnlyPreserveOneEachHour() {
+            return this.onlyPreserveOneEachHour;
+        }
+
+        /**
+         * @return retentionType
+         */
+        public String getRetentionType() {
+            return this.retentionType;
+        }
+
+        /**
+         * @return retentionValue
+         */
+        public Integer getRetentionValue() {
+            return this.retentionValue;
+        }
+
+        /**
+         * @return srcRegion
+         */
+        public String getSrcRegion() {
+            return this.srcRegion;
+        }
+
+        /**
+         * @return srcType
+         */
+        public String getSrcType() {
+            return this.srcType;
+        }
+
+        /**
+         * @return strategyId
+         */
+        public String getStrategyId() {
+            return this.strategyId;
+        }
+
+        public static final class Builder {
+            private String actionType; 
+            private String bakType; 
+            private String destRegion; 
+            private String destType; 
+            private String filterKey; 
+            private String filterType; 
+            private String filterValue; 
+            private Boolean onlyPreserveOneEachDay; 
+            private Boolean onlyPreserveOneEachHour; 
+            private String retentionType; 
+            private Integer retentionValue; 
+            private String srcRegion; 
+            private String srcType; 
+            private String strategyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvancedDataPolicy model) {
+                this.actionType = model.actionType;
+                this.bakType = model.bakType;
+                this.destRegion = model.destRegion;
+                this.destType = model.destType;
+                this.filterKey = model.filterKey;
+                this.filterType = model.filterType;
+                this.filterValue = model.filterValue;
+                this.onlyPreserveOneEachDay = model.onlyPreserveOneEachDay;
+                this.onlyPreserveOneEachHour = model.onlyPreserveOneEachHour;
+                this.retentionType = model.retentionType;
+                this.retentionValue = model.retentionValue;
+                this.srcRegion = model.srcRegion;
+                this.srcType = model.srcType;
+                this.strategyId = model.strategyId;
+            } 
+
+            /**
+             * ActionType.
+             */
+            public Builder actionType(String actionType) {
+                this.actionType = actionType;
+                return this;
+            }
+
+            /**
+             * BakType.
+             */
+            public Builder bakType(String bakType) {
+                this.bakType = bakType;
+                return this;
+            }
+
+            /**
+             * DestRegion.
+             */
+            public Builder destRegion(String destRegion) {
+                this.destRegion = destRegion;
+                return this;
+            }
+
+            /**
+             * DestType.
+             */
+            public Builder destType(String destType) {
+                this.destType = destType;
+                return this;
+            }
+
+            /**
+             * FilterKey.
+             */
+            public Builder filterKey(String filterKey) {
+                this.filterKey = filterKey;
+                return this;
+            }
+
+            /**
+             * FilterType.
+             */
+            public Builder filterType(String filterType) {
+                this.filterType = filterType;
+                return this;
+            }
+
+            /**
+             * FilterValue.
+             */
+            public Builder filterValue(String filterValue) {
+                this.filterValue = filterValue;
+                return this;
+            }
+
+            /**
+             * OnlyPreserveOneEachDay.
+             */
+            public Builder onlyPreserveOneEachDay(Boolean onlyPreserveOneEachDay) {
+                this.onlyPreserveOneEachDay = onlyPreserveOneEachDay;
+                return this;
+            }
+
+            /**
+             * OnlyPreserveOneEachHour.
+             */
+            public Builder onlyPreserveOneEachHour(Boolean onlyPreserveOneEachHour) {
+                this.onlyPreserveOneEachHour = onlyPreserveOneEachHour;
+                return this;
+            }
+
+            /**
+             * RetentionType.
+             */
+            public Builder retentionType(String retentionType) {
+                this.retentionType = retentionType;
+                return this;
+            }
+
+            /**
+             * RetentionValue.
+             */
+            public Builder retentionValue(Integer retentionValue) {
+                this.retentionValue = retentionValue;
+                return this;
+            }
+
+            /**
+             * SrcRegion.
+             */
+            public Builder srcRegion(String srcRegion) {
+                this.srcRegion = srcRegion;
+                return this;
+            }
+
+            /**
+             * SrcType.
+             */
+            public Builder srcType(String srcType) {
+                this.srcType = srcType;
+                return this;
+            }
+
+            /**
+             * StrategyId.
+             */
+            public Builder strategyId(String strategyId) {
+                this.strategyId = strategyId;
+                return this;
+            }
+
+            public AdvancedDataPolicy build() {
+                return new AdvancedDataPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPolicyResponseBody</p>
+     */
+    public static class AdvancedDataPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AdvancedDataPolicy")
+        private java.util.List<AdvancedDataPolicy> advancedDataPolicy;
+
+        private AdvancedDataPolicies(Builder builder) {
+            this.advancedDataPolicy = builder.advancedDataPolicy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdvancedDataPolicies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return advancedDataPolicy
+         */
+        public java.util.List<AdvancedDataPolicy> getAdvancedDataPolicy() {
+            return this.advancedDataPolicy;
+        }
+
+        public static final class Builder {
+            private java.util.List<AdvancedDataPolicy> advancedDataPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvancedDataPolicies model) {
+                this.advancedDataPolicy = model.advancedDataPolicy;
+            } 
+
+            /**
+             * AdvancedDataPolicy.
+             */
+            public Builder advancedDataPolicy(java.util.List<AdvancedDataPolicy> advancedDataPolicy) {
+                this.advancedDataPolicy = advancedDataPolicy;
+                return this;
+            }
+
+            public AdvancedDataPolicies build() {
+                return new AdvancedDataPolicies(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPolicyResponseBody</p>
+     */
+    public static class AdvancedLogPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActionType")
+        private String actionType;
+
+        @com.aliyun.core.annotation.NameInMap("DestRegion")
+        private String destRegion;
+
+        @com.aliyun.core.annotation.NameInMap("DestType")
+        private String destType;
+
+        @com.aliyun.core.annotation.NameInMap("EnableLogBackup")
+        private Integer enableLogBackup;
+
+        @com.aliyun.core.annotation.NameInMap("FilterKey")
+        private String filterKey;
+
+        @com.aliyun.core.annotation.NameInMap("FilterValue")
+        private String filterValue;
+
+        @com.aliyun.core.annotation.NameInMap("LogRetentionType")
+        private String logRetentionType;
+
+        @com.aliyun.core.annotation.NameInMap("LogRetentionValue")
+        private Integer logRetentionValue;
+
+        @com.aliyun.core.annotation.NameInMap("SrcRegion")
+        private String srcRegion;
+
+        @com.aliyun.core.annotation.NameInMap("SrcType")
+        private String srcType;
+
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
+        private String strategyId;
+
+        private AdvancedLogPolicy(Builder builder) {
+            this.actionType = builder.actionType;
+            this.destRegion = builder.destRegion;
+            this.destType = builder.destType;
+            this.enableLogBackup = builder.enableLogBackup;
+            this.filterKey = builder.filterKey;
+            this.filterValue = builder.filterValue;
+            this.logRetentionType = builder.logRetentionType;
+            this.logRetentionValue = builder.logRetentionValue;
+            this.srcRegion = builder.srcRegion;
+            this.srcType = builder.srcType;
+            this.strategyId = builder.strategyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdvancedLogPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return actionType
+         */
+        public String getActionType() {
+            return this.actionType;
+        }
+
+        /**
+         * @return destRegion
+         */
+        public String getDestRegion() {
+            return this.destRegion;
+        }
+
+        /**
+         * @return destType
+         */
+        public String getDestType() {
+            return this.destType;
+        }
+
+        /**
+         * @return enableLogBackup
+         */
+        public Integer getEnableLogBackup() {
+            return this.enableLogBackup;
+        }
+
+        /**
+         * @return filterKey
+         */
+        public String getFilterKey() {
+            return this.filterKey;
+        }
+
+        /**
+         * @return filterValue
+         */
+        public String getFilterValue() {
+            return this.filterValue;
+        }
+
+        /**
+         * @return logRetentionType
+         */
+        public String getLogRetentionType() {
+            return this.logRetentionType;
+        }
+
+        /**
+         * @return logRetentionValue
+         */
+        public Integer getLogRetentionValue() {
+            return this.logRetentionValue;
+        }
+
+        /**
+         * @return srcRegion
+         */
+        public String getSrcRegion() {
+            return this.srcRegion;
+        }
+
+        /**
+         * @return srcType
+         */
+        public String getSrcType() {
+            return this.srcType;
+        }
+
+        /**
+         * @return strategyId
+         */
+        public String getStrategyId() {
+            return this.strategyId;
+        }
+
+        public static final class Builder {
+            private String actionType; 
+            private String destRegion; 
+            private String destType; 
+            private Integer enableLogBackup; 
+            private String filterKey; 
+            private String filterValue; 
+            private String logRetentionType; 
+            private Integer logRetentionValue; 
+            private String srcRegion; 
+            private String srcType; 
+            private String strategyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvancedLogPolicy model) {
+                this.actionType = model.actionType;
+                this.destRegion = model.destRegion;
+                this.destType = model.destType;
+                this.enableLogBackup = model.enableLogBackup;
+                this.filterKey = model.filterKey;
+                this.filterValue = model.filterValue;
+                this.logRetentionType = model.logRetentionType;
+                this.logRetentionValue = model.logRetentionValue;
+                this.srcRegion = model.srcRegion;
+                this.srcType = model.srcType;
+                this.strategyId = model.strategyId;
+            } 
+
+            /**
+             * ActionType.
+             */
+            public Builder actionType(String actionType) {
+                this.actionType = actionType;
+                return this;
+            }
+
+            /**
+             * DestRegion.
+             */
+            public Builder destRegion(String destRegion) {
+                this.destRegion = destRegion;
+                return this;
+            }
+
+            /**
+             * DestType.
+             */
+            public Builder destType(String destType) {
+                this.destType = destType;
+                return this;
+            }
+
+            /**
+             * EnableLogBackup.
+             */
+            public Builder enableLogBackup(Integer enableLogBackup) {
+                this.enableLogBackup = enableLogBackup;
+                return this;
+            }
+
+            /**
+             * FilterKey.
+             */
+            public Builder filterKey(String filterKey) {
+                this.filterKey = filterKey;
+                return this;
+            }
+
+            /**
+             * FilterValue.
+             */
+            public Builder filterValue(String filterValue) {
+                this.filterValue = filterValue;
+                return this;
+            }
+
+            /**
+             * LogRetentionType.
+             */
+            public Builder logRetentionType(String logRetentionType) {
+                this.logRetentionType = logRetentionType;
+                return this;
+            }
+
+            /**
+             * LogRetentionValue.
+             */
+            public Builder logRetentionValue(Integer logRetentionValue) {
+                this.logRetentionValue = logRetentionValue;
+                return this;
+            }
+
+            /**
+             * SrcRegion.
+             */
+            public Builder srcRegion(String srcRegion) {
+                this.srcRegion = srcRegion;
+                return this;
+            }
+
+            /**
+             * SrcType.
+             */
+            public Builder srcType(String srcType) {
+                this.srcType = srcType;
+                return this;
+            }
+
+            /**
+             * StrategyId.
+             */
+            public Builder strategyId(String strategyId) {
+                this.strategyId = strategyId;
+                return this;
+            }
+
+            public AdvancedLogPolicy build() {
+                return new AdvancedLogPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPolicyResponseBody</p>
+     */
+    public static class AdvancedLogPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AdvancedLogPolicy")
+        private java.util.List<AdvancedLogPolicy> advancedLogPolicy;
+
+        private AdvancedLogPolicies(Builder builder) {
+            this.advancedLogPolicy = builder.advancedLogPolicy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdvancedLogPolicies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return advancedLogPolicy
+         */
+        public java.util.List<AdvancedLogPolicy> getAdvancedLogPolicy() {
+            return this.advancedLogPolicy;
+        }
+
+        public static final class Builder {
+            private java.util.List<AdvancedLogPolicy> advancedLogPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvancedLogPolicies model) {
+                this.advancedLogPolicy = model.advancedLogPolicy;
+            } 
+
+            /**
+             * AdvancedLogPolicy.
+             */
+            public Builder advancedLogPolicy(java.util.List<AdvancedLogPolicy> advancedLogPolicy) {
+                this.advancedLogPolicy = advancedLogPolicy;
+                return this;
+            }
+
+            public AdvancedLogPolicies build() {
+                return new AdvancedLogPolicies(this);
+            } 
+
+        } 
+
+    }
 }

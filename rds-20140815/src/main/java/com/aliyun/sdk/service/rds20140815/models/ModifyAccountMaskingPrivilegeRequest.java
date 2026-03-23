@@ -174,6 +174,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +187,10 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
         }
 
         /**
-         * DBName.
+         * <p>Database name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myDB</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -195,7 +199,10 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
         }
 
         /**
-         * ExpireTime.
+         * <p>Permission expiration time in UTC format. (Required only for fullAccess permission.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-22T02:01:20Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -213,6 +220,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
         }
 
         /**
+         * <p>Permission type (noneAccess, restrictedAccess, fullAccess)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +233,10 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -252,6 +263,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
         }
 
         /**
+         * <p>Account name. Multiple accounts are supported and must be separated by commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
