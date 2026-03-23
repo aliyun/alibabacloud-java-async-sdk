@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AIDBClusterId")
+    private String AIDBClusterId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String applicationType;
@@ -26,6 +30,10 @@ public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Architecture")
     @com.aliyun.core.annotation.Validation(required = true)
     private String architecture;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoAllocatePublicEip")
+    private Boolean autoAllocatePublicEip;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoCreatePolarFs")
@@ -62,6 +70,26 @@ public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemApplicationSpec")
     private MemApplicationSpec memApplicationSpec;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelApi")
+    private String modelApi;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelApiKey")
+    private String modelApiKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelBaseUrl")
+    private String modelBaseUrl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelFrom")
+    private String modelFrom;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelName")
+    private String modelName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
@@ -109,8 +137,10 @@ public class CreateApplicationRequest extends Request {
 
     private CreateApplicationRequest(Builder builder) {
         super(builder);
+        this.AIDBClusterId = builder.AIDBClusterId;
         this.applicationType = builder.applicationType;
         this.architecture = builder.architecture;
+        this.autoAllocatePublicEip = builder.autoAllocatePublicEip;
         this.autoCreatePolarFs = builder.autoCreatePolarFs;
         this.autoRenew = builder.autoRenew;
         this.autoUseCoupon = builder.autoUseCoupon;
@@ -120,6 +150,11 @@ public class CreateApplicationRequest extends Request {
         this.dryRun = builder.dryRun;
         this.endpoints = builder.endpoints;
         this.memApplicationSpec = builder.memApplicationSpec;
+        this.modelApi = builder.modelApi;
+        this.modelApiKey = builder.modelApiKey;
+        this.modelBaseUrl = builder.modelBaseUrl;
+        this.modelFrom = builder.modelFrom;
+        this.modelName = builder.modelName;
         this.payType = builder.payType;
         this.period = builder.period;
         this.polarFSInstanceId = builder.polarFSInstanceId;
@@ -147,6 +182,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return AIDBClusterId
+     */
+    public String getAIDBClusterId() {
+        return this.AIDBClusterId;
+    }
+
+    /**
      * @return applicationType
      */
     public String getApplicationType() {
@@ -158,6 +200,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    /**
+     * @return autoAllocatePublicEip
+     */
+    public Boolean getAutoAllocatePublicEip() {
+        return this.autoAllocatePublicEip;
     }
 
     /**
@@ -221,6 +270,41 @@ public class CreateApplicationRequest extends Request {
      */
     public MemApplicationSpec getMemApplicationSpec() {
         return this.memApplicationSpec;
+    }
+
+    /**
+     * @return modelApi
+     */
+    public String getModelApi() {
+        return this.modelApi;
+    }
+
+    /**
+     * @return modelApiKey
+     */
+    public String getModelApiKey() {
+        return this.modelApiKey;
+    }
+
+    /**
+     * @return modelBaseUrl
+     */
+    public String getModelBaseUrl() {
+        return this.modelBaseUrl;
+    }
+
+    /**
+     * @return modelFrom
+     */
+    public String getModelFrom() {
+        return this.modelFrom;
+    }
+
+    /**
+     * @return modelName
+     */
+    public String getModelName() {
+        return this.modelName;
     }
 
     /**
@@ -301,8 +385,10 @@ public class CreateApplicationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
+        private String AIDBClusterId; 
         private String applicationType; 
         private String architecture; 
+        private Boolean autoAllocatePublicEip; 
         private Boolean autoCreatePolarFs; 
         private Boolean autoRenew; 
         private Boolean autoUseCoupon; 
@@ -312,6 +398,11 @@ public class CreateApplicationRequest extends Request {
         private Boolean dryRun; 
         private java.util.List<Endpoints> endpoints; 
         private MemApplicationSpec memApplicationSpec; 
+        private String modelApi; 
+        private String modelApiKey; 
+        private String modelBaseUrl; 
+        private String modelFrom; 
+        private String modelName; 
         private String payType; 
         private String period; 
         private String polarFSInstanceId; 
@@ -330,8 +421,10 @@ public class CreateApplicationRequest extends Request {
 
         private Builder(CreateApplicationRequest request) {
             super(request);
+            this.AIDBClusterId = request.AIDBClusterId;
             this.applicationType = request.applicationType;
             this.architecture = request.architecture;
+            this.autoAllocatePublicEip = request.autoAllocatePublicEip;
             this.autoCreatePolarFs = request.autoCreatePolarFs;
             this.autoRenew = request.autoRenew;
             this.autoUseCoupon = request.autoUseCoupon;
@@ -341,6 +434,11 @@ public class CreateApplicationRequest extends Request {
             this.dryRun = request.dryRun;
             this.endpoints = request.endpoints;
             this.memApplicationSpec = request.memApplicationSpec;
+            this.modelApi = request.modelApi;
+            this.modelApiKey = request.modelApiKey;
+            this.modelBaseUrl = request.modelBaseUrl;
+            this.modelFrom = request.modelFrom;
+            this.modelName = request.modelName;
             this.payType = request.payType;
             this.period = request.period;
             this.polarFSInstanceId = request.polarFSInstanceId;
@@ -353,6 +451,15 @@ public class CreateApplicationRequest extends Request {
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * AIDBClusterId.
+         */
+        public Builder AIDBClusterId(String AIDBClusterId) {
+            this.putQueryParameter("AIDBClusterId", AIDBClusterId);
+            this.AIDBClusterId = AIDBClusterId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -375,6 +482,15 @@ public class CreateApplicationRequest extends Request {
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
             this.architecture = architecture;
+            return this;
+        }
+
+        /**
+         * AutoAllocatePublicEip.
+         */
+        public Builder autoAllocatePublicEip(Boolean autoAllocatePublicEip) {
+            this.putQueryParameter("AutoAllocatePublicEip", autoAllocatePublicEip);
+            this.autoAllocatePublicEip = autoAllocatePublicEip;
             return this;
         }
 
@@ -459,6 +575,51 @@ public class CreateApplicationRequest extends Request {
             String memApplicationSpecShrink = shrink(memApplicationSpec, "MemApplicationSpec", "json");
             this.putQueryParameter("MemApplicationSpec", memApplicationSpecShrink);
             this.memApplicationSpec = memApplicationSpec;
+            return this;
+        }
+
+        /**
+         * ModelApi.
+         */
+        public Builder modelApi(String modelApi) {
+            this.putQueryParameter("ModelApi", modelApi);
+            this.modelApi = modelApi;
+            return this;
+        }
+
+        /**
+         * ModelApiKey.
+         */
+        public Builder modelApiKey(String modelApiKey) {
+            this.putQueryParameter("ModelApiKey", modelApiKey);
+            this.modelApiKey = modelApiKey;
+            return this;
+        }
+
+        /**
+         * ModelBaseUrl.
+         */
+        public Builder modelBaseUrl(String modelBaseUrl) {
+            this.putQueryParameter("ModelBaseUrl", modelBaseUrl);
+            this.modelBaseUrl = modelBaseUrl;
+            return this;
+        }
+
+        /**
+         * ModelFrom.
+         */
+        public Builder modelFrom(String modelFrom) {
+            this.putQueryParameter("ModelFrom", modelFrom);
+            this.modelFrom = modelFrom;
+            return this;
+        }
+
+        /**
+         * ModelName.
+         */
+        public Builder modelName(String modelName) {
+            this.putQueryParameter("ModelName", modelName);
+            this.modelName = modelName;
             return this;
         }
 

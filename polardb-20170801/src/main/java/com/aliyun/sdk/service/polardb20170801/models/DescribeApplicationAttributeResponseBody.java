@@ -47,6 +47,12 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Expired")
     private Boolean expired;
 
+    @com.aliyun.core.annotation.NameInMap("IsLatestVersion")
+    private Boolean isLatestVersion;
+
+    @com.aliyun.core.annotation.NameInMap("LatestVersion")
+    private String latestVersion;
+
     @com.aliyun.core.annotation.NameInMap("LockMode")
     private String lockMode;
 
@@ -58,6 +64,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("MemApplicationAttribute")
     private MemApplicationAttribute memApplicationAttribute;
+
+    @com.aliyun.core.annotation.NameInMap("MinorVersion")
+    private String minorVersion;
 
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
@@ -109,10 +118,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         this.endpoints = builder.endpoints;
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
+        this.isLatestVersion = builder.isLatestVersion;
+        this.latestVersion = builder.latestVersion;
         this.lockMode = builder.lockMode;
         this.maintainEndTime = builder.maintainEndTime;
         this.maintainStartTime = builder.maintainStartTime;
         this.memApplicationAttribute = builder.memApplicationAttribute;
+        this.minorVersion = builder.minorVersion;
         this.payType = builder.payType;
         this.polarFSInstanceId = builder.polarFSInstanceId;
         this.regionId = builder.regionId;
@@ -211,6 +223,20 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return isLatestVersion
+     */
+    public Boolean getIsLatestVersion() {
+        return this.isLatestVersion;
+    }
+
+    /**
+     * @return latestVersion
+     */
+    public String getLatestVersion() {
+        return this.latestVersion;
+    }
+
+    /**
      * @return lockMode
      */
     public String getLockMode() {
@@ -236,6 +262,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
      */
     public MemApplicationAttribute getMemApplicationAttribute() {
         return this.memApplicationAttribute;
+    }
+
+    /**
+     * @return minorVersion
+     */
+    public String getMinorVersion() {
+        return this.minorVersion;
     }
 
     /**
@@ -340,10 +373,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private java.util.List<Endpoints> endpoints; 
         private String expireTime; 
         private Boolean expired; 
+        private Boolean isLatestVersion; 
+        private String latestVersion; 
         private String lockMode; 
         private String maintainEndTime; 
         private String maintainStartTime; 
         private MemApplicationAttribute memApplicationAttribute; 
+        private String minorVersion; 
         private String payType; 
         private String polarFSInstanceId; 
         private String regionId; 
@@ -372,10 +408,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             this.endpoints = model.endpoints;
             this.expireTime = model.expireTime;
             this.expired = model.expired;
+            this.isLatestVersion = model.isLatestVersion;
+            this.latestVersion = model.latestVersion;
             this.lockMode = model.lockMode;
             this.maintainEndTime = model.maintainEndTime;
             this.maintainStartTime = model.maintainStartTime;
             this.memApplicationAttribute = model.memApplicationAttribute;
+            this.minorVersion = model.minorVersion;
             this.payType = model.payType;
             this.polarFSInstanceId = model.polarFSInstanceId;
             this.regionId = model.regionId;
@@ -472,6 +511,22 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * IsLatestVersion.
+         */
+        public Builder isLatestVersion(Boolean isLatestVersion) {
+            this.isLatestVersion = isLatestVersion;
+            return this;
+        }
+
+        /**
+         * LatestVersion.
+         */
+        public Builder latestVersion(String latestVersion) {
+            this.latestVersion = latestVersion;
+            return this;
+        }
+
+        /**
          * LockMode.
          */
         public Builder lockMode(String lockMode) {
@@ -500,6 +555,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          */
         public Builder memApplicationAttribute(MemApplicationAttribute memApplicationAttribute) {
             this.memApplicationAttribute = memApplicationAttribute;
+            return this;
+        }
+
+        /**
+         * MinorVersion.
+         */
+        public Builder minorVersion(String minorVersion) {
+            this.minorVersion = minorVersion;
             return this;
         }
 
