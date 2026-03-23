@@ -23,6 +23,9 @@ public class RequestLogDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("clientId")
     private Long clientId;
 
+    @com.aliyun.core.annotation.NameInMap("clientUuid")
+    private String clientUuid;
+
     @com.aliyun.core.annotation.NameInMap("completionTokens")
     private Integer completionTokens;
 
@@ -37,6 +40,9 @@ public class RequestLogDTO extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
+
+    @com.aliyun.core.annotation.NameInMap("modelCode")
+    private String modelCode;
 
     @com.aliyun.core.annotation.NameInMap("modelId")
     private Long modelId;
@@ -62,8 +68,14 @@ public class RequestLogDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("responseTimeMs")
     private Integer responseTimeMs;
 
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("symbol")
+    private String symbol;
 
     @com.aliyun.core.annotation.NameInMap("totalTokens")
     private Integer totalTokens;
@@ -71,11 +83,13 @@ public class RequestLogDTO extends TeaModel {
     private RequestLogDTO(Builder builder) {
         this.apiKeyId = builder.apiKeyId;
         this.clientId = builder.clientId;
+        this.clientUuid = builder.clientUuid;
         this.completionTokens = builder.completionTokens;
         this.deleteTag = builder.deleteTag;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
         this.id = builder.id;
+        this.modelCode = builder.modelCode;
         this.modelId = builder.modelId;
         this.modelName = builder.modelName;
         this.promptTokens = builder.promptTokens;
@@ -84,7 +98,9 @@ public class RequestLogDTO extends TeaModel {
         this.requestTime = builder.requestTime;
         this.responseBody = builder.responseBody;
         this.responseTimeMs = builder.responseTimeMs;
+        this.status = builder.status;
         this.statusCode = builder.statusCode;
+        this.symbol = builder.symbol;
         this.totalTokens = builder.totalTokens;
     }
 
@@ -112,6 +128,13 @@ public class RequestLogDTO extends TeaModel {
      */
     public Long getClientId() {
         return this.clientId;
+    }
+
+    /**
+     * @return clientUuid
+     */
+    public String getClientUuid() {
+        return this.clientUuid;
     }
 
     /**
@@ -147,6 +170,13 @@ public class RequestLogDTO extends TeaModel {
      */
     public Long getId() {
         return this.id;
+    }
+
+    /**
+     * @return modelCode
+     */
+    public String getModelCode() {
+        return this.modelCode;
     }
 
     /**
@@ -206,10 +236,24 @@ public class RequestLogDTO extends TeaModel {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return statusCode
      */
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    /**
+     * @return symbol
+     */
+    public String getSymbol() {
+        return this.symbol;
     }
 
     /**
@@ -222,11 +266,13 @@ public class RequestLogDTO extends TeaModel {
     public static final class Builder {
         private Long apiKeyId; 
         private Long clientId; 
+        private String clientUuid; 
         private Integer completionTokens; 
         private Integer deleteTag; 
         private String gmtCreate; 
         private String gmtModified; 
         private Long id; 
+        private String modelCode; 
         private Long modelId; 
         private String modelName; 
         private Integer promptTokens; 
@@ -235,7 +281,9 @@ public class RequestLogDTO extends TeaModel {
         private String requestTime; 
         private String responseBody; 
         private Integer responseTimeMs; 
+        private String status; 
         private Integer statusCode; 
+        private String symbol; 
         private Integer totalTokens; 
 
         private Builder() {
@@ -244,11 +292,13 @@ public class RequestLogDTO extends TeaModel {
         private Builder(RequestLogDTO model) {
             this.apiKeyId = model.apiKeyId;
             this.clientId = model.clientId;
+            this.clientUuid = model.clientUuid;
             this.completionTokens = model.completionTokens;
             this.deleteTag = model.deleteTag;
             this.gmtCreate = model.gmtCreate;
             this.gmtModified = model.gmtModified;
             this.id = model.id;
+            this.modelCode = model.modelCode;
             this.modelId = model.modelId;
             this.modelName = model.modelName;
             this.promptTokens = model.promptTokens;
@@ -257,7 +307,9 @@ public class RequestLogDTO extends TeaModel {
             this.requestTime = model.requestTime;
             this.responseBody = model.responseBody;
             this.responseTimeMs = model.responseTimeMs;
+            this.status = model.status;
             this.statusCode = model.statusCode;
+            this.symbol = model.symbol;
             this.totalTokens = model.totalTokens;
         } 
 
@@ -274,6 +326,14 @@ public class RequestLogDTO extends TeaModel {
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
+            return this;
+        }
+
+        /**
+         * clientUuid.
+         */
+        public Builder clientUuid(String clientUuid) {
+            this.clientUuid = clientUuid;
             return this;
         }
 
@@ -314,6 +374,14 @@ public class RequestLogDTO extends TeaModel {
          */
         public Builder id(Long id) {
             this.id = id;
+            return this;
+        }
+
+        /**
+         * modelCode.
+         */
+        public Builder modelCode(String modelCode) {
+            this.modelCode = modelCode;
             return this;
         }
 
@@ -382,10 +450,26 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
          * statusCode.
          */
         public Builder statusCode(Integer statusCode) {
             this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * symbol.
+         */
+        public Builder symbol(String symbol) {
+            this.symbol = symbol;
             return this;
         }
 

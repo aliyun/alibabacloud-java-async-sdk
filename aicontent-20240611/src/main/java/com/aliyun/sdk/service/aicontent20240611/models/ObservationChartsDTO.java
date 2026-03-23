@@ -30,7 +30,7 @@ public class ObservationChartsDTO extends TeaModel {
     private java.util.List<TimeSeriesPointDTO> responseTime;
 
     @com.aliyun.core.annotation.NameInMap("successRate")
-    private java.util.List<TimeSeriesPointDTO> successRate;
+    private java.util.List<SuccessRate> successRate;
 
     @com.aliyun.core.annotation.NameInMap("tpm")
     private java.util.List<TimeSeriesPointDTO> tpm;
@@ -87,7 +87,7 @@ public class ObservationChartsDTO extends TeaModel {
     /**
      * @return successRate
      */
-    public java.util.List<TimeSeriesPointDTO> getSuccessRate() {
+    public java.util.List<SuccessRate> getSuccessRate() {
         return this.successRate;
     }
 
@@ -103,7 +103,7 @@ public class ObservationChartsDTO extends TeaModel {
         private java.util.List<TimeSeriesPointDTO> concurrency; 
         private java.util.List<TimeSeriesPointDTO> qpm; 
         private java.util.List<TimeSeriesPointDTO> responseTime; 
-        private java.util.List<TimeSeriesPointDTO> successRate; 
+        private java.util.List<SuccessRate> successRate; 
         private java.util.List<TimeSeriesPointDTO> tpm; 
 
         private Builder() {
@@ -153,7 +153,7 @@ public class ObservationChartsDTO extends TeaModel {
         /**
          * successRate.
          */
-        public Builder successRate(java.util.List<TimeSeriesPointDTO> successRate) {
+        public Builder successRate(java.util.List<SuccessRate> successRate) {
             this.successRate = successRate;
             return this;
         }
@@ -172,4 +172,100 @@ public class ObservationChartsDTO extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ObservationChartsDTO} extends {@link TeaModel}
+     *
+     * <p>ObservationChartsDTO</p>
+     */
+    public static class SuccessRate extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("label")
+        private String label;
+
+        @com.aliyun.core.annotation.NameInMap("timestamp")
+        private String timestamp;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private Object value;
+
+        private SuccessRate(Builder builder) {
+            this.label = builder.label;
+            this.timestamp = builder.timestamp;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SuccessRate create() {
+            return builder().build();
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return timestamp
+         */
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        /**
+         * @return value
+         */
+        public Object getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String label; 
+            private String timestamp; 
+            private Object value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuccessRate model) {
+                this.label = model.label;
+                this.timestamp = model.timestamp;
+                this.value = model.value;
+            } 
+
+            /**
+             * label.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * timestamp.
+             */
+            public Builder timestamp(String timestamp) {
+                this.timestamp = timestamp;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(Object value) {
+                this.value = value;
+                return this;
+            }
+
+            public SuccessRate build() {
+                return new SuccessRate(this);
+            } 
+
+        } 
+
+    }
 }

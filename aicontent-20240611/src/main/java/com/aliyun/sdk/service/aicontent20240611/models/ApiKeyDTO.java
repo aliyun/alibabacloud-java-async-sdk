@@ -23,6 +23,9 @@ public class ApiKeyDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("clientId")
     private Long clientId;
 
+    @com.aliyun.core.annotation.NameInMap("deleteTag")
+    private Integer deleteTag;
+
     @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private String gmtCreate;
 
@@ -31,6 +34,9 @@ public class ApiKeyDTO extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
+
+    @com.aliyun.core.annotation.NameInMap("key")
+    private String key;
 
     @com.aliyun.core.annotation.NameInMap("keyPreview")
     private String keyPreview;
@@ -41,9 +47,11 @@ public class ApiKeyDTO extends TeaModel {
     private ApiKeyDTO(Builder builder) {
         this.client = builder.client;
         this.clientId = builder.clientId;
+        this.deleteTag = builder.deleteTag;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
         this.id = builder.id;
+        this.key = builder.key;
         this.keyPreview = builder.keyPreview;
         this.name = builder.name;
     }
@@ -75,6 +83,13 @@ public class ApiKeyDTO extends TeaModel {
     }
 
     /**
+     * @return deleteTag
+     */
+    public Integer getDeleteTag() {
+        return this.deleteTag;
+    }
+
+    /**
      * @return gmtCreate
      */
     public String getGmtCreate() {
@@ -96,6 +111,13 @@ public class ApiKeyDTO extends TeaModel {
     }
 
     /**
+     * @return key
+     */
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      * @return keyPreview
      */
     public String getKeyPreview() {
@@ -112,9 +134,11 @@ public class ApiKeyDTO extends TeaModel {
     public static final class Builder {
         private ClientDTO client; 
         private Long clientId; 
+        private Integer deleteTag; 
         private String gmtCreate; 
         private String gmtModified; 
         private Long id; 
+        private String key; 
         private String keyPreview; 
         private String name; 
 
@@ -124,9 +148,11 @@ public class ApiKeyDTO extends TeaModel {
         private Builder(ApiKeyDTO model) {
             this.client = model.client;
             this.clientId = model.clientId;
+            this.deleteTag = model.deleteTag;
             this.gmtCreate = model.gmtCreate;
             this.gmtModified = model.gmtModified;
             this.id = model.id;
+            this.key = model.key;
             this.keyPreview = model.keyPreview;
             this.name = model.name;
         } 
@@ -144,6 +170,14 @@ public class ApiKeyDTO extends TeaModel {
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
+            return this;
+        }
+
+        /**
+         * deleteTag.
+         */
+        public Builder deleteTag(Integer deleteTag) {
+            this.deleteTag = deleteTag;
             return this;
         }
 
@@ -168,6 +202,14 @@ public class ApiKeyDTO extends TeaModel {
          */
         public Builder id(Long id) {
             this.id = id;
+            return this;
+        }
+
+        /**
+         * key.
+         */
+        public Builder key(String key) {
+            this.key = key;
             return this;
         }
 

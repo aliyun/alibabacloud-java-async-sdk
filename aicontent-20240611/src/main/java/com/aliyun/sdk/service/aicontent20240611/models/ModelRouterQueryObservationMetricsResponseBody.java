@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List<ModelMetricsDTO> data;
+    private ModelMetricsDTO data;
 
     @com.aliyun.core.annotation.NameInMap("errCode")
     private String errCode;
@@ -29,43 +29,19 @@ public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
 
-    @com.aliyun.core.annotation.NameInMap("maxResults")
-    private Integer maxResults;
-
-    @com.aliyun.core.annotation.NameInMap("nextToken")
-    private String nextToken;
-
-    @com.aliyun.core.annotation.NameInMap("pageIndex")
-    private Integer pageIndex;
-
-    @com.aliyun.core.annotation.NameInMap("pageSize")
-    private Integer pageSize;
-
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("skip")
-    private Integer skip;
-
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
-
-    @com.aliyun.core.annotation.NameInMap("totalCount")
-    private Integer totalCount;
 
     private ModelRouterQueryObservationMetricsResponseBody(Builder builder) {
         this.data = builder.data;
         this.errCode = builder.errCode;
         this.errMessage = builder.errMessage;
         this.httpStatusCode = builder.httpStatusCode;
-        this.maxResults = builder.maxResults;
-        this.nextToken = builder.nextToken;
-        this.pageIndex = builder.pageIndex;
-        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.skip = builder.skip;
         this.success = builder.success;
-        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -83,7 +59,7 @@ public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List<ModelMetricsDTO> getData() {
+    public ModelMetricsDTO getData() {
         return this.data;
     }
 
@@ -109,45 +85,10 @@ public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
     }
 
     /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return nextToken
-     */
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * @return pageIndex
-     */
-    public Integer getPageIndex() {
-        return this.pageIndex;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
-    }
-
-    /**
-     * @return skip
-     */
-    public Integer getSkip() {
-        return this.skip;
     }
 
     /**
@@ -157,26 +98,13 @@ public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
         return this.success;
     }
 
-    /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public static final class Builder {
-        private java.util.List<ModelMetricsDTO> data; 
+        private ModelMetricsDTO data; 
         private String errCode; 
         private String errMessage; 
         private Integer httpStatusCode; 
-        private Integer maxResults; 
-        private String nextToken; 
-        private Integer pageIndex; 
-        private Integer pageSize; 
         private String requestId; 
-        private Integer skip; 
         private Boolean success; 
-        private Integer totalCount; 
 
         private Builder() {
         } 
@@ -186,20 +114,14 @@ public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
             this.errCode = model.errCode;
             this.errMessage = model.errMessage;
             this.httpStatusCode = model.httpStatusCode;
-            this.maxResults = model.maxResults;
-            this.nextToken = model.nextToken;
-            this.pageIndex = model.pageIndex;
-            this.pageSize = model.pageSize;
             this.requestId = model.requestId;
-            this.skip = model.skip;
             this.success = model.success;
-            this.totalCount = model.totalCount;
         } 
 
         /**
          * data.
          */
-        public Builder data(java.util.List<ModelMetricsDTO> data) {
+        public Builder data(ModelMetricsDTO data) {
             this.data = data;
             return this;
         }
@@ -229,44 +151,6 @@ public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>maxResults</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
-        public Builder maxResults(Integer maxResults) {
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * <p>nextToken</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxxx-xxx-xxxxx</p>
-         */
-        public Builder nextToken(String nextToken) {
-            this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * pageIndex.
-         */
-        public Builder pageIndex(Integer pageIndex) {
-            this.pageIndex = pageIndex;
-            return this;
-        }
-
-        /**
-         * pageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
          * requestId.
          */
         public Builder requestId(String requestId) {
@@ -275,29 +159,10 @@ public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>skip</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
-        public Builder skip(Integer skip) {
-            this.skip = skip;
-            return this;
-        }
-
-        /**
          * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
-            return this;
-        }
-
-        /**
-         * totalCount.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
             return this;
         }
 

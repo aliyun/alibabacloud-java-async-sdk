@@ -65,6 +65,9 @@ public class ModelDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("tags")
     private String tags;
 
+    @com.aliyun.core.annotation.NameInMap("version")
+    private Integer version;
+
     private ModelDTO(Builder builder) {
         this.apiKeyPreview = builder.apiKeyPreview;
         this.baseUrl = builder.baseUrl;
@@ -82,6 +85,7 @@ public class ModelDTO extends TeaModel {
         this.symbol = builder.symbol;
         this.tagNames = builder.tagNames;
         this.tags = builder.tags;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -208,6 +212,13 @@ public class ModelDTO extends TeaModel {
         return this.tags;
     }
 
+    /**
+     * @return version
+     */
+    public Integer getVersion() {
+        return this.version;
+    }
+
     public static final class Builder {
         private String apiKeyPreview; 
         private String baseUrl; 
@@ -225,6 +236,7 @@ public class ModelDTO extends TeaModel {
         private String symbol; 
         private String tagNames; 
         private String tags; 
+        private Integer version; 
 
         private Builder() {
         } 
@@ -246,6 +258,7 @@ public class ModelDTO extends TeaModel {
             this.symbol = model.symbol;
             this.tagNames = model.tagNames;
             this.tags = model.tags;
+            this.version = model.version;
         } 
 
         /**
@@ -373,6 +386,14 @@ public class ModelDTO extends TeaModel {
          */
         public Builder tags(String tags) {
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * version.
+         */
+        public Builder version(Integer version) {
+            this.version = version;
             return this;
         }
 

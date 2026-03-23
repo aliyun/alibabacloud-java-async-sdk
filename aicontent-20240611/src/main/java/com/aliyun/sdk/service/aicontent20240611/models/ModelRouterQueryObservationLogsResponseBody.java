@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List<RequestLogDTO> data;
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("errCode")
     private String errCode;
@@ -35,23 +35,11 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @com.aliyun.core.annotation.NameInMap("pageIndex")
-    private Integer pageIndex;
-
-    @com.aliyun.core.annotation.NameInMap("pageSize")
-    private Integer pageSize;
-
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("skip")
-    private Integer skip;
-
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
-
-    @com.aliyun.core.annotation.NameInMap("totalCount")
-    private Integer totalCount;
 
     private ModelRouterQueryObservationLogsResponseBody(Builder builder) {
         this.data = builder.data;
@@ -60,12 +48,8 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         this.httpStatusCode = builder.httpStatusCode;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
-        this.pageIndex = builder.pageIndex;
-        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.skip = builder.skip;
         this.success = builder.success;
-        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -83,7 +67,7 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List<RequestLogDTO> getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -123,31 +107,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageIndex
-     */
-    public Integer getPageIndex() {
-        return this.pageIndex;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
-    }
-
-    /**
-     * @return skip
-     */
-    public Integer getSkip() {
-        return this.skip;
     }
 
     /**
@@ -157,26 +120,15 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         return this.success;
     }
 
-    /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public static final class Builder {
-        private java.util.List<RequestLogDTO> data; 
+        private Data data; 
         private String errCode; 
         private String errMessage; 
         private Integer httpStatusCode; 
         private Integer maxResults; 
         private String nextToken; 
-        private Integer pageIndex; 
-        private Integer pageSize; 
         private String requestId; 
-        private Integer skip; 
         private Boolean success; 
-        private Integer totalCount; 
 
         private Builder() {
         } 
@@ -188,18 +140,14 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
             this.httpStatusCode = model.httpStatusCode;
             this.maxResults = model.maxResults;
             this.nextToken = model.nextToken;
-            this.pageIndex = model.pageIndex;
-            this.pageSize = model.pageSize;
             this.requestId = model.requestId;
-            this.skip = model.skip;
             this.success = model.success;
-            this.totalCount = model.totalCount;
         } 
 
         /**
          * data.
          */
-        public Builder data(java.util.List<RequestLogDTO> data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -251,37 +199,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         }
 
         /**
-         * pageIndex.
-         */
-        public Builder pageIndex(Integer pageIndex) {
-            this.pageIndex = pageIndex;
-            return this;
-        }
-
-        /**
-         * pageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
          * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * <p>skip</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
-        public Builder skip(Integer skip) {
-            this.skip = skip;
             return this;
         }
 
@@ -293,18 +214,175 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
             return this;
         }
 
-        /**
-         * totalCount.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
         public ModelRouterQueryObservationLogsResponseBody build() {
             return new ModelRouterQueryObservationLogsResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link ModelRouterQueryObservationLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModelRouterQueryObservationLogsResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("list")
+        private java.util.List<RequestLogDTO> list;
+
+        @com.aliyun.core.annotation.NameInMap("maxResults")
+        private Integer maxResults;
+
+        @com.aliyun.core.annotation.NameInMap("nextToken")
+        private Integer nextToken;
+
+        @com.aliyun.core.annotation.NameInMap("page")
+        private Integer page;
+
+        @com.aliyun.core.annotation.NameInMap("pageSize")
+        private Integer pageSize;
+
+        @com.aliyun.core.annotation.NameInMap("total")
+        private Integer total;
+
+        private Data(Builder builder) {
+            this.list = builder.list;
+            this.maxResults = builder.maxResults;
+            this.nextToken = builder.nextToken;
+            this.page = builder.page;
+            this.pageSize = builder.pageSize;
+            this.total = builder.total;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return list
+         */
+        public java.util.List<RequestLogDTO> getList() {
+            return this.list;
+        }
+
+        /**
+         * @return maxResults
+         */
+        public Integer getMaxResults() {
+            return this.maxResults;
+        }
+
+        /**
+         * @return nextToken
+         */
+        public Integer getNextToken() {
+            return this.nextToken;
+        }
+
+        /**
+         * @return page
+         */
+        public Integer getPage() {
+            return this.page;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return total
+         */
+        public Integer getTotal() {
+            return this.total;
+        }
+
+        public static final class Builder {
+            private java.util.List<RequestLogDTO> list; 
+            private Integer maxResults; 
+            private Integer nextToken; 
+            private Integer page; 
+            private Integer pageSize; 
+            private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
+
+            /**
+             * list.
+             */
+            public Builder list(java.util.List<RequestLogDTO> list) {
+                this.list = list;
+                return this;
+            }
+
+            /**
+             * <p>maxResults</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder maxResults(Integer maxResults) {
+                this.maxResults = maxResults;
+                return this;
+            }
+
+            /**
+             * <p>nextToken</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx-xxx-xxxxx</p>
+             */
+            public Builder nextToken(Integer nextToken) {
+                this.nextToken = nextToken;
+                return this;
+            }
+
+            /**
+             * page.
+             */
+            public Builder page(Integer page) {
+                this.page = page;
+                return this;
+            }
+
+            /**
+             * pageSize.
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * total.
+             */
+            public Builder total(Integer total) {
+                this.total = total;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

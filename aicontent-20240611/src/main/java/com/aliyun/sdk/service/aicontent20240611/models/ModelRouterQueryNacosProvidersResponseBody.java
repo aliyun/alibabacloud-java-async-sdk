@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List<String> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("errCode")
     private String errCode;
@@ -29,43 +29,19 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
 
-    @com.aliyun.core.annotation.NameInMap("maxResults")
-    private Integer maxResults;
-
-    @com.aliyun.core.annotation.NameInMap("nextToken")
-    private String nextToken;
-
-    @com.aliyun.core.annotation.NameInMap("pageIndex")
-    private Integer pageIndex;
-
-    @com.aliyun.core.annotation.NameInMap("pageSize")
-    private Integer pageSize;
-
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("skip")
-    private Integer skip;
-
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
-
-    @com.aliyun.core.annotation.NameInMap("totalCount")
-    private Integer totalCount;
 
     private ModelRouterQueryNacosProvidersResponseBody(Builder builder) {
         this.data = builder.data;
         this.errCode = builder.errCode;
         this.errMessage = builder.errMessage;
         this.httpStatusCode = builder.httpStatusCode;
-        this.maxResults = builder.maxResults;
-        this.nextToken = builder.nextToken;
-        this.pageIndex = builder.pageIndex;
-        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.skip = builder.skip;
         this.success = builder.success;
-        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -83,7 +59,7 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List<String> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -109,45 +85,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     }
 
     /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return nextToken
-     */
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * @return pageIndex
-     */
-    public Integer getPageIndex() {
-        return this.pageIndex;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
-    }
-
-    /**
-     * @return skip
-     */
-    public Integer getSkip() {
-        return this.skip;
     }
 
     /**
@@ -157,26 +98,13 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         return this.success;
     }
 
-    /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public static final class Builder {
-        private java.util.List<String> data; 
+        private java.util.List<Data> data; 
         private String errCode; 
         private String errMessage; 
         private Integer httpStatusCode; 
-        private Integer maxResults; 
-        private String nextToken; 
-        private Integer pageIndex; 
-        private Integer pageSize; 
         private String requestId; 
-        private Integer skip; 
         private Boolean success; 
-        private Integer totalCount; 
 
         private Builder() {
         } 
@@ -186,20 +114,14 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             this.errCode = model.errCode;
             this.errMessage = model.errMessage;
             this.httpStatusCode = model.httpStatusCode;
-            this.maxResults = model.maxResults;
-            this.nextToken = model.nextToken;
-            this.pageIndex = model.pageIndex;
-            this.pageSize = model.pageSize;
             this.requestId = model.requestId;
-            this.skip = model.skip;
             this.success = model.success;
-            this.totalCount = model.totalCount;
         } 
 
         /**
          * data.
          */
-        public Builder data(java.util.List<String> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -229,59 +151,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>maxResults</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
-        public Builder maxResults(Integer maxResults) {
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * <p>nextToken</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxxx-xxx-xxxxx</p>
-         */
-        public Builder nextToken(String nextToken) {
-            this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * pageIndex.
-         */
-        public Builder pageIndex(Integer pageIndex) {
-            this.pageIndex = pageIndex;
-            return this;
-        }
-
-        /**
-         * pageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
          * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * <p>skip</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
-        public Builder skip(Integer skip) {
-            this.skip = skip;
             return this;
         }
 
@@ -293,18 +166,223 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             return this;
         }
 
-        /**
-         * totalCount.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
         public ModelRouterQueryNacosProvidersResponseBody build() {
             return new ModelRouterQueryNacosProvidersResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link ModelRouterQueryNacosProvidersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModelRouterQueryNacosProvidersResponseBody</p>
+     */
+    public static class Models extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("identifier")
+        private String identifier;
+
+        @com.aliyun.core.annotation.NameInMap("inputToken")
+        private String inputToken;
+
+        @com.aliyun.core.annotation.NameInMap("outputToken")
+        private String outputToken;
+
+        private Models(Builder builder) {
+            this.identifier = builder.identifier;
+            this.inputToken = builder.inputToken;
+            this.outputToken = builder.outputToken;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Models create() {
+            return builder().build();
+        }
+
+        /**
+         * @return identifier
+         */
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        /**
+         * @return inputToken
+         */
+        public String getInputToken() {
+            return this.inputToken;
+        }
+
+        /**
+         * @return outputToken
+         */
+        public String getOutputToken() {
+            return this.outputToken;
+        }
+
+        public static final class Builder {
+            private String identifier; 
+            private String inputToken; 
+            private String outputToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Models model) {
+                this.identifier = model.identifier;
+                this.inputToken = model.inputToken;
+                this.outputToken = model.outputToken;
+            } 
+
+            /**
+             * identifier.
+             */
+            public Builder identifier(String identifier) {
+                this.identifier = identifier;
+                return this;
+            }
+
+            /**
+             * inputToken.
+             */
+            public Builder inputToken(String inputToken) {
+                this.inputToken = inputToken;
+                return this;
+            }
+
+            /**
+             * outputToken.
+             */
+            public Builder outputToken(String outputToken) {
+                this.outputToken = outputToken;
+                return this;
+            }
+
+            public Models build() {
+                return new Models(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModelRouterQueryNacosProvidersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModelRouterQueryNacosProvidersResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("baseUrl")
+        private String baseUrl;
+
+        @com.aliyun.core.annotation.NameInMap("models")
+        private java.util.List<Models> models;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("symbol")
+        private String symbol;
+
+        private Data(Builder builder) {
+            this.baseUrl = builder.baseUrl;
+            this.models = builder.models;
+            this.name = builder.name;
+            this.symbol = builder.symbol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return baseUrl
+         */
+        public String getBaseUrl() {
+            return this.baseUrl;
+        }
+
+        /**
+         * @return models
+         */
+        public java.util.List<Models> getModels() {
+            return this.models;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return symbol
+         */
+        public String getSymbol() {
+            return this.symbol;
+        }
+
+        public static final class Builder {
+            private String baseUrl; 
+            private java.util.List<Models> models; 
+            private String name; 
+            private String symbol; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.baseUrl = model.baseUrl;
+                this.models = model.models;
+                this.name = model.name;
+                this.symbol = model.symbol;
+            } 
+
+            /**
+             * baseUrl.
+             */
+            public Builder baseUrl(String baseUrl) {
+                this.baseUrl = baseUrl;
+                return this;
+            }
+
+            /**
+             * models.
+             */
+            public Builder models(java.util.List<Models> models) {
+                this.models = models;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * symbol.
+             */
+            public Builder symbol(String symbol) {
+                this.symbol = symbol;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }
