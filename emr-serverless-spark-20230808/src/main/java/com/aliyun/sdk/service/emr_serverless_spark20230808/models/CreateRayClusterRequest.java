@@ -46,6 +46,10 @@ public class CreateRayClusterRequest extends Request {
     private String networkServiceName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("volumeIds")
+    private java.util.List<String> volumeIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("workerSpec")
     private java.util.List<WorkerSpec> workerSpec;
 
@@ -58,6 +62,7 @@ public class CreateRayClusterRequest extends Request {
         this.headSpec = builder.headSpec;
         this.name = builder.name;
         this.networkServiceName = builder.networkServiceName;
+        this.volumeIds = builder.volumeIds;
         this.workerSpec = builder.workerSpec;
     }
 
@@ -124,6 +129,13 @@ public class CreateRayClusterRequest extends Request {
     }
 
     /**
+     * @return volumeIds
+     */
+    public java.util.List<String> getVolumeIds() {
+        return this.volumeIds;
+    }
+
+    /**
      * @return workerSpec
      */
     public java.util.List<WorkerSpec> getWorkerSpec() {
@@ -138,6 +150,7 @@ public class CreateRayClusterRequest extends Request {
         private HeadSpec headSpec; 
         private String name; 
         private String networkServiceName; 
+        private java.util.List<String> volumeIds; 
         private java.util.List<WorkerSpec> workerSpec; 
 
         private Builder() {
@@ -153,6 +166,7 @@ public class CreateRayClusterRequest extends Request {
             this.headSpec = request.headSpec;
             this.name = request.name;
             this.networkServiceName = request.networkServiceName;
+            this.volumeIds = request.volumeIds;
             this.workerSpec = request.workerSpec;
         } 
 
@@ -220,6 +234,15 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
+         * volumeIds.
+         */
+        public Builder volumeIds(java.util.List<String> volumeIds) {
+            this.putBodyParameter("volumeIds", volumeIds);
+            this.volumeIds = volumeIds;
+            return this;
+        }
+
+        /**
          * workerSpec.
          */
         public Builder workerSpec(java.util.List<WorkerSpec> workerSpec) {
@@ -248,6 +271,9 @@ public class CreateRayClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("enableAutoScaling")
         private Boolean enableAutoScaling;
 
+        @com.aliyun.core.annotation.NameInMap("gpuSpec")
+        private String gpuSpec;
+
         @com.aliyun.core.annotation.NameInMap("idleTimeoutSeconds")
         private Integer idleTimeoutSeconds;
 
@@ -260,6 +286,7 @@ public class CreateRayClusterRequest extends Request {
         private HeadSpec(Builder builder) {
             this.cpu = builder.cpu;
             this.enableAutoScaling = builder.enableAutoScaling;
+            this.gpuSpec = builder.gpuSpec;
             this.idleTimeoutSeconds = builder.idleTimeoutSeconds;
             this.memory = builder.memory;
             this.queueName = builder.queueName;
@@ -288,6 +315,13 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
+         * @return gpuSpec
+         */
+        public String getGpuSpec() {
+            return this.gpuSpec;
+        }
+
+        /**
          * @return idleTimeoutSeconds
          */
         public Integer getIdleTimeoutSeconds() {
@@ -311,6 +345,7 @@ public class CreateRayClusterRequest extends Request {
         public static final class Builder {
             private String cpu; 
             private Boolean enableAutoScaling; 
+            private String gpuSpec; 
             private Integer idleTimeoutSeconds; 
             private String memory; 
             private String queueName; 
@@ -321,6 +356,7 @@ public class CreateRayClusterRequest extends Request {
             private Builder(HeadSpec model) {
                 this.cpu = model.cpu;
                 this.enableAutoScaling = model.enableAutoScaling;
+                this.gpuSpec = model.gpuSpec;
                 this.idleTimeoutSeconds = model.idleTimeoutSeconds;
                 this.memory = model.memory;
                 this.queueName = model.queueName;
@@ -339,6 +375,14 @@ public class CreateRayClusterRequest extends Request {
              */
             public Builder enableAutoScaling(Boolean enableAutoScaling) {
                 this.enableAutoScaling = enableAutoScaling;
+                return this;
+            }
+
+            /**
+             * gpuSpec.
+             */
+            public Builder gpuSpec(String gpuSpec) {
+                this.gpuSpec = gpuSpec;
                 return this;
             }
 
@@ -383,6 +427,9 @@ public class CreateRayClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("cpu")
         private String cpu;
 
+        @com.aliyun.core.annotation.NameInMap("gpuSpec")
+        private String gpuSpec;
+
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
@@ -406,6 +453,7 @@ public class CreateRayClusterRequest extends Request {
 
         private WorkerSpec(Builder builder) {
             this.cpu = builder.cpu;
+            this.gpuSpec = builder.gpuSpec;
             this.groupName = builder.groupName;
             this.maxReplica = builder.maxReplica;
             this.memory = builder.memory;
@@ -428,6 +476,13 @@ public class CreateRayClusterRequest extends Request {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return gpuSpec
+         */
+        public String getGpuSpec() {
+            return this.gpuSpec;
         }
 
         /**
@@ -481,6 +536,7 @@ public class CreateRayClusterRequest extends Request {
 
         public static final class Builder {
             private String cpu; 
+            private String gpuSpec; 
             private String groupName; 
             private Integer maxReplica; 
             private String memory; 
@@ -494,6 +550,7 @@ public class CreateRayClusterRequest extends Request {
 
             private Builder(WorkerSpec model) {
                 this.cpu = model.cpu;
+                this.gpuSpec = model.gpuSpec;
                 this.groupName = model.groupName;
                 this.maxReplica = model.maxReplica;
                 this.memory = model.memory;
@@ -508,6 +565,14 @@ public class CreateRayClusterRequest extends Request {
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * gpuSpec.
+             */
+            public Builder gpuSpec(String gpuSpec) {
+                this.gpuSpec = gpuSpec;
                 return this;
             }
 

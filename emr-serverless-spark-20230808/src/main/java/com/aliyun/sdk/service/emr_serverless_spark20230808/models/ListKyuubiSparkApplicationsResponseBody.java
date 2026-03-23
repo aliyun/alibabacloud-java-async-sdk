@@ -194,6 +194,9 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("mbSeconds")
         private Long mbSeconds;
 
+        @com.aliyun.core.annotation.NameInMap("priority")
+        private String priority;
+
         @com.aliyun.core.annotation.NameInMap("resourceQueueId")
         private String resourceQueueId;
 
@@ -224,6 +227,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
             this.kyuubiServiceId = builder.kyuubiServiceId;
             this.latestSqlStatementStatus = builder.latestSqlStatementStatus;
             this.mbSeconds = builder.mbSeconds;
+            this.priority = builder.priority;
             this.resourceQueueId = builder.resourceQueueId;
             this.runLog = builder.runLog;
             this.startTime = builder.startTime;
@@ -298,6 +302,13 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return priority
+         */
+        public String getPriority() {
+            return this.priority;
+        }
+
+        /**
          * @return resourceQueueId
          */
         public String getResourceQueueId() {
@@ -355,6 +366,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
             private String kyuubiServiceId; 
             private String latestSqlStatementStatus; 
             private Long mbSeconds; 
+            private String priority; 
             private String resourceQueueId; 
             private RunLog runLog; 
             private String startTime; 
@@ -375,6 +387,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
                 this.kyuubiServiceId = model.kyuubiServiceId;
                 this.latestSqlStatementStatus = model.latestSqlStatementStatus;
                 this.mbSeconds = model.mbSeconds;
+                this.priority = model.priority;
                 this.resourceQueueId = model.resourceQueueId;
                 this.runLog = model.runLog;
                 this.startTime = model.startTime;
@@ -460,6 +473,14 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
              */
             public Builder mbSeconds(Long mbSeconds) {
                 this.mbSeconds = mbSeconds;
+                return this;
+            }
+
+            /**
+             * priority.
+             */
+            public Builder priority(String priority) {
+                this.priority = priority;
                 return this;
             }
 

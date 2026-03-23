@@ -344,6 +344,9 @@ public class ListJobRunsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("priority")
+        private String priority;
+
         @com.aliyun.core.annotation.NameInMap("releaseVersion")
         private String releaseVersion;
 
@@ -385,6 +388,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             this.log = builder.log;
             this.mbSeconds = builder.mbSeconds;
             this.name = builder.name;
+            this.priority = builder.priority;
             this.releaseVersion = builder.releaseVersion;
             this.resourceQueueId = builder.resourceQueueId;
             this.state = builder.state;
@@ -496,6 +500,13 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
+         * @return priority
+         */
+        public String getPriority() {
+            return this.priority;
+        }
+
+        /**
          * @return releaseVersion
          */
         public String getReleaseVersion() {
@@ -572,6 +583,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             private RunLog log; 
             private Long mbSeconds; 
             private String name; 
+            private String priority; 
             private String releaseVersion; 
             private String resourceQueueId; 
             private String state; 
@@ -599,6 +611,7 @@ public class ListJobRunsResponseBody extends TeaModel {
                 this.log = model.log;
                 this.mbSeconds = model.mbSeconds;
                 this.name = model.name;
+                this.priority = model.priority;
                 this.releaseVersion = model.releaseVersion;
                 this.resourceQueueId = model.resourceQueueId;
                 this.state = model.state;
@@ -744,6 +757,14 @@ public class ListJobRunsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * priority.
+             */
+            public Builder priority(String priority) {
+                this.priority = priority;
                 return this;
             }
 

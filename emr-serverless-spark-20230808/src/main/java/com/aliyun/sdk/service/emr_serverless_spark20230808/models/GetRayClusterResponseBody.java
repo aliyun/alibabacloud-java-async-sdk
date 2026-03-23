@@ -56,6 +56,9 @@ public class GetRayClusterResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("jobUrl")
     private String jobUrl;
 
+    @com.aliyun.core.annotation.NameInMap("jobUrlInner")
+    private String jobUrlInner;
+
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
@@ -92,6 +95,9 @@ public class GetRayClusterResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
 
+    @com.aliyun.core.annotation.NameInMap("volumeIds")
+    private java.util.List<String> volumeIds;
+
     @com.aliyun.core.annotation.NameInMap("workerSpec")
     private java.util.List<WorkerSpec> workerSpec;
 
@@ -109,6 +115,7 @@ public class GetRayClusterResponseBody extends TeaModel {
         this.instanceId = builder.instanceId;
         this.instances = builder.instances;
         this.jobUrl = builder.jobUrl;
+        this.jobUrlInner = builder.jobUrlInner;
         this.message = builder.message;
         this.modified = builder.modified;
         this.modifiedTime = builder.modifiedTime;
@@ -121,6 +128,7 @@ public class GetRayClusterResponseBody extends TeaModel {
         this.state = builder.state;
         this.submitToken = builder.submitToken;
         this.userId = builder.userId;
+        this.volumeIds = builder.volumeIds;
         this.workerSpec = builder.workerSpec;
     }
 
@@ -228,6 +236,13 @@ public class GetRayClusterResponseBody extends TeaModel {
     }
 
     /**
+     * @return jobUrlInner
+     */
+    public String getJobUrlInner() {
+        return this.jobUrlInner;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -312,6 +327,13 @@ public class GetRayClusterResponseBody extends TeaModel {
     }
 
     /**
+     * @return volumeIds
+     */
+    public java.util.List<String> getVolumeIds() {
+        return this.volumeIds;
+    }
+
+    /**
      * @return workerSpec
      */
     public java.util.List<WorkerSpec> getWorkerSpec() {
@@ -332,6 +354,7 @@ public class GetRayClusterResponseBody extends TeaModel {
         private String instanceId; 
         private java.util.List<Instances> instances; 
         private String jobUrl; 
+        private String jobUrlInner; 
         private String message; 
         private Boolean modified; 
         private Long modifiedTime; 
@@ -344,6 +367,7 @@ public class GetRayClusterResponseBody extends TeaModel {
         private String state; 
         private String submitToken; 
         private String userId; 
+        private java.util.List<String> volumeIds; 
         private java.util.List<WorkerSpec> workerSpec; 
 
         private Builder() {
@@ -363,6 +387,7 @@ public class GetRayClusterResponseBody extends TeaModel {
             this.instanceId = model.instanceId;
             this.instances = model.instances;
             this.jobUrl = model.jobUrl;
+            this.jobUrlInner = model.jobUrlInner;
             this.message = model.message;
             this.modified = model.modified;
             this.modifiedTime = model.modifiedTime;
@@ -375,6 +400,7 @@ public class GetRayClusterResponseBody extends TeaModel {
             this.state = model.state;
             this.submitToken = model.submitToken;
             this.userId = model.userId;
+            this.volumeIds = model.volumeIds;
             this.workerSpec = model.workerSpec;
         } 
 
@@ -483,6 +509,14 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
+         * jobUrlInner.
+         */
+        public Builder jobUrlInner(String jobUrlInner) {
+            this.jobUrlInner = jobUrlInner;
+            return this;
+        }
+
+        /**
          * message.
          */
         public Builder message(String message) {
@@ -579,6 +613,14 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
+         * volumeIds.
+         */
+        public Builder volumeIds(java.util.List<String> volumeIds) {
+            this.volumeIds = volumeIds;
+            return this;
+        }
+
+        /**
          * workerSpec.
          */
         public Builder workerSpec(java.util.List<WorkerSpec> workerSpec) {
@@ -605,6 +647,9 @@ public class GetRayClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableAutoScaling")
         private Boolean enableAutoScaling;
 
+        @com.aliyun.core.annotation.NameInMap("gpuSpec")
+        private String gpuSpec;
+
         @com.aliyun.core.annotation.NameInMap("idleTimeoutSeconds")
         private Integer idleTimeoutSeconds;
 
@@ -620,6 +665,7 @@ public class GetRayClusterResponseBody extends TeaModel {
         private HeadSpec(Builder builder) {
             this.cpu = builder.cpu;
             this.enableAutoScaling = builder.enableAutoScaling;
+            this.gpuSpec = builder.gpuSpec;
             this.idleTimeoutSeconds = builder.idleTimeoutSeconds;
             this.memory = builder.memory;
             this.queueName = builder.queueName;
@@ -646,6 +692,13 @@ public class GetRayClusterResponseBody extends TeaModel {
          */
         public Boolean getEnableAutoScaling() {
             return this.enableAutoScaling;
+        }
+
+        /**
+         * @return gpuSpec
+         */
+        public String getGpuSpec() {
+            return this.gpuSpec;
         }
 
         /**
@@ -679,6 +732,7 @@ public class GetRayClusterResponseBody extends TeaModel {
         public static final class Builder {
             private String cpu; 
             private Boolean enableAutoScaling; 
+            private String gpuSpec; 
             private Integer idleTimeoutSeconds; 
             private String memory; 
             private String queueName; 
@@ -690,6 +744,7 @@ public class GetRayClusterResponseBody extends TeaModel {
             private Builder(HeadSpec model) {
                 this.cpu = model.cpu;
                 this.enableAutoScaling = model.enableAutoScaling;
+                this.gpuSpec = model.gpuSpec;
                 this.idleTimeoutSeconds = model.idleTimeoutSeconds;
                 this.memory = model.memory;
                 this.queueName = model.queueName;
@@ -709,6 +764,14 @@ public class GetRayClusterResponseBody extends TeaModel {
              */
             public Builder enableAutoScaling(Boolean enableAutoScaling) {
                 this.enableAutoScaling = enableAutoScaling;
+                return this;
+            }
+
+            /**
+             * gpuSpec.
+             */
+            public Builder gpuSpec(String gpuSpec) {
+                this.gpuSpec = gpuSpec;
                 return this;
             }
 
@@ -1025,6 +1088,9 @@ public class GetRayClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cpu")
         private String cpu;
 
+        @com.aliyun.core.annotation.NameInMap("gpuSpec")
+        private String gpuSpec;
+
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
@@ -1048,6 +1114,7 @@ public class GetRayClusterResponseBody extends TeaModel {
 
         private WorkerSpec(Builder builder) {
             this.cpu = builder.cpu;
+            this.gpuSpec = builder.gpuSpec;
             this.groupName = builder.groupName;
             this.maxReplica = builder.maxReplica;
             this.memory = builder.memory;
@@ -1070,6 +1137,13 @@ public class GetRayClusterResponseBody extends TeaModel {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return gpuSpec
+         */
+        public String getGpuSpec() {
+            return this.gpuSpec;
         }
 
         /**
@@ -1123,6 +1197,7 @@ public class GetRayClusterResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cpu; 
+            private String gpuSpec; 
             private String groupName; 
             private Integer maxReplica; 
             private String memory; 
@@ -1136,6 +1211,7 @@ public class GetRayClusterResponseBody extends TeaModel {
 
             private Builder(WorkerSpec model) {
                 this.cpu = model.cpu;
+                this.gpuSpec = model.gpuSpec;
                 this.groupName = model.groupName;
                 this.maxReplica = model.maxReplica;
                 this.memory = model.memory;
@@ -1150,6 +1226,14 @@ public class GetRayClusterResponseBody extends TeaModel {
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * gpuSpec.
+             */
+            public Builder gpuSpec(String gpuSpec) {
+                this.gpuSpec = gpuSpec;
                 return this;
             }
 

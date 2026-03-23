@@ -269,6 +269,9 @@ public class GetJobRunResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("notebookAccessUrl")
         private String notebookAccessUrl;
 
+        @com.aliyun.core.annotation.NameInMap("priority")
+        private String priority;
+
         @com.aliyun.core.annotation.NameInMap("releaseVersion")
         private String releaseVersion;
 
@@ -309,6 +312,7 @@ public class GetJobRunResponseBody extends TeaModel {
             this.log = builder.log;
             this.name = builder.name;
             this.notebookAccessUrl = builder.notebookAccessUrl;
+            this.priority = builder.priority;
             this.releaseVersion = builder.releaseVersion;
             this.resourceOwnerId = builder.resourceOwnerId;
             this.resourceQueueId = builder.resourceQueueId;
@@ -413,6 +417,13 @@ public class GetJobRunResponseBody extends TeaModel {
         }
 
         /**
+         * @return priority
+         */
+        public String getPriority() {
+            return this.priority;
+        }
+
+        /**
          * @return releaseVersion
          */
         public String getReleaseVersion() {
@@ -488,6 +499,7 @@ public class GetJobRunResponseBody extends TeaModel {
             private RunLog log; 
             private String name; 
             private String notebookAccessUrl; 
+            private String priority; 
             private String releaseVersion; 
             private String resourceOwnerId; 
             private String resourceQueueId; 
@@ -514,6 +526,7 @@ public class GetJobRunResponseBody extends TeaModel {
                 this.log = model.log;
                 this.name = model.name;
                 this.notebookAccessUrl = model.notebookAccessUrl;
+                this.priority = model.priority;
                 this.releaseVersion = model.releaseVersion;
                 this.resourceOwnerId = model.resourceOwnerId;
                 this.resourceQueueId = model.resourceQueueId;
@@ -647,6 +660,14 @@ public class GetJobRunResponseBody extends TeaModel {
              */
             public Builder notebookAccessUrl(String notebookAccessUrl) {
                 this.notebookAccessUrl = notebookAccessUrl;
+                return this;
+            }
+
+            /**
+             * priority.
+             */
+            public Builder priority(String priority) {
+                this.priority = priority;
                 return this;
             }
 

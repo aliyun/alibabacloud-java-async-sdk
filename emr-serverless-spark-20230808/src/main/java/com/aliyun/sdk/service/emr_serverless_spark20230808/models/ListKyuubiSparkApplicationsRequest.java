@@ -34,6 +34,14 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
     private String applicationName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endTime")
+    private EndTime endTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("latestSqlStatementStatuses")
+    private String latestSqlStatementStatuses;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
@@ -61,12 +69,18 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("startTime")
     private StartTime startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("states")
+    private String states;
+
     private ListKyuubiSparkApplicationsRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.kyuubiServiceId = builder.kyuubiServiceId;
         this.applicationId = builder.applicationId;
         this.applicationName = builder.applicationName;
+        this.endTime = builder.endTime;
+        this.latestSqlStatementStatuses = builder.latestSqlStatementStatuses;
         this.maxResults = builder.maxResults;
         this.minDuration = builder.minDuration;
         this.nextToken = builder.nextToken;
@@ -74,6 +88,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         this.resourceQueueId = builder.resourceQueueId;
         this.sort = builder.sort;
         this.startTime = builder.startTime;
+        this.states = builder.states;
     }
 
     public static Builder builder() {
@@ -115,6 +130,20 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
      */
     public String getApplicationName() {
         return this.applicationName;
+    }
+
+    /**
+     * @return endTime
+     */
+    public EndTime getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * @return latestSqlStatementStatuses
+     */
+    public String getLatestSqlStatementStatuses() {
+        return this.latestSqlStatementStatuses;
     }
 
     /**
@@ -166,11 +195,20 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return states
+     */
+    public String getStates() {
+        return this.states;
+    }
+
     public static final class Builder extends Request.Builder<ListKyuubiSparkApplicationsRequest, Builder> {
         private String workspaceId; 
         private String kyuubiServiceId; 
         private String applicationId; 
         private String applicationName; 
+        private EndTime endTime; 
+        private String latestSqlStatementStatuses; 
         private Integer maxResults; 
         private Long minDuration; 
         private String nextToken; 
@@ -178,6 +216,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         private String resourceQueueId; 
         private String sort; 
         private StartTime startTime; 
+        private String states; 
 
         private Builder() {
             super();
@@ -189,6 +228,8 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
             this.kyuubiServiceId = request.kyuubiServiceId;
             this.applicationId = request.applicationId;
             this.applicationName = request.applicationName;
+            this.endTime = request.endTime;
+            this.latestSqlStatementStatuses = request.latestSqlStatementStatuses;
             this.maxResults = request.maxResults;
             this.minDuration = request.minDuration;
             this.nextToken = request.nextToken;
@@ -196,6 +237,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
             this.resourceQueueId = request.resourceQueueId;
             this.sort = request.sort;
             this.startTime = request.startTime;
+            this.states = request.states;
         } 
 
         /**
@@ -243,6 +285,25 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("applicationName", applicationName);
             this.applicationName = applicationName;
+            return this;
+        }
+
+        /**
+         * endTime.
+         */
+        public Builder endTime(EndTime endTime) {
+            String endTimeShrink = shrink(endTime, "endTime", "json");
+            this.putQueryParameter("endTime", endTimeShrink);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * latestSqlStatementStatuses.
+         */
+        public Builder latestSqlStatementStatuses(String latestSqlStatementStatuses) {
+            this.putQueryParameter("latestSqlStatementStatuses", latestSqlStatementStatuses);
+            this.latestSqlStatementStatuses = latestSqlStatementStatuses;
             return this;
         }
 
@@ -317,6 +378,15 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
             return this;
         }
 
+        /**
+         * states.
+         */
+        public Builder states(String states) {
+            this.putQueryParameter("states", states);
+            this.states = states;
+            return this;
+        }
+
         @Override
         public ListKyuubiSparkApplicationsRequest build() {
             return new ListKyuubiSparkApplicationsRequest(this);
@@ -324,6 +394,81 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListKyuubiSparkApplicationsRequest} extends {@link TeaModel}
+     *
+     * <p>ListKyuubiSparkApplicationsRequest</p>
+     */
+    public static class EndTime extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endTime")
+        private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("startTime")
+        private Long startTime;
+
+        private EndTime(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EndTime create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private Long endTime; 
+            private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndTime model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
+            /**
+             * endTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * <p>The range of start time.</p>
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public EndTime build() {
+                return new EndTime(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ListKyuubiSparkApplicationsRequest} extends {@link TeaModel}

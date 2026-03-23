@@ -608,6 +608,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("failReason")
         private String failReason;
 
+        @com.aliyun.core.annotation.NameInMap("gpuSpec")
+        private java.util.List<String> gpuSpec;
+
         @com.aliyun.core.annotation.NameInMap("paymentDurationUnit")
         private String paymentDurationUnit;
 
@@ -660,6 +663,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             this.duration = builder.duration;
             this.endTime = builder.endTime;
             this.failReason = builder.failReason;
+            this.gpuSpec = builder.gpuSpec;
             this.paymentDurationUnit = builder.paymentDurationUnit;
             this.paymentStatus = builder.paymentStatus;
             this.paymentType = builder.paymentType;
@@ -745,6 +749,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
          */
         public String getFailReason() {
             return this.failReason;
+        }
+
+        /**
+         * @return gpuSpec
+         */
+        public java.util.List<String> getGpuSpec() {
+            return this.gpuSpec;
         }
 
         /**
@@ -855,6 +866,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private Integer duration; 
             private Long endTime; 
             private String failReason; 
+            private java.util.List<String> gpuSpec; 
             private String paymentDurationUnit; 
             private String paymentStatus; 
             private String paymentType; 
@@ -883,6 +895,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
                 this.duration = model.duration;
                 this.endTime = model.endTime;
                 this.failReason = model.failReason;
+                this.gpuSpec = model.gpuSpec;
                 this.paymentDurationUnit = model.paymentDurationUnit;
                 this.paymentStatus = model.paymentStatus;
                 this.paymentType = model.paymentType;
@@ -995,6 +1008,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;
+                return this;
+            }
+
+            /**
+             * gpuSpec.
+             */
+            public Builder gpuSpec(java.util.List<String> gpuSpec) {
+                this.gpuSpec = gpuSpec;
                 return this;
             }
 

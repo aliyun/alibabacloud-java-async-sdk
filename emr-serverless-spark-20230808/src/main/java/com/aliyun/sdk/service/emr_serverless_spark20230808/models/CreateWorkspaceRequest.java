@@ -50,6 +50,10 @@ public class CreateWorkspaceRequest extends Request {
     private String duration;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gpuSpec")
+    private java.util.List<String> gpuSpec;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ossBucket")
     private String ossBucket;
 
@@ -99,6 +103,7 @@ public class CreateWorkspaceRequest extends Request {
         this.dlfCatalogId = builder.dlfCatalogId;
         this.dlfType = builder.dlfType;
         this.duration = builder.duration;
+        this.gpuSpec = builder.gpuSpec;
         this.ossBucket = builder.ossBucket;
         this.paymentDurationUnit = builder.paymentDurationUnit;
         this.paymentType = builder.paymentType;
@@ -181,6 +186,13 @@ public class CreateWorkspaceRequest extends Request {
     }
 
     /**
+     * @return gpuSpec
+     */
+    public java.util.List<String> getGpuSpec() {
+        return this.gpuSpec;
+    }
+
+    /**
      * @return ossBucket
      */
     public String getOssBucket() {
@@ -259,6 +271,7 @@ public class CreateWorkspaceRequest extends Request {
         private String dlfCatalogId; 
         private String dlfType; 
         private String duration; 
+        private java.util.List<String> gpuSpec; 
         private String ossBucket; 
         private String paymentDurationUnit; 
         private String paymentType; 
@@ -284,6 +297,7 @@ public class CreateWorkspaceRequest extends Request {
             this.dlfCatalogId = request.dlfCatalogId;
             this.dlfType = request.dlfType;
             this.duration = request.duration;
+            this.gpuSpec = request.gpuSpec;
             this.ossBucket = request.ossBucket;
             this.paymentDurationUnit = request.paymentDurationUnit;
             this.paymentType = request.paymentType;
@@ -389,6 +403,15 @@ public class CreateWorkspaceRequest extends Request {
         public Builder duration(String duration) {
             this.putBodyParameter("duration", duration);
             this.duration = duration;
+            return this;
+        }
+
+        /**
+         * gpuSpec.
+         */
+        public Builder gpuSpec(java.util.List<String> gpuSpec) {
+            this.putBodyParameter("gpuSpec", gpuSpec);
+            this.gpuSpec = gpuSpec;
             return this;
         }
 
@@ -524,8 +547,12 @@ public class CreateWorkspaceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("cu")
         private String cu;
 
+        @com.aliyun.core.annotation.NameInMap("gpu")
+        private Integer gpu;
+
         private ResourceSpec(Builder builder) {
             this.cu = builder.cu;
+            this.gpu = builder.gpu;
         }
 
         public static Builder builder() {
@@ -543,14 +570,23 @@ public class CreateWorkspaceRequest extends Request {
             return this.cu;
         }
 
+        /**
+         * @return gpu
+         */
+        public Integer getGpu() {
+            return this.gpu;
+        }
+
         public static final class Builder {
             private String cu; 
+            private Integer gpu; 
 
             private Builder() {
             } 
 
             private Builder(ResourceSpec model) {
                 this.cu = model.cu;
+                this.gpu = model.gpu;
             } 
 
             /**
@@ -561,6 +597,14 @@ public class CreateWorkspaceRequest extends Request {
              */
             public Builder cu(String cu) {
                 this.cu = cu;
+                return this;
+            }
+
+            /**
+             * gpu.
+             */
+            public Builder gpu(Integer gpu) {
+                this.gpu = gpu;
                 return this;
             }
 

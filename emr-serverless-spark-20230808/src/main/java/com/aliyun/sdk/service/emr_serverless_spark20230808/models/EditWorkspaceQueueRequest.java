@@ -22,6 +22,10 @@ public class EditWorkspaceQueueRequest extends Request {
     private java.util.List<String> environments;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gpuSpec")
+    private java.util.List<String> gpuSpec;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resourceSpec")
     private ResourceSpec resourceSpec;
 
@@ -40,6 +44,7 @@ public class EditWorkspaceQueueRequest extends Request {
     private EditWorkspaceQueueRequest(Builder builder) {
         super(builder);
         this.environments = builder.environments;
+        this.gpuSpec = builder.gpuSpec;
         this.resourceSpec = builder.resourceSpec;
         this.workspaceId = builder.workspaceId;
         this.workspaceQueueName = builder.workspaceQueueName;
@@ -64,6 +69,13 @@ public class EditWorkspaceQueueRequest extends Request {
      */
     public java.util.List<String> getEnvironments() {
         return this.environments;
+    }
+
+    /**
+     * @return gpuSpec
+     */
+    public java.util.List<String> getGpuSpec() {
+        return this.gpuSpec;
     }
 
     /**
@@ -96,6 +108,7 @@ public class EditWorkspaceQueueRequest extends Request {
 
     public static final class Builder extends Request.Builder<EditWorkspaceQueueRequest, Builder> {
         private java.util.List<String> environments; 
+        private java.util.List<String> gpuSpec; 
         private ResourceSpec resourceSpec; 
         private String workspaceId; 
         private String workspaceQueueName; 
@@ -108,6 +121,7 @@ public class EditWorkspaceQueueRequest extends Request {
         private Builder(EditWorkspaceQueueRequest request) {
             super(request);
             this.environments = request.environments;
+            this.gpuSpec = request.gpuSpec;
             this.resourceSpec = request.resourceSpec;
             this.workspaceId = request.workspaceId;
             this.workspaceQueueName = request.workspaceQueueName;
@@ -120,6 +134,15 @@ public class EditWorkspaceQueueRequest extends Request {
         public Builder environments(java.util.List<String> environments) {
             this.putBodyParameter("environments", environments);
             this.environments = environments;
+            return this;
+        }
+
+        /**
+         * gpuSpec.
+         */
+        public Builder gpuSpec(java.util.List<String> gpuSpec) {
+            this.putBodyParameter("gpuSpec", gpuSpec);
+            this.gpuSpec = gpuSpec;
             return this;
         }
 
@@ -176,11 +199,15 @@ public class EditWorkspaceQueueRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("cu")
         private Long cu;
 
+        @com.aliyun.core.annotation.NameInMap("gpu")
+        private Integer gpu;
+
         @com.aliyun.core.annotation.NameInMap("maxCu")
         private Long maxCu;
 
         private ResourceSpec(Builder builder) {
             this.cu = builder.cu;
+            this.gpu = builder.gpu;
             this.maxCu = builder.maxCu;
         }
 
@@ -200,6 +227,13 @@ public class EditWorkspaceQueueRequest extends Request {
         }
 
         /**
+         * @return gpu
+         */
+        public Integer getGpu() {
+            return this.gpu;
+        }
+
+        /**
          * @return maxCu
          */
         public Long getMaxCu() {
@@ -208,6 +242,7 @@ public class EditWorkspaceQueueRequest extends Request {
 
         public static final class Builder {
             private Long cu; 
+            private Integer gpu; 
             private Long maxCu; 
 
             private Builder() {
@@ -215,6 +250,7 @@ public class EditWorkspaceQueueRequest extends Request {
 
             private Builder(ResourceSpec model) {
                 this.cu = model.cu;
+                this.gpu = model.gpu;
                 this.maxCu = model.maxCu;
             } 
 
@@ -223,6 +259,14 @@ public class EditWorkspaceQueueRequest extends Request {
              */
             public Builder cu(Long cu) {
                 this.cu = cu;
+                return this;
+            }
+
+            /**
+             * gpu.
+             */
+            public Builder gpu(Integer gpu) {
+                this.gpu = gpu;
                 return this;
             }
 

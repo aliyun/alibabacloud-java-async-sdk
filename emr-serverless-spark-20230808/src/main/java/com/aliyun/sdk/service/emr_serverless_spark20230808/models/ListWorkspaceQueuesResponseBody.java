@@ -335,6 +335,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("environments")
         private java.util.List<String> environments;
 
+        @com.aliyun.core.annotation.NameInMap("gpuSpec")
+        private java.util.List<String> gpuSpec;
+
         @com.aliyun.core.annotation.NameInMap("maxResource")
         private String maxResource;
 
@@ -349,6 +352,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("properties")
         private String properties;
+
+        @com.aliyun.core.annotation.NameInMap("queueCategory")
+        private String queueCategory;
 
         @com.aliyun.core.annotation.NameInMap("queueName")
         private String queueName;
@@ -376,11 +382,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.creator = builder.creator;
             this.environments = builder.environments;
+            this.gpuSpec = builder.gpuSpec;
             this.maxResource = builder.maxResource;
             this.minResource = builder.minResource;
             this.paymentType = builder.paymentType;
             this.preheat = builder.preheat;
             this.properties = builder.properties;
+            this.queueCategory = builder.queueCategory;
             this.queueName = builder.queueName;
             this.queueScope = builder.queueScope;
             this.queueStatus = builder.queueStatus;
@@ -427,6 +435,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         /**
+         * @return gpuSpec
+         */
+        public java.util.List<String> getGpuSpec() {
+            return this.gpuSpec;
+        }
+
+        /**
          * @return maxResource
          */
         public String getMaxResource() {
@@ -459,6 +474,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
          */
         public String getProperties() {
             return this.properties;
+        }
+
+        /**
+         * @return queueCategory
+         */
+        public String getQueueCategory() {
+            return this.queueCategory;
         }
 
         /**
@@ -515,11 +537,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             private Long createTime; 
             private String creator; 
             private java.util.List<String> environments; 
+            private java.util.List<String> gpuSpec; 
             private String maxResource; 
             private String minResource; 
             private String paymentType; 
             private Boolean preheat; 
             private String properties; 
+            private String queueCategory; 
             private String queueName; 
             private String queueScope; 
             private String queueStatus; 
@@ -536,11 +560,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.creator = model.creator;
                 this.environments = model.environments;
+                this.gpuSpec = model.gpuSpec;
                 this.maxResource = model.maxResource;
                 this.minResource = model.minResource;
                 this.paymentType = model.paymentType;
                 this.preheat = model.preheat;
                 this.properties = model.properties;
+                this.queueCategory = model.queueCategory;
                 this.queueName = model.queueName;
                 this.queueScope = model.queueScope;
                 this.queueStatus = model.queueStatus;
@@ -585,6 +611,14 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
              */
             public Builder environments(java.util.List<String> environments) {
                 this.environments = environments;
+                return this;
+            }
+
+            /**
+             * gpuSpec.
+             */
+            public Builder gpuSpec(java.util.List<String> gpuSpec) {
+                this.gpuSpec = gpuSpec;
                 return this;
             }
 
@@ -641,6 +675,14 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
              */
             public Builder properties(String properties) {
                 this.properties = properties;
+                return this;
+            }
+
+            /**
+             * queueCategory.
+             */
+            public Builder queueCategory(String queueCategory) {
+                this.queueCategory = queueCategory;
                 return this;
             }
 

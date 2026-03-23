@@ -101,6 +101,9 @@ public class ListRayClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableAutoScaling")
         private Boolean enableAutoScaling;
 
+        @com.aliyun.core.annotation.NameInMap("gpuSpec")
+        private String gpuSpec;
+
         @com.aliyun.core.annotation.NameInMap("idleTimeoutSeconds")
         private Integer idleTimeoutSeconds;
 
@@ -116,6 +119,7 @@ public class ListRayClusterResponseBody extends TeaModel {
         private HeadSpec(Builder builder) {
             this.cpu = builder.cpu;
             this.enableAutoScaling = builder.enableAutoScaling;
+            this.gpuSpec = builder.gpuSpec;
             this.idleTimeoutSeconds = builder.idleTimeoutSeconds;
             this.memory = builder.memory;
             this.queueName = builder.queueName;
@@ -142,6 +146,13 @@ public class ListRayClusterResponseBody extends TeaModel {
          */
         public Boolean getEnableAutoScaling() {
             return this.enableAutoScaling;
+        }
+
+        /**
+         * @return gpuSpec
+         */
+        public String getGpuSpec() {
+            return this.gpuSpec;
         }
 
         /**
@@ -175,6 +186,7 @@ public class ListRayClusterResponseBody extends TeaModel {
         public static final class Builder {
             private String cpu; 
             private Boolean enableAutoScaling; 
+            private String gpuSpec; 
             private Integer idleTimeoutSeconds; 
             private String memory; 
             private String queueName; 
@@ -186,6 +198,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             private Builder(HeadSpec model) {
                 this.cpu = model.cpu;
                 this.enableAutoScaling = model.enableAutoScaling;
+                this.gpuSpec = model.gpuSpec;
                 this.idleTimeoutSeconds = model.idleTimeoutSeconds;
                 this.memory = model.memory;
                 this.queueName = model.queueName;
@@ -205,6 +218,14 @@ public class ListRayClusterResponseBody extends TeaModel {
              */
             public Builder enableAutoScaling(Boolean enableAutoScaling) {
                 this.enableAutoScaling = enableAutoScaling;
+                return this;
+            }
+
+            /**
+             * gpuSpec.
+             */
+            public Builder gpuSpec(String gpuSpec) {
+                this.gpuSpec = gpuSpec;
                 return this;
             }
 
@@ -257,6 +278,9 @@ public class ListRayClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cpu")
         private String cpu;
 
+        @com.aliyun.core.annotation.NameInMap("gpuSpec")
+        private String gpuSpec;
+
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
@@ -280,6 +304,7 @@ public class ListRayClusterResponseBody extends TeaModel {
 
         private WorkerSpec(Builder builder) {
             this.cpu = builder.cpu;
+            this.gpuSpec = builder.gpuSpec;
             this.groupName = builder.groupName;
             this.maxReplica = builder.maxReplica;
             this.memory = builder.memory;
@@ -302,6 +327,13 @@ public class ListRayClusterResponseBody extends TeaModel {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return gpuSpec
+         */
+        public String getGpuSpec() {
+            return this.gpuSpec;
         }
 
         /**
@@ -355,6 +387,7 @@ public class ListRayClusterResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cpu; 
+            private String gpuSpec; 
             private String groupName; 
             private Integer maxReplica; 
             private String memory; 
@@ -368,6 +401,7 @@ public class ListRayClusterResponseBody extends TeaModel {
 
             private Builder(WorkerSpec model) {
                 this.cpu = model.cpu;
+                this.gpuSpec = model.gpuSpec;
                 this.groupName = model.groupName;
                 this.maxReplica = model.maxReplica;
                 this.memory = model.memory;
@@ -382,6 +416,14 @@ public class ListRayClusterResponseBody extends TeaModel {
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * gpuSpec.
+             */
+            public Builder gpuSpec(String gpuSpec) {
+                this.gpuSpec = gpuSpec;
                 return this;
             }
 
