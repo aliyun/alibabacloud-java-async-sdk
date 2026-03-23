@@ -599,6 +599,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunCommandResponse> runCommand(RunCommandRequest request);
 
     /**
+     * @param request the request parameters of RunSyncCommand  RunSyncCommandRequest
+     * @return RunSyncCommandResponse
+     */
+    CompletableFuture<RunSyncCommandResponse> runSyncCommand(RunSyncCommandRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Currently, this operation allows you to only push files or folders from OSS buckets to cloud phone instances.</p>
      * 
