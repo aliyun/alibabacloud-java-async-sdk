@@ -41,6 +41,10 @@ public class ListTemplatesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     private String workspaceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("workspaceIds")
+    private String workspaceIds;
+
     private ListTemplatesRequest(Builder builder) {
         super(builder);
         this.pageNumber = builder.pageNumber;
@@ -49,6 +53,7 @@ public class ListTemplatesRequest extends Request {
         this.templateName = builder.templateName;
         this.templateType = builder.templateType;
         this.workspaceId = builder.workspaceId;
+        this.workspaceIds = builder.workspaceIds;
     }
 
     public static Builder builder() {
@@ -106,6 +111,13 @@ public class ListTemplatesRequest extends Request {
         return this.workspaceId;
     }
 
+    /**
+     * @return workspaceIds
+     */
+    public String getWorkspaceIds() {
+        return this.workspaceIds;
+    }
+
     public static final class Builder extends Request.Builder<ListTemplatesRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -113,6 +125,7 @@ public class ListTemplatesRequest extends Request {
         private String templateName; 
         private String templateType; 
         private String workspaceId; 
+        private String workspaceIds; 
 
         private Builder() {
             super();
@@ -126,6 +139,7 @@ public class ListTemplatesRequest extends Request {
             this.templateName = request.templateName;
             this.templateType = request.templateType;
             this.workspaceId = request.workspaceId;
+            this.workspaceIds = request.workspaceIds;
         } 
 
         /**
@@ -188,6 +202,15 @@ public class ListTemplatesRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * workspaceIds.
+         */
+        public Builder workspaceIds(String workspaceIds) {
+            this.putQueryParameter("workspaceIds", workspaceIds);
+            this.workspaceIds = workspaceIds;
             return this;
         }
 

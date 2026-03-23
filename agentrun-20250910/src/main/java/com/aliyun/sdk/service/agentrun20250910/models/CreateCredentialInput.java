@@ -41,6 +41,9 @@ public class CreateCredentialInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("enabled")
     private Boolean enabled;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private CreateCredentialInput(Builder builder) {
         this.credentialAuthType = builder.credentialAuthType;
         this.credentialName = builder.credentialName;
@@ -49,6 +52,7 @@ public class CreateCredentialInput extends TeaModel {
         this.credentialSourceType = builder.credentialSourceType;
         this.description = builder.description;
         this.enabled = builder.enabled;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -112,6 +116,13 @@ public class CreateCredentialInput extends TeaModel {
         return this.enabled;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private String credentialAuthType; 
         private String credentialName; 
@@ -120,6 +131,7 @@ public class CreateCredentialInput extends TeaModel {
         private String credentialSourceType; 
         private String description; 
         private Boolean enabled; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -132,6 +144,7 @@ public class CreateCredentialInput extends TeaModel {
             this.credentialSourceType = model.credentialSourceType;
             this.description = model.description;
             this.enabled = model.enabled;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -187,6 +200,14 @@ public class CreateCredentialInput extends TeaModel {
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

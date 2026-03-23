@@ -38,6 +38,9 @@ public class CreateKnowledgeBaseInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("retrieveSettings")
     private java.util.Map<String, ?> retrieveSettings;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private CreateKnowledgeBaseInput(Builder builder) {
         this.credentialName = builder.credentialName;
         this.description = builder.description;
@@ -45,6 +48,7 @@ public class CreateKnowledgeBaseInput extends TeaModel {
         this.provider = builder.provider;
         this.providerSettings = builder.providerSettings;
         this.retrieveSettings = builder.retrieveSettings;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -101,6 +105,13 @@ public class CreateKnowledgeBaseInput extends TeaModel {
         return this.retrieveSettings;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private String credentialName; 
         private String description; 
@@ -108,6 +119,7 @@ public class CreateKnowledgeBaseInput extends TeaModel {
         private String provider; 
         private java.util.Map<String, ?> providerSettings; 
         private java.util.Map<String, ?> retrieveSettings; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -119,6 +131,7 @@ public class CreateKnowledgeBaseInput extends TeaModel {
             this.provider = model.provider;
             this.providerSettings = model.providerSettings;
             this.retrieveSettings = model.retrieveSettings;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -166,6 +179,14 @@ public class CreateKnowledgeBaseInput extends TeaModel {
          */
         public Builder retrieveSettings(java.util.Map<String, ?> retrieveSettings) {
             this.retrieveSettings = retrieveSettings;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

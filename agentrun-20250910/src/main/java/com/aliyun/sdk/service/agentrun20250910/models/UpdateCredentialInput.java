@@ -29,11 +29,15 @@ public class UpdateCredentialInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("enabled")
     private Boolean enabled;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private UpdateCredentialInput(Builder builder) {
         this.credentialPublicConfig = builder.credentialPublicConfig;
         this.credentialSecret = builder.credentialSecret;
         this.description = builder.description;
         this.enabled = builder.enabled;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class UpdateCredentialInput extends TeaModel {
         return this.enabled;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private CredentialPublicConfig credentialPublicConfig; 
         private String credentialSecret; 
         private String description; 
         private Boolean enabled; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -90,6 +102,7 @@ public class UpdateCredentialInput extends TeaModel {
             this.credentialSecret = model.credentialSecret;
             this.description = model.description;
             this.enabled = model.enabled;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -121,6 +134,14 @@ public class UpdateCredentialInput extends TeaModel {
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

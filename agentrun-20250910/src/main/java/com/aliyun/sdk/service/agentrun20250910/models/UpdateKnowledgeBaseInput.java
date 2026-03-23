@@ -29,11 +29,15 @@ public class UpdateKnowledgeBaseInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("retrieveSettings")
     private java.util.Map<String, ?> retrieveSettings;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private UpdateKnowledgeBaseInput(Builder builder) {
         this.credentialName = builder.credentialName;
         this.description = builder.description;
         this.providerSettings = builder.providerSettings;
         this.retrieveSettings = builder.retrieveSettings;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class UpdateKnowledgeBaseInput extends TeaModel {
         return this.retrieveSettings;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private String credentialName; 
         private String description; 
         private java.util.Map<String, ?> providerSettings; 
         private java.util.Map<String, ?> retrieveSettings; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -90,6 +102,7 @@ public class UpdateKnowledgeBaseInput extends TeaModel {
             this.description = model.description;
             this.providerSettings = model.providerSettings;
             this.retrieveSettings = model.retrieveSettings;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -121,6 +134,14 @@ public class UpdateKnowledgeBaseInput extends TeaModel {
          */
         public Builder retrieveSettings(java.util.Map<String, ?> retrieveSettings) {
             this.retrieveSettings = retrieveSettings;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

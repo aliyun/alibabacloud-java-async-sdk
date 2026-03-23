@@ -50,6 +50,9 @@ public class Credential extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private String updatedAt;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private Credential(Builder builder) {
         this.createdAt = builder.createdAt;
         this.credentialAuthType = builder.credentialAuthType;
@@ -62,6 +65,7 @@ public class Credential extends TeaModel {
         this.enabled = builder.enabled;
         this.relatedResources = builder.relatedResources;
         this.updatedAt = builder.updatedAt;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -153,6 +157,13 @@ public class Credential extends TeaModel {
         return this.updatedAt;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private String createdAt; 
         private String credentialAuthType; 
@@ -165,6 +176,7 @@ public class Credential extends TeaModel {
         private Boolean enabled; 
         private java.util.List<RelatedResource> relatedResources; 
         private String updatedAt; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -181,6 +193,7 @@ public class Credential extends TeaModel {
             this.enabled = model.enabled;
             this.relatedResources = model.relatedResources;
             this.updatedAt = model.updatedAt;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -268,6 +281,14 @@ public class Credential extends TeaModel {
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 
