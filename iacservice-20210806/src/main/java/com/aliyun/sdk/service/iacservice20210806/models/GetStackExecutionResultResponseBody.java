@@ -26,10 +26,14 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("triggerId")
     private String triggerId;
 
+    @com.aliyun.core.annotation.NameInMap("triggeredStatus")
+    private String triggeredStatus;
+
     private GetStackExecutionResultResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.stackResults = builder.stackResults;
         this.triggerId = builder.triggerId;
+        this.triggeredStatus = builder.triggeredStatus;
     }
 
     public static Builder builder() {
@@ -65,10 +69,18 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
         return this.triggerId;
     }
 
+    /**
+     * @return triggeredStatus
+     */
+    public String getTriggeredStatus() {
+        return this.triggeredStatus;
+    }
+
     public static final class Builder {
         private String requestId; 
         private java.util.List<StackResults> stackResults; 
         private String triggerId; 
+        private String triggeredStatus; 
 
         private Builder() {
         } 
@@ -77,6 +89,7 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.stackResults = model.stackResults;
             this.triggerId = model.triggerId;
+            this.triggeredStatus = model.triggeredStatus;
         } 
 
         /**
@@ -103,6 +116,14 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
          */
         public Builder triggerId(String triggerId) {
             this.triggerId = triggerId;
+            return this;
+        }
+
+        /**
+         * triggeredStatus.
+         */
+        public Builder triggeredStatus(String triggeredStatus) {
+            this.triggeredStatus = triggeredStatus;
             return this;
         }
 
