@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddSQLRateLimitingRulesResponse> addSQLRateLimitingRules(AddSQLRateLimitingRulesRequest request);
 
     /**
+     * @param request the request parameters of ApplyApplicationPrompts  ApplyApplicationPromptsRequest
+     * @return ApplyApplicationPromptsResponse
+     */
+    CompletableFuture<ApplyApplicationPromptsResponse> applyApplicationPrompts(ApplyApplicationPromptsRequest request);
+
+    /**
      * @param request the request parameters of AttachApplicationPolarFS  AttachApplicationPolarFSRequest
      * @return AttachApplicationPolarFSResponse
      */
@@ -189,6 +195,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateApplicationEndpointAddressResponse
      */
     CompletableFuture<CreateApplicationEndpointAddressResponse> createApplicationEndpointAddress(CreateApplicationEndpointAddressRequest request);
+
+    /**
+     * @param request the request parameters of CreateApplicationPrompt  CreateApplicationPromptRequest
+     * @return CreateApplicationPromptResponse
+     */
+    CompletableFuture<CreateApplicationPromptResponse> createApplicationPrompt(CreateApplicationPromptRequest request);
 
     /**
      * <b>description</b> :
@@ -392,6 +404,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteApplicationEndpointAddressResponse
      */
     CompletableFuture<DeleteApplicationEndpointAddressResponse> deleteApplicationEndpointAddress(DeleteApplicationEndpointAddressRequest request);
+
+    /**
+     * @param request the request parameters of DeleteApplicationPrompt  DeleteApplicationPromptRequest
+     * @return DeleteApplicationPromptResponse
+     */
+    CompletableFuture<DeleteApplicationPromptResponse> deleteApplicationPrompt(DeleteApplicationPromptRequest request);
 
     /**
      * <b>description</b> :
@@ -636,6 +654,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeApplicationParametersResponse
      */
     CompletableFuture<DescribeApplicationParametersResponse> describeApplicationParameters(DescribeApplicationParametersRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApplicationPrompts  DescribeApplicationPromptsRequest
+     * @return DescribeApplicationPromptsResponse
+     */
+    CompletableFuture<DescribeApplicationPromptsResponse> describeApplicationPrompts(DescribeApplicationPromptsRequest request);
 
     /**
      * @param request the request parameters of DescribeApplicationServerlessConf  DescribeApplicationServerlessConfRequest
@@ -1507,6 +1531,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyApplicationParameterResponse
      */
     CompletableFuture<ModifyApplicationParameterResponse> modifyApplicationParameter(ModifyApplicationParameterRequest request);
+
+    /**
+     * @param request the request parameters of ModifyApplicationPrompt  ModifyApplicationPromptRequest
+     * @return ModifyApplicationPromptResponse
+     */
+    CompletableFuture<ModifyApplicationPromptResponse> modifyApplicationPrompt(ModifyApplicationPromptRequest request);
 
     /**
      * @param request the request parameters of ModifyApplicationServerlessConf  ModifyApplicationServerlessConfRequest
