@@ -272,6 +272,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetIpfilterListResponse> getIpfilterList(GetIpfilterListRequest request);
 
     /**
+     * @param request the request parameters of GetSendifyAutoLoginURL  GetSendifyAutoLoginURLRequest
+     * @return GetSendifyAutoLoginURLResponse
+     */
+    CompletableFuture<GetSendifyAutoLoginURLResponse> getSendifyAutoLoginURL(GetSendifyAutoLoginURLRequest request);
+
+    /**
+     * @param request the request parameters of GetSendifyInfo  GetSendifyInfoRequest
+     * @return GetSendifyInfoResponse
+     */
+    CompletableFuture<GetSendifyInfoResponse> getSendifyInfo(GetSendifyInfoRequest request);
+
+    /**
      * @param request the request parameters of GetSuppressionListLevel  GetSuppressionListLevelRequest
      * @return GetSuppressionListLevelResponse
      */
@@ -348,6 +360,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyTagResponse
      */
     CompletableFuture<ModifyTagResponse> modifyTag(ModifyTagRequest request);
+
+    /**
+     * @param request the request parameters of OpenSendifyTrialService  OpenSendifyTrialServiceRequest
+     * @return OpenSendifyTrialServiceResponse
+     */
+    CompletableFuture<OpenSendifyTrialServiceResponse> openSendifyTrialService(OpenSendifyTrialServiceRequest request);
 
     /**
      * @param request the request parameters of QueryDomainByParam  QueryDomainByParamRequest

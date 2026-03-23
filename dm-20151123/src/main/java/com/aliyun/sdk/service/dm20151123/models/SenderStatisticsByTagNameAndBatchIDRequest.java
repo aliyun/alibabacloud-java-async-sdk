@@ -30,6 +30,10 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
     private String dedicatedIpPoolId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    private String domain;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
@@ -64,6 +68,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
         this.accountName = builder.accountName;
         this.dedicatedIp = builder.dedicatedIp;
         this.dedicatedIpPoolId = builder.dedicatedIpPoolId;
+        this.domain = builder.domain;
         this.endTime = builder.endTime;
         this.esp = builder.esp;
         this.ownerId = builder.ownerId;
@@ -105,6 +110,13 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
      */
     public String getDedicatedIpPoolId() {
         return this.dedicatedIpPoolId;
+    }
+
+    /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
     }
 
     /**
@@ -160,6 +172,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
         private String accountName; 
         private String dedicatedIp; 
         private String dedicatedIpPoolId; 
+        private String domain; 
         private String endTime; 
         private String esp; 
         private Long ownerId; 
@@ -177,6 +190,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
             this.accountName = request.accountName;
             this.dedicatedIp = request.dedicatedIp;
             this.dedicatedIpPoolId = request.dedicatedIpPoolId;
+            this.domain = request.domain;
             this.endTime = request.endTime;
             this.esp = request.esp;
             this.ownerId = request.ownerId;
@@ -213,6 +227,15 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
         public Builder dedicatedIpPoolId(String dedicatedIpPoolId) {
             this.putQueryParameter("DedicatedIpPoolId", dedicatedIpPoolId);
             this.dedicatedIpPoolId = dedicatedIpPoolId;
+            return this;
+        }
+
+        /**
+         * Domain.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
             return this;
         }
 

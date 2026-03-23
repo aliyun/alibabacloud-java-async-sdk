@@ -37,6 +37,10 @@ public class DedicatedIpPoolListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolId")
+    private String poolId;
+
     private DedicatedIpPoolListRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -44,6 +48,7 @@ public class DedicatedIpPoolListRequest extends Request {
         this.keyword = builder.keyword;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
+        this.poolId = builder.poolId;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class DedicatedIpPoolListRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return poolId
+     */
+    public String getPoolId() {
+        return this.poolId;
+    }
+
     public static final class Builder extends Request.Builder<DedicatedIpPoolListRequest, Builder> {
         private String regionId; 
         private Boolean all; 
         private String keyword; 
         private Integer pageIndex; 
         private Integer pageSize; 
+        private String poolId; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class DedicatedIpPoolListRequest extends Request {
             this.keyword = request.keyword;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
+            this.poolId = request.poolId;
         } 
 
         /**
@@ -165,6 +179,15 @@ public class DedicatedIpPoolListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PoolId.
+         */
+        public Builder poolId(String poolId) {
+            this.putQueryParameter("PoolId", poolId);
+            this.poolId = poolId;
             return this;
         }
 

@@ -796,6 +796,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetSendifyAutoLoginURL  GetSendifyAutoLoginURLRequest
+     * @return GetSendifyAutoLoginURLResponse
+     */
+    @Override
+    public CompletableFuture<GetSendifyAutoLoginURLResponse> getSendifyAutoLoginURL(GetSendifyAutoLoginURLRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSendifyAutoLoginURL").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSendifyAutoLoginURLResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSendifyAutoLoginURLResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetSendifyInfo  GetSendifyInfoRequest
+     * @return GetSendifyInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetSendifyInfoResponse> getSendifyInfo(GetSendifyInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSendifyInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSendifyInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSendifyInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetSuppressionListLevel  GetSuppressionListLevelRequest
      * @return GetSuppressionListLevelResponse
      */
@@ -1024,6 +1060,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyTagResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of OpenSendifyTrialService  OpenSendifyTrialServiceRequest
+     * @return OpenSendifyTrialServiceResponse
+     */
+    @Override
+    public CompletableFuture<OpenSendifyTrialServiceResponse> openSendifyTrialService(OpenSendifyTrialServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenSendifyTrialService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenSendifyTrialServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OpenSendifyTrialServiceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
