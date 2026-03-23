@@ -1688,6 +1688,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTablesInCategoryResponse> listTablesInCategory(ListTablesInCategoryRequest request);
 
     /**
+     * @param request the request parameters of ListTagMetaAsset  ListTagMetaAssetRequest
+     * @return ListTagMetaAssetResponse
+     */
+    CompletableFuture<ListTagMetaAssetResponse> listTagMetaAsset(ListTagMetaAssetRequest request);
+
+    /**
      * @param request the request parameters of ListTaskFlow  ListTaskFlowRequest
      * @return ListTaskFlowResponse
      */
