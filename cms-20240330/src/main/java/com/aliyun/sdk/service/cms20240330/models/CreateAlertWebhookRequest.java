@@ -51,6 +51,10 @@ public class CreateAlertWebhookRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("webhookId")
     private String webhookId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workspace")
+    private String workspace;
+
     private CreateAlertWebhookRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -61,6 +65,7 @@ public class CreateAlertWebhookRequest extends Request {
         this.name = builder.name;
         this.url = builder.url;
         this.webhookId = builder.webhookId;
+        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -132,6 +137,13 @@ public class CreateAlertWebhookRequest extends Request {
         return this.webhookId;
     }
 
+    /**
+     * @return workspace
+     */
+    public String getWorkspace() {
+        return this.workspace;
+    }
+
     public static final class Builder extends Request.Builder<CreateAlertWebhookRequest, Builder> {
         private String regionId; 
         private String contentType; 
@@ -141,6 +153,7 @@ public class CreateAlertWebhookRequest extends Request {
         private String name; 
         private String url; 
         private String webhookId; 
+        private String workspace; 
 
         private Builder() {
             super();
@@ -156,6 +169,7 @@ public class CreateAlertWebhookRequest extends Request {
             this.name = request.name;
             this.url = request.url;
             this.webhookId = request.webhookId;
+            this.workspace = request.workspace;
         } 
 
         /**
@@ -233,6 +247,15 @@ public class CreateAlertWebhookRequest extends Request {
         public Builder webhookId(String webhookId) {
             this.putBodyParameter("webhookId", webhookId);
             this.webhookId = webhookId;
+            return this;
+        }
+
+        /**
+         * workspace.
+         */
+        public Builder workspace(String workspace) {
+            this.putBodyParameter("workspace", workspace);
+            this.workspace = workspace;
             return this;
         }
 

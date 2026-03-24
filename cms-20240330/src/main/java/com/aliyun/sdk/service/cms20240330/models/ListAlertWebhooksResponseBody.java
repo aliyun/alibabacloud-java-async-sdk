@@ -179,6 +179,9 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("webhookId")
         private String webhookId;
 
+        @com.aliyun.core.annotation.NameInMap("workspace")
+        private String workspace;
+
         private Webhooks(Builder builder) {
             this.contentType = builder.contentType;
             this.headers = builder.headers;
@@ -187,6 +190,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
             this.name = builder.name;
             this.url = builder.url;
             this.webhookId = builder.webhookId;
+            this.workspace = builder.workspace;
         }
 
         public static Builder builder() {
@@ -246,6 +250,13 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
             return this.webhookId;
         }
 
+        /**
+         * @return workspace
+         */
+        public String getWorkspace() {
+            return this.workspace;
+        }
+
         public static final class Builder {
             private String contentType; 
             private java.util.Map<String, ?> headers; 
@@ -254,6 +265,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
             private String name; 
             private String url; 
             private String webhookId; 
+            private String workspace; 
 
             private Builder() {
             } 
@@ -266,6 +278,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
                 this.name = model.name;
                 this.url = model.url;
                 this.webhookId = model.webhookId;
+                this.workspace = model.workspace;
             } 
 
             /**
@@ -324,6 +337,14 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
              */
             public Builder webhookId(String webhookId) {
                 this.webhookId = webhookId;
+                return this;
+            }
+
+            /**
+             * workspace.
+             */
+            public Builder workspace(String workspace) {
+                this.workspace = workspace;
                 return this;
             }
 

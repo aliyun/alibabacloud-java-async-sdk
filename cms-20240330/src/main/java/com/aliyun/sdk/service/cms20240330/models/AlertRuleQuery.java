@@ -53,6 +53,9 @@ public class AlertRuleQuery extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("labelFilters")
     private java.util.List<LabelFilters> labelFilters;
 
+    @com.aliyun.core.annotation.NameInMap("markTags")
+    private java.util.List<MarkTags> markTags;
+
     @com.aliyun.core.annotation.NameInMap("metric")
     private String metric;
 
@@ -91,6 +94,7 @@ public class AlertRuleQuery extends TeaModel {
         this.groupId = builder.groupId;
         this.groupType = builder.groupType;
         this.labelFilters = builder.labelFilters;
+        this.markTags = builder.markTags;
         this.metric = builder.metric;
         this.metricSet = builder.metricSet;
         this.namespace = builder.namespace;
@@ -198,6 +202,13 @@ public class AlertRuleQuery extends TeaModel {
     }
 
     /**
+     * @return markTags
+     */
+    public java.util.List<MarkTags> getMarkTags() {
+        return this.markTags;
+    }
+
+    /**
      * @return metric
      */
     public String getMetric() {
@@ -266,6 +277,7 @@ public class AlertRuleQuery extends TeaModel {
         private String groupId; 
         private String groupType; 
         private java.util.List<LabelFilters> labelFilters; 
+        private java.util.List<MarkTags> markTags; 
         private String metric; 
         private String metricSet; 
         private String namespace; 
@@ -291,6 +303,7 @@ public class AlertRuleQuery extends TeaModel {
             this.groupId = model.groupId;
             this.groupType = model.groupType;
             this.labelFilters = model.labelFilters;
+            this.markTags = model.markTags;
             this.metric = model.metric;
             this.metricSet = model.metricSet;
             this.namespace = model.namespace;
@@ -394,6 +407,14 @@ public class AlertRuleQuery extends TeaModel {
          */
         public Builder labelFilters(java.util.List<LabelFilters> labelFilters) {
             this.labelFilters = labelFilters;
+            return this;
+        }
+
+        /**
+         * markTags.
+         */
+        public Builder markTags(java.util.List<MarkTags> markTags) {
+            this.markTags = markTags;
             return this;
         }
 
@@ -827,6 +848,81 @@ public class AlertRuleQuery extends TeaModel {
 
             public LabelFilters build() {
                 return new LabelFilters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleQuery} extends {@link TeaModel}
+     *
+     * <p>AlertRuleQuery</p>
+     */
+    public static class MarkTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private MarkTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MarkTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(MarkTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public MarkTags build() {
+                return new MarkTags(this);
             } 
 
         } 

@@ -37,6 +37,10 @@ public class ListAlertWebhooksRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("webhookIds")
     private java.util.List<String> webhookIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("workspace")
+    private String workspace;
+
     private ListAlertWebhooksRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -44,6 +48,7 @@ public class ListAlertWebhooksRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.webhookIds = builder.webhookIds;
+        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class ListAlertWebhooksRequest extends Request {
         return this.webhookIds;
     }
 
+    /**
+     * @return workspace
+     */
+    public String getWorkspace() {
+        return this.workspace;
+    }
+
     public static final class Builder extends Request.Builder<ListAlertWebhooksRequest, Builder> {
         private String regionId; 
         private String name; 
         private Long pageNumber; 
         private Long pageSize; 
         private java.util.List<String> webhookIds; 
+        private String workspace; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class ListAlertWebhooksRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.webhookIds = request.webhookIds;
+            this.workspace = request.workspace;
         } 
 
         /**
@@ -157,6 +171,15 @@ public class ListAlertWebhooksRequest extends Request {
             String webhookIdsShrink = shrink(webhookIds, "webhookIds", "json");
             this.putQueryParameter("webhookIds", webhookIdsShrink);
             this.webhookIds = webhookIds;
+            return this;
+        }
+
+        /**
+         * workspace.
+         */
+        public Builder workspace(String workspace) {
+            this.putQueryParameter("workspace", workspace);
+            this.workspace = workspace;
             return this;
         }
 
