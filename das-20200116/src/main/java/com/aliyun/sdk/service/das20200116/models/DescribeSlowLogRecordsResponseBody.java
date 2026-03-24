@@ -290,6 +290,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocsExamined")
         private String docsExamined;
 
+        @com.aliyun.core.annotation.NameInMap("Fail")
+        private String fail;
+
         @com.aliyun.core.annotation.NameInMap("Frows")
         private Long frows;
 
@@ -329,6 +332,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OriginTime")
         private String originTime;
 
+        @com.aliyun.core.annotation.NameInMap("Params")
+        private String params;
+
         @com.aliyun.core.annotation.NameInMap("PhysicalIOReads")
         private Long physicalIOReads;
 
@@ -346,6 +352,12 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("QueryTimeSeconds")
         private Double queryTimeSeconds;
+
+        @com.aliyun.core.annotation.NameInMap("Reason")
+        private String reason;
+
+        @com.aliyun.core.annotation.NameInMap("ReqId")
+        private String reqId;
 
         @com.aliyun.core.annotation.NameInMap("RequestSize")
         private Long requestSize;
@@ -422,6 +434,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             this.dbId = builder.dbId;
             this.dbInstanceName = builder.dbInstanceName;
             this.docsExamined = builder.docsExamined;
+            this.fail = builder.fail;
             this.frows = builder.frows;
             this.hostAddress = builder.hostAddress;
             this.IOWrites = builder.IOWrites;
@@ -435,12 +448,15 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             this.nodeId = builder.nodeId;
             this.opType = builder.opType;
             this.originTime = builder.originTime;
+            this.params = builder.params;
             this.physicalIOReads = builder.physicalIOReads;
             this.psql = builder.psql;
             this.queryId = builder.queryId;
             this.queryStartTime = builder.queryStartTime;
             this.queryTime = builder.queryTime;
             this.queryTimeSeconds = builder.queryTimeSeconds;
+            this.reason = builder.reason;
+            this.reqId = builder.reqId;
             this.requestSize = builder.requestSize;
             this.responseSize = builder.responseSize;
             this.returnItemNumbers = builder.returnItemNumbers;
@@ -550,6 +566,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return fail
+         */
+        public String getFail() {
+            return this.fail;
+        }
+
+        /**
          * @return frows
          */
         public Long getFrows() {
@@ -641,6 +664,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return params
+         */
+        public String getParams() {
+            return this.params;
+        }
+
+        /**
          * @return physicalIOReads
          */
         public Long getPhysicalIOReads() {
@@ -680,6 +710,20 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
          */
         public Double getQueryTimeSeconds() {
             return this.queryTimeSeconds;
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
+         * @return reqId
+         */
+        public String getReqId() {
+            return this.reqId;
         }
 
         /**
@@ -841,6 +885,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String dbId; 
             private String dbInstanceName; 
             private String docsExamined; 
+            private String fail; 
             private Long frows; 
             private String hostAddress; 
             private Long IOWrites; 
@@ -854,12 +899,15 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String nodeId; 
             private String opType; 
             private String originTime; 
+            private String params; 
             private Long physicalIOReads; 
             private String psql; 
             private String queryId; 
             private String queryStartTime; 
             private Long queryTime; 
             private Double queryTimeSeconds; 
+            private String reason; 
+            private String reqId; 
             private Long requestSize; 
             private Long responseSize; 
             private String returnItemNumbers; 
@@ -897,6 +945,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
                 this.dbId = model.dbId;
                 this.dbInstanceName = model.dbInstanceName;
                 this.docsExamined = model.docsExamined;
+                this.fail = model.fail;
                 this.frows = model.frows;
                 this.hostAddress = model.hostAddress;
                 this.IOWrites = model.IOWrites;
@@ -910,12 +959,15 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
                 this.nodeId = model.nodeId;
                 this.opType = model.opType;
                 this.originTime = model.originTime;
+                this.params = model.params;
                 this.physicalIOReads = model.physicalIOReads;
                 this.psql = model.psql;
                 this.queryId = model.queryId;
                 this.queryStartTime = model.queryStartTime;
                 this.queryTime = model.queryTime;
                 this.queryTimeSeconds = model.queryTimeSeconds;
+                this.reason = model.reason;
+                this.reqId = model.reqId;
                 this.requestSize = model.requestSize;
                 this.responseSize = model.responseSize;
                 this.returnItemNumbers = model.returnItemNumbers;
@@ -1028,6 +1080,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * Fail.
+             */
+            public Builder fail(String fail) {
+                this.fail = fail;
+                return this;
+            }
+
+            /**
              * Frows.
              */
             public Builder frows(Long frows) {
@@ -1132,6 +1192,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * Params.
+             */
+            public Builder params(String params) {
+                this.params = params;
+                return this;
+            }
+
+            /**
              * PhysicalIOReads.
              */
             public Builder physicalIOReads(Long physicalIOReads) {
@@ -1176,6 +1244,22 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
              */
             public Builder queryTimeSeconds(Double queryTimeSeconds) {
                 this.queryTimeSeconds = queryTimeSeconds;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            /**
+             * ReqId.
+             */
+            public Builder reqId(String reqId) {
+                this.reqId = reqId;
                 return this;
             }
 
