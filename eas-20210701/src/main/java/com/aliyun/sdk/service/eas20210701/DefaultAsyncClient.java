@@ -1593,6 +1593,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ScaleService  ScaleServiceRequest
+     * @return ScaleServiceResponse
+     */
+    @Override
+    public CompletableFuture<ScaleServiceResponse> scaleService(ScaleServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ScaleService").setMethod(HttpMethod.PUT).setPathRegex("/api/v2/services/{ClusterId}/{ServiceName}/scale").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ScaleServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ScaleServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StartBenchmarkTask  StartBenchmarkTaskRequest
      * @return StartBenchmarkTaskResponse
      */

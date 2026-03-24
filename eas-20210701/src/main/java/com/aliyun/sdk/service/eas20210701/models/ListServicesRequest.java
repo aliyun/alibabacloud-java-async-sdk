@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListServicesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoscalerEnabled")
     private Boolean autoscalerEnabled;
 
@@ -124,6 +128,7 @@ public class ListServicesRequest extends Request {
 
     private ListServicesRequest(Builder builder) {
         super(builder);
+        this.accessibility = builder.accessibility;
         this.autoscalerEnabled = builder.autoscalerEnabled;
         this.callerUid = builder.callerUid;
         this.cronscalerEnabled = builder.cronscalerEnabled;
@@ -163,6 +168,13 @@ public class ListServicesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     /**
@@ -348,6 +360,7 @@ public class ListServicesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListServicesRequest, Builder> {
+        private String accessibility; 
         private Boolean autoscalerEnabled; 
         private String callerUid; 
         private Boolean cronscalerEnabled; 
@@ -381,6 +394,7 @@ public class ListServicesRequest extends Request {
 
         private Builder(ListServicesRequest request) {
             super(request);
+            this.accessibility = request.accessibility;
             this.autoscalerEnabled = request.autoscalerEnabled;
             this.callerUid = request.callerUid;
             this.cronscalerEnabled = request.cronscalerEnabled;
@@ -408,6 +422,15 @@ public class ListServicesRequest extends Request {
             this.trafficState = request.trafficState;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putQueryParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
+            return this;
+        }
 
         /**
          * AutoscalerEnabled.

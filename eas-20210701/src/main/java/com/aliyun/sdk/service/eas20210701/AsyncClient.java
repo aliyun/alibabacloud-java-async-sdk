@@ -537,6 +537,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestartServiceResponse> restartService(RestartServiceRequest request);
 
     /**
+     * @param request the request parameters of ScaleService  ScaleServiceRequest
+     * @return ScaleServiceResponse
+     */
+    CompletableFuture<ScaleServiceResponse> scaleService(ScaleServiceRequest request);
+
+    /**
      * @param request the request parameters of StartBenchmarkTask  StartBenchmarkTaskRequest
      * @return StartBenchmarkTaskResponse
      */
