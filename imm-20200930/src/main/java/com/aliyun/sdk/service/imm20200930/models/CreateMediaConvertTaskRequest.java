@@ -48,8 +48,11 @@ public class CreateMediaConvertTaskRequest extends Request {
     private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetGroups")
+    private java.util.List<TargetGroups> targetGroups;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Targets")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Targets> targets;
 
     @com.aliyun.core.annotation.Query
@@ -65,6 +68,7 @@ public class CreateMediaConvertTaskRequest extends Request {
         this.projectName = builder.projectName;
         this.sources = builder.sources;
         this.tags = builder.tags;
+        this.targetGroups = builder.targetGroups;
         this.targets = builder.targets;
         this.userData = builder.userData;
     }
@@ -132,6 +136,13 @@ public class CreateMediaConvertTaskRequest extends Request {
     }
 
     /**
+     * @return targetGroups
+     */
+    public java.util.List<TargetGroups> getTargetGroups() {
+        return this.targetGroups;
+    }
+
+    /**
      * @return targets
      */
     public java.util.List<Targets> getTargets() {
@@ -153,6 +164,7 @@ public class CreateMediaConvertTaskRequest extends Request {
         private String projectName; 
         private java.util.List<Sources> sources; 
         private java.util.Map<String, ?> tags; 
+        private java.util.List<TargetGroups> targetGroups; 
         private java.util.List<Targets> targets; 
         private String userData; 
 
@@ -169,6 +181,7 @@ public class CreateMediaConvertTaskRequest extends Request {
             this.projectName = request.projectName;
             this.sources = request.sources;
             this.tags = request.tags;
+            this.targetGroups = request.targetGroups;
             this.targets = request.targets;
             this.userData = request.userData;
         } 
@@ -253,8 +266,17 @@ public class CreateMediaConvertTaskRequest extends Request {
         }
 
         /**
+         * TargetGroups.
+         */
+        public Builder targetGroups(java.util.List<TargetGroups> targetGroups) {
+            String targetGroupsShrink = shrink(targetGroups, "TargetGroups", "json");
+            this.putQueryParameter("TargetGroups", targetGroupsShrink);
+            this.targetGroups = targetGroups;
+            return this;
+        }
+
+        /**
          * <p>List of media processing tasks, supporting multiple task configurations.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder targets(java.util.List<Targets> targets) {
             String targetsShrink = shrink(targets, "Targets", "json");
@@ -703,10 +725,10 @@ public class CreateMediaConvertTaskRequest extends Request {
             } 
 
             /**
-             * <p>Segment length. Unit: seconds.</p>
+             * <p>The duration of media transcoding, in seconds. The default value is 0, indicating until the end of the video.</p>
              * 
              * <strong>example:</strong>
-             * <p>30</p>
+             * <p>0</p>
              */
             public Builder duration(Double duration) {
                 this.duration = duration;
@@ -714,14 +736,7 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * <p>Media slicing method. The value range is as follows:</p>
-             * <ul>
-             * <li>hls</li>
-             * <li>dash</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>hls</p>
+             * Format.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -729,10 +744,7 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * <p>Starting sequence number, supported only for hls, default is 0.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * StartNumber.
              */
             public Builder startNumber(Integer startNumber) {
                 this.startNumber = startNumber;
@@ -752,15 +764,12 @@ public class CreateMediaConvertTaskRequest extends Request {
      *
      * <p>CreateMediaConvertTaskRequest</p>
      */
-    public static class Targets extends TeaModel {
+    public static class TargetGroupsTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Audio")
         private TargetAudio audio;
 
         @com.aliyun.core.annotation.NameInMap("Container")
         private String container;
-
-        @com.aliyun.core.annotation.NameInMap("Image")
-        private TargetImage image;
 
         @com.aliyun.core.annotation.NameInMap("Segment")
         private Segment segment;
@@ -780,10 +789,9 @@ public class CreateMediaConvertTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Video")
         private TargetVideo video;
 
-        private Targets(Builder builder) {
+        private TargetGroupsTargets(Builder builder) {
             this.audio = builder.audio;
             this.container = builder.container;
-            this.image = builder.image;
             this.segment = builder.segment;
             this.speed = builder.speed;
             this.stripMetadata = builder.stripMetadata;
@@ -796,7 +804,7 @@ public class CreateMediaConvertTaskRequest extends Request {
             return new Builder();
         }
 
-        public static Targets create() {
+        public static TargetGroupsTargets create() {
             return builder().build();
         }
 
@@ -812,13 +820,6 @@ public class CreateMediaConvertTaskRequest extends Request {
          */
         public String getContainer() {
             return this.container;
-        }
-
-        /**
-         * @return image
-         */
-        public TargetImage getImage() {
-            return this.image;
         }
 
         /**
@@ -866,7 +867,6 @@ public class CreateMediaConvertTaskRequest extends Request {
         public static final class Builder {
             private TargetAudio audio; 
             private String container; 
-            private TargetImage image; 
             private Segment segment; 
             private Float speed; 
             private Boolean stripMetadata; 
@@ -877,9 +877,546 @@ public class CreateMediaConvertTaskRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(Targets model) {
+            private Builder(TargetGroupsTargets model) {
                 this.audio = model.audio;
                 this.container = model.container;
+                this.segment = model.segment;
+                this.speed = model.speed;
+                this.stripMetadata = model.stripMetadata;
+                this.subtitle = model.subtitle;
+                this.URI = model.URI;
+                this.video = model.video;
+            } 
+
+            /**
+             * Audio.
+             */
+            public Builder audio(TargetAudio audio) {
+                this.audio = audio;
+                return this;
+            }
+
+            /**
+             * Container.
+             */
+            public Builder container(String container) {
+                this.container = container;
+                return this;
+            }
+
+            /**
+             * Segment.
+             */
+            public Builder segment(Segment segment) {
+                this.segment = segment;
+                return this;
+            }
+
+            /**
+             * Speed.
+             */
+            public Builder speed(Float speed) {
+                this.speed = speed;
+                return this;
+            }
+
+            /**
+             * StripMetadata.
+             */
+            public Builder stripMetadata(Boolean stripMetadata) {
+                this.stripMetadata = stripMetadata;
+                return this;
+            }
+
+            /**
+             * Subtitle.
+             */
+            public Builder subtitle(TargetSubtitle subtitle) {
+                this.subtitle = subtitle;
+                return this;
+            }
+
+            /**
+             * <p>The OSS address rule is <code>oss://${Bucket}/${Object}</code>, where <code>${Bucket}</code> is the name of the OSS Bucket in the same region (Region) as the current project, and <code>${Object}</code> is the complete path of the file including the file extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/test-object</p>
+             */
+            public Builder URI(String URI) {
+                this.URI = URI;
+                return this;
+            }
+
+            /**
+             * Video.
+             */
+            public Builder video(TargetVideo video) {
+                this.video = video;
+                return this;
+            }
+
+            public TargetGroupsTargets build() {
+                return new TargetGroupsTargets(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMediaConvertTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMediaConvertTaskRequest</p>
+     */
+    public static class TargetGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Targets")
+        private java.util.List<TargetGroupsTargets> targets;
+
+        @com.aliyun.core.annotation.NameInMap("URI")
+        private String URI;
+
+        private TargetGroups(Builder builder) {
+            this.targets = builder.targets;
+            this.URI = builder.URI;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TargetGroups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return targets
+         */
+        public java.util.List<TargetGroupsTargets> getTargets() {
+            return this.targets;
+        }
+
+        /**
+         * @return URI
+         */
+        public String getURI() {
+            return this.URI;
+        }
+
+        public static final class Builder {
+            private java.util.List<TargetGroupsTargets> targets; 
+            private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetGroups model) {
+                this.targets = model.targets;
+                this.URI = model.URI;
+            } 
+
+            /**
+             * <p>List of media processing tasks, supporting multiple task configurations.</p>
+             */
+            public Builder targets(java.util.List<TargetGroupsTargets> targets) {
+                this.targets = targets;
+                return this;
+            }
+
+            /**
+             * <p>The OSS address rule is <code>oss://${Bucket}/${Object}</code>, where <code>${Bucket}</code> is the name of the OSS Bucket in the same region (Region) as the current project, and <code>${Object}</code> is the complete path of the file including the file extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/test-object</p>
+             */
+            public Builder URI(String URI) {
+                this.URI = URI;
+                return this;
+            }
+
+            public TargetGroups build() {
+                return new TargetGroups(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMediaConvertTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMediaConvertTaskRequest</p>
+     */
+    public static class AttachedPicture extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Stream")
+        private java.util.List<Integer> stream;
+
+        private AttachedPicture(Builder builder) {
+            this.stream = builder.stream;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AttachedPicture create() {
+            return builder().build();
+        }
+
+        /**
+         * @return stream
+         */
+        public java.util.List<Integer> getStream() {
+            return this.stream;
+        }
+
+        public static final class Builder {
+            private java.util.List<Integer> stream; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttachedPicture model) {
+                this.stream = model.stream;
+            } 
+
+            /**
+             * Stream.
+             */
+            public Builder stream(java.util.List<Integer> stream) {
+                this.stream = stream;
+                return this;
+            }
+
+            public AttachedPicture build() {
+                return new AttachedPicture(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMediaConvertTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMediaConvertTaskRequest</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Stream")
+        private java.util.List<Integer> stream;
+
+        private Data(Builder builder) {
+            this.stream = builder.stream;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return stream
+         */
+        public java.util.List<Integer> getStream() {
+            return this.stream;
+        }
+
+        public static final class Builder {
+            private java.util.List<Integer> stream; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.stream = model.stream;
+            } 
+
+            /**
+             * Stream.
+             */
+            public Builder stream(java.util.List<Integer> stream) {
+                this.stream = stream;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMediaConvertTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMediaConvertTaskRequest</p>
+     */
+    public static class TargetsSegment extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private Double duration;
+
+        @com.aliyun.core.annotation.NameInMap("Format")
+        private String format;
+
+        @com.aliyun.core.annotation.NameInMap("StartNumber")
+        private Integer startNumber;
+
+        private TargetsSegment(Builder builder) {
+            this.duration = builder.duration;
+            this.format = builder.format;
+            this.startNumber = builder.startNumber;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TargetsSegment create() {
+            return builder().build();
+        }
+
+        /**
+         * @return duration
+         */
+        public Double getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        /**
+         * @return startNumber
+         */
+        public Integer getStartNumber() {
+            return this.startNumber;
+        }
+
+        public static final class Builder {
+            private Double duration; 
+            private String format; 
+            private Integer startNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetsSegment model) {
+                this.duration = model.duration;
+                this.format = model.format;
+                this.startNumber = model.startNumber;
+            } 
+
+            /**
+             * <p>Segment length. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
+             */
+            public Builder duration(Double duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * <p>Media slicing method. The value range is as follows:</p>
+             * <ul>
+             * <li>hls</li>
+             * <li>dash</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>hls</p>
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * <p>Starting sequence number, supported only for hls, default is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder startNumber(Integer startNumber) {
+                this.startNumber = startNumber;
+                return this;
+            }
+
+            public TargetsSegment build() {
+                return new TargetsSegment(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMediaConvertTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMediaConvertTaskRequest</p>
+     */
+    public static class Targets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AttachedPicture")
+        private AttachedPicture attachedPicture;
+
+        @com.aliyun.core.annotation.NameInMap("Audio")
+        private TargetAudio audio;
+
+        @com.aliyun.core.annotation.NameInMap("Container")
+        private String container;
+
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private Data data;
+
+        @com.aliyun.core.annotation.NameInMap("Image")
+        private TargetImage image;
+
+        @com.aliyun.core.annotation.NameInMap("Segment")
+        private TargetsSegment segment;
+
+        @com.aliyun.core.annotation.NameInMap("Speed")
+        private Float speed;
+
+        @com.aliyun.core.annotation.NameInMap("StripMetadata")
+        private Boolean stripMetadata;
+
+        @com.aliyun.core.annotation.NameInMap("Subtitle")
+        private TargetSubtitle subtitle;
+
+        @com.aliyun.core.annotation.NameInMap("URI")
+        private String URI;
+
+        @com.aliyun.core.annotation.NameInMap("Video")
+        private TargetVideo video;
+
+        private Targets(Builder builder) {
+            this.attachedPicture = builder.attachedPicture;
+            this.audio = builder.audio;
+            this.container = builder.container;
+            this.data = builder.data;
+            this.image = builder.image;
+            this.segment = builder.segment;
+            this.speed = builder.speed;
+            this.stripMetadata = builder.stripMetadata;
+            this.subtitle = builder.subtitle;
+            this.URI = builder.URI;
+            this.video = builder.video;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Targets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attachedPicture
+         */
+        public AttachedPicture getAttachedPicture() {
+            return this.attachedPicture;
+        }
+
+        /**
+         * @return audio
+         */
+        public TargetAudio getAudio() {
+            return this.audio;
+        }
+
+        /**
+         * @return container
+         */
+        public String getContainer() {
+            return this.container;
+        }
+
+        /**
+         * @return data
+         */
+        public Data getData() {
+            return this.data;
+        }
+
+        /**
+         * @return image
+         */
+        public TargetImage getImage() {
+            return this.image;
+        }
+
+        /**
+         * @return segment
+         */
+        public TargetsSegment getSegment() {
+            return this.segment;
+        }
+
+        /**
+         * @return speed
+         */
+        public Float getSpeed() {
+            return this.speed;
+        }
+
+        /**
+         * @return stripMetadata
+         */
+        public Boolean getStripMetadata() {
+            return this.stripMetadata;
+        }
+
+        /**
+         * @return subtitle
+         */
+        public TargetSubtitle getSubtitle() {
+            return this.subtitle;
+        }
+
+        /**
+         * @return URI
+         */
+        public String getURI() {
+            return this.URI;
+        }
+
+        /**
+         * @return video
+         */
+        public TargetVideo getVideo() {
+            return this.video;
+        }
+
+        public static final class Builder {
+            private AttachedPicture attachedPicture; 
+            private TargetAudio audio; 
+            private String container; 
+            private Data data; 
+            private TargetImage image; 
+            private TargetsSegment segment; 
+            private Float speed; 
+            private Boolean stripMetadata; 
+            private TargetSubtitle subtitle; 
+            private String URI; 
+            private TargetVideo video; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.attachedPicture = model.attachedPicture;
+                this.audio = model.audio;
+                this.container = model.container;
+                this.data = model.data;
                 this.image = model.image;
                 this.segment = model.segment;
                 this.speed = model.speed;
@@ -888,6 +1425,14 @@ public class CreateMediaConvertTaskRequest extends Request {
                 this.URI = model.URI;
                 this.video = model.video;
             } 
+
+            /**
+             * AttachedPicture.
+             */
+            public Builder attachedPicture(AttachedPicture attachedPicture) {
+                this.attachedPicture = attachedPicture;
+                return this;
+            }
 
             /**
              * <p>Audio processing parameter configuration.</p>
@@ -919,6 +1464,14 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
+             * Data.
+             */
+            public Builder data(Data data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
              * <p>Configuration for frame capture, sprite image capture, and media to animated image conversion.</p>
              */
             public Builder image(TargetImage image) {
@@ -929,7 +1482,7 @@ public class CreateMediaConvertTaskRequest extends Request {
             /**
              * <p>Media segment settings, no segmentation by default.</p>
              */
-            public Builder segment(Segment segment) {
+            public Builder segment(TargetsSegment segment) {
                 this.segment = segment;
                 return this;
             }
