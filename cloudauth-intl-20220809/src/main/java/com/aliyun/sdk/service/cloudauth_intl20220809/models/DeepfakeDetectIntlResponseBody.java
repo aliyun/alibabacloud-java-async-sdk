@@ -155,10 +155,14 @@ public class DeepfakeDetectIntlResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RiskTag")
         private String riskTag;
 
+        @com.aliyun.core.annotation.NameInMap("TransactionId")
+        private String transactionId;
+
         private ResultObject(Builder builder) {
             this.result = builder.result;
             this.riskScore = builder.riskScore;
             this.riskTag = builder.riskTag;
+            this.transactionId = builder.transactionId;
         }
 
         public static Builder builder() {
@@ -190,10 +194,18 @@ public class DeepfakeDetectIntlResponseBody extends TeaModel {
             return this.riskTag;
         }
 
+        /**
+         * @return transactionId
+         */
+        public String getTransactionId() {
+            return this.transactionId;
+        }
+
         public static final class Builder {
             private String result; 
             private java.util.Map<String, String> riskScore; 
             private String riskTag; 
+            private String transactionId; 
 
             private Builder() {
             } 
@@ -202,6 +214,7 @@ public class DeepfakeDetectIntlResponseBody extends TeaModel {
                 this.result = model.result;
                 this.riskScore = model.riskScore;
                 this.riskTag = model.riskTag;
+                this.transactionId = model.transactionId;
             } 
 
             /**
@@ -244,6 +257,14 @@ public class DeepfakeDetectIntlResponseBody extends TeaModel {
              */
             public Builder riskTag(String riskTag) {
                 this.riskTag = riskTag;
+                return this;
+            }
+
+            /**
+             * TransactionId.
+             */
+            public Builder transactionId(String transactionId) {
+                this.transactionId = transactionId;
                 return this;
             }
 
