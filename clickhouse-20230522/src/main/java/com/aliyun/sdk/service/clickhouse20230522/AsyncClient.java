@@ -170,6 +170,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeProcessListResponse> describeProcessList(DescribeProcessListRequest request);
 
     /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
+    CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
      * @param request the request parameters of DescribeSecurityIPList  DescribeSecurityIPListRequest
      * @return DescribeSecurityIPListResponse
      */
