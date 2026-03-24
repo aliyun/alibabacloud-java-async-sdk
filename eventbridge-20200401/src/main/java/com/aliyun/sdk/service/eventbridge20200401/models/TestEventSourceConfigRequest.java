@@ -106,6 +106,9 @@ public class TestEventSourceConfigRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("SnapshotMode")
+        private String snapshotMode;
+
         @com.aliyun.core.annotation.NameInMap("TableNames")
         private String tableNames;
 
@@ -127,6 +130,7 @@ public class TestEventSourceConfigRequest extends Request {
             this.port = builder.port;
             this.regionId = builder.regionId;
             this.securityGroupId = builder.securityGroupId;
+            this.snapshotMode = builder.snapshotMode;
             this.tableNames = builder.tableNames;
             this.user = builder.user;
             this.vSwitchIds = builder.vSwitchIds;
@@ -198,6 +202,13 @@ public class TestEventSourceConfigRequest extends Request {
         }
 
         /**
+         * @return snapshotMode
+         */
+        public String getSnapshotMode() {
+            return this.snapshotMode;
+        }
+
+        /**
          * @return tableNames
          */
         public String getTableNames() {
@@ -234,6 +245,7 @@ public class TestEventSourceConfigRequest extends Request {
             private Integer port; 
             private String regionId; 
             private String securityGroupId; 
+            private String snapshotMode; 
             private String tableNames; 
             private String user; 
             private String vSwitchIds; 
@@ -251,6 +263,7 @@ public class TestEventSourceConfigRequest extends Request {
                 this.port = model.port;
                 this.regionId = model.regionId;
                 this.securityGroupId = model.securityGroupId;
+                this.snapshotMode = model.snapshotMode;
                 this.tableNames = model.tableNames;
                 this.user = model.user;
                 this.vSwitchIds = model.vSwitchIds;
@@ -344,6 +357,14 @@ public class TestEventSourceConfigRequest extends Request {
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * SnapshotMode.
+             */
+            public Builder snapshotMode(String snapshotMode) {
+                this.snapshotMode = snapshotMode;
                 return this;
             }
 

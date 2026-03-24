@@ -23,6 +23,9 @@ public class Conversation extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
     @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
@@ -32,6 +35,7 @@ public class Conversation extends TeaModel {
     private Conversation(Builder builder) {
         this.createdAt = builder.createdAt;
         this.id = builder.id;
+        this.status = builder.status;
         this.title = builder.title;
         this.updatedAt = builder.updatedAt;
     }
@@ -63,6 +67,13 @@ public class Conversation extends TeaModel {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -79,6 +90,7 @@ public class Conversation extends TeaModel {
     public static final class Builder {
         private Long createdAt; 
         private String id; 
+        private String status; 
         private String title; 
         private Long updatedAt; 
 
@@ -88,6 +100,7 @@ public class Conversation extends TeaModel {
         private Builder(Conversation model) {
             this.createdAt = model.createdAt;
             this.id = model.id;
+            this.status = model.status;
             this.title = model.title;
             this.updatedAt = model.updatedAt;
         } 
@@ -105,6 +118,14 @@ public class Conversation extends TeaModel {
          */
         public Builder id(String id) {
             this.id = id;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 
