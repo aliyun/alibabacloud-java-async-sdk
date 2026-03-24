@@ -34,6 +34,10 @@ public class BeginSessionRequest extends Request {
     private Boolean sandBox;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SessionId")
+    private String sessionId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VendorParam")
     private String vendorParam;
 
@@ -43,6 +47,7 @@ public class BeginSessionRequest extends Request {
         this.agentKey = builder.agentKey;
         this.instanceId = builder.instanceId;
         this.sandBox = builder.sandBox;
+        this.sessionId = builder.sessionId;
         this.vendorParam = builder.vendorParam;
     }
 
@@ -88,6 +93,13 @@ public class BeginSessionRequest extends Request {
     }
 
     /**
+     * @return sessionId
+     */
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    /**
      * @return vendorParam
      */
     public String getVendorParam() {
@@ -99,6 +111,7 @@ public class BeginSessionRequest extends Request {
         private String agentKey; 
         private String instanceId; 
         private Boolean sandBox; 
+        private String sessionId; 
         private String vendorParam; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class BeginSessionRequest extends Request {
             this.agentKey = request.agentKey;
             this.instanceId = request.instanceId;
             this.sandBox = request.sandBox;
+            this.sessionId = request.sessionId;
             this.vendorParam = request.vendorParam;
         } 
 
@@ -147,6 +161,15 @@ public class BeginSessionRequest extends Request {
         public Builder sandBox(Boolean sandBox) {
             this.putBodyParameter("SandBox", sandBox);
             this.sandBox = sandBox;
+            return this;
+        }
+
+        /**
+         * SessionId.
+         */
+        public Builder sessionId(String sessionId) {
+            this.putBodyParameter("SessionId", sessionId);
+            this.sessionId = sessionId;
             return this;
         }
 

@@ -41,6 +41,10 @@ public class ListInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RobotType")
     private String robotType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sandbox")
+    private Boolean sandbox;
+
     private ListInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -49,6 +53,7 @@ public class ListInstanceRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.robotType = builder.robotType;
+        this.sandbox = builder.sandbox;
     }
 
     public static Builder builder() {
@@ -106,6 +111,13 @@ public class ListInstanceRequest extends Request {
         return this.robotType;
     }
 
+    /**
+     * @return sandbox
+     */
+    public Boolean getSandbox() {
+        return this.sandbox;
+    }
+
     public static final class Builder extends Request.Builder<ListInstanceRequest, Builder> {
         private String regionId; 
         private String agentKey; 
@@ -113,6 +125,7 @@ public class ListInstanceRequest extends Request {
         private Long pageNumber; 
         private Long pageSize; 
         private String robotType; 
+        private Boolean sandbox; 
 
         private Builder() {
             super();
@@ -126,6 +139,7 @@ public class ListInstanceRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.robotType = request.robotType;
+            this.sandbox = request.sandbox;
         } 
 
         /**
@@ -179,6 +193,15 @@ public class ListInstanceRequest extends Request {
         public Builder robotType(String robotType) {
             this.putQueryParameter("RobotType", robotType);
             this.robotType = robotType;
+            return this;
+        }
+
+        /**
+         * Sandbox.
+         */
+        public Builder sandbox(Boolean sandbox) {
+            this.putQueryParameter("Sandbox", sandbox);
+            this.sandbox = sandbox;
             return this;
         }
 
