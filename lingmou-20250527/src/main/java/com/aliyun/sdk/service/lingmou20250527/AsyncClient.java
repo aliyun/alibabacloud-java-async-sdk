@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ConfirmTrainPicAvatarResponse> confirmTrainPicAvatar(ConfirmTrainPicAvatarRequest request);
 
     /**
+     * @param request the request parameters of CopyBroadcastSceneFromTemplate  CopyBroadcastSceneFromTemplateRequest
+     * @return CopyBroadcastSceneFromTemplateResponse
+     */
+    CompletableFuture<CopyBroadcastSceneFromTemplateResponse> copyBroadcastSceneFromTemplate(CopyBroadcastSceneFromTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreateBackgroundPic  CreateBackgroundPicRequest
      * @return CreateBackgroundPicResponse
      */
@@ -132,6 +138,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPrivateTTSVoicesCustomResponse
      */
     CompletableFuture<ListPrivateTTSVoicesCustomResponse> listPrivateTTSVoicesCustom(ListPrivateTTSVoicesCustomRequest request);
+
+    /**
+     * @param request the request parameters of ListPublicBroadcastSceneTemplates  ListPublicBroadcastSceneTemplatesRequest
+     * @return ListPublicBroadcastSceneTemplatesResponse
+     */
+    CompletableFuture<ListPublicBroadcastSceneTemplatesResponse> listPublicBroadcastSceneTemplates(ListPublicBroadcastSceneTemplatesRequest request);
 
     /**
      * @param request the request parameters of ListTemplateMaterial  ListTemplateMaterialRequest

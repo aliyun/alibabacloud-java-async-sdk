@@ -76,6 +76,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CopyBroadcastSceneFromTemplate  CopyBroadcastSceneFromTemplateRequest
+     * @return CopyBroadcastSceneFromTemplateResponse
+     */
+    @Override
+    public CompletableFuture<CopyBroadcastSceneFromTemplateResponse> copyBroadcastSceneFromTemplate(CopyBroadcastSceneFromTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CopyBroadcastSceneFromTemplate").setMethod(HttpMethod.POST).setPathRegex("/openapi/customer/broadcast/template/scene/copyByTemplate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CopyBroadcastSceneFromTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CopyBroadcastSceneFromTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateBackgroundPic  CreateBackgroundPicRequest
      * @return CreateBackgroundPicResponse
      */
@@ -376,6 +394,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListPrivateTTSVoicesCustomResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListPublicBroadcastSceneTemplates  ListPublicBroadcastSceneTemplatesRequest
+     * @return ListPublicBroadcastSceneTemplatesResponse
+     */
+    @Override
+    public CompletableFuture<ListPublicBroadcastSceneTemplatesResponse> listPublicBroadcastSceneTemplates(ListPublicBroadcastSceneTemplatesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListPublicBroadcastSceneTemplates").setMethod(HttpMethod.GET).setPathRegex("/openapi/customer/broadcast/template/scene/listPublic").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPublicBroadcastSceneTemplatesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPublicBroadcastSceneTemplatesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
