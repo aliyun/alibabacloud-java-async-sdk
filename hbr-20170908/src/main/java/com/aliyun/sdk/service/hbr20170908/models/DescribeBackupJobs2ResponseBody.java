@@ -1034,6 +1034,9 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
+        @com.aliyun.core.annotation.NameInMap("TriggerMode")
+        private String triggerMode;
+
         @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
 
@@ -1086,6 +1089,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.tableName = builder.tableName;
+            this.triggerMode = builder.triggerMode;
             this.updatedTime = builder.updatedTime;
             this.vaultId = builder.vaultId;
         }
@@ -1414,6 +1418,13 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return triggerMode
+         */
+        public String getTriggerMode() {
+            return this.triggerMode;
+        }
+
+        /**
          * @return updatedTime
          */
         public Long getUpdatedTime() {
@@ -1473,6 +1484,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             private Long startTime; 
             private String status; 
             private String tableName; 
+            private String triggerMode; 
             private Long updatedTime; 
             private String vaultId; 
 
@@ -1525,6 +1537,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
                 this.startTime = model.startTime;
                 this.status = model.status;
                 this.tableName = model.tableName;
+                this.triggerMode = model.triggerMode;
                 this.updatedTime = model.updatedTime;
                 this.vaultId = model.vaultId;
             } 
@@ -2033,6 +2046,14 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
+                return this;
+            }
+
+            /**
+             * TriggerMode.
+             */
+            public Builder triggerMode(String triggerMode) {
+                this.triggerMode = triggerMode;
                 return this;
             }
 
