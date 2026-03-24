@@ -1509,6 +1509,32 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>PolarFsInstanceId</code> 是必须提供的参数，用来指定要操作的PolarFS实例。</li>
+     * <li><code>DBClusterId</code> 参数是可选的，如果提供，则表示与特定PolarDB集群关联的操作。</li>
+     * <li><code>Objects</code> 参数是一个字符串数组，列出了所有需要被删除的对象路径，并且是必需的。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeletePolarFsObjects  DeletePolarFsObjectsRequest
+     * @return DeletePolarFsObjectsResponse
+     */
+    @Override
+    public CompletableFuture<DeletePolarFsObjectsResponse> deletePolarFsObjects(DeletePolarFsObjectsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeletePolarFsObjects").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePolarFsObjectsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeletePolarFsObjectsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeletePolarFsQuota  DeletePolarFsQuotaRequest
      * @return DeletePolarFsQuotaResponse
      */
