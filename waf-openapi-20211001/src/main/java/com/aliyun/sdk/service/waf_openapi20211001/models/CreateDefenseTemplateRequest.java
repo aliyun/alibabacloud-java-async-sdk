@@ -23,6 +23,10 @@ public class CreateDefenseTemplateRequest extends Request {
     private String defenseScene;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefenseSubScene")
+    private String defenseSubScene;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -70,6 +74,7 @@ public class CreateDefenseTemplateRequest extends Request {
     private CreateDefenseTemplateRequest(Builder builder) {
         super(builder);
         this.defenseScene = builder.defenseScene;
+        this.defenseSubScene = builder.defenseSubScene;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
@@ -100,6 +105,13 @@ public class CreateDefenseTemplateRequest extends Request {
      */
     public String getDefenseScene() {
         return this.defenseScene;
+    }
+
+    /**
+     * @return defenseSubScene
+     */
+    public String getDefenseSubScene() {
+        return this.defenseSubScene;
     }
 
     /**
@@ -174,6 +186,7 @@ public class CreateDefenseTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDefenseTemplateRequest, Builder> {
         private String defenseScene; 
+        private String defenseSubScene; 
         private String description; 
         private String instanceId; 
         private String regionId; 
@@ -192,6 +205,7 @@ public class CreateDefenseTemplateRequest extends Request {
         private Builder(CreateDefenseTemplateRequest request) {
             super(request);
             this.defenseScene = request.defenseScene;
+            this.defenseSubScene = request.defenseSubScene;
             this.description = request.description;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
@@ -214,6 +228,15 @@ public class CreateDefenseTemplateRequest extends Request {
         public Builder defenseScene(String defenseScene) {
             this.putQueryParameter("DefenseScene", defenseScene);
             this.defenseScene = defenseScene;
+            return this;
+        }
+
+        /**
+         * DefenseSubScene.
+         */
+        public Builder defenseSubScene(String defenseSubScene) {
+            this.putQueryParameter("DefenseSubScene", defenseSubScene);
+            this.defenseSubScene = defenseSubScene;
             return this;
         }
 
