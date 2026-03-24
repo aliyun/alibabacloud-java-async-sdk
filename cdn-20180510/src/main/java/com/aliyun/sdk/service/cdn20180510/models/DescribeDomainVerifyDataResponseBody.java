@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainVerifyDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Content")
-    private String content;
+    private Content content;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -43,7 +43,7 @@ public class DescribeDomainVerifyDataResponseBody extends TeaModel {
     /**
      * @return content
      */
-    public String getContent() {
+    public Content getContent() {
         return this.content;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDomainVerifyDataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String content; 
+        private Content content; 
         private String requestId; 
 
         private Builder() {
@@ -75,7 +75,7 @@ public class DescribeDomainVerifyDataResponseBody extends TeaModel {
          *     &quot;verifyKey&quot;: &quot;_acme-challenge&quot;
          *   }</p>
          */
-        public Builder content(String content) {
+        public Builder content(Content content) {
             this.content = content;
             return this;
         }
@@ -97,4 +97,100 @@ public class DescribeDomainVerifyDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainVerifyDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainVerifyDataResponseBody</p>
+     */
+    public static class Content extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RootDomain")
+        private String rootDomain;
+
+        @com.aliyun.core.annotation.NameInMap("verifyCode")
+        private String verifyCode;
+
+        @com.aliyun.core.annotation.NameInMap("verifyKey")
+        private String verifyKey;
+
+        private Content(Builder builder) {
+            this.rootDomain = builder.rootDomain;
+            this.verifyCode = builder.verifyCode;
+            this.verifyKey = builder.verifyKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Content create() {
+            return builder().build();
+        }
+
+        /**
+         * @return rootDomain
+         */
+        public String getRootDomain() {
+            return this.rootDomain;
+        }
+
+        /**
+         * @return verifyCode
+         */
+        public String getVerifyCode() {
+            return this.verifyCode;
+        }
+
+        /**
+         * @return verifyKey
+         */
+        public String getVerifyKey() {
+            return this.verifyKey;
+        }
+
+        public static final class Builder {
+            private String rootDomain; 
+            private String verifyCode; 
+            private String verifyKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.rootDomain = model.rootDomain;
+                this.verifyCode = model.verifyCode;
+                this.verifyKey = model.verifyKey;
+            } 
+
+            /**
+             * RootDomain.
+             */
+            public Builder rootDomain(String rootDomain) {
+                this.rootDomain = rootDomain;
+                return this;
+            }
+
+            /**
+             * verifyCode.
+             */
+            public Builder verifyCode(String verifyCode) {
+                this.verifyCode = verifyCode;
+                return this;
+            }
+
+            /**
+             * verifyKey.
+             */
+            public Builder verifyKey(String verifyKey) {
+                this.verifyKey = verifyKey;
+                return this;
+            }
+
+            public Content build() {
+                return new Content(this);
+            } 
+
+        } 
+
+    }
 }
