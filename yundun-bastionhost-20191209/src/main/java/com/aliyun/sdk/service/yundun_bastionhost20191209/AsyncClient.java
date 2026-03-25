@@ -537,6 +537,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserGroupResponse> getUserGroup(GetUserGroupRequest request);
 
     /**
+     * @param request the request parameters of ImportKMSSecretsForHost  ImportKMSSecretsForHostRequest
+     * @return ImportKMSSecretsForHostResponse
+     */
+    CompletableFuture<ImportKMSSecretsForHostResponse> importKMSSecretsForHost(ImportKMSSecretsForHostRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query commands to be reviewed by a Bastionhost administrator.
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -659,6 +665,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListHostsForUserGroupResponse
      */
     CompletableFuture<ListHostsForUserGroupResponse> listHostsForUserGroup(ListHostsForUserGroupRequest request);
+
+    /**
+     * @param request the request parameters of ListImportableKMSSecretsForHost  ListImportableKMSSecretsForHostRequest
+     * @return ListImportableKMSSecretsForHostResponse
+     */
+    CompletableFuture<ListImportableKMSSecretsForHostResponse> listImportableKMSSecretsForHost(ListImportableKMSSecretsForHostRequest request);
 
     /**
      * @param request the request parameters of ListInstanceRdMembers  ListInstanceRdMembersRequest
