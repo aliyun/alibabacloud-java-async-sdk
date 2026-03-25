@@ -59,7 +59,10 @@ public class GetSecretValueRequest extends Request {
         } 
 
         /**
-         * name.
+         * <p>The key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_secret</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);

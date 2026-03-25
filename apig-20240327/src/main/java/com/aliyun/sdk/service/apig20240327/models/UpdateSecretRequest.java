@@ -73,7 +73,10 @@ public class UpdateSecretRequest extends Request {
         } 
 
         /**
-         * secretId.
+         * <p>The ID of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
          */
         public Builder secretId(String secretId) {
             this.putPathParameter("secretId", secretId);
@@ -82,7 +85,10 @@ public class UpdateSecretRequest extends Request {
         }
 
         /**
-         * secretData.
+         * <p>The key value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apikey-xxxxxxxx</p>
          */
         public Builder secretData(String secretData) {
             this.putBodyParameter("secretData", secretData);

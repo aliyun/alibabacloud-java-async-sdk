@@ -59,7 +59,10 @@ public class GetSecretRequest extends Request {
         } 
 
         /**
-         * secretId.
+         * <p>The ID of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
          */
         public Builder secretId(String secretId) {
             this.putPathParameter("secretId", secretId);

@@ -101,7 +101,10 @@ public class ListConsumerAuthorizationRulesRequest extends Request {
         } 
 
         /**
-         * consumerId.
+         * <p>The consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-csgdi45lhtggrjcpriug</p>
          */
         public Builder consumerId(String consumerId) {
             this.putPathParameter("consumerId", consumerId);
@@ -110,7 +113,10 @@ public class ListConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * apiNameLike.
+         * <p>API name for fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3</p>
          */
         public Builder apiNameLike(String apiNameLike) {
             this.putQueryParameter("apiNameLike", apiNameLike);
@@ -119,7 +125,10 @@ public class ListConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -128,7 +137,10 @@ public class ListConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries returned on each page. If you do not specify this parameter, the default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

@@ -93,7 +93,10 @@ public class CreateSecretResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to upload data. Please try again</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CFF809D7-045D-502F-BF6C-947Exxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +179,10 @@ public class CreateSecretResponseBody extends TeaModel {
             } 
 
             /**
-             * secretId.
+             * <p>The ID of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
              */
             public Builder secretId(String secretId) {
                 this.secretId = secretId;

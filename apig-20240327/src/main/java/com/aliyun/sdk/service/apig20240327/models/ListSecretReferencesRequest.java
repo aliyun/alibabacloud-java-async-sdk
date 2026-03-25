@@ -87,7 +87,10 @@ public class ListSecretReferencesRequest extends Request {
         } 
 
         /**
-         * secretId.
+         * <p>The ID of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
          */
         public Builder secretId(String secretId) {
             this.putPathParameter("secretId", secretId);
@@ -96,7 +99,10 @@ public class ListSecretReferencesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. The value starts from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -105,7 +111,10 @@ public class ListSecretReferencesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

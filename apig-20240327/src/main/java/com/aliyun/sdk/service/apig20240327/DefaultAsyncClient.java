@@ -1042,6 +1042,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * @param request the request parameters of GetSecret  GetSecretRequest
      * @return GetSecretResponse
      */
@@ -1370,6 +1373,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * @param request the request parameters of ListPluginClasses  ListPluginClassesRequest
      * @return ListPluginClassesResponse
      */
@@ -1442,6 +1448,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * @param request the request parameters of ListSecretReferences  ListSecretReferencesRequest
      * @return ListSecretReferencesResponse
      */
@@ -1899,6 +1908,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can only update the listening Ingress configuration for sources of the <strong>ACK</strong> type.</p>
+     * 
      * @param request the request parameters of UpdateSecret  UpdateSecretRequest
      * @return UpdateSecretResponse
      */

@@ -199,7 +199,7 @@ public class ListPluginClassesRequest extends Request {
         } 
 
         /**
-         * aliasLike.
+         * <p>The alias keyword for a fuzzy search.</p>
          */
         public Builder aliasLike(String aliasLike) {
             this.putQueryParameter("aliasLike", aliasLike);
@@ -208,7 +208,15 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * direction.
+         * <p>The traffic direction. Valid values: </p>
+         * <ul>
+         * <li>OutBound</li>
+         * <li>InBound</li>
+         * <li>Both</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InBound</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("direction", direction);
@@ -217,7 +225,10 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * excludeBuiltinAiProxy.
+         * <p>Specifies whether to exclude built-in plugins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder excludeBuiltinAiProxy(Boolean excludeBuiltinAiProxy) {
             this.putQueryParameter("excludeBuiltinAiProxy", excludeBuiltinAiProxy);
@@ -226,7 +237,10 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-d1j8tjum1hkhxxxxxxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -235,7 +249,10 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * gatewayType.
+         * <p>The instance type. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("gatewayType", gatewayType);
@@ -244,7 +261,10 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * installed.
+         * <p>Indicates whether the plugin is installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder installed(Boolean installed) {
             this.putQueryParameter("installed", installed);
@@ -253,7 +273,10 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * nameLike.
+         * <p>The plugin name for a fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oauth</p>
          */
         public Builder nameLike(String nameLike) {
             this.putQueryParameter("nameLike", nameLike);
@@ -262,7 +285,10 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -271,7 +297,10 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -280,7 +309,15 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>The plugin source. Valid values: </p>
+         * <ul>
+         * <li>HigressOfficial</li>
+         * <li>HigressCommunity</li>
+         * <li>Custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HigressOfficial</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("source", source);
@@ -289,7 +326,10 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The type of the plugin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Auth</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

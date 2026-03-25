@@ -93,7 +93,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,6 +124,9 @@ public class ListSecretReferencesResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE857A85-251D-5018-8103-A38957D71***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -196,7 +205,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The plug-in name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oauth</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -204,7 +216,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * pluginClassId.
+             * <p>The plug-in type ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pls-xxxxxxxx</p>
              */
             public Builder pluginClassId(String pluginClassId) {
                 this.pluginClassId = pluginClassId;
@@ -212,7 +227,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * pluginId.
+             * <p>The plug-in ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl-d4ijk56m1hkhxxxxxxxx</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -279,7 +297,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myService</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -287,7 +308,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-cvgbtcmm1hkmxxxxxxxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -354,7 +378,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             } 
 
             /**
-             * consumerId.
+             * <p>The consumer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-d0iltnem1hkhxxxxxxxx</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -362,7 +389,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The consumer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myconsumer</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -442,7 +472,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             } 
 
             /**
-             * httpApiId.
+             * <p>The HTTP API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-d2vv43em201hxxxxxxxx</p>
              */
             public Builder httpApiId(String httpApiId) {
                 this.httpApiId = httpApiId;
@@ -450,7 +483,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The route name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -458,7 +494,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * routeId.
+             * <p>The route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hr-cv0i5oum1hkhxxxxxxxx</p>
              */
             public Builder routeId(String routeId) {
                 this.routeId = routeId;
@@ -577,7 +616,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             } 
 
             /**
-             * PluginConfig.
+             * <p>The information about the plug-in that references the current key.</p>
              */
             public Builder pluginConfig(PluginConfig pluginConfig) {
                 this.pluginConfig = pluginConfig;
@@ -585,7 +624,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceConfig.
+             * <p>The service information that references the current key.</p>
              */
             public Builder serviceConfig(ServiceConfig serviceConfig) {
                 this.serviceConfig = serviceConfig;
@@ -593,7 +632,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * consumerConfig.
+             * <p>The consumer information that references the current key.</p>
              */
             public Builder consumerConfig(ConsumerConfig consumerConfig) {
                 this.consumerConfig = consumerConfig;
@@ -601,7 +640,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -609,7 +651,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * mcpServerConfig.
+             * <p>MCP service information that references the current key.</p>
              */
             public Builder mcpServerConfig(McpServerConfig mcpServerConfig) {
                 this.mcpServerConfig = mcpServerConfig;
@@ -617,7 +659,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The type of resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Plugin</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -710,7 +755,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The list of reference details.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -718,7 +763,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -726,7 +774,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -734,7 +785,10 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

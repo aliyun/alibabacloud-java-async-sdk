@@ -80,7 +80,10 @@ public class UpdateSecretResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class UpdateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +102,10 @@ public class UpdateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B01CABA5-9AA1-51A2-A5A7-8BD83BA062F7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

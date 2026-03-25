@@ -93,7 +93,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response payload.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>479AE38F-A574-52F7-87EA-E91199999F9E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +179,10 @@ public class GetSecretValueResponseBody extends TeaModel {
             } 
 
             /**
-             * secretData.
+             * <p>The key value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apikey-xxxxxxxx</p>
              */
             public Builder secretData(String secretData) {
                 this.secretData = secretData;

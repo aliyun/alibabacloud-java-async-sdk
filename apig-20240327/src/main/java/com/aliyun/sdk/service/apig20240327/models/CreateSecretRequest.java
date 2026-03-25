@@ -129,7 +129,10 @@ public class CreateSecretRequest extends Request {
         } 
 
         /**
-         * description.
+         * <p>The description of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -138,7 +141,10 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * gatewayType.
+         * <p>The type of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putBodyParameter("gatewayType", gatewayType);
@@ -147,7 +153,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * kmsConfig.
+         * <p>The key configuration information of KMS.</p>
          */
         public Builder kmsConfig(KMSConfig kmsConfig) {
             this.putBodyParameter("kmsConfig", kmsConfig);
@@ -156,7 +162,10 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The key name. It can be up to 64 characters in length and can contain letters, digits, and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_secret</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -165,7 +174,10 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * secretData.
+         * <p>The value of the KMS credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apikey-123456xxxxxxxx</p>
          */
         public Builder secretData(String secretData) {
             this.putBodyParameter("secretData", secretData);
@@ -174,7 +186,10 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * secretSource.
+         * <p>The source of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KMS</p>
          */
         public Builder secretSource(String secretSource) {
             this.putBodyParameter("secretSource", secretSource);

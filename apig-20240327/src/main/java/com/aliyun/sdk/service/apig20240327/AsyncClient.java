@@ -362,6 +362,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceOverviewResponse> getResourceOverview(GetResourceOverviewRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * @param request the request parameters of GetSecret  GetSecretRequest
      * @return GetSecretResponse
      */
@@ -474,6 +477,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPluginAttachmentsResponse> listPluginAttachments(ListPluginAttachmentsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * @param request the request parameters of ListPluginClasses  ListPluginClassesRequest
      * @return ListPluginClassesResponse
      */
@@ -498,6 +504,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPolicyClassesResponse> listPolicyClasses(ListPolicyClassesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * @param request the request parameters of ListSecretReferences  ListSecretReferencesRequest
      * @return ListSecretReferencesResponse
      */
@@ -655,6 +664,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePolicyResponse> updatePolicy(UpdatePolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can only update the listening Ingress configuration for sources of the <strong>ACK</strong> type.</p>
+     * 
      * @param request the request parameters of UpdateSecret  UpdateSecretRequest
      * @return UpdateSecretResponse
      */

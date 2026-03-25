@@ -93,7 +93,10 @@ public class GetSecretResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetSecretResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The key information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetSecretResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class GetSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE857A85-251D-5018-8103-A38957D71E20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -274,7 +283,10 @@ public class GetSecretResponseBody extends TeaModel {
             } 
 
             /**
-             * createTimestamp.
+             * <p>The creation timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -282,7 +294,14 @@ public class GetSecretResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayType.
+             * <p>The type of the gateway. Valid values:</p>
+             * <ul>
+             * <li>API</li>
+             * <li>AI</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>API</p>
              */
             public Builder gatewayType(String gatewayType) {
                 this.gatewayType = gatewayType;
@@ -290,7 +309,7 @@ public class GetSecretResponseBody extends TeaModel {
             }
 
             /**
-             * kmsConfig.
+             * <p>The KMS configuration information.</p>
              */
             public Builder kmsConfig(KMSConfig kmsConfig) {
                 this.kmsConfig = kmsConfig;
@@ -298,7 +317,10 @@ public class GetSecretResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysecret</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -306,7 +328,10 @@ public class GetSecretResponseBody extends TeaModel {
             }
 
             /**
-             * referenceCount.
+             * <p>The number of resources that reference the current key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder referenceCount(Integer referenceCount) {
                 this.referenceCount = referenceCount;
@@ -314,7 +339,10 @@ public class GetSecretResponseBody extends TeaModel {
             }
 
             /**
-             * secretId.
+             * <p>The ID of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
              */
             public Builder secretId(String secretId) {
                 this.secretId = secretId;
@@ -322,7 +350,10 @@ public class GetSecretResponseBody extends TeaModel {
             }
 
             /**
-             * secretSource.
+             * <p>The source of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KMS</p>
              */
             public Builder secretSource(String secretSource) {
                 this.secretSource = secretSource;
@@ -330,7 +361,15 @@ public class GetSecretResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The state of the key. Valid values:</p>
+             * <ul>
+             * <li>ENALBE</li>
+             * <li>DISABLE</li>
+             * <li>DELETED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ENALBE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -338,7 +377,10 @@ public class GetSecretResponseBody extends TeaModel {
             }
 
             /**
-             * updateTimestamp.
+             * <p>The update timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1725868548440</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;

@@ -562,6 +562,9 @@ public class ImportHttpApiResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("failureOperations")
         private java.util.List<FailureOperations> failureOperations;
 
+        @com.aliyun.core.annotation.NameInMap("mcpToolsDefinition")
+        private String mcpToolsDefinition;
+
         @com.aliyun.core.annotation.NameInMap("successComponents")
         private java.util.List<SuccessComponents> successComponents;
 
@@ -576,6 +579,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             this.existHttpApiInfo = builder.existHttpApiInfo;
             this.failureComponents = builder.failureComponents;
             this.failureOperations = builder.failureOperations;
+            this.mcpToolsDefinition = builder.mcpToolsDefinition;
             this.successComponents = builder.successComponents;
             this.successOperations = builder.successOperations;
             this.warningMessages = builder.warningMessages;
@@ -618,6 +622,13 @@ public class ImportHttpApiResponseBody extends TeaModel {
         }
 
         /**
+         * @return mcpToolsDefinition
+         */
+        public String getMcpToolsDefinition() {
+            return this.mcpToolsDefinition;
+        }
+
+        /**
          * @return successComponents
          */
         public java.util.List<SuccessComponents> getSuccessComponents() {
@@ -643,6 +654,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             private HttpApiApiInfo existHttpApiInfo; 
             private java.util.List<FailureComponents> failureComponents; 
             private java.util.List<FailureOperations> failureOperations; 
+            private String mcpToolsDefinition; 
             private java.util.List<SuccessComponents> successComponents; 
             private java.util.List<SuccessOperations> successOperations; 
             private java.util.List<String> warningMessages; 
@@ -655,6 +667,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
                 this.existHttpApiInfo = model.existHttpApiInfo;
                 this.failureComponents = model.failureComponents;
                 this.failureOperations = model.failureOperations;
+                this.mcpToolsDefinition = model.mcpToolsDefinition;
                 this.successComponents = model.successComponents;
                 this.successOperations = model.successOperations;
                 this.warningMessages = model.warningMessages;
@@ -689,6 +702,14 @@ public class ImportHttpApiResponseBody extends TeaModel {
              */
             public Builder failureOperations(java.util.List<FailureOperations> failureOperations) {
                 this.failureOperations = failureOperations;
+                return this;
+            }
+
+            /**
+             * mcpToolsDefinition.
+             */
+            public Builder mcpToolsDefinition(String mcpToolsDefinition) {
+                this.mcpToolsDefinition = mcpToolsDefinition;
                 return this;
             }
 

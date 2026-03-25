@@ -59,7 +59,10 @@ public class DeleteSecretRequest extends Request {
         } 
 
         /**
-         * secretId.
+         * <p>The key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sec-d5e6shmm1hkoxxxxxxxxx</p>
          */
         public Builder secretId(String secretId) {
             this.putPathParameter("secretId", secretId);

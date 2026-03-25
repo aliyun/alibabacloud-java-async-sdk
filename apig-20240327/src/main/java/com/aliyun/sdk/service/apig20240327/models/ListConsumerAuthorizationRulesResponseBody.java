@@ -93,7 +93,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -329,7 +335,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * apiInfo.
+             * <p>The API information.</p>
              */
             public Builder apiInfo(HttpApiApiInfo apiInfo) {
                 this.apiInfo = apiInfo;
@@ -337,7 +343,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * consumerAuthorizationRuleId.
+             * <p>The ID of the consumer authorization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>car-csgeka5lhtggrjcprok0</p>
              */
             public Builder consumerAuthorizationRuleId(String consumerAuthorizationRuleId) {
                 this.consumerAuthorizationRuleId = consumerAuthorizationRuleId;
@@ -345,7 +354,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * consumerId.
+             * <p>The consumer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-csheiftlhtgmp0j0hp4g</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -353,7 +365,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * createTimestamp.
+             * <p>The creation timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -361,7 +376,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * deployStatus.
+             * <p>The deployment status of the API in the current environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder deployStatus(String deployStatus) {
                 this.deployStatus = deployStatus;
@@ -369,7 +387,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * environmentInfo.
+             * <p>The environment information.</p>
              */
             public Builder environmentInfo(EnvironmentInfo environmentInfo) {
                 this.environmentInfo = environmentInfo;
@@ -377,7 +395,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * expireMode.
+             * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ShortTerm</p>
              */
             public Builder expireMode(String expireMode) {
                 this.expireMode = expireMode;
@@ -385,7 +406,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * expireStatus.
+             * <p>The rule status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InEffect</p>
              */
             public Builder expireStatus(String expireStatus) {
                 this.expireStatus = expireStatus;
@@ -393,7 +417,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * expireTimestamp.
+             * <p>The time when the rule expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172086834548</p>
              */
             public Builder expireTimestamp(Long expireTimestamp) {
                 this.expireTimestamp = expireTimestamp;
@@ -401,7 +428,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayInfo.
+             * <p>The gateway information.</p>
              */
             public Builder gatewayInfo(GatewayInfo gatewayInfo) {
                 this.gatewayInfo = gatewayInfo;
@@ -409,7 +436,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2351944</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -417,7 +447,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HttpApiRoute</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -425,7 +458,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * updateTimestamp.
+             * <p>The update timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1721116090326</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -518,7 +554,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The list of consumer authorization information.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -526,7 +562,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -534,7 +573,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -542,7 +584,10 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>The total number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder totalSize(String totalSize) {
                 this.totalSize = totalSize;
