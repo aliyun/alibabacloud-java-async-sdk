@@ -110,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DispatchConsoleAPIForPartnerResponse> dispatchConsoleAPIForPartner(DispatchConsoleAPIForPartnerRequest request);
 
     /**
+     * @param request the request parameters of EditPluginConfig  EditPluginConfigRequest
+     * @return EditPluginConfigResponse
+     */
+    CompletableFuture<EditPluginConfigResponse> editPluginConfig(EditPluginConfigRequest request);
+
+    /**
      * @param request the request parameters of ExportMaterialFile  ExportMaterialFileRequest
      * @return ExportMaterialFileResponse
      */
