@@ -186,6 +186,9 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("EffectiveOrderType")
+        private String effectiveOrderType;
+
         @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
@@ -193,6 +196,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
             this.cenId = builder.cenId;
             this.cenOwnerId = builder.cenOwnerId;
             this.createTime = builder.createTime;
+            this.effectiveOrderType = builder.effectiveOrderType;
             this.orderType = builder.orderType;
         }
 
@@ -226,6 +230,13 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return effectiveOrderType
+         */
+        public String getEffectiveOrderType() {
+            return this.effectiveOrderType;
+        }
+
+        /**
          * @return orderType
          */
         public String getOrderType() {
@@ -236,6 +247,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
             private String cenId; 
             private Long cenOwnerId; 
             private String createTime; 
+            private String effectiveOrderType; 
             private String orderType; 
 
             private Builder() {
@@ -245,6 +257,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
                 this.cenId = model.cenId;
                 this.cenOwnerId = model.cenOwnerId;
                 this.createTime = model.createTime;
+                this.effectiveOrderType = model.effectiveOrderType;
                 this.orderType = model.orderType;
             } 
 
@@ -278,6 +291,14 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * EffectiveOrderType.
+             */
+            public Builder effectiveOrderType(String effectiveOrderType) {
+                this.effectiveOrderType = effectiveOrderType;
                 return this;
             }
 

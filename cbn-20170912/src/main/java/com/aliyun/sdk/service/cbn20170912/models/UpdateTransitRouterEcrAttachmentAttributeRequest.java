@@ -26,6 +26,10 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
+    private String orderType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -58,6 +62,7 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.orderType = builder.orderType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -92,6 +97,13 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return orderType
+     */
+    public String getOrderType() {
+        return this.orderType;
     }
 
     /**
@@ -146,6 +158,7 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateTransitRouterEcrAttachmentAttributeRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
+        private String orderType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -162,6 +175,7 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
+            this.orderType = request.orderType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -200,6 +214,15 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * OrderType.
+         */
+        public Builder orderType(String orderType) {
+            this.putQueryParameter("OrderType", orderType);
+            this.orderType = orderType;
             return this;
         }
 
