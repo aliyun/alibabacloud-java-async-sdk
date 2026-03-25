@@ -26,6 +26,10 @@ public class ListSandboxesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sandboxId")
+    private String sandboxId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
@@ -41,6 +45,7 @@ public class ListSandboxesRequest extends Request {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.sandboxId = builder.sandboxId;
         this.status = builder.status;
         this.templateName = builder.templateName;
         this.templateType = builder.templateType;
@@ -74,6 +79,13 @@ public class ListSandboxesRequest extends Request {
     }
 
     /**
+     * @return sandboxId
+     */
+    public String getSandboxId() {
+        return this.sandboxId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -97,6 +109,7 @@ public class ListSandboxesRequest extends Request {
     public static final class Builder extends Request.Builder<ListSandboxesRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
+        private String sandboxId; 
         private String status; 
         private String templateName; 
         private String templateType; 
@@ -109,6 +122,7 @@ public class ListSandboxesRequest extends Request {
             super(request);
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.sandboxId = request.sandboxId;
             this.status = request.status;
             this.templateName = request.templateName;
             this.templateType = request.templateType;
@@ -132,6 +146,15 @@ public class ListSandboxesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * sandboxId.
+         */
+        public Builder sandboxId(String sandboxId) {
+            this.putQueryParameter("sandboxId", sandboxId);
+            this.sandboxId = sandboxId;
             return this;
         }
 
