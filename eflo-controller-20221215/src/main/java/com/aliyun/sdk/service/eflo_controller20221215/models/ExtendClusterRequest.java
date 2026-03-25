@@ -999,6 +999,9 @@ public class ExtendClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("LoginPassword")
         private String loginPassword;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
@@ -1010,6 +1013,7 @@ public class ExtendClusterRequest extends Request {
             this.hostname = builder.hostname;
             this.hyperNodeId = builder.hyperNodeId;
             this.loginPassword = builder.loginPassword;
+            this.securityGroupId = builder.securityGroupId;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
         }
@@ -1051,6 +1055,13 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -1069,6 +1080,7 @@ public class ExtendClusterRequest extends Request {
             private String hostname; 
             private String hyperNodeId; 
             private String loginPassword; 
+            private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
 
@@ -1080,6 +1092,7 @@ public class ExtendClusterRequest extends Request {
                 this.hostname = model.hostname;
                 this.hyperNodeId = model.hyperNodeId;
                 this.loginPassword = model.loginPassword;
+                this.securityGroupId = model.securityGroupId;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
             } 
@@ -1116,6 +1129,14 @@ public class ExtendClusterRequest extends Request {
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
                 return this;
             }
 
@@ -1413,6 +1434,9 @@ public class ExtendClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
@@ -1424,6 +1448,7 @@ public class ExtendClusterRequest extends Request {
             this.hostname = builder.hostname;
             this.loginPassword = builder.loginPassword;
             this.nodeId = builder.nodeId;
+            this.securityGroupId = builder.securityGroupId;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
         }
@@ -1465,6 +1490,13 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -1483,6 +1515,7 @@ public class ExtendClusterRequest extends Request {
             private String hostname; 
             private String loginPassword; 
             private String nodeId; 
+            private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
 
@@ -1494,6 +1527,7 @@ public class ExtendClusterRequest extends Request {
                 this.hostname = model.hostname;
                 this.loginPassword = model.loginPassword;
                 this.nodeId = model.nodeId;
+                this.securityGroupId = model.securityGroupId;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
             } 
@@ -1536,6 +1570,14 @@ public class ExtendClusterRequest extends Request {
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
                 return this;
             }
 

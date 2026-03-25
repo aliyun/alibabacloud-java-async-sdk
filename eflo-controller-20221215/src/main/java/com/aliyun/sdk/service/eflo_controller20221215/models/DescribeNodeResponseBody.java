@@ -781,8 +781,14 @@ public class DescribeNodeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
         @com.aliyun.core.annotation.NameInMap("SubnetId")
         private String subnetId;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        private String vSwitchId;
 
         @com.aliyun.core.annotation.NameInMap("VpdId")
         private String vpdId;
@@ -790,7 +796,9 @@ public class DescribeNodeResponseBody extends TeaModel {
         private Networks(Builder builder) {
             this.bondName = builder.bondName;
             this.ip = builder.ip;
+            this.securityGroupId = builder.securityGroupId;
             this.subnetId = builder.subnetId;
+            this.vSwitchId = builder.vSwitchId;
             this.vpdId = builder.vpdId;
         }
 
@@ -817,10 +825,24 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
          * @return subnetId
          */
         public String getSubnetId() {
             return this.subnetId;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
         /**
@@ -833,7 +855,9 @@ public class DescribeNodeResponseBody extends TeaModel {
         public static final class Builder {
             private String bondName; 
             private String ip; 
+            private String securityGroupId; 
             private String subnetId; 
+            private String vSwitchId; 
             private String vpdId; 
 
             private Builder() {
@@ -842,7 +866,9 @@ public class DescribeNodeResponseBody extends TeaModel {
             private Builder(Networks model) {
                 this.bondName = model.bondName;
                 this.ip = model.ip;
+                this.securityGroupId = model.securityGroupId;
                 this.subnetId = model.subnetId;
+                this.vSwitchId = model.vSwitchId;
                 this.vpdId = model.vpdId;
             } 
 
@@ -869,6 +895,14 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
              * <p>The subnet ID.</p>
              * 
              * <strong>example:</strong>
@@ -876,6 +910,14 @@ public class DescribeNodeResponseBody extends TeaModel {
              */
             public Builder subnetId(String subnetId) {
                 this.subnetId = subnetId;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
                 return this;
             }
 
