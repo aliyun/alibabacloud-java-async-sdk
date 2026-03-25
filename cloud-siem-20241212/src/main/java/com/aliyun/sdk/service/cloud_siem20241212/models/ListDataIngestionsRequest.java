@@ -34,6 +34,10 @@ public class ListDataIngestionsRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NormalizationSchemaIds")
+    private java.util.List<String> normalizationSchemaIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProductId")
     private String productId;
 
@@ -51,6 +55,7 @@ public class ListDataIngestionsRequest extends Request {
         this.dataIngestionStatus = builder.dataIngestionStatus;
         this.dataIngestionTemplateIds = builder.dataIngestionTemplateIds;
         this.lang = builder.lang;
+        this.normalizationSchemaIds = builder.normalizationSchemaIds;
         this.productId = builder.productId;
         this.regionId = builder.regionId;
         this.roleFor = builder.roleFor;
@@ -98,6 +103,13 @@ public class ListDataIngestionsRequest extends Request {
     }
 
     /**
+     * @return normalizationSchemaIds
+     */
+    public java.util.List<String> getNormalizationSchemaIds() {
+        return this.normalizationSchemaIds;
+    }
+
+    /**
      * @return productId
      */
     public String getProductId() {
@@ -123,6 +135,7 @@ public class ListDataIngestionsRequest extends Request {
         private String dataIngestionStatus; 
         private java.util.List<String> dataIngestionTemplateIds; 
         private String lang; 
+        private java.util.List<String> normalizationSchemaIds; 
         private String productId; 
         private String regionId; 
         private Long roleFor; 
@@ -137,6 +150,7 @@ public class ListDataIngestionsRequest extends Request {
             this.dataIngestionStatus = request.dataIngestionStatus;
             this.dataIngestionTemplateIds = request.dataIngestionTemplateIds;
             this.lang = request.lang;
+            this.normalizationSchemaIds = request.normalizationSchemaIds;
             this.productId = request.productId;
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
@@ -177,6 +191,16 @@ public class ListDataIngestionsRequest extends Request {
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * NormalizationSchemaIds.
+         */
+        public Builder normalizationSchemaIds(java.util.List<String> normalizationSchemaIds) {
+            String normalizationSchemaIdsShrink = shrink(normalizationSchemaIds, "NormalizationSchemaIds", "simple");
+            this.putBodyParameter("NormalizationSchemaIds", normalizationSchemaIdsShrink);
+            this.normalizationSchemaIds = normalizationSchemaIds;
             return this;
         }
 
