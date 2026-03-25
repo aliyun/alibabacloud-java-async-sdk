@@ -55,8 +55,16 @@ public class DescribeCouponRequest extends Request {
     private Long expireStartDate;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Nbid")
     private String nbid;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
@@ -78,7 +86,9 @@ public class DescribeCouponRequest extends Request {
         this.effectiveStartTime = builder.effectiveStartTime;
         this.expireEndDate = builder.expireEndDate;
         this.expireStartDate = builder.expireStartDate;
+        this.maxResults = builder.maxResults;
         this.nbid = builder.nbid;
+        this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
     }
@@ -160,10 +170,24 @@ public class DescribeCouponRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
      * @return nbid
      */
     public String getNbid() {
         return this.nbid;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -190,7 +214,9 @@ public class DescribeCouponRequest extends Request {
         private Long effectiveStartTime; 
         private Long expireEndDate; 
         private Long expireStartDate; 
+        private Integer maxResults; 
         private String nbid; 
+        private String nextToken; 
         private Integer pageSize; 
         private String status; 
 
@@ -209,7 +235,9 @@ public class DescribeCouponRequest extends Request {
             this.effectiveStartTime = request.effectiveStartTime;
             this.expireEndDate = request.expireEndDate;
             this.expireStartDate = request.expireStartDate;
+            this.maxResults = request.maxResults;
             this.nbid = request.nbid;
+            this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
             this.status = request.status;
         } 
@@ -300,11 +328,29 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
          * Nbid.
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
             this.nbid = nbid;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
