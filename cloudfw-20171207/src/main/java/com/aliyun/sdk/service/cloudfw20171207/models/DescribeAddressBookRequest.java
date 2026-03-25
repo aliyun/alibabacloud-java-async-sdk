@@ -30,6 +30,10 @@ public class DescribeAddressBookRequest extends Request {
     private String groupType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupUuid")
+    private String groupUuid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -46,6 +50,7 @@ public class DescribeAddressBookRequest extends Request {
         this.containPort = builder.containPort;
         this.currentPage = builder.currentPage;
         this.groupType = builder.groupType;
+        this.groupUuid = builder.groupUuid;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.query = builder.query;
@@ -86,6 +91,13 @@ public class DescribeAddressBookRequest extends Request {
     }
 
     /**
+     * @return groupUuid
+     */
+    public String getGroupUuid() {
+        return this.groupUuid;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -110,6 +122,7 @@ public class DescribeAddressBookRequest extends Request {
         private String containPort; 
         private String currentPage; 
         private String groupType; 
+        private String groupUuid; 
         private String lang; 
         private String pageSize; 
         private String query; 
@@ -123,6 +136,7 @@ public class DescribeAddressBookRequest extends Request {
             this.containPort = request.containPort;
             this.currentPage = request.currentPage;
             this.groupType = request.groupType;
+            this.groupUuid = request.groupUuid;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.query = request.query;
@@ -174,6 +188,15 @@ public class DescribeAddressBookRequest extends Request {
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
             this.groupType = groupType;
+            return this;
+        }
+
+        /**
+         * GroupUuid.
+         */
+        public Builder groupUuid(String groupUuid) {
+            this.putQueryParameter("GroupUuid", groupUuid);
+            this.groupUuid = groupUuid;
             return this;
         }
 
