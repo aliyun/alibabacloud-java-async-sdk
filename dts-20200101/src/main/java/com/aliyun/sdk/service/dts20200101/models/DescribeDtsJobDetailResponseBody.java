@@ -20,6 +20,12 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
+    @com.aliyun.core.annotation.NameInMap("ApprovalProcessStatus")
+    private Long approvalProcessStatus;
+
+    @com.aliyun.core.annotation.NameInMap("ApprovalProcessUrl")
+    private String approvalProcessUrl;
+
     @com.aliyun.core.annotation.NameInMap("BeginTimestamp")
     private String beginTimestamp;
 
@@ -196,6 +202,8 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
 
     private DescribeDtsJobDetailResponseBody(Builder builder) {
         this.appName = builder.appName;
+        this.approvalProcessStatus = builder.approvalProcessStatus;
+        this.approvalProcessUrl = builder.approvalProcessUrl;
         this.beginTimestamp = builder.beginTimestamp;
         this.binlog = builder.binlog;
         this.binlogSite = builder.binlogSite;
@@ -273,6 +281,20 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
      */
     public String getAppName() {
         return this.appName;
+    }
+
+    /**
+     * @return approvalProcessStatus
+     */
+    public Long getApprovalProcessStatus() {
+        return this.approvalProcessStatus;
+    }
+
+    /**
+     * @return approvalProcessUrl
+     */
+    public String getApprovalProcessUrl() {
+        return this.approvalProcessUrl;
     }
 
     /**
@@ -683,6 +705,8 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private String appName; 
+        private Long approvalProcessStatus; 
+        private String approvalProcessUrl; 
         private String beginTimestamp; 
         private String binlog; 
         private String binlogSite; 
@@ -747,6 +771,8 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
 
         private Builder(DescribeDtsJobDetailResponseBody model) {
             this.appName = model.appName;
+            this.approvalProcessStatus = model.approvalProcessStatus;
+            this.approvalProcessUrl = model.approvalProcessUrl;
             this.beginTimestamp = model.beginTimestamp;
             this.binlog = model.binlog;
             this.binlogSite = model.binlogSite;
@@ -818,6 +844,22 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
          */
         public Builder appName(String appName) {
             this.appName = appName;
+            return this;
+        }
+
+        /**
+         * ApprovalProcessStatus.
+         */
+        public Builder approvalProcessStatus(Long approvalProcessStatus) {
+            this.approvalProcessStatus = approvalProcessStatus;
+            return this;
+        }
+
+        /**
+         * ApprovalProcessUrl.
+         */
+        public Builder approvalProcessUrl(String approvalProcessUrl) {
+            this.approvalProcessUrl = approvalProcessUrl;
             return this;
         }
 
