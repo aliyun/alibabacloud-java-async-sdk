@@ -446,6 +446,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSwimmingLaneResponse> describeSwimmingLane(DescribeSwimmingLaneRequest request);
 
     /**
+     * @param request the request parameters of DescribeVSwitches  DescribeVSwitchesRequest
+     * @return DescribeVSwitchesResponse
+     */
+    CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Call the DescribeWebApplication operation to query web applications.</p>
      * 
