@@ -117,6 +117,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>创建一个新的工具，支持创建 MCP、函数调用和技能等多种类型的工具。工具创建后可以被 Agent 调用以扩展其能力。</p>
+     * 
+     * @param request the request parameters of CreateTool  CreateToolRequest
+     * @return CreateToolResponse
+     */
+    CompletableFuture<CreateToolResponse> createTool(CreateToolRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>创建工作空间</p>
      * 
      * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
@@ -207,6 +216,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteTemplateResponse
      */
     CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定的工具。删除操作不可逆，请谨慎操作。删除工具后，所有引用该工具的 Agent 将无法继续使用该工具。</p>
+     * 
+     * @param request the request parameters of DeleteTool  DeleteToolRequest
+     * @return DeleteToolResponse
+     */
+    CompletableFuture<DeleteToolResponse> deleteTool(DeleteToolRequest request);
 
     /**
      * <b>description</b> :
@@ -309,6 +327,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTemplateResponse
      */
     CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>根据工具名称获取工具的完整配置信息，包括工具的基本信息、资源配置、网络配置、运行状态等所有详细信息。</p>
+     * 
+     * @param request the request parameters of GetTool  GetToolRequest
+     * @return GetToolResponse
+     */
+    CompletableFuture<GetToolResponse> getTool(GetToolRequest request);
 
     /**
      * <b>description</b> :
@@ -429,6 +456,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>查询工具列表，支持分页查询和按工具类型、工作空间等条件过滤。返回符合条件的工具列表及分页信息。</p>
+     * 
+     * @param request the request parameters of ListTools  ListToolsRequest
+     * @return ListToolsResponse
+     */
+    CompletableFuture<ListToolsResponse> listTools(ListToolsRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>获取工作空间列表</p>
      * 
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
@@ -519,6 +555,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateTemplateResponse
      */
     CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>更新现有工具的配置信息，可以修改工具的描述、资源配置、网络配置等。更新操作支持部分更新，只需提供需要修改的字段。</p>
+     * 
+     * @param request the request parameters of UpdateTool  UpdateToolRequest
+     * @return UpdateToolResponse
+     */
+    CompletableFuture<UpdateToolResponse> updateTool(UpdateToolRequest request);
 
     /**
      * <b>description</b> :

@@ -293,6 +293,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>创建一个新的工具，支持创建 MCP、函数调用和技能等多种类型的工具。工具创建后可以被 Agent 调用以扩展其能力。</p>
+     * 
+     * @param request the request parameters of CreateTool  CreateToolRequest
+     * @return CreateToolResponse
+     */
+    @Override
+    public CompletableFuture<CreateToolResponse> createTool(CreateToolRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateTool").setMethod(HttpMethod.POST).setPathRegex("/2025-09-10/agents/tools").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateToolResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateToolResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>创建工作空间</p>
      * 
      * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
@@ -535,6 +556,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定的工具。删除操作不可逆，请谨慎操作。删除工具后，所有引用该工具的 Agent 将无法继续使用该工具。</p>
+     * 
+     * @param request the request parameters of DeleteTool  DeleteToolRequest
+     * @return DeleteToolResponse
+     */
+    @Override
+    public CompletableFuture<DeleteToolResponse> deleteTool(DeleteToolRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteTool").setMethod(HttpMethod.DELETE).setPathRegex("/2025-09-10/agents/tools/{toolName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteToolResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteToolResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -805,6 +847,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据工具名称获取工具的完整配置信息，包括工具的基本信息、资源配置、网络配置、运行状态等所有详细信息。</p>
+     * 
+     * @param request the request parameters of GetTool  GetToolRequest
+     * @return GetToolResponse
+     */
+    @Override
+    public CompletableFuture<GetToolResponse> getTool(GetToolRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTool").setMethod(HttpMethod.GET).setPathRegex("/2025-09-10/agents/tools/{toolName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetToolResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetToolResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1121,6 +1184,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>查询工具列表，支持分页查询和按工具类型、工作空间等条件过滤。返回符合条件的工具列表及分页信息。</p>
+     * 
+     * @param request the request parameters of ListTools  ListToolsRequest
+     * @return ListToolsResponse
+     */
+    @Override
+    public CompletableFuture<ListToolsResponse> listTools(ListToolsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTools").setMethod(HttpMethod.GET).setPathRegex("/2025-09-10/agents/tools").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListToolsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListToolsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>获取工作空间列表</p>
      * 
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
@@ -1363,6 +1447,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新现有工具的配置信息，可以修改工具的描述、资源配置、网络配置等。更新操作支持部分更新，只需提供需要修改的字段。</p>
+     * 
+     * @param request the request parameters of UpdateTool  UpdateToolRequest
+     * @return UpdateToolResponse
+     */
+    @Override
+    public CompletableFuture<UpdateToolResponse> updateTool(UpdateToolRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateTool").setMethod(HttpMethod.PUT).setPathRegex("/2025-09-10/agents/tools/{toolName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateToolResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateToolResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
