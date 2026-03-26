@@ -181,6 +181,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserLogCountResponse> describeUserLogCount(DescribeUserLogCountRequest request);
 
     /**
+     * @param request the request parameters of DisableInsight  DisableInsightRequest
+     * @return DisableInsightResponse
+     */
+    CompletableFuture<DisableInsightResponse> disableInsight(DisableInsightRequest request);
+
+    /**
      * @param request the request parameters of EnableInsight  EnableInsightRequest
      * @return EnableInsightResponse
      */
@@ -269,6 +275,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetGovernanceMetricsResponse> getGovernanceMetrics(GetGovernanceMetricsRequest request);
 
     /**
+     * @param request the request parameters of GetInsightSelectors  GetInsightSelectorsRequest
+     * @return GetInsightSelectorsResponse
+     */
+    CompletableFuture<GetInsightSelectorsResponse> getInsightSelectors(GetInsightSelectorsRequest request);
+
+    /**
+     * @param request the request parameters of GetInsightTypes  GetInsightTypesRequest
+     * @return GetInsightTypesResponse
+     */
+    CompletableFuture<GetInsightTypesResponse> getInsightTypes(GetInsightTypesRequest request);
+
+    /**
+     * @param request the request parameters of GetInsightsEventsCount  GetInsightsEventsCountRequest
+     * @return GetInsightsEventsCountResponse
+     */
+    CompletableFuture<GetInsightsEventsCountResponse> getInsightsEventsCount(GetInsightsEventsCountRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This topic describes how to query the status of a sample single-account trail named <code>trail-test</code>.</p>
      * 
@@ -311,10 +335,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<LookupEventsResponse> lookupEvents(LookupEventsRequest request);
 
     /**
+     * @param request the request parameters of LookupInsightEvents  LookupInsightEventsRequest
+     * @return LookupInsightEventsResponse
+     */
+    CompletableFuture<LookupInsightEventsResponse> lookupInsightEvents(LookupInsightEventsRequest request);
+
+    /**
      * @param request the request parameters of PutDataEventSelector  PutDataEventSelectorRequest
      * @return PutDataEventSelectorResponse
      */
     CompletableFuture<PutDataEventSelectorResponse> putDataEventSelector(PutDataEventSelectorRequest request);
+
+    /**
+     * @param request the request parameters of PutInsightSelectors  PutInsightSelectorsRequest
+     * @return PutInsightSelectorsResponse
+     */
+    CompletableFuture<PutInsightSelectorsResponse> putInsightSelectors(PutInsightSelectorsRequest request);
 
     /**
      * <b>description</b> :
