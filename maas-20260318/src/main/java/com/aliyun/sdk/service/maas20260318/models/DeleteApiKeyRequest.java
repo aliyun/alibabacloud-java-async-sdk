@@ -17,7 +17,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteApiKeyRequest</p>
  */
 public class DeleteApiKeyRequest extends Request {
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("apiKeyId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long apiKeyId;
@@ -60,14 +60,10 @@ public class DeleteApiKeyRequest extends Request {
         } 
 
         /**
-         * <p>API Key ID。</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3952240</p>
          */
         public Builder apiKeyId(Long apiKeyId) {
-            this.putQueryParameter("apiKeyId", apiKeyId);
+            this.putPathParameter("apiKeyId", apiKeyId);
             this.apiKeyId = apiKeyId;
             return this;
         }

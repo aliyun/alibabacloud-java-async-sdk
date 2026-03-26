@@ -24,7 +24,7 @@ public class CreateApiKeyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("workspaceId")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 4)
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String workspaceId;
 
     private CreateApiKeyRequest(Builder builder) {
@@ -84,10 +84,7 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>llm-y3kv9qctnlytgmga</p>
+         * workspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("workspaceId", workspaceId);
