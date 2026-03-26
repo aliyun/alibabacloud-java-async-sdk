@@ -51,6 +51,10 @@ public class ListDatasetJobsRequest extends Request {
     private String status;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithLogs")
+    private Boolean withLogs;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -64,6 +68,7 @@ public class ListDatasetJobsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.sortBy = builder.sortBy;
         this.status = builder.status;
+        this.withLogs = builder.withLogs;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -137,6 +142,13 @@ public class ListDatasetJobsRequest extends Request {
     }
 
     /**
+     * @return withLogs
+     */
+    public Boolean getWithLogs() {
+        return this.withLogs;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -152,6 +164,7 @@ public class ListDatasetJobsRequest extends Request {
         private Integer pageSize; 
         private String sortBy; 
         private String status; 
+        private Boolean withLogs; 
         private String workspaceId; 
 
         private Builder() {
@@ -168,6 +181,7 @@ public class ListDatasetJobsRequest extends Request {
             this.pageSize = request.pageSize;
             this.sortBy = request.sortBy;
             this.status = request.status;
+            this.withLogs = request.withLogs;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -256,6 +270,15 @@ public class ListDatasetJobsRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * WithLogs.
+         */
+        public Builder withLogs(Boolean withLogs) {
+            this.putQueryParameter("WithLogs", withLogs);
+            this.withLogs = withLogs;
             return this;
         }
 

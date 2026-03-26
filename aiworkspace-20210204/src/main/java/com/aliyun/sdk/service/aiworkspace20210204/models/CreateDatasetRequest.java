@@ -22,6 +22,10 @@ public class CreateDatasetRequest extends Request {
     private String accessibility;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessibleRoleIdList")
+    private java.util.List<String> accessibleRoleIdList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DataCount")
     @com.aliyun.core.annotation.Validation(maximum = 999999999999D, minimum = 1)
     private Long dataCount;
@@ -122,6 +126,7 @@ public class CreateDatasetRequest extends Request {
     private CreateDatasetRequest(Builder builder) {
         super(builder);
         this.accessibility = builder.accessibility;
+        this.accessibleRoleIdList = builder.accessibleRoleIdList;
         this.dataCount = builder.dataCount;
         this.dataSize = builder.dataSize;
         this.dataSourceType = builder.dataSourceType;
@@ -165,6 +170,13 @@ public class CreateDatasetRequest extends Request {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return accessibleRoleIdList
+     */
+    public java.util.List<String> getAccessibleRoleIdList() {
+        return this.accessibleRoleIdList;
     }
 
     /**
@@ -330,6 +342,7 @@ public class CreateDatasetRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDatasetRequest, Builder> {
         private String accessibility; 
+        private java.util.List<String> accessibleRoleIdList; 
         private Long dataCount; 
         private Long dataSize; 
         private String dataSourceType; 
@@ -361,6 +374,7 @@ public class CreateDatasetRequest extends Request {
         private Builder(CreateDatasetRequest request) {
             super(request);
             this.accessibility = request.accessibility;
+            this.accessibleRoleIdList = request.accessibleRoleIdList;
             this.dataCount = request.dataCount;
             this.dataSize = request.dataSize;
             this.dataSourceType = request.dataSourceType;
@@ -399,6 +413,15 @@ public class CreateDatasetRequest extends Request {
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * AccessibleRoleIdList.
+         */
+        public Builder accessibleRoleIdList(java.util.List<String> accessibleRoleIdList) {
+            this.putBodyParameter("AccessibleRoleIdList", accessibleRoleIdList);
+            this.accessibleRoleIdList = accessibleRoleIdList;
             return this;
         }
 

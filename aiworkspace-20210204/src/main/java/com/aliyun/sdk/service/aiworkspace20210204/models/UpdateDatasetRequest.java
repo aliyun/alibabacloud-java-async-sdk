@@ -23,6 +23,14 @@ public class UpdateDatasetRequest extends Request {
     private String datasetId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessibleRoleIdList")
+    private java.util.List<String> accessibleRoleIdList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -49,6 +57,8 @@ public class UpdateDatasetRequest extends Request {
     private UpdateDatasetRequest(Builder builder) {
         super(builder);
         this.datasetId = builder.datasetId;
+        this.accessibility = builder.accessibility;
+        this.accessibleRoleIdList = builder.accessibleRoleIdList;
         this.description = builder.description;
         this.edition = builder.edition;
         this.mountAccessReadWriteRoleIdList = builder.mountAccessReadWriteRoleIdList;
@@ -75,6 +85,20 @@ public class UpdateDatasetRequest extends Request {
      */
     public String getDatasetId() {
         return this.datasetId;
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
+    }
+
+    /**
+     * @return accessibleRoleIdList
+     */
+    public java.util.List<String> getAccessibleRoleIdList() {
+        return this.accessibleRoleIdList;
     }
 
     /**
@@ -121,6 +145,8 @@ public class UpdateDatasetRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateDatasetRequest, Builder> {
         private String datasetId; 
+        private String accessibility; 
+        private java.util.List<String> accessibleRoleIdList; 
         private String description; 
         private String edition; 
         private java.util.List<String> mountAccessReadWriteRoleIdList; 
@@ -135,6 +161,8 @@ public class UpdateDatasetRequest extends Request {
         private Builder(UpdateDatasetRequest request) {
             super(request);
             this.datasetId = request.datasetId;
+            this.accessibility = request.accessibility;
+            this.accessibleRoleIdList = request.accessibleRoleIdList;
             this.description = request.description;
             this.edition = request.edition;
             this.mountAccessReadWriteRoleIdList = request.mountAccessReadWriteRoleIdList;
@@ -153,6 +181,24 @@ public class UpdateDatasetRequest extends Request {
         public Builder datasetId(String datasetId) {
             this.putPathParameter("DatasetId", datasetId);
             this.datasetId = datasetId;
+            return this;
+        }
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putBodyParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * AccessibleRoleIdList.
+         */
+        public Builder accessibleRoleIdList(java.util.List<String> accessibleRoleIdList) {
+            this.putBodyParameter("AccessibleRoleIdList", accessibleRoleIdList);
+            this.accessibleRoleIdList = accessibleRoleIdList;
             return this;
         }
 

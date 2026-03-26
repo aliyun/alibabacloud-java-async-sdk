@@ -30,6 +30,10 @@ public class ListDatasetsRequest extends Request {
     private String dataTypes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasetIds")
+    private String datasetIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Edition")
     private String edition;
 
@@ -90,6 +94,7 @@ public class ListDatasetsRequest extends Request {
         this.accessibility = builder.accessibility;
         this.dataSourceTypes = builder.dataSourceTypes;
         this.dataTypes = builder.dataTypes;
+        this.datasetIds = builder.datasetIds;
         this.edition = builder.edition;
         this.label = builder.label;
         this.name = builder.name;
@@ -138,6 +143,13 @@ public class ListDatasetsRequest extends Request {
      */
     public String getDataTypes() {
         return this.dataTypes;
+    }
+
+    /**
+     * @return datasetIds
+     */
+    public String getDatasetIds() {
+        return this.datasetIds;
     }
 
     /**
@@ -242,6 +254,7 @@ public class ListDatasetsRequest extends Request {
         private String accessibility; 
         private String dataSourceTypes; 
         private String dataTypes; 
+        private String datasetIds; 
         private String edition; 
         private String label; 
         private String name; 
@@ -266,6 +279,7 @@ public class ListDatasetsRequest extends Request {
             this.accessibility = request.accessibility;
             this.dataSourceTypes = request.dataSourceTypes;
             this.dataTypes = request.dataTypes;
+            this.datasetIds = request.datasetIds;
             this.edition = request.edition;
             this.label = request.label;
             this.name = request.name;
@@ -323,6 +337,15 @@ public class ListDatasetsRequest extends Request {
         public Builder dataTypes(String dataTypes) {
             this.putQueryParameter("DataTypes", dataTypes);
             this.dataTypes = dataTypes;
+            return this;
+        }
+
+        /**
+         * DatasetIds.
+         */
+        public Builder datasetIds(String datasetIds) {
+            this.putQueryParameter("DatasetIds", datasetIds);
+            this.datasetIds = datasetIds;
             return this;
         }
 

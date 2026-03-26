@@ -20,6 +20,9 @@ public class Dataset extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
+    @com.aliyun.core.annotation.NameInMap("AccessibleRoleIdList")
+    private java.util.List<String> accessibleRoleIdList;
+
     @com.aliyun.core.annotation.NameInMap("DataSourceType")
     private String dataSourceType;
 
@@ -106,6 +109,7 @@ public class Dataset extends TeaModel {
 
     private Dataset(Builder builder) {
         this.accessibility = builder.accessibility;
+        this.accessibleRoleIdList = builder.accessibleRoleIdList;
         this.dataSourceType = builder.dataSourceType;
         this.dataType = builder.dataType;
         this.datasetId = builder.datasetId;
@@ -153,6 +157,13 @@ public class Dataset extends TeaModel {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return accessibleRoleIdList
+     */
+    public java.util.List<String> getAccessibleRoleIdList() {
+        return this.accessibleRoleIdList;
     }
 
     /**
@@ -353,6 +364,7 @@ public class Dataset extends TeaModel {
 
     public static final class Builder {
         private String accessibility; 
+        private java.util.List<String> accessibleRoleIdList; 
         private String dataSourceType; 
         private String dataType; 
         private String datasetId; 
@@ -387,6 +399,7 @@ public class Dataset extends TeaModel {
 
         private Builder(Dataset model) {
             this.accessibility = model.accessibility;
+            this.accessibleRoleIdList = model.accessibleRoleIdList;
             this.dataSourceType = model.dataSourceType;
             this.dataType = model.dataType;
             this.datasetId = model.datasetId;
@@ -422,6 +435,14 @@ public class Dataset extends TeaModel {
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * AccessibleRoleIdList.
+         */
+        public Builder accessibleRoleIdList(java.util.List<String> accessibleRoleIdList) {
+            this.accessibleRoleIdList = accessibleRoleIdList;
             return this;
         }
 
