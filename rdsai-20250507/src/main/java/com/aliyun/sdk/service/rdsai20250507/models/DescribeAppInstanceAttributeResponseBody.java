@@ -23,6 +23,9 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
+    @com.aliyun.core.annotation.NameInMap("Components")
+    private java.util.List<Components> components;
+
     @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
@@ -74,6 +77,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     private DescribeAppInstanceAttributeResponseBody(Builder builder) {
         this.appName = builder.appName;
         this.appType = builder.appType;
+        this.components = builder.components;
         this.DBInstanceName = builder.DBInstanceName;
         this.eipId = builder.eipId;
         this.eipStatus = builder.eipStatus;
@@ -116,6 +120,13 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
      */
     public String getAppType() {
         return this.appType;
+    }
+
+    /**
+     * @return components
+     */
+    public java.util.List<Components> getComponents() {
+        return this.components;
     }
 
     /**
@@ -233,6 +244,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private String appName; 
         private String appType; 
+        private java.util.List<Components> components; 
         private String DBInstanceName; 
         private String eipId; 
         private String eipStatus; 
@@ -256,6 +268,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         private Builder(DescribeAppInstanceAttributeResponseBody model) {
             this.appName = model.appName;
             this.appType = model.appType;
+            this.components = model.components;
             this.DBInstanceName = model.DBInstanceName;
             this.eipId = model.eipId;
             this.eipStatus = model.eipStatus;
@@ -293,6 +306,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder appType(String appType) {
             this.appType = appType;
+            return this;
+        }
+
+        /**
+         * Components.
+         */
+        public Builder components(java.util.List<Components> components) {
+            this.components = components;
             return this;
         }
 
@@ -463,4 +484,82 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppInstanceAttributeResponseBody</p>
+     */
+    public static class Components extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Components(Builder builder) {
+            this.status = builder.status;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Components create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String status; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance state table</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Components build() {
+                return new Components(this);
+            } 
+
+        } 
+
+    }
 }

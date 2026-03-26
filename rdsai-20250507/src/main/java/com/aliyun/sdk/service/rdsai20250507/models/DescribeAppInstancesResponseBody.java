@@ -193,12 +193,90 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeAppInstancesResponseBody</p>
      */
+    public static class Components extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Components(Builder builder) {
+            this.status = builder.status;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Components create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String status; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Components build() {
+                return new Components(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAppInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
         @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
+
+        @com.aliyun.core.annotation.NameInMap("Components")
+        private java.util.List<Components> components;
 
         @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
@@ -230,6 +308,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
         private Instances(Builder builder) {
             this.appName = builder.appName;
             this.appType = builder.appType;
+            this.components = builder.components;
             this.DBInstanceName = builder.DBInstanceName;
             this.instanceClass = builder.instanceClass;
             this.instanceMinorVersion = builder.instanceMinorVersion;
@@ -261,6 +340,13 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
          */
         public String getAppType() {
             return this.appType;
+        }
+
+        /**
+         * @return components
+         */
+        public java.util.List<Components> getComponents() {
+            return this.components;
         }
 
         /**
@@ -329,6 +415,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String appName; 
             private String appType; 
+            private java.util.List<Components> components; 
             private String DBInstanceName; 
             private String instanceClass; 
             private String instanceMinorVersion; 
@@ -345,6 +432,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             private Builder(Instances model) {
                 this.appName = model.appName;
                 this.appType = model.appType;
+                this.components = model.components;
                 this.DBInstanceName = model.DBInstanceName;
                 this.instanceClass = model.instanceClass;
                 this.instanceMinorVersion = model.instanceMinorVersion;
@@ -375,6 +463,14 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
              */
             public Builder appType(String appType) {
                 this.appType = appType;
+                return this;
+            }
+
+            /**
+             * Components.
+             */
+            public Builder components(java.util.List<Components> components) {
+                this.components = components;
                 return this;
             }
 

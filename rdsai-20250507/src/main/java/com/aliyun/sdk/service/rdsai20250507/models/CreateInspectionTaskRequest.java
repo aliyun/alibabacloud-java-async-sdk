@@ -38,6 +38,10 @@ public class CreateInspectionTaskRequest extends Request {
     private String reportLanguage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportRegionId")
+    private String reportRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReportType")
     private String reportType;
 
@@ -52,6 +56,7 @@ public class CreateInspectionTaskRequest extends Request {
         this.instanceIds = builder.instanceIds;
         this.regionId = builder.regionId;
         this.reportLanguage = builder.reportLanguage;
+        this.reportRegionId = builder.reportRegionId;
         this.reportType = builder.reportType;
         this.startTime = builder.startTime;
     }
@@ -105,6 +110,13 @@ public class CreateInspectionTaskRequest extends Request {
     }
 
     /**
+     * @return reportRegionId
+     */
+    public String getReportRegionId() {
+        return this.reportRegionId;
+    }
+
+    /**
      * @return reportType
      */
     public String getReportType() {
@@ -124,6 +136,7 @@ public class CreateInspectionTaskRequest extends Request {
         private String instanceIds; 
         private String regionId; 
         private String reportLanguage; 
+        private String reportRegionId; 
         private String reportType; 
         private String startTime; 
 
@@ -138,6 +151,7 @@ public class CreateInspectionTaskRequest extends Request {
             this.instanceIds = request.instanceIds;
             this.regionId = request.regionId;
             this.reportLanguage = request.reportLanguage;
+            this.reportRegionId = request.reportRegionId;
             this.reportType = request.reportType;
             this.startTime = request.startTime;
         } 
@@ -208,6 +222,15 @@ public class CreateInspectionTaskRequest extends Request {
         public Builder reportLanguage(String reportLanguage) {
             this.putQueryParameter("ReportLanguage", reportLanguage);
             this.reportLanguage = reportLanguage;
+            return this;
+        }
+
+        /**
+         * ReportRegionId.
+         */
+        public Builder reportRegionId(String reportRegionId) {
+            this.putQueryParameter("ReportRegionId", reportRegionId);
+            this.reportRegionId = reportRegionId;
             return this;
         }
 

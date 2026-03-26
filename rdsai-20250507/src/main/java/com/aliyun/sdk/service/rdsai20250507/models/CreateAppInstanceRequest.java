@@ -30,6 +30,10 @@ public class CreateAppInstanceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Components")
+    private java.util.List<Components> components;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceConfig")
     private DBInstanceConfig DBInstanceConfig;
 
@@ -82,6 +86,7 @@ public class CreateAppInstanceRequest extends Request {
         this.appName = builder.appName;
         this.appType = builder.appType;
         this.clientToken = builder.clientToken;
+        this.components = builder.components;
         this.DBInstanceConfig = builder.DBInstanceConfig;
         this.DBInstanceName = builder.DBInstanceName;
         this.dashboardPassword = builder.dashboardPassword;
@@ -128,6 +133,13 @@ public class CreateAppInstanceRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return components
+     */
+    public java.util.List<Components> getComponents() {
+        return this.components;
     }
 
     /**
@@ -218,6 +230,7 @@ public class CreateAppInstanceRequest extends Request {
         private String appName; 
         private String appType; 
         private String clientToken; 
+        private java.util.List<Components> components; 
         private DBInstanceConfig DBInstanceConfig; 
         private String DBInstanceName; 
         private String dashboardPassword; 
@@ -240,6 +253,7 @@ public class CreateAppInstanceRequest extends Request {
             this.appName = request.appName;
             this.appType = request.appType;
             this.clientToken = request.clientToken;
+            this.components = request.components;
             this.DBInstanceConfig = request.DBInstanceConfig;
             this.DBInstanceName = request.DBInstanceName;
             this.dashboardPassword = request.dashboardPassword;
@@ -290,6 +304,16 @@ public class CreateAppInstanceRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Components.
+         */
+        public Builder components(java.util.List<Components> components) {
+            String componentsShrink = shrink(components, "Components", "json");
+            this.putQueryParameter("Components", componentsShrink);
+            this.components = components;
             return this;
         }
 
@@ -455,6 +479,60 @@ public class CreateAppInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceRequest</p>
+     */
+    public static class Components extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Components(Builder builder) {
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Components create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.type = model.type;
+            } 
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Components build() {
+                return new Components(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateAppInstanceRequest} extends {@link TeaModel}
