@@ -159,6 +159,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeWorkModeResponse> changeWorkMode(ChangeWorkModeRequest request);
 
     /**
+     * @param request the request parameters of ClaimCall  ClaimCallRequest
+     * @return ClaimCallResponse
+     */
+    CompletableFuture<ClaimCallResponse> claimCall(ClaimCallRequest request);
+
+    /**
      * @param request the request parameters of ClaimChat  ClaimChatRequest
      * @return ClaimChatResponse
      */
