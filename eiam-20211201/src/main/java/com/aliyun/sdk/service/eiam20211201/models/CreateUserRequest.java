@@ -94,7 +94,7 @@ public class CreateUserRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Username")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256)
     private String username;
 
     private CreateUserRequest(Builder builder) {
@@ -514,7 +514,7 @@ public class CreateUserRequest extends Request {
         private String fieldName;
 
         @com.aliyun.core.annotation.NameInMap("FieldValue")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
+        @com.aliyun.core.annotation.Validation(maxLength = 256)
         private String fieldValue;
 
         private CustomFields(Builder builder) {

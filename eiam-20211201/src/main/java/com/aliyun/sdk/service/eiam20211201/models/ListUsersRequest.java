@@ -85,7 +85,7 @@ public class ListUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsernameStartsWith")
-    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String usernameStartsWith;
 
     private ListUsersRequest(Builder builder) {
