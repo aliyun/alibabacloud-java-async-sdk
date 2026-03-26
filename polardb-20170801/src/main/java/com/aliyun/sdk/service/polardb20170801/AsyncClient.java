@@ -2075,4 +2075,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpgradeDBClusterVersionZonalResponse> upgradeDBClusterVersionZonal(UpgradeDBClusterVersionZonalRequest request);
 
+    /**
+     * @param request the request parameters of UpgradePolarClawSkills  UpgradePolarClawSkillsRequest
+     * @return UpgradePolarClawSkillsResponse
+     */
+    CompletableFuture<UpgradePolarClawSkillsResponse> upgradePolarClawSkills(UpgradePolarClawSkillsRequest request);
+
 }
