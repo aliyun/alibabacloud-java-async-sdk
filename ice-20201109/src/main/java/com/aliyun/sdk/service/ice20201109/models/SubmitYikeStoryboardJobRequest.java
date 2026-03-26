@@ -25,6 +25,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AspectRatio")
     private String aspectRatio;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecMode")
+    private String execMode;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FileURL")
     private String fileURL;
@@ -48,6 +52,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ShotSplitMode")
     private String shotSplitMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkipFailureShot")
+    private Boolean skipFailureShot;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceType")
@@ -73,12 +81,14 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.aspectRatio = builder.aspectRatio;
+        this.execMode = builder.execMode;
         this.fileURL = builder.fileURL;
         this.modelParams = builder.modelParams;
         this.narrationVoiceId = builder.narrationVoiceId;
         this.resolution = builder.resolution;
         this.shotPromptMode = builder.shotPromptMode;
         this.shotSplitMode = builder.shotSplitMode;
+        this.skipFailureShot = builder.skipFailureShot;
         this.sourceType = builder.sourceType;
         this.styleId = builder.styleId;
         this.title = builder.title;
@@ -111,6 +121,13 @@ public class SubmitYikeStoryboardJobRequest extends Request {
      */
     public String getAspectRatio() {
         return this.aspectRatio;
+    }
+
+    /**
+     * @return execMode
+     */
+    public String getExecMode() {
+        return this.execMode;
     }
 
     /**
@@ -156,6 +173,13 @@ public class SubmitYikeStoryboardJobRequest extends Request {
     }
 
     /**
+     * @return skipFailureShot
+     */
+    public Boolean getSkipFailureShot() {
+        return this.skipFailureShot;
+    }
+
+    /**
      * @return sourceType
      */
     public String getSourceType() {
@@ -193,12 +217,14 @@ public class SubmitYikeStoryboardJobRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitYikeStoryboardJobRequest, Builder> {
         private String regionId; 
         private String aspectRatio; 
+        private String execMode; 
         private String fileURL; 
         private String modelParams; 
         private String narrationVoiceId; 
         private String resolution; 
         private String shotPromptMode; 
         private String shotSplitMode; 
+        private Boolean skipFailureShot; 
         private String sourceType; 
         private String styleId; 
         private String title; 
@@ -213,12 +239,14 @@ public class SubmitYikeStoryboardJobRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.aspectRatio = request.aspectRatio;
+            this.execMode = request.execMode;
             this.fileURL = request.fileURL;
             this.modelParams = request.modelParams;
             this.narrationVoiceId = request.narrationVoiceId;
             this.resolution = request.resolution;
             this.shotPromptMode = request.shotPromptMode;
             this.shotSplitMode = request.shotSplitMode;
+            this.skipFailureShot = request.skipFailureShot;
             this.sourceType = request.sourceType;
             this.styleId = request.styleId;
             this.title = request.title;
@@ -241,6 +269,15 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         public Builder aspectRatio(String aspectRatio) {
             this.putQueryParameter("AspectRatio", aspectRatio);
             this.aspectRatio = aspectRatio;
+            return this;
+        }
+
+        /**
+         * ExecMode.
+         */
+        public Builder execMode(String execMode) {
+            this.putQueryParameter("ExecMode", execMode);
+            this.execMode = execMode;
             return this;
         }
 
@@ -295,6 +332,15 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         public Builder shotSplitMode(String shotSplitMode) {
             this.putBodyParameter("ShotSplitMode", shotSplitMode);
             this.shotSplitMode = shotSplitMode;
+            return this;
+        }
+
+        /**
+         * SkipFailureShot.
+         */
+        public Builder skipFailureShot(Boolean skipFailureShot) {
+            this.putQueryParameter("SkipFailureShot", skipFailureShot);
+            this.skipFailureShot = skipFailureShot;
             return this;
         }
 

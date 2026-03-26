@@ -2179,6 +2179,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResumeMediaConnectFlowOutputResponse> resumeMediaConnectFlowOutput(ResumeMediaConnectFlowOutputRequest request);
 
     /**
+     * @param request the request parameters of ResumeYikeStoryboardJob  ResumeYikeStoryboardJobRequest
+     * @return ResumeYikeStoryboardJobResponse
+     */
+    CompletableFuture<ResumeYikeStoryboardJobResponse> resumeYikeStoryboardJob(ResumeYikeStoryboardJobRequest request);
+
+    /**
      * @param request the request parameters of SearchEditingProject  SearchEditingProjectRequest
      * @return SearchEditingProjectResponse
      */
