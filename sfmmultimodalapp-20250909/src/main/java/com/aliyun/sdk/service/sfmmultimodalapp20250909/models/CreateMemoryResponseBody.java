@@ -188,10 +188,14 @@ public class CreateMemoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemoryNodeId")
         private String memoryNodeId;
 
+        @com.aliyun.core.annotation.NameInMap("OldContent")
+        private String oldContent;
+
         private MemoryNodes(Builder builder) {
             this.content = builder.content;
             this.event = builder.event;
             this.memoryNodeId = builder.memoryNodeId;
+            this.oldContent = builder.oldContent;
         }
 
         public static Builder builder() {
@@ -223,10 +227,18 @@ public class CreateMemoryResponseBody extends TeaModel {
             return this.memoryNodeId;
         }
 
+        /**
+         * @return oldContent
+         */
+        public String getOldContent() {
+            return this.oldContent;
+        }
+
         public static final class Builder {
             private String content; 
             private String event; 
             private String memoryNodeId; 
+            private String oldContent; 
 
             private Builder() {
             } 
@@ -235,6 +247,7 @@ public class CreateMemoryResponseBody extends TeaModel {
                 this.content = model.content;
                 this.event = model.event;
                 this.memoryNodeId = model.memoryNodeId;
+                this.oldContent = model.oldContent;
             } 
 
             /**
@@ -258,6 +271,14 @@ public class CreateMemoryResponseBody extends TeaModel {
              */
             public Builder memoryNodeId(String memoryNodeId) {
                 this.memoryNodeId = memoryNodeId;
+                return this;
+            }
+
+            /**
+             * OldContent.
+             */
+            public Builder oldContent(String oldContent) {
+                this.oldContent = oldContent;
                 return this;
             }
 

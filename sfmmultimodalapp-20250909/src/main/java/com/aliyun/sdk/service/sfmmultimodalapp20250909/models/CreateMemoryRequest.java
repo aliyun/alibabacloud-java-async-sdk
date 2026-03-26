@@ -23,8 +23,16 @@ public class CreateMemoryRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUpdate")
+    private Boolean autoUpdate;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpirationTime")
+    private Integer expirationTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MessagesJson")
@@ -39,6 +47,10 @@ public class CreateMemoryRequest extends Request {
     private String projectId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Prompt")
+    private String prompt;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserDefinedId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String userDefinedId;
@@ -51,10 +63,13 @@ public class CreateMemoryRequest extends Request {
     private CreateMemoryRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.autoUpdate = builder.autoUpdate;
         this.content = builder.content;
+        this.expirationTime = builder.expirationTime;
         this.messagesJson = builder.messagesJson;
         this.metaData = builder.metaData;
         this.projectId = builder.projectId;
+        this.prompt = builder.prompt;
         this.userDefinedId = builder.userDefinedId;
         this.workspaceId = builder.workspaceId;
     }
@@ -80,10 +95,24 @@ public class CreateMemoryRequest extends Request {
     }
 
     /**
+     * @return autoUpdate
+     */
+    public Boolean getAutoUpdate() {
+        return this.autoUpdate;
+    }
+
+    /**
      * @return content
      */
     public String getContent() {
         return this.content;
+    }
+
+    /**
+     * @return expirationTime
+     */
+    public Integer getExpirationTime() {
+        return this.expirationTime;
     }
 
     /**
@@ -108,6 +137,13 @@ public class CreateMemoryRequest extends Request {
     }
 
     /**
+     * @return prompt
+     */
+    public String getPrompt() {
+        return this.prompt;
+    }
+
+    /**
      * @return userDefinedId
      */
     public String getUserDefinedId() {
@@ -123,10 +159,13 @@ public class CreateMemoryRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateMemoryRequest, Builder> {
         private String appId; 
+        private Boolean autoUpdate; 
         private String content; 
+        private Integer expirationTime; 
         private String messagesJson; 
         private java.util.Map<String, String> metaData; 
         private String projectId; 
+        private String prompt; 
         private String userDefinedId; 
         private String workspaceId; 
 
@@ -137,10 +176,13 @@ public class CreateMemoryRequest extends Request {
         private Builder(CreateMemoryRequest request) {
             super(request);
             this.appId = request.appId;
+            this.autoUpdate = request.autoUpdate;
             this.content = request.content;
+            this.expirationTime = request.expirationTime;
             this.messagesJson = request.messagesJson;
             this.metaData = request.metaData;
             this.projectId = request.projectId;
+            this.prompt = request.prompt;
             this.userDefinedId = request.userDefinedId;
             this.workspaceId = request.workspaceId;
         } 
@@ -158,11 +200,29 @@ public class CreateMemoryRequest extends Request {
         }
 
         /**
+         * AutoUpdate.
+         */
+        public Builder autoUpdate(Boolean autoUpdate) {
+            this.putQueryParameter("AutoUpdate", autoUpdate);
+            this.autoUpdate = autoUpdate;
+            return this;
+        }
+
+        /**
          * Content.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
             this.content = content;
+            return this;
+        }
+
+        /**
+         * ExpirationTime.
+         */
+        public Builder expirationTime(Integer expirationTime) {
+            this.putQueryParameter("ExpirationTime", expirationTime);
+            this.expirationTime = expirationTime;
             return this;
         }
 
@@ -191,6 +251,15 @@ public class CreateMemoryRequest extends Request {
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * Prompt.
+         */
+        public Builder prompt(String prompt) {
+            this.putQueryParameter("Prompt", prompt);
+            this.prompt = prompt;
             return this;
         }
 
