@@ -442,6 +442,9 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
      * <p>SearchCloudGtmMonitorTemplatesResponseBody</p>
      */
     public static class Template extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CloudGtmMonitorTemplateId")
+        private String cloudGtmMonitorTemplateId;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -488,6 +491,7 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         private Long updateTimestamp;
 
         private Template(Builder builder) {
+            this.cloudGtmMonitorTemplateId = builder.cloudGtmMonitorTemplateId;
             this.createTime = builder.createTime;
             this.createTimestamp = builder.createTimestamp;
             this.evaluationCount = builder.evaluationCount;
@@ -511,6 +515,13 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
 
         public static Template create() {
             return builder().build();
+        }
+
+        /**
+         * @return cloudGtmMonitorTemplateId
+         */
+        public String getCloudGtmMonitorTemplateId() {
+            return this.cloudGtmMonitorTemplateId;
         }
 
         /**
@@ -619,6 +630,7 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String cloudGtmMonitorTemplateId; 
             private String createTime; 
             private Long createTimestamp; 
             private Integer evaluationCount; 
@@ -639,6 +651,7 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             } 
 
             private Builder(Template model) {
+                this.cloudGtmMonitorTemplateId = model.cloudGtmMonitorTemplateId;
                 this.createTime = model.createTime;
                 this.createTimestamp = model.createTimestamp;
                 this.evaluationCount = model.evaluationCount;
@@ -655,6 +668,14 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
                 this.updateTime = model.updateTime;
                 this.updateTimestamp = model.updateTimestamp;
             } 
+
+            /**
+             * CloudGtmMonitorTemplateId.
+             */
+            public Builder cloudGtmMonitorTemplateId(String cloudGtmMonitorTemplateId) {
+                this.cloudGtmMonitorTemplateId = cloudGtmMonitorTemplateId;
+                return this;
+            }
 
             /**
              * CreateTime.
