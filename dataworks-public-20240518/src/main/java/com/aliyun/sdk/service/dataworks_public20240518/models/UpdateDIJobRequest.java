@@ -39,6 +39,10 @@ public class UpdateDIJobRequest extends Request {
     private JobSettings jobSettings;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Owner")
+    private String owner;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
@@ -61,6 +65,7 @@ public class UpdateDIJobRequest extends Request {
         this.description = builder.description;
         this.id = builder.id;
         this.jobSettings = builder.jobSettings;
+        this.owner = builder.owner;
         this.projectId = builder.projectId;
         this.resourceSettings = builder.resourceSettings;
         this.tableMappings = builder.tableMappings;
@@ -116,6 +121,13 @@ public class UpdateDIJobRequest extends Request {
     }
 
     /**
+     * @return owner
+     */
+    public String getOwner() {
+        return this.owner;
+    }
+
+    /**
      * @return projectId
      */
     public Long getProjectId() {
@@ -149,6 +161,7 @@ public class UpdateDIJobRequest extends Request {
         private String description; 
         private Long id; 
         private JobSettings jobSettings; 
+        private String owner; 
         private Long projectId; 
         private ResourceSettings resourceSettings; 
         private java.util.List<TableMappings> tableMappings; 
@@ -165,6 +178,7 @@ public class UpdateDIJobRequest extends Request {
             this.description = request.description;
             this.id = request.id;
             this.jobSettings = request.jobSettings;
+            this.owner = request.owner;
             this.projectId = request.projectId;
             this.resourceSettings = request.resourceSettings;
             this.tableMappings = request.tableMappings;
@@ -220,6 +234,18 @@ public class UpdateDIJobRequest extends Request {
             String jobSettingsShrink = shrink(jobSettings, "JobSettings", "json");
             this.putBodyParameter("JobSettings", jobSettingsShrink);
             this.jobSettings = jobSettings;
+            return this;
+        }
+
+        /**
+         * <p>The task owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95279527</p>
+         */
+        public Builder owner(String owner) {
+            this.putQueryParameter("Owner", owner);
+            this.owner = owner;
             return this;
         }
 

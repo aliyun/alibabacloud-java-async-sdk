@@ -1727,6 +1727,9 @@ public class GetDIJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MigrationType")
         private String migrationType;
 
+        @com.aliyun.core.annotation.NameInMap("Owner")
+        private String owner;
+
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
@@ -1756,6 +1759,7 @@ public class GetDIJobResponseBody extends TeaModel {
             this.jobStatus = builder.jobStatus;
             this.jobType = builder.jobType;
             this.migrationType = builder.migrationType;
+            this.owner = builder.owner;
             this.projectId = builder.projectId;
             this.resourceSettings = builder.resourceSettings;
             this.sourceDataSourceSettings = builder.sourceDataSourceSettings;
@@ -1843,6 +1847,13 @@ public class GetDIJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return owner
+         */
+        public String getOwner() {
+            return this.owner;
+        }
+
+        /**
          * @return projectId
          */
         public Long getProjectId() {
@@ -1895,6 +1906,7 @@ public class GetDIJobResponseBody extends TeaModel {
             private String jobStatus; 
             private String jobType; 
             private String migrationType; 
+            private String owner; 
             private Long projectId; 
             private ResourceSettings resourceSettings; 
             private java.util.List<SourceDataSourceSettings> sourceDataSourceSettings; 
@@ -1916,6 +1928,7 @@ public class GetDIJobResponseBody extends TeaModel {
                 this.jobStatus = model.jobStatus;
                 this.jobType = model.jobType;
                 this.migrationType = model.migrationType;
+                this.owner = model.owner;
                 this.projectId = model.projectId;
                 this.resourceSettings = model.resourceSettings;
                 this.sourceDataSourceSettings = model.sourceDataSourceSettings;
@@ -2040,6 +2053,14 @@ public class GetDIJobResponseBody extends TeaModel {
              */
             public Builder migrationType(String migrationType) {
                 this.migrationType = migrationType;
+                return this;
+            }
+
+            /**
+             * Owner.
+             */
+            public Builder owner(String owner) {
+                this.owner = owner;
                 return this;
             }
 

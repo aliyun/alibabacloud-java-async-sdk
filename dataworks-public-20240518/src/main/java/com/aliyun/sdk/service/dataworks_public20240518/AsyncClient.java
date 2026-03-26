@@ -52,9 +52,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssociateProjectToResourceGroupResponse> associateProjectToResourceGroup(AssociateProjectToResourceGroupRequest request);
 
     /**
-     * @param request the request parameters of AttachDataQualityRulesToEvaluationTask  AttachDataQualityRulesToEvaluationTaskRequest
+     * @deprecated OpenAPI AttachDataQualityRulesToEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.  * @param request  the request parameters of AttachDataQualityRulesToEvaluationTask  AttachDataQualityRulesToEvaluationTaskRequest
      * @return AttachDataQualityRulesToEvaluationTaskResponse
      */
+    @Deprecated
     CompletableFuture<AttachDataQualityRulesToEvaluationTaskResponse> attachDataQualityRulesToEvaluationTask(AttachDataQualityRulesToEvaluationTaskRequest request);
 
     /**
@@ -142,30 +143,33 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataQualityAlertRuleResponse> createDataQualityAlertRule(CreateDataQualityAlertRuleRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>This API operation is supported in all DataWorks editions.</p>
+     * @deprecated OpenAPI CreateDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.  * @description This API operation is supported in all DataWorks editions.
      * 
      * @param request the request parameters of CreateDataQualityEvaluationTask  CreateDataQualityEvaluationTaskRequest
      * @return CreateDataQualityEvaluationTaskResponse
      */
+    @Deprecated
     CompletableFuture<CreateDataQualityEvaluationTaskResponse> createDataQualityEvaluationTask(CreateDataQualityEvaluationTaskRequest request);
 
     /**
-     * @param request the request parameters of CreateDataQualityEvaluationTaskInstance  CreateDataQualityEvaluationTaskInstanceRequest
+     * @deprecated OpenAPI CreateDataQualityEvaluationTaskInstance is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScanRun instead.  * @param request  the request parameters of CreateDataQualityEvaluationTaskInstance  CreateDataQualityEvaluationTaskInstanceRequest
      * @return CreateDataQualityEvaluationTaskInstanceResponse
      */
+    @Deprecated
     CompletableFuture<CreateDataQualityEvaluationTaskInstanceResponse> createDataQualityEvaluationTaskInstance(CreateDataQualityEvaluationTaskInstanceRequest request);
 
     /**
-     * @param request the request parameters of CreateDataQualityRule  CreateDataQualityRuleRequest
+     * @deprecated OpenAPI CreateDataQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.  * @param request  the request parameters of CreateDataQualityRule  CreateDataQualityRuleRequest
      * @return CreateDataQualityRuleResponse
      */
+    @Deprecated
     CompletableFuture<CreateDataQualityRuleResponse> createDataQualityRule(CreateDataQualityRuleRequest request);
 
     /**
-     * @param request the request parameters of CreateDataQualityRuleTemplate  CreateDataQualityRuleTemplateRequest
+     * @deprecated OpenAPI CreateDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityTemplate instead.  * @param request  the request parameters of CreateDataQualityRuleTemplate  CreateDataQualityRuleTemplateRequest
      * @return CreateDataQualityRuleTemplateResponse
      */
+    @Deprecated
     CompletableFuture<CreateDataQualityRuleTemplateResponse> createDataQualityRuleTemplate(CreateDataQualityRuleTemplateRequest request);
 
     /**
@@ -456,9 +460,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDataQualityAlertRuleResponse> deleteDataQualityAlertRule(DeleteDataQualityAlertRuleRequest request);
 
     /**
-     * @param request the request parameters of DeleteDataQualityEvaluationTask  DeleteDataQualityEvaluationTaskRequest
+     * @deprecated OpenAPI DeleteDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.  * @param request  the request parameters of DeleteDataQualityEvaluationTask  DeleteDataQualityEvaluationTaskRequest
      * @return DeleteDataQualityEvaluationTaskResponse
      */
+    @Deprecated
     CompletableFuture<DeleteDataQualityEvaluationTaskResponse> deleteDataQualityEvaluationTask(DeleteDataQualityEvaluationTaskRequest request);
 
     /**
@@ -468,9 +473,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDataQualityRuleResponse> deleteDataQualityRule(DeleteDataQualityRuleRequest request);
 
     /**
-     * @param request the request parameters of DeleteDataQualityRuleTemplate  DeleteDataQualityRuleTemplateRequest
+     * @deprecated OpenAPI DeleteDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityTemplate instead.  * @param request  the request parameters of DeleteDataQualityRuleTemplate  DeleteDataQualityRuleTemplateRequest
      * @return DeleteDataQualityRuleTemplateResponse
      */
+    @Deprecated
     CompletableFuture<DeleteDataQualityRuleTemplateResponse> deleteDataQualityRuleTemplate(DeleteDataQualityRuleTemplateRequest request);
 
     /**
@@ -679,9 +685,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeployFileResponse> deployFile(DeployFileRequest request);
 
     /**
-     * @param request the request parameters of DetachDataQualityRulesFromEvaluationTask  DetachDataQualityRulesFromEvaluationTaskRequest
+     * @deprecated OpenAPI DetachDataQualityRulesFromEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.  * @param request  the request parameters of DetachDataQualityRulesFromEvaluationTask  DetachDataQualityRulesFromEvaluationTaskRequest
      * @return DetachDataQualityRulesFromEvaluationTaskResponse
      */
+    @Deprecated
     CompletableFuture<DetachDataQualityRulesFromEvaluationTaskResponse> detachDataQualityRulesFromEvaluationTask(DetachDataQualityRulesFromEvaluationTaskRequest request);
 
     /**
@@ -816,33 +823,35 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataQualityAlertRuleResponse> getDataQualityAlertRule(GetDataQualityAlertRuleRequest request);
 
     /**
-     * @param request the request parameters of GetDataQualityEvaluationTask  GetDataQualityEvaluationTaskRequest
+     * @deprecated OpenAPI GetDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.  * @param request  the request parameters of GetDataQualityEvaluationTask  GetDataQualityEvaluationTaskRequest
      * @return GetDataQualityEvaluationTaskResponse
      */
+    @Deprecated
     CompletableFuture<GetDataQualityEvaluationTaskResponse> getDataQualityEvaluationTask(GetDataQualityEvaluationTaskRequest request);
 
     /**
-     * @param request the request parameters of GetDataQualityEvaluationTaskInstance  GetDataQualityEvaluationTaskInstanceRequest
+     * @deprecated OpenAPI GetDataQualityEvaluationTaskInstance is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScanRun instead.  * @param request  the request parameters of GetDataQualityEvaluationTaskInstance  GetDataQualityEvaluationTaskInstanceRequest
      * @return GetDataQualityEvaluationTaskInstanceResponse
      */
+    @Deprecated
     CompletableFuture<GetDataQualityEvaluationTaskInstanceResponse> getDataQualityEvaluationTaskInstance(GetDataQualityEvaluationTaskInstanceRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * @deprecated OpenAPI GetDataQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.  * @description This API operation is available for all DataWorks editions.
      * 
      * @param request the request parameters of GetDataQualityRule  GetDataQualityRuleRequest
      * @return GetDataQualityRuleResponse
      */
+    @Deprecated
     CompletableFuture<GetDataQualityRuleResponse> getDataQualityRule(GetDataQualityRuleRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * @deprecated OpenAPI GetDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::GetDataQualityTemplate instead.  * @description This API operation is available for all DataWorks editions.
      * 
      * @param request the request parameters of GetDataQualityRuleTemplate  GetDataQualityRuleTemplateRequest
      * @return GetDataQualityRuleTemplateResponse
      */
+    @Deprecated
     CompletableFuture<GetDataQualityRuleTemplateResponse> getDataQualityRuleTemplate(GetDataQualityRuleTemplateRequest request);
 
     /**
@@ -1274,45 +1283,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataQualityAlertRulesResponse> listDataQualityAlertRules(ListDataQualityAlertRulesRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * @deprecated OpenAPI ListDataQualityEvaluationTaskInstances is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.  * @description This API operation is available for all DataWorks editions.
      * 
      * @param request the request parameters of ListDataQualityEvaluationTaskInstances  ListDataQualityEvaluationTaskInstancesRequest
      * @return ListDataQualityEvaluationTaskInstancesResponse
      */
+    @Deprecated
     CompletableFuture<ListDataQualityEvaluationTaskInstancesResponse> listDataQualityEvaluationTaskInstances(ListDataQualityEvaluationTaskInstancesRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * @deprecated OpenAPI ListDataQualityEvaluationTasks is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.  * @description This API operation is available for all DataWorks editions.
      * 
      * @param request the request parameters of ListDataQualityEvaluationTasks  ListDataQualityEvaluationTasksRequest
      * @return ListDataQualityEvaluationTasksResponse
      */
+    @Deprecated
     CompletableFuture<ListDataQualityEvaluationTasksResponse> listDataQualityEvaluationTasks(ListDataQualityEvaluationTasksRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * @deprecated OpenAPI ListDataQualityResults is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.  * @description This API operation is available for all DataWorks editions.
      * 
      * @param request the request parameters of ListDataQualityResults  ListDataQualityResultsRequest
      * @return ListDataQualityResultsResponse
      */
+    @Deprecated
     CompletableFuture<ListDataQualityResultsResponse> listDataQualityResults(ListDataQualityResultsRequest request);
 
     /**
-     * @param request the request parameters of ListDataQualityRuleTemplates  ListDataQualityRuleTemplatesRequest
+     * @deprecated OpenAPI ListDataQualityRuleTemplates is deprecated, please use dataworks-public::2024-05-18::ListDataQualityTemplates instead.  * @param request  the request parameters of ListDataQualityRuleTemplates  ListDataQualityRuleTemplatesRequest
      * @return ListDataQualityRuleTemplatesResponse
      */
+    @Deprecated
     CompletableFuture<ListDataQualityRuleTemplatesResponse> listDataQualityRuleTemplates(ListDataQualityRuleTemplatesRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * @deprecated OpenAPI ListDataQualityRules is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.  * @description This API operation is available for all DataWorks editions.
      * 
      * @param request the request parameters of ListDataQualityRules  ListDataQualityRulesRequest
      * @return ListDataQualityRulesResponse
      */
+    @Deprecated
     CompletableFuture<ListDataQualityRulesResponse> listDataQualityRules(ListDataQualityRulesRequest request);
 
     /**
@@ -1930,24 +1940,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDataQualityAlertRuleResponse> updateDataQualityAlertRule(UpdateDataQualityAlertRuleRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>This API operation is supported in all DataWorks editions.</p>
+     * @deprecated OpenAPI UpdateDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.  * @description This API operation is supported in all DataWorks editions.
      * 
      * @param request the request parameters of UpdateDataQualityEvaluationTask  UpdateDataQualityEvaluationTaskRequest
      * @return UpdateDataQualityEvaluationTaskResponse
      */
+    @Deprecated
     CompletableFuture<UpdateDataQualityEvaluationTaskResponse> updateDataQualityEvaluationTask(UpdateDataQualityEvaluationTaskRequest request);
 
     /**
-     * @param request the request parameters of UpdateDataQualityRule  UpdateDataQualityRuleRequest
+     * @deprecated OpenAPI UpdateDataQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.  * @param request  the request parameters of UpdateDataQualityRule  UpdateDataQualityRuleRequest
      * @return UpdateDataQualityRuleResponse
      */
+    @Deprecated
     CompletableFuture<UpdateDataQualityRuleResponse> updateDataQualityRule(UpdateDataQualityRuleRequest request);
 
     /**
-     * @param request the request parameters of UpdateDataQualityRuleTemplate  UpdateDataQualityRuleTemplateRequest
+     * @deprecated OpenAPI UpdateDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityTemplate instead.  * @param request  the request parameters of UpdateDataQualityRuleTemplate  UpdateDataQualityRuleTemplateRequest
      * @return UpdateDataQualityRuleTemplateResponse
      */
+    @Deprecated
     CompletableFuture<UpdateDataQualityRuleTemplateResponse> updateDataQualityRuleTemplate(UpdateDataQualityRuleTemplateRequest request);
 
     /**

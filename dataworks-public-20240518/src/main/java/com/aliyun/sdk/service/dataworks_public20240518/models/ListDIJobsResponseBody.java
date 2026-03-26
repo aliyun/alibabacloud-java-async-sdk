@@ -117,6 +117,9 @@ public class ListDIJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MigrationType")
         private String migrationType;
 
+        @com.aliyun.core.annotation.NameInMap("Owner")
+        private String owner;
+
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
@@ -130,6 +133,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             this.jobName = builder.jobName;
             this.jobStatus = builder.jobStatus;
             this.migrationType = builder.migrationType;
+            this.owner = builder.owner;
             this.projectId = builder.projectId;
             this.sourceDataSourceType = builder.sourceDataSourceType;
         }
@@ -185,6 +189,13 @@ public class ListDIJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return owner
+         */
+        public String getOwner() {
+            return this.owner;
+        }
+
+        /**
          * @return projectId
          */
         public Long getProjectId() {
@@ -205,6 +216,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             private String jobName; 
             private String jobStatus; 
             private String migrationType; 
+            private String owner; 
             private Long projectId; 
             private String sourceDataSourceType; 
 
@@ -218,6 +230,7 @@ public class ListDIJobsResponseBody extends TeaModel {
                 this.jobName = model.jobName;
                 this.jobStatus = model.jobStatus;
                 this.migrationType = model.migrationType;
+                this.owner = model.owner;
                 this.projectId = model.projectId;
                 this.sourceDataSourceType = model.sourceDataSourceType;
             } 
@@ -300,6 +313,14 @@ public class ListDIJobsResponseBody extends TeaModel {
              */
             public Builder migrationType(String migrationType) {
                 this.migrationType = migrationType;
+                return this;
+            }
+
+            /**
+             * Owner.
+             */
+            public Builder owner(String owner) {
+                this.owner = owner;
                 return this;
             }
 

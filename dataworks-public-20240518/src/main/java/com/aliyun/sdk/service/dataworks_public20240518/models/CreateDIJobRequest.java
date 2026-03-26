@@ -58,6 +58,10 @@ public class CreateDIJobRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Owner")
+    private String owner;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
@@ -96,6 +100,7 @@ public class CreateDIJobRequest extends Request {
         this.jobType = builder.jobType;
         this.migrationType = builder.migrationType;
         this.name = builder.name;
+        this.owner = builder.owner;
         this.projectId = builder.projectId;
         this.resourceSettings = builder.resourceSettings;
         this.sourceDataSourceSettings = builder.sourceDataSourceSettings;
@@ -181,6 +186,13 @@ public class CreateDIJobRequest extends Request {
     }
 
     /**
+     * @return owner
+     */
+    public String getOwner() {
+        return this.owner;
+    }
+
+    /**
      * @return projectId
      */
     public Long getProjectId() {
@@ -232,6 +244,7 @@ public class CreateDIJobRequest extends Request {
         private String jobType; 
         private String migrationType; 
         private String name; 
+        private String owner; 
         private Long projectId; 
         private ResourceSettings resourceSettings; 
         private java.util.List<SourceDataSourceSettings> sourceDataSourceSettings; 
@@ -254,6 +267,7 @@ public class CreateDIJobRequest extends Request {
             this.jobType = request.jobType;
             this.migrationType = request.migrationType;
             this.name = request.name;
+            this.owner = request.owner;
             this.projectId = request.projectId;
             this.resourceSettings = request.resourceSettings;
             this.sourceDataSourceSettings = request.sourceDataSourceSettings;
@@ -371,6 +385,18 @@ public class CreateDIJobRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>The task owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3726346</p>
+         */
+        public Builder owner(String owner) {
+            this.putQueryParameter("Owner", owner);
+            this.owner = owner;
             return this;
         }
 
