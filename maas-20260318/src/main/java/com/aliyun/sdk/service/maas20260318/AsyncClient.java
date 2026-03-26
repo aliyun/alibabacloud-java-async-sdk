@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApiKeysResponse> listApiKeys(ListApiKeysRequest request);
 
     /**
+     * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
+     * @return ListWorkspacesResponse
+     */
+    CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
+
+    /**
      * @param request the request parameters of UpdateApiKey  UpdateApiKeyRequest
      * @return UpdateApiKeyResponse
      */
