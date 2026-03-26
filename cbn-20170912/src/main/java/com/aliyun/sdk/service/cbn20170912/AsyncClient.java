@@ -1494,6 +1494,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyFlowLogAttributeResponse> modifyFlowLogAttribute(ModifyFlowLogAttributeRequest request);
 
     /**
+     * @param request the request parameters of ModifyGrantInstanceToTransitRouter  ModifyGrantInstanceToTransitRouterRequest
+     * @return ModifyGrantInstanceToTransitRouterResponse
+     */
+    CompletableFuture<ModifyGrantInstanceToTransitRouterResponse> modifyGrantInstanceToTransitRouter(ModifyGrantInstanceToTransitRouterRequest request);
+
+    /**
      * @param request the request parameters of ModifyTrafficMatchRuleToTrafficMarkingPolicy  ModifyTrafficMatchRuleToTrafficMarkingPolicyRequest
      * @return ModifyTrafficMatchRuleToTrafficMarkingPolicyResponse
      */
