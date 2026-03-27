@@ -278,6 +278,9 @@ public class BatchTranslateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private Long code;
 
+        @com.aliyun.core.annotation.NameInMap("detectedLang")
+        private String detectedLang;
+
         @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
@@ -292,6 +295,7 @@ public class BatchTranslateResponseBody extends TeaModel {
 
         private TranslationList(Builder builder) {
             this.code = builder.code;
+            this.detectedLang = builder.detectedLang;
             this.index = builder.index;
             this.message = builder.message;
             this.translation = builder.translation;
@@ -311,6 +315,13 @@ public class BatchTranslateResponseBody extends TeaModel {
          */
         public Long getCode() {
             return this.code;
+        }
+
+        /**
+         * @return detectedLang
+         */
+        public String getDetectedLang() {
+            return this.detectedLang;
         }
 
         /**
@@ -343,6 +354,7 @@ public class BatchTranslateResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long code; 
+            private String detectedLang; 
             private String index; 
             private String message; 
             private String translation; 
@@ -353,6 +365,7 @@ public class BatchTranslateResponseBody extends TeaModel {
 
             private Builder(TranslationList model) {
                 this.code = model.code;
+                this.detectedLang = model.detectedLang;
                 this.index = model.index;
                 this.message = model.message;
                 this.translation = model.translation;
@@ -364,6 +377,14 @@ public class BatchTranslateResponseBody extends TeaModel {
              */
             public Builder code(Long code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * detectedLang.
+             */
+            public Builder detectedLang(String detectedLang) {
+                this.detectedLang = detectedLang;
                 return this;
             }
 

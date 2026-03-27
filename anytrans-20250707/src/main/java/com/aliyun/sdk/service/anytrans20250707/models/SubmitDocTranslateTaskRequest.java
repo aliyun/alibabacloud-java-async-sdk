@@ -377,11 +377,15 @@ public class SubmitDocTranslateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("terminologies")
         private java.util.List<Terminologies> terminologies;
 
+        @com.aliyun.core.annotation.NameInMap("trackingData")
+        private String trackingData;
+
         private Ext(Builder builder) {
             this.config = builder.config;
             this.domainHint = builder.domainHint;
             this.paramMap = builder.paramMap;
             this.terminologies = builder.terminologies;
+            this.trackingData = builder.trackingData;
         }
 
         public static Builder builder() {
@@ -420,11 +424,19 @@ public class SubmitDocTranslateTaskRequest extends Request {
             return this.terminologies;
         }
 
+        /**
+         * @return trackingData
+         */
+        public String getTrackingData() {
+            return this.trackingData;
+        }
+
         public static final class Builder {
             private Config config; 
             private String domainHint; 
             private Object paramMap; 
             private java.util.List<Terminologies> terminologies; 
+            private String trackingData; 
 
             private Builder() {
             } 
@@ -434,6 +446,7 @@ public class SubmitDocTranslateTaskRequest extends Request {
                 this.domainHint = model.domainHint;
                 this.paramMap = model.paramMap;
                 this.terminologies = model.terminologies;
+                this.trackingData = model.trackingData;
             } 
 
             /**
@@ -465,6 +478,14 @@ public class SubmitDocTranslateTaskRequest extends Request {
              */
             public Builder terminologies(java.util.List<Terminologies> terminologies) {
                 this.terminologies = terminologies;
+                return this;
+            }
+
+            /**
+             * trackingData.
+             */
+            public Builder trackingData(String trackingData) {
+                this.trackingData = trackingData;
                 return this;
             }
 

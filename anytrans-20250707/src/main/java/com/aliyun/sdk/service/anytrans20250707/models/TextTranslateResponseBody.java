@@ -278,6 +278,9 @@ public class TextTranslateResponseBody extends TeaModel {
      * <p>TextTranslateResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("detectedLang")
+        private String detectedLang;
+
         @com.aliyun.core.annotation.NameInMap("translation")
         private String translation;
 
@@ -285,6 +288,7 @@ public class TextTranslateResponseBody extends TeaModel {
         private Usage usage;
 
         private Data(Builder builder) {
+            this.detectedLang = builder.detectedLang;
             this.translation = builder.translation;
             this.usage = builder.usage;
         }
@@ -295,6 +299,13 @@ public class TextTranslateResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return detectedLang
+         */
+        public String getDetectedLang() {
+            return this.detectedLang;
         }
 
         /**
@@ -312,6 +323,7 @@ public class TextTranslateResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String detectedLang; 
             private String translation; 
             private Usage usage; 
 
@@ -319,9 +331,18 @@ public class TextTranslateResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.detectedLang = model.detectedLang;
                 this.translation = model.translation;
                 this.usage = model.usage;
             } 
+
+            /**
+             * detectedLang.
+             */
+            public Builder detectedLang(String detectedLang) {
+                this.detectedLang = detectedLang;
+                return this;
+            }
 
             /**
              * translation.

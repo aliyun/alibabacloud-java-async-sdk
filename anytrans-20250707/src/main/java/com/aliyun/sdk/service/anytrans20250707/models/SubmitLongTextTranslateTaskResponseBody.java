@@ -188,9 +188,13 @@ public class SubmitLongTextTranslateTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("taskId")
         private String taskId;
 
+        @com.aliyun.core.annotation.NameInMap("trackingData")
+        private String trackingData;
+
         private Data(Builder builder) {
             this.status = builder.status;
             this.taskId = builder.taskId;
+            this.trackingData = builder.trackingData;
         }
 
         public static Builder builder() {
@@ -215,9 +219,17 @@ public class SubmitLongTextTranslateTaskResponseBody extends TeaModel {
             return this.taskId;
         }
 
+        /**
+         * @return trackingData
+         */
+        public String getTrackingData() {
+            return this.trackingData;
+        }
+
         public static final class Builder {
             private String status; 
             private String taskId; 
+            private String trackingData; 
 
             private Builder() {
             } 
@@ -225,6 +237,7 @@ public class SubmitLongTextTranslateTaskResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.status = model.status;
                 this.taskId = model.taskId;
+                this.trackingData = model.trackingData;
             } 
 
             /**
@@ -240,6 +253,14 @@ public class SubmitLongTextTranslateTaskResponseBody extends TeaModel {
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * trackingData.
+             */
+            public Builder trackingData(String trackingData) {
+                this.trackingData = trackingData;
                 return this;
             }
 

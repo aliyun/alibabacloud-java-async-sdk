@@ -566,6 +566,9 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("textTransform")
         private TextTransform textTransform;
 
+        @com.aliyun.core.annotation.NameInMap("trackingData")
+        private String trackingData;
+
         private Ext(Builder builder) {
             this.config = builder.config;
             this.domainHint = builder.domainHint;
@@ -574,6 +577,7 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
             this.sensitives = builder.sensitives;
             this.terminologies = builder.terminologies;
             this.textTransform = builder.textTransform;
+            this.trackingData = builder.trackingData;
         }
 
         public static Builder builder() {
@@ -633,6 +637,13 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
             return this.textTransform;
         }
 
+        /**
+         * @return trackingData
+         */
+        public String getTrackingData() {
+            return this.trackingData;
+        }
+
         public static final class Builder {
             private Config config; 
             private String domainHint; 
@@ -641,6 +652,7 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
             private java.util.List<String> sensitives; 
             private java.util.List<Terminologies> terminologies; 
             private TextTransform textTransform; 
+            private String trackingData; 
 
             private Builder() {
             } 
@@ -653,6 +665,7 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
                 this.sensitives = model.sensitives;
                 this.terminologies = model.terminologies;
                 this.textTransform = model.textTransform;
+                this.trackingData = model.trackingData;
             } 
 
             /**
@@ -708,6 +721,14 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
              */
             public Builder textTransform(TextTransform textTransform) {
                 this.textTransform = textTransform;
+                return this;
+            }
+
+            /**
+             * trackingData.
+             */
+            public Builder trackingData(String trackingData) {
+                this.trackingData = trackingData;
                 return this;
             }
 
