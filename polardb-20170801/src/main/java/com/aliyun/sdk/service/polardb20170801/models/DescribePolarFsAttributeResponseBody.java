@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePolarFsAttributeResponseBody</p>
  */
 public class DescribePolarFsAttributeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccelerateType")
+    private String accelerateType;
+
     @com.aliyun.core.annotation.NameInMap("AcceleratedStorageSpace")
     private Double acceleratedStorageSpace;
 
@@ -43,6 +46,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("CustomBucketPath")
     private String customBucketPath;
+
+    @com.aliyun.core.annotation.NameInMap("CustomBucketPathList")
+    private java.util.List<CustomBucketPathList> customBucketPathList;
 
     @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
@@ -120,6 +126,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     private String zoneId;
 
     private DescribePolarFsAttributeResponseBody(Builder builder) {
+        this.accelerateType = builder.accelerateType;
         this.acceleratedStorageSpace = builder.acceleratedStorageSpace;
         this.acceleratingEnable = builder.acceleratingEnable;
         this.bandwidth = builder.bandwidth;
@@ -129,6 +136,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         this.clientDownloadPath = builder.clientDownloadPath;
         this.createTime = builder.createTime;
         this.customBucketPath = builder.customBucketPath;
+        this.customBucketPathList = builder.customBucketPathList;
         this.DBType = builder.DBType;
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
@@ -166,6 +174,13 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accelerateType
+     */
+    public String getAccelerateType() {
+        return this.accelerateType;
     }
 
     /**
@@ -229,6 +244,13 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
      */
     public String getCustomBucketPath() {
         return this.customBucketPath;
+    }
+
+    /**
+     * @return customBucketPathList
+     */
+    public java.util.List<CustomBucketPathList> getCustomBucketPathList() {
+        return this.customBucketPathList;
     }
 
     /**
@@ -407,6 +429,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accelerateType; 
         private Double acceleratedStorageSpace; 
         private String acceleratingEnable; 
         private Double bandwidth; 
@@ -416,6 +439,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         private String clientDownloadPath; 
         private String createTime; 
         private String customBucketPath; 
+        private java.util.List<CustomBucketPathList> customBucketPathList; 
         private String DBType; 
         private String expireTime; 
         private String expired; 
@@ -446,6 +470,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         } 
 
         private Builder(DescribePolarFsAttributeResponseBody model) {
+            this.accelerateType = model.accelerateType;
             this.acceleratedStorageSpace = model.acceleratedStorageSpace;
             this.acceleratingEnable = model.acceleratingEnable;
             this.bandwidth = model.bandwidth;
@@ -455,6 +480,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             this.clientDownloadPath = model.clientDownloadPath;
             this.createTime = model.createTime;
             this.customBucketPath = model.customBucketPath;
+            this.customBucketPathList = model.customBucketPathList;
             this.DBType = model.DBType;
             this.expireTime = model.expireTime;
             this.expired = model.expired;
@@ -481,6 +507,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             this.vSwitchId = model.vSwitchId;
             this.zoneId = model.zoneId;
         } 
+
+        /**
+         * AccelerateType.
+         */
+        public Builder accelerateType(String accelerateType) {
+            this.accelerateType = accelerateType;
+            return this;
+        }
 
         /**
          * AcceleratedStorageSpace.
@@ -551,6 +585,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
          */
         public Builder customBucketPath(String customBucketPath) {
             this.customBucketPath = customBucketPath;
+            return this;
+        }
+
+        /**
+         * CustomBucketPathList.
+         */
+        public Builder customBucketPathList(java.util.List<CustomBucketPathList> customBucketPathList) {
+            this.customBucketPathList = customBucketPathList;
             return this;
         }
 
@@ -763,6 +805,81 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePolarFsAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolarFsAttributeResponseBody</p>
+     */
+    public static class CustomBucketPathList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bucket")
+        private String bucket;
+
+        @com.aliyun.core.annotation.NameInMap("Path")
+        private String path;
+
+        private CustomBucketPathList(Builder builder) {
+            this.bucket = builder.bucket;
+            this.path = builder.path;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomBucketPathList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bucket
+         */
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        public static final class Builder {
+            private String bucket; 
+            private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomBucketPathList model) {
+                this.bucket = model.bucket;
+                this.path = model.path;
+            } 
+
+            /**
+             * Bucket.
+             */
+            public Builder bucket(String bucket) {
+                this.bucket = bucket;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            public CustomBucketPathList build() {
+                return new CustomBucketPathList(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribePolarFsAttributeResponseBody} extends {@link TeaModel}

@@ -92,6 +92,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.NameInMap("Storages")
+    private java.util.List<Storages> storages;
+
     @com.aliyun.core.annotation.NameInMap("UpgradeAvailable")
     private String upgradeAvailable;
 
@@ -133,6 +136,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         this.securityIPArrays = builder.securityIPArrays;
         this.serverlessType = builder.serverlessType;
         this.status = builder.status;
+        this.storages = builder.storages;
         this.upgradeAvailable = builder.upgradeAvailable;
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
@@ -328,6 +332,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return storages
+     */
+    public java.util.List<Storages> getStorages() {
+        return this.storages;
+    }
+
+    /**
      * @return upgradeAvailable
      */
     public String getUpgradeAvailable() {
@@ -388,6 +399,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private java.util.List<SecurityIPArrays> securityIPArrays; 
         private String serverlessType; 
         private String status; 
+        private java.util.List<Storages> storages; 
         private String upgradeAvailable; 
         private String VPCId; 
         private String vSwitchId; 
@@ -423,6 +435,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             this.securityIPArrays = model.securityIPArrays;
             this.serverlessType = model.serverlessType;
             this.status = model.status;
+            this.storages = model.storages;
             this.upgradeAvailable = model.upgradeAvailable;
             this.VPCId = model.VPCId;
             this.vSwitchId = model.vSwitchId;
@@ -627,6 +640,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * Storages.
+         */
+        public Builder storages(java.util.List<Storages> storages) {
+            this.storages = storages;
             return this;
         }
 
@@ -1865,6 +1886,123 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
             public SecurityIPArrays build() {
                 return new SecurityIPArrays(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationAttributeResponseBody</p>
+     */
+    public static class Storages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("StorageCapacity")
+        private String storageCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("StorageInstanceId")
+        private String storageInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("StoragePerformanceLevel")
+        private String storagePerformanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("StorageType")
+        private String storageType;
+
+        private Storages(Builder builder) {
+            this.storageCapacity = builder.storageCapacity;
+            this.storageInstanceId = builder.storageInstanceId;
+            this.storagePerformanceLevel = builder.storagePerformanceLevel;
+            this.storageType = builder.storageType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Storages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return storageCapacity
+         */
+        public String getStorageCapacity() {
+            return this.storageCapacity;
+        }
+
+        /**
+         * @return storageInstanceId
+         */
+        public String getStorageInstanceId() {
+            return this.storageInstanceId;
+        }
+
+        /**
+         * @return storagePerformanceLevel
+         */
+        public String getStoragePerformanceLevel() {
+            return this.storagePerformanceLevel;
+        }
+
+        /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        public static final class Builder {
+            private String storageCapacity; 
+            private String storageInstanceId; 
+            private String storagePerformanceLevel; 
+            private String storageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Storages model) {
+                this.storageCapacity = model.storageCapacity;
+                this.storageInstanceId = model.storageInstanceId;
+                this.storagePerformanceLevel = model.storagePerformanceLevel;
+                this.storageType = model.storageType;
+            } 
+
+            /**
+             * StorageCapacity.
+             */
+            public Builder storageCapacity(String storageCapacity) {
+                this.storageCapacity = storageCapacity;
+                return this;
+            }
+
+            /**
+             * StorageInstanceId.
+             */
+            public Builder storageInstanceId(String storageInstanceId) {
+                this.storageInstanceId = storageInstanceId;
+                return this;
+            }
+
+            /**
+             * StoragePerformanceLevel.
+             */
+            public Builder storagePerformanceLevel(String storagePerformanceLevel) {
+                this.storagePerformanceLevel = storagePerformanceLevel;
+                return this;
+            }
+
+            /**
+             * StorageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
+                return this;
+            }
+
+            public Storages build() {
+                return new Storages(this);
             } 
 
         } 

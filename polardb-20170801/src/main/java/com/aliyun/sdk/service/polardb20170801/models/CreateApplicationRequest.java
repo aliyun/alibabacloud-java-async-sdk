@@ -120,6 +120,18 @@ public class CreateApplicationRequest extends Request {
     private String securityGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIPArrayName")
+    private String securityIPArrayName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIPList")
+    private String securityIPList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIPType")
+    private String securityIPType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -170,6 +182,9 @@ public class CreateApplicationRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.securityGroupId = builder.securityGroupId;
+        this.securityIPArrayName = builder.securityIPArrayName;
+        this.securityIPList = builder.securityIPList;
+        this.securityIPType = builder.securityIPType;
         this.tag = builder.tag;
         this.targetVersion = builder.targetVersion;
         this.usedTime = builder.usedTime;
@@ -367,6 +382,27 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return securityIPArrayName
+     */
+    public String getSecurityIPArrayName() {
+        return this.securityIPArrayName;
+    }
+
+    /**
+     * @return securityIPList
+     */
+    public String getSecurityIPList() {
+        return this.securityIPList;
+    }
+
+    /**
+     * @return securityIPType
+     */
+    public String getSecurityIPType() {
+        return this.securityIPType;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -434,6 +470,9 @@ public class CreateApplicationRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String securityGroupId; 
+        private String securityIPArrayName; 
+        private String securityIPList; 
+        private String securityIPType; 
         private java.util.List<Tag> tag; 
         private String targetVersion; 
         private String usedTime; 
@@ -472,6 +511,9 @@ public class CreateApplicationRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.securityGroupId = request.securityGroupId;
+            this.securityIPArrayName = request.securityIPArrayName;
+            this.securityIPList = request.securityIPList;
+            this.securityIPType = request.securityIPType;
             this.tag = request.tag;
             this.targetVersion = request.targetVersion;
             this.usedTime = request.usedTime;
@@ -711,6 +753,33 @@ public class CreateApplicationRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * SecurityIPArrayName.
+         */
+        public Builder securityIPArrayName(String securityIPArrayName) {
+            this.putQueryParameter("SecurityIPArrayName", securityIPArrayName);
+            this.securityIPArrayName = securityIPArrayName;
+            return this;
+        }
+
+        /**
+         * SecurityIPList.
+         */
+        public Builder securityIPList(String securityIPList) {
+            this.putQueryParameter("SecurityIPList", securityIPList);
+            this.securityIPList = securityIPList;
+            return this;
+        }
+
+        /**
+         * SecurityIPType.
+         */
+        public Builder securityIPType(String securityIPType) {
+            this.putQueryParameter("SecurityIPType", securityIPType);
+            this.securityIPType = securityIPType;
             return this;
         }
 
