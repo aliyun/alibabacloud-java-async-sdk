@@ -39,10 +39,6 @@ public class CreateIndexRequest extends Request {
     private String createIndexType;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DataSource")
-    private DataSource dataSource;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -134,6 +130,10 @@ public class CreateIndexRequest extends Request {
     private String knowledgeScene;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("knowledgeType")
+    private String knowledgeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("metaExtractColumns")
     private java.util.List<MetaExtractColumns> metaExtractColumns;
 
@@ -161,7 +161,6 @@ public class CreateIndexRequest extends Request {
         this.chunkSize = builder.chunkSize;
         this.columns = builder.columns;
         this.createIndexType = builder.createIndexType;
-        this.dataSource = builder.dataSource;
         this.description = builder.description;
         this.documentIds = builder.documentIds;
         this.embeddingModelName = builder.embeddingModelName;
@@ -184,6 +183,7 @@ public class CreateIndexRequest extends Request {
         this.datasourceCode = builder.datasourceCode;
         this.enableHeaders = builder.enableHeaders;
         this.knowledgeScene = builder.knowledgeScene;
+        this.knowledgeType = builder.knowledgeType;
         this.metaExtractColumns = builder.metaExtractColumns;
         this.pipelineCommercialCu = builder.pipelineCommercialCu;
         this.pipelineCommercialType = builder.pipelineCommercialType;
@@ -237,13 +237,6 @@ public class CreateIndexRequest extends Request {
      */
     public String getCreateIndexType() {
         return this.createIndexType;
-    }
-
-    /**
-     * @return dataSource
-     */
-    public DataSource getDataSource() {
-        return this.dataSource;
     }
 
     /**
@@ -401,6 +394,13 @@ public class CreateIndexRequest extends Request {
     }
 
     /**
+     * @return knowledgeType
+     */
+    public String getKnowledgeType() {
+        return this.knowledgeType;
+    }
+
+    /**
      * @return metaExtractColumns
      */
     public java.util.List<MetaExtractColumns> getMetaExtractColumns() {
@@ -441,7 +441,6 @@ public class CreateIndexRequest extends Request {
         private Integer chunkSize; 
         private java.util.List<Columns> columns; 
         private String createIndexType; 
-        private DataSource dataSource; 
         private String description; 
         private java.util.List<String> documentIds; 
         private String embeddingModelName; 
@@ -464,6 +463,7 @@ public class CreateIndexRequest extends Request {
         private String datasourceCode; 
         private Boolean enableHeaders; 
         private String knowledgeScene; 
+        private String knowledgeType; 
         private java.util.List<MetaExtractColumns> metaExtractColumns; 
         private Integer pipelineCommercialCu; 
         private String pipelineCommercialType; 
@@ -481,7 +481,6 @@ public class CreateIndexRequest extends Request {
             this.chunkSize = request.chunkSize;
             this.columns = request.columns;
             this.createIndexType = request.createIndexType;
-            this.dataSource = request.dataSource;
             this.description = request.description;
             this.documentIds = request.documentIds;
             this.embeddingModelName = request.embeddingModelName;
@@ -504,6 +503,7 @@ public class CreateIndexRequest extends Request {
             this.datasourceCode = request.datasourceCode;
             this.enableHeaders = request.enableHeaders;
             this.knowledgeScene = request.knowledgeScene;
+            this.knowledgeType = request.knowledgeType;
             this.metaExtractColumns = request.metaExtractColumns;
             this.pipelineCommercialCu = request.pipelineCommercialCu;
             this.pipelineCommercialType = request.pipelineCommercialType;
@@ -568,18 +568,6 @@ public class CreateIndexRequest extends Request {
         public Builder createIndexType(String createIndexType) {
             this.putQueryParameter("CreateIndexType", createIndexType);
             this.createIndexType = createIndexType;
-            return this;
-        }
-
-        /**
-         * <blockquote>
-         * <p> This parameter is not available. Do not specify this parameter.</p>
-         * </blockquote>
-         */
-        public Builder dataSource(DataSource dataSource) {
-            String dataSourceShrink = shrink(dataSource, "DataSource", "json");
-            this.putQueryParameter("DataSource", dataSourceShrink);
-            this.dataSource = dataSource;
             return this;
         }
 
@@ -889,6 +877,15 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * knowledgeType.
+         */
+        public Builder knowledgeType(String knowledgeType) {
+            this.putQueryParameter("knowledgeType", knowledgeType);
+            this.knowledgeType = knowledgeType;
+            return this;
+        }
+
+        /**
          * <p>The metadata extraction configurations. Metadata refers to a set of additional attributes associated with unstructured data, which are integrated into text chunks in key-value pairs. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
          */
         public Builder metaExtractColumns(java.util.List<MetaExtractColumns> metaExtractColumns) {
@@ -1075,269 +1072,6 @@ public class CreateIndexRequest extends Request {
 
             public Columns build() {
                 return new Columns(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link CreateIndexRequest} extends {@link TeaModel}
-     *
-     * <p>CreateIndexRequest</p>
-     */
-    public static class DataSource extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CredentialId")
-        private String credentialId;
-
-        @com.aliyun.core.annotation.NameInMap("CredentialKey")
-        private String credentialKey;
-
-        @com.aliyun.core.annotation.NameInMap("Database")
-        private String database;
-
-        @com.aliyun.core.annotation.NameInMap("Endpoint")
-        private String endpoint;
-
-        @com.aliyun.core.annotation.NameInMap("IsPrivateLink")
-        private Boolean isPrivateLink;
-
-        @com.aliyun.core.annotation.NameInMap("Region")
-        private String region;
-
-        @com.aliyun.core.annotation.NameInMap("SubPath")
-        private String subPath;
-
-        @com.aliyun.core.annotation.NameInMap("SubType")
-        private String subType;
-
-        @com.aliyun.core.annotation.NameInMap("Table")
-        private String table;
-
-        @com.aliyun.core.annotation.NameInMap("Type")
-        private String type;
-
-        private DataSource(Builder builder) {
-            this.credentialId = builder.credentialId;
-            this.credentialKey = builder.credentialKey;
-            this.database = builder.database;
-            this.endpoint = builder.endpoint;
-            this.isPrivateLink = builder.isPrivateLink;
-            this.region = builder.region;
-            this.subPath = builder.subPath;
-            this.subType = builder.subType;
-            this.table = builder.table;
-            this.type = builder.type;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DataSource create() {
-            return builder().build();
-        }
-
-        /**
-         * @return credentialId
-         */
-        public String getCredentialId() {
-            return this.credentialId;
-        }
-
-        /**
-         * @return credentialKey
-         */
-        public String getCredentialKey() {
-            return this.credentialKey;
-        }
-
-        /**
-         * @return database
-         */
-        public String getDatabase() {
-            return this.database;
-        }
-
-        /**
-         * @return endpoint
-         */
-        public String getEndpoint() {
-            return this.endpoint;
-        }
-
-        /**
-         * @return isPrivateLink
-         */
-        public Boolean getIsPrivateLink() {
-            return this.isPrivateLink;
-        }
-
-        /**
-         * @return region
-         */
-        public String getRegion() {
-            return this.region;
-        }
-
-        /**
-         * @return subPath
-         */
-        public String getSubPath() {
-            return this.subPath;
-        }
-
-        /**
-         * @return subType
-         */
-        public String getSubType() {
-            return this.subType;
-        }
-
-        /**
-         * @return table
-         */
-        public String getTable() {
-            return this.table;
-        }
-
-        /**
-         * @return type
-         */
-        public String getType() {
-            return this.type;
-        }
-
-        public static final class Builder {
-            private String credentialId; 
-            private String credentialKey; 
-            private String database; 
-            private String endpoint; 
-            private Boolean isPrivateLink; 
-            private String region; 
-            private String subPath; 
-            private String subType; 
-            private String table; 
-            private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(DataSource model) {
-                this.credentialId = model.credentialId;
-                this.credentialKey = model.credentialKey;
-                this.database = model.database;
-                this.endpoint = model.endpoint;
-                this.isPrivateLink = model.isPrivateLink;
-                this.region = model.region;
-                this.subPath = model.subPath;
-                this.subType = model.subType;
-                this.table = model.table;
-                this.type = model.type;
-            } 
-
-            /**
-             * <blockquote>
-             * <p> This parameter is not available. Do not specify this parameter.</p>
-             * </blockquote>
-             */
-            public Builder credentialId(String credentialId) {
-                this.credentialId = credentialId;
-                return this;
-            }
-
-            /**
-             * <blockquote>
-             * <p> This parameter is not available. Do not specify this parameter.</p>
-             * </blockquote>
-             */
-            public Builder credentialKey(String credentialKey) {
-                this.credentialKey = credentialKey;
-                return this;
-            }
-
-            /**
-             * <blockquote>
-             * <p> This parameter is not available. Do not specify this parameter.</p>
-             * </blockquote>
-             */
-            public Builder database(String database) {
-                this.database = database;
-                return this;
-            }
-
-            /**
-             * <blockquote>
-             * <p> This parameter is not available. Do not specify this parameter.</p>
-             * </blockquote>
-             */
-            public Builder endpoint(String endpoint) {
-                this.endpoint = endpoint;
-                return this;
-            }
-
-            /**
-             * <blockquote>
-             * <p> This parameter is not available. Do not specify this parameter.</p>
-             * </blockquote>
-             */
-            public Builder isPrivateLink(Boolean isPrivateLink) {
-                this.isPrivateLink = isPrivateLink;
-                return this;
-            }
-
-            /**
-             * <blockquote>
-             * <p> This parameter is not available. Do not specify this parameter.</p>
-             * </blockquote>
-             */
-            public Builder region(String region) {
-                this.region = region;
-                return this;
-            }
-
-            /**
-             * <blockquote>
-             * <p> This parameter is not available. Do not specify this parameter.</p>
-             * </blockquote>
-             */
-            public Builder subPath(String subPath) {
-                this.subPath = subPath;
-                return this;
-            }
-
-            /**
-             * <blockquote>
-             * <p> This parameter is not available. Do not specify this parameter.</p>
-             * </blockquote>
-             */
-            public Builder subType(String subType) {
-                this.subType = subType;
-                return this;
-            }
-
-            /**
-             * <blockquote>
-             * <p> This parameter is not available. Do not specify this parameter.</p>
-             * </blockquote>
-             */
-            public Builder table(String table) {
-                this.table = table;
-                return this;
-            }
-
-            /**
-             * <blockquote>
-             * <p> This parameter is not available. Do not specify this parameter.</p>
-             * </blockquote>
-             */
-            public Builder type(String type) {
-                this.type = type;
-                return this;
-            }
-
-            public DataSource build() {
-                return new DataSource(this);
             } 
 
         } 
