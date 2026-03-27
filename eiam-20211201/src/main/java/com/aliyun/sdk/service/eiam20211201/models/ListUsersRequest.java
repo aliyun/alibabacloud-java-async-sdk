@@ -37,6 +37,14 @@ public class ListUsersRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrganizationalUnitId")
     @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String organizationalUnitId;
@@ -94,6 +102,8 @@ public class ListUsersRequest extends Request {
         this.displayNameStartsWith = builder.displayNameStartsWith;
         this.email = builder.email;
         this.instanceId = builder.instanceId;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.organizationalUnitId = builder.organizationalUnitId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -146,6 +156,20 @@ public class ListUsersRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -230,6 +254,8 @@ public class ListUsersRequest extends Request {
         private String displayNameStartsWith; 
         private String email; 
         private String instanceId; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String organizationalUnitId; 
         private Long pageNumber; 
         private Long pageSize; 
@@ -252,6 +278,8 @@ public class ListUsersRequest extends Request {
             this.displayNameStartsWith = request.displayNameStartsWith;
             this.email = request.email;
             this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.organizationalUnitId = request.organizationalUnitId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -308,6 +336,24 @@ public class ListUsersRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

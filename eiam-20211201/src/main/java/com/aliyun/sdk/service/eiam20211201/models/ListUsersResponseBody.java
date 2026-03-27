@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersResponseBody</p>
  */
 public class ListUsersResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -27,6 +33,8 @@ public class ListUsersResponseBody extends TeaModel {
     private java.util.List<Users> users;
 
     private ListUsersResponseBody(Builder builder) {
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
         this.users = builder.users;
@@ -42,6 +50,20 @@ public class ListUsersResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -66,6 +88,8 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer maxResults; 
+        private String nextToken; 
         private String requestId; 
         private Long totalCount; 
         private java.util.List<Users> users; 
@@ -74,10 +98,28 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
         private Builder(ListUsersResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
             this.requestId = model.requestId;
             this.totalCount = model.totalCount;
             this.users = model.users;
         } 
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
 
         /**
          * <p>The ID of the request.</p>
