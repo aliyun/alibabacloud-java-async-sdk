@@ -260,7 +260,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotPolicyIds.
+         * <p>The IDs of the snapshot policies associated with the security group.</p>
          */
         public Builder snapshotPolicyIds(SnapshotPolicyIds snapshotPolicyIds) {
             this.snapshotPolicyIds = snapshotPolicyIds;

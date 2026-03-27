@@ -1476,10 +1476,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBandwidthLimitationResponse> describeBandwidthLimitation(DescribeBandwidthLimitationRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeBandwidthPackages is deprecated, please use Vpc::2016-04-28::DescribeBandwidthPackages instead.  * @param request  the request parameters of DescribeBandwidthPackages  DescribeBandwidthPackagesRequest
+     * @param request the request parameters of DescribeBandwidthPackages  DescribeBandwidthPackagesRequest
      * @return DescribeBandwidthPackagesResponse
      */
-    @Deprecated
     CompletableFuture<DescribeBandwidthPackagesResponse> describeBandwidthPackages(DescribeBandwidthPackagesRequest request);
 
     /**

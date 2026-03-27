@@ -2936,10 +2936,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeBandwidthPackages is deprecated, please use Vpc::2016-04-28::DescribeBandwidthPackages instead.  * @param request  the request parameters of DescribeBandwidthPackages  DescribeBandwidthPackagesRequest
+     * @param request the request parameters of DescribeBandwidthPackages  DescribeBandwidthPackagesRequest
      * @return DescribeBandwidthPackagesResponse
      */
-    @Deprecated
     @Override
     public CompletableFuture<DescribeBandwidthPackagesResponse> describeBandwidthPackages(DescribeBandwidthPackagesRequest request) {
         try {

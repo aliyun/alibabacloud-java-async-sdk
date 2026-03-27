@@ -116,6 +116,9 @@ public class LockSnapshotResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockExpiredTime")
         private String lockExpiredTime;
 
+        @com.aliyun.core.annotation.NameInMap("LockMode")
+        private String lockMode;
+
         @com.aliyun.core.annotation.NameInMap("LockStatus")
         private String lockStatus;
 
@@ -129,6 +132,7 @@ public class LockSnapshotResponseBody extends TeaModel {
             this.lockDuration = builder.lockDuration;
             this.lockDurationStartTime = builder.lockDurationStartTime;
             this.lockExpiredTime = builder.lockExpiredTime;
+            this.lockMode = builder.lockMode;
             this.lockStatus = builder.lockStatus;
             this.snapshotId = builder.snapshotId;
         }
@@ -184,6 +188,13 @@ public class LockSnapshotResponseBody extends TeaModel {
         }
 
         /**
+         * @return lockMode
+         */
+        public String getLockMode() {
+            return this.lockMode;
+        }
+
+        /**
          * @return lockStatus
          */
         public String getLockStatus() {
@@ -204,6 +215,7 @@ public class LockSnapshotResponseBody extends TeaModel {
             private Integer lockDuration; 
             private String lockDurationStartTime; 
             private String lockExpiredTime; 
+            private String lockMode; 
             private String lockStatus; 
             private String snapshotId; 
 
@@ -217,6 +229,7 @@ public class LockSnapshotResponseBody extends TeaModel {
                 this.lockDuration = model.lockDuration;
                 this.lockDurationStartTime = model.lockDurationStartTime;
                 this.lockExpiredTime = model.lockExpiredTime;
+                this.lockMode = model.lockMode;
                 this.lockStatus = model.lockStatus;
                 this.snapshotId = model.snapshotId;
             } 
@@ -284,6 +297,14 @@ public class LockSnapshotResponseBody extends TeaModel {
              */
             public Builder lockExpiredTime(String lockExpiredTime) {
                 this.lockExpiredTime = lockExpiredTime;
+                return this;
+            }
+
+            /**
+             * LockMode.
+             */
+            public Builder lockMode(String lockMode) {
+                this.lockMode = lockMode;
                 return this;
             }
 

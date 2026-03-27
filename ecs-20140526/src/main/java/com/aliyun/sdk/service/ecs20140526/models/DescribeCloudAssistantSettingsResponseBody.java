@@ -26,6 +26,9 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceUsageConfig")
+    private ResourceUsageConfig resourceUsageConfig;
+
     @com.aliyun.core.annotation.NameInMap("SessionManagerConfig")
     private SessionManagerConfig sessionManagerConfig;
 
@@ -36,6 +39,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         this.agentUpgradeConfig = builder.agentUpgradeConfig;
         this.ossDeliveryConfigs = builder.ossDeliveryConfigs;
         this.requestId = builder.requestId;
+        this.resourceUsageConfig = builder.resourceUsageConfig;
         this.sessionManagerConfig = builder.sessionManagerConfig;
         this.slsDeliveryConfigs = builder.slsDeliveryConfigs;
     }
@@ -74,6 +78,13 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceUsageConfig
+     */
+    public ResourceUsageConfig getResourceUsageConfig() {
+        return this.resourceUsageConfig;
+    }
+
+    /**
      * @return sessionManagerConfig
      */
     public SessionManagerConfig getSessionManagerConfig() {
@@ -91,6 +102,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         private AgentUpgradeConfig agentUpgradeConfig; 
         private OssDeliveryConfigs ossDeliveryConfigs; 
         private String requestId; 
+        private ResourceUsageConfig resourceUsageConfig; 
         private SessionManagerConfig sessionManagerConfig; 
         private SlsDeliveryConfigs slsDeliveryConfigs; 
 
@@ -101,6 +113,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             this.agentUpgradeConfig = model.agentUpgradeConfig;
             this.ossDeliveryConfigs = model.ossDeliveryConfigs;
             this.requestId = model.requestId;
+            this.resourceUsageConfig = model.resourceUsageConfig;
             this.sessionManagerConfig = model.sessionManagerConfig;
             this.slsDeliveryConfigs = model.slsDeliveryConfigs;
         } 
@@ -129,6 +142,14 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceUsageConfig.
+         */
+        public Builder resourceUsageConfig(ResourceUsageConfig resourceUsageConfig) {
+            this.resourceUsageConfig = resourceUsageConfig;
             return this;
         }
 
@@ -218,6 +239,12 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedUpgradeWindows")
         private AllowedUpgradeWindows allowedUpgradeWindows;
 
+        @com.aliyun.core.annotation.NameInMap("BootstrapUpgrade")
+        private Boolean bootstrapUpgrade;
+
+        @com.aliyun.core.annotation.NameInMap("DisableUpgrade")
+        private Boolean disableUpgrade;
+
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
@@ -226,6 +253,8 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
         private AgentUpgradeConfig(Builder builder) {
             this.allowedUpgradeWindows = builder.allowedUpgradeWindows;
+            this.bootstrapUpgrade = builder.bootstrapUpgrade;
+            this.disableUpgrade = builder.disableUpgrade;
             this.enabled = builder.enabled;
             this.timeZone = builder.timeZone;
         }
@@ -246,6 +275,20 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return bootstrapUpgrade
+         */
+        public Boolean getBootstrapUpgrade() {
+            return this.bootstrapUpgrade;
+        }
+
+        /**
+         * @return disableUpgrade
+         */
+        public Boolean getDisableUpgrade() {
+            return this.disableUpgrade;
+        }
+
+        /**
          * @return enabled
          */
         public Boolean getEnabled() {
@@ -261,6 +304,8 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
         public static final class Builder {
             private AllowedUpgradeWindows allowedUpgradeWindows; 
+            private Boolean bootstrapUpgrade; 
+            private Boolean disableUpgrade; 
             private Boolean enabled; 
             private String timeZone; 
 
@@ -269,6 +314,8 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
             private Builder(AgentUpgradeConfig model) {
                 this.allowedUpgradeWindows = model.allowedUpgradeWindows;
+                this.bootstrapUpgrade = model.bootstrapUpgrade;
+                this.disableUpgrade = model.disableUpgrade;
                 this.enabled = model.enabled;
                 this.timeZone = model.timeZone;
             } 
@@ -278,6 +325,22 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
              */
             public Builder allowedUpgradeWindows(AllowedUpgradeWindows allowedUpgradeWindows) {
                 this.allowedUpgradeWindows = allowedUpgradeWindows;
+                return this;
+            }
+
+            /**
+             * BootstrapUpgrade.
+             */
+            public Builder bootstrapUpgrade(Boolean bootstrapUpgrade) {
+                this.bootstrapUpgrade = bootstrapUpgrade;
+                return this;
+            }
+
+            /**
+             * DisableUpgrade.
+             */
+            public Builder disableUpgrade(Boolean disableUpgrade) {
+                this.disableUpgrade = disableUpgrade;
                 return this;
             }
 
@@ -573,6 +636,165 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
             public OssDeliveryConfigs build() {
                 return new OssDeliveryConfigs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudAssistantSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudAssistantSettingsResponseBody</p>
+     */
+    public static class ResourceUsageConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CpuLimit")
+        private Integer cpuLimit;
+
+        @com.aliyun.core.annotation.NameInMap("KeepScriptFile")
+        private Boolean keepScriptFile;
+
+        @com.aliyun.core.annotation.NameInMap("LogFileCountLimit")
+        private Integer logFileCountLimit;
+
+        @com.aliyun.core.annotation.NameInMap("LogSizeLimit")
+        private String logSizeLimit;
+
+        @com.aliyun.core.annotation.NameInMap("MemoryLimit")
+        private String memoryLimit;
+
+        @com.aliyun.core.annotation.NameInMap("OverloadLimit")
+        private Integer overloadLimit;
+
+        private ResourceUsageConfig(Builder builder) {
+            this.cpuLimit = builder.cpuLimit;
+            this.keepScriptFile = builder.keepScriptFile;
+            this.logFileCountLimit = builder.logFileCountLimit;
+            this.logSizeLimit = builder.logSizeLimit;
+            this.memoryLimit = builder.memoryLimit;
+            this.overloadLimit = builder.overloadLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceUsageConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpuLimit
+         */
+        public Integer getCpuLimit() {
+            return this.cpuLimit;
+        }
+
+        /**
+         * @return keepScriptFile
+         */
+        public Boolean getKeepScriptFile() {
+            return this.keepScriptFile;
+        }
+
+        /**
+         * @return logFileCountLimit
+         */
+        public Integer getLogFileCountLimit() {
+            return this.logFileCountLimit;
+        }
+
+        /**
+         * @return logSizeLimit
+         */
+        public String getLogSizeLimit() {
+            return this.logSizeLimit;
+        }
+
+        /**
+         * @return memoryLimit
+         */
+        public String getMemoryLimit() {
+            return this.memoryLimit;
+        }
+
+        /**
+         * @return overloadLimit
+         */
+        public Integer getOverloadLimit() {
+            return this.overloadLimit;
+        }
+
+        public static final class Builder {
+            private Integer cpuLimit; 
+            private Boolean keepScriptFile; 
+            private Integer logFileCountLimit; 
+            private String logSizeLimit; 
+            private String memoryLimit; 
+            private Integer overloadLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceUsageConfig model) {
+                this.cpuLimit = model.cpuLimit;
+                this.keepScriptFile = model.keepScriptFile;
+                this.logFileCountLimit = model.logFileCountLimit;
+                this.logSizeLimit = model.logSizeLimit;
+                this.memoryLimit = model.memoryLimit;
+                this.overloadLimit = model.overloadLimit;
+            } 
+
+            /**
+             * CpuLimit.
+             */
+            public Builder cpuLimit(Integer cpuLimit) {
+                this.cpuLimit = cpuLimit;
+                return this;
+            }
+
+            /**
+             * KeepScriptFile.
+             */
+            public Builder keepScriptFile(Boolean keepScriptFile) {
+                this.keepScriptFile = keepScriptFile;
+                return this;
+            }
+
+            /**
+             * LogFileCountLimit.
+             */
+            public Builder logFileCountLimit(Integer logFileCountLimit) {
+                this.logFileCountLimit = logFileCountLimit;
+                return this;
+            }
+
+            /**
+             * LogSizeLimit.
+             */
+            public Builder logSizeLimit(String logSizeLimit) {
+                this.logSizeLimit = logSizeLimit;
+                return this;
+            }
+
+            /**
+             * MemoryLimit.
+             */
+            public Builder memoryLimit(String memoryLimit) {
+                this.memoryLimit = memoryLimit;
+                return this;
+            }
+
+            /**
+             * OverloadLimit.
+             */
+            public Builder overloadLimit(Integer overloadLimit) {
+                this.overloadLimit = overloadLimit;
+                return this;
+            }
+
+            public ResourceUsageConfig build() {
+                return new ResourceUsageConfig(this);
             } 
 
         } 

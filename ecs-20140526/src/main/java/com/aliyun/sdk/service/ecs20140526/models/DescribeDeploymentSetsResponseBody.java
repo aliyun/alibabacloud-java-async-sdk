@@ -446,6 +446,9 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Strategy")
         private String strategy;
 
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
         private DeploymentSet(Builder builder) {
             this.accountId = builder.accountId;
             this.capacities = builder.capacities;
@@ -460,6 +463,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             this.instanceAmount = builder.instanceAmount;
             this.instanceIds = builder.instanceIds;
             this.strategy = builder.strategy;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -561,6 +565,13 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             return this.strategy;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private Long accountId; 
             private Capacities capacities; 
@@ -575,6 +586,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             private Integer instanceAmount; 
             private InstanceIds instanceIds; 
             private String strategy; 
+            private String type; 
 
             private Builder() {
             } 
@@ -593,6 +605,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
                 this.instanceAmount = model.instanceAmount;
                 this.instanceIds = model.instanceIds;
                 this.strategy = model.strategy;
+                this.type = model.type;
             } 
 
             /**
@@ -729,6 +742,14 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
              */
             public Builder strategy(String strategy) {
                 this.strategy = strategy;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

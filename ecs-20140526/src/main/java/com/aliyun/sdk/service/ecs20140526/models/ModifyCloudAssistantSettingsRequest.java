@@ -51,6 +51,10 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceUsageConfig")
+    private ResourceUsageConfig resourceUsageConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SessionManagerConfig")
     private SessionManagerConfig sessionManagerConfig;
 
@@ -73,6 +77,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.resourceUsageConfig = builder.resourceUsageConfig;
         this.sessionManagerConfig = builder.sessionManagerConfig;
         this.settingType = builder.settingType;
         this.slsDeliveryConfig = builder.slsDeliveryConfig;
@@ -148,6 +153,13 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
     }
 
     /**
+     * @return resourceUsageConfig
+     */
+    public ResourceUsageConfig getResourceUsageConfig() {
+        return this.resourceUsageConfig;
+    }
+
+    /**
      * @return sessionManagerConfig
      */
     public SessionManagerConfig getSessionManagerConfig() {
@@ -177,6 +189,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private ResourceUsageConfig resourceUsageConfig; 
         private SessionManagerConfig sessionManagerConfig; 
         private String settingType; 
         private SlsDeliveryConfig slsDeliveryConfig; 
@@ -195,6 +208,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceUsageConfig = request.resourceUsageConfig;
             this.sessionManagerConfig = request.sessionManagerConfig;
             this.settingType = request.settingType;
             this.slsDeliveryConfig = request.slsDeliveryConfig;
@@ -279,6 +293,16 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
+         * ResourceUsageConfig.
+         */
+        public Builder resourceUsageConfig(ResourceUsageConfig resourceUsageConfig) {
+            String resourceUsageConfigShrink = shrink(resourceUsageConfig, "ResourceUsageConfig", "json");
+            this.putQueryParameter("ResourceUsageConfig", resourceUsageConfigShrink);
+            this.resourceUsageConfig = resourceUsageConfig;
+            return this;
+        }
+
+        /**
          * <p>Cloud Assistant Session Manager configuration.</p>
          */
         public Builder sessionManagerConfig(SessionManagerConfig sessionManagerConfig) {
@@ -334,6 +358,12 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AllowedUpgradeWindow")
         private java.util.List<String> allowedUpgradeWindow;
 
+        @com.aliyun.core.annotation.NameInMap("BootstrapUpgrade")
+        private Boolean bootstrapUpgrade;
+
+        @com.aliyun.core.annotation.NameInMap("DisableUpgrade")
+        private Boolean disableUpgrade;
+
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
@@ -342,6 +372,8 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
 
         private AgentUpgradeConfig(Builder builder) {
             this.allowedUpgradeWindow = builder.allowedUpgradeWindow;
+            this.bootstrapUpgrade = builder.bootstrapUpgrade;
+            this.disableUpgrade = builder.disableUpgrade;
             this.enabled = builder.enabled;
             this.timeZone = builder.timeZone;
         }
@@ -362,6 +394,20 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
+         * @return bootstrapUpgrade
+         */
+        public Boolean getBootstrapUpgrade() {
+            return this.bootstrapUpgrade;
+        }
+
+        /**
+         * @return disableUpgrade
+         */
+        public Boolean getDisableUpgrade() {
+            return this.disableUpgrade;
+        }
+
+        /**
          * @return enabled
          */
         public Boolean getEnabled() {
@@ -377,6 +423,8 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> allowedUpgradeWindow; 
+            private Boolean bootstrapUpgrade; 
+            private Boolean disableUpgrade; 
             private Boolean enabled; 
             private String timeZone; 
 
@@ -385,6 +433,8 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
 
             private Builder(AgentUpgradeConfig model) {
                 this.allowedUpgradeWindow = model.allowedUpgradeWindow;
+                this.bootstrapUpgrade = model.bootstrapUpgrade;
+                this.disableUpgrade = model.disableUpgrade;
                 this.enabled = model.enabled;
                 this.timeZone = model.timeZone;
             } 
@@ -397,6 +447,22 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
              */
             public Builder allowedUpgradeWindow(java.util.List<String> allowedUpgradeWindow) {
                 this.allowedUpgradeWindow = allowedUpgradeWindow;
+                return this;
+            }
+
+            /**
+             * BootstrapUpgrade.
+             */
+            public Builder bootstrapUpgrade(Boolean bootstrapUpgrade) {
+                this.bootstrapUpgrade = bootstrapUpgrade;
+                return this;
+            }
+
+            /**
+             * DisableUpgrade.
+             */
+            public Builder disableUpgrade(Boolean disableUpgrade) {
+                this.disableUpgrade = disableUpgrade;
                 return this;
             }
 
@@ -620,6 +686,165 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
 
             public OssDeliveryConfig build() {
                 return new OssDeliveryConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyCloudAssistantSettingsRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCloudAssistantSettingsRequest</p>
+     */
+    public static class ResourceUsageConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CpuLimit")
+        private Integer cpuLimit;
+
+        @com.aliyun.core.annotation.NameInMap("KeepScriptFile")
+        private Boolean keepScriptFile;
+
+        @com.aliyun.core.annotation.NameInMap("LogFileCountLimit")
+        private Integer logFileCountLimit;
+
+        @com.aliyun.core.annotation.NameInMap("LogSizeLimit")
+        private String logSizeLimit;
+
+        @com.aliyun.core.annotation.NameInMap("MemoryLimit")
+        private String memoryLimit;
+
+        @com.aliyun.core.annotation.NameInMap("OverloadLimit")
+        private Integer overloadLimit;
+
+        private ResourceUsageConfig(Builder builder) {
+            this.cpuLimit = builder.cpuLimit;
+            this.keepScriptFile = builder.keepScriptFile;
+            this.logFileCountLimit = builder.logFileCountLimit;
+            this.logSizeLimit = builder.logSizeLimit;
+            this.memoryLimit = builder.memoryLimit;
+            this.overloadLimit = builder.overloadLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceUsageConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpuLimit
+         */
+        public Integer getCpuLimit() {
+            return this.cpuLimit;
+        }
+
+        /**
+         * @return keepScriptFile
+         */
+        public Boolean getKeepScriptFile() {
+            return this.keepScriptFile;
+        }
+
+        /**
+         * @return logFileCountLimit
+         */
+        public Integer getLogFileCountLimit() {
+            return this.logFileCountLimit;
+        }
+
+        /**
+         * @return logSizeLimit
+         */
+        public String getLogSizeLimit() {
+            return this.logSizeLimit;
+        }
+
+        /**
+         * @return memoryLimit
+         */
+        public String getMemoryLimit() {
+            return this.memoryLimit;
+        }
+
+        /**
+         * @return overloadLimit
+         */
+        public Integer getOverloadLimit() {
+            return this.overloadLimit;
+        }
+
+        public static final class Builder {
+            private Integer cpuLimit; 
+            private Boolean keepScriptFile; 
+            private Integer logFileCountLimit; 
+            private String logSizeLimit; 
+            private String memoryLimit; 
+            private Integer overloadLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceUsageConfig model) {
+                this.cpuLimit = model.cpuLimit;
+                this.keepScriptFile = model.keepScriptFile;
+                this.logFileCountLimit = model.logFileCountLimit;
+                this.logSizeLimit = model.logSizeLimit;
+                this.memoryLimit = model.memoryLimit;
+                this.overloadLimit = model.overloadLimit;
+            } 
+
+            /**
+             * CpuLimit.
+             */
+            public Builder cpuLimit(Integer cpuLimit) {
+                this.cpuLimit = cpuLimit;
+                return this;
+            }
+
+            /**
+             * KeepScriptFile.
+             */
+            public Builder keepScriptFile(Boolean keepScriptFile) {
+                this.keepScriptFile = keepScriptFile;
+                return this;
+            }
+
+            /**
+             * LogFileCountLimit.
+             */
+            public Builder logFileCountLimit(Integer logFileCountLimit) {
+                this.logFileCountLimit = logFileCountLimit;
+                return this;
+            }
+
+            /**
+             * LogSizeLimit.
+             */
+            public Builder logSizeLimit(String logSizeLimit) {
+                this.logSizeLimit = logSizeLimit;
+                return this;
+            }
+
+            /**
+             * MemoryLimit.
+             */
+            public Builder memoryLimit(String memoryLimit) {
+                this.memoryLimit = memoryLimit;
+                return this;
+            }
+
+            /**
+             * OverloadLimit.
+             */
+            public Builder overloadLimit(Integer overloadLimit) {
+                this.overloadLimit = overloadLimit;
+                return this;
+            }
+
+            public ResourceUsageConfig build() {
+                return new ResourceUsageConfig(this);
             } 
 
         } 

@@ -75,6 +75,10 @@ public class DescribeDeploymentSetsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Strategy")
     private String strategy;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private DescribeDeploymentSetsRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
@@ -91,6 +95,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.strategy = builder.strategy;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -204,6 +209,13 @@ public class DescribeDeploymentSetsRequest extends Request {
         return this.strategy;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDeploymentSetsRequest, Builder> {
         private String sourceRegionId; 
         private String deploymentSetIds; 
@@ -219,6 +231,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String strategy; 
+        private String type; 
 
         private Builder() {
             super();
@@ -240,6 +253,7 @@ public class DescribeDeploymentSetsRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.strategy = request.strategy;
+            this.type = request.type;
         } 
 
         /**
@@ -407,6 +421,15 @@ public class DescribeDeploymentSetsRequest extends Request {
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);
             this.strategy = strategy;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 
