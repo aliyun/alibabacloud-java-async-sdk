@@ -5259,6 +5259,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>根据用户提供的问题，智能搜索获取表知识</p>
+     * 
+     * @param request the request parameters of SearchTableKnowledge  SearchTableKnowledgeRequest
+     * @return SearchTableKnowledgeResponse
+     */
+    @Override
+    public CompletableFuture<SearchTableKnowledgeResponse> searchTableKnowledge(SearchTableKnowledgeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SearchTableKnowledge").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchTableKnowledgeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchTableKnowledgeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SetOwners  SetOwnersRequest
      * @return SetOwnersResponse
      */

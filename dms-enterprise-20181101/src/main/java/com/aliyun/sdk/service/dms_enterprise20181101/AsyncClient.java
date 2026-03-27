@@ -1994,6 +1994,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchTableResponse> searchTable(SearchTableRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>根据用户提供的问题，智能搜索获取表知识</p>
+     * 
+     * @param request the request parameters of SearchTableKnowledge  SearchTableKnowledgeRequest
+     * @return SearchTableKnowledgeResponse
+     */
+    CompletableFuture<SearchTableKnowledgeResponse> searchTableKnowledge(SearchTableKnowledgeRequest request);
+
+    /**
      * @param request the request parameters of SetOwners  SetOwnersRequest
      * @return SetOwnersResponse
      */
