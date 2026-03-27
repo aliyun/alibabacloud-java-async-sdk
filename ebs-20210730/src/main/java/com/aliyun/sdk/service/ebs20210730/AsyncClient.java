@@ -101,6 +101,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDedicatedBlockStorageClusterResponse> createDedicatedBlockStorageCluster(CreateDedicatedBlockStorageClusterRequest request);
 
     /**
+     * @param request the request parameters of CreateDiagnoseReport  CreateDiagnoseReportRequest
+     * @return CreateDiagnoseReportResponse
+     */
+    CompletableFuture<CreateDiagnoseReportResponse> createDiagnoseReport(CreateDiagnoseReportRequest request);
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <p>The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of instances.
@@ -217,6 +223,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDedicatedBlockStorageClustersResponse
      */
     CompletableFuture<DescribeDedicatedBlockStorageClustersResponse> describeDedicatedBlockStorageClusters(DescribeDedicatedBlockStorageClustersRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDiagnoseReport  DescribeDiagnoseReportRequest
+     * @return DescribeDiagnoseReportResponse
+     */
+    CompletableFuture<DescribeDiagnoseReportResponse> describeDiagnoseReport(DescribeDiagnoseReportRequest request);
 
     /**
      * <b>description</b> :
