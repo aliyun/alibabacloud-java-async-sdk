@@ -136,12 +136,249 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
      *
      * <p>QueryDocParserStatusResponseBody</p>
      */
+    public static class Pages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImageHeight")
+        private Integer imageHeight;
+
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
+        private String imageUrl;
+
+        @com.aliyun.core.annotation.NameInMap("ImageWidth")
+        private Integer imageWidth;
+
+        @com.aliyun.core.annotation.NameInMap("PageIdAllDocs")
+        private Integer pageIdAllDocs;
+
+        @com.aliyun.core.annotation.NameInMap("PageIdCurDoc")
+        private Integer pageIdCurDoc;
+
+        private Pages(Builder builder) {
+            this.imageHeight = builder.imageHeight;
+            this.imageUrl = builder.imageUrl;
+            this.imageWidth = builder.imageWidth;
+            this.pageIdAllDocs = builder.pageIdAllDocs;
+            this.pageIdCurDoc = builder.pageIdCurDoc;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Pages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return imageHeight
+         */
+        public Integer getImageHeight() {
+            return this.imageHeight;
+        }
+
+        /**
+         * @return imageUrl
+         */
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        /**
+         * @return imageWidth
+         */
+        public Integer getImageWidth() {
+            return this.imageWidth;
+        }
+
+        /**
+         * @return pageIdAllDocs
+         */
+        public Integer getPageIdAllDocs() {
+            return this.pageIdAllDocs;
+        }
+
+        /**
+         * @return pageIdCurDoc
+         */
+        public Integer getPageIdCurDoc() {
+            return this.pageIdCurDoc;
+        }
+
+        public static final class Builder {
+            private Integer imageHeight; 
+            private String imageUrl; 
+            private Integer imageWidth; 
+            private Integer pageIdAllDocs; 
+            private Integer pageIdCurDoc; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pages model) {
+                this.imageHeight = model.imageHeight;
+                this.imageUrl = model.imageUrl;
+                this.imageWidth = model.imageWidth;
+                this.pageIdAllDocs = model.pageIdAllDocs;
+                this.pageIdCurDoc = model.pageIdCurDoc;
+            } 
+
+            /**
+             * ImageHeight.
+             */
+            public Builder imageHeight(Integer imageHeight) {
+                this.imageHeight = imageHeight;
+                return this;
+            }
+
+            /**
+             * ImageUrl.
+             */
+            public Builder imageUrl(String imageUrl) {
+                this.imageUrl = imageUrl;
+                return this;
+            }
+
+            /**
+             * ImageWidth.
+             */
+            public Builder imageWidth(Integer imageWidth) {
+                this.imageWidth = imageWidth;
+                return this;
+            }
+
+            /**
+             * PageIdAllDocs.
+             */
+            public Builder pageIdAllDocs(Integer pageIdAllDocs) {
+                this.pageIdAllDocs = pageIdAllDocs;
+                return this;
+            }
+
+            /**
+             * PageIdCurDoc.
+             */
+            public Builder pageIdCurDoc(Integer pageIdCurDoc) {
+                this.pageIdCurDoc = pageIdCurDoc;
+                return this;
+            }
+
+            public Pages build() {
+                return new Pages(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryDocParserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDocParserStatusResponseBody</p>
+     */
+    public static class OutputFormatResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OutputFileUrl")
+        private String outputFileUrl;
+
+        @com.aliyun.core.annotation.NameInMap("OutputType")
+        private String outputType;
+
+        @com.aliyun.core.annotation.NameInMap("Pages")
+        private java.util.List<Pages> pages;
+
+        private OutputFormatResult(Builder builder) {
+            this.outputFileUrl = builder.outputFileUrl;
+            this.outputType = builder.outputType;
+            this.pages = builder.pages;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OutputFormatResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return outputFileUrl
+         */
+        public String getOutputFileUrl() {
+            return this.outputFileUrl;
+        }
+
+        /**
+         * @return outputType
+         */
+        public String getOutputType() {
+            return this.outputType;
+        }
+
+        /**
+         * @return pages
+         */
+        public java.util.List<Pages> getPages() {
+            return this.pages;
+        }
+
+        public static final class Builder {
+            private String outputFileUrl; 
+            private String outputType; 
+            private java.util.List<Pages> pages; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputFormatResult model) {
+                this.outputFileUrl = model.outputFileUrl;
+                this.outputType = model.outputType;
+                this.pages = model.pages;
+            } 
+
+            /**
+             * OutputFileUrl.
+             */
+            public Builder outputFileUrl(String outputFileUrl) {
+                this.outputFileUrl = outputFileUrl;
+                return this;
+            }
+
+            /**
+             * OutputType.
+             */
+            public Builder outputType(String outputType) {
+                this.outputType = outputType;
+                return this;
+            }
+
+            /**
+             * Pages.
+             */
+            public Builder pages(java.util.List<Pages> pages) {
+                this.pages = pages;
+                return this;
+            }
+
+            public OutputFormatResult build() {
+                return new OutputFormatResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryDocParserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDocParserStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageCount")
         private Integer imageCount;
 
         @com.aliyun.core.annotation.NameInMap("NumberOfSuccessfulParsing")
         private Integer numberOfSuccessfulParsing;
+
+        @com.aliyun.core.annotation.NameInMap("OutputFormatResult")
+        private java.util.List<OutputFormatResult> outputFormatResult;
 
         @com.aliyun.core.annotation.NameInMap("PageCountEstimate")
         private Integer pageCountEstimate;
@@ -164,6 +401,7 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.imageCount = builder.imageCount;
             this.numberOfSuccessfulParsing = builder.numberOfSuccessfulParsing;
+            this.outputFormatResult = builder.outputFormatResult;
             this.pageCountEstimate = builder.pageCountEstimate;
             this.paragraphCount = builder.paragraphCount;
             this.processing = builder.processing;
@@ -192,6 +430,13 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
          */
         public Integer getNumberOfSuccessfulParsing() {
             return this.numberOfSuccessfulParsing;
+        }
+
+        /**
+         * @return outputFormatResult
+         */
+        public java.util.List<OutputFormatResult> getOutputFormatResult() {
+            return this.outputFormatResult;
         }
 
         /**
@@ -239,6 +484,7 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
         public static final class Builder {
             private Integer imageCount; 
             private Integer numberOfSuccessfulParsing; 
+            private java.util.List<OutputFormatResult> outputFormatResult; 
             private Integer pageCountEstimate; 
             private Integer paragraphCount; 
             private Float processing; 
@@ -252,6 +498,7 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.imageCount = model.imageCount;
                 this.numberOfSuccessfulParsing = model.numberOfSuccessfulParsing;
+                this.outputFormatResult = model.outputFormatResult;
                 this.pageCountEstimate = model.pageCountEstimate;
                 this.paragraphCount = model.paragraphCount;
                 this.processing = model.processing;
@@ -273,6 +520,14 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
              */
             public Builder numberOfSuccessfulParsing(Integer numberOfSuccessfulParsing) {
                 this.numberOfSuccessfulParsing = numberOfSuccessfulParsing;
+                return this;
+            }
+
+            /**
+             * OutputFormatResult.
+             */
+            public Builder outputFormatResult(java.util.List<OutputFormatResult> outputFormatResult) {
+                this.outputFormatResult = outputFormatResult;
                 return this;
             }
 
