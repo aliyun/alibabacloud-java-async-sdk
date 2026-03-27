@@ -44,6 +44,14 @@ public class CreateMemoryStoreRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer shortTermTtl;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceType")
+    private String sourceType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("traceSourceConfig")
+    private TraceSourceConfig traceSourceConfig;
+
     private CreateMemoryStoreRequest(Builder builder) {
         super(builder);
         this.workspace = builder.workspace;
@@ -52,6 +60,8 @@ public class CreateMemoryStoreRequest extends Request {
         this.extractionStrategies = builder.extractionStrategies;
         this.memoryStoreName = builder.memoryStoreName;
         this.shortTermTtl = builder.shortTermTtl;
+        this.sourceType = builder.sourceType;
+        this.traceSourceConfig = builder.traceSourceConfig;
     }
 
     public static Builder builder() {
@@ -109,6 +119,20 @@ public class CreateMemoryStoreRequest extends Request {
         return this.shortTermTtl;
     }
 
+    /**
+     * @return sourceType
+     */
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    /**
+     * @return traceSourceConfig
+     */
+    public TraceSourceConfig getTraceSourceConfig() {
+        return this.traceSourceConfig;
+    }
+
     public static final class Builder extends Request.Builder<CreateMemoryStoreRequest, Builder> {
         private String workspace; 
         private java.util.List<CustomExtractionStrategy> customExtractionStrategies; 
@@ -116,6 +140,8 @@ public class CreateMemoryStoreRequest extends Request {
         private java.util.List<String> extractionStrategies; 
         private String memoryStoreName; 
         private Integer shortTermTtl; 
+        private String sourceType; 
+        private TraceSourceConfig traceSourceConfig; 
 
         private Builder() {
             super();
@@ -129,6 +155,8 @@ public class CreateMemoryStoreRequest extends Request {
             this.extractionStrategies = request.extractionStrategies;
             this.memoryStoreName = request.memoryStoreName;
             this.shortTermTtl = request.shortTermTtl;
+            this.sourceType = request.sourceType;
+            this.traceSourceConfig = request.traceSourceConfig;
         } 
 
         /**
@@ -194,6 +222,24 @@ public class CreateMemoryStoreRequest extends Request {
             return this;
         }
 
+        /**
+         * sourceType.
+         */
+        public Builder sourceType(String sourceType) {
+            this.putBodyParameter("sourceType", sourceType);
+            this.sourceType = sourceType;
+            return this;
+        }
+
+        /**
+         * traceSourceConfig.
+         */
+        public Builder traceSourceConfig(TraceSourceConfig traceSourceConfig) {
+            this.putBodyParameter("traceSourceConfig", traceSourceConfig);
+            this.traceSourceConfig = traceSourceConfig;
+            return this;
+        }
+
         @Override
         public CreateMemoryStoreRequest build() {
             return new CreateMemoryStoreRequest(this);
@@ -201,4 +247,103 @@ public class CreateMemoryStoreRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMemoryStoreRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMemoryStoreRequest</p>
+     */
+    public static class TraceSourceConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("includeOutput")
+        private Boolean includeOutput;
+
+        @com.aliyun.core.annotation.NameInMap("query")
+        private String query;
+
+        @com.aliyun.core.annotation.NameInMap("workspace")
+        private String workspace;
+
+        private TraceSourceConfig(Builder builder) {
+            this.includeOutput = builder.includeOutput;
+            this.query = builder.query;
+            this.workspace = builder.workspace;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TraceSourceConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return includeOutput
+         */
+        public Boolean getIncludeOutput() {
+            return this.includeOutput;
+        }
+
+        /**
+         * @return query
+         */
+        public String getQuery() {
+            return this.query;
+        }
+
+        /**
+         * @return workspace
+         */
+        public String getWorkspace() {
+            return this.workspace;
+        }
+
+        public static final class Builder {
+            private Boolean includeOutput; 
+            private String query; 
+            private String workspace; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraceSourceConfig model) {
+                this.includeOutput = model.includeOutput;
+                this.query = model.query;
+                this.workspace = model.workspace;
+            } 
+
+            /**
+             * includeOutput.
+             */
+            public Builder includeOutput(Boolean includeOutput) {
+                this.includeOutput = includeOutput;
+                return this;
+            }
+
+            /**
+             * query.
+             */
+            public Builder query(String query) {
+                this.query = query;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace-test</p>
+             */
+            public Builder workspace(String workspace) {
+                this.workspace = workspace;
+                return this;
+            }
+
+            public TraceSourceConfig build() {
+                return new TraceSourceConfig(this);
+            } 
+
+        } 
+
+    }
 }

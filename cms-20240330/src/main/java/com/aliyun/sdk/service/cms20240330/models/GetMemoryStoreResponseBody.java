@@ -44,6 +44,12 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("shortTermTtl")
     private Integer shortTermTtl;
 
+    @com.aliyun.core.annotation.NameInMap("sourceType")
+    private String sourceType;
+
+    @com.aliyun.core.annotation.NameInMap("traceSourceConfig")
+    private TraceSourceConfig traceSourceConfig;
+
     @com.aliyun.core.annotation.NameInMap("updateTime")
     private String updateTime;
 
@@ -60,6 +66,8 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.shortTermStorage = builder.shortTermStorage;
         this.shortTermTtl = builder.shortTermTtl;
+        this.sourceType = builder.sourceType;
+        this.traceSourceConfig = builder.traceSourceConfig;
         this.updateTime = builder.updateTime;
         this.workspace = builder.workspace;
     }
@@ -140,6 +148,20 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     }
 
     /**
+     * @return sourceType
+     */
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    /**
+     * @return traceSourceConfig
+     */
+    public TraceSourceConfig getTraceSourceConfig() {
+        return this.traceSourceConfig;
+    }
+
+    /**
      * @return updateTime
      */
     public String getUpdateTime() {
@@ -163,6 +185,8 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         private String requestId; 
         private ShortTermStorage shortTermStorage; 
         private Integer shortTermTtl; 
+        private String sourceType; 
+        private TraceSourceConfig traceSourceConfig; 
         private String updateTime; 
         private String workspace; 
 
@@ -179,6 +203,8 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.shortTermStorage = model.shortTermStorage;
             this.shortTermTtl = model.shortTermTtl;
+            this.sourceType = model.sourceType;
+            this.traceSourceConfig = model.traceSourceConfig;
             this.updateTime = model.updateTime;
             this.workspace = model.workspace;
         } 
@@ -255,6 +281,22 @@ public class GetMemoryStoreResponseBody extends TeaModel {
          */
         public Builder shortTermTtl(Integer shortTermTtl) {
             this.shortTermTtl = shortTermTtl;
+            return this;
+        }
+
+        /**
+         * sourceType.
+         */
+        public Builder sourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+
+        /**
+         * traceSourceConfig.
+         */
+        public Builder traceSourceConfig(TraceSourceConfig traceSourceConfig) {
+            this.traceSourceConfig = traceSourceConfig;
             return this;
         }
 
@@ -353,6 +395,102 @@ public class GetMemoryStoreResponseBody extends TeaModel {
 
             public ShortTermStorage build() {
                 return new ShortTermStorage(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMemoryStoreResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMemoryStoreResponseBody</p>
+     */
+    public static class TraceSourceConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("includeOutput")
+        private Boolean includeOutput;
+
+        @com.aliyun.core.annotation.NameInMap("query")
+        private String query;
+
+        @com.aliyun.core.annotation.NameInMap("workspace")
+        private String workspace;
+
+        private TraceSourceConfig(Builder builder) {
+            this.includeOutput = builder.includeOutput;
+            this.query = builder.query;
+            this.workspace = builder.workspace;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TraceSourceConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return includeOutput
+         */
+        public Boolean getIncludeOutput() {
+            return this.includeOutput;
+        }
+
+        /**
+         * @return query
+         */
+        public String getQuery() {
+            return this.query;
+        }
+
+        /**
+         * @return workspace
+         */
+        public String getWorkspace() {
+            return this.workspace;
+        }
+
+        public static final class Builder {
+            private Boolean includeOutput; 
+            private String query; 
+            private String workspace; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraceSourceConfig model) {
+                this.includeOutput = model.includeOutput;
+                this.query = model.query;
+                this.workspace = model.workspace;
+            } 
+
+            /**
+             * includeOutput.
+             */
+            public Builder includeOutput(Boolean includeOutput) {
+                this.includeOutput = includeOutput;
+                return this;
+            }
+
+            /**
+             * query.
+             */
+            public Builder query(String query) {
+                this.query = query;
+                return this;
+            }
+
+            /**
+             * workspace.
+             */
+            public Builder workspace(String workspace) {
+                this.workspace = workspace;
+                return this;
+            }
+
+            public TraceSourceConfig build() {
+                return new TraceSourceConfig(this);
             } 
 
         } 
