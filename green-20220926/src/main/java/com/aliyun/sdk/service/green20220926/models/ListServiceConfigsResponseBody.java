@@ -557,6 +557,9 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
+        @com.aliyun.core.annotation.NameInMap("SceneType")
+        private String sceneType;
+
         @com.aliyun.core.annotation.NameInMap("ServiceCode")
         private String serviceCode;
 
@@ -582,6 +585,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.option = builder.option;
             this.resourceType = builder.resourceType;
+            this.sceneType = builder.sceneType;
             this.serviceCode = builder.serviceCode;
             this.serviceDesc = builder.serviceDesc;
             this.serviceName = builder.serviceName;
@@ -641,6 +645,13 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sceneType
+         */
+        public String getSceneType() {
+            return this.sceneType;
+        }
+
+        /**
          * @return serviceCode
          */
         public String getServiceCode() {
@@ -689,6 +700,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             private String gmtModified; 
             private java.util.Map<String, ?> option; 
             private String resourceType; 
+            private String sceneType; 
             private String serviceCode; 
             private String serviceDesc; 
             private String serviceName; 
@@ -706,6 +718,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
                 this.gmtModified = model.gmtModified;
                 this.option = model.option;
                 this.resourceType = model.resourceType;
+                this.sceneType = model.sceneType;
                 this.serviceCode = model.serviceCode;
                 this.serviceDesc = model.serviceDesc;
                 this.serviceName = model.serviceName;
@@ -774,6 +787,14 @@ public class ListServiceConfigsResponseBody extends TeaModel {
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * SceneType.
+             */
+            public Builder sceneType(String sceneType) {
+                this.sceneType = sceneType;
                 return this;
             }
 
