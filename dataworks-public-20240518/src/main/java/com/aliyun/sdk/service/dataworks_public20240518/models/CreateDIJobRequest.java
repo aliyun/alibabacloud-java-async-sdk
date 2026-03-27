@@ -27,13 +27,15 @@ public class CreateDIJobRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DestinationDataSourceSettings")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<DestinationDataSourceSettings> destinationDataSourceSettings;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationDataSourceType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationDataSourceType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileSpec")
+    private String fileSpec;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobName")
@@ -50,7 +52,6 @@ public class CreateDIJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MigrationType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String migrationType;
 
     @com.aliyun.core.annotation.Query
@@ -67,22 +68,18 @@ public class CreateDIJobRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceSettings")
-    @com.aliyun.core.annotation.Validation(required = true)
     private ResourceSettings resourceSettings;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceDataSourceSettings")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<SourceDataSourceSettings> sourceDataSourceSettings;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceDataSourceType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceDataSourceType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TableMappings")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<TableMappings> tableMappings;
 
     @com.aliyun.core.annotation.Body
@@ -95,6 +92,7 @@ public class CreateDIJobRequest extends Request {
         this.description = builder.description;
         this.destinationDataSourceSettings = builder.destinationDataSourceSettings;
         this.destinationDataSourceType = builder.destinationDataSourceType;
+        this.fileSpec = builder.fileSpec;
         this.jobName = builder.jobName;
         this.jobSettings = builder.jobSettings;
         this.jobType = builder.jobType;
@@ -148,6 +146,13 @@ public class CreateDIJobRequest extends Request {
      */
     public String getDestinationDataSourceType() {
         return this.destinationDataSourceType;
+    }
+
+    /**
+     * @return fileSpec
+     */
+    public String getFileSpec() {
+        return this.fileSpec;
     }
 
     /**
@@ -239,6 +244,7 @@ public class CreateDIJobRequest extends Request {
         private String description; 
         private java.util.List<DestinationDataSourceSettings> destinationDataSourceSettings; 
         private String destinationDataSourceType; 
+        private String fileSpec; 
         private String jobName; 
         private JobSettings jobSettings; 
         private String jobType; 
@@ -262,6 +268,7 @@ public class CreateDIJobRequest extends Request {
             this.description = request.description;
             this.destinationDataSourceSettings = request.destinationDataSourceSettings;
             this.destinationDataSourceType = request.destinationDataSourceType;
+            this.fileSpec = request.fileSpec;
             this.jobName = request.jobName;
             this.jobSettings = request.jobSettings;
             this.jobType = request.jobType;
@@ -295,7 +302,7 @@ public class CreateDIJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * DestinationDataSourceSettings.
          */
         public Builder destinationDataSourceSettings(java.util.List<DestinationDataSourceSettings> destinationDataSourceSettings) {
             String destinationDataSourceSettingsShrink = shrink(destinationDataSourceSettings, "DestinationDataSourceSettings", "json");
@@ -306,7 +313,6 @@ public class CreateDIJobRequest extends Request {
 
         /**
          * <p>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, LogHub, StarRocks, DataHub, AnalyticDB for MySQL, Kafka, and Hive.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Hologres</p>
@@ -314,6 +320,15 @@ public class CreateDIJobRequest extends Request {
         public Builder destinationDataSourceType(String destinationDataSourceType) {
             this.putQueryParameter("DestinationDataSourceType", destinationDataSourceType);
             this.destinationDataSourceType = destinationDataSourceType;
+            return this;
+        }
+
+        /**
+         * FileSpec.
+         */
+        public Builder fileSpec(String fileSpec) {
+            this.putBodyParameter("FileSpec", fileSpec);
+            this.fileSpec = fileSpec;
             return this;
         }
 
@@ -365,7 +380,6 @@ public class CreateDIJobRequest extends Request {
          * <li>OfflineIncremental</li>
          * <li>FullAndOfflineIncremental</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>FullAndRealtimeIncremental</p>
@@ -414,7 +428,7 @@ public class CreateDIJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * ResourceSettings.
          */
         public Builder resourceSettings(ResourceSettings resourceSettings) {
             String resourceSettingsShrink = shrink(resourceSettings, "ResourceSettings", "json");
@@ -424,7 +438,7 @@ public class CreateDIJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * SourceDataSourceSettings.
          */
         public Builder sourceDataSourceSettings(java.util.List<SourceDataSourceSettings> sourceDataSourceSettings) {
             String sourceDataSourceSettingsShrink = shrink(sourceDataSourceSettings, "SourceDataSourceSettings", "json");
@@ -435,7 +449,6 @@ public class CreateDIJobRequest extends Request {
 
         /**
          * <p>The source type. Valid values: PolarDB, MySQL, Kafka, LogHub, Hologres, Oracle, OceanBase, MongoDB, Redshift, Hive, SQL Server, Doris, and ClickHouse.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -447,7 +460,7 @@ public class CreateDIJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * TableMappings.
          */
         public Builder tableMappings(java.util.List<TableMappings> tableMappings) {
             String tableMappingsShrink = shrink(tableMappings, "TableMappings", "json");

@@ -30,6 +30,10 @@ public class UpdateDIJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileSpec")
+    private String fileSpec;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
@@ -63,6 +67,7 @@ public class UpdateDIJobRequest extends Request {
         this.regionId = builder.regionId;
         this.DIJobId = builder.DIJobId;
         this.description = builder.description;
+        this.fileSpec = builder.fileSpec;
         this.id = builder.id;
         this.jobSettings = builder.jobSettings;
         this.owner = builder.owner;
@@ -104,6 +109,13 @@ public class UpdateDIJobRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return fileSpec
+     */
+    public String getFileSpec() {
+        return this.fileSpec;
     }
 
     /**
@@ -159,6 +171,7 @@ public class UpdateDIJobRequest extends Request {
         private String regionId; 
         private Long DIJobId; 
         private String description; 
+        private String fileSpec; 
         private Long id; 
         private JobSettings jobSettings; 
         private String owner; 
@@ -176,6 +189,7 @@ public class UpdateDIJobRequest extends Request {
             this.regionId = request.regionId;
             this.DIJobId = request.DIJobId;
             this.description = request.description;
+            this.fileSpec = request.fileSpec;
             this.id = request.id;
             this.jobSettings = request.jobSettings;
             this.owner = request.owner;
@@ -212,6 +226,15 @@ public class UpdateDIJobRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * FileSpec.
+         */
+        public Builder fileSpec(String fileSpec) {
+            this.putBodyParameter("FileSpec", fileSpec);
+            this.fileSpec = fileSpec;
             return this;
         }
 
