@@ -26,6 +26,10 @@ public class GetAppRecommendedCommoditiesRequest extends Request {
     private String bizId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Extend")
+    private String extend;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceConditions")
     private String resourceConditions;
 
@@ -37,6 +41,7 @@ public class GetAppRecommendedCommoditiesRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
+        this.extend = builder.extend;
         this.resourceConditions = builder.resourceConditions;
         this.scene = builder.scene;
     }
@@ -69,6 +74,13 @@ public class GetAppRecommendedCommoditiesRequest extends Request {
     }
 
     /**
+     * @return extend
+     */
+    public String getExtend() {
+        return this.extend;
+    }
+
+    /**
      * @return resourceConditions
      */
     public String getResourceConditions() {
@@ -85,6 +97,7 @@ public class GetAppRecommendedCommoditiesRequest extends Request {
     public static final class Builder extends Request.Builder<GetAppRecommendedCommoditiesRequest, Builder> {
         private String regionId; 
         private String bizId; 
+        private String extend; 
         private String resourceConditions; 
         private String scene; 
 
@@ -96,6 +109,7 @@ public class GetAppRecommendedCommoditiesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.bizId = request.bizId;
+            this.extend = request.extend;
             this.resourceConditions = request.resourceConditions;
             this.scene = request.scene;
         } 
@@ -115,6 +129,15 @@ public class GetAppRecommendedCommoditiesRequest extends Request {
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
             this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * Extend.
+         */
+        public Builder extend(String extend) {
+            this.putQueryParameter("Extend", extend);
+            this.extend = extend;
             return this;
         }
 
