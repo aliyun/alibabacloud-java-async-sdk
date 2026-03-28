@@ -58,6 +58,10 @@ public class ListSnapshotsRequest extends Request {
     private String snapshotResourceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotStatus")
+    private String snapshotStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -77,6 +81,7 @@ public class ListSnapshotsRequest extends Request {
         this.snapshotId = builder.snapshotId;
         this.snapshotResourceId = builder.snapshotResourceId;
         this.snapshotResourceType = builder.snapshotResourceType;
+        this.snapshotStatus = builder.snapshotStatus;
         this.sortBy = builder.sortBy;
         this.workspaceId = builder.workspaceId;
     }
@@ -165,6 +170,13 @@ public class ListSnapshotsRequest extends Request {
     }
 
     /**
+     * @return snapshotStatus
+     */
+    public String getSnapshotStatus() {
+        return this.snapshotStatus;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -189,6 +201,7 @@ public class ListSnapshotsRequest extends Request {
         private String snapshotId; 
         private String snapshotResourceId; 
         private String snapshotResourceType; 
+        private String snapshotStatus; 
         private String sortBy; 
         private String workspaceId; 
 
@@ -208,12 +221,16 @@ public class ListSnapshotsRequest extends Request {
             this.snapshotId = request.snapshotId;
             this.snapshotResourceId = request.snapshotResourceId;
             this.snapshotResourceType = request.snapshotResourceType;
+            this.snapshotStatus = request.snapshotStatus;
             this.sortBy = request.sortBy;
             this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * CreationType.
+         * <p>The creation type of the snapshot. To query multiple types at the same time, separate them with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ManualCreated,DeploymentAutoCreated</p>
          */
         public Builder creationType(String creationType) {
             this.putQueryParameter("CreationType", creationType);
@@ -222,7 +239,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * Creator.
+         * <p>The creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2003******4844</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -231,7 +251,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records allowed to be returned in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -240,7 +263,14 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Pagination cursor used to retrieve results for the next page.</p>
+         * <ul>
+         * <li>Leave empty for the first request.</li>
+         * <li>For subsequent requests, pass the NextToken value returned in the previous response.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -249,7 +279,14 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>Sorting order.</p>
+         * <ul>
+         * <li>ASC: ascending order.</li>
+         * <li>DESC: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -258,7 +295,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number of the current page in paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -267,7 +307,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items displayed per page. Default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -276,7 +319,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * <p>Snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snap-asfg******123</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -285,7 +331,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * SnapshotResourceId.
+         * <p>Snapshot resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow-asfg******1234</p>
          */
         public Builder snapshotResourceId(String snapshotResourceId) {
             this.putQueryParameter("SnapshotResourceId", snapshotResourceId);
@@ -294,7 +343,13 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * SnapshotResourceType.
+         * <p>The snapshot resource type. Valid values:</p>
+         * <ul>
+         * <li>Flow: pipeline</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Flow</p>
          */
         public Builder snapshotResourceType(String snapshotResourceType) {
             this.putQueryParameter("SnapshotResourceType", snapshotResourceType);
@@ -303,7 +358,23 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * SnapshotStatus.
+         */
+        public Builder snapshotStatus(String snapshotStatus) {
+            this.putQueryParameter("SnapshotStatus", snapshotStatus);
+            this.snapshotStatus = snapshotStatus;
+            return this;
+        }
+
+        /**
+         * <p>Sorting field used in paged query. The default value is GmtCreateTime. Valid values:</p>
+         * <ul>
+         * <li>GmtCreateTime (default): sort by Creation Time.</li>
+         * <li>GmtModifiedTime: sort by Updated At.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -312,7 +383,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. For information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

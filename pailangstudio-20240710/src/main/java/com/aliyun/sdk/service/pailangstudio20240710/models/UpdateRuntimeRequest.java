@@ -26,6 +26,10 @@ public class UpdateRuntimeRequest extends Request {
     private String action;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoUpdateImage")
+    private Boolean autoUpdateImage;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RunTimeout")
     private Integer runTimeout;
 
@@ -41,6 +45,7 @@ public class UpdateRuntimeRequest extends Request {
         super(builder);
         this.runtimeId = builder.runtimeId;
         this.action = builder.action;
+        this.autoUpdateImage = builder.autoUpdateImage;
         this.runTimeout = builder.runTimeout;
         this.version = builder.version;
         this.workspaceId = builder.workspaceId;
@@ -74,6 +79,13 @@ public class UpdateRuntimeRequest extends Request {
     }
 
     /**
+     * @return autoUpdateImage
+     */
+    public Boolean getAutoUpdateImage() {
+        return this.autoUpdateImage;
+    }
+
+    /**
      * @return runTimeout
      */
     public Integer getRunTimeout() {
@@ -97,6 +109,7 @@ public class UpdateRuntimeRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateRuntimeRequest, Builder> {
         private String runtimeId; 
         private String action; 
+        private Boolean autoUpdateImage; 
         private Integer runTimeout; 
         private String version; 
         private String workspaceId; 
@@ -109,13 +122,17 @@ public class UpdateRuntimeRequest extends Request {
             super(request);
             this.runtimeId = request.runtimeId;
             this.action = request.action;
+            this.autoUpdateImage = request.autoUpdateImage;
             this.runTimeout = request.runTimeout;
             this.version = request.version;
             this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * RuntimeId.
+         * <p>Runtime ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtime-apje******beaz</p>
          */
         public Builder runtimeId(String runtimeId) {
             this.putPathParameter("RuntimeId", runtimeId);
@@ -124,7 +141,14 @@ public class UpdateRuntimeRequest extends Request {
         }
 
         /**
-         * Action.
+         * <p>Runtime operation. Valid values:</p>
+         * <ul>
+         * <li>Start: Startup runtime</li>
+         * <li>Stop: Stop runtime</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Start</p>
          */
         public Builder action(String action) {
             this.putBodyParameter("Action", action);
@@ -133,7 +157,19 @@ public class UpdateRuntimeRequest extends Request {
         }
 
         /**
-         * RunTimeout.
+         * AutoUpdateImage.
+         */
+        public Builder autoUpdateImage(Boolean autoUpdateImage) {
+            this.putBodyParameter("AutoUpdateImage", autoUpdateImage);
+            this.autoUpdateImage = autoUpdateImage;
+            return this;
+        }
+
+        /**
+         * <p>Timeout in seconds for a single test executed on the runtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder runTimeout(Integer runTimeout) {
             this.putBodyParameter("RunTimeout", runTimeout);
@@ -142,7 +178,10 @@ public class UpdateRuntimeRequest extends Request {
         }
 
         /**
-         * Version.
+         * <p>Runtime image version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("Version", version);
@@ -151,7 +190,10 @@ public class UpdateRuntimeRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the DataWorks workspace. To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

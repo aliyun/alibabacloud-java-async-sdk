@@ -90,6 +90,7 @@ public class GetKnowledgeBaseJobRequest extends Request {
         } 
 
         /**
+         * <p>Knowledge Base ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class GetKnowledgeBaseJobRequest extends Request {
         }
 
         /**
+         * <p>Knowledge Base Task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class GetKnowledgeBaseJobRequest extends Request {
         }
 
         /**
+         * <p>Knowledge Base Workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -73,7 +73,10 @@ public class DeleteDeploymentRequest extends Request {
         } 
 
         /**
-         * DeploymentId.
+         * <p>Deployment job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dploy-asdf******1234</p>
          */
         public Builder deploymentId(String deploymentId) {
             this.putPathParameter("DeploymentId", deploymentId);
@@ -82,7 +85,10 @@ public class DeleteDeploymentRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Workspace ID. For information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

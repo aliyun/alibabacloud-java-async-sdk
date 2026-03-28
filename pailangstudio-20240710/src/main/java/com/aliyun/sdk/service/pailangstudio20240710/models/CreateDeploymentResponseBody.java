@@ -67,7 +67,10 @@ public class CreateDeploymentResponseBody extends TeaModel {
         } 
 
         /**
-         * DeploymentId.
+         * <p>Deployment record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dploy-asdf******1234</p>
          */
         public Builder deploymentId(String deploymentId) {
             this.deploymentId = deploymentId;
@@ -75,7 +78,10 @@ public class CreateDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

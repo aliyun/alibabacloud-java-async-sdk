@@ -20,6 +20,9 @@ public class GetRuntimeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
+    @com.aliyun.core.annotation.NameInMap("AutoUpdateImage")
+    private Boolean autoUpdateImage;
+
     @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
@@ -82,6 +85,7 @@ public class GetRuntimeResponseBody extends TeaModel {
 
     private GetRuntimeResponseBody(Builder builder) {
         this.accessibility = builder.accessibility;
+        this.autoUpdateImage = builder.autoUpdateImage;
         this.creator = builder.creator;
         this.credentialConfig = builder.credentialConfig;
         this.dataSources = builder.dataSources;
@@ -121,6 +125,13 @@ public class GetRuntimeResponseBody extends TeaModel {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return autoUpdateImage
+     */
+    public Boolean getAutoUpdateImage() {
+        return this.autoUpdateImage;
     }
 
     /**
@@ -265,6 +276,7 @@ public class GetRuntimeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String accessibility; 
+        private Boolean autoUpdateImage; 
         private String creator; 
         private CredentialConfig credentialConfig; 
         private java.util.List<DataSources> dataSources; 
@@ -291,6 +303,7 @@ public class GetRuntimeResponseBody extends TeaModel {
 
         private Builder(GetRuntimeResponseBody model) {
             this.accessibility = model.accessibility;
+            this.autoUpdateImage = model.autoUpdateImage;
             this.creator = model.creator;
             this.credentialConfig = model.credentialConfig;
             this.dataSources = model.dataSources;
@@ -314,7 +327,10 @@ public class GetRuntimeResponseBody extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>Workspace visibility.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -322,7 +338,18 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * Creator.
+         * AutoUpdateImage.
+         */
+        public Builder autoUpdateImage(Boolean autoUpdateImage) {
+            this.autoUpdateImage = autoUpdateImage;
+            return this;
+        }
+
+        /**
+         * <p>Creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2680******4103</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -330,7 +357,7 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * CredentialConfig.
+         * <p>The credential configuration.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             this.credentialConfig = credentialConfig;
@@ -338,7 +365,7 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * DataSources.
+         * <p>MountData Source</p>
          */
         public Builder dataSources(java.util.List<DataSources> dataSources) {
             this.dataSources = dataSources;
@@ -346,7 +373,7 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * EcsSpec.
+         * <p>ECS resource configurations.</p>
          */
         public Builder ecsSpec(EcsSpec ecsSpec) {
             this.ecsSpec = ecsSpec;
@@ -354,7 +381,7 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * Envs.
+         * <p>The environment variables. Separate the environment variables with commas (,).</p>
          */
         public Builder envs(java.util.List<Envs> envs) {
             this.envs = envs;
@@ -362,7 +389,10 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the export directory was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-09-24T07:33:53Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -370,7 +400,10 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>Modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-09-24T08:24:36Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -378,7 +411,7 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The tag of the resource group.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -386,7 +419,10 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -394,7 +430,10 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota18******zv9</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -402,7 +441,10 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * RunTimeout.
+         * <p>Timeout in seconds for a single test executed on the runtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder runTimeout(Integer runTimeout) {
             this.runTimeout = runTimeout;
@@ -410,7 +452,10 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * RuntimeId.
+         * <p>Runtime ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtime-apje******beaz</p>
          */
         public Builder runtimeId(String runtimeId) {
             this.runtimeId = runtimeId;
@@ -418,7 +463,10 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * RuntimeLog.
+         * <p>The runtime log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://path/to/log/file</p>
          */
         public Builder runtimeLog(String runtimeLog) {
             this.runtimeLog = runtimeLog;
@@ -426,7 +474,10 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * RuntimeName.
+         * <p>The name of the runtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev01</p>
          */
         public Builder runtimeName(String runtimeName) {
             this.runtimeName = runtimeName;
@@ -434,7 +485,27 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * RuntimeStatus.
+         * <p>The status of the runtime. Valid values:</p>
+         * <ul>
+         * <li>Creating: The data cache is being created.</li>
+         * <li>SaveFailed: Failed to save the runtime image</li>
+         * <li>Stopped: The file system is stopped.</li>
+         * <li>Failed: Failed</li>
+         * <li>ResourceAllocating: Resources are being allocated</li>
+         * <li>Stopping: The file system is being stopped</li>
+         * <li>Updating: Update in progress</li>
+         * <li>Saving: The runtime image is being saved</li>
+         * <li>Queuing: Queueing in progress</li>
+         * <li>Recovering: The instance is being recovered</li>
+         * <li>Starting: The instance is being created.</li>
+         * <li>Running: The gateway is running.</li>
+         * <li>Saved: The runtime image is saved.</li>
+         * <li>Deleting: The mount target is being deleted.</li>
+         * <li>EnvPreparing: Preparing environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder runtimeStatus(String runtimeStatus) {
             this.runtimeStatus = runtimeStatus;
@@ -442,7 +513,10 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * RuntimeType.
+         * <p>The type of the runtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DSW</p>
          */
         public Builder runtimeType(String runtimeType) {
             this.runtimeType = runtimeType;
@@ -450,7 +524,7 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * UserVpc.
+         * <p>User VPC configuration.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.userVpc = userVpc;
@@ -458,7 +532,10 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The runtime image version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -466,7 +543,10 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * WorkDir.
+         * <p>The OSS path of the working directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket.oss-cn-hangzhou-internal.aliyuncs.com/workdir/</p>
          */
         public Builder workDir(String workDir) {
             this.workDir = workDir;
@@ -474,7 +554,10 @@ public class GetRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the DataWorks Workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -553,7 +636,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>AssumeRoleFor</p>
+             * <p>The entity to which the role is assigned.</p>
              * 
              * <strong>example:</strong>
              * <p>1095******785714</p>
@@ -564,7 +647,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>角色名称</p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::1095******785714:role/testrole</p>
@@ -575,7 +658,11 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>角色类型</p>
+             * <p>The class of the role. Valid values:</p>
+             * <ul>
+             * <li>service: assumed by the service;</li>
+             * <li>user: assumed by the regular user account</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>service</p>
@@ -658,7 +745,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Key</p>
+             * <p>The key that identifies the configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -669,7 +756,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>角色列表</p>
+             * <p>The list of configured roles.</p>
              */
             public Builder roles(java.util.List<Roles> roles) {
                 this.roles = roles;
@@ -677,7 +764,11 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Type</p>
+             * <p>The configuration type. Valid values:</p>
+             * <ul>
+             * <li>Role: role assumption</li>
+             * <li>RoleChain: role chain assumption</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Role</p>
@@ -760,7 +851,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>AliyunEnvRoleKey</p>
+             * <p>The key of the environment variable role.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -771,7 +862,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Credential配置项列表</p>
+             * <p>The list of credential configurations.</p>
              */
             public Builder credentialConfigItems(java.util.List<CredentialConfigItems> credentialConfigItems) {
                 this.credentialConfigItems = credentialConfigItems;
@@ -779,7 +870,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否启用Credential注入</p>
+             * <p>Whether to enable credential injection.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -862,7 +953,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>数据集ID</p>
+             * <p>Dataset ID. Choose either Uri or another option.</p>
              * 
              * <strong>example:</strong>
              * <p>d-umns******zij4szhc</p>
@@ -873,7 +964,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>挂载路径</p>
+             * <p>The path to which the data disk is mounted.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/data</p>
@@ -884,7 +975,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>统一资源识别码</p>
+             * <p>The OSS path of the data source. You must choose either DatasetId or another option.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/langstudio/source/</p>
@@ -1019,7 +1110,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>CPU数量</p>
+             * <p>The number of CPU cores.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1030,7 +1121,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>驱动版本</p>
+             * <p>The version of the GPU driver.</p>
              * 
              * <strong>example:</strong>
              * <p>535.161.08</p>
@@ -1041,7 +1132,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GPU数量</p>
+             * <p>The number of GPUs.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1052,7 +1143,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GPU类型</p>
+             * <p>GPU type.</p>
              * 
              * <strong>example:</strong>
              * <p>V100</p>
@@ -1063,7 +1154,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例类型</p>
+             * <p>Instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.c6.large</p>
@@ -1074,7 +1165,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>内存信息</p>
+             * <p>The memory size. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -1085,7 +1176,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>共享内存</p>
+             * <p>The shared memory size. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -1155,7 +1246,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>环境键</p>
+             * <p>The environment key.</p>
              * 
              * <strong>example:</strong>
              * <p>testKey1</p>
@@ -1166,7 +1257,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>环境值</p>
+             * <p>The value of the environment.</p>
              * 
              * <strong>example:</strong>
              * <p>testValue1</p>
@@ -1236,7 +1327,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>标签键</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>testKey1</p>
@@ -1247,7 +1338,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>标签值</p>
+             * <p>Tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>testValue1</p>
@@ -1356,7 +1447,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>默认路由</p>
+             * <p>Default route.</p>
              * 
              * <strong>example:</strong>
              * <p>eth0</p>
@@ -1367,7 +1458,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>扩展网段</p>
+             * <p>The extended CIDR blocks.</p>
              */
             public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
@@ -1375,7 +1466,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>安全组ID</p>
+             * <p>Security Group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-wz9i****1129</p>
@@ -1386,7 +1477,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>交换机ID</p>
+             * <p>vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-wz9r****ng10</p>
@@ -1397,7 +1488,7 @@ public class GetRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID</p>
+             * <p>The virtual private cloud (VPC) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-wz90****5v23</p>

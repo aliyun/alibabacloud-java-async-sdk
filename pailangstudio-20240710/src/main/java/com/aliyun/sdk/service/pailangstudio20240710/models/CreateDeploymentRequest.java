@@ -227,7 +227,14 @@ public class CreateDeploymentRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>Workspace visibility. Valid values:  </p>
+         * <ul>
+         * <li>PRIVATE: The service is visible only to you and administrators within this workspace.  </li>
+         * <li>PUBLIC: The service is visible to all users within this workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -236,7 +243,10 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * AutoApproval.
+         * <p>Indicates whether to automatically skip the deployment confirmation step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoApproval(Boolean autoApproval) {
             this.putBodyParameter("AutoApproval", autoApproval);
@@ -245,7 +255,7 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * ChatHistoryConfig.
+         * <p>Chat history configuration.</p>
          */
         public Builder chatHistoryConfig(ChatHistoryConfig chatHistoryConfig) {
             this.putBodyParameter("ChatHistoryConfig", chatHistoryConfig);
@@ -254,7 +264,7 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * ContentModerationConfig.
+         * <p>Content moderation configuration.</p>
          */
         public Builder contentModerationConfig(ContentModerationConfig contentModerationConfig) {
             this.putBodyParameter("ContentModerationConfig", contentModerationConfig);
@@ -263,7 +273,10 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * DeploymentConfig.
+         * <p>Deployment configuration. For details, see <a href="https://help.aliyun.com/zh/pai/user-guide/parameters-of-model-services">Deployment Configuration</a> in PAI-EAS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;metadata&quot;:{&quot;name&quot;:&quot;langstudio_2026<em><strong><em><strong>3848_jro7&quot;,&quot;instance&quot;:1,&quot;workspace_id&quot;:&quot;285</strong></em>&quot;,&quot;enable_webservice&quot;:false},&quot;cloud&quot;:{&quot;computing&quot;:{&quot;instances&quot;:[{&quot;type&quot;:&quot;ecs.g7.xlarge&quot;}]},&quot;networking&quot;:{&quot;vpc_id&quot;:&quot;vpc-bp1obprt</strong></em><em><strong>4bzo00d&quot;,&quot;vswitch_id&quot;:&quot;vsw-bp1p6i36k</strong></em><em><strong>pmfhw8&quot;,&quot;security_group_id&quot;:&quot;sg-bp1djud4</strong></em>***zecl5a&quot;}}}</p>
          */
         public Builder deploymentConfig(String deploymentConfig) {
             this.putBodyParameter("DeploymentConfig", deploymentConfig);
@@ -272,7 +285,10 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Service description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -281,7 +297,10 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * EnableTrace.
+         * <p>Indicates whether to enable Tracing Analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTrace(Boolean enableTrace) {
             this.putBodyParameter("EnableTrace", enableTrace);
@@ -290,7 +309,10 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource to deploy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow-asdf******123</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -299,7 +321,10 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * ResourceSnapshotId.
+         * <p>The snapshot ID of the resource to deploy. If this parameter is provided, the system deploys directly based on this snapshot. If this parameter is not provided, the system creates a new snapshot of the resource and then executes the deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snap-asfg******123</p>
          */
         public Builder resourceSnapshotId(String resourceSnapshotId) {
             this.putBodyParameter("ResourceSnapshotId", resourceSnapshotId);
@@ -308,7 +333,14 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type to deploy. Valid values:</p>
+         * <ul>
+         * <li>Flow: A pipeline project</li>
+         * <li>Code: A code project</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Flow</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -317,7 +349,15 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>Service name. Format requirements:</p>
+         * <ul>
+         * <li>Supports lowercase letters, digits, and underscores</li>
+         * <li>Must start with a letter</li>
+         * <li>Length must be 1 to 45 characters</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>myservice01</p>
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("ServiceName", serviceName);
@@ -326,7 +366,10 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * WorkDir.
+         * <p>The OSS working directory for the service. It is used to store the service&quot;s runtime logs, conversation history, and other data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket.oss-cn-hangzhou-internal.aliyuncs.com/workdir/</p>
          */
         public Builder workDir(String workDir) {
             this.putBodyParameter("WorkDir", workDir);
@@ -335,7 +378,10 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Workspace ID. For information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -403,7 +449,7 @@ public class CreateDeploymentRequest extends Request {
             } 
 
             /**
-             * <p>连接名称</p>
+             * <p>Connection name. This parameter is required when the chat history storage type is RDS.</p>
              * 
              * <strong>example:</strong>
              * <p>rdsconnection</p>
@@ -414,7 +460,12 @@ public class CreateDeploymentRequest extends Request {
             }
 
             /**
-             * <p>存储类型</p>
+             * <p>Storage class. Valid values:  </p>
+             * <ul>
+             * <li>LOCAL: Chat history is stored in a local SQLite file. This option does not support multi-instance deployment.  </li>
+             * <li>OSS: Chat history is stored under a specific path within the service&quot;s OSS workspace path.  </li>
+             * <li>RDS: Chat history is stored in an RDS table, and an RDS connection must be specified.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>RDS</p>
@@ -497,7 +548,7 @@ public class CreateDeploymentRequest extends Request {
             } 
 
             /**
-             * <p>启用输入内容审查</p>
+             * <p>Whether to enable security review for input.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -508,7 +559,7 @@ public class CreateDeploymentRequest extends Request {
             }
 
             /**
-             * <p>启用输出内容审查</p>
+             * <p>Whether to enable content moderation for output.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -519,7 +570,7 @@ public class CreateDeploymentRequest extends Request {
             }
 
             /**
-             * <p>流式输出内容送审缓存大小</p>
+             * <p>The cache size for streaming output content submitted for moderation. Default value: 5.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

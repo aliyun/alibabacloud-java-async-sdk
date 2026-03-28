@@ -73,7 +73,10 @@ public class DeleteSnapshotRequest extends Request {
         } 
 
         /**
-         * SnapshotId.
+         * <p>Snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snap-asfg******123</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putPathParameter("SnapshotId", snapshotId);
@@ -82,7 +85,10 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Workspace ID. For information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

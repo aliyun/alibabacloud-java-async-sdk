@@ -54,7 +54,7 @@ public class RetrieveKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * KnowledgeBaseFileChunks.
+         * <p>知识库切片列表。</p>
          */
         public Builder knowledgeBaseFileChunks(java.util.List<KnowledgeBaseFileChunk> knowledgeBaseFileChunks) {
             this.knowledgeBaseFileChunks = knowledgeBaseFileChunks;

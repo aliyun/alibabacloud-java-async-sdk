@@ -106,7 +106,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         } 
 
         /**
-         * Deployments.
+         * <p>List of deployment jobs.</p>
          */
         public Builder deployments(java.util.List<Deployment> deployments) {
             this.deployments = deployments;
@@ -114,7 +114,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>Maximum number of records allowed to be returned in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Pagination cursor for the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

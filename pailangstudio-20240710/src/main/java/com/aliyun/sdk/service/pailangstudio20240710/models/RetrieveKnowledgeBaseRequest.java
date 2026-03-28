@@ -201,7 +201,10 @@ public class RetrieveKnowledgeBaseRequest extends Request {
         } 
 
         /**
-         * KnowledgeBaseId.
+         * <p>知识库ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-ksicx823d</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.putPathParameter("KnowledgeBaseId", knowledgeBaseId);
@@ -210,7 +213,22 @@ public class RetrieveKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * HybridStrategyConfig.
+         * <p>混合检索策略配置，选填。JSON格式字符串，JSON字段定义如下：</p>
+         * <ul>
+         * <li><p>Strategy：混合检索策略。取值为rrf（RRF融合）和weighted（加权融合）</p>
+         * </li>
+         * <li><p>RRFK：RRF融合平滑参数，取值范围 [1, 100]</p>
+         * </li>
+         * <li><p>Weight：weighted策略的权重，该值表示向量语义检索对最终得分的贡献比例。取值范围 [0, 1.0]</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;Strategy&quot;: &quot;rrf&quot;,
+         *   &quot;RRFK&quot;:60,
+         *   &quot;Weight&quot;: 0.5
+         * }</p>
          */
         public Builder hybridStrategyConfig(String hybridStrategyConfig) {
             this.putBodyParameter("HybridStrategyConfig", hybridStrategyConfig);
@@ -219,7 +237,33 @@ public class RetrieveKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * MetaDataFilterConditions.
+         * <p>选填。元数据过滤检索条件。格式为JSON格式字符串，JSON字段定义如下：</p>
+         * <ul>
+         * <li>FilterCondition: 逻辑关系，取值：and、or。</li>
+         * <li>MetaDataFilters：过滤条件。多个条件之间按FilterCondition的逻辑关系处理。其中Key表示元数据Key；Value表示元数据值；Operator表示运算符，取值：==、!=、contains，contains仅支持file_name字段。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;FilterCondition&quot;: &quot;and&quot;, 
+         *     &quot;MetaDataFilters&quot;: [
+         *         {
+         *             &quot;Key&quot;: &quot;key1&quot;, 
+         *             &quot;Value&quot;: &quot;value1&quot;, 
+         *             &quot;Operator&quot;: &quot;==&quot;
+         *         },
+         *         {
+         *             &quot;Key&quot;: &quot;key2&quot;, 
+         *             &quot;Value&quot;: &quot;value2&quot;, 
+         *             &quot;Operator&quot;: &quot;!=&quot;
+         *         },
+         *         {
+         *             &quot;Key&quot;: &quot;file_name&quot;, 
+         *             &quot;Value&quot;: &quot;prefix&quot;, 
+         *             &quot;Operator&quot;: &quot;contains&quot;
+         *         }
+         *     ]
+         * }</p>
          */
         public Builder metaDataFilterConditions(String metaDataFilterConditions) {
             this.putBodyParameter("MetaDataFilterConditions", metaDataFilterConditions);
@@ -228,7 +272,11 @@ public class RetrieveKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>检索内容。</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>red car</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("Query", query);
@@ -237,7 +285,14 @@ public class RetrieveKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * QueryMode.
+         * <p>检索模式。</p>
+         * <ul>
+         * <li>dense: 语义检索。</li>
+         * <li>hybrid: 混合检索。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dense</p>
          */
         public Builder queryMode(String queryMode) {
             this.putBodyParameter("QueryMode", queryMode);
@@ -246,7 +301,22 @@ public class RetrieveKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * RerankConfig.
+         * <p>Rerank配置，选填。JSON格式字符串，JSON字段定义如下：</p>
+         * <ul>
+         * <li><p>ConnectionId：模型服务连接ID</p>
+         * </li>
+         * <li><p>Model：模型名称。若为百炼类型连接，支持的模型为 gte-rerank-v2</p>
+         * </li>
+         * <li><p>TopK：返回排名最高的结果数</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *    &quot;ConnectionId&quot;:&quot;conn-xxx&quot;,
+         *     &quot;Model&quot;: &quot;qwen-max&quot;,
+         *     &quot;TopK&quot;: 5
+         * }</p>
          */
         public Builder rerankConfig(String rerankConfig) {
             this.putBodyParameter("RerankConfig", rerankConfig);
@@ -255,7 +325,43 @@ public class RetrieveKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * RewriteConfig.
+         * <p>Rewrite配置，选填。JSON格式字符串，JSON字段定义如下：</p>
+         * <ul>
+         * <li><p>ConnectionId：模型服务连接ID</p>
+         * </li>
+         * <li><p>Model：模型名称。百炼连接支持的模型为qwen3-max、qwen-plus、qwen-flash</p>
+         * </li>
+         * <li><p>Temprature：用于控制大模型生成内容的随机性，值越高结果越随机。取值范围 [0, 2.0]。</p>
+         * </li>
+         * <li><p>TopP：生成过程中的核采样方法概率阈值，取值范围 [0, 1.0]</p>
+         * </li>
+         * <li><p>PresensePenalty：存在惩罚，取值范围 [-2.0, 2.0]</p>
+         * </li>
+         * <li><p>FrequencyPenalty：频率惩罚，取值范围 [-2.0~2.0]</p>
+         * </li>
+         * <li><p>Seed：随机数种子，取值范围 [0, 2147483647]</p>
+         * </li>
+         * <li><p>MaxTokens：控制模型生成结果的长度</p>
+         * </li>
+         * <li><p>Stop：停止序列列表。遇到列表中的任何一个序列，模型停止输出。最多支持4个序列。</p>
+         * </li>
+         * <li><p>EnableThingking：是否启用推理</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;ConnectionId&quot;:&quot;conn-xxx&quot;,
+         *     &quot;Model&quot;: &quot;qwen-max&quot;,
+         *     &quot;Temperature&quot;: 0.7,
+         *     &quot;TopP&quot;: 0.9,
+         *     &quot;PresencePenalty&quot;: 0.5,
+         *     &quot;FrequencyPenalty&quot;: 0.5,
+         *     &quot;Seed&quot;: 0,
+         *     &quot;MaxTokens&quot;: 1024,
+         *     &quot;Stop&quot;: [],
+         *     &quot;EnableThinking&quot;: true
+         * }</p>
          */
         public Builder rewriteConfig(String rewriteConfig) {
             this.putBodyParameter("RewriteConfig", rewriteConfig);
@@ -264,7 +370,10 @@ public class RetrieveKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * ScoreThreshold.
+         * <p>相似度分数阈值。浮点型，取值范围[0, 1]。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder scoreThreshold(Float scoreThreshold) {
             this.putBodyParameter("ScoreThreshold", scoreThreshold);
@@ -273,7 +382,10 @@ public class RetrieveKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * TopK.
+         * <p>返回排名最高的结果数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder topK(Integer topK) {
             this.putBodyParameter("TopK", topK);
@@ -282,7 +394,10 @@ public class RetrieveKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * VersionName.
+         * <p>知识库版本。默认v1。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionName(String versionName) {
             this.putBodyParameter("VersionName", versionName);
@@ -291,6 +406,7 @@ public class RetrieveKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>知识库所在工作空间ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

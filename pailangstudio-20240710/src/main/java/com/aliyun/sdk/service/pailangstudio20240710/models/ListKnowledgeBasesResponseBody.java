@@ -106,7 +106,7 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         } 
 
         /**
-         * KnowledgeBases.
+         * <p>Knowledge base list.</p>
          */
         public Builder knowledgeBases(java.util.List<KnowledgeBase> knowledgeBases) {
             this.knowledgeBases = knowledgeBases;
@@ -114,7 +114,10 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records allowed to be returned by this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Returns the position from which the next query starts. Empty indicates that all data has been retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35686626-8D83-5ADE-B400-08A6613A6057</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

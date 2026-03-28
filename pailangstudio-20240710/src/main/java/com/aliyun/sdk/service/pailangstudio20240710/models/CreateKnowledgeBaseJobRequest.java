@@ -186,7 +186,10 @@ public class CreateKnowledgeBaseJobRequest extends Request {
         } 
 
         /**
-         * KnowledgeBaseId.
+         * <p>The ID of the Knowledge Base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-ksicx823d</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.putPathParameter("KnowledgeBaseId", knowledgeBaseId);
@@ -195,7 +198,14 @@ public class CreateKnowledgeBaseJobRequest extends Request {
         }
 
         /**
-         * Accessibility.
+         * <p>Workspace visibility. Possible values are:</p>
+         * <ul>
+         * <li>PRIVATE: In this workspace, it is visible only to you and the administrator.</li>
+         * <li>PUBLIC: This workspace is visible to all users.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -204,7 +214,10 @@ public class CreateKnowledgeBaseJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Knowledge base task description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description of the knowledge base job.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -213,7 +226,7 @@ public class CreateKnowledgeBaseJobRequest extends Request {
         }
 
         /**
-         * EcsSpecs.
+         * <p>Task Run Resource Configuration List Documentation and structured Knowledge Base contain only one Element and the Type is Worker. Images and Videos Knowledge Base contain two Elements and the Types are Head and Worker.</p>
          */
         public Builder ecsSpecs(java.util.List<EcsSpecs> ecsSpecs) {
             this.putBodyParameter("EcsSpecs", ecsSpecs);
@@ -222,7 +235,7 @@ public class CreateKnowledgeBaseJobRequest extends Request {
         }
 
         /**
-         * EmbeddingConfig.
+         * <p>Index Configuration.</p>
          */
         public Builder embeddingConfig(EmbeddingConfig embeddingConfig) {
             this.putBodyParameter("EmbeddingConfig", embeddingConfig);
@@ -231,7 +244,13 @@ public class CreateKnowledgeBaseJobRequest extends Request {
         }
 
         /**
-         * JobAction.
+         * <p>The type of the task operation.</p>
+         * <ul>
+         * <li>SyncIndex: updates the knowledge base index</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SyncIndex</p>
          */
         public Builder jobAction(String jobAction) {
             this.putBodyParameter("JobAction", jobAction);
@@ -240,7 +259,10 @@ public class CreateKnowledgeBaseJobRequest extends Request {
         }
 
         /**
-         * MaxRunningTimeInSeconds.
+         * <p>The maximum running time for the task, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder maxRunningTimeInSeconds(Integer maxRunningTimeInSeconds) {
             this.putBodyParameter("MaxRunningTimeInSeconds", maxRunningTimeInSeconds);
@@ -249,7 +271,10 @@ public class CreateKnowledgeBaseJobRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource group ID. This field being empty or public-cluster indicates a public resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public-cluster</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -258,7 +283,7 @@ public class CreateKnowledgeBaseJobRequest extends Request {
         }
 
         /**
-         * UserVpc.
+         * <p>Task Run VPC Info.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.putBodyParameter("UserVpc", userVpc);
@@ -267,6 +292,7 @@ public class CreateKnowledgeBaseJobRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace. For information on how to obtain the workspace ID, see ListWorkspaces.<a href="~~449124~~"></a></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -429,7 +455,7 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             } 
 
             /**
-             * <p>CPU核数</p>
+             * <p>The number of CPU cores. You must specify the resource quota to use.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -440,7 +466,7 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             }
 
             /**
-             * <p>驱动版本</p>
+             * <p>The version of the GPU driver.</p>
              * 
              * <strong>example:</strong>
              * <p>535.161.08</p>
@@ -451,7 +477,7 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             }
 
             /**
-             * <p>GPU卡数</p>
+             * <p>The number of GPU cards. You must specify the resource quota to use.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -462,7 +488,10 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             }
 
             /**
-             * <p>GPU类型</p>
+             * <p>GPU Class</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -470,7 +499,7 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             }
 
             /**
-             * <p>机型名称</p>
+             * <p>The name of the instance type. Use of public resources must be filled in.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.c6.large</p>
@@ -481,7 +510,7 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             }
 
             /**
-             * <p>内存大小</p>
+             * <p>The memory size, in GB. You must specify the resource quota to use.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -492,7 +521,7 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             }
 
             /**
-             * <p>副本数量</p>
+             * <p>The number of replicas.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -503,7 +532,10 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             }
 
             /**
-             * <p>共享内存容量</p>
+             * <p>The Shared Memory Capacity. Unit: GB. You must specify the resource quota to use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder sharedMemory(Integer sharedMemory) {
                 this.sharedMemory = sharedMemory;
@@ -511,7 +543,7 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             }
 
             /**
-             * <p>节点类型</p>
+             * <p>The type of the node. Possible values are Head and Worker.</p>
              * 
              * <strong>example:</strong>
              * <p>Worker</p>
@@ -582,7 +614,7 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             } 
 
             /**
-             * <p>Embedding分批大小</p>
+             * <p>Index batch size. The knowledge base for documentation and structured data types is effective.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -593,7 +625,7 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             }
 
             /**
-             * <p>Embedding并发数</p>
+             * <p>Index concurrency. Image and video type knowledge base is valid.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -676,7 +708,10 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             } 
 
             /**
-             * <p>安全组ID</p>
+             * <p>The ID of a security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-wz9i****1129</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -684,7 +719,10 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             }
 
             /**
-             * <p>交换机ID</p>
+             * <p>The vSwitch IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-wz9r****ng10</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -692,7 +730,10 @@ public class CreateKnowledgeBaseJobRequest extends Request {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz90****5v23</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

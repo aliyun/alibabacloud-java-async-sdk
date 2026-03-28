@@ -314,7 +314,14 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>Workspace visibility, possible values are:</p>
+         * <ul>
+         * <li>PRIVATE: In this workspace, visible only to you and administrators.</li>
+         * <li>PUBLIC: In this workspace, visible to everyone.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -322,7 +329,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * AutoUpdateConfig.
+         * <p>Knowledge base auto-update configuration.</p>
          */
         public Builder autoUpdateConfig(AutoUpdateConfig autoUpdateConfig) {
             this.autoUpdateConfig = autoUpdateConfig;
@@ -330,7 +337,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * ChunkConfig.
+         * <p>File slicing configuration.</p>
          */
         public Builder chunkConfig(ChunkConfig chunkConfig) {
             this.chunkConfig = chunkConfig;
@@ -338,7 +345,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * Creator.
+         * <p>Creator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2485765****023475</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -346,7 +356,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * DataSources.
+         * <p>Data source.</p>
          */
         public Builder dataSources(java.util.List<DataSources> dataSources) {
             this.dataSources = dataSources;
@@ -354,7 +364,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * DatasetId.
+         * <p>The ID of the dataset corresponding to the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-cupbwkk5us9xpjz870</p>
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -362,7 +375,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Knowledge base description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description of the knowledge base.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -370,7 +386,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * EmbeddingConfig.
+         * <p>Vector index configuration.</p>
          */
         public Builder embeddingConfig(EmbeddingConfig embeddingConfig) {
             this.embeddingConfig = embeddingConfig;
@@ -378,7 +394,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>Knowledge base creation time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-15T14:46:23Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -386,7 +405,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>Knowledge base modification time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-18T19:32:58Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -394,7 +416,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * IndexColumnConfig.
+         * <p>Column field configuration. The structured data type knowledge base is effective.</p>
          */
         public Builder indexColumnConfig(IndexColumnConfig indexColumnConfig) {
             this.indexColumnConfig = indexColumnConfig;
@@ -402,7 +424,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * KnowledgeBaseId.
+         * <p>Knowledge base ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-ksicx823d</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.knowledgeBaseId = knowledgeBaseId;
@@ -410,7 +435,16 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * KnowledgeBaseType.
+         * <p>Knowledge base type.</p>
+         * <ul>
+         * <li>TEXT: Document.</li>
+         * <li>STRUCTURED: Structured data.</li>
+         * <li>IMAGE: Picture.</li>
+         * <li>VIDEO: Video.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TEXT</p>
          */
         public Builder knowledgeBaseType(String knowledgeBaseType) {
             this.knowledgeBaseType = knowledgeBaseType;
@@ -418,7 +452,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * MetaDataConfig.
+         * <p>Metadata configuration.</p>
          */
         public Builder metaDataConfig(MetaDataConfig metaDataConfig) {
             this.metaDataConfig = metaDataConfig;
@@ -426,7 +460,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Knowledge base name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myName</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -434,7 +471,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * OutputDir.
+         * <p>Storage path for the output data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/langstudio/output/</p>
          */
         public Builder outputDir(String outputDir) {
             this.outputDir = outputDir;
@@ -442,7 +482,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -450,7 +493,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * RuntimeId.
+         * <p>Runtime ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtime-apje******beaz</p>
          */
         public Builder runtimeId(String runtimeId) {
             this.runtimeId = runtimeId;
@@ -458,7 +504,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * VectorDBConfig.
+         * <p>Vector database configuration.</p>
          */
         public Builder vectorDBConfig(VectorDBConfig vectorDBConfig) {
             this.vectorDBConfig = vectorDBConfig;
@@ -466,7 +512,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * VersionName.
+         * <p>Knowledge base version. Default is v1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;
@@ -474,7 +523,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace where the knowledge base resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -631,7 +683,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>CPU核数</p>
+             * <p>The number of vCPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder CPU(Integer CPU) {
                 this.CPU = CPU;
@@ -639,7 +694,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>驱动版本</p>
+             * <p>The version of the GPU driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>550.127.08</p>
              */
             public Builder driver(String driver) {
                 this.driver = driver;
@@ -647,7 +705,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GPU卡数</p>
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder GPU(Integer GPU) {
                 this.GPU = GPU;
@@ -655,7 +716,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GPU类型</p>
+             * <p>The GPU type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V100</p>
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -663,7 +727,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>机型名称</p>
+             * <p>Model name.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.c6.large</p>
@@ -674,7 +738,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>内存大小</p>
+             * <p>The memory size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -682,7 +749,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>副本数量</p>
+             * <p>Number of replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder podCount(Integer podCount) {
                 this.podCount = podCount;
@@ -690,7 +760,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>共享内存容量</p>
+             * <p>The shared memory size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder sharedMemory(Integer sharedMemory) {
                 this.sharedMemory = sharedMemory;
@@ -698,7 +771,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点类型</p>
+             * <p>Node type. Possible values are Head and Worker.</p>
              * 
              * <strong>example:</strong>
              * <p>Worker</p>
@@ -769,7 +842,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Embedding分批大小</p>
+             * <p>Index batch size. Document and structured data type knowledge base is valid.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -780,7 +853,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Embedding并发数</p>
+             * <p>Index concurrency count. Image and video type knowledge base is valid.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -902,7 +975,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>运行资源配置</p>
+             * <p>Runtime resource configuration list.</p>
              */
             public Builder ecsSpecs(java.util.List<EcsSpecs> ecsSpecs) {
                 this.ecsSpecs = ecsSpecs;
@@ -910,7 +983,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Embedding配置</p>
+             * <p>Vector index configuration.</p>
              */
             public Builder embeddingConfig(AutoUpdateConfigEmbeddingConfig embeddingConfig) {
                 this.embeddingConfig = embeddingConfig;
@@ -918,7 +991,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>任务最大运行时间</p>
+             * <p>Maximum task running time, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -929,7 +1002,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源组ID</p>
+             * <p>Resource group ID. Empty or &quot;public-cluster&quot; indicates public resources.</p>
              * 
              * <strong>example:</strong>
              * <p>public-cluster</p>
@@ -940,7 +1013,11 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>知识库自动更新状态</p>
+             * <p>Knowledge base auto-update switch status.</p>
+             * <ul>
+             * <li>Enable: Turn on auto-update.</li>
+             * <li>Disable: Turn off auto-update.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -951,7 +1028,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户VPC配置</p>
+             * <p>User VPC configuration.</p>
              */
             public Builder userVpc(UserVpc userVpc) {
                 this.userVpc = userVpc;
@@ -1044,7 +1121,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>分块时长</p>
+             * <p>Chunk duration in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1055,7 +1132,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>分块重叠大小</p>
+             * <p>Chunk overlap size.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -1066,7 +1143,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>分块大小</p>
+             * <p>Chunk size.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -1077,7 +1154,11 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>分块策略</p>
+             * <p>Chunking strategy. Strategy types are as follows:</p>
+             * <ul>
+             * <li>Default. System default slicing strategy.</li>
+             * <li>ASR. Split by audio content; valid for video knowledge bases.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Default</p>
@@ -1134,7 +1215,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>统一资源识别码</p>
+             * <p>Storage path for the source file.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/langstudio/source/</p>
@@ -1217,7 +1298,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Embedding连接ID</p>
+             * <p>Index service connection ID.</p>
              * 
              * <strong>example:</strong>
              * <p>conn-r3o7******38bh</p>
@@ -1228,7 +1309,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Embedding连接名称</p>
+             * <p>Index service connection name.</p>
              * 
              * <strong>example:</strong>
              * <p>myEmbeddingConn</p>
@@ -1239,7 +1320,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>模型</p>
+             * <p>Model name.</p>
              * 
              * <strong>example:</strong>
              * <p>text-embedding-v4</p>
@@ -1296,7 +1377,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>列Key</p>
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1350,7 +1434,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>列Key</p>
+             * <p>Column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1404,7 +1491,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>列Key</p>
+             * <p>Column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1484,7 +1574,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>所有列名</p>
+             * <p>All column names.</p>
              */
             public Builder columnDefinitions(java.util.List<ColumnDefinitions> columnDefinitions) {
                 this.columnDefinitions = columnDefinitions;
@@ -1492,7 +1582,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>内容检索列</p>
+             * <p>Content filtering column. The fields in this list support keyword-based retrieval.</p>
              */
             public Builder contentColumns(java.util.List<ContentColumns> contentColumns) {
                 this.contentColumns = contentColumns;
@@ -1500,7 +1590,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Embedding列</p>
+             * <p>Vector index column. The fields in this list will be vectorized and participate in retrieval.</p>
              */
             public Builder embeddingColumns(java.util.List<EmbeddingColumns> embeddingColumns) {
                 this.embeddingColumns = embeddingColumns;
@@ -1593,7 +1683,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>元数据Key</p>
+             * <p>Metadata field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>author</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1601,7 +1694,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>引用次数</p>
+             * <p>The number of references to the permission policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder referenceCount(Integer referenceCount) {
                 this.referenceCount = referenceCount;
@@ -1609,7 +1705,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>值的个数</p>
+             * <p>Number of values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder valueCount(Integer valueCount) {
                 this.valueCount = valueCount;
@@ -1617,7 +1716,10 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>元数据Value类型</p>
+             * <p>Metadata field type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -1671,7 +1773,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>自定义元数据</p>
+             * <p>Custom metadata.</p>
              */
             public Builder customMetaData(java.util.List<CustomMetaData> customMetaData) {
                 this.customMetaData = customMetaData;
@@ -1764,7 +1866,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Collectioin名称</p>
+             * <p>Vector database table or collection name.</p>
              * 
              * <strong>example:</strong>
              * <p>my_collection</p>
@@ -1775,7 +1877,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Embedding连接ID</p>
+             * <p>Vector database connection ID.</p>
              * 
              * <strong>example:</strong>
              * <p>conn-7y5y******jja7</p>
@@ -1786,7 +1888,7 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VectorDB连接名称</p>
+             * <p>Vector database connection name.</p>
              * 
              * <strong>example:</strong>
              * <p>myVectorConn</p>
@@ -1797,7 +1899,12 @@ public class GetKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VectorDB类型</p>
+             * <p>Vector database type. Supported values are as follows:</p>
+             * <ul>
+             * <li>Elasticsearch</li>
+             * <li>Milvus</li>
+             * <li>Faiss</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Milvus</p>

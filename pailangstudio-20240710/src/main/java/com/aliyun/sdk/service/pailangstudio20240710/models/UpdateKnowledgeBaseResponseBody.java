@@ -54,7 +54,10 @@ public class UpdateKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48E6392E-C3C9-5212-9FAD-13256ABD9AF6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

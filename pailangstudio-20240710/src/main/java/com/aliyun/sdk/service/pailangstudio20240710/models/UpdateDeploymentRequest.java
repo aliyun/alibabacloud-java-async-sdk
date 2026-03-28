@@ -129,7 +129,10 @@ public class UpdateDeploymentRequest extends Request {
         } 
 
         /**
-         * DeploymentId.
+         * <p>Deployment job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dploy-asdf******1234</p>
          */
         public Builder deploymentId(String deploymentId) {
             this.putPathParameter("DeploymentId", deploymentId);
@@ -138,7 +141,10 @@ public class UpdateDeploymentRequest extends Request {
         }
 
         /**
-         * AutoApproval.
+         * <p>Indicates whether to automatically skip the deployment confirmation step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoApproval(Boolean autoApproval) {
             this.putBodyParameter("AutoApproval", autoApproval);
@@ -147,7 +153,10 @@ public class UpdateDeploymentRequest extends Request {
         }
 
         /**
-         * DeploymentConfig.
+         * <p>Service Configuration for deployment. For more information, see the <a href="https://help.aliyun.com/zh/pai/user-guide/parameters-of-model-services">deployment configuration</a> of PAI-EAS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;metadata&quot;:{&quot;name&quot;:&quot;langstudio_2026<em><strong><em><strong>3848_jro7&quot;,&quot;instance&quot;:1,&quot;workspace_id&quot;:&quot;285</strong></em>&quot;,&quot;enable_webservice&quot;:false},&quot;cloud&quot;:{&quot;computing&quot;:{&quot;instances&quot;:[{&quot;type&quot;:&quot;ecs.g7.xlarge&quot;}]},&quot;networking&quot;:{&quot;vpc_id&quot;:&quot;vpc-bp1obprt</strong></em><em><strong>4bzo00d&quot;,&quot;vswitch_id&quot;:&quot;vsw-bp1p6i36k</strong></em><em><strong>pmfhw8&quot;,&quot;security_group_id&quot;:&quot;sg-bp1djud4</strong></em>***zecl5a&quot;}}}</p>
          */
         public Builder deploymentConfig(String deploymentConfig) {
             this.putBodyParameter("DeploymentConfig", deploymentConfig);
@@ -156,7 +165,10 @@ public class UpdateDeploymentRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Deployment description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description of deployment</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -165,7 +177,14 @@ public class UpdateDeploymentRequest extends Request {
         }
 
         /**
-         * StageAction.
+         * <p>Deployment stage operation information. The JSON format is as follows:<br>{&quot;Stage&quot;:3,&quot;Action&quot;:&quot;Confirm&quot;}. Valid values for Action are:  </p>
+         * <ul>
+         * <li>Confirm: confirm.  </li>
+         * <li>Cancel: cancel.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Stage&quot;:3,&quot;Action&quot;:&quot;Confirm&quot;}</p>
          */
         public Builder stageAction(String stageAction) {
             this.putBodyParameter("StageAction", stageAction);
@@ -174,7 +193,10 @@ public class UpdateDeploymentRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Workspace ID. For information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

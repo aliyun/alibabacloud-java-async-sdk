@@ -130,6 +130,7 @@ public class ListKnowledgeBaseChunksRequest extends Request {
         } 
 
         /**
+         * <p>Knowledge base ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,14 @@ public class ListKnowledgeBaseChunksRequest extends Request {
         }
 
         /**
-         * ChunkStatus.
+         * <p>Segment status.  </p>
+         * <ul>
+         * <li>Enable: Valid.  </li>
+         * <li>Disable: Invalid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder chunkStatus(String chunkStatus) {
             this.putQueryParameter("ChunkStatus", chunkStatus);
@@ -151,7 +159,10 @@ public class ListKnowledgeBaseChunksRequest extends Request {
         }
 
         /**
-         * MetaData.
+         * <p>Original file information. If empty, the entire knowledge base version is traversed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder metaData(MetaData metaData) {
             this.putQueryParameter("MetaData", metaData);
@@ -160,7 +171,10 @@ public class ListKnowledgeBaseChunksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -169,7 +183,10 @@ public class ListKnowledgeBaseChunksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -178,7 +195,10 @@ public class ListKnowledgeBaseChunksRequest extends Request {
         }
 
         /**
-         * VersionName.
+         * <p>Knowledge base version. The default is v1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionName(String versionName) {
             this.putQueryParameter("VersionName", versionName);
@@ -246,7 +266,7 @@ public class ListKnowledgeBaseChunksRequest extends Request {
             } 
 
             /**
-             * <p>文件元数据ID</p>
+             * <p>File metadata ID.</p>
              * 
              * <strong>example:</strong>
              * <p>xd8e****79du</p>
@@ -257,7 +277,7 @@ public class ListKnowledgeBaseChunksRequest extends Request {
             }
 
             /**
-             * <p>文件地址</p>
+             * <p>File URI. If FileMetaId is also provided, this parameter value is ignored.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://mybucketpath/file1.txt</p>

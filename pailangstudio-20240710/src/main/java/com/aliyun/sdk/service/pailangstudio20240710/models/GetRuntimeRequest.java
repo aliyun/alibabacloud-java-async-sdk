@@ -73,7 +73,10 @@ public class GetRuntimeRequest extends Request {
         } 
 
         /**
-         * RuntimeId.
+         * <p>Runtime ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtime-apje******beaz</p>
          */
         public Builder runtimeId(String runtimeId) {
             this.putPathParameter("RuntimeId", runtimeId);
@@ -82,7 +85,10 @@ public class GetRuntimeRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the DataWorks workspace. To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

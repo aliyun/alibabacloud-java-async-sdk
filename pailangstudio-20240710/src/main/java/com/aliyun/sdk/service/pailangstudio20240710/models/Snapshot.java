@@ -29,6 +29,9 @@ public class Snapshot extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+    private String errorMessage;
+
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
@@ -47,6 +50,9 @@ public class Snapshot extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SnapshotResourceType")
     private String snapshotResourceType;
 
+    @com.aliyun.core.annotation.NameInMap("SnapshotStatus")
+    private String snapshotStatus;
+
     @com.aliyun.core.annotation.NameInMap("SnapshotStoragePath")
     private String snapshotStoragePath;
 
@@ -64,12 +70,14 @@ public class Snapshot extends TeaModel {
         this.creationType = builder.creationType;
         this.creator = builder.creator;
         this.description = builder.description;
+        this.errorMessage = builder.errorMessage;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.snapshotId = builder.snapshotId;
         this.snapshotName = builder.snapshotName;
         this.snapshotResourceId = builder.snapshotResourceId;
         this.snapshotResourceType = builder.snapshotResourceType;
+        this.snapshotStatus = builder.snapshotStatus;
         this.snapshotStoragePath = builder.snapshotStoragePath;
         this.snapshotUrl = builder.snapshotUrl;
         this.workDir = builder.workDir;
@@ -117,6 +125,13 @@ public class Snapshot extends TeaModel {
     }
 
     /**
+     * @return errorMessage
+     */
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    /**
      * @return gmtCreateTime
      */
     public String getGmtCreateTime() {
@@ -159,6 +174,13 @@ public class Snapshot extends TeaModel {
     }
 
     /**
+     * @return snapshotStatus
+     */
+    public String getSnapshotStatus() {
+        return this.snapshotStatus;
+    }
+
+    /**
      * @return snapshotStoragePath
      */
     public String getSnapshotStoragePath() {
@@ -191,12 +213,14 @@ public class Snapshot extends TeaModel {
         private String creationType; 
         private String creator; 
         private String description; 
+        private String errorMessage; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String snapshotId; 
         private String snapshotName; 
         private String snapshotResourceId; 
         private String snapshotResourceType; 
+        private String snapshotStatus; 
         private String snapshotStoragePath; 
         private String snapshotUrl; 
         private String workDir; 
@@ -210,12 +234,14 @@ public class Snapshot extends TeaModel {
             this.creationType = model.creationType;
             this.creator = model.creator;
             this.description = model.description;
+            this.errorMessage = model.errorMessage;
             this.gmtCreateTime = model.gmtCreateTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.snapshotId = model.snapshotId;
             this.snapshotName = model.snapshotName;
             this.snapshotResourceId = model.snapshotResourceId;
             this.snapshotResourceType = model.snapshotResourceType;
+            this.snapshotStatus = model.snapshotStatus;
             this.snapshotStoragePath = model.snapshotStoragePath;
             this.snapshotUrl = model.snapshotUrl;
             this.workDir = model.workDir;
@@ -251,6 +277,14 @@ public class Snapshot extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * ErrorMessage.
+         */
+        public Builder errorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
             return this;
         }
 
@@ -299,6 +333,14 @@ public class Snapshot extends TeaModel {
          */
         public Builder snapshotResourceType(String snapshotResourceType) {
             this.snapshotResourceType = snapshotResourceType;
+            return this;
+        }
+
+        /**
+         * SnapshotStatus.
+         */
+        public Builder snapshotStatus(String snapshotStatus) {
+            this.snapshotStatus = snapshotStatus;
             return this;
         }
 

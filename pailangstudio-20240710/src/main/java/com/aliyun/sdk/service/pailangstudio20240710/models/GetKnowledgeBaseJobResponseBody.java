@@ -301,7 +301,14 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>Workspace visibility, possible values are:</p>
+         * <ul>
+         * <li>PRIVATE: In this workspace, it is only visible to you and the administrators.</li>
+         * <li>PUBLIC: In this workspace, visible to everyone.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -309,7 +316,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * Creator.
+         * <p>Creator User ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2003******4844</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -317,7 +327,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Knowledge Base Task Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project name pass the check</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -325,7 +338,7 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * EcsSpecs.
+         * <p>Run Resource Configuration List</p>
          */
         public Builder ecsSpecs(java.util.List<EcsSpecs> ecsSpecs) {
             this.ecsSpecs = ecsSpecs;
@@ -333,7 +346,7 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * EmbeddingConfig.
+         * <p>Index Configuration.</p>
          */
         public Builder embeddingConfig(EmbeddingConfig embeddingConfig) {
             this.embeddingConfig = embeddingConfig;
@@ -341,7 +354,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>Task error info.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to update knwoledge base index, pipelineRunId: flow-9p8f****4t9z</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -349,7 +365,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>Task creation time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-09-24T07:33:53Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -357,7 +376,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * GmtFinishTime.
+         * <p>Task end time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-02-08T15:45:12Z</p>
          */
         public Builder gmtFinishTime(String gmtFinishTime) {
             this.gmtFinishTime = gmtFinishTime;
@@ -365,7 +387,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>Task Update Time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-11T08:58:35.438Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -373,7 +398,13 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobAction.
+         * <p>Task Operation Type.</p>
+         * <ul>
+         * <li>SyncIndex: Update Knowledge Base Index</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UpdateScheduleConfig</p>
          */
         public Builder jobAction(String jobAction) {
             this.jobAction = jobAction;
@@ -381,7 +412,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * KnowledgeBaseId.
+         * <p>Knowledge Base ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-nacr******sxd2</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.knowledgeBaseId = knowledgeBaseId;
@@ -389,7 +423,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * KnowledgeBaseJobId.
+         * <p>Knowledge Base Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kbjob-9m******54</p>
          */
         public Builder knowledgeBaseJobId(String knowledgeBaseJobId) {
             this.knowledgeBaseJobId = knowledgeBaseJobId;
@@ -397,7 +434,7 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * KnowledgeBaseJobResult.
+         * <p>Task Result.</p>
          */
         public Builder knowledgeBaseJobResult(KnowledgeBaseJobResult knowledgeBaseJobResult) {
             this.knowledgeBaseJobResult = knowledgeBaseJobResult;
@@ -405,7 +442,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * MaxRunningTimeInSeconds.
+         * <p>Maximum task running time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder maxRunningTimeInSeconds(Integer maxRunningTimeInSeconds) {
             this.maxRunningTimeInSeconds = maxRunningTimeInSeconds;
@@ -413,7 +453,7 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * PipelineRunInfo.
+         * <p>Workflow Run Info.</p>
          */
         public Builder pipelineRunInfo(PipelineRunInfo pipelineRunInfo) {
             this.pipelineRunInfo = pipelineRunInfo;
@@ -421,7 +461,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C25324E3-18E6-50D8-9026-16D74AAEEB26</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -429,7 +472,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource group ID. Empty or public-cluster indicates public resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota89**76</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -437,7 +483,15 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Knowledge Base Task Status</p>
+         * <ul>
+         * <li>Running: The instance is in operation.</li>
+         * <li>Success: Run successfully.</li>
+         * <li>Failed: Run failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>discovering</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -445,7 +499,7 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * UserVpc.
+         * <p>Task Run VPC Info.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.userVpc = userVpc;
@@ -453,7 +507,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Knowledge Base workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -610,7 +667,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>CPU核数</p>
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder CPU(Integer CPU) {
                 this.CPU = CPU;
@@ -618,7 +678,7 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>驱动版本</p>
+             * <p>Driver Version.</p>
              * 
              * <strong>example:</strong>
              * <p>535.161.08</p>
@@ -629,7 +689,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GPU卡数</p>
+             * <p>The number of GPU cards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder GPU(Integer GPU) {
                 this.GPU = GPU;
@@ -637,7 +700,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GPU类型</p>
+             * <p>GPU Class.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V100</p>
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -645,7 +711,7 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>机型名称</p>
+             * <p>Model name.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.c6.large</p>
@@ -656,7 +722,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>内存大小</p>
+             * <p>Memory size, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -664,7 +733,7 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>副本数量</p>
+             * <p>Number of copies.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -675,7 +744,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>共享内存容量</p>
+             * <p>Shared memory capacity, in units of GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder sharedMemory(Integer sharedMemory) {
                 this.sharedMemory = sharedMemory;
@@ -683,7 +755,7 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点类型</p>
+             * <p>Node type. Possible values are Head and Worker.</p>
              * 
              * <strong>example:</strong>
              * <p>Worker</p>
@@ -754,7 +826,7 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Embedding分批大小</p>
+             * <p>Index batch size. Documentation and structured data types knowledge base is effective.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -765,7 +837,7 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Embedding并发数</p>
+             * <p>Index concurrency. Image and Video Type Knowledge Base is valid.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -848,7 +920,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>增加Chunk数量</p>
+             * <p>Increase the number of Chunks</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder addChunkCount(Integer addChunkCount) {
                 this.addChunkCount = addChunkCount;
@@ -856,7 +931,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>删除Chunk数量</p>
+             * <p>Delete Chunk Quantity</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder deleteChunkCount(Integer deleteChunkCount) {
                 this.deleteChunkCount = deleteChunkCount;
@@ -864,7 +942,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总处理文件数</p>
+             * <p>Total Number of Processed Files</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalFileCount(Integer totalFileCount) {
                 this.totalFileCount = totalFileCount;
@@ -918,7 +999,7 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>PaiFlow工作流运行ID</p>
+             * <p>PaiFlow Workflow Run ID</p>
              * 
              * <strong>example:</strong>
              * <p>flow-fi8z******g4gy</p>
@@ -1001,7 +1082,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>安全组ID</p>
+             * <p>Security Group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-wz91****e10e</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1009,7 +1093,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>交换机ID</p>
+             * <p>Switch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-wz9r****ng10</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1017,7 +1104,10 @@ public class GetKnowledgeBaseJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz90****5v23</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

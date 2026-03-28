@@ -255,7 +255,10 @@ public class ListDeploymentsRequest extends Request {
         } 
 
         /**
-         * Creator.
+         * <p>The creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2680******4103</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -264,7 +267,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * DeploymentId.
+         * <p>Deployment job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dploy-asdf******1234</p>
          */
         public Builder deploymentId(String deploymentId) {
             this.putQueryParameter("DeploymentId", deploymentId);
@@ -273,7 +279,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * DeploymentStatus.
+         * <p>The deployment job status. To query multiple statuses simultaneously, separate them with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating,Running</p>
          */
         public Builder deploymentStatus(String deploymentStatus) {
             this.putQueryParameter("DeploymentStatus", deploymentStatus);
@@ -282,7 +291,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>Maximum number of records allowed to be returned in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -291,7 +303,14 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Pagination cursor used to retrieve the next page of results.  </p>
+         * <ul>
+         * <li>Leave empty for the first request.  </li>
+         * <li>For subsequent requests, pass the NextToken value returned in the previous response.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -300,7 +319,14 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * <p>The operation type. Valid values:  </p>
+         * <ul>
+         * <li>Create: Create a service.  </li>
+         * <li>Update: Update an existing service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Create</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -309,7 +335,14 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>Sorting order.  </p>
+         * <ul>
+         * <li>ASC: ascending.  </li>
+         * <li>DESC: descending.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -318,7 +351,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the current page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -327,7 +363,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items displayed per page. Default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -336,7 +375,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource ID to be deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow-asdf******123</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -345,7 +387,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * ResourceSnapshotId.
+         * <p>The snapshot ID of the resource to be deployed. If this parameter is provided, the system deploys directly based on this snapshot. If it is not provided, the system first creates a new snapshot for the resource and then executes the deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snap-asfg******123</p>
          */
         public Builder resourceSnapshotId(String resourceSnapshotId) {
             this.putQueryParameter("ResourceSnapshotId", resourceSnapshotId);
@@ -354,7 +399,14 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type to be deployed. Valid values:  </p>
+         * <ul>
+         * <li>Flow: A project of the pipeline pattern  </li>
+         * <li>Code: A project of the Code pattern</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Flow</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -363,7 +415,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name. Fuzzy search by service name is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myservice01</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -372,7 +427,14 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>Field used for sorting in paged queries. The default field is GmtCreateTime. Valid values are as follows:  </p>
+         * <ul>
+         * <li>GmtCreateTime (default): sort by creation time.  </li>
+         * <li>GmtModifiedTime: sort by updated time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -381,7 +443,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Workspace ID. For information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

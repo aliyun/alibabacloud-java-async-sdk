@@ -106,7 +106,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>Maximum number of records allowed to be returned in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Pagination cursor for the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Snapshots.
+         * <p>Snapshot list.</p>
          */
         public Builder snapshots(java.util.List<Snapshot> snapshots) {
             this.snapshots = snapshots;
@@ -138,7 +147,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

@@ -106,7 +106,10 @@ public class ListRuntimesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of returned results for a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListRuntimesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The next request token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListRuntimesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class ListRuntimesResponseBody extends TeaModel {
         }
 
         /**
-         * Runtimes.
+         * <p>The list of runtimes.</p>
          */
         public Builder runtimes(java.util.List<Runtime> runtimes) {
             this.runtimes = runtimes;
@@ -138,7 +147,10 @@ public class ListRuntimesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of runtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

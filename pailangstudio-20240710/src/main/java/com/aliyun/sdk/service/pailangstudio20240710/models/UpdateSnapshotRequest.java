@@ -101,7 +101,10 @@ public class UpdateSnapshotRequest extends Request {
         } 
 
         /**
-         * SnapshotId.
+         * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snap-asfg******123</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putPathParameter("SnapshotId", snapshotId);
@@ -110,7 +113,10 @@ public class UpdateSnapshotRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The snapshot description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -119,7 +125,15 @@ public class UpdateSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotName.
+         * <p>The snapshot name. The format requirements are as follows:</p>
+         * <ul>
+         * <li>It can contain only letters, digits, and underscores (_).</li>
+         * <li>It must start with a letter.</li>
+         * <li>It must be 1 to 256 characters in length.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot02</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putBodyParameter("SnapshotName", snapshotName);
@@ -128,7 +142,10 @@ public class UpdateSnapshotRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. For information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

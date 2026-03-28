@@ -103,6 +103,7 @@ public class UpdateKnowledgeBaseChunkRequest extends Request {
         } 
 
         /**
+         * <p>Knowledge Base ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class UpdateKnowledgeBaseChunkRequest extends Request {
         }
 
         /**
+         * <p>Knowledge Base Chunk ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class UpdateKnowledgeBaseChunkRequest extends Request {
         }
 
         /**
-         * ChunkContent.
+         * <p>Chunk content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>content</p>
          */
         public Builder chunkContent(String chunkContent) {
             this.putBodyParameter("ChunkContent", chunkContent);
@@ -136,7 +141,14 @@ public class UpdateKnowledgeBaseChunkRequest extends Request {
         }
 
         /**
-         * ChunkStatus.
+         * <p>Chunk status.</p>
+         * <ul>
+         * <li>Enable: Enabled.</li>
+         * <li>Disable: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder chunkStatus(String chunkStatus) {
             this.putBodyParameter("ChunkStatus", chunkStatus);

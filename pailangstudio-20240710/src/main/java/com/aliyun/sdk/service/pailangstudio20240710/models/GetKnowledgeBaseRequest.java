@@ -89,6 +89,7 @@ public class GetKnowledgeBaseRequest extends Request {
         } 
 
         /**
+         * <p>Knowledge Base ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class GetKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * VersionName.
+         * <p>Knowledge Base Version. Default is v1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionName(String versionName) {
             this.putQueryParameter("VersionName", versionName);
@@ -110,6 +114,7 @@ public class GetKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The ID of the DataWorks workspace. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

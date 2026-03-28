@@ -145,7 +145,11 @@ public class UpdateKnowledgeBaseRequest extends Request {
         } 
 
         /**
+         * <p>Knowledge Base ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-nacr******sxd2</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.putPathParameter("KnowledgeBaseId", knowledgeBaseId);
@@ -154,7 +158,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * AutoUpdateConfig.
+         * <p>Knowledge Base Automatic Update Configuration.</p>
          */
         public Builder autoUpdateConfig(AutoUpdateConfig autoUpdateConfig) {
             this.putBodyParameter("AutoUpdateConfig", autoUpdateConfig);
@@ -163,7 +167,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * BindRuntime.
+         * <p>Whether to bind at runtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder bindRuntime(Boolean bindRuntime) {
             this.putBodyParameter("BindRuntime", bindRuntime);
@@ -172,7 +179,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Knowledge base description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description of the knowledge base.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -181,7 +191,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * MetaDataConfig.
+         * <p>Metadata Configuration.</p>
          */
         public Builder metaDataConfig(MetaDataConfig metaDataConfig) {
             this.putBodyParameter("MetaDataConfig", metaDataConfig);
@@ -190,7 +200,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * RuntimeId.
+         * <p>Runtime ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtime-231x****tmo4</p>
          */
         public Builder runtimeId(String runtimeId) {
             this.putBodyParameter("RuntimeId", runtimeId);
@@ -199,7 +212,11 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>285773</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -358,7 +375,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>CPU核数</p>
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder CPU(Integer CPU) {
                 this.CPU = CPU;
@@ -366,7 +386,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>驱动版本</p>
+             * <p>Driver Version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>550.127.08</p>
              */
             public Builder driver(String driver) {
                 this.driver = driver;
@@ -374,7 +397,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>GPU卡数</p>
+             * <p>The number of GPU cards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder GPU(Integer GPU) {
                 this.GPU = GPU;
@@ -382,7 +408,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>GPU类型</p>
+             * <p>The GPU Class.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V100</p>
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -390,7 +419,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>机型名称</p>
+             * <p>Model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c6.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -398,7 +430,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>内存大小</p>
+             * <p>Memory size, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -406,7 +441,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>副本数量</p>
+             * <p>The number of replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder podCount(Integer podCount) {
                 this.podCount = podCount;
@@ -414,7 +452,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>共享内存容量</p>
+             * <p>Shared memory capacity, in units of GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder sharedMemory(Integer sharedMemory) {
                 this.sharedMemory = sharedMemory;
@@ -422,7 +463,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>节点类型</p>
+             * <p>Node type. Possible values are Head and Worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Worker</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -490,7 +534,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>Embedding分批大小</p>
+             * <p>Index batch size. Documentation and structured data type Knowledge Base are effective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder batchSize(Integer batchSize) {
                 this.batchSize = batchSize;
@@ -498,7 +545,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>Embedding并发数</p>
+             * <p>Index concurrency. Image and Video Type Knowledge Base is valid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder concurrency(Integer concurrency) {
                 this.concurrency = concurrency;
@@ -617,7 +667,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>运行资源配置</p>
+             * <p>Run Resource Configuration List Documentation and structured knowledge base contain only one element and the <strong>Type</strong> is Worker. images and videos knowledge base contain two elements and the <strong>Types</strong> are Head and Worker.</p>
              */
             public Builder ecsSpecs(java.util.List<EcsSpecs> ecsSpecs) {
                 this.ecsSpecs = ecsSpecs;
@@ -625,7 +675,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>Embedding配置</p>
+             * <p>Vector Index Configuration.</p>
              */
             public Builder embeddingConfig(EmbeddingConfig embeddingConfig) {
                 this.embeddingConfig = embeddingConfig;
@@ -633,7 +683,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>任务最大运行时间</p>
+             * <p>Maximum task running time, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -644,7 +694,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>资源组ID</p>
+             * <p>Resource Group ID. Empty or public-cluster indicates public resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota89**76</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -652,7 +705,14 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>知识库自动更新状态</p>
+             * <p>Knowledge Base Automatic Update Switch Status</p>
+             * <ul>
+             * <li>Enable: Turn on automatic updates.</li>
+             * <li>Disable: Turn off automatic updates.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -660,7 +720,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>用户VPC配置</p>
+             * <p>User VPC Configuration.</p>
              */
             public Builder userVpc(UserVpc userVpc) {
                 this.userVpc = userVpc;
@@ -727,7 +787,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>元数据Key</p>
+             * <p>Metadata Field Name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>author</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -735,7 +798,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>元数据Value类型</p>
+             * <p>Metadata Field Type Currently, only the String class type is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>String</p>
@@ -792,7 +855,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>自定义元数据</p>
+             * <p>Custom metadata.</p>
              */
             public Builder customMetaData(java.util.List<CustomMetaData> customMetaData) {
                 this.customMetaData = customMetaData;

@@ -104,6 +104,7 @@ public class UpdateKnowledgeBaseJobRequest extends Request {
         } 
 
         /**
+         * <p>Knowledge Base ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class UpdateKnowledgeBaseJobRequest extends Request {
         }
 
         /**
+         * <p>Knowledge Base Task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class UpdateKnowledgeBaseJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Knowledge base task description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description of the knowledge base job.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -137,6 +142,7 @@ public class UpdateKnowledgeBaseJobRequest extends Request {
         }
 
         /**
+         * <p>Workspace ID where the knowledge course is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

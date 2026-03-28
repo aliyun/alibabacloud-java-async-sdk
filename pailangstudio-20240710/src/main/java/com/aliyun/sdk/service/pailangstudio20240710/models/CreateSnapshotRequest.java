@@ -171,7 +171,14 @@ public class CreateSnapshotRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>Workspace visibility. Valid values:</p>
+         * <ul>
+         * <li>PRIVATE: Visible only to you and administrators in this workspace.</li>
+         * <li>PUBLIC: Visible to everyone in this workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -180,7 +187,15 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * CreationType.
+         * <p>Snapshot creation type. Valid values:</p>
+         * <ul>
+         * <li>ManualCreated: manual creation</li>
+         * <li>DeploymentAutoCreated: automatic creation by service deployment</li>
+         * <li>EvaluationAutoCreated: automatic creation by evaluation job</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ManualCreated</p>
          */
         public Builder creationType(String creationType) {
             this.putBodyParameter("CreationType", creationType);
@@ -189,7 +204,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Description of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -198,7 +216,15 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotName.
+         * <p>Snapshot name. Requirements:</p>
+         * <ul>
+         * <li>Can contain only letters, digits, and underscores (_)</li>
+         * <li>Must start with a letter</li>
+         * <li>Length must be 1 to 256 characters</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot01</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putBodyParameter("SnapshotName", snapshotName);
@@ -207,7 +233,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotResourceId.
+         * <p>Snapshot resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow-asfg******123</p>
          */
         public Builder snapshotResourceId(String snapshotResourceId) {
             this.putBodyParameter("SnapshotResourceId", snapshotResourceId);
@@ -216,7 +245,13 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotResourceType.
+         * <p>Snapshot resource type. Valid values:</p>
+         * <ul>
+         * <li>Flow: pipeline</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Flow</p>
          */
         public Builder snapshotResourceType(String snapshotResourceType) {
             this.putBodyParameter("SnapshotResourceType", snapshotResourceType);
@@ -225,7 +260,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * SourceStoragePath.
+         * <p>Create a snapshot from source files under the specified OSS folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket.oss-cn-hangzhou.aliyuncs.com/path/to/snapshot/source</p>
          */
         public Builder sourceStoragePath(String sourceStoragePath) {
             this.putBodyParameter("SourceStoragePath", sourceStoragePath);
@@ -234,7 +272,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * WorkDir.
+         * <p>OSS working directory for storing the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket.oss-cn-hangzhou.aliyuncs.com/workdir</p>
          */
         public Builder workDir(String workDir) {
             this.putBodyParameter("WorkDir", workDir);
@@ -243,7 +284,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Workspace ID. For information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

@@ -22,6 +22,10 @@ public class CreateRuntimeRequest extends Request {
     private String accessibility;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoUpdateImage")
+    private Boolean autoUpdateImage;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CredentialConfig")
     private CredentialConfig credentialConfig;
 
@@ -72,6 +76,7 @@ public class CreateRuntimeRequest extends Request {
     private CreateRuntimeRequest(Builder builder) {
         super(builder);
         this.accessibility = builder.accessibility;
+        this.autoUpdateImage = builder.autoUpdateImage;
         this.credentialConfig = builder.credentialConfig;
         this.dataSources = builder.dataSources;
         this.ecsSpec = builder.ecsSpec;
@@ -104,6 +109,13 @@ public class CreateRuntimeRequest extends Request {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return autoUpdateImage
+     */
+    public Boolean getAutoUpdateImage() {
+        return this.autoUpdateImage;
     }
 
     /**
@@ -192,6 +204,7 @@ public class CreateRuntimeRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateRuntimeRequest, Builder> {
         private String accessibility; 
+        private Boolean autoUpdateImage; 
         private CredentialConfig credentialConfig; 
         private java.util.List<DataSources> dataSources; 
         private EcsSpec ecsSpec; 
@@ -212,6 +225,7 @@ public class CreateRuntimeRequest extends Request {
         private Builder(CreateRuntimeRequest request) {
             super(request);
             this.accessibility = request.accessibility;
+            this.autoUpdateImage = request.autoUpdateImage;
             this.credentialConfig = request.credentialConfig;
             this.dataSources = request.dataSources;
             this.ecsSpec = request.ecsSpec;
@@ -227,7 +241,14 @@ public class CreateRuntimeRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>Workspace visibility. Possible values are:</p>
+         * <ul>
+         * <li>PRIVATE: In this workspace, visible only to you and administrators.</li>
+         * <li>PUBLIC: In this workspace, visible to everyone.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -236,7 +257,16 @@ public class CreateRuntimeRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * AutoUpdateImage.
+         */
+        public Builder autoUpdateImage(Boolean autoUpdateImage) {
+            this.putBodyParameter("AutoUpdateImage", autoUpdateImage);
+            this.autoUpdateImage = autoUpdateImage;
+            return this;
+        }
+
+        /**
+         * <p>The credential configuration.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             this.putBodyParameter("CredentialConfig", credentialConfig);
@@ -245,7 +275,7 @@ public class CreateRuntimeRequest extends Request {
         }
 
         /**
-         * DataSources.
+         * <p>Mount data source.</p>
          */
         public Builder dataSources(java.util.List<DataSources> dataSources) {
             this.putBodyParameter("DataSources", dataSources);
@@ -254,7 +284,7 @@ public class CreateRuntimeRequest extends Request {
         }
 
         /**
-         * EcsSpec.
+         * <p>The configurations of ECS resources.</p>
          */
         public Builder ecsSpec(EcsSpec ecsSpec) {
             this.putBodyParameter("EcsSpec", ecsSpec);
@@ -263,7 +293,7 @@ public class CreateRuntimeRequest extends Request {
         }
 
         /**
-         * Envs.
+         * <p>The environment variables. Separate the environment variables with commas (,).</p>
          */
         public Builder envs(java.util.List<Envs> envs) {
             this.putBodyParameter("Envs", envs);
@@ -272,7 +302,7 @@ public class CreateRuntimeRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The list of tags.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
@@ -281,7 +311,10 @@ public class CreateRuntimeRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota18******zv9</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -290,7 +323,10 @@ public class CreateRuntimeRequest extends Request {
         }
 
         /**
-         * RunTimeout.
+         * <p>Timeout in seconds for a single test executed on the runtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder runTimeout(Integer runTimeout) {
             this.putBodyParameter("RunTimeout", runTimeout);
@@ -299,7 +335,15 @@ public class CreateRuntimeRequest extends Request {
         }
 
         /**
-         * RuntimeName.
+         * <p>The name of the container runtime. Format requirements:</p>
+         * <ul>
+         * <li>Can only contain English letters, digits, and underscores (_).</li>
+         * <li>Starts with a letter.</li>
+         * <li>The length must be 1 to 256 characters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dev01</p>
          */
         public Builder runtimeName(String runtimeName) {
             this.putBodyParameter("RuntimeName", runtimeName);
@@ -308,7 +352,13 @@ public class CreateRuntimeRequest extends Request {
         }
 
         /**
-         * RuntimeType.
+         * <p>The runtime type used by the nodes. Valid values:</p>
+         * <ul>
+         * <li>DSW: PAI-DSW instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DSW</p>
          */
         public Builder runtimeType(String runtimeType) {
             this.putBodyParameter("RuntimeType", runtimeType);
@@ -317,7 +367,7 @@ public class CreateRuntimeRequest extends Request {
         }
 
         /**
-         * UserVpc.
+         * <p>User VPC Configuration.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.putBodyParameter("UserVpc", userVpc);
@@ -326,7 +376,10 @@ public class CreateRuntimeRequest extends Request {
         }
 
         /**
-         * WorkDir.
+         * <p>The OSS path of the working directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket.oss-cn-hangzhou-internal.aliyuncs.com/workdir/</p>
          */
         public Builder workDir(String workDir) {
             this.putBodyParameter("WorkDir", workDir);
@@ -335,7 +388,10 @@ public class CreateRuntimeRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace. To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -416,7 +472,7 @@ public class CreateRuntimeRequest extends Request {
             } 
 
             /**
-             * <p>AssumeRoleFor</p>
+             * <p>The entity to which the role is assigned.</p>
              * 
              * <strong>example:</strong>
              * <p>1095******785714</p>
@@ -427,7 +483,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>角色名称</p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::1095******785714:role/testrole</p>
@@ -438,7 +494,11 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>角色类型</p>
+             * <p>The class of the role. Valid values:</p>
+             * <ul>
+             * <li>service: assumed by the service;</li>
+             * <li>user: assumed by the regular user account</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>service</p>
@@ -521,7 +581,7 @@ public class CreateRuntimeRequest extends Request {
             } 
 
             /**
-             * <p>Key</p>
+             * <p>The key that identifies the configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -532,7 +592,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>角色列表</p>
+             * <p>The list of configured roles.</p>
              */
             public Builder roles(java.util.List<Roles> roles) {
                 this.roles = roles;
@@ -540,7 +600,11 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>Type</p>
+             * <p>The configuration type. Valid values:</p>
+             * <ul>
+             * <li>Role: role assumption</li>
+             * <li>RoleChain: role chain assumption</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Role</p>
@@ -623,7 +687,7 @@ public class CreateRuntimeRequest extends Request {
             } 
 
             /**
-             * <p>AliyunEnvRoleKey</p>
+             * <p>The key of the environment variable role.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -634,7 +698,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>Credential配置项列表</p>
+             * <p>The list of credential configurations.</p>
              */
             public Builder credentialConfigItems(java.util.List<CredentialConfigItems> credentialConfigItems) {
                 this.credentialConfigItems = credentialConfigItems;
@@ -642,7 +706,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>是否启用Credential注入</p>
+             * <p>Whether to enable credential injection.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -725,7 +789,7 @@ public class CreateRuntimeRequest extends Request {
             } 
 
             /**
-             * <p>数据集ID</p>
+             * <p>The ID of the dataset. Choose either Uri or another option.</p>
              * 
              * <strong>example:</strong>
              * <p>d-umns******zij4szhc</p>
@@ -736,7 +800,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>挂载路径</p>
+             * <p>The path to which the data disk is mounted.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/data</p>
@@ -747,7 +811,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>统一资源识别码</p>
+             * <p>The OSS path of the data source. You must choose either DatasetId or another option.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/langstudio/source/</p>
@@ -882,7 +946,7 @@ public class CreateRuntimeRequest extends Request {
             } 
 
             /**
-             * <p>CPU数量</p>
+             * <p>The number of CPU cores.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -893,7 +957,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>驱动版本</p>
+             * <p>The version of the GPU driver.</p>
              * 
              * <strong>example:</strong>
              * <p>535.161.08</p>
@@ -904,7 +968,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>GPU数量</p>
+             * <p>The number of the GPUs.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -915,7 +979,14 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>GPU类型</p>
+             * <p>The GPU Class. Valid values are as follows:</p>
+             * <ul>
+             * <li>V100</li>
+             * <li>A100</li>
+             * <li>T4</li>
+             * <li>A10</li>
+             * <li>P100</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>V100</p>
@@ -926,7 +997,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>实例类型</p>
+             * <p>Instance Type</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.c6.large</p>
@@ -937,7 +1008,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>内存信息</p>
+             * <p>The memory size, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -948,7 +1019,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>共享内存</p>
+             * <p>The shared memory size. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -1018,7 +1089,7 @@ public class CreateRuntimeRequest extends Request {
             } 
 
             /**
-             * <p>环境键</p>
+             * <p>The environment key.</p>
              * 
              * <strong>example:</strong>
              * <p>testKey1</p>
@@ -1029,7 +1100,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>环境值</p>
+             * <p>The value of the environment.</p>
              * 
              * <strong>example:</strong>
              * <p>testValue1</p>
@@ -1099,7 +1170,7 @@ public class CreateRuntimeRequest extends Request {
             } 
 
             /**
-             * <p>标签键</p>
+             * <p>Tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>testKey1</p>
@@ -1110,7 +1181,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>标签值</p>
+             * <p>Tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>testValue1</p>
@@ -1219,7 +1290,7 @@ public class CreateRuntimeRequest extends Request {
             } 
 
             /**
-             * <p>默认路由</p>
+             * <p>The default Ingress.</p>
              * 
              * <strong>example:</strong>
              * <p>eth0</p>
@@ -1230,7 +1301,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>扩展网段</p>
+             * <p>The extended CIDR blocks.</p>
              */
             public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
@@ -1238,7 +1309,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>安全组ID</p>
+             * <p>The ID of a security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-wz9i****1129</p>
@@ -1249,7 +1320,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>交换机ID</p>
+             * <p>The vSwitch IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-wz9r****ng10</p>
@@ -1260,7 +1331,7 @@ public class CreateRuntimeRequest extends Request {
             }
 
             /**
-             * <p>VPC ID</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-wz90****5v23</p>

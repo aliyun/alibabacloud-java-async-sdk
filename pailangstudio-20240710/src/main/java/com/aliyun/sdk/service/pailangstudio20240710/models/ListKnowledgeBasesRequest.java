@@ -199,7 +199,10 @@ public class ListKnowledgeBasesRequest extends Request {
         } 
 
         /**
-         * Creator.
+         * <p>Creator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2680******4103</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -208,7 +211,10 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * KnowledgeBaseId.
+         * <p>Knowledge Base ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-nacr******sxd2</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.putQueryParameter("KnowledgeBaseId", knowledgeBaseId);
@@ -217,7 +223,16 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * KnowledgeBaseType.
+         * <p>The type of the knowledge base.</p>
+         * <ul>
+         * <li>TEXT: Document.</li>
+         * <li>STRUCTURED: Structured data.</li>
+         * <li>IMAGE: Image.</li>
+         * <li>VIDEO: Video.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TEXT</p>
          */
         public Builder knowledgeBaseType(String knowledgeBaseType) {
             this.putQueryParameter("KnowledgeBaseType", knowledgeBaseType);
@@ -226,7 +241,10 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>When querying using NextToken, the maximum number of results returned each time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -235,7 +253,10 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -244,7 +265,10 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Used to mark the current starting position for reading; leaving it empty means starting from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -253,7 +277,14 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order in which you want to sort the queried instances.</p>
+         * <ul>
+         * <li>ASC: ascending order.</li>
+         * <li>DESC: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -262,7 +293,10 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number. Value range: greater than 0. Default value: 1. If MaxResults is passed in at the same time, the NextToken query method will be used, and this field value will be ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -271,7 +305,10 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of queries per page. If MaxResults is passed in at the same time, the quantity will be based on MaxResults.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -280,7 +317,10 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>Sorting field. Currently, only GmtCreateTime is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -289,7 +329,10 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the DataWorks workspace. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

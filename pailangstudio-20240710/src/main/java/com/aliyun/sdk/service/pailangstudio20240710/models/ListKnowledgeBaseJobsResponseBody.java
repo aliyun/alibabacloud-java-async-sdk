@@ -106,7 +106,7 @@ public class ListKnowledgeBaseJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * KnowledgeBaseJobs.
+         * <p>知识库任务列表。</p>
          */
         public Builder knowledgeBaseJobs(java.util.List<KnowledgeBaseJob> knowledgeBaseJobs) {
             this.knowledgeBaseJobs = knowledgeBaseJobs;
@@ -114,7 +114,10 @@ public class ListKnowledgeBaseJobsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>本次请求允许返回的最大记录条数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListKnowledgeBaseJobsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>返回下一次查询开始的位置。为空表示已经获取了全部数据。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListKnowledgeBaseJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListKnowledgeBaseJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>总记录条数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

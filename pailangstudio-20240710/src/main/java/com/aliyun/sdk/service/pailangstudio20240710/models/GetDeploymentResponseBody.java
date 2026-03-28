@@ -327,7 +327,14 @@ public class GetDeploymentResponseBody extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>The workspace visibility. Valid values:  </p>
+         * <ul>
+         * <li>PRIVATE: The resource is visible only to you and administrators in this workspace.  </li>
+         * <li>PUBLIC: The resource is visible to all users in this workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -335,7 +342,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * AutoApproval.
+         * <p>Indicates whether deployment confirmation is automatically skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoApproval(Boolean autoApproval) {
             this.autoApproval = autoApproval;
@@ -343,7 +353,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * ChatHistoryConfig.
+         * <p>Chat history configuration.</p>
          */
         public Builder chatHistoryConfig(ChatHistoryConfig chatHistoryConfig) {
             this.chatHistoryConfig = chatHistoryConfig;
@@ -351,7 +361,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * ContentModerationConfig.
+         * <p>Content moderation configuration.</p>
          */
         public Builder contentModerationConfig(ContentModerationConfig contentModerationConfig) {
             this.contentModerationConfig = contentModerationConfig;
@@ -359,7 +369,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * Creator.
+         * <p>Creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2003******4844</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -367,7 +380,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * DeploymentConfig.
+         * <p>Deployment configuration. For details, see <a href="https://help.aliyun.com/zh/pai/user-guide/parameters-of-model-services">Deployment Configuration</a> in PAI-EAS documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;metadata&quot;:{&quot;name&quot;:&quot;langstudio_2026<em><strong><em><strong>3848_jro7&quot;,&quot;instance&quot;:1,&quot;workspace_id&quot;:&quot;285</strong></em>&quot;,&quot;enable_webservice&quot;:false},&quot;cloud&quot;:{&quot;computing&quot;:{&quot;instances&quot;:[{&quot;type&quot;:&quot;ecs.g7.xlarge&quot;}]},&quot;networking&quot;:{&quot;vpc_id&quot;:&quot;vpc-bp1obprt</strong></em><em><strong>4bzo00d&quot;,&quot;vswitch_id&quot;:&quot;vsw-bp1p6i36k</strong></em><em><strong>pmfhw8&quot;,&quot;security_group_id&quot;:&quot;sg-bp1djud4</strong></em>***zecl5a&quot;}}}</p>
          */
         public Builder deploymentConfig(String deploymentConfig) {
             this.deploymentConfig = deploymentConfig;
@@ -375,7 +391,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * DeploymentId.
+         * <p>The ID of the deployment job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dploy-asdf******1234</p>
          */
         public Builder deploymentId(String deploymentId) {
             this.deploymentId = deploymentId;
@@ -383,7 +402,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * DeploymentStages.
+         * <p>Stage information of the deployment.</p>
          */
         public Builder deploymentStages(java.util.List<DeploymentStages> deploymentStages) {
             this.deploymentStages = deploymentStages;
@@ -391,7 +410,22 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * DeploymentStatus.
+         * <p>Task Status. Valid values:  </p>
+         * <ul>
+         * <li>Creating: Creating.  </li>
+         * <li>Failed: Deployment failed.  </li>
+         * <li>Stopping: Stopping.  </li>
+         * <li>Waiting: Waiting.  </li>
+         * <li>Starting: Starting.  </li>
+         * <li>Running: Running.  </li>
+         * <li>Pending: Pending.  </li>
+         * <li>WaitForConfirm: Waiting for confirmation.  </li>
+         * <li>Canceled: Canceled.  </li>
+         * <li>Succeed: Succeeded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeed</p>
          */
         public Builder deploymentStatus(String deploymentStatus) {
             this.deploymentStatus = deploymentStatus;
@@ -399,7 +433,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The service description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -407,7 +444,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * EnableTrace.
+         * <p>Indicates whether Tracing Analysis is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTrace(Boolean enableTrace) {
             this.enableTrace = enableTrace;
@@ -415,7 +455,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is error message</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -423,7 +466,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>Creation Time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-09-24T07:33:53Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -431,7 +477,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>Updated At.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-09-24T08:58:35Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -439,7 +488,14 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * OperationType.
+         * <p>Operation Type. Valid values:  </p>
+         * <ul>
+         * <li>Create: Create a new service.  </li>
+         * <li>Update: Update an existing service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Create</p>
          */
         public Builder operationType(String operationType) {
             this.operationType = operationType;
@@ -447,7 +503,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -455,7 +514,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource to be deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow-asdf******123</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -463,7 +525,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceSnapshotId.
+         * <p>The snapshot ID of the resource to be deployed. If this parameter is provided, the system deploys directly based on this snapshot. If not provided, the system creates a new snapshot of the resource before deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snap-asfg******123</p>
          */
         public Builder resourceSnapshotId(String resourceSnapshotId) {
             this.resourceSnapshotId = resourceSnapshotId;
@@ -471,7 +536,14 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type to be deployed. Valid values:  </p>
+         * <ul>
+         * <li>Flow: A pipeline project  </li>
+         * <li>Code: A Code project</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Flow</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -479,7 +551,15 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * <p>Service Name. Format requirements:  </p>
+         * <ul>
+         * <li>Supports lowercase letters, digits, and underscores.  </li>
+         * <li>Must start with a letter.  </li>
+         * <li>Length must be 1–45 characters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>myservice01</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -487,7 +567,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * WorkDir.
+         * <p>The OSS working directory for the service. It stores runtime logs, conversation history, and other data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket.oss-cn-hangzhou-internal.aliyuncs.com/workdir/</p>
          */
         public Builder workDir(String workDir) {
             this.workDir = workDir;
@@ -495,7 +578,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -561,7 +647,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>连接名称</p>
+             * <p>The connection name. This parameter is required when the chat history storage type is RDS.</p>
              * 
              * <strong>example:</strong>
              * <p>rdsconnection</p>
@@ -572,7 +658,12 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>存储类型</p>
+             * <p>The storage class. Valid values:  </p>
+             * <ul>
+             * <li>LOCAL: Chat history is stored in a local SQLite file. This option does not support multi-instance deployment.  </li>
+             * <li>OSS: Chat history is stored in a specific path under the service OSS workspace path.  </li>
+             * <li>RDS: Chat history is stored in an RDS Table, and an RDS connection must be specified.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>RDS</p>
@@ -655,7 +746,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>启用输入内容审查</p>
+             * <p>Indicates whether to enable security review for input.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -666,7 +757,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>启用输出内容审查</p>
+             * <p>Indicates whether to enable content moderation for output.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -677,7 +768,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>流式输出内容送审缓存大小</p>
+             * <p>Cache size for streaming output content submitted for moderation. The default value is 5.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -825,7 +916,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>描述</p>
+             * <p>Deployment stage description.</p>
              * 
              * <strong>example:</strong>
              * <p>Create snapshot for deployment</p>
@@ -836,7 +927,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>错误信息</p>
+             * <p>Error message.</p>
              * 
              * <strong>example:</strong>
              * <p>This is error</p>
@@ -847,7 +938,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>结束时间</p>
+             * <p>End time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-23T10:35:38+08:00</p>
@@ -858,7 +949,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>开始时间</p>
+             * <p>Start Time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-23T10:25:38+08:00</p>
@@ -869,7 +960,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段</p>
+             * <p>Deployment stage.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -880,7 +971,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段信息</p>
+             * <p>Deployment stage information.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;SnapshotId&quot;:&quot;snap-i8j29kw8nubqb0hotn&quot;}</p>
@@ -891,7 +982,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段名称</p>
+             * <p>Deployment stage name.</p>
              * 
              * <strong>example:</strong>
              * <p>PrepareSnapshot</p>
@@ -902,7 +993,17 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段状态</p>
+             * <p>Deployment stage status. Valid values:  </p>
+             * <ul>
+             * <li>NotStarted: Not started.  </li>
+             * <li>WaitForConfirm: Waiting for confirmation.  </li>
+             * <li>Waiting: Waiting.  </li>
+             * <li>Creating: Creating.  </li>
+             * <li>Running: Running.  </li>
+             * <li>Succeed: Succeeded.  </li>
+             * <li>Failed: Failed.  </li>
+             * <li>Canceled: Canceled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Running</p>

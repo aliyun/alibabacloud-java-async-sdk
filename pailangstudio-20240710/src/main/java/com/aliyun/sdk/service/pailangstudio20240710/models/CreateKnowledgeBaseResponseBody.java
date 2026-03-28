@@ -80,7 +80,10 @@ public class CreateKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * KnowledgeBaseId.
+         * <p>Knowledge base ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-ksicx823d</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.knowledgeBaseId = knowledgeBaseId;
@@ -88,7 +91,10 @@ public class CreateKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48E6392E-C3C9-5212-9FAD-13256ABD9AF6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class CreateKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

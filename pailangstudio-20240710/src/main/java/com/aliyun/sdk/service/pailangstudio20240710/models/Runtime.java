@@ -20,6 +20,9 @@ public class Runtime extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
+    @com.aliyun.core.annotation.NameInMap("AutoUpdateImage")
+    private Boolean autoUpdateImage;
+
     @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
@@ -79,6 +82,7 @@ public class Runtime extends TeaModel {
 
     private Runtime(Builder builder) {
         this.accessibility = builder.accessibility;
+        this.autoUpdateImage = builder.autoUpdateImage;
         this.creator = builder.creator;
         this.credentialConfig = builder.credentialConfig;
         this.dataSources = builder.dataSources;
@@ -117,6 +121,13 @@ public class Runtime extends TeaModel {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return autoUpdateImage
+     */
+    public Boolean getAutoUpdateImage() {
+        return this.autoUpdateImage;
     }
 
     /**
@@ -254,6 +265,7 @@ public class Runtime extends TeaModel {
 
     public static final class Builder {
         private String accessibility; 
+        private Boolean autoUpdateImage; 
         private String creator; 
         private CredentialConfig credentialConfig; 
         private java.util.List<DataSources> dataSources; 
@@ -279,6 +291,7 @@ public class Runtime extends TeaModel {
 
         private Builder(Runtime model) {
             this.accessibility = model.accessibility;
+            this.autoUpdateImage = model.autoUpdateImage;
             this.creator = model.creator;
             this.credentialConfig = model.credentialConfig;
             this.dataSources = model.dataSources;
@@ -305,6 +318,14 @@ public class Runtime extends TeaModel {
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * AutoUpdateImage.
+         */
+        public Builder autoUpdateImage(Boolean autoUpdateImage) {
+            this.autoUpdateImage = autoUpdateImage;
             return this;
         }
 

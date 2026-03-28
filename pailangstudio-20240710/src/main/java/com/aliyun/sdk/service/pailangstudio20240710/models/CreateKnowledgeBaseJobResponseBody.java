@@ -67,7 +67,10 @@ public class CreateKnowledgeBaseJobResponseBody extends TeaModel {
         } 
 
         /**
-         * KnowledgeBaseJobId.
+         * <p>Knowledge Base Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kbjob-9mn******1z54</p>
          */
         public Builder knowledgeBaseJobId(String knowledgeBaseJobId) {
             this.knowledgeBaseJobId = knowledgeBaseJobId;
@@ -75,7 +78,10 @@ public class CreateKnowledgeBaseJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

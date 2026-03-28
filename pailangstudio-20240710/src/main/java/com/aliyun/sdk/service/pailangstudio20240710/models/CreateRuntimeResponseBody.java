@@ -67,7 +67,10 @@ public class CreateRuntimeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * RuntimeId.
+         * <p>Runtime ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtime-apje******beaz</p>
          */
         public Builder runtimeId(String runtimeId) {
             this.runtimeId = runtimeId;

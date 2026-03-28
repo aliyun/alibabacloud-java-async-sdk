@@ -54,7 +54,10 @@ public class DeleteKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C25324E3-18E6-50D8-9026-16D74AAEEB26</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

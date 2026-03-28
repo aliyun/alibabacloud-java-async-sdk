@@ -90,6 +90,7 @@ public class DeleteKnowledgeBaseJobRequest extends Request {
         } 
 
         /**
+         * <p>知识库ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteKnowledgeBaseJobRequest extends Request {
         }
 
         /**
+         * <p>知识库任务ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteKnowledgeBaseJobRequest extends Request {
         }
 
         /**
+         * <p>知识库所在工作空间ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

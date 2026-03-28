@@ -227,7 +227,10 @@ public class ListRuntimesRequest extends Request {
         } 
 
         /**
-         * Creator.
+         * <p>The creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2485765****023475</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -236,7 +239,10 @@ public class ListRuntimesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records allowed to be returned by this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -245,7 +251,14 @@ public class ListRuntimesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. The pagination token used in the next request to retrieve a new page of results.</p>
+         * <ul>
+         * <li>This value is left empty during the first request.</li>
+         * <li>The <code>NextToken</code> value returned by the previous response passed in subsequent requests.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -254,7 +267,14 @@ public class ListRuntimesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sorting method.</p>
+         * <ul>
+         * <li>ASC: ascending order.</li>
+         * <li>DESC: Descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -263,7 +283,10 @@ public class ListRuntimesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -272,7 +295,10 @@ public class ListRuntimesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -281,7 +307,10 @@ public class ListRuntimesRequest extends Request {
         }
 
         /**
-         * RuntimeId.
+         * <p>Runtime ID. Supports exact search by runtime ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtime-apje******beaz</p>
          */
         public Builder runtimeId(String runtimeId) {
             this.putQueryParameter("RuntimeId", runtimeId);
@@ -290,7 +319,10 @@ public class ListRuntimesRequest extends Request {
         }
 
         /**
-         * RuntimeName.
+         * <p>The name of the runtime. Supports fuzzy search by name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev01</p>
          */
         public Builder runtimeName(String runtimeName) {
             this.putQueryParameter("RuntimeName", runtimeName);
@@ -299,7 +331,27 @@ public class ListRuntimesRequest extends Request {
         }
 
         /**
-         * RuntimeStatus.
+         * <p>Runtime status. Valid values:</p>
+         * <ul>
+         * <li>Creating: The data cache is being created.</li>
+         * <li>SaveFailed: Failed to save the runtime image.</li>
+         * <li>Stopped: The file system is stopped.</li>
+         * <li>Failed: Failed</li>
+         * <li>ResourceAllocating: Resource allocation in progress</li>
+         * <li>Stopping: Stopping in progress</li>
+         * <li>Updating: Updating in progress</li>
+         * <li>Saving: Saving the runtime image in progress</li>
+         * <li>Queuing: Queuing in progress</li>
+         * <li>Recovering: The instance is recovering.</li>
+         * <li>Starting: The instance is being created.</li>
+         * <li>Running: The gateway is running.</li>
+         * <li>Saved: The runtime image is saved.</li>
+         * <li>Deleting: The mount target is being deleted.</li>
+         * <li>EnvPreparing: Preparing environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder runtimeStatus(String runtimeStatus) {
             this.putQueryParameter("RuntimeStatus", runtimeStatus);
@@ -308,7 +360,18 @@ public class ListRuntimesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used to sort the results in paged queries. Default value: GmtCreateTime. Valid values are as follows:</p>
+         * <ul>
+         * <li>GmtCreateTime (default value): Sort by the time when created.</li>
+         * <li>GmtModifiedTime: Sorted by modification time.</li>
+         * <li>Creator: The ID of the creator.</li>
+         * <li>WorkDir: the working path.</li>
+         * <li>RuntimeName: the runtime parameter.</li>
+         * <li>Status: the status of the runtime.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -317,7 +380,10 @@ public class ListRuntimesRequest extends Request {
         }
 
         /**
-         * Version.
+         * <p>Version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("Version", version);
@@ -326,7 +392,10 @@ public class ListRuntimesRequest extends Request {
         }
 
         /**
-         * WorkDir.
+         * <p>The OSS path of the working directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket.oss-cn-hangzhou-internal.aliyuncs.com/workdir/</p>
          */
         public Builder workDir(String workDir) {
             this.putQueryParameter("WorkDir", workDir);
@@ -335,7 +404,10 @@ public class ListRuntimesRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the DataWorks workspace. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

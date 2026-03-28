@@ -235,7 +235,14 @@ public class CreateKnowledgeBaseRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility of the workspace.</p>
+         * <ul>
+         * <li>PRIVATE: The workspace is visible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: The model is visible to all users in the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -244,6 +251,7 @@ public class CreateKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>File slicing configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder chunkConfig(ChunkConfig chunkConfig) {
@@ -253,6 +261,7 @@ public class CreateKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>Data source.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dataSources(java.util.List<DataSources> dataSources) {
@@ -262,7 +271,10 @@ public class CreateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Custom description of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description of the knowledge base.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -271,6 +283,7 @@ public class CreateKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>Vector index configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder embeddingConfig(EmbeddingConfig embeddingConfig) {
@@ -280,7 +293,7 @@ public class CreateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * IndexColumnConfig.
+         * <p>Structured knowledge base field column configuration.</p>
          */
         public Builder indexColumnConfig(IndexColumnConfig indexColumnConfig) {
             this.putBodyParameter("IndexColumnConfig", indexColumnConfig);
@@ -289,6 +302,13 @@ public class CreateKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The type of the knowledge base. Specifies whether to disable the instance protection period. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>TEXT: Document.</li>
+         * <li>STRUCTURED: Structured data.</li>
+         * <li>IMAGE: Picture.</li>
+         * <li>VIDEO: Video.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +321,7 @@ public class CreateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * MetaDataConfig.
+         * <p>The metadata configurations.</p>
          */
         public Builder metaDataConfig(MetaDataConfig metaDataConfig) {
             this.putBodyParameter("MetaDataConfig", metaDataConfig);
@@ -310,6 +330,12 @@ public class CreateKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The name of the knowledge base. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>Can contain letters, numbers, or underscores (_).</li>
+         * <li>Starts with a letter.</li>
+         * <li>Length is 1 to 127 characters.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -322,6 +348,7 @@ public class CreateKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>Storage path for output data.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -334,7 +361,10 @@ public class CreateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * RuntimeId.
+         * <p>Runtime ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtime-apje******beaz</p>
          */
         public Builder runtimeId(String runtimeId) {
             this.putBodyParameter("RuntimeId", runtimeId);
@@ -343,6 +373,7 @@ public class CreateKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>Vector store configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder vectorDBConfig(VectorDBConfig vectorDBConfig) {
@@ -352,6 +383,7 @@ public class CreateKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace. For more information about how to obtain the ID of a workspace, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -449,7 +481,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>分块时长</p>
+             * <p>Chunk duration, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -460,7 +492,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>分块重叠大小</p>
+             * <p>Chunk overlap size</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -471,7 +503,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>分块大小</p>
+             * <p>Chunk size</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -482,7 +514,11 @@ public class CreateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>分块策略</p>
+             * <p>Chunking strategy. Supported strategies are as follows:</p>
+             * <ul>
+             * <li>Default. System default slicing strategy.</li>
+             * <li>Asr. Split by audio content; valid for video knowledge bases.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Default</p>
@@ -539,7 +575,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>统一资源识别码</p>
+             * <p>Source file storage path.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/langstudio/source/</p>
@@ -611,7 +647,13 @@ public class CreateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>Embedding连接ID</p>
+             * <p>Index service connection ID. For more information about how to obtain the connection ID, see <a href="https://help.aliyun.com/document_detail/2922801.html">ListConnections</a>. The connection types supported by each type of knowledge base are as follows:</p>
+             * <ul>
+             * <li>Documents: BaiLian LLM Service, General Embedding Model Service, AI Search Open Platform Model Service.</li>
+             * <li>Structured Data: BaiLian LLM Service, General Embedding Model Service, AI Search Open Platform Model Service.</li>
+             * <li>Images: BaiLian LLM Service, General Multimodal Embedding Model Service.</li>
+             * <li>Videos: BaiLian LLM Service.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -623,7 +665,13 @@ public class CreateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>模型</p>
+             * <p>Model name. Specifically, when selecting the BaiLian LLM Service, the models supported by each type of knowledge base are as follows:</p>
+             * <ul>
+             * <li>Documents: text-embedding-v1, text-embedding-v2, text-embedding-v3, text-embedding-v4</li>
+             * <li>Structured Data: text-embedding-v1, text-embedding-v2, text-embedding-v3, text-embedding-v4</li>
+             * <li>Images: multimodal-embedding-v1</li>
+             * <li>Videos: qwen2.5-vl-embedding</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -681,7 +729,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>列Key</p>
+             * <p>The column name.</p>
              * 
              * <strong>example:</strong>
              * <p>column1</p>
@@ -738,7 +786,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>列Key</p>
+             * <p>Column name.</p>
              * 
              * <strong>example:</strong>
              * <p>column1</p>
@@ -795,7 +843,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>列Key</p>
+             * <p>Column name.</p>
              * 
              * <strong>example:</strong>
              * <p>column1</p>
@@ -878,7 +926,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>所有列名</p>
+             * <p>All column names.</p>
              */
             public Builder columnDefinitions(java.util.List<ColumnDefinitions> columnDefinitions) {
                 this.columnDefinitions = columnDefinitions;
@@ -886,7 +934,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>内容检索列</p>
+             * <p>Content filtering column. The fields in this list support keyword-based retrieval.</p>
              */
             public Builder contentColumns(java.util.List<ContentColumns> contentColumns) {
                 this.contentColumns = contentColumns;
@@ -894,7 +942,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>Embedding列</p>
+             * <p>Vector retrieval column. The fields in this list will be vectorized and participate in retrieval.</p>
              */
             public Builder embeddingColumns(java.util.List<EmbeddingColumns> embeddingColumns) {
                 this.embeddingColumns = embeddingColumns;
@@ -961,7 +1009,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>元数据Key</p>
+             * <p>Metadata field name.</p>
              * 
              * <strong>example:</strong>
              * <p>author</p>
@@ -972,7 +1020,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>元数据Value类型</p>
+             * <p>Metadata field type. Currently, only the String class type is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>String</p>
@@ -1029,7 +1077,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>自定义元数据</p>
+             * <p>Custom metadata.</p>
              */
             public Builder customMetaData(java.util.List<CustomMetaData> customMetaData) {
                 this.customMetaData = customMetaData;
@@ -1110,7 +1158,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>Collectioin名称</p>
+             * <p>Vector database table or collection name.</p>
              * 
              * <strong>example:</strong>
              * <p>my_collection</p>
@@ -1121,7 +1169,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>Embedding连接ID</p>
+             * <p>Vector database connection ID. For more information about how to obtain the connection ID, see <a href="https://help.aliyun.com/document_detail/2922801.html">ListConnections</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>conn-7y5y******jja7</p>
@@ -1132,7 +1180,12 @@ public class CreateKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>VectorDB类型</p>
+             * <p>Vector database type. Supports the following values:</p>
+             * <ul>
+             * <li>Elasticsearch</li>
+             * <li>Milvus</li>
+             * <li>Faiss (only supported for document and structured data knowledge bases)</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

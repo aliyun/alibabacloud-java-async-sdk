@@ -199,7 +199,10 @@ public class ListKnowledgeBaseJobsRequest extends Request {
         } 
 
         /**
-         * KnowledgeBaseId.
+         * <p>知识库ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-ksicx823d</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.putPathParameter("KnowledgeBaseId", knowledgeBaseId);
@@ -208,7 +211,13 @@ public class ListKnowledgeBaseJobsRequest extends Request {
         }
 
         /**
-         * JobAction.
+         * <p>任务操作类型。</p>
+         * <ul>
+         * <li>SyncIndex：更新知识库索引</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SyncIndex</p>
          */
         public Builder jobAction(String jobAction) {
             this.putQueryParameter("JobAction", jobAction);
@@ -217,7 +226,10 @@ public class ListKnowledgeBaseJobsRequest extends Request {
         }
 
         /**
-         * KnowledgeBaseJobId.
+         * <p>知识库任务ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kbjob-9m******54</p>
          */
         public Builder knowledgeBaseJobId(String knowledgeBaseJobId) {
             this.putQueryParameter("KnowledgeBaseJobId", knowledgeBaseJobId);
@@ -226,7 +238,10 @@ public class ListKnowledgeBaseJobsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>使用 NextToken 方式查询时，每次最多返回的结果数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -235,7 +250,10 @@ public class ListKnowledgeBaseJobsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>用来标记当前开始读取的位置，置空表示从头开始。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -244,7 +262,14 @@ public class ListKnowledgeBaseJobsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>排序方式。</p>
+         * <ul>
+         * <li>ASC：升序。</li>
+         * <li>DESC：降序。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -253,7 +278,10 @@ public class ListKnowledgeBaseJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>当前页数。 取值范围：大于0。 默认值：1。如果同时传入MaxResults，则使用NextToken查询方式，忽略此字段值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -262,7 +290,10 @@ public class ListKnowledgeBaseJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>每页查询的数量。如果同时传入 MaxResults，则以 MaxResults 数量为准。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -271,7 +302,10 @@ public class ListKnowledgeBaseJobsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>排序字段。目前只支持GmtCreateTime。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -280,7 +314,15 @@ public class ListKnowledgeBaseJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>知识库任务状态。</p>
+         * <ul>
+         * <li>Running: 运行中。</li>
+         * <li>Success: 运行成功。</li>
+         * <li>Failed: 运行失败。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -289,7 +331,10 @@ public class ListKnowledgeBaseJobsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>知识库所在工作空间ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

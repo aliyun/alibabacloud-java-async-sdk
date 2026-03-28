@@ -67,7 +67,10 @@ public class CreateSnapshotResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotId.
+         * <p>Snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snap-asfg******123</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.snapshotId = snapshotId;

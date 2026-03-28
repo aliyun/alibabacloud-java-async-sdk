@@ -93,7 +93,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>切片列表</p>
+         * <p>Segment list.</p>
          */
         public Builder knowledgeBaseChunks(java.util.List<KnowledgeBaseChunks> knowledgeBaseChunks) {
             this.knowledgeBaseChunks = knowledgeBaseChunks;
@@ -101,7 +101,10 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>Maximum number of records allowed to be returned in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +112,10 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of segments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -209,7 +218,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>下载地址</p>
+             * <p>Download URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://mybucket.oss-cn-shanghai.aliyuncs.com/">https://mybucket.oss-cn-shanghai.aliyuncs.com/</a>...</p>
@@ -220,7 +229,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>占位符ID</p>
+             * <p>Placeholder ID.</p>
              * 
              * <strong>example:</strong>
              * <p>IMAGE_PLACEHOLDER_0</p>
@@ -231,7 +240,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>类型</p>
+             * <p>Attachment type.</p>
              * 
              * <strong>example:</strong>
              * <p>image</p>
@@ -242,7 +251,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>路径</p>
+             * <p>Attachment path.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://mybucket/path/file.txt</p>
@@ -325,7 +334,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>文件元数据ID</p>
+             * <p>File metadata ID.</p>
              * 
              * <strong>example:</strong>
              * <p>xd8e****79du</p>
@@ -336,7 +345,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>File name.</p>
              * 
              * <strong>example:</strong>
              * <p>file1.txt</p>
@@ -347,7 +356,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件地址</p>
+             * <p>File path.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://mybucketpath/file1.txt</p>
@@ -560,7 +569,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>切片附属信息</p>
+             * <p>List of segment attachments.</p>
              */
             public Builder chunkAttachment(java.util.List<ChunkAttachment> chunkAttachment) {
                 this.chunkAttachment = chunkAttachment;
@@ -568,7 +577,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>切片内容</p>
+             * <p>Segment content.</p>
              * 
              * <strong>example:</strong>
              * <p>content</p>
@@ -579,7 +588,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>切片结束位置</p>
+             * <p>Segment end position. Returns the number of milliseconds from the start of file playback.</p>
              * 
              * <strong>example:</strong>
              * <p>30000</p>
@@ -590,7 +599,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>切片顺序</p>
+             * <p>Ordinal number of the segment within the file.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -601,7 +610,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>切片大小</p>
+             * <p>Segment size.</p>
              * 
              * <strong>example:</strong>
              * <p>1873</p>
@@ -612,7 +621,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>切片起始位置</p>
+             * <p>Segment start position. Returns the number of milliseconds from the start of file playback.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -623,7 +632,11 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>切片状态</p>
+             * <p>Segment status.  </p>
+             * <ul>
+             * <li>Enable: enabled.  </li>
+             * <li>Disable: disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -634,7 +647,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>切片下载地址</p>
+             * <p>Download URL of the segment. Returned for image and video files.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://mybucket.oss-cn-shanghai.aliyuncs.com/">https://mybucket.oss-cn-shanghai.aliyuncs.com/</a>...</p>
@@ -645,7 +658,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>切片ID</p>
+             * <p>Segment ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -656,7 +669,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>知识库ID</p>
+             * <p>Knowledge base ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-ix****o9</p>
@@ -667,7 +680,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>原始文件信息</p>
+             * <p>Original file information.</p>
              */
             public Builder metaData(MetaData metaData) {
                 this.metaData = metaData;
@@ -675,7 +688,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>切片缩略图</p>
+             * <p>Thumbnail of the segment. Returned for image and video files.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://mybucket.oss-cn-shanghai.aliyuncs.com/">https://mybucket.oss-cn-shanghai.aliyuncs.com/</a>...</p>
@@ -686,7 +699,7 @@ public class ListKnowledgeBaseChunksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>知识库版本</p>
+             * <p>Knowledge base version.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>

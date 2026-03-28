@@ -29,6 +29,9 @@ public class GetSnapshotResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+    private String errorMessage;
+
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
@@ -50,6 +53,9 @@ public class GetSnapshotResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SnapshotResourceType")
     private String snapshotResourceType;
 
+    @com.aliyun.core.annotation.NameInMap("SnapshotStatus")
+    private String snapshotStatus;
+
     @com.aliyun.core.annotation.NameInMap("SnapshotStoragePath")
     private String snapshotStoragePath;
 
@@ -67,6 +73,7 @@ public class GetSnapshotResponseBody extends TeaModel {
         this.creationType = builder.creationType;
         this.creator = builder.creator;
         this.description = builder.description;
+        this.errorMessage = builder.errorMessage;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.requestId = builder.requestId;
@@ -74,6 +81,7 @@ public class GetSnapshotResponseBody extends TeaModel {
         this.snapshotName = builder.snapshotName;
         this.snapshotResourceId = builder.snapshotResourceId;
         this.snapshotResourceType = builder.snapshotResourceType;
+        this.snapshotStatus = builder.snapshotStatus;
         this.snapshotStoragePath = builder.snapshotStoragePath;
         this.snapshotUrl = builder.snapshotUrl;
         this.workDir = builder.workDir;
@@ -118,6 +126,13 @@ public class GetSnapshotResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return errorMessage
+     */
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     /**
@@ -170,6 +185,13 @@ public class GetSnapshotResponseBody extends TeaModel {
     }
 
     /**
+     * @return snapshotStatus
+     */
+    public String getSnapshotStatus() {
+        return this.snapshotStatus;
+    }
+
+    /**
      * @return snapshotStoragePath
      */
     public String getSnapshotStoragePath() {
@@ -202,6 +224,7 @@ public class GetSnapshotResponseBody extends TeaModel {
         private String creationType; 
         private String creator; 
         private String description; 
+        private String errorMessage; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String requestId; 
@@ -209,6 +232,7 @@ public class GetSnapshotResponseBody extends TeaModel {
         private String snapshotName; 
         private String snapshotResourceId; 
         private String snapshotResourceType; 
+        private String snapshotStatus; 
         private String snapshotStoragePath; 
         private String snapshotUrl; 
         private String workDir; 
@@ -222,6 +246,7 @@ public class GetSnapshotResponseBody extends TeaModel {
             this.creationType = model.creationType;
             this.creator = model.creator;
             this.description = model.description;
+            this.errorMessage = model.errorMessage;
             this.gmtCreateTime = model.gmtCreateTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.requestId = model.requestId;
@@ -229,6 +254,7 @@ public class GetSnapshotResponseBody extends TeaModel {
             this.snapshotName = model.snapshotName;
             this.snapshotResourceId = model.snapshotResourceId;
             this.snapshotResourceType = model.snapshotResourceType;
+            this.snapshotStatus = model.snapshotStatus;
             this.snapshotStoragePath = model.snapshotStoragePath;
             this.snapshotUrl = model.snapshotUrl;
             this.workDir = model.workDir;
@@ -236,7 +262,14 @@ public class GetSnapshotResponseBody extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>Workspace visibility. Possible values are:</p>
+         * <ul>
+         * <li>PRIVATE: In this workspace, visible only to you and administrators.</li>
+         * <li>PUBLIC: In this workspace, visible to everyone.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -244,7 +277,15 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * CreationType.
+         * <p>Snapshot creation type. Valid values:</p>
+         * <ul>
+         * <li>ManualCreated: Manually created</li>
+         * <li>DeploymentAutoCreated: Automatically created by service deployment</li>
+         * <li>EvaluationAutoCreated: Automatically created by evaluation job</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ManualCreated</p>
          */
         public Builder creationType(String creationType) {
             this.creationType = creationType;
@@ -252,7 +293,10 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * Creator.
+         * <p>Creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2680******4103</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -260,7 +304,10 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Snapshot description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -268,7 +315,18 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * ErrorMessage.
+         */
+        public Builder errorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+
+        /**
+         * <p>Creation Time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-09-24T07:33:53Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -276,7 +334,10 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>Updated At.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-09-24T08:58:35Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -284,7 +345,10 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -292,7 +356,10 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotId.
+         * <p>Snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snap-asfg******123</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.snapshotId = snapshotId;
@@ -300,7 +367,10 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotName.
+         * <p>Snapshot name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot01</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.snapshotName = snapshotName;
@@ -308,7 +378,10 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotResourceId.
+         * <p>Snapshot resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow-asfg******1234</p>
          */
         public Builder snapshotResourceId(String snapshotResourceId) {
             this.snapshotResourceId = snapshotResourceId;
@@ -316,7 +389,13 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotResourceType.
+         * <p>Snapshot resource type. Valid values:</p>
+         * <ul>
+         * <li>Flow: pipeline</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Flow</p>
          */
         public Builder snapshotResourceType(String snapshotResourceType) {
             this.snapshotResourceType = snapshotResourceType;
@@ -324,7 +403,18 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotStoragePath.
+         * SnapshotStatus.
+         */
+        public Builder snapshotStatus(String snapshotStatus) {
+            this.snapshotStatus = snapshotStatus;
+            return this;
+        }
+
+        /**
+         * <p>OSS path where the snapshot source file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket.oss-cn-hangzhou.aliyuncs.com/workdir/snapshot/snap-1234/src</p>
          */
         public Builder snapshotStoragePath(String snapshotStoragePath) {
             this.snapshotStoragePath = snapshotStoragePath;
@@ -332,7 +422,10 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotUrl.
+         * <p>Snapshot download URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://path/to/snapshot/zipfile">https://path/to/snapshot/zipfile</a></p>
          */
         public Builder snapshotUrl(String snapshotUrl) {
             this.snapshotUrl = snapshotUrl;
@@ -340,7 +433,10 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * WorkDir.
+         * <p>The OSS working directory where the snapshot is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket.oss-cn-hangzhou-internal.aliyuncs.com/workdir/</p>
          */
         public Builder workDir(String workDir) {
             this.workDir = workDir;
@@ -348,7 +444,10 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Workspace ID. For information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

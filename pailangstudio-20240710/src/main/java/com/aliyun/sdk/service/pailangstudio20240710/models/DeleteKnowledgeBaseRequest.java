@@ -75,6 +75,7 @@ public class DeleteKnowledgeBaseRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Knowledge Base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
