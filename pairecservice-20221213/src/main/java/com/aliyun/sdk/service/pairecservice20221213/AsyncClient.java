@@ -116,6 +116,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCrowdResponse> createCrowd(CreateCrowdRequest request);
 
     /**
+     * @param request the request parameters of CreateDataDiagnosis  CreateDataDiagnosisRequest
+     * @return CreateDataDiagnosisResponse
+     */
+    CompletableFuture<CreateDataDiagnosisResponse> createDataDiagnosis(CreateDataDiagnosisRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataDiagnosisJobs  CreateDataDiagnosisJobsRequest
+     * @return CreateDataDiagnosisJobsResponse
+     */
+    CompletableFuture<CreateDataDiagnosisJobsResponse> createDataDiagnosisJobs(CreateDataDiagnosisJobsRequest request);
+
+    /**
      * @param request the request parameters of CreateEngineConfig  CreateEngineConfigRequest
      * @return CreateEngineConfigResponse
      */
@@ -272,6 +284,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCrowdResponse> deleteCrowd(DeleteCrowdRequest request);
 
     /**
+     * @param request the request parameters of DeleteDataDiagnosis  DeleteDataDiagnosisRequest
+     * @return DeleteDataDiagnosisResponse
+     */
+    CompletableFuture<DeleteDataDiagnosisResponse> deleteDataDiagnosis(DeleteDataDiagnosisRequest request);
+
+    /**
      * @param request the request parameters of DeleteEngineConfig  DeleteEngineConfigRequest
      * @return DeleteEngineConfigResponse
      */
@@ -420,6 +438,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCalculationJobResponse
      */
     CompletableFuture<GetCalculationJobResponse> getCalculationJob(GetCalculationJobRequest request);
+
+    /**
+     * @param request the request parameters of GetDataDiagnosis  GetDataDiagnosisRequest
+     * @return GetDataDiagnosisResponse
+     */
+    CompletableFuture<GetDataDiagnosisResponse> getDataDiagnosis(GetDataDiagnosisRequest request);
 
     /**
      * @param request the request parameters of GetEngineConfig  GetEngineConfigRequest
@@ -600,6 +624,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCrowdsResponse
      */
     CompletableFuture<ListCrowdsResponse> listCrowds(ListCrowdsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataDiagnoses  ListDataDiagnosesRequest
+     * @return ListDataDiagnosesResponse
+     */
+    CompletableFuture<ListDataDiagnosesResponse> listDataDiagnoses(ListDataDiagnosesRequest request);
+
+    /**
+     * @param request the request parameters of ListDataDiagnosisJobs  ListDataDiagnosisJobsRequest
+     * @return ListDataDiagnosisJobsResponse
+     */
+    CompletableFuture<ListDataDiagnosisJobsResponse> listDataDiagnosisJobs(ListDataDiagnosisJobsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataDiagnosisReports  ListDataDiagnosisReportsRequest
+     * @return ListDataDiagnosisReportsResponse
+     */
+    CompletableFuture<ListDataDiagnosisReportsResponse> listDataDiagnosisReports(ListDataDiagnosisReportsRequest request);
 
     /**
      * @param request the request parameters of ListEngineConfigs  ListEngineConfigsRequest
@@ -824,6 +866,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PushResourceRuleResponse> pushResourceRule(PushResourceRuleRequest request);
 
     /**
+     * @param request the request parameters of QueryDataDiagnosisStatistics  QueryDataDiagnosisStatisticsRequest
+     * @return QueryDataDiagnosisStatisticsResponse
+     */
+    CompletableFuture<QueryDataDiagnosisStatisticsResponse> queryDataDiagnosisStatistics(QueryDataDiagnosisStatisticsRequest request);
+
+    /**
      * @param request the request parameters of QuerySampleConsistencyJobDifference  QuerySampleConsistencyJobDifferenceRequest
      * @return QuerySampleConsistencyJobDifferenceResponse
      */
@@ -918,6 +966,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCrowdResponse
      */
     CompletableFuture<UpdateCrowdResponse> updateCrowd(UpdateCrowdRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataDiagnosis  UpdateDataDiagnosisRequest
+     * @return UpdateDataDiagnosisResponse
+     */
+    CompletableFuture<UpdateDataDiagnosisResponse> updateDataDiagnosis(UpdateDataDiagnosisRequest request);
 
     /**
      * @param request the request parameters of UpdateEngineConfig  UpdateEngineConfigRequest

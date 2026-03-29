@@ -328,6 +328,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateDataDiagnosis  CreateDataDiagnosisRequest
+     * @return CreateDataDiagnosisResponse
+     */
+    @Override
+    public CompletableFuture<CreateDataDiagnosisResponse> createDataDiagnosis(CreateDataDiagnosisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDataDiagnosis").setMethod(HttpMethod.POST).setPathRegex("/api/v1/datadiagnoses").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDataDiagnosisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDataDiagnosisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateDataDiagnosisJobs  CreateDataDiagnosisJobsRequest
+     * @return CreateDataDiagnosisJobsResponse
+     */
+    @Override
+    public CompletableFuture<CreateDataDiagnosisJobsResponse> createDataDiagnosisJobs(CreateDataDiagnosisJobsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDataDiagnosisJobs").setMethod(HttpMethod.POST).setPathRegex("/api/v1/batch/datadiagnosisjobs/create").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDataDiagnosisJobsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDataDiagnosisJobsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateEngineConfig  CreateEngineConfigRequest
      * @return CreateEngineConfigResponse
      */
@@ -796,6 +832,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteDataDiagnosis  DeleteDataDiagnosisRequest
+     * @return DeleteDataDiagnosisResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDataDiagnosisResponse> deleteDataDiagnosis(DeleteDataDiagnosisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDataDiagnosis").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/datadiagnoses/{DataDiagnosisId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDataDiagnosisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDataDiagnosisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteEngineConfig  DeleteEngineConfigRequest
      * @return DeleteEngineConfigResponse
      */
@@ -1240,6 +1294,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetCalculationJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDataDiagnosis  GetDataDiagnosisRequest
+     * @return GetDataDiagnosisResponse
+     */
+    @Override
+    public CompletableFuture<GetDataDiagnosisResponse> getDataDiagnosis(GetDataDiagnosisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDataDiagnosis").setMethod(HttpMethod.GET).setPathRegex("/api/v1/datadiagnoses/{DataDiagnosisId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDataDiagnosisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDataDiagnosisResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1780,6 +1852,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListCrowdsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDataDiagnoses  ListDataDiagnosesRequest
+     * @return ListDataDiagnosesResponse
+     */
+    @Override
+    public CompletableFuture<ListDataDiagnosesResponse> listDataDiagnoses(ListDataDiagnosesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDataDiagnoses").setMethod(HttpMethod.GET).setPathRegex("/api/v1/datadiagnoses").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDataDiagnosesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDataDiagnosesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDataDiagnosisJobs  ListDataDiagnosisJobsRequest
+     * @return ListDataDiagnosisJobsResponse
+     */
+    @Override
+    public CompletableFuture<ListDataDiagnosisJobsResponse> listDataDiagnosisJobs(ListDataDiagnosisJobsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDataDiagnosisJobs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/datadiagnosisjobs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDataDiagnosisJobsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDataDiagnosisJobsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDataDiagnosisReports  ListDataDiagnosisReportsRequest
+     * @return ListDataDiagnosisReportsResponse
+     */
+    @Override
+    public CompletableFuture<ListDataDiagnosisReportsResponse> listDataDiagnosisReports(ListDataDiagnosisReportsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDataDiagnosisReports").setMethod(HttpMethod.GET).setPathRegex("/api/v1/datadiagnoses/{DataDiagnosisId}/reports").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDataDiagnosisReportsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDataDiagnosisReportsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2452,6 +2578,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryDataDiagnosisStatistics  QueryDataDiagnosisStatisticsRequest
+     * @return QueryDataDiagnosisStatisticsResponse
+     */
+    @Override
+    public CompletableFuture<QueryDataDiagnosisStatisticsResponse> queryDataDiagnosisStatistics(QueryDataDiagnosisStatisticsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryDataDiagnosisStatistics").setMethod(HttpMethod.POST).setPathRegex("/api/v1/datadiagnoses/{DataDiagnosisId}/statistics/action/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryDataDiagnosisStatisticsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryDataDiagnosisStatisticsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QuerySampleConsistencyJobDifference  QuerySampleConsistencyJobDifferenceRequest
      * @return QuerySampleConsistencyJobDifferenceResponse
      */
@@ -2734,6 +2878,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateCrowdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDataDiagnosis  UpdateDataDiagnosisRequest
+     * @return UpdateDataDiagnosisResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDataDiagnosisResponse> updateDataDiagnosis(UpdateDataDiagnosisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDataDiagnosis").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/datadiagnoses/{DataDiagnosisId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDataDiagnosisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDataDiagnosisResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

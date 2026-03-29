@@ -17,7 +17,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadRecommendationDataRequest</p>
  */
 public class UploadRecommendationDataRequest extends Request {
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -90,7 +90,7 @@ public class UploadRecommendationDataRequest extends Request {
          * RegionId.
          */
         public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
+            this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }

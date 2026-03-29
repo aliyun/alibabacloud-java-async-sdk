@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListExperimentGroupsRequest} extends {@link RequestModel}
+ * {@link ListDataDiagnosisJobsRequest} extends {@link RequestModel}
  *
- * <p>ListExperimentGroupsRequest</p>
+ * <p>ListDataDiagnosisJobsRequest</p>
  */
-public class ListExperimentGroupsRequest extends Request {
+public class ListDataDiagnosisJobsRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -27,36 +27,36 @@ public class ListExperimentGroupsRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("LayerId")
-    private String layerId;
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private String pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private String pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TimeRangeEnd")
-    private String timeRangeEnd;
+    @com.aliyun.core.annotation.NameInMap("Types")
+    private java.util.List<String> types;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TimeRangeStart")
-    private String timeRangeStart;
-
-    private ListExperimentGroupsRequest(Builder builder) {
+    private ListDataDiagnosisJobsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
-        this.layerId = builder.layerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.status = builder.status;
-        this.timeRangeEnd = builder.timeRangeEnd;
-        this.timeRangeStart = builder.timeRangeStart;
+        this.types = builder.types;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListExperimentGroupsRequest create() {
+    public static ListDataDiagnosisJobsRequest create() {
         return builder().build();
     }
 
@@ -80,10 +80,17 @@ public class ListExperimentGroupsRequest extends Request {
     }
 
     /**
-     * @return layerId
+     * @return pageNumber
      */
-    public String getLayerId() {
-        return this.layerId;
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public String getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -94,39 +101,32 @@ public class ListExperimentGroupsRequest extends Request {
     }
 
     /**
-     * @return timeRangeEnd
+     * @return types
      */
-    public String getTimeRangeEnd() {
-        return this.timeRangeEnd;
+    public java.util.List<String> getTypes() {
+        return this.types;
     }
 
-    /**
-     * @return timeRangeStart
-     */
-    public String getTimeRangeStart() {
-        return this.timeRangeStart;
-    }
-
-    public static final class Builder extends Request.Builder<ListExperimentGroupsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListDataDiagnosisJobsRequest, Builder> {
         private String regionId; 
         private String instanceId; 
-        private String layerId; 
+        private String pageNumber; 
+        private String pageSize; 
         private String status; 
-        private String timeRangeEnd; 
-        private String timeRangeStart; 
+        private java.util.List<String> types; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListExperimentGroupsRequest request) {
+        private Builder(ListDataDiagnosisJobsRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
-            this.layerId = request.layerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.status = request.status;
-            this.timeRangeEnd = request.timeRangeEnd;
-            this.timeRangeStart = request.timeRangeStart;
+            this.types = request.types;
         } 
 
         /**
@@ -142,7 +142,7 @@ public class ListExperimentGroupsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pairec-cn-abcdefg1234</p>
+         * <p>pairec-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -151,11 +151,20 @@ public class ListExperimentGroupsRequest extends Request {
         }
 
         /**
-         * LayerId.
+         * PageNumber.
          */
-        public Builder layerId(String layerId) {
-            this.putQueryParameter("LayerId", layerId);
-            this.layerId = layerId;
+        public Builder pageNumber(String pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(String pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -169,26 +178,18 @@ public class ListExperimentGroupsRequest extends Request {
         }
 
         /**
-         * TimeRangeEnd.
+         * Types.
          */
-        public Builder timeRangeEnd(String timeRangeEnd) {
-            this.putQueryParameter("TimeRangeEnd", timeRangeEnd);
-            this.timeRangeEnd = timeRangeEnd;
-            return this;
-        }
-
-        /**
-         * TimeRangeStart.
-         */
-        public Builder timeRangeStart(String timeRangeStart) {
-            this.putQueryParameter("TimeRangeStart", timeRangeStart);
-            this.timeRangeStart = timeRangeStart;
+        public Builder types(java.util.List<String> types) {
+            String typesShrink = shrink(types, "Types", "simple");
+            this.putQueryParameter("Types", typesShrink);
+            this.types = types;
             return this;
         }
 
         @Override
-        public ListExperimentGroupsRequest build() {
-            return new ListExperimentGroupsRequest(this);
+        public ListDataDiagnosisJobsRequest build() {
+            return new ListDataDiagnosisJobsRequest(this);
         } 
 
     } 
