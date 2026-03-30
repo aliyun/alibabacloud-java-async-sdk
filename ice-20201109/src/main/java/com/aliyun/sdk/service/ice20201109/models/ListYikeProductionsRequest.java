@@ -37,6 +37,10 @@ public class ListYikeProductionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private ListYikeProductionsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -44,6 +48,7 @@ public class ListYikeProductionsRequest extends Request {
         this.nextToken = builder.nextToken;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class ListYikeProductionsRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListYikeProductionsRequest, Builder> {
         private String regionId; 
         private Integer maxResults; 
         private String nextToken; 
         private Integer pageNo; 
         private Integer pageSize; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class ListYikeProductionsRequest extends Request {
             this.nextToken = request.nextToken;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -156,6 +170,15 @@ public class ListYikeProductionsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 
