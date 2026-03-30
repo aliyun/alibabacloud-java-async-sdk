@@ -351,6 +351,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
 
+        @com.aliyun.core.annotation.NameInMap("FullSnapshotSizeInBytes")
+        private Long fullSnapshotSizeInBytes;
+
         @com.aliyun.core.annotation.NameInMap("InstantAccess")
         private Boolean instantAccess;
 
@@ -429,6 +432,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.encrypted = builder.encrypted;
+            this.fullSnapshotSizeInBytes = builder.fullSnapshotSizeInBytes;
             this.instantAccess = builder.instantAccess;
             this.instantAccessRetentionDays = builder.instantAccessRetentionDays;
             this.KMSKeyId = builder.KMSKeyId;
@@ -496,6 +500,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          */
         public Boolean getEncrypted() {
             return this.encrypted;
+        }
+
+        /**
+         * @return fullSnapshotSizeInBytes
+         */
+        public Long getFullSnapshotSizeInBytes() {
+            return this.fullSnapshotSizeInBytes;
         }
 
         /**
@@ -672,6 +683,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String creationTime; 
             private String description; 
             private Boolean encrypted; 
+            private Long fullSnapshotSizeInBytes; 
             private Boolean instantAccess; 
             private Integer instantAccessRetentionDays; 
             private String KMSKeyId; 
@@ -706,6 +718,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
                 this.creationTime = model.creationTime;
                 this.description = model.description;
                 this.encrypted = model.encrypted;
+                this.fullSnapshotSizeInBytes = model.fullSnapshotSizeInBytes;
                 this.instantAccess = model.instantAccess;
                 this.instantAccessRetentionDays = model.instantAccessRetentionDays;
                 this.KMSKeyId = model.KMSKeyId;
@@ -797,6 +810,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * FullSnapshotSizeInBytes.
+             */
+            public Builder fullSnapshotSizeInBytes(Long fullSnapshotSizeInBytes) {
+                this.fullSnapshotSizeInBytes = fullSnapshotSizeInBytes;
                 return this;
             }
 

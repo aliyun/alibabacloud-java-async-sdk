@@ -428,6 +428,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelTaskResponse> cancelTask(CancelTaskRequest request);
 
     /**
+     * @param request the request parameters of CloneDisks  CloneDisksRequest
+     * @return CloneDisksResponse
+     */
+    CompletableFuture<CloneDisksResponse> cloneDisks(CloneDisksRequest request);
+
+    /**
      * @deprecated OpenAPI ConnectRouterInterface is deprecated, please use Vpc::2016-04-28::ConnectRouterInterface instead.  * @param request  the request parameters of ConnectRouterInterface  ConnectRouterInterfaceRequest
      * @return ConnectRouterInterfaceResponse
      */
