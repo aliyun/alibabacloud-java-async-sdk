@@ -42,6 +42,11 @@ public class CreateCloudAccountRequest extends Request {
     private String cloudAccountProviderName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudAccountSite")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
+    private String cloudAccountSite;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CloudAccountVendorType")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private String cloudAccountVendorType;
@@ -63,6 +68,7 @@ public class CreateCloudAccountRequest extends Request {
         this.cloudAccountExternalId = builder.cloudAccountExternalId;
         this.cloudAccountName = builder.cloudAccountName;
         this.cloudAccountProviderName = builder.cloudAccountProviderName;
+        this.cloudAccountSite = builder.cloudAccountSite;
         this.cloudAccountVendorType = builder.cloudAccountVendorType;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
@@ -117,6 +123,13 @@ public class CreateCloudAccountRequest extends Request {
     }
 
     /**
+     * @return cloudAccountSite
+     */
+    public String getCloudAccountSite() {
+        return this.cloudAccountSite;
+    }
+
+    /**
      * @return cloudAccountVendorType
      */
     public String getCloudAccountVendorType() {
@@ -143,6 +156,7 @@ public class CreateCloudAccountRequest extends Request {
         private String cloudAccountExternalId; 
         private String cloudAccountName; 
         private String cloudAccountProviderName; 
+        private String cloudAccountSite; 
         private String cloudAccountVendorType; 
         private String description; 
         private String instanceId; 
@@ -158,6 +172,7 @@ public class CreateCloudAccountRequest extends Request {
             this.cloudAccountExternalId = request.cloudAccountExternalId;
             this.cloudAccountName = request.cloudAccountName;
             this.cloudAccountProviderName = request.cloudAccountProviderName;
+            this.cloudAccountSite = request.cloudAccountSite;
             this.cloudAccountVendorType = request.cloudAccountVendorType;
             this.description = request.description;
             this.instanceId = request.instanceId;
@@ -218,6 +233,15 @@ public class CreateCloudAccountRequest extends Request {
         public Builder cloudAccountProviderName(String cloudAccountProviderName) {
             this.putQueryParameter("CloudAccountProviderName", cloudAccountProviderName);
             this.cloudAccountProviderName = cloudAccountProviderName;
+            return this;
+        }
+
+        /**
+         * CloudAccountSite.
+         */
+        public Builder cloudAccountSite(String cloudAccountSite) {
+            this.putQueryParameter("CloudAccountSite", cloudAccountSite);
+            this.cloudAccountSite = cloudAccountSite;
             return this;
         }
 
