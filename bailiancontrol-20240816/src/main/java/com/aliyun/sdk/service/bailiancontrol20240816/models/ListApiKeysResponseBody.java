@@ -241,12 +241,69 @@ public class ListApiKeysResponseBody extends TeaModel {
      *
      * <p>ListApiKeysResponseBody</p>
      */
+    public static class AuthSetModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authSetMode")
+        private String authSetMode;
+
+        private AuthSetModel(Builder builder) {
+            this.authSetMode = builder.authSetMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthSetModel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authSetMode
+         */
+        public String getAuthSetMode() {
+            return this.authSetMode;
+        }
+
+        public static final class Builder {
+            private String authSetMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthSetModel model) {
+                this.authSetMode = model.authSetMode;
+            } 
+
+            /**
+             * authSetMode.
+             */
+            public Builder authSetMode(String authSetMode) {
+                this.authSetMode = authSetMode;
+                return this;
+            }
+
+            public AuthSetModel build() {
+                return new AuthSetModel(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListApiKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApiKeysResponseBody</p>
+     */
     public static class ApiKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apiKeyValue")
         private String apiKeyValue;
 
         @com.aliyun.core.annotation.NameInMap("apikeyId")
         private String apikeyId;
+
+        @com.aliyun.core.annotation.NameInMap("authSetModel")
+        private AuthSetModel authSetModel;
 
         @com.aliyun.core.annotation.NameInMap("blocked")
         private Integer blocked;
@@ -281,6 +338,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         private ApiKeys(Builder builder) {
             this.apiKeyValue = builder.apiKeyValue;
             this.apikeyId = builder.apikeyId;
+            this.authSetModel = builder.authSetModel;
             this.blocked = builder.blocked;
             this.createTime = builder.createTime;
             this.creator = builder.creator;
@@ -313,6 +371,13 @@ public class ListApiKeysResponseBody extends TeaModel {
          */
         public String getApikeyId() {
             return this.apikeyId;
+        }
+
+        /**
+         * @return authSetModel
+         */
+        public AuthSetModel getAuthSetModel() {
+            return this.authSetModel;
         }
 
         /**
@@ -388,6 +453,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public static final class Builder {
             private String apiKeyValue; 
             private String apikeyId; 
+            private AuthSetModel authSetModel; 
             private Integer blocked; 
             private Long createTime; 
             private String creator; 
@@ -405,6 +471,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             private Builder(ApiKeys model) {
                 this.apiKeyValue = model.apiKeyValue;
                 this.apikeyId = model.apikeyId;
+                this.authSetModel = model.authSetModel;
                 this.blocked = model.blocked;
                 this.createTime = model.createTime;
                 this.creator = model.creator;
@@ -430,6 +497,14 @@ public class ListApiKeysResponseBody extends TeaModel {
              */
             public Builder apikeyId(String apikeyId) {
                 this.apikeyId = apikeyId;
+                return this;
+            }
+
+            /**
+             * authSetModel.
+             */
+            public Builder authSetModel(AuthSetModel authSetModel) {
+                this.authSetModel = authSetModel;
                 return this;
             }
 
