@@ -32,6 +32,14 @@ public class CreateApplicationRequest extends Request {
     private String architecture;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthProvider")
+    private String authProvider;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthProviderConfig")
+    private String authProviderConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoAllocatePublicEip")
     private Boolean autoAllocatePublicEip;
 
@@ -160,6 +168,8 @@ public class CreateApplicationRequest extends Request {
         this.AIDBClusterId = builder.AIDBClusterId;
         this.applicationType = builder.applicationType;
         this.architecture = builder.architecture;
+        this.authProvider = builder.authProvider;
+        this.authProviderConfig = builder.authProviderConfig;
         this.autoAllocatePublicEip = builder.autoAllocatePublicEip;
         this.autoCreatePolarFs = builder.autoCreatePolarFs;
         this.autoRenew = builder.autoRenew;
@@ -225,6 +235,20 @@ public class CreateApplicationRequest extends Request {
      */
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    /**
+     * @return authProvider
+     */
+    public String getAuthProvider() {
+        return this.authProvider;
+    }
+
+    /**
+     * @return authProviderConfig
+     */
+    public String getAuthProviderConfig() {
+        return this.authProviderConfig;
     }
 
     /**
@@ -448,6 +472,8 @@ public class CreateApplicationRequest extends Request {
         private String AIDBClusterId; 
         private String applicationType; 
         private String architecture; 
+        private String authProvider; 
+        private String authProviderConfig; 
         private Boolean autoAllocatePublicEip; 
         private Boolean autoCreatePolarFs; 
         private Boolean autoRenew; 
@@ -489,6 +515,8 @@ public class CreateApplicationRequest extends Request {
             this.AIDBClusterId = request.AIDBClusterId;
             this.applicationType = request.applicationType;
             this.architecture = request.architecture;
+            this.authProvider = request.authProvider;
+            this.authProviderConfig = request.authProviderConfig;
             this.autoAllocatePublicEip = request.autoAllocatePublicEip;
             this.autoCreatePolarFs = request.autoCreatePolarFs;
             this.autoRenew = request.autoRenew;
@@ -552,6 +580,24 @@ public class CreateApplicationRequest extends Request {
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
             this.architecture = architecture;
+            return this;
+        }
+
+        /**
+         * AuthProvider.
+         */
+        public Builder authProvider(String authProvider) {
+            this.putQueryParameter("AuthProvider", authProvider);
+            this.authProvider = authProvider;
+            return this;
+        }
+
+        /**
+         * AuthProviderConfig.
+         */
+        public Builder authProviderConfig(String authProviderConfig) {
+            this.putQueryParameter("AuthProviderConfig", authProviderConfig);
+            this.authProviderConfig = authProviderConfig;
             return this;
         }
 

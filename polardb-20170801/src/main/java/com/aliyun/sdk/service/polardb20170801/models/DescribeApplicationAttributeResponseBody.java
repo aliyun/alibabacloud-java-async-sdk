@@ -71,6 +71,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
+    @com.aliyun.core.annotation.NameInMap("PolarClawSaaSApplicationAttribute")
+    private PolarClawSaaSApplicationAttribute polarClawSaaSApplicationAttribute;
+
     @com.aliyun.core.annotation.NameInMap("PolarFSInstanceId")
     private String polarFSInstanceId;
 
@@ -129,6 +132,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         this.memApplicationAttribute = builder.memApplicationAttribute;
         this.minorVersion = builder.minorVersion;
         this.payType = builder.payType;
+        this.polarClawSaaSApplicationAttribute = builder.polarClawSaaSApplicationAttribute;
         this.polarFSInstanceId = builder.polarFSInstanceId;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
@@ -283,6 +287,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return polarClawSaaSApplicationAttribute
+     */
+    public PolarClawSaaSApplicationAttribute getPolarClawSaaSApplicationAttribute() {
+        return this.polarClawSaaSApplicationAttribute;
+    }
+
+    /**
      * @return polarFSInstanceId
      */
     public String getPolarFSInstanceId() {
@@ -392,6 +403,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private MemApplicationAttribute memApplicationAttribute; 
         private String minorVersion; 
         private String payType; 
+        private PolarClawSaaSApplicationAttribute polarClawSaaSApplicationAttribute; 
         private String polarFSInstanceId; 
         private String regionId; 
         private String requestId; 
@@ -428,6 +440,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             this.memApplicationAttribute = model.memApplicationAttribute;
             this.minorVersion = model.minorVersion;
             this.payType = model.payType;
+            this.polarClawSaaSApplicationAttribute = model.polarClawSaaSApplicationAttribute;
             this.polarFSInstanceId = model.polarFSInstanceId;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
@@ -584,6 +597,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          */
         public Builder payType(String payType) {
             this.payType = payType;
+            return this;
+        }
+
+        /**
+         * PolarClawSaaSApplicationAttribute.
+         */
+        public Builder polarClawSaaSApplicationAttribute(PolarClawSaaSApplicationAttribute polarClawSaaSApplicationAttribute) {
+            this.polarClawSaaSApplicationAttribute = polarClawSaaSApplicationAttribute;
             return this;
         }
 
@@ -1631,6 +1652,60 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
             public MemApplicationAttribute build() {
                 return new MemApplicationAttribute(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationAttributeResponseBody</p>
+     */
+    public static class PolarClawSaaSApplicationAttribute extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthCallbackURL")
+        private String authCallbackURL;
+
+        private PolarClawSaaSApplicationAttribute(Builder builder) {
+            this.authCallbackURL = builder.authCallbackURL;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PolarClawSaaSApplicationAttribute create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authCallbackURL
+         */
+        public String getAuthCallbackURL() {
+            return this.authCallbackURL;
+        }
+
+        public static final class Builder {
+            private String authCallbackURL; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolarClawSaaSApplicationAttribute model) {
+                this.authCallbackURL = model.authCallbackURL;
+            } 
+
+            /**
+             * AuthCallbackURL.
+             */
+            public Builder authCallbackURL(String authCallbackURL) {
+                this.authCallbackURL = authCallbackURL;
+                return this;
+            }
+
+            public PolarClawSaaSApplicationAttribute build() {
+                return new PolarClawSaaSApplicationAttribute(this);
             } 
 
         } 
