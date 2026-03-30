@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddCloudAccess  AddCloudAccessRequest
+     * @return AddCloudAccessResponse
+     */
+    CompletableFuture<AddCloudAccessResponse> addCloudAccess(AddCloudAccessRequest request);
+
+    /**
      * @param request the request parameters of ApplyCertificate  ApplyCertificateRequest
      * @return ApplyCertificateResponse
      */
@@ -106,6 +112,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDeploymentJobResponse> createDeploymentJob(CreateDeploymentJobRequest request);
 
     /**
+     * @param request the request parameters of CreateWHClientCertificate  CreateWHClientCertificateRequest
+     * @return CreateWHClientCertificateResponse
+     */
+    CompletableFuture<CreateWHClientCertificateResponse> createWHClientCertificate(CreateWHClientCertificateRequest request);
+
+    /**
+     * @param request the request parameters of CreateWarehouse  CreateWarehouseRequest
+     * @return CreateWarehouseResponse
+     */
+    CompletableFuture<CreateWarehouseResponse> createWarehouse(CreateWarehouseRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
@@ -126,6 +144,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCertificateRequestResponse
      */
     CompletableFuture<DeleteCertificateRequestResponse> deleteCertificateRequest(DeleteCertificateRequestRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCloudAccess  DeleteCloudAccessRequest
+     * @return DeleteCloudAccessResponse
+     */
+    CompletableFuture<DeleteCloudAccessResponse> deleteCloudAccess(DeleteCloudAccessRequest request);
 
     /**
      * @param request the request parameters of DeleteCsr  DeleteCsrRequest
@@ -166,6 +190,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteUserCertificateResponse> deleteUserCertificate(DeleteUserCertificateRequest request);
 
     /**
+     * @param request the request parameters of DeleteWarehouse  DeleteWarehouseRequest
+     * @return DeleteWarehouseResponse
+     */
+    CompletableFuture<DeleteWarehouseResponse> deleteWarehouse(DeleteWarehouseRequest request);
+
+    /**
      * @param request the request parameters of DeleteWorkerResource  DeleteWorkerResourceRequest
      * @return DeleteWorkerResourceResponse
      */
@@ -204,6 +234,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePackageStateResponse
      */
     CompletableFuture<DescribePackageStateResponse> describePackageState(DescribePackageStateRequest request);
+
+    /**
+     * @param request the request parameters of DescribeWarehouseCert  DescribeWarehouseCertRequest
+     * @return DescribeWarehouseCertResponse
+     */
+    CompletableFuture<DescribeWarehouseCertResponse> describeWarehouseCert(DescribeWarehouseCertRequest request);
 
     /**
      * <b>description</b> :
@@ -366,6 +402,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUserCertificateOrderResponse> listUserCertificateOrder(ListUserCertificateOrderRequest request);
 
     /**
+     * @param request the request parameters of ListWarehouse  ListWarehouseRequest
+     * @return ListWarehouseResponse
+     */
+    CompletableFuture<ListWarehouseResponse> listWarehouse(ListWarehouseRequest request);
+
+    /**
      * @param request the request parameters of ListWorkerResource  ListWorkerResourceRequest
      * @return ListWorkerResourceResponse
      */
@@ -400,6 +442,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RevokeCertificateResponse
      */
     CompletableFuture<RevokeCertificateResponse> revokeCertificate(RevokeCertificateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of RevokeWHClientCertificate  RevokeWHClientCertificateRequest
+     * @return RevokeWHClientCertificateResponse
+     */
+    CompletableFuture<RevokeWHClientCertificateResponse> revokeWHClientCertificate(RevokeWHClientCertificateRequest request);
 
     /**
      * <b>description</b> :
@@ -447,6 +498,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UploadCsrResponse
      */
     CompletableFuture<UploadCsrResponse> uploadCsr(UploadCsrRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to upload a private certificate to a certificate repository.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of UploadPCACert  UploadPCACertRequest
+     * @return UploadPCACertResponse
+     */
+    CompletableFuture<UploadPCACertResponse> uploadPCACert(UploadPCACertRequest request);
 
     /**
      * <b>description</b> :
