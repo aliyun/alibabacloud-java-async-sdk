@@ -656,7 +656,7 @@ public class CreateTemplateRequest extends Request {
         private String performanceLevel;
 
         @com.aliyun.core.annotation.NameInMap("Size")
-        @com.aliyun.core.annotation.Validation(maximum = 2040, minimum = 40)
+        @com.aliyun.core.annotation.Validation(maximum = 2040, minimum = 20)
         private Integer size;
 
         private DataDiskList(Builder builder) {

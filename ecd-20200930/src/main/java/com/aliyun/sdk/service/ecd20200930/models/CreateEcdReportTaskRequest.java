@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateEcdReportTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FilterList")
     private java.util.List<FilterList> filterList;
 
@@ -41,6 +45,7 @@ public class CreateEcdReportTaskRequest extends Request {
 
     private CreateEcdReportTaskRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.filterList = builder.filterList;
         this.langType = builder.langType;
         this.reportFileName = builder.reportFileName;
@@ -59,6 +64,13 @@ public class CreateEcdReportTaskRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -97,6 +109,7 @@ public class CreateEcdReportTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateEcdReportTaskRequest, Builder> {
+        private String businessChannel; 
         private java.util.List<FilterList> filterList; 
         private String langType; 
         private String reportFileName; 
@@ -109,12 +122,22 @@ public class CreateEcdReportTaskRequest extends Request {
 
         private Builder(CreateEcdReportTaskRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.filterList = request.filterList;
             this.langType = request.langType;
             this.reportFileName = request.reportFileName;
             this.subType = request.subType;
             this.taskType = request.taskType;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The filter conditions for filtering query results. The logical relationship between each filter condition is &quot;and&quot; (&amp;). Each filter condition contains FilterKey and FilterValues, which indicate the key and value for the filter condition.</p>

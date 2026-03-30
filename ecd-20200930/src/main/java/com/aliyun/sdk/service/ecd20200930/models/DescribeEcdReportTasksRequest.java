@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEcdReportTasksRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
@@ -43,6 +47,7 @@ public class DescribeEcdReportTasksRequest extends Request {
 
     private DescribeEcdReportTasksRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
@@ -62,6 +67,13 @@ public class DescribeEcdReportTasksRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -107,6 +119,7 @@ public class DescribeEcdReportTasksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeEcdReportTasksRequest, Builder> {
+        private String businessChannel; 
         private Integer pageNum; 
         private Integer pageSize; 
         private java.util.List<String> status; 
@@ -120,6 +133,7 @@ public class DescribeEcdReportTasksRequest extends Request {
 
         private Builder(DescribeEcdReportTasksRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.status = request.status;
@@ -127,6 +141,15 @@ public class DescribeEcdReportTasksRequest extends Request {
             this.taskId = request.taskId;
             this.taskType = request.taskType;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>

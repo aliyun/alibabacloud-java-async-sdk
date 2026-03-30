@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDesktopsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
@@ -169,6 +173,7 @@ public class DescribeDesktopsRequest extends Request {
 
     private DescribeDesktopsRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.chargeType = builder.chargeType;
         this.desktopGroupId = builder.desktopGroupId;
         this.desktopId = builder.desktopId;
@@ -219,6 +224,13 @@ public class DescribeDesktopsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -481,6 +493,7 @@ public class DescribeDesktopsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDesktopsRequest, Builder> {
+        private String businessChannel; 
         private String chargeType; 
         private String desktopGroupId; 
         private java.util.List<String> desktopId; 
@@ -525,6 +538,7 @@ public class DescribeDesktopsRequest extends Request {
 
         private Builder(DescribeDesktopsRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.chargeType = request.chargeType;
             this.desktopGroupId = request.desktopGroupId;
             this.desktopId = request.desktopId;
@@ -563,6 +577,15 @@ public class DescribeDesktopsRequest extends Request {
             this.tag = request.tag;
             this.userName = request.userName;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The billing method of the cloud computer.</p>

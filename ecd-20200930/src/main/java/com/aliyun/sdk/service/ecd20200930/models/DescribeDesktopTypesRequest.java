@@ -22,6 +22,10 @@ public class DescribeDesktopTypesRequest extends Request {
     private String appliedScope;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CpuCount")
     private Integer cpuCount;
 
@@ -101,6 +105,7 @@ public class DescribeDesktopTypesRequest extends Request {
     private DescribeDesktopTypesRequest(Builder builder) {
         super(builder);
         this.appliedScope = builder.appliedScope;
+        this.businessChannel = builder.businessChannel;
         this.cpuCount = builder.cpuCount;
         this.desktopGroupIdForModify = builder.desktopGroupIdForModify;
         this.desktopIdForModify = builder.desktopIdForModify;
@@ -140,6 +145,13 @@ public class DescribeDesktopTypesRequest extends Request {
      */
     public String getAppliedScope() {
         return this.appliedScope;
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -277,6 +289,7 @@ public class DescribeDesktopTypesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDesktopTypesRequest, Builder> {
         private String appliedScope; 
+        private String businessChannel; 
         private Integer cpuCount; 
         private String desktopGroupIdForModify; 
         private String desktopIdForModify; 
@@ -304,6 +317,7 @@ public class DescribeDesktopTypesRequest extends Request {
         private Builder(DescribeDesktopTypesRequest request) {
             super(request);
             this.appliedScope = request.appliedScope;
+            this.businessChannel = request.businessChannel;
             this.cpuCount = request.cpuCount;
             this.desktopGroupIdForModify = request.desktopGroupIdForModify;
             this.desktopIdForModify = request.desktopIdForModify;
@@ -334,6 +348,15 @@ public class DescribeDesktopTypesRequest extends Request {
         public Builder appliedScope(String appliedScope) {
             this.putQueryParameter("AppliedScope", appliedScope);
             this.appliedScope = appliedScope;
+            return this;
+        }
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
             return this;
         }
 
