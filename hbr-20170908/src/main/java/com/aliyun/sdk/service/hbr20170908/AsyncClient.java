@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddCrossAccountResponse> addCrossAccount(AddCrossAccountRequest request);
 
     /**
+     * @param request the request parameters of AddDataSource  AddDataSourceRequest
+     * @return AddDataSourceResponse
+     */
+    CompletableFuture<AddDataSourceResponse> addDataSource(AddDataSourceRequest request);
+
+    /**
      * @param request the request parameters of BrowseFiles  BrowseFilesRequest
      * @return BrowseFilesResponse
      */
