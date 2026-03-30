@@ -64,8 +64,16 @@ public class CreateIndexRequest extends Request {
     private Integer overlapSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RerankInstruct")
+    private String rerankInstruct;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RerankMinScore")
     private Double rerankMinScore;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RerankMode")
+    private String rerankMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RerankModelName")
@@ -167,7 +175,9 @@ public class CreateIndexRequest extends Request {
         this.enableRewrite = builder.enableRewrite;
         this.name = builder.name;
         this.overlapSize = builder.overlapSize;
+        this.rerankInstruct = builder.rerankInstruct;
         this.rerankMinScore = builder.rerankMinScore;
+        this.rerankMode = builder.rerankMode;
         this.rerankModelName = builder.rerankModelName;
         this.separator = builder.separator;
         this.sinkInstanceId = builder.sinkInstanceId;
@@ -282,10 +292,24 @@ public class CreateIndexRequest extends Request {
     }
 
     /**
+     * @return rerankInstruct
+     */
+    public String getRerankInstruct() {
+        return this.rerankInstruct;
+    }
+
+    /**
      * @return rerankMinScore
      */
     public Double getRerankMinScore() {
         return this.rerankMinScore;
+    }
+
+    /**
+     * @return rerankMode
+     */
+    public String getRerankMode() {
+        return this.rerankMode;
     }
 
     /**
@@ -447,7 +471,9 @@ public class CreateIndexRequest extends Request {
         private Boolean enableRewrite; 
         private String name; 
         private Integer overlapSize; 
+        private String rerankInstruct; 
         private Double rerankMinScore; 
+        private String rerankMode; 
         private String rerankModelName; 
         private String separator; 
         private String sinkInstanceId; 
@@ -487,7 +513,9 @@ public class CreateIndexRequest extends Request {
             this.enableRewrite = request.enableRewrite;
             this.name = request.name;
             this.overlapSize = request.overlapSize;
+            this.rerankInstruct = request.rerankInstruct;
             this.rerankMinScore = request.rerankMinScore;
+            this.rerankMode = request.rerankMode;
             this.rerankModelName = request.rerankModelName;
             this.separator = request.separator;
             this.sinkInstanceId = request.sinkInstanceId;
@@ -650,6 +678,15 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * RerankInstruct.
+         */
+        public Builder rerankInstruct(String rerankInstruct) {
+            this.putQueryParameter("RerankInstruct", rerankInstruct);
+            this.rerankInstruct = rerankInstruct;
+            return this;
+        }
+
+        /**
          * <p>The similarity threshold. Only chunks with a similarity score higher than this value can be recalled. This parameter is used to filter chunks returned by the re-rank model. Valid values: 0.01 to 1.00.</p>
          * <p>Default value: 0.01.</p>
          * 
@@ -659,6 +696,15 @@ public class CreateIndexRequest extends Request {
         public Builder rerankMinScore(Double rerankMinScore) {
             this.putQueryParameter("RerankMinScore", rerankMinScore);
             this.rerankMinScore = rerankMinScore;
+            return this;
+        }
+
+        /**
+         * RerankMode.
+         */
+        public Builder rerankMode(String rerankMode) {
+            this.putQueryParameter("RerankMode", rerankMode);
+            this.rerankMode = rerankMode;
             return this;
         }
 

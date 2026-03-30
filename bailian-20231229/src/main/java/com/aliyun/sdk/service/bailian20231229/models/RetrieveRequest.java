@@ -535,8 +535,16 @@ public class RetrieveRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
+        @com.aliyun.core.annotation.NameInMap("RerankInstruct")
+        private String rerankInstruct;
+
+        @com.aliyun.core.annotation.NameInMap("RerankMode")
+        private String rerankMode;
+
         private Rerank(Builder builder) {
             this.modelName = builder.modelName;
+            this.rerankInstruct = builder.rerankInstruct;
+            this.rerankMode = builder.rerankMode;
         }
 
         public static Builder builder() {
@@ -554,14 +562,32 @@ public class RetrieveRequest extends Request {
             return this.modelName;
         }
 
+        /**
+         * @return rerankInstruct
+         */
+        public String getRerankInstruct() {
+            return this.rerankInstruct;
+        }
+
+        /**
+         * @return rerankMode
+         */
+        public String getRerankMode() {
+            return this.rerankMode;
+        }
+
         public static final class Builder {
             private String modelName; 
+            private String rerankInstruct; 
+            private String rerankMode; 
 
             private Builder() {
             } 
 
             private Builder(Rerank model) {
                 this.modelName = model.modelName;
+                this.rerankInstruct = model.rerankInstruct;
+                this.rerankMode = model.rerankMode;
             } 
 
             /**
@@ -576,6 +602,22 @@ public class RetrieveRequest extends Request {
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
+                return this;
+            }
+
+            /**
+             * RerankInstruct.
+             */
+            public Builder rerankInstruct(String rerankInstruct) {
+                this.rerankInstruct = rerankInstruct;
+                return this;
+            }
+
+            /**
+             * RerankMode.
+             */
+            public Builder rerankMode(String rerankMode) {
+                this.rerankMode = rerankMode;
                 return this;
             }
 
