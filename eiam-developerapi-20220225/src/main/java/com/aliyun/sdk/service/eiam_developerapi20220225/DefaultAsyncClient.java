@@ -662,6 +662,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ObtainJwtAuthenticationToken  ObtainJwtAuthenticationTokenRequest
+     * @return ObtainJwtAuthenticationTokenResponse
+     */
+    @Override
+    public CompletableFuture<ObtainJwtAuthenticationTokenResponse> obtainJwtAuthenticationToken(ObtainJwtAuthenticationTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ObtainJwtAuthenticationToken").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/authenticationTokens/_/actions/obtainJwt").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ObtainJwtAuthenticationTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ObtainJwtAuthenticationTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ObtainJwtAuthenticationTokenByDerivedShortToken  ObtainJwtAuthenticationTokenByDerivedShortTokenRequest
      * @return ObtainJwtAuthenticationTokenByDerivedShortTokenResponse
      */

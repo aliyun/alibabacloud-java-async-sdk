@@ -32,11 +32,16 @@ public class ObtainCloudAccountRoleAccessCredentialRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String cloudAccountRoleExternalId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("durationSeconds")
+    private Integer durationSeconds;
+
     private ObtainCloudAccountRoleAccessCredentialRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.authorization = builder.authorization;
         this.cloudAccountRoleExternalId = builder.cloudAccountRoleExternalId;
+        this.durationSeconds = builder.durationSeconds;
     }
 
     public static Builder builder() {
@@ -73,10 +78,18 @@ public class ObtainCloudAccountRoleAccessCredentialRequest extends Request {
         return this.cloudAccountRoleExternalId;
     }
 
+    /**
+     * @return durationSeconds
+     */
+    public Integer getDurationSeconds() {
+        return this.durationSeconds;
+    }
+
     public static final class Builder extends Request.Builder<ObtainCloudAccountRoleAccessCredentialRequest, Builder> {
         private String instanceId; 
         private String authorization; 
         private String cloudAccountRoleExternalId; 
+        private Integer durationSeconds; 
 
         private Builder() {
             super();
@@ -87,6 +100,7 @@ public class ObtainCloudAccountRoleAccessCredentialRequest extends Request {
             this.instanceId = request.instanceId;
             this.authorization = request.authorization;
             this.cloudAccountRoleExternalId = request.cloudAccountRoleExternalId;
+            this.durationSeconds = request.durationSeconds;
         } 
 
         /**
@@ -122,6 +136,15 @@ public class ObtainCloudAccountRoleAccessCredentialRequest extends Request {
         public Builder cloudAccountRoleExternalId(String cloudAccountRoleExternalId) {
             this.putQueryParameter("cloudAccountRoleExternalId", cloudAccountRoleExternalId);
             this.cloudAccountRoleExternalId = cloudAccountRoleExternalId;
+            return this;
+        }
+
+        /**
+         * durationSeconds.
+         */
+        public Builder durationSeconds(Integer durationSeconds) {
+            this.putQueryParameter("durationSeconds", durationSeconds);
+            this.durationSeconds = durationSeconds;
             return this;
         }
 
