@@ -26,6 +26,10 @@ public class DescribeCouponRequest extends Request {
     private String couponNo;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponTemplateIdList")
+    private java.util.List<Long> couponTemplateIdList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CouponType")
     private String couponType;
 
@@ -79,6 +83,7 @@ public class DescribeCouponRequest extends Request {
         super(builder);
         this.couponId = builder.couponId;
         this.couponNo = builder.couponNo;
+        this.couponTemplateIdList = builder.couponTemplateIdList;
         this.couponType = builder.couponType;
         this.currentPage = builder.currentPage;
         this.ecIdAccountIds = builder.ecIdAccountIds;
@@ -118,6 +123,13 @@ public class DescribeCouponRequest extends Request {
      */
     public String getCouponNo() {
         return this.couponNo;
+    }
+
+    /**
+     * @return couponTemplateIdList
+     */
+    public java.util.List<Long> getCouponTemplateIdList() {
+        return this.couponTemplateIdList;
     }
 
     /**
@@ -207,6 +219,7 @@ public class DescribeCouponRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeCouponRequest, Builder> {
         private Long couponId; 
         private String couponNo; 
+        private java.util.List<Long> couponTemplateIdList; 
         private String couponType; 
         private Integer currentPage; 
         private java.util.List<EcIdAccountIds> ecIdAccountIds; 
@@ -228,6 +241,7 @@ public class DescribeCouponRequest extends Request {
             super(request);
             this.couponId = request.couponId;
             this.couponNo = request.couponNo;
+            this.couponTemplateIdList = request.couponTemplateIdList;
             this.couponType = request.couponType;
             this.currentPage = request.currentPage;
             this.ecIdAccountIds = request.ecIdAccountIds;
@@ -257,6 +271,16 @@ public class DescribeCouponRequest extends Request {
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
             this.couponNo = couponNo;
+            return this;
+        }
+
+        /**
+         * CouponTemplateIdList.
+         */
+        public Builder couponTemplateIdList(java.util.List<Long> couponTemplateIdList) {
+            String couponTemplateIdListShrink = shrink(couponTemplateIdList, "CouponTemplateIdList", "json");
+            this.putQueryParameter("CouponTemplateIdList", couponTemplateIdListShrink);
+            this.couponTemplateIdList = couponTemplateIdList;
             return this;
         }
 
