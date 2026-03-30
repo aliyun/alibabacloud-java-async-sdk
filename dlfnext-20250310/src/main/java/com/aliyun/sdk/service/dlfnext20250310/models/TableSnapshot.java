@@ -26,6 +26,9 @@ public class TableSnapshot extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("lastFileCreationTime")
     private Long lastFileCreationTime;
 
+    @com.aliyun.core.annotation.NameInMap("partitionCount")
+    private Long partitionCount;
+
     @com.aliyun.core.annotation.NameInMap("recordCount")
     private Long recordCount;
 
@@ -39,6 +42,7 @@ public class TableSnapshot extends TeaModel {
         this.fileCount = builder.fileCount;
         this.fileSizeInBytes = builder.fileSizeInBytes;
         this.lastFileCreationTime = builder.lastFileCreationTime;
+        this.partitionCount = builder.partitionCount;
         this.recordCount = builder.recordCount;
         this.snapshot = builder.snapshot;
         this.totalBuckets = builder.totalBuckets;
@@ -78,6 +82,13 @@ public class TableSnapshot extends TeaModel {
     }
 
     /**
+     * @return partitionCount
+     */
+    public Long getPartitionCount() {
+        return this.partitionCount;
+    }
+
+    /**
      * @return recordCount
      */
     public Long getRecordCount() {
@@ -102,6 +113,7 @@ public class TableSnapshot extends TeaModel {
         private Long fileCount; 
         private Long fileSizeInBytes; 
         private Long lastFileCreationTime; 
+        private Long partitionCount; 
         private Long recordCount; 
         private Snapshot snapshot; 
         private Integer totalBuckets; 
@@ -113,6 +125,7 @@ public class TableSnapshot extends TeaModel {
             this.fileCount = model.fileCount;
             this.fileSizeInBytes = model.fileSizeInBytes;
             this.lastFileCreationTime = model.lastFileCreationTime;
+            this.partitionCount = model.partitionCount;
             this.recordCount = model.recordCount;
             this.snapshot = model.snapshot;
             this.totalBuckets = model.totalBuckets;
@@ -139,6 +152,14 @@ public class TableSnapshot extends TeaModel {
          */
         public Builder lastFileCreationTime(Long lastFileCreationTime) {
             this.lastFileCreationTime = lastFileCreationTime;
+            return this;
+        }
+
+        /**
+         * partitionCount.
+         */
+        public Builder partitionCount(Long partitionCount) {
+            this.partitionCount = partitionCount;
             return this;
         }
 
