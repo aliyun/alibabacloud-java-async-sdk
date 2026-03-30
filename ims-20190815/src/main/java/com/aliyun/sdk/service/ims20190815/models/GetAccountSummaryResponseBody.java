@@ -122,6 +122,9 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachedSystemPoliciesPerUserQuota")
         private Integer attachedSystemPoliciesPerUserQuota;
 
+        @com.aliyun.core.annotation.NameInMap("AuthorizedClientPerUserQuota")
+        private Integer authorizedClientPerUserQuota;
+
         @com.aliyun.core.annotation.NameInMap("ConditionsPerAKPolicyQuota")
         private Integer conditionsPerAKPolicyQuota;
 
@@ -179,6 +182,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             this.attachedSystemPoliciesPerGroupQuota = builder.attachedSystemPoliciesPerGroupQuota;
             this.attachedSystemPoliciesPerRoleQuota = builder.attachedSystemPoliciesPerRoleQuota;
             this.attachedSystemPoliciesPerUserQuota = builder.attachedSystemPoliciesPerUserQuota;
+            this.authorizedClientPerUserQuota = builder.authorizedClientPerUserQuota;
             this.conditionsPerAKPolicyQuota = builder.conditionsPerAKPolicyQuota;
             this.groups = builder.groups;
             this.groupsPerUserQuota = builder.groupsPerUserQuota;
@@ -259,6 +263,13 @@ public class GetAccountSummaryResponseBody extends TeaModel {
          */
         public Integer getAttachedSystemPoliciesPerUserQuota() {
             return this.attachedSystemPoliciesPerUserQuota;
+        }
+
+        /**
+         * @return authorizedClientPerUserQuota
+         */
+        public Integer getAuthorizedClientPerUserQuota() {
+            return this.authorizedClientPerUserQuota;
         }
 
         /**
@@ -382,6 +393,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             private Integer attachedSystemPoliciesPerGroupQuota; 
             private Integer attachedSystemPoliciesPerRoleQuota; 
             private Integer attachedSystemPoliciesPerUserQuota; 
+            private Integer authorizedClientPerUserQuota; 
             private Integer conditionsPerAKPolicyQuota; 
             private Integer groups; 
             private Integer groupsPerUserQuota; 
@@ -411,6 +423,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
                 this.attachedSystemPoliciesPerGroupQuota = model.attachedSystemPoliciesPerGroupQuota;
                 this.attachedSystemPoliciesPerRoleQuota = model.attachedSystemPoliciesPerRoleQuota;
                 this.attachedSystemPoliciesPerUserQuota = model.attachedSystemPoliciesPerUserQuota;
+                this.authorizedClientPerUserQuota = model.authorizedClientPerUserQuota;
                 this.conditionsPerAKPolicyQuota = model.conditionsPerAKPolicyQuota;
                 this.groups = model.groups;
                 this.groupsPerUserQuota = model.groupsPerUserQuota;
@@ -511,6 +524,14 @@ public class GetAccountSummaryResponseBody extends TeaModel {
              */
             public Builder attachedSystemPoliciesPerUserQuota(Integer attachedSystemPoliciesPerUserQuota) {
                 this.attachedSystemPoliciesPerUserQuota = attachedSystemPoliciesPerUserQuota;
+                return this;
+            }
+
+            /**
+             * AuthorizedClientPerUserQuota.
+             */
+            public Builder authorizedClientPerUserQuota(Integer authorizedClientPerUserQuota) {
+                this.authorizedClientPerUserQuota = authorizedClientPerUserQuota;
                 return this;
             }
 
