@@ -392,6 +392,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCrossAccountsResponse> describeCrossAccounts(DescribeCrossAccountsRequest request);
 
     /**
+     * @param request the request parameters of DescribeDataSources  DescribeDataSourcesRequest
+     * @return DescribeDataSourcesResponse
+     */
+    CompletableFuture<DescribeDataSourcesResponse> describeDataSources(DescribeDataSourcesRequest request);
+
+    /**
      * @param request the request parameters of DescribeHanaBackupPlans  DescribeHanaBackupPlansRequest
      * @return DescribeHanaBackupPlansResponse
      */
@@ -612,6 +618,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OpenHbrServiceResponse> openHbrService(OpenHbrServiceRequest request);
 
     /**
+     * @param request the request parameters of RemoveDataSource  RemoveDataSourceRequest
+     * @return RemoveDataSourceResponse
+     */
+    CompletableFuture<RemoveDataSourceResponse> removeDataSource(RemoveDataSourceRequest request);
+
+    /**
      * @param request the request parameters of SearchHistoricalSnapshots  SearchHistoricalSnapshotsRequest
      * @return SearchHistoricalSnapshotsResponse
      */
@@ -677,6 +689,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateContainerClusterResponse
      */
     CompletableFuture<UpdateContainerClusterResponse> updateContainerCluster(UpdateContainerClusterRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataSource  UpdateDataSourceRequest
+     * @return UpdateDataSourceResponse
+     */
+    CompletableFuture<UpdateDataSourceResponse> updateDataSource(UpdateDataSourceRequest request);
 
     /**
      * <b>description</b> :
