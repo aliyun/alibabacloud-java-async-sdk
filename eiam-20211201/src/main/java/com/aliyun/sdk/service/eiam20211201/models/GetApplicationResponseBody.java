@@ -97,6 +97,156 @@ public class GetApplicationResponseBody extends TeaModel {
      *
      * <p>GetApplicationResponseBody</p>
      */
+    public static class ApplicationOwner extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GroupIds")
+        private java.util.List<String> groupIds;
+
+        @com.aliyun.core.annotation.NameInMap("UserIds")
+        private java.util.List<String> userIds;
+
+        private ApplicationOwner(Builder builder) {
+            this.groupIds = builder.groupIds;
+            this.userIds = builder.userIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApplicationOwner create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupIds
+         */
+        public java.util.List<String> getGroupIds() {
+            return this.groupIds;
+        }
+
+        /**
+         * @return userIds
+         */
+        public java.util.List<String> getUserIds() {
+            return this.userIds;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> groupIds; 
+            private java.util.List<String> userIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationOwner model) {
+                this.groupIds = model.groupIds;
+                this.userIds = model.userIds;
+            } 
+
+            /**
+             * GroupIds.
+             */
+            public Builder groupIds(java.util.List<String> groupIds) {
+                this.groupIds = groupIds;
+                return this;
+            }
+
+            /**
+             * UserIds.
+             */
+            public Builder userIds(java.util.List<String> userIds) {
+                this.userIds = userIds;
+                return this;
+            }
+
+            public ApplicationOwner build() {
+                return new ApplicationOwner(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class CustomFields extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FieldName")
+        private String fieldName;
+
+        @com.aliyun.core.annotation.NameInMap("FieldValue")
+        private String fieldValue;
+
+        private CustomFields(Builder builder) {
+            this.fieldName = builder.fieldName;
+            this.fieldValue = builder.fieldValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomFields create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fieldName
+         */
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        /**
+         * @return fieldValue
+         */
+        public String getFieldValue() {
+            return this.fieldValue;
+        }
+
+        public static final class Builder {
+            private String fieldName; 
+            private String fieldValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomFields model) {
+                this.fieldName = model.fieldName;
+                this.fieldValue = model.fieldValue;
+            } 
+
+            /**
+             * FieldName.
+             */
+            public Builder fieldName(String fieldName) {
+                this.fieldName = fieldName;
+                return this;
+            }
+
+            /**
+             * FieldValue.
+             */
+            public Builder fieldValue(String fieldValue) {
+                this.fieldValue = fieldValue;
+                return this;
+            }
+
+            public CustomFields build() {
+                return new CustomFields(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class Application extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiInvokeStatus")
         private String apiInvokeStatus;
@@ -112,6 +262,9 @@ public class GetApplicationResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
+
+        @com.aliyun.core.annotation.NameInMap("ApplicationOwner")
+        private ApplicationOwner applicationOwner;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationSourceType")
         private String applicationSourceType;
@@ -130,6 +283,9 @@ public class GetApplicationResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
+
+        @com.aliyun.core.annotation.NameInMap("CustomFields")
+        private java.util.List<CustomFields> customFields;
 
         @com.aliyun.core.annotation.NameInMap("CustomSubjectStatus")
         private String customSubjectStatus;
@@ -179,12 +335,14 @@ public class GetApplicationResponseBody extends TeaModel {
             this.applicationId = builder.applicationId;
             this.applicationIdentityType = builder.applicationIdentityType;
             this.applicationName = builder.applicationName;
+            this.applicationOwner = builder.applicationOwner;
             this.applicationSourceType = builder.applicationSourceType;
             this.applicationTemplateId = builder.applicationTemplateId;
             this.applicationVisibility = builder.applicationVisibility;
             this.authorizationType = builder.authorizationType;
             this.clientId = builder.clientId;
             this.createTime = builder.createTime;
+            this.customFields = builder.customFields;
             this.customSubjectStatus = builder.customSubjectStatus;
             this.description = builder.description;
             this.features = builder.features;
@@ -245,6 +403,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return applicationOwner
+         */
+        public ApplicationOwner getApplicationOwner() {
+            return this.applicationOwner;
+        }
+
+        /**
          * @return applicationSourceType
          */
         public String getApplicationSourceType() {
@@ -284,6 +449,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return customFields
+         */
+        public java.util.List<CustomFields> getCustomFields() {
+            return this.customFields;
         }
 
         /**
@@ -390,12 +562,14 @@ public class GetApplicationResponseBody extends TeaModel {
             private String applicationId; 
             private String applicationIdentityType; 
             private String applicationName; 
+            private ApplicationOwner applicationOwner; 
             private String applicationSourceType; 
             private String applicationTemplateId; 
             private java.util.List<String> applicationVisibility; 
             private String authorizationType; 
             private String clientId; 
             private Long createTime; 
+            private java.util.List<CustomFields> customFields; 
             private String customSubjectStatus; 
             private String description; 
             private String features; 
@@ -420,12 +594,14 @@ public class GetApplicationResponseBody extends TeaModel {
                 this.applicationId = model.applicationId;
                 this.applicationIdentityType = model.applicationIdentityType;
                 this.applicationName = model.applicationName;
+                this.applicationOwner = model.applicationOwner;
                 this.applicationSourceType = model.applicationSourceType;
                 this.applicationTemplateId = model.applicationTemplateId;
                 this.applicationVisibility = model.applicationVisibility;
                 this.authorizationType = model.authorizationType;
                 this.clientId = model.clientId;
                 this.createTime = model.createTime;
+                this.customFields = model.customFields;
                 this.customSubjectStatus = model.customSubjectStatus;
                 this.description = model.description;
                 this.features = model.features;
@@ -492,6 +668,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
+                return this;
+            }
+
+            /**
+             * ApplicationOwner.
+             */
+            public Builder applicationOwner(ApplicationOwner applicationOwner) {
+                this.applicationOwner = applicationOwner;
                 return this;
             }
 
@@ -563,6 +747,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * CustomFields.
+             */
+            public Builder customFields(java.util.List<CustomFields> customFields) {
+                this.customFields = customFields;
                 return this;
             }
 

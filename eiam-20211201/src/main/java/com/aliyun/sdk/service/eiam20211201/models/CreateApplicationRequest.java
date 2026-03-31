@@ -31,6 +31,10 @@ public class CreateApplicationRequest extends Request {
     private String applicationName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationOwner")
+    private ApplicationOwner applicationOwner;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationSourceType")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String applicationSourceType;
@@ -38,6 +42,10 @@ public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationTemplateId")
     private String applicationTemplateId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomFields")
+    private java.util.List<CustomFields> customFields;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -64,8 +72,10 @@ public class CreateApplicationRequest extends Request {
         this.regionId = builder.regionId;
         this.applicationIdentityType = builder.applicationIdentityType;
         this.applicationName = builder.applicationName;
+        this.applicationOwner = builder.applicationOwner;
         this.applicationSourceType = builder.applicationSourceType;
         this.applicationTemplateId = builder.applicationTemplateId;
+        this.customFields = builder.customFields;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.logoUrl = builder.logoUrl;
@@ -107,6 +117,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return applicationOwner
+     */
+    public ApplicationOwner getApplicationOwner() {
+        return this.applicationOwner;
+    }
+
+    /**
      * @return applicationSourceType
      */
     public String getApplicationSourceType() {
@@ -118,6 +135,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getApplicationTemplateId() {
         return this.applicationTemplateId;
+    }
+
+    /**
+     * @return customFields
+     */
+    public java.util.List<CustomFields> getCustomFields() {
+        return this.customFields;
     }
 
     /**
@@ -152,8 +176,10 @@ public class CreateApplicationRequest extends Request {
         private String regionId; 
         private String applicationIdentityType; 
         private String applicationName; 
+        private ApplicationOwner applicationOwner; 
         private String applicationSourceType; 
         private String applicationTemplateId; 
+        private java.util.List<CustomFields> customFields; 
         private String description; 
         private String instanceId; 
         private String logoUrl; 
@@ -168,8 +194,10 @@ public class CreateApplicationRequest extends Request {
             this.regionId = request.regionId;
             this.applicationIdentityType = request.applicationIdentityType;
             this.applicationName = request.applicationName;
+            this.applicationOwner = request.applicationOwner;
             this.applicationSourceType = request.applicationSourceType;
             this.applicationTemplateId = request.applicationTemplateId;
+            this.customFields = request.customFields;
             this.description = request.description;
             this.instanceId = request.instanceId;
             this.logoUrl = request.logoUrl;
@@ -208,6 +236,15 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
+         * ApplicationOwner.
+         */
+        public Builder applicationOwner(ApplicationOwner applicationOwner) {
+            this.putQueryParameter("ApplicationOwner", applicationOwner);
+            this.applicationOwner = applicationOwner;
+            return this;
+        }
+
+        /**
          * <p>The type of the application source. Valid values:</p>
          * <ul>
          * <li>urn:alibaba:idaas:app:source:template: application template</li>
@@ -233,6 +270,15 @@ public class CreateApplicationRequest extends Request {
         public Builder applicationTemplateId(String applicationTemplateId) {
             this.putQueryParameter("ApplicationTemplateId", applicationTemplateId);
             this.applicationTemplateId = applicationTemplateId;
+            return this;
+        }
+
+        /**
+         * CustomFields.
+         */
+        public Builder customFields(java.util.List<CustomFields> customFields) {
+            this.putQueryParameter("CustomFields", customFields);
+            this.customFields = customFields;
             return this;
         }
 
@@ -297,4 +343,155 @@ public class CreateApplicationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationRequest</p>
+     */
+    public static class ApplicationOwner extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GroupIds")
+        private java.util.List<String> groupIds;
+
+        @com.aliyun.core.annotation.NameInMap("UserIds")
+        private java.util.List<String> userIds;
+
+        private ApplicationOwner(Builder builder) {
+            this.groupIds = builder.groupIds;
+            this.userIds = builder.userIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApplicationOwner create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupIds
+         */
+        public java.util.List<String> getGroupIds() {
+            return this.groupIds;
+        }
+
+        /**
+         * @return userIds
+         */
+        public java.util.List<String> getUserIds() {
+            return this.userIds;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> groupIds; 
+            private java.util.List<String> userIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationOwner model) {
+                this.groupIds = model.groupIds;
+                this.userIds = model.userIds;
+            } 
+
+            /**
+             * GroupIds.
+             */
+            public Builder groupIds(java.util.List<String> groupIds) {
+                this.groupIds = groupIds;
+                return this;
+            }
+
+            /**
+             * UserIds.
+             */
+            public Builder userIds(java.util.List<String> userIds) {
+                this.userIds = userIds;
+                return this;
+            }
+
+            public ApplicationOwner build() {
+                return new ApplicationOwner(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationRequest</p>
+     */
+    public static class CustomFields extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FieldName")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
+        private String fieldName;
+
+        @com.aliyun.core.annotation.NameInMap("FieldValue")
+        private String fieldValue;
+
+        private CustomFields(Builder builder) {
+            this.fieldName = builder.fieldName;
+            this.fieldValue = builder.fieldValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomFields create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fieldName
+         */
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        /**
+         * @return fieldValue
+         */
+        public String getFieldValue() {
+            return this.fieldValue;
+        }
+
+        public static final class Builder {
+            private String fieldName; 
+            private String fieldValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomFields model) {
+                this.fieldName = model.fieldName;
+                this.fieldValue = model.fieldValue;
+            } 
+
+            /**
+             * FieldName.
+             */
+            public Builder fieldName(String fieldName) {
+                this.fieldName = fieldName;
+                return this;
+            }
+
+            /**
+             * FieldValue.
+             */
+            public Builder fieldValue(String fieldValue) {
+                this.fieldValue = fieldValue;
+                return this;
+            }
+
+            public CustomFields build() {
+                return new CustomFields(this);
+            } 
+
+        } 
+
+    }
 }

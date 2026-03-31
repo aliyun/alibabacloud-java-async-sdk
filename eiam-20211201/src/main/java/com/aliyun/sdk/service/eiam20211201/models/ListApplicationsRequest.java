@@ -44,6 +44,10 @@ public class ListApplicationsRequest extends Request {
     private String authorizationType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomFields")
+    private java.util.List<CustomFields> customFields;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
@@ -84,6 +88,7 @@ public class ListApplicationsRequest extends Request {
         this.applicationIds = builder.applicationIds;
         this.applicationName = builder.applicationName;
         this.authorizationType = builder.authorizationType;
+        this.customFields = builder.customFields;
         this.instanceId = builder.instanceId;
         this.m2MClientStatus = builder.m2MClientStatus;
         this.pageNumber = builder.pageNumber;
@@ -149,6 +154,13 @@ public class ListApplicationsRequest extends Request {
     }
 
     /**
+     * @return customFields
+     */
+    public java.util.List<CustomFields> getCustomFields() {
+        return this.customFields;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -204,6 +216,7 @@ public class ListApplicationsRequest extends Request {
         private java.util.List<String> applicationIds; 
         private String applicationName; 
         private String authorizationType; 
+        private java.util.List<CustomFields> customFields; 
         private String instanceId; 
         private String m2MClientStatus; 
         private Long pageNumber; 
@@ -224,6 +237,7 @@ public class ListApplicationsRequest extends Request {
             this.applicationIds = request.applicationIds;
             this.applicationName = request.applicationName;
             this.authorizationType = request.authorizationType;
+            this.customFields = request.customFields;
             this.instanceId = request.instanceId;
             this.m2MClientStatus = request.m2MClientStatus;
             this.pageNumber = request.pageNumber;
@@ -297,6 +311,15 @@ public class ListApplicationsRequest extends Request {
         public Builder authorizationType(String authorizationType) {
             this.putQueryParameter("AuthorizationType", authorizationType);
             this.authorizationType = authorizationType;
+            return this;
+        }
+
+        /**
+         * CustomFields.
+         */
+        public Builder customFields(java.util.List<CustomFields> customFields) {
+            this.putQueryParameter("CustomFields", customFields);
+            this.customFields = customFields;
             return this;
         }
 
@@ -409,4 +432,80 @@ public class ListApplicationsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationsRequest} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsRequest</p>
+     */
+    public static class CustomFields extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FieldName")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
+        private String fieldName;
+
+        @com.aliyun.core.annotation.NameInMap("FieldValue")
+        private String fieldValue;
+
+        private CustomFields(Builder builder) {
+            this.fieldName = builder.fieldName;
+            this.fieldValue = builder.fieldValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomFields create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fieldName
+         */
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        /**
+         * @return fieldValue
+         */
+        public String getFieldValue() {
+            return this.fieldValue;
+        }
+
+        public static final class Builder {
+            private String fieldName; 
+            private String fieldValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomFields model) {
+                this.fieldName = model.fieldName;
+                this.fieldValue = model.fieldValue;
+            } 
+
+            /**
+             * FieldName.
+             */
+            public Builder fieldName(String fieldName) {
+                this.fieldName = fieldName;
+                return this;
+            }
+
+            /**
+             * FieldValue.
+             */
+            public Builder fieldValue(String fieldValue) {
+                this.fieldValue = fieldValue;
+                return this;
+            }
+
+            public CustomFields build() {
+                return new CustomFields(this);
+            } 
+
+        } 
+
+    }
 }
