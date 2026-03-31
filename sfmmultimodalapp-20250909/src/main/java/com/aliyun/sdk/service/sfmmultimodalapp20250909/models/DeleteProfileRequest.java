@@ -24,7 +24,6 @@ public class DeleteProfileRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserDefinedId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String userDefinedId;
 
     @com.aliyun.core.annotation.Query
@@ -102,10 +101,7 @@ public class DeleteProfileRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5A7C969B-5101-112B-8202-DFAEEA4BFBED</p>
+         * UserDefinedId.
          */
         public Builder userDefinedId(String userDefinedId) {
             this.putQueryParameter("UserDefinedId", userDefinedId);

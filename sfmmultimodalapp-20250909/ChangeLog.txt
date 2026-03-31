@@ -1,3 +1,6 @@
+2026-03-31 Version: 1.0.3
+- Generated java-async 2025-09-09 for SfmMultiModalApp.
+
 2026-03-26 Version: 1.0.2
 - Generated java-async 2025-09-09 for SfmMultiModalApp.
 

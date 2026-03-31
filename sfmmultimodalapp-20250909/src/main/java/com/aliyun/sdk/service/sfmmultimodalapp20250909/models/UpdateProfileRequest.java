@@ -36,7 +36,6 @@ public class UpdateProfileRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserDefinedId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String userDefinedId;
 
     @com.aliyun.core.annotation.Query
@@ -172,10 +171,7 @@ public class UpdateProfileRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10b6d435</p>
+         * UserDefinedId.
          */
         public Builder userDefinedId(String userDefinedId) {
             this.putQueryParameter("UserDefinedId", userDefinedId);
