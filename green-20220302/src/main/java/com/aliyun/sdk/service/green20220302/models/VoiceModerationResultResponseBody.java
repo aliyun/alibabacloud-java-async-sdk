@@ -145,6 +145,357 @@ public class VoiceModerationResultResponseBody extends TeaModel {
      *
      * <p>VoiceModerationResultResponseBody</p>
      */
+    public static class CustomizedHit extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("KeyWords")
+        private String keyWords;
+
+        @com.aliyun.core.annotation.NameInMap("LibName")
+        private String libName;
+
+        private CustomizedHit(Builder builder) {
+            this.keyWords = builder.keyWords;
+            this.libName = builder.libName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomizedHit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keyWords
+         */
+        public String getKeyWords() {
+            return this.keyWords;
+        }
+
+        /**
+         * @return libName
+         */
+        public String getLibName() {
+            return this.libName;
+        }
+
+        public static final class Builder {
+            private String keyWords; 
+            private String libName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomizedHit model) {
+                this.keyWords = model.keyWords;
+                this.libName = model.libName;
+            } 
+
+            /**
+             * KeyWords.
+             */
+            public Builder keyWords(String keyWords) {
+                this.keyWords = keyWords;
+                return this;
+            }
+
+            /**
+             * LibName.
+             */
+            public Builder libName(String libName) {
+                this.libName = libName;
+                return this;
+            }
+
+            public CustomizedHit build() {
+                return new CustomizedHit(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VoiceModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VoiceModerationResultResponseBody</p>
+     */
+    public static class RiskPositions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndPos")
+        private Integer endPos;
+
+        @com.aliyun.core.annotation.NameInMap("RiskWord")
+        private String riskWord;
+
+        @com.aliyun.core.annotation.NameInMap("StartPos")
+        private Integer startPos;
+
+        private RiskPositions(Builder builder) {
+            this.endPos = builder.endPos;
+            this.riskWord = builder.riskWord;
+            this.startPos = builder.startPos;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RiskPositions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endPos
+         */
+        public Integer getEndPos() {
+            return this.endPos;
+        }
+
+        /**
+         * @return riskWord
+         */
+        public String getRiskWord() {
+            return this.riskWord;
+        }
+
+        /**
+         * @return startPos
+         */
+        public Integer getStartPos() {
+            return this.startPos;
+        }
+
+        public static final class Builder {
+            private Integer endPos; 
+            private String riskWord; 
+            private Integer startPos; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskPositions model) {
+                this.endPos = model.endPos;
+                this.riskWord = model.riskWord;
+                this.startPos = model.startPos;
+            } 
+
+            /**
+             * EndPos.
+             */
+            public Builder endPos(Integer endPos) {
+                this.endPos = endPos;
+                return this;
+            }
+
+            /**
+             * RiskWord.
+             */
+            public Builder riskWord(String riskWord) {
+                this.riskWord = riskWord;
+                return this;
+            }
+
+            /**
+             * StartPos.
+             */
+            public Builder startPos(Integer startPos) {
+                this.startPos = startPos;
+                return this;
+            }
+
+            public RiskPositions build() {
+                return new RiskPositions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VoiceModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VoiceModerationResultResponseBody</p>
+     */
+    public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Confidence")
+        private Float confidence;
+
+        @com.aliyun.core.annotation.NameInMap("CustomizedHit")
+        private java.util.List<CustomizedHit> customizedHit;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
+
+        @com.aliyun.core.annotation.NameInMap("RiskPositions")
+        private java.util.List<RiskPositions> riskPositions;
+
+        @com.aliyun.core.annotation.NameInMap("RiskWords")
+        private String riskWords;
+
+        private Result(Builder builder) {
+            this.confidence = builder.confidence;
+            this.customizedHit = builder.customizedHit;
+            this.description = builder.description;
+            this.label = builder.label;
+            this.riskLevel = builder.riskLevel;
+            this.riskPositions = builder.riskPositions;
+            this.riskWords = builder.riskWords;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Result create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidence
+         */
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return customizedHit
+         */
+        public java.util.List<CustomizedHit> getCustomizedHit() {
+            return this.customizedHit;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        /**
+         * @return riskPositions
+         */
+        public java.util.List<RiskPositions> getRiskPositions() {
+            return this.riskPositions;
+        }
+
+        /**
+         * @return riskWords
+         */
+        public String getRiskWords() {
+            return this.riskWords;
+        }
+
+        public static final class Builder {
+            private Float confidence; 
+            private java.util.List<CustomizedHit> customizedHit; 
+            private String description; 
+            private String label; 
+            private String riskLevel; 
+            private java.util.List<RiskPositions> riskPositions; 
+            private String riskWords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.confidence = model.confidence;
+                this.customizedHit = model.customizedHit;
+                this.description = model.description;
+                this.label = model.label;
+                this.riskLevel = model.riskLevel;
+                this.riskPositions = model.riskPositions;
+                this.riskWords = model.riskWords;
+            } 
+
+            /**
+             * Confidence.
+             */
+            public Builder confidence(Float confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * CustomizedHit.
+             */
+            public Builder customizedHit(java.util.List<CustomizedHit> customizedHit) {
+                this.customizedHit = customizedHit;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Label.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            /**
+             * RiskPositions.
+             */
+            public Builder riskPositions(java.util.List<RiskPositions> riskPositions) {
+                this.riskPositions = riskPositions;
+                return this;
+            }
+
+            /**
+             * RiskWords.
+             */
+            public Builder riskWords(String riskWords) {
+                this.riskWords = riskWords;
+                return this;
+            }
+
+            public Result build() {
+                return new Result(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VoiceModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VoiceModerationResultResponseBody</p>
+     */
     public static class SliceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Descriptions")
         private String descriptions;
@@ -163,6 +514,9 @@ public class VoiceModerationResultResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("OriginAlgoResult")
         private java.util.Map<String, ?> originAlgoResult;
+
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -195,6 +549,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             this.extend = builder.extend;
             this.labels = builder.labels;
             this.originAlgoResult = builder.originAlgoResult;
+            this.result = builder.result;
             this.riskLevel = builder.riskLevel;
             this.riskTips = builder.riskTips;
             this.riskWords = builder.riskWords;
@@ -253,6 +608,13 @@ public class VoiceModerationResultResponseBody extends TeaModel {
          */
         public java.util.Map<String, ?> getOriginAlgoResult() {
             return this.originAlgoResult;
+        }
+
+        /**
+         * @return result
+         */
+        public java.util.List<Result> getResult() {
+            return this.result;
         }
 
         /**
@@ -318,6 +680,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             private String extend; 
             private String labels; 
             private java.util.Map<String, ?> originAlgoResult; 
+            private java.util.List<Result> result; 
             private String riskLevel; 
             private String riskTips; 
             private String riskWords; 
@@ -337,6 +700,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
                 this.extend = model.extend;
                 this.labels = model.labels;
                 this.originAlgoResult = model.originAlgoResult;
+                this.result = model.result;
                 this.riskLevel = model.riskLevel;
                 this.riskTips = model.riskTips;
                 this.riskWords = model.riskWords;
@@ -410,6 +774,14 @@ public class VoiceModerationResultResponseBody extends TeaModel {
              */
             public Builder originAlgoResult(java.util.Map<String, ?> originAlgoResult) {
                 this.originAlgoResult = originAlgoResult;
+                return this;
+            }
+
+            /**
+             * Result.
+             */
+            public Builder result(java.util.List<Result> result) {
+                this.result = result;
                 return this;
             }
 
