@@ -881,6 +881,9 @@ public class ListAddonReleasesResponseBody extends TeaModel {
      * <p>ListAddonReleasesResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContainsV2Addon")
+        private Boolean containsV2Addon;
+
         @com.aliyun.core.annotation.NameInMap("Releases")
         private java.util.List<Releases> releases;
 
@@ -888,6 +891,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         private Long total;
 
         private Data(Builder builder) {
+            this.containsV2Addon = builder.containsV2Addon;
             this.releases = builder.releases;
             this.total = builder.total;
         }
@@ -898,6 +902,13 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return containsV2Addon
+         */
+        public Boolean getContainsV2Addon() {
+            return this.containsV2Addon;
         }
 
         /**
@@ -915,6 +926,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean containsV2Addon; 
             private java.util.List<Releases> releases; 
             private Long total; 
 
@@ -922,9 +934,18 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.containsV2Addon = model.containsV2Addon;
                 this.releases = model.releases;
                 this.total = model.total;
             } 
+
+            /**
+             * ContainsV2Addon.
+             */
+            public Builder containsV2Addon(Boolean containsV2Addon) {
+                this.containsV2Addon = containsV2Addon;
+                return this;
+            }
 
             /**
              * <p>The queried add-ons.</p>
