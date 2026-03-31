@@ -26,6 +26,10 @@ public class DetachPolicyFromRoleRequest extends Request {
     private String policyType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RoleName")
     private String roleName;
 
@@ -33,6 +37,7 @@ public class DetachPolicyFromRoleRequest extends Request {
         super(builder);
         this.policyName = builder.policyName;
         this.policyType = builder.policyType;
+        this.resourceGroupId = builder.resourceGroupId;
         this.roleName = builder.roleName;
     }
 
@@ -64,6 +69,13 @@ public class DetachPolicyFromRoleRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return roleName
      */
     public String getRoleName() {
@@ -73,6 +85,7 @@ public class DetachPolicyFromRoleRequest extends Request {
     public static final class Builder extends Request.Builder<DetachPolicyFromRoleRequest, Builder> {
         private String policyName; 
         private String policyType; 
+        private String resourceGroupId; 
         private String roleName; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class DetachPolicyFromRoleRequest extends Request {
             super(request);
             this.policyName = request.policyName;
             this.policyType = request.policyType;
+            this.resourceGroupId = request.resourceGroupId;
             this.roleName = request.roleName;
         } 
 
@@ -107,6 +121,15 @@ public class DetachPolicyFromRoleRequest extends Request {
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
             this.policyType = policyType;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

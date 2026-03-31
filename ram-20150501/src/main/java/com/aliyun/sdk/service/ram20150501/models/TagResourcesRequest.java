@@ -100,8 +100,8 @@ public class TagResourcesRequest extends Request {
          * <p>The resource type.</p>
          * <p>Enumerated values:</p>
          * <ul>
-         * <li>role</li>
-         * <li>policy</li>
+         * <li>role: RAM roles.</li>
+         * <li>policy: policies.</li>
          * </ul>
          * 
          * <strong>example:</strong>

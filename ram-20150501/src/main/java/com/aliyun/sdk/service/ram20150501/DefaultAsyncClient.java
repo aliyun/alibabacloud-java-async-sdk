@@ -437,6 +437,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you delete a regular RAM role, call the <a href="https://help.aliyun.com/document_detail/2337680.html">DetachPolicyFromRole</a> operation to remove all policies from the RAM role.
+     * The DeleteRole operation cannot be used to delete service-linked roles and reserved roles for cloud services.</p>
+     * 
      * @param request the request parameters of DeleteRole  DeleteRoleRequest
      * @return DeleteRoleResponse
      */

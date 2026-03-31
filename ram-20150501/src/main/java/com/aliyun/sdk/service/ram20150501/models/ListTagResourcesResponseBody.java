@@ -102,7 +102,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tags that are added to the resources.</p>
+         * <p>The tags that are added to the cloud resources.</p>
          */
         public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -206,6 +206,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The resource type.</p>
+             * <p>Enumerated values:</p>
+             * <ul>
+             * <li>role: RAM roles.</li>
+             * <li>policy: policies.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>role</p>

@@ -1,3 +1,6 @@
+2026-03-31 Version: 1.0.5
+- Generated java-async 2015-05-01 for Ram.
+
 2025-06-12 Version: 1.0.4
 - Generated java-async 2015-05-01 for Ram.
 

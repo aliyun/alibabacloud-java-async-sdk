@@ -29,11 +29,16 @@ public class DetachPolicyFromGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PolicyType")
     private String policyType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private DetachPolicyFromGroupRequest(Builder builder) {
         super(builder);
         this.groupName = builder.groupName;
         this.policyName = builder.policyName;
         this.policyType = builder.policyType;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class DetachPolicyFromGroupRequest extends Request {
         return this.policyType;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<DetachPolicyFromGroupRequest, Builder> {
         private String groupName; 
         private String policyName; 
         private String policyType; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class DetachPolicyFromGroupRequest extends Request {
             this.groupName = request.groupName;
             this.policyName = request.policyName;
             this.policyType = request.policyType;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -119,6 +133,15 @@ public class DetachPolicyFromGroupRequest extends Request {
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
             this.policyType = policyType;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
