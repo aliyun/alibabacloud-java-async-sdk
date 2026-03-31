@@ -525,6 +525,12 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DirectoryType")
         private String directoryType;
 
+        @com.aliyun.core.annotation.NameInMap("EnvId")
+        private String envId;
+
+        @com.aliyun.core.annotation.NameInMap("EnvType")
+        private String envType;
+
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
@@ -655,6 +661,8 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             this.desktopGroupName = builder.desktopGroupName;
             this.directoryId = builder.directoryId;
             this.directoryType = builder.directoryType;
+            this.envId = builder.envId;
+            this.envType = builder.envType;
             this.expiredTime = builder.expiredTime;
             this.expiredTimes = builder.expiredTimes;
             this.gpuCount = builder.gpuCount;
@@ -806,6 +814,20 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
          */
         public String getDirectoryType() {
             return this.directoryType;
+        }
+
+        /**
+         * @return envId
+         */
+        public String getEnvId() {
+            return this.envId;
+        }
+
+        /**
+         * @return envType
+         */
+        public String getEnvType() {
+            return this.envType;
         }
 
         /**
@@ -1090,6 +1112,8 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             private String desktopGroupName; 
             private String directoryId; 
             private String directoryType; 
+            private String envId; 
+            private String envType; 
             private String expiredTime; 
             private java.util.List<String> expiredTimes; 
             private Float gpuCount; 
@@ -1148,6 +1172,8 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
                 this.desktopGroupName = model.desktopGroupName;
                 this.directoryId = model.directoryId;
                 this.directoryType = model.directoryType;
+                this.envId = model.envId;
+                this.envType = model.envType;
                 this.expiredTime = model.expiredTime;
                 this.expiredTimes = model.expiredTimes;
                 this.gpuCount = model.gpuCount;
@@ -1362,6 +1388,22 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
              */
             public Builder directoryType(String directoryType) {
                 this.directoryType = directoryType;
+                return this;
+            }
+
+            /**
+             * EnvId.
+             */
+            public Builder envId(String envId) {
+                this.envId = envId;
+                return this;
+            }
+
+            /**
+             * EnvType.
+             */
+            public Builder envType(String envType) {
+                this.envType = envType;
                 return this;
             }
 

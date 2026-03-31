@@ -393,6 +393,12 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntraDomainName")
         private String entraDomainName;
 
+        @com.aliyun.core.annotation.NameInMap("EnvId")
+        private String envId;
+
+        @com.aliyun.core.annotation.NameInMap("EnvType")
+        private String envType;
+
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
@@ -531,6 +537,8 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.desktopType = builder.desktopType;
             this.endUserCount = builder.endUserCount;
             this.entraDomainName = builder.entraDomainName;
+            this.envId = builder.envId;
+            this.envType = builder.envType;
             this.expiredTime = builder.expiredTime;
             this.expiredTimes = builder.expiredTimes;
             this.gpuCount = builder.gpuCount;
@@ -698,6 +706,20 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         public String getEntraDomainName() {
             return this.entraDomainName;
+        }
+
+        /**
+         * @return envId
+         */
+        public String getEnvId() {
+            return this.envId;
+        }
+
+        /**
+         * @return envType
+         */
+        public String getEnvType() {
+            return this.envType;
         }
 
         /**
@@ -998,6 +1020,8 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String desktopType; 
             private Integer endUserCount; 
             private String entraDomainName; 
+            private String envId; 
+            private String envType; 
             private String expiredTime; 
             private java.util.List<String> expiredTimes; 
             private Float gpuCount; 
@@ -1060,6 +1084,8 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
                 this.desktopType = model.desktopType;
                 this.endUserCount = model.endUserCount;
                 this.entraDomainName = model.entraDomainName;
+                this.envId = model.envId;
+                this.envType = model.envType;
                 this.expiredTime = model.expiredTime;
                 this.expiredTimes = model.expiredTimes;
                 this.gpuCount = model.gpuCount;
@@ -1283,6 +1309,22 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder entraDomainName(String entraDomainName) {
                 this.entraDomainName = entraDomainName;
+                return this;
+            }
+
+            /**
+             * EnvId.
+             */
+            public Builder envId(String envId) {
+                this.envId = envId;
+                return this;
+            }
+
+            /**
+             * EnvType.
+             */
+            public Builder envType(String envType) {
+                this.envType = envType;
                 return this;
             }
 
