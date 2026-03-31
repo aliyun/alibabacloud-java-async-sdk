@@ -119,6 +119,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     private String promotionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleMode")
+    private String saleMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StreamMode")
     private Integer streamMode;
 
@@ -156,6 +160,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
         this.promotionId = builder.promotionId;
+        this.saleMode = builder.saleMode;
         this.streamMode = builder.streamMode;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
@@ -343,6 +348,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return saleMode
+     */
+    public String getSaleMode() {
+        return this.saleMode;
+    }
+
+    /**
      * @return streamMode
      */
     public Integer getStreamMode() {
@@ -388,6 +400,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         private String periodUnit; 
         private String policyGroupId; 
         private String promotionId; 
+        private String saleMode; 
         private Integer streamMode; 
         private java.util.List<Tag> tag; 
         private String vSwitchId; 
@@ -422,6 +435,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
             this.promotionId = request.promotionId;
+            this.saleMode = request.saleMode;
             this.streamMode = request.streamMode;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
@@ -753,6 +767,15 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
             this.promotionId = promotionId;
+            return this;
+        }
+
+        /**
+         * SaleMode.
+         */
+        public Builder saleMode(String saleMode) {
+            this.putQueryParameter("SaleMode", saleMode);
+            this.saleMode = saleMode;
             return this;
         }
 
