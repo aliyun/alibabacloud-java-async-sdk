@@ -474,6 +474,9 @@ public class DescribeAlertsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
+        @com.aliyun.core.annotation.NameInMap("InvestigationReport")
+        private String investigationReport;
+
         @com.aliyun.core.annotation.NameInMap("IsDefend")
         private String isDefend;
 
@@ -534,6 +537,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
             this.incidentUuid = builder.incidentUuid;
+            this.investigationReport = builder.investigationReport;
             this.isDefend = builder.isDefend;
             this.logTime = builder.logTime;
             this.logUuid = builder.logUuid;
@@ -758,6 +762,13 @@ public class DescribeAlertsResponseBody extends TeaModel {
         }
 
         /**
+         * @return investigationReport
+         */
+        public String getInvestigationReport() {
+            return this.investigationReport;
+        }
+
+        /**
          * @return isDefend
          */
         public String getIsDefend() {
@@ -857,6 +868,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             private String gmtModified; 
             private Long id; 
             private String incidentUuid; 
+            private String investigationReport; 
             private String isDefend; 
             private String logTime; 
             private String logUuid; 
@@ -901,6 +913,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
                 this.gmtModified = model.gmtModified;
                 this.id = model.id;
                 this.incidentUuid = model.incidentUuid;
+                this.investigationReport = model.investigationReport;
                 this.isDefend = model.isDefend;
                 this.logTime = model.logTime;
                 this.logUuid = model.logUuid;
@@ -1238,6 +1251,14 @@ public class DescribeAlertsResponseBody extends TeaModel {
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
+                return this;
+            }
+
+            /**
+             * InvestigationReport.
+             */
+            public Builder investigationReport(String investigationReport) {
+                this.investigationReport = investigationReport;
                 return this;
             }
 

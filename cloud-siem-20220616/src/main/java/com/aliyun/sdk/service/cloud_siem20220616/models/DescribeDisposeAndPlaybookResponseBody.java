@@ -306,6 +306,9 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskConfig")
         private String taskConfig;
 
+        @com.aliyun.core.annotation.NameInMap("UnAvailableCode")
+        private String unAvailableCode;
+
         @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
@@ -321,6 +324,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             this.opLevel = builder.opLevel;
             this.paramConfig = builder.paramConfig;
             this.taskConfig = builder.taskConfig;
+            this.unAvailableCode = builder.unAvailableCode;
             this.uuid = builder.uuid;
             this.wafPlaybook = builder.wafPlaybook;
         }
@@ -390,6 +394,13 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
 
         /**
+         * @return unAvailableCode
+         */
+        public String getUnAvailableCode() {
+            return this.unAvailableCode;
+        }
+
+        /**
          * @return uuid
          */
         public String getUuid() {
@@ -412,6 +423,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             private String opLevel; 
             private java.util.List<?> paramConfig; 
             private String taskConfig; 
+            private String unAvailableCode; 
             private String uuid; 
             private Boolean wafPlaybook; 
 
@@ -427,6 +439,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
                 this.opLevel = model.opLevel;
                 this.paramConfig = model.paramConfig;
                 this.taskConfig = model.taskConfig;
+                this.unAvailableCode = model.unAvailableCode;
                 this.uuid = model.uuid;
                 this.wafPlaybook = model.wafPlaybook;
             } 
@@ -514,6 +527,14 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
              */
             public Builder taskConfig(String taskConfig) {
                 this.taskConfig = taskConfig;
+                return this;
+            }
+
+            /**
+             * UnAvailableCode.
+             */
+            public Builder unAvailableCode(String unAvailableCode) {
+                this.unAvailableCode = unAvailableCode;
                 return this;
             }
 
