@@ -68,6 +68,23 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApplicationGroupResponse> createApplicationGroup(CreateApplicationGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * @param request the request parameters of CreateChatConfiguration  CreateChatConfigurationRequest
+     * @return CreateChatConfigurationResponse
+     */
+    CompletableFuture<CreateChatConfigurationResponse> createChatConfiguration(CreateChatConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of CreateDeployRevision  CreateDeployRevisionRequest
+     * @return CreateDeployRevisionResponse
+     */
+    CompletableFuture<CreateDeployRevisionResponse> createDeployRevision(CreateDeployRevisionRequest request);
+
+    /**
      * @param request the request parameters of CreateGitRepository  CreateGitRepositoryRequest
      * @return CreateGitRepositoryResponse
      */
@@ -120,6 +137,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteApplicationGroupResponse
      */
     CompletableFuture<DeleteApplicationGroupResponse> deleteApplicationGroup(DeleteApplicationGroupRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * @param request the request parameters of DeleteChatConfiguration  DeleteChatConfigurationRequest
+     * @return DeleteChatConfigurationResponse
+     */
+    CompletableFuture<DeleteChatConfigurationResponse> deleteChatConfiguration(DeleteChatConfigurationRequest request);
 
     /**
      * @param request the request parameters of DeleteExecutions  DeleteExecutionsRequest
@@ -210,6 +238,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetApplicationGroupResponse
      */
     CompletableFuture<GetApplicationGroupResponse> getApplicationGroup(GetApplicationGroupRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * @param request the request parameters of GetChatConfiguration  GetChatConfigurationRequest
+     * @return GetChatConfigurationResponse
+     */
+    CompletableFuture<GetChatConfigurationResponse> getChatConfiguration(GetChatConfigurationRequest request);
 
     /**
      * @param request the request parameters of GetExecutionTemplate  GetExecutionTemplateRequest
@@ -318,6 +357,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListApplicationsResponse
      */
     CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * @param request the request parameters of ListChatConfigurations  ListChatConfigurationsRequest
+     * @return ListChatConfigurationsResponse
+     */
+    CompletableFuture<ListChatConfigurationsResponse> listChatConfigurations(ListChatConfigurationsRequest request);
 
     /**
      * <b>description</b> :
@@ -464,6 +514,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request);
 
     /**
+     * @param request the request parameters of ListTaskExecutionInvocations  ListTaskExecutionInvocationsRequest
+     * @return ListTaskExecutionInvocationsResponse
+     */
+    CompletableFuture<ListTaskExecutionInvocationsResponse> listTaskExecutionInvocations(ListTaskExecutionInvocationsRequest request);
+
+    /**
      * @param request the request parameters of ListTaskExecutions  ListTaskExecutionsRequest
      * @return ListTaskExecutionsResponse
      */
@@ -556,6 +612,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateApplicationGroupResponse> updateApplicationGroup(UpdateApplicationGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * @param request the request parameters of UpdateChatConfiguration  UpdateChatConfigurationRequest
+     * @return UpdateChatConfigurationResponse
+     */
+    CompletableFuture<UpdateChatConfigurationResponse> updateChatConfiguration(UpdateChatConfigurationRequest request);
+
+    /**
      * @param request the request parameters of UpdateExecution  UpdateExecutionRequest
      * @return UpdateExecutionResponse
      */
@@ -602,6 +669,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateTemplateResponse
      */
     CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request);
+
+    /**
+     * @param request the request parameters of UpdateTemplateAttributes  UpdateTemplateAttributesRequest
+     * @return UpdateTemplateAttributesResponse
+     */
+    CompletableFuture<UpdateTemplateAttributesResponse> updateTemplateAttributes(UpdateTemplateAttributesRequest request);
 
     /**
      * @param request the request parameters of ValidateTemplateContent  ValidateTemplateContentRequest

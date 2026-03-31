@@ -27,6 +27,10 @@ public class UpdateApplicationGroupRequest extends Request {
     private String deployedRevisionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorMetadata")
+    private String monitorMetadata;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
@@ -51,6 +55,7 @@ public class UpdateApplicationGroupRequest extends Request {
         super(builder);
         this.applicationName = builder.applicationName;
         this.deployedRevisionId = builder.deployedRevisionId;
+        this.monitorMetadata = builder.monitorMetadata;
         this.name = builder.name;
         this.newName = builder.newName;
         this.operationName = builder.operationName;
@@ -83,6 +88,13 @@ public class UpdateApplicationGroupRequest extends Request {
      */
     public String getDeployedRevisionId() {
         return this.deployedRevisionId;
+    }
+
+    /**
+     * @return monitorMetadata
+     */
+    public String getMonitorMetadata() {
+        return this.monitorMetadata;
     }
 
     /**
@@ -123,6 +135,7 @@ public class UpdateApplicationGroupRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateApplicationGroupRequest, Builder> {
         private String applicationName; 
         private String deployedRevisionId; 
+        private String monitorMetadata; 
         private String name; 
         private String newName; 
         private String operationName; 
@@ -137,6 +150,7 @@ public class UpdateApplicationGroupRequest extends Request {
             super(request);
             this.applicationName = request.applicationName;
             this.deployedRevisionId = request.deployedRevisionId;
+            this.monitorMetadata = request.monitorMetadata;
             this.name = request.name;
             this.newName = request.newName;
             this.operationName = request.operationName;
@@ -163,6 +177,15 @@ public class UpdateApplicationGroupRequest extends Request {
         public Builder deployedRevisionId(String deployedRevisionId) {
             this.putQueryParameter("DeployedRevisionId", deployedRevisionId);
             this.deployedRevisionId = deployedRevisionId;
+            return this;
+        }
+
+        /**
+         * MonitorMetadata.
+         */
+        public Builder monitorMetadata(String monitorMetadata) {
+            this.putQueryParameter("MonitorMetadata", monitorMetadata);
+            this.monitorMetadata = monitorMetadata;
             return this;
         }
 

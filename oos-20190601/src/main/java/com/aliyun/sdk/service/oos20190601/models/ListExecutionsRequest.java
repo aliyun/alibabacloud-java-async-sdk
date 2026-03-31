@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListExecutionsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    private String accountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Categories")
     private String categories;
 
@@ -74,6 +78,10 @@ public class ListExecutionsRequest extends Request {
     private String ramRole;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdFolderIds")
+    private java.util.List<String> rdFolderIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -119,6 +127,7 @@ public class ListExecutionsRequest extends Request {
 
     private ListExecutionsRequest(Builder builder) {
         super(builder);
+        this.accountId = builder.accountId;
         this.categories = builder.categories;
         this.category = builder.category;
         this.depth = builder.depth;
@@ -133,6 +142,7 @@ public class ListExecutionsRequest extends Request {
         this.nextToken = builder.nextToken;
         this.parentExecutionId = builder.parentExecutionId;
         this.ramRole = builder.ramRole;
+        this.rdFolderIds = builder.rdFolderIds;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceId = builder.resourceId;
@@ -157,6 +167,13 @@ public class ListExecutionsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountId
+     */
+    public String getAccountId() {
+        return this.accountId;
     }
 
     /**
@@ -258,6 +275,13 @@ public class ListExecutionsRequest extends Request {
     }
 
     /**
+     * @return rdFolderIds
+     */
+    public java.util.List<String> getRdFolderIds() {
+        return this.rdFolderIds;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -335,6 +359,7 @@ public class ListExecutionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListExecutionsRequest, Builder> {
+        private String accountId; 
         private String categories; 
         private String category; 
         private String depth; 
@@ -349,6 +374,7 @@ public class ListExecutionsRequest extends Request {
         private String nextToken; 
         private String parentExecutionId; 
         private String ramRole; 
+        private java.util.List<String> rdFolderIds; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceId; 
@@ -367,6 +393,7 @@ public class ListExecutionsRequest extends Request {
 
         private Builder(ListExecutionsRequest request) {
             super(request);
+            this.accountId = request.accountId;
             this.categories = request.categories;
             this.category = request.category;
             this.depth = request.depth;
@@ -381,6 +408,7 @@ public class ListExecutionsRequest extends Request {
             this.nextToken = request.nextToken;
             this.parentExecutionId = request.parentExecutionId;
             this.ramRole = request.ramRole;
+            this.rdFolderIds = request.rdFolderIds;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceId = request.resourceId;
@@ -393,6 +421,15 @@ public class ListExecutionsRequest extends Request {
             this.tags = request.tags;
             this.templateName = request.templateName;
         } 
+
+        /**
+         * AccountId.
+         */
+        public Builder accountId(String accountId) {
+            this.putQueryParameter("AccountId", accountId);
+            this.accountId = accountId;
+            return this;
+        }
 
         /**
          * <p>The types of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger. You can specify only one of the Categories and Category parameters. We recommend that you specify Categories.</p>
@@ -563,6 +600,16 @@ public class ListExecutionsRequest extends Request {
         public Builder ramRole(String ramRole) {
             this.putQueryParameter("RamRole", ramRole);
             this.ramRole = ramRole;
+            return this;
+        }
+
+        /**
+         * RdFolderIds.
+         */
+        public Builder rdFolderIds(java.util.List<String> rdFolderIds) {
+            String rdFolderIdsShrink = shrink(rdFolderIds, "RdFolderIds", "json");
+            this.putQueryParameter("RdFolderIds", rdFolderIdsShrink);
+            this.rdFolderIds = rdFolderIds;
             return this;
         }
 

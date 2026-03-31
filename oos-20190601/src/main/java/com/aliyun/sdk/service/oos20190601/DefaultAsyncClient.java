@@ -184,6 +184,47 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * @param request the request parameters of CreateChatConfiguration  CreateChatConfigurationRequest
+     * @return CreateChatConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<CreateChatConfigurationResponse> createChatConfiguration(CreateChatConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateChatConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateChatConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateChatConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateDeployRevision  CreateDeployRevisionRequest
+     * @return CreateDeployRevisionResponse
+     */
+    @Override
+    public CompletableFuture<CreateDeployRevisionResponse> createDeployRevision(CreateDeployRevisionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDeployRevision").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDeployRevisionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDeployRevisionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateGitRepository  CreateGitRepositoryRequest
      * @return CreateGitRepositoryResponse
      */
@@ -340,6 +381,29 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteApplicationGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * @param request the request parameters of DeleteChatConfiguration  DeleteChatConfigurationRequest
+     * @return DeleteChatConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<DeleteChatConfigurationResponse> deleteChatConfiguration(DeleteChatConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteChatConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteChatConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteChatConfigurationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -610,6 +674,29 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetApplicationGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * @param request the request parameters of GetChatConfiguration  GetChatConfigurationRequest
+     * @return GetChatConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<GetChatConfigurationResponse> getChatConfiguration(GetChatConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetChatConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetChatConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetChatConfigurationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -934,6 +1021,29 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListApplicationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * @param request the request parameters of ListChatConfigurations  ListChatConfigurationsRequest
+     * @return ListChatConfigurationsResponse
+     */
+    @Override
+    public CompletableFuture<ListChatConfigurationsResponse> listChatConfigurations(ListChatConfigurationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListChatConfigurations").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListChatConfigurationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListChatConfigurationsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1360,6 +1470,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListTaskExecutionInvocations  ListTaskExecutionInvocationsRequest
+     * @return ListTaskExecutionInvocationsResponse
+     */
+    @Override
+    public CompletableFuture<ListTaskExecutionInvocationsResponse> listTaskExecutionInvocations(ListTaskExecutionInvocationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListTaskExecutionInvocations").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTaskExecutionInvocationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTaskExecutionInvocationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListTaskExecutions  ListTaskExecutionsRequest
      * @return ListTaskExecutionsResponse
      */
@@ -1620,6 +1748,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * @param request the request parameters of UpdateChatConfiguration  UpdateChatConfigurationRequest
+     * @return UpdateChatConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<UpdateChatConfigurationResponse> updateChatConfiguration(UpdateChatConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateChatConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateChatConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateChatConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateExecution  UpdateExecutionRequest
      * @return UpdateExecutionResponse
      */
@@ -1758,6 +1909,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateTemplateAttributes  UpdateTemplateAttributesRequest
+     * @return UpdateTemplateAttributesResponse
+     */
+    @Override
+    public CompletableFuture<UpdateTemplateAttributesResponse> updateTemplateAttributes(UpdateTemplateAttributesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateTemplateAttributes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateTemplateAttributesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateTemplateAttributesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

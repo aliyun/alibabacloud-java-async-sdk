@@ -38,12 +38,20 @@ public class SetServiceSettingsRequest extends Request {
     private String deliverySlsProjectName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdFolderIds")
+    private java.util.List<String> rdFolderIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RdcEnterpriseId")
     private String rdcEnterpriseId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceAccessRdEnabled")
+    private Boolean serviceAccessRdEnabled;
 
     private SetServiceSettingsRequest(Builder builder) {
         super(builder);
@@ -52,8 +60,10 @@ public class SetServiceSettingsRequest extends Request {
         this.deliveryOssKeyPrefix = builder.deliveryOssKeyPrefix;
         this.deliverySlsEnabled = builder.deliverySlsEnabled;
         this.deliverySlsProjectName = builder.deliverySlsProjectName;
+        this.rdFolderIds = builder.rdFolderIds;
         this.rdcEnterpriseId = builder.rdcEnterpriseId;
         this.regionId = builder.regionId;
+        this.serviceAccessRdEnabled = builder.serviceAccessRdEnabled;
     }
 
     public static Builder builder() {
@@ -105,6 +115,13 @@ public class SetServiceSettingsRequest extends Request {
     }
 
     /**
+     * @return rdFolderIds
+     */
+    public java.util.List<String> getRdFolderIds() {
+        return this.rdFolderIds;
+    }
+
+    /**
      * @return rdcEnterpriseId
      */
     public String getRdcEnterpriseId() {
@@ -118,14 +135,23 @@ public class SetServiceSettingsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return serviceAccessRdEnabled
+     */
+    public Boolean getServiceAccessRdEnabled() {
+        return this.serviceAccessRdEnabled;
+    }
+
     public static final class Builder extends Request.Builder<SetServiceSettingsRequest, Builder> {
         private String deliveryOssBucketName; 
         private Boolean deliveryOssEnabled; 
         private String deliveryOssKeyPrefix; 
         private Boolean deliverySlsEnabled; 
         private String deliverySlsProjectName; 
+        private java.util.List<String> rdFolderIds; 
         private String rdcEnterpriseId; 
         private String regionId; 
+        private Boolean serviceAccessRdEnabled; 
 
         private Builder() {
             super();
@@ -138,8 +164,10 @@ public class SetServiceSettingsRequest extends Request {
             this.deliveryOssKeyPrefix = request.deliveryOssKeyPrefix;
             this.deliverySlsEnabled = request.deliverySlsEnabled;
             this.deliverySlsProjectName = request.deliverySlsProjectName;
+            this.rdFolderIds = request.rdFolderIds;
             this.rdcEnterpriseId = request.rdcEnterpriseId;
             this.regionId = request.regionId;
+            this.serviceAccessRdEnabled = request.serviceAccessRdEnabled;
         } 
 
         /**
@@ -203,6 +231,16 @@ public class SetServiceSettingsRequest extends Request {
         }
 
         /**
+         * RdFolderIds.
+         */
+        public Builder rdFolderIds(java.util.List<String> rdFolderIds) {
+            String rdFolderIdsShrink = shrink(rdFolderIds, "RdFolderIds", "json");
+            this.putQueryParameter("RdFolderIds", rdFolderIdsShrink);
+            this.rdFolderIds = rdFolderIds;
+            return this;
+        }
+
+        /**
          * <p>The id of RDC Enterprise.</p>
          * 
          * <strong>example:</strong>
@@ -223,6 +261,15 @@ public class SetServiceSettingsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ServiceAccessRdEnabled.
+         */
+        public Builder serviceAccessRdEnabled(Boolean serviceAccessRdEnabled) {
+            this.putQueryParameter("ServiceAccessRdEnabled", serviceAccessRdEnabled);
+            this.serviceAccessRdEnabled = serviceAccessRdEnabled;
             return this;
         }
 

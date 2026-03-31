@@ -113,8 +113,14 @@ public class GetServiceSettingsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeliverySlsProjectName")
         private String deliverySlsProjectName;
 
+        @com.aliyun.core.annotation.NameInMap("RdFolders")
+        private String rdFolders;
+
         @com.aliyun.core.annotation.NameInMap("RdcEnterpriseId")
         private String rdcEnterpriseId;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceAccessRdEnabled")
+        private Boolean serviceAccessRdEnabled;
 
         private ServiceSettings(Builder builder) {
             this.deliveryOssBucketName = builder.deliveryOssBucketName;
@@ -122,7 +128,9 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             this.deliveryOssKeyPrefix = builder.deliveryOssKeyPrefix;
             this.deliverySlsEnabled = builder.deliverySlsEnabled;
             this.deliverySlsProjectName = builder.deliverySlsProjectName;
+            this.rdFolders = builder.rdFolders;
             this.rdcEnterpriseId = builder.rdcEnterpriseId;
+            this.serviceAccessRdEnabled = builder.serviceAccessRdEnabled;
         }
 
         public static Builder builder() {
@@ -169,10 +177,24 @@ public class GetServiceSettingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return rdFolders
+         */
+        public String getRdFolders() {
+            return this.rdFolders;
+        }
+
+        /**
          * @return rdcEnterpriseId
          */
         public String getRdcEnterpriseId() {
             return this.rdcEnterpriseId;
+        }
+
+        /**
+         * @return serviceAccessRdEnabled
+         */
+        public Boolean getServiceAccessRdEnabled() {
+            return this.serviceAccessRdEnabled;
         }
 
         public static final class Builder {
@@ -181,7 +203,9 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             private String deliveryOssKeyPrefix; 
             private Boolean deliverySlsEnabled; 
             private String deliverySlsProjectName; 
+            private String rdFolders; 
             private String rdcEnterpriseId; 
+            private Boolean serviceAccessRdEnabled; 
 
             private Builder() {
             } 
@@ -192,7 +216,9 @@ public class GetServiceSettingsResponseBody extends TeaModel {
                 this.deliveryOssKeyPrefix = model.deliveryOssKeyPrefix;
                 this.deliverySlsEnabled = model.deliverySlsEnabled;
                 this.deliverySlsProjectName = model.deliverySlsProjectName;
+                this.rdFolders = model.rdFolders;
                 this.rdcEnterpriseId = model.rdcEnterpriseId;
+                this.serviceAccessRdEnabled = model.serviceAccessRdEnabled;
             } 
 
             /**
@@ -251,6 +277,14 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
+             * RdFolders.
+             */
+            public Builder rdFolders(String rdFolders) {
+                this.rdFolders = rdFolders;
+                return this;
+            }
+
+            /**
              * <p>The id of RDC Enterprise.</p>
              * 
              * <strong>example:</strong>
@@ -258,6 +292,14 @@ public class GetServiceSettingsResponseBody extends TeaModel {
              */
             public Builder rdcEnterpriseId(String rdcEnterpriseId) {
                 this.rdcEnterpriseId = rdcEnterpriseId;
+                return this;
+            }
+
+            /**
+             * ServiceAccessRdEnabled.
+             */
+            public Builder serviceAccessRdEnabled(Boolean serviceAccessRdEnabled) {
+                this.serviceAccessRdEnabled = serviceAccessRdEnabled;
                 return this;
             }
 

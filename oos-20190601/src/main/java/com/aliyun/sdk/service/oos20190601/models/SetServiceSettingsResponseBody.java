@@ -116,6 +116,9 @@ public class SetServiceSettingsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RdcEnterpriseId")
         private String rdcEnterpriseId;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceAccessRdEnabled")
+        private Boolean serviceAccessRdEnabled;
+
         private ServiceSettings(Builder builder) {
             this.deliveryOssBucketName = builder.deliveryOssBucketName;
             this.deliveryOssEnabled = builder.deliveryOssEnabled;
@@ -123,6 +126,7 @@ public class SetServiceSettingsResponseBody extends TeaModel {
             this.deliverySlsEnabled = builder.deliverySlsEnabled;
             this.deliverySlsProjectName = builder.deliverySlsProjectName;
             this.rdcEnterpriseId = builder.rdcEnterpriseId;
+            this.serviceAccessRdEnabled = builder.serviceAccessRdEnabled;
         }
 
         public static Builder builder() {
@@ -175,6 +179,13 @@ public class SetServiceSettingsResponseBody extends TeaModel {
             return this.rdcEnterpriseId;
         }
 
+        /**
+         * @return serviceAccessRdEnabled
+         */
+        public Boolean getServiceAccessRdEnabled() {
+            return this.serviceAccessRdEnabled;
+        }
+
         public static final class Builder {
             private String deliveryOssBucketName; 
             private Boolean deliveryOssEnabled; 
@@ -182,6 +193,7 @@ public class SetServiceSettingsResponseBody extends TeaModel {
             private Boolean deliverySlsEnabled; 
             private String deliverySlsProjectName; 
             private String rdcEnterpriseId; 
+            private Boolean serviceAccessRdEnabled; 
 
             private Builder() {
             } 
@@ -193,6 +205,7 @@ public class SetServiceSettingsResponseBody extends TeaModel {
                 this.deliverySlsEnabled = model.deliverySlsEnabled;
                 this.deliverySlsProjectName = model.deliverySlsProjectName;
                 this.rdcEnterpriseId = model.rdcEnterpriseId;
+                this.serviceAccessRdEnabled = model.serviceAccessRdEnabled;
             } 
 
             /**
@@ -258,6 +271,14 @@ public class SetServiceSettingsResponseBody extends TeaModel {
              */
             public Builder rdcEnterpriseId(String rdcEnterpriseId) {
                 this.rdcEnterpriseId = rdcEnterpriseId;
+                return this;
+            }
+
+            /**
+             * ServiceAccessRdEnabled.
+             */
+            public Builder serviceAccessRdEnabled(Boolean serviceAccessRdEnabled) {
+                this.serviceAccessRdEnabled = serviceAccessRdEnabled;
                 return this;
             }
 

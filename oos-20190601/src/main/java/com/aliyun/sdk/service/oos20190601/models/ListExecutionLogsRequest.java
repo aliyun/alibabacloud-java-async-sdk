@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListExecutionLogsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    private String accountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExecutionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String executionId;
@@ -44,6 +48,7 @@ public class ListExecutionLogsRequest extends Request {
 
     private ListExecutionLogsRequest(Builder builder) {
         super(builder);
+        this.accountId = builder.accountId;
         this.executionId = builder.executionId;
         this.logType = builder.logType;
         this.maxResults = builder.maxResults;
@@ -63,6 +68,13 @@ public class ListExecutionLogsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountId
+     */
+    public String getAccountId() {
+        return this.accountId;
     }
 
     /**
@@ -108,6 +120,7 @@ public class ListExecutionLogsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListExecutionLogsRequest, Builder> {
+        private String accountId; 
         private String executionId; 
         private String logType; 
         private Integer maxResults; 
@@ -121,6 +134,7 @@ public class ListExecutionLogsRequest extends Request {
 
         private Builder(ListExecutionLogsRequest request) {
             super(request);
+            this.accountId = request.accountId;
             this.executionId = request.executionId;
             this.logType = request.logType;
             this.maxResults = request.maxResults;
@@ -128,6 +142,15 @@ public class ListExecutionLogsRequest extends Request {
             this.regionId = request.regionId;
             this.taskExecutionId = request.taskExecutionId;
         } 
+
+        /**
+         * AccountId.
+         */
+        public Builder accountId(String accountId) {
+            this.putQueryParameter("AccountId", accountId);
+            this.accountId = accountId;
+            return this;
+        }
 
         /**
          * <p>The ID of the execution.</p>

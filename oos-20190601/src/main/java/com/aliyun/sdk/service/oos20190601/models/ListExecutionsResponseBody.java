@@ -275,6 +275,9 @@ public class ListExecutionsResponseBody extends TeaModel {
      * <p>ListExecutionsResponseBody</p>
      */
     public static class Executions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        private String accountId;
+
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
@@ -378,6 +381,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         private String waitingStatus;
 
         private Executions(Builder builder) {
+            this.accountId = builder.accountId;
             this.category = builder.category;
             this.counters = builder.counters;
             this.createDate = builder.createDate;
@@ -420,6 +424,13 @@ public class ListExecutionsResponseBody extends TeaModel {
 
         public static Executions create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountId
+         */
+        public String getAccountId() {
+            return this.accountId;
         }
 
         /**
@@ -661,6 +672,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountId; 
             private String category; 
             private java.util.Map<String, ?> counters; 
             private String createDate; 
@@ -700,6 +712,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             } 
 
             private Builder(Executions model) {
+                this.accountId = model.accountId;
                 this.category = model.category;
                 this.counters = model.counters;
                 this.createDate = model.createDate;
@@ -735,6 +748,14 @@ public class ListExecutionsResponseBody extends TeaModel {
                 this.updateDate = model.updateDate;
                 this.waitingStatus = model.waitingStatus;
             } 
+
+            /**
+             * AccountId.
+             */
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
+                return this;
+            }
 
             /**
              * <p>The type of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger.</p>

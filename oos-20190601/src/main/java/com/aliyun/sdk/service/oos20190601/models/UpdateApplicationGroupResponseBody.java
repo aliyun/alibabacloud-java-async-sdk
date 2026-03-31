@@ -116,6 +116,9 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImportTagValue")
         private String importTagValue;
 
+        @com.aliyun.core.annotation.NameInMap("MonitorMetadata")
+        private String monitorMetadata;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -129,6 +132,7 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
             this.description = builder.description;
             this.importTagKey = builder.importTagKey;
             this.importTagValue = builder.importTagValue;
+            this.monitorMetadata = builder.monitorMetadata;
             this.name = builder.name;
             this.updatedDate = builder.updatedDate;
         }
@@ -184,6 +188,13 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return monitorMetadata
+         */
+        public String getMonitorMetadata() {
+            return this.monitorMetadata;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -204,6 +215,7 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
             private String description; 
             private String importTagKey; 
             private String importTagValue; 
+            private String monitorMetadata; 
             private String name; 
             private String updatedDate; 
 
@@ -217,6 +229,7 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
                 this.description = model.description;
                 this.importTagKey = model.importTagKey;
                 this.importTagValue = model.importTagValue;
+                this.monitorMetadata = model.monitorMetadata;
                 this.name = model.name;
                 this.updatedDate = model.updatedDate;
             } 
@@ -284,6 +297,14 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
              */
             public Builder importTagValue(String importTagValue) {
                 this.importTagValue = importTagValue;
+                return this;
+            }
+
+            /**
+             * MonitorMetadata.
+             */
+            public Builder monitorMetadata(String monitorMetadata) {
+                this.monitorMetadata = monitorMetadata;
                 return this;
             }
 

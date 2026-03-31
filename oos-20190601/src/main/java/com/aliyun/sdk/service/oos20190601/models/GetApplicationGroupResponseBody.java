@@ -140,6 +140,9 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImportTagValue")
         private String importTagValue;
 
+        @com.aliyun.core.annotation.NameInMap("MonitorMetadata")
+        private String monitorMetadata;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -173,6 +176,7 @@ public class GetApplicationGroupResponseBody extends TeaModel {
             this.executionId = builder.executionId;
             this.importTagKey = builder.importTagKey;
             this.importTagValue = builder.importTagValue;
+            this.monitorMetadata = builder.monitorMetadata;
             this.name = builder.name;
             this.operationMetadata = builder.operationMetadata;
             this.progress = builder.progress;
@@ -288,6 +292,13 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return monitorMetadata
+         */
+        public String getMonitorMetadata() {
+            return this.monitorMetadata;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -344,6 +355,7 @@ public class GetApplicationGroupResponseBody extends TeaModel {
             private String executionId; 
             private String importTagKey; 
             private String importTagValue; 
+            private String monitorMetadata; 
             private String name; 
             private String operationMetadata; 
             private String progress; 
@@ -369,6 +381,7 @@ public class GetApplicationGroupResponseBody extends TeaModel {
                 this.executionId = model.executionId;
                 this.importTagKey = model.importTagKey;
                 this.importTagValue = model.importTagValue;
+                this.monitorMetadata = model.monitorMetadata;
                 this.name = model.name;
                 this.operationMetadata = model.operationMetadata;
                 this.progress = model.progress;
@@ -516,6 +529,14 @@ public class GetApplicationGroupResponseBody extends TeaModel {
              */
             public Builder importTagValue(String importTagValue) {
                 this.importTagValue = importTagValue;
+                return this;
+            }
+
+            /**
+             * MonitorMetadata.
+             */
+            public Builder monitorMetadata(String monitorMetadata) {
+                this.monitorMetadata = monitorMetadata;
                 return this;
             }
 

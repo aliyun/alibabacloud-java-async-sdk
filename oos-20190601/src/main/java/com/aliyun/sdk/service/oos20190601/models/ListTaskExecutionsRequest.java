@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTaskExecutionsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    private String accountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndDateAfter")
     private String endDateAfter;
 
@@ -83,6 +87,7 @@ public class ListTaskExecutionsRequest extends Request {
 
     private ListTaskExecutionsRequest(Builder builder) {
         super(builder);
+        this.accountId = builder.accountId;
         this.endDateAfter = builder.endDateAfter;
         this.endDateBefore = builder.endDateBefore;
         this.executionId = builder.executionId;
@@ -112,6 +117,13 @@ public class ListTaskExecutionsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountId
+     */
+    public String getAccountId() {
+        return this.accountId;
     }
 
     /**
@@ -227,6 +239,7 @@ public class ListTaskExecutionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTaskExecutionsRequest, Builder> {
+        private String accountId; 
         private String endDateAfter; 
         private String endDateBefore; 
         private String executionId; 
@@ -250,6 +263,7 @@ public class ListTaskExecutionsRequest extends Request {
 
         private Builder(ListTaskExecutionsRequest request) {
             super(request);
+            this.accountId = request.accountId;
             this.endDateAfter = request.endDateAfter;
             this.endDateBefore = request.endDateBefore;
             this.executionId = request.executionId;
@@ -267,6 +281,15 @@ public class ListTaskExecutionsRequest extends Request {
             this.taskExecutionId = request.taskExecutionId;
             this.taskName = request.taskName;
         } 
+
+        /**
+         * AccountId.
+         */
+        public Builder accountId(String accountId) {
+            this.putQueryParameter("AccountId", accountId);
+            this.accountId = accountId;
+            return this;
+        }
 
         /**
          * <p>The execution ID of the task.</p>
