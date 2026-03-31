@@ -125,6 +125,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddTemplateResponse> addTemplate(AddTemplateRequest request);
 
     /**
+     * @param request the request parameters of AddYikeUserCredit  AddYikeUserCreditRequest
+     * @return AddYikeUserCreditResponse
+     */
+    CompletableFuture<AddYikeUserCreditResponse> addYikeUserCredit(AddYikeUserCreditRequest request);
+
+    /**
      * @param request the request parameters of AlterSearchIndex  AlterSearchIndexRequest
      * @return AlterSearchIndexResponse
      */
@@ -502,6 +508,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateYikeAssetUploadResponse
      */
     CompletableFuture<CreateYikeAssetUploadResponse> createYikeAssetUpload(CreateYikeAssetUploadRequest request);
+
+    /**
+     * @param request the request parameters of CreateYikeProduction  CreateYikeProductionRequest
+     * @return CreateYikeProductionResponse
+     */
+    CompletableFuture<CreateYikeProductionResponse> createYikeProduction(CreateYikeProductionRequest request);
+
+    /**
+     * @param request the request parameters of CreateYikeUser  CreateYikeUserRequest
+     * @return CreateYikeUserResponse
+     */
+    CompletableFuture<CreateYikeUserResponse> createYikeUser(CreateYikeUserRequest request);
+
+    /**
+     * @param request the request parameters of CreateYikeWorkspace  CreateYikeWorkspaceRequest
+     * @return CreateYikeWorkspaceResponse
+     */
+    CompletableFuture<CreateYikeWorkspaceResponse> createYikeWorkspace(CreateYikeWorkspaceRequest request);
 
     /**
      * @param request the request parameters of DecryptKMSDataKey  DecryptKMSDataKeyRequest
@@ -1520,6 +1544,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetYikeStoryboardJobResponse> getYikeStoryboardJob(GetYikeStoryboardJobRequest request);
 
     /**
+     * @param request the request parameters of GetYikeUserCredit  GetYikeUserCreditRequest
+     * @return GetYikeUserCreditResponse
+     */
+    CompletableFuture<GetYikeUserCreditResponse> getYikeUserCredit(GetYikeUserCreditRequest request);
+
+    /**
      * @param request the request parameters of InsertMediaToSearchLib  InsertMediaToSearchLibRequest
      * @return InsertMediaToSearchLibResponse
      */
@@ -2337,6 +2367,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetNotifyConfigResponse
      */
     CompletableFuture<SetNotifyConfigResponse> setNotifyConfig(SetNotifyConfigRequest request);
+
+    /**
+     * @param request the request parameters of SetYikeUserRole  SetYikeUserRoleRequest
+     * @return SetYikeUserRoleResponse
+     */
+    CompletableFuture<SetYikeUserRoleResponse> setYikeUserRole(SetYikeUserRoleRequest request);
 
     /**
      * <b>description</b> :
