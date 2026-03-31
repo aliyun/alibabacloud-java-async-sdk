@@ -386,8 +386,14 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("region")
         private String region;
 
+        @com.aliyun.core.annotation.NameInMap("scanErrMsg")
+        private String scanErrMsg;
+
         @com.aliyun.core.annotation.NameInMap("scanId")
         private Long scanId;
+
+        @com.aliyun.core.annotation.NameInMap("scanStatus")
+        private String scanStatus;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
@@ -427,7 +433,9 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             this.partitionsDoneNum = builder.partitionsDoneNum;
             this.partitionsFailedNum = builder.partitionsFailedNum;
             this.region = builder.region;
+            this.scanErrMsg = builder.scanErrMsg;
             this.scanId = builder.scanId;
+            this.scanStatus = builder.scanStatus;
             this.status = builder.status;
             this.tableNum = builder.tableNum;
             this.tablesDoingNum = builder.tablesDoingNum;
@@ -558,10 +566,24 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return scanErrMsg
+         */
+        public String getScanErrMsg() {
+            return this.scanErrMsg;
+        }
+
+        /**
          * @return scanId
          */
         public Long getScanId() {
             return this.scanId;
+        }
+
+        /**
+         * @return scanStatus
+         */
+        public String getScanStatus() {
+            return this.scanStatus;
         }
 
         /**
@@ -630,7 +652,9 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             private Integer partitionsDoneNum; 
             private Integer partitionsFailedNum; 
             private String region; 
+            private String scanErrMsg; 
             private Long scanId; 
+            private String scanStatus; 
             private String status; 
             private Integer tableNum; 
             private Integer tablesDoingNum; 
@@ -659,7 +683,9 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
                 this.partitionsDoneNum = model.partitionsDoneNum;
                 this.partitionsFailedNum = model.partitionsFailedNum;
                 this.region = model.region;
+                this.scanErrMsg = model.scanErrMsg;
                 this.scanId = model.scanId;
+                this.scanStatus = model.scanStatus;
                 this.status = model.status;
                 this.tableNum = model.tableNum;
                 this.tablesDoingNum = model.tablesDoingNum;
@@ -798,10 +824,26 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
+             * scanErrMsg.
+             */
+            public Builder scanErrMsg(String scanErrMsg) {
+                this.scanErrMsg = scanErrMsg;
+                return this;
+            }
+
+            /**
              * scanId.
              */
             public Builder scanId(Long scanId) {
                 this.scanId = scanId;
+                return this;
+            }
+
+            /**
+             * scanStatus.
+             */
+            public Builder scanStatus(String scanStatus) {
+                this.scanStatus = scanStatus;
                 return this;
             }
 
