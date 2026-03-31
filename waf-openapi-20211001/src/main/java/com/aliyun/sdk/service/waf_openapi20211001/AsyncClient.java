@@ -1151,6 +1151,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserSlsLogRegionsResponse> describeUserSlsLogRegions(DescribeUserSlsLogRegionsRequest request);
 
     /**
+     * @param request the request parameters of DescribeUserTraffic  DescribeUserTrafficRequest
+     * @return DescribeUserTrafficResponse
+     */
+    CompletableFuture<DescribeUserTrafficResponse> describeUserTraffic(DescribeUserTrafficRequest request);
+
+    /**
      * @param request the request parameters of DescribeUserWafLogStatus  DescribeUserWafLogStatusRequest
      * @return DescribeUserWafLogStatusResponse
      */
