@@ -46,6 +46,11 @@ public class UpdateNodeGroupRequest extends Request {
     private String nodeGroupId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RamRoleName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
+    private String ramRoleName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
@@ -58,6 +63,7 @@ public class UpdateNodeGroupRequest extends Request {
         this.loginPassword = builder.loginPassword;
         this.newNodeGroupName = builder.newNodeGroupName;
         this.nodeGroupId = builder.nodeGroupId;
+        this.ramRoleName = builder.ramRoleName;
         this.userData = builder.userData;
     }
 
@@ -124,6 +130,13 @@ public class UpdateNodeGroupRequest extends Request {
     }
 
     /**
+     * @return ramRoleName
+     */
+    public String getRamRoleName() {
+        return this.ramRoleName;
+    }
+
+    /**
      * @return userData
      */
     public String getUserData() {
@@ -138,6 +151,7 @@ public class UpdateNodeGroupRequest extends Request {
         private String loginPassword; 
         private String newNodeGroupName; 
         private String nodeGroupId; 
+        private String ramRoleName; 
         private String userData; 
 
         private Builder() {
@@ -153,6 +167,7 @@ public class UpdateNodeGroupRequest extends Request {
             this.loginPassword = request.loginPassword;
             this.newNodeGroupName = request.newNodeGroupName;
             this.nodeGroupId = request.nodeGroupId;
+            this.ramRoleName = request.ramRoleName;
             this.userData = request.userData;
         } 
 
@@ -234,6 +249,15 @@ public class UpdateNodeGroupRequest extends Request {
         public Builder nodeGroupId(String nodeGroupId) {
             this.putBodyParameter("NodeGroupId", nodeGroupId);
             this.nodeGroupId = nodeGroupId;
+            return this;
+        }
+
+        /**
+         * RamRoleName.
+         */
+        public Builder ramRoleName(String ramRoleName) {
+            this.putBodyParameter("RamRoleName", ramRoleName);
+            this.ramRoleName = ramRoleName;
             return this;
         }
 

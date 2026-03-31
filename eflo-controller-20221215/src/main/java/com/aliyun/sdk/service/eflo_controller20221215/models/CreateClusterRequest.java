@@ -2544,6 +2544,10 @@ public class CreateClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List<Nodes> nodes;
 
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.Validation(maxLength = 128)
+        private String ramRoleName;
+
         @com.aliyun.core.annotation.NameInMap("SystemDisk")
         private SystemDisk systemDisk;
 
@@ -2566,6 +2570,7 @@ public class CreateClusterRequest extends Request {
             this.nodeGroupDescription = builder.nodeGroupDescription;
             this.nodeGroupName = builder.nodeGroupName;
             this.nodes = builder.nodes;
+            this.ramRoleName = builder.ramRoleName;
             this.systemDisk = builder.systemDisk;
             this.userData = builder.userData;
             this.virtualGpuEnabled = builder.virtualGpuEnabled;
@@ -2644,6 +2649,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * @return ramRoleName
+         */
+        public String getRamRoleName() {
+            return this.ramRoleName;
+        }
+
+        /**
          * @return systemDisk
          */
         public SystemDisk getSystemDisk() {
@@ -2681,6 +2693,7 @@ public class CreateClusterRequest extends Request {
             private String nodeGroupDescription; 
             private String nodeGroupName; 
             private java.util.List<Nodes> nodes; 
+            private String ramRoleName; 
             private SystemDisk systemDisk; 
             private String userData; 
             private Boolean virtualGpuEnabled; 
@@ -2699,6 +2712,7 @@ public class CreateClusterRequest extends Request {
                 this.nodeGroupDescription = model.nodeGroupDescription;
                 this.nodeGroupName = model.nodeGroupName;
                 this.nodes = model.nodes;
+                this.ramRoleName = model.ramRoleName;
                 this.systemDisk = model.systemDisk;
                 this.userData = model.userData;
                 this.virtualGpuEnabled = model.virtualGpuEnabled;
@@ -2795,6 +2809,14 @@ public class CreateClusterRequest extends Request {
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
+                return this;
+            }
+
+            /**
+             * RamRoleName.
+             */
+            public Builder ramRoleName(String ramRoleName) {
+                this.ramRoleName = ramRoleName;
                 return this;
             }
 

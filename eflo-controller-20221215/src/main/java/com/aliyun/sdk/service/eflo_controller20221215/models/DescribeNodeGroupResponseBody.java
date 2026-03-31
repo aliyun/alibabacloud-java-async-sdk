@@ -59,6 +59,9 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NodeGroupName")
     private String nodeGroupName;
 
+    @com.aliyun.core.annotation.NameInMap("RamRoleName")
+    private String ramRoleName;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -89,6 +92,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         this.nodeGroupDescription = builder.nodeGroupDescription;
         this.nodeGroupId = builder.nodeGroupId;
         this.nodeGroupName = builder.nodeGroupName;
+        this.ramRoleName = builder.ramRoleName;
         this.requestId = builder.requestId;
         this.systemDisk = builder.systemDisk;
         this.updateTime = builder.updateTime;
@@ -207,6 +211,13 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return ramRoleName
+     */
+    public String getRamRoleName() {
+        return this.ramRoleName;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -256,6 +267,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         private String nodeGroupDescription; 
         private String nodeGroupId; 
         private String nodeGroupName; 
+        private String ramRoleName; 
         private String requestId; 
         private SystemDisk systemDisk; 
         private String updateTime; 
@@ -280,6 +292,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
             this.nodeGroupDescription = model.nodeGroupDescription;
             this.nodeGroupId = model.nodeGroupId;
             this.nodeGroupName = model.nodeGroupName;
+            this.ramRoleName = model.ramRoleName;
             this.requestId = model.requestId;
             this.systemDisk = model.systemDisk;
             this.updateTime = model.updateTime;
@@ -396,6 +409,14 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
+            return this;
+        }
+
+        /**
+         * RamRoleName.
+         */
+        public Builder ramRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
             return this;
         }
 

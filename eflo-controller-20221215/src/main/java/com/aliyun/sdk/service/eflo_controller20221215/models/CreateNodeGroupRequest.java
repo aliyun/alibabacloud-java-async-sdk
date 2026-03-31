@@ -302,6 +302,10 @@ public class CreateNodeGroupRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String nodeGroupName;
 
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.Validation(maxLength = 128)
+        private String ramRoleName;
+
         @com.aliyun.core.annotation.NameInMap("SystemDisk")
         private SystemDisk systemDisk;
 
@@ -320,6 +324,7 @@ public class CreateNodeGroupRequest extends Request {
             this.machineType = builder.machineType;
             this.nodeGroupDescription = builder.nodeGroupDescription;
             this.nodeGroupName = builder.nodeGroupName;
+            this.ramRoleName = builder.ramRoleName;
             this.systemDisk = builder.systemDisk;
             this.userData = builder.userData;
             this.virtualGpuEnabled = builder.virtualGpuEnabled;
@@ -390,6 +395,13 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
+         * @return ramRoleName
+         */
+        public String getRamRoleName() {
+            return this.ramRoleName;
+        }
+
+        /**
          * @return systemDisk
          */
         public SystemDisk getSystemDisk() {
@@ -419,6 +431,7 @@ public class CreateNodeGroupRequest extends Request {
             private String machineType; 
             private String nodeGroupDescription; 
             private String nodeGroupName; 
+            private String ramRoleName; 
             private SystemDisk systemDisk; 
             private String userData; 
             private Boolean virtualGpuEnabled; 
@@ -435,6 +448,7 @@ public class CreateNodeGroupRequest extends Request {
                 this.machineType = model.machineType;
                 this.nodeGroupDescription = model.nodeGroupDescription;
                 this.nodeGroupName = model.nodeGroupName;
+                this.ramRoleName = model.ramRoleName;
                 this.systemDisk = model.systemDisk;
                 this.userData = model.userData;
                 this.virtualGpuEnabled = model.virtualGpuEnabled;
@@ -529,6 +543,14 @@ public class CreateNodeGroupRequest extends Request {
              */
             public Builder nodeGroupName(String nodeGroupName) {
                 this.nodeGroupName = nodeGroupName;
+                return this;
+            }
+
+            /**
+             * RamRoleName.
+             */
+            public Builder ramRoleName(String ramRoleName) {
+                this.ramRoleName = ramRoleName;
                 return this;
             }
 
