@@ -1,6 +1,9 @@
 2026-03-31 Version: 6.0.1
 - Generated java-async 2022-06-16 for cloud-siem.
 
+2026-03-31 Version: 6.0.1
+- Generated java-async 2022-06-16 for cloud-siem.
+
 2026-02-11 Version: 6.0.0
 - Generated java-async 2022-06-16 for cloud-siem.
 
