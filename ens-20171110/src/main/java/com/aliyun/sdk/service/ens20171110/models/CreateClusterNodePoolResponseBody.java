@@ -566,6 +566,9 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesiredNodes")
         private Integer desiredNodes;
 
+        @com.aliyun.core.annotation.NameInMap("FailedNodes")
+        private Integer failedNodes;
+
         @com.aliyun.core.annotation.NameInMap("InitialNodes")
         private Integer initialNodes;
 
@@ -583,6 +586,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
 
         private Status(Builder builder) {
             this.desiredNodes = builder.desiredNodes;
+            this.failedNodes = builder.failedNodes;
             this.initialNodes = builder.initialNodes;
             this.removingNodes = builder.removingNodes;
             this.servingNodes = builder.servingNodes;
@@ -603,6 +607,13 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
          */
         public Integer getDesiredNodes() {
             return this.desiredNodes;
+        }
+
+        /**
+         * @return failedNodes
+         */
+        public Integer getFailedNodes() {
+            return this.failedNodes;
         }
 
         /**
@@ -642,6 +653,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer desiredNodes; 
+            private Integer failedNodes; 
             private Integer initialNodes; 
             private Integer removingNodes; 
             private Integer servingNodes; 
@@ -653,6 +665,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
 
             private Builder(Status model) {
                 this.desiredNodes = model.desiredNodes;
+                this.failedNodes = model.failedNodes;
                 this.initialNodes = model.initialNodes;
                 this.removingNodes = model.removingNodes;
                 this.servingNodes = model.servingNodes;
@@ -665,6 +678,14 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
              */
             public Builder desiredNodes(Integer desiredNodes) {
                 this.desiredNodes = desiredNodes;
+                return this;
+            }
+
+            /**
+             * FailedNodes.
+             */
+            public Builder failedNodes(Integer failedNodes) {
+                this.failedNodes = failedNodes;
                 return this;
             }
 

@@ -188,8 +188,14 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotBefore")
         private Long notBefore;
 
+        @com.aliyun.core.annotation.NameInMap("NotBeforeUtcTime")
+        private String notBeforeUtcTime;
+
         @com.aliyun.core.annotation.NameInMap("PublishTime")
         private Long publishTime;
+
+        @com.aliyun.core.annotation.NameInMap("PublishUtcTime")
+        private String publishUtcTime;
 
         @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
@@ -204,7 +210,9 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             this.eventType = builder.eventType;
             this.extendedAttribute = builder.extendedAttribute;
             this.notBefore = builder.notBefore;
+            this.notBeforeUtcTime = builder.notBeforeUtcTime;
             this.publishTime = builder.publishTime;
+            this.publishUtcTime = builder.publishUtcTime;
             this.reason = builder.reason;
             this.resourceId = builder.resourceId;
         }
@@ -260,10 +268,24 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return notBeforeUtcTime
+         */
+        public String getNotBeforeUtcTime() {
+            return this.notBeforeUtcTime;
+        }
+
+        /**
          * @return publishTime
          */
         public Long getPublishTime() {
             return this.publishTime;
+        }
+
+        /**
+         * @return publishUtcTime
+         */
+        public String getPublishUtcTime() {
+            return this.publishUtcTime;
         }
 
         /**
@@ -287,7 +309,9 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             private String eventType; 
             private String extendedAttribute; 
             private Long notBefore; 
+            private String notBeforeUtcTime; 
             private Long publishTime; 
+            private String publishUtcTime; 
             private String reason; 
             private String resourceId; 
 
@@ -301,7 +325,9 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
                 this.eventType = model.eventType;
                 this.extendedAttribute = model.extendedAttribute;
                 this.notBefore = model.notBefore;
+                this.notBeforeUtcTime = model.notBeforeUtcTime;
                 this.publishTime = model.publishTime;
+                this.publishUtcTime = model.publishUtcTime;
                 this.reason = model.reason;
                 this.resourceId = model.resourceId;
             } 
@@ -398,6 +424,14 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
+             * NotBeforeUtcTime.
+             */
+            public Builder notBeforeUtcTime(String notBeforeUtcTime) {
+                this.notBeforeUtcTime = notBeforeUtcTime;
+                return this;
+            }
+
+            /**
              * <p>The release time in milliseconds.</p>
              * 
              * <strong>example:</strong>
@@ -405,6 +439,14 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
              */
             public Builder publishTime(Long publishTime) {
                 this.publishTime = publishTime;
+                return this;
+            }
+
+            /**
+             * PublishUtcTime.
+             */
+            public Builder publishUtcTime(String publishUtcTime) {
+                this.publishUtcTime = publishUtcTime;
                 return this;
             }
 

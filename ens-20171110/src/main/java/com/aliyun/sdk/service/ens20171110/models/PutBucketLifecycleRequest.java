@@ -19,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class PutBucketLifecycleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AllowSameActionOverlap")
-    private String allowSameActionOverlap;
+    private Boolean allowSameActionOverlap;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BucketName")
@@ -74,7 +74,7 @@ public class PutBucketLifecycleRequest extends Request {
     /**
      * @return allowSameActionOverlap
      */
-    public String getAllowSameActionOverlap() {
+    public Boolean getAllowSameActionOverlap() {
         return this.allowSameActionOverlap;
     }
 
@@ -121,7 +121,7 @@ public class PutBucketLifecycleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PutBucketLifecycleRequest, Builder> {
-        private String allowSameActionOverlap; 
+        private Boolean allowSameActionOverlap; 
         private String bucketName; 
         private String createdBeforeDate; 
         private Long expirationDays; 
@@ -154,7 +154,7 @@ public class PutBucketLifecycleRequest extends Request {
          * <strong>example:</strong>
          * <p>false</p>
          */
-        public Builder allowSameActionOverlap(String allowSameActionOverlap) {
+        public Builder allowSameActionOverlap(Boolean allowSameActionOverlap) {
             this.putQueryParameter("AllowSameActionOverlap", allowSameActionOverlap);
             this.allowSameActionOverlap = allowSameActionOverlap;
             return this;

@@ -91,6 +91,9 @@ public class BatchEventRebootInstanceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PlanTime")
         private Long planTime;
 
+        @com.aliyun.core.annotation.NameInMap("PlanUtcTime")
+        private String planUtcTime;
+
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
@@ -98,6 +101,7 @@ public class BatchEventRebootInstanceRequest extends Request {
             this.eventId = builder.eventId;
             this.opsType = builder.opsType;
             this.planTime = builder.planTime;
+            this.planUtcTime = builder.planUtcTime;
             this.resourceId = builder.resourceId;
         }
 
@@ -131,6 +135,13 @@ public class BatchEventRebootInstanceRequest extends Request {
         }
 
         /**
+         * @return planUtcTime
+         */
+        public String getPlanUtcTime() {
+            return this.planUtcTime;
+        }
+
+        /**
          * @return resourceId
          */
         public String getResourceId() {
@@ -141,6 +152,7 @@ public class BatchEventRebootInstanceRequest extends Request {
             private String eventId; 
             private String opsType; 
             private Long planTime; 
+            private String planUtcTime; 
             private String resourceId; 
 
             private Builder() {
@@ -150,6 +162,7 @@ public class BatchEventRebootInstanceRequest extends Request {
                 this.eventId = model.eventId;
                 this.opsType = model.opsType;
                 this.planTime = model.planTime;
+                this.planUtcTime = model.planUtcTime;
                 this.resourceId = model.resourceId;
             } 
 
@@ -187,6 +200,14 @@ public class BatchEventRebootInstanceRequest extends Request {
              */
             public Builder planTime(Long planTime) {
                 this.planTime = planTime;
+                return this;
+            }
+
+            /**
+             * PlanUtcTime.
+             */
+            public Builder planUtcTime(String planUtcTime) {
+                this.planUtcTime = planUtcTime;
                 return this;
             }
 

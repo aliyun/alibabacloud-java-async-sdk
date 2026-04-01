@@ -41,6 +41,10 @@ public class EventMigrateInstanceRequest extends Request {
     private Long planTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanUtcTime")
+    private String planUtcTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
@@ -52,6 +56,7 @@ public class EventMigrateInstanceRequest extends Request {
         this.opsType = builder.opsType;
         this.password = builder.password;
         this.planTime = builder.planTime;
+        this.planUtcTime = builder.planUtcTime;
         this.resourceId = builder.resourceId;
     }
 
@@ -104,6 +109,13 @@ public class EventMigrateInstanceRequest extends Request {
     }
 
     /**
+     * @return planUtcTime
+     */
+    public String getPlanUtcTime() {
+        return this.planUtcTime;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -116,6 +128,7 @@ public class EventMigrateInstanceRequest extends Request {
         private String opsType; 
         private String password; 
         private Long planTime; 
+        private String planUtcTime; 
         private String resourceId; 
 
         private Builder() {
@@ -129,6 +142,7 @@ public class EventMigrateInstanceRequest extends Request {
             this.opsType = request.opsType;
             this.password = request.password;
             this.planTime = request.planTime;
+            this.planUtcTime = request.planUtcTime;
             this.resourceId = request.resourceId;
         } 
 
@@ -202,6 +216,15 @@ public class EventMigrateInstanceRequest extends Request {
         public Builder planTime(Long planTime) {
             this.putQueryParameter("PlanTime", planTime);
             this.planTime = planTime;
+            return this;
+        }
+
+        /**
+         * PlanUtcTime.
+         */
+        public Builder planUtcTime(String planUtcTime) {
+            this.putQueryParameter("PlanUtcTime", planUtcTime);
+            this.planUtcTime = planUtcTime;
             return this;
         }
 

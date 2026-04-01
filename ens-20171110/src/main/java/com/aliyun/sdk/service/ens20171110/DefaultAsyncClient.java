@@ -255,6 +255,51 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AttachInstancesToNodePool  AttachInstancesToNodePoolRequest
+     * @return AttachInstancesToNodePoolResponse
+     */
+    @Override
+    public CompletableFuture<AttachInstancesToNodePoolResponse> attachInstancesToNodePool(AttachInstancesToNodePoolRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AttachInstancesToNodePool").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AttachInstancesToNodePoolResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AttachInstancesToNodePoolResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>This operation is used to bind a key pair to instances. Only disabled instances are supported.</p>
+     * <ul>
+     * <li>You can bind a maximum of 30 instances at a time.</li>
+     * <li>At least one of the key_pair_name and key_pair_id parameters is not empty.</li>
+     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AttachKeyPair  AttachKeyPairRequest
+     * @return AttachKeyPairResponse
+     */
+    @Override
+    public CompletableFuture<AttachKeyPairResponse> attachKeyPair(AttachKeyPairRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AttachKeyPair").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AttachKeyPairResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AttachKeyPairResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
@@ -2078,6 +2123,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeClusterAttachScripts  DescribeClusterAttachScriptsRequest
+     * @return DescribeClusterAttachScriptsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeClusterAttachScriptsResponse> describeClusterAttachScripts(DescribeClusterAttachScriptsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeClusterAttachScripts").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClusterAttachScriptsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeClusterAttachScriptsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3962,6 +4025,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DetachInstanceSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</p>
+     * <ul>
+     * <li>You can unbind a maximum of 30 instances at a time.</li>
+     * <li>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</li>
+     * <li>At least one of key_pair_name and key_pair_id is not empty.</li>
+     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DetachKeyPair  DetachKeyPairRequest
+     * @return DetachKeyPairResponse
+     */
+    @Override
+    public CompletableFuture<DetachKeyPairResponse> detachKeyPair(DetachKeyPairRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DetachKeyPair").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DetachKeyPairResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DetachKeyPairResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

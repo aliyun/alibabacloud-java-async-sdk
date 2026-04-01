@@ -32,6 +32,10 @@ public class EventRebootInstanceRequest extends Request {
     private Long planTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanUtcTime")
+    private String planUtcTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
@@ -41,6 +45,7 @@ public class EventRebootInstanceRequest extends Request {
         this.eventId = builder.eventId;
         this.opsType = builder.opsType;
         this.planTime = builder.planTime;
+        this.planUtcTime = builder.planUtcTime;
         this.resourceId = builder.resourceId;
     }
 
@@ -79,6 +84,13 @@ public class EventRebootInstanceRequest extends Request {
     }
 
     /**
+     * @return planUtcTime
+     */
+    public String getPlanUtcTime() {
+        return this.planUtcTime;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -89,6 +101,7 @@ public class EventRebootInstanceRequest extends Request {
         private String eventId; 
         private String opsType; 
         private Long planTime; 
+        private String planUtcTime; 
         private String resourceId; 
 
         private Builder() {
@@ -100,6 +113,7 @@ public class EventRebootInstanceRequest extends Request {
             this.eventId = request.eventId;
             this.opsType = request.opsType;
             this.planTime = request.planTime;
+            this.planUtcTime = request.planUtcTime;
             this.resourceId = request.resourceId;
         } 
 
@@ -142,6 +156,15 @@ public class EventRebootInstanceRequest extends Request {
         public Builder planTime(Long planTime) {
             this.putQueryParameter("PlanTime", planTime);
             this.planTime = planTime;
+            return this;
+        }
+
+        /**
+         * PlanUtcTime.
+         */
+        public Builder planUtcTime(String planUtcTime) {
+            this.putQueryParameter("PlanUtcTime", planUtcTime);
+            this.planUtcTime = planUtcTime;
             return this;
         }
 

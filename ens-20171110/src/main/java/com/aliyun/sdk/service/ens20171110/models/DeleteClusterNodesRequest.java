@@ -27,10 +27,15 @@ public class DeleteClusterNodesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseNode")
+    private Boolean releaseNode;
+
     private DeleteClusterNodesRequest(Builder builder) {
         super(builder);
         this.body = builder.body;
         this.clusterId = builder.clusterId;
+        this.releaseNode = builder.releaseNode;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class DeleteClusterNodesRequest extends Request {
         return this.clusterId;
     }
 
+    /**
+     * @return releaseNode
+     */
+    public Boolean getReleaseNode() {
+        return this.releaseNode;
+    }
+
     public static final class Builder extends Request.Builder<DeleteClusterNodesRequest, Builder> {
         private DeleteClusterNodesRequestBody body; 
         private String clusterId; 
+        private Boolean releaseNode; 
 
         private Builder() {
             super();
@@ -72,6 +85,7 @@ public class DeleteClusterNodesRequest extends Request {
             super(request);
             this.body = request.body;
             this.clusterId = request.clusterId;
+            this.releaseNode = request.releaseNode;
         } 
 
         /**
@@ -93,6 +107,15 @@ public class DeleteClusterNodesRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * ReleaseNode.
+         */
+        public Builder releaseNode(Boolean releaseNode) {
+            this.putQueryParameter("ReleaseNode", releaseNode);
+            this.releaseNode = releaseNode;
             return this;
         }
 

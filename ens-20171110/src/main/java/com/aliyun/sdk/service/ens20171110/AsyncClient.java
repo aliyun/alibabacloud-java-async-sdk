@@ -115,6 +115,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachInstanceSDGResponse> attachInstanceSDG(AttachInstanceSDGRequest request);
 
     /**
+     * @param request the request parameters of AttachInstancesToNodePool  AttachInstancesToNodePoolRequest
+     * @return AttachInstancesToNodePoolResponse
+     */
+    CompletableFuture<AttachInstancesToNodePoolResponse> attachInstancesToNodePool(AttachInstancesToNodePoolRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>This operation is used to bind a key pair to instances. Only disabled instances are supported.</p>
+     * <ul>
+     * <li>You can bind a maximum of 30 instances at a time.</li>
+     * <li>At least one of the key_pair_name and key_pair_id parameters is not empty.</li>
+     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AttachKeyPair  AttachKeyPairRequest
+     * @return AttachKeyPairResponse
+     */
+    CompletableFuture<AttachKeyPairResponse> attachKeyPair(AttachKeyPairRequest request);
+
+    /**
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
@@ -816,6 +837,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClusterResponse> describeCluster(DescribeClusterRequest request);
 
     /**
+     * @param request the request parameters of DescribeClusterAttachScripts  DescribeClusterAttachScriptsRequest
+     * @return DescribeClusterAttachScriptsResponse
+     */
+    CompletableFuture<DescribeClusterAttachScriptsResponse> describeClusterAttachScripts(DescribeClusterAttachScriptsRequest request);
+
+    /**
      * @param request the request parameters of DescribeClusterDetail  DescribeClusterDetailRequest
      * @return DescribeClusterDetailResponse
      */
@@ -1510,6 +1537,22 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DetachInstanceSDGResponse
      */
     CompletableFuture<DetachInstanceSDGResponse> detachInstanceSDG(DetachInstanceSDGRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</p>
+     * <ul>
+     * <li>You can unbind a maximum of 30 instances at a time.</li>
+     * <li>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</li>
+     * <li>At least one of key_pair_name and key_pair_id is not empty.</li>
+     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DetachKeyPair  DetachKeyPairRequest
+     * @return DetachKeyPairResponse
+     */
+    CompletableFuture<DetachKeyPairResponse> detachKeyPair(DetachKeyPairRequest request);
 
     /**
      * <b>description</b> :

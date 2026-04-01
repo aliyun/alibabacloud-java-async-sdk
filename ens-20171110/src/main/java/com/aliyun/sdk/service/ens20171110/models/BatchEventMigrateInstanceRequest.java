@@ -100,6 +100,9 @@ public class BatchEventMigrateInstanceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PlanTime")
         private Long planTime;
 
+        @com.aliyun.core.annotation.NameInMap("PlanUtcTime")
+        private String planUtcTime;
+
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         @com.aliyun.core.annotation.Validation(required = true)
         private String resourceId;
@@ -110,6 +113,7 @@ public class BatchEventMigrateInstanceRequest extends Request {
             this.opsType = builder.opsType;
             this.password = builder.password;
             this.planTime = builder.planTime;
+            this.planUtcTime = builder.planUtcTime;
             this.resourceId = builder.resourceId;
         }
 
@@ -157,6 +161,13 @@ public class BatchEventMigrateInstanceRequest extends Request {
         }
 
         /**
+         * @return planUtcTime
+         */
+        public String getPlanUtcTime() {
+            return this.planUtcTime;
+        }
+
+        /**
          * @return resourceId
          */
         public String getResourceId() {
@@ -169,6 +180,7 @@ public class BatchEventMigrateInstanceRequest extends Request {
             private String opsType; 
             private String password; 
             private Long planTime; 
+            private String planUtcTime; 
             private String resourceId; 
 
             private Builder() {
@@ -180,6 +192,7 @@ public class BatchEventMigrateInstanceRequest extends Request {
                 this.opsType = model.opsType;
                 this.password = model.password;
                 this.planTime = model.planTime;
+                this.planUtcTime = model.planUtcTime;
                 this.resourceId = model.resourceId;
             } 
 
@@ -248,6 +261,14 @@ public class BatchEventMigrateInstanceRequest extends Request {
              */
             public Builder planTime(Long planTime) {
                 this.planTime = planTime;
+                return this;
+            }
+
+            /**
+             * PlanUtcTime.
+             */
+            public Builder planUtcTime(String planUtcTime) {
+                this.planUtcTime = planUtcTime;
                 return this;
             }
 

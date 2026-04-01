@@ -142,7 +142,7 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
         private String portRange;
 
         @com.aliyun.core.annotation.NameInMap("Priority")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer priority;
 
         @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
