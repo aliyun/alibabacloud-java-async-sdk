@@ -1259,11 +1259,15 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addons")
         private java.util.List<Addons> addons;
 
+        @com.aliyun.core.annotation.NameInMap("ContainsV2Addon")
+        private Boolean containsV2Addon;
+
         @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
             this.addons = builder.addons;
+            this.containsV2Addon = builder.containsV2Addon;
             this.total = builder.total;
         }
 
@@ -1283,6 +1287,13 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         }
 
         /**
+         * @return containsV2Addon
+         */
+        public Boolean getContainsV2Addon() {
+            return this.containsV2Addon;
+        }
+
+        /**
          * @return total
          */
         public Long getTotal() {
@@ -1291,6 +1302,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Addons> addons; 
+            private Boolean containsV2Addon; 
             private Long total; 
 
             private Builder() {
@@ -1298,6 +1310,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.addons = model.addons;
+                this.containsV2Addon = model.containsV2Addon;
                 this.total = model.total;
             } 
 
@@ -1306,6 +1319,14 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
              */
             public Builder addons(java.util.List<Addons> addons) {
                 this.addons = addons;
+                return this;
+            }
+
+            /**
+             * ContainsV2Addon.
+             */
+            public Builder containsV2Addon(Boolean containsV2Addon) {
+                this.containsV2Addon = containsV2Addon;
                 return this;
             }
 
