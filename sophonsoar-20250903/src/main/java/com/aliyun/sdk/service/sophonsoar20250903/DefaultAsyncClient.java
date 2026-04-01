@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AbortPlaybookExecution  AbortPlaybookExecutionRequest
+     * @return AbortPlaybookExecutionResponse
+     */
+    @Override
+    public CompletableFuture<AbortPlaybookExecutionResponse> abortPlaybookExecution(AbortPlaybookExecutionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AbortPlaybookExecution").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AbortPlaybookExecutionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AbortPlaybookExecutionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., Threat Analysis and Response Log Ingress Traffic) before using this interface.</p>
      * 
@@ -118,6 +136,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before using this interface, please make sure you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the Response Orchestration product (i.e., Threat Analysis and Response Log Ingress Traffic).</p>
+     * 
      * @param request the request parameters of ExecuteComponent  ExecuteComponentRequest
      * @return ExecuteComponentResponse
      */

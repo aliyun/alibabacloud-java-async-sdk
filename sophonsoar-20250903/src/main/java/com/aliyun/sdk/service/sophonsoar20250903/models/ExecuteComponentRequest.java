@@ -143,7 +143,10 @@ public class ExecuteComponentRequest extends Request {
         } 
 
         /**
-         * ComponentActionName.
+         * <p>The name of the component action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doRequest</p>
          */
         public Builder componentActionName(String componentActionName) {
             this.putBodyParameter("ComponentActionName", componentActionName);
@@ -152,7 +155,10 @@ public class ExecuteComponentRequest extends Request {
         }
 
         /**
-         * ComponentAssetUuid.
+         * <p>Asset UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C5F11E9-<strong><strong>-51F0-</strong></strong>-43BB312A0557</p>
          */
         public Builder componentAssetUuid(String componentAssetUuid) {
             this.putBodyParameter("ComponentAssetUuid", componentAssetUuid);
@@ -161,7 +167,10 @@ public class ExecuteComponentRequest extends Request {
         }
 
         /**
-         * ComponentInput.
+         * <p>Component input parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder componentInput(String componentInput) {
             this.putBodyParameter("ComponentInput", componentInput);
@@ -170,7 +179,10 @@ public class ExecuteComponentRequest extends Request {
         }
 
         /**
-         * ComponentName.
+         * <p>The name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS</p>
          */
         public Builder componentName(String componentName) {
             this.putBodyParameter("ComponentName", componentName);
@@ -179,7 +191,16 @@ public class ExecuteComponentRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type for requests and responses. Values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -188,7 +209,10 @@ public class ExecuteComponentRequest extends Request {
         }
 
         /**
-         * PlayBookNodeName.
+         * <p>The name of the node corresponding to the current component in the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node1</p>
          */
         public Builder playBookNodeName(String playBookNodeName) {
             this.putBodyParameter("PlayBookNodeName", playBookNodeName);
@@ -197,7 +221,13 @@ public class ExecuteComponentRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * <p>The UUID of the playbook.</p>
+         * <blockquote>
+         * <p>You can obtain this parameter by calling the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> interface.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ac343acc-1a61-4084-9a1cxxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);

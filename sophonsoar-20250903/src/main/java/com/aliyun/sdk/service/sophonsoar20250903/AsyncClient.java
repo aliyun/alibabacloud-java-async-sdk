@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AbortPlaybookExecution  AbortPlaybookExecutionRequest
+     * @return AbortPlaybookExecutionResponse
+     */
+    CompletableFuture<AbortPlaybookExecutionResponse> abortPlaybookExecution(AbortPlaybookExecutionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., Threat Analysis and Response Log Ingress Traffic) before using this interface.</p>
      * 
@@ -50,6 +56,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePlaybookResponse> deletePlaybook(DeletePlaybookRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before using this interface, please make sure you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the Response Orchestration product (i.e., Threat Analysis and Response Log Ingress Traffic).</p>
+     * 
      * @param request the request parameters of ExecuteComponent  ExecuteComponentRequest
      * @return ExecuteComponentResponse
      */
