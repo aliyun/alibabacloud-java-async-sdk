@@ -1211,6 +1211,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetKeystores  GetKeystoresRequest
+     * @return GetKeystoresResponse
+     */
+    @Override
+    public CompletableFuture<GetKeystoresResponse> getKeystores(GetKeystoresRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetKeystores").setMethod(HttpMethod.GET).setPathRegex("/openapi/instances/{InstanceId}/keystores").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetKeystoresResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetKeystoresResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetOpenStoreUsage  GetOpenStoreUsageRequest
      * @return GetOpenStoreUsageResponse
      */
@@ -1313,6 +1331,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GrayPublishResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of InitModel  InitModelRequest
+     * @return InitModelResponse
+     */
+    @Override
+    public CompletableFuture<InitModelResponse> initModel(InitModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InitModel").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{InstanceId}/initModel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InitModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InitModelResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2245,6 +2281,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListUserPlugin  ListUserPluginRequest
+     * @return ListUserPluginResponse
+     */
+    @Override
+    public CompletableFuture<ListUserPluginResponse> listUserPlugin(ListUserPluginRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListUserPlugin").setMethod(HttpMethod.GET).setPathRegex("/openapi/instances/{instanceId}/userPlugins").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUserPluginResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUserPluginResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListVpcEndpoints  ListVpcEndpointsRequest
      * @return ListVpcEndpointsResponse
      */
@@ -2445,6 +2499,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of PluginAnalysis  PluginAnalysisRequest
+     * @return PluginAnalysisResponse
+     */
+    @Override
+    public CompletableFuture<PluginAnalysisResponse> pluginAnalysis(PluginAnalysisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PluginAnalysis").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{instanceId}/plugins/actions/analysis").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PluginAnalysisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PluginAnalysisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of PostEmonTryAlarmRule  PostEmonTryAlarmRuleRequest
      * @return PostEmonTryAlarmRuleResponse
      */
@@ -2493,6 +2565,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ReinstallCollectorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RemovePlugin  RemovePluginRequest
+     * @return RemovePluginResponse
+     */
+    @Override
+    public CompletableFuture<RemovePluginResponse> removePlugin(RemovePluginRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RemovePlugin").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{instanceId}/plugins/actions/remove").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemovePluginResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemovePluginResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3166,6 +3256,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateFalconSeek  UpdateFalconSeekRequest
+     * @return UpdateFalconSeekResponse
+     */
+    @Override
+    public CompletableFuture<UpdateFalconSeekResponse> updateFalconSeek(UpdateFalconSeekRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateFalconSeek").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{InstanceId}/falconseek").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateFalconSeekResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateFalconSeekResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
@@ -3288,6 +3396,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateKeystores  UpdateKeystoresRequest
+     * @return UpdateKeystoresResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKeystoresResponse> updateKeystores(UpdateKeystoresRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateKeystores").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{InstanceId}/keystores").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKeystoresResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKeystoresResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateKibanaPvlNetwork  UpdateKibanaPvlNetworkRequest
      * @return UpdateKibanaPvlNetworkResponse
      */
@@ -3318,6 +3444,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateKibanaSettingsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateKibanaSso  UpdateKibanaSsoRequest
+     * @return UpdateKibanaSsoResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKibanaSsoResponse> updateKibanaSso(UpdateKibanaSsoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateKibanaSso").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{InstanceId}/actions/kibana-sso").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKibanaSsoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKibanaSsoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3671,6 +3815,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpgradeEngineVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpgradeInfo  UpgradeInfoRequest
+     * @return UpgradeInfoResponse
+     */
+    @Override
+    public CompletableFuture<UpgradeInfoResponse> upgradeInfo(UpgradeInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpgradeInfo").setMethod(HttpMethod.GET).setPathRegex("/openapi/instances/{instanceId}/upgradeInfo").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpgradeInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

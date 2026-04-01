@@ -423,6 +423,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEmonMonitorDataResponse> getEmonMonitorData(GetEmonMonitorDataRequest request);
 
     /**
+     * @param request the request parameters of GetKeystores  GetKeystoresRequest
+     * @return GetKeystoresResponse
+     */
+    CompletableFuture<GetKeystoresResponse> getKeystores(GetKeystoresRequest request);
+
+    /**
      * @param request the request parameters of GetOpenStoreUsage  GetOpenStoreUsageRequest
      * @return GetOpenStoreUsageResponse
      */
@@ -457,6 +463,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GrayPublishResponse
      */
     CompletableFuture<GrayPublishResponse> grayPublish(GrayPublishRequest request);
+
+    /**
+     * @param request the request parameters of InitModel  InitModelRequest
+     * @return InitModelResponse
+     */
+    CompletableFuture<InitModelResponse> initModel(InitModelRequest request);
 
     /**
      * <b>description</b> :
@@ -785,6 +797,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagsResponse> listTags(ListTagsRequest request);
 
     /**
+     * @param request the request parameters of ListUserPlugin  ListUserPluginRequest
+     * @return ListUserPluginResponse
+     */
+    CompletableFuture<ListUserPluginResponse> listUserPlugin(ListUserPluginRequest request);
+
+    /**
      * @param request the request parameters of ListVpcEndpoints  ListVpcEndpointsRequest
      * @return ListVpcEndpointsResponse
      */
@@ -865,6 +883,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OpenHttpsResponse> openHttps(OpenHttpsRequest request);
 
     /**
+     * @param request the request parameters of PluginAnalysis  PluginAnalysisRequest
+     * @return PluginAnalysisResponse
+     */
+    CompletableFuture<PluginAnalysisResponse> pluginAnalysis(PluginAnalysisRequest request);
+
+    /**
      * @param request the request parameters of PostEmonTryAlarmRule  PostEmonTryAlarmRuleRequest
      * @return PostEmonTryAlarmRuleResponse
      */
@@ -881,6 +905,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ReinstallCollectorResponse
      */
     CompletableFuture<ReinstallCollectorResponse> reinstallCollector(ReinstallCollectorRequest request);
+
+    /**
+     * @param request the request parameters of RemovePlugin  RemovePluginRequest
+     * @return RemovePluginResponse
+     */
+    CompletableFuture<RemovePluginResponse> removePlugin(RemovePluginRequest request);
 
     /**
      * @param request the request parameters of RenewInstance  RenewInstanceRequest
@@ -1130,6 +1160,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateExtendfilesResponse> updateExtendfiles(UpdateExtendfilesRequest request);
 
     /**
+     * @param request the request parameters of UpdateFalconSeek  UpdateFalconSeekRequest
+     * @return UpdateFalconSeekResponse
+     */
+    CompletableFuture<UpdateFalconSeekResponse> updateFalconSeek(UpdateFalconSeekRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
@@ -1180,6 +1216,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateInstanceSettingsResponse> updateInstanceSettings(UpdateInstanceSettingsRequest request);
 
     /**
+     * @param request the request parameters of UpdateKeystores  UpdateKeystoresRequest
+     * @return UpdateKeystoresResponse
+     */
+    CompletableFuture<UpdateKeystoresResponse> updateKeystores(UpdateKeystoresRequest request);
+
+    /**
      * @param request the request parameters of UpdateKibanaPvlNetwork  UpdateKibanaPvlNetworkRequest
      * @return UpdateKibanaPvlNetworkResponse
      */
@@ -1190,6 +1232,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateKibanaSettingsResponse
      */
     CompletableFuture<UpdateKibanaSettingsResponse> updateKibanaSettings(UpdateKibanaSettingsRequest request);
+
+    /**
+     * @param request the request parameters of UpdateKibanaSso  UpdateKibanaSsoRequest
+     * @return UpdateKibanaSsoResponse
+     */
+    CompletableFuture<UpdateKibanaSsoResponse> updateKibanaSso(UpdateKibanaSsoRequest request);
 
     /**
      * <b>description</b> :
@@ -1339,6 +1387,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpgradeEngineVersionResponse
      */
     CompletableFuture<UpgradeEngineVersionResponse> upgradeEngineVersion(UpgradeEngineVersionRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeInfo  UpgradeInfoRequest
+     * @return UpgradeInfoResponse
+     */
+    CompletableFuture<UpgradeInfoResponse> upgradeInfo(UpgradeInfoRequest request);
 
     /**
      * <b>description</b> :
