@@ -3920,6 +3920,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBDescriptionResponse> modifyDBDescription(ModifyDBDescriptionRequest request);
 
     /**
+     * @param request the request parameters of ModifyDBInstance  ModifyDBInstanceRequest
+     * @return ModifyDBInstanceResponse
+     */
+    CompletableFuture<ModifyDBInstanceResponse> modifyDBInstance(ModifyDBInstanceRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
