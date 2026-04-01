@@ -26,6 +26,9 @@ public class PartitionSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("lastAccessTime")
     private Long lastAccessTime;
 
+    @com.aliyun.core.annotation.NameInMap("lastRequester")
+    private String lastRequester;
+
     @com.aliyun.core.annotation.NameInMap("partitionName")
     private String partitionName;
 
@@ -41,6 +44,18 @@ public class PartitionSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("tableName")
     private String tableName;
 
+    @com.aliyun.core.annotation.NameInMap("topRequester")
+    private String topRequester;
+
+    @com.aliyun.core.annotation.NameInMap("totalFileAccessNum")
+    private Long totalFileAccessNum;
+
+    @com.aliyun.core.annotation.NameInMap("totalFileAccessNum30d")
+    private Long totalFileAccessNum30d;
+
+    @com.aliyun.core.annotation.NameInMap("totalFileAccessNum7d")
+    private Long totalFileAccessNum7d;
+
     @com.aliyun.core.annotation.NameInMap("totalFileCount")
     private Long totalFileCount;
 
@@ -54,11 +69,16 @@ public class PartitionSummary extends TeaModel {
         this.createdAt = builder.createdAt;
         this.databaseName = builder.databaseName;
         this.lastAccessTime = builder.lastAccessTime;
+        this.lastRequester = builder.lastRequester;
         this.partitionName = builder.partitionName;
         this.storageActionParams = builder.storageActionParams;
         this.storageActionTimestamp = builder.storageActionTimestamp;
         this.storageClass = builder.storageClass;
         this.tableName = builder.tableName;
+        this.topRequester = builder.topRequester;
+        this.totalFileAccessNum = builder.totalFileAccessNum;
+        this.totalFileAccessNum30d = builder.totalFileAccessNum30d;
+        this.totalFileAccessNum7d = builder.totalFileAccessNum7d;
         this.totalFileCount = builder.totalFileCount;
         this.totalFileSizeInBytes = builder.totalFileSizeInBytes;
         this.updatedAt = builder.updatedAt;
@@ -98,6 +118,13 @@ public class PartitionSummary extends TeaModel {
     }
 
     /**
+     * @return lastRequester
+     */
+    public String getLastRequester() {
+        return this.lastRequester;
+    }
+
+    /**
      * @return partitionName
      */
     public String getPartitionName() {
@@ -133,6 +160,34 @@ public class PartitionSummary extends TeaModel {
     }
 
     /**
+     * @return topRequester
+     */
+    public String getTopRequester() {
+        return this.topRequester;
+    }
+
+    /**
+     * @return totalFileAccessNum
+     */
+    public Long getTotalFileAccessNum() {
+        return this.totalFileAccessNum;
+    }
+
+    /**
+     * @return totalFileAccessNum30d
+     */
+    public Long getTotalFileAccessNum30d() {
+        return this.totalFileAccessNum30d;
+    }
+
+    /**
+     * @return totalFileAccessNum7d
+     */
+    public Long getTotalFileAccessNum7d() {
+        return this.totalFileAccessNum7d;
+    }
+
+    /**
      * @return totalFileCount
      */
     public Long getTotalFileCount() {
@@ -157,11 +212,16 @@ public class PartitionSummary extends TeaModel {
         private Long createdAt; 
         private String databaseName; 
         private Long lastAccessTime; 
+        private String lastRequester; 
         private String partitionName; 
         private java.util.Map<String, String> storageActionParams; 
         private Long storageActionTimestamp; 
         private String storageClass; 
         private String tableName; 
+        private String topRequester; 
+        private Long totalFileAccessNum; 
+        private Long totalFileAccessNum30d; 
+        private Long totalFileAccessNum7d; 
         private Long totalFileCount; 
         private Long totalFileSizeInBytes; 
         private Long updatedAt; 
@@ -173,11 +233,16 @@ public class PartitionSummary extends TeaModel {
             this.createdAt = model.createdAt;
             this.databaseName = model.databaseName;
             this.lastAccessTime = model.lastAccessTime;
+            this.lastRequester = model.lastRequester;
             this.partitionName = model.partitionName;
             this.storageActionParams = model.storageActionParams;
             this.storageActionTimestamp = model.storageActionTimestamp;
             this.storageClass = model.storageClass;
             this.tableName = model.tableName;
+            this.topRequester = model.topRequester;
+            this.totalFileAccessNum = model.totalFileAccessNum;
+            this.totalFileAccessNum30d = model.totalFileAccessNum30d;
+            this.totalFileAccessNum7d = model.totalFileAccessNum7d;
             this.totalFileCount = model.totalFileCount;
             this.totalFileSizeInBytes = model.totalFileSizeInBytes;
             this.updatedAt = model.updatedAt;
@@ -204,6 +269,14 @@ public class PartitionSummary extends TeaModel {
          */
         public Builder lastAccessTime(Long lastAccessTime) {
             this.lastAccessTime = lastAccessTime;
+            return this;
+        }
+
+        /**
+         * lastRequester.
+         */
+        public Builder lastRequester(String lastRequester) {
+            this.lastRequester = lastRequester;
             return this;
         }
 
@@ -244,6 +317,38 @@ public class PartitionSummary extends TeaModel {
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
+            return this;
+        }
+
+        /**
+         * topRequester.
+         */
+        public Builder topRequester(String topRequester) {
+            this.topRequester = topRequester;
+            return this;
+        }
+
+        /**
+         * totalFileAccessNum.
+         */
+        public Builder totalFileAccessNum(Long totalFileAccessNum) {
+            this.totalFileAccessNum = totalFileAccessNum;
+            return this;
+        }
+
+        /**
+         * totalFileAccessNum30d.
+         */
+        public Builder totalFileAccessNum30d(Long totalFileAccessNum30d) {
+            this.totalFileAccessNum30d = totalFileAccessNum30d;
+            return this;
+        }
+
+        /**
+         * totalFileAccessNum7d.
+         */
+        public Builder totalFileAccessNum7d(Long totalFileAccessNum7d) {
+            this.totalFileAccessNum7d = totalFileAccessNum7d;
             return this;
         }
 
