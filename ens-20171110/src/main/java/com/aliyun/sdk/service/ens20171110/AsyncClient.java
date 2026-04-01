@@ -687,6 +687,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteNetworkInterfacesResponse> deleteNetworkInterfaces(DeleteNetworkInterfacesRequest request);
 
     /**
+     * @param request the request parameters of DeleteNetworkPeerConnection  DeleteNetworkPeerConnectionRequest
+     * @return DeleteNetworkPeerConnectionResponse
+     */
+    CompletableFuture<DeleteNetworkPeerConnectionResponse> deleteNetworkPeerConnection(DeleteNetworkPeerConnectionRequest request);
+
+    /**
      * @param request the request parameters of DeleteObject  DeleteObjectRequest
      * @return DeleteObjectResponse
      */
@@ -1351,6 +1357,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeNetworkInterfacesResponse
      */
     CompletableFuture<DescribeNetworkInterfacesResponse> describeNetworkInterfaces(DescribeNetworkInterfacesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeNetworkPeerConnections  DescribeNetworkPeerConnectionsRequest
+     * @return DescribeNetworkPeerConnectionsResponse
+     */
+    CompletableFuture<DescribeNetworkPeerConnectionsResponse> describeNetworkPeerConnections(DescribeNetworkPeerConnectionsRequest request);
 
     /**
      * <b>description</b> :
@@ -2490,6 +2502,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateClusterCertificate  UpdateClusterCertificateRequest
+     * @return UpdateClusterCertificateResponse
+     */
+    CompletableFuture<UpdateClusterCertificateResponse> updateClusterCertificate(UpdateClusterCertificateRequest request);
 
     /**
      * @param request the request parameters of UpdateEnsSaleControl  UpdateEnsSaleControlRequest
