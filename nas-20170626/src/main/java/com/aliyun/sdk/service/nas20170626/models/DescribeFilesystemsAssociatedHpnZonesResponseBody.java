@@ -67,7 +67,7 @@ public class DescribeFilesystemsAssociatedHpnZonesResponseBody extends TeaModel 
         } 
 
         /**
-         * Filesystems.
+         * <p>The list of HpnZones associated with the file system.</p>
          */
         public Builder filesystems(java.util.List<Filesystems> filesystems) {
             this.filesystems = filesystems;
@@ -75,7 +75,10 @@ public class DescribeFilesystemsAssociatedHpnZonesResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,7 @@ public class DescribeFilesystemsAssociatedHpnZonesResponseBody extends TeaModel 
             } 
 
             /**
-             * AssociatedHpnZones.
+             * <p>The list of HpnZones supported by the file system.</p>
              */
             public Builder associatedHpnZones(java.util.List<String> associatedHpnZones) {
                 this.associatedHpnZones = associatedHpnZones;
@@ -162,7 +165,10 @@ public class DescribeFilesystemsAssociatedHpnZonesResponseBody extends TeaModel 
             }
 
             /**
-             * FileSystemId.
+             * <p>The ID of the CPFS for Lingjun file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bmcpfs-290t15yn4uo8lid****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -170,7 +176,10 @@ public class DescribeFilesystemsAssociatedHpnZonesResponseBody extends TeaModel 
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-k</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

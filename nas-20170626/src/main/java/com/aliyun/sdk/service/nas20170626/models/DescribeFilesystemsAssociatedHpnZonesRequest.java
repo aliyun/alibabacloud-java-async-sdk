@@ -74,7 +74,10 @@ public class DescribeFilesystemsAssociatedHpnZonesRequest extends Request {
         } 
 
         /**
-         * Filesystems.
+         * <p>The collection of file system IDs.</p>
+         * <blockquote>
+         * <p> The maximum number of elements in the set must be less than or equal to 20.</p>
+         * </blockquote>
          */
         public Builder filesystems(java.util.List<Filesystems> filesystems) {
             String filesystemsShrink = shrink(filesystems, "Filesystems", "json");
@@ -84,6 +87,7 @@ public class DescribeFilesystemsAssociatedHpnZonesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the file system resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +146,10 @@ public class DescribeFilesystemsAssociatedHpnZonesRequest extends Request {
             } 
 
             /**
-             * FileSystemId.
+             * <p>The ID of the CPFS for Lingjun file system. Must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya****.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bmcpfs-290t15yn4uo8lid****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;

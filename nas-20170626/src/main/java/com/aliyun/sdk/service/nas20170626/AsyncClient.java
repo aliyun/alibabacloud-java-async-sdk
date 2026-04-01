@@ -834,6 +834,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFilesetsResponse> describeFilesets(DescribeFilesetsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  Only CPFS for Lingjun supports this operation.</p>
+     * <ul>
+     * <li>You can call this operation to query up to 20 file systems at a time.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeFilesystemsAssociatedHpnZones  DescribeFilesystemsAssociatedHpnZonesRequest
      * @return DescribeFilesystemsAssociatedHpnZonesResponse
      */
@@ -859,6 +865,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeLifecyclePoliciesResponse
      */
     CompletableFuture<DescribeLifecyclePoliciesResponse> describeLifecyclePolicies(DescribeLifecyclePoliciesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLifecyclePolicyLogs  DescribeLifecyclePolicyLogsRequest
+     * @return DescribeLifecyclePolicyLogsResponse
+     */
+    CompletableFuture<DescribeLifecyclePolicyLogsResponse> describeLifecyclePolicyLogs(DescribeLifecyclePolicyLogsRequest request);
 
     /**
      * @param request the request parameters of DescribeLogAnalysis  DescribeLogAnalysisRequest
@@ -1304,6 +1316,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartDataFlowResponse> startDataFlow(StartDataFlowRequest request);
 
     /**
+     * @param request the request parameters of StartLifecyclePolicyExecution  StartLifecyclePolicyExecutionRequest
+     * @return StartLifecyclePolicyExecutionResponse
+     */
+    CompletableFuture<StartLifecyclePolicyExecutionResponse> startLifecyclePolicyExecution(StartLifecyclePolicyExecutionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This operation is available only to CPFS file systems.</p>
      * <ul>
@@ -1320,6 +1338,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopDataFlowResponse> stopDataFlow(StopDataFlowRequest request);
 
     /**
+     * @param request the request parameters of StopLifecyclePolicyExecution  StopLifecyclePolicyExecutionRequest
+     * @return StopLifecyclePolicyExecutionResponse
+     */
+    CompletableFuture<StopLifecyclePolicyExecutionResponse> stopLifecyclePolicyExecution(StopLifecyclePolicyExecutionRequest request);
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -1330,6 +1354,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLifecyclePolicy  UpdateLifecyclePolicyRequest
+     * @return UpdateLifecyclePolicyResponse
+     */
+    CompletableFuture<UpdateLifecyclePolicyResponse> updateLifecyclePolicy(UpdateLifecyclePolicyRequest request);
 
     /**
      * <b>description</b> :
