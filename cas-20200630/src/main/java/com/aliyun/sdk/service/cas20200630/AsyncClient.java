@@ -248,10 +248,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClientCertificateStatusForSerialNumberResponse> describeClientCertificateStatusForSerialNumber(DescribeClientCertificateStatusForSerialNumberRequest request);
 
     /**
-     * @deprecated OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.  * @param request  the request parameters of DescribePcaAndExternalCACertificateList  DescribePcaAndExternalCACertificateListRequest
+     * @param request the request parameters of DescribePcaAndExternalCACertificateList  DescribePcaAndExternalCACertificateListRequest
      * @return DescribePcaAndExternalCACertificateListResponse
      */
-    @Deprecated
     CompletableFuture<DescribePcaAndExternalCACertificateListResponse> describePcaAndExternalCACertificateList(DescribePcaAndExternalCACertificateListRequest request);
 
     /**

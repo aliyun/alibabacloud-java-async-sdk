@@ -22,12 +22,22 @@ public class DescribePcaAndExternalCACertificateListRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Identifiers")
+    private String identifiers;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyWord")
+    private String keyWord;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShowSize")
     private Integer showSize;
 
     private DescribePcaAndExternalCACertificateListRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.identifiers = builder.identifiers;
+        this.keyWord = builder.keyWord;
         this.showSize = builder.showSize;
     }
 
@@ -52,6 +62,20 @@ public class DescribePcaAndExternalCACertificateListRequest extends Request {
     }
 
     /**
+     * @return identifiers
+     */
+    public String getIdentifiers() {
+        return this.identifiers;
+    }
+
+    /**
+     * @return keyWord
+     */
+    public String getKeyWord() {
+        return this.keyWord;
+    }
+
+    /**
      * @return showSize
      */
     public Integer getShowSize() {
@@ -60,6 +84,8 @@ public class DescribePcaAndExternalCACertificateListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribePcaAndExternalCACertificateListRequest, Builder> {
         private Integer currentPage; 
+        private String identifiers; 
+        private String keyWord; 
         private Integer showSize; 
 
         private Builder() {
@@ -69,6 +95,8 @@ public class DescribePcaAndExternalCACertificateListRequest extends Request {
         private Builder(DescribePcaAndExternalCACertificateListRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.identifiers = request.identifiers;
+            this.keyWord = request.keyWord;
             this.showSize = request.showSize;
         } 
 
@@ -78,6 +106,24 @@ public class DescribePcaAndExternalCACertificateListRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * Identifiers.
+         */
+        public Builder identifiers(String identifiers) {
+            this.putQueryParameter("Identifiers", identifiers);
+            this.identifiers = identifiers;
+            return this;
+        }
+
+        /**
+         * KeyWord.
+         */
+        public Builder keyWord(String keyWord) {
+            this.putQueryParameter("KeyWord", keyWord);
+            this.keyWord = keyWord;
             return this;
         }
 

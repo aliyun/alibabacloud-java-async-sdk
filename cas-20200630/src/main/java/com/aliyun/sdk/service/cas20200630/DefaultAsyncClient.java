@@ -548,10 +548,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.  * @param request  the request parameters of DescribePcaAndExternalCACertificateList  DescribePcaAndExternalCACertificateListRequest
+     * @param request the request parameters of DescribePcaAndExternalCACertificateList  DescribePcaAndExternalCACertificateListRequest
      * @return DescribePcaAndExternalCACertificateListResponse
      */
-    @Deprecated
     @Override
     public CompletableFuture<DescribePcaAndExternalCACertificateListResponse> describePcaAndExternalCACertificateList(DescribePcaAndExternalCACertificateListRequest request) {
         try {
