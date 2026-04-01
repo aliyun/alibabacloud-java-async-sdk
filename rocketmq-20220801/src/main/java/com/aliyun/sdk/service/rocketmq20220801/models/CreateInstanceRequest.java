@@ -1043,6 +1043,9 @@ public class CreateInstanceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("capacityType")
         private String capacityType;
 
+        @com.aliyun.core.annotation.NameInMap("drReplicationMode")
+        private String drReplicationMode;
+
         @com.aliyun.core.annotation.NameInMap("messageRetentionTime")
         private Integer messageRetentionTime;
 
@@ -1067,6 +1070,7 @@ public class CreateInstanceRequest extends Request {
         private ProductInfo(Builder builder) {
             this.autoScaling = builder.autoScaling;
             this.capacityType = builder.capacityType;
+            this.drReplicationMode = builder.drReplicationMode;
             this.messageRetentionTime = builder.messageRetentionTime;
             this.msgProcessSpec = builder.msgProcessSpec;
             this.provisionedCapacity = builder.provisionedCapacity;
@@ -1096,6 +1100,13 @@ public class CreateInstanceRequest extends Request {
          */
         public String getCapacityType() {
             return this.capacityType;
+        }
+
+        /**
+         * @return drReplicationMode
+         */
+        public String getDrReplicationMode() {
+            return this.drReplicationMode;
         }
 
         /**
@@ -1150,6 +1161,7 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private Boolean autoScaling; 
             private String capacityType; 
+            private String drReplicationMode; 
             private Integer messageRetentionTime; 
             private String msgProcessSpec; 
             private Long provisionedCapacity; 
@@ -1164,6 +1176,7 @@ public class CreateInstanceRequest extends Request {
             private Builder(ProductInfo model) {
                 this.autoScaling = model.autoScaling;
                 this.capacityType = model.capacityType;
+                this.drReplicationMode = model.drReplicationMode;
                 this.messageRetentionTime = model.messageRetentionTime;
                 this.msgProcessSpec = model.msgProcessSpec;
                 this.provisionedCapacity = model.provisionedCapacity;
@@ -1198,6 +1211,14 @@ public class CreateInstanceRequest extends Request {
              */
             public Builder capacityType(String capacityType) {
                 this.capacityType = capacityType;
+                return this;
+            }
+
+            /**
+             * drReplicationMode.
+             */
+            public Builder drReplicationMode(String drReplicationMode) {
+                this.drReplicationMode = drReplicationMode;
                 return this;
             }
 

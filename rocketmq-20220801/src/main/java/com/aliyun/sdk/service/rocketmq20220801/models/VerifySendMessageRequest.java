@@ -28,12 +28,20 @@ public class VerifySendMessageRequest extends Request {
     private String topicName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("deliveryTimeStamp")
+    private Long deliveryTimeStamp;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("liteTopicName")
     private String liteTopicName;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("messageGroup")
+    private String messageGroup;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("messageKey")
@@ -43,14 +51,21 @@ public class VerifySendMessageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("messageTag")
     private String messageTag;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userProperties")
+    private java.util.Map<String, ?> userProperties;
+
     private VerifySendMessageRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.topicName = builder.topicName;
+        this.deliveryTimeStamp = builder.deliveryTimeStamp;
         this.liteTopicName = builder.liteTopicName;
         this.message = builder.message;
+        this.messageGroup = builder.messageGroup;
         this.messageKey = builder.messageKey;
         this.messageTag = builder.messageTag;
+        this.userProperties = builder.userProperties;
     }
 
     public static Builder builder() {
@@ -81,6 +96,13 @@ public class VerifySendMessageRequest extends Request {
     }
 
     /**
+     * @return deliveryTimeStamp
+     */
+    public Long getDeliveryTimeStamp() {
+        return this.deliveryTimeStamp;
+    }
+
+    /**
      * @return liteTopicName
      */
     public String getLiteTopicName() {
@@ -92,6 +114,13 @@ public class VerifySendMessageRequest extends Request {
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return messageGroup
+     */
+    public String getMessageGroup() {
+        return this.messageGroup;
     }
 
     /**
@@ -108,13 +137,23 @@ public class VerifySendMessageRequest extends Request {
         return this.messageTag;
     }
 
+    /**
+     * @return userProperties
+     */
+    public java.util.Map<String, ?> getUserProperties() {
+        return this.userProperties;
+    }
+
     public static final class Builder extends Request.Builder<VerifySendMessageRequest, Builder> {
         private String instanceId; 
         private String topicName; 
+        private Long deliveryTimeStamp; 
         private String liteTopicName; 
         private String message; 
+        private String messageGroup; 
         private String messageKey; 
         private String messageTag; 
+        private java.util.Map<String, ?> userProperties; 
 
         private Builder() {
             super();
@@ -124,10 +163,13 @@ public class VerifySendMessageRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.topicName = request.topicName;
+            this.deliveryTimeStamp = request.deliveryTimeStamp;
             this.liteTopicName = request.liteTopicName;
             this.message = request.message;
+            this.messageGroup = request.messageGroup;
             this.messageKey = request.messageKey;
             this.messageTag = request.messageTag;
+            this.userProperties = request.userProperties;
         } 
 
         /**
@@ -157,6 +199,15 @@ public class VerifySendMessageRequest extends Request {
         }
 
         /**
+         * deliveryTimeStamp.
+         */
+        public Builder deliveryTimeStamp(Long deliveryTimeStamp) {
+            this.putBodyParameter("deliveryTimeStamp", deliveryTimeStamp);
+            this.deliveryTimeStamp = deliveryTimeStamp;
+            return this;
+        }
+
+        /**
          * liteTopicName.
          */
         public Builder liteTopicName(String liteTopicName) {
@@ -174,6 +225,15 @@ public class VerifySendMessageRequest extends Request {
         public Builder message(String message) {
             this.putBodyParameter("message", message);
             this.message = message;
+            return this;
+        }
+
+        /**
+         * messageGroup.
+         */
+        public Builder messageGroup(String messageGroup) {
+            this.putBodyParameter("messageGroup", messageGroup);
+            this.messageGroup = messageGroup;
             return this;
         }
 
@@ -198,6 +258,15 @@ public class VerifySendMessageRequest extends Request {
         public Builder messageTag(String messageTag) {
             this.putBodyParameter("messageTag", messageTag);
             this.messageTag = messageTag;
+            return this;
+        }
+
+        /**
+         * userProperties.
+         */
+        public Builder userProperties(java.util.Map<String, ?> userProperties) {
+            this.putBodyParameter("userProperties", userProperties);
+            this.userProperties = userProperties;
             return this;
         }
 
