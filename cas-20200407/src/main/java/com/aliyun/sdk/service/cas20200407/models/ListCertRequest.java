@@ -26,6 +26,10 @@ public class ListCertRequest extends Request {
     private Long currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Identifiers")
+    private String identifiers;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyWord")
     private String keyWord;
 
@@ -49,6 +53,7 @@ public class ListCertRequest extends Request {
         super(builder);
         this.certType = builder.certType;
         this.currentPage = builder.currentPage;
+        this.identifiers = builder.identifiers;
         this.keyWord = builder.keyWord;
         this.showSize = builder.showSize;
         this.sourceType = builder.sourceType;
@@ -81,6 +86,13 @@ public class ListCertRequest extends Request {
      */
     public Long getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return identifiers
+     */
+    public String getIdentifiers() {
+        return this.identifiers;
     }
 
     /**
@@ -121,6 +133,7 @@ public class ListCertRequest extends Request {
     public static final class Builder extends Request.Builder<ListCertRequest, Builder> {
         private String certType; 
         private Long currentPage; 
+        private String identifiers; 
         private String keyWord; 
         private Long showSize; 
         private String sourceType; 
@@ -135,6 +148,7 @@ public class ListCertRequest extends Request {
             super(request);
             this.certType = request.certType;
             this.currentPage = request.currentPage;
+            this.identifiers = request.identifiers;
             this.keyWord = request.keyWord;
             this.showSize = request.showSize;
             this.sourceType = request.sourceType;
@@ -167,6 +181,15 @@ public class ListCertRequest extends Request {
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * Identifiers.
+         */
+        public Builder identifiers(String identifiers) {
+            this.putQueryParameter("Identifiers", identifiers);
+            this.identifiers = identifiers;
             return this;
         }
 
