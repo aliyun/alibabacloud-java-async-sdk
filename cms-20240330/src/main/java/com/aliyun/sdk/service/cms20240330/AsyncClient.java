@@ -77,6 +77,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCloudResourceResponse> createCloudResource(CreateCloudResourceRequest request);
 
     /**
+     * @param request the request parameters of CreateDataset  CreateDatasetRequest
+     * @return CreateDatasetResponse
+     */
+    CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request);
+
+    /**
      * @param request the request parameters of CreateDeliveryTask  CreateDeliveryTaskRequest
      * @return CreateDeliveryTaskResponse
      */
@@ -203,6 +209,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCloudResourceResponse> deleteCloudResource(DeleteCloudResourceRequest request);
 
     /**
+     * @param request the request parameters of DeleteDataset  DeleteDatasetRequest
+     * @return DeleteDatasetResponse
+     */
+    CompletableFuture<DeleteDatasetResponse> deleteDataset(DeleteDatasetRequest request);
+
+    /**
      * @param request the request parameters of DeleteDeliveryTask  DeleteDeliveryTaskRequest
      * @return DeleteDeliveryTaskResponse
      */
@@ -269,6 +281,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePrometheusViewResponse> deletePrometheusView(DeletePrometheusViewRequest request);
 
     /**
+     * @param request the request parameters of DeletePrometheusVirtualInstance  DeletePrometheusVirtualInstanceRequest
+     * @return DeletePrometheusVirtualInstanceResponse
+     */
+    CompletableFuture<DeletePrometheusVirtualInstanceResponse> deletePrometheusVirtualInstance(DeletePrometheusVirtualInstanceRequest request);
+
+    /**
      * @param request the request parameters of DeleteService  DeleteServiceRequest
      * @return DeleteServiceResponse
      */
@@ -315,6 +333,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRegionsResponse
      */
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteQuery  ExecuteQueryRequest
+     * @return ExecuteQueryResponse
+     */
+    CompletableFuture<ExecuteQueryResponse> executeQuery(ExecuteQueryRequest request);
 
     /**
      * @param request the request parameters of GetAddon  GetAddonRequest
@@ -369,6 +393,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCmsServiceResponse
      */
     CompletableFuture<GetCmsServiceResponse> getCmsService(GetCmsServiceRequest request);
+
+    /**
+     * @param request the request parameters of GetDataset  GetDatasetRequest
+     * @return GetDatasetResponse
+     */
+    CompletableFuture<GetDatasetResponse> getDataset(GetDatasetRequest request);
 
     /**
      * @param request the request parameters of GetDeliveryTask  GetDeliveryTaskRequest
@@ -552,6 +582,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListBizTracesResponse
      */
     CompletableFuture<ListBizTracesResponse> listBizTraces(ListBizTracesRequest request);
+
+    /**
+     * @param request the request parameters of ListDatasets  ListDatasetsRequest
+     * @return ListDatasetsResponse
+     */
+    CompletableFuture<ListDatasetsResponse> listDatasets(ListDatasetsRequest request);
 
     /**
      * @param request the request parameters of ListDeliveryTasks  ListDeliveryTasksRequest
@@ -757,6 +793,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateBizTraceResponse
      */
     CompletableFuture<UpdateBizTraceResponse> updateBizTrace(UpdateBizTraceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataset  UpdateDatasetRequest
+     * @return UpdateDatasetResponse
+     */
+    CompletableFuture<UpdateDatasetResponse> updateDataset(UpdateDatasetRequest request);
 
     /**
      * @param request the request parameters of UpdateDeliveryTask  UpdateDeliveryTaskRequest
