@@ -229,6 +229,9 @@ public class CreateEndpointGroupsRequest extends Request {
      * <p>CreateEndpointGroupsRequest</p>
      */
     public static class EndpointConfigurations extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApiKeys")
+        private java.util.List<String> apiKeys;
+
         @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservation")
         private Boolean enableClientIPPreservation;
 
@@ -237,6 +240,9 @@ public class CreateEndpointGroupsRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
+
+        @com.aliyun.core.annotation.NameInMap("Provider")
+        private String provider;
 
         @com.aliyun.core.annotation.NameInMap("SubAddress")
         private String subAddress;
@@ -254,9 +260,11 @@ public class CreateEndpointGroupsRequest extends Request {
         private Long weight;
 
         private EndpointConfigurations(Builder builder) {
+            this.apiKeys = builder.apiKeys;
             this.enableClientIPPreservation = builder.enableClientIPPreservation;
             this.enableProxyProtocol = builder.enableProxyProtocol;
             this.endpoint = builder.endpoint;
+            this.provider = builder.provider;
             this.subAddress = builder.subAddress;
             this.type = builder.type;
             this.vSwitchIds = builder.vSwitchIds;
@@ -270,6 +278,13 @@ public class CreateEndpointGroupsRequest extends Request {
 
         public static EndpointConfigurations create() {
             return builder().build();
+        }
+
+        /**
+         * @return apiKeys
+         */
+        public java.util.List<String> getApiKeys() {
+            return this.apiKeys;
         }
 
         /**
@@ -291,6 +306,13 @@ public class CreateEndpointGroupsRequest extends Request {
          */
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        /**
+         * @return provider
+         */
+        public String getProvider() {
+            return this.provider;
         }
 
         /**
@@ -329,9 +351,11 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<String> apiKeys; 
             private Boolean enableClientIPPreservation; 
             private Boolean enableProxyProtocol; 
             private String endpoint; 
+            private String provider; 
             private String subAddress; 
             private String type; 
             private java.util.List<String> vSwitchIds; 
@@ -342,15 +366,25 @@ public class CreateEndpointGroupsRequest extends Request {
             } 
 
             private Builder(EndpointConfigurations model) {
+                this.apiKeys = model.apiKeys;
                 this.enableClientIPPreservation = model.enableClientIPPreservation;
                 this.enableProxyProtocol = model.enableProxyProtocol;
                 this.endpoint = model.endpoint;
+                this.provider = model.provider;
                 this.subAddress = model.subAddress;
                 this.type = model.type;
                 this.vSwitchIds = model.vSwitchIds;
                 this.vpcId = model.vpcId;
                 this.weight = model.weight;
             } 
+
+            /**
+             * ApiKeys.
+             */
+            public Builder apiKeys(java.util.List<String> apiKeys) {
+                this.apiKeys = apiKeys;
+                return this;
+            }
 
             /**
              * EnableClientIPPreservation.
@@ -373,6 +407,14 @@ public class CreateEndpointGroupsRequest extends Request {
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * Provider.
+             */
+            public Builder provider(String provider) {
+                this.provider = provider;
                 return this;
             }
 

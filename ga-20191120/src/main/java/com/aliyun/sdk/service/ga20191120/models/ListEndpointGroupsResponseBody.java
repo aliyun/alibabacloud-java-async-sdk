@@ -170,6 +170,9 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
      * <p>ListEndpointGroupsResponseBody</p>
      */
     public static class EndpointConfigurations extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApiKeys")
+        private java.util.List<String> apiKeys;
+
         @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservation")
         private Boolean enableClientIPPreservation;
 
@@ -188,6 +191,9 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProbeProtocol")
         private String probeProtocol;
 
+        @com.aliyun.core.annotation.NameInMap("Provider")
+        private String provider;
+
         @com.aliyun.core.annotation.NameInMap("SubAddress")
         private String subAddress;
 
@@ -204,12 +210,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         private Integer weight;
 
         private EndpointConfigurations(Builder builder) {
+            this.apiKeys = builder.apiKeys;
             this.enableClientIPPreservation = builder.enableClientIPPreservation;
             this.enableProxyProtocol = builder.enableProxyProtocol;
             this.endpoint = builder.endpoint;
             this.endpointId = builder.endpointId;
             this.probePort = builder.probePort;
             this.probeProtocol = builder.probeProtocol;
+            this.provider = builder.provider;
             this.subAddress = builder.subAddress;
             this.type = builder.type;
             this.vSwitchIds = builder.vSwitchIds;
@@ -223,6 +231,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
         public static EndpointConfigurations create() {
             return builder().build();
+        }
+
+        /**
+         * @return apiKeys
+         */
+        public java.util.List<String> getApiKeys() {
+            return this.apiKeys;
         }
 
         /**
@@ -268,6 +283,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return provider
+         */
+        public String getProvider() {
+            return this.provider;
+        }
+
+        /**
          * @return subAddress
          */
         public String getSubAddress() {
@@ -303,12 +325,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> apiKeys; 
             private Boolean enableClientIPPreservation; 
             private Boolean enableProxyProtocol; 
             private String endpoint; 
             private String endpointId; 
             private Integer probePort; 
             private String probeProtocol; 
+            private String provider; 
             private String subAddress; 
             private String type; 
             private java.util.List<String> vSwitchIds; 
@@ -319,18 +343,28 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             } 
 
             private Builder(EndpointConfigurations model) {
+                this.apiKeys = model.apiKeys;
                 this.enableClientIPPreservation = model.enableClientIPPreservation;
                 this.enableProxyProtocol = model.enableProxyProtocol;
                 this.endpoint = model.endpoint;
                 this.endpointId = model.endpointId;
                 this.probePort = model.probePort;
                 this.probeProtocol = model.probeProtocol;
+                this.provider = model.provider;
                 this.subAddress = model.subAddress;
                 this.type = model.type;
                 this.vSwitchIds = model.vSwitchIds;
                 this.vpcId = model.vpcId;
                 this.weight = model.weight;
             } 
+
+            /**
+             * ApiKeys.
+             */
+            public Builder apiKeys(java.util.List<String> apiKeys) {
+                this.apiKeys = apiKeys;
+                return this;
+            }
 
             /**
              * <p>Indicates whether the client IP address preservation feature is enabled. Valid values:</p>
@@ -404,6 +438,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
              */
             public Builder probeProtocol(String probeProtocol) {
                 this.probeProtocol = probeProtocol;
+                return this;
+            }
+
+            /**
+             * Provider.
+             */
+            public Builder provider(String provider) {
+                this.provider = provider;
                 return this;
             }
 
