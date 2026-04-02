@@ -34,6 +34,10 @@ public class ModelRouterCreateClientRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("parentId")
+    private Long parentId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
 
@@ -43,6 +47,7 @@ public class ModelRouterCreateClientRequest extends Request {
         this.allowedModels = builder.allowedModels;
         this.contact = builder.contact;
         this.name = builder.name;
+        this.parentId = builder.parentId;
         this.remark = builder.remark;
     }
 
@@ -88,6 +93,13 @@ public class ModelRouterCreateClientRequest extends Request {
     }
 
     /**
+     * @return parentId
+     */
+    public Long getParentId() {
+        return this.parentId;
+    }
+
+    /**
      * @return remark
      */
     public String getRemark() {
@@ -99,6 +111,7 @@ public class ModelRouterCreateClientRequest extends Request {
         private String allowedModels; 
         private String contact; 
         private String name; 
+        private Long parentId; 
         private String remark; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class ModelRouterCreateClientRequest extends Request {
             this.allowedModels = request.allowedModels;
             this.contact = request.contact;
             this.name = request.name;
+            this.parentId = request.parentId;
             this.remark = request.remark;
         } 
 
@@ -147,6 +161,15 @@ public class ModelRouterCreateClientRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * parentId.
+         */
+        public Builder parentId(Long parentId) {
+            this.putBodyParameter("parentId", parentId);
+            this.parentId = parentId;
             return this;
         }
 

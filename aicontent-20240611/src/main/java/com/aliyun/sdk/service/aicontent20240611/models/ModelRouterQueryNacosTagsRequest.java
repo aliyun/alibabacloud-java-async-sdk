@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModelRouterQueryNacosTagsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("configType")
+    private String configType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("groupBy")
     private String groupBy;
 
@@ -51,6 +55,7 @@ public class ModelRouterQueryNacosTagsRequest extends Request {
 
     private ModelRouterQueryNacosTagsRequest(Builder builder) {
         super(builder);
+        this.configType = builder.configType;
         this.groupBy = builder.groupBy;
         this.maxResults = builder.maxResults;
         this.needTotalCount = builder.needTotalCount;
@@ -72,6 +77,13 @@ public class ModelRouterQueryNacosTagsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return configType
+     */
+    public String getConfigType() {
+        return this.configType;
     }
 
     /**
@@ -131,6 +143,7 @@ public class ModelRouterQueryNacosTagsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModelRouterQueryNacosTagsRequest, Builder> {
+        private String configType; 
         private String groupBy; 
         private Integer maxResults; 
         private Boolean needTotalCount; 
@@ -146,6 +159,7 @@ public class ModelRouterQueryNacosTagsRequest extends Request {
 
         private Builder(ModelRouterQueryNacosTagsRequest request) {
             super(request);
+            this.configType = request.configType;
             this.groupBy = request.groupBy;
             this.maxResults = request.maxResults;
             this.needTotalCount = request.needTotalCount;
@@ -155,6 +169,15 @@ public class ModelRouterQueryNacosTagsRequest extends Request {
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
         } 
+
+        /**
+         * configType.
+         */
+        public Builder configType(String configType) {
+            this.putQueryParameter("configType", configType);
+            this.configType = configType;
+            return this;
+        }
 
         /**
          * groupBy.

@@ -178,9 +178,69 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
      *
      * <p>ModelRouterQueryNacosProvidersResponseBody</p>
      */
+    public static class Extensions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("async")
+        private Boolean async;
+
+        private Extensions(Builder builder) {
+            this.async = builder.async;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Extensions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return async
+         */
+        public Boolean getAsync() {
+            return this.async;
+        }
+
+        public static final class Builder {
+            private Boolean async; 
+
+            private Builder() {
+            } 
+
+            private Builder(Extensions model) {
+                this.async = model.async;
+            } 
+
+            /**
+             * async.
+             */
+            public Builder async(Boolean async) {
+                this.async = async;
+                return this;
+            }
+
+            public Extensions build() {
+                return new Extensions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModelRouterQueryNacosProvidersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModelRouterQueryNacosProvidersResponseBody</p>
+     */
     public static class Models extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("extensions")
+        private Extensions extensions;
+
         @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
+
+        @com.aliyun.core.annotation.NameInMap("inOut")
+        private String inOut;
 
         @com.aliyun.core.annotation.NameInMap("inputToken")
         private String inputToken;
@@ -188,10 +248,16 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("outputToken")
         private String outputToken;
 
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
         private Models(Builder builder) {
+            this.extensions = builder.extensions;
             this.identifier = builder.identifier;
+            this.inOut = builder.inOut;
             this.inputToken = builder.inputToken;
             this.outputToken = builder.outputToken;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -203,10 +269,24 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         }
 
         /**
+         * @return extensions
+         */
+        public Extensions getExtensions() {
+            return this.extensions;
+        }
+
+        /**
          * @return identifier
          */
         public String getIdentifier() {
             return this.identifier;
+        }
+
+        /**
+         * @return inOut
+         */
+        public String getInOut() {
+            return this.inOut;
         }
 
         /**
@@ -223,25 +303,54 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             return this.outputToken;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
+            private Extensions extensions; 
             private String identifier; 
+            private String inOut; 
             private String inputToken; 
             private String outputToken; 
+            private String type; 
 
             private Builder() {
             } 
 
             private Builder(Models model) {
+                this.extensions = model.extensions;
                 this.identifier = model.identifier;
+                this.inOut = model.inOut;
                 this.inputToken = model.inputToken;
                 this.outputToken = model.outputToken;
+                this.type = model.type;
             } 
+
+            /**
+             * extensions.
+             */
+            public Builder extensions(Extensions extensions) {
+                this.extensions = extensions;
+                return this;
+            }
 
             /**
              * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
+                return this;
+            }
+
+            /**
+             * inOut.
+             */
+            public Builder inOut(String inOut) {
+                this.inOut = inOut;
                 return this;
             }
 
@@ -258,6 +367,14 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
              */
             public Builder outputToken(String outputToken) {
                 this.outputToken = outputToken;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

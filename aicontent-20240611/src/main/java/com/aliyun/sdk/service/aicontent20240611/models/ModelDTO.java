@@ -29,6 +29,9 @@ public class ModelDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("extensions")
+    private String extensions;
+
     @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private String gmtCreate;
 
@@ -37,6 +40,9 @@ public class ModelDTO extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
+
+    @com.aliyun.core.annotation.NameInMap("inOut")
+    private String inOut;
 
     @com.aliyun.core.annotation.NameInMap("isCustom")
     private Boolean isCustom;
@@ -73,9 +79,11 @@ public class ModelDTO extends TeaModel {
         this.baseUrl = builder.baseUrl;
         this.deleteTag = builder.deleteTag;
         this.description = builder.description;
+        this.extensions = builder.extensions;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
         this.id = builder.id;
+        this.inOut = builder.inOut;
         this.isCustom = builder.isCustom;
         this.maxInputLength = builder.maxInputLength;
         this.maxOutputLength = builder.maxOutputLength;
@@ -129,6 +137,13 @@ public class ModelDTO extends TeaModel {
     }
 
     /**
+     * @return extensions
+     */
+    public String getExtensions() {
+        return this.extensions;
+    }
+
+    /**
      * @return gmtCreate
      */
     public String getGmtCreate() {
@@ -147,6 +162,13 @@ public class ModelDTO extends TeaModel {
      */
     public Long getId() {
         return this.id;
+    }
+
+    /**
+     * @return inOut
+     */
+    public String getInOut() {
+        return this.inOut;
     }
 
     /**
@@ -224,9 +246,11 @@ public class ModelDTO extends TeaModel {
         private String baseUrl; 
         private Integer deleteTag; 
         private String description; 
+        private String extensions; 
         private String gmtCreate; 
         private String gmtModified; 
         private Long id; 
+        private String inOut; 
         private Boolean isCustom; 
         private String maxInputLength; 
         private String maxOutputLength; 
@@ -246,9 +270,11 @@ public class ModelDTO extends TeaModel {
             this.baseUrl = model.baseUrl;
             this.deleteTag = model.deleteTag;
             this.description = model.description;
+            this.extensions = model.extensions;
             this.gmtCreate = model.gmtCreate;
             this.gmtModified = model.gmtModified;
             this.id = model.id;
+            this.inOut = model.inOut;
             this.isCustom = model.isCustom;
             this.maxInputLength = model.maxInputLength;
             this.maxOutputLength = model.maxOutputLength;
@@ -294,6 +320,14 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
+         * extensions.
+         */
+        public Builder extensions(String extensions) {
+            this.extensions = extensions;
+            return this;
+        }
+
+        /**
          * gmtCreate.
          */
         public Builder gmtCreate(String gmtCreate) {
@@ -314,6 +348,14 @@ public class ModelDTO extends TeaModel {
          */
         public Builder id(Long id) {
             this.id = id;
+            return this;
+        }
+
+        /**
+         * inOut.
+         */
+        public Builder inOut(String inOut) {
+            this.inOut = inOut;
             return this;
         }
 

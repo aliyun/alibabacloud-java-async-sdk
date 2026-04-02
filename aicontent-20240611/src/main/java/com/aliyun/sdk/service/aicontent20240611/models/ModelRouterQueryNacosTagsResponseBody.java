@@ -179,15 +179,23 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
      * <p>ModelRouterQueryNacosTagsResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("label")
+        private String label;
+
         @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
 
         @com.aliyun.core.annotation.NameInMap("tagName")
         private String tagName;
 
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
         private Data(Builder builder) {
+            this.label = builder.label;
             this.tag = builder.tag;
             this.tagName = builder.tagName;
+            this.value = builder.value;
         }
 
         public static Builder builder() {
@@ -196,6 +204,13 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
         }
 
         /**
@@ -212,17 +227,36 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
             return this.tagName;
         }
 
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
         public static final class Builder {
+            private String label; 
             private String tag; 
             private String tagName; 
+            private String value; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.label = model.label;
                 this.tag = model.tag;
                 this.tagName = model.tagName;
+                this.value = model.value;
             } 
+
+            /**
+             * label.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
 
             /**
              * tag.
@@ -237,6 +271,14 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
                 return this;
             }
 

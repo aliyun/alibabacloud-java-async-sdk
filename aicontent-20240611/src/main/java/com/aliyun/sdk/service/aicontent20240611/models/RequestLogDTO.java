@@ -50,6 +50,9 @@ public class RequestLogDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("modelName")
     private String modelName;
 
+    @com.aliyun.core.annotation.NameInMap("modelType")
+    private String modelType;
+
     @com.aliyun.core.annotation.NameInMap("promptTokens")
     private Integer promptTokens;
 
@@ -80,6 +83,9 @@ public class RequestLogDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("totalTokens")
     private Integer totalTokens;
 
+    @com.aliyun.core.annotation.NameInMap("usage")
+    private UsageInfoDTO usage;
+
     private RequestLogDTO(Builder builder) {
         this.apiKeyId = builder.apiKeyId;
         this.clientId = builder.clientId;
@@ -92,6 +98,7 @@ public class RequestLogDTO extends TeaModel {
         this.modelCode = builder.modelCode;
         this.modelId = builder.modelId;
         this.modelName = builder.modelName;
+        this.modelType = builder.modelType;
         this.promptTokens = builder.promptTokens;
         this.requestBody = builder.requestBody;
         this.requestId = builder.requestId;
@@ -102,6 +109,7 @@ public class RequestLogDTO extends TeaModel {
         this.statusCode = builder.statusCode;
         this.symbol = builder.symbol;
         this.totalTokens = builder.totalTokens;
+        this.usage = builder.usage;
     }
 
     public static Builder builder() {
@@ -194,6 +202,13 @@ public class RequestLogDTO extends TeaModel {
     }
 
     /**
+     * @return modelType
+     */
+    public String getModelType() {
+        return this.modelType;
+    }
+
+    /**
      * @return promptTokens
      */
     public Integer getPromptTokens() {
@@ -263,6 +278,13 @@ public class RequestLogDTO extends TeaModel {
         return this.totalTokens;
     }
 
+    /**
+     * @return usage
+     */
+    public UsageInfoDTO getUsage() {
+        return this.usage;
+    }
+
     public static final class Builder {
         private Long apiKeyId; 
         private Long clientId; 
@@ -275,6 +297,7 @@ public class RequestLogDTO extends TeaModel {
         private String modelCode; 
         private Long modelId; 
         private String modelName; 
+        private String modelType; 
         private Integer promptTokens; 
         private String requestBody; 
         private String requestId; 
@@ -285,6 +308,7 @@ public class RequestLogDTO extends TeaModel {
         private Integer statusCode; 
         private String symbol; 
         private Integer totalTokens; 
+        private UsageInfoDTO usage; 
 
         private Builder() {
         } 
@@ -301,6 +325,7 @@ public class RequestLogDTO extends TeaModel {
             this.modelCode = model.modelCode;
             this.modelId = model.modelId;
             this.modelName = model.modelName;
+            this.modelType = model.modelType;
             this.promptTokens = model.promptTokens;
             this.requestBody = model.requestBody;
             this.requestId = model.requestId;
@@ -311,6 +336,7 @@ public class RequestLogDTO extends TeaModel {
             this.statusCode = model.statusCode;
             this.symbol = model.symbol;
             this.totalTokens = model.totalTokens;
+            this.usage = model.usage;
         } 
 
         /**
@@ -402,6 +428,14 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
+         * modelType.
+         */
+        public Builder modelType(String modelType) {
+            this.modelType = modelType;
+            return this;
+        }
+
+        /**
          * promptTokens.
          */
         public Builder promptTokens(Integer promptTokens) {
@@ -478,6 +512,14 @@ public class RequestLogDTO extends TeaModel {
          */
         public Builder totalTokens(Integer totalTokens) {
             this.totalTokens = totalTokens;
+            return this;
+        }
+
+        /**
+         * usage.
+         */
+        public Builder usage(UsageInfoDTO usage) {
+            this.usage = usage;
             return this;
         }
 

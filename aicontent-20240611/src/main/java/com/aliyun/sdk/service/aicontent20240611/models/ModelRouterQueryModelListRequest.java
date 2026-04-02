@@ -30,6 +30,10 @@ public class ModelRouterQueryModelListRequest extends Request {
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("modelType")
+    private String modelType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("needTotalCount")
     private Boolean needTotalCount;
 
@@ -62,6 +66,7 @@ public class ModelRouterQueryModelListRequest extends Request {
         this.groupBy = builder.groupBy;
         this.keyword = builder.keyword;
         this.maxResults = builder.maxResults;
+        this.modelType = builder.modelType;
         this.needTotalCount = builder.needTotalCount;
         this.nextToken = builder.nextToken;
         this.orderBy = builder.orderBy;
@@ -103,6 +108,13 @@ public class ModelRouterQueryModelListRequest extends Request {
      */
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    /**
+     * @return modelType
+     */
+    public String getModelType() {
+        return this.modelType;
     }
 
     /**
@@ -158,6 +170,7 @@ public class ModelRouterQueryModelListRequest extends Request {
         private String groupBy; 
         private String keyword; 
         private Integer maxResults; 
+        private String modelType; 
         private Boolean needTotalCount; 
         private String nextToken; 
         private String orderBy; 
@@ -175,6 +188,7 @@ public class ModelRouterQueryModelListRequest extends Request {
             this.groupBy = request.groupBy;
             this.keyword = request.keyword;
             this.maxResults = request.maxResults;
+            this.modelType = request.modelType;
             this.needTotalCount = request.needTotalCount;
             this.nextToken = request.nextToken;
             this.orderBy = request.orderBy;
@@ -208,6 +222,15 @@ public class ModelRouterQueryModelListRequest extends Request {
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * modelType.
+         */
+        public Builder modelType(String modelType) {
+            this.putQueryParameter("modelType", modelType);
+            this.modelType = modelType;
             return this;
         }
 
