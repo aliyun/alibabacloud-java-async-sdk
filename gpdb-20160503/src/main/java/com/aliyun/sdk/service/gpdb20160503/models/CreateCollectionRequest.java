@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateCollectionRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
+    private String algorithm;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Collection")
     @com.aliyun.core.annotation.Validation(required = true)
     private String collection;
@@ -100,11 +104,16 @@ public class CreateCollectionRequest extends Request {
     private Boolean supportSparse;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VectorIndexConfig")
+    private VectorIndexConfig vectorIndexConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private CreateCollectionRequest(Builder builder) {
         super(builder);
+        this.algorithm = builder.algorithm;
         this.collection = builder.collection;
         this.DBInstanceId = builder.DBInstanceId;
         this.dimension = builder.dimension;
@@ -124,6 +133,7 @@ public class CreateCollectionRequest extends Request {
         this.regionId = builder.regionId;
         this.sparseVectorIndexConfig = builder.sparseVectorIndexConfig;
         this.supportSparse = builder.supportSparse;
+        this.vectorIndexConfig = builder.vectorIndexConfig;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -138,6 +148,13 @@ public class CreateCollectionRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return algorithm
+     */
+    public String getAlgorithm() {
+        return this.algorithm;
     }
 
     /**
@@ -274,6 +291,13 @@ public class CreateCollectionRequest extends Request {
     }
 
     /**
+     * @return vectorIndexConfig
+     */
+    public VectorIndexConfig getVectorIndexConfig() {
+        return this.vectorIndexConfig;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -281,6 +305,7 @@ public class CreateCollectionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCollectionRequest, Builder> {
+        private String algorithm; 
         private String collection; 
         private String DBInstanceId; 
         private Long dimension; 
@@ -300,6 +325,7 @@ public class CreateCollectionRequest extends Request {
         private String regionId; 
         private SparseVectorIndexConfig sparseVectorIndexConfig; 
         private Boolean supportSparse; 
+        private VectorIndexConfig vectorIndexConfig; 
         private String workspaceId; 
 
         private Builder() {
@@ -308,6 +334,7 @@ public class CreateCollectionRequest extends Request {
 
         private Builder(CreateCollectionRequest request) {
             super(request);
+            this.algorithm = request.algorithm;
             this.collection = request.collection;
             this.DBInstanceId = request.DBInstanceId;
             this.dimension = request.dimension;
@@ -327,8 +354,18 @@ public class CreateCollectionRequest extends Request {
             this.regionId = request.regionId;
             this.sparseVectorIndexConfig = request.sparseVectorIndexConfig;
             this.supportSparse = request.supportSparse;
+            this.vectorIndexConfig = request.vectorIndexConfig;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * Algorithm.
+         */
+        public Builder algorithm(String algorithm) {
+            this.putQueryParameter("Algorithm", algorithm);
+            this.algorithm = algorithm;
+            return this;
+        }
 
         /**
          * <p>The name of the collection that you want to create.</p>
@@ -603,6 +640,16 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
+         * VectorIndexConfig.
+         */
+        public Builder vectorIndexConfig(VectorIndexConfig vectorIndexConfig) {
+            String vectorIndexConfigShrink = shrink(vectorIndexConfig, "VectorIndexConfig", "json");
+            this.putQueryParameter("VectorIndexConfig", vectorIndexConfigShrink);
+            this.vectorIndexConfig = vectorIndexConfig;
+            return this;
+        }
+
+        /**
          * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</p>
          * 
          * <strong>example:</strong>
@@ -628,6 +675,9 @@ public class CreateCollectionRequest extends Request {
      * <p>CreateCollectionRequest</p>
      */
     public static class SparseVectorIndexConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Algorithm")
+        private String algorithm;
+
         @com.aliyun.core.annotation.NameInMap("HnswEfConstruction")
         private Integer hnswEfConstruction;
 
@@ -635,6 +685,7 @@ public class CreateCollectionRequest extends Request {
         private Integer hnswM;
 
         private SparseVectorIndexConfig(Builder builder) {
+            this.algorithm = builder.algorithm;
             this.hnswEfConstruction = builder.hnswEfConstruction;
             this.hnswM = builder.hnswM;
         }
@@ -645,6 +696,13 @@ public class CreateCollectionRequest extends Request {
 
         public static SparseVectorIndexConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return algorithm
+         */
+        public String getAlgorithm() {
+            return this.algorithm;
         }
 
         /**
@@ -662,6 +720,7 @@ public class CreateCollectionRequest extends Request {
         }
 
         public static final class Builder {
+            private String algorithm; 
             private Integer hnswEfConstruction; 
             private Integer hnswM; 
 
@@ -669,9 +728,18 @@ public class CreateCollectionRequest extends Request {
             } 
 
             private Builder(SparseVectorIndexConfig model) {
+                this.algorithm = model.algorithm;
                 this.hnswEfConstruction = model.hnswEfConstruction;
                 this.hnswM = model.hnswM;
             } 
+
+            /**
+             * Algorithm.
+             */
+            public Builder algorithm(String algorithm) {
+                this.algorithm = algorithm;
+                return this;
+            }
 
             /**
              * HnswEfConstruction.
@@ -701,6 +769,81 @@ public class CreateCollectionRequest extends Request {
 
             public SparseVectorIndexConfig build() {
                 return new SparseVectorIndexConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateCollectionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCollectionRequest</p>
+     */
+    public static class VectorIndexConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Nlist")
+        private Integer nlist;
+
+        @com.aliyun.core.annotation.NameInMap("RabitqBits")
+        private Integer rabitqBits;
+
+        private VectorIndexConfig(Builder builder) {
+            this.nlist = builder.nlist;
+            this.rabitqBits = builder.rabitqBits;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VectorIndexConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nlist
+         */
+        public Integer getNlist() {
+            return this.nlist;
+        }
+
+        /**
+         * @return rabitqBits
+         */
+        public Integer getRabitqBits() {
+            return this.rabitqBits;
+        }
+
+        public static final class Builder {
+            private Integer nlist; 
+            private Integer rabitqBits; 
+
+            private Builder() {
+            } 
+
+            private Builder(VectorIndexConfig model) {
+                this.nlist = model.nlist;
+                this.rabitqBits = model.rabitqBits;
+            } 
+
+            /**
+             * Nlist.
+             */
+            public Builder nlist(Integer nlist) {
+                this.nlist = nlist;
+                return this;
+            }
+
+            /**
+             * RabitqBits.
+             */
+            public Builder rabitqBits(Integer rabitqBits) {
+                this.rabitqBits = rabitqBits;
+                return this;
+            }
+
+            public VectorIndexConfig build() {
+                return new VectorIndexConfig(this);
             } 
 
         } 

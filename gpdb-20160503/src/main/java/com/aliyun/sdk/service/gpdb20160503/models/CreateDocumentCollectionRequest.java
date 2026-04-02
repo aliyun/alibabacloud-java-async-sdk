@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDocumentCollectionRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
+    private String algorithm;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Collection")
     @com.aliyun.core.annotation.Validation(required = true)
     private String collection;
@@ -127,8 +131,13 @@ public class CreateDocumentCollectionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SupportSparse")
     private Boolean supportSparse;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VectorIndexConfig")
+    private VectorIndexConfig vectorIndexConfig;
+
     private CreateDocumentCollectionRequest(Builder builder) {
         super(builder);
+        this.algorithm = builder.algorithm;
         this.collection = builder.collection;
         this.DBInstanceId = builder.DBInstanceId;
         this.dimension = builder.dimension;
@@ -155,6 +164,7 @@ public class CreateDocumentCollectionRequest extends Request {
         this.sparseRetrievalFields = builder.sparseRetrievalFields;
         this.sparseVectorIndexConfig = builder.sparseVectorIndexConfig;
         this.supportSparse = builder.supportSparse;
+        this.vectorIndexConfig = builder.vectorIndexConfig;
     }
 
     public static Builder builder() {
@@ -168,6 +178,13 @@ public class CreateDocumentCollectionRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return algorithm
+     */
+    public String getAlgorithm() {
+        return this.algorithm;
     }
 
     /**
@@ -352,7 +369,15 @@ public class CreateDocumentCollectionRequest extends Request {
         return this.supportSparse;
     }
 
+    /**
+     * @return vectorIndexConfig
+     */
+    public VectorIndexConfig getVectorIndexConfig() {
+        return this.vectorIndexConfig;
+    }
+
     public static final class Builder extends Request.Builder<CreateDocumentCollectionRequest, Builder> {
+        private String algorithm; 
         private String collection; 
         private String DBInstanceId; 
         private Integer dimension; 
@@ -379,6 +404,7 @@ public class CreateDocumentCollectionRequest extends Request {
         private String sparseRetrievalFields; 
         private SparseVectorIndexConfig sparseVectorIndexConfig; 
         private Boolean supportSparse; 
+        private VectorIndexConfig vectorIndexConfig; 
 
         private Builder() {
             super();
@@ -386,6 +412,7 @@ public class CreateDocumentCollectionRequest extends Request {
 
         private Builder(CreateDocumentCollectionRequest request) {
             super(request);
+            this.algorithm = request.algorithm;
             this.collection = request.collection;
             this.DBInstanceId = request.DBInstanceId;
             this.dimension = request.dimension;
@@ -412,7 +439,17 @@ public class CreateDocumentCollectionRequest extends Request {
             this.sparseRetrievalFields = request.sparseRetrievalFields;
             this.sparseVectorIndexConfig = request.sparseVectorIndexConfig;
             this.supportSparse = request.supportSparse;
+            this.vectorIndexConfig = request.vectorIndexConfig;
         } 
+
+        /**
+         * Algorithm.
+         */
+        public Builder algorithm(String algorithm) {
+            this.putQueryParameter("Algorithm", algorithm);
+            this.algorithm = algorithm;
+            return this;
+        }
 
         /**
          * <p>The name of the document collection that you want to create.</p>
@@ -784,6 +821,16 @@ public class CreateDocumentCollectionRequest extends Request {
             return this;
         }
 
+        /**
+         * VectorIndexConfig.
+         */
+        public Builder vectorIndexConfig(VectorIndexConfig vectorIndexConfig) {
+            String vectorIndexConfigShrink = shrink(vectorIndexConfig, "VectorIndexConfig", "json");
+            this.putQueryParameter("VectorIndexConfig", vectorIndexConfigShrink);
+            this.vectorIndexConfig = vectorIndexConfig;
+            return this;
+        }
+
         @Override
         public CreateDocumentCollectionRequest build() {
             return new CreateDocumentCollectionRequest(this);
@@ -798,6 +845,9 @@ public class CreateDocumentCollectionRequest extends Request {
      * <p>CreateDocumentCollectionRequest</p>
      */
     public static class SparseVectorIndexConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Algorithm")
+        private String algorithm;
+
         @com.aliyun.core.annotation.NameInMap("HnswEfConstruction")
         private Integer hnswEfConstruction;
 
@@ -805,6 +855,7 @@ public class CreateDocumentCollectionRequest extends Request {
         private Integer hnswM;
 
         private SparseVectorIndexConfig(Builder builder) {
+            this.algorithm = builder.algorithm;
             this.hnswEfConstruction = builder.hnswEfConstruction;
             this.hnswM = builder.hnswM;
         }
@@ -815,6 +866,13 @@ public class CreateDocumentCollectionRequest extends Request {
 
         public static SparseVectorIndexConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return algorithm
+         */
+        public String getAlgorithm() {
+            return this.algorithm;
         }
 
         /**
@@ -832,6 +890,7 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         public static final class Builder {
+            private String algorithm; 
             private Integer hnswEfConstruction; 
             private Integer hnswM; 
 
@@ -839,9 +898,18 @@ public class CreateDocumentCollectionRequest extends Request {
             } 
 
             private Builder(SparseVectorIndexConfig model) {
+                this.algorithm = model.algorithm;
                 this.hnswEfConstruction = model.hnswEfConstruction;
                 this.hnswM = model.hnswM;
             } 
+
+            /**
+             * Algorithm.
+             */
+            public Builder algorithm(String algorithm) {
+                this.algorithm = algorithm;
+                return this;
+            }
 
             /**
              * HnswEfConstruction.
@@ -877,6 +945,81 @@ public class CreateDocumentCollectionRequest extends Request {
 
             public SparseVectorIndexConfig build() {
                 return new SparseVectorIndexConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDocumentCollectionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDocumentCollectionRequest</p>
+     */
+    public static class VectorIndexConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Nlist")
+        private Integer nlist;
+
+        @com.aliyun.core.annotation.NameInMap("RabitqBits")
+        private Integer rabitqBits;
+
+        private VectorIndexConfig(Builder builder) {
+            this.nlist = builder.nlist;
+            this.rabitqBits = builder.rabitqBits;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VectorIndexConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nlist
+         */
+        public Integer getNlist() {
+            return this.nlist;
+        }
+
+        /**
+         * @return rabitqBits
+         */
+        public Integer getRabitqBits() {
+            return this.rabitqBits;
+        }
+
+        public static final class Builder {
+            private Integer nlist; 
+            private Integer rabitqBits; 
+
+            private Builder() {
+            } 
+
+            private Builder(VectorIndexConfig model) {
+                this.nlist = model.nlist;
+                this.rabitqBits = model.rabitqBits;
+            } 
+
+            /**
+             * Nlist.
+             */
+            public Builder nlist(Integer nlist) {
+                this.nlist = nlist;
+                return this;
+            }
+
+            /**
+             * RabitqBits.
+             */
+            public Builder rabitqBits(Integer rabitqBits) {
+                this.rabitqBits = rabitqBits;
+                return this;
+            }
+
+            public VectorIndexConfig build() {
+                return new VectorIndexConfig(this);
             } 
 
         } 

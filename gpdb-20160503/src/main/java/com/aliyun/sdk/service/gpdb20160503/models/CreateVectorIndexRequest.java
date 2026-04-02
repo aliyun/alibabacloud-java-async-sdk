@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateVectorIndexRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
+    private String algorithm;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Collection")
     @com.aliyun.core.annotation.Validation(required = true)
     private String collection;
@@ -63,12 +67,20 @@ public class CreateVectorIndexRequest extends Request {
     private String namespace;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Nlist")
+    private Integer nlist;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PqEnable")
     private Integer pqEnable;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RabitqBits")
+    private Integer rabitqBits;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -81,6 +93,7 @@ public class CreateVectorIndexRequest extends Request {
 
     private CreateVectorIndexRequest(Builder builder) {
         super(builder);
+        this.algorithm = builder.algorithm;
         this.collection = builder.collection;
         this.DBInstanceId = builder.DBInstanceId;
         this.dimension = builder.dimension;
@@ -91,8 +104,10 @@ public class CreateVectorIndexRequest extends Request {
         this.managerAccountPassword = builder.managerAccountPassword;
         this.metrics = builder.metrics;
         this.namespace = builder.namespace;
+        this.nlist = builder.nlist;
         this.ownerId = builder.ownerId;
         this.pqEnable = builder.pqEnable;
+        this.rabitqBits = builder.rabitqBits;
         this.regionId = builder.regionId;
         this.type = builder.type;
     }
@@ -108,6 +123,13 @@ public class CreateVectorIndexRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return algorithm
+     */
+    public String getAlgorithm() {
+        return this.algorithm;
     }
 
     /**
@@ -181,6 +203,13 @@ public class CreateVectorIndexRequest extends Request {
     }
 
     /**
+     * @return nlist
+     */
+    public Integer getNlist() {
+        return this.nlist;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -192,6 +221,13 @@ public class CreateVectorIndexRequest extends Request {
      */
     public Integer getPqEnable() {
         return this.pqEnable;
+    }
+
+    /**
+     * @return rabitqBits
+     */
+    public Integer getRabitqBits() {
+        return this.rabitqBits;
     }
 
     /**
@@ -209,6 +245,7 @@ public class CreateVectorIndexRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateVectorIndexRequest, Builder> {
+        private String algorithm; 
         private String collection; 
         private String DBInstanceId; 
         private Integer dimension; 
@@ -219,8 +256,10 @@ public class CreateVectorIndexRequest extends Request {
         private String managerAccountPassword; 
         private String metrics; 
         private String namespace; 
+        private Integer nlist; 
         private Long ownerId; 
         private Integer pqEnable; 
+        private Integer rabitqBits; 
         private String regionId; 
         private String type; 
 
@@ -230,6 +269,7 @@ public class CreateVectorIndexRequest extends Request {
 
         private Builder(CreateVectorIndexRequest request) {
             super(request);
+            this.algorithm = request.algorithm;
             this.collection = request.collection;
             this.DBInstanceId = request.DBInstanceId;
             this.dimension = request.dimension;
@@ -240,11 +280,22 @@ public class CreateVectorIndexRequest extends Request {
             this.managerAccountPassword = request.managerAccountPassword;
             this.metrics = request.metrics;
             this.namespace = request.namespace;
+            this.nlist = request.nlist;
             this.ownerId = request.ownerId;
             this.pqEnable = request.pqEnable;
+            this.rabitqBits = request.rabitqBits;
             this.regionId = request.regionId;
             this.type = request.type;
         } 
+
+        /**
+         * Algorithm.
+         */
+        public Builder algorithm(String algorithm) {
+            this.putQueryParameter("Algorithm", algorithm);
+            this.algorithm = algorithm;
+            return this;
+        }
 
         /**
          * <p>Collection name.</p>
@@ -403,6 +454,15 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
+         * Nlist.
+         */
+        public Builder nlist(Integer nlist) {
+            this.putQueryParameter("Nlist", nlist);
+            this.nlist = nlist;
+            return this;
+        }
+
+        /**
          * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
@@ -424,6 +484,15 @@ public class CreateVectorIndexRequest extends Request {
         public Builder pqEnable(Integer pqEnable) {
             this.putQueryParameter("PqEnable", pqEnable);
             this.pqEnable = pqEnable;
+            return this;
+        }
+
+        /**
+         * RabitqBits.
+         */
+        public Builder rabitqBits(Integer rabitqBits) {
+            this.putQueryParameter("RabitqBits", rabitqBits);
+            this.rabitqBits = rabitqBits;
             return this;
         }
 

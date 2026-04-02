@@ -358,6 +358,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteBackupResponse> deleteBackup(DeleteBackupRequest request);
 
     /**
+     * @param request the request parameters of DeleteChunks  DeleteChunksRequest
+     * @return DeleteChunksResponse
+     */
+    CompletableFuture<DeleteChunksResponse> deleteChunks(DeleteChunksRequest request);
+
+    /**
      * @param request the request parameters of DeleteCollection  DeleteCollectionRequest
      * @return DeleteCollectionResponse
      */
@@ -1300,6 +1306,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListBackupJobsResponse
      */
     CompletableFuture<ListBackupJobsResponse> listBackupJobs(ListBackupJobsRequest request);
+
+    /**
+     * @param request the request parameters of ListChunks  ListChunksRequest
+     * @return ListChunksResponse
+     */
+    CompletableFuture<ListChunksResponse> listChunks(ListChunksRequest request);
 
     /**
      * @param request the request parameters of ListCollections  ListCollectionsRequest

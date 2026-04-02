@@ -27,6 +27,10 @@ public class RerankRequest extends Request {
     private java.util.List<String> documents;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Instruct")
+    private String instruct;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxChunksPerDoc")
     private Integer maxChunksPerDoc;
 
@@ -59,6 +63,7 @@ public class RerankRequest extends Request {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
         this.documents = builder.documents;
+        this.instruct = builder.instruct;
         this.maxChunksPerDoc = builder.maxChunksPerDoc;
         this.model = builder.model;
         this.ownerId = builder.ownerId;
@@ -93,6 +98,13 @@ public class RerankRequest extends Request {
      */
     public java.util.List<String> getDocuments() {
         return this.documents;
+    }
+
+    /**
+     * @return instruct
+     */
+    public String getInstruct() {
+        return this.instruct;
     }
 
     /**
@@ -147,6 +159,7 @@ public class RerankRequest extends Request {
     public static final class Builder extends Request.Builder<RerankRequest, Builder> {
         private String DBInstanceId; 
         private java.util.List<String> documents; 
+        private String instruct; 
         private Integer maxChunksPerDoc; 
         private String model; 
         private Long ownerId; 
@@ -163,6 +176,7 @@ public class RerankRequest extends Request {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
             this.documents = request.documents;
+            this.instruct = request.instruct;
             this.maxChunksPerDoc = request.maxChunksPerDoc;
             this.model = request.model;
             this.ownerId = request.ownerId;
@@ -195,6 +209,15 @@ public class RerankRequest extends Request {
             String documentsShrink = shrink(documents, "Documents", "json");
             this.putBodyParameter("Documents", documentsShrink);
             this.documents = documents;
+            return this;
+        }
+
+        /**
+         * Instruct.
+         */
+        public Builder instruct(String instruct) {
+            this.putBodyParameter("Instruct", instruct);
+            this.instruct = instruct;
             return this;
         }
 

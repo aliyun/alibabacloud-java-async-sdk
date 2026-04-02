@@ -49,6 +49,10 @@ public class QueryKnowledgeBasesContentRequest extends Request {
     private Double rerankFactor;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RerankModel")
+    private RerankModel rerankModel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceCollection")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<SourceCollection> sourceCollection;
@@ -66,6 +70,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.rerankFactor = builder.rerankFactor;
+        this.rerankModel = builder.rerankModel;
         this.sourceCollection = builder.sourceCollection;
         this.topK = builder.topK;
     }
@@ -133,6 +138,13 @@ public class QueryKnowledgeBasesContentRequest extends Request {
     }
 
     /**
+     * @return rerankModel
+     */
+    public RerankModel getRerankModel() {
+        return this.rerankModel;
+    }
+
+    /**
      * @return sourceCollection
      */
     public java.util.List<SourceCollection> getSourceCollection() {
@@ -154,6 +166,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         private Long ownerId; 
         private String regionId; 
         private Double rerankFactor; 
+        private RerankModel rerankModel; 
         private java.util.List<SourceCollection> sourceCollection; 
         private Long topK; 
 
@@ -170,6 +183,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.rerankFactor = request.rerankFactor;
+            this.rerankModel = request.rerankModel;
             this.sourceCollection = request.sourceCollection;
             this.topK = request.topK;
         } 
@@ -265,6 +279,16 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         public Builder rerankFactor(Double rerankFactor) {
             this.putQueryParameter("RerankFactor", rerankFactor);
             this.rerankFactor = rerankFactor;
+            return this;
+        }
+
+        /**
+         * RerankModel.
+         */
+        public Builder rerankModel(RerankModel rerankModel) {
+            String rerankModelShrink = shrink(rerankModel, "RerankModel", "json");
+            this.putQueryParameter("RerankModel", rerankModelShrink);
+            this.rerankModel = rerankModel;
             return this;
         }
 
@@ -490,6 +514,81 @@ public class QueryKnowledgeBasesContentRequest extends Request {
      *
      * <p>QueryKnowledgeBasesContentRequest</p>
      */
+    public static class RerankModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Instruct")
+        private String instruct;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private RerankModel(Builder builder) {
+            this.instruct = builder.instruct;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RerankModel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instruct
+         */
+        public String getInstruct() {
+            return this.instruct;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String instruct; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(RerankModel model) {
+                this.instruct = model.instruct;
+                this.name = model.name;
+            } 
+
+            /**
+             * Instruct.
+             */
+            public Builder instruct(String instruct) {
+                this.instruct = instruct;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public RerankModel build() {
+                return new RerankModel(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryKnowledgeBasesContentRequest} extends {@link TeaModel}
+     *
+     * <p>QueryKnowledgeBasesContentRequest</p>
+     */
     public static class GraphSearchArgs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GraphTopK")
         private Long graphTopK;
@@ -547,6 +646,81 @@ public class QueryKnowledgeBasesContentRequest extends Request {
      *
      * <p>QueryKnowledgeBasesContentRequest</p>
      */
+    public static class QueryParamsRerankModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Instruct")
+        private String instruct;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private QueryParamsRerankModel(Builder builder) {
+            this.instruct = builder.instruct;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QueryParamsRerankModel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instruct
+         */
+        public String getInstruct() {
+            return this.instruct;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String instruct; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryParamsRerankModel model) {
+                this.instruct = model.instruct;
+                this.name = model.name;
+            } 
+
+            /**
+             * Instruct.
+             */
+            public Builder instruct(String instruct) {
+                this.instruct = instruct;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public QueryParamsRerankModel build() {
+                return new QueryParamsRerankModel(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryKnowledgeBasesContentRequest} extends {@link TeaModel}
+     *
+     * <p>QueryKnowledgeBasesContentRequest</p>
+     */
     public static class QueryParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Filter")
         private String filter;
@@ -578,6 +752,9 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RerankFactor")
         private Double rerankFactor;
 
+        @com.aliyun.core.annotation.NameInMap("RerankModel")
+        private QueryParamsRerankModel rerankModel;
+
         @com.aliyun.core.annotation.NameInMap("TopK")
         private Long topK;
 
@@ -595,6 +772,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             this.orderBy = builder.orderBy;
             this.recallWindow = builder.recallWindow;
             this.rerankFactor = builder.rerankFactor;
+            this.rerankModel = builder.rerankModel;
             this.topK = builder.topK;
             this.useFullTextRetrieval = builder.useFullTextRetrieval;
         }
@@ -678,6 +856,13 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         }
 
         /**
+         * @return rerankModel
+         */
+        public QueryParamsRerankModel getRerankModel() {
+            return this.rerankModel;
+        }
+
+        /**
          * @return topK
          */
         public Long getTopK() {
@@ -702,6 +887,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             private String orderBy; 
             private java.util.List<Long> recallWindow; 
             private Double rerankFactor; 
+            private QueryParamsRerankModel rerankModel; 
             private Long topK; 
             private Boolean useFullTextRetrieval; 
 
@@ -719,6 +905,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
                 this.orderBy = model.orderBy;
                 this.recallWindow = model.recallWindow;
                 this.rerankFactor = model.rerankFactor;
+                this.rerankModel = model.rerankModel;
                 this.topK = model.topK;
                 this.useFullTextRetrieval = model.useFullTextRetrieval;
             } 
@@ -877,6 +1064,14 @@ public class QueryKnowledgeBasesContentRequest extends Request {
              */
             public Builder rerankFactor(Double rerankFactor) {
                 this.rerankFactor = rerankFactor;
+                return this;
+            }
+
+            /**
+             * RerankModel.
+             */
+            public Builder rerankModel(QueryParamsRerankModel rerankModel) {
+                this.rerankModel = rerankModel;
                 return this;
             }
 
