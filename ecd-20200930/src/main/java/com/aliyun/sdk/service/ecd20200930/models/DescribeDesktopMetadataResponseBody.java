@@ -116,6 +116,9 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
      * <p>DescribeDesktopMetadataResponseBody</p>
      */
     public static class Desktops extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentProviderList")
+        private java.util.List<String> agentProviderList;
+
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
@@ -171,6 +174,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         private String startTime;
 
         private Desktops(Builder builder) {
+            this.agentProviderList = builder.agentProviderList;
             this.chargeType = builder.chargeType;
             this.creationTime = builder.creationTime;
             this.desktopGroupId = builder.desktopGroupId;
@@ -197,6 +201,13 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
 
         public static Desktops create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentProviderList
+         */
+        public java.util.List<String> getAgentProviderList() {
+            return this.agentProviderList;
         }
 
         /**
@@ -326,6 +337,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> agentProviderList; 
             private String chargeType; 
             private String creationTime; 
             private String desktopGroupId; 
@@ -349,6 +361,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             } 
 
             private Builder(Desktops model) {
+                this.agentProviderList = model.agentProviderList;
                 this.chargeType = model.chargeType;
                 this.creationTime = model.creationTime;
                 this.desktopGroupId = model.desktopGroupId;
@@ -368,6 +381,14 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
                 this.resourceGroupName = model.resourceGroupName;
                 this.startTime = model.startTime;
             } 
+
+            /**
+             * AgentProviderList.
+             */
+            public Builder agentProviderList(java.util.List<String> agentProviderList) {
+                this.agentProviderList = agentProviderList;
+                return this;
+            }
 
             /**
              * ChargeType.

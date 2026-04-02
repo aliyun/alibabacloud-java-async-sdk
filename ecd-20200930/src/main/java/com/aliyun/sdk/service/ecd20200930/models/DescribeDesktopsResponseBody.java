@@ -1300,6 +1300,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
+        @com.aliyun.core.annotation.NameInMap("AgentProviderList")
+        private java.util.List<String> agentProviderList;
+
         @com.aliyun.core.annotation.NameInMap("BindAmount")
         private Integer bindAmount;
 
@@ -1509,6 +1512,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         private Desktops(Builder builder) {
             this.accountType = builder.accountType;
+            this.agentProviderList = builder.agentProviderList;
             this.bindAmount = builder.bindAmount;
             this.bundleId = builder.bundleId;
             this.bundleName = builder.bundleName;
@@ -1593,6 +1597,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
          */
         public String getAccountType() {
             return this.accountType;
+        }
+
+        /**
+         * @return agentProviderList
+         */
+        public java.util.List<String> getAgentProviderList() {
+            return this.agentProviderList;
         }
 
         /**
@@ -2080,6 +2091,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountType; 
+            private java.util.List<String> agentProviderList; 
             private Integer bindAmount; 
             private String bundleId; 
             private String bundleName; 
@@ -2155,6 +2167,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
             private Builder(Desktops model) {
                 this.accountType = model.accountType;
+                this.agentProviderList = model.agentProviderList;
                 this.bindAmount = model.bindAmount;
                 this.bundleId = model.bundleId;
                 this.bundleName = model.bundleName;
@@ -2231,6 +2244,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
+                return this;
+            }
+
+            /**
+             * AgentProviderList.
+             */
+            public Builder agentProviderList(java.util.List<String> agentProviderList) {
+                this.agentProviderList = agentProviderList;
                 return this;
             }
 
