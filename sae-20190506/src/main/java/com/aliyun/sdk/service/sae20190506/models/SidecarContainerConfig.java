@@ -50,6 +50,12 @@ public class SidecarContainerConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("PostStart")
+    private String postStart;
+
+    @com.aliyun.core.annotation.NameInMap("PreStop")
+    private String preStop;
+
     @com.aliyun.core.annotation.NameInMap("Readiness")
     private String readiness;
 
@@ -68,6 +74,8 @@ public class SidecarContainerConfig extends TeaModel {
         this.liveness = builder.liveness;
         this.memory = builder.memory;
         this.name = builder.name;
+        this.postStart = builder.postStart;
+        this.preStop = builder.preStop;
         this.readiness = builder.readiness;
         this.secretMountDesc = builder.secretMountDesc;
     }
@@ -162,6 +170,20 @@ public class SidecarContainerConfig extends TeaModel {
     }
 
     /**
+     * @return postStart
+     */
+    public String getPostStart() {
+        return this.postStart;
+    }
+
+    /**
+     * @return preStop
+     */
+    public String getPreStop() {
+        return this.preStop;
+    }
+
+    /**
      * @return readiness
      */
     public String getReadiness() {
@@ -187,6 +209,8 @@ public class SidecarContainerConfig extends TeaModel {
         private String liveness; 
         private Integer memory; 
         private String name; 
+        private String postStart; 
+        private String preStop; 
         private String readiness; 
         private String secretMountDesc; 
 
@@ -205,6 +229,8 @@ public class SidecarContainerConfig extends TeaModel {
             this.liveness = model.liveness;
             this.memory = model.memory;
             this.name = model.name;
+            this.postStart = model.postStart;
+            this.preStop = model.preStop;
             this.readiness = model.readiness;
             this.secretMountDesc = model.secretMountDesc;
         } 
@@ -294,6 +320,22 @@ public class SidecarContainerConfig extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * PostStart.
+         */
+        public Builder postStart(String postStart) {
+            this.postStart = postStart;
+            return this;
+        }
+
+        /**
+         * PreStop.
+         */
+        public Builder preStop(String preStop) {
+            this.preStop = preStop;
             return this;
         }
 
