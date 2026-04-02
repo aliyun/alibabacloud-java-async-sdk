@@ -206,6 +206,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KmsKeyId")
         private String kmsKeyId;
 
+        @com.aliyun.core.annotation.NameInMap("ListenerMode")
+        private String listenerMode;
+
         @com.aliyun.core.annotation.NameInMap("MaxEipTps")
         private Integer maxEipTps;
 
@@ -236,6 +239,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -248,6 +254,12 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        @com.aliyun.core.annotation.NameInMap("VswitchIds")
+        private java.util.List<String> vswitchIds;
+
         private Instances(Builder builder) {
             this.autoRenewInstance = builder.autoRenewInstance;
             this.classicEndpoint = builder.classicEndpoint;
@@ -258,6 +270,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.instanceType = builder.instanceType;
             this.kmsKeyId = builder.kmsKeyId;
+            this.listenerMode = builder.listenerMode;
             this.maxEipTps = builder.maxEipTps;
             this.maxQueue = builder.maxQueue;
             this.maxTps = builder.maxTps;
@@ -268,10 +281,13 @@ public class ListInstancesResponseBody extends TeaModel {
             this.provisionedCapacity = builder.provisionedCapacity;
             this.publicEndpoint = builder.publicEndpoint;
             this.resourceGroupId = builder.resourceGroupId;
+            this.securityGroupId = builder.securityGroupId;
             this.status = builder.status;
             this.storageSize = builder.storageSize;
             this.supportEIP = builder.supportEIP;
             this.tags = builder.tags;
+            this.vpcId = builder.vpcId;
+            this.vswitchIds = builder.vswitchIds;
         }
 
         public static Builder builder() {
@@ -346,6 +362,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return listenerMode
+         */
+        public String getListenerMode() {
+            return this.listenerMode;
+        }
+
+        /**
          * @return maxEipTps
          */
         public Integer getMaxEipTps() {
@@ -416,6 +439,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -443,6 +473,20 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.tags;
         }
 
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
+         * @return vswitchIds
+         */
+        public java.util.List<String> getVswitchIds() {
+            return this.vswitchIds;
+        }
+
         public static final class Builder {
             private Boolean autoRenewInstance; 
             private String classicEndpoint; 
@@ -453,6 +497,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String instanceName; 
             private String instanceType; 
             private String kmsKeyId; 
+            private String listenerMode; 
             private Integer maxEipTps; 
             private Integer maxQueue; 
             private Integer maxTps; 
@@ -463,10 +508,13 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer provisionedCapacity; 
             private String publicEndpoint; 
             private String resourceGroupId; 
+            private String securityGroupId; 
             private String status; 
             private Integer storageSize; 
             private Boolean supportEIP; 
             private java.util.List<Tags> tags; 
+            private String vpcId; 
+            private java.util.List<String> vswitchIds; 
 
             private Builder() {
             } 
@@ -481,6 +529,7 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.instanceName = model.instanceName;
                 this.instanceType = model.instanceType;
                 this.kmsKeyId = model.kmsKeyId;
+                this.listenerMode = model.listenerMode;
                 this.maxEipTps = model.maxEipTps;
                 this.maxQueue = model.maxQueue;
                 this.maxTps = model.maxTps;
@@ -491,10 +540,13 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.provisionedCapacity = model.provisionedCapacity;
                 this.publicEndpoint = model.publicEndpoint;
                 this.resourceGroupId = model.resourceGroupId;
+                this.securityGroupId = model.securityGroupId;
                 this.status = model.status;
                 this.storageSize = model.storageSize;
                 this.supportEIP = model.supportEIP;
                 this.tags = model.tags;
+                this.vpcId = model.vpcId;
+                this.vswitchIds = model.vswitchIds;
             } 
 
             /**
@@ -595,6 +647,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
+                return this;
+            }
+
+            /**
+             * ListenerMode.
+             */
+            public Builder listenerMode(String listenerMode) {
+                this.listenerMode = listenerMode;
                 return this;
             }
 
@@ -710,6 +770,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
              * <p>The instance status. Valid values:</p>
              * <ul>
              * <li>DEPLOYING: The instance is being deployed.</li>
@@ -756,6 +824,22 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VswitchIds.
+             */
+            public Builder vswitchIds(java.util.List<String> vswitchIds) {
+                this.vswitchIds = vswitchIds;
                 return this;
             }
 

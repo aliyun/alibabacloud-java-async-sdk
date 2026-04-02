@@ -54,6 +54,10 @@ public class CreateInstanceRequest extends Request {
     private String kmsKeyId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerMode")
+    private String listenerMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxConnections")
     private Integer maxConnections;
 
@@ -99,6 +103,11 @@ public class CreateInstanceRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String securityGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServerlessChargeType")
     private String serverlessChargeType;
 
@@ -122,6 +131,16 @@ public class CreateInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TracingStorageTime")
     private Integer tracingStorageTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String vpcId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VswitchIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> vswitchIds;
+
     private CreateInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -133,6 +152,7 @@ public class CreateInstanceRequest extends Request {
         this.instanceName = builder.instanceName;
         this.instanceType = builder.instanceType;
         this.kmsKeyId = builder.kmsKeyId;
+        this.listenerMode = builder.listenerMode;
         this.maxConnections = builder.maxConnections;
         this.maxEipTps = builder.maxEipTps;
         this.maxPrivateTps = builder.maxPrivateTps;
@@ -144,12 +164,15 @@ public class CreateInstanceRequest extends Request {
         this.renewStatus = builder.renewStatus;
         this.renewalDurationUnit = builder.renewalDurationUnit;
         this.resourceGroupId = builder.resourceGroupId;
+        this.securityGroupId = builder.securityGroupId;
         this.serverlessChargeType = builder.serverlessChargeType;
         this.storageSize = builder.storageSize;
         this.supportEip = builder.supportEip;
         this.supportTracing = builder.supportTracing;
         this.tags = builder.tags;
         this.tracingStorageTime = builder.tracingStorageTime;
+        this.vpcId = builder.vpcId;
+        this.vswitchIds = builder.vswitchIds;
     }
 
     public static Builder builder() {
@@ -226,6 +249,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getKmsKeyId() {
         return this.kmsKeyId;
+    }
+
+    /**
+     * @return listenerMode
+     */
+    public String getListenerMode() {
+        return this.listenerMode;
     }
 
     /**
@@ -306,6 +336,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    /**
      * @return serverlessChargeType
      */
     public String getServerlessChargeType() {
@@ -347,6 +384,20 @@ public class CreateInstanceRequest extends Request {
         return this.tracingStorageTime;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    /**
+     * @return vswitchIds
+     */
+    public java.util.List<String> getVswitchIds() {
+        return this.vswitchIds;
+    }
+
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private String regionId; 
         private Boolean autoRenew; 
@@ -357,6 +408,7 @@ public class CreateInstanceRequest extends Request {
         private String instanceName; 
         private String instanceType; 
         private String kmsKeyId; 
+        private String listenerMode; 
         private Integer maxConnections; 
         private Long maxEipTps; 
         private Long maxPrivateTps; 
@@ -368,12 +420,15 @@ public class CreateInstanceRequest extends Request {
         private String renewStatus; 
         private String renewalDurationUnit; 
         private String resourceGroupId; 
+        private String securityGroupId; 
         private String serverlessChargeType; 
         private Integer storageSize; 
         private Boolean supportEip; 
         private Boolean supportTracing; 
         private java.util.List<Tags> tags; 
         private Integer tracingStorageTime; 
+        private String vpcId; 
+        private java.util.List<String> vswitchIds; 
 
         private Builder() {
             super();
@@ -390,6 +445,7 @@ public class CreateInstanceRequest extends Request {
             this.instanceName = request.instanceName;
             this.instanceType = request.instanceType;
             this.kmsKeyId = request.kmsKeyId;
+            this.listenerMode = request.listenerMode;
             this.maxConnections = request.maxConnections;
             this.maxEipTps = request.maxEipTps;
             this.maxPrivateTps = request.maxPrivateTps;
@@ -401,12 +457,15 @@ public class CreateInstanceRequest extends Request {
             this.renewStatus = request.renewStatus;
             this.renewalDurationUnit = request.renewalDurationUnit;
             this.resourceGroupId = request.resourceGroupId;
+            this.securityGroupId = request.securityGroupId;
             this.serverlessChargeType = request.serverlessChargeType;
             this.storageSize = request.storageSize;
             this.supportEip = request.supportEip;
             this.supportTracing = request.supportTracing;
             this.tags = request.tags;
             this.tracingStorageTime = request.tracingStorageTime;
+            this.vpcId = request.vpcId;
+            this.vswitchIds = request.vswitchIds;
         } 
 
         /**
@@ -528,6 +587,15 @@ public class CreateInstanceRequest extends Request {
         public Builder kmsKeyId(String kmsKeyId) {
             this.putQueryParameter("KmsKeyId", kmsKeyId);
             this.kmsKeyId = kmsKeyId;
+            return this;
+        }
+
+        /**
+         * ListenerMode.
+         */
+        public Builder listenerMode(String listenerMode) {
+            this.putQueryParameter("ListenerMode", listenerMode);
+            this.listenerMode = listenerMode;
             return this;
         }
 
@@ -688,6 +756,18 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxx</p>
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
          * <p>The billing method of the serverless instance. Valid value:</p>
          * <ul>
          * <li>onDemand: You are charged based on your actual usage.</li>
@@ -788,6 +868,28 @@ public class CreateInstanceRequest extends Request {
         public Builder tracingStorageTime(Integer tracingStorageTime) {
             this.putQueryParameter("TracingStorageTime", tracingStorageTime);
             this.tracingStorageTime = tracingStorageTime;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxx</p>
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder vswitchIds(java.util.List<String> vswitchIds) {
+            String vswitchIdsShrink = shrink(vswitchIds, "VswitchIds", "json");
+            this.putQueryParameter("VswitchIds", vswitchIdsShrink);
+            this.vswitchIds = vswitchIds;
             return this;
         }
 
