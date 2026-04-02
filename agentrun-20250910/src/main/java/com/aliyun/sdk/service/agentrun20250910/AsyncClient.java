@@ -474,12 +474,27 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
+     * 
+     * @param request the request parameters of PauseSandbox  PauseSandboxRequest
+     * @return PauseSandboxResponse
+     */
+    CompletableFuture<PauseSandboxResponse> pauseSandbox(PauseSandboxRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</p>
      * 
      * @param request the request parameters of PublishRuntimeVersion  PublishRuntimeVersionRequest
      * @return PublishRuntimeVersionResponse
      */
     CompletableFuture<PublishRuntimeVersionResponse> publishRuntimeVersion(PublishRuntimeVersionRequest request);
+
+    /**
+     * @param request the request parameters of ResumeSandbox  ResumeSandboxRequest
+     * @return ResumeSandboxResponse
+     */
+    CompletableFuture<ResumeSandboxResponse> resumeSandbox(ResumeSandboxRequest request);
 
     /**
      * <b>description</b> :

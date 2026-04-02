@@ -1226,6 +1226,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
+     * 
+     * @param request the request parameters of PauseSandbox  PauseSandboxRequest
+     * @return PauseSandboxResponse
+     */
+    @Override
+    public CompletableFuture<PauseSandboxResponse> pauseSandbox(PauseSandboxRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PauseSandbox").setMethod(HttpMethod.PUT).setPathRegex("/2025-09-10/sandboxes/{sandboxId}/pause").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PauseSandboxResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PauseSandboxResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</p>
      * 
      * @param request the request parameters of PublishRuntimeVersion  PublishRuntimeVersionRequest
@@ -1240,6 +1261,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PublishRuntimeVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ResumeSandbox  ResumeSandboxRequest
+     * @return ResumeSandboxResponse
+     */
+    @Override
+    public CompletableFuture<ResumeSandboxResponse> resumeSandbox(ResumeSandboxRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ResumeSandbox").setMethod(HttpMethod.PUT).setPathRegex("/2025-09-10/sandboxes/{sandboxId}/resume").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResumeSandboxResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResumeSandboxResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
