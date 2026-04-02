@@ -29,6 +29,9 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBProxyConnectStringPort")
     private String DBProxyConnectStringPort;
 
+    @com.aliyun.core.annotation.NameInMap("DBProxyEndpointCostThresholdForDuckdb")
+    private String DBProxyEndpointCostThresholdForDuckdb;
+
     @com.aliyun.core.annotation.NameInMap("DBProxyEndpointId")
     private String DBProxyEndpointId;
 
@@ -79,6 +82,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         this.DBProxyConnectString = builder.DBProxyConnectString;
         this.DBProxyConnectStringNetType = builder.DBProxyConnectStringNetType;
         this.DBProxyConnectStringPort = builder.DBProxyConnectStringPort;
+        this.DBProxyEndpointCostThresholdForDuckdb = builder.DBProxyEndpointCostThresholdForDuckdb;
         this.DBProxyEndpointId = builder.DBProxyEndpointId;
         this.DBProxyEndpointMinSlaveCount = builder.DBProxyEndpointMinSlaveCount;
         this.DBProxyEngineType = builder.DBProxyEngineType;
@@ -134,6 +138,13 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
      */
     public String getDBProxyConnectStringPort() {
         return this.DBProxyConnectStringPort;
+    }
+
+    /**
+     * @return DBProxyEndpointCostThresholdForDuckdb
+     */
+    public String getDBProxyEndpointCostThresholdForDuckdb() {
+        return this.DBProxyEndpointCostThresholdForDuckdb;
     }
 
     /**
@@ -246,6 +257,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         private String DBProxyConnectString; 
         private String DBProxyConnectStringNetType; 
         private String DBProxyConnectStringPort; 
+        private String DBProxyEndpointCostThresholdForDuckdb; 
         private String DBProxyEndpointId; 
         private String DBProxyEndpointMinSlaveCount; 
         private String DBProxyEngineType; 
@@ -270,6 +282,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
             this.DBProxyConnectString = model.DBProxyConnectString;
             this.DBProxyConnectStringNetType = model.DBProxyConnectStringNetType;
             this.DBProxyConnectStringPort = model.DBProxyConnectStringPort;
+            this.DBProxyEndpointCostThresholdForDuckdb = model.DBProxyEndpointCostThresholdForDuckdb;
             this.DBProxyEndpointId = model.DBProxyEndpointId;
             this.DBProxyEndpointMinSlaveCount = model.DBProxyEndpointMinSlaveCount;
             this.DBProxyEngineType = model.DBProxyEngineType;
@@ -332,6 +345,14 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
          */
         public Builder DBProxyConnectStringPort(String DBProxyConnectStringPort) {
             this.DBProxyConnectStringPort = DBProxyConnectStringPort;
+            return this;
+        }
+
+        /**
+         * DBProxyEndpointCostThresholdForDuckdb.
+         */
+        public Builder DBProxyEndpointCostThresholdForDuckdb(String DBProxyEndpointCostThresholdForDuckdb) {
+            this.DBProxyEndpointCostThresholdForDuckdb = DBProxyEndpointCostThresholdForDuckdb;
             return this;
         }
 

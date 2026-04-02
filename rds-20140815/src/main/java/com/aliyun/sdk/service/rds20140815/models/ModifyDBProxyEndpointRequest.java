@@ -43,6 +43,10 @@ public class ModifyDBProxyEndpointRequest extends Request {
     private String dbEndpointAliases;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbEndpointCostThresholdForDuckdb")
+    private String dbEndpointCostThresholdForDuckdb;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DbEndpointMinSlaveCount")
     private String dbEndpointMinSlaveCount;
 
@@ -110,6 +114,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
         this.DBProxyEndpointId = builder.DBProxyEndpointId;
         this.DBProxyEngineType = builder.DBProxyEngineType;
         this.dbEndpointAliases = builder.dbEndpointAliases;
+        this.dbEndpointCostThresholdForDuckdb = builder.dbEndpointCostThresholdForDuckdb;
         this.dbEndpointMinSlaveCount = builder.dbEndpointMinSlaveCount;
         this.dbEndpointOperator = builder.dbEndpointOperator;
         this.dbEndpointReadWriteMode = builder.dbEndpointReadWriteMode;
@@ -180,6 +185,13 @@ public class ModifyDBProxyEndpointRequest extends Request {
      */
     public String getDbEndpointAliases() {
         return this.dbEndpointAliases;
+    }
+
+    /**
+     * @return dbEndpointCostThresholdForDuckdb
+     */
+    public String getDbEndpointCostThresholdForDuckdb() {
+        return this.dbEndpointCostThresholdForDuckdb;
     }
 
     /**
@@ -294,6 +306,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
         private String DBProxyEndpointId; 
         private String DBProxyEngineType; 
         private String dbEndpointAliases; 
+        private String dbEndpointCostThresholdForDuckdb; 
         private String dbEndpointMinSlaveCount; 
         private String dbEndpointOperator; 
         private String dbEndpointReadWriteMode; 
@@ -322,6 +335,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
             this.DBProxyEndpointId = request.DBProxyEndpointId;
             this.DBProxyEngineType = request.DBProxyEngineType;
             this.dbEndpointAliases = request.dbEndpointAliases;
+            this.dbEndpointCostThresholdForDuckdb = request.dbEndpointCostThresholdForDuckdb;
             this.dbEndpointMinSlaveCount = request.dbEndpointMinSlaveCount;
             this.dbEndpointOperator = request.dbEndpointOperator;
             this.dbEndpointReadWriteMode = request.dbEndpointReadWriteMode;
@@ -436,6 +450,15 @@ public class ModifyDBProxyEndpointRequest extends Request {
         public Builder dbEndpointAliases(String dbEndpointAliases) {
             this.putQueryParameter("DbEndpointAliases", dbEndpointAliases);
             this.dbEndpointAliases = dbEndpointAliases;
+            return this;
+        }
+
+        /**
+         * DbEndpointCostThresholdForDuckdb.
+         */
+        public Builder dbEndpointCostThresholdForDuckdb(String dbEndpointCostThresholdForDuckdb) {
+            this.putQueryParameter("DbEndpointCostThresholdForDuckdb", dbEndpointCostThresholdForDuckdb);
+            this.dbEndpointCostThresholdForDuckdb = dbEndpointCostThresholdForDuckdb;
             return this;
         }
 
