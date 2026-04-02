@@ -1667,8 +1667,12 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthCallbackURL")
         private String authCallbackURL;
 
+        @com.aliyun.core.annotation.NameInMap("SupabaseClusterId")
+        private String supabaseClusterId;
+
         private PolarClawSaaSApplicationAttribute(Builder builder) {
             this.authCallbackURL = builder.authCallbackURL;
+            this.supabaseClusterId = builder.supabaseClusterId;
         }
 
         public static Builder builder() {
@@ -1686,14 +1690,23 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             return this.authCallbackURL;
         }
 
+        /**
+         * @return supabaseClusterId
+         */
+        public String getSupabaseClusterId() {
+            return this.supabaseClusterId;
+        }
+
         public static final class Builder {
             private String authCallbackURL; 
+            private String supabaseClusterId; 
 
             private Builder() {
             } 
 
             private Builder(PolarClawSaaSApplicationAttribute model) {
                 this.authCallbackURL = model.authCallbackURL;
+                this.supabaseClusterId = model.supabaseClusterId;
             } 
 
             /**
@@ -1701,6 +1714,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
              */
             public Builder authCallbackURL(String authCallbackURL) {
                 this.authCallbackURL = authCallbackURL;
+                return this;
+            }
+
+            /**
+             * SupabaseClusterId.
+             */
+            public Builder supabaseClusterId(String supabaseClusterId) {
+                this.supabaseClusterId = supabaseClusterId;
                 return this;
             }
 

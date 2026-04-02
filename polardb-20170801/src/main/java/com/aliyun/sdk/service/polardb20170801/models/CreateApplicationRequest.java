@@ -140,6 +140,10 @@ public class CreateApplicationRequest extends Request {
     private String securityIPType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillTemplateId")
+    private String skillTemplateId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -195,6 +199,7 @@ public class CreateApplicationRequest extends Request {
         this.securityIPArrayName = builder.securityIPArrayName;
         this.securityIPList = builder.securityIPList;
         this.securityIPType = builder.securityIPType;
+        this.skillTemplateId = builder.skillTemplateId;
         this.tag = builder.tag;
         this.targetVersion = builder.targetVersion;
         this.usedTime = builder.usedTime;
@@ -427,6 +432,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return skillTemplateId
+     */
+    public String getSkillTemplateId() {
+        return this.skillTemplateId;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -499,6 +511,7 @@ public class CreateApplicationRequest extends Request {
         private String securityIPArrayName; 
         private String securityIPList; 
         private String securityIPType; 
+        private String skillTemplateId; 
         private java.util.List<Tag> tag; 
         private String targetVersion; 
         private String usedTime; 
@@ -542,6 +555,7 @@ public class CreateApplicationRequest extends Request {
             this.securityIPArrayName = request.securityIPArrayName;
             this.securityIPList = request.securityIPList;
             this.securityIPType = request.securityIPType;
+            this.skillTemplateId = request.skillTemplateId;
             this.tag = request.tag;
             this.targetVersion = request.targetVersion;
             this.usedTime = request.usedTime;
@@ -826,6 +840,15 @@ public class CreateApplicationRequest extends Request {
         public Builder securityIPType(String securityIPType) {
             this.putQueryParameter("SecurityIPType", securityIPType);
             this.securityIPType = securityIPType;
+            return this;
+        }
+
+        /**
+         * SkillTemplateId.
+         */
+        public Builder skillTemplateId(String skillTemplateId) {
+            this.putQueryParameter("SkillTemplateId", skillTemplateId);
+            this.skillTemplateId = skillTemplateId;
             return this;
         }
 
