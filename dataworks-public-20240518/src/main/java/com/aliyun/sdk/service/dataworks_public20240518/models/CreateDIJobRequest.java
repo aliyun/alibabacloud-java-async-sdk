@@ -492,12 +492,70 @@ public class CreateDIJobRequest extends Request {
      *
      * <p>CreateDIJobRequest</p>
      */
+    public static class DataSourceProperties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectionProperties")
+        private String connectionProperties;
+
+        private DataSourceProperties(Builder builder) {
+            this.connectionProperties = builder.connectionProperties;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataSourceProperties create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectionProperties
+         */
+        public String getConnectionProperties() {
+            return this.connectionProperties;
+        }
+
+        public static final class Builder {
+            private String connectionProperties; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSourceProperties model) {
+                this.connectionProperties = model.connectionProperties;
+            } 
+
+            /**
+             * ConnectionProperties.
+             */
+            public Builder connectionProperties(String connectionProperties) {
+                this.connectionProperties = connectionProperties;
+                return this;
+            }
+
+            public DataSourceProperties build() {
+                return new DataSourceProperties(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDIJobRequest</p>
+     */
     public static class DestinationDataSourceSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceName")
         private String dataSourceName;
 
+        @com.aliyun.core.annotation.NameInMap("DataSourceProperties")
+        private DataSourceProperties dataSourceProperties;
+
         private DestinationDataSourceSettings(Builder builder) {
             this.dataSourceName = builder.dataSourceName;
+            this.dataSourceProperties = builder.dataSourceProperties;
         }
 
         public static Builder builder() {
@@ -515,14 +573,23 @@ public class CreateDIJobRequest extends Request {
             return this.dataSourceName;
         }
 
+        /**
+         * @return dataSourceProperties
+         */
+        public DataSourceProperties getDataSourceProperties() {
+            return this.dataSourceProperties;
+        }
+
         public static final class Builder {
             private String dataSourceName; 
+            private DataSourceProperties dataSourceProperties; 
 
             private Builder() {
             } 
 
             private Builder(DestinationDataSourceSettings model) {
                 this.dataSourceName = model.dataSourceName;
+                this.dataSourceProperties = model.dataSourceProperties;
             } 
 
             /**
@@ -530,6 +597,14 @@ public class CreateDIJobRequest extends Request {
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
+                return this;
+            }
+
+            /**
+             * DataSourceProperties.
+             */
+            public Builder dataSourceProperties(DataSourceProperties dataSourceProperties) {
+                this.dataSourceProperties = dataSourceProperties;
                 return this;
             }
 
@@ -1308,14 +1383,18 @@ public class CreateDIJobRequest extends Request {
      *
      * <p>CreateDIJobRequest</p>
      */
-    public static class DataSourceProperties extends TeaModel {
+    public static class SourceDataSourceSettingsDataSourceProperties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectionProperties")
+        private String connectionProperties;
+
         @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
         @com.aliyun.core.annotation.NameInMap("Timezone")
         private String timezone;
 
-        private DataSourceProperties(Builder builder) {
+        private SourceDataSourceSettingsDataSourceProperties(Builder builder) {
+            this.connectionProperties = builder.connectionProperties;
             this.encoding = builder.encoding;
             this.timezone = builder.timezone;
         }
@@ -1324,8 +1403,15 @@ public class CreateDIJobRequest extends Request {
             return new Builder();
         }
 
-        public static DataSourceProperties create() {
+        public static SourceDataSourceSettingsDataSourceProperties create() {
             return builder().build();
+        }
+
+        /**
+         * @return connectionProperties
+         */
+        public String getConnectionProperties() {
+            return this.connectionProperties;
         }
 
         /**
@@ -1343,16 +1429,26 @@ public class CreateDIJobRequest extends Request {
         }
 
         public static final class Builder {
+            private String connectionProperties; 
             private String encoding; 
             private String timezone; 
 
             private Builder() {
             } 
 
-            private Builder(DataSourceProperties model) {
+            private Builder(SourceDataSourceSettingsDataSourceProperties model) {
+                this.connectionProperties = model.connectionProperties;
                 this.encoding = model.encoding;
                 this.timezone = model.timezone;
             } 
+
+            /**
+             * ConnectionProperties.
+             */
+            public Builder connectionProperties(String connectionProperties) {
+                this.connectionProperties = connectionProperties;
+                return this;
+            }
 
             /**
              * Encoding.
@@ -1370,8 +1466,8 @@ public class CreateDIJobRequest extends Request {
                 return this;
             }
 
-            public DataSourceProperties build() {
-                return new DataSourceProperties(this);
+            public SourceDataSourceSettingsDataSourceProperties build() {
+                return new SourceDataSourceSettingsDataSourceProperties(this);
             } 
 
         } 
@@ -1388,7 +1484,7 @@ public class CreateDIJobRequest extends Request {
         private String dataSourceName;
 
         @com.aliyun.core.annotation.NameInMap("DataSourceProperties")
-        private DataSourceProperties dataSourceProperties;
+        private SourceDataSourceSettingsDataSourceProperties dataSourceProperties;
 
         private SourceDataSourceSettings(Builder builder) {
             this.dataSourceName = builder.dataSourceName;
@@ -1413,13 +1509,13 @@ public class CreateDIJobRequest extends Request {
         /**
          * @return dataSourceProperties
          */
-        public DataSourceProperties getDataSourceProperties() {
+        public SourceDataSourceSettingsDataSourceProperties getDataSourceProperties() {
             return this.dataSourceProperties;
         }
 
         public static final class Builder {
             private String dataSourceName; 
-            private DataSourceProperties dataSourceProperties; 
+            private SourceDataSourceSettingsDataSourceProperties dataSourceProperties; 
 
             private Builder() {
             } 
@@ -1440,7 +1536,7 @@ public class CreateDIJobRequest extends Request {
             /**
              * DataSourceProperties.
              */
-            public Builder dataSourceProperties(DataSourceProperties dataSourceProperties) {
+            public Builder dataSourceProperties(SourceDataSourceSettingsDataSourceProperties dataSourceProperties) {
                 this.dataSourceProperties = dataSourceProperties;
                 return this;
             }
