@@ -256,7 +256,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         }
 
         /**
-         * <p>The information about the inbound rule.</p>
+         * <p>The information about the inbound rules.</p>
          */
         public Builder ingressAclEntries(java.util.List<IngressAclEntries> ingressAclEntries) {
             this.putQueryParameter("IngressAclEntries", ingressAclEntries);
@@ -517,7 +517,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
 
             /**
              * <p>The description of the outbound rule.</p>
-             * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>This is EgressAclEntries.</p>
@@ -528,10 +528,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The destination CIDR block.</p>
+             * <p>The destination CIDR block. Alternatively, a prefix list ID can be provided.</p>
              * 
              * <strong>example:</strong>
-             * <p>10.0.0.0/24</p>
+             * <p>10.0.0.0/24
+             * pl-xxxxxx</p>
              */
             public Builder destinationCidrIp(String destinationCidrIp) {
                 this.destinationCidrIp = destinationCidrIp;
@@ -539,7 +540,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The type of the rule. Set the value to <strong>custom</strong>, which specifies custom rules.</p>
+             * <p>The rule type. Set the value to <strong>custom</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>
@@ -550,9 +551,9 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The IP version. Valid values:</p>
+             * <p>The IP version:</p>
              * <ul>
-             * <li><strong>IPv4</strong> (default)</li>
+             * <li><strong>IPv4</strong></li>
              * <li><strong>IPv6</strong></li>
              * </ul>
              * 
@@ -566,7 +567,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
 
             /**
              * <p>The ID of the outbound rule.</p>
-             * <p>Valid values of <strong>N</strong>: <strong>0</strong> to <strong>99</strong>. You can specify at most 100 outbound rules.</p>
+             * <p>Valid values of <strong>N</strong>: <strong>0</strong> to <strong>99</strong>. You can specify at most 100 outbound rule IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>nae-2zecs97e0brcge46****</p>
@@ -589,7 +590,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
+             * <p>The access control policy. Valid values:</p>
              * <ul>
              * <li><strong>accept</strong></li>
              * <li><strong>drop</strong></li>
@@ -606,8 +607,8 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             /**
              * <p>The destination port range of the outbound traffic.</p>
              * <ul>
-             * <li>If the <strong>protocol</strong> of the outbound rule is set to <strong>all</strong>, <strong>icmp</strong>, or <strong>gre</strong>, the port range is -1/-1, which specified all ports.</li>
-             * <li>If the <strong>protocol</strong> of the outbound rule is set to <strong>tcp</strong> or <strong>udp</strong>, set the port range in the following format: <strong>1/200</strong> or <strong>80/80</strong>, which specifies port 1 to port 200 or port 80. Valid values for a port: <strong>1</strong> to <strong>65535</strong>.</li>
+             * <li>If <strong>Protocol</strong> is set to <strong>all</strong>, <strong>icmp</strong>, or <strong>gre</strong>, the port range is -1/-1, which indicates all ports are available.</li>
+             * <li>If <strong>Protocol</strong> is set to <strong>tcp</strong> or <strong>udp</strong>, valid port numbers are <strong>1</strong> to <strong>65535</strong>. Format: <strong>1/200</strong> (port 1 to 200) or <strong>80/80</strong> (port 80).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -619,13 +620,14 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The protocol. Valid values:</p>
+             * <p>The protocol type. Valid values:</p>
              * <ul>
              * <li><strong>icmp</strong></li>
              * <li><strong>gre</strong></li>
              * <li><strong>tcp</strong></li>
              * <li><strong>udp</strong></li>
              * <li><strong>all</strong></li>
+             * <li><strong>icmpv6</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -788,7 +790,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
 
             /**
              * <p>The description of the inbound rule.</p>
-             * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>This is IngressAclEntries.</p>
@@ -799,7 +801,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The type of the rule. Set the value to <strong>custom</strong>, which specifies custom rules.</p>
+             * <p>The rule type. Set the value to <strong>custom</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>
@@ -810,9 +812,9 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The IP version. Valid values:</p>
+             * <p>The IP version:</p>
              * <ul>
-             * <li><strong>IPv4</strong> (default)</li>
+             * <li><strong>IPv4</strong></li>
              * <li><strong>IPv6</strong></li>
              * </ul>
              * 
@@ -826,7 +828,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
 
             /**
              * <p>The ID of the inbound rule.</p>
-             * <p>Valid values of <strong>N</strong>: <strong>0</strong> to <strong>99</strong>. You can specify at most 100 inbound rules.</p>
+             * <p>Valid values of <strong>N</strong>: <strong>0</strong> to <strong>99</strong>. You can specify at most 100 inbound rule IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>nae-2zepn32de59j8m4****</p>
@@ -849,9 +851,9 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
+             * <p>The access control policy. Valid values:</p>
              * <ul>
-             * <li><strong>accept</strong></li>
+             * <li><strong>accept</strong>: allows network traffic.</li>
              * <li><strong>drop</strong></li>
              * </ul>
              * 
@@ -866,8 +868,8 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             /**
              * <p>The source port range of the inbound rule.</p>
              * <ul>
-             * <li>If the <strong>protocol</strong> of the inbound rule is set to <strong>all</strong>, <strong>icmp</strong>, or <strong>gre</strong>, the port range is -1/-1, which specifies all ports.</li>
-             * <li>If the <strong>protocol</strong> of the inbound rule is set to <strong>tcp</strong> or <strong>udp</strong>, set the port range in the following format: <strong>1/200</strong> or <strong>80/80</strong>, which specifies port 1 to port 200 or port 80. Valid ports: <strong>1</strong> to <strong>65535</strong>.</li>
+             * <li>If <strong>Protocol</strong> is set to <strong>all</strong>, <strong>icmp</strong>, or <strong>gre</strong>, the port range is -1/-1, which indicates all ports are available.</li>
+             * <li>If <strong>Protocol</strong> is set to <strong>tcp</strong> or <strong>udp</strong>, valid port numbers are <strong>1</strong> to <strong>65535</strong>. Format: <strong>1/200</strong> (port 1 to 200) or <strong>80/80</strong> (port 80).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -879,13 +881,14 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The protocol. Valid values:</p>
+             * <p>Protocol type. Valid values:</p>
              * <ul>
              * <li><strong>icmp</strong></li>
              * <li><strong>gre</strong></li>
              * <li><strong>tcp</strong></li>
              * <li><strong>udp</strong></li>
              * <li><strong>all</strong></li>
+             * <li><strong>icmpv6</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -897,10 +900,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The source CIDR block.</p>
+             * <p>The source CIDR block. Alternatively, a prefix list ID can be provided.</p>
              * 
              * <strong>example:</strong>
-             * <p>10.0.0.0/24</p>
+             * <p>10.0.0.0/24
+             * pl-xxxxxx</p>
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;

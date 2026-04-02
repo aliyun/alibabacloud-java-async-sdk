@@ -551,6 +551,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDhcpOptionsSetResponse> createDhcpOptionsSet(CreateDhcpOptionsSetRequest request);
 
     /**
+     * @param request the request parameters of CreateEnhancedVpnGateway  CreateEnhancedVpnGatewayRequest
+     * @return CreateEnhancedVpnGatewayResponse
+     */
+    CompletableFuture<CreateEnhancedVpnGatewayResponse> createEnhancedVpnGateway(CreateEnhancedVpnGatewayRequest request);
+
+    /**
      * @param request the request parameters of CreateExpressCloudConnection  CreateExpressCloudConnectionRequest
      * @return CreateExpressCloudConnectionResponse
      */
@@ -1338,6 +1344,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDhcpOptionsSetResponse
      */
     CompletableFuture<DeleteDhcpOptionsSetResponse> deleteDhcpOptionsSet(DeleteDhcpOptionsSetRequest request);
+
+    /**
+     * @param request the request parameters of DeleteEnhancedVpnGateway  DeleteEnhancedVpnGatewayRequest
+     * @return DeleteEnhancedVpnGatewayResponse
+     */
+    CompletableFuture<DeleteEnhancedVpnGatewayResponse> deleteEnhancedVpnGateway(DeleteEnhancedVpnGatewayRequest request);
 
     /**
      * @param request the request parameters of DeleteExpressConnect  DeleteExpressConnectRequest
@@ -3971,6 +3983,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDhcpOptionsSetAttributeResponse
      */
     CompletableFuture<UpdateDhcpOptionsSetAttributeResponse> updateDhcpOptionsSetAttribute(UpdateDhcpOptionsSetAttributeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateEnhancedVpnGateway  UpdateEnhancedVpnGatewayRequest
+     * @return UpdateEnhancedVpnGatewayResponse
+     */
+    CompletableFuture<UpdateEnhancedVpnGatewayResponse> updateEnhancedVpnGateway(UpdateEnhancedVpnGatewayRequest request);
 
     /**
      * @param request the request parameters of UpdateFailoverTestJob  UpdateFailoverTestJobRequest
