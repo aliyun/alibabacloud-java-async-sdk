@@ -23,6 +23,10 @@ public class UpdateCodeSourceRequest extends Request {
     private String codeSourceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloneType")
+    private Integer cloneType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CodeBranch")
     private String codeBranch;
 
@@ -57,6 +61,7 @@ public class UpdateCodeSourceRequest extends Request {
     private UpdateCodeSourceRequest(Builder builder) {
         super(builder);
         this.codeSourceId = builder.codeSourceId;
+        this.cloneType = builder.cloneType;
         this.codeBranch = builder.codeBranch;
         this.codeCommit = builder.codeCommit;
         this.codeRepo = builder.codeRepo;
@@ -85,6 +90,13 @@ public class UpdateCodeSourceRequest extends Request {
      */
     public String getCodeSourceId() {
         return this.codeSourceId;
+    }
+
+    /**
+     * @return cloneType
+     */
+    public Integer getCloneType() {
+        return this.cloneType;
     }
 
     /**
@@ -145,6 +157,7 @@ public class UpdateCodeSourceRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateCodeSourceRequest, Builder> {
         private String codeSourceId; 
+        private Integer cloneType; 
         private String codeBranch; 
         private String codeCommit; 
         private String codeRepo; 
@@ -161,6 +174,7 @@ public class UpdateCodeSourceRequest extends Request {
         private Builder(UpdateCodeSourceRequest request) {
             super(request);
             this.codeSourceId = request.codeSourceId;
+            this.cloneType = request.cloneType;
             this.codeBranch = request.codeBranch;
             this.codeCommit = request.codeCommit;
             this.codeRepo = request.codeRepo;
@@ -181,6 +195,15 @@ public class UpdateCodeSourceRequest extends Request {
         public Builder codeSourceId(String codeSourceId) {
             this.putPathParameter("CodeSourceId", codeSourceId);
             this.codeSourceId = codeSourceId;
+            return this;
+        }
+
+        /**
+         * CloneType.
+         */
+        public Builder cloneType(Integer cloneType) {
+            this.putBodyParameter("CloneType", cloneType);
+            this.cloneType = cloneType;
             return this;
         }
 

@@ -22,6 +22,10 @@ public class CreateCodeSourceRequest extends Request {
     private String accessibility;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloneType")
+    private Integer cloneType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CodeBranch")
     private String codeBranch;
 
@@ -62,6 +66,7 @@ public class CreateCodeSourceRequest extends Request {
     private CreateCodeSourceRequest(Builder builder) {
         super(builder);
         this.accessibility = builder.accessibility;
+        this.cloneType = builder.cloneType;
         this.codeBranch = builder.codeBranch;
         this.codeCommit = builder.codeCommit;
         this.codeRepo = builder.codeRepo;
@@ -91,6 +96,13 @@ public class CreateCodeSourceRequest extends Request {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return cloneType
+     */
+    public Integer getCloneType() {
+        return this.cloneType;
     }
 
     /**
@@ -158,6 +170,7 @@ public class CreateCodeSourceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCodeSourceRequest, Builder> {
         private String accessibility; 
+        private Integer cloneType; 
         private String codeBranch; 
         private String codeCommit; 
         private String codeRepo; 
@@ -175,6 +188,7 @@ public class CreateCodeSourceRequest extends Request {
         private Builder(CreateCodeSourceRequest request) {
             super(request);
             this.accessibility = request.accessibility;
+            this.cloneType = request.cloneType;
             this.codeBranch = request.codeBranch;
             this.codeCommit = request.codeCommit;
             this.codeRepo = request.codeRepo;
@@ -199,6 +213,15 @@ public class CreateCodeSourceRequest extends Request {
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * CloneType.
+         */
+        public Builder cloneType(Integer cloneType) {
+            this.putBodyParameter("CloneType", cloneType);
+            this.cloneType = cloneType;
             return this;
         }
 

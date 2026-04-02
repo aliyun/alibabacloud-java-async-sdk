@@ -20,6 +20,9 @@ public class CodeSourceItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
+    @com.aliyun.core.annotation.NameInMap("CloneType")
+    private Integer cloneType;
+
     @com.aliyun.core.annotation.NameInMap("CodeBranch")
     private String codeBranch;
 
@@ -61,6 +64,7 @@ public class CodeSourceItem extends TeaModel {
 
     private CodeSourceItem(Builder builder) {
         this.accessibility = builder.accessibility;
+        this.cloneType = builder.cloneType;
         this.codeBranch = builder.codeBranch;
         this.codeCommit = builder.codeCommit;
         this.codeRepo = builder.codeRepo;
@@ -93,6 +97,13 @@ public class CodeSourceItem extends TeaModel {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return cloneType
+     */
+    public Integer getCloneType() {
+        return this.cloneType;
     }
 
     /**
@@ -188,6 +199,7 @@ public class CodeSourceItem extends TeaModel {
 
     public static final class Builder {
         private String accessibility; 
+        private Integer cloneType; 
         private String codeBranch; 
         private String codeCommit; 
         private String codeRepo; 
@@ -207,6 +219,7 @@ public class CodeSourceItem extends TeaModel {
 
         private Builder(CodeSourceItem model) {
             this.accessibility = model.accessibility;
+            this.cloneType = model.cloneType;
             this.codeBranch = model.codeBranch;
             this.codeCommit = model.codeCommit;
             this.codeRepo = model.codeRepo;
@@ -227,6 +240,14 @@ public class CodeSourceItem extends TeaModel {
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * CloneType.
+         */
+        public Builder cloneType(Integer cloneType) {
+            this.cloneType = cloneType;
             return this;
         }
 
