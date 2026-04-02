@@ -56,6 +56,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSanityCheckTaskResponse> createSanityCheckTask(CreateSanityCheckTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateTempFile  CreateTempFileRequest
+     * @return CreateTempFileResponse
+     */
+    CompletableFuture<CreateTempFileResponse> createTempFile(CreateTempFileRequest request);
+
+    /**
+     * @param request the request parameters of CreateTempFileTask  CreateTempFileTaskRequest
+     * @return CreateTempFileTaskResponse
+     */
+    CompletableFuture<CreateTempFileTaskResponse> createTempFileTask(CreateTempFileTaskRequest request);
+
+    /**
      * @param request the request parameters of DeleteIdleInstanceCuller  DeleteIdleInstanceCullerRequest
      * @return DeleteIdleInstanceCullerResponse
      */
@@ -90,6 +102,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteInstancesResponse
      */
     CompletableFuture<DeleteInstancesResponse> deleteInstances(DeleteInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteTempFile  DeleteTempFileRequest
+     * @return DeleteTempFileResponse
+     */
+    CompletableFuture<DeleteTempFileResponse> deleteTempFile(DeleteTempFileRequest request);
+
+    /**
+     * @param request the request parameters of DeleteTempFileTask  DeleteTempFileTaskRequest
+     * @return DeleteTempFileTaskResponse
+     */
+    CompletableFuture<DeleteTempFileTaskResponse> deleteTempFileTask(DeleteTempFileTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteTempFileTasks  DeleteTempFileTasksRequest
+     * @return DeleteTempFileTasksResponse
+     */
+    CompletableFuture<DeleteTempFileTasksResponse> deleteTempFileTasks(DeleteTempFileTasksRequest request);
 
     /**
      * @param request the request parameters of GetIdleInstanceCuller  GetIdleInstanceCullerRequest
@@ -155,6 +185,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSanityCheckTaskResponse> getSanityCheckTask(GetSanityCheckTaskRequest request);
 
     /**
+     * @param request the request parameters of GetTempFile  GetTempFileRequest
+     * @return GetTempFileResponse
+     */
+    CompletableFuture<GetTempFileResponse> getTempFile(GetTempFileRequest request);
+
+    /**
+     * @param request the request parameters of GetTempFileTask  GetTempFileTaskRequest
+     * @return GetTempFileTaskResponse
+     */
+    CompletableFuture<GetTempFileTaskResponse> getTempFileTask(GetTempFileTaskRequest request);
+
+    /**
      * @param request the request parameters of GetToken  GetTokenRequest
      * @return GetTokenResponse
      */
@@ -203,6 +245,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSystemLogsResponse> listSystemLogs(ListSystemLogsRequest request);
 
     /**
+     * @param request the request parameters of ListTempFiles  ListTempFilesRequest
+     * @return ListTempFilesResponse
+     */
+    CompletableFuture<ListTempFilesResponse> listTempFiles(ListTempFilesRequest request);
+
+    /**
      * @param request the request parameters of StartInstance  StartInstanceRequest
      * @return StartInstanceResponse
      */
@@ -231,5 +279,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateInstanceLabelsResponse
      */
     CompletableFuture<UpdateInstanceLabelsResponse> updateInstanceLabels(UpdateInstanceLabelsRequest request);
+
+    /**
+     * @param request the request parameters of UpdateTempFile  UpdateTempFileRequest
+     * @return UpdateTempFileResponse
+     */
+    CompletableFuture<UpdateTempFileResponse> updateTempFile(UpdateTempFileRequest request);
+
+    /**
+     * @param request the request parameters of UpdateTempFileTask  UpdateTempFileTaskRequest
+     * @return UpdateTempFileTaskResponse
+     */
+    CompletableFuture<UpdateTempFileTaskResponse> updateTempFileTask(UpdateTempFileTaskRequest request);
 
 }

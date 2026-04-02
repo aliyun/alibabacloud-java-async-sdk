@@ -148,6 +148,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateTempFile  CreateTempFileRequest
+     * @return CreateTempFileResponse
+     */
+    @Override
+    public CompletableFuture<CreateTempFileResponse> createTempFile(CreateTempFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateTempFile").setMethod(HttpMethod.POST).setPathRegex("/api/v2/tempfiles").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateTempFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateTempFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateTempFileTask  CreateTempFileTaskRequest
+     * @return CreateTempFileTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateTempFileTaskResponse> createTempFileTask(CreateTempFileTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateTempFileTask").setMethod(HttpMethod.POST).setPathRegex("/api/v2/tempfiletasks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateTempFileTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateTempFileTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteIdleInstanceCuller  DeleteIdleInstanceCullerRequest
      * @return DeleteIdleInstanceCullerResponse
      */
@@ -250,6 +286,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteTempFile  DeleteTempFileRequest
+     * @return DeleteTempFileResponse
+     */
+    @Override
+    public CompletableFuture<DeleteTempFileResponse> deleteTempFile(DeleteTempFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteTempFile").setMethod(HttpMethod.DELETE).setPathRegex("/api/v2/tempfiles/{TempFileId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteTempFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteTempFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteTempFileTask  DeleteTempFileTaskRequest
+     * @return DeleteTempFileTaskResponse
+     */
+    @Override
+    public CompletableFuture<DeleteTempFileTaskResponse> deleteTempFileTask(DeleteTempFileTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteTempFileTask").setMethod(HttpMethod.DELETE).setPathRegex("/api/v2/tempfiletasks/{TempFileTaskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteTempFileTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteTempFileTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteTempFileTasks  DeleteTempFileTasksRequest
+     * @return DeleteTempFileTasksResponse
+     */
+    @Override
+    public CompletableFuture<DeleteTempFileTasksResponse> deleteTempFileTasks(DeleteTempFileTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteTempFileTasks").setMethod(HttpMethod.PUT).setPathRegex("/api/v2/batch/tempfiletasks/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteTempFileTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteTempFileTasksResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -439,6 +529,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetTempFile  GetTempFileRequest
+     * @return GetTempFileResponse
+     */
+    @Override
+    public CompletableFuture<GetTempFileResponse> getTempFile(GetTempFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTempFile").setMethod(HttpMethod.GET).setPathRegex("/api/v2/tempfiles/{TempFileId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTempFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTempFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetTempFileTask  GetTempFileTaskRequest
+     * @return GetTempFileTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetTempFileTaskResponse> getTempFileTask(GetTempFileTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTempFileTask").setMethod(HttpMethod.GET).setPathRegex("/api/v2/tempfiletasks/{TempFileTaskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTempFileTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTempFileTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetToken  GetTokenRequest
      * @return GetTokenResponse
      */
@@ -583,6 +709,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListTempFiles  ListTempFilesRequest
+     * @return ListTempFilesResponse
+     */
+    @Override
+    public CompletableFuture<ListTempFilesResponse> listTempFiles(ListTempFilesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTempFiles").setMethod(HttpMethod.GET).setPathRegex("/api/v2/tempfiles").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTempFilesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTempFilesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StartInstance  StartInstanceRequest
      * @return StartInstanceResponse
      */
@@ -667,6 +811,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateInstanceLabelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateTempFile  UpdateTempFileRequest
+     * @return UpdateTempFileResponse
+     */
+    @Override
+    public CompletableFuture<UpdateTempFileResponse> updateTempFile(UpdateTempFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateTempFile").setMethod(HttpMethod.PUT).setPathRegex("/api/v2/tempfiles/{TempFileId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateTempFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateTempFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateTempFileTask  UpdateTempFileTaskRequest
+     * @return UpdateTempFileTaskResponse
+     */
+    @Override
+    public CompletableFuture<UpdateTempFileTaskResponse> updateTempFileTask(UpdateTempFileTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateTempFileTask").setMethod(HttpMethod.PUT).setPathRegex("/api/v2/tempfiletasks/{TempFileTaskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateTempFileTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateTempFileTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
