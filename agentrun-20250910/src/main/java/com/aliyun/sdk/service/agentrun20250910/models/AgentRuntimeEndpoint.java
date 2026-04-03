@@ -41,6 +41,9 @@ public class AgentRuntimeEndpoint extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("routingConfiguration")
     private RoutingConfiguration routingConfiguration;
 
+    @com.aliyun.core.annotation.NameInMap("scalingStatus")
+    private ScalingStatus scalingStatus;
+
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
@@ -59,6 +62,7 @@ public class AgentRuntimeEndpoint extends TeaModel {
         this.disablePublicNetworkAccess = builder.disablePublicNetworkAccess;
         this.endpointPublicUrl = builder.endpointPublicUrl;
         this.routingConfiguration = builder.routingConfiguration;
+        this.scalingStatus = builder.scalingStatus;
         this.status = builder.status;
         this.statusReason = builder.statusReason;
         this.targetVersion = builder.targetVersion;
@@ -133,6 +137,13 @@ public class AgentRuntimeEndpoint extends TeaModel {
     }
 
     /**
+     * @return scalingStatus
+     */
+    public ScalingStatus getScalingStatus() {
+        return this.scalingStatus;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -162,6 +173,7 @@ public class AgentRuntimeEndpoint extends TeaModel {
         private Boolean disablePublicNetworkAccess; 
         private String endpointPublicUrl; 
         private RoutingConfiguration routingConfiguration; 
+        private ScalingStatus scalingStatus; 
         private String status; 
         private String statusReason; 
         private String targetVersion; 
@@ -178,6 +190,7 @@ public class AgentRuntimeEndpoint extends TeaModel {
             this.disablePublicNetworkAccess = model.disablePublicNetworkAccess;
             this.endpointPublicUrl = model.endpointPublicUrl;
             this.routingConfiguration = model.routingConfiguration;
+            this.scalingStatus = model.scalingStatus;
             this.status = model.status;
             this.statusReason = model.statusReason;
             this.targetVersion = model.targetVersion;
@@ -247,6 +260,14 @@ public class AgentRuntimeEndpoint extends TeaModel {
          */
         public Builder routingConfiguration(RoutingConfiguration routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>端点的弹性伸缩状态，包括最小/目标/当前实例数及定时策略（复用 ScalingStatus）</p>
+         */
+        public Builder scalingStatus(ScalingStatus scalingStatus) {
+            this.scalingStatus = scalingStatus;
             return this;
         }
 

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Funagent} extends {@link TeaModel}
+ * {@link UpdateFunagentInput} extends {@link TeaModel}
  *
- * <p>Funagent</p>
+ * <p>UpdateFunagentInput</p>
  */
-public class Funagent extends TeaModel {
+public class UpdateFunagentInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("adminName")
     private String adminName;
 
@@ -25,9 +25,6 @@ public class Funagent extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("cpu")
     private Float cpu;
-
-    @com.aliyun.core.annotation.NameInMap("createdAt")
-    private String createdAt;
 
     @com.aliyun.core.annotation.NameInMap("dbConnections")
     private Integer dbConnections;
@@ -56,53 +53,19 @@ public class Funagent extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @com.aliyun.core.annotation.NameInMap("endpoint")
-    private String endpoint;
-
-    @com.aliyun.core.annotation.NameInMap("funagentId")
-    private String funagentId;
-
-    @com.aliyun.core.annotation.NameInMap("funagentName")
-    private String funagentName;
-
-    @com.aliyun.core.annotation.NameInMap("imageUrl")
-    private String imageUrl;
-
     @com.aliyun.core.annotation.NameInMap("memory")
     private Integer memory;
-
-    @com.aliyun.core.annotation.NameInMap("regionId")
-    private String regionId;
 
     @com.aliyun.core.annotation.NameInMap("replicas")
     private Integer replicas;
 
-    @com.aliyun.core.annotation.NameInMap("securityGroupId")
-    private String securityGroupId;
-
-    @com.aliyun.core.annotation.NameInMap("status")
-    private String status;
-
-    @com.aliyun.core.annotation.NameInMap("tenantId")
-    private String tenantId;
-
-    @com.aliyun.core.annotation.NameInMap("updatedAt")
-    private String updatedAt;
-
     @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
-    @com.aliyun.core.annotation.NameInMap("vpcId")
-    private String vpcId;
-
-    @com.aliyun.core.annotation.NameInMap("vswitchIds")
-    private String vswitchIds;
-
-    private Funagent(Builder builder) {
+    private UpdateFunagentInput(Builder builder) {
         this.adminName = builder.adminName;
         this.adminSecret = builder.adminSecret;
         this.cpu = builder.cpu;
-        this.createdAt = builder.createdAt;
         this.dbConnections = builder.dbConnections;
         this.dbHost = builder.dbHost;
         this.dbInstanceId = builder.dbInstanceId;
@@ -112,27 +75,16 @@ public class Funagent extends TeaModel {
         this.dbType = builder.dbType;
         this.dbUsername = builder.dbUsername;
         this.description = builder.description;
-        this.endpoint = builder.endpoint;
-        this.funagentId = builder.funagentId;
-        this.funagentName = builder.funagentName;
-        this.imageUrl = builder.imageUrl;
         this.memory = builder.memory;
-        this.regionId = builder.regionId;
         this.replicas = builder.replicas;
-        this.securityGroupId = builder.securityGroupId;
-        this.status = builder.status;
-        this.tenantId = builder.tenantId;
-        this.updatedAt = builder.updatedAt;
         this.version = builder.version;
-        this.vpcId = builder.vpcId;
-        this.vswitchIds = builder.vswitchIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Funagent create() {
+    public static UpdateFunagentInput create() {
         return builder().build();
     }
 
@@ -159,13 +111,6 @@ public class Funagent extends TeaModel {
      */
     public Float getCpu() {
         return this.cpu;
-    }
-
-    /**
-     * @return createdAt
-     */
-    public String getCreatedAt() {
-        return this.createdAt;
     }
 
     /**
@@ -232,45 +177,10 @@ public class Funagent extends TeaModel {
     }
 
     /**
-     * @return endpoint
-     */
-    public String getEndpoint() {
-        return this.endpoint;
-    }
-
-    /**
-     * @return funagentId
-     */
-    public String getFunagentId() {
-        return this.funagentId;
-    }
-
-    /**
-     * @return funagentName
-     */
-    public String getFunagentName() {
-        return this.funagentName;
-    }
-
-    /**
-     * @return imageUrl
-     */
-    public String getImageUrl() {
-        return this.imageUrl;
-    }
-
-    /**
      * @return memory
      */
     public Integer getMemory() {
         return this.memory;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -281,59 +191,16 @@ public class Funagent extends TeaModel {
     }
 
     /**
-     * @return securityGroupId
-     */
-    public String getSecurityGroupId() {
-        return this.securityGroupId;
-    }
-
-    /**
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
-    }
-
-    /**
-     * @return tenantId
-     */
-    public String getTenantId() {
-        return this.tenantId;
-    }
-
-    /**
-     * @return updatedAt
-     */
-    public String getUpdatedAt() {
-        return this.updatedAt;
-    }
-
-    /**
      * @return version
      */
     public String getVersion() {
         return this.version;
     }
 
-    /**
-     * @return vpcId
-     */
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    /**
-     * @return vswitchIds
-     */
-    public String getVswitchIds() {
-        return this.vswitchIds;
-    }
-
     public static final class Builder {
         private String adminName; 
         private String adminSecret; 
         private Float cpu; 
-        private String createdAt; 
         private Integer dbConnections; 
         private String dbHost; 
         private String dbInstanceId; 
@@ -343,29 +210,17 @@ public class Funagent extends TeaModel {
         private String dbType; 
         private String dbUsername; 
         private String description; 
-        private String endpoint; 
-        private String funagentId; 
-        private String funagentName; 
-        private String imageUrl; 
         private Integer memory; 
-        private String regionId; 
         private Integer replicas; 
-        private String securityGroupId; 
-        private String status; 
-        private String tenantId; 
-        private String updatedAt; 
         private String version; 
-        private String vpcId; 
-        private String vswitchIds; 
 
         private Builder() {
         } 
 
-        private Builder(Funagent model) {
+        private Builder(UpdateFunagentInput model) {
             this.adminName = model.adminName;
             this.adminSecret = model.adminSecret;
             this.cpu = model.cpu;
-            this.createdAt = model.createdAt;
             this.dbConnections = model.dbConnections;
             this.dbHost = model.dbHost;
             this.dbInstanceId = model.dbInstanceId;
@@ -375,20 +230,9 @@ public class Funagent extends TeaModel {
             this.dbType = model.dbType;
             this.dbUsername = model.dbUsername;
             this.description = model.description;
-            this.endpoint = model.endpoint;
-            this.funagentId = model.funagentId;
-            this.funagentName = model.funagentName;
-            this.imageUrl = model.imageUrl;
             this.memory = model.memory;
-            this.regionId = model.regionId;
             this.replicas = model.replicas;
-            this.securityGroupId = model.securityGroupId;
-            this.status = model.status;
-            this.tenantId = model.tenantId;
-            this.updatedAt = model.updatedAt;
             this.version = model.version;
-            this.vpcId = model.vpcId;
-            this.vswitchIds = model.vswitchIds;
         } 
 
         /**
@@ -400,7 +244,7 @@ public class Funagent extends TeaModel {
         }
 
         /**
-         * <p>敏感；响应中应脱敏</p>
+         * <p>敏感字段</p>
          */
         public Builder adminSecret(String adminSecret) {
             this.adminSecret = adminSecret;
@@ -412,14 +256,6 @@ public class Funagent extends TeaModel {
          */
         public Builder cpu(Float cpu) {
             this.cpu = cpu;
-            return this;
-        }
-
-        /**
-         * <p>ISO 8601</p>
-         */
-        public Builder createdAt(String createdAt) {
-            this.createdAt = createdAt;
             return this;
         }
 
@@ -456,7 +292,7 @@ public class Funagent extends TeaModel {
         }
 
         /**
-         * <p>敏感；响应中应脱敏</p>
+         * <p>敏感字段</p>
          */
         public Builder dbPassword(String dbPassword) {
             this.dbPassword = dbPassword;
@@ -496,50 +332,10 @@ public class Funagent extends TeaModel {
         }
 
         /**
-         * endpoint.
-         */
-        public Builder endpoint(String endpoint) {
-            this.endpoint = endpoint;
-            return this;
-        }
-
-        /**
-         * <p>UUID 字符串</p>
-         */
-        public Builder funagentId(String funagentId) {
-            this.funagentId = funagentId;
-            return this;
-        }
-
-        /**
-         * funagentName.
-         */
-        public Builder funagentName(String funagentName) {
-            this.funagentName = funagentName;
-            return this;
-        }
-
-        /**
-         * imageUrl.
-         */
-        public Builder imageUrl(String imageUrl) {
-            this.imageUrl = imageUrl;
-            return this;
-        }
-
-        /**
          * memory.
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
-            return this;
-        }
-
-        /**
-         * regionId.
-         */
-        public Builder regionId(String regionId) {
-            this.regionId = regionId;
             return this;
         }
 
@@ -552,38 +348,6 @@ public class Funagent extends TeaModel {
         }
 
         /**
-         * securityGroupId.
-         */
-        public Builder securityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * status.
-         */
-        public Builder status(String status) {
-            this.status = status;
-            return this;
-        }
-
-        /**
-         * tenantId.
-         */
-        public Builder tenantId(String tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-
-        /**
-         * <p>ISO 8601</p>
-         */
-        public Builder updatedAt(String updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
-        }
-
-        /**
          * version.
          */
         public Builder version(String version) {
@@ -591,24 +355,8 @@ public class Funagent extends TeaModel {
             return this;
         }
 
-        /**
-         * vpcId.
-         */
-        public Builder vpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-
-        /**
-         * <p>与存储一致时为 JSON 字符串</p>
-         */
-        public Builder vswitchIds(String vswitchIds) {
-            this.vswitchIds = vswitchIds;
-            return this;
-        }
-
-        public Funagent build() {
-            return new Funagent(this);
+        public UpdateFunagentInput build() {
+            return new UpdateFunagentInput(this);
         } 
 
     } 

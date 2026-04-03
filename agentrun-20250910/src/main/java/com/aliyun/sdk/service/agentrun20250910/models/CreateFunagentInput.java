@@ -37,6 +37,9 @@ public class CreateFunagentInput extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String dbHost;
 
+    @com.aliyun.core.annotation.NameInMap("dbInstanceId")
+    private String dbInstanceId;
+
     @com.aliyun.core.annotation.NameInMap("dbName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
@@ -94,6 +97,7 @@ public class CreateFunagentInput extends TeaModel {
         this.cpu = builder.cpu;
         this.dbConnections = builder.dbConnections;
         this.dbHost = builder.dbHost;
+        this.dbInstanceId = builder.dbInstanceId;
         this.dbName = builder.dbName;
         this.dbPassword = builder.dbPassword;
         this.dbPort = builder.dbPort;
@@ -154,6 +158,13 @@ public class CreateFunagentInput extends TeaModel {
      */
     public String getDbHost() {
         return this.dbHost;
+    }
+
+    /**
+     * @return dbInstanceId
+     */
+    public String getDbInstanceId() {
+        return this.dbInstanceId;
     }
 
     /**
@@ -253,6 +264,7 @@ public class CreateFunagentInput extends TeaModel {
         private Float cpu; 
         private Integer dbConnections; 
         private String dbHost; 
+        private String dbInstanceId; 
         private String dbName; 
         private String dbPassword; 
         private Integer dbPort; 
@@ -276,6 +288,7 @@ public class CreateFunagentInput extends TeaModel {
             this.cpu = model.cpu;
             this.dbConnections = model.dbConnections;
             this.dbHost = model.dbHost;
+            this.dbInstanceId = model.dbInstanceId;
             this.dbName = model.dbName;
             this.dbPassword = model.dbPassword;
             this.dbPort = model.dbPort;
@@ -333,6 +346,14 @@ public class CreateFunagentInput extends TeaModel {
          */
         public Builder dbHost(String dbHost) {
             this.dbHost = dbHost;
+            return this;
+        }
+
+        /**
+         * <p><code>string</code>，必填</p>
+         */
+        public Builder dbInstanceId(String dbInstanceId) {
+            this.dbInstanceId = dbInstanceId;
             return this;
         }
 

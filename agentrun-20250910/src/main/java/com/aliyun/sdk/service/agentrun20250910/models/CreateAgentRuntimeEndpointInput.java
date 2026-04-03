@@ -29,6 +29,9 @@ public class CreateAgentRuntimeEndpointInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("routingConfiguration")
     private RoutingConfiguration routingConfiguration;
 
+    @com.aliyun.core.annotation.NameInMap("scalingConfig")
+    private ScalingConfig scalingConfig;
+
     @com.aliyun.core.annotation.NameInMap("targetVersion")
     private String targetVersion;
 
@@ -37,6 +40,7 @@ public class CreateAgentRuntimeEndpointInput extends TeaModel {
         this.description = builder.description;
         this.disablePublicNetworkAccess = builder.disablePublicNetworkAccess;
         this.routingConfiguration = builder.routingConfiguration;
+        this.scalingConfig = builder.scalingConfig;
         this.targetVersion = builder.targetVersion;
     }
 
@@ -81,6 +85,13 @@ public class CreateAgentRuntimeEndpointInput extends TeaModel {
     }
 
     /**
+     * @return scalingConfig
+     */
+    public ScalingConfig getScalingConfig() {
+        return this.scalingConfig;
+    }
+
+    /**
      * @return targetVersion
      */
     public String getTargetVersion() {
@@ -92,6 +103,7 @@ public class CreateAgentRuntimeEndpointInput extends TeaModel {
         private String description; 
         private Boolean disablePublicNetworkAccess; 
         private RoutingConfiguration routingConfiguration; 
+        private ScalingConfig scalingConfig; 
         private String targetVersion; 
 
         private Builder() {
@@ -102,6 +114,7 @@ public class CreateAgentRuntimeEndpointInput extends TeaModel {
             this.description = model.description;
             this.disablePublicNetworkAccess = model.disablePublicNetworkAccess;
             this.routingConfiguration = model.routingConfiguration;
+            this.scalingConfig = model.scalingConfig;
             this.targetVersion = model.targetVersion;
         } 
 
@@ -137,6 +150,14 @@ public class CreateAgentRuntimeEndpointInput extends TeaModel {
          */
         public Builder routingConfiguration(RoutingConfiguration routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>端点的弹性伸缩配置，包括最小实例数和定时扩容策略（复用 ScalingConfig）</p>
+         */
+        public Builder scalingConfig(ScalingConfig scalingConfig) {
+            this.scalingConfig = scalingConfig;
             return this;
         }
 

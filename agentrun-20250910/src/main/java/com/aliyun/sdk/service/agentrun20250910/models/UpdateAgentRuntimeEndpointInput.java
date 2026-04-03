@@ -20,6 +20,9 @@ public class UpdateAgentRuntimeEndpointInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("agentRuntimeEndpointName")
     private String agentRuntimeEndpointName;
 
+    @com.aliyun.core.annotation.NameInMap("deleteScalingConfig")
+    private Boolean deleteScalingConfig;
+
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -29,14 +32,19 @@ public class UpdateAgentRuntimeEndpointInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("routingConfiguration")
     private RoutingConfiguration routingConfiguration;
 
+    @com.aliyun.core.annotation.NameInMap("scalingConfig")
+    private ScalingConfig scalingConfig;
+
     @com.aliyun.core.annotation.NameInMap("targetVersion")
     private String targetVersion;
 
     private UpdateAgentRuntimeEndpointInput(Builder builder) {
         this.agentRuntimeEndpointName = builder.agentRuntimeEndpointName;
+        this.deleteScalingConfig = builder.deleteScalingConfig;
         this.description = builder.description;
         this.disablePublicNetworkAccess = builder.disablePublicNetworkAccess;
         this.routingConfiguration = builder.routingConfiguration;
+        this.scalingConfig = builder.scalingConfig;
         this.targetVersion = builder.targetVersion;
     }
 
@@ -57,6 +65,13 @@ public class UpdateAgentRuntimeEndpointInput extends TeaModel {
      */
     public String getAgentRuntimeEndpointName() {
         return this.agentRuntimeEndpointName;
+    }
+
+    /**
+     * @return deleteScalingConfig
+     */
+    public Boolean getDeleteScalingConfig() {
+        return this.deleteScalingConfig;
     }
 
     /**
@@ -81,6 +96,13 @@ public class UpdateAgentRuntimeEndpointInput extends TeaModel {
     }
 
     /**
+     * @return scalingConfig
+     */
+    public ScalingConfig getScalingConfig() {
+        return this.scalingConfig;
+    }
+
+    /**
      * @return targetVersion
      */
     public String getTargetVersion() {
@@ -89,9 +111,11 @@ public class UpdateAgentRuntimeEndpointInput extends TeaModel {
 
     public static final class Builder {
         private String agentRuntimeEndpointName; 
+        private Boolean deleteScalingConfig; 
         private String description; 
         private Boolean disablePublicNetworkAccess; 
         private RoutingConfiguration routingConfiguration; 
+        private ScalingConfig scalingConfig; 
         private String targetVersion; 
 
         private Builder() {
@@ -99,9 +123,11 @@ public class UpdateAgentRuntimeEndpointInput extends TeaModel {
 
         private Builder(UpdateAgentRuntimeEndpointInput model) {
             this.agentRuntimeEndpointName = model.agentRuntimeEndpointName;
+            this.deleteScalingConfig = model.deleteScalingConfig;
             this.description = model.description;
             this.disablePublicNetworkAccess = model.disablePublicNetworkAccess;
             this.routingConfiguration = model.routingConfiguration;
+            this.scalingConfig = model.scalingConfig;
             this.targetVersion = model.targetVersion;
         } 
 
@@ -110,6 +136,14 @@ public class UpdateAgentRuntimeEndpointInput extends TeaModel {
          */
         public Builder agentRuntimeEndpointName(String agentRuntimeEndpointName) {
             this.agentRuntimeEndpointName = agentRuntimeEndpointName;
+            return this;
+        }
+
+        /**
+         * <p>为 true 时删除该端点的弹性配置</p>
+         */
+        public Builder deleteScalingConfig(Boolean deleteScalingConfig) {
+            this.deleteScalingConfig = deleteScalingConfig;
             return this;
         }
 
@@ -137,6 +171,14 @@ public class UpdateAgentRuntimeEndpointInput extends TeaModel {
          */
         public Builder routingConfiguration(RoutingConfiguration routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>端点的弹性伸缩配置，包括最小实例数和定时扩容策略（复用 ScalingConfig）</p>
+         */
+        public Builder scalingConfig(ScalingConfig scalingConfig) {
+            this.scalingConfig = scalingConfig;
             return this;
         }
 
