@@ -113,6 +113,9 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Revisable")
         private Integer revisable;
 
+        @com.aliyun.core.annotation.NameInMap("UserChangable")
+        private Integer userChangable;
+
         private Parameters(Builder builder) {
             this.checkingCode = builder.checkingCode;
             this.dynamic = builder.dynamic;
@@ -120,6 +123,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             this.parameterName = builder.parameterName;
             this.parameterValue = builder.parameterValue;
             this.revisable = builder.revisable;
+            this.userChangable = builder.userChangable;
         }
 
         public static Builder builder() {
@@ -172,6 +176,13 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             return this.revisable;
         }
 
+        /**
+         * @return userChangable
+         */
+        public Integer getUserChangable() {
+            return this.userChangable;
+        }
+
         public static final class Builder {
             private String checkingCode; 
             private Integer dynamic; 
@@ -179,6 +190,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             private String parameterName; 
             private String parameterValue; 
             private Integer revisable; 
+            private Integer userChangable; 
 
             private Builder() {
             } 
@@ -190,6 +202,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
                 this.parameterName = model.parameterName;
                 this.parameterValue = model.parameterValue;
                 this.revisable = model.revisable;
+                this.userChangable = model.userChangable;
             } 
 
             /**
@@ -237,6 +250,14 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
              */
             public Builder revisable(Integer revisable) {
                 this.revisable = revisable;
+                return this;
+            }
+
+            /**
+             * UserChangable.
+             */
+            public Builder userChangable(Integer userChangable) {
+                this.userChangable = userChangable;
                 return this;
             }
 
