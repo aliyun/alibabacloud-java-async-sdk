@@ -891,11 +891,15 @@ public class AIAgentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Messages")
         private java.util.List<Messages> messages;
 
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
         @com.aliyun.core.annotation.NameInMap("WaitTime")
         private Integer waitTime;
 
         private LlmPending(Builder builder) {
             this.messages = builder.messages;
+            this.mode = builder.mode;
             this.waitTime = builder.waitTime;
         }
 
@@ -915,6 +919,13 @@ public class AIAgentConfig extends TeaModel {
         }
 
         /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
          * @return waitTime
          */
         public Integer getWaitTime() {
@@ -923,6 +934,7 @@ public class AIAgentConfig extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Messages> messages; 
+            private String mode; 
             private Integer waitTime; 
 
             private Builder() {
@@ -930,6 +942,7 @@ public class AIAgentConfig extends TeaModel {
 
             private Builder(LlmPending model) {
                 this.messages = model.messages;
+                this.mode = model.mode;
                 this.waitTime = model.waitTime;
             } 
 
@@ -938,6 +951,14 @@ public class AIAgentConfig extends TeaModel {
              */
             public Builder messages(java.util.List<Messages> messages) {
                 this.messages = messages;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
                 return this;
             }
 
@@ -1038,6 +1059,9 @@ public class AIAgentConfig extends TeaModel {
      * <p>AIAgentConfig</p>
      */
     public static class UserIdle extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HangupEndWord")
+        private String hangupEndWord;
+
         @com.aliyun.core.annotation.NameInMap("MaxRepeats")
         private Integer maxRepeats;
 
@@ -1048,6 +1072,7 @@ public class AIAgentConfig extends TeaModel {
         private Integer waitTime;
 
         private UserIdle(Builder builder) {
+            this.hangupEndWord = builder.hangupEndWord;
             this.maxRepeats = builder.maxRepeats;
             this.messages = builder.messages;
             this.waitTime = builder.waitTime;
@@ -1059,6 +1084,13 @@ public class AIAgentConfig extends TeaModel {
 
         public static UserIdle create() {
             return builder().build();
+        }
+
+        /**
+         * @return hangupEndWord
+         */
+        public String getHangupEndWord() {
+            return this.hangupEndWord;
         }
 
         /**
@@ -1083,6 +1115,7 @@ public class AIAgentConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private String hangupEndWord; 
             private Integer maxRepeats; 
             private java.util.List<UserIdleMessages> messages; 
             private Integer waitTime; 
@@ -1091,10 +1124,19 @@ public class AIAgentConfig extends TeaModel {
             } 
 
             private Builder(UserIdle model) {
+                this.hangupEndWord = model.hangupEndWord;
                 this.maxRepeats = model.maxRepeats;
                 this.messages = model.messages;
                 this.waitTime = model.waitTime;
             } 
+
+            /**
+             * HangupEndWord.
+             */
+            public Builder hangupEndWord(String hangupEndWord) {
+                this.hangupEndWord = hangupEndWord;
+                return this;
+            }
 
             /**
              * MaxRepeats.

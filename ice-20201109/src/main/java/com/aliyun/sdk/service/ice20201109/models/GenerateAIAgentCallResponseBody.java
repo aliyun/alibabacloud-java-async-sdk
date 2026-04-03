@@ -20,6 +20,9 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AIAgentUserId")
     private String AIAgentUserId;
 
+    @com.aliyun.core.annotation.NameInMap("AvatarUserId")
+    private String avatarUserId;
+
     @com.aliyun.core.annotation.NameInMap("ChannelId")
     private String channelId;
 
@@ -37,6 +40,7 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
 
     private GenerateAIAgentCallResponseBody(Builder builder) {
         this.AIAgentUserId = builder.AIAgentUserId;
+        this.avatarUserId = builder.avatarUserId;
         this.channelId = builder.channelId;
         this.instanceId = builder.instanceId;
         this.requestId = builder.requestId;
@@ -61,6 +65,13 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
      */
     public String getAIAgentUserId() {
         return this.AIAgentUserId;
+    }
+
+    /**
+     * @return avatarUserId
+     */
+    public String getAvatarUserId() {
+        return this.avatarUserId;
     }
 
     /**
@@ -100,6 +111,7 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
 
     public static final class Builder {
         private String AIAgentUserId; 
+        private String avatarUserId; 
         private String channelId; 
         private String instanceId; 
         private String requestId; 
@@ -111,6 +123,7 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
 
         private Builder(GenerateAIAgentCallResponseBody model) {
             this.AIAgentUserId = model.AIAgentUserId;
+            this.avatarUserId = model.avatarUserId;
             this.channelId = model.channelId;
             this.instanceId = model.instanceId;
             this.requestId = model.requestId;
@@ -126,6 +139,14 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
          */
         public Builder AIAgentUserId(String AIAgentUserId) {
             this.AIAgentUserId = AIAgentUserId;
+            return this;
+        }
+
+        /**
+         * AvatarUserId.
+         */
+        public Builder avatarUserId(String avatarUserId) {
+            this.avatarUserId = avatarUserId;
             return this;
         }
 

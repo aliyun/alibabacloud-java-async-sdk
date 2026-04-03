@@ -101,6 +101,9 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentConfig")
         private AIAgentConfig agentConfig;
 
+        @com.aliyun.core.annotation.NameInMap("CallInfo")
+        private AIAgentCallInfo callInfo;
+
         @com.aliyun.core.annotation.NameInMap("CallLogUrl")
         private String callLogUrl;
 
@@ -128,6 +131,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
 
         private Instance(Builder builder) {
             this.agentConfig = builder.agentConfig;
+            this.callInfo = builder.callInfo;
             this.callLogUrl = builder.callLogUrl;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -151,6 +155,13 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
          */
         public AIAgentConfig getAgentConfig() {
             return this.agentConfig;
+        }
+
+        /**
+         * @return callInfo
+         */
+        public AIAgentCallInfo getCallInfo() {
+            return this.callInfo;
         }
 
         /**
@@ -211,6 +222,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private AIAgentConfig agentConfig; 
+            private AIAgentCallInfo callInfo; 
             private String callLogUrl; 
             private String gmtCreate; 
             private String gmtModified; 
@@ -225,6 +237,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
 
             private Builder(Instance model) {
                 this.agentConfig = model.agentConfig;
+                this.callInfo = model.callInfo;
                 this.callLogUrl = model.callLogUrl;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
@@ -240,6 +253,14 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
              */
             public Builder agentConfig(AIAgentConfig agentConfig) {
                 this.agentConfig = agentConfig;
+                return this;
+            }
+
+            /**
+             * CallInfo.
+             */
+            public Builder callInfo(AIAgentCallInfo callInfo) {
+                this.callInfo = callInfo;
                 return this;
             }
 
