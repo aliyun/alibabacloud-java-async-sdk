@@ -26,6 +26,14 @@ public class CreateCenterPolicyRequest extends Request {
     private String adminAccess;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdminKeyboardOnFullScreen")
+    private String adminKeyboardOnFullScreen;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdminKeyboardOnWindows")
+    private String adminKeyboardOnWindows;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppContentProtection")
     private String appContentProtection;
 
@@ -115,6 +123,10 @@ public class CreateCenterPolicyRequest extends Request {
     private Integer cpuSingleRateLimit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeviceConnectHint")
     private String deviceConnectHint;
 
@@ -201,6 +213,10 @@ public class CreateCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InternetPrinter")
     private String internetPrinter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyboardControl")
+    private String keyboardControl;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LocalDrive")
@@ -542,6 +558,8 @@ public class CreateCenterPolicyRequest extends Request {
         super(builder);
         this.academicProxy = builder.academicProxy;
         this.adminAccess = builder.adminAccess;
+        this.adminKeyboardOnFullScreen = builder.adminKeyboardOnFullScreen;
+        this.adminKeyboardOnWindows = builder.adminKeyboardOnWindows;
         this.appContentProtection = builder.appContentProtection;
         this.authorizeAccessPolicyRule = builder.authorizeAccessPolicyRule;
         this.authorizeSecurityPolicyRule = builder.authorizeSecurityPolicyRule;
@@ -564,6 +582,7 @@ public class CreateCenterPolicyRequest extends Request {
         this.cpuRateLimit = builder.cpuRateLimit;
         this.cpuSampleDuration = builder.cpuSampleDuration;
         this.cpuSingleRateLimit = builder.cpuSingleRateLimit;
+        this.description = builder.description;
         this.deviceConnectHint = builder.deviceConnectHint;
         this.deviceRedirects = builder.deviceRedirects;
         this.deviceRules = builder.deviceRules;
@@ -586,6 +605,7 @@ public class CreateCenterPolicyRequest extends Request {
         this.html5FileTransfer = builder.html5FileTransfer;
         this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
         this.internetPrinter = builder.internetPrinter;
+        this.keyboardControl = builder.keyboardControl;
         this.localDrive = builder.localDrive;
         this.maxReconnectTime = builder.maxReconnectTime;
         this.memoryDownGradeDuration = builder.memoryDownGradeDuration;
@@ -696,6 +716,20 @@ public class CreateCenterPolicyRequest extends Request {
      */
     public String getAdminAccess() {
         return this.adminAccess;
+    }
+
+    /**
+     * @return adminKeyboardOnFullScreen
+     */
+    public String getAdminKeyboardOnFullScreen() {
+        return this.adminKeyboardOnFullScreen;
+    }
+
+    /**
+     * @return adminKeyboardOnWindows
+     */
+    public String getAdminKeyboardOnWindows() {
+        return this.adminKeyboardOnWindows;
     }
 
     /**
@@ -853,6 +887,13 @@ public class CreateCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return deviceConnectHint
      */
     public String getDeviceConnectHint() {
@@ -1004,6 +1045,13 @@ public class CreateCenterPolicyRequest extends Request {
      */
     public String getInternetPrinter() {
         return this.internetPrinter;
+    }
+
+    /**
+     * @return keyboardControl
+     */
+    public String getKeyboardControl() {
+        return this.keyboardControl;
     }
 
     /**
@@ -1590,6 +1638,8 @@ public class CreateCenterPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCenterPolicyRequest, Builder> {
         private String academicProxy; 
         private String adminAccess; 
+        private String adminKeyboardOnFullScreen; 
+        private String adminKeyboardOnWindows; 
         private String appContentProtection; 
         private java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule; 
         private java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule; 
@@ -1612,6 +1662,7 @@ public class CreateCenterPolicyRequest extends Request {
         private Integer cpuRateLimit; 
         private Integer cpuSampleDuration; 
         private Integer cpuSingleRateLimit; 
+        private String description; 
         private String deviceConnectHint; 
         private java.util.List<DeviceRedirects> deviceRedirects; 
         private java.util.List<DeviceRules> deviceRules; 
@@ -1634,6 +1685,7 @@ public class CreateCenterPolicyRequest extends Request {
         private String html5FileTransfer; 
         private String internetCommunicationProtocol; 
         private String internetPrinter; 
+        private String keyboardControl; 
         private String localDrive; 
         private Integer maxReconnectTime; 
         private Integer memoryDownGradeDuration; 
@@ -1726,6 +1778,8 @@ public class CreateCenterPolicyRequest extends Request {
             super(request);
             this.academicProxy = request.academicProxy;
             this.adminAccess = request.adminAccess;
+            this.adminKeyboardOnFullScreen = request.adminKeyboardOnFullScreen;
+            this.adminKeyboardOnWindows = request.adminKeyboardOnWindows;
             this.appContentProtection = request.appContentProtection;
             this.authorizeAccessPolicyRule = request.authorizeAccessPolicyRule;
             this.authorizeSecurityPolicyRule = request.authorizeSecurityPolicyRule;
@@ -1748,6 +1802,7 @@ public class CreateCenterPolicyRequest extends Request {
             this.cpuRateLimit = request.cpuRateLimit;
             this.cpuSampleDuration = request.cpuSampleDuration;
             this.cpuSingleRateLimit = request.cpuSingleRateLimit;
+            this.description = request.description;
             this.deviceConnectHint = request.deviceConnectHint;
             this.deviceRedirects = request.deviceRedirects;
             this.deviceRules = request.deviceRules;
@@ -1770,6 +1825,7 @@ public class CreateCenterPolicyRequest extends Request {
             this.html5FileTransfer = request.html5FileTransfer;
             this.internetCommunicationProtocol = request.internetCommunicationProtocol;
             this.internetPrinter = request.internetPrinter;
+            this.keyboardControl = request.keyboardControl;
             this.localDrive = request.localDrive;
             this.maxReconnectTime = request.maxReconnectTime;
             this.memoryDownGradeDuration = request.memoryDownGradeDuration;
@@ -1882,6 +1938,24 @@ public class CreateCenterPolicyRequest extends Request {
         public Builder adminAccess(String adminAccess) {
             this.putQueryParameter("AdminAccess", adminAccess);
             this.adminAccess = adminAccess;
+            return this;
+        }
+
+        /**
+         * AdminKeyboardOnFullScreen.
+         */
+        public Builder adminKeyboardOnFullScreen(String adminKeyboardOnFullScreen) {
+            this.putQueryParameter("AdminKeyboardOnFullScreen", adminKeyboardOnFullScreen);
+            this.adminKeyboardOnFullScreen = adminKeyboardOnFullScreen;
+            return this;
+        }
+
+        /**
+         * AdminKeyboardOnWindows.
+         */
+        public Builder adminKeyboardOnWindows(String adminKeyboardOnWindows) {
+            this.putQueryParameter("AdminKeyboardOnWindows", adminKeyboardOnWindows);
+            this.adminKeyboardOnWindows = adminKeyboardOnWindows;
             return this;
         }
 
@@ -2143,6 +2217,15 @@ public class CreateCenterPolicyRequest extends Request {
         public Builder cpuSingleRateLimit(Integer cpuSingleRateLimit) {
             this.putQueryParameter("CpuSingleRateLimit", cpuSingleRateLimit);
             this.cpuSingleRateLimit = cpuSingleRateLimit;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
@@ -2434,6 +2517,15 @@ public class CreateCenterPolicyRequest extends Request {
         public Builder internetPrinter(String internetPrinter) {
             this.putQueryParameter("InternetPrinter", internetPrinter);
             this.internetPrinter = internetPrinter;
+            return this;
+        }
+
+        /**
+         * KeyboardControl.
+         */
+        public Builder keyboardControl(String keyboardControl) {
+            this.putQueryParameter("KeyboardControl", keyboardControl);
+            this.keyboardControl = keyboardControl;
             return this;
         }
 

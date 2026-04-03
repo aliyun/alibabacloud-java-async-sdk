@@ -1406,6 +1406,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdminAccess")
         private String adminAccess;
 
+        @com.aliyun.core.annotation.NameInMap("AdminKeyboardOnFullScreen")
+        private String adminKeyboardOnFullScreen;
+
+        @com.aliyun.core.annotation.NameInMap("AdminKeyboardOnWindows")
+        private String adminKeyboardOnWindows;
+
         @com.aliyun.core.annotation.NameInMap("AppContentProtection")
         private String appContentProtection;
 
@@ -1468,6 +1474,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CpuSingleRateLimit")
         private Integer cpuSingleRateLimit;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
 
         @com.aliyun.core.annotation.NameInMap("DesktopCount")
         private Integer desktopCount;
@@ -1552,6 +1561,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("InternetPrinter")
         private String internetPrinter;
+
+        @com.aliyun.core.annotation.NameInMap("KeyboardControl")
+        private String keyboardControl;
 
         @com.aliyun.core.annotation.NameInMap("LocalDrive")
         private String localDrive;
@@ -1811,6 +1823,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private DescribePolicyGroups(Builder builder) {
             this.academicProxy = builder.academicProxy;
             this.adminAccess = builder.adminAccess;
+            this.adminKeyboardOnFullScreen = builder.adminKeyboardOnFullScreen;
+            this.adminKeyboardOnWindows = builder.adminKeyboardOnWindows;
             this.appContentProtection = builder.appContentProtection;
             this.authorizeAccessPolicyRules = builder.authorizeAccessPolicyRules;
             this.authorizeSecurityPolicyRules = builder.authorizeSecurityPolicyRules;
@@ -1832,6 +1846,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.cpuRateLimit = builder.cpuRateLimit;
             this.cpuSampleDuration = builder.cpuSampleDuration;
             this.cpuSingleRateLimit = builder.cpuSingleRateLimit;
+            this.description = builder.description;
             this.desktopCount = builder.desktopCount;
             this.desktopGroupCount = builder.desktopGroupCount;
             this.deviceConnectHint = builder.deviceConnectHint;
@@ -1860,6 +1875,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.html5FileTransfer = builder.html5FileTransfer;
             this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
             this.internetPrinter = builder.internetPrinter;
+            this.keyboardControl = builder.keyboardControl;
             this.localDrive = builder.localDrive;
             this.maxReconnectTime = builder.maxReconnectTime;
             this.memoryDownGradeDuration = builder.memoryDownGradeDuration;
@@ -1967,6 +1983,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getAdminAccess() {
             return this.adminAccess;
+        }
+
+        /**
+         * @return adminKeyboardOnFullScreen
+         */
+        public String getAdminKeyboardOnFullScreen() {
+            return this.adminKeyboardOnFullScreen;
+        }
+
+        /**
+         * @return adminKeyboardOnWindows
+         */
+        public String getAdminKeyboardOnWindows() {
+            return this.adminKeyboardOnWindows;
         }
 
         /**
@@ -2114,6 +2144,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public Integer getCpuSingleRateLimit() {
             return this.cpuSingleRateLimit;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -2310,6 +2347,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getInternetPrinter() {
             return this.internetPrinter;
+        }
+
+        /**
+         * @return keyboardControl
+         */
+        public String getKeyboardControl() {
+            return this.keyboardControl;
         }
 
         /**
@@ -2910,6 +2954,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String academicProxy; 
             private String adminAccess; 
+            private String adminKeyboardOnFullScreen; 
+            private String adminKeyboardOnWindows; 
             private String appContentProtection; 
             private java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules; 
             private java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules; 
@@ -2931,6 +2977,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private Integer cpuRateLimit; 
             private Integer cpuSampleDuration; 
             private Integer cpuSingleRateLimit; 
+            private String description; 
             private Integer desktopCount; 
             private Integer desktopGroupCount; 
             private String deviceConnectHint; 
@@ -2959,6 +3006,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String html5FileTransfer; 
             private String internetCommunicationProtocol; 
             private String internetPrinter; 
+            private String keyboardControl; 
             private String localDrive; 
             private Integer maxReconnectTime; 
             private Integer memoryDownGradeDuration; 
@@ -3051,6 +3099,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private Builder(DescribePolicyGroups model) {
                 this.academicProxy = model.academicProxy;
                 this.adminAccess = model.adminAccess;
+                this.adminKeyboardOnFullScreen = model.adminKeyboardOnFullScreen;
+                this.adminKeyboardOnWindows = model.adminKeyboardOnWindows;
                 this.appContentProtection = model.appContentProtection;
                 this.authorizeAccessPolicyRules = model.authorizeAccessPolicyRules;
                 this.authorizeSecurityPolicyRules = model.authorizeSecurityPolicyRules;
@@ -3072,6 +3122,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.cpuRateLimit = model.cpuRateLimit;
                 this.cpuSampleDuration = model.cpuSampleDuration;
                 this.cpuSingleRateLimit = model.cpuSingleRateLimit;
+                this.description = model.description;
                 this.desktopCount = model.desktopCount;
                 this.desktopGroupCount = model.desktopGroupCount;
                 this.deviceConnectHint = model.deviceConnectHint;
@@ -3100,6 +3151,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.html5FileTransfer = model.html5FileTransfer;
                 this.internetCommunicationProtocol = model.internetCommunicationProtocol;
                 this.internetPrinter = model.internetPrinter;
+                this.keyboardControl = model.keyboardControl;
                 this.localDrive = model.localDrive;
                 this.maxReconnectTime = model.maxReconnectTime;
                 this.memoryDownGradeDuration = model.memoryDownGradeDuration;
@@ -3206,6 +3258,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder adminAccess(String adminAccess) {
                 this.adminAccess = adminAccess;
+                return this;
+            }
+
+            /**
+             * AdminKeyboardOnFullScreen.
+             */
+            public Builder adminKeyboardOnFullScreen(String adminKeyboardOnFullScreen) {
+                this.adminKeyboardOnFullScreen = adminKeyboardOnFullScreen;
+                return this;
+            }
+
+            /**
+             * AdminKeyboardOnWindows.
+             */
+            public Builder adminKeyboardOnWindows(String adminKeyboardOnWindows) {
+                this.adminKeyboardOnWindows = adminKeyboardOnWindows;
                 return this;
             }
 
@@ -3431,6 +3499,17 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder cpuSingleRateLimit(Integer cpuSingleRateLimit) {
                 this.cpuSingleRateLimit = cpuSingleRateLimit;
+                return this;
+            }
+
+            /**
+             * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
@@ -3743,6 +3822,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder internetPrinter(String internetPrinter) {
                 this.internetPrinter = internetPrinter;
+                return this;
+            }
+
+            /**
+             * KeyboardControl.
+             */
+            public Builder keyboardControl(String keyboardControl) {
+                this.keyboardControl = keyboardControl;
                 return this;
             }
 

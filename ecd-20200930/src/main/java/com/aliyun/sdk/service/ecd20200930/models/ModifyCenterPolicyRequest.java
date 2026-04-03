@@ -26,6 +26,14 @@ public class ModifyCenterPolicyRequest extends Request {
     private String adminAccess;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdminKeyboardOnFullScreen")
+    private String adminKeyboardOnFullScreen;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdminKeyboardOnWindows")
+    private String adminKeyboardOnWindows;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppContentProtection")
     private String appContentProtection;
 
@@ -113,6 +121,10 @@ public class ModifyCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CpuSingleRateLimit")
     private Integer cpuSingleRateLimit;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeviceConnectHint")
@@ -554,6 +566,8 @@ public class ModifyCenterPolicyRequest extends Request {
         super(builder);
         this.academicProxy = builder.academicProxy;
         this.adminAccess = builder.adminAccess;
+        this.adminKeyboardOnFullScreen = builder.adminKeyboardOnFullScreen;
+        this.adminKeyboardOnWindows = builder.adminKeyboardOnWindows;
         this.appContentProtection = builder.appContentProtection;
         this.authorizeAccessPolicyRule = builder.authorizeAccessPolicyRule;
         this.authorizeSecurityPolicyRule = builder.authorizeSecurityPolicyRule;
@@ -576,6 +590,7 @@ public class ModifyCenterPolicyRequest extends Request {
         this.cpuRateLimit = builder.cpuRateLimit;
         this.cpuSampleDuration = builder.cpuSampleDuration;
         this.cpuSingleRateLimit = builder.cpuSingleRateLimit;
+        this.description = builder.description;
         this.deviceConnectHint = builder.deviceConnectHint;
         this.deviceRedirects = builder.deviceRedirects;
         this.deviceRules = builder.deviceRules;
@@ -711,6 +726,20 @@ public class ModifyCenterPolicyRequest extends Request {
      */
     public String getAdminAccess() {
         return this.adminAccess;
+    }
+
+    /**
+     * @return adminKeyboardOnFullScreen
+     */
+    public String getAdminKeyboardOnFullScreen() {
+        return this.adminKeyboardOnFullScreen;
+    }
+
+    /**
+     * @return adminKeyboardOnWindows
+     */
+    public String getAdminKeyboardOnWindows() {
+        return this.adminKeyboardOnWindows;
     }
 
     /**
@@ -865,6 +894,13 @@ public class ModifyCenterPolicyRequest extends Request {
      */
     public Integer getCpuSingleRateLimit() {
         return this.cpuSingleRateLimit;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -1626,6 +1662,8 @@ public class ModifyCenterPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyCenterPolicyRequest, Builder> {
         private String academicProxy; 
         private String adminAccess; 
+        private String adminKeyboardOnFullScreen; 
+        private String adminKeyboardOnWindows; 
         private String appContentProtection; 
         private java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule; 
         private java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule; 
@@ -1648,6 +1686,7 @@ public class ModifyCenterPolicyRequest extends Request {
         private Integer cpuRateLimit; 
         private Integer cpuSampleDuration; 
         private Integer cpuSingleRateLimit; 
+        private String description; 
         private String deviceConnectHint; 
         private java.util.List<DeviceRedirects> deviceRedirects; 
         private java.util.List<DeviceRules> deviceRules; 
@@ -1765,6 +1804,8 @@ public class ModifyCenterPolicyRequest extends Request {
             super(request);
             this.academicProxy = request.academicProxy;
             this.adminAccess = request.adminAccess;
+            this.adminKeyboardOnFullScreen = request.adminKeyboardOnFullScreen;
+            this.adminKeyboardOnWindows = request.adminKeyboardOnWindows;
             this.appContentProtection = request.appContentProtection;
             this.authorizeAccessPolicyRule = request.authorizeAccessPolicyRule;
             this.authorizeSecurityPolicyRule = request.authorizeSecurityPolicyRule;
@@ -1787,6 +1828,7 @@ public class ModifyCenterPolicyRequest extends Request {
             this.cpuRateLimit = request.cpuRateLimit;
             this.cpuSampleDuration = request.cpuSampleDuration;
             this.cpuSingleRateLimit = request.cpuSingleRateLimit;
+            this.description = request.description;
             this.deviceConnectHint = request.deviceConnectHint;
             this.deviceRedirects = request.deviceRedirects;
             this.deviceRules = request.deviceRules;
@@ -1924,6 +1966,24 @@ public class ModifyCenterPolicyRequest extends Request {
         public Builder adminAccess(String adminAccess) {
             this.putQueryParameter("AdminAccess", adminAccess);
             this.adminAccess = adminAccess;
+            return this;
+        }
+
+        /**
+         * AdminKeyboardOnFullScreen.
+         */
+        public Builder adminKeyboardOnFullScreen(String adminKeyboardOnFullScreen) {
+            this.putQueryParameter("AdminKeyboardOnFullScreen", adminKeyboardOnFullScreen);
+            this.adminKeyboardOnFullScreen = adminKeyboardOnFullScreen;
+            return this;
+        }
+
+        /**
+         * AdminKeyboardOnWindows.
+         */
+        public Builder adminKeyboardOnWindows(String adminKeyboardOnWindows) {
+            this.putQueryParameter("AdminKeyboardOnWindows", adminKeyboardOnWindows);
+            this.adminKeyboardOnWindows = adminKeyboardOnWindows;
             return this;
         }
 
@@ -2185,6 +2245,15 @@ public class ModifyCenterPolicyRequest extends Request {
         public Builder cpuSingleRateLimit(Integer cpuSingleRateLimit) {
             this.putQueryParameter("CpuSingleRateLimit", cpuSingleRateLimit);
             this.cpuSingleRateLimit = cpuSingleRateLimit;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
