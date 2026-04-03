@@ -401,7 +401,7 @@ public class DescribeImageSensitiveFileListRequest extends Request {
         }
 
         /**
-         * SensitiveKeyList.
+         * <p>敏感文件Key列表</p>
          */
         public Builder sensitiveKeyList(java.util.List<String> sensitiveKeyList) {
             this.putQueryParameter("SensitiveKeyList", sensitiveKeyList);

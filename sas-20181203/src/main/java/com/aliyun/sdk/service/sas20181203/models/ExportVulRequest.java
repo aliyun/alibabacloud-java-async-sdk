@@ -552,7 +552,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * VulEntityList.
+         * <p>漏洞组件信息列表</p>
          */
         public Builder vulEntityList(java.util.List<VulEntityList> vulEntityList) {
             this.putQueryParameter("VulEntityList", vulEntityList);
@@ -620,7 +620,10 @@ public class ExportVulRequest extends Request {
             } 
 
             /**
-             * EntityName.
+             * <p>组件名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ollama</p>
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;
@@ -628,7 +631,10 @@ public class ExportVulRequest extends Request {
             }
 
             /**
-             * EntityVersion.
+             * <p>组件版本</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder entityVersion(String entityVersion) {
                 this.entityVersion = entityVersion;

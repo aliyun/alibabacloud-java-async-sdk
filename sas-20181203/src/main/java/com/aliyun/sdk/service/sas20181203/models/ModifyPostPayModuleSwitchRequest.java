@@ -427,7 +427,10 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
             }
 
             /**
-             * AiDigital.
+             * <p>AI Digitization</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder aiDigital(Integer aiDigital) {
                 this.aiDigital = aiDigital;

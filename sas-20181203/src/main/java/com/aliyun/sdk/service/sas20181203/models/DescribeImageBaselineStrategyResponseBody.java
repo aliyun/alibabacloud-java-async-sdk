@@ -209,6 +209,9 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineItemList")
         private java.util.List<BaselineItemList> baselineItemList;
 
+        @com.aliyun.core.annotation.NameInMap("ImageVulClean")
+        private Integer imageVulClean;
+
         @com.aliyun.core.annotation.NameInMap("SelectedItemCount")
         private Integer selectedItemCount;
 
@@ -227,6 +230,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         private Strategy(Builder builder) {
             this.baselineItem = builder.baselineItem;
             this.baselineItemList = builder.baselineItemList;
+            this.imageVulClean = builder.imageVulClean;
             this.selectedItemCount = builder.selectedItemCount;
             this.strategyId = builder.strategyId;
             this.strategyName = builder.strategyName;
@@ -254,6 +258,13 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
          */
         public java.util.List<BaselineItemList> getBaselineItemList() {
             return this.baselineItemList;
+        }
+
+        /**
+         * @return imageVulClean
+         */
+        public Integer getImageVulClean() {
+            return this.imageVulClean;
         }
 
         /**
@@ -294,6 +305,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         public static final class Builder {
             private String baselineItem; 
             private java.util.List<BaselineItemList> baselineItemList; 
+            private Integer imageVulClean; 
             private Integer selectedItemCount; 
             private Long strategyId; 
             private String strategyName; 
@@ -306,6 +318,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             private Builder(Strategy model) {
                 this.baselineItem = model.baselineItem;
                 this.baselineItemList = model.baselineItemList;
+                this.imageVulClean = model.imageVulClean;
                 this.selectedItemCount = model.selectedItemCount;
                 this.strategyId = model.strategyId;
                 this.strategyName = model.strategyName;
@@ -329,6 +342,14 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
              */
             public Builder baselineItemList(java.util.List<BaselineItemList> baselineItemList) {
                 this.baselineItemList = baselineItemList;
+                return this;
+            }
+
+            /**
+             * ImageVulClean.
+             */
+            public Builder imageVulClean(Integer imageVulClean) {
+                this.imageVulClean = imageVulClean;
                 return this;
             }
 

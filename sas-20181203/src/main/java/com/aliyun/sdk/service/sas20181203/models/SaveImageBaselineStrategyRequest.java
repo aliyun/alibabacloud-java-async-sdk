@@ -23,6 +23,10 @@ public class SaveImageBaselineStrategyRequest extends Request {
     private String baselineItemList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageVulClean")
+    private Integer imageVulClean;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -41,6 +45,7 @@ public class SaveImageBaselineStrategyRequest extends Request {
     private SaveImageBaselineStrategyRequest(Builder builder) {
         super(builder);
         this.baselineItemList = builder.baselineItemList;
+        this.imageVulClean = builder.imageVulClean;
         this.lang = builder.lang;
         this.source = builder.source;
         this.strategyId = builder.strategyId;
@@ -65,6 +70,13 @@ public class SaveImageBaselineStrategyRequest extends Request {
      */
     public String getBaselineItemList() {
         return this.baselineItemList;
+    }
+
+    /**
+     * @return imageVulClean
+     */
+    public Integer getImageVulClean() {
+        return this.imageVulClean;
     }
 
     /**
@@ -97,6 +109,7 @@ public class SaveImageBaselineStrategyRequest extends Request {
 
     public static final class Builder extends Request.Builder<SaveImageBaselineStrategyRequest, Builder> {
         private String baselineItemList; 
+        private Integer imageVulClean; 
         private String lang; 
         private String source; 
         private Long strategyId; 
@@ -109,6 +122,7 @@ public class SaveImageBaselineStrategyRequest extends Request {
         private Builder(SaveImageBaselineStrategyRequest request) {
             super(request);
             this.baselineItemList = request.baselineItemList;
+            this.imageVulClean = request.imageVulClean;
             this.lang = request.lang;
             this.source = request.source;
             this.strategyId = request.strategyId;
@@ -128,6 +142,15 @@ public class SaveImageBaselineStrategyRequest extends Request {
         public Builder baselineItemList(String baselineItemList) {
             this.putQueryParameter("BaselineItemList", baselineItemList);
             this.baselineItemList = baselineItemList;
+            return this;
+        }
+
+        /**
+         * ImageVulClean.
+         */
+        public Builder imageVulClean(Integer imageVulClean) {
+            this.putQueryParameter("ImageVulClean", imageVulClean);
+            this.imageVulClean = imageVulClean;
             return this;
         }
 

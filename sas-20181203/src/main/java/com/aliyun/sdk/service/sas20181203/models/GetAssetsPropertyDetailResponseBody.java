@@ -799,7 +799,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Agent.
+             * <p>Agent</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mozilla/5.0 (Windows NT 10.0%3B Win64%3B x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0</p>
              */
             public Builder agent(String agent) {
                 this.agent = agent;
@@ -829,7 +832,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Asset description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Type&quot;: &quot;text&quot;, &quot;Value&quot;: u&quot;\u786e\u4fdd\u7f51\u5173\u5b89\u5168\u9632\u62a4\u3002\u8981\u6c42\uff1a\u5f00\u542fWAF\u9632\u706b\u5899\u9632\u62a4\u529f\u80fd\u3002&quot;}</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -887,7 +893,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ImageDigest.
+             * <p>镜像Digest</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImageDigest</p>
              */
             public Builder imageDigest(String imageDigest) {
                 this.imageDigest = imageDigest;
@@ -986,7 +995,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * McpName.
+             * <p>MCP name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@modelcontextprotocol/server-github</p>
              */
             public Builder mcpName(String mcpName) {
                 this.mcpName = mcpName;
@@ -1123,7 +1135,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * <p>镜像的RepoName</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACR-Example</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -1131,7 +1146,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespace.
+             * <p>镜像Repo命名空间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -1167,7 +1185,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SkillsName.
+             * <p>Skill name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Analytics and Data Analysis</p>
              */
             public Builder skillsName(String skillsName) {
                 this.skillsName = skillsName;
@@ -1175,7 +1196,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>标签</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AI</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1183,7 +1207,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TransportName.
+             * <p>Transmission name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder transportName(String transportName) {
                 this.transportName = transportName;

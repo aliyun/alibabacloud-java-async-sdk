@@ -296,6 +296,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorFile")
         private String errorFile;
 
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
+        private Long expireTime;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -353,6 +356,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             this.clientVersion = builder.clientVersion;
             this.createdTime = builder.createdTime;
             this.errorFile = builder.errorFile;
+            this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
             this.itemsDone = builder.itemsDone;
             this.itemsTotal = builder.itemsTotal;
@@ -433,6 +437,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          */
         public String getErrorFile() {
             return this.errorFile;
+        }
+
+        /**
+         * @return expireTime
+         */
+        public Long getExpireTime() {
+            return this.expireTime;
         }
 
         /**
@@ -556,6 +567,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String clientVersion; 
             private Long createdTime; 
             private String errorFile; 
+            private Long expireTime; 
             private String instanceId; 
             private Long itemsDone; 
             private Long itemsTotal; 
@@ -585,6 +597,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
                 this.clientVersion = model.clientVersion;
                 this.createdTime = model.createdTime;
                 this.errorFile = model.errorFile;
+                this.expireTime = model.expireTime;
                 this.instanceId = model.instanceId;
                 this.itemsDone = model.itemsDone;
                 this.itemsTotal = model.itemsTotal;
@@ -691,6 +704,17 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              */
             public Builder errorFile(String errorFile) {
                 this.errorFile = errorFile;
+                return this;
+            }
+
+            /**
+             * <p>Snapshot expiration timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1799132915000</p>
+             */
+            public Builder expireTime(Long expireTime) {
+                this.expireTime = expireTime;
                 return this;
             }
 

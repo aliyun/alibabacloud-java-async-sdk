@@ -577,7 +577,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * SearchCriteriaList.
+         * <p>搜索条件列表</p>
          */
         public Builder searchCriteriaList(java.util.List<SearchCriteriaList> searchCriteriaList) {
             this.putQueryParameter("SearchCriteriaList", searchCriteriaList);
@@ -773,13 +773,10 @@ public class DescribePropertyScaDetailRequest extends Request {
             } 
 
             /**
-             * <p>The name of the middleware, database, or web service.</p>
-             * <blockquote>
-             * <p> This parameter is deprecated. You can ignore it.</p>
-             * </blockquote>
+             * <p>搜索条件名称</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>Name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -787,7 +784,10 @@ public class DescribePropertyScaDetailRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>搜索条件过滤值</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

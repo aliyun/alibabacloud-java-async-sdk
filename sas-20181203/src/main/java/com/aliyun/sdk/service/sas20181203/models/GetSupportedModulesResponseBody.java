@@ -174,7 +174,14 @@ public class GetSupportedModulesResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleAuth.
+             * <p>Module authorization switch indicator. Values: </p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled</li>
+             * <li><strong>false</strong>: Not enabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder moduleAuth(Boolean moduleAuth) {
                 this.moduleAuth = moduleAuth;

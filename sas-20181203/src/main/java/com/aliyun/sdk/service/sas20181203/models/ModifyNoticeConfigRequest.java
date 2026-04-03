@@ -22,6 +22,10 @@ public class ModifyNoticeConfigRequest extends Request {
     private String bizType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FocusLevel")
+    private String focusLevel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Project")
     private String project;
 
@@ -40,6 +44,7 @@ public class ModifyNoticeConfigRequest extends Request {
     private ModifyNoticeConfigRequest(Builder builder) {
         super(builder);
         this.bizType = builder.bizType;
+        this.focusLevel = builder.focusLevel;
         this.project = builder.project;
         this.route = builder.route;
         this.sourceIp = builder.sourceIp;
@@ -64,6 +69,13 @@ public class ModifyNoticeConfigRequest extends Request {
      */
     public String getBizType() {
         return this.bizType;
+    }
+
+    /**
+     * @return focusLevel
+     */
+    public String getFocusLevel() {
+        return this.focusLevel;
     }
 
     /**
@@ -96,6 +108,7 @@ public class ModifyNoticeConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyNoticeConfigRequest, Builder> {
         private String bizType; 
+        private String focusLevel; 
         private String project; 
         private Integer route; 
         private String sourceIp; 
@@ -108,6 +121,7 @@ public class ModifyNoticeConfigRequest extends Request {
         private Builder(ModifyNoticeConfigRequest request) {
             super(request);
             this.bizType = request.bizType;
+            this.focusLevel = request.focusLevel;
             this.project = request.project;
             this.route = request.route;
             this.sourceIp = request.sourceIp;
@@ -126,6 +140,15 @@ public class ModifyNoticeConfigRequest extends Request {
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
             this.bizType = bizType;
+            return this;
+        }
+
+        /**
+         * FocusLevel.
+         */
+        public Builder focusLevel(String focusLevel) {
+            this.putQueryParameter("FocusLevel", focusLevel);
+            this.focusLevel = focusLevel;
             return this;
         }
 

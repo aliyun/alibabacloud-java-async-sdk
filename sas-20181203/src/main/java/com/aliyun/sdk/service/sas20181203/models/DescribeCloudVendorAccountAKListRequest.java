@@ -237,7 +237,14 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         }
 
         /**
-         * Vendor.
+         * <p>Cloud asset vendor. Values:</p>
+         * <ul>
+         * <li><strong>Tencent</strong>: Tencent Cloud </li>
+         * <li><strong>AWS</strong>: Amazon Web Services</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VOLCENGINE</p>
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

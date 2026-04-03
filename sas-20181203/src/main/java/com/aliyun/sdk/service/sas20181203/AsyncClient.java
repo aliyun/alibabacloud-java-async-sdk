@@ -2590,6 +2590,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSuspiciousOverallConfigResponse> describeSuspiciousOverallConfig(DescribeSuspiciousOverallConfigRequest request);
 
     /**
+     * @param request the request parameters of DescribeSuspiciousSecurityEventyStatistics  DescribeSuspiciousSecurityEventyStatisticsRequest
+     * @return DescribeSuspiciousSecurityEventyStatisticsResponse
+     */
+    CompletableFuture<DescribeSuspiciousSecurityEventyStatisticsResponse> describeSuspiciousSecurityEventyStatistics(DescribeSuspiciousSecurityEventyStatisticsRequest request);
+
+    /**
      * @param request the request parameters of DescribeSuspiciousUUIDConfig  DescribeSuspiciousUUIDConfigRequest
      * @return DescribeSuspiciousUUIDConfigResponse
      */
@@ -3173,6 +3179,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAssetsPropertyItemResponse> getAssetsPropertyItem(GetAssetsPropertyItemRequest request);
 
     /**
+     * @param request the request parameters of GetAttackEventDashboard  GetAttackEventDashboardRequest
+     * @return GetAttackEventDashboardResponse
+     */
+    CompletableFuture<GetAttackEventDashboardResponse> getAttackEventDashboard(GetAttackEventDashboardRequest request);
+
+    /**
+     * @param request the request parameters of GetAttackEventDetail  GetAttackEventDetailRequest
+     * @return GetAttackEventDetailResponse
+     */
+    CompletableFuture<GetAttackEventDetailResponse> getAttackEventDetail(GetAttackEventDetailRequest request);
+
+    /**
      * @param request the request parameters of GetAttackPathEventDetail  GetAttackPathEventDetailRequest
      * @return GetAttackPathEventDetailResponse
      */
@@ -3330,6 +3348,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetClusterCheckItemWarningStatisticsResponse
      */
     CompletableFuture<GetClusterCheckItemWarningStatisticsResponse> getClusterCheckItemWarningStatistics(GetClusterCheckItemWarningStatisticsRequest request);
+
+    /**
+     * @param request the request parameters of GetClusterCheckSummary  GetClusterCheckSummaryRequest
+     * @return GetClusterCheckSummaryResponse
+     */
+    CompletableFuture<GetClusterCheckSummaryResponse> getClusterCheckSummary(GetClusterCheckSummaryRequest request);
 
     /**
      * @param request the request parameters of GetClusterRuleSummary  GetClusterRuleSummaryRequest
@@ -3782,6 +3806,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserLangResponse> getUserLang(GetUserLangRequest request);
 
     /**
+     * @param request the request parameters of GetValidDeductInstances  GetValidDeductInstancesRequest
+     * @return GetValidDeductInstancesResponse
+     */
+    CompletableFuture<GetValidDeductInstancesResponse> getValidDeductInstances(GetValidDeductInstancesRequest request);
+
+    /**
      * @param request the request parameters of GetVirusScanConfig  GetVirusScanConfigRequest
      * @return GetVirusScanConfigResponse
      */
@@ -3992,6 +4022,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAssetSelectionTargetResponse> listAssetSelectionTarget(ListAssetSelectionTargetRequest request);
 
     /**
+     * @param request the request parameters of ListAttackEventInfo  ListAttackEventInfoRequest
+     * @return ListAttackEventInfoResponse
+     */
+    CompletableFuture<ListAttackEventInfoResponse> listAttackEventInfo(ListAttackEventInfoRequest request);
+
+    /**
      * @param request the request parameters of ListAttackPathEvent  ListAttackPathEventRequest
      * @return ListAttackPathEventResponse
      */
@@ -4143,6 +4179,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCloudVendorRegionsResponse
      */
     CompletableFuture<ListCloudVendorRegionsResponse> listCloudVendorRegions(ListCloudVendorRegionsRequest request);
+
+    /**
+     * @param request the request parameters of ListClusterCheckResult  ListClusterCheckResultRequest
+     * @return ListClusterCheckResultResponse
+     */
+    CompletableFuture<ListClusterCheckResultResponse> listClusterCheckResult(ListClusterCheckResultRequest request);
 
     /**
      * @param request the request parameters of ListClusterCnnfStatusDetail  ListClusterCnnfStatusDetailRequest
@@ -4351,6 +4393,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListK8sAccessInfoResponse
      */
     CompletableFuture<ListK8sAccessInfoResponse> listK8sAccessInfo(ListK8sAccessInfoRequest request);
+
+    /**
+     * @param request the request parameters of ListKspmInstances  ListKspmInstancesRequest
+     * @return ListKspmInstancesResponse
+     */
+    CompletableFuture<ListKspmInstancesResponse> listKspmInstances(ListKspmInstancesRequest request);
 
     /**
      * @param request the request parameters of ListLogShipperRegions  ListLogShipperRegionsRequest

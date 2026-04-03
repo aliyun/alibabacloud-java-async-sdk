@@ -119,6 +119,9 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PersistenceDay")
         private Long persistenceDay;
 
+        @com.aliyun.core.annotation.NameInMap("Port")
+        private Integer port;
+
         @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private Long protocolType;
 
@@ -160,6 +163,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             this.netType = builder.netType;
             this.password = builder.password;
             this.persistenceDay = builder.persistenceDay;
+            this.port = builder.port;
             this.protocolType = builder.protocolType;
             this.regionId = builder.regionId;
             this.registryHostIp = builder.registryHostIp;
@@ -228,6 +232,13 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
          */
         public Long getPersistenceDay() {
             return this.persistenceDay;
+        }
+
+        /**
+         * @return port
+         */
+        public Integer getPort() {
+            return this.port;
         }
 
         /**
@@ -315,6 +326,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             private Long netType; 
             private String password; 
             private Long persistenceDay; 
+            private Integer port; 
             private Long protocolType; 
             private String regionId; 
             private String registryHostIp; 
@@ -338,6 +350,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
                 this.netType = model.netType;
                 this.password = model.password;
                 this.persistenceDay = model.persistenceDay;
+                this.port = model.port;
                 this.protocolType = model.protocolType;
                 this.regionId = model.regionId;
                 this.registryHostIp = model.registryHostIp;
@@ -429,6 +442,14 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
              */
             public Builder persistenceDay(Long persistenceDay) {
                 this.persistenceDay = persistenceDay;
+                return this;
+            }
+
+            /**
+             * Port.
+             */
+            public Builder port(Integer port) {
+                this.port = port;
                 return this;
             }
 

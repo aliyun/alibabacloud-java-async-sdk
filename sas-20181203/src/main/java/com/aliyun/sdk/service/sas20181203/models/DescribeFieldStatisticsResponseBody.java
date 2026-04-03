@@ -107,6 +107,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AzureInstanceCount")
         private Integer azureInstanceCount;
 
+        @com.aliyun.core.annotation.NameInMap("BaiduInstanceCount")
+        private Integer baiduInstanceCount;
+
         @com.aliyun.core.annotation.NameInMap("ExposedInstanceCoreCount")
         private Long exposedInstanceCoreCount;
 
@@ -139,6 +142,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("InstanceSyncTaskCount")
         private Integer instanceSyncTaskCount;
+
+        @com.aliyun.core.annotation.NameInMap("KingsoftInstanceCount")
+        private Integer kingsoftInstanceCount;
 
         @com.aliyun.core.annotation.NameInMap("NewInstanceCoreCount")
         private Long newInstanceCoreCount;
@@ -176,6 +182,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RiskInstanceCount")
         private Integer riskInstanceCount;
 
+        @com.aliyun.core.annotation.NameInMap("StateCloudInstanceCount")
+        private Integer stateCloudInstanceCount;
+
         @com.aliyun.core.annotation.NameInMap("TencentInstanceCount")
         private Integer tencentInstanceCount;
 
@@ -184,6 +193,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("TripartiteInstanceCount")
         private Integer tripartiteInstanceCount;
+
+        @com.aliyun.core.annotation.NameInMap("UcloudInstanceCount")
+        private Integer ucloudInstanceCount;
 
         @com.aliyun.core.annotation.NameInMap("UnKnowStatusInstanceCount")
         private Integer unKnowStatusInstanceCount;
@@ -204,6 +216,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             this.aliYunInstanceCount = builder.aliYunInstanceCount;
             this.awsInstanceCount = builder.awsInstanceCount;
             this.azureInstanceCount = builder.azureInstanceCount;
+            this.baiduInstanceCount = builder.baiduInstanceCount;
             this.exposedInstanceCoreCount = builder.exposedInstanceCoreCount;
             this.exposedInstanceCount = builder.exposedInstanceCount;
             this.generalAssetCount = builder.generalAssetCount;
@@ -215,6 +228,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             this.instanceCoreCount = builder.instanceCoreCount;
             this.instanceCount = builder.instanceCount;
             this.instanceSyncTaskCount = builder.instanceSyncTaskCount;
+            this.kingsoftInstanceCount = builder.kingsoftInstanceCount;
             this.newInstanceCoreCount = builder.newInstanceCoreCount;
             this.newInstanceCount = builder.newInstanceCount;
             this.noRiskInstanceCount = builder.noRiskInstanceCount;
@@ -227,9 +241,11 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             this.regionCount = builder.regionCount;
             this.riskInstanceCoreCount = builder.riskInstanceCoreCount;
             this.riskInstanceCount = builder.riskInstanceCount;
+            this.stateCloudInstanceCount = builder.stateCloudInstanceCount;
             this.tencentInstanceCount = builder.tencentInstanceCount;
             this.testAssetCount = builder.testAssetCount;
             this.tripartiteInstanceCount = builder.tripartiteInstanceCount;
+            this.ucloudInstanceCount = builder.ucloudInstanceCount;
             this.unKnowStatusInstanceCount = builder.unKnowStatusInstanceCount;
             this.unprotectedInstanceCoreCount = builder.unprotectedInstanceCoreCount;
             this.unprotectedInstanceCount = builder.unprotectedInstanceCount;
@@ -264,6 +280,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
          */
         public Integer getAzureInstanceCount() {
             return this.azureInstanceCount;
+        }
+
+        /**
+         * @return baiduInstanceCount
+         */
+        public Integer getBaiduInstanceCount() {
+            return this.baiduInstanceCount;
         }
 
         /**
@@ -341,6 +364,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
          */
         public Integer getInstanceSyncTaskCount() {
             return this.instanceSyncTaskCount;
+        }
+
+        /**
+         * @return kingsoftInstanceCount
+         */
+        public Integer getKingsoftInstanceCount() {
+            return this.kingsoftInstanceCount;
         }
 
         /**
@@ -428,6 +458,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return stateCloudInstanceCount
+         */
+        public Integer getStateCloudInstanceCount() {
+            return this.stateCloudInstanceCount;
+        }
+
+        /**
          * @return tencentInstanceCount
          */
         public Integer getTencentInstanceCount() {
@@ -446,6 +483,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
          */
         public Integer getTripartiteInstanceCount() {
             return this.tripartiteInstanceCount;
+        }
+
+        /**
+         * @return ucloudInstanceCount
+         */
+        public Integer getUcloudInstanceCount() {
+            return this.ucloudInstanceCount;
         }
 
         /**
@@ -487,6 +531,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             private Integer aliYunInstanceCount; 
             private Integer awsInstanceCount; 
             private Integer azureInstanceCount; 
+            private Integer baiduInstanceCount; 
             private Long exposedInstanceCoreCount; 
             private Integer exposedInstanceCount; 
             private Integer generalAssetCount; 
@@ -498,6 +543,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             private Long instanceCoreCount; 
             private Integer instanceCount; 
             private Integer instanceSyncTaskCount; 
+            private Integer kingsoftInstanceCount; 
             private Long newInstanceCoreCount; 
             private Integer newInstanceCount; 
             private Integer noRiskInstanceCount; 
@@ -510,9 +556,11 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             private Integer regionCount; 
             private Long riskInstanceCoreCount; 
             private Integer riskInstanceCount; 
+            private Integer stateCloudInstanceCount; 
             private Integer tencentInstanceCount; 
             private Integer testAssetCount; 
             private Integer tripartiteInstanceCount; 
+            private Integer ucloudInstanceCount; 
             private Integer unKnowStatusInstanceCount; 
             private Long unprotectedInstanceCoreCount; 
             private Integer unprotectedInstanceCount; 
@@ -526,6 +574,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
                 this.aliYunInstanceCount = model.aliYunInstanceCount;
                 this.awsInstanceCount = model.awsInstanceCount;
                 this.azureInstanceCount = model.azureInstanceCount;
+                this.baiduInstanceCount = model.baiduInstanceCount;
                 this.exposedInstanceCoreCount = model.exposedInstanceCoreCount;
                 this.exposedInstanceCount = model.exposedInstanceCount;
                 this.generalAssetCount = model.generalAssetCount;
@@ -537,6 +586,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
                 this.instanceCoreCount = model.instanceCoreCount;
                 this.instanceCount = model.instanceCount;
                 this.instanceSyncTaskCount = model.instanceSyncTaskCount;
+                this.kingsoftInstanceCount = model.kingsoftInstanceCount;
                 this.newInstanceCoreCount = model.newInstanceCoreCount;
                 this.newInstanceCount = model.newInstanceCount;
                 this.noRiskInstanceCount = model.noRiskInstanceCount;
@@ -549,9 +599,11 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
                 this.regionCount = model.regionCount;
                 this.riskInstanceCoreCount = model.riskInstanceCoreCount;
                 this.riskInstanceCount = model.riskInstanceCount;
+                this.stateCloudInstanceCount = model.stateCloudInstanceCount;
                 this.tencentInstanceCount = model.tencentInstanceCount;
                 this.testAssetCount = model.testAssetCount;
                 this.tripartiteInstanceCount = model.tripartiteInstanceCount;
+                this.ucloudInstanceCount = model.ucloudInstanceCount;
                 this.unKnowStatusInstanceCount = model.unKnowStatusInstanceCount;
                 this.unprotectedInstanceCoreCount = model.unprotectedInstanceCoreCount;
                 this.unprotectedInstanceCount = model.unprotectedInstanceCount;
@@ -589,6 +641,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
              */
             public Builder azureInstanceCount(Integer azureInstanceCount) {
                 this.azureInstanceCount = azureInstanceCount;
+                return this;
+            }
+
+            /**
+             * BaiduInstanceCount.
+             */
+            public Builder baiduInstanceCount(Integer baiduInstanceCount) {
+                this.baiduInstanceCount = baiduInstanceCount;
                 return this;
             }
 
@@ -710,6 +770,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
              */
             public Builder instanceSyncTaskCount(Integer instanceSyncTaskCount) {
                 this.instanceSyncTaskCount = instanceSyncTaskCount;
+                return this;
+            }
+
+            /**
+             * KingsoftInstanceCount.
+             */
+            public Builder kingsoftInstanceCount(Integer kingsoftInstanceCount) {
+                this.kingsoftInstanceCount = kingsoftInstanceCount;
                 return this;
             }
 
@@ -846,6 +914,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
+             * StateCloudInstanceCount.
+             */
+            public Builder stateCloudInstanceCount(Integer stateCloudInstanceCount) {
+                this.stateCloudInstanceCount = stateCloudInstanceCount;
+                return this;
+            }
+
+            /**
              * <p>The total number of cloud services that are protected by Security Center.</p>
              * 
              * <strong>example:</strong>
@@ -875,6 +951,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
              */
             public Builder tripartiteInstanceCount(Integer tripartiteInstanceCount) {
                 this.tripartiteInstanceCount = tripartiteInstanceCount;
+                return this;
+            }
+
+            /**
+             * UcloudInstanceCount.
+             */
+            public Builder ucloudInstanceCount(Integer ucloudInstanceCount) {
+                this.ucloudInstanceCount = ucloudInstanceCount;
                 return this;
             }
 

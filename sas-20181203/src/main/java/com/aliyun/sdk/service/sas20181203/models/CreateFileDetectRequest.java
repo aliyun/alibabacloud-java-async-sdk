@@ -35,7 +35,6 @@ public class CreateFileDetectRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HashKey")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String hashKey;
 
     @com.aliyun.core.annotation.Query
@@ -212,7 +211,6 @@ public class CreateFileDetectRequest extends Request {
 
         /**
          * <p>The identifier of the file. Only MD5 hash values are supported.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>0a212417e65c26ff133cfff28f6c****</p>

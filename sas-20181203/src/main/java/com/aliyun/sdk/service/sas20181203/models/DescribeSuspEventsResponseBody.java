@@ -1466,7 +1466,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DetectSource.
+             * <p>Source of discovery (invalid field)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder detectSource(String detectSource) {
                 this.detectSource = detectSource;

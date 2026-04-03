@@ -665,7 +665,10 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * DetectSource.
+         * <p>Source of discovery (invalid field)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder detectSource(String detectSource) {
             this.putQueryParameter("DetectSource", detectSource);

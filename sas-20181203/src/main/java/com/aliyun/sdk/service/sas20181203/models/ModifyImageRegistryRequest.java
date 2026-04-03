@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyImageRegistryRequest</p>
  */
 public class ModifyImageRegistryRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    private String domainName;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
@@ -24,6 +28,14 @@ public class ModifyImageRegistryRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    private Integer port;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistryHostIp")
+    private String registryHostIp;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TransPerHour")
@@ -35,8 +47,11 @@ public class ModifyImageRegistryRequest extends Request {
 
     private ModifyImageRegistryRequest(Builder builder) {
         super(builder);
+        this.domainName = builder.domainName;
         this.id = builder.id;
         this.password = builder.password;
+        this.port = builder.port;
+        this.registryHostIp = builder.registryHostIp;
         this.transPerHour = builder.transPerHour;
         this.userName = builder.userName;
     }
@@ -55,6 +70,13 @@ public class ModifyImageRegistryRequest extends Request {
     }
 
     /**
+     * @return domainName
+     */
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    /**
      * @return id
      */
     public Long getId() {
@@ -66,6 +88,20 @@ public class ModifyImageRegistryRequest extends Request {
      */
     public String getPassword() {
         return this.password;
+    }
+
+    /**
+     * @return port
+     */
+    public Integer getPort() {
+        return this.port;
+    }
+
+    /**
+     * @return registryHostIp
+     */
+    public String getRegistryHostIp() {
+        return this.registryHostIp;
     }
 
     /**
@@ -83,8 +119,11 @@ public class ModifyImageRegistryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyImageRegistryRequest, Builder> {
+        private String domainName; 
         private Long id; 
         private String password; 
+        private Integer port; 
+        private String registryHostIp; 
         private Integer transPerHour; 
         private String userName; 
 
@@ -94,11 +133,23 @@ public class ModifyImageRegistryRequest extends Request {
 
         private Builder(ModifyImageRegistryRequest request) {
             super(request);
+            this.domainName = request.domainName;
             this.id = request.id;
             this.password = request.password;
+            this.port = request.port;
+            this.registryHostIp = request.registryHostIp;
             this.transPerHour = request.transPerHour;
             this.userName = request.userName;
         } 
+
+        /**
+         * DomainName.
+         */
+        public Builder domainName(String domainName) {
+            this.putQueryParameter("DomainName", domainName);
+            this.domainName = domainName;
+            return this;
+        }
 
         /**
          * <p>The ID of the image repository. You can call the listImageRegistry operation to query the ID of the image repository.</p>
@@ -121,6 +172,24 @@ public class ModifyImageRegistryRequest extends Request {
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
             this.password = password;
+            return this;
+        }
+
+        /**
+         * Port.
+         */
+        public Builder port(Integer port) {
+            this.putQueryParameter("Port", port);
+            this.port = port;
+            return this;
+        }
+
+        /**
+         * RegistryHostIp.
+         */
+        public Builder registryHostIp(String registryHostIp) {
+            this.putQueryParameter("RegistryHostIp", registryHostIp);
+            this.registryHostIp = registryHostIp;
             return this;
         }
 

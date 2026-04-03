@@ -339,7 +339,10 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckShowName.
+             * <p>检查项展示名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>开启公网访问</p>
              */
             public Builder checkShowName(String checkShowName) {
                 this.checkShowName = checkShowName;
@@ -574,7 +577,10 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * VendorShowName.
+             * <p>厂商名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>阿里云</p>
              */
             public Builder vendorShowName(String vendorShowName) {
                 this.vendorShowName = vendorShowName;

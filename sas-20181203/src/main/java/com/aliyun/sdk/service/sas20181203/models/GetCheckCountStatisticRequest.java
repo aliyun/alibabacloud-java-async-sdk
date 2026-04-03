@@ -101,7 +101,10 @@ public class GetCheckCountStatisticRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>语言参数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -129,6 +132,9 @@ public class GetCheckCountStatisticRequest extends Request {
 
         /**
          * <p>Task source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder taskSources(java.util.List<String> taskSources) {
             this.putQueryParameter("TaskSources", taskSources);

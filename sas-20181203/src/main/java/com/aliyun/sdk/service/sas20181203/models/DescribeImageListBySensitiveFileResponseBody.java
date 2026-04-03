@@ -228,6 +228,9 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
+        private String instanceName;
+
         @com.aliyun.core.annotation.NameInMap("LastScanTime")
         private Long lastScanTime;
 
@@ -256,6 +259,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             this.digest = builder.digest;
             this.firstScanTime = builder.firstScanTime;
             this.instanceId = builder.instanceId;
+            this.instanceName = builder.instanceName;
             this.lastScanTime = builder.lastScanTime;
             this.regionId = builder.regionId;
             this.repoName = builder.repoName;
@@ -293,6 +297,13 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         /**
@@ -355,6 +366,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             private String digest; 
             private Long firstScanTime; 
             private String instanceId; 
+            private String instanceName; 
             private Long lastScanTime; 
             private String regionId; 
             private String repoName; 
@@ -371,6 +383,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
                 this.digest = model.digest;
                 this.firstScanTime = model.firstScanTime;
                 this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
                 this.lastScanTime = model.lastScanTime;
                 this.regionId = model.regionId;
                 this.repoName = model.repoName;
@@ -411,6 +424,14 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
                 return this;
             }
 
