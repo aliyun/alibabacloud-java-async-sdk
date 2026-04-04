@@ -44,6 +44,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckResourceMeasureResponse> checkResourceMeasure(CheckResourceMeasureRequest request);
 
     /**
+     * @param request the request parameters of CheckUserResourceMeasure  CheckUserResourceMeasureRequest
+     * @return CheckUserResourceMeasureResponse
+     */
+    CompletableFuture<CheckUserResourceMeasureResponse> checkUserResourceMeasure(CheckUserResourceMeasureRequest request);
+
+    /**
+     * @param request the request parameters of CreateAppAssistantAgent  CreateAppAssistantAgentRequest
+     * @return CreateAppAssistantAgentResponse
+     */
+    CompletableFuture<CreateAppAssistantAgentResponse> createAppAssistantAgent(CreateAppAssistantAgentRequest request);
+
+    /**
+     * @param request the request parameters of CreateAppAssistantAgentSsoLogin  CreateAppAssistantAgentSsoLoginRequest
+     * @return CreateAppAssistantAgentSsoLoginResponse
+     */
+    CompletableFuture<CreateAppAssistantAgentSsoLoginResponse> createAppAssistantAgentSsoLogin(CreateAppAssistantAgentSsoLoginRequest request);
+
+    /**
      * @param request the request parameters of CreateAppInstance  CreateAppInstanceRequest
      * @return CreateAppInstanceResponse
      */
@@ -192,6 +210,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return IntrospectAppInstanceTicketForPreviewResponse
      */
     CompletableFuture<IntrospectAppInstanceTicketForPreviewResponse> introspectAppInstanceTicketForPreview(IntrospectAppInstanceTicketForPreviewRequest request);
+
+    /**
+     * @param request the request parameters of ListAppAssistantAgents  ListAppAssistantAgentsRequest
+     * @return ListAppAssistantAgentsResponse
+     */
+    CompletableFuture<ListAppAssistantAgentsResponse> listAppAssistantAgents(ListAppAssistantAgentsRequest request);
 
     /**
      * @param request the request parameters of ListAppCommoditySpecificationsForPartner  ListAppCommoditySpecificationsForPartnerRequest
