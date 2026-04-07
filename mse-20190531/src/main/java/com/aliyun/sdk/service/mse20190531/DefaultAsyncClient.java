@@ -310,6 +310,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddZooKeeperSaslUser  AddZooKeeperSaslUserRequest
+     * @return AddZooKeeperSaslUserResponse
+     */
+    @Override
+    public CompletableFuture<AddZooKeeperSaslUserResponse> addZooKeeperSaslUser(AddZooKeeperSaslUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddZooKeeperSaslUser").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddZooKeeperSaslUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddZooKeeperSaslUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ApplyGatewayRoute  ApplyGatewayRouteRequest
      * @return ApplyGatewayRouteResponse
      */
@@ -3211,6 +3229,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListZooKeeperSaslUser  ListZooKeeperSaslUserRequest
+     * @return ListZooKeeperSaslUserResponse
+     */
+    @Override
+    public CompletableFuture<ListZooKeeperSaslUserResponse> listZooKeeperSaslUser(ListZooKeeperSaslUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListZooKeeperSaslUser").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListZooKeeperSaslUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListZooKeeperSaslUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifyGovernanceKubernetesCluster  ModifyGovernanceKubernetesClusterRequest
      * @return ModifyGovernanceKubernetesClusterResponse
      */
@@ -3691,6 +3727,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RemoveAuthPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RemoveZooKeeperSaslUser  RemoveZooKeeperSaslUserRequest
+     * @return RemoveZooKeeperSaslUserResponse
+     */
+    @Override
+    public CompletableFuture<RemoveZooKeeperSaslUserResponse> removeZooKeeperSaslUser(RemoveZooKeeperSaslUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemoveZooKeeperSaslUser").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveZooKeeperSaslUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveZooKeeperSaslUserResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4684,6 +4738,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateZnodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateZooKeeperSaslUser  UpdateZooKeeperSaslUserRequest
+     * @return UpdateZooKeeperSaslUserResponse
+     */
+    @Override
+    public CompletableFuture<UpdateZooKeeperSaslUserResponse> updateZooKeeperSaslUser(UpdateZooKeeperSaslUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateZooKeeperSaslUser").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateZooKeeperSaslUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateZooKeeperSaslUserResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

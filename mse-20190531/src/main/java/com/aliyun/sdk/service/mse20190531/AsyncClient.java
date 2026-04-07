@@ -110,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddServiceSourceResponse> addServiceSource(AddServiceSourceRequest request);
 
     /**
+     * @param request the request parameters of AddZooKeeperSaslUser  AddZooKeeperSaslUserRequest
+     * @return AddZooKeeperSaslUserResponse
+     */
+    CompletableFuture<AddZooKeeperSaslUserResponse> addZooKeeperSaslUser(AddZooKeeperSaslUserRequest request);
+
+    /**
      * @param request the request parameters of ApplyGatewayRoute  ApplyGatewayRouteRequest
      * @return ApplyGatewayRouteResponse
      */
@@ -1163,6 +1169,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListZnodeChildrenResponse> listZnodeChildren(ListZnodeChildrenRequest request);
 
     /**
+     * @param request the request parameters of ListZooKeeperSaslUser  ListZooKeeperSaslUserRequest
+     * @return ListZooKeeperSaslUserResponse
+     */
+    CompletableFuture<ListZooKeeperSaslUserResponse> listZooKeeperSaslUser(ListZooKeeperSaslUserRequest request);
+
+    /**
      * @param request the request parameters of ModifyGovernanceKubernetesCluster  ModifyGovernanceKubernetesClusterRequest
      * @return ModifyGovernanceKubernetesClusterResponse
      */
@@ -1323,6 +1335,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveAuthPolicyResponse
      */
     CompletableFuture<RemoveAuthPolicyResponse> removeAuthPolicy(RemoveAuthPolicyRequest request);
+
+    /**
+     * @param request the request parameters of RemoveZooKeeperSaslUser  RemoveZooKeeperSaslUserRequest
+     * @return RemoveZooKeeperSaslUserResponse
+     */
+    CompletableFuture<RemoveZooKeeperSaslUserResponse> removeZooKeeperSaslUser(RemoveZooKeeperSaslUserRequest request);
 
     /**
      * @param request the request parameters of RestartCluster  RestartClusterRequest
@@ -1668,6 +1686,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateZnodeResponse
      */
     CompletableFuture<UpdateZnodeResponse> updateZnode(UpdateZnodeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateZooKeeperSaslUser  UpdateZooKeeperSaslUserRequest
+     * @return UpdateZooKeeperSaslUserResponse
+     */
+    CompletableFuture<UpdateZooKeeperSaslUserResponse> updateZooKeeperSaslUser(UpdateZooKeeperSaslUserRequest request);
 
     /**
      * @param request the request parameters of UpgradeCluster  UpgradeClusterRequest
