@@ -23,6 +23,10 @@ public class BridgeWebCallRequest extends Request {
     private String applicationId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AudioCodec")
+    private String audioCodec;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BusinessUnitId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String businessUnitId;
@@ -55,6 +59,7 @@ public class BridgeWebCallRequest extends Request {
     private BridgeWebCallRequest(Builder builder) {
         super(builder);
         this.applicationId = builder.applicationId;
+        this.audioCodec = builder.audioCodec;
         this.businessUnitId = builder.businessUnitId;
         this.caller = builder.caller;
         this.deviceId = builder.deviceId;
@@ -82,6 +87,13 @@ public class BridgeWebCallRequest extends Request {
      */
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    /**
+     * @return audioCodec
+     */
+    public String getAudioCodec() {
+        return this.audioCodec;
     }
 
     /**
@@ -135,6 +147,7 @@ public class BridgeWebCallRequest extends Request {
 
     public static final class Builder extends Request.Builder<BridgeWebCallRequest, Builder> {
         private String applicationId; 
+        private String audioCodec; 
         private String businessUnitId; 
         private String caller; 
         private String deviceId; 
@@ -150,6 +163,7 @@ public class BridgeWebCallRequest extends Request {
         private Builder(BridgeWebCallRequest request) {
             super(request);
             this.applicationId = request.applicationId;
+            this.audioCodec = request.audioCodec;
             this.businessUnitId = request.businessUnitId;
             this.caller = request.caller;
             this.deviceId = request.deviceId;
@@ -168,6 +182,15 @@ public class BridgeWebCallRequest extends Request {
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
             this.applicationId = applicationId;
+            return this;
+        }
+
+        /**
+         * AudioCodec.
+         */
+        public Builder audioCodec(String audioCodec) {
+            this.putQueryParameter("AudioCodec", audioCodec);
+            this.audioCodec = audioCodec;
             return this;
         }
 

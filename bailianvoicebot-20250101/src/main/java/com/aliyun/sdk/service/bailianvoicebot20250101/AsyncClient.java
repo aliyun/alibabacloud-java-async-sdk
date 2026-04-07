@@ -38,10 +38,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApplicationVersionResponse> createApplicationVersion(CreateApplicationVersionRequest request);
 
     /**
+     * @param request the request parameters of CreateCloneVoice  CreateCloneVoiceRequest
+     * @return CreateCloneVoiceResponse
+     */
+    CompletableFuture<CreateCloneVoiceResponse> createCloneVoice(CreateCloneVoiceRequest request);
+
+    /**
+     * @param request the request parameters of CreateVariable  CreateVariableRequest
+     * @return CreateVariableResponse
+     */
+    CompletableFuture<CreateVariableResponse> createVariable(CreateVariableRequest request);
+
+    /**
      * @param request the request parameters of DeleteApplication  DeleteApplicationRequest
      * @return DeleteApplicationResponse
      */
     CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCloneVoice  DeleteCloneVoiceRequest
+     * @return DeleteCloneVoiceResponse
+     */
+    CompletableFuture<DeleteCloneVoiceResponse> deleteCloneVoice(DeleteCloneVoiceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVariable  DeleteVariableRequest
+     * @return DeleteVariableResponse
+     */
+    CompletableFuture<DeleteVariableResponse> deleteVariable(DeleteVariableRequest request);
 
     /**
      * @param request the request parameters of GetApplication  GetApplicationRequest
@@ -62,6 +86,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
 
     /**
+     * @param request the request parameters of ListCloneVoice  ListCloneVoiceRequest
+     * @return ListCloneVoiceResponse
+     */
+    CompletableFuture<ListCloneVoiceResponse> listCloneVoice(ListCloneVoiceRequest request);
+
+    /**
+     * @param request the request parameters of ListVariable  ListVariableRequest
+     * @return ListVariableResponse
+     */
+    CompletableFuture<ListVariableResponse> listVariable(ListVariableRequest request);
+
+    /**
      * @param request the request parameters of PublishApplicationVersion  PublishApplicationVersionRequest
      * @return PublishApplicationVersionResponse
      */
@@ -78,5 +114,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateApplicationVersionResponse
      */
     CompletableFuture<UpdateApplicationVersionResponse> updateApplicationVersion(UpdateApplicationVersionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCloneVoice  UpdateCloneVoiceRequest
+     * @return UpdateCloneVoiceResponse
+     */
+    CompletableFuture<UpdateCloneVoiceResponse> updateCloneVoice(UpdateCloneVoiceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVariable  UpdateVariableRequest
+     * @return UpdateVariableResponse
+     */
+    CompletableFuture<UpdateVariableResponse> updateVariable(UpdateVariableRequest request);
 
 }
