@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateScriptResponse> createScript(CreateScriptRequest request);
 
     /**
+     * @param request the request parameters of CreateScriptVersion  CreateScriptVersionRequest
+     * @return CreateScriptVersionResponse
+     */
+    CompletableFuture<CreateScriptVersionResponse> createScriptVersion(CreateScriptVersionRequest request);
+
+    /**
      * @param request the request parameters of CreateVariable  CreateVariableRequest
      * @return CreateVariableResponse
      */
@@ -98,16 +104,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportVocabularyResponse> exportVocabulary(ExportVocabularyRequest request);
 
     /**
+     * @param request the request parameters of GenerateFileUploadParams  GenerateFileUploadParamsRequest
+     * @return GenerateFileUploadParamsResponse
+     */
+    CompletableFuture<GenerateFileUploadParamsResponse> generateFileUploadParams(GenerateFileUploadParamsRequest request);
+
+    /**
      * @param request the request parameters of GetCallDetailRecord  GetCallDetailRecordRequest
      * @return GetCallDetailRecordResponse
      */
     CompletableFuture<GetCallDetailRecordResponse> getCallDetailRecord(GetCallDetailRecordRequest request);
 
     /**
+     * @param request the request parameters of GetRealtimeInstanceStats  GetRealtimeInstanceStatsRequest
+     * @return GetRealtimeInstanceStatsResponse
+     */
+    CompletableFuture<GetRealtimeInstanceStatsResponse> getRealtimeInstanceStats(GetRealtimeInstanceStatsRequest request);
+
+    /**
      * @param request the request parameters of GetRecording  GetRecordingRequest
      * @return GetRecordingResponse
      */
     CompletableFuture<GetRecordingResponse> getRecording(GetRecordingRequest request);
+
+    /**
+     * @param request the request parameters of GetScript  GetScriptRequest
+     * @return GetScriptResponse
+     */
+    CompletableFuture<GetScriptResponse> getScript(GetScriptRequest request);
 
     /**
      * @param request the request parameters of GetSubscription  GetSubscriptionRequest
@@ -132,6 +156,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListBackgroundMusicsResponse
      */
     CompletableFuture<ListBackgroundMusicsResponse> listBackgroundMusics(ListBackgroundMusicsRequest request);
+
+    /**
+     * @param request the request parameters of ListCallDetailRecords  ListCallDetailRecordsRequest
+     * @return ListCallDetailRecordsResponse
+     */
+    CompletableFuture<ListCallDetailRecordsResponse> listCallDetailRecords(ListCallDetailRecordsRequest request);
 
     /**
      * @param request the request parameters of ListCloneVoice  ListCloneVoiceRequest
