@@ -28,12 +28,20 @@ public class ListMigrationOperationsRequest extends Request {
     private String stageType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("businessStatus")
+    private java.util.List<String> businessStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("filter")
     private String filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("operationStatus")
+    private java.util.List<String> operationStatus;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("operationType")
@@ -54,8 +62,10 @@ public class ListMigrationOperationsRequest extends Request {
         super(builder);
         this.migrationId = builder.migrationId;
         this.stageType = builder.stageType;
+        this.businessStatus = builder.businessStatus;
         this.filter = builder.filter;
         this.instanceId = builder.instanceId;
+        this.operationStatus = builder.operationStatus;
         this.operationType = builder.operationType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -89,6 +99,13 @@ public class ListMigrationOperationsRequest extends Request {
     }
 
     /**
+     * @return businessStatus
+     */
+    public java.util.List<String> getBusinessStatus() {
+        return this.businessStatus;
+    }
+
+    /**
      * @return filter
      */
     public String getFilter() {
@@ -100,6 +117,13 @@ public class ListMigrationOperationsRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return operationStatus
+     */
+    public java.util.List<String> getOperationStatus() {
+        return this.operationStatus;
     }
 
     /**
@@ -126,8 +150,10 @@ public class ListMigrationOperationsRequest extends Request {
     public static final class Builder extends Request.Builder<ListMigrationOperationsRequest, Builder> {
         private Long migrationId; 
         private String stageType; 
+        private java.util.List<String> businessStatus; 
         private String filter; 
         private String instanceId; 
+        private java.util.List<String> operationStatus; 
         private String operationType; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -140,8 +166,10 @@ public class ListMigrationOperationsRequest extends Request {
             super(request);
             this.migrationId = request.migrationId;
             this.stageType = request.stageType;
+            this.businessStatus = request.businessStatus;
             this.filter = request.filter;
             this.instanceId = request.instanceId;
+            this.operationStatus = request.operationStatus;
             this.operationType = request.operationType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -172,6 +200,16 @@ public class ListMigrationOperationsRequest extends Request {
         }
 
         /**
+         * businessStatus.
+         */
+        public Builder businessStatus(java.util.List<String> businessStatus) {
+            String businessStatusShrink = shrink(businessStatus, "businessStatus", "simple");
+            this.putQueryParameter("businessStatus", businessStatusShrink);
+            this.businessStatus = businessStatus;
+            return this;
+        }
+
+        /**
          * filter.
          */
         public Builder filter(String filter) {
@@ -186,6 +224,16 @@ public class ListMigrationOperationsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * operationStatus.
+         */
+        public Builder operationStatus(java.util.List<String> operationStatus) {
+            String operationStatusShrink = shrink(operationStatus, "operationStatus", "simple");
+            this.putQueryParameter("operationStatus", operationStatusShrink);
+            this.operationStatus = operationStatus;
             return this;
         }
 
