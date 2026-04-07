@@ -26,6 +26,10 @@ public class ResumeSessionRequest extends Request {
     private String sessionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("fileSystemOnly")
+    private Boolean fileSystemOnly;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
@@ -33,6 +37,7 @@ public class ResumeSessionRequest extends Request {
         super(builder);
         this.functionName = builder.functionName;
         this.sessionId = builder.sessionId;
+        this.fileSystemOnly = builder.fileSystemOnly;
         this.qualifier = builder.qualifier;
     }
 
@@ -64,6 +69,13 @@ public class ResumeSessionRequest extends Request {
     }
 
     /**
+     * @return fileSystemOnly
+     */
+    public Boolean getFileSystemOnly() {
+        return this.fileSystemOnly;
+    }
+
+    /**
      * @return qualifier
      */
     public String getQualifier() {
@@ -73,6 +85,7 @@ public class ResumeSessionRequest extends Request {
     public static final class Builder extends Request.Builder<ResumeSessionRequest, Builder> {
         private String functionName; 
         private String sessionId; 
+        private Boolean fileSystemOnly; 
         private String qualifier; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class ResumeSessionRequest extends Request {
             super(request);
             this.functionName = request.functionName;
             this.sessionId = request.sessionId;
+            this.fileSystemOnly = request.fileSystemOnly;
             this.qualifier = request.qualifier;
         } 
 
@@ -101,6 +115,15 @@ public class ResumeSessionRequest extends Request {
         public Builder sessionId(String sessionId) {
             this.putPathParameter("sessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * fileSystemOnly.
+         */
+        public Builder fileSystemOnly(Boolean fileSystemOnly) {
+            this.putQueryParameter("fileSystemOnly", fileSystemOnly);
+            this.fileSystemOnly = fileSystemOnly;
             return this;
         }
 
