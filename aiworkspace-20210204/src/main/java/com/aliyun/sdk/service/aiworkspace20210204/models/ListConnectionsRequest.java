@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListConnectionsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConnectionIds")
     private java.util.List<String> connectionIds;
 
@@ -71,6 +75,7 @@ public class ListConnectionsRequest extends Request {
 
     private ListConnectionsRequest(Builder builder) {
         super(builder);
+        this.accessibility = builder.accessibility;
         this.connectionIds = builder.connectionIds;
         this.connectionName = builder.connectionName;
         this.connectionTypes = builder.connectionTypes;
@@ -97,6 +102,13 @@ public class ListConnectionsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     /**
@@ -191,6 +203,7 @@ public class ListConnectionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListConnectionsRequest, Builder> {
+        private String accessibility; 
         private java.util.List<String> connectionIds; 
         private String connectionName; 
         private java.util.List<String> connectionTypes; 
@@ -211,6 +224,7 @@ public class ListConnectionsRequest extends Request {
 
         private Builder(ListConnectionsRequest request) {
             super(request);
+            this.accessibility = request.accessibility;
             this.connectionIds = request.connectionIds;
             this.connectionName = request.connectionName;
             this.connectionTypes = request.connectionTypes;
@@ -225,6 +239,15 @@ public class ListConnectionsRequest extends Request {
             this.toolCall = request.toolCall;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putQueryParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
+            return this;
+        }
 
         /**
          * <p>The list of connection IDs.</p>
