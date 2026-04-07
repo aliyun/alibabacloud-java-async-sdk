@@ -329,7 +329,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ch-hangzhou</p>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -367,7 +367,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
          * <li>The CIDR block cannot overlap with the primary CIDR block or an existing secondary CIDR block of the VPC.</li>
          * </ul>
          * <blockquote>
-         * <p> You must and can specify only one of <strong>SecondaryCidrBlock</strong> and <strong>Ipv6CidrBlock</strong>.</p>
+         * <p> You must and can specify only one of <strong>SecondaryCidrBlock</strong> and <strong>IPv6CidrBlock</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

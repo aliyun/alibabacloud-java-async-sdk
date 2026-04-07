@@ -468,7 +468,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch name.</p>
+         * <p>The exact name of the vSwitch that you want to query. Fuzzy match is not supported.</p>
          * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

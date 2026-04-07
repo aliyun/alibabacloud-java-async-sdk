@@ -401,7 +401,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <p>The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):</p>
      * <ol>
      * <li>Call the AllocateVpcIpv6Cidr operation to reserve the IPv6 CIDR block.</li>
-     * <li>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <strong>RegionId</strong>, <strong>VpcId</strong>, and <strong>IPv6CidrBlock</strong> to the IPv6 CIDR bock, and set <strong>IpVersion</strong> to <strong>ipv6</strong>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <strong>RegionId</strong> and <strong>Ipv6CidrBlock</strong> to the IPv6 CIDR block, and set <strong>EnableIpv6</strong> to <strong>true</strong>.</li>
+     * <li>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <strong>RegionId</strong>, <strong>VpcId</strong>, and <strong>IPv6CidrBlock</strong> to the IPv6 CIDR block, and set <strong>IpVersion</strong> to <strong>ipv6</strong>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <strong>RegionId</strong> and <strong>Ipv6CidrBlock</strong> to the IPv6 CIDR block, and set <strong>EnableIpv6</strong> to <strong>true</strong>.</li>
      * </ol>
      * 
      * @param request the request parameters of AllocateVpcIpv6Cidr  AllocateVpcIpv6CidrRequest
@@ -2254,11 +2254,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>After you create a VPC, a vRouter and a route table are automatically created.</li>
      * <li>At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if both 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.</li>
      * <li><strong>CreateVpc</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of the task:<ul>
-     * <li>If the VPC is in the <strong>Creating</strong> state, the VPC is being created.</li>
-     * <li>If the VPC is in the <strong>Created</strong> state, the VPC is created.</li>
+     * <li>If the VPC is in the <strong>Pending</strong> state, the VPC is being created.</li>
+     * <li>If the VPC is in the <strong>Available</strong> state, the VPC is created.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>DeleteRouteEntry</strong> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</li>
+     * <li>You cannot repeatedly call the <strong>CreateVpc</strong> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateVpc  CreateVpcRequest
@@ -3602,8 +3602,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>You can delete only vSwitches that are in the <strong>Available</strong> state.</li>
      * <li>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</li>
      * <li><strong>DeleteVSwitch</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<ul>
-     * <li>If the vSwitch is in the <strong>Pending</strong> state, the vSwitch is being deleted.</li>
-     * <li>If you cannot query the vSwitch, the vSwitch is deleted.</li>
+     * <li>If the vSwitch is in the <strong>Deleting</strong> state, the vSwitch is being deleted.</li>
+     * <li>If the DescribeVSwitchAttributes operation returns empty values for the vSwitch attributes, the vSwitch is deleted.</li>
      * </ul>
      * </li>
      * <li>You cannot repeatedly call the <strong>DeleteVSwitch</strong> operation to delete a vSwitch within the specified period of time.</li>
@@ -5103,6 +5103,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Debugging</h2>
+     * <p><a href="https://api.aliyun.com/#product=Vpc%5C&api=DescribeVpcAttribute%5C&type=RPC%5C&version=2016-04-28">You can run this interface directly in OpenAPI Explorer, saving you the trouble of calculating signatures. After running successfully, OpenAPI Explorer can automatically generate SDK code samples.</a></p>
+     * 
      * @param request the request parameters of DescribeVpcAttribute  DescribeVpcAttributeRequest
      * @return DescribeVpcAttributeResponse
      */

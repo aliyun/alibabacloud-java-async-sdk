@@ -232,11 +232,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
              * <li><strong>BGP</strong></li>
              * <li><strong>ChinaMobile</strong></li>
              * <li><strong>ChinaUnicom</strong></li>
-             * <li><strong>ChinaTelecom</strong></li>
-             * </ul>
-             * <blockquote>
-             * <p> If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
+             * <li><strong>ChinaTelecom</strong>
+             * Note<blockquote>
+             * <p> If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to <strong>ChinaTelecom</strong>,<strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>BGP</p>
@@ -528,7 +529,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
              * <p>The key of tag N.</p>
              * 
              * <strong>example:</strong>
-             * <p>env</p>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -539,7 +540,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
              * <p>The value of tag N.</p>
              * 
              * <strong>example:</strong>
-             * <p>internal</p>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1054,7 +1055,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached. <strong>Attached</strong> is returned only if the VPC is attached to a CEN instance.</p>
+             * <p>The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><strong>Attached</strong>: The VPC is attached to a CEN instance.</li>
+             * <li><strong>Detached</strong>: The VPC is not attached to a CEN instance.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Attached</p>
@@ -1109,7 +1115,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the DHCP options set. Valid values:</p>
+             * <p>The status of the DHCP options set. Valid values: </p>
              * <ul>
              * <li><strong>Available</strong></li>
              * <li><strong>InUse</strong></li>

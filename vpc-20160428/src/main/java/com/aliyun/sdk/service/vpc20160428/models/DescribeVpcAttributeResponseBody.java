@@ -449,7 +449,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of resources deployed in the VPC.</p>
+         * CloudResources.
          */
         public Builder cloudResources(CloudResources cloudResources) {
             this.cloudResources = cloudResources;
