@@ -31,6 +31,10 @@ public class SendChatMessageRequest extends Request {
     private DataSource dataSource;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSources")
+    private java.util.List<DataSources> dataSources;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Message")
     @com.aliyun.core.annotation.Validation(required = true)
     private String message;
@@ -69,6 +73,7 @@ public class SendChatMessageRequest extends Request {
         this.agentId = builder.agentId;
         this.DMSUnit = builder.DMSUnit;
         this.dataSource = builder.dataSource;
+        this.dataSources = builder.dataSources;
         this.message = builder.message;
         this.messageType = builder.messageType;
         this.parentSessionId = builder.parentSessionId;
@@ -111,6 +116,13 @@ public class SendChatMessageRequest extends Request {
      */
     public DataSource getDataSource() {
         return this.dataSource;
+    }
+
+    /**
+     * @return dataSources
+     */
+    public java.util.List<DataSources> getDataSources() {
+        return this.dataSources;
     }
 
     /**
@@ -173,6 +185,7 @@ public class SendChatMessageRequest extends Request {
         private String agentId; 
         private String DMSUnit; 
         private DataSource dataSource; 
+        private java.util.List<DataSources> dataSources; 
         private String message; 
         private String messageType; 
         private String parentSessionId; 
@@ -191,6 +204,7 @@ public class SendChatMessageRequest extends Request {
             this.agentId = request.agentId;
             this.DMSUnit = request.DMSUnit;
             this.dataSource = request.dataSource;
+            this.dataSources = request.dataSources;
             this.message = request.message;
             this.messageType = request.messageType;
             this.parentSessionId = request.parentSessionId;
@@ -229,6 +243,16 @@ public class SendChatMessageRequest extends Request {
             String dataSourceShrink = shrink(dataSource, "DataSource", "json");
             this.putQueryParameter("DataSource", dataSourceShrink);
             this.dataSource = dataSource;
+            return this;
+        }
+
+        /**
+         * DataSources.
+         */
+        public Builder dataSources(java.util.List<DataSources> dataSources) {
+            String dataSourcesShrink = shrink(dataSources, "DataSources", "json");
+            this.putQueryParameter("DataSources", dataSourcesShrink);
+            this.dataSources = dataSources;
             return this;
         }
 
@@ -577,6 +601,270 @@ public class SendChatMessageRequest extends Request {
 
             public DataSource build() {
                 return new DataSource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SendChatMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatMessageRequest</p>
+     */
+    public static class DataSources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DataSourceId")
+        private String dataSourceId;
+
+        @com.aliyun.core.annotation.NameInMap("DataSourceType")
+        private String dataSourceType;
+
+        @com.aliyun.core.annotation.NameInMap("Database")
+        private String database;
+
+        @com.aliyun.core.annotation.NameInMap("DbName")
+        private String dbName;
+
+        @com.aliyun.core.annotation.NameInMap("DmsDatabaseId")
+        private String dmsDatabaseId;
+
+        @com.aliyun.core.annotation.NameInMap("DmsInstanceId")
+        private String dmsInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("Engine")
+        private String engine;
+
+        @com.aliyun.core.annotation.NameInMap("FileId")
+        private String fileId;
+
+        @com.aliyun.core.annotation.NameInMap("Location")
+        private String location;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("Tables")
+        private java.util.List<String> tables;
+
+        private DataSources(Builder builder) {
+            this.dataSourceId = builder.dataSourceId;
+            this.dataSourceType = builder.dataSourceType;
+            this.database = builder.database;
+            this.dbName = builder.dbName;
+            this.dmsDatabaseId = builder.dmsDatabaseId;
+            this.dmsInstanceId = builder.dmsInstanceId;
+            this.engine = builder.engine;
+            this.fileId = builder.fileId;
+            this.location = builder.location;
+            this.regionId = builder.regionId;
+            this.tables = builder.tables;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataSources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataSourceId
+         */
+        public String getDataSourceId() {
+            return this.dataSourceId;
+        }
+
+        /**
+         * @return dataSourceType
+         */
+        public String getDataSourceType() {
+            return this.dataSourceType;
+        }
+
+        /**
+         * @return database
+         */
+        public String getDatabase() {
+            return this.database;
+        }
+
+        /**
+         * @return dbName
+         */
+        public String getDbName() {
+            return this.dbName;
+        }
+
+        /**
+         * @return dmsDatabaseId
+         */
+        public String getDmsDatabaseId() {
+            return this.dmsDatabaseId;
+        }
+
+        /**
+         * @return dmsInstanceId
+         */
+        public String getDmsInstanceId() {
+            return this.dmsInstanceId;
+        }
+
+        /**
+         * @return engine
+         */
+        public String getEngine() {
+            return this.engine;
+        }
+
+        /**
+         * @return fileId
+         */
+        public String getFileId() {
+            return this.fileId;
+        }
+
+        /**
+         * @return location
+         */
+        public String getLocation() {
+            return this.location;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return tables
+         */
+        public java.util.List<String> getTables() {
+            return this.tables;
+        }
+
+        public static final class Builder {
+            private String dataSourceId; 
+            private String dataSourceType; 
+            private String database; 
+            private String dbName; 
+            private String dmsDatabaseId; 
+            private String dmsInstanceId; 
+            private String engine; 
+            private String fileId; 
+            private String location; 
+            private String regionId; 
+            private java.util.List<String> tables; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSources model) {
+                this.dataSourceId = model.dataSourceId;
+                this.dataSourceType = model.dataSourceType;
+                this.database = model.database;
+                this.dbName = model.dbName;
+                this.dmsDatabaseId = model.dmsDatabaseId;
+                this.dmsInstanceId = model.dmsInstanceId;
+                this.engine = model.engine;
+                this.fileId = model.fileId;
+                this.location = model.location;
+                this.regionId = model.regionId;
+                this.tables = model.tables;
+            } 
+
+            /**
+             * DataSourceId.
+             */
+            public Builder dataSourceId(String dataSourceId) {
+                this.dataSourceId = dataSourceId;
+                return this;
+            }
+
+            /**
+             * DataSourceType.
+             */
+            public Builder dataSourceType(String dataSourceType) {
+                this.dataSourceType = dataSourceType;
+                return this;
+            }
+
+            /**
+             * Database.
+             */
+            public Builder database(String database) {
+                this.database = database;
+                return this;
+            }
+
+            /**
+             * DbName.
+             */
+            public Builder dbName(String dbName) {
+                this.dbName = dbName;
+                return this;
+            }
+
+            /**
+             * DmsDatabaseId.
+             */
+            public Builder dmsDatabaseId(String dmsDatabaseId) {
+                this.dmsDatabaseId = dmsDatabaseId;
+                return this;
+            }
+
+            /**
+             * DmsInstanceId.
+             */
+            public Builder dmsInstanceId(String dmsInstanceId) {
+                this.dmsInstanceId = dmsInstanceId;
+                return this;
+            }
+
+            /**
+             * Engine.
+             */
+            public Builder engine(String engine) {
+                this.engine = engine;
+                return this;
+            }
+
+            /**
+             * FileId.
+             */
+            public Builder fileId(String fileId) {
+                this.fileId = fileId;
+                return this;
+            }
+
+            /**
+             * Location.
+             */
+            public Builder location(String location) {
+                this.location = location;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * Tables.
+             */
+            public Builder tables(java.util.List<String> tables) {
+                this.tables = tables;
+                return this;
+            }
+
+            public DataSources build() {
+                return new DataSources(this);
             } 
 
         } 

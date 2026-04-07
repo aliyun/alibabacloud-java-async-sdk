@@ -29,6 +29,9 @@ public class OpenClawInstanceVO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BasicAuthUsername")
     private String basicAuthUsername;
 
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    private String chargeType;
+
     @com.aliyun.core.annotation.NameInMap("Cpu")
     private Double cpu;
 
@@ -56,6 +59,9 @@ public class OpenClawInstanceVO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LastActiveTime")
     private String lastActiveTime;
 
+    @com.aliyun.core.annotation.NameInMap("LockTime")
+    private String lockTime;
+
     @com.aliyun.core.annotation.NameInMap("MemorySize")
     private Integer memorySize;
 
@@ -77,6 +83,9 @@ public class OpenClawInstanceVO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("StatusMessage")
     private String statusMessage;
 
+    @com.aliyun.core.annotation.NameInMap("TrialExpireTime")
+    private String trialExpireTime;
+
     @com.aliyun.core.annotation.NameInMap("Variables")
     private String variables;
 
@@ -85,6 +94,7 @@ public class OpenClawInstanceVO extends TeaModel {
         this.authType = builder.authType;
         this.basicAuthPassword = builder.basicAuthPassword;
         this.basicAuthUsername = builder.basicAuthUsername;
+        this.chargeType = builder.chargeType;
         this.cpu = builder.cpu;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
@@ -94,6 +104,7 @@ public class OpenClawInstanceVO extends TeaModel {
         this.instanceName = builder.instanceName;
         this.instanceRegion = builder.instanceRegion;
         this.lastActiveTime = builder.lastActiveTime;
+        this.lockTime = builder.lockTime;
         this.memorySize = builder.memorySize;
         this.openclawToken = builder.openclawToken;
         this.ownerUid = builder.ownerUid;
@@ -101,6 +112,7 @@ public class OpenClawInstanceVO extends TeaModel {
         this.status = builder.status;
         this.statusDesc = builder.statusDesc;
         this.statusMessage = builder.statusMessage;
+        this.trialExpireTime = builder.trialExpireTime;
         this.variables = builder.variables;
     }
 
@@ -142,6 +154,13 @@ public class OpenClawInstanceVO extends TeaModel {
      */
     public String getBasicAuthUsername() {
         return this.basicAuthUsername;
+    }
+
+    /**
+     * @return chargeType
+     */
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     /**
@@ -208,6 +227,13 @@ public class OpenClawInstanceVO extends TeaModel {
     }
 
     /**
+     * @return lockTime
+     */
+    public String getLockTime() {
+        return this.lockTime;
+    }
+
+    /**
      * @return memorySize
      */
     public Integer getMemorySize() {
@@ -257,6 +283,13 @@ public class OpenClawInstanceVO extends TeaModel {
     }
 
     /**
+     * @return trialExpireTime
+     */
+    public String getTrialExpireTime() {
+        return this.trialExpireTime;
+    }
+
+    /**
      * @return variables
      */
     public String getVariables() {
@@ -268,6 +301,7 @@ public class OpenClawInstanceVO extends TeaModel {
         private String authType; 
         private String basicAuthPassword; 
         private String basicAuthUsername; 
+        private String chargeType; 
         private Double cpu; 
         private String gmtCreate; 
         private String gmtModified; 
@@ -277,6 +311,7 @@ public class OpenClawInstanceVO extends TeaModel {
         private String instanceName; 
         private String instanceRegion; 
         private String lastActiveTime; 
+        private String lockTime; 
         private Integer memorySize; 
         private String openclawToken; 
         private String ownerUid; 
@@ -284,6 +319,7 @@ public class OpenClawInstanceVO extends TeaModel {
         private Integer status; 
         private String statusDesc; 
         private String statusMessage; 
+        private String trialExpireTime; 
         private String variables; 
 
         private Builder() {
@@ -294,6 +330,7 @@ public class OpenClawInstanceVO extends TeaModel {
             this.authType = model.authType;
             this.basicAuthPassword = model.basicAuthPassword;
             this.basicAuthUsername = model.basicAuthUsername;
+            this.chargeType = model.chargeType;
             this.cpu = model.cpu;
             this.gmtCreate = model.gmtCreate;
             this.gmtModified = model.gmtModified;
@@ -303,6 +340,7 @@ public class OpenClawInstanceVO extends TeaModel {
             this.instanceName = model.instanceName;
             this.instanceRegion = model.instanceRegion;
             this.lastActiveTime = model.lastActiveTime;
+            this.lockTime = model.lockTime;
             this.memorySize = model.memorySize;
             this.openclawToken = model.openclawToken;
             this.ownerUid = model.ownerUid;
@@ -310,6 +348,7 @@ public class OpenClawInstanceVO extends TeaModel {
             this.status = model.status;
             this.statusDesc = model.statusDesc;
             this.statusMessage = model.statusMessage;
+            this.trialExpireTime = model.trialExpireTime;
             this.variables = model.variables;
         } 
 
@@ -342,6 +381,14 @@ public class OpenClawInstanceVO extends TeaModel {
          */
         public Builder basicAuthUsername(String basicAuthUsername) {
             this.basicAuthUsername = basicAuthUsername;
+            return this;
+        }
+
+        /**
+         * ChargeType.
+         */
+        public Builder chargeType(String chargeType) {
+            this.chargeType = chargeType;
             return this;
         }
 
@@ -418,6 +465,14 @@ public class OpenClawInstanceVO extends TeaModel {
         }
 
         /**
+         * LockTime.
+         */
+        public Builder lockTime(String lockTime) {
+            this.lockTime = lockTime;
+            return this;
+        }
+
+        /**
          * MemorySize.
          */
         public Builder memorySize(Integer memorySize) {
@@ -470,6 +525,14 @@ public class OpenClawInstanceVO extends TeaModel {
          */
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = statusMessage;
+            return this;
+        }
+
+        /**
+         * TrialExpireTime.
+         */
+        public Builder trialExpireTime(String trialExpireTime) {
+            this.trialExpireTime = trialExpireTime;
             return this;
         }
 
