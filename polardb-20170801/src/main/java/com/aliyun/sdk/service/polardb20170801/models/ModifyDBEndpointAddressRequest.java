@@ -28,7 +28,6 @@ public class ModifyDBEndpointAddressRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBEndpointId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBEndpointId;
 
     @com.aliyun.core.annotation.Query
@@ -239,7 +238,6 @@ public class ModifyDBEndpointAddressRequest extends Request {
          * <blockquote>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query endpoint IDs.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>pe-****************</p>

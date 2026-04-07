@@ -364,6 +364,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoAddNewNodes")
         private String autoAddNewNodes;
 
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
+        private String connectionString;
+
         @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
@@ -379,6 +382,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
+        @com.aliyun.core.annotation.NameInMap("NetType")
+        private String netType;
+
         @com.aliyun.core.annotation.NameInMap("NodeWithRoles")
         private String nodeWithRoles;
 
@@ -391,6 +397,12 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolarSccWaitTimeout")
         private String polarSccWaitTimeout;
 
+        @com.aliyun.core.annotation.NameInMap("Port")
+        private String port;
+
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
+
         @com.aliyun.core.annotation.NameInMap("ReadWriteMode")
         private String readWriteMode;
 
@@ -400,21 +412,29 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
+        @com.aliyun.core.annotation.NameInMap("VPCId")
+        private String VPCId;
+
         private Items(Builder builder) {
             this.addressItems = builder.addressItems;
             this.autoAddNewNodes = builder.autoAddNewNodes;
+            this.connectionString = builder.connectionString;
             this.DBClusterId = builder.DBClusterId;
             this.DBEndpointDescription = builder.DBEndpointDescription;
             this.DBEndpointId = builder.DBEndpointId;
             this.endpointConfig = builder.endpointConfig;
             this.endpointType = builder.endpointType;
+            this.netType = builder.netType;
             this.nodeWithRoles = builder.nodeWithRoles;
             this.nodes = builder.nodes;
             this.polarSccTimeoutAction = builder.polarSccTimeoutAction;
             this.polarSccWaitTimeout = builder.polarSccWaitTimeout;
+            this.port = builder.port;
+            this.protocol = builder.protocol;
             this.readWriteMode = builder.readWriteMode;
             this.sccMode = builder.sccMode;
             this.serviceName = builder.serviceName;
+            this.VPCId = builder.VPCId;
         }
 
         public static Builder builder() {
@@ -437,6 +457,13 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
          */
         public String getAutoAddNewNodes() {
             return this.autoAddNewNodes;
+        }
+
+        /**
+         * @return connectionString
+         */
+        public String getConnectionString() {
+            return this.connectionString;
         }
 
         /**
@@ -475,6 +502,13 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         }
 
         /**
+         * @return netType
+         */
+        public String getNetType() {
+            return this.netType;
+        }
+
+        /**
          * @return nodeWithRoles
          */
         public String getNodeWithRoles() {
@@ -503,6 +537,20 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         }
 
         /**
+         * @return port
+         */
+        public String getPort() {
+            return this.port;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        /**
          * @return readWriteMode
          */
         public String getReadWriteMode() {
@@ -523,21 +571,33 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             return this.serviceName;
         }
 
+        /**
+         * @return VPCId
+         */
+        public String getVPCId() {
+            return this.VPCId;
+        }
+
         public static final class Builder {
             private java.util.List<AddressItems> addressItems; 
             private String autoAddNewNodes; 
+            private String connectionString; 
             private String DBClusterId; 
             private String DBEndpointDescription; 
             private String DBEndpointId; 
             private String endpointConfig; 
             private String endpointType; 
+            private String netType; 
             private String nodeWithRoles; 
             private String nodes; 
             private String polarSccTimeoutAction; 
             private String polarSccWaitTimeout; 
+            private String port; 
+            private String protocol; 
             private String readWriteMode; 
             private String sccMode; 
             private String serviceName; 
+            private String VPCId; 
 
             private Builder() {
             } 
@@ -545,18 +605,23 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             private Builder(Items model) {
                 this.addressItems = model.addressItems;
                 this.autoAddNewNodes = model.autoAddNewNodes;
+                this.connectionString = model.connectionString;
                 this.DBClusterId = model.DBClusterId;
                 this.DBEndpointDescription = model.DBEndpointDescription;
                 this.DBEndpointId = model.DBEndpointId;
                 this.endpointConfig = model.endpointConfig;
                 this.endpointType = model.endpointType;
+                this.netType = model.netType;
                 this.nodeWithRoles = model.nodeWithRoles;
                 this.nodes = model.nodes;
                 this.polarSccTimeoutAction = model.polarSccTimeoutAction;
                 this.polarSccWaitTimeout = model.polarSccWaitTimeout;
+                this.port = model.port;
+                this.protocol = model.protocol;
                 this.readWriteMode = model.readWriteMode;
                 this.sccMode = model.sccMode;
                 this.serviceName = model.serviceName;
+                this.VPCId = model.VPCId;
             } 
 
             /**
@@ -579,6 +644,17 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
              */
             public Builder autoAddNewNodes(String autoAddNewNodes) {
                 this.autoAddNewNodes = autoAddNewNodes;
+                return this;
+            }
+
+            /**
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>********.rwlb.polardb-pg-public.rds.aliyuncs.com</p>
+             */
+            public Builder connectionString(String connectionString) {
+                this.connectionString = connectionString;
                 return this;
             }
 
@@ -666,6 +742,21 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The network type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong></li>
+             * <li><strong>Private</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
+             */
+            public Builder netType(String netType) {
+                this.netType = netType;
+                return this;
+            }
+
+            /**
              * <p>The role name of each node in the endpoint. The role name of the primary node is <strong>Writer</strong>. Multiple read-only nodes can be associated with an endpoint. Therefore, the role name of each read-only node is suffixed with a number. For example, you can use <strong>Reader1</strong> and <strong>Reader2</strong> as the role names.</p>
              * <blockquote>
              * <p> This parameter is valid only for PolarDB for PostgreSQL clusters and PolarDB for PostgreSQL (Compatible with Oracle)) clusters.</p>
@@ -717,6 +808,25 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1521</p>
+             */
+            public Builder port(String port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            /**
              * <p>The read/write mode. Valid values:</p>
              * <ul>
              * <li><strong>ReadWrite</strong>: handles read and write requests. Automatic read/write splitting is enabled.</li>
@@ -751,6 +861,17 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-***************</p>
+             */
+            public Builder VPCId(String VPCId) {
+                this.VPCId = VPCId;
                 return this;
             }
 
