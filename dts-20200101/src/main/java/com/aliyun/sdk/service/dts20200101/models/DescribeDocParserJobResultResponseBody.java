@@ -38,6 +38,9 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
+    @com.aliyun.core.annotation.NameInMap("OuterFileUrl")
+    private String outerFileUrl;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -52,6 +55,7 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         this.errMessage = builder.errMessage;
         this.fileUrl = builder.fileUrl;
         this.httpStatusCode = builder.httpStatusCode;
+        this.outerFileUrl = builder.outerFileUrl;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -118,6 +122,13 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     }
 
     /**
+     * @return outerFileUrl
+     */
+    public String getOuterFileUrl() {
+        return this.outerFileUrl;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -139,6 +150,7 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         private String errMessage; 
         private String fileUrl; 
         private Integer httpStatusCode; 
+        private String outerFileUrl; 
         private String requestId; 
         private Boolean success; 
 
@@ -153,6 +165,7 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
             this.errMessage = model.errMessage;
             this.fileUrl = model.fileUrl;
             this.httpStatusCode = model.httpStatusCode;
+            this.outerFileUrl = model.outerFileUrl;
             this.requestId = model.requestId;
             this.success = model.success;
         } 
@@ -210,6 +223,14 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * OuterFileUrl.
+         */
+        public Builder outerFileUrl(String outerFileUrl) {
+            this.outerFileUrl = outerFileUrl;
             return this;
         }
 
