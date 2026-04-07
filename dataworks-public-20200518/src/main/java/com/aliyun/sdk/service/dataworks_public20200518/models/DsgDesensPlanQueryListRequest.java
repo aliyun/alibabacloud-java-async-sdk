@@ -42,11 +42,23 @@ public class DsgDesensPlanQueryListRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SceneId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private Integer sceneId;
+    private Long sceneId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("columns")
+    private java.util.List<Columns> columns;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dataType")
+    private String dataType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("emptyNotDesesn")
+    private String emptyNotDesesn;
 
     private DsgDesensPlanQueryListRequest(Builder builder) {
         super(builder);
@@ -57,6 +69,9 @@ public class DsgDesensPlanQueryListRequest extends Request {
         this.ruleName = builder.ruleName;
         this.sceneId = builder.sceneId;
         this.status = builder.status;
+        this.columns = builder.columns;
+        this.dataType = builder.dataType;
+        this.emptyNotDesesn = builder.emptyNotDesesn;
     }
 
     public static Builder builder() {
@@ -110,7 +125,7 @@ public class DsgDesensPlanQueryListRequest extends Request {
     /**
      * @return sceneId
      */
-    public Integer getSceneId() {
+    public Long getSceneId() {
         return this.sceneId;
     }
 
@@ -121,14 +136,38 @@ public class DsgDesensPlanQueryListRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return columns
+     */
+    public java.util.List<Columns> getColumns() {
+        return this.columns;
+    }
+
+    /**
+     * @return dataType
+     */
+    public String getDataType() {
+        return this.dataType;
+    }
+
+    /**
+     * @return emptyNotDesesn
+     */
+    public String getEmptyNotDesesn() {
+        return this.emptyNotDesesn;
+    }
+
     public static final class Builder extends Request.Builder<DsgDesensPlanQueryListRequest, Builder> {
         private String regionId; 
         private String owner; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String ruleName; 
-        private Integer sceneId; 
+        private Long sceneId; 
         private Integer status; 
+        private java.util.List<Columns> columns; 
+        private String dataType; 
+        private String emptyNotDesesn; 
 
         private Builder() {
             super();
@@ -143,6 +182,9 @@ public class DsgDesensPlanQueryListRequest extends Request {
             this.ruleName = request.ruleName;
             this.sceneId = request.sceneId;
             this.status = request.status;
+            this.columns = request.columns;
+            this.dataType = request.dataType;
+            this.emptyNotDesesn = request.emptyNotDesesn;
         } 
 
         /**
@@ -211,7 +253,7 @@ public class DsgDesensPlanQueryListRequest extends Request {
          * <strong>example:</strong>
          * <p>123</p>
          */
-        public Builder sceneId(Integer sceneId) {
+        public Builder sceneId(Long sceneId) {
             this.putQueryParameter("SceneId", sceneId);
             this.sceneId = sceneId;
             return this;
@@ -233,6 +275,34 @@ public class DsgDesensPlanQueryListRequest extends Request {
             return this;
         }
 
+        /**
+         * columns.
+         */
+        public Builder columns(java.util.List<Columns> columns) {
+            String columnsShrink = shrink(columns, "columns", "json");
+            this.putQueryParameter("columns", columnsShrink);
+            this.columns = columns;
+            return this;
+        }
+
+        /**
+         * dataType.
+         */
+        public Builder dataType(String dataType) {
+            this.putQueryParameter("dataType", dataType);
+            this.dataType = dataType;
+            return this;
+        }
+
+        /**
+         * emptyNotDesesn.
+         */
+        public Builder emptyNotDesesn(String emptyNotDesesn) {
+            this.putQueryParameter("emptyNotDesesn", emptyNotDesesn);
+            this.emptyNotDesesn = emptyNotDesesn;
+            return this;
+        }
+
         @Override
         public DsgDesensPlanQueryListRequest build() {
             return new DsgDesensPlanQueryListRequest(this);
@@ -240,4 +310,121 @@ public class DsgDesensPlanQueryListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DsgDesensPlanQueryListRequest} extends {@link TeaModel}
+     *
+     * <p>DsgDesensPlanQueryListRequest</p>
+     */
+    public static class Columns extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("column")
+        private String column;
+
+        @com.aliyun.core.annotation.NameInMap("dbType")
+        private String dbType;
+
+        @com.aliyun.core.annotation.NameInMap("project")
+        private String project;
+
+        @com.aliyun.core.annotation.NameInMap("table")
+        private String table;
+
+        private Columns(Builder builder) {
+            this.column = builder.column;
+            this.dbType = builder.dbType;
+            this.project = builder.project;
+            this.table = builder.table;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Columns create() {
+            return builder().build();
+        }
+
+        /**
+         * @return column
+         */
+        public String getColumn() {
+            return this.column;
+        }
+
+        /**
+         * @return dbType
+         */
+        public String getDbType() {
+            return this.dbType;
+        }
+
+        /**
+         * @return project
+         */
+        public String getProject() {
+            return this.project;
+        }
+
+        /**
+         * @return table
+         */
+        public String getTable() {
+            return this.table;
+        }
+
+        public static final class Builder {
+            private String column; 
+            private String dbType; 
+            private String project; 
+            private String table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.column = model.column;
+                this.dbType = model.dbType;
+                this.project = model.project;
+                this.table = model.table;
+            } 
+
+            /**
+             * column.
+             */
+            public Builder column(String column) {
+                this.column = column;
+                return this;
+            }
+
+            /**
+             * dbType.
+             */
+            public Builder dbType(String dbType) {
+                this.dbType = dbType;
+                return this;
+            }
+
+            /**
+             * project.
+             */
+            public Builder project(String project) {
+                this.project = project;
+                return this;
+            }
+
+            /**
+             * table.
+             */
+            public Builder table(String table) {
+                this.table = table;
+                return this;
+            }
+
+            public Columns build() {
+                return new Columns(this);
+            } 
+
+        } 
+
+    }
 }

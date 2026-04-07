@@ -67,7 +67,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The query results returned by page.</p>
+         * <p>The paginated query results of permission requests.</p>
          */
         public Builder applyOrders(ApplyOrders applyOrders) {
             this.applyOrders = applyOrders;
@@ -144,7 +144,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             } 
 
             /**
-             * Actions.
+             * <p>The operation type.</p>
              */
             public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
@@ -152,7 +152,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the table on which you requested permissions.</p>
+             * <p>The name of the requested table.</p>
              * 
              * <strong>example:</strong>
              * <p>aTableName</p>
@@ -222,7 +222,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the object on which you requested permissions.</p>
+             * <p>The information about the requested object.</p>
              */
             public Builder objectMetaList(java.util.List<ObjectMetaList> objectMetaList) {
                 this.objectMetaList = objectMetaList;
@@ -230,7 +230,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the DataWorks workspace that is associated with the MaxCompute project in which you requested permissions on a table.</p>
+             * <p>The name of the DataWorks workspace that contains the MaxCompute project for which permissions are requested.</p>
              * 
              * <strong>example:</strong>
              * <p>aWorkspaceName</p>
@@ -313,7 +313,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reason for your request. The administrator determines whether to approve the request based on the reason.</p>
+             * <p>The reason for the permission request, which is used by administrators for evaluation and approval.</p>
              * 
              * <strong>example:</strong>
              * <p>I need to use this table</p>
@@ -324,7 +324,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</p>
+             * <p>The type of permission request. Only the value 1 is supported, which indicates an ACL permission request for objects.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -335,7 +335,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the object on which you requested permissions.</p>
+             * <p>The content of the requested object.</p>
              */
             public Builder projectMeta(ProjectMeta projectMeta) {
                 this.projectMeta = projectMeta;
@@ -467,7 +467,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account that was used to submit the permission request order.</p>
+             * <p>The Alibaba Cloud account ID of the user who submitted the permission request.</p>
              * 
              * <strong>example:</strong>
              * <p>267842600408993176</p>
@@ -478,7 +478,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the permission request order was submitted. The parameter value is a UNIX timestamp.</p>
+             * <p>The time when the permission request was submitted, in Unix timestamp format.</p>
              * 
              * <strong>example:</strong>
              * <p>1615284086000</p>
@@ -489,7 +489,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the permission request order.</p>
+             * <p>The content of the permission request.</p>
              */
             public Builder approveContent(ApproveContent approveContent) {
                 this.approveContent = approveContent;
@@ -497,7 +497,10 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * FinishApprovalComment.
+             * <p>The final approval comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agree</p>
              */
             public Builder finishApprovalComment(String finishApprovalComment) {
                 this.finishApprovalComment = finishApprovalComment;
@@ -505,7 +508,10 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * FinishApprovalTimestamp.
+             * <p>The final approval timestamp. Displayed as a Unix timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1757496687000</p>
              */
             public Builder finishApprovalTimestamp(Long finishApprovalTimestamp) {
                 this.finishApprovalTimestamp = finishApprovalTimestamp;
@@ -513,7 +519,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the permission request order.</p>
+             * <p>The permission request ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ad8da78d-8135-455e-9486-27cf213fc140</p>
@@ -524,12 +530,12 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the permission request order. Valid values:</p>
+             * <p>The status of the permission request. Valid values:</p>
              * <ul>
-             * <li>1: to be processed</li>
-             * <li>2: approved and authorized</li>
-             * <li>3: approved but authorization failed</li>
-             * <li>4: rejected</li>
+             * <li>1: Pending approval</li>
+             * <li>2: Approved and authorization succeeded</li>
+             * <li>3: Approved but authorization failed</li>
+             * <li>4: Rejected</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -626,7 +632,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of the permission request orders.</p>
+             * <p>The list of permission requests.</p>
              */
             public Builder applyOrder(java.util.List<ApplyOrder> applyOrder) {
                 this.applyOrder = applyOrder;
@@ -656,7 +662,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of permission requests returned.</p>
              * 
              * <strong>example:</strong>
              * <p>150</p>

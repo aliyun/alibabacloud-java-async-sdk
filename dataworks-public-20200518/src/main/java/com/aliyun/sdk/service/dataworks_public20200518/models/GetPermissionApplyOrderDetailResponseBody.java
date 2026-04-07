@@ -67,7 +67,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the permission request order.</p>
+         * <p>Details of the permission request order.</p>
          */
         public Builder applyOrderDetail(ApplyOrderDetail applyOrderDetail) {
             this.applyOrderDetail = applyOrderDetail;

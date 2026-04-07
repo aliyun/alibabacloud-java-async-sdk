@@ -729,9 +729,6 @@ public class UpdateTableRequest extends Request {
 
             /**
              * <p>The display name of the field.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>名称</p>
              */
             public Builder columnNameCn(String columnNameCn) {
                 this.columnNameCn = columnNameCn;

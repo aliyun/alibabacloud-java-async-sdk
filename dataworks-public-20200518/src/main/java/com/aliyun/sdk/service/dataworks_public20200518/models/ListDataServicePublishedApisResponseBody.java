@@ -2799,7 +2799,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * SqlMode.
+             * <p>SQL mode. 0: Basic SQL; 1: Advanced SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sqlMode(Integer sqlMode) {
                 this.sqlMode = sqlMode;
@@ -2944,7 +2947,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the APIs in the published state.</p>
+             * <p>Information about published APIs.</p>
              */
             public Builder apis(java.util.List<Apis> apis) {
                 this.apis = apis;

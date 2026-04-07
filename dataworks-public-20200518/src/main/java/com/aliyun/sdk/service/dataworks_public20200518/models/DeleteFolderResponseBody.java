@@ -106,10 +106,7 @@ public class DeleteFolderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Invalid.Tenant.ConnectionNotExists</p>
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -117,10 +114,7 @@ public class DeleteFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The connection does not exist.</p>
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -128,10 +122,7 @@ public class DeleteFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -139,10 +130,7 @@ public class DeleteFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0000-ABCD-EFG****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,10 +138,7 @@ public class DeleteFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

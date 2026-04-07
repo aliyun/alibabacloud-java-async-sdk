@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateFolderResponseBody} extends {@link TeaModel}
+ * {@link DsgUpdateDesensStatusListResponseBody} extends {@link TeaModel}
  *
- * <p>CreateFolderResponseBody</p>
+ * <p>DsgUpdateDesensStatusListResponseBody</p>
  */
-public class CreateFolderResponseBody extends TeaModel {
+public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private String data;
+    private Boolean data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -35,7 +35,7 @@ public class CreateFolderResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private CreateFolderResponseBody(Builder builder) {
+    private DsgUpdateDesensStatusListResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
@@ -48,7 +48,7 @@ public class CreateFolderResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateFolderResponseBody create() {
+    public static DsgUpdateDesensStatusListResponseBody create() {
         return builder().build();
     }
 
@@ -59,7 +59,7 @@ public class CreateFolderResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public Boolean getData() {
         return this.data;
     }
 
@@ -99,7 +99,7 @@ public class CreateFolderResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String data; 
+        private Boolean data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -109,7 +109,7 @@ public class CreateFolderResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(CreateFolderResponseBody model) {
+        private Builder(DsgUpdateDesensStatusListResponseBody model) {
             this.data = model.data;
             this.errorCode = model.errorCode;
             this.errorMessage = model.errorMessage;
@@ -119,21 +119,15 @@ public class CreateFolderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The unique identifier of the folder.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>bdfd68****</p>
+         * Data.
          */
-        public Builder data(String data) {
+        public Builder data(Boolean data) {
             this.data = data;
             return this;
         }
 
         /**
-         * <p>The error code returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Invalid.Tenant.ConnectionNotExists</p>
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -141,10 +135,7 @@ public class CreateFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The connection does not exist.</p>
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -152,10 +143,7 @@ public class CreateFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The path of the folder.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -163,10 +151,7 @@ public class CreateFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0000-ABCD-EFG</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,18 +159,15 @@ public class CreateFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public CreateFolderResponseBody build() {
-            return new CreateFolderResponseBody(this);
+        public DsgUpdateDesensStatusListResponseBody build() {
+            return new DsgUpdateDesensStatusListResponseBody(this);
         } 
 
     } 

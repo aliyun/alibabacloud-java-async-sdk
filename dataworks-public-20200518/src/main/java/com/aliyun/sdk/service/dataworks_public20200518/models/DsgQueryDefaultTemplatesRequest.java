@@ -24,7 +24,7 @@ public class DsgQueryDefaultTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SceneId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private Integer sceneId;
+    private Long sceneId;
 
     private DsgQueryDefaultTemplatesRequest(Builder builder) {
         super(builder);
@@ -55,13 +55,13 @@ public class DsgQueryDefaultTemplatesRequest extends Request {
     /**
      * @return sceneId
      */
-    public Integer getSceneId() {
+    public Long getSceneId() {
         return this.sceneId;
     }
 
     public static final class Builder extends Request.Builder<DsgQueryDefaultTemplatesRequest, Builder> {
         private String regionId; 
-        private Integer sceneId; 
+        private Long sceneId; 
 
         private Builder() {
             super();
@@ -89,7 +89,7 @@ public class DsgQueryDefaultTemplatesRequest extends Request {
          * <strong>example:</strong>
          * <p>123</p>
          */
-        public Builder sceneId(Integer sceneId) {
+        public Builder sceneId(Long sceneId) {
             this.putQueryParameter("SceneId", sceneId);
             this.sceneId = sceneId;
             return this;

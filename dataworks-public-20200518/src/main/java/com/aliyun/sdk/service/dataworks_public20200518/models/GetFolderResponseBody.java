@@ -119,7 +119,7 @@ public class GetFolderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the folder.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,7 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>GetFolder</p>
          * 
          * <strong>example:</strong>
          * <p>Invalid.Tenant.ConnectionNotExists</p>
@@ -138,7 +138,7 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The folder ID.</p>
          * 
          * <strong>example:</strong>
          * <p>The connection does not exist.</p>
@@ -149,7 +149,7 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The path of the folder.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -160,7 +160,7 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p><a href="http://100.67.165.184/business/api/folders/detail">http://100.67.165.184/business/api/folders/detail</a></p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>
@@ -171,10 +171,7 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -240,10 +237,7 @@ public class GetFolderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The folder ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2735****</p>
+             * FolderId.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -251,10 +245,7 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the folder.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
+             * FolderPath.
              */
             public Builder folderPath(String folderPath) {
                 this.folderPath = folderPath;

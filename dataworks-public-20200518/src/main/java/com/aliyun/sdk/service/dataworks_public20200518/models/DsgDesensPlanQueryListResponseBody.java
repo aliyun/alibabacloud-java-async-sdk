@@ -275,6 +275,123 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
      *
      * <p>DsgDesensPlanQueryListResponseBody</p>
      */
+    public static class Columns extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("column")
+        private String column;
+
+        @com.aliyun.core.annotation.NameInMap("dbType")
+        private String dbType;
+
+        @com.aliyun.core.annotation.NameInMap("project")
+        private String project;
+
+        @com.aliyun.core.annotation.NameInMap("table")
+        private String table;
+
+        private Columns(Builder builder) {
+            this.column = builder.column;
+            this.dbType = builder.dbType;
+            this.project = builder.project;
+            this.table = builder.table;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Columns create() {
+            return builder().build();
+        }
+
+        /**
+         * @return column
+         */
+        public String getColumn() {
+            return this.column;
+        }
+
+        /**
+         * @return dbType
+         */
+        public String getDbType() {
+            return this.dbType;
+        }
+
+        /**
+         * @return project
+         */
+        public String getProject() {
+            return this.project;
+        }
+
+        /**
+         * @return table
+         */
+        public String getTable() {
+            return this.table;
+        }
+
+        public static final class Builder {
+            private String column; 
+            private String dbType; 
+            private String project; 
+            private String table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.column = model.column;
+                this.dbType = model.dbType;
+                this.project = model.project;
+                this.table = model.table;
+            } 
+
+            /**
+             * column.
+             */
+            public Builder column(String column) {
+                this.column = column;
+                return this;
+            }
+
+            /**
+             * dbType.
+             */
+            public Builder dbType(String dbType) {
+                this.dbType = dbType;
+                return this;
+            }
+
+            /**
+             * project.
+             */
+            public Builder project(String project) {
+                this.project = project;
+                return this;
+            }
+
+            /**
+             * table.
+             */
+            public Builder table(String table) {
+                this.table = table;
+                return this;
+            }
+
+            public Columns build() {
+                return new Columns(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DsgDesensPlanQueryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DsgDesensPlanQueryListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckWatermark")
         private Boolean checkWatermark;
@@ -318,6 +435,12 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
+        @com.aliyun.core.annotation.NameInMap("columns")
+        private java.util.List<Columns> columns;
+
+        @com.aliyun.core.annotation.NameInMap("emptyNotDesesn")
+        private Boolean emptyNotDesesn;
+
         private Data(Builder builder) {
             this.checkWatermark = builder.checkWatermark;
             this.dataType = builder.dataType;
@@ -333,6 +456,8 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             this.sceneCode = builder.sceneCode;
             this.sceneName = builder.sceneName;
             this.status = builder.status;
+            this.columns = builder.columns;
+            this.emptyNotDesesn = builder.emptyNotDesesn;
         }
 
         public static Builder builder() {
@@ -441,6 +566,20 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return columns
+         */
+        public java.util.List<Columns> getColumns() {
+            return this.columns;
+        }
+
+        /**
+         * @return emptyNotDesesn
+         */
+        public Boolean getEmptyNotDesesn() {
+            return this.emptyNotDesesn;
+        }
+
         public static final class Builder {
             private Boolean checkWatermark; 
             private String dataType; 
@@ -456,6 +595,8 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             private String sceneCode; 
             private String sceneName; 
             private Integer status; 
+            private java.util.List<Columns> columns; 
+            private Boolean emptyNotDesesn; 
 
             private Builder() {
             } 
@@ -475,6 +616,8 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
                 this.sceneCode = model.sceneCode;
                 this.sceneName = model.sceneName;
                 this.status = model.status;
+                this.columns = model.columns;
+                this.emptyNotDesesn = model.emptyNotDesesn;
             } 
 
             /**
@@ -641,6 +784,22 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * columns.
+             */
+            public Builder columns(java.util.List<Columns> columns) {
+                this.columns = columns;
+                return this;
+            }
+
+            /**
+             * emptyNotDesesn.
+             */
+            public Builder emptyNotDesesn(Boolean emptyNotDesesn) {
+                this.emptyNotDesesn = emptyNotDesesn;
                 return this;
             }
 

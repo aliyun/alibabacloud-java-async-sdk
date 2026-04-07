@@ -208,13 +208,16 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         private String gmtModified;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Integer id;
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
+
+        @com.aliyun.core.annotation.NameInMap("mcAggregationInfo")
+        private String mcAggregationInfo;
 
         private Data(Builder builder) {
             this.accounts = builder.accounts;
@@ -223,6 +226,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             this.id = builder.id;
             this.name = builder.name;
             this.owner = builder.owner;
+            this.mcAggregationInfo = builder.mcAggregationInfo;
         }
 
         public static Builder builder() {
@@ -257,7 +261,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Integer getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -275,13 +279,21 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             return this.owner;
         }
 
+        /**
+         * @return mcAggregationInfo
+         */
+        public String getMcAggregationInfo() {
+            return this.mcAggregationInfo;
+        }
+
         public static final class Builder {
             private java.util.List<String> accounts; 
             private String gmtCreate; 
             private String gmtModified; 
-            private Integer id; 
+            private Long id; 
             private String name; 
             private String owner; 
+            private String mcAggregationInfo; 
 
             private Builder() {
             } 
@@ -293,6 +305,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
                 this.id = model.id;
                 this.name = model.name;
                 this.owner = model.owner;
+                this.mcAggregationInfo = model.mcAggregationInfo;
             } 
 
             /**
@@ -331,7 +344,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>123</p>
              */
-            public Builder id(Integer id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -355,6 +368,14 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
              */
             public Builder owner(String owner) {
                 this.owner = owner;
+                return this;
+            }
+
+            /**
+             * mcAggregationInfo.
+             */
+            public Builder mcAggregationInfo(String mcAggregationInfo) {
+                this.mcAggregationInfo = mcAggregationInfo;
                 return this;
             }
 

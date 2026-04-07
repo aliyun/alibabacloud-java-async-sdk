@@ -111,7 +111,7 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
-         * <p>The path of the folder.</p>
+         * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace name. You must configure either this parameter or the <strong>ProjectId</strong> parameter to determine the DataWorks workspace to which the operation is applied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must configure either this parameter or the <strong>ProjectIdentifier</strong> parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * <p>$.parameters[4].schema.enumValueTitles</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -136,7 +136,7 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
-         * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace name. You must configure either this parameter or the <strong>ProjectId</strong> parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must configure either this parameter or the <strong>ProjectIdentifier</strong> parameter to determine the DataWorks workspace to which the operation is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>dw_project</p>

@@ -32,29 +32,62 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
             new TeaPair("ap-northeast-1", "dataworks.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "dataworks.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "dataworks.aliyuncs.com"),
+            new TeaPair("ap-south-1", "dataworks.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "dataworks.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "dataworks.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "dataworks.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "dataworks.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "dataworks.ap-southeast-5.aliyuncs.com"),
             new TeaPair("cn-beijing", "dataworks.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "dataworks.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "dataworks.aliyuncs.com"),
             new TeaPair("cn-chengdu", "dataworks.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-fujian", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "dataworks.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "dataworks.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "dataworks.aliyuncs.com"),
             new TeaPair("cn-hongkong", "dataworks.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "dataworks.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "dataworks.cn-north-2-gov-1.aliyuncs.com"),
             new TeaPair("cn-qingdao", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "dataworks.aliyuncs.com"),
             new TeaPair("cn-shanghai", "dataworks.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "dataworks.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "dataworks.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "dataworks.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "dataworks.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "dataworks.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "dataworks.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "dataworks.aliyuncs.com"),
             new TeaPair("eu-central-1", "dataworks.eu-central-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "dataworks.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "dataworks.aliyuncs.com"),
             new TeaPair("me-east-1", "dataworks.me-east-1.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "dataworks.aliyuncs.com"),
             new TeaPair("us-east-1", "dataworks.us-east-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "dataworks.aliyuncs.com")
+            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -678,9 +711,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateQualityEntity  CreateQualityEntityRequest
+     * @deprecated OpenAPI CreateQualityEntity is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.  * @param request  the request parameters of CreateQualityEntity  CreateQualityEntityRequest
      * @return CreateQualityEntityResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateQualityEntityResponse> createQualityEntity(CreateQualityEntityRequest request) {
         try {
@@ -696,9 +730,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateQualityFollower  CreateQualityFollowerRequest
+     * @deprecated OpenAPI CreateQualityFollower is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityAlertRule instead.  * @param request  the request parameters of CreateQualityFollower  CreateQualityFollowerRequest
      * @return CreateQualityFollowerResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateQualityFollowerResponse> createQualityFollower(CreateQualityFollowerRequest request) {
         try {
@@ -714,9 +749,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateQualityRelativeNode  CreateQualityRelativeNodeRequest
+     * @deprecated OpenAPI CreateQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.  * @param request  the request parameters of CreateQualityRelativeNode  CreateQualityRelativeNodeRequest
      * @return CreateQualityRelativeNodeResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateQualityRelativeNodeResponse> createQualityRelativeNode(CreateQualityRelativeNodeRequest request) {
         try {
@@ -732,9 +768,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateQualityRule  CreateQualityRuleRequest
+     * @deprecated OpenAPI CreateQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.  * @param request  the request parameters of CreateQualityRule  CreateQualityRuleRequest
      * @return CreateQualityRuleResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateQualityRuleResponse> createQualityRule(CreateQualityRuleRequest request) {
         try {
@@ -768,9 +805,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateTable  CreateTableRequest
+     * @deprecated OpenAPI CreateTable is deprecated  * @param request  the request parameters of CreateTable  CreateTableRequest
      * @return CreateTableResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateTableResponse> createTable(CreateTableRequest request) {
         try {
@@ -1156,9 +1194,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeleteQualityEntity  DeleteQualityEntityRequest
+     * @deprecated OpenAPI DeleteQualityEntity is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.  * @param request  the request parameters of DeleteQualityEntity  DeleteQualityEntityRequest
      * @return DeleteQualityEntityResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteQualityEntityResponse> deleteQualityEntity(DeleteQualityEntityRequest request) {
         try {
@@ -1174,12 +1213,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transform, and load (ETL). This way, you can prevent tasks from producing unexpected dirty data that affects the smooth running of tasks and business decision-making. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule that is created based on the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors at the earliest opportunity. For more information, see <a href="https://help.aliyun.com/document_detail/73690.html">Configure monitoring rules</a>.</p>
+     * @deprecated OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.  * @description In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transform, and load (ETL). This way, you can prevent tasks from producing unexpected dirty data that affects the smooth running of tasks and business decision-making. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule that is created based on the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors at the earliest opportunity. For more information, see [Configure monitoring rules](https://help.aliyun.com/document_detail/73690.html).
      * 
      * @param request the request parameters of DeleteQualityFollower  DeleteQualityFollowerRequest
      * @return DeleteQualityFollowerResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteQualityFollowerResponse> deleteQualityFollower(DeleteQualityFollowerRequest request) {
         try {
@@ -1195,9 +1234,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeleteQualityRelativeNode  DeleteQualityRelativeNodeRequest
+     * @deprecated OpenAPI DeleteQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.  * @param request  the request parameters of DeleteQualityRelativeNode  DeleteQualityRelativeNodeRequest
      * @return DeleteQualityRelativeNodeResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteQualityRelativeNodeResponse> deleteQualityRelativeNode(DeleteQualityRelativeNodeRequest request) {
         try {
@@ -1213,9 +1253,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeleteQualityRule  DeleteQualityRuleRequest
+     * @deprecated OpenAPI DeleteQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.  * @param request  the request parameters of DeleteQualityRule  DeleteQualityRuleRequest
      * @return DeleteQualityRuleResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteQualityRuleResponse> deleteQualityRule(DeleteQualityRuleRequest request) {
         try {
@@ -1267,9 +1308,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeleteTable  DeleteTableRequest
+     * @deprecated OpenAPI DeleteTable is deprecated  * @param request  the request parameters of DeleteTable  DeleteTableRequest
      * @return DeleteTableResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteTableResponse> deleteTable(DeleteTableRequest request) {
         try {
@@ -1483,6 +1525,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DsgQueryDesensStatusList  DsgQueryDesensStatusListRequest
+     * @return DsgQueryDesensStatusListResponse
+     */
+    @Override
+    public CompletableFuture<DsgQueryDesensStatusListResponse> dsgQueryDesensStatusList(DsgQueryDesensStatusListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DsgQueryDesensStatusList").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DsgQueryDesensStatusListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DsgQueryDesensStatusListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>The query capability of the API operation is similar to the query feature in Data Security Guard in the DataWorks console. The API operation can be used to query the identification results of sensitive data of a tenant based on the association with the tenant ID.</p>
      * <ul>
@@ -1593,6 +1653,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DsgStopSensIdentifyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DsgUpdateDesensStatusList  DsgUpdateDesensStatusListRequest
+     * @return DsgUpdateDesensStatusListResponse
+     */
+    @Override
+    public CompletableFuture<DsgUpdateDesensStatusListResponse> dsgUpdateDesensStatusList(DsgUpdateDesensStatusListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DsgUpdateDesensStatusList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DsgUpdateDesensStatusListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DsgUpdateDesensStatusListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1947,9 +2025,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of GetDDLJobStatus  GetDDLJobStatusRequest
+     * @deprecated OpenAPI GetDDLJobStatus is deprecated  * @param request  the request parameters of GetDDLJobStatus  GetDDLJobStatusRequest
      * @return GetDDLJobStatusResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetDDLJobStatusResponse> getDDLJobStatus(GetDDLJobStatusRequest request) {
         try {
@@ -2629,12 +2708,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.</p>
+     * @deprecated OpenAPI GetMetaTableFullInfo is deprecated  * @description You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.
      * 
      * @param request the request parameters of GetMetaTableFullInfo  GetMetaTableFullInfoRequest
      * @return GetMetaTableFullInfoResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetMetaTableFullInfoResponse> getMetaTableFullInfo(GetMetaTableFullInfoRequest request) {
         try {
@@ -3034,9 +3113,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of GetQualityEntity  GetQualityEntityRequest
+     * @deprecated OpenAPI GetQualityEntity is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.  * @param request  the request parameters of GetQualityEntity  GetQualityEntityRequest
      * @return GetQualityEntityResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetQualityEntityResponse> getQualityEntity(GetQualityEntityRequest request) {
         try {
@@ -3052,9 +3132,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of GetQualityFollower  GetQualityFollowerRequest
+     * @deprecated OpenAPI GetQualityFollower is deprecated, please use dataworks-public::2024-05-18::GetDataQualityAlertRule instead.  * @param request  the request parameters of GetQualityFollower  GetQualityFollowerRequest
      * @return GetQualityFollowerResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetQualityFollowerResponse> getQualityFollower(GetQualityFollowerRequest request) {
         try {
@@ -3070,9 +3151,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of GetQualityRule  GetQualityRuleRequest
+     * @deprecated OpenAPI GetQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.  * @param request  the request parameters of GetQualityRule  GetQualityRuleRequest
      * @return GetQualityRuleResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetQualityRuleResponse> getQualityRule(GetQualityRuleRequest request) {
         try {
@@ -4226,12 +4308,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <hr>
+     * @deprecated OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.  * @description ****
      * 
      * @param request the request parameters of ListQualityResultsByEntity  ListQualityResultsByEntityRequest
      * @return ListQualityResultsByEntityResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ListQualityResultsByEntityResponse> listQualityResultsByEntity(ListQualityResultsByEntityRequest request) {
         try {
@@ -4247,9 +4329,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ListQualityResultsByRule  ListQualityResultsByRuleRequest
+     * @deprecated OpenAPI ListQualityResultsByRule is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.  * @param request  the request parameters of ListQualityResultsByRule  ListQualityResultsByRuleRequest
      * @return ListQualityResultsByRuleResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ListQualityResultsByRuleResponse> listQualityResultsByRule(ListQualityResultsByRuleRequest request) {
         try {
@@ -4265,9 +4348,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ListQualityRules  ListQualityRulesRequest
+     * @deprecated OpenAPI ListQualityRules is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.  * @param request  the request parameters of ListQualityRules  ListQualityRulesRequest
      * @return ListQualityRulesResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ListQualityRulesResponse> listQualityRules(ListQualityRulesRequest request) {
         try {
@@ -5523,6 +5607,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation supports MaxCompute tables only.</p>
+     * 
      * @param request the request parameters of UpdateMetaTable  UpdateMetaTableRequest
      * @return UpdateMetaTableResponse
      */
@@ -5595,9 +5682,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of UpdateQualityFollower  UpdateQualityFollowerRequest
+     * @deprecated OpenAPI UpdateQualityFollower is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityAlertRule instead.  * @param request  the request parameters of UpdateQualityFollower  UpdateQualityFollowerRequest
      * @return UpdateQualityFollowerResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdateQualityFollowerResponse> updateQualityFollower(UpdateQualityFollowerRequest request) {
         try {
@@ -5613,9 +5701,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of UpdateQualityRule  UpdateQualityRuleRequest
+     * @deprecated OpenAPI UpdateQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.  * @param request  the request parameters of UpdateQualityRule  UpdateQualityRuleRequest
      * @return UpdateQualityRuleResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdateQualityRuleResponse> updateQualityRule(UpdateQualityRuleRequest request) {
         try {
@@ -5649,9 +5738,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of UpdateTable  UpdateTableRequest
+     * @deprecated OpenAPI UpdateTable is deprecated  * @param request  the request parameters of UpdateTable  UpdateTableRequest
      * @return UpdateTableResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdateTableResponse> updateTable(UpdateTableRequest request) {
         try {
@@ -5667,9 +5757,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of UpdateTableAddColumn  UpdateTableAddColumnRequest
+     * @deprecated OpenAPI UpdateTableAddColumn is deprecated  * @param request  the request parameters of UpdateTableAddColumn  UpdateTableAddColumnRequest
      * @return UpdateTableAddColumnResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdateTableAddColumnResponse> updateTableAddColumn(UpdateTableAddColumnRequest request) {
         try {

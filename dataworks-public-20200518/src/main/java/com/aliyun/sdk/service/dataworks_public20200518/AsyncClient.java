@@ -237,27 +237,31 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProjectMemberResponse> createProjectMember(CreateProjectMemberRequest request);
 
     /**
-     * @param request the request parameters of CreateQualityEntity  CreateQualityEntityRequest
+     * @deprecated OpenAPI CreateQualityEntity is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.  * @param request  the request parameters of CreateQualityEntity  CreateQualityEntityRequest
      * @return CreateQualityEntityResponse
      */
+    @Deprecated
     CompletableFuture<CreateQualityEntityResponse> createQualityEntity(CreateQualityEntityRequest request);
 
     /**
-     * @param request the request parameters of CreateQualityFollower  CreateQualityFollowerRequest
+     * @deprecated OpenAPI CreateQualityFollower is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityAlertRule instead.  * @param request  the request parameters of CreateQualityFollower  CreateQualityFollowerRequest
      * @return CreateQualityFollowerResponse
      */
+    @Deprecated
     CompletableFuture<CreateQualityFollowerResponse> createQualityFollower(CreateQualityFollowerRequest request);
 
     /**
-     * @param request the request parameters of CreateQualityRelativeNode  CreateQualityRelativeNodeRequest
+     * @deprecated OpenAPI CreateQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.  * @param request  the request parameters of CreateQualityRelativeNode  CreateQualityRelativeNodeRequest
      * @return CreateQualityRelativeNodeResponse
      */
+    @Deprecated
     CompletableFuture<CreateQualityRelativeNodeResponse> createQualityRelativeNode(CreateQualityRelativeNodeRequest request);
 
     /**
-     * @param request the request parameters of CreateQualityRule  CreateQualityRuleRequest
+     * @deprecated OpenAPI CreateQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.  * @param request  the request parameters of CreateQualityRule  CreateQualityRuleRequest
      * @return CreateQualityRuleResponse
      */
+    @Deprecated
     CompletableFuture<CreateQualityRuleResponse> createQualityRule(CreateQualityRuleRequest request);
 
     /**
@@ -267,9 +271,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRemindResponse> createRemind(CreateRemindRequest request);
 
     /**
-     * @param request the request parameters of CreateTable  CreateTableRequest
+     * @deprecated OpenAPI CreateTable is deprecated  * @param request  the request parameters of CreateTable  CreateTableRequest
      * @return CreateTableResponse
      */
+    @Deprecated
     CompletableFuture<CreateTableResponse> createTable(CreateTableRequest request);
 
     /**
@@ -403,30 +408,33 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteProjectMemberResponse> deleteProjectMember(DeleteProjectMemberRequest request);
 
     /**
-     * @param request the request parameters of DeleteQualityEntity  DeleteQualityEntityRequest
+     * @deprecated OpenAPI DeleteQualityEntity is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.  * @param request  the request parameters of DeleteQualityEntity  DeleteQualityEntityRequest
      * @return DeleteQualityEntityResponse
      */
+    @Deprecated
     CompletableFuture<DeleteQualityEntityResponse> deleteQualityEntity(DeleteQualityEntityRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transform, and load (ETL). This way, you can prevent tasks from producing unexpected dirty data that affects the smooth running of tasks and business decision-making. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule that is created based on the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors at the earliest opportunity. For more information, see <a href="https://help.aliyun.com/document_detail/73690.html">Configure monitoring rules</a>.</p>
+     * @deprecated OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.  * @description In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transform, and load (ETL). This way, you can prevent tasks from producing unexpected dirty data that affects the smooth running of tasks and business decision-making. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule that is created based on the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors at the earliest opportunity. For more information, see [Configure monitoring rules](https://help.aliyun.com/document_detail/73690.html).
      * 
      * @param request the request parameters of DeleteQualityFollower  DeleteQualityFollowerRequest
      * @return DeleteQualityFollowerResponse
      */
+    @Deprecated
     CompletableFuture<DeleteQualityFollowerResponse> deleteQualityFollower(DeleteQualityFollowerRequest request);
 
     /**
-     * @param request the request parameters of DeleteQualityRelativeNode  DeleteQualityRelativeNodeRequest
+     * @deprecated OpenAPI DeleteQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.  * @param request  the request parameters of DeleteQualityRelativeNode  DeleteQualityRelativeNodeRequest
      * @return DeleteQualityRelativeNodeResponse
      */
+    @Deprecated
     CompletableFuture<DeleteQualityRelativeNodeResponse> deleteQualityRelativeNode(DeleteQualityRelativeNodeRequest request);
 
     /**
-     * @param request the request parameters of DeleteQualityRule  DeleteQualityRuleRequest
+     * @deprecated OpenAPI DeleteQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.  * @param request  the request parameters of DeleteQualityRule  DeleteQualityRuleRequest
      * @return DeleteQualityRuleResponse
      */
+    @Deprecated
     CompletableFuture<DeleteQualityRuleResponse> deleteQualityRule(DeleteQualityRuleRequest request);
 
     /**
@@ -442,9 +450,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRemindResponse> deleteRemind(DeleteRemindRequest request);
 
     /**
-     * @param request the request parameters of DeleteTable  DeleteTableRequest
+     * @deprecated OpenAPI DeleteTable is deprecated  * @param request  the request parameters of DeleteTable  DeleteTableRequest
      * @return DeleteTableResponse
      */
+    @Deprecated
     CompletableFuture<DeleteTableResponse> deleteTable(DeleteTableRequest request);
 
     /**
@@ -514,6 +523,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DsgQueryDefaultTemplatesResponse> dsgQueryDefaultTemplates(DsgQueryDefaultTemplatesRequest request);
 
     /**
+     * @param request the request parameters of DsgQueryDesensStatusList  DsgQueryDesensStatusListRequest
+     * @return DsgQueryDesensStatusListResponse
+     */
+    CompletableFuture<DsgQueryDesensStatusListResponse> dsgQueryDesensStatusList(DsgQueryDesensStatusListRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The query capability of the API operation is similar to the query feature in Data Security Guard in the DataWorks console. The API operation can be used to query the identification results of sensitive data of a tenant based on the association with the tenant ID.</p>
      * <ul>
@@ -556,6 +571,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DsgStopSensIdentifyResponse
      */
     CompletableFuture<DsgStopSensIdentifyResponse> dsgStopSensIdentify(DsgStopSensIdentifyRequest request);
+
+    /**
+     * @param request the request parameters of DsgUpdateDesensStatusList  DsgUpdateDesensStatusListRequest
+     * @return DsgUpdateDesensStatusListResponse
+     */
+    CompletableFuture<DsgUpdateDesensStatusListResponse> dsgUpdateDesensStatusList(DsgUpdateDesensStatusListRequest request);
 
     /**
      * @param request the request parameters of DsgUserGroupAddOrUpdate  DsgUserGroupAddOrUpdateRequest
@@ -678,9 +699,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetBusinessResponse> getBusiness(GetBusinessRequest request);
 
     /**
-     * @param request the request parameters of GetDDLJobStatus  GetDDLJobStatusRequest
+     * @deprecated OpenAPI GetDDLJobStatus is deprecated  * @param request  the request parameters of GetDDLJobStatus  GetDDLJobStatusRequest
      * @return GetDDLJobStatusResponse
      */
+    @Deprecated
     CompletableFuture<GetDDLJobStatusResponse> getDDLJobStatus(GetDDLJobStatusRequest request);
 
     /**
@@ -928,12 +950,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMetaTableColumnResponse> getMetaTableColumn(GetMetaTableColumnRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.</p>
+     * @deprecated OpenAPI GetMetaTableFullInfo is deprecated  * @description You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.
      * 
      * @param request the request parameters of GetMetaTableFullInfo  GetMetaTableFullInfoRequest
      * @return GetMetaTableFullInfoResponse
      */
+    @Deprecated
     CompletableFuture<GetMetaTableFullInfoResponse> getMetaTableFullInfo(GetMetaTableFullInfoRequest request);
 
     /**
@@ -1069,21 +1091,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetProjectDetailResponse> getProjectDetail(GetProjectDetailRequest request);
 
     /**
-     * @param request the request parameters of GetQualityEntity  GetQualityEntityRequest
+     * @deprecated OpenAPI GetQualityEntity is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.  * @param request  the request parameters of GetQualityEntity  GetQualityEntityRequest
      * @return GetQualityEntityResponse
      */
+    @Deprecated
     CompletableFuture<GetQualityEntityResponse> getQualityEntity(GetQualityEntityRequest request);
 
     /**
-     * @param request the request parameters of GetQualityFollower  GetQualityFollowerRequest
+     * @deprecated OpenAPI GetQualityFollower is deprecated, please use dataworks-public::2024-05-18::GetDataQualityAlertRule instead.  * @param request  the request parameters of GetQualityFollower  GetQualityFollowerRequest
      * @return GetQualityFollowerResponse
      */
+    @Deprecated
     CompletableFuture<GetQualityFollowerResponse> getQualityFollower(GetQualityFollowerRequest request);
 
     /**
-     * @param request the request parameters of GetQualityRule  GetQualityRuleRequest
+     * @deprecated OpenAPI GetQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.  * @param request  the request parameters of GetQualityRule  GetQualityRuleRequest
      * @return GetQualityRuleResponse
      */
+    @Deprecated
     CompletableFuture<GetQualityRuleResponse> getQualityRule(GetQualityRuleRequest request);
 
     /**
@@ -1505,24 +1530,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
 
     /**
-     * <b>description</b> :
-     * <hr>
+     * @deprecated OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.  * @description ****
      * 
      * @param request the request parameters of ListQualityResultsByEntity  ListQualityResultsByEntityRequest
      * @return ListQualityResultsByEntityResponse
      */
+    @Deprecated
     CompletableFuture<ListQualityResultsByEntityResponse> listQualityResultsByEntity(ListQualityResultsByEntityRequest request);
 
     /**
-     * @param request the request parameters of ListQualityResultsByRule  ListQualityResultsByRuleRequest
+     * @deprecated OpenAPI ListQualityResultsByRule is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.  * @param request  the request parameters of ListQualityResultsByRule  ListQualityResultsByRuleRequest
      * @return ListQualityResultsByRuleResponse
      */
+    @Deprecated
     CompletableFuture<ListQualityResultsByRuleResponse> listQualityResultsByRule(ListQualityResultsByRuleRequest request);
 
     /**
-     * @param request the request parameters of ListQualityRules  ListQualityRulesRequest
+     * @deprecated OpenAPI ListQualityRules is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.  * @param request  the request parameters of ListQualityRules  ListQualityRulesRequest
      * @return ListQualityRulesResponse
      */
+    @Deprecated
     CompletableFuture<ListQualityRulesResponse> listQualityRules(ListQualityRulesRequest request);
 
     /**
@@ -1962,6 +1989,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateMetaCollectionResponse> updateMetaCollection(UpdateMetaCollectionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation supports MaxCompute tables only.</p>
+     * 
      * @param request the request parameters of UpdateMetaTable  UpdateMetaTableRequest
      * @return UpdateMetaTableResponse
      */
@@ -1986,15 +2016,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateNodeRunModeResponse> updateNodeRunMode(UpdateNodeRunModeRequest request);
 
     /**
-     * @param request the request parameters of UpdateQualityFollower  UpdateQualityFollowerRequest
+     * @deprecated OpenAPI UpdateQualityFollower is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityAlertRule instead.  * @param request  the request parameters of UpdateQualityFollower  UpdateQualityFollowerRequest
      * @return UpdateQualityFollowerResponse
      */
+    @Deprecated
     CompletableFuture<UpdateQualityFollowerResponse> updateQualityFollower(UpdateQualityFollowerRequest request);
 
     /**
-     * @param request the request parameters of UpdateQualityRule  UpdateQualityRuleRequest
+     * @deprecated OpenAPI UpdateQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.  * @param request  the request parameters of UpdateQualityRule  UpdateQualityRuleRequest
      * @return UpdateQualityRuleResponse
      */
+    @Deprecated
     CompletableFuture<UpdateQualityRuleResponse> updateQualityRule(UpdateQualityRuleRequest request);
 
     /**
@@ -2004,15 +2036,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateRemindResponse> updateRemind(UpdateRemindRequest request);
 
     /**
-     * @param request the request parameters of UpdateTable  UpdateTableRequest
+     * @deprecated OpenAPI UpdateTable is deprecated  * @param request  the request parameters of UpdateTable  UpdateTableRequest
      * @return UpdateTableResponse
      */
+    @Deprecated
     CompletableFuture<UpdateTableResponse> updateTable(UpdateTableRequest request);
 
     /**
-     * @param request the request parameters of UpdateTableAddColumn  UpdateTableAddColumnRequest
+     * @deprecated OpenAPI UpdateTableAddColumn is deprecated  * @param request  the request parameters of UpdateTableAddColumn  UpdateTableAddColumnRequest
      * @return UpdateTableAddColumnResponse
      */
+    @Deprecated
     CompletableFuture<UpdateTableAddColumnResponse> updateTableAddColumn(UpdateTableAddColumnRequest request);
 
     /**

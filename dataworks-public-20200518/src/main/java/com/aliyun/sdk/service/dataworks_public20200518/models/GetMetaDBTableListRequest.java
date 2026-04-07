@@ -43,6 +43,7 @@ public class GetMetaDBTableListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer pageSize;
 
     private GetMetaDBTableListRequest(Builder builder) {

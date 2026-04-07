@@ -195,12 +195,132 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
      *
      * <p>DsgDesensPlanAddOrUpdateRequest</p>
      */
+    public static class Columns extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("column")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String column;
+
+        @com.aliyun.core.annotation.NameInMap("dbType")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String dbType;
+
+        @com.aliyun.core.annotation.NameInMap("project")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String project;
+
+        @com.aliyun.core.annotation.NameInMap("table")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String table;
+
+        private Columns(Builder builder) {
+            this.column = builder.column;
+            this.dbType = builder.dbType;
+            this.project = builder.project;
+            this.table = builder.table;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Columns create() {
+            return builder().build();
+        }
+
+        /**
+         * @return column
+         */
+        public String getColumn() {
+            return this.column;
+        }
+
+        /**
+         * @return dbType
+         */
+        public String getDbType() {
+            return this.dbType;
+        }
+
+        /**
+         * @return project
+         */
+        public String getProject() {
+            return this.project;
+        }
+
+        /**
+         * @return table
+         */
+        public String getTable() {
+            return this.table;
+        }
+
+        public static final class Builder {
+            private String column; 
+            private String dbType; 
+            private String project; 
+            private String table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.column = model.column;
+                this.dbType = model.dbType;
+                this.project = model.project;
+                this.table = model.table;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder column(String column) {
+                this.column = column;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder dbType(String dbType) {
+                this.dbType = dbType;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder project(String project) {
+                this.project = project;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder table(String table) {
+                this.table = table;
+                return this;
+            }
+
+            public Columns build() {
+                return new Columns(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DsgDesensPlanAddOrUpdateRequest} extends {@link TeaModel}
+     *
+     * <p>DsgDesensPlanAddOrUpdateRequest</p>
+     */
     public static class DesensRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckWatermark")
         private Boolean checkWatermark;
 
         @com.aliyun.core.annotation.NameInMap("DataType")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String dataType;
 
         @com.aliyun.core.annotation.NameInMap("DesensPlan")
@@ -208,7 +328,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
         private DesensPlan desensPlan;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Integer id;
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Owner")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -220,10 +340,16 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("SceneIds")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List<Integer> sceneIds;
+        private java.util.List<Long> sceneIds;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
+
+        @com.aliyun.core.annotation.NameInMap("columns")
+        private java.util.List<Columns> columns;
+
+        @com.aliyun.core.annotation.NameInMap("emptyNotDesesn")
+        private Boolean emptyNotDesesn;
 
         private DesensRules(Builder builder) {
             this.checkWatermark = builder.checkWatermark;
@@ -234,6 +360,8 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             this.ruleName = builder.ruleName;
             this.sceneIds = builder.sceneIds;
             this.status = builder.status;
+            this.columns = builder.columns;
+            this.emptyNotDesesn = builder.emptyNotDesesn;
         }
 
         public static Builder builder() {
@@ -268,7 +396,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
         /**
          * @return id
          */
-        public Integer getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -289,7 +417,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
         /**
          * @return sceneIds
          */
-        public java.util.List<Integer> getSceneIds() {
+        public java.util.List<Long> getSceneIds() {
             return this.sceneIds;
         }
 
@@ -300,15 +428,31 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             return this.status;
         }
 
+        /**
+         * @return columns
+         */
+        public java.util.List<Columns> getColumns() {
+            return this.columns;
+        }
+
+        /**
+         * @return emptyNotDesesn
+         */
+        public Boolean getEmptyNotDesesn() {
+            return this.emptyNotDesesn;
+        }
+
         public static final class Builder {
             private Boolean checkWatermark; 
             private String dataType; 
             private DesensPlan desensPlan; 
-            private Integer id; 
+            private Long id; 
             private String owner; 
             private String ruleName; 
-            private java.util.List<Integer> sceneIds; 
+            private java.util.List<Long> sceneIds; 
             private Integer status; 
+            private java.util.List<Columns> columns; 
+            private Boolean emptyNotDesesn; 
 
             private Builder() {
             } 
@@ -322,6 +466,8 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
                 this.ruleName = model.ruleName;
                 this.sceneIds = model.sceneIds;
                 this.status = model.status;
+                this.columns = model.columns;
+                this.emptyNotDesesn = model.emptyNotDesesn;
             } 
 
             /**
@@ -341,7 +487,6 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
 
             /**
              * <p>The sensitive field type.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>phone</p>
@@ -366,7 +511,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
              * <strong>example:</strong>
              * <p>123</p>
              */
-            public Builder id(Integer id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -399,7 +544,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
              * <p>The level-2 data masking scenario.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder sceneIds(java.util.List<Integer> sceneIds) {
+            public Builder sceneIds(java.util.List<Long> sceneIds) {
                 this.sceneIds = sceneIds;
                 return this;
             }
@@ -416,6 +561,22 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * columns.
+             */
+            public Builder columns(java.util.List<Columns> columns) {
+                this.columns = columns;
+                return this;
+            }
+
+            /**
+             * emptyNotDesesn.
+             */
+            public Builder emptyNotDesesn(Boolean emptyNotDesesn) {
+                this.emptyNotDesesn = emptyNotDesesn;
                 return this;
             }
 

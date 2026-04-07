@@ -93,10 +93,7 @@ public class ChangeResourceManagerResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the resource group is changed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Data.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -104,10 +101,7 @@ public class ChangeResourceManagerResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -115,10 +109,7 @@ public class ChangeResourceManagerResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1AFAE64E-D1BE-432B-A9****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -126,10 +117,7 @@ public class ChangeResourceManagerResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -332,6 +332,9 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserGroups")
         private String userGroups;
 
+        @com.aliyun.core.annotation.NameInMap("scenceDbType")
+        private String scenceDbType;
+
         private Data(Builder builder) {
             this.children = builder.children;
             this.desc = builder.desc;
@@ -341,6 +344,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             this.sceneLevel = builder.sceneLevel;
             this.sceneName = builder.sceneName;
             this.userGroups = builder.userGroups;
+            this.scenceDbType = builder.scenceDbType;
         }
 
         public static Builder builder() {
@@ -407,6 +411,13 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             return this.userGroups;
         }
 
+        /**
+         * @return scenceDbType
+         */
+        public String getScenceDbType() {
+            return this.scenceDbType;
+        }
+
         public static final class Builder {
             private java.util.List<?> children; 
             private String desc; 
@@ -416,6 +427,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             private Integer sceneLevel; 
             private String sceneName; 
             private String userGroups; 
+            private String scenceDbType; 
 
             private Builder() {
             } 
@@ -429,6 +441,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
                 this.sceneLevel = model.sceneLevel;
                 this.sceneName = model.sceneName;
                 this.userGroups = model.userGroups;
+                this.scenceDbType = model.scenceDbType;
             } 
 
             /**
@@ -522,6 +535,14 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
              */
             public Builder userGroups(String userGroups) {
                 this.userGroups = userGroups;
+                return this;
+            }
+
+            /**
+             * scenceDbType.
+             */
+            public Builder scenceDbType(String scenceDbType) {
+                this.scenceDbType = scenceDbType;
                 return this;
             }
 

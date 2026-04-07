@@ -108,7 +108,6 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
      */
     public static class UserGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accounts")
-        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<String> accounts;
 
         @com.aliyun.core.annotation.NameInMap("Id")
@@ -129,6 +128,9 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private Integer userGroupType;
 
+        @com.aliyun.core.annotation.NameInMap("projects")
+        private String projects;
+
         private UserGroups(Builder builder) {
             this.accounts = builder.accounts;
             this.id = builder.id;
@@ -136,6 +138,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             this.owner = builder.owner;
             this.projectName = builder.projectName;
             this.userGroupType = builder.userGroupType;
+            this.projects = builder.projects;
         }
 
         public static Builder builder() {
@@ -188,6 +191,13 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             return this.userGroupType;
         }
 
+        /**
+         * @return projects
+         */
+        public String getProjects() {
+            return this.projects;
+        }
+
         public static final class Builder {
             private java.util.List<String> accounts; 
             private Long id; 
@@ -195,6 +205,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             private String owner; 
             private String projectName; 
             private Integer userGroupType; 
+            private String projects; 
 
             private Builder() {
             } 
@@ -206,6 +217,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
                 this.owner = model.owner;
                 this.projectName = model.projectName;
                 this.userGroupType = model.userGroupType;
+                this.projects = model.projects;
             } 
 
             /**
@@ -214,7 +226,6 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
              * <li>If a user group is created by using an Alibaba Cloud account and a RAM role, you can call the <a href="https://help.aliyun.com/document_detail/2786445.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</li>
              * <li>If a user group is created by using a MaxCompute role, you can call the <a href="https://help.aliyun.com/document_detail/2785695.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</li>
              * </ul>
-             * <p>This parameter is required.</p>
              */
             public Builder accounts(java.util.List<String> accounts) {
                 this.accounts = accounts;
@@ -285,6 +296,14 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
              */
             public Builder userGroupType(Integer userGroupType) {
                 this.userGroupType = userGroupType;
+                return this;
+            }
+
+            /**
+             * projects.
+             */
+            public Builder projects(String projects) {
+                this.projects = projects;
                 return this;
             }
 

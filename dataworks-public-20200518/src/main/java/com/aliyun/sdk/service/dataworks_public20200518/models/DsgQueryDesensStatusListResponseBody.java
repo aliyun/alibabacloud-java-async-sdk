@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListFoldersResponseBody} extends {@link TeaModel}
+ * {@link DsgQueryDesensStatusListResponseBody} extends {@link TeaModel}
  *
- * <p>ListFoldersResponseBody</p>
+ * <p>DsgQueryDesensStatusListResponseBody</p>
  */
-public class ListFoldersResponseBody extends TeaModel {
+public class DsgQueryDesensStatusListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
@@ -35,7 +35,7 @@ public class ListFoldersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ListFoldersResponseBody(Builder builder) {
+    private DsgQueryDesensStatusListResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
@@ -48,7 +48,7 @@ public class ListFoldersResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListFoldersResponseBody create() {
+    public static DsgQueryDesensStatusListResponseBody create() {
         return builder().build();
     }
 
@@ -109,7 +109,7 @@ public class ListFoldersResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ListFoldersResponseBody model) {
+        private Builder(DsgQueryDesensStatusListResponseBody model) {
             this.data = model.data;
             this.errorCode = model.errorCode;
             this.errorMessage = model.errorMessage;
@@ -119,7 +119,7 @@ public class ListFoldersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The path of the folder.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,10 +127,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Invalid.Tenant.ConnectionNotExists</p>
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -138,10 +135,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The connection does not exist.</p>
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -149,10 +143,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the folders.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -160,10 +151,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0000-ABCD-****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -171,92 +159,152 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of folders.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public ListFoldersResponseBody build() {
-            return new ListFoldersResponseBody(this);
+        public DsgQueryDesensStatusListResponseBody build() {
+            return new DsgQueryDesensStatusListResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListFoldersResponseBody} extends {@link TeaModel}
+     * {@link DsgQueryDesensStatusListResponseBody} extends {@link TeaModel}
      *
-     * <p>ListFoldersResponseBody</p>
+     * <p>DsgQueryDesensStatusListResponseBody</p>
      */
-    public static class Folders extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("FolderId")
-        private String folderId;
+    public static class PageData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DesensStatus")
+        private Integer desensStatus;
 
-        @com.aliyun.core.annotation.NameInMap("FolderPath")
-        private String folderPath;
+        @com.aliyun.core.annotation.NameInMap("HandleSpace")
+        private String handleSpace;
 
-        private Folders(Builder builder) {
-            this.folderId = builder.folderId;
-            this.folderPath = builder.folderPath;
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("WorkspaceIdentifier")
+        private String workspaceIdentifier;
+
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
+        private String workspaceName;
+
+        private PageData(Builder builder) {
+            this.desensStatus = builder.desensStatus;
+            this.handleSpace = builder.handleSpace;
+            this.id = builder.id;
+            this.workspaceIdentifier = builder.workspaceIdentifier;
+            this.workspaceName = builder.workspaceName;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Folders create() {
+        public static PageData create() {
             return builder().build();
         }
 
         /**
-         * @return folderId
+         * @return desensStatus
          */
-        public String getFolderId() {
-            return this.folderId;
+        public Integer getDesensStatus() {
+            return this.desensStatus;
         }
 
         /**
-         * @return folderPath
+         * @return handleSpace
          */
-        public String getFolderPath() {
-            return this.folderPath;
+        public String getHandleSpace() {
+            return this.handleSpace;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return workspaceIdentifier
+         */
+        public String getWorkspaceIdentifier() {
+            return this.workspaceIdentifier;
+        }
+
+        /**
+         * @return workspaceName
+         */
+        public String getWorkspaceName() {
+            return this.workspaceName;
         }
 
         public static final class Builder {
-            private String folderId; 
-            private String folderPath; 
+            private Integer desensStatus; 
+            private String handleSpace; 
+            private Long id; 
+            private String workspaceIdentifier; 
+            private String workspaceName; 
 
             private Builder() {
             } 
 
-            private Builder(Folders model) {
-                this.folderId = model.folderId;
-                this.folderPath = model.folderPath;
+            private Builder(PageData model) {
+                this.desensStatus = model.desensStatus;
+                this.handleSpace = model.handleSpace;
+                this.id = model.id;
+                this.workspaceIdentifier = model.workspaceIdentifier;
+                this.workspaceName = model.workspaceName;
             } 
 
             /**
-             * FolderId.
+             * DesensStatus.
              */
-            public Builder folderId(String folderId) {
-                this.folderId = folderId;
+            public Builder desensStatus(Integer desensStatus) {
+                this.desensStatus = desensStatus;
                 return this;
             }
 
             /**
-             * FolderPath.
+             * HandleSpace.
              */
-            public Builder folderPath(String folderPath) {
-                this.folderPath = folderPath;
+            public Builder handleSpace(String handleSpace) {
+                this.handleSpace = handleSpace;
                 return this;
             }
 
-            public Folders build() {
-                return new Folders(this);
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * WorkspaceIdentifier.
+             */
+            public Builder workspaceIdentifier(String workspaceIdentifier) {
+                this.workspaceIdentifier = workspaceIdentifier;
+                return this;
+            }
+
+            /**
+             * WorkspaceName.
+             */
+            public Builder workspaceName(String workspaceName) {
+                this.workspaceName = workspaceName;
+                return this;
+            }
+
+            public PageData build() {
+                return new PageData(this);
             } 
 
         } 
@@ -264,13 +312,13 @@ public class ListFoldersResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link ListFoldersResponseBody} extends {@link TeaModel}
+     * {@link DsgQueryDesensStatusListResponseBody} extends {@link TeaModel}
      *
-     * <p>ListFoldersResponseBody</p>
+     * <p>DsgQueryDesensStatusListResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Folders")
-        private java.util.List<Folders> folders;
+        @com.aliyun.core.annotation.NameInMap("PageData")
+        private java.util.List<PageData> pageData;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -282,7 +330,7 @@ public class ListFoldersResponseBody extends TeaModel {
         private Integer totalCount;
 
         private Data(Builder builder) {
-            this.folders = builder.folders;
+            this.pageData = builder.pageData;
             this.pageNumber = builder.pageNumber;
             this.pageSize = builder.pageSize;
             this.totalCount = builder.totalCount;
@@ -297,10 +345,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * @return folders
+         * @return pageData
          */
-        public java.util.List<Folders> getFolders() {
-            return this.folders;
+        public java.util.List<PageData> getPageData() {
+            return this.pageData;
         }
 
         /**
@@ -325,7 +373,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List<Folders> folders; 
+            private java.util.List<PageData> pageData; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -334,25 +382,22 @@ public class ListFoldersResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
-                this.folders = model.folders;
+                this.pageData = model.pageData;
                 this.pageNumber = model.pageNumber;
                 this.pageSize = model.pageSize;
                 this.totalCount = model.totalCount;
             } 
 
             /**
-             * Folders.
+             * PageData.
              */
-            public Builder folders(java.util.List<Folders> folders) {
-                this.folders = folders;
+            public Builder pageData(java.util.List<PageData> pageData) {
+                this.pageData = pageData;
                 return this;
             }
 
             /**
-             * <p>The folder ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * PageNumber.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -360,10 +405,7 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * <p><a href="http://100.67.165.184/business/api/folders/list">http://100.67.165.184/business/api/folders/list</a></p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -371,10 +413,7 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ListFolders</p>
-             * 
-             * <strong>example:</strong>
-             * <p>13</p>
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
