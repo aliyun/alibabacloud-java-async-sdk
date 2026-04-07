@@ -266,6 +266,9 @@ public class GetSmsTemplateListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
 
+        @com.aliyun.core.annotation.NameInMap("TemplateContent")
+        private String templateContent;
+
         @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
@@ -286,6 +289,7 @@ public class GetSmsTemplateListResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.signName = builder.signName;
             this.templateCode = builder.templateCode;
+            this.templateContent = builder.templateContent;
             this.templateName = builder.templateName;
             this.templateTag = builder.templateTag;
             this.templateType = builder.templateType;
@@ -330,6 +334,13 @@ public class GetSmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
+         * @return templateContent
+         */
+        public String getTemplateContent() {
+            return this.templateContent;
+        }
+
+        /**
          * @return templateName
          */
         public String getTemplateName() {
@@ -369,6 +380,7 @@ public class GetSmsTemplateListResponseBody extends TeaModel {
             private String gmtCreate; 
             private String signName; 
             private String templateCode; 
+            private String templateContent; 
             private String templateName; 
             private java.util.List<TemplateTag> templateTag; 
             private Long templateType; 
@@ -383,6 +395,7 @@ public class GetSmsTemplateListResponseBody extends TeaModel {
                 this.gmtCreate = model.gmtCreate;
                 this.signName = model.signName;
                 this.templateCode = model.templateCode;
+                this.templateContent = model.templateContent;
                 this.templateName = model.templateName;
                 this.templateTag = model.templateTag;
                 this.templateType = model.templateType;
@@ -431,6 +444,17 @@ public class GetSmsTemplateListResponseBody extends TeaModel {
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
+                return this;
+            }
+
+            /**
+             * <p>模板内容</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
+             */
+            public Builder templateContent(String templateContent) {
+                this.templateContent = templateContent;
                 return this;
             }
 

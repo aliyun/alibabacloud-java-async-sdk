@@ -53,6 +53,9 @@ public class GetSmsTemplateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SignList")
+    private SignList signList;
+
     @com.aliyun.core.annotation.NameInMap("TemplateCode")
     private String templateCode;
 
@@ -90,6 +93,7 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         this.relatedSignName = builder.relatedSignName;
         this.remark = builder.remark;
         this.requestId = builder.requestId;
+        this.signList = builder.signList;
         this.templateCode = builder.templateCode;
         this.templateContent = builder.templateContent;
         this.templateName = builder.templateName;
@@ -197,6 +201,13 @@ public class GetSmsTemplateResponseBody extends TeaModel {
     }
 
     /**
+     * @return signList
+     */
+    public SignList getSignList() {
+        return this.signList;
+    }
+
+    /**
      * @return templateCode
      */
     public String getTemplateCode() {
@@ -265,6 +276,7 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         private String relatedSignName; 
         private String remark; 
         private String requestId; 
+        private SignList signList; 
         private String templateCode; 
         private String templateContent; 
         private String templateName; 
@@ -290,6 +302,7 @@ public class GetSmsTemplateResponseBody extends TeaModel {
             this.relatedSignName = model.relatedSignName;
             this.remark = model.remark;
             this.requestId = model.requestId;
+            this.signList = model.signList;
             this.templateCode = model.templateCode;
             this.templateContent = model.templateContent;
             this.templateName = model.templateName;
@@ -430,6 +443,14 @@ public class GetSmsTemplateResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SignList.
+         */
+        public Builder signList(SignList signList) {
+            this.signList = signList;
             return this;
         }
 
@@ -730,6 +751,60 @@ public class GetSmsTemplateResponseBody extends TeaModel {
 
             public MoreDataFileUrlList build() {
                 return new MoreDataFileUrlList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetSmsTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmsTemplateResponseBody</p>
+     */
+    public static class SignList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SignList")
+        private java.util.List<String> signList;
+
+        private SignList(Builder builder) {
+            this.signList = builder.signList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SignList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return signList
+         */
+        public java.util.List<String> getSignList() {
+            return this.signList;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> signList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SignList model) {
+                this.signList = model.signList;
+            } 
+
+            /**
+             * SignList.
+             */
+            public Builder signList(java.util.List<String> signList) {
+                this.signList = signList;
+                return this;
+            }
+
+            public SignList build() {
+                return new SignList(this);
             } 
 
         } 
