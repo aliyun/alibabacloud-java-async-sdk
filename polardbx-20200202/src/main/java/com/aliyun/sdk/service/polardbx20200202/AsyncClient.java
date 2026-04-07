@@ -122,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGdnInstanceResponse> createGdnInstance(CreateGdnInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateMem0  CreateMem0Request
+     * @return CreateMem0Response
+     */
+    CompletableFuture<CreateMem0Response> createMem0(CreateMem0Request request);
+
+    /**
      * @param request the request parameters of CreateRplInspectionTask  CreateRplInspectionTaskRequest
      * @return CreateRplInspectionTaskResponse
      */
@@ -192,6 +198,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteGdnInstanceResponse
      */
     CompletableFuture<DeleteGdnInstanceResponse> deleteGdnInstance(DeleteGdnInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMem0  DeleteMem0Request
+     * @return DeleteMem0Response
+     */
+    CompletableFuture<DeleteMem0Response> deleteMem0(DeleteMem0Request request);
 
     /**
      * @param request the request parameters of DescribeAccountList  DescribeAccountListRequest
@@ -414,6 +426,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeGdnInstancesResponse
      */
     CompletableFuture<DescribeGdnInstancesResponse> describeGdnInstances(DescribeGdnInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeMem0Info  DescribeMem0InfoRequest
+     * @return DescribeMem0InfoResponse
+     */
+    CompletableFuture<DescribeMem0InfoResponse> describeMem0Info(DescribeMem0InfoRequest request);
 
     /**
      * @param request the request parameters of DescribeOpenBackupSet  DescribeOpenBackupSetRequest
