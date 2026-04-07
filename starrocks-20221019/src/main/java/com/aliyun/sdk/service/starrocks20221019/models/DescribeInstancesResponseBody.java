@@ -380,6 +380,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
+        @com.aliyun.core.annotation.NameInMap("EnableAiFunction")
+        private Boolean enableAiFunction;
+
         @com.aliyun.core.annotation.NameInMap("EnableAutoMinorVersionUpgrade")
         private Boolean enableAutoMinorVersionUpgrade;
 
@@ -462,6 +465,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.aclId = builder.aclId;
             this.architecture = builder.architecture;
             this.beginTime = builder.beginTime;
+            this.enableAiFunction = builder.enableAiFunction;
             this.enableAutoMinorVersionUpgrade = builder.enableAutoMinorVersionUpgrade;
             this.enableSSL = builder.enableSSL;
             this.enabledAuditLoader = builder.enabledAuditLoader;
@@ -517,6 +521,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public Long getBeginTime() {
             return this.beginTime;
+        }
+
+        /**
+         * @return enableAiFunction
+         */
+        public Boolean getEnableAiFunction() {
+            return this.enableAiFunction;
         }
 
         /**
@@ -705,6 +716,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String aclId; 
             private String architecture; 
             private Long beginTime; 
+            private Boolean enableAiFunction; 
             private Boolean enableAutoMinorVersionUpgrade; 
             private Boolean enableSSL; 
             private Boolean enabledAuditLoader; 
@@ -739,6 +751,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.aclId = model.aclId;
                 this.architecture = model.architecture;
                 this.beginTime = model.beginTime;
+                this.enableAiFunction = model.enableAiFunction;
                 this.enableAutoMinorVersionUpgrade = model.enableAutoMinorVersionUpgrade;
                 this.enableSSL = model.enableSSL;
                 this.enabledAuditLoader = model.enabledAuditLoader;
@@ -788,6 +801,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
+                return this;
+            }
+
+            /**
+             * EnableAiFunction.
+             */
+            public Builder enableAiFunction(Boolean enableAiFunction) {
+                this.enableAiFunction = enableAiFunction;
                 return this;
             }
 
