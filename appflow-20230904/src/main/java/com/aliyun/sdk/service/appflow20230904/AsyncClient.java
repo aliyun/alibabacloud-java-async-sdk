@@ -25,4 +25,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GenerateUserSessionTokenResponse> generateUserSessionToken(GenerateUserSessionTokenRequest request);
 
+    /**
+     * @param request the request parameters of InvokeAction  InvokeActionRequest
+     * @return InvokeActionResponse
+     */
+    CompletableFuture<InvokeActionResponse> invokeAction(InvokeActionRequest request);
+
+    ResponseIterable<InvokeActionResponseBody> invokeActionWithResponseIterable(InvokeActionRequest request);
+
 }

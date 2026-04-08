@@ -26,6 +26,10 @@ public class GenerateUserSessionTokenRequest extends Request {
     private Long expireSecond;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+    private String extraInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IntegrateId")
     private String integrateId;
 
@@ -46,6 +50,7 @@ public class GenerateUserSessionTokenRequest extends Request {
         super(builder);
         this.chatbotId = builder.chatbotId;
         this.expireSecond = builder.expireSecond;
+        this.extraInfo = builder.extraInfo;
         this.integrateId = builder.integrateId;
         this.userAvatar = builder.userAvatar;
         this.userId = builder.userId;
@@ -80,6 +85,13 @@ public class GenerateUserSessionTokenRequest extends Request {
     }
 
     /**
+     * @return extraInfo
+     */
+    public String getExtraInfo() {
+        return this.extraInfo;
+    }
+
+    /**
      * @return integrateId
      */
     public String getIntegrateId() {
@@ -110,6 +122,7 @@ public class GenerateUserSessionTokenRequest extends Request {
     public static final class Builder extends Request.Builder<GenerateUserSessionTokenRequest, Builder> {
         private String chatbotId; 
         private Long expireSecond; 
+        private String extraInfo; 
         private String integrateId; 
         private String userAvatar; 
         private String userId; 
@@ -123,6 +136,7 @@ public class GenerateUserSessionTokenRequest extends Request {
             super(request);
             this.chatbotId = request.chatbotId;
             this.expireSecond = request.expireSecond;
+            this.extraInfo = request.extraInfo;
             this.integrateId = request.integrateId;
             this.userAvatar = request.userAvatar;
             this.userId = request.userId;
@@ -150,6 +164,15 @@ public class GenerateUserSessionTokenRequest extends Request {
         public Builder expireSecond(Long expireSecond) {
             this.putQueryParameter("ExpireSecond", expireSecond);
             this.expireSecond = expireSecond;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(String extraInfo) {
+            this.putQueryParameter("ExtraInfo", extraInfo);
+            this.extraInfo = extraInfo;
             return this;
         }
 

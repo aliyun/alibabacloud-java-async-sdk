@@ -1,3 +1,6 @@
+2026-04-08 Version: 1.0.2
+- Generated java-async 2023-09-04 for appflow.
+
 2025-05-30 Version: 1.0.0
 - Generated java-async 2023-09-04 for appflow.
 
