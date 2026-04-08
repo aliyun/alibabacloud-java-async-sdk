@@ -432,6 +432,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEnvironmentsResponse> listEnvironments(ListEnvironmentsRequest request);
 
     /**
+     * @param request the request parameters of ListExternalServices  ListExternalServicesRequest
+     * @return ListExternalServicesResponse
+     */
+    CompletableFuture<ListExternalServicesResponse> listExternalServices(ListExternalServicesRequest request);
+
+    /**
      * @param request the request parameters of ListGatewayFeatures  ListGatewayFeaturesRequest
      * @return ListGatewayFeaturesResponse
      */

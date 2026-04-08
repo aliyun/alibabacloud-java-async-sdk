@@ -17,11 +17,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ValidationOptions</p>
  */
 public class ValidationOptions extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("skipVerifyAIChatCompletion")
-    private Boolean skipVerifyAIChatCompletion;
-
     private ValidationOptions(Builder builder) {
-        this.skipVerifyAIChatCompletion = builder.skipVerifyAIChatCompletion;
     }
 
     public static Builder builder() {
@@ -36,30 +32,13 @@ public class ValidationOptions extends TeaModel {
         return new Builder(this);
     }
 
-    /**
-     * @return skipVerifyAIChatCompletion
-     */
-    public Boolean getSkipVerifyAIChatCompletion() {
-        return this.skipVerifyAIChatCompletion;
-    }
-
     public static final class Builder {
-        private Boolean skipVerifyAIChatCompletion; 
 
         private Builder() {
         } 
 
         private Builder(ValidationOptions model) {
-            this.skipVerifyAIChatCompletion = model.skipVerifyAIChatCompletion;
         } 
-
-        /**
-         * skipVerifyAIChatCompletion.
-         */
-        public Builder skipVerifyAIChatCompletion(Boolean skipVerifyAIChatCompletion) {
-            this.skipVerifyAIChatCompletion = skipVerifyAIChatCompletion;
-            return this;
-        }
 
         public ValidationOptions build() {
             return new ValidationOptions(this);

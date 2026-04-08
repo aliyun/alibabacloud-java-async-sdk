@@ -1244,6 +1244,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListExternalServices  ListExternalServicesRequest
+     * @return ListExternalServicesResponse
+     */
+    @Override
+    public CompletableFuture<ListExternalServicesResponse> listExternalServices(ListExternalServicesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListExternalServices").setMethod(HttpMethod.GET).setPathRegex("/v1/gateways/{gatewayId}/external-services").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListExternalServicesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListExternalServicesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListGatewayFeatures  ListGatewayFeaturesRequest
      * @return ListGatewayFeaturesResponse
      */
