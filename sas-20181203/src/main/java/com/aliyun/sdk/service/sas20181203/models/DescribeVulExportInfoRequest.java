@@ -22,9 +22,14 @@ public class DescribeVulExportInfoRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long exportId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private DescribeVulExportInfoRequest(Builder builder) {
         super(builder);
         this.exportId = builder.exportId;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class DescribeVulExportInfoRequest extends Request {
         return this.exportId;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeVulExportInfoRequest, Builder> {
         private Long exportId; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class DescribeVulExportInfoRequest extends Request {
         private Builder(DescribeVulExportInfoRequest request) {
             super(request);
             this.exportId = request.exportId;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -69,6 +83,15 @@ public class DescribeVulExportInfoRequest extends Request {
         public Builder exportId(Long exportId) {
             this.putQueryParameter("ExportId", exportId);
             this.exportId = exportId;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

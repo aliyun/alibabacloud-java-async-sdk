@@ -70,6 +70,10 @@ public class ExportVulRequest extends Request {
     private Integer raspDefend;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchTags")
     private String searchTags;
 
@@ -105,6 +109,7 @@ public class ExportVulRequest extends Request {
         this.necessity = builder.necessity;
         this.path = builder.path;
         this.raspDefend = builder.raspDefend;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.searchTags = builder.searchTags;
         this.type = builder.type;
         this.uuids = builder.uuids;
@@ -217,6 +222,13 @@ public class ExportVulRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return searchTags
      */
     public String getSearchTags() {
@@ -265,6 +277,7 @@ public class ExportVulRequest extends Request {
         private String necessity; 
         private String path; 
         private Integer raspDefend; 
+        private Long resourceDirectoryAccountId; 
         private String searchTags; 
         private String type; 
         private String uuids; 
@@ -290,6 +303,7 @@ public class ExportVulRequest extends Request {
             this.necessity = request.necessity;
             this.path = request.path;
             this.raspDefend = request.raspDefend;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.searchTags = request.searchTags;
             this.type = request.type;
             this.uuids = request.uuids;
@@ -481,6 +495,15 @@ public class ExportVulRequest extends Request {
         public Builder raspDefend(Integer raspDefend) {
             this.putQueryParameter("RaspDefend", raspDefend);
             this.raspDefend = raspDefend;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 
