@@ -21,6 +21,9 @@ public class CreateAgentRuntimeInput extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String agentRuntimeName;
 
+    @com.aliyun.core.annotation.NameInMap("armsConfiguration")
+    private ArmsConfiguration armsConfiguration;
+
     @com.aliyun.core.annotation.NameInMap("artifactType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String artifactType;
@@ -100,6 +103,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
 
     private CreateAgentRuntimeInput(Builder builder) {
         this.agentRuntimeName = builder.agentRuntimeName;
+        this.armsConfiguration = builder.armsConfiguration;
         this.artifactType = builder.artifactType;
         this.codeConfiguration = builder.codeConfiguration;
         this.containerConfiguration = builder.containerConfiguration;
@@ -142,6 +146,13 @@ public class CreateAgentRuntimeInput extends TeaModel {
      */
     public String getAgentRuntimeName() {
         return this.agentRuntimeName;
+    }
+
+    /**
+     * @return armsConfiguration
+     */
+    public ArmsConfiguration getArmsConfiguration() {
+        return this.armsConfiguration;
     }
 
     /**
@@ -307,6 +318,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
 
     public static final class Builder {
         private String agentRuntimeName; 
+        private ArmsConfiguration armsConfiguration; 
         private String artifactType; 
         private CodeConfiguration codeConfiguration; 
         private ContainerConfiguration containerConfiguration; 
@@ -336,6 +348,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
 
         private Builder(CreateAgentRuntimeInput model) {
             this.agentRuntimeName = model.agentRuntimeName;
+            this.armsConfiguration = model.armsConfiguration;
             this.artifactType = model.artifactType;
             this.codeConfiguration = model.codeConfiguration;
             this.containerConfiguration = model.containerConfiguration;
@@ -370,6 +383,14 @@ public class CreateAgentRuntimeInput extends TeaModel {
          */
         public Builder agentRuntimeName(String agentRuntimeName) {
             this.agentRuntimeName = agentRuntimeName;
+            return this;
+        }
+
+        /**
+         * armsConfiguration.
+         */
+        public Builder armsConfiguration(ArmsConfiguration armsConfiguration) {
+            this.armsConfiguration = armsConfiguration;
             return this;
         }
 
