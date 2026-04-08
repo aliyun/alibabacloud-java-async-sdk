@@ -1,3 +1,6 @@
+2026-04-08 Version: 2.0.12
+- Generated java-async 2018-11-01 for dms-enterprise.
+
 2026-03-27 Version: 2.0.11
 - Generated java-async 2018-11-01 for dms-enterprise.
 

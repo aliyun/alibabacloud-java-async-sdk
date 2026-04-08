@@ -228,6 +228,9 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Skip")
         private Boolean skip;
 
+        @com.aliyun.core.annotation.NameInMap("SqlId")
+        private Long sqlId;
+
         @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
@@ -251,6 +254,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             this.log = builder.log;
             this.logic = builder.logic;
             this.skip = builder.skip;
+            this.sqlId = builder.sqlId;
             this.sqlType = builder.sqlType;
             this.startTime = builder.startTime;
             this.status = builder.status;
@@ -336,6 +340,13 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return sqlId
+         */
+        public Long getSqlId() {
+            return this.sqlId;
+        }
+
+        /**
          * @return sqlType
          */
         public String getSqlType() {
@@ -374,6 +385,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             private String log; 
             private Boolean logic; 
             private Boolean skip; 
+            private Long sqlId; 
             private String sqlType; 
             private String startTime; 
             private String status; 
@@ -393,6 +405,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
                 this.log = model.log;
                 this.logic = model.logic;
                 this.skip = model.skip;
+                this.sqlId = model.sqlId;
                 this.sqlType = model.sqlType;
                 this.startTime = model.startTime;
                 this.status = model.status;
@@ -514,6 +527,14 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
              */
             public Builder skip(Boolean skip) {
                 this.skip = skip;
+                return this;
+            }
+
+            /**
+             * SqlId.
+             */
+            public Builder sqlId(Long sqlId) {
+                this.sqlId = sqlId;
                 return this;
             }
 
