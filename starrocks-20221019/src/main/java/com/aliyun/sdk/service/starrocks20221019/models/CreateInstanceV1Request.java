@@ -60,6 +60,10 @@ public class CreateInstanceV1Request extends Request {
     private Integer duration;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableMultiAz")
+    private Boolean enableMultiAz;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Encrypted")
     private Boolean encrypted;
 
@@ -162,6 +166,7 @@ public class CreateInstanceV1Request extends Request {
         this.dlfCatalogName = builder.dlfCatalogName;
         this.dlfCatalogType = builder.dlfCatalogType;
         this.duration = builder.duration;
+        this.enableMultiAz = builder.enableMultiAz;
         this.encrypted = builder.encrypted;
         this.frontendNodeGroups = builder.frontendNodeGroups;
         this.gatewayType = builder.gatewayType;
@@ -266,6 +271,13 @@ public class CreateInstanceV1Request extends Request {
      */
     public Integer getDuration() {
         return this.duration;
+    }
+
+    /**
+     * @return enableMultiAz
+     */
+    public Boolean getEnableMultiAz() {
+        return this.enableMultiAz;
     }
 
     /**
@@ -426,6 +438,7 @@ public class CreateInstanceV1Request extends Request {
         private String dlfCatalogName; 
         private String dlfCatalogType; 
         private Integer duration; 
+        private Boolean enableMultiAz; 
         private Boolean encrypted; 
         private java.util.List<FrontendNodeGroups> frontendNodeGroups; 
         private String gatewayType; 
@@ -464,6 +477,7 @@ public class CreateInstanceV1Request extends Request {
             this.dlfCatalogName = request.dlfCatalogName;
             this.dlfCatalogType = request.dlfCatalogType;
             this.duration = request.duration;
+            this.enableMultiAz = request.enableMultiAz;
             this.encrypted = request.encrypted;
             this.frontendNodeGroups = request.frontendNodeGroups;
             this.gatewayType = request.gatewayType;
@@ -578,6 +592,15 @@ public class CreateInstanceV1Request extends Request {
         public Builder duration(Integer duration) {
             this.putBodyParameter("Duration", duration);
             this.duration = duration;
+            return this;
+        }
+
+        /**
+         * EnableMultiAz.
+         */
+        public Builder enableMultiAz(Boolean enableMultiAz) {
+            this.putBodyParameter("EnableMultiAz", enableMultiAz);
+            this.enableMultiAz = enableMultiAz;
             return this;
         }
 

@@ -227,8 +227,14 @@ public class ListOperationActivityResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityStatus")
         private String activityStatus;
 
+        @com.aliyun.core.annotation.NameInMap("ConsoleRetryCount")
+        private Integer consoleRetryCount;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("ErrMessage")
+        private String errMessage;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -239,7 +245,9 @@ public class ListOperationActivityResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.activityId = builder.activityId;
             this.activityStatus = builder.activityStatus;
+            this.consoleRetryCount = builder.consoleRetryCount;
             this.endTime = builder.endTime;
+            this.errMessage = builder.errMessage;
             this.name = builder.name;
             this.startTime = builder.startTime;
         }
@@ -267,10 +275,24 @@ public class ListOperationActivityResponseBody extends TeaModel {
         }
 
         /**
+         * @return consoleRetryCount
+         */
+        public Integer getConsoleRetryCount() {
+            return this.consoleRetryCount;
+        }
+
+        /**
          * @return endTime
          */
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return errMessage
+         */
+        public String getErrMessage() {
+            return this.errMessage;
         }
 
         /**
@@ -290,7 +312,9 @@ public class ListOperationActivityResponseBody extends TeaModel {
         public static final class Builder {
             private String activityId; 
             private String activityStatus; 
+            private Integer consoleRetryCount; 
             private Long endTime; 
+            private String errMessage; 
             private String name; 
             private Long startTime; 
 
@@ -300,7 +324,9 @@ public class ListOperationActivityResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.activityId = model.activityId;
                 this.activityStatus = model.activityStatus;
+                this.consoleRetryCount = model.consoleRetryCount;
                 this.endTime = model.endTime;
+                this.errMessage = model.errMessage;
                 this.name = model.name;
                 this.startTime = model.startTime;
             } 
@@ -322,10 +348,26 @@ public class ListOperationActivityResponseBody extends TeaModel {
             }
 
             /**
+             * ConsoleRetryCount.
+             */
+            public Builder consoleRetryCount(Integer consoleRetryCount) {
+                this.consoleRetryCount = consoleRetryCount;
+                return this;
+            }
+
+            /**
              * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * ErrMessage.
+             */
+            public Builder errMessage(String errMessage) {
+                this.errMessage = errMessage;
                 return this;
             }
 

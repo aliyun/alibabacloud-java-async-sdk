@@ -386,6 +386,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableAutoMinorVersionUpgrade")
         private Boolean enableAutoMinorVersionUpgrade;
 
+        @com.aliyun.core.annotation.NameInMap("EnableMultiAz")
+        private Boolean enableMultiAz;
+
         @com.aliyun.core.annotation.NameInMap("EnableSSL")
         private Boolean enableSSL;
 
@@ -467,6 +470,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.beginTime = builder.beginTime;
             this.enableAiFunction = builder.enableAiFunction;
             this.enableAutoMinorVersionUpgrade = builder.enableAutoMinorVersionUpgrade;
+            this.enableMultiAz = builder.enableMultiAz;
             this.enableSSL = builder.enableSSL;
             this.enabledAuditLoader = builder.enabledAuditLoader;
             this.encrypted = builder.encrypted;
@@ -535,6 +539,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public Boolean getEnableAutoMinorVersionUpgrade() {
             return this.enableAutoMinorVersionUpgrade;
+        }
+
+        /**
+         * @return enableMultiAz
+         */
+        public Boolean getEnableMultiAz() {
+            return this.enableMultiAz;
         }
 
         /**
@@ -718,6 +729,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Long beginTime; 
             private Boolean enableAiFunction; 
             private Boolean enableAutoMinorVersionUpgrade; 
+            private Boolean enableMultiAz; 
             private Boolean enableSSL; 
             private Boolean enabledAuditLoader; 
             private Boolean encrypted; 
@@ -753,6 +765,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.beginTime = model.beginTime;
                 this.enableAiFunction = model.enableAiFunction;
                 this.enableAutoMinorVersionUpgrade = model.enableAutoMinorVersionUpgrade;
+                this.enableMultiAz = model.enableMultiAz;
                 this.enableSSL = model.enableSSL;
                 this.enabledAuditLoader = model.enabledAuditLoader;
                 this.encrypted = model.encrypted;
@@ -817,6 +830,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder enableAutoMinorVersionUpgrade(Boolean enableAutoMinorVersionUpgrade) {
                 this.enableAutoMinorVersionUpgrade = enableAutoMinorVersionUpgrade;
+                return this;
+            }
+
+            /**
+             * EnableMultiAz.
+             */
+            public Builder enableMultiAz(Boolean enableMultiAz) {
+                this.enableMultiAz = enableMultiAz;
                 return this;
             }
 
