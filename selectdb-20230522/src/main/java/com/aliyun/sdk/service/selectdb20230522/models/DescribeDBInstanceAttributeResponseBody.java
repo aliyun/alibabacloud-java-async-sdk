@@ -71,6 +71,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MultiZone")
     private java.util.List<MultiZone> multiZone;
 
+    @com.aliyun.core.annotation.NameInMap("OTelBearerToken")
+    private String oTelBearerToken;
+
+    @com.aliyun.core.annotation.NameInMap("OTelGrafanaServiceStatus")
+    private String oTelGrafanaServiceStatus;
+
     @com.aliyun.core.annotation.NameInMap("ObjectStoreSize")
     private Long objectStoreSize;
 
@@ -135,6 +141,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         this.maintainEndtime = builder.maintainEndtime;
         this.maintainStarttime = builder.maintainStarttime;
         this.multiZone = builder.multiZone;
+        this.oTelBearerToken = builder.oTelBearerToken;
+        this.oTelGrafanaServiceStatus = builder.oTelGrafanaServiceStatus;
         this.objectStoreSize = builder.objectStoreSize;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
@@ -291,6 +299,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return oTelBearerToken
+     */
+    public String getOTelBearerToken() {
+        return this.oTelBearerToken;
+    }
+
+    /**
+     * @return oTelGrafanaServiceStatus
+     */
+    public String getOTelGrafanaServiceStatus() {
+        return this.oTelGrafanaServiceStatus;
+    }
+
+    /**
      * @return objectStoreSize
      */
     public Long getObjectStoreSize() {
@@ -414,6 +436,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String maintainEndtime; 
         private String maintainStarttime; 
         private java.util.List<MultiZone> multiZone; 
+        private String oTelBearerToken; 
+        private String oTelGrafanaServiceStatus; 
         private Long objectStoreSize; 
         private String regionId; 
         private String requestId; 
@@ -452,6 +476,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.maintainEndtime = model.maintainEndtime;
             this.maintainStarttime = model.maintainStarttime;
             this.multiZone = model.multiZone;
+            this.oTelBearerToken = model.oTelBearerToken;
+            this.oTelGrafanaServiceStatus = model.oTelGrafanaServiceStatus;
             this.objectStoreSize = model.objectStoreSize;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
@@ -653,6 +679,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder multiZone(java.util.List<MultiZone> multiZone) {
             this.multiZone = multiZone;
+            return this;
+        }
+
+        /**
+         * OTelBearerToken.
+         */
+        public Builder oTelBearerToken(String oTelBearerToken) {
+            this.oTelBearerToken = oTelBearerToken;
+            return this;
+        }
+
+        /**
+         * OTelGrafanaServiceStatus.
+         */
+        public Builder oTelGrafanaServiceStatus(String oTelGrafanaServiceStatus) {
+            this.oTelGrafanaServiceStatus = oTelGrafanaServiceStatus;
             return this;
         }
 
