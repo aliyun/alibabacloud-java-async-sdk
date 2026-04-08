@@ -100,6 +100,10 @@ public class CreateApplicationRequest extends Request {
     private String modelName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.List<Parameters> parameters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
@@ -189,6 +193,7 @@ public class CreateApplicationRequest extends Request {
         this.modelBaseUrl = builder.modelBaseUrl;
         this.modelFrom = builder.modelFrom;
         this.modelName = builder.modelName;
+        this.parameters = builder.parameters;
         this.payType = builder.payType;
         this.period = builder.period;
         this.polarFSInstanceId = builder.polarFSInstanceId;
@@ -362,6 +367,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return parameters
+     */
+    public java.util.List<Parameters> getParameters() {
+        return this.parameters;
+    }
+
+    /**
      * @return payType
      */
     public String getPayType() {
@@ -501,6 +513,7 @@ public class CreateApplicationRequest extends Request {
         private String modelBaseUrl; 
         private String modelFrom; 
         private String modelName; 
+        private java.util.List<Parameters> parameters; 
         private String payType; 
         private String period; 
         private String polarFSInstanceId; 
@@ -545,6 +558,7 @@ public class CreateApplicationRequest extends Request {
             this.modelBaseUrl = request.modelBaseUrl;
             this.modelFrom = request.modelFrom;
             this.modelName = request.modelName;
+            this.parameters = request.parameters;
             this.payType = request.payType;
             this.period = request.period;
             this.polarFSInstanceId = request.polarFSInstanceId;
@@ -750,6 +764,16 @@ public class CreateApplicationRequest extends Request {
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
             this.modelName = modelName;
+            return this;
+        }
+
+        /**
+         * Parameters.
+         */
+        public Builder parameters(java.util.List<Parameters> parameters) {
+            String parametersShrink = shrink(parameters, "Parameters", "json");
+            this.putQueryParameter("Parameters", parametersShrink);
+            this.parameters = parameters;
             return this;
         }
 
@@ -1469,6 +1493,81 @@ public class CreateApplicationRequest extends Request {
 
             public MemApplicationSpec build() {
                 return new MemApplicationSpec(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationRequest</p>
+     */
+    public static class Parameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
+        private String parameterName;
+
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
+        private String parameterValue;
+
+        private Parameters(Builder builder) {
+            this.parameterName = builder.parameterName;
+            this.parameterValue = builder.parameterValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Parameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return parameterName
+         */
+        public String getParameterName() {
+            return this.parameterName;
+        }
+
+        /**
+         * @return parameterValue
+         */
+        public String getParameterValue() {
+            return this.parameterValue;
+        }
+
+        public static final class Builder {
+            private String parameterName; 
+            private String parameterValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+            } 
+
+            /**
+             * ParameterName.
+             */
+            public Builder parameterName(String parameterName) {
+                this.parameterName = parameterName;
+                return this;
+            }
+
+            /**
+             * ParameterValue.
+             */
+            public Builder parameterValue(String parameterValue) {
+                this.parameterValue = parameterValue;
+                return this;
+            }
+
+            public Parameters build() {
+                return new Parameters(this);
             } 
 
         } 
