@@ -58,6 +58,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMmsJobResponse> createMmsJob(CreateMmsJobRequest request);
 
     /**
+     * @param request the request parameters of CreateMmsTimer  CreateMmsTimerRequest
+     * @return CreateMmsTimerResponse
+     */
+    CompletableFuture<CreateMmsTimerResponse> createMmsTimer(CreateMmsTimerRequest request);
+
+    /**
      * @param request the request parameters of CreatePackage  CreatePackageRequest
      * @return CreatePackageResponse
      */
@@ -104,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteMmsJobResponse
      */
     CompletableFuture<DeleteMmsJobResponse> deleteMmsJob(DeleteMmsJobRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMmsTimer  DeleteMmsTimerRequest
+     * @return DeleteMmsTimerResponse
+     */
+    CompletableFuture<DeleteMmsTimerResponse> deleteMmsTimer(DeleteMmsTimerRequest request);
 
     /**
      * @param request the request parameters of DeleteProject  DeleteProjectRequest
@@ -194,6 +206,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetMmsTaskResponse
      */
     CompletableFuture<GetMmsTaskResponse> getMmsTask(GetMmsTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetMmsTimer  GetMmsTimerRequest
+     * @return GetMmsTimerResponse
+     */
+    CompletableFuture<GetMmsTimerResponse> getMmsTimer(GetMmsTimerRequest request);
 
     /**
      * @param request the request parameters of GetPackage  GetPackageRequest
@@ -328,6 +346,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListJobSnapshotInfosResponse> listJobSnapshotInfos(ListJobSnapshotInfosRequest request);
 
     /**
+     * @param request the request parameters of ListMmsDataSourceConfigItems  ListMmsDataSourceConfigItemsRequest
+     * @return ListMmsDataSourceConfigItemsResponse
+     */
+    CompletableFuture<ListMmsDataSourceConfigItemsResponse> listMmsDataSourceConfigItems(ListMmsDataSourceConfigItemsRequest request);
+
+    /**
      * @param request the request parameters of ListMmsDataSources  ListMmsDataSourcesRequest
      * @return ListMmsDataSourcesResponse
      */
@@ -368,6 +392,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListMmsTasksResponse
      */
     CompletableFuture<ListMmsTasksResponse> listMmsTasks(ListMmsTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListMmsTimerLogs  ListMmsTimerLogsRequest
+     * @return ListMmsTimerLogsResponse
+     */
+    CompletableFuture<ListMmsTimerLogsResponse> listMmsTimerLogs(ListMmsTimerLogsRequest request);
 
     /**
      * @param request the request parameters of ListPackages  ListPackagesRequest

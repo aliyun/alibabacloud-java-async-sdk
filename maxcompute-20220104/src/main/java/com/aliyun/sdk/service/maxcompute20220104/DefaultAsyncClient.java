@@ -193,6 +193,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateMmsTimer  CreateMmsTimerRequest
+     * @return CreateMmsTimerResponse
+     */
+    @Override
+    public CompletableFuture<CreateMmsTimerResponse> createMmsTimer(CreateMmsTimerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateMmsTimer").setMethod(HttpMethod.POST).setPathRegex("/api/v1/mms/datasources/{sourceId}/timers").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMmsTimerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMmsTimerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreatePackage  CreatePackageRequest
      * @return CreatePackageResponse
      */
@@ -331,6 +349,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteMmsJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteMmsTimer  DeleteMmsTimerRequest
+     * @return DeleteMmsTimerResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMmsTimerResponse> deleteMmsTimer(DeleteMmsTimerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteMmsTimer").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/mms/datasources/{sourceId}/timers/{timerId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMmsTimerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMmsTimerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -601,6 +637,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetMmsTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMmsTimer  GetMmsTimerRequest
+     * @return GetMmsTimerResponse
+     */
+    @Override
+    public CompletableFuture<GetMmsTimerResponse> getMmsTimer(GetMmsTimerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMmsTimer").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/timers/{timerId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMmsTimerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMmsTimerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1003,6 +1057,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListMmsDataSourceConfigItems  ListMmsDataSourceConfigItemsRequest
+     * @return ListMmsDataSourceConfigItemsResponse
+     */
+    @Override
+    public CompletableFuture<ListMmsDataSourceConfigItemsResponse> listMmsDataSourceConfigItems(ListMmsDataSourceConfigItemsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMmsDataSourceConfigItems").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/configItems").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMmsDataSourceConfigItemsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMmsDataSourceConfigItemsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListMmsDataSources  ListMmsDataSourcesRequest
      * @return ListMmsDataSourcesResponse
      */
@@ -1123,6 +1195,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListMmsTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMmsTimerLogs  ListMmsTimerLogsRequest
+     * @return ListMmsTimerLogsResponse
+     */
+    @Override
+    public CompletableFuture<ListMmsTimerLogsResponse> listMmsTimerLogs(ListMmsTimerLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMmsTimerLogs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/timers/{timerId}/logs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMmsTimerLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMmsTimerLogsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
