@@ -83,6 +83,9 @@ public class Resource extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
+    @com.aliyun.core.annotation.NameInMap("UsageMode")
+    private String usageMode;
+
     @com.aliyun.core.annotation.NameInMap("Vendor")
     private String vendor;
 
@@ -109,6 +112,7 @@ public class Resource extends TeaModel {
         this.resourceType = builder.resourceType;
         this.status = builder.status;
         this.updateTime = builder.updateTime;
+        this.usageMode = builder.usageMode;
         this.vendor = builder.vendor;
     }
 
@@ -279,6 +283,13 @@ public class Resource extends TeaModel {
     }
 
     /**
+     * @return usageMode
+     */
+    public String getUsageMode() {
+        return this.usageMode;
+    }
+
+    /**
      * @return vendor
      */
     public String getVendor() {
@@ -308,6 +319,7 @@ public class Resource extends TeaModel {
         private String resourceType; 
         private String status; 
         private String updateTime; 
+        private String usageMode; 
         private String vendor; 
 
         private Builder() {
@@ -336,6 +348,7 @@ public class Resource extends TeaModel {
             this.resourceType = model.resourceType;
             this.status = model.status;
             this.updateTime = model.updateTime;
+            this.usageMode = model.usageMode;
             this.vendor = model.vendor;
         } 
 
@@ -512,6 +525,14 @@ public class Resource extends TeaModel {
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
+            return this;
+        }
+
+        /**
+         * UsageMode.
+         */
+        public Builder usageMode(String usageMode) {
+            this.usageMode = usageMode;
             return this;
         }
 

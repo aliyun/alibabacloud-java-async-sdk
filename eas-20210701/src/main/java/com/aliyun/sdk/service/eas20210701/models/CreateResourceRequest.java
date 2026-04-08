@@ -55,6 +55,10 @@ public class CreateResourceRequest extends Request {
     private Integer systemDiskSize;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UsageMode")
+    private String usageMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Zone")
     private String zone;
 
@@ -69,6 +73,7 @@ public class CreateResourceRequest extends Request {
         this.resourceType = builder.resourceType;
         this.selfManagedResourceOptions = builder.selfManagedResourceOptions;
         this.systemDiskSize = builder.systemDiskSize;
+        this.usageMode = builder.usageMode;
         this.zone = builder.zone;
     }
 
@@ -149,6 +154,13 @@ public class CreateResourceRequest extends Request {
     }
 
     /**
+     * @return usageMode
+     */
+    public String getUsageMode() {
+        return this.usageMode;
+    }
+
+    /**
      * @return zone
      */
     public String getZone() {
@@ -165,6 +177,7 @@ public class CreateResourceRequest extends Request {
         private String resourceType; 
         private SelfManagedResourceOptions selfManagedResourceOptions; 
         private Integer systemDiskSize; 
+        private String usageMode; 
         private String zone; 
 
         private Builder() {
@@ -182,6 +195,7 @@ public class CreateResourceRequest extends Request {
             this.resourceType = request.resourceType;
             this.selfManagedResourceOptions = request.selfManagedResourceOptions;
             this.systemDiskSize = request.systemDiskSize;
+            this.usageMode = request.usageMode;
             this.zone = request.zone;
         } 
 
@@ -305,6 +319,15 @@ public class CreateResourceRequest extends Request {
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putBodyParameter("SystemDiskSize", systemDiskSize);
             this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+
+        /**
+         * UsageMode.
+         */
+        public Builder usageMode(String usageMode) {
+            this.putBodyParameter("UsageMode", usageMode);
+            this.usageMode = usageMode;
             return this;
         }
 

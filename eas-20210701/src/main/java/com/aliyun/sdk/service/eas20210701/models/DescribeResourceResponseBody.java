@@ -89,6 +89,9 @@ public class DescribeResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
+    @com.aliyun.core.annotation.NameInMap("UsageMode")
+    private String usageMode;
+
     private DescribeResourceResponseBody(Builder builder) {
         this.clusterId = builder.clusterId;
         this.cpuCount = builder.cpuCount;
@@ -114,6 +117,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         this.resourceType = builder.resourceType;
         this.status = builder.status;
         this.updateTime = builder.updateTime;
+        this.usageMode = builder.usageMode;
     }
 
     public static Builder builder() {
@@ -296,6 +300,13 @@ public class DescribeResourceResponseBody extends TeaModel {
         return this.updateTime;
     }
 
+    /**
+     * @return usageMode
+     */
+    public String getUsageMode() {
+        return this.usageMode;
+    }
+
     public static final class Builder {
         private String clusterId; 
         private Integer cpuCount; 
@@ -321,6 +332,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         private String resourceType; 
         private String status; 
         private String updateTime; 
+        private String usageMode; 
 
         private Builder() {
         } 
@@ -350,6 +362,7 @@ public class DescribeResourceResponseBody extends TeaModel {
             this.resourceType = model.resourceType;
             this.status = model.status;
             this.updateTime = model.updateTime;
+            this.usageMode = model.usageMode;
         } 
 
         /**
@@ -605,6 +618,14 @@ public class DescribeResourceResponseBody extends TeaModel {
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
+            return this;
+        }
+
+        /**
+         * UsageMode.
+         */
+        public Builder usageMode(String usageMode) {
+            this.usageMode = usageMode;
             return this;
         }
 

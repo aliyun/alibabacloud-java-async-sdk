@@ -49,6 +49,10 @@ public class ListResourcesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsageMode")
+    private String usageMode;
+
     private ListResourcesRequest(Builder builder) {
         super(builder);
         this.order = builder.order;
@@ -59,6 +63,7 @@ public class ListResourcesRequest extends Request {
         this.resourceStatus = builder.resourceStatus;
         this.resourceType = builder.resourceType;
         this.sort = builder.sort;
+        this.usageMode = builder.usageMode;
     }
 
     public static Builder builder() {
@@ -130,6 +135,13 @@ public class ListResourcesRequest extends Request {
         return this.sort;
     }
 
+    /**
+     * @return usageMode
+     */
+    public String getUsageMode() {
+        return this.usageMode;
+    }
+
     public static final class Builder extends Request.Builder<ListResourcesRequest, Builder> {
         private String order; 
         private Integer pageNumber; 
@@ -139,6 +151,7 @@ public class ListResourcesRequest extends Request {
         private String resourceStatus; 
         private String resourceType; 
         private String sort; 
+        private String usageMode; 
 
         private Builder() {
             super();
@@ -154,6 +167,7 @@ public class ListResourcesRequest extends Request {
             this.resourceStatus = request.resourceStatus;
             this.resourceType = request.resourceType;
             this.sort = request.sort;
+            this.usageMode = request.usageMode;
         } 
 
         /**
@@ -270,6 +284,15 @@ public class ListResourcesRequest extends Request {
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
             this.sort = sort;
+            return this;
+        }
+
+        /**
+         * UsageMode.
+         */
+        public Builder usageMode(String usageMode) {
+            this.putQueryParameter("UsageMode", usageMode);
+            this.usageMode = usageMode;
             return this;
         }
 
