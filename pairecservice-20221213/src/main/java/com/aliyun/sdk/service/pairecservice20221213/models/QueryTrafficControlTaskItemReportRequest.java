@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GenerateTrafficControlTaskCodeRequest} extends {@link RequestModel}
+ * {@link QueryTrafficControlTaskItemReportRequest} extends {@link RequestModel}
  *
- * <p>GenerateTrafficControlTaskCodeRequest</p>
+ * <p>QueryTrafficControlTaskItemReportRequest</p>
  */
-public class GenerateTrafficControlTaskCodeRequest extends Request {
+public class QueryTrafficControlTaskItemReportRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("TrafficControlTaskId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -26,28 +26,41 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Environment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environment;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    private GenerateTrafficControlTaskCodeRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String startTime;
+
+    private QueryTrafficControlTaskItemReportRequest(Builder builder) {
         super(builder);
         this.trafficControlTaskId = builder.trafficControlTaskId;
         this.regionId = builder.regionId;
+        this.endTime = builder.endTime;
         this.environment = builder.environment;
         this.instanceId = builder.instanceId;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GenerateTrafficControlTaskCodeRequest create() {
+    public static QueryTrafficControlTaskItemReportRequest create() {
         return builder().build();
     }
 
@@ -71,6 +84,13 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return environment
      */
     public String getEnvironment() {
@@ -84,29 +104,40 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<GenerateTrafficControlTaskCodeRequest, Builder> {
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public static final class Builder extends Request.Builder<QueryTrafficControlTaskItemReportRequest, Builder> {
         private String trafficControlTaskId; 
         private String regionId; 
+        private String endTime; 
         private String environment; 
         private String instanceId; 
+        private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GenerateTrafficControlTaskCodeRequest request) {
+        private Builder(QueryTrafficControlTaskItemReportRequest request) {
             super(request);
             this.trafficControlTaskId = request.trafficControlTaskId;
             this.regionId = request.regionId;
+            this.endTime = request.endTime;
             this.environment = request.environment;
             this.instanceId = request.instanceId;
+            this.startTime = request.startTime;
         } 
 
         /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>7</p>
+         * <p>1</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
@@ -124,10 +155,25 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-02 10:30:00</p>
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pre</p>
          */
         public Builder environment(String environment) {
-            this.putBodyParameter("Environment", environment);
+            this.putQueryParameter("Environment", environment);
             this.environment = environment;
             return this;
         }
@@ -136,17 +182,29 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pairec-test1</p>
+         * <p>pairec_123****</p>
          */
         public Builder instanceId(String instanceId) {
-            this.putBodyParameter("InstanceId", instanceId);
+            this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01 10:30:00</p>
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
         @Override
-        public GenerateTrafficControlTaskCodeRequest build() {
-            return new GenerateTrafficControlTaskCodeRequest(this);
+        public QueryTrafficControlTaskItemReportRequest build() {
+            return new QueryTrafficControlTaskItemReportRequest(this);
         } 
 
     } 

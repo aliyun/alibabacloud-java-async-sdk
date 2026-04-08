@@ -12,19 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GenerateTrafficControlTaskCodeRequest} extends {@link RequestModel}
+ * {@link DeployTrafficControlTaskCodeRequest} extends {@link RequestModel}
  *
- * <p>GenerateTrafficControlTaskCodeRequest</p>
+ * <p>DeployTrafficControlTaskCodeRequest</p>
  */
-public class GenerateTrafficControlTaskCodeRequest extends Request {
-    @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("TrafficControlTaskId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String trafficControlTaskId;
-
+public class DeployTrafficControlTaskCodeRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TrafficControlTaskId")
+    private String trafficControlTaskId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Environment")
@@ -32,22 +31,26 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    private GenerateTrafficControlTaskCodeRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RetryDeploy")
+    private Boolean retryDeploy;
+
+    private DeployTrafficControlTaskCodeRequest(Builder builder) {
         super(builder);
-        this.trafficControlTaskId = builder.trafficControlTaskId;
         this.regionId = builder.regionId;
+        this.trafficControlTaskId = builder.trafficControlTaskId;
         this.environment = builder.environment;
         this.instanceId = builder.instanceId;
+        this.retryDeploy = builder.retryDeploy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GenerateTrafficControlTaskCodeRequest create() {
+    public static DeployTrafficControlTaskCodeRequest create() {
         return builder().build();
     }
 
@@ -57,17 +60,17 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
     }
 
     /**
-     * @return trafficControlTaskId
-     */
-    public String getTrafficControlTaskId() {
-        return this.trafficControlTaskId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return trafficControlTaskId
+     */
+    public String getTrafficControlTaskId() {
+        return this.trafficControlTaskId;
     }
 
     /**
@@ -84,35 +87,32 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<GenerateTrafficControlTaskCodeRequest, Builder> {
-        private String trafficControlTaskId; 
+    /**
+     * @return retryDeploy
+     */
+    public Boolean getRetryDeploy() {
+        return this.retryDeploy;
+    }
+
+    public static final class Builder extends Request.Builder<DeployTrafficControlTaskCodeRequest, Builder> {
         private String regionId; 
+        private String trafficControlTaskId; 
         private String environment; 
         private String instanceId; 
+        private Boolean retryDeploy; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GenerateTrafficControlTaskCodeRequest request) {
+        private Builder(DeployTrafficControlTaskCodeRequest request) {
             super(request);
-            this.trafficControlTaskId = request.trafficControlTaskId;
             this.regionId = request.regionId;
+            this.trafficControlTaskId = request.trafficControlTaskId;
             this.environment = request.environment;
             this.instanceId = request.instanceId;
+            this.retryDeploy = request.retryDeploy;
         } 
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>7</p>
-         */
-        public Builder trafficControlTaskId(String trafficControlTaskId) {
-            this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
-            this.trafficControlTaskId = trafficControlTaskId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -120,6 +120,15 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TrafficControlTaskId.
+         */
+        public Builder trafficControlTaskId(String trafficControlTaskId) {
+            this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
+            this.trafficControlTaskId = trafficControlTaskId;
             return this;
         }
 
@@ -133,10 +142,7 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pairec-test1</p>
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -144,9 +150,18 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
             return this;
         }
 
+        /**
+         * RetryDeploy.
+         */
+        public Builder retryDeploy(Boolean retryDeploy) {
+            this.putBodyParameter("RetryDeploy", retryDeploy);
+            this.retryDeploy = retryDeploy;
+            return this;
+        }
+
         @Override
-        public GenerateTrafficControlTaskCodeRequest build() {
-            return new GenerateTrafficControlTaskCodeRequest(this);
+        public DeployTrafficControlTaskCodeRequest build() {
+            return new DeployTrafficControlTaskCodeRequest(this);
         } 
 
     } 

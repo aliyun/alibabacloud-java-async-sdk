@@ -1192,6 +1192,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeployTrafficControlTaskCode  DeployTrafficControlTaskCodeRequest
+     * @return DeployTrafficControlTaskCodeResponse
+     */
+    @Override
+    public CompletableFuture<DeployTrafficControlTaskCodeResponse> deployTrafficControlTaskCode(DeployTrafficControlTaskCodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeployTrafficControlTaskCode").setMethod(HttpMethod.POST).setPathRegex("/api/v1/trafficcontroltasks/{TrafficControlTaskId}/action/deploycode").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeployTrafficControlTaskCodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeployTrafficControlTaskCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GenerateAlgorithmCustomizationScript  GenerateAlgorithmCustomizationScriptRequest
      * @return GenerateAlgorithmCustomizationScriptResponse
      */
@@ -2626,6 +2644,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryTrafficControlTargetItemReportDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryTrafficControlTaskDeployResult  QueryTrafficControlTaskDeployResultRequest
+     * @return QueryTrafficControlTaskDeployResultResponse
+     */
+    @Override
+    public CompletableFuture<QueryTrafficControlTaskDeployResultResponse> queryTrafficControlTaskDeployResult(QueryTrafficControlTaskDeployResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryTrafficControlTaskDeployResult").setMethod(HttpMethod.GET).setPathRegex("/api/v1/trafficcontroltasks/{TrafficControlTaskId}/action/queryresult").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryTrafficControlTaskDeployResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryTrafficControlTaskDeployResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryTrafficControlTaskItemReport  QueryTrafficControlTaskItemReportRequest
+     * @return QueryTrafficControlTaskItemReportResponse
+     */
+    @Override
+    public CompletableFuture<QueryTrafficControlTaskItemReportResponse> queryTrafficControlTaskItemReport(QueryTrafficControlTaskItemReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryTrafficControlTaskItemReport").setMethod(HttpMethod.GET).setPathRegex("/api/v1/trafficcontroltasks/{TrafficControlTaskId}/action/queryitemreport").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryTrafficControlTaskItemReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryTrafficControlTaskItemReportResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

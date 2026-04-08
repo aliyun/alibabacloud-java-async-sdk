@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateTrafficControlTaskResponseBody} extends {@link TeaModel}
+ * {@link DeployTrafficControlTaskCodeResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateTrafficControlTaskResponseBody</p>
+ * <p>DeployTrafficControlTaskCodeResponseBody</p>
  */
-public class UpdateTrafficControlTaskResponseBody extends TeaModel {
+public class DeployTrafficControlTaskCodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdateTrafficControlTaskResponseBody(Builder builder) {
+    private DeployTrafficControlTaskCodeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class UpdateTrafficControlTaskResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateTrafficControlTaskResponseBody create() {
+    public static DeployTrafficControlTaskCodeResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,20 @@ public class UpdateTrafficControlTaskResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateTrafficControlTaskResponseBody model) {
+        private Builder(DeployTrafficControlTaskCodeResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6CF1E160-3F36-5E73-A170-C75504F05BBC</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdateTrafficControlTaskResponseBody build() {
-            return new UpdateTrafficControlTaskResponseBody(this);
+        public DeployTrafficControlTaskCodeResponseBody build() {
+            return new DeployTrafficControlTaskCodeResponseBody(this);
         } 
 
     } 

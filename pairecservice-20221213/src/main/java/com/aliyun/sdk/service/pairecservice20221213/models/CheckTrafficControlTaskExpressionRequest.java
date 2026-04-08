@@ -114,6 +114,9 @@ public class CheckTrafficControlTaskExpressionRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event=exposure</p>
          */
         public Builder expression(String expression) {
             this.putQueryParameter("Expression", expression);
@@ -123,6 +126,9 @@ public class CheckTrafficControlTaskExpressionRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec_123****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -132,6 +138,9 @@ public class CheckTrafficControlTaskExpressionRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tableMetaId(String tableMetaId) {
             this.putQueryParameter("TableMetaId", tableMetaId);

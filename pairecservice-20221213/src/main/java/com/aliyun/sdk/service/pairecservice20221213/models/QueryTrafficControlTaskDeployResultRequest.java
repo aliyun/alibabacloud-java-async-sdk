@@ -12,30 +12,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GenerateTrafficControlTaskCodeRequest} extends {@link RequestModel}
+ * {@link QueryTrafficControlTaskDeployResultRequest} extends {@link RequestModel}
  *
- * <p>GenerateTrafficControlTaskCodeRequest</p>
+ * <p>QueryTrafficControlTaskDeployResultRequest</p>
  */
-public class GenerateTrafficControlTaskCodeRequest extends Request {
+public class QueryTrafficControlTaskDeployResultRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("TrafficControlTaskId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficControlTaskId;
 
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Environment")
     private String environment;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    private GenerateTrafficControlTaskCodeRequest(Builder builder) {
+    private QueryTrafficControlTaskDeployResultRequest(Builder builder) {
         super(builder);
         this.trafficControlTaskId = builder.trafficControlTaskId;
         this.regionId = builder.regionId;
@@ -47,7 +45,7 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
         return new Builder();
     }
 
-    public static GenerateTrafficControlTaskCodeRequest create() {
+    public static QueryTrafficControlTaskDeployResultRequest create() {
         return builder().build();
     }
 
@@ -84,7 +82,7 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<GenerateTrafficControlTaskCodeRequest, Builder> {
+    public static final class Builder extends Request.Builder<QueryTrafficControlTaskDeployResultRequest, Builder> {
         private String trafficControlTaskId; 
         private String regionId; 
         private String environment; 
@@ -94,7 +92,7 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
             super();
         } 
 
-        private Builder(GenerateTrafficControlTaskCodeRequest request) {
+        private Builder(QueryTrafficControlTaskDeployResultRequest request) {
             super(request);
             this.trafficControlTaskId = request.trafficControlTaskId;
             this.regionId = request.regionId;
@@ -103,10 +101,7 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>7</p>
+         * TrafficControlTaskId.
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
@@ -127,26 +122,23 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
          * Environment.
          */
         public Builder environment(String environment) {
-            this.putBodyParameter("Environment", environment);
+            this.putQueryParameter("Environment", environment);
             this.environment = environment;
             return this;
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pairec-test1</p>
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
-            this.putBodyParameter("InstanceId", instanceId);
+            this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
         }
 
         @Override
-        public GenerateTrafficControlTaskCodeRequest build() {
-            return new GenerateTrafficControlTaskCodeRequest(this);
+        public QueryTrafficControlTaskDeployResultRequest build() {
+            return new QueryTrafficControlTaskDeployResultRequest(this);
         } 
 
     } 

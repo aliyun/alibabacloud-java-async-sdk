@@ -404,6 +404,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteTrafficControlTaskResponse> deleteTrafficControlTask(DeleteTrafficControlTaskRequest request);
 
     /**
+     * @param request the request parameters of DeployTrafficControlTaskCode  DeployTrafficControlTaskCodeRequest
+     * @return DeployTrafficControlTaskCodeResponse
+     */
+    CompletableFuture<DeployTrafficControlTaskCodeResponse> deployTrafficControlTaskCode(DeployTrafficControlTaskCodeRequest request);
+
+    /**
      * @param request the request parameters of GenerateAlgorithmCustomizationScript  GenerateAlgorithmCustomizationScriptRequest
      * @return GenerateAlgorithmCustomizationScriptResponse
      */
@@ -882,6 +888,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryTrafficControlTargetItemReportDetailResponse
      */
     CompletableFuture<QueryTrafficControlTargetItemReportDetailResponse> queryTrafficControlTargetItemReportDetail(QueryTrafficControlTargetItemReportDetailRequest request);
+
+    /**
+     * @param request the request parameters of QueryTrafficControlTaskDeployResult  QueryTrafficControlTaskDeployResultRequest
+     * @return QueryTrafficControlTaskDeployResultResponse
+     */
+    CompletableFuture<QueryTrafficControlTaskDeployResultResponse> queryTrafficControlTaskDeployResult(QueryTrafficControlTaskDeployResultRequest request);
+
+    /**
+     * @param request the request parameters of QueryTrafficControlTaskItemReport  QueryTrafficControlTaskItemReportRequest
+     * @return QueryTrafficControlTaskItemReportResponse
+     */
+    CompletableFuture<QueryTrafficControlTaskItemReportResponse> queryTrafficControlTaskItemReport(QueryTrafficControlTaskItemReportRequest request);
 
     /**
      * @param request the request parameters of ReleaseTrafficControlTask  ReleaseTrafficControlTaskRequest
