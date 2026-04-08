@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateIdpDepartmentResponse> createIdpDepartment(CreateIdpDepartmentRequest request);
 
     /**
+     * @param request the request parameters of CreatePADiagnosisTask  CreatePADiagnosisTaskRequest
+     * @return CreatePADiagnosisTaskResponse
+     */
+    CompletableFuture<CreatePADiagnosisTaskResponse> createPADiagnosisTask(CreatePADiagnosisTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <p>By default, you can create a maximum of 500 office applications.</p>
      * 
@@ -283,6 +289,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetIdpConfigResponse
      */
     CompletableFuture<GetIdpConfigResponse> getIdpConfig(GetIdpConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetPADiagnosisTask  GetPADiagnosisTaskRequest
+     * @return GetPADiagnosisTaskResponse
+     */
+    CompletableFuture<GetPADiagnosisTaskResponse> getPADiagnosisTask(GetPADiagnosisTaskRequest request);
 
     /**
      * @param request the request parameters of GetPrivateAccessApplication  GetPrivateAccessApplicationRequest
