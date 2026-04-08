@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceDomainsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainKeywords")
+    private String domainKeywords;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -36,6 +40,7 @@ public class DescribeInstanceDomainsRequest extends Request {
 
     private DescribeInstanceDomainsRequest(Builder builder) {
         super(builder);
+        this.domainKeywords = builder.domainKeywords;
         this.instanceId = builder.instanceId;
         this.lang = builder.lang;
         this.pageNumber = builder.pageNumber;
@@ -53,6 +58,13 @@ public class DescribeInstanceDomainsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return domainKeywords
+     */
+    public String getDomainKeywords() {
+        return this.domainKeywords;
     }
 
     /**
@@ -84,6 +96,7 @@ public class DescribeInstanceDomainsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceDomainsRequest, Builder> {
+        private String domainKeywords; 
         private String instanceId; 
         private String lang; 
         private Long pageNumber; 
@@ -95,11 +108,21 @@ public class DescribeInstanceDomainsRequest extends Request {
 
         private Builder(DescribeInstanceDomainsRequest request) {
             super(request);
+            this.domainKeywords = request.domainKeywords;
             this.instanceId = request.instanceId;
             this.lang = request.lang;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
+
+        /**
+         * DomainKeywords.
+         */
+        public Builder domainKeywords(String domainKeywords) {
+            this.putQueryParameter("DomainKeywords", domainKeywords);
+            this.domainKeywords = domainKeywords;
+            return this;
+        }
 
         /**
          * <p>The ID of the Alibaba Cloud Domain Name System (DNS) instance. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaininfo?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainInfo</a> operation to obtain the ID.</p>
