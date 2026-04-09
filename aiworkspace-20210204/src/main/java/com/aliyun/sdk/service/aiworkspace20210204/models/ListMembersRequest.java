@@ -38,6 +38,10 @@ public class ListMembersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Roles")
     private String roles;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    private String userId;
+
     private ListMembersRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
@@ -45,6 +49,7 @@ public class ListMembersRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.roles = builder.roles;
+        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -95,12 +100,20 @@ public class ListMembersRequest extends Request {
         return this.roles;
     }
 
+    /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
     public static final class Builder extends Request.Builder<ListMembersRequest, Builder> {
         private String workspaceId; 
         private String memberName; 
         private Long pageNumber; 
         private Integer pageSize; 
         private String roles; 
+        private String userId; 
 
         private Builder() {
             super();
@@ -113,6 +126,7 @@ public class ListMembersRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.roles = request.roles;
+            this.userId = request.userId;
         } 
 
         /**
@@ -182,6 +196,15 @@ public class ListMembersRequest extends Request {
         public Builder roles(String roles) {
             this.putQueryParameter("Roles", roles);
             this.roles = roles;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.putQueryParameter("UserId", userId);
+            this.userId = userId;
             return this;
         }
 
