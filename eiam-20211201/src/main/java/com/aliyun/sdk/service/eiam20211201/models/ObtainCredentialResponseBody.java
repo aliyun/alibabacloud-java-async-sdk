@@ -323,6 +323,9 @@ public class ObtainCredentialResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CredentialScenarioLabel")
         private String credentialScenarioLabel;
 
+        @com.aliyun.core.annotation.NameInMap("CredentialSharingScope")
+        private String credentialSharingScope;
+
         @com.aliyun.core.annotation.NameInMap("CredentialSubjectId")
         private String credentialSubjectId;
 
@@ -334,6 +337,9 @@ public class ObtainCredentialResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("ExclusiveUserId")
+        private String exclusiveUserId;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -352,10 +358,12 @@ public class ObtainCredentialResponseBody extends TeaModel {
             this.credentialIdentifier = builder.credentialIdentifier;
             this.credentialName = builder.credentialName;
             this.credentialScenarioLabel = builder.credentialScenarioLabel;
+            this.credentialSharingScope = builder.credentialSharingScope;
             this.credentialSubjectId = builder.credentialSubjectId;
             this.credentialSubjectType = builder.credentialSubjectType;
             this.credentialType = builder.credentialType;
             this.description = builder.description;
+            this.exclusiveUserId = builder.exclusiveUserId;
             this.instanceId = builder.instanceId;
             this.status = builder.status;
             this.updateTime = builder.updateTime;
@@ -419,6 +427,13 @@ public class ObtainCredentialResponseBody extends TeaModel {
         }
 
         /**
+         * @return credentialSharingScope
+         */
+        public String getCredentialSharingScope() {
+            return this.credentialSharingScope;
+        }
+
+        /**
          * @return credentialSubjectId
          */
         public String getCredentialSubjectId() {
@@ -444,6 +459,13 @@ public class ObtainCredentialResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return exclusiveUserId
+         */
+        public String getExclusiveUserId() {
+            return this.exclusiveUserId;
         }
 
         /**
@@ -475,10 +497,12 @@ public class ObtainCredentialResponseBody extends TeaModel {
             private String credentialIdentifier; 
             private String credentialName; 
             private String credentialScenarioLabel; 
+            private String credentialSharingScope; 
             private String credentialSubjectId; 
             private String credentialSubjectType; 
             private String credentialType; 
             private String description; 
+            private String exclusiveUserId; 
             private String instanceId; 
             private String status; 
             private Long updateTime; 
@@ -494,10 +518,12 @@ public class ObtainCredentialResponseBody extends TeaModel {
                 this.credentialIdentifier = model.credentialIdentifier;
                 this.credentialName = model.credentialName;
                 this.credentialScenarioLabel = model.credentialScenarioLabel;
+                this.credentialSharingScope = model.credentialSharingScope;
                 this.credentialSubjectId = model.credentialSubjectId;
                 this.credentialSubjectType = model.credentialSubjectType;
                 this.credentialType = model.credentialType;
                 this.description = model.description;
+                this.exclusiveUserId = model.exclusiveUserId;
                 this.instanceId = model.instanceId;
                 this.status = model.status;
                 this.updateTime = model.updateTime;
@@ -578,6 +604,14 @@ public class ObtainCredentialResponseBody extends TeaModel {
             }
 
             /**
+             * CredentialSharingScope.
+             */
+            public Builder credentialSharingScope(String credentialSharingScope) {
+                this.credentialSharingScope = credentialSharingScope;
+                return this;
+            }
+
+            /**
              * <p>凭据所属的主体ID。</p>
              * 
              * <strong>example:</strong>
@@ -618,6 +652,14 @@ public class ObtainCredentialResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * ExclusiveUserId.
+             */
+            public Builder exclusiveUserId(String exclusiveUserId) {
+                this.exclusiveUserId = exclusiveUserId;
                 return this;
             }
 

@@ -36,12 +36,12 @@ public class CreateUserRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DisplayName")
-    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String displayName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Email")
-    @com.aliyun.core.annotation.Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String email;
 
     @com.aliyun.core.annotation.Query
@@ -89,7 +89,7 @@ public class CreateUserRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserExternalId")
-    @com.aliyun.core.annotation.Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String userExternalId;
 
     @com.aliyun.core.annotation.Query

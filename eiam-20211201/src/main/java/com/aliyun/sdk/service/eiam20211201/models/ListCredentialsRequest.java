@@ -26,6 +26,10 @@ public class ListCredentialsRequest extends Request {
     private java.util.List<String> credentialIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CredentialSharingScopes")
+    private java.util.List<String> credentialSharingScopes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CredentialTypes")
     private java.util.List<String> credentialTypes;
 
@@ -54,6 +58,7 @@ public class ListCredentialsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.credentialIds = builder.credentialIds;
+        this.credentialSharingScopes = builder.credentialSharingScopes;
         this.credentialTypes = builder.credentialTypes;
         this.filter = builder.filter;
         this.instanceId = builder.instanceId;
@@ -87,6 +92,13 @@ public class ListCredentialsRequest extends Request {
      */
     public java.util.List<String> getCredentialIds() {
         return this.credentialIds;
+    }
+
+    /**
+     * @return credentialSharingScopes
+     */
+    public java.util.List<String> getCredentialSharingScopes() {
+        return this.credentialSharingScopes;
     }
 
     /**
@@ -134,6 +146,7 @@ public class ListCredentialsRequest extends Request {
     public static final class Builder extends Request.Builder<ListCredentialsRequest, Builder> {
         private String regionId; 
         private java.util.List<String> credentialIds; 
+        private java.util.List<String> credentialSharingScopes; 
         private java.util.List<String> credentialTypes; 
         private java.util.List<Filter> filter; 
         private String instanceId; 
@@ -149,6 +162,7 @@ public class ListCredentialsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.credentialIds = request.credentialIds;
+            this.credentialSharingScopes = request.credentialSharingScopes;
             this.credentialTypes = request.credentialTypes;
             this.filter = request.filter;
             this.instanceId = request.instanceId;
@@ -172,6 +186,15 @@ public class ListCredentialsRequest extends Request {
         public Builder credentialIds(java.util.List<String> credentialIds) {
             this.putQueryParameter("CredentialIds", credentialIds);
             this.credentialIds = credentialIds;
+            return this;
+        }
+
+        /**
+         * CredentialSharingScopes.
+         */
+        public Builder credentialSharingScopes(java.util.List<String> credentialSharingScopes) {
+            this.putQueryParameter("CredentialSharingScopes", credentialSharingScopes);
+            this.credentialSharingScopes = credentialSharingScopes;
             return this;
         }
 

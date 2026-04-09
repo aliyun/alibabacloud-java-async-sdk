@@ -47,6 +47,11 @@ public class CreateCredentialRequest extends Request {
     private String credentialScenarioLabel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CredentialSharingScope")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
+    private String credentialSharingScope;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CredentialSubjectId")
     @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String credentialSubjectId;
@@ -67,6 +72,10 @@ public class CreateCredentialRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExclusiveUserId")
+    private String exclusiveUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
@@ -79,10 +88,12 @@ public class CreateCredentialRequest extends Request {
         this.credentialIdentifier = builder.credentialIdentifier;
         this.credentialName = builder.credentialName;
         this.credentialScenarioLabel = builder.credentialScenarioLabel;
+        this.credentialSharingScope = builder.credentialSharingScope;
         this.credentialSubjectId = builder.credentialSubjectId;
         this.credentialSubjectType = builder.credentialSubjectType;
         this.credentialType = builder.credentialType;
         this.description = builder.description;
+        this.exclusiveUserId = builder.exclusiveUserId;
         this.instanceId = builder.instanceId;
     }
 
@@ -142,6 +153,13 @@ public class CreateCredentialRequest extends Request {
     }
 
     /**
+     * @return credentialSharingScope
+     */
+    public String getCredentialSharingScope() {
+        return this.credentialSharingScope;
+    }
+
+    /**
      * @return credentialSubjectId
      */
     public String getCredentialSubjectId() {
@@ -170,6 +188,13 @@ public class CreateCredentialRequest extends Request {
     }
 
     /**
+     * @return exclusiveUserId
+     */
+    public String getExclusiveUserId() {
+        return this.exclusiveUserId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -183,10 +208,12 @@ public class CreateCredentialRequest extends Request {
         private String credentialIdentifier; 
         private String credentialName; 
         private String credentialScenarioLabel; 
+        private String credentialSharingScope; 
         private String credentialSubjectId; 
         private String credentialSubjectType; 
         private String credentialType; 
         private String description; 
+        private String exclusiveUserId; 
         private String instanceId; 
 
         private Builder() {
@@ -201,10 +228,12 @@ public class CreateCredentialRequest extends Request {
             this.credentialIdentifier = request.credentialIdentifier;
             this.credentialName = request.credentialName;
             this.credentialScenarioLabel = request.credentialScenarioLabel;
+            this.credentialSharingScope = request.credentialSharingScope;
             this.credentialSubjectId = request.credentialSubjectId;
             this.credentialSubjectType = request.credentialSubjectType;
             this.credentialType = request.credentialType;
             this.description = request.description;
+            this.exclusiveUserId = request.exclusiveUserId;
             this.instanceId = request.instanceId;
         } 
 
@@ -279,6 +308,15 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
+         * CredentialSharingScope.
+         */
+        public Builder credentialSharingScope(String credentialSharingScope) {
+            this.putQueryParameter("CredentialSharingScope", credentialSharingScope);
+            this.credentialSharingScope = credentialSharingScope;
+            return this;
+        }
+
+        /**
          * <p>凭据所属的主体ID。</p>
          * 
          * <strong>example:</strong>
@@ -324,6 +362,15 @@ public class CreateCredentialRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * ExclusiveUserId.
+         */
+        public Builder exclusiveUserId(String exclusiveUserId) {
+            this.putQueryParameter("ExclusiveUserId", exclusiveUserId);
+            this.exclusiveUserId = exclusiveUserId;
             return this;
         }
 

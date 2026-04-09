@@ -22,6 +22,10 @@ public class CreateFederatedCredentialProviderRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudIdPProviderConfig")
+    private CloudIdPProviderConfig cloudIdPProviderConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String description;
@@ -61,6 +65,7 @@ public class CreateFederatedCredentialProviderRequest extends Request {
     private CreateFederatedCredentialProviderRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.cloudIdPProviderConfig = builder.cloudIdPProviderConfig;
         this.description = builder.description;
         this.federatedCredentialProviderName = builder.federatedCredentialProviderName;
         this.federatedCredentialProviderType = builder.federatedCredentialProviderType;
@@ -89,6 +94,13 @@ public class CreateFederatedCredentialProviderRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return cloudIdPProviderConfig
+     */
+    public CloudIdPProviderConfig getCloudIdPProviderConfig() {
+        return this.cloudIdPProviderConfig;
     }
 
     /**
@@ -149,6 +161,7 @@ public class CreateFederatedCredentialProviderRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateFederatedCredentialProviderRequest, Builder> {
         private String regionId; 
+        private CloudIdPProviderConfig cloudIdPProviderConfig; 
         private String description; 
         private String federatedCredentialProviderName; 
         private String federatedCredentialProviderType; 
@@ -165,6 +178,7 @@ public class CreateFederatedCredentialProviderRequest extends Request {
         private Builder(CreateFederatedCredentialProviderRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.cloudIdPProviderConfig = request.cloudIdPProviderConfig;
             this.description = request.description;
             this.federatedCredentialProviderName = request.federatedCredentialProviderName;
             this.federatedCredentialProviderType = request.federatedCredentialProviderType;
@@ -181,6 +195,15 @@ public class CreateFederatedCredentialProviderRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CloudIdPProviderConfig.
+         */
+        public Builder cloudIdPProviderConfig(CloudIdPProviderConfig cloudIdPProviderConfig) {
+            this.putQueryParameter("CloudIdPProviderConfig", cloudIdPProviderConfig);
+            this.cloudIdPProviderConfig = cloudIdPProviderConfig;
             return this;
         }
 
@@ -281,6 +304,61 @@ public class CreateFederatedCredentialProviderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFederatedCredentialProviderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFederatedCredentialProviderRequest</p>
+     */
+    public static class CloudIdPProviderConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IdentityProviderId")
+        @com.aliyun.core.annotation.Validation(maxLength = 32)
+        private String identityProviderId;
+
+        private CloudIdPProviderConfig(Builder builder) {
+            this.identityProviderId = builder.identityProviderId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CloudIdPProviderConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return identityProviderId
+         */
+        public String getIdentityProviderId() {
+            return this.identityProviderId;
+        }
+
+        public static final class Builder {
+            private String identityProviderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CloudIdPProviderConfig model) {
+                this.identityProviderId = model.identityProviderId;
+            } 
+
+            /**
+             * IdentityProviderId.
+             */
+            public Builder identityProviderId(String identityProviderId) {
+                this.identityProviderId = identityProviderId;
+                return this;
+            }
+
+            public CloudIdPProviderConfig build() {
+                return new CloudIdPProviderConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateFederatedCredentialProviderRequest} extends {@link TeaModel}

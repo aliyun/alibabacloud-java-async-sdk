@@ -187,6 +187,60 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
      *
      * <p>ListFederatedCredentialProvidersResponseBody</p>
      */
+    public static class CloudIdPProviderConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IdentityProviderId")
+        private String identityProviderId;
+
+        private CloudIdPProviderConfig(Builder builder) {
+            this.identityProviderId = builder.identityProviderId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CloudIdPProviderConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return identityProviderId
+         */
+        public String getIdentityProviderId() {
+            return this.identityProviderId;
+        }
+
+        public static final class Builder {
+            private String identityProviderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CloudIdPProviderConfig model) {
+                this.identityProviderId = model.identityProviderId;
+            } 
+
+            /**
+             * IdentityProviderId.
+             */
+            public Builder identityProviderId(String identityProviderId) {
+                this.identityProviderId = identityProviderId;
+                return this;
+            }
+
+            public CloudIdPProviderConfig build() {
+                return new CloudIdPProviderConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListFederatedCredentialProvidersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFederatedCredentialProvidersResponseBody</p>
+     */
     public static class OidcProviderConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Audiences")
         private java.util.List<String> audiences;
@@ -1073,6 +1127,9 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
      * <p>ListFederatedCredentialProvidersResponseBody</p>
      */
     public static class FederatedCredentialProviders extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CloudIdPProviderConfig")
+        private CloudIdPProviderConfig cloudIdPProviderConfig;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
@@ -1110,6 +1167,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         private Long updateTime;
 
         private FederatedCredentialProviders(Builder builder) {
+            this.cloudIdPProviderConfig = builder.cloudIdPProviderConfig;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.federatedCredentialProviderId = builder.federatedCredentialProviderId;
@@ -1130,6 +1188,13 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
 
         public static FederatedCredentialProviders create() {
             return builder().build();
+        }
+
+        /**
+         * @return cloudIdPProviderConfig
+         */
+        public CloudIdPProviderConfig getCloudIdPProviderConfig() {
+            return this.cloudIdPProviderConfig;
         }
 
         /**
@@ -1217,6 +1282,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private CloudIdPProviderConfig cloudIdPProviderConfig; 
             private Long createTime; 
             private String description; 
             private String federatedCredentialProviderId; 
@@ -1234,6 +1300,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
             } 
 
             private Builder(FederatedCredentialProviders model) {
+                this.cloudIdPProviderConfig = model.cloudIdPProviderConfig;
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.federatedCredentialProviderId = model.federatedCredentialProviderId;
@@ -1247,6 +1314,14 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
                 this.status = model.status;
                 this.updateTime = model.updateTime;
             } 
+
+            /**
+             * CloudIdPProviderConfig.
+             */
+            public Builder cloudIdPProviderConfig(CloudIdPProviderConfig cloudIdPProviderConfig) {
+                this.cloudIdPProviderConfig = cloudIdPProviderConfig;
+                return this;
+            }
 
             /**
              * <p>创建时间</p>
