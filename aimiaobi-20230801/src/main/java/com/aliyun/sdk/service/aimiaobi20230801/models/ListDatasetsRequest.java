@@ -22,6 +22,10 @@ public class ListDatasetsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DatasetDescription")
+    private String datasetDescription;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DatasetId")
     private Long datasetId;
 
@@ -65,6 +69,7 @@ public class ListDatasetsRequest extends Request {
     private ListDatasetsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.datasetDescription = builder.datasetDescription;
         this.datasetId = builder.datasetId;
         this.datasetName = builder.datasetName;
         this.datasetType = builder.datasetType;
@@ -95,6 +100,13 @@ public class ListDatasetsRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return datasetDescription
+     */
+    public String getDatasetDescription() {
+        return this.datasetDescription;
     }
 
     /**
@@ -169,6 +181,7 @@ public class ListDatasetsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDatasetsRequest, Builder> {
         private String regionId; 
+        private String datasetDescription; 
         private Long datasetId; 
         private String datasetName; 
         private String datasetType; 
@@ -187,6 +200,7 @@ public class ListDatasetsRequest extends Request {
         private Builder(ListDatasetsRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.datasetDescription = request.datasetDescription;
             this.datasetId = request.datasetId;
             this.datasetName = request.datasetName;
             this.datasetType = request.datasetType;
@@ -205,6 +219,15 @@ public class ListDatasetsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DatasetDescription.
+         */
+        public Builder datasetDescription(String datasetDescription) {
+            this.putBodyParameter("DatasetDescription", datasetDescription);
+            this.datasetDescription = datasetDescription;
             return this;
         }
 

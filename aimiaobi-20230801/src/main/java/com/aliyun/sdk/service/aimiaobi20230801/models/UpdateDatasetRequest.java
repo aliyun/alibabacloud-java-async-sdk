@@ -22,6 +22,10 @@ public class UpdateDatasetRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessLevel")
+    private String accessLevel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DatasetConfig")
     private DatasetConfig datasetConfig;
 
@@ -46,6 +50,7 @@ public class UpdateDatasetRequest extends Request {
     private UpdateDatasetRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.accessLevel = builder.accessLevel;
         this.datasetConfig = builder.datasetConfig;
         this.datasetDescription = builder.datasetDescription;
         this.datasetId = builder.datasetId;
@@ -71,6 +76,13 @@ public class UpdateDatasetRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return accessLevel
+     */
+    public String getAccessLevel() {
+        return this.accessLevel;
     }
 
     /**
@@ -110,6 +122,7 @@ public class UpdateDatasetRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateDatasetRequest, Builder> {
         private String regionId; 
+        private String accessLevel; 
         private DatasetConfig datasetConfig; 
         private String datasetDescription; 
         private Long datasetId; 
@@ -123,6 +136,7 @@ public class UpdateDatasetRequest extends Request {
         private Builder(UpdateDatasetRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.accessLevel = request.accessLevel;
             this.datasetConfig = request.datasetConfig;
             this.datasetDescription = request.datasetDescription;
             this.datasetId = request.datasetId;
@@ -136,6 +150,15 @@ public class UpdateDatasetRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AccessLevel.
+         */
+        public Builder accessLevel(String accessLevel) {
+            this.putBodyParameter("AccessLevel", accessLevel);
+            this.accessLevel = accessLevel;
             return this;
         }
 

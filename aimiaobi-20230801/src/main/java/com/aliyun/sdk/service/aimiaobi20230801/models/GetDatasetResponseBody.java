@@ -1361,6 +1361,9 @@ public class GetDatasetResponseBody extends TeaModel {
      * <p>GetDatasetResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessLevel")
+        private String accessLevel;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -1389,6 +1392,7 @@ public class GetDatasetResponseBody extends TeaModel {
         private Integer searchDatasetEnable;
 
         private Data(Builder builder) {
+            this.accessLevel = builder.accessLevel;
             this.createTime = builder.createTime;
             this.createUser = builder.createUser;
             this.datasetConfig = builder.datasetConfig;
@@ -1406,6 +1410,13 @@ public class GetDatasetResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return accessLevel
+         */
+        public String getAccessLevel() {
+            return this.accessLevel;
         }
 
         /**
@@ -1472,6 +1483,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accessLevel; 
             private String createTime; 
             private String createUser; 
             private DatasetConfig datasetConfig; 
@@ -1486,6 +1498,7 @@ public class GetDatasetResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.accessLevel = model.accessLevel;
                 this.createTime = model.createTime;
                 this.createUser = model.createUser;
                 this.datasetConfig = model.datasetConfig;
@@ -1496,6 +1509,14 @@ public class GetDatasetResponseBody extends TeaModel {
                 this.documentHandleConfig = model.documentHandleConfig;
                 this.searchDatasetEnable = model.searchDatasetEnable;
             } 
+
+            /**
+             * AccessLevel.
+             */
+            public Builder accessLevel(String accessLevel) {
+                this.accessLevel = accessLevel;
+                return this;
+            }
 
             /**
              * CreateTime.

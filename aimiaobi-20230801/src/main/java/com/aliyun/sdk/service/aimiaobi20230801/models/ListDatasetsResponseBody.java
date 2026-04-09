@@ -400,7 +400,88 @@ public class ListDatasetsResponseBody extends TeaModel {
      *
      * <p>ListDatasetsResponseBody</p>
      */
+    public static class Administrators extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        private String userId;
+
+        @com.aliyun.core.annotation.NameInMap("Username")
+        private String username;
+
+        private Administrators(Builder builder) {
+            this.userId = builder.userId;
+            this.username = builder.username;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Administrators create() {
+            return builder().build();
+        }
+
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        /**
+         * @return username
+         */
+        public String getUsername() {
+            return this.username;
+        }
+
+        public static final class Builder {
+            private String userId; 
+            private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Administrators model) {
+                this.userId = model.userId;
+                this.username = model.username;
+            } 
+
+            /**
+             * UserId.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
+                return this;
+            }
+
+            /**
+             * Username.
+             */
+            public Builder username(String username) {
+                this.username = username;
+                return this;
+            }
+
+            public Administrators build() {
+                return new Administrators(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListDatasetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatasetsResponseBody</p>
+     */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessLevel")
+        private String accessLevel;
+
+        @com.aliyun.core.annotation.NameInMap("Administrators")
+        private java.util.List<Administrators> administrators;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -426,6 +507,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         private Integer searchDatasetEnable;
 
         private Data(Builder builder) {
+            this.accessLevel = builder.accessLevel;
+            this.administrators = builder.administrators;
             this.createTime = builder.createTime;
             this.createUser = builder.createUser;
             this.datasetDescription = builder.datasetDescription;
@@ -442,6 +525,20 @@ public class ListDatasetsResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return accessLevel
+         */
+        public String getAccessLevel() {
+            return this.accessLevel;
+        }
+
+        /**
+         * @return administrators
+         */
+        public java.util.List<Administrators> getAdministrators() {
+            return this.administrators;
         }
 
         /**
@@ -501,6 +598,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accessLevel; 
+            private java.util.List<Administrators> administrators; 
             private String createTime; 
             private String createUser; 
             private String datasetDescription; 
@@ -514,6 +613,8 @@ public class ListDatasetsResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.accessLevel = model.accessLevel;
+                this.administrators = model.administrators;
                 this.createTime = model.createTime;
                 this.createUser = model.createUser;
                 this.datasetDescription = model.datasetDescription;
@@ -523,6 +624,22 @@ public class ListDatasetsResponseBody extends TeaModel {
                 this.docUsedQuota = model.docUsedQuota;
                 this.searchDatasetEnable = model.searchDatasetEnable;
             } 
+
+            /**
+             * AccessLevel.
+             */
+            public Builder accessLevel(String accessLevel) {
+                this.accessLevel = accessLevel;
+                return this;
+            }
+
+            /**
+             * Administrators.
+             */
+            public Builder administrators(java.util.List<Administrators> administrators) {
+                this.administrators = administrators;
+                return this;
+            }
 
             /**
              * CreateTime.

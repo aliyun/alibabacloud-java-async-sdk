@@ -104,6 +104,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ConfirmAndPostProcessAuditNoteResponse> confirmAndPostProcessAuditNote(ConfirmAndPostProcessAuditNoteRequest request);
 
     /**
+     * @param request the request parameters of CreateDataPermissions  CreateDataPermissionsRequest
+     * @return CreateDataPermissionsResponse
+     */
+    CompletableFuture<CreateDataPermissionsResponse> createDataPermissions(CreateDataPermissionsRequest request);
+
+    /**
      * @param request the request parameters of CreateDataset  CreateDatasetRequest
      * @return CreateDatasetResponse
      */
@@ -156,6 +162,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCustomTopicViewPointByIdResponse
      */
     CompletableFuture<DeleteCustomTopicViewPointByIdResponse> deleteCustomTopicViewPointById(DeleteCustomTopicViewPointByIdRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataPermissions  DeleteDataPermissionsRequest
+     * @return DeleteDataPermissionsResponse
+     */
+    CompletableFuture<DeleteDataPermissionsResponse> deleteDataPermissions(DeleteDataPermissionsRequest request);
 
     /**
      * @param request the request parameters of DeleteDataset  DeleteDatasetRequest
@@ -672,6 +684,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCustomViewPointsResponse
      */
     CompletableFuture<ListCustomViewPointsResponse> listCustomViewPoints(ListCustomViewPointsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataPermissions  ListDataPermissionsRequest
+     * @return ListDataPermissionsResponse
+     */
+    CompletableFuture<ListDataPermissionsResponse> listDataPermissions(ListDataPermissionsRequest request);
 
     /**
      * @param request the request parameters of ListDatasetDocuments  ListDatasetDocumentsRequest
