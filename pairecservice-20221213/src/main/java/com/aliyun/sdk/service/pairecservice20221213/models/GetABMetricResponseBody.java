@@ -17,17 +17,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetABMetricResponseBody</p>
  */
 public class GetABMetricResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AggregationByUser")
+    private Boolean aggregationByUser;
+
     @com.aliyun.core.annotation.NameInMap("Definition")
     private String definition;
 
+    @com.aliyun.core.annotation.NameInMap("Denominator")
+    private String denominator;
+
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.NameInMap("IsBinomialDistribution")
+    private Boolean isBinomialDistribution;
 
     @com.aliyun.core.annotation.NameInMap("LeftMetricId")
     private String leftMetricId;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
+
+    @com.aliyun.core.annotation.NameInMap("NeedSignificance")
+    private Boolean needSignificance;
+
+    @com.aliyun.core.annotation.NameInMap("Numerator")
+    private String numerator;
 
     @com.aliyun.core.annotation.NameInMap("Operator")
     private String operator;
@@ -63,10 +78,15 @@ public class GetABMetricResponseBody extends TeaModel {
     private String type;
 
     private GetABMetricResponseBody(Builder builder) {
+        this.aggregationByUser = builder.aggregationByUser;
         this.definition = builder.definition;
+        this.denominator = builder.denominator;
         this.description = builder.description;
+        this.isBinomialDistribution = builder.isBinomialDistribution;
         this.leftMetricId = builder.leftMetricId;
         this.name = builder.name;
+        this.needSignificance = builder.needSignificance;
+        this.numerator = builder.numerator;
         this.operator = builder.operator;
         this.realtime = builder.realtime;
         this.requestId = builder.requestId;
@@ -93,6 +113,13 @@ public class GetABMetricResponseBody extends TeaModel {
     }
 
     /**
+     * @return aggregationByUser
+     */
+    public Boolean getAggregationByUser() {
+        return this.aggregationByUser;
+    }
+
+    /**
      * @return definition
      */
     public String getDefinition() {
@@ -100,10 +127,24 @@ public class GetABMetricResponseBody extends TeaModel {
     }
 
     /**
+     * @return denominator
+     */
+    public String getDenominator() {
+        return this.denominator;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return isBinomialDistribution
+     */
+    public Boolean getIsBinomialDistribution() {
+        return this.isBinomialDistribution;
     }
 
     /**
@@ -118,6 +159,20 @@ public class GetABMetricResponseBody extends TeaModel {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return needSignificance
+     */
+    public Boolean getNeedSignificance() {
+        return this.needSignificance;
+    }
+
+    /**
+     * @return numerator
+     */
+    public String getNumerator() {
+        return this.numerator;
     }
 
     /**
@@ -198,10 +253,15 @@ public class GetABMetricResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean aggregationByUser; 
         private String definition; 
+        private String denominator; 
         private String description; 
+        private Boolean isBinomialDistribution; 
         private String leftMetricId; 
         private String name; 
+        private Boolean needSignificance; 
+        private String numerator; 
         private String operator; 
         private String realtime; 
         private String requestId; 
@@ -218,10 +278,15 @@ public class GetABMetricResponseBody extends TeaModel {
         } 
 
         private Builder(GetABMetricResponseBody model) {
+            this.aggregationByUser = model.aggregationByUser;
             this.definition = model.definition;
+            this.denominator = model.denominator;
             this.description = model.description;
+            this.isBinomialDistribution = model.isBinomialDistribution;
             this.leftMetricId = model.leftMetricId;
             this.name = model.name;
+            this.needSignificance = model.needSignificance;
+            this.numerator = model.numerator;
             this.operator = model.operator;
             this.realtime = model.realtime;
             this.requestId = model.requestId;
@@ -236,6 +301,14 @@ public class GetABMetricResponseBody extends TeaModel {
         } 
 
         /**
+         * AggregationByUser.
+         */
+        public Builder aggregationByUser(Boolean aggregationByUser) {
+            this.aggregationByUser = aggregationByUser;
+            return this;
+        }
+
+        /**
          * Definition.
          */
         public Builder definition(String definition) {
@@ -244,10 +317,26 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
+         * Denominator.
+         */
+        public Builder denominator(String denominator) {
+            this.denominator = denominator;
+            return this;
+        }
+
+        /**
          * Description.
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * IsBinomialDistribution.
+         */
+        public Builder isBinomialDistribution(Boolean isBinomialDistribution) {
+            this.isBinomialDistribution = isBinomialDistribution;
             return this;
         }
 
@@ -264,6 +353,22 @@ public class GetABMetricResponseBody extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * NeedSignificance.
+         */
+        public Builder needSignificance(Boolean needSignificance) {
+            this.needSignificance = needSignificance;
+            return this;
+        }
+
+        /**
+         * Numerator.
+         */
+        public Builder numerator(String numerator) {
+            this.numerator = numerator;
             return this;
         }
 

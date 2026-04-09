@@ -27,9 +27,17 @@ public class UpdateABMetricRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AggregationByUser")
+    private Boolean aggregationByUser;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Definition")
     @com.aliyun.core.annotation.Validation(required = true)
     private String definition;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Denominator")
+    private String denominator;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -42,6 +50,10 @@ public class UpdateABMetricRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsBinomialDistribution")
+    private Boolean isBinomialDistribution;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LeftMetricId")
     private String leftMetricId;
 
@@ -49,6 +61,14 @@ public class UpdateABMetricRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NeedSignificance")
+    private Boolean needSignificance;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Numerator")
+    private String numerator;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Operator")
@@ -90,11 +110,16 @@ public class UpdateABMetricRequest extends Request {
         super(builder);
         this.ABMetricId = builder.ABMetricId;
         this.regionId = builder.regionId;
+        this.aggregationByUser = builder.aggregationByUser;
         this.definition = builder.definition;
+        this.denominator = builder.denominator;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
+        this.isBinomialDistribution = builder.isBinomialDistribution;
         this.leftMetricId = builder.leftMetricId;
         this.name = builder.name;
+        this.needSignificance = builder.needSignificance;
+        this.numerator = builder.numerator;
         this.operator = builder.operator;
         this.realtime = builder.realtime;
         this.resultResourceId = builder.resultResourceId;
@@ -133,10 +158,24 @@ public class UpdateABMetricRequest extends Request {
     }
 
     /**
+     * @return aggregationByUser
+     */
+    public Boolean getAggregationByUser() {
+        return this.aggregationByUser;
+    }
+
+    /**
      * @return definition
      */
     public String getDefinition() {
         return this.definition;
+    }
+
+    /**
+     * @return denominator
+     */
+    public String getDenominator() {
+        return this.denominator;
     }
 
     /**
@@ -154,6 +193,13 @@ public class UpdateABMetricRequest extends Request {
     }
 
     /**
+     * @return isBinomialDistribution
+     */
+    public Boolean getIsBinomialDistribution() {
+        return this.isBinomialDistribution;
+    }
+
+    /**
      * @return leftMetricId
      */
     public String getLeftMetricId() {
@@ -165,6 +211,20 @@ public class UpdateABMetricRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return needSignificance
+     */
+    public Boolean getNeedSignificance() {
+        return this.needSignificance;
+    }
+
+    /**
+     * @return numerator
+     */
+    public String getNumerator() {
+        return this.numerator;
     }
 
     /**
@@ -226,11 +286,16 @@ public class UpdateABMetricRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateABMetricRequest, Builder> {
         private String ABMetricId; 
         private String regionId; 
+        private Boolean aggregationByUser; 
         private String definition; 
+        private String denominator; 
         private String description; 
         private String instanceId; 
+        private Boolean isBinomialDistribution; 
         private String leftMetricId; 
         private String name; 
+        private Boolean needSignificance; 
+        private String numerator; 
         private String operator; 
         private Boolean realtime; 
         private String resultResourceId; 
@@ -248,11 +313,16 @@ public class UpdateABMetricRequest extends Request {
             super(request);
             this.ABMetricId = request.ABMetricId;
             this.regionId = request.regionId;
+            this.aggregationByUser = request.aggregationByUser;
             this.definition = request.definition;
+            this.denominator = request.denominator;
             this.description = request.description;
             this.instanceId = request.instanceId;
+            this.isBinomialDistribution = request.isBinomialDistribution;
             this.leftMetricId = request.leftMetricId;
             this.name = request.name;
+            this.needSignificance = request.needSignificance;
+            this.numerator = request.numerator;
             this.operator = request.operator;
             this.realtime = request.realtime;
             this.resultResourceId = request.resultResourceId;
@@ -285,6 +355,15 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
+         * AggregationByUser.
+         */
+        public Builder aggregationByUser(Boolean aggregationByUser) {
+            this.putBodyParameter("AggregationByUser", aggregationByUser);
+            this.aggregationByUser = aggregationByUser;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,6 +372,15 @@ public class UpdateABMetricRequest extends Request {
         public Builder definition(String definition) {
             this.putBodyParameter("Definition", definition);
             this.definition = definition;
+            return this;
+        }
+
+        /**
+         * Denominator.
+         */
+        public Builder denominator(String denominator) {
+            this.putBodyParameter("Denominator", denominator);
+            this.denominator = denominator;
             return this;
         }
 
@@ -318,6 +406,15 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
+         * IsBinomialDistribution.
+         */
+        public Builder isBinomialDistribution(Boolean isBinomialDistribution) {
+            this.putBodyParameter("IsBinomialDistribution", isBinomialDistribution);
+            this.isBinomialDistribution = isBinomialDistribution;
+            return this;
+        }
+
+        /**
          * LeftMetricId.
          */
         public Builder leftMetricId(String leftMetricId) {
@@ -335,6 +432,24 @@ public class UpdateABMetricRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * NeedSignificance.
+         */
+        public Builder needSignificance(Boolean needSignificance) {
+            this.putBodyParameter("NeedSignificance", needSignificance);
+            this.needSignificance = needSignificance;
+            return this;
+        }
+
+        /**
+         * Numerator.
+         */
+        public Builder numerator(String numerator) {
+            this.putBodyParameter("Numerator", numerator);
+            this.numerator = numerator;
             return this;
         }
 
