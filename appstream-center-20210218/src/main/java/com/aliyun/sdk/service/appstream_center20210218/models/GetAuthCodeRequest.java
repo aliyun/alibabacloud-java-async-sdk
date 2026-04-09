@@ -33,12 +33,17 @@ public class GetAuthCodeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Policy")
     private String policy;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TokenType")
+    private String tokenType;
+
     private GetAuthCodeRequest(Builder builder) {
         super(builder);
         this.autoCreateUser = builder.autoCreateUser;
         this.endUserId = builder.endUserId;
         this.externalUserId = builder.externalUserId;
         this.policy = builder.policy;
+        this.tokenType = builder.tokenType;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class GetAuthCodeRequest extends Request {
         return this.policy;
     }
 
+    /**
+     * @return tokenType
+     */
+    public String getTokenType() {
+        return this.tokenType;
+    }
+
     public static final class Builder extends Request.Builder<GetAuthCodeRequest, Builder> {
         private Boolean autoCreateUser; 
         private String endUserId; 
         private String externalUserId; 
         private String policy; 
+        private String tokenType; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class GetAuthCodeRequest extends Request {
             this.endUserId = request.endUserId;
             this.externalUserId = request.externalUserId;
             this.policy = request.policy;
+            this.tokenType = request.tokenType;
         } 
 
         /**
@@ -133,6 +147,15 @@ public class GetAuthCodeRequest extends Request {
         public Builder policy(String policy) {
             this.putBodyParameter("Policy", policy);
             this.policy = policy;
+            return this;
+        }
+
+        /**
+         * TokenType.
+         */
+        public Builder tokenType(String tokenType) {
+            this.putQueryParameter("TokenType", tokenType);
+            this.tokenType = tokenType;
             return this;
         }
 
