@@ -308,6 +308,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNodeResponse> createNode(CreateNodeRequest request);
 
     /**
+     * @param request the request parameters of CreateParameter  CreateParameterRequest
+     * @return CreateParameterResponse
+     */
+    CompletableFuture<CreateParameterResponse> createParameter(CreateParameterRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> Batch operations are not currently supported. If you specify multiple entities in the parameters, only the first entity takes effect, and the rest are ignored.
@@ -598,6 +604,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteNodeResponse
      */
     CompletableFuture<DeleteNodeResponse> deleteNode(DeleteNodeRequest request);
+
+    /**
+     * @param request the request parameters of DeleteParameter  DeleteParameterRequest
+     * @return DeleteParameterResponse
+     */
+    CompletableFuture<DeleteParameterResponse> deleteParameter(DeleteParameterRequest request);
 
     /**
      * <b>description</b> :
@@ -991,6 +1003,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetNodeResponse
      */
     CompletableFuture<GetNodeResponse> getNode(GetNodeRequest request);
+
+    /**
+     * @param request the request parameters of GetParameter  GetParameterRequest
+     * @return GetParameterResponse
+     */
+    CompletableFuture<GetParameterResponse> getParameter(GetParameterRequest request);
 
     /**
      * <b>description</b> :
@@ -1497,6 +1515,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request);
 
     /**
+     * @param request the request parameters of ListParameterVersions  ListParameterVersionsRequest
+     * @return ListParameterVersionsResponse
+     */
+    CompletableFuture<ListParameterVersionsResponse> listParameterVersions(ListParameterVersionsRequest request);
+
+    /**
+     * @param request the request parameters of ListParameters  ListParametersRequest
+     * @return ListParametersResponse
+     */
+    CompletableFuture<ListParametersResponse> listParameters(ListParametersRequest request);
+
+    /**
      * @param request the request parameters of ListPartitions  ListPartitionsRequest
      * @return ListPartitionsResponse
      */
@@ -1764,6 +1794,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RevokeMemberProjectRolesResponse
      */
     CompletableFuture<RevokeMemberProjectRolesResponse> revokeMemberProjectRoles(RevokeMemberProjectRolesRequest request);
+
+    /**
+     * @param request the request parameters of RollbackParameter  RollbackParameterRequest
+     * @return RollbackParameterResponse
+     */
+    CompletableFuture<RollbackParameterResponse> rollbackParameter(RollbackParameterRequest request);
 
     /**
      * <b>description</b> :
@@ -2042,6 +2078,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateNodeResponse
      */
     CompletableFuture<UpdateNodeResponse> updateNode(UpdateNodeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateParameter  UpdateParameterRequest
+     * @return UpdateParameterResponse
+     */
+    CompletableFuture<UpdateParameterResponse> updateParameter(UpdateParameterRequest request);
 
     /**
      * @param request the request parameters of UpdateProject  UpdateProjectRequest
