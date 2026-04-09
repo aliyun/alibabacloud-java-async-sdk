@@ -42,6 +42,10 @@ public class CreateJobRequest extends Request {
     private String debuggerConfigContent;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DisplayName")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
     private String displayName;
@@ -125,6 +129,7 @@ public class CreateJobRequest extends Request {
         this.customEnvs = builder.customEnvs;
         this.dataSources = builder.dataSources;
         this.debuggerConfigContent = builder.debuggerConfigContent;
+        this.description = builder.description;
         this.displayName = builder.displayName;
         this.elasticSpec = builder.elasticSpec;
         this.envs = builder.envs;
@@ -198,6 +203,13 @@ public class CreateJobRequest extends Request {
      */
     public String getDebuggerConfigContent() {
         return this.debuggerConfigContent;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -333,6 +345,7 @@ public class CreateJobRequest extends Request {
         private java.util.List<CustomEnvs> customEnvs; 
         private java.util.List<DataSources> dataSources; 
         private String debuggerConfigContent; 
+        private String description; 
         private String displayName; 
         private JobElasticSpec elasticSpec; 
         private java.util.Map<String, String> envs; 
@@ -364,6 +377,7 @@ public class CreateJobRequest extends Request {
             this.customEnvs = request.customEnvs;
             this.dataSources = request.dataSources;
             this.debuggerConfigContent = request.debuggerConfigContent;
+            this.description = request.description;
             this.displayName = request.displayName;
             this.elasticSpec = request.elasticSpec;
             this.envs = request.envs;
@@ -445,6 +459,15 @@ public class CreateJobRequest extends Request {
         public Builder debuggerConfigContent(String debuggerConfigContent) {
             this.putBodyParameter("DebuggerConfigContent", debuggerConfigContent);
             this.debuggerConfigContent = debuggerConfigContent;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("Description", description);
+            this.description = description;
             return this;
         }
 

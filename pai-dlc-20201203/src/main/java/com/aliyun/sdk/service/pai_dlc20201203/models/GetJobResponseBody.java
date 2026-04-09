@@ -35,6 +35,9 @@ public class GetJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataSources")
     private java.util.List<DataSources> dataSources;
 
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
     @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
@@ -159,6 +162,7 @@ public class GetJobResponseBody extends TeaModel {
         this.credentialConfig = builder.credentialConfig;
         this.customEnvs = builder.customEnvs;
         this.dataSources = builder.dataSources;
+        this.description = builder.description;
         this.displayName = builder.displayName;
         this.duration = builder.duration;
         this.elasticSpec = builder.elasticSpec;
@@ -252,6 +256,13 @@ public class GetJobResponseBody extends TeaModel {
      */
     public java.util.List<DataSources> getDataSources() {
         return this.dataSources;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -534,6 +545,7 @@ public class GetJobResponseBody extends TeaModel {
         private CredentialConfig credentialConfig; 
         private java.util.List<CustomEnvs> customEnvs; 
         private java.util.List<DataSources> dataSources; 
+        private String description; 
         private String displayName; 
         private Long duration; 
         private JobElasticSpec elasticSpec; 
@@ -584,6 +596,7 @@ public class GetJobResponseBody extends TeaModel {
             this.credentialConfig = model.credentialConfig;
             this.customEnvs = model.customEnvs;
             this.dataSources = model.dataSources;
+            this.description = model.description;
             this.displayName = model.displayName;
             this.duration = model.duration;
             this.elasticSpec = model.elasticSpec;
@@ -680,6 +693,14 @@ public class GetJobResponseBody extends TeaModel {
          */
         public Builder dataSources(java.util.List<DataSources> dataSources) {
             this.dataSources = dataSources;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.description = description;
             return this;
         }
 

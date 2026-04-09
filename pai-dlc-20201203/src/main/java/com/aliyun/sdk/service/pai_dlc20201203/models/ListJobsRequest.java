@@ -30,6 +30,10 @@ public class ListJobsRequest extends Request {
     private String caller;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DisplayName")
     @com.aliyun.core.annotation.Validation(maxLength = 1024)
     private String displayName;
@@ -167,6 +171,7 @@ public class ListJobsRequest extends Request {
         this.accessibility = builder.accessibility;
         this.businessUserId = builder.businessUserId;
         this.caller = builder.caller;
+        this.description = builder.description;
         this.displayName = builder.displayName;
         this.displayNameSearchMode = builder.displayNameSearchMode;
         this.enableAssignNode = builder.enableAssignNode;
@@ -233,6 +238,13 @@ public class ListJobsRequest extends Request {
      */
     public String getCaller() {
         return this.caller;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -463,6 +475,7 @@ public class ListJobsRequest extends Request {
         private String accessibility; 
         private String businessUserId; 
         private String caller; 
+        private String description; 
         private String displayName; 
         private String displayNameSearchMode; 
         private String enableAssignNode; 
@@ -505,6 +518,7 @@ public class ListJobsRequest extends Request {
             this.accessibility = request.accessibility;
             this.businessUserId = request.businessUserId;
             this.caller = request.caller;
+            this.description = request.description;
             this.displayName = request.displayName;
             this.displayNameSearchMode = request.displayNameSearchMode;
             this.enableAssignNode = request.enableAssignNode;
@@ -576,6 +590,15 @@ public class ListJobsRequest extends Request {
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
             this.caller = caller;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
