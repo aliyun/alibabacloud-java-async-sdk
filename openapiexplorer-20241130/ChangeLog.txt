@@ -1,3 +1,6 @@
+2026-04-09 Version: 1.0.5
+- Generated java-async 2024-11-30 for OpenAPIExplorer.
+
 2026-03-18 Version: 1.0.4
 - Generated java-async 2024-11-30 for OpenAPIExplorer.
 

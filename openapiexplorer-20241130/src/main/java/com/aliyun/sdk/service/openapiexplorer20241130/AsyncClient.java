@@ -113,6 +113,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApiMcpServersResponse> listApiMcpServers(ListApiMcpServersRequest request);
 
     /**
+     * @param request the request parameters of ListProducts  ListProductsRequest
+     * @return ListProductsResponse
+     */
+    CompletableFuture<ListProductsResponse> listProducts(ListProductsRequest request);
+
+    /**
      * @param request the request parameters of UpdateApiMcpServer  UpdateApiMcpServerRequest
      * @return UpdateApiMcpServerResponse
      */
