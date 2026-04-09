@@ -1,3 +1,6 @@
+2026-04-09 Version: 1.3.9
+- Generated java-async 2018-01-01 for pvtz.
+
 2025-12-30 Version: 1.3.8
 - Generated java-async 2018-01-01 for pvtz.
 

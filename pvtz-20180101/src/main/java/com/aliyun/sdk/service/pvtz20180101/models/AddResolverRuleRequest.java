@@ -36,7 +36,6 @@ public class AddResolverRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     @com.aliyun.core.annotation.Query
@@ -212,7 +211,6 @@ public class AddResolverRuleRequest extends Request {
 
         /**
          * <p>The name of the forwarding rule. You can name the rule based on your business requirements.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
