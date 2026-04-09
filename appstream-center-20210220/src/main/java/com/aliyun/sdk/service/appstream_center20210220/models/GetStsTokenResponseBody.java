@@ -95,6 +95,15 @@ public class GetStsTokenResponseBody extends TeaModel {
      * <p>GetStsTokenResponseBody</p>
      */
     public static class StsTokenModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
+        private String endUserId;
+
+        @com.aliyun.core.annotation.NameInMap("LoginToken")
+        private String loginToken;
+
+        @com.aliyun.core.annotation.NameInMap("ProfileRegion")
+        private String profileRegion;
+
         @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
@@ -105,6 +114,9 @@ public class GetStsTokenResponseBody extends TeaModel {
         private Long tenantId;
 
         private StsTokenModel(Builder builder) {
+            this.endUserId = builder.endUserId;
+            this.loginToken = builder.loginToken;
+            this.profileRegion = builder.profileRegion;
             this.sessionId = builder.sessionId;
             this.stsToken = builder.stsToken;
             this.tenantId = builder.tenantId;
@@ -116,6 +128,27 @@ public class GetStsTokenResponseBody extends TeaModel {
 
         public static StsTokenModel create() {
             return builder().build();
+        }
+
+        /**
+         * @return endUserId
+         */
+        public String getEndUserId() {
+            return this.endUserId;
+        }
+
+        /**
+         * @return loginToken
+         */
+        public String getLoginToken() {
+            return this.loginToken;
+        }
+
+        /**
+         * @return profileRegion
+         */
+        public String getProfileRegion() {
+            return this.profileRegion;
         }
 
         /**
@@ -140,6 +173,9 @@ public class GetStsTokenResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String endUserId; 
+            private String loginToken; 
+            private String profileRegion; 
             private String sessionId; 
             private String stsToken; 
             private Long tenantId; 
@@ -148,10 +184,37 @@ public class GetStsTokenResponseBody extends TeaModel {
             } 
 
             private Builder(StsTokenModel model) {
+                this.endUserId = model.endUserId;
+                this.loginToken = model.loginToken;
+                this.profileRegion = model.profileRegion;
                 this.sessionId = model.sessionId;
                 this.stsToken = model.stsToken;
                 this.tenantId = model.tenantId;
             } 
+
+            /**
+             * EndUserId.
+             */
+            public Builder endUserId(String endUserId) {
+                this.endUserId = endUserId;
+                return this;
+            }
+
+            /**
+             * LoginToken.
+             */
+            public Builder loginToken(String loginToken) {
+                this.loginToken = loginToken;
+                return this;
+            }
+
+            /**
+             * ProfileRegion.
+             */
+            public Builder profileRegion(String profileRegion) {
+                this.profileRegion = profileRegion;
+                return this;
+            }
 
             /**
              * SessionId.
