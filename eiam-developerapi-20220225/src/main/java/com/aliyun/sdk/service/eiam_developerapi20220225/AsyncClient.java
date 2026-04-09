@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
 
     /**
+     * @param request the request parameters of CreateUserExclusiveCredential  CreateUserExclusiveCredentialRequest
+     * @return CreateUserExclusiveCredentialResponse
+     */
+    CompletableFuture<CreateUserExclusiveCredentialResponse> createUserExclusiveCredential(CreateUserExclusiveCredentialRequest request);
+
+    /**
      * @param request the request parameters of DeleteGroup  DeleteGroupRequest
      * @return DeleteGroupResponse
      */
