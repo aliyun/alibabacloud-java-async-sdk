@@ -26,6 +26,10 @@ public class CreateIpv6GatewayRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -67,6 +71,7 @@ public class CreateIpv6GatewayRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -103,6 +108,13 @@ public class CreateIpv6GatewayRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -171,6 +183,7 @@ public class CreateIpv6GatewayRequest extends Request {
     public static final class Builder extends Request.Builder<CreateIpv6GatewayRequest, Builder> {
         private String clientToken; 
         private String description; 
+        private Boolean dryRun; 
         private String name; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -189,6 +202,7 @@ public class CreateIpv6GatewayRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.description = request.description;
+            this.dryRun = request.dryRun;
             this.name = request.name;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -226,6 +240,15 @@ public class CreateIpv6GatewayRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

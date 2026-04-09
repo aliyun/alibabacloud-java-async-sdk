@@ -27,6 +27,10 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String ipInstanceId;
@@ -56,6 +60,7 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
         super(builder);
         this.bandwidthPackageId = builder.bandwidthPackageId;
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.ipInstanceId = builder.ipInstanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -89,6 +94,13 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -136,6 +148,7 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
     public static final class Builder extends Request.Builder<RemoveCommonBandwidthPackageIpRequest, Builder> {
         private String bandwidthPackageId; 
         private String clientToken; 
+        private Boolean dryRun; 
         private String ipInstanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -151,6 +164,7 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
             super(request);
             this.bandwidthPackageId = request.bandwidthPackageId;
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.ipInstanceId = request.ipInstanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -177,6 +191,15 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

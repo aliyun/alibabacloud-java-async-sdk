@@ -27,6 +27,10 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String ipInstanceId;
@@ -60,6 +64,7 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         super(builder);
         this.bandwidthPackageId = builder.bandwidthPackageId;
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.ipInstanceId = builder.ipInstanceId;
         this.ipType = builder.ipType;
         this.ownerAccount = builder.ownerAccount;
@@ -94,6 +99,13 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -148,6 +160,7 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
     public static final class Builder extends Request.Builder<AddCommonBandwidthPackageIpRequest, Builder> {
         private String bandwidthPackageId; 
         private String clientToken; 
+        private Boolean dryRun; 
         private String ipInstanceId; 
         private String ipType; 
         private String ownerAccount; 
@@ -164,6 +177,7 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
             super(request);
             this.bandwidthPackageId = request.bandwidthPackageId;
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.ipInstanceId = request.ipInstanceId;
             this.ipType = request.ipType;
             this.ownerAccount = request.ownerAccount;
@@ -191,6 +205,15 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

@@ -22,6 +22,10 @@ public class DeleteIpv6EgressOnlyRuleRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6EgressOnlyRuleId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String ipv6EgressOnlyRuleId;
@@ -50,6 +54,7 @@ public class DeleteIpv6EgressOnlyRuleRequest extends Request {
     private DeleteIpv6EgressOnlyRuleRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.ipv6EgressOnlyRuleId = builder.ipv6EgressOnlyRuleId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -76,6 +81,13 @@ public class DeleteIpv6EgressOnlyRuleRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -122,6 +134,7 @@ public class DeleteIpv6EgressOnlyRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteIpv6EgressOnlyRuleRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private String ipv6EgressOnlyRuleId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -136,6 +149,7 @@ public class DeleteIpv6EgressOnlyRuleRequest extends Request {
         private Builder(DeleteIpv6EgressOnlyRuleRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.ipv6EgressOnlyRuleId = request.ipv6EgressOnlyRuleId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -157,6 +171,15 @@ public class DeleteIpv6EgressOnlyRuleRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
