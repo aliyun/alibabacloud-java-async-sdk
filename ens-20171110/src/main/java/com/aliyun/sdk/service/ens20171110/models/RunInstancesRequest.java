@@ -187,6 +187,14 @@ public class RunInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpdId")
+    private String vpdId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpdVSwitchIds")
+    private java.util.List<String> vpdVSwitchIds;
+
     private RunInstancesRequest(Builder builder) {
         super(builder);
         this.amount = builder.amount;
@@ -231,6 +239,8 @@ public class RunInstancesRequest extends Request {
         this.uniqueSuffix = builder.uniqueSuffix;
         this.userData = builder.userData;
         this.vSwitchId = builder.vSwitchId;
+        this.vpdId = builder.vpdId;
+        this.vpdVSwitchIds = builder.vpdVSwitchIds;
     }
 
     public static Builder builder() {
@@ -540,6 +550,20 @@ public class RunInstancesRequest extends Request {
         return this.vSwitchId;
     }
 
+    /**
+     * @return vpdId
+     */
+    public String getVpdId() {
+        return this.vpdId;
+    }
+
+    /**
+     * @return vpdVSwitchIds
+     */
+    public java.util.List<String> getVpdVSwitchIds() {
+        return this.vpdVSwitchIds;
+    }
+
     public static final class Builder extends Request.Builder<RunInstancesRequest, Builder> {
         private Long amount; 
         private String autoReleaseTime; 
@@ -583,6 +607,8 @@ public class RunInstancesRequest extends Request {
         private Boolean uniqueSuffix; 
         private String userData; 
         private String vSwitchId; 
+        private String vpdId; 
+        private java.util.List<String> vpdVSwitchIds; 
 
         private Builder() {
             super();
@@ -632,6 +658,8 @@ public class RunInstancesRequest extends Request {
             this.uniqueSuffix = request.uniqueSuffix;
             this.userData = request.userData;
             this.vSwitchId = request.vSwitchId;
+            this.vpdId = request.vpdId;
+            this.vpdVSwitchIds = request.vpdVSwitchIds;
         } 
 
         /**
@@ -1217,6 +1245,25 @@ public class RunInstancesRequest extends Request {
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * VpdId.
+         */
+        public Builder vpdId(String vpdId) {
+            this.putQueryParameter("VpdId", vpdId);
+            this.vpdId = vpdId;
+            return this;
+        }
+
+        /**
+         * VpdVSwitchIds.
+         */
+        public Builder vpdVSwitchIds(java.util.List<String> vpdVSwitchIds) {
+            String vpdVSwitchIdsShrink = shrink(vpdVSwitchIds, "VpdVSwitchIds", "json");
+            this.putQueryParameter("VpdVSwitchIds", vpdVSwitchIdsShrink);
+            this.vpdVSwitchIds = vpdVSwitchIds;
             return this;
         }
 

@@ -1061,6 +1061,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("VpdId")
+        private String vpdId;
+
+        @com.aliyun.core.annotation.NameInMap("VpdVSwitchId")
+        private String vpdVSwitchId;
+
         private NetworkInterfaces(Builder builder) {
             this.ipv6Sets = builder.ipv6Sets;
             this.macAddress = builder.macAddress;
@@ -1068,6 +1074,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.primaryIpAddress = builder.primaryIpAddress;
             this.privateIpSets = builder.privateIpSets;
             this.type = builder.type;
+            this.vpdId = builder.vpdId;
+            this.vpdVSwitchId = builder.vpdVSwitchId;
         }
 
         public static Builder builder() {
@@ -1120,6 +1128,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return vpdId
+         */
+        public String getVpdId() {
+            return this.vpdId;
+        }
+
+        /**
+         * @return vpdVSwitchId
+         */
+        public String getVpdVSwitchId() {
+            return this.vpdVSwitchId;
+        }
+
         public static final class Builder {
             private Ipv6Sets ipv6Sets; 
             private String macAddress; 
@@ -1127,6 +1149,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String primaryIpAddress; 
             private PrivateIpSets privateIpSets; 
             private String type; 
+            private String vpdId; 
+            private String vpdVSwitchId; 
 
             private Builder() {
             } 
@@ -1138,6 +1162,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.primaryIpAddress = model.primaryIpAddress;
                 this.privateIpSets = model.privateIpSets;
                 this.type = model.type;
+                this.vpdId = model.vpdId;
+                this.vpdVSwitchId = model.vpdVSwitchId;
             } 
 
             /**
@@ -1201,6 +1227,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * VpdId.
+             */
+            public Builder vpdId(String vpdId) {
+                this.vpdId = vpdId;
+                return this;
+            }
+
+            /**
+             * VpdVSwitchId.
+             */
+            public Builder vpdVSwitchId(String vpdVSwitchId) {
+                this.vpdVSwitchId = vpdVSwitchId;
                 return this;
             }
 

@@ -101,6 +101,14 @@ public class DescribeInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpdId")
+    private String vpdId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpdVSwitchId")
+    private String vpdVSwitchId;
+
     private DescribeInstancesRequest(Builder builder) {
         super(builder);
         this.eipAddresses = builder.eipAddresses;
@@ -124,6 +132,8 @@ public class DescribeInstancesRequest extends Request {
         this.status = builder.status;
         this.tags = builder.tags;
         this.vSwitchId = builder.vSwitchId;
+        this.vpdId = builder.vpdId;
+        this.vpdVSwitchId = builder.vpdVSwitchId;
     }
 
     public static Builder builder() {
@@ -286,6 +296,20 @@ public class DescribeInstancesRequest extends Request {
         return this.vSwitchId;
     }
 
+    /**
+     * @return vpdId
+     */
+    public String getVpdId() {
+        return this.vpdId;
+    }
+
+    /**
+     * @return vpdVSwitchId
+     */
+    public String getVpdVSwitchId() {
+        return this.vpdVSwitchId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeInstancesRequest, Builder> {
         private java.util.List<String> eipAddresses; 
         private String ensRegionId; 
@@ -308,6 +332,8 @@ public class DescribeInstancesRequest extends Request {
         private String status; 
         private java.util.List<Tags> tags; 
         private String vSwitchId; 
+        private String vpdId; 
+        private String vpdVSwitchId; 
 
         private Builder() {
             super();
@@ -336,6 +362,8 @@ public class DescribeInstancesRequest extends Request {
             this.status = request.status;
             this.tags = request.tags;
             this.vSwitchId = request.vSwitchId;
+            this.vpdId = request.vpdId;
+            this.vpdVSwitchId = request.vpdVSwitchId;
         } 
 
         /**
@@ -595,6 +623,24 @@ public class DescribeInstancesRequest extends Request {
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * VpdId.
+         */
+        public Builder vpdId(String vpdId) {
+            this.putQueryParameter("VpdId", vpdId);
+            this.vpdId = vpdId;
+            return this;
+        }
+
+        /**
+         * VpdVSwitchId.
+         */
+        public Builder vpdVSwitchId(String vpdVSwitchId) {
+            this.putQueryParameter("VpdVSwitchId", vpdVSwitchId);
+            this.vpdVSwitchId = vpdVSwitchId;
             return this;
         }
 
