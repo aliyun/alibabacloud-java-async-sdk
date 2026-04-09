@@ -20,6 +20,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("agentRuntimeName")
     private String agentRuntimeName;
 
+    @com.aliyun.core.annotation.NameInMap("armsConfiguration")
+    private ArmsConfiguration armsConfiguration;
+
     @com.aliyun.core.annotation.NameInMap("artifactType")
     private String artifactType;
 
@@ -87,6 +90,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
 
     private UpdateAgentRuntimeInput(Builder builder) {
         this.agentRuntimeName = builder.agentRuntimeName;
+        this.armsConfiguration = builder.armsConfiguration;
         this.artifactType = builder.artifactType;
         this.codeConfiguration = builder.codeConfiguration;
         this.containerConfiguration = builder.containerConfiguration;
@@ -127,6 +131,13 @@ public class UpdateAgentRuntimeInput extends TeaModel {
      */
     public String getAgentRuntimeName() {
         return this.agentRuntimeName;
+    }
+
+    /**
+     * @return armsConfiguration
+     */
+    public ArmsConfiguration getArmsConfiguration() {
+        return this.armsConfiguration;
     }
 
     /**
@@ -278,6 +289,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
 
     public static final class Builder {
         private String agentRuntimeName; 
+        private ArmsConfiguration armsConfiguration; 
         private String artifactType; 
         private CodeConfiguration codeConfiguration; 
         private ContainerConfiguration containerConfiguration; 
@@ -305,6 +317,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
 
         private Builder(UpdateAgentRuntimeInput model) {
             this.agentRuntimeName = model.agentRuntimeName;
+            this.armsConfiguration = model.armsConfiguration;
             this.artifactType = model.artifactType;
             this.codeConfiguration = model.codeConfiguration;
             this.containerConfiguration = model.containerConfiguration;
@@ -333,6 +346,17 @@ public class UpdateAgentRuntimeInput extends TeaModel {
          */
         public Builder agentRuntimeName(String agentRuntimeName) {
             this.agentRuntimeName = agentRuntimeName;
+            return this;
+        }
+
+        /**
+         * <p>应用实时监控服务（ARMS）的配置信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        public Builder armsConfiguration(ArmsConfiguration armsConfiguration) {
+            this.armsConfiguration = armsConfiguration;
             return this;
         }
 

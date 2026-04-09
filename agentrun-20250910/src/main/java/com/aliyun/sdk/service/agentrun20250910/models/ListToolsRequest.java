@@ -26,6 +26,10 @@ public class ListToolsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("toolName")
+    private String toolName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("toolType")
     private String toolType;
 
@@ -41,6 +45,7 @@ public class ListToolsRequest extends Request {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.toolName = builder.toolName;
         this.toolType = builder.toolType;
         this.workspaceId = builder.workspaceId;
         this.workspaceIds = builder.workspaceIds;
@@ -74,6 +79,13 @@ public class ListToolsRequest extends Request {
     }
 
     /**
+     * @return toolName
+     */
+    public String getToolName() {
+        return this.toolName;
+    }
+
+    /**
      * @return toolType
      */
     public String getToolType() {
@@ -97,6 +109,7 @@ public class ListToolsRequest extends Request {
     public static final class Builder extends Request.Builder<ListToolsRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String toolName; 
         private String toolType; 
         private String workspaceId; 
         private String workspaceIds; 
@@ -109,6 +122,7 @@ public class ListToolsRequest extends Request {
             super(request);
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.toolName = request.toolName;
             this.toolType = request.toolType;
             this.workspaceId = request.workspaceId;
             this.workspaceIds = request.workspaceIds;
@@ -135,6 +149,15 @@ public class ListToolsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * toolName.
+         */
+        public Builder toolName(String toolName) {
+            this.putQueryParameter("toolName", toolName);
+            this.toolName = toolName;
             return this;
         }
 

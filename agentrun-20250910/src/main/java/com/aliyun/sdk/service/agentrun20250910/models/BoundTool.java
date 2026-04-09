@@ -17,16 +17,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BoundTool</p>
  */
 public class BoundTool extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("apis")
+    private java.util.List<BoundToolApi> apis;
+
     @com.aliyun.core.annotation.NameInMap("method")
+    @Deprecated
     private String method;
 
     @com.aliyun.core.annotation.NameInMap("path")
+    @Deprecated
     private String path;
 
     @com.aliyun.core.annotation.NameInMap("toolName")
     private String toolName;
 
     private BoundTool(Builder builder) {
+        this.apis = builder.apis;
         this.method = builder.method;
         this.path = builder.path;
         this.toolName = builder.toolName;
@@ -42,6 +48,13 @@ public class BoundTool extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return apis
+     */
+    public java.util.List<BoundToolApi> getApis() {
+        return this.apis;
     }
 
     /**
@@ -66,6 +79,7 @@ public class BoundTool extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<BoundToolApi> apis; 
         private String method; 
         private String path; 
         private String toolName; 
@@ -74,10 +88,19 @@ public class BoundTool extends TeaModel {
         } 
 
         private Builder(BoundTool model) {
+            this.apis = model.apis;
             this.method = model.method;
             this.path = model.path;
             this.toolName = model.toolName;
         } 
+
+        /**
+         * apis.
+         */
+        public Builder apis(java.util.List<BoundToolApi> apis) {
+            this.apis = apis;
+            return this;
+        }
 
         /**
          * <p>绑定的 HTTP 请求方法，支持：GET、PUT、POST、PATCH、DELETE、OPTIONS</p>
