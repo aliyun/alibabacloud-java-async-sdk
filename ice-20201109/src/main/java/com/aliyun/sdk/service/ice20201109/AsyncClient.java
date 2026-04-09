@@ -2478,6 +2478,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopRtcRobotInstanceResponse> stopRtcRobotInstance(StopRtcRobotInstanceRequest request);
 
     /**
+     * @param request the request parameters of SubYikeUserCredit  SubYikeUserCreditRequest
+     * @return SubYikeUserCreditResponse
+     */
+    CompletableFuture<SubYikeUserCreditResponse> subYikeUserCredit(SubYikeUserCreditRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Call SubmitAIAgentVideoAuditTask to submit a video moderation task with configurations such as a video URL, frame-capturing policies, and review interval. The system returns a unique JobId for tracking. When the task is complete, the service will push the results, including the moderation status and AI-generated analysis, to the configured callback URL. Only OSS URLs are supported as input. The underlying multi-modal large language model (MLLM) only supports interaction via the non-streaming OpenAI protocol.</p>
      * 
