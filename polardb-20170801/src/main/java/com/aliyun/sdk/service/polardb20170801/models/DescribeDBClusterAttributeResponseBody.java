@@ -35,6 +35,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BlktagUsed")
     private Long blktagUsed;
 
+    @com.aliyun.core.annotation.NameInMap("Branch")
+    private Branch branch;
+
     @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
     private String burstingEnabled;
 
@@ -231,6 +234,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.autoUpgradeMinorVersion = builder.autoUpgradeMinorVersion;
         this.blktagTotal = builder.blktagTotal;
         this.blktagUsed = builder.blktagUsed;
+        this.branch = builder.branch;
         this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
         this.compressStorageMode = builder.compressStorageMode;
@@ -348,6 +352,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     public Long getBlktagUsed() {
         return this.blktagUsed;
+    }
+
+    /**
+     * @return branch
+     */
+    public Branch getBranch() {
+        return this.branch;
     }
 
     /**
@@ -798,6 +809,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String autoUpgradeMinorVersion; 
         private Long blktagTotal; 
         private Long blktagUsed; 
+        private Branch branch; 
         private String burstingEnabled; 
         private String category; 
         private String compressStorageMode; 
@@ -872,6 +884,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.autoUpgradeMinorVersion = model.autoUpgradeMinorVersion;
             this.blktagTotal = model.blktagTotal;
             this.blktagUsed = model.blktagUsed;
+            this.branch = model.branch;
             this.burstingEnabled = model.burstingEnabled;
             this.category = model.category;
             this.compressStorageMode = model.compressStorageMode;
@@ -1012,6 +1025,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder blktagUsed(Long blktagUsed) {
             this.blktagUsed = blktagUsed;
+            return this;
+        }
+
+        /**
+         * Branch.
+         */
+        public Builder branch(Branch branch) {
+            this.branch = branch;
             return this;
         }
 
@@ -1823,6 +1844,264 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAttributeResponseBody</p>
+     */
+    public static class ChildBranch extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BranchLsn")
+        private String branchLsn;
+
+        @com.aliyun.core.annotation.NameInMap("BranchTime")
+        private String branchTime;
+
+        @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
+        private String DBClusterDescription;
+
+        @com.aliyun.core.annotation.NameInMap("HasChild")
+        private Boolean hasChild;
+
+        @com.aliyun.core.annotation.NameInMap("InsName")
+        private String insName;
+
+        private ChildBranch(Builder builder) {
+            this.branchLsn = builder.branchLsn;
+            this.branchTime = builder.branchTime;
+            this.DBClusterDescription = builder.DBClusterDescription;
+            this.hasChild = builder.hasChild;
+            this.insName = builder.insName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ChildBranch create() {
+            return builder().build();
+        }
+
+        /**
+         * @return branchLsn
+         */
+        public String getBranchLsn() {
+            return this.branchLsn;
+        }
+
+        /**
+         * @return branchTime
+         */
+        public String getBranchTime() {
+            return this.branchTime;
+        }
+
+        /**
+         * @return DBClusterDescription
+         */
+        public String getDBClusterDescription() {
+            return this.DBClusterDescription;
+        }
+
+        /**
+         * @return hasChild
+         */
+        public Boolean getHasChild() {
+            return this.hasChild;
+        }
+
+        /**
+         * @return insName
+         */
+        public String getInsName() {
+            return this.insName;
+        }
+
+        public static final class Builder {
+            private String branchLsn; 
+            private String branchTime; 
+            private String DBClusterDescription; 
+            private Boolean hasChild; 
+            private String insName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChildBranch model) {
+                this.branchLsn = model.branchLsn;
+                this.branchTime = model.branchTime;
+                this.DBClusterDescription = model.DBClusterDescription;
+                this.hasChild = model.hasChild;
+                this.insName = model.insName;
+            } 
+
+            /**
+             * BranchLsn.
+             */
+            public Builder branchLsn(String branchLsn) {
+                this.branchLsn = branchLsn;
+                return this;
+            }
+
+            /**
+             * BranchTime.
+             */
+            public Builder branchTime(String branchTime) {
+                this.branchTime = branchTime;
+                return this;
+            }
+
+            /**
+             * <p>Cluster description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder DBClusterDescription(String DBClusterDescription) {
+                this.DBClusterDescription = DBClusterDescription;
+                return this;
+            }
+
+            /**
+             * HasChild.
+             */
+            public Builder hasChild(Boolean hasChild) {
+                this.hasChild = hasChild;
+                return this;
+            }
+
+            /**
+             * InsName.
+             */
+            public Builder insName(String insName) {
+                this.insName = insName;
+                return this;
+            }
+
+            public ChildBranch build() {
+                return new ChildBranch(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAttributeResponseBody</p>
+     */
+    public static class Branch extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BranchLsn")
+        private String branchLsn;
+
+        @com.aliyun.core.annotation.NameInMap("BranchTime")
+        private String branchTime;
+
+        @com.aliyun.core.annotation.NameInMap("ChildBranch")
+        private java.util.List<ChildBranch> childBranch;
+
+        @com.aliyun.core.annotation.NameInMap("ParentInsName")
+        private String parentInsName;
+
+        private Branch(Builder builder) {
+            this.branchLsn = builder.branchLsn;
+            this.branchTime = builder.branchTime;
+            this.childBranch = builder.childBranch;
+            this.parentInsName = builder.parentInsName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Branch create() {
+            return builder().build();
+        }
+
+        /**
+         * @return branchLsn
+         */
+        public String getBranchLsn() {
+            return this.branchLsn;
+        }
+
+        /**
+         * @return branchTime
+         */
+        public String getBranchTime() {
+            return this.branchTime;
+        }
+
+        /**
+         * @return childBranch
+         */
+        public java.util.List<ChildBranch> getChildBranch() {
+            return this.childBranch;
+        }
+
+        /**
+         * @return parentInsName
+         */
+        public String getParentInsName() {
+            return this.parentInsName;
+        }
+
+        public static final class Builder {
+            private String branchLsn; 
+            private String branchTime; 
+            private java.util.List<ChildBranch> childBranch; 
+            private String parentInsName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Branch model) {
+                this.branchLsn = model.branchLsn;
+                this.branchTime = model.branchTime;
+                this.childBranch = model.childBranch;
+                this.parentInsName = model.parentInsName;
+            } 
+
+            /**
+             * BranchLsn.
+             */
+            public Builder branchLsn(String branchLsn) {
+                this.branchLsn = branchLsn;
+                return this;
+            }
+
+            /**
+             * BranchTime.
+             */
+            public Builder branchTime(String branchTime) {
+                this.branchTime = branchTime;
+                return this;
+            }
+
+            /**
+             * ChildBranch.
+             */
+            public Builder childBranch(java.util.List<ChildBranch> childBranch) {
+                this.childBranch = childBranch;
+                return this;
+            }
+
+            /**
+             * ParentInsName.
+             */
+            public Builder parentInsName(String parentInsName) {
+                this.parentInsName = parentInsName;
+                return this;
+            }
+
+            public Branch build() {
+                return new Branch(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeDBClusterAttributeResponseBody} extends {@link TeaModel}

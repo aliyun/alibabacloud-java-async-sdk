@@ -2005,6 +2005,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeAccountPrivilegeZonalResponse> revokeAccountPrivilegeZonal(RevokeAccountPrivilegeZonalRequest request);
 
     /**
+     * @param request the request parameters of SearchMemories  SearchMemoriesRequest
+     * @return SearchMemoriesResponse
+     */
+    CompletableFuture<SearchMemoriesResponse> searchMemories(SearchMemoriesRequest request);
+
+    /**
      * @param request the request parameters of SetPolarFsFileQuota  SetPolarFsFileQuotaRequest
      * @return SetPolarFsFileQuotaResponse
      */
