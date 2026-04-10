@@ -329,6 +329,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ExchangeEntitlement  ExchangeEntitlementRequest
+     * @return ExchangeEntitlementResponse
+     */
+    @Override
+    public CompletableFuture<ExchangeEntitlementResponse> exchangeEntitlement(ExchangeEntitlementRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExchangeEntitlement").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/v1/tenants/{tenantId}/redeem").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExchangeEntitlementResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExchangeEntitlementResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GenDocQaResult  GenDocQaResultRequest
      * @return GenDocQaResultResponse
      */
@@ -671,6 +689,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetUsage  GetUsageRequest
+     * @return GetUsageResponse
+     */
+    @Override
+    public CompletableFuture<GetUsageResponse> getUsage(GetUsageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetUsage").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/api/v1/tenants/{tenantId}/usage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetUsageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetUsageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetVideoCreationTaskResult  GetVideoCreationTaskResultRequest
      * @return GetVideoCreationTaskResultResponse
      */
@@ -719,6 +755,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PreviewDocumentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryApiKeys  QueryApiKeysRequest
+     * @return QueryApiKeysResponse
+     */
+    @Override
+    public CompletableFuture<QueryApiKeysResponse> queryApiKeys(QueryApiKeysRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryApiKeys").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/api/v1/tenants/{tenantId}/apikeys").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryApiKeysResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryApiKeysResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryRedemptionRecords  QueryRedemptionRecordsRequest
+     * @return QueryRedemptionRecordsResponse
+     */
+    @Override
+    public CompletableFuture<QueryRedemptionRecordsResponse> queryRedemptionRecords(QueryRedemptionRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryRedemptionRecords").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/api/v1/tenants/{tenantId}/redemption-records").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRedemptionRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryRedemptionRecordsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

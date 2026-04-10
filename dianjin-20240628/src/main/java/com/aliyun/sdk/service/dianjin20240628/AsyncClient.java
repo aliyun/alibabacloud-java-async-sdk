@@ -116,6 +116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EvictTaskResponse> evictTask(EvictTaskRequest request);
 
     /**
+     * @param request the request parameters of ExchangeEntitlement  ExchangeEntitlementRequest
+     * @return ExchangeEntitlementResponse
+     */
+    CompletableFuture<ExchangeEntitlementResponse> exchangeEntitlement(ExchangeEntitlementRequest request);
+
+    /**
      * @param request the request parameters of GenDocQaResult  GenDocQaResultRequest
      * @return GenDocQaResultResponse
      */
@@ -230,6 +236,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTaskStatusResponse> getTaskStatus(GetTaskStatusRequest request);
 
     /**
+     * @param request the request parameters of GetUsage  GetUsageRequest
+     * @return GetUsageResponse
+     */
+    CompletableFuture<GetUsageResponse> getUsage(GetUsageRequest request);
+
+    /**
      * @param request the request parameters of GetVideoCreationTaskResult  GetVideoCreationTaskResultRequest
      * @return GetVideoCreationTaskResultResponse
      */
@@ -246,6 +258,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PreviewDocumentResponse
      */
     CompletableFuture<PreviewDocumentResponse> previewDocument(PreviewDocumentRequest request);
+
+    /**
+     * @param request the request parameters of QueryApiKeys  QueryApiKeysRequest
+     * @return QueryApiKeysResponse
+     */
+    CompletableFuture<QueryApiKeysResponse> queryApiKeys(QueryApiKeysRequest request);
+
+    /**
+     * @param request the request parameters of QueryRedemptionRecords  QueryRedemptionRecordsRequest
+     * @return QueryRedemptionRecordsResponse
+     */
+    CompletableFuture<QueryRedemptionRecordsResponse> queryRedemptionRecords(QueryRedemptionRecordsRequest request);
 
     /**
      * @param request the request parameters of ReIndex  ReIndexRequest
