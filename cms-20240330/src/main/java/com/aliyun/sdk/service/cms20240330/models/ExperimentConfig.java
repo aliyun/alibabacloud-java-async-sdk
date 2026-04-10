@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExperimentConfig</p>
  */
 public class ExperimentConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("endpointConnectorId")
+    private String endpointConnectorId;
+
     @com.aliyun.core.annotation.NameInMap("label")
     private String label;
 
@@ -36,6 +39,7 @@ public class ExperimentConfig extends TeaModel {
     private java.util.List<PromptTemplateItem> promptTemplate;
 
     private ExperimentConfig(Builder builder) {
+        this.endpointConnectorId = builder.endpointConnectorId;
         this.label = builder.label;
         this.modelName = builder.modelName;
         this.modelParameters = builder.modelParameters;
@@ -54,6 +58,13 @@ public class ExperimentConfig extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endpointConnectorId
+     */
+    public String getEndpointConnectorId() {
+        return this.endpointConnectorId;
     }
 
     /**
@@ -99,6 +110,7 @@ public class ExperimentConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private String endpointConnectorId; 
         private String label; 
         private String modelName; 
         private ModelParameters modelParameters; 
@@ -110,6 +122,7 @@ public class ExperimentConfig extends TeaModel {
         } 
 
         private Builder(ExperimentConfig model) {
+            this.endpointConnectorId = model.endpointConnectorId;
             this.label = model.label;
             this.modelName = model.modelName;
             this.modelParameters = model.modelParameters;
@@ -117,6 +130,14 @@ public class ExperimentConfig extends TeaModel {
             this.name = model.name;
             this.promptTemplate = model.promptTemplate;
         } 
+
+        /**
+         * endpointConnectorId.
+         */
+        public Builder endpointConnectorId(String endpointConnectorId) {
+            this.endpointConnectorId = endpointConnectorId;
+            return this;
+        }
 
         /**
          * label.

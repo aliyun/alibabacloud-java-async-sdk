@@ -231,7 +231,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         private String memory;
 
         @com.aliyun.core.annotation.NameInMap("metadata")
-        private String metadata;
+        private java.util.Map<String, ?> metadata;
 
         @com.aliyun.core.annotation.NameInMap("role")
         private String role;
@@ -316,7 +316,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         /**
          * @return metadata
          */
-        public String getMetadata() {
+        public java.util.Map<String, ?> getMetadata() {
             return this.metadata;
         }
 
@@ -362,7 +362,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
             private String hash; 
             private String id; 
             private String memory; 
-            private String metadata; 
+            private java.util.Map<String, ?> metadata; 
             private String role; 
             private String runId; 
             private Double score; 
@@ -438,7 +438,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
             /**
              * metadata.
              */
-            public Builder metadata(String metadata) {
+            public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
                 return this;
             }

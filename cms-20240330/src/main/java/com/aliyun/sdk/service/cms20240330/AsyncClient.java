@@ -741,10 +741,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
 
     /**
+     * @param request the request parameters of ManageAlertRules  ManageAlertRulesRequest
+     * @return ManageAlertRulesResponse
+     */
+    CompletableFuture<ManageAlertRulesResponse> manageAlertRules(ManageAlertRulesRequest request);
+
+    /**
      * @param request the request parameters of PutWorkspace  PutWorkspaceRequest
      * @return PutWorkspaceResponse
      */
     CompletableFuture<PutWorkspaceResponse> putWorkspace(PutWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of QueryAlertRules  QueryAlertRulesRequest
+     * @return QueryAlertRulesResponse
+     */
+    CompletableFuture<QueryAlertRulesResponse> queryAlertRules(QueryAlertRulesRequest request);
 
     /**
      * @param request the request parameters of SearchMemories  SearchMemoriesRequest

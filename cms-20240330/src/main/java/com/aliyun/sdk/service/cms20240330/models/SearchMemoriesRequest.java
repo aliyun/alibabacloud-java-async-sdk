@@ -36,8 +36,8 @@ public class SearchMemoriesRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("metadata")
-    private java.util.Map<String, ?> metadata;
+    @com.aliyun.core.annotation.NameInMap("filters")
+    private java.util.Map<String, ?> filters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("query")
@@ -48,8 +48,16 @@ public class SearchMemoriesRequest extends Request {
     private Boolean rerank;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("retrieveLevel")
+    private String retrieveLevel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("runId")
     private String runId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("threshold")
+    private Double threshold;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("topK")
@@ -65,10 +73,12 @@ public class SearchMemoriesRequest extends Request {
         this.memoryStoreName = builder.memoryStoreName;
         this.agentId = builder.agentId;
         this.appId = builder.appId;
-        this.metadata = builder.metadata;
+        this.filters = builder.filters;
         this.query = builder.query;
         this.rerank = builder.rerank;
+        this.retrieveLevel = builder.retrieveLevel;
         this.runId = builder.runId;
+        this.threshold = builder.threshold;
         this.topK = builder.topK;
         this.userId = builder.userId;
     }
@@ -115,10 +125,10 @@ public class SearchMemoriesRequest extends Request {
     }
 
     /**
-     * @return metadata
+     * @return filters
      */
-    public java.util.Map<String, ?> getMetadata() {
-        return this.metadata;
+    public java.util.Map<String, ?> getFilters() {
+        return this.filters;
     }
 
     /**
@@ -136,10 +146,24 @@ public class SearchMemoriesRequest extends Request {
     }
 
     /**
+     * @return retrieveLevel
+     */
+    public String getRetrieveLevel() {
+        return this.retrieveLevel;
+    }
+
+    /**
      * @return runId
      */
     public String getRunId() {
         return this.runId;
+    }
+
+    /**
+     * @return threshold
+     */
+    public Double getThreshold() {
+        return this.threshold;
     }
 
     /**
@@ -161,10 +185,12 @@ public class SearchMemoriesRequest extends Request {
         private String memoryStoreName; 
         private String agentId; 
         private String appId; 
-        private java.util.Map<String, ?> metadata; 
+        private java.util.Map<String, ?> filters; 
         private String query; 
         private Boolean rerank; 
+        private String retrieveLevel; 
         private String runId; 
+        private Double threshold; 
         private Integer topK; 
         private String userId; 
 
@@ -178,10 +204,12 @@ public class SearchMemoriesRequest extends Request {
             this.memoryStoreName = request.memoryStoreName;
             this.agentId = request.agentId;
             this.appId = request.appId;
-            this.metadata = request.metadata;
+            this.filters = request.filters;
             this.query = request.query;
             this.rerank = request.rerank;
+            this.retrieveLevel = request.retrieveLevel;
             this.runId = request.runId;
+            this.threshold = request.threshold;
             this.topK = request.topK;
             this.userId = request.userId;
         } 
@@ -229,11 +257,11 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * metadata.
+         * filters.
          */
-        public Builder metadata(java.util.Map<String, ?> metadata) {
-            this.putBodyParameter("metadata", metadata);
-            this.metadata = metadata;
+        public Builder filters(java.util.Map<String, ?> filters) {
+            this.putBodyParameter("filters", filters);
+            this.filters = filters;
             return this;
         }
 
@@ -256,11 +284,29 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
+         * retrieveLevel.
+         */
+        public Builder retrieveLevel(String retrieveLevel) {
+            this.putBodyParameter("retrieveLevel", retrieveLevel);
+            this.retrieveLevel = retrieveLevel;
+            return this;
+        }
+
+        /**
          * runId.
          */
         public Builder runId(String runId) {
             this.putBodyParameter("runId", runId);
             this.runId = runId;
+            return this;
+        }
+
+        /**
+         * threshold.
+         */
+        public Builder threshold(Double threshold) {
+            this.putBodyParameter("threshold", threshold);
+            this.threshold = threshold;
             return this;
         }
 

@@ -36,6 +36,10 @@ public class GetMemoriesRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("filters")
+    private java.util.Map<String, ?> filters;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
@@ -57,6 +61,7 @@ public class GetMemoriesRequest extends Request {
         this.memoryStoreName = builder.memoryStoreName;
         this.agentId = builder.agentId;
         this.appId = builder.appId;
+        this.filters = builder.filters;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.runId = builder.runId;
@@ -105,6 +110,13 @@ public class GetMemoriesRequest extends Request {
     }
 
     /**
+     * @return filters
+     */
+    public java.util.Map<String, ?> getFilters() {
+        return this.filters;
+    }
+
+    /**
      * @return page
      */
     public Integer getPage() {
@@ -137,6 +149,7 @@ public class GetMemoriesRequest extends Request {
         private String memoryStoreName; 
         private String agentId; 
         private String appId; 
+        private java.util.Map<String, ?> filters; 
         private Integer page; 
         private Integer pageSize; 
         private String runId; 
@@ -152,6 +165,7 @@ public class GetMemoriesRequest extends Request {
             this.memoryStoreName = request.memoryStoreName;
             this.agentId = request.agentId;
             this.appId = request.appId;
+            this.filters = request.filters;
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.runId = request.runId;
@@ -197,6 +211,15 @@ public class GetMemoriesRequest extends Request {
         public Builder appId(String appId) {
             this.putBodyParameter("appId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * filters.
+         */
+        public Builder filters(java.util.Map<String, ?> filters) {
+            this.putBodyParameter("filters", filters);
+            this.filters = filters;
             return this;
         }
 
