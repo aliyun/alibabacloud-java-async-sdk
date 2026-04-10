@@ -169,6 +169,198 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
      *
      * <p>DescribePhysicalConnectionsResponseBody</p>
      */
+    public static class MacsecKey extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Cak")
+        private String cak;
+
+        @com.aliyun.core.annotation.NameInMap("CipherSuite")
+        private String cipherSuite;
+
+        @com.aliyun.core.annotation.NameInMap("Ckn")
+        private String ckn;
+
+        @com.aliyun.core.annotation.NameInMap("StartOn")
+        private String startOn;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private MacsecKey(Builder builder) {
+            this.cak = builder.cak;
+            this.cipherSuite = builder.cipherSuite;
+            this.ckn = builder.ckn;
+            this.startOn = builder.startOn;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MacsecKey create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cak
+         */
+        public String getCak() {
+            return this.cak;
+        }
+
+        /**
+         * @return cipherSuite
+         */
+        public String getCipherSuite() {
+            return this.cipherSuite;
+        }
+
+        /**
+         * @return ckn
+         */
+        public String getCkn() {
+            return this.ckn;
+        }
+
+        /**
+         * @return startOn
+         */
+        public String getStartOn() {
+            return this.startOn;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String cak; 
+            private String cipherSuite; 
+            private String ckn; 
+            private String startOn; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(MacsecKey model) {
+                this.cak = model.cak;
+                this.cipherSuite = model.cipherSuite;
+                this.ckn = model.ckn;
+                this.startOn = model.startOn;
+                this.status = model.status;
+            } 
+
+            /**
+             * Cak.
+             */
+            public Builder cak(String cak) {
+                this.cak = cak;
+                return this;
+            }
+
+            /**
+             * CipherSuite.
+             */
+            public Builder cipherSuite(String cipherSuite) {
+                this.cipherSuite = cipherSuite;
+                return this;
+            }
+
+            /**
+             * Ckn.
+             */
+            public Builder ckn(String ckn) {
+                this.ckn = ckn;
+                return this;
+            }
+
+            /**
+             * StartOn.
+             */
+            public Builder startOn(String startOn) {
+                this.startOn = startOn;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public MacsecKey build() {
+                return new MacsecKey(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePhysicalConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionsResponseBody</p>
+     */
+    public static class MacsecKeys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MacsecKey")
+        private java.util.List<MacsecKey> macsecKey;
+
+        private MacsecKeys(Builder builder) {
+            this.macsecKey = builder.macsecKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MacsecKeys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return macsecKey
+         */
+        public java.util.List<MacsecKey> getMacsecKey() {
+            return this.macsecKey;
+        }
+
+        public static final class Builder {
+            private java.util.List<MacsecKey> macsecKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(MacsecKeys model) {
+                this.macsecKey = model.macsecKey;
+            } 
+
+            /**
+             * MacsecKey.
+             */
+            public Builder macsecKey(java.util.List<MacsecKey> macsecKey) {
+                this.macsecKey = macsecKey;
+                return this;
+            }
+
+            public MacsecKeys build() {
+                return new MacsecKeys(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePhysicalConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -355,6 +547,9 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LoaStatus")
         private String loaStatus;
 
+        @com.aliyun.core.annotation.NameInMap("MacsecKeys")
+        private MacsecKeys macsecKeys;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -441,6 +636,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             this.hasReservationData = builder.hasReservationData;
             this.lineOperator = builder.lineOperator;
             this.loaStatus = builder.loaStatus;
+            this.macsecKeys = builder.macsecKeys;
             this.name = builder.name;
             this.opticalModuleModel = builder.opticalModuleModel;
             this.orderMode = builder.orderMode;
@@ -584,6 +780,13 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
          */
         public String getLoaStatus() {
             return this.loaStatus;
+        }
+
+        /**
+         * @return macsecKeys
+         */
+        public MacsecKeys getMacsecKeys() {
+            return this.macsecKeys;
         }
 
         /**
@@ -764,6 +967,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             private String hasReservationData; 
             private String lineOperator; 
             private String loaStatus; 
+            private MacsecKeys macsecKeys; 
             private String name; 
             private String opticalModuleModel; 
             private String orderMode; 
@@ -808,6 +1012,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
                 this.hasReservationData = model.hasReservationData;
                 this.lineOperator = model.lineOperator;
                 this.loaStatus = model.loaStatus;
+                this.macsecKeys = model.macsecKeys;
                 this.name = model.name;
                 this.opticalModuleModel = model.opticalModuleModel;
                 this.orderMode = model.orderMode;
@@ -1035,6 +1240,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
              */
             public Builder loaStatus(String loaStatus) {
                 this.loaStatus = loaStatus;
+                return this;
+            }
+
+            /**
+             * MacsecKeys.
+             */
+            public Builder macsecKeys(MacsecKeys macsecKeys) {
+                this.macsecKeys = macsecKeys;
                 return this;
             }
 
