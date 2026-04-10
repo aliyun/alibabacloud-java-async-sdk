@@ -233,6 +233,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceStorageConfigResponse> describeInstanceStorageConfig(DescribeInstanceStorageConfigRequest request);
 
     /**
+     * @param request the request parameters of DescribeSandboxTemplates  DescribeSandboxTemplatesRequest
+     * @return DescribeSandboxTemplatesResponse
+     */
+    CompletableFuture<DescribeSandboxTemplatesResponse> describeSandboxTemplates(DescribeSandboxTemplatesRequest request);
+
+    /**
      * @param request the request parameters of GetConversations  GetConversationsRequest
      * @return GetConversationsResponse
      */
