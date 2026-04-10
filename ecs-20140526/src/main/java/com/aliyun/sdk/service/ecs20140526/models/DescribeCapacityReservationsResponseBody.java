@@ -335,8 +335,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CapacityReservationUsages")
         private CapacityReservationUsages capacityReservationUsages;
 
+        @com.aliyun.core.annotation.NameInMap("FailedAmount")
+        private Integer failedAmount;
+
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
+
+        @com.aliyun.core.annotation.NameInMap("LockedAmount")
+        private Integer lockedAmount;
 
         @com.aliyun.core.annotation.NameInMap("TotalAmount")
         private Integer totalAmount;
@@ -350,7 +356,9 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         private AllocatedResource(Builder builder) {
             this.availableAmount = builder.availableAmount;
             this.capacityReservationUsages = builder.capacityReservationUsages;
+            this.failedAmount = builder.failedAmount;
             this.instanceType = builder.instanceType;
+            this.lockedAmount = builder.lockedAmount;
             this.totalAmount = builder.totalAmount;
             this.usedAmount = builder.usedAmount;
             this.zoneId = builder.zoneId;
@@ -379,10 +387,24 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return failedAmount
+         */
+        public Integer getFailedAmount() {
+            return this.failedAmount;
+        }
+
+        /**
          * @return instanceType
          */
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        /**
+         * @return lockedAmount
+         */
+        public Integer getLockedAmount() {
+            return this.lockedAmount;
         }
 
         /**
@@ -409,7 +431,9 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer availableAmount; 
             private CapacityReservationUsages capacityReservationUsages; 
+            private Integer failedAmount; 
             private String instanceType; 
+            private Integer lockedAmount; 
             private Integer totalAmount; 
             private Integer usedAmount; 
             private String zoneId; 
@@ -420,7 +444,9 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             private Builder(AllocatedResource model) {
                 this.availableAmount = model.availableAmount;
                 this.capacityReservationUsages = model.capacityReservationUsages;
+                this.failedAmount = model.failedAmount;
                 this.instanceType = model.instanceType;
+                this.lockedAmount = model.lockedAmount;
                 this.totalAmount = model.totalAmount;
                 this.usedAmount = model.usedAmount;
                 this.zoneId = model.zoneId;
@@ -446,6 +472,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
+             * FailedAmount.
+             */
+            public Builder failedAmount(Integer failedAmount) {
+                this.failedAmount = failedAmount;
+                return this;
+            }
+
+            /**
              * <p>The instance type of the instances.</p>
              * 
              * <strong>example:</strong>
@@ -453,6 +487,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * LockedAmount.
+             */
+            public Builder lockedAmount(Integer lockedAmount) {
+                this.lockedAmount = lockedAmount;
                 return this;
             }
 

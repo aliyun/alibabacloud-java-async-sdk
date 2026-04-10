@@ -341,8 +341,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ElasticityAssuranceUsages")
         private ElasticityAssuranceUsages elasticityAssuranceUsages;
 
+        @com.aliyun.core.annotation.NameInMap("FailedAmount")
+        private Integer failedAmount;
+
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
+
+        @com.aliyun.core.annotation.NameInMap("LockedAmount")
+        private Integer lockedAmount;
 
         @com.aliyun.core.annotation.NameInMap("TotalAmount")
         private Integer totalAmount;
@@ -356,7 +362,9 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         private AllocatedResource(Builder builder) {
             this.availableAmount = builder.availableAmount;
             this.elasticityAssuranceUsages = builder.elasticityAssuranceUsages;
+            this.failedAmount = builder.failedAmount;
             this.instanceType = builder.instanceType;
+            this.lockedAmount = builder.lockedAmount;
             this.totalAmount = builder.totalAmount;
             this.usedAmount = builder.usedAmount;
             this.zoneId = builder.zoneId;
@@ -385,10 +393,24 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return failedAmount
+         */
+        public Integer getFailedAmount() {
+            return this.failedAmount;
+        }
+
+        /**
          * @return instanceType
          */
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        /**
+         * @return lockedAmount
+         */
+        public Integer getLockedAmount() {
+            return this.lockedAmount;
         }
 
         /**
@@ -415,7 +437,9 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer availableAmount; 
             private ElasticityAssuranceUsages elasticityAssuranceUsages; 
+            private Integer failedAmount; 
             private String instanceType; 
+            private Integer lockedAmount; 
             private Integer totalAmount; 
             private Integer usedAmount; 
             private String zoneId; 
@@ -426,7 +450,9 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private Builder(AllocatedResource model) {
                 this.availableAmount = model.availableAmount;
                 this.elasticityAssuranceUsages = model.elasticityAssuranceUsages;
+                this.failedAmount = model.failedAmount;
                 this.instanceType = model.instanceType;
+                this.lockedAmount = model.lockedAmount;
                 this.totalAmount = model.totalAmount;
                 this.usedAmount = model.usedAmount;
                 this.zoneId = model.zoneId;
@@ -456,6 +482,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
+             * FailedAmount.
+             */
+            public Builder failedAmount(Integer failedAmount) {
+                this.failedAmount = failedAmount;
+                return this;
+            }
+
+            /**
              * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
@@ -463,6 +497,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * LockedAmount.
+             */
+            public Builder lockedAmount(Integer lockedAmount) {
+                this.lockedAmount = lockedAmount;
                 return this;
             }
 
