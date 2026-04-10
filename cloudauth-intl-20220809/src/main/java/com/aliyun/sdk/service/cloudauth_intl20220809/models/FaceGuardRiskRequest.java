@@ -33,12 +33,17 @@ public class FaceGuardRiskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private FaceGuardRiskRequest(Builder builder) {
         super(builder);
         this.bizId = builder.bizId;
         this.deviceToken = builder.deviceToken;
         this.merchantBizId = builder.merchantBizId;
         this.productCode = builder.productCode;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class FaceGuardRiskRequest extends Request {
         return this.productCode;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<FaceGuardRiskRequest, Builder> {
         private String bizId; 
         private String deviceToken; 
         private String merchantBizId; 
         private String productCode; 
+        private String type; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class FaceGuardRiskRequest extends Request {
             this.deviceToken = request.deviceToken;
             this.merchantBizId = request.merchantBizId;
             this.productCode = request.productCode;
+            this.type = request.type;
         } 
 
         /**
@@ -145,6 +159,15 @@ public class FaceGuardRiskRequest extends Request {
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
             this.productCode = productCode;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 
