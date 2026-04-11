@@ -27,6 +27,10 @@ public class SendFileRequest extends Request {
     private Boolean autoInstall;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceFilePath")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sourceFilePath;
@@ -53,6 +57,7 @@ public class SendFileRequest extends Request {
         super(builder);
         this.androidInstanceIdList = builder.androidInstanceIdList;
         this.autoInstall = builder.autoInstall;
+        this.clientToken = builder.clientToken;
         this.sourceFilePath = builder.sourceFilePath;
         this.targetFileName = builder.targetFileName;
         this.uploadEndpoint = builder.uploadEndpoint;
@@ -85,6 +90,13 @@ public class SendFileRequest extends Request {
      */
     public Boolean getAutoInstall() {
         return this.autoInstall;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -125,6 +137,7 @@ public class SendFileRequest extends Request {
     public static final class Builder extends Request.Builder<SendFileRequest, Builder> {
         private java.util.List<String> androidInstanceIdList; 
         private Boolean autoInstall; 
+        private String clientToken; 
         private String sourceFilePath; 
         private String targetFileName; 
         private String uploadEndpoint; 
@@ -139,6 +152,7 @@ public class SendFileRequest extends Request {
             super(request);
             this.androidInstanceIdList = request.androidInstanceIdList;
             this.autoInstall = request.autoInstall;
+            this.clientToken = request.clientToken;
             this.sourceFilePath = request.sourceFilePath;
             this.targetFileName = request.targetFileName;
             this.uploadEndpoint = request.uploadEndpoint;
@@ -162,6 +176,15 @@ public class SendFileRequest extends Request {
         public Builder autoInstall(Boolean autoInstall) {
             this.putQueryParameter("AutoInstall", autoInstall);
             this.autoInstall = autoInstall;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

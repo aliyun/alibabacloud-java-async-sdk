@@ -23,6 +23,10 @@ public class FetchFileRequest extends Request {
     private java.util.List<String> androidInstanceIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceFilePath")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sourceFilePath;
@@ -45,6 +49,7 @@ public class FetchFileRequest extends Request {
     private FetchFileRequest(Builder builder) {
         super(builder);
         this.androidInstanceIdList = builder.androidInstanceIdList;
+        this.clientToken = builder.clientToken;
         this.sourceFilePath = builder.sourceFilePath;
         this.uploadEndpoint = builder.uploadEndpoint;
         this.uploadType = builder.uploadType;
@@ -69,6 +74,13 @@ public class FetchFileRequest extends Request {
      */
     public java.util.List<String> getAndroidInstanceIdList() {
         return this.androidInstanceIdList;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -101,6 +113,7 @@ public class FetchFileRequest extends Request {
 
     public static final class Builder extends Request.Builder<FetchFileRequest, Builder> {
         private java.util.List<String> androidInstanceIdList; 
+        private String clientToken; 
         private String sourceFilePath; 
         private String uploadEndpoint; 
         private String uploadType; 
@@ -113,6 +126,7 @@ public class FetchFileRequest extends Request {
         private Builder(FetchFileRequest request) {
             super(request);
             this.androidInstanceIdList = request.androidInstanceIdList;
+            this.clientToken = request.clientToken;
             this.sourceFilePath = request.sourceFilePath;
             this.uploadEndpoint = request.uploadEndpoint;
             this.uploadType = request.uploadType;
@@ -126,6 +140,15 @@ public class FetchFileRequest extends Request {
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
             this.putQueryParameter("AndroidInstanceIdList", androidInstanceIdList);
             this.androidInstanceIdList = androidInstanceIdList;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

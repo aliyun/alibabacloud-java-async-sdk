@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InstallAppResponseBody</p>
  */
 public class InstallAppResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ChildTaskInfo")
+    private java.util.List<ChildTaskInfo> childTaskInfo;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -24,6 +27,7 @@ public class InstallAppResponseBody extends TeaModel {
     private String taskId;
 
     private InstallAppResponseBody(Builder builder) {
+        this.childTaskInfo = builder.childTaskInfo;
         this.requestId = builder.requestId;
         this.taskId = builder.taskId;
     }
@@ -41,6 +45,13 @@ public class InstallAppResponseBody extends TeaModel {
     }
 
     /**
+     * @return childTaskInfo
+     */
+    public java.util.List<ChildTaskInfo> getChildTaskInfo() {
+        return this.childTaskInfo;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -55,6 +66,7 @@ public class InstallAppResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<ChildTaskInfo> childTaskInfo; 
         private String requestId; 
         private String taskId; 
 
@@ -62,9 +74,18 @@ public class InstallAppResponseBody extends TeaModel {
         } 
 
         private Builder(InstallAppResponseBody model) {
+            this.childTaskInfo = model.childTaskInfo;
             this.requestId = model.requestId;
             this.taskId = model.taskId;
         } 
+
+        /**
+         * ChildTaskInfo.
+         */
+        public Builder childTaskInfo(java.util.List<ChildTaskInfo> childTaskInfo) {
+            this.childTaskInfo = childTaskInfo;
+            return this;
+        }
 
         /**
          * <p>The ID of the request.</p>
@@ -94,4 +115,79 @@ public class InstallAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InstallAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>InstallAppResponseBody</p>
+     */
+    public static class ChildTaskInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ChildTaskId")
+        private String childTaskId;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        private ChildTaskInfo(Builder builder) {
+            this.childTaskId = builder.childTaskId;
+            this.instanceId = builder.instanceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ChildTaskInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return childTaskId
+         */
+        public String getChildTaskId() {
+            return this.childTaskId;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public static final class Builder {
+            private String childTaskId; 
+            private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChildTaskInfo model) {
+                this.childTaskId = model.childTaskId;
+                this.instanceId = model.instanceId;
+            } 
+
+            /**
+             * ChildTaskId.
+             */
+            public Builder childTaskId(String childTaskId) {
+                this.childTaskId = childTaskId;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            public ChildTaskInfo build() {
+                return new ChildTaskInfo(this);
+            } 
+
+        } 
+
+    }
 }

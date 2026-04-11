@@ -34,12 +34,16 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
     private String instanceGroupName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceVersion")
+    private String instanceVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairId")
     private String keyPairId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
-    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
@@ -68,6 +72,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         this.chargeType = builder.chargeType;
         this.instanceGroupIds = builder.instanceGroupIds;
         this.instanceGroupName = builder.instanceGroupName;
+        this.instanceVersion = builder.instanceVersion;
         this.keyPairId = builder.keyPairId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -116,6 +121,13 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
      */
     public String getInstanceGroupName() {
         return this.instanceGroupName;
+    }
+
+    /**
+     * @return instanceVersion
+     */
+    public String getInstanceVersion() {
+        return this.instanceVersion;
     }
 
     /**
@@ -172,6 +184,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         private String chargeType; 
         private java.util.List<String> instanceGroupIds; 
         private String instanceGroupName; 
+        private String instanceVersion; 
         private String keyPairId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -190,6 +203,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
             this.chargeType = request.chargeType;
             this.instanceGroupIds = request.instanceGroupIds;
             this.instanceGroupName = request.instanceGroupName;
+            this.instanceVersion = request.instanceVersion;
             this.keyPairId = request.keyPairId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -246,6 +260,15 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         public Builder instanceGroupName(String instanceGroupName) {
             this.putQueryParameter("InstanceGroupName", instanceGroupName);
             this.instanceGroupName = instanceGroupName;
+            return this;
+        }
+
+        /**
+         * InstanceVersion.
+         */
+        public Builder instanceVersion(String instanceVersion) {
+            this.putQueryParameter("InstanceVersion", instanceVersion);
+            this.instanceVersion = instanceVersion;
             return this;
         }
 

@@ -54,6 +54,10 @@ public class DescribeAndroidInstancesRequest extends Request {
     private String instanceGroupName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceVersion")
+    private String instanceVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairId")
     private String keyPairId;
 
@@ -90,6 +94,14 @@ public class DescribeAndroidInstancesRequest extends Request {
     private String saleMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortKey")
+    private String sortKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortType")
+    private String sortType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -108,6 +120,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         this.instanceGroupId = builder.instanceGroupId;
         this.instanceGroupIds = builder.instanceGroupIds;
         this.instanceGroupName = builder.instanceGroupName;
+        this.instanceVersion = builder.instanceVersion;
         this.keyPairId = builder.keyPairId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -117,6 +130,8 @@ public class DescribeAndroidInstancesRequest extends Request {
         this.privateIpAddress = builder.privateIpAddress;
         this.qosRuleIds = builder.qosRuleIds;
         this.saleMode = builder.saleMode;
+        this.sortKey = builder.sortKey;
+        this.sortType = builder.sortType;
         this.status = builder.status;
         this.tag = builder.tag;
     }
@@ -198,6 +213,13 @@ public class DescribeAndroidInstancesRequest extends Request {
     }
 
     /**
+     * @return instanceVersion
+     */
+    public String getInstanceVersion() {
+        return this.instanceVersion;
+    }
+
+    /**
      * @return keyPairId
      */
     public String getKeyPairId() {
@@ -261,6 +283,20 @@ public class DescribeAndroidInstancesRequest extends Request {
     }
 
     /**
+     * @return sortKey
+     */
+    public String getSortKey() {
+        return this.sortKey;
+    }
+
+    /**
+     * @return sortType
+     */
+    public String getSortType() {
+        return this.sortType;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -284,6 +320,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         private String instanceGroupId; 
         private java.util.List<String> instanceGroupIds; 
         private String instanceGroupName; 
+        private String instanceVersion; 
         private String keyPairId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -293,6 +330,8 @@ public class DescribeAndroidInstancesRequest extends Request {
         private String privateIpAddress; 
         private java.util.List<String> qosRuleIds; 
         private String saleMode; 
+        private String sortKey; 
+        private String sortType; 
         private String status; 
         private java.util.List<Tag> tag; 
 
@@ -311,6 +350,7 @@ public class DescribeAndroidInstancesRequest extends Request {
             this.instanceGroupId = request.instanceGroupId;
             this.instanceGroupIds = request.instanceGroupIds;
             this.instanceGroupName = request.instanceGroupName;
+            this.instanceVersion = request.instanceVersion;
             this.keyPairId = request.keyPairId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -320,6 +360,8 @@ public class DescribeAndroidInstancesRequest extends Request {
             this.privateIpAddress = request.privateIpAddress;
             this.qosRuleIds = request.qosRuleIds;
             this.saleMode = request.saleMode;
+            this.sortKey = request.sortKey;
+            this.sortType = request.sortType;
             this.status = request.status;
             this.tag = request.tag;
         } 
@@ -426,6 +468,15 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
+         * InstanceVersion.
+         */
+        public Builder instanceVersion(String instanceVersion) {
+            this.putQueryParameter("InstanceVersion", instanceVersion);
+            this.instanceVersion = instanceVersion;
+            return this;
+        }
+
+        /**
          * <p>The ID of the bound key pair.</p>
          * 
          * <strong>example:</strong>
@@ -526,6 +577,24 @@ public class DescribeAndroidInstancesRequest extends Request {
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);
             this.saleMode = saleMode;
+            return this;
+        }
+
+        /**
+         * SortKey.
+         */
+        public Builder sortKey(String sortKey) {
+            this.putQueryParameter("SortKey", sortKey);
+            this.sortKey = sortKey;
+            return this;
+        }
+
+        /**
+         * SortType.
+         */
+        public Builder sortType(String sortType) {
+            this.putQueryParameter("SortType", sortType);
+            this.sortType = sortType;
             return this;
         }
 

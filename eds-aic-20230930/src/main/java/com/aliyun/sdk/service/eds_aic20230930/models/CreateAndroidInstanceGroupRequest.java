@@ -74,6 +74,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     private String instanceGroupSpec;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceVersion")
+    private String instanceVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6Bandwidth")
     private Integer ipv6Bandwidth;
 
@@ -149,6 +153,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         this.imageId = builder.imageId;
         this.instanceGroupName = builder.instanceGroupName;
         this.instanceGroupSpec = builder.instanceGroupSpec;
+        this.instanceVersion = builder.instanceVersion;
         this.ipv6Bandwidth = builder.ipv6Bandwidth;
         this.keyPairId = builder.keyPairId;
         this.networkInfo = builder.networkInfo;
@@ -271,6 +276,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return instanceVersion
+     */
+    public String getInstanceVersion() {
+        return this.instanceVersion;
+    }
+
+    /**
      * @return ipv6Bandwidth
      */
     public Integer getIpv6Bandwidth() {
@@ -389,6 +401,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         private String imageId; 
         private String instanceGroupName; 
         private String instanceGroupSpec; 
+        private String instanceVersion; 
         private Integer ipv6Bandwidth; 
         private String keyPairId; 
         private NetworkInfo networkInfo; 
@@ -424,6 +437,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.imageId = request.imageId;
             this.instanceGroupName = request.instanceGroupName;
             this.instanceGroupSpec = request.instanceGroupSpec;
+            this.instanceVersion = request.instanceVersion;
             this.ipv6Bandwidth = request.ipv6Bandwidth;
             this.keyPairId = request.keyPairId;
             this.networkInfo = request.networkInfo;
@@ -631,6 +645,15 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         public Builder instanceGroupSpec(String instanceGroupSpec) {
             this.putQueryParameter("InstanceGroupSpec", instanceGroupSpec);
             this.instanceGroupSpec = instanceGroupSpec;
+            return this;
+        }
+
+        /**
+         * InstanceVersion.
+         */
+        public Builder instanceVersion(String instanceVersion) {
+            this.putQueryParameter("InstanceVersion", instanceVersion);
+            this.instanceVersion = instanceVersion;
             return this;
         }
 
