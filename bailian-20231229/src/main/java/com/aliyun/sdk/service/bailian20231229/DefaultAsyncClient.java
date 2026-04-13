@@ -114,6 +114,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddTable  AddTableRequest
+     * @return AddTableResponse
+     */
+    @Override
+    public CompletableFuture<AddTableResponse> addTable(AddTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddTable").setMethod(HttpMethod.POST).setPathRegex("/{WorkspaceId}/datacenter/table").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  This operation returns an HTTP URL that can be used to upload an unstructured document (the lease) and parameters required for the upload. Structured documents are not supported.</p>
      * <ul>
@@ -1140,6 +1158,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdatePromptTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateTableFromAuthorizedOss  UpdateTableFromAuthorizedOssRequest
+     * @return UpdateTableFromAuthorizedOssResponse
+     */
+    @Override
+    public CompletableFuture<UpdateTableFromAuthorizedOssResponse> updateTableFromAuthorizedOss(UpdateTableFromAuthorizedOssRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateTableFromAuthorizedOss").setMethod(HttpMethod.PUT).setPathRegex("/{WorkspaceId}/datacenter/table/fromoss/{TableId}").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateTableFromAuthorizedOssResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateTableFromAuthorizedOssResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
