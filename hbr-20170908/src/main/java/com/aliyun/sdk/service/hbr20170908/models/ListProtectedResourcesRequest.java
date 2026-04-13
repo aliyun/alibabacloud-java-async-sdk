@@ -22,6 +22,10 @@ public class ListProtectedResourcesRequest extends Request {
     private String createdByProduct;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HasSnapshot")
+    private Boolean hasSnapshot;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -44,6 +48,7 @@ public class ListProtectedResourcesRequest extends Request {
     private ListProtectedResourcesRequest(Builder builder) {
         super(builder);
         this.createdByProduct = builder.createdByProduct;
+        this.hasSnapshot = builder.hasSnapshot;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.resourceId = builder.resourceId;
@@ -69,6 +74,13 @@ public class ListProtectedResourcesRequest extends Request {
      */
     public String getCreatedByProduct() {
         return this.createdByProduct;
+    }
+
+    /**
+     * @return hasSnapshot
+     */
+    public Boolean getHasSnapshot() {
+        return this.hasSnapshot;
     }
 
     /**
@@ -108,6 +120,7 @@ public class ListProtectedResourcesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListProtectedResourcesRequest, Builder> {
         private String createdByProduct; 
+        private Boolean hasSnapshot; 
         private Integer maxResults; 
         private String nextToken; 
         private String resourceId; 
@@ -121,6 +134,7 @@ public class ListProtectedResourcesRequest extends Request {
         private Builder(ListProtectedResourcesRequest request) {
             super(request);
             this.createdByProduct = request.createdByProduct;
+            this.hasSnapshot = request.hasSnapshot;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.resourceId = request.resourceId;
@@ -134,6 +148,15 @@ public class ListProtectedResourcesRequest extends Request {
         public Builder createdByProduct(String createdByProduct) {
             this.putQueryParameter("CreatedByProduct", createdByProduct);
             this.createdByProduct = createdByProduct;
+            return this;
+        }
+
+        /**
+         * HasSnapshot.
+         */
+        public Builder hasSnapshot(Boolean hasSnapshot) {
+            this.putQueryParameter("HasSnapshot", hasSnapshot);
+            this.hasSnapshot = hasSnapshot;
             return this;
         }
 

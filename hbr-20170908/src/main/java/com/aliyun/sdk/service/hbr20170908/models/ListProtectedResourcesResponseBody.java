@@ -221,6 +221,9 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
      * <p>ListProtectedResourcesResponseBody</p>
      */
     public static class ProtectedResources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackupPlanCount")
+        private Long backupPlanCount;
+
         @com.aliyun.core.annotation.NameInMap("CreatedByProduct")
         private String createdByProduct;
 
@@ -236,6 +239,9 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
         private Long resourceOwnerId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
+        private String resourceRegionId;
+
         @com.aliyun.core.annotation.NameInMap("SnapshotCount")
         private Long snapshotCount;
 
@@ -243,11 +249,13 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         private String sourceType;
 
         private ProtectedResources(Builder builder) {
+            this.backupPlanCount = builder.backupPlanCount;
             this.createdByProduct = builder.createdByProduct;
             this.protectedDataSize = builder.protectedDataSize;
             this.protectedResourceId = builder.protectedResourceId;
             this.resourceId = builder.resourceId;
             this.resourceOwnerId = builder.resourceOwnerId;
+            this.resourceRegionId = builder.resourceRegionId;
             this.snapshotCount = builder.snapshotCount;
             this.sourceType = builder.sourceType;
         }
@@ -258,6 +266,13 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
 
         public static ProtectedResources create() {
             return builder().build();
+        }
+
+        /**
+         * @return backupPlanCount
+         */
+        public Long getBackupPlanCount() {
+            return this.backupPlanCount;
         }
 
         /**
@@ -296,6 +311,13 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceRegionId
+         */
+        public String getResourceRegionId() {
+            return this.resourceRegionId;
+        }
+
+        /**
          * @return snapshotCount
          */
         public Long getSnapshotCount() {
@@ -310,11 +332,13 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long backupPlanCount; 
             private String createdByProduct; 
             private Long protectedDataSize; 
             private String protectedResourceId; 
             private String resourceId; 
             private Long resourceOwnerId; 
+            private String resourceRegionId; 
             private Long snapshotCount; 
             private String sourceType; 
 
@@ -322,14 +346,24 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
             } 
 
             private Builder(ProtectedResources model) {
+                this.backupPlanCount = model.backupPlanCount;
                 this.createdByProduct = model.createdByProduct;
                 this.protectedDataSize = model.protectedDataSize;
                 this.protectedResourceId = model.protectedResourceId;
                 this.resourceId = model.resourceId;
                 this.resourceOwnerId = model.resourceOwnerId;
+                this.resourceRegionId = model.resourceRegionId;
                 this.snapshotCount = model.snapshotCount;
                 this.sourceType = model.sourceType;
             } 
+
+            /**
+             * BackupPlanCount.
+             */
+            public Builder backupPlanCount(Long backupPlanCount) {
+                this.backupPlanCount = backupPlanCount;
+                return this;
+            }
 
             /**
              * CreatedByProduct.
@@ -368,6 +402,14 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
              */
             public Builder resourceOwnerId(Long resourceOwnerId) {
                 this.resourceOwnerId = resourceOwnerId;
+                return this;
+            }
+
+            /**
+             * ResourceRegionId.
+             */
+            public Builder resourceRegionId(String resourceRegionId) {
+                this.resourceRegionId = resourceRegionId;
                 return this;
             }
 

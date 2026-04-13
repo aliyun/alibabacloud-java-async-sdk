@@ -573,6 +573,9 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
         private String sourceInstanceId;
 
+        @com.aliyun.core.annotation.NameInMap("SourceResourceId")
+        private String sourceResourceId;
+
         @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
@@ -661,6 +664,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             this.snapshotHash = builder.snapshotHash;
             this.snapshotId = builder.snapshotId;
             this.sourceInstanceId = builder.sourceInstanceId;
+            this.sourceResourceId = builder.sourceResourceId;
             this.sourceType = builder.sourceType;
             this.speed = builder.speed;
             this.startTime = builder.startTime;
@@ -901,6 +905,13 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceResourceId
+         */
+        public String getSourceResourceId() {
+            return this.sourceResourceId;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -1064,6 +1075,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             private String snapshotHash; 
             private String snapshotId; 
             private String sourceInstanceId; 
+            private String sourceResourceId; 
             private String sourceType; 
             private Long speed; 
             private Long startTime; 
@@ -1118,6 +1130,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
                 this.snapshotHash = model.snapshotHash;
                 this.snapshotId = model.snapshotId;
                 this.sourceInstanceId = model.sourceInstanceId;
+                this.sourceResourceId = model.sourceResourceId;
                 this.sourceType = model.sourceType;
                 this.speed = model.speed;
                 this.startTime = model.startTime;
@@ -1466,6 +1479,14 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
+                return this;
+            }
+
+            /**
+             * SourceResourceId.
+             */
+            public Builder sourceResourceId(String sourceResourceId) {
+                this.sourceResourceId = sourceResourceId;
                 return this;
             }
 
