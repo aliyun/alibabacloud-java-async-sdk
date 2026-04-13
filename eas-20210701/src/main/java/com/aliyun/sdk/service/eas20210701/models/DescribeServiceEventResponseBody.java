@@ -176,6 +176,9 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
+        @com.aliyun.core.annotation.NameInMap("Resource")
+        private String resource;
+
         @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
@@ -185,6 +188,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         private Events(Builder builder) {
             this.message = builder.message;
             this.reason = builder.reason;
+            this.resource = builder.resource;
             this.time = builder.time;
             this.type = builder.type;
         }
@@ -212,6 +216,13 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
+         * @return resource
+         */
+        public String getResource() {
+            return this.resource;
+        }
+
+        /**
          * @return time
          */
         public String getTime() {
@@ -228,6 +239,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         public static final class Builder {
             private String message; 
             private String reason; 
+            private String resource; 
             private String time; 
             private String type; 
 
@@ -237,6 +249,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             private Builder(Events model) {
                 this.message = model.message;
                 this.reason = model.reason;
+                this.resource = model.resource;
                 this.time = model.time;
                 this.type = model.type;
             } 
@@ -260,6 +273,14 @@ public class DescribeServiceEventResponseBody extends TeaModel {
              */
             public Builder reason(String reason) {
                 this.reason = reason;
+                return this;
+            }
+
+            /**
+             * Resource.
+             */
+            public Builder resource(String resource) {
+                this.resource = resource;
                 return this;
             }
 
