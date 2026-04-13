@@ -247,6 +247,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssociateHaVipResponse> associateHaVip(AssociateHaVipRequest request);
 
     /**
+     * @param request the request parameters of AssociateMacSecKey  AssociateMacSecKeyRequest
+     * @return AssociateMacSecKeyResponse
+     */
+    CompletableFuture<AssociateMacSecKeyResponse> associateMacSecKey(AssociateMacSecKeyRequest request);
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Description</h2>
      * <ul>
@@ -2565,6 +2571,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<DisableVpcClassicLinkResponse> disableVpcClassicLink(DisableVpcClassicLinkRequest request);
+
+    /**
+     * @param request the request parameters of DisassociateMacSecKey  DisassociateMacSecKeyRequest
+     * @return DisassociateMacSecKeyResponse
+     */
+    CompletableFuture<DisassociateMacSecKeyResponse> disassociateMacSecKey(DisassociateMacSecKeyRequest request);
 
     /**
      * @param request the request parameters of DissociateRouteTableFromGateway  DissociateRouteTableFromGatewayRequest
