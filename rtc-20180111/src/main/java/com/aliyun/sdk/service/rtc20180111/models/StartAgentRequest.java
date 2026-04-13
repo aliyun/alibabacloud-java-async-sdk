@@ -745,8 +745,12 @@ public class StartAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("UserTurnEnd")
         private Boolean userTurnEnd;
 
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private Integer version;
+
         private BackChannelConfig(Builder builder) {
             this.userTurnEnd = builder.userTurnEnd;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -764,14 +768,23 @@ public class StartAgentRequest extends Request {
             return this.userTurnEnd;
         }
 
+        /**
+         * @return version
+         */
+        public Integer getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private Boolean userTurnEnd; 
+            private Integer version; 
 
             private Builder() {
             } 
 
             private Builder(BackChannelConfig model) {
                 this.userTurnEnd = model.userTurnEnd;
+                this.version = model.version;
             } 
 
             /**
@@ -779,6 +792,14 @@ public class StartAgentRequest extends Request {
              */
             public Builder userTurnEnd(Boolean userTurnEnd) {
                 this.userTurnEnd = userTurnEnd;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(Integer version) {
+                this.version = version;
                 return this;
             }
 
