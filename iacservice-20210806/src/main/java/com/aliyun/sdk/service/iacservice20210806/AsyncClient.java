@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddSharedAccountsResponse> addSharedAccounts(AddSharedAccountsRequest request);
 
     /**
+     * @param request the request parameters of AssociateDetectConfig  AssociateDetectConfigRequest
+     * @return AssociateDetectConfigResponse
+     */
+    CompletableFuture<AssociateDetectConfigResponse> associateDetectConfig(AssociateDetectConfigRequest request);
+
+    /**
      * @param request the request parameters of AssociateGroup  AssociateGroupRequest
      * @return AssociateGroupResponse
      */
@@ -42,6 +48,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CancelResourceExportTaskResponse
      */
     CompletableFuture<CancelResourceExportTaskResponse> cancelResourceExportTask(CancelResourceExportTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateDetectConfig  CreateDetectConfigRequest
+     * @return CreateDetectConfigResponse
+     */
+    CompletableFuture<CreateDetectConfigResponse> createDetectConfig(CreateDetectConfigRequest request);
 
     /**
      * @param request the request parameters of CreateGroup  CreateGroupRequest
@@ -104,6 +116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request);
 
     /**
+     * @param request the request parameters of DeleteDetectConfig  DeleteDetectConfigRequest
+     * @return DeleteDetectConfigResponse
+     */
+    CompletableFuture<DeleteDetectConfigResponse> deleteDetectConfig(DeleteDetectConfigRequest request);
+
+    /**
      * @param request the request parameters of DeleteGroup  DeleteGroupRequest
      * @return DeleteGroupResponse
      */
@@ -152,10 +170,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteResourceExportTaskResponse> deleteResourceExportTask(DeleteResourceExportTaskRequest request);
 
     /**
+     * @param request the request parameters of DeleteStack  DeleteStackRequest
+     * @return DeleteStackResponse
+     */
+    CompletableFuture<DeleteStackResponse> deleteStack(DeleteStackRequest request);
+
+    /**
      * @param request the request parameters of DeleteTask  DeleteTaskRequest
      * @return DeleteTaskResponse
      */
     CompletableFuture<DeleteTaskResponse> deleteTask(DeleteTaskRequest request);
+
+    /**
+     * @param request the request parameters of DetectTerraformState  DetectTerraformStateRequest
+     * @return DetectTerraformStateResponse
+     */
+    CompletableFuture<DetectTerraformStateResponse> detectTerraformState(DetectTerraformStateRequest request);
+
+    /**
+     * @param request the request parameters of DissociateDetectConfig  DissociateDetectConfigRequest
+     * @return DissociateDetectConfigResponse
+     */
+    CompletableFuture<DissociateDetectConfigResponse> dissociateDetectConfig(DissociateDetectConfigRequest request);
 
     /**
      * @param request the request parameters of DissociateGroup  DissociateGroupRequest
@@ -204,6 +240,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GenerateModuleResponse
      */
     CompletableFuture<GenerateModuleResponse> generateModule(GenerateModuleRequest request);
+
+    /**
+     * @param request the request parameters of GetDetectConfig  GetDetectConfigRequest
+     * @return GetDetectConfigResponse
+     */
+    CompletableFuture<GetDetectConfigResponse> getDetectConfig(GetDetectConfigRequest request);
 
     /**
      * @param request the request parameters of GetExecuteState  GetExecuteStateRequest
@@ -278,6 +320,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceTypeResponse> getResourceType(GetResourceTypeRequest request);
 
     /**
+     * @param request the request parameters of GetStackDeployments  GetStackDeploymentsRequest
+     * @return GetStackDeploymentsResponse
+     */
+    CompletableFuture<GetStackDeploymentsResponse> getStackDeployments(GetStackDeploymentsRequest request);
+
+    /**
      * @param request the request parameters of GetStackExecutionResult  GetStackExecutionResultRequest
      * @return GetStackExecutionResultResponse
      */
@@ -288,6 +336,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTaskResponse
      */
     CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetTerraformStateDetection  GetTerraformStateDetectionRequest
+     * @return GetTerraformStateDetectionResponse
+     */
+    CompletableFuture<GetTerraformStateDetectionResponse> getTerraformStateDetection(GetTerraformStateDetectionRequest request);
+
+    /**
+     * @param request the request parameters of ListDetectConfigRelations  ListDetectConfigRelationsRequest
+     * @return ListDetectConfigRelationsResponse
+     */
+    CompletableFuture<ListDetectConfigRelationsResponse> listDetectConfigRelations(ListDetectConfigRelationsRequest request);
+
+    /**
+     * @param request the request parameters of ListDetectConfigs  ListDetectConfigsRequest
+     * @return ListDetectConfigsResponse
+     */
+    CompletableFuture<ListDetectConfigsResponse> listDetectConfigs(ListDetectConfigsRequest request);
 
     /**
      * @param request the request parameters of ListExplorerRegistryModuleExamples  ListExplorerRegistryModuleExamplesRequest
@@ -438,6 +504,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TriggerStackExecutionResponse
      */
     CompletableFuture<TriggerStackExecutionResponse> triggerStackExecution(TriggerStackExecutionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDetectConfig  UpdateDetectConfigRequest
+     * @return UpdateDetectConfigResponse
+     */
+    CompletableFuture<UpdateDetectConfigResponse> updateDetectConfig(UpdateDetectConfigRequest request);
 
     /**
      * @param request the request parameters of UpdateExplorerModuleAttribute  UpdateExplorerModuleAttributeRequest

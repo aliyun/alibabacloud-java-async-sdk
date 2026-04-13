@@ -59,6 +59,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AssociateDetectConfig  AssociateDetectConfigRequest
+     * @return AssociateDetectConfigResponse
+     */
+    @Override
+    public CompletableFuture<AssociateDetectConfigResponse> associateDetectConfig(AssociateDetectConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AssociateDetectConfig").setMethod(HttpMethod.POST).setPathRegex("/terraformState/detectConfig/operations/associate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AssociateDetectConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AssociateDetectConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AssociateGroup  AssociateGroupRequest
      * @return AssociateGroupResponse
      */
@@ -107,6 +125,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CancelResourceExportTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateDetectConfig  CreateDetectConfigRequest
+     * @return CreateDetectConfigResponse
+     */
+    @Override
+    public CompletableFuture<CreateDetectConfigResponse> createDetectConfig(CreateDetectConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDetectConfig").setMethod(HttpMethod.POST).setPathRegex("/terraformState/detectConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDetectConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDetectConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -293,6 +329,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteDetectConfig  DeleteDetectConfigRequest
+     * @return DeleteDetectConfigResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDetectConfigResponse> deleteDetectConfig(DeleteDetectConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDetectConfig").setMethod(HttpMethod.DELETE).setPathRegex("/terraformState/detectConfig/{detectConfigId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDetectConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDetectConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteGroup  DeleteGroupRequest
      * @return DeleteGroupResponse
      */
@@ -437,6 +491,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteStack  DeleteStackRequest
+     * @return DeleteStackResponse
+     */
+    @Override
+    public CompletableFuture<DeleteStackResponse> deleteStack(DeleteStackRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteStack").setMethod(HttpMethod.DELETE).setPathRegex("/stacks/{stackId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteStackResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteStackResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteTask  DeleteTaskRequest
      * @return DeleteTaskResponse
      */
@@ -449,6 +521,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DetectTerraformState  DetectTerraformStateRequest
+     * @return DetectTerraformStateResponse
+     */
+    @Override
+    public CompletableFuture<DetectTerraformStateResponse> detectTerraformState(DetectTerraformStateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DetectTerraformState").setMethod(HttpMethod.POST).setPathRegex("/terraformState/detect").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DetectTerraformStateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DetectTerraformStateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DissociateDetectConfig  DissociateDetectConfigRequest
+     * @return DissociateDetectConfigResponse
+     */
+    @Override
+    public CompletableFuture<DissociateDetectConfigResponse> dissociateDetectConfig(DissociateDetectConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DissociateDetectConfig").setMethod(HttpMethod.PUT).setPathRegex("/terraformState/detectConfig/operations/dissociate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DissociateDetectConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DissociateDetectConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -593,6 +701,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GenerateModuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDetectConfig  GetDetectConfigRequest
+     * @return GetDetectConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetDetectConfigResponse> getDetectConfig(GetDetectConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDetectConfig").setMethod(HttpMethod.GET).setPathRegex("/terraformState/detectConfig/{detectConfigId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDetectConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDetectConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -815,6 +941,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetStackDeployments  GetStackDeploymentsRequest
+     * @return GetStackDeploymentsResponse
+     */
+    @Override
+    public CompletableFuture<GetStackDeploymentsResponse> getStackDeployments(GetStackDeploymentsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetStackDeployments").setMethod(HttpMethod.GET).setPathRegex("/stacks/{stackId}/deployments").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetStackDeploymentsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetStackDeploymentsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetStackExecutionResult  GetStackExecutionResultRequest
      * @return GetStackExecutionResultResponse
      */
@@ -845,6 +989,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetTerraformStateDetection  GetTerraformStateDetectionRequest
+     * @return GetTerraformStateDetectionResponse
+     */
+    @Override
+    public CompletableFuture<GetTerraformStateDetectionResponse> getTerraformStateDetection(GetTerraformStateDetectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTerraformStateDetection").setMethod(HttpMethod.GET).setPathRegex("/terraformState/detect/{detectionId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTerraformStateDetectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTerraformStateDetectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDetectConfigRelations  ListDetectConfigRelationsRequest
+     * @return ListDetectConfigRelationsResponse
+     */
+    @Override
+    public CompletableFuture<ListDetectConfigRelationsResponse> listDetectConfigRelations(ListDetectConfigRelationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDetectConfigRelations").setMethod(HttpMethod.GET).setPathRegex("/terraformState/detectConfig/operations/relation").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDetectConfigRelationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDetectConfigRelationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDetectConfigs  ListDetectConfigsRequest
+     * @return ListDetectConfigsResponse
+     */
+    @Override
+    public CompletableFuture<ListDetectConfigsResponse> listDetectConfigs(ListDetectConfigsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDetectConfigs").setMethod(HttpMethod.GET).setPathRegex("/terraformState/detectConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDetectConfigsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDetectConfigsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1295,6 +1493,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TriggerStackExecutionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDetectConfig  UpdateDetectConfigRequest
+     * @return UpdateDetectConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDetectConfigResponse> updateDetectConfig(UpdateDetectConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDetectConfig").setMethod(HttpMethod.PUT).setPathRegex("/terraformState/detectConfig/{detectConfigId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDetectConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDetectConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
