@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeReplicaSetRoleResponseBody</p>
  */
 public class DescribeReplicaSetRoleResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ConnectionStringSuffix")
+    private String connectionStringSuffix;
+
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
@@ -27,6 +30,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeReplicaSetRoleResponseBody(Builder builder) {
+        this.connectionStringSuffix = builder.connectionStringSuffix;
         this.DBInstanceId = builder.DBInstanceId;
         this.replicaSets = builder.replicaSets;
         this.requestId = builder.requestId;
@@ -42,6 +46,13 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return connectionStringSuffix
+     */
+    public String getConnectionStringSuffix() {
+        return this.connectionStringSuffix;
     }
 
     /**
@@ -66,6 +77,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String connectionStringSuffix; 
         private String DBInstanceId; 
         private ReplicaSets replicaSets; 
         private String requestId; 
@@ -74,10 +86,19 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeReplicaSetRoleResponseBody model) {
+            this.connectionStringSuffix = model.connectionStringSuffix;
             this.DBInstanceId = model.DBInstanceId;
             this.replicaSets = model.replicaSets;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * ConnectionStringSuffix.
+         */
+        public Builder connectionStringSuffix(String connectionStringSuffix) {
+            this.connectionStringSuffix = connectionStringSuffix;
+            return this;
+        }
 
         /**
          * <p>The instance ID.</p>

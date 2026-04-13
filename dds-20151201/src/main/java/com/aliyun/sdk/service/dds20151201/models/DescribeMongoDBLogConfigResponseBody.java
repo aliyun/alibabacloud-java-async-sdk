@@ -20,6 +20,9 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnableAudit")
     private Boolean enableAudit;
 
+    @com.aliyun.core.annotation.NameInMap("HotTtlForV2Standard")
+    private Long hotTtlForV2Standard;
+
     @com.aliyun.core.annotation.NameInMap("IsEtlMetaExist")
     private Integer isEtlMetaExist;
 
@@ -44,6 +47,9 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TtlForTrail")
     private Long ttlForTrail;
 
+    @com.aliyun.core.annotation.NameInMap("TtlForV2Standard")
+    private Long ttlForV2Standard;
+
     @com.aliyun.core.annotation.NameInMap("UsedStorageForStandard")
     private Long usedStorageForStandard;
 
@@ -55,6 +61,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
 
     private DescribeMongoDBLogConfigResponseBody(Builder builder) {
         this.enableAudit = builder.enableAudit;
+        this.hotTtlForV2Standard = builder.hotTtlForV2Standard;
         this.isEtlMetaExist = builder.isEtlMetaExist;
         this.isUserProjectLogstoreExist = builder.isUserProjectLogstoreExist;
         this.preserveStorageForStandard = builder.preserveStorageForStandard;
@@ -63,6 +70,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         this.serviceType = builder.serviceType;
         this.ttlForStandard = builder.ttlForStandard;
         this.ttlForTrail = builder.ttlForTrail;
+        this.ttlForV2Standard = builder.ttlForV2Standard;
         this.usedStorageForStandard = builder.usedStorageForStandard;
         this.usedStorageForTrail = builder.usedStorageForTrail;
         this.userProjectName = builder.userProjectName;
@@ -85,6 +93,13 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
      */
     public Boolean getEnableAudit() {
         return this.enableAudit;
+    }
+
+    /**
+     * @return hotTtlForV2Standard
+     */
+    public Long getHotTtlForV2Standard() {
+        return this.hotTtlForV2Standard;
     }
 
     /**
@@ -144,6 +159,13 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return ttlForV2Standard
+     */
+    public Long getTtlForV2Standard() {
+        return this.ttlForV2Standard;
+    }
+
+    /**
      * @return usedStorageForStandard
      */
     public Long getUsedStorageForStandard() {
@@ -166,6 +188,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private Boolean enableAudit; 
+        private Long hotTtlForV2Standard; 
         private Integer isEtlMetaExist; 
         private Integer isUserProjectLogstoreExist; 
         private Long preserveStorageForStandard; 
@@ -174,6 +197,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         private String serviceType; 
         private Long ttlForStandard; 
         private Long ttlForTrail; 
+        private Long ttlForV2Standard; 
         private Long usedStorageForStandard; 
         private Long usedStorageForTrail; 
         private String userProjectName; 
@@ -183,6 +207,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
 
         private Builder(DescribeMongoDBLogConfigResponseBody model) {
             this.enableAudit = model.enableAudit;
+            this.hotTtlForV2Standard = model.hotTtlForV2Standard;
             this.isEtlMetaExist = model.isEtlMetaExist;
             this.isUserProjectLogstoreExist = model.isUserProjectLogstoreExist;
             this.preserveStorageForStandard = model.preserveStorageForStandard;
@@ -191,6 +216,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
             this.serviceType = model.serviceType;
             this.ttlForStandard = model.ttlForStandard;
             this.ttlForTrail = model.ttlForTrail;
+            this.ttlForV2Standard = model.ttlForV2Standard;
             this.usedStorageForStandard = model.usedStorageForStandard;
             this.usedStorageForTrail = model.usedStorageForTrail;
             this.userProjectName = model.userProjectName;
@@ -208,6 +234,14 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
          */
         public Builder enableAudit(Boolean enableAudit) {
             this.enableAudit = enableAudit;
+            return this;
+        }
+
+        /**
+         * HotTtlForV2Standard.
+         */
+        public Builder hotTtlForV2Standard(Long hotTtlForV2Standard) {
+            this.hotTtlForV2Standard = hotTtlForV2Standard;
             return this;
         }
 
@@ -308,6 +342,14 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
          */
         public Builder ttlForTrail(Long ttlForTrail) {
             this.ttlForTrail = ttlForTrail;
+            return this;
+        }
+
+        /**
+         * TtlForV2Standard.
+         */
+        public Builder ttlForV2Standard(Long ttlForV2Standard) {
+            this.ttlForV2Standard = ttlForV2Standard;
             return this;
         }
 

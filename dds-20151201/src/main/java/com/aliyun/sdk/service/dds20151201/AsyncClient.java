@@ -348,6 +348,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request);
 
     /**
+     * @param request the request parameters of DescribeBinlogFiles  DescribeBinlogFilesRequest
+     * @return DescribeBinlogFilesResponse
+     */
+    CompletableFuture<DescribeBinlogFilesResponse> describeBinlogFiles(DescribeBinlogFilesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For a sharded cluster instance that is created before October 19, 2023 and uses cloud disks, you must call the <a href="https://help.aliyun.com/document_detail/2587931.html">TransferClusterBackup</a> operation to switch the instance from the shard backup mode to the cluster backup mode before you call the DescribeClusterBackups operation.
      * By default, cloud disk-based sharded cluster instances that are created after October 19, 2023 are in the cluster backup mode.</p>

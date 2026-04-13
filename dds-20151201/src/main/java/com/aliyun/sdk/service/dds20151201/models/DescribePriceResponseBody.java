@@ -248,11 +248,17 @@ public class DescribePriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityCategory")
         private String activityCategory;
 
+        @com.aliyun.core.annotation.NameInMap("ActivityExtInfo")
+        private java.util.Map<String, ?> activityExtInfo;
+
         @com.aliyun.core.annotation.NameInMap("CouponNo")
         private String couponNo;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Effective")
+        private Boolean effective;
 
         @com.aliyun.core.annotation.NameInMap("IsSelected")
         private String isSelected;
@@ -271,8 +277,10 @@ public class DescribePriceResponseBody extends TeaModel {
 
         private Coupon(Builder builder) {
             this.activityCategory = builder.activityCategory;
+            this.activityExtInfo = builder.activityExtInfo;
             this.couponNo = builder.couponNo;
             this.description = builder.description;
+            this.effective = builder.effective;
             this.isSelected = builder.isSelected;
             this.name = builder.name;
             this.optionCode = builder.optionCode;
@@ -296,6 +304,13 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return activityExtInfo
+         */
+        public java.util.Map<String, ?> getActivityExtInfo() {
+            return this.activityExtInfo;
+        }
+
+        /**
          * @return couponNo
          */
         public String getCouponNo() {
@@ -307,6 +322,13 @@ public class DescribePriceResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return effective
+         */
+        public Boolean getEffective() {
+            return this.effective;
         }
 
         /**
@@ -346,8 +368,10 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String activityCategory; 
+            private java.util.Map<String, ?> activityExtInfo; 
             private String couponNo; 
             private String description; 
+            private Boolean effective; 
             private String isSelected; 
             private String name; 
             private String optionCode; 
@@ -359,8 +383,10 @@ public class DescribePriceResponseBody extends TeaModel {
 
             private Builder(Coupon model) {
                 this.activityCategory = model.activityCategory;
+                this.activityExtInfo = model.activityExtInfo;
                 this.couponNo = model.couponNo;
                 this.description = model.description;
+                this.effective = model.effective;
                 this.isSelected = model.isSelected;
                 this.name = model.name;
                 this.optionCode = model.optionCode;
@@ -384,6 +410,14 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
+             * ActivityExtInfo.
+             */
+            public Builder activityExtInfo(java.util.Map<String, ?> activityExtInfo) {
+                this.activityExtInfo = activityExtInfo;
+                return this;
+            }
+
+            /**
              * <p>The coupon ID.</p>
              * 
              * <strong>example:</strong>
@@ -402,6 +436,14 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * Effective.
+             */
+            public Builder effective(Boolean effective) {
+                this.effective = effective;
                 return this;
             }
 

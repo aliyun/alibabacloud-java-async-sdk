@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBInstanceConnectionStringResponseBody</p>
  */
 public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ModifiedConnectionString")
+    private String modifiedConnectionString;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDBInstanceConnectionStringResponseBody(Builder builder) {
+        this.modifiedConnectionString = builder.modifiedConnectionString;
         this.requestId = builder.requestId;
     }
 
@@ -37,6 +41,13 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
     }
 
     /**
+     * @return modifiedConnectionString
+     */
+    public String getModifiedConnectionString() {
+        return this.modifiedConnectionString;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -44,14 +55,24 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String modifiedConnectionString; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(ModifyDBInstanceConnectionStringResponseBody model) {
+            this.modifiedConnectionString = model.modifiedConnectionString;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * ModifiedConnectionString.
+         */
+        public Builder modifiedConnectionString(String modifiedConnectionString) {
+            this.modifiedConnectionString = modifiedConnectionString;
+            return this;
+        }
 
         /**
          * <p>The request ID.</p>

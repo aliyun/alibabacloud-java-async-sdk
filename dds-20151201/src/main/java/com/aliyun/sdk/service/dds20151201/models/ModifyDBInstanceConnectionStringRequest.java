@@ -23,7 +23,6 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentConnectionString")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String currentConnectionString;
 
     @com.aliyun.core.annotation.Query
@@ -32,8 +31,15 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceModifySuffix")
+    private Boolean forceModifySuffix;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
+    private String networkType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NewConnectionString")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String newConnectionString;
 
     @com.aliyun.core.annotation.Query
@@ -53,6 +59,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortModifyOnly")
+    private Boolean portModifyOnly;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -65,11 +75,14 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         this.regionId = builder.regionId;
         this.currentConnectionString = builder.currentConnectionString;
         this.DBInstanceId = builder.DBInstanceId;
+        this.forceModifySuffix = builder.forceModifySuffix;
+        this.networkType = builder.networkType;
         this.newConnectionString = builder.newConnectionString;
         this.newPort = builder.newPort;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.portModifyOnly = builder.portModifyOnly;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -109,6 +122,20 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     }
 
     /**
+     * @return forceModifySuffix
+     */
+    public Boolean getForceModifySuffix() {
+        return this.forceModifySuffix;
+    }
+
+    /**
+     * @return networkType
+     */
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    /**
      * @return newConnectionString
      */
     public String getNewConnectionString() {
@@ -144,6 +171,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     }
 
     /**
+     * @return portModifyOnly
+     */
+    public Boolean getPortModifyOnly() {
+        return this.portModifyOnly;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -161,11 +195,14 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         private String regionId; 
         private String currentConnectionString; 
         private String DBInstanceId; 
+        private Boolean forceModifySuffix; 
+        private String networkType; 
         private String newConnectionString; 
         private Integer newPort; 
         private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Boolean portModifyOnly; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -178,11 +215,14 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
             this.regionId = request.regionId;
             this.currentConnectionString = request.currentConnectionString;
             this.DBInstanceId = request.DBInstanceId;
+            this.forceModifySuffix = request.forceModifySuffix;
+            this.networkType = request.networkType;
             this.newConnectionString = request.newConnectionString;
             this.newPort = request.newPort;
             this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.portModifyOnly = request.portModifyOnly;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -198,7 +238,6 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
         /**
          * <p>The current endpoint that is to be modified.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
@@ -226,11 +265,28 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
+         * ForceModifySuffix.
+         */
+        public Builder forceModifySuffix(Boolean forceModifySuffix) {
+            this.putQueryParameter("ForceModifySuffix", forceModifySuffix);
+            this.forceModifySuffix = forceModifySuffix;
+            return this;
+        }
+
+        /**
+         * NetworkType.
+         */
+        public Builder networkType(String networkType) {
+            this.putQueryParameter("NetworkType", networkType);
+            this.networkType = networkType;
+            return this;
+        }
+
+        /**
          * <p>The new endpoint. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.</p>
          * <blockquote>
          * <p>You need only to specify the prefix of the endpoint. The content other than the prefix cannot be modified.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyuntest111</p>
@@ -286,6 +342,15 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PortModifyOnly.
+         */
+        public Builder portModifyOnly(Boolean portModifyOnly) {
+            this.putQueryParameter("PortModifyOnly", portModifyOnly);
+            this.portModifyOnly = portModifyOnly;
             return this;
         }
 

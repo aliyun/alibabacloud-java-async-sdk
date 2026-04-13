@@ -20,6 +20,9 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CompatibleConnections")
     private CompatibleConnections compatibleConnections;
 
+    @com.aliyun.core.annotation.NameInMap("ConnectionStringSuffix")
+    private String connectionStringSuffix;
+
     @com.aliyun.core.annotation.NameInMap("NetworkAddresses")
     private NetworkAddresses networkAddresses;
 
@@ -28,6 +31,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
     private DescribeShardingNetworkAddressResponseBody(Builder builder) {
         this.compatibleConnections = builder.compatibleConnections;
+        this.connectionStringSuffix = builder.connectionStringSuffix;
         this.networkAddresses = builder.networkAddresses;
         this.requestId = builder.requestId;
     }
@@ -52,6 +56,13 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     }
 
     /**
+     * @return connectionStringSuffix
+     */
+    public String getConnectionStringSuffix() {
+        return this.connectionStringSuffix;
+    }
+
+    /**
      * @return networkAddresses
      */
     public NetworkAddresses getNetworkAddresses() {
@@ -67,6 +78,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
     public static final class Builder {
         private CompatibleConnections compatibleConnections; 
+        private String connectionStringSuffix; 
         private NetworkAddresses networkAddresses; 
         private String requestId; 
 
@@ -75,6 +87,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
         private Builder(DescribeShardingNetworkAddressResponseBody model) {
             this.compatibleConnections = model.compatibleConnections;
+            this.connectionStringSuffix = model.connectionStringSuffix;
             this.networkAddresses = model.networkAddresses;
             this.requestId = model.requestId;
         } 
@@ -84,6 +97,14 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
          */
         public Builder compatibleConnections(CompatibleConnections compatibleConnections) {
             this.compatibleConnections = compatibleConnections;
+            return this;
+        }
+
+        /**
+         * ConnectionStringSuffix.
+         */
+        public Builder connectionStringSuffix(String connectionStringSuffix) {
+            this.connectionStringSuffix = connectionStringSuffix;
             return this;
         }
 

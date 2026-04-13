@@ -1735,6 +1735,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
+        @com.aliyun.core.annotation.NameInMap("ColdDataEnabled")
+        private Boolean coldDataEnabled;
+
         @com.aliyun.core.annotation.NameInMap("ConfigserverList")
         private ConfigserverList configserverList;
 
@@ -1898,6 +1901,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.burstingEnabled = builder.burstingEnabled;
             this.capacityUnit = builder.capacityUnit;
             this.chargeType = builder.chargeType;
+            this.coldDataEnabled = builder.coldDataEnabled;
             this.configserverList = builder.configserverList;
             this.creationTime = builder.creationTime;
             this.currentKernelVersion = builder.currentKernelVersion;
@@ -1980,6 +1984,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        /**
+         * @return coldDataEnabled
+         */
+        public Boolean getColdDataEnabled() {
+            return this.coldDataEnabled;
         }
 
         /**
@@ -2357,6 +2368,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Boolean burstingEnabled; 
             private String capacityUnit; 
             private String chargeType; 
+            private Boolean coldDataEnabled; 
             private ConfigserverList configserverList; 
             private String creationTime; 
             private String currentKernelVersion; 
@@ -2418,6 +2430,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.burstingEnabled = model.burstingEnabled;
                 this.capacityUnit = model.capacityUnit;
                 this.chargeType = model.chargeType;
+                this.coldDataEnabled = model.coldDataEnabled;
                 this.configserverList = model.configserverList;
                 this.creationTime = model.creationTime;
                 this.currentKernelVersion = model.currentKernelVersion;
@@ -2507,6 +2520,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * ColdDataEnabled.
+             */
+            public Builder coldDataEnabled(Boolean coldDataEnabled) {
+                this.coldDataEnabled = coldDataEnabled;
                 return this;
             }
 

@@ -36,6 +36,11 @@ public class ModifyAuditPolicyRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HotStoragePeriod")
+    @com.aliyun.core.annotation.Validation(maximum = 7)
+    private Integer hotStoragePeriod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -66,6 +71,7 @@ public class ModifyAuditPolicyRequest extends Request {
         this.auditLogSwitchSource = builder.auditLogSwitchSource;
         this.auditStatus = builder.auditStatus;
         this.DBInstanceId = builder.DBInstanceId;
+        this.hotStoragePeriod = builder.hotStoragePeriod;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -116,6 +122,13 @@ public class ModifyAuditPolicyRequest extends Request {
     }
 
     /**
+     * @return hotStoragePeriod
+     */
+    public Integer getHotStoragePeriod() {
+        return this.hotStoragePeriod;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -162,6 +175,7 @@ public class ModifyAuditPolicyRequest extends Request {
         private String auditLogSwitchSource; 
         private String auditStatus; 
         private String DBInstanceId; 
+        private Integer hotStoragePeriod; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -179,6 +193,7 @@ public class ModifyAuditPolicyRequest extends Request {
             this.auditLogSwitchSource = request.auditLogSwitchSource;
             this.auditStatus = request.auditStatus;
             this.DBInstanceId = request.DBInstanceId;
+            this.hotStoragePeriod = request.hotStoragePeriod;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -235,6 +250,15 @@ public class ModifyAuditPolicyRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * HotStoragePeriod.
+         */
+        public Builder hotStoragePeriod(Integer hotStoragePeriod) {
+            this.putQueryParameter("HotStoragePeriod", hotStoragePeriod);
+            this.hotStoragePeriod = hotStoragePeriod;
             return this;
         }
 
