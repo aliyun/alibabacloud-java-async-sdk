@@ -166,7 +166,7 @@ public class UpdateApiDestinationRequest extends Request {
      */
     public static class HttpApiParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Endpoint")
-        @com.aliyun.core.annotation.Validation(maxLength = 127)
+        @com.aliyun.core.annotation.Validation(maxLength = 511)
         private String endpoint;
 
         @com.aliyun.core.annotation.NameInMap("Method")

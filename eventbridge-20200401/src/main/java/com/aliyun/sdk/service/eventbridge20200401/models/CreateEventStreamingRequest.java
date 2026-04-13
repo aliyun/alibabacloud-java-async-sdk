@@ -17540,17 +17540,33 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private String networkType;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private String vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         private SourceMQTTParameters(Builder builder) {
             this.bodyDataType = builder.bodyDataType;
             this.instanceId = builder.instanceId;
+            this.networkType = builder.networkType;
             this.regionId = builder.regionId;
+            this.securityGroupId = builder.securityGroupId;
             this.topic = builder.topic;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -17576,10 +17592,24 @@ public class CreateEventStreamingRequest extends Request {
         }
 
         /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
         /**
@@ -17589,11 +17619,29 @@ public class CreateEventStreamingRequest extends Request {
             return this.topic;
         }
 
+        /**
+         * @return vSwitchIds
+         */
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private String bodyDataType; 
             private String instanceId; 
+            private String networkType; 
             private String regionId; 
+            private String securityGroupId; 
             private String topic; 
+            private String vSwitchIds; 
+            private String vpcId; 
 
             private Builder() {
             } 
@@ -17601,8 +17649,12 @@ public class CreateEventStreamingRequest extends Request {
             private Builder(SourceMQTTParameters model) {
                 this.bodyDataType = model.bodyDataType;
                 this.instanceId = model.instanceId;
+                this.networkType = model.networkType;
                 this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
                 this.topic = model.topic;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
             } 
 
             /**
@@ -17625,6 +17677,14 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
+             * <p>The network type.</p>
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
              * <p>The ID of the region where the ApsaraMQ for MQTT instance resides.</p>
              * 
              * <strong>example:</strong>
@@ -17636,6 +17696,17 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
+             * <p>The ID of the security group to which the ApsaraMQ for Kafka instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1iv19sp1msc7zot4wr</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
              * <p>The topic from which messages are sent.</p>
              * 
              * <strong>example:</strong>
@@ -17643,6 +17714,28 @@ public class CreateEventStreamingRequest extends Request {
              */
             public Builder topic(String topic) {
                 this.topic = topic;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the vSwitch with which the ApsaraMQ for Kafka instance is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp179l3llg3jjxwrq72hh</p>
+             */
+            public Builder vSwitchIds(String vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the VPC to which the ApsaraMQ for Kafka instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vblalsi0vbhizr77cbhu</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

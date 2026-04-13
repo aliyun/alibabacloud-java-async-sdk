@@ -168,7 +168,7 @@ public class CreateApiDestinationRequest extends Request {
      */
     public static class HttpApiParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Endpoint")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 127)
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 511)
         private String endpoint;
 
         @com.aliyun.core.annotation.NameInMap("Method")

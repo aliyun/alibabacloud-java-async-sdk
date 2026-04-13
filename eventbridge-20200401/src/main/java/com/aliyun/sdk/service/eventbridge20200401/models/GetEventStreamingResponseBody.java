@@ -15878,17 +15878,33 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private String networkType;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private String vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         private SourceMQTTParameters(Builder builder) {
             this.bodyDataType = builder.bodyDataType;
             this.instanceId = builder.instanceId;
+            this.networkType = builder.networkType;
             this.regionId = builder.regionId;
+            this.securityGroupId = builder.securityGroupId;
             this.topic = builder.topic;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -15914,10 +15930,24 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
         /**
@@ -15927,11 +15957,29 @@ public class GetEventStreamingResponseBody extends TeaModel {
             return this.topic;
         }
 
+        /**
+         * @return vSwitchIds
+         */
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private String bodyDataType; 
             private String instanceId; 
+            private String networkType; 
             private String regionId; 
+            private String securityGroupId; 
             private String topic; 
+            private String vSwitchIds; 
+            private String vpcId; 
 
             private Builder() {
             } 
@@ -15939,8 +15987,12 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private Builder(SourceMQTTParameters model) {
                 this.bodyDataType = model.bodyDataType;
                 this.instanceId = model.instanceId;
+                this.networkType = model.networkType;
                 this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
                 this.topic = model.topic;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
             } 
 
             /**
@@ -15963,6 +16015,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
+             * NetworkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
              * <p>The region ID of the Message Queue for MQTT instance.</p>
              * 
              * <strong>example:</strong>
@@ -15974,6 +16034,17 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2vcgdxz7o1n9zappuimt</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
              * <p>The name of the topic in the Message Queue for MQTT instance.</p>
              * 
              * <strong>example:</strong>
@@ -15981,6 +16052,28 @@ public class GetEventStreamingResponseBody extends TeaModel {
              */
             public Builder topic(String topic) {
                 this.topic = topic;
+                return this;
+            }
+
+            /**
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-wz9qqeovkwjxlu9uc8rst</p>
+             */
+            public Builder vSwitchIds(String vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zehizpoendb3nwwu9w5o</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 
