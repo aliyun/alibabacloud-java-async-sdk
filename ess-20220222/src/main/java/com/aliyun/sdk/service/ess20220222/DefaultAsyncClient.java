@@ -1021,6 +1021,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeCandidateInstanceType  DescribeCandidateInstanceTypeRequest
+     * @return DescribeCandidateInstanceTypeResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCandidateInstanceTypeResponse> describeCandidateInstanceType(DescribeCandidateInstanceTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCandidateInstanceType").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCandidateInstanceTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCandidateInstanceTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeDiagnoseReports  DescribeDiagnoseReportsRequest
      * @return DescribeDiagnoseReportsResponse
      */

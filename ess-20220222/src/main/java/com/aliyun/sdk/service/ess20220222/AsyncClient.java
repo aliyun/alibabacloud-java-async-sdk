@@ -572,6 +572,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAlertConfigurationResponse> describeAlertConfiguration(DescribeAlertConfigurationRequest request);
 
     /**
+     * @param request the request parameters of DescribeCandidateInstanceType  DescribeCandidateInstanceTypeRequest
+     * @return DescribeCandidateInstanceTypeResponse
+     */
+    CompletableFuture<DescribeCandidateInstanceTypeResponse> describeCandidateInstanceType(DescribeCandidateInstanceTypeRequest request);
+
+    /**
      * @param request the request parameters of DescribeDiagnoseReports  DescribeDiagnoseReportsRequest
      * @return DescribeDiagnoseReportsResponse
      */

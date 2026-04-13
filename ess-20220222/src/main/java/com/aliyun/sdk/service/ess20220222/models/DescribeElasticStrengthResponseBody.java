@@ -315,6 +315,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
+        @com.aliyun.core.annotation.NameInMap("ElasticStrength")
+        private String elasticStrength;
+
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
@@ -338,6 +341,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
         private ElasticStrengthModelsResourcePools(Builder builder) {
             this.code = builder.code;
+            this.elasticStrength = builder.elasticStrength;
             this.instanceType = builder.instanceType;
             this.inventoryHealth = builder.inventoryHealth;
             this.msg = builder.msg;
@@ -360,6 +364,13 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
          */
         public String getCode() {
             return this.code;
+        }
+
+        /**
+         * @return elasticStrength
+         */
+        public String getElasticStrength() {
+            return this.elasticStrength;
         }
 
         /**
@@ -413,6 +424,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
+            private String elasticStrength; 
             private String instanceType; 
             private InventoryHealth inventoryHealth; 
             private String msg; 
@@ -426,6 +438,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
             private Builder(ElasticStrengthModelsResourcePools model) {
                 this.code = model.code;
+                this.elasticStrength = model.elasticStrength;
                 this.instanceType = model.instanceType;
                 this.inventoryHealth = model.inventoryHealth;
                 this.msg = model.msg;
@@ -443,6 +456,22 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
              */
             public Builder code(String code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * <p>The scaling strength level of the scaling group. Valid values:</p>
+             * <ul>
+             * <li>Strong</li>
+             * <li>Medium</li>
+             * <li>Weak</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Strong</p>
+             */
+            public Builder elasticStrength(String elasticStrength) {
+                this.elasticStrength = elasticStrength;
                 return this;
             }
 
@@ -811,6 +840,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
+        @com.aliyun.core.annotation.NameInMap("ElasticStrength")
+        private String elasticStrength;
+
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
@@ -834,6 +866,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
         private ResourcePools(Builder builder) {
             this.code = builder.code;
+            this.elasticStrength = builder.elasticStrength;
             this.instanceType = builder.instanceType;
             this.inventoryHealth = builder.inventoryHealth;
             this.msg = builder.msg;
@@ -856,6 +889,13 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
          */
         public String getCode() {
             return this.code;
+        }
+
+        /**
+         * @return elasticStrength
+         */
+        public String getElasticStrength() {
+            return this.elasticStrength;
         }
 
         /**
@@ -909,6 +949,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
+            private String elasticStrength; 
             private String instanceType; 
             private ResourcePoolsInventoryHealth inventoryHealth; 
             private String msg; 
@@ -922,6 +963,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
             private Builder(ResourcePools model) {
                 this.code = model.code;
+                this.elasticStrength = model.elasticStrength;
                 this.instanceType = model.instanceType;
                 this.inventoryHealth = model.inventoryHealth;
                 this.msg = model.msg;
@@ -939,6 +981,22 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
              */
             public Builder code(String code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * <p>The scaling strength level of the scaling group. Valid values:</p>
+             * <ul>
+             * <li>Strong</li>
+             * <li>Medium</li>
+             * <li>Weak</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Strong</p>
+             */
+            public Builder elasticStrength(String elasticStrength) {
+                this.elasticStrength = elasticStrength;
                 return this;
             }
 
