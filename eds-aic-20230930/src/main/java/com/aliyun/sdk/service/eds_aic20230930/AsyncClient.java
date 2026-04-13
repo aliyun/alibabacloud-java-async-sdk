@@ -230,6 +230,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSystemPropertyTemplatesResponse> deleteSystemPropertyTemplates(DeleteSystemPropertyTemplatesRequest request);
 
     /**
+     * @param request the request parameters of DescribeAgentTask  DescribeAgentTaskRequest
+     * @return DescribeAgentTaskResponse
+     */
+    CompletableFuture<DescribeAgentTaskResponse> describeAgentTask(DescribeAgentTaskRequest request);
+
+    /**
      * @param request the request parameters of DescribeAndroidInstanceGroups  DescribeAndroidInstanceGroupsRequest
      * @return DescribeAndroidInstanceGroupsResponse
      */
@@ -591,6 +597,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResetAndroidInstancesInGroupResponse
      */
     CompletableFuture<ResetAndroidInstancesInGroupResponse> resetAndroidInstancesInGroup(ResetAndroidInstancesInGroupRequest request);
+
+    /**
+     * @param request the request parameters of RunAgentTask  RunAgentTaskRequest
+     * @return RunAgentTaskResponse
+     */
+    CompletableFuture<RunAgentTaskResponse> runAgentTask(RunAgentTaskRequest request);
 
     /**
      * @param request the request parameters of RunCommand  RunCommandRequest
