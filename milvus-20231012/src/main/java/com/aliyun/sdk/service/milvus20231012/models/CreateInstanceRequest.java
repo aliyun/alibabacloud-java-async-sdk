@@ -22,12 +22,24 @@ public class CreateInstanceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("aiFunction")
+    private Boolean aiFunction;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("autoBackup")
     private Boolean autoBackup;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("autoRenew")
     private Boolean autoRenew;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("backupRestoreInfo")
+    private BackupRestoreInfo backupRestoreInfo;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("components")
@@ -120,8 +132,11 @@ public class CreateInstanceRequest extends Request {
     private CreateInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.aiFunction = builder.aiFunction;
         this.autoBackup = builder.autoBackup;
+        this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
+        this.backupRestoreInfo = builder.backupRestoreInfo;
         this.components = builder.components;
         this.configuration = builder.configuration;
         this.dbAdminPassword = builder.dbAdminPassword;
@@ -166,6 +181,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return aiFunction
+     */
+    public Boolean getAiFunction() {
+        return this.aiFunction;
+    }
+
+    /**
      * @return autoBackup
      */
     public Boolean getAutoBackup() {
@@ -173,10 +195,24 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    /**
      * @return autoRenew
      */
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return backupRestoreInfo
+     */
+    public BackupRestoreInfo getBackupRestoreInfo() {
+        return this.backupRestoreInfo;
     }
 
     /**
@@ -328,8 +364,11 @@ public class CreateInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private String regionId; 
+        private Boolean aiFunction; 
         private Boolean autoBackup; 
+        private Boolean autoPay; 
         private Boolean autoRenew; 
+        private BackupRestoreInfo backupRestoreInfo; 
         private java.util.List<Components> components; 
         private String configuration; 
         private String dbAdminPassword; 
@@ -359,8 +398,11 @@ public class CreateInstanceRequest extends Request {
         private Builder(CreateInstanceRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.aiFunction = request.aiFunction;
             this.autoBackup = request.autoBackup;
+            this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
+            this.backupRestoreInfo = request.backupRestoreInfo;
             this.components = request.components;
             this.configuration = request.configuration;
             this.dbAdminPassword = request.dbAdminPassword;
@@ -394,6 +436,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * aiFunction.
+         */
+        public Builder aiFunction(Boolean aiFunction) {
+            this.putBodyParameter("aiFunction", aiFunction);
+            this.aiFunction = aiFunction;
+            return this;
+        }
+
+        /**
          * autoBackup.
          */
         public Builder autoBackup(Boolean autoBackup) {
@@ -403,11 +454,29 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * autoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putBodyParameter("autoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
          * autoRenew.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("autoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * backupRestoreInfo.
+         */
+        public Builder backupRestoreInfo(BackupRestoreInfo backupRestoreInfo) {
+            this.putBodyParameter("backupRestoreInfo", backupRestoreInfo);
+            this.backupRestoreInfo = backupRestoreInfo;
             return this;
         }
 
@@ -619,6 +688,102 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class BackupRestoreInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("backupId")
+        private String backupId;
+
+        @com.aliyun.core.annotation.NameInMap("backupName")
+        private String backupName;
+
+        @com.aliyun.core.annotation.NameInMap("sourceClusterId")
+        private String sourceClusterId;
+
+        private BackupRestoreInfo(Builder builder) {
+            this.backupId = builder.backupId;
+            this.backupName = builder.backupName;
+            this.sourceClusterId = builder.sourceClusterId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackupRestoreInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return backupId
+         */
+        public String getBackupId() {
+            return this.backupId;
+        }
+
+        /**
+         * @return backupName
+         */
+        public String getBackupName() {
+            return this.backupName;
+        }
+
+        /**
+         * @return sourceClusterId
+         */
+        public String getSourceClusterId() {
+            return this.sourceClusterId;
+        }
+
+        public static final class Builder {
+            private String backupId; 
+            private String backupName; 
+            private String sourceClusterId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupRestoreInfo model) {
+                this.backupId = model.backupId;
+                this.backupName = model.backupName;
+                this.sourceClusterId = model.sourceClusterId;
+            } 
+
+            /**
+             * backupId.
+             */
+            public Builder backupId(String backupId) {
+                this.backupId = backupId;
+                return this;
+            }
+
+            /**
+             * backupName.
+             */
+            public Builder backupName(String backupName) {
+                this.backupName = backupName;
+                return this;
+            }
+
+            /**
+             * sourceClusterId.
+             */
+            public Builder sourceClusterId(String sourceClusterId) {
+                this.sourceClusterId = sourceClusterId;
+                return this;
+            }
+
+            public BackupRestoreInfo build() {
+                return new BackupRestoreInfo(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateInstanceRequest} extends {@link TeaModel}

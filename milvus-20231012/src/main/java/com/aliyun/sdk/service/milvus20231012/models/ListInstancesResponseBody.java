@@ -727,6 +727,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("TemplateVersion")
+        private String templateVersion;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
@@ -757,6 +760,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.runningTime = builder.runningTime;
             this.sgId = builder.sgId;
             this.tags = builder.tags;
+            this.templateVersion = builder.templateVersion;
             this.version = builder.version;
             this.vpcId = builder.vpcId;
             this.vswId = builder.vswId;
@@ -891,6 +895,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return templateVersion
+         */
+        public String getTemplateVersion() {
+            return this.templateVersion;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -936,6 +947,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer runningTime; 
             private String sgId; 
             private java.util.List<Tags> tags; 
+            private String templateVersion; 
             private String version; 
             private String vpcId; 
             private String vswId; 
@@ -962,6 +974,7 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.runningTime = model.runningTime;
                 this.sgId = model.sgId;
                 this.tags = model.tags;
+                this.templateVersion = model.templateVersion;
                 this.version = model.version;
                 this.vpcId = model.vpcId;
                 this.vswId = model.vswId;
@@ -1156,6 +1169,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * TemplateVersion.
+             */
+            public Builder templateVersion(String templateVersion) {
+                this.templateVersion = templateVersion;
                 return this;
             }
 

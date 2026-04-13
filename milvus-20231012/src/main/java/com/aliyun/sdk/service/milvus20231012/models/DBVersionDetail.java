@@ -305,6 +305,9 @@ public class DBVersionDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("isStandalone")
         private Boolean isStandalone;
 
+        @com.aliyun.core.annotation.NameInMap("isStandalonePro")
+        private Boolean isStandalonePro;
+
         @com.aliyun.core.annotation.NameInMap("zoneMode")
         private String zoneMode;
 
@@ -312,6 +315,7 @@ public class DBVersionDetail extends TeaModel {
             this.componentSpecs = builder.componentSpecs;
             this.isHA = builder.isHA;
             this.isStandalone = builder.isStandalone;
+            this.isStandalonePro = builder.isStandalonePro;
             this.zoneMode = builder.zoneMode;
         }
 
@@ -345,6 +349,13 @@ public class DBVersionDetail extends TeaModel {
         }
 
         /**
+         * @return isStandalonePro
+         */
+        public Boolean getIsStandalonePro() {
+            return this.isStandalonePro;
+        }
+
+        /**
          * @return zoneMode
          */
         public String getZoneMode() {
@@ -355,6 +366,7 @@ public class DBVersionDetail extends TeaModel {
             private java.util.List<ComponentSpecs> componentSpecs; 
             private Boolean isHA; 
             private Boolean isStandalone; 
+            private Boolean isStandalonePro; 
             private String zoneMode; 
 
             private Builder() {
@@ -364,6 +376,7 @@ public class DBVersionDetail extends TeaModel {
                 this.componentSpecs = model.componentSpecs;
                 this.isHA = model.isHA;
                 this.isStandalone = model.isStandalone;
+                this.isStandalonePro = model.isStandalonePro;
                 this.zoneMode = model.zoneMode;
             } 
 
@@ -388,6 +401,14 @@ public class DBVersionDetail extends TeaModel {
              */
             public Builder isStandalone(Boolean isStandalone) {
                 this.isStandalone = isStandalone;
+                return this;
+            }
+
+            /**
+             * isStandalonePro.
+             */
+            public Builder isStandalonePro(Boolean isStandalonePro) {
+                this.isStandalonePro = isStandalonePro;
                 return this;
             }
 

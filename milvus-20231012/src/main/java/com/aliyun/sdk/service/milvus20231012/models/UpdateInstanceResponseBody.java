@@ -23,12 +23,16 @@ public class UpdateInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
     private Boolean data;
 
+    @com.aliyun.core.annotation.NameInMap("orderId")
+    private String orderId;
+
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private UpdateInstanceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.data = builder.data;
+        this.orderId = builder.orderId;
         this.success = builder.success;
     }
 
@@ -59,6 +63,13 @@ public class UpdateInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -68,6 +79,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Boolean data; 
+        private String orderId; 
         private Boolean success; 
 
         private Builder() {
@@ -76,6 +88,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         private Builder(UpdateInstanceResponseBody model) {
             this.requestId = model.requestId;
             this.data = model.data;
+            this.orderId = model.orderId;
             this.success = model.success;
         } 
 
@@ -92,6 +105,14 @@ public class UpdateInstanceResponseBody extends TeaModel {
          */
         public Builder data(Boolean data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * orderId.
+         */
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
             return this;
         }
 

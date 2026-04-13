@@ -233,6 +233,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
+        @com.aliyun.core.annotation.NameInMap("PayType")
+        private String payType;
+
         @com.aliyun.core.annotation.NameInMap("Replica")
         private Integer replica;
 
@@ -245,6 +248,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.cuRatio = builder.cuRatio;
             this.diskSize = builder.diskSize;
             this.diskType = builder.diskType;
+            this.payType = builder.payType;
             this.replica = builder.replica;
             this.zoneId = builder.zoneId;
         }
@@ -293,6 +297,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return payType
+         */
+        public String getPayType() {
+            return this.payType;
+        }
+
+        /**
          * @return replica
          */
         public Integer getReplica() {
@@ -312,6 +323,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             private Integer cuRatio; 
             private Integer diskSize; 
             private String diskType; 
+            private String payType; 
             private Integer replica; 
             private String zoneId; 
 
@@ -324,6 +336,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
                 this.cuRatio = model.cuRatio;
                 this.diskSize = model.diskSize;
                 this.diskType = model.diskType;
+                this.payType = model.payType;
                 this.replica = model.replica;
                 this.zoneId = model.zoneId;
             } 
@@ -385,6 +398,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
+                return this;
+            }
+
+            /**
+             * PayType.
+             */
+            public Builder payType(String payType) {
+                this.payType = payType;
                 return this;
             }
 
@@ -1216,6 +1237,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KmsKeyId")
         private String kmsKeyId;
 
+        @com.aliyun.core.annotation.NameInMap("MaintainablePeriod")
+        private String maintainablePeriod;
+
         @com.aliyun.core.annotation.NameInMap("MeasureConfig")
         private MeasureConfig measureConfig;
 
@@ -1287,6 +1311,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceStatus = builder.instanceStatus;
             this.kmsKeyId = builder.kmsKeyId;
+            this.maintainablePeriod = builder.maintainablePeriod;
             this.measureConfig = builder.measureConfig;
             this.multiZoneMode = builder.multiZoneMode;
             this.nodeType = builder.nodeType;
@@ -1405,6 +1430,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
          */
         public String getKmsKeyId() {
             return this.kmsKeyId;
+        }
+
+        /**
+         * @return maintainablePeriod
+         */
+        public String getMaintainablePeriod() {
+            return this.maintainablePeriod;
         }
 
         /**
@@ -1554,6 +1586,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceStatus; 
             private String kmsKeyId; 
+            private String maintainablePeriod; 
             private MeasureConfig measureConfig; 
             private String multiZoneMode; 
             private String nodeType; 
@@ -1591,6 +1624,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
                 this.instanceId = model.instanceId;
                 this.instanceStatus = model.instanceStatus;
                 this.kmsKeyId = model.kmsKeyId;
+                this.maintainablePeriod = model.maintainablePeriod;
                 this.measureConfig = model.measureConfig;
                 this.multiZoneMode = model.multiZoneMode;
                 this.nodeType = model.nodeType;
@@ -1745,6 +1779,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
+                return this;
+            }
+
+            /**
+             * MaintainablePeriod.
+             */
+            public Builder maintainablePeriod(String maintainablePeriod) {
+                this.maintainablePeriod = maintainablePeriod;
                 return this;
             }
 

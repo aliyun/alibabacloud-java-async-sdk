@@ -26,6 +26,10 @@ public class UpdateInstanceRequest extends Request {
     private Boolean autoBackup;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("components")
     private java.util.List<Components> components;
 
@@ -54,6 +58,7 @@ public class UpdateInstanceRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.autoBackup = builder.autoBackup;
+        this.autoPay = builder.autoPay;
         this.components = builder.components;
         this.configuration = builder.configuration;
         this.ha = builder.ha;
@@ -87,6 +92,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public Boolean getAutoBackup() {
         return this.autoBackup;
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -134,6 +146,7 @@ public class UpdateInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String regionId; 
         private Boolean autoBackup; 
+        private Boolean autoPay; 
         private java.util.List<Components> components; 
         private String configuration; 
         private Boolean ha; 
@@ -149,6 +162,7 @@ public class UpdateInstanceRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.autoBackup = request.autoBackup;
+            this.autoPay = request.autoPay;
             this.components = request.components;
             this.configuration = request.configuration;
             this.ha = request.ha;
@@ -172,6 +186,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder autoBackup(Boolean autoBackup) {
             this.putBodyParameter("autoBackup", autoBackup);
             this.autoBackup = autoBackup;
+            return this;
+        }
+
+        /**
+         * autoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putBodyParameter("autoPay", autoPay);
+            this.autoPay = autoPay;
             return this;
         }
 
@@ -250,6 +273,9 @@ public class UpdateInstanceRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private Integer cuNum;
 
+        @com.aliyun.core.annotation.NameInMap("payType")
+        private String payType;
+
         @com.aliyun.core.annotation.NameInMap("replica")
         @com.aliyun.core.annotation.Validation(required = true)
         private Integer replica;
@@ -260,6 +286,7 @@ public class UpdateInstanceRequest extends Request {
 
         private Components(Builder builder) {
             this.cuNum = builder.cuNum;
+            this.payType = builder.payType;
             this.replica = builder.replica;
             this.type = builder.type;
         }
@@ -280,6 +307,13 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * @return payType
+         */
+        public String getPayType() {
+            return this.payType;
+        }
+
+        /**
          * @return replica
          */
         public Integer getReplica() {
@@ -295,6 +329,7 @@ public class UpdateInstanceRequest extends Request {
 
         public static final class Builder {
             private Integer cuNum; 
+            private String payType; 
             private Integer replica; 
             private String type; 
 
@@ -303,6 +338,7 @@ public class UpdateInstanceRequest extends Request {
 
             private Builder(Components model) {
                 this.cuNum = model.cuNum;
+                this.payType = model.payType;
                 this.replica = model.replica;
                 this.type = model.type;
             } 
@@ -315,6 +351,14 @@ public class UpdateInstanceRequest extends Request {
              */
             public Builder cuNum(Integer cuNum) {
                 this.cuNum = cuNum;
+                return this;
+            }
+
+            /**
+             * payType.
+             */
+            public Builder payType(String payType) {
+                this.payType = payType;
                 return this;
             }
 

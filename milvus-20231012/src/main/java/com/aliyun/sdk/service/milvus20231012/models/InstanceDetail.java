@@ -545,6 +545,9 @@ public class InstanceDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("diskSizeType")
         private String diskSizeType;
 
+        @com.aliyun.core.annotation.NameInMap("payType")
+        private String payType;
+
         @com.aliyun.core.annotation.NameInMap("replica")
         private Integer replica;
 
@@ -555,6 +558,7 @@ public class InstanceDetail extends TeaModel {
             this.cuNum = builder.cuNum;
             this.cuType = builder.cuType;
             this.diskSizeType = builder.diskSizeType;
+            this.payType = builder.payType;
             this.replica = builder.replica;
             this.type = builder.type;
         }
@@ -589,6 +593,13 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
+         * @return payType
+         */
+        public String getPayType() {
+            return this.payType;
+        }
+
+        /**
          * @return replica
          */
         public Integer getReplica() {
@@ -606,6 +617,7 @@ public class InstanceDetail extends TeaModel {
             private Integer cuNum; 
             private String cuType; 
             private String diskSizeType; 
+            private String payType; 
             private Integer replica; 
             private String type; 
 
@@ -616,6 +628,7 @@ public class InstanceDetail extends TeaModel {
                 this.cuNum = model.cuNum;
                 this.cuType = model.cuType;
                 this.diskSizeType = model.diskSizeType;
+                this.payType = model.payType;
                 this.replica = model.replica;
                 this.type = model.type;
             } 
@@ -641,6 +654,14 @@ public class InstanceDetail extends TeaModel {
              */
             public Builder diskSizeType(String diskSizeType) {
                 this.diskSizeType = diskSizeType;
+                return this;
+            }
+
+            /**
+             * payType.
+             */
+            public Builder payType(String payType) {
+                this.payType = payType;
                 return this;
             }
 
