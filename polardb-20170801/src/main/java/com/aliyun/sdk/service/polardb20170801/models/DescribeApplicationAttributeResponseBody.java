@@ -1667,11 +1667,15 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthCallbackURL")
         private String authCallbackURL;
 
+        @com.aliyun.core.annotation.NameInMap("AuthProviders")
+        private java.util.List<String> authProviders;
+
         @com.aliyun.core.annotation.NameInMap("SupabaseClusterId")
         private String supabaseClusterId;
 
         private PolarClawSaaSApplicationAttribute(Builder builder) {
             this.authCallbackURL = builder.authCallbackURL;
+            this.authProviders = builder.authProviders;
             this.supabaseClusterId = builder.supabaseClusterId;
         }
 
@@ -1691,6 +1695,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return authProviders
+         */
+        public java.util.List<String> getAuthProviders() {
+            return this.authProviders;
+        }
+
+        /**
          * @return supabaseClusterId
          */
         public String getSupabaseClusterId() {
@@ -1699,6 +1710,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String authCallbackURL; 
+            private java.util.List<String> authProviders; 
             private String supabaseClusterId; 
 
             private Builder() {
@@ -1706,6 +1718,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
             private Builder(PolarClawSaaSApplicationAttribute model) {
                 this.authCallbackURL = model.authCallbackURL;
+                this.authProviders = model.authProviders;
                 this.supabaseClusterId = model.supabaseClusterId;
             } 
 
@@ -1714,6 +1727,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
              */
             public Builder authCallbackURL(String authCallbackURL) {
                 this.authCallbackURL = authCallbackURL;
+                return this;
+            }
+
+            /**
+             * AuthProviders.
+             */
+            public Builder authProviders(java.util.List<String> authProviders) {
+                this.authProviders = authProviders;
                 return this;
             }
 
