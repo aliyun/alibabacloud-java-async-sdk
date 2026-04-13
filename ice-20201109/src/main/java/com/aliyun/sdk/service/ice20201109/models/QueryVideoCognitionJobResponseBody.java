@@ -17,8 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryVideoCognitionJobResponseBody</p>
  */
 public class QueryVideoCognitionJobResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Input")
+    private Input input;
+
     @com.aliyun.core.annotation.NameInMap("JobStatus")
     private String jobStatus;
+
+    @com.aliyun.core.annotation.NameInMap("Params")
+    private String params;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -26,13 +32,19 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Results")
     private Results results;
 
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    private String templateId;
+
     @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private QueryVideoCognitionJobResponseBody(Builder builder) {
+        this.input = builder.input;
         this.jobStatus = builder.jobStatus;
+        this.params = builder.params;
         this.requestId = builder.requestId;
         this.results = builder.results;
+        this.templateId = builder.templateId;
         this.userData = builder.userData;
     }
 
@@ -49,10 +61,24 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return input
+     */
+    public Input getInput() {
+        return this.input;
+    }
+
+    /**
      * @return jobStatus
      */
     public String getJobStatus() {
         return this.jobStatus;
+    }
+
+    /**
+     * @return params
+     */
+    public String getParams() {
+        return this.params;
     }
 
     /**
@@ -70,6 +96,13 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return templateId
+     */
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    /**
      * @return userData
      */
     public String getUserData() {
@@ -77,20 +110,34 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Input input; 
         private String jobStatus; 
+        private String params; 
         private String requestId; 
         private Results results; 
+        private String templateId; 
         private String userData; 
 
         private Builder() {
         } 
 
         private Builder(QueryVideoCognitionJobResponseBody model) {
+            this.input = model.input;
             this.jobStatus = model.jobStatus;
+            this.params = model.params;
             this.requestId = model.requestId;
             this.results = model.results;
+            this.templateId = model.templateId;
             this.userData = model.userData;
         } 
+
+        /**
+         * Input.
+         */
+        public Builder input(Input input) {
+            this.input = input;
+            return this;
+        }
 
         /**
          * <p>The status of the task. Valid values:</p>
@@ -106,6 +153,14 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
          */
         public Builder jobStatus(String jobStatus) {
             this.jobStatus = jobStatus;
+            return this;
+        }
+
+        /**
+         * Params.
+         */
+        public Builder params(String params) {
+            this.params = params;
             return this;
         }
 
@@ -129,6 +184,14 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
         }
 
         /**
+         * TemplateId.
+         */
+        public Builder templateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+
+        /**
          * <p>The user-defined data.</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +208,81 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryVideoCognitionJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryVideoCognitionJobResponseBody</p>
+     */
+    public static class Input extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Media")
+        private String media;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Input(Builder builder) {
+            this.media = builder.media;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Input create() {
+            return builder().build();
+        }
+
+        /**
+         * @return media
+         */
+        public String getMedia() {
+            return this.media;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String media; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
+            /**
+             * Media.
+             */
+            public Builder media(String media) {
+                this.media = media;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Input build() {
+                return new Input(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link QueryVideoCognitionJobResponseBody} extends {@link TeaModel}
