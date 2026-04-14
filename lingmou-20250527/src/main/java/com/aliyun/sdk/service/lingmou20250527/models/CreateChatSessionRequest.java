@@ -23,6 +23,14 @@ public class CreateChatSessionRequest extends Request {
     private String id;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appId")
+    private String appId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("deviceId")
+    private String deviceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("instanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -38,6 +46,8 @@ public class CreateChatSessionRequest extends Request {
     private CreateChatSessionRequest(Builder builder) {
         super(builder);
         this.id = builder.id;
+        this.appId = builder.appId;
+        this.deviceId = builder.deviceId;
         this.instanceId = builder.instanceId;
         this.license = builder.license;
         this.platform = builder.platform;
@@ -64,6 +74,20 @@ public class CreateChatSessionRequest extends Request {
     }
 
     /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
+    }
+
+    /**
+     * @return deviceId
+     */
+    public String getDeviceId() {
+        return this.deviceId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -86,6 +110,8 @@ public class CreateChatSessionRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateChatSessionRequest, Builder> {
         private String id; 
+        private String appId; 
+        private String deviceId; 
         private String instanceId; 
         private String license; 
         private String platform; 
@@ -97,6 +123,8 @@ public class CreateChatSessionRequest extends Request {
         private Builder(CreateChatSessionRequest request) {
             super(request);
             this.id = request.id;
+            this.appId = request.appId;
+            this.deviceId = request.deviceId;
             this.instanceId = request.instanceId;
             this.license = request.license;
             this.platform = request.platform;
@@ -112,6 +140,24 @@ public class CreateChatSessionRequest extends Request {
         public Builder id(String id) {
             this.putPathParameter("id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * appId.
+         */
+        public Builder appId(String appId) {
+            this.putQueryParameter("appId", appId);
+            this.appId = appId;
+            return this;
+        }
+
+        /**
+         * deviceId.
+         */
+        public Builder deviceId(String deviceId) {
+            this.putQueryParameter("deviceId", deviceId);
+            this.deviceId = deviceId;
             return this;
         }
 
