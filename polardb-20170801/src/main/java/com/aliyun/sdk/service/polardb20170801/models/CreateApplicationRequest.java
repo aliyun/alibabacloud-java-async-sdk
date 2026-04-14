@@ -76,6 +76,10 @@ public class CreateApplicationRequest extends Request {
     private java.util.List<Endpoints> endpoints;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KnowledgeApplicationSpec")
+    private KnowledgeApplicationSpec knowledgeApplicationSpec;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemApplicationSpec")
     private MemApplicationSpec memApplicationSpec;
 
@@ -187,6 +191,7 @@ public class CreateApplicationRequest extends Request {
         this.description = builder.description;
         this.dryRun = builder.dryRun;
         this.endpoints = builder.endpoints;
+        this.knowledgeApplicationSpec = builder.knowledgeApplicationSpec;
         this.memApplicationSpec = builder.memApplicationSpec;
         this.modelApi = builder.modelApi;
         this.modelApiKey = builder.modelApiKey;
@@ -322,6 +327,13 @@ public class CreateApplicationRequest extends Request {
      */
     public java.util.List<Endpoints> getEndpoints() {
         return this.endpoints;
+    }
+
+    /**
+     * @return knowledgeApplicationSpec
+     */
+    public KnowledgeApplicationSpec getKnowledgeApplicationSpec() {
+        return this.knowledgeApplicationSpec;
     }
 
     /**
@@ -507,6 +519,7 @@ public class CreateApplicationRequest extends Request {
         private String description; 
         private Boolean dryRun; 
         private java.util.List<Endpoints> endpoints; 
+        private KnowledgeApplicationSpec knowledgeApplicationSpec; 
         private MemApplicationSpec memApplicationSpec; 
         private String modelApi; 
         private String modelApiKey; 
@@ -552,6 +565,7 @@ public class CreateApplicationRequest extends Request {
             this.description = request.description;
             this.dryRun = request.dryRun;
             this.endpoints = request.endpoints;
+            this.knowledgeApplicationSpec = request.knowledgeApplicationSpec;
             this.memApplicationSpec = request.memApplicationSpec;
             this.modelApi = request.modelApi;
             this.modelApiKey = request.modelApiKey;
@@ -709,6 +723,16 @@ public class CreateApplicationRequest extends Request {
             String endpointsShrink = shrink(endpoints, "Endpoints", "json");
             this.putQueryParameter("Endpoints", endpointsShrink);
             this.endpoints = endpoints;
+            return this;
+        }
+
+        /**
+         * KnowledgeApplicationSpec.
+         */
+        public Builder knowledgeApplicationSpec(KnowledgeApplicationSpec knowledgeApplicationSpec) {
+            String knowledgeApplicationSpecShrink = shrink(knowledgeApplicationSpec, "KnowledgeApplicationSpec", "json");
+            this.putQueryParameter("KnowledgeApplicationSpec", knowledgeApplicationSpecShrink);
+            this.knowledgeApplicationSpec = knowledgeApplicationSpec;
             return this;
         }
 
@@ -1250,6 +1274,102 @@ public class CreateApplicationRequest extends Request {
 
             public Endpoints build() {
                 return new Endpoints(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationRequest</p>
+     */
+    public static class KnowledgeApplicationSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DashboardPassword")
+        private String dashboardPassword;
+
+        @com.aliyun.core.annotation.NameInMap("DbPassword")
+        private String dbPassword;
+
+        @com.aliyun.core.annotation.NameInMap("LlmModel")
+        private String llmModel;
+
+        private KnowledgeApplicationSpec(Builder builder) {
+            this.dashboardPassword = builder.dashboardPassword;
+            this.dbPassword = builder.dbPassword;
+            this.llmModel = builder.llmModel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static KnowledgeApplicationSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dashboardPassword
+         */
+        public String getDashboardPassword() {
+            return this.dashboardPassword;
+        }
+
+        /**
+         * @return dbPassword
+         */
+        public String getDbPassword() {
+            return this.dbPassword;
+        }
+
+        /**
+         * @return llmModel
+         */
+        public String getLlmModel() {
+            return this.llmModel;
+        }
+
+        public static final class Builder {
+            private String dashboardPassword; 
+            private String dbPassword; 
+            private String llmModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(KnowledgeApplicationSpec model) {
+                this.dashboardPassword = model.dashboardPassword;
+                this.dbPassword = model.dbPassword;
+                this.llmModel = model.llmModel;
+            } 
+
+            /**
+             * DashboardPassword.
+             */
+            public Builder dashboardPassword(String dashboardPassword) {
+                this.dashboardPassword = dashboardPassword;
+                return this;
+            }
+
+            /**
+             * DbPassword.
+             */
+            public Builder dbPassword(String dbPassword) {
+                this.dbPassword = dbPassword;
+                return this;
+            }
+
+            /**
+             * LlmModel.
+             */
+            public Builder llmModel(String llmModel) {
+                this.llmModel = llmModel;
+                return this;
+            }
+
+            public KnowledgeApplicationSpec build() {
+                return new KnowledgeApplicationSpec(this);
             } 
 
         } 
