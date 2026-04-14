@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListRuntimesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
@@ -71,6 +75,7 @@ public class ListRuntimesRequest extends Request {
 
     private ListRuntimesRequest(Builder builder) {
         super(builder);
+        this.accessibility = builder.accessibility;
         this.creator = builder.creator;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -97,6 +102,13 @@ public class ListRuntimesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     /**
@@ -191,6 +203,7 @@ public class ListRuntimesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListRuntimesRequest, Builder> {
+        private String accessibility; 
         private String creator; 
         private Integer maxResults; 
         private String nextToken; 
@@ -211,6 +224,7 @@ public class ListRuntimesRequest extends Request {
 
         private Builder(ListRuntimesRequest request) {
             super(request);
+            this.accessibility = request.accessibility;
             this.creator = request.creator;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -225,6 +239,15 @@ public class ListRuntimesRequest extends Request {
             this.workDir = request.workDir;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putQueryParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
+            return this;
+        }
 
         /**
          * <p>The creator ID.</p>

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDeploymentsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
@@ -79,6 +83,7 @@ public class ListDeploymentsRequest extends Request {
 
     private ListDeploymentsRequest(Builder builder) {
         super(builder);
+        this.accessibility = builder.accessibility;
         this.creator = builder.creator;
         this.deploymentId = builder.deploymentId;
         this.deploymentStatus = builder.deploymentStatus;
@@ -107,6 +112,13 @@ public class ListDeploymentsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     /**
@@ -215,6 +227,7 @@ public class ListDeploymentsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDeploymentsRequest, Builder> {
+        private String accessibility; 
         private String creator; 
         private String deploymentId; 
         private String deploymentStatus; 
@@ -237,6 +250,7 @@ public class ListDeploymentsRequest extends Request {
 
         private Builder(ListDeploymentsRequest request) {
             super(request);
+            this.accessibility = request.accessibility;
             this.creator = request.creator;
             this.deploymentId = request.deploymentId;
             this.deploymentStatus = request.deploymentStatus;
@@ -253,6 +267,15 @@ public class ListDeploymentsRequest extends Request {
             this.sortBy = request.sortBy;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putQueryParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
+            return this;
+        }
 
         /**
          * <p>The creator ID.</p>

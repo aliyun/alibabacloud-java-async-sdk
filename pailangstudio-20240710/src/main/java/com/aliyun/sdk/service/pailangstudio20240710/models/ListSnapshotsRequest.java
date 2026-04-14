@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListSnapshotsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreationType")
     private String creationType;
 
@@ -71,6 +75,7 @@ public class ListSnapshotsRequest extends Request {
 
     private ListSnapshotsRequest(Builder builder) {
         super(builder);
+        this.accessibility = builder.accessibility;
         this.creationType = builder.creationType;
         this.creator = builder.creator;
         this.maxResults = builder.maxResults;
@@ -97,6 +102,13 @@ public class ListSnapshotsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     /**
@@ -191,6 +203,7 @@ public class ListSnapshotsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListSnapshotsRequest, Builder> {
+        private String accessibility; 
         private String creationType; 
         private String creator; 
         private Integer maxResults; 
@@ -211,6 +224,7 @@ public class ListSnapshotsRequest extends Request {
 
         private Builder(ListSnapshotsRequest request) {
             super(request);
+            this.accessibility = request.accessibility;
             this.creationType = request.creationType;
             this.creator = request.creator;
             this.maxResults = request.maxResults;
@@ -225,6 +239,15 @@ public class ListSnapshotsRequest extends Request {
             this.sortBy = request.sortBy;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putQueryParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
+            return this;
+        }
 
         /**
          * <p>The creation type of the snapshot. To query multiple types at the same time, separate them with commas.</p>

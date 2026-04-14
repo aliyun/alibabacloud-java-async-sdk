@@ -22,6 +22,10 @@ public class ListKnowledgeBaseJobsRequest extends Request {
     private String knowledgeBaseId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobAction")
     private String jobAction;
 
@@ -64,6 +68,7 @@ public class ListKnowledgeBaseJobsRequest extends Request {
     private ListKnowledgeBaseJobsRequest(Builder builder) {
         super(builder);
         this.knowledgeBaseId = builder.knowledgeBaseId;
+        this.accessibility = builder.accessibility;
         this.jobAction = builder.jobAction;
         this.knowledgeBaseJobId = builder.knowledgeBaseJobId;
         this.maxResults = builder.maxResults;
@@ -94,6 +99,13 @@ public class ListKnowledgeBaseJobsRequest extends Request {
      */
     public String getKnowledgeBaseId() {
         return this.knowledgeBaseId;
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     /**
@@ -168,6 +180,7 @@ public class ListKnowledgeBaseJobsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListKnowledgeBaseJobsRequest, Builder> {
         private String knowledgeBaseId; 
+        private String accessibility; 
         private String jobAction; 
         private String knowledgeBaseJobId; 
         private Integer maxResults; 
@@ -186,6 +199,7 @@ public class ListKnowledgeBaseJobsRequest extends Request {
         private Builder(ListKnowledgeBaseJobsRequest request) {
             super(request);
             this.knowledgeBaseId = request.knowledgeBaseId;
+            this.accessibility = request.accessibility;
             this.jobAction = request.jobAction;
             this.knowledgeBaseJobId = request.knowledgeBaseJobId;
             this.maxResults = request.maxResults;
@@ -207,6 +221,15 @@ public class ListKnowledgeBaseJobsRequest extends Request {
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.putPathParameter("KnowledgeBaseId", knowledgeBaseId);
             this.knowledgeBaseId = knowledgeBaseId;
+            return this;
+        }
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putQueryParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
             return this;
         }
 

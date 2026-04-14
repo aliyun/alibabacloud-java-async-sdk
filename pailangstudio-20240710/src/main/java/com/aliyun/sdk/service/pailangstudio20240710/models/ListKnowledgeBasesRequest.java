@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListKnowledgeBasesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
@@ -63,6 +67,7 @@ public class ListKnowledgeBasesRequest extends Request {
 
     private ListKnowledgeBasesRequest(Builder builder) {
         super(builder);
+        this.accessibility = builder.accessibility;
         this.creator = builder.creator;
         this.knowledgeBaseId = builder.knowledgeBaseId;
         this.knowledgeBaseType = builder.knowledgeBaseType;
@@ -87,6 +92,13 @@ public class ListKnowledgeBasesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     /**
@@ -167,6 +179,7 @@ public class ListKnowledgeBasesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListKnowledgeBasesRequest, Builder> {
+        private String accessibility; 
         private String creator; 
         private String knowledgeBaseId; 
         private String knowledgeBaseType; 
@@ -185,6 +198,7 @@ public class ListKnowledgeBasesRequest extends Request {
 
         private Builder(ListKnowledgeBasesRequest request) {
             super(request);
+            this.accessibility = request.accessibility;
             this.creator = request.creator;
             this.knowledgeBaseId = request.knowledgeBaseId;
             this.knowledgeBaseType = request.knowledgeBaseType;
@@ -197,6 +211,15 @@ public class ListKnowledgeBasesRequest extends Request {
             this.sortBy = request.sortBy;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putQueryParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
+            return this;
+        }
 
         /**
          * <p>Creator user ID.</p>
