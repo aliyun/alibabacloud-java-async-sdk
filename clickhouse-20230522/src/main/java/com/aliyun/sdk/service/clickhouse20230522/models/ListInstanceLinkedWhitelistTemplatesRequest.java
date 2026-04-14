@@ -87,6 +87,7 @@ public class ListInstanceLinkedWhitelistTemplatesRequest extends Request {
         }
 
         /**
+         * <p>RegionId</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

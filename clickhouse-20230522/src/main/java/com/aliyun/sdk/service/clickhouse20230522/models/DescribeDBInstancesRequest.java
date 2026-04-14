@@ -49,6 +49,10 @@ public class DescribeDBInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcIds")
+    private String vpcIds;
+
     private DescribeDBInstancesRequest(Builder builder) {
         super(builder);
         this.DBInstanceIds = builder.DBInstanceIds;
@@ -59,6 +63,7 @@ public class DescribeDBInstancesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
+        this.vpcIds = builder.vpcIds;
     }
 
     public static Builder builder() {
@@ -130,6 +135,13 @@ public class DescribeDBInstancesRequest extends Request {
         return this.tags;
     }
 
+    /**
+     * @return vpcIds
+     */
+    public String getVpcIds() {
+        return this.vpcIds;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDBInstancesRequest, Builder> {
         private String DBInstanceIds; 
         private String DBInstanceStatus; 
@@ -139,6 +151,7 @@ public class DescribeDBInstancesRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private java.util.List<Tags> tags; 
+        private String vpcIds; 
 
         private Builder() {
             super();
@@ -154,6 +167,7 @@ public class DescribeDBInstancesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
+            this.vpcIds = request.vpcIds;
         } 
 
         /**
@@ -246,6 +260,15 @@ public class DescribeDBInstancesRequest extends Request {
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * VpcIds.
+         */
+        public Builder vpcIds(String vpcIds) {
+            this.putQueryParameter("VpcIds", vpcIds);
+            this.vpcIds = vpcIds;
             return this;
         }
 

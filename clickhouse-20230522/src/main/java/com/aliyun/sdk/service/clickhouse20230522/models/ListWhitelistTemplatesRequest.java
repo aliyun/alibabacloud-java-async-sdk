@@ -120,6 +120,7 @@ public class ListWhitelistTemplatesRequest extends Request {
         }
 
         /**
+         * <p>RegionId</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

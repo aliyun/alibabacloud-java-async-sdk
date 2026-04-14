@@ -383,6 +383,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
+        @com.aliyun.core.annotation.NameInMap("LangfuseInstanceIds")
+        private java.util.List<String> langfuseInstanceIds;
+
         @com.aliyun.core.annotation.NameInMap("LatestEngineMinorVersion")
         private String latestEngineMinorVersion;
 
@@ -468,6 +471,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.engineMinorVersion = builder.engineMinorVersion;
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
+            this.langfuseInstanceIds = builder.langfuseInstanceIds;
             this.latestEngineMinorVersion = builder.latestEngineMinorVersion;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
@@ -604,6 +608,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        /**
+         * @return langfuseInstanceIds
+         */
+        public java.util.List<String> getLangfuseInstanceIds() {
+            return this.langfuseInstanceIds;
         }
 
         /**
@@ -783,6 +794,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String engineMinorVersion; 
             private String engineVersion; 
             private String expireTime; 
+            private java.util.List<String> langfuseInstanceIds; 
             private String latestEngineMinorVersion; 
             private String lockMode; 
             private String lockReason; 
@@ -826,6 +838,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.engineMinorVersion = model.engineMinorVersion;
                 this.engineVersion = model.engineVersion;
                 this.expireTime = model.expireTime;
+                this.langfuseInstanceIds = model.langfuseInstanceIds;
                 this.latestEngineMinorVersion = model.latestEngineMinorVersion;
                 this.lockMode = model.lockMode;
                 this.lockReason = model.lockReason;
@@ -1015,6 +1028,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * LangfuseInstanceIds.
+             */
+            public Builder langfuseInstanceIds(java.util.List<String> langfuseInstanceIds) {
+                this.langfuseInstanceIds = langfuseInstanceIds;
                 return this;
             }
 
