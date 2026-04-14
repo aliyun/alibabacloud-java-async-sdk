@@ -25,10 +25,15 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tenantId")
+    private String tenantId;
+
     private ListPrometheusVirtualInstancesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.namespace = builder.namespace;
+        this.tenantId = builder.tenantId;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
         return this.namespace;
     }
 
+    /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
     public static final class Builder extends Request.Builder<ListPrometheusVirtualInstancesRequest, Builder> {
         private String regionId; 
         private String namespace; 
+        private String tenantId; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.namespace = request.namespace;
+            this.tenantId = request.tenantId;
         } 
 
         /**
@@ -90,6 +104,15 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * tenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putQueryParameter("tenantId", tenantId);
+            this.tenantId = tenantId;
             return this;
         }
 
