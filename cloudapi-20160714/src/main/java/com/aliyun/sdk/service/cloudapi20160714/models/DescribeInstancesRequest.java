@@ -34,6 +34,14 @@ public class DescribeInstancesRequest extends Request {
     private String language;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
@@ -47,6 +55,8 @@ public class DescribeInstancesRequest extends Request {
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
         this.language = builder.language;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.securityToken = builder.securityToken;
         this.tag = builder.tag;
     }
@@ -93,6 +103,20 @@ public class DescribeInstancesRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -111,6 +135,8 @@ public class DescribeInstancesRequest extends Request {
         private String instanceId; 
         private String instanceType; 
         private String language; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String securityToken; 
         private java.util.List<Tag> tag; 
 
@@ -124,6 +150,8 @@ public class DescribeInstancesRequest extends Request {
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
             this.language = request.language;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.securityToken = request.securityToken;
             this.tag = request.tag;
         } 
@@ -175,6 +203,24 @@ public class DescribeInstancesRequest extends Request {
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
             this.language = language;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
