@@ -27,6 +27,10 @@ public class SetRuleRequest extends Request {
     private Integer cookieTimeout;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheck")
     private String healthCheck;
 
@@ -121,6 +125,7 @@ public class SetRuleRequest extends Request {
         super(builder);
         this.cookie = builder.cookie;
         this.cookieTimeout = builder.cookieTimeout;
+        this.dryRun = builder.dryRun;
         this.healthCheck = builder.healthCheck;
         this.healthCheckConnectPort = builder.healthCheckConnectPort;
         this.healthCheckDomain = builder.healthCheckDomain;
@@ -169,6 +174,13 @@ public class SetRuleRequest extends Request {
      */
     public Integer getCookieTimeout() {
         return this.cookieTimeout;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -321,6 +333,7 @@ public class SetRuleRequest extends Request {
     public static final class Builder extends Request.Builder<SetRuleRequest, Builder> {
         private String cookie; 
         private Integer cookieTimeout; 
+        private Boolean dryRun; 
         private String healthCheck; 
         private Integer healthCheckConnectPort; 
         private String healthCheckDomain; 
@@ -351,6 +364,7 @@ public class SetRuleRequest extends Request {
             super(request);
             this.cookie = request.cookie;
             this.cookieTimeout = request.cookieTimeout;
+            this.dryRun = request.dryRun;
             this.healthCheck = request.healthCheck;
             this.healthCheckConnectPort = request.healthCheckConnectPort;
             this.healthCheckDomain = request.healthCheckDomain;
@@ -402,6 +416,15 @@ public class SetRuleRequest extends Request {
         public Builder cookieTimeout(Integer cookieTimeout) {
             this.putQueryParameter("CookieTimeout", cookieTimeout);
             this.cookieTimeout = cookieTimeout;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

@@ -47,6 +47,10 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EstablishedTimeout")
     @com.aliyun.core.annotation.Validation(maximum = 900, minimum = 10)
     private Integer establishedTimeout;
@@ -168,6 +172,7 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends Request {
         this.connectionDrain = builder.connectionDrain;
         this.connectionDrainTimeout = builder.connectionDrainTimeout;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
         this.establishedTimeout = builder.establishedTimeout;
         this.healthCheckConnectPort = builder.healthCheckConnectPort;
         this.healthCheckConnectTimeout = builder.healthCheckConnectTimeout;
@@ -256,6 +261,13 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -448,6 +460,7 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends Request {
         private String connectionDrain; 
         private Integer connectionDrainTimeout; 
         private String description; 
+        private Boolean dryRun; 
         private Integer establishedTimeout; 
         private Integer healthCheckConnectPort; 
         private Integer healthCheckConnectTimeout; 
@@ -488,6 +501,7 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends Request {
             this.connectionDrain = request.connectionDrain;
             this.connectionDrainTimeout = request.connectionDrainTimeout;
             this.description = request.description;
+            this.dryRun = request.dryRun;
             this.establishedTimeout = request.establishedTimeout;
             this.healthCheckConnectPort = request.healthCheckConnectPort;
             this.healthCheckConnectTimeout = request.healthCheckConnectTimeout;
@@ -623,6 +637,15 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

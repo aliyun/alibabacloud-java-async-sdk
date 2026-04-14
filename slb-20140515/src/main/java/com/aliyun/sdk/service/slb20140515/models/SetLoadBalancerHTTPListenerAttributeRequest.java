@@ -48,6 +48,10 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Gzip")
     private String gzip;
 
@@ -189,6 +193,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         this.cookie = builder.cookie;
         this.cookieTimeout = builder.cookieTimeout;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
         this.gzip = builder.gzip;
         this.healthCheck = builder.healthCheck;
         this.healthCheckConnectPort = builder.healthCheckConnectPort;
@@ -282,6 +287,13 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -509,6 +521,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         private String cookie; 
         private Integer cookieTimeout; 
         private String description; 
+        private Boolean dryRun; 
         private String gzip; 
         private String healthCheck; 
         private Integer healthCheckConnectPort; 
@@ -554,6 +567,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
             this.cookie = request.cookie;
             this.cookieTimeout = request.cookieTimeout;
             this.description = request.description;
+            this.dryRun = request.dryRun;
             this.gzip = request.gzip;
             this.healthCheck = request.healthCheck;
             this.healthCheckConnectPort = request.healthCheckConnectPort;
@@ -697,6 +711,15 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

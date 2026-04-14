@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ListenerPort")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer listenerPort;
@@ -59,6 +63,7 @@ public class CreateRulesRequest extends Request {
 
     private CreateRulesRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.listenerPort = builder.listenerPort;
         this.listenerProtocol = builder.listenerProtocol;
         this.loadBalancerId = builder.loadBalancerId;
@@ -81,6 +86,13 @@ public class CreateRulesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -147,6 +159,7 @@ public class CreateRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRulesRequest, Builder> {
+        private Boolean dryRun; 
         private Integer listenerPort; 
         private String listenerProtocol; 
         private String loadBalancerId; 
@@ -163,6 +176,7 @@ public class CreateRulesRequest extends Request {
 
         private Builder(CreateRulesRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.listenerPort = request.listenerPort;
             this.listenerProtocol = request.listenerProtocol;
             this.loadBalancerId = request.loadBalancerId;
@@ -173,6 +187,15 @@ public class CreateRulesRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.ruleList = request.ruleList;
         } 
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * <p>The frontend listener port that is used by the SLB instance.</p>

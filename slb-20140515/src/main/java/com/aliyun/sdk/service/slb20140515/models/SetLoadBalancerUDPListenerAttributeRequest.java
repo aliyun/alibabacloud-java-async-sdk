@@ -39,6 +39,10 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
     @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
     private Integer healthCheckConnectPort;
@@ -136,6 +140,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         this.aclType = builder.aclType;
         this.bandwidth = builder.bandwidth;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
         this.healthCheckConnectPort = builder.healthCheckConnectPort;
         this.healthCheckConnectTimeout = builder.healthCheckConnectTimeout;
         this.healthCheckInterval = builder.healthCheckInterval;
@@ -205,6 +210,13 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -360,6 +372,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         private String aclType; 
         private Integer bandwidth; 
         private String description; 
+        private Boolean dryRun; 
         private Integer healthCheckConnectPort; 
         private Integer healthCheckConnectTimeout; 
         private Integer healthCheckInterval; 
@@ -393,6 +406,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
             this.aclType = request.aclType;
             this.bandwidth = request.bandwidth;
             this.description = request.description;
+            this.dryRun = request.dryRun;
             this.healthCheckConnectPort = request.healthCheckConnectPort;
             this.healthCheckConnectTimeout = request.healthCheckConnectTimeout;
             this.healthCheckInterval = request.healthCheckInterval;
@@ -496,6 +510,15 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
