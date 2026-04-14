@@ -29,11 +29,15 @@ public class ListAgentRuntimesInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("statuses")
     private java.util.List<String> statuses;
 
+    @com.aliyun.core.annotation.NameInMap("systemTags")
+    private java.util.List<String> systemTags;
+
     private ListAgentRuntimesInput(Builder builder) {
         this.agentRuntimeName = builder.agentRuntimeName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.statuses = builder.statuses;
+        this.systemTags = builder.systemTags;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class ListAgentRuntimesInput extends TeaModel {
         return this.statuses;
     }
 
+    /**
+     * @return systemTags
+     */
+    public java.util.List<String> getSystemTags() {
+        return this.systemTags;
+    }
+
     public static final class Builder {
         private String agentRuntimeName; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private java.util.List<String> statuses; 
+        private java.util.List<String> systemTags; 
 
         private Builder() {
         } 
@@ -90,6 +102,7 @@ public class ListAgentRuntimesInput extends TeaModel {
             this.pageNumber = model.pageNumber;
             this.pageSize = model.pageSize;
             this.statuses = model.statuses;
+            this.systemTags = model.systemTags;
         } 
 
         /**
@@ -133,6 +146,17 @@ public class ListAgentRuntimesInput extends TeaModel {
          */
         public Builder statuses(java.util.List<String> statuses) {
             this.statuses = statuses;
+            return this;
+        }
+
+        /**
+         * <p>按系统标签过滤</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ecs:tag1,acs:ecs:tag2</p>
+         */
+        public Builder systemTags(java.util.List<String> systemTags) {
+            this.systemTags = systemTags;
             return this;
         }
 

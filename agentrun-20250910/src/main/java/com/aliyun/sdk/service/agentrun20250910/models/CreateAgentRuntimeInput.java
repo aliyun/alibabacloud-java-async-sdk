@@ -51,6 +51,9 @@ public class CreateAgentRuntimeInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("diskSize")
     private Integer diskSize;
 
+    @com.aliyun.core.annotation.NameInMap("enableSessionIsolation")
+    private Boolean enableSessionIsolation;
+
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map<String, String> environmentVariables;
 
@@ -112,6 +115,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
         this.credentialName = builder.credentialName;
         this.description = builder.description;
         this.diskSize = builder.diskSize;
+        this.enableSessionIsolation = builder.enableSessionIsolation;
         this.environmentVariables = builder.environmentVariables;
         this.executionRoleArn = builder.executionRoleArn;
         this.externalAgentEndpointUrl = builder.externalAgentEndpointUrl;
@@ -209,6 +213,13 @@ public class CreateAgentRuntimeInput extends TeaModel {
      */
     public Integer getDiskSize() {
         return this.diskSize;
+    }
+
+    /**
+     * @return enableSessionIsolation
+     */
+    public Boolean getEnableSessionIsolation() {
+        return this.enableSessionIsolation;
     }
 
     /**
@@ -327,6 +338,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
         private String credentialName; 
         private String description; 
         private Integer diskSize; 
+        private Boolean enableSessionIsolation; 
         private java.util.Map<String, String> environmentVariables; 
         private String executionRoleArn; 
         private String externalAgentEndpointUrl; 
@@ -357,6 +369,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
             this.credentialName = model.credentialName;
             this.description = model.description;
             this.diskSize = model.diskSize;
+            this.enableSessionIsolation = model.enableSessionIsolation;
             this.environmentVariables = model.environmentVariables;
             this.executionRoleArn = model.executionRoleArn;
             this.externalAgentEndpointUrl = model.externalAgentEndpointUrl;
@@ -478,6 +491,17 @@ public class CreateAgentRuntimeInput extends TeaModel {
          */
         public Builder diskSize(Integer diskSize) {
             this.diskSize = diskSize;
+            return this;
+        }
+
+        /**
+         * <p>是否启用会话隔离，启用后每个会话将在独立的环境中运行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder enableSessionIsolation(Boolean enableSessionIsolation) {
+            this.enableSessionIsolation = enableSessionIsolation;
             return this;
         }
 

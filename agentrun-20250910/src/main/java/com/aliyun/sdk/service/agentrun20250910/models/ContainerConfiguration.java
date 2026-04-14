@@ -32,12 +32,16 @@ public class ContainerConfiguration extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("port")
     private Integer port;
 
+    @com.aliyun.core.annotation.NameInMap("registryConfig")
+    private RegistryConfig registryConfig;
+
     private ContainerConfiguration(Builder builder) {
         this.acrInstanceId = builder.acrInstanceId;
         this.command = builder.command;
         this.image = builder.image;
         this.imageRegistryType = builder.imageRegistryType;
         this.port = builder.port;
+        this.registryConfig = builder.registryConfig;
     }
 
     public static Builder builder() {
@@ -87,12 +91,20 @@ public class ContainerConfiguration extends TeaModel {
         return this.port;
     }
 
+    /**
+     * @return registryConfig
+     */
+    public RegistryConfig getRegistryConfig() {
+        return this.registryConfig;
+    }
+
     public static final class Builder {
         private String acrInstanceId; 
         private java.util.List<String> command; 
         private String image; 
         private String imageRegistryType; 
         private Integer port; 
+        private RegistryConfig registryConfig; 
 
         private Builder() {
         } 
@@ -103,6 +115,7 @@ public class ContainerConfiguration extends TeaModel {
             this.image = model.image;
             this.imageRegistryType = model.imageRegistryType;
             this.port = model.port;
+            this.registryConfig = model.registryConfig;
         } 
 
         /**
@@ -151,6 +164,17 @@ public class ContainerConfiguration extends TeaModel {
          */
         public Builder port(Integer port) {
             this.port = port;
+            return this;
+        }
+
+        /**
+         * <p>自定义镜像仓库的配置信息，当imageRegistryType为CUSTOM时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        public Builder registryConfig(RegistryConfig registryConfig) {
+            this.registryConfig = registryConfig;
             return this;
         }
 

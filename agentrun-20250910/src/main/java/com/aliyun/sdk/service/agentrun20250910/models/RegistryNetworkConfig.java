@@ -1,0 +1,121 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.agentrun20250910.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link RegistryNetworkConfig} extends {@link TeaModel}
+ *
+ * <p>RegistryNetworkConfig</p>
+ */
+public class RegistryNetworkConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("securityGroupId")
+    private String securityGroupId;
+
+    @com.aliyun.core.annotation.NameInMap("vSwitchId")
+    private String vSwitchId;
+
+    @com.aliyun.core.annotation.NameInMap("vpcId")
+    private String vpcId;
+
+    private RegistryNetworkConfig(Builder builder) {
+        this.securityGroupId = builder.securityGroupId;
+        this.vSwitchId = builder.vSwitchId;
+        this.vpcId = builder.vpcId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static RegistryNetworkConfig create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public static final class Builder {
+        private String securityGroupId; 
+        private String vSwitchId; 
+        private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RegistryNetworkConfig model) {
+            this.securityGroupId = model.securityGroupId;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+        } 
+
+        /**
+         * <p>镜像仓库的安全组ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxxxxxxxxxxxx</p>
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * <p>镜像仓库所在的交换机ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxxxxxxxxxxxx</p>
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * <p>镜像仓库所在的VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxxxxxxxxx</p>
+         */
+        public Builder vpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+
+        public RegistryNetworkConfig build() {
+            return new RegistryNetworkConfig(this);
+        } 
+
+    } 
+
+}

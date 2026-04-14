@@ -48,6 +48,10 @@ public class ListAgentRuntimesRequest extends Request {
     private String status;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("systemTags")
+    private String systemTags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     private String workspaceId;
 
@@ -64,6 +68,7 @@ public class ListAgentRuntimesRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.searchMode = builder.searchMode;
         this.status = builder.status;
+        this.systemTags = builder.systemTags;
         this.workspaceId = builder.workspaceId;
         this.workspaceIds = builder.workspaceIds;
     }
@@ -131,6 +136,13 @@ public class ListAgentRuntimesRequest extends Request {
     }
 
     /**
+     * @return systemTags
+     */
+    public String getSystemTags() {
+        return this.systemTags;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -152,6 +164,7 @@ public class ListAgentRuntimesRequest extends Request {
         private String resourceGroupId; 
         private String searchMode; 
         private String status; 
+        private String systemTags; 
         private String workspaceId; 
         private String workspaceIds; 
 
@@ -168,6 +181,7 @@ public class ListAgentRuntimesRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.searchMode = request.searchMode;
             this.status = request.status;
+            this.systemTags = request.systemTags;
             this.workspaceId = request.workspaceId;
             this.workspaceIds = request.workspaceIds;
         } 
@@ -250,6 +264,18 @@ public class ListAgentRuntimesRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>根据系统标签进行过滤，多个标签用逗号分隔，支持精确匹配</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ecs:tag1,acs:ecs:tag2</p>
+         */
+        public Builder systemTags(String systemTags) {
+            this.putQueryParameter("systemTags", systemTags);
+            this.systemTags = systemTags;
             return this;
         }
 
