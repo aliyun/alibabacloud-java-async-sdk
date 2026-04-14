@@ -110,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateResourceExportTaskResponse> createResourceExportTask(CreateResourceExportTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateStack  CreateStackRequest
+     * @return CreateStackResponse
+     */
+    CompletableFuture<CreateStackResponse> createStack(CreateStackRequest request);
+
+    /**
      * @param request the request parameters of CreateTask  CreateTaskRequest
      * @return CreateTaskResponse
      */
@@ -320,6 +326,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceTypeResponse> getResourceType(GetResourceTypeRequest request);
 
     /**
+     * @param request the request parameters of GetStack  GetStackRequest
+     * @return GetStackResponse
+     */
+    CompletableFuture<GetStackResponse> getStack(GetStackRequest request);
+
+    /**
      * @param request the request parameters of GetStackDeployments  GetStackDeploymentsRequest
      * @return GetStackDeploymentsResponse
      */
@@ -464,6 +476,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListResourcesResponse> listResources(ListResourcesRequest request);
 
     /**
+     * @param request the request parameters of ListStackConfigs  ListStackConfigsRequest
+     * @return ListStackConfigsResponse
+     */
+    CompletableFuture<ListStackConfigsResponse> listStackConfigs(ListStackConfigsRequest request);
+
+    /**
+     * @param request the request parameters of ListStacks  ListStacksRequest
+     * @return ListStacksResponse
+     */
+    CompletableFuture<ListStacksResponse> listStacks(ListStacksRequest request);
+
+    /**
      * @param request the request parameters of ListTasks  ListTasksRequest
      * @return ListTasksResponse
      */
@@ -558,6 +582,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateResourceExportTaskAttributeResponse
      */
     CompletableFuture<UpdateResourceExportTaskAttributeResponse> updateResourceExportTaskAttribute(UpdateResourceExportTaskAttributeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateStack  UpdateStackRequest
+     * @return UpdateStackResponse
+     */
+    CompletableFuture<UpdateStackResponse> updateStack(UpdateStackRequest request);
 
     /**
      * @param request the request parameters of UpdateTaskAttribute  UpdateTaskAttributeRequest
