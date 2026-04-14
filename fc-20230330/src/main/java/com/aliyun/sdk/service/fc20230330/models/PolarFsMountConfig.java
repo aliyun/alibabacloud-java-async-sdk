@@ -23,12 +23,16 @@ public class PolarFsMountConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("mountDir")
     private String mountDir;
 
+    @com.aliyun.core.annotation.NameInMap("readOnly")
+    private Boolean readOnly;
+
     @com.aliyun.core.annotation.NameInMap("remoteDir")
     private String remoteDir;
 
     private PolarFsMountConfig(Builder builder) {
         this.instanceId = builder.instanceId;
         this.mountDir = builder.mountDir;
+        this.readOnly = builder.readOnly;
         this.remoteDir = builder.remoteDir;
     }
 
@@ -59,6 +63,13 @@ public class PolarFsMountConfig extends TeaModel {
     }
 
     /**
+     * @return readOnly
+     */
+    public Boolean getReadOnly() {
+        return this.readOnly;
+    }
+
+    /**
      * @return remoteDir
      */
     public String getRemoteDir() {
@@ -68,6 +79,7 @@ public class PolarFsMountConfig extends TeaModel {
     public static final class Builder {
         private String instanceId; 
         private String mountDir; 
+        private Boolean readOnly; 
         private String remoteDir; 
 
         private Builder() {
@@ -76,6 +88,7 @@ public class PolarFsMountConfig extends TeaModel {
         private Builder(PolarFsMountConfig model) {
             this.instanceId = model.instanceId;
             this.mountDir = model.mountDir;
+            this.readOnly = model.readOnly;
             this.remoteDir = model.remoteDir;
         } 
 
@@ -92,6 +105,14 @@ public class PolarFsMountConfig extends TeaModel {
          */
         public Builder mountDir(String mountDir) {
             this.mountDir = mountDir;
+            return this;
+        }
+
+        /**
+         * readOnly.
+         */
+        public Builder readOnly(Boolean readOnly) {
+            this.readOnly = readOnly;
             return this;
         }
 
