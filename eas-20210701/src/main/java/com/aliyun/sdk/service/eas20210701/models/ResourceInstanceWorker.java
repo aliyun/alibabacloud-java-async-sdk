@@ -30,7 +30,7 @@ public class ResourceInstanceWorker extends TeaModel {
     private Integer gpuRequest;
 
     @com.aliyun.core.annotation.NameInMap("MemoryLimit")
-    private Integer memoryLimit;
+    private Long memoryLimit;
 
     @com.aliyun.core.annotation.NameInMap("MemoryRquest")
     private Integer memoryRquest;
@@ -42,7 +42,7 @@ public class ResourceInstanceWorker extends TeaModel {
     private Boolean ready;
 
     @com.aliyun.core.annotation.NameInMap("RestartCount")
-    private Integer restartCount;
+    private Long restartCount;
 
     @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
@@ -111,7 +111,7 @@ public class ResourceInstanceWorker extends TeaModel {
     /**
      * @return memoryLimit
      */
-    public Integer getMemoryLimit() {
+    public Long getMemoryLimit() {
         return this.memoryLimit;
     }
 
@@ -139,7 +139,7 @@ public class ResourceInstanceWorker extends TeaModel {
     /**
      * @return restartCount
      */
-    public Integer getRestartCount() {
+    public Long getRestartCount() {
         return this.restartCount;
     }
 
@@ -169,11 +169,11 @@ public class ResourceInstanceWorker extends TeaModel {
         private Integer cpuRequest; 
         private Integer gpuLimit; 
         private Integer gpuRequest; 
-        private Integer memoryLimit; 
+        private Long memoryLimit; 
         private Integer memoryRquest; 
         private String name; 
         private Boolean ready; 
-        private Integer restartCount; 
+        private Long restartCount; 
         private String serviceName; 
         private String startTime; 
         private String status; 
@@ -231,7 +231,7 @@ public class ResourceInstanceWorker extends TeaModel {
         /**
          * MemoryLimit.
          */
-        public Builder memoryLimit(Integer memoryLimit) {
+        public Builder memoryLimit(Long memoryLimit) {
             this.memoryLimit = memoryLimit;
             return this;
         }
@@ -263,7 +263,7 @@ public class ResourceInstanceWorker extends TeaModel {
         /**
          * RestartCount.
          */
-        public Builder restartCount(Integer restartCount) {
+        public Builder restartCount(Long restartCount) {
             this.restartCount = restartCount;
             return this;
         }
