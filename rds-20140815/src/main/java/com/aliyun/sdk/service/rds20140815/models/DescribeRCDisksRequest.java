@@ -40,6 +40,10 @@ public class DescribeRCDisksRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -50,6 +54,7 @@ public class DescribeRCDisksRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.status = builder.status;
         this.tag = builder.tag;
     }
 
@@ -102,6 +107,13 @@ public class DescribeRCDisksRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -114,6 +126,7 @@ public class DescribeRCDisksRequest extends Request {
         private Long pageNumber; 
         private Long pageSize; 
         private String regionId; 
+        private String status; 
         private java.util.List<Tag> tag; 
 
         private Builder() {
@@ -127,6 +140,7 @@ public class DescribeRCDisksRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.status = request.status;
             this.tag = request.tag;
         } 
 
@@ -188,6 +202,15 @@ public class DescribeRCDisksRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 

@@ -39,6 +39,10 @@ public class RunRCInstancesRequest extends Request {
     private Boolean autoUseCoupon;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessInfo")
+    private String businessInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -204,6 +208,7 @@ public class RunRCInstancesRequest extends Request {
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.autoUseCoupon = builder.autoUseCoupon;
+        this.businessInfo = builder.businessInfo;
         this.clientToken = builder.clientToken;
         this.createAckEdgeParam = builder.createAckEdgeParam;
         this.createExtraParam = builder.createExtraParam;
@@ -291,6 +296,13 @@ public class RunRCInstancesRequest extends Request {
      */
     public Boolean getAutoUseCoupon() {
         return this.autoUseCoupon;
+    }
+
+    /**
+     * @return businessInfo
+     */
+    public String getBusinessInfo() {
+        return this.businessInfo;
     }
 
     /**
@@ -572,6 +584,7 @@ public class RunRCInstancesRequest extends Request {
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private Boolean autoUseCoupon; 
+        private String businessInfo; 
         private String clientToken; 
         private CreateAckEdgeParam createAckEdgeParam; 
         private String createExtraParam; 
@@ -623,6 +636,7 @@ public class RunRCInstancesRequest extends Request {
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.autoUseCoupon = request.autoUseCoupon;
+            this.businessInfo = request.businessInfo;
             this.clientToken = request.clientToken;
             this.createAckEdgeParam = request.createAckEdgeParam;
             this.createExtraParam = request.createExtraParam;
@@ -727,6 +741,15 @@ public class RunRCInstancesRequest extends Request {
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
             this.autoUseCoupon = autoUseCoupon;
+            return this;
+        }
+
+        /**
+         * BusinessInfo.
+         */
+        public Builder businessInfo(String businessInfo) {
+            this.putQueryParameter("BusinessInfo", businessInfo);
+            this.businessInfo = businessInfo;
             return this;
         }
 
