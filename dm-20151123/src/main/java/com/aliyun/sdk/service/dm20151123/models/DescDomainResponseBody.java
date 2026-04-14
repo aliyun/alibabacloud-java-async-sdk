@@ -77,6 +77,9 @@ public class DescDomainResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainType")
     private String domainType;
 
+    @com.aliyun.core.annotation.NameInMap("DomainVersion")
+    private Integer domainVersion;
+
     @com.aliyun.core.annotation.NameInMap("HostRecord")
     private String hostRecord;
 
@@ -128,6 +131,7 @@ public class DescDomainResponseBody extends TeaModel {
         this.domainName = builder.domainName;
         this.domainStatus = builder.domainStatus;
         this.domainType = builder.domainType;
+        this.domainVersion = builder.domainVersion;
         this.hostRecord = builder.hostRecord;
         this.icpStatus = builder.icpStatus;
         this.mxAuthStatus = builder.mxAuthStatus;
@@ -293,6 +297,13 @@ public class DescDomainResponseBody extends TeaModel {
     }
 
     /**
+     * @return domainVersion
+     */
+    public Integer getDomainVersion() {
+        return this.domainVersion;
+    }
+
+    /**
      * @return hostRecord
      */
     public String getHostRecord() {
@@ -383,6 +394,7 @@ public class DescDomainResponseBody extends TeaModel {
         private String domainName; 
         private String domainStatus; 
         private String domainType; 
+        private Integer domainVersion; 
         private String hostRecord; 
         private String icpStatus; 
         private String mxAuthStatus; 
@@ -418,6 +430,7 @@ public class DescDomainResponseBody extends TeaModel {
             this.domainName = model.domainName;
             this.domainStatus = model.domainStatus;
             this.domainType = model.domainType;
+            this.domainVersion = model.domainVersion;
             this.hostRecord = model.hostRecord;
             this.icpStatus = model.icpStatus;
             this.mxAuthStatus = model.mxAuthStatus;
@@ -649,6 +662,14 @@ public class DescDomainResponseBody extends TeaModel {
          */
         public Builder domainType(String domainType) {
             this.domainType = domainType;
+            return this;
+        }
+
+        /**
+         * DomainVersion.
+         */
+        public Builder domainVersion(Integer domainVersion) {
+            this.domainVersion = domainVersion;
             return this;
         }
 
