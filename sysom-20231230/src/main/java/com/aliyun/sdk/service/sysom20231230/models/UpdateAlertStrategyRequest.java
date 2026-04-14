@@ -189,11 +189,15 @@ public class UpdateAlertStrategyRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("clusters")
         private java.util.List<String> clusters;
 
+        @com.aliyun.core.annotation.NameInMap("destinations")
+        private java.util.List<Integer> destinations;
+
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List<String> items;
 
         private Strategy(Builder builder) {
             this.clusters = builder.clusters;
+            this.destinations = builder.destinations;
             this.items = builder.items;
         }
 
@@ -213,6 +217,13 @@ public class UpdateAlertStrategyRequest extends Request {
         }
 
         /**
+         * @return destinations
+         */
+        public java.util.List<Integer> getDestinations() {
+            return this.destinations;
+        }
+
+        /**
          * @return items
          */
         public java.util.List<String> getItems() {
@@ -221,6 +232,7 @@ public class UpdateAlertStrategyRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> clusters; 
+            private java.util.List<Integer> destinations; 
             private java.util.List<String> items; 
 
             private Builder() {
@@ -228,6 +240,7 @@ public class UpdateAlertStrategyRequest extends Request {
 
             private Builder(Strategy model) {
                 this.clusters = model.clusters;
+                this.destinations = model.destinations;
                 this.items = model.items;
             } 
 
@@ -236,6 +249,14 @@ public class UpdateAlertStrategyRequest extends Request {
              */
             public Builder clusters(java.util.List<String> clusters) {
                 this.clusters = clusters;
+                return this;
+            }
+
+            /**
+             * destinations.
+             */
+            public Builder destinations(java.util.List<Integer> destinations) {
+                this.destinations = destinations;
                 return this;
             }
 

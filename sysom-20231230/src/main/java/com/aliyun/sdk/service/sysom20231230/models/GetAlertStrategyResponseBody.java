@@ -143,11 +143,15 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("clusters")
         private java.util.List<String> clusters;
 
+        @com.aliyun.core.annotation.NameInMap("destinations")
+        private Object destinations;
+
         @com.aliyun.core.annotation.NameInMap("items")
         private Object items;
 
         private Strategy(Builder builder) {
             this.clusters = builder.clusters;
+            this.destinations = builder.destinations;
             this.items = builder.items;
         }
 
@@ -167,6 +171,13 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         }
 
         /**
+         * @return destinations
+         */
+        public Object getDestinations() {
+            return this.destinations;
+        }
+
+        /**
          * @return items
          */
         public Object getItems() {
@@ -175,6 +186,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> clusters; 
+            private Object destinations; 
             private Object items; 
 
             private Builder() {
@@ -182,6 +194,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
 
             private Builder(Strategy model) {
                 this.clusters = model.clusters;
+                this.destinations = model.destinations;
                 this.items = model.items;
             } 
 
@@ -190,6 +203,14 @@ public class GetAlertStrategyResponseBody extends TeaModel {
              */
             public Builder clusters(java.util.List<String> clusters) {
                 this.clusters = clusters;
+                return this;
+            }
+
+            /**
+             * destinations.
+             */
+            public Builder destinations(Object destinations) {
+                this.destinations = destinations;
                 return this;
             }
 

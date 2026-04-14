@@ -77,6 +77,49 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CpuHighAgentStreamResponse  CpuHighAgentStreamResponseRequest
+     * @return CpuHighAgentStreamResponseResponse
+     */
+    @Override
+    public CompletableFuture<CpuHighAgentStreamResponseResponse> cpuHighAgentStreamResponse(CpuHighAgentStreamResponseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CpuHighAgentStreamResponse").setMethod(HttpMethod.POST).setPathRegex("/api/v1/highCpuAgent/streamResponse").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CpuHighAgentStreamResponseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CpuHighAgentStreamResponseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> cpuHighAgentStreamResponseWithAsyncResponseHandler(CpuHighAgentStreamResponseRequest request, AsyncResponseHandler<CpuHighAgentStreamResponseResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CpuHighAgentStreamResponse").setMethod(HttpMethod.POST).setPathRegex("/api/v1/highCpuAgent/streamResponse").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(CpuHighAgentStreamResponseResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((CpuHighAgentStreamResponseResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<CpuHighAgentStreamResponseResponseBody> cpuHighAgentStreamResponseWithResponseIterable(CpuHighAgentStreamResponseRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("CpuHighAgentStreamResponse").setMethod(HttpMethod.POST).setPathRegex("/api/v1/highCpuAgent/streamResponse").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        CpuHighAgentStreamResponseResponseBodyIterator iterator = CpuHighAgentStreamResponseResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of CreateAlertStrategy  CreateAlertStrategyRequest
      * @return CreateAlertStrategyResponse
      */

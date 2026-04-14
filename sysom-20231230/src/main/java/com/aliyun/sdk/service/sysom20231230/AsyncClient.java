@@ -32,6 +32,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckInstanceSupportResponse> checkInstanceSupport(CheckInstanceSupportRequest request);
 
     /**
+     * @param request the request parameters of CpuHighAgentStreamResponse  CpuHighAgentStreamResponseRequest
+     * @return CpuHighAgentStreamResponseResponse
+     */
+    CompletableFuture<CpuHighAgentStreamResponseResponse> cpuHighAgentStreamResponse(CpuHighAgentStreamResponseRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> cpuHighAgentStreamResponseWithAsyncResponseHandler(CpuHighAgentStreamResponseRequest request, AsyncResponseHandler<CpuHighAgentStreamResponseResponse, ReturnT> responseHandler);
+
+    ResponseIterable<CpuHighAgentStreamResponseResponseBody> cpuHighAgentStreamResponseWithResponseIterable(CpuHighAgentStreamResponseRequest request);
+
+    /**
      * @param request the request parameters of CreateAlertStrategy  CreateAlertStrategyRequest
      * @return CreateAlertStrategyResponse
      */
