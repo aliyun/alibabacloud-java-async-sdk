@@ -38,10 +38,6 @@ public class ListInstanceRequest extends Request {
     private String instanceName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Long pageIndex;
 
@@ -54,14 +50,6 @@ public class ListInstanceRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubmitTime")
     private String submitTime;
 
@@ -72,12 +60,9 @@ public class ListInstanceRequest extends Request {
         this.filterStr = builder.filterStr;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
-        this.ownerId = builder.ownerId;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.submitTime = builder.submitTime;
     }
 
@@ -130,13 +115,6 @@ public class ListInstanceRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return pageIndex
      */
     public Long getPageIndex() {
@@ -158,20 +136,6 @@ public class ListInstanceRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
      * @return submitTime
      */
     public String getSubmitTime() {
@@ -184,12 +148,9 @@ public class ListInstanceRequest extends Request {
         private String filterStr; 
         private String instanceId; 
         private String instanceName; 
-        private Long ownerId; 
         private Long pageIndex; 
         private Long pageSize; 
         private String resourceGroupId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
         private String submitTime; 
 
         private Builder() {
@@ -203,12 +164,9 @@ public class ListInstanceRequest extends Request {
             this.filterStr = request.filterStr;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
-            this.ownerId = request.ownerId;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.submitTime = request.submitTime;
         } 
 
@@ -258,15 +216,6 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
          * PageIndex.
          */
         public Builder pageIndex(Long pageIndex) {
@@ -290,24 +239,6 @@ public class ListInstanceRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerAccount.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

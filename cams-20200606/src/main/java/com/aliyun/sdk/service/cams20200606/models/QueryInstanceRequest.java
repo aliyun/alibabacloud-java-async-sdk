@@ -26,25 +26,10 @@ public class QueryInstanceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
     private QueryInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -74,33 +59,9 @@ public class QueryInstanceRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
     public static final class Builder extends Request.Builder<QueryInstanceRequest, Builder> {
         private String regionId; 
         private String instanceId; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -110,9 +71,6 @@ public class QueryInstanceRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -133,33 +91,6 @@ public class QueryInstanceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerAccount.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

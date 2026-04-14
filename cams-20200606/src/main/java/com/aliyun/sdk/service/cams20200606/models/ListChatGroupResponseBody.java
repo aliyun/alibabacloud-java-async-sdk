@@ -182,14 +182,26 @@ public class ListChatGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessNumber")
         private String businessNumber;
 
+        @com.aliyun.core.annotation.NameInMap("BusinessRole")
+        private String businessRole;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("GmtModifier")
+        private Long gmtModifier;
 
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
+        @com.aliyun.core.annotation.NameInMap("GroupLink")
+        private String groupLink;
+
         @com.aliyun.core.annotation.NameInMap("GroupStatus")
         private String groupStatus;
+
+        @com.aliyun.core.annotation.NameInMap("GroupType")
+        private String groupType;
 
         @com.aliyun.core.annotation.NameInMap("InviteLink")
         private String inviteLink;
@@ -200,14 +212,22 @@ public class ListChatGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Subject")
         private String subject;
 
+        @com.aliyun.core.annotation.NameInMap("TotalParticipantCount")
+        private Long totalParticipantCount;
+
         private List(Builder builder) {
             this.businessNumber = builder.businessNumber;
+            this.businessRole = builder.businessRole;
             this.description = builder.description;
+            this.gmtModifier = builder.gmtModifier;
             this.groupId = builder.groupId;
+            this.groupLink = builder.groupLink;
             this.groupStatus = builder.groupStatus;
+            this.groupType = builder.groupType;
             this.inviteLink = builder.inviteLink;
             this.profilePictureFile = builder.profilePictureFile;
             this.subject = builder.subject;
+            this.totalParticipantCount = builder.totalParticipantCount;
         }
 
         public static Builder builder() {
@@ -226,10 +246,24 @@ public class ListChatGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return businessRole
+         */
+        public String getBusinessRole() {
+            return this.businessRole;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return gmtModifier
+         */
+        public Long getGmtModifier() {
+            return this.gmtModifier;
         }
 
         /**
@@ -240,10 +274,24 @@ public class ListChatGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return groupLink
+         */
+        public String getGroupLink() {
+            return this.groupLink;
+        }
+
+        /**
          * @return groupStatus
          */
         public String getGroupStatus() {
             return this.groupStatus;
+        }
+
+        /**
+         * @return groupType
+         */
+        public String getGroupType() {
+            return this.groupType;
         }
 
         /**
@@ -267,26 +315,43 @@ public class ListChatGroupResponseBody extends TeaModel {
             return this.subject;
         }
 
+        /**
+         * @return totalParticipantCount
+         */
+        public Long getTotalParticipantCount() {
+            return this.totalParticipantCount;
+        }
+
         public static final class Builder {
             private String businessNumber; 
+            private String businessRole; 
             private String description; 
+            private Long gmtModifier; 
             private String groupId; 
+            private String groupLink; 
             private String groupStatus; 
+            private String groupType; 
             private String inviteLink; 
             private String profilePictureFile; 
             private String subject; 
+            private Long totalParticipantCount; 
 
             private Builder() {
             } 
 
             private Builder(List model) {
                 this.businessNumber = model.businessNumber;
+                this.businessRole = model.businessRole;
                 this.description = model.description;
+                this.gmtModifier = model.gmtModifier;
                 this.groupId = model.groupId;
+                this.groupLink = model.groupLink;
                 this.groupStatus = model.groupStatus;
+                this.groupType = model.groupType;
                 this.inviteLink = model.inviteLink;
                 this.profilePictureFile = model.profilePictureFile;
                 this.subject = model.subject;
+                this.totalParticipantCount = model.totalParticipantCount;
             } 
 
             /**
@@ -294,6 +359,14 @@ public class ListChatGroupResponseBody extends TeaModel {
              */
             public Builder businessNumber(String businessNumber) {
                 this.businessNumber = businessNumber;
+                return this;
+            }
+
+            /**
+             * BusinessRole.
+             */
+            public Builder businessRole(String businessRole) {
+                this.businessRole = businessRole;
                 return this;
             }
 
@@ -306,6 +379,14 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
+             * GmtModifier.
+             */
+            public Builder gmtModifier(Long gmtModifier) {
+                this.gmtModifier = gmtModifier;
+                return this;
+            }
+
+            /**
              * GroupId.
              */
             public Builder groupId(String groupId) {
@@ -314,10 +395,26 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
+             * GroupLink.
+             */
+            public Builder groupLink(String groupLink) {
+                this.groupLink = groupLink;
+                return this;
+            }
+
+            /**
              * GroupStatus.
              */
             public Builder groupStatus(String groupStatus) {
                 this.groupStatus = groupStatus;
+                return this;
+            }
+
+            /**
+             * GroupType.
+             */
+            public Builder groupType(String groupType) {
+                this.groupType = groupType;
                 return this;
             }
 
@@ -342,6 +439,14 @@ public class ListChatGroupResponseBody extends TeaModel {
              */
             public Builder subject(String subject) {
                 this.subject = subject;
+                return this;
+            }
+
+            /**
+             * TotalParticipantCount.
+             */
+            public Builder totalParticipantCount(Long totalParticipantCount) {
+                this.totalParticipantCount = totalParticipantCount;
                 return this;
             }
 

@@ -36,6 +36,10 @@ public class AddChatGroupRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupLink")
+    private String groupLink;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
@@ -49,7 +53,6 @@ public class AddChatGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Subject")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String subject;
 
     private AddChatGroupRequest(Builder builder) {
@@ -58,6 +61,7 @@ public class AddChatGroupRequest extends Request {
         this.channelType = builder.channelType;
         this.custSpaceId = builder.custSpaceId;
         this.description = builder.description;
+        this.groupLink = builder.groupLink;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -106,6 +110,13 @@ public class AddChatGroupRequest extends Request {
     }
 
     /**
+     * @return groupLink
+     */
+    public String getGroupLink() {
+        return this.groupLink;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -138,6 +149,7 @@ public class AddChatGroupRequest extends Request {
         private String channelType; 
         private String custSpaceId; 
         private String description; 
+        private String groupLink; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -153,6 +165,7 @@ public class AddChatGroupRequest extends Request {
             this.channelType = request.channelType;
             this.custSpaceId = request.custSpaceId;
             this.description = request.description;
+            this.groupLink = request.groupLink;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -202,6 +215,15 @@ public class AddChatGroupRequest extends Request {
         }
 
         /**
+         * GroupLink.
+         */
+        public Builder groupLink(String groupLink) {
+            this.putQueryParameter("GroupLink", groupLink);
+            this.groupLink = groupLink;
+            return this;
+        }
+
+        /**
          * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
@@ -229,10 +251,7 @@ public class AddChatGroupRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * Subject.
          */
         public Builder subject(String subject) {
             this.putQueryParameter("Subject", subject);

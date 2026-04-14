@@ -60,20 +60,8 @@ public class CreateInstanceRequest extends Request {
     private String officeAddress;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
@@ -87,10 +75,7 @@ public class CreateInstanceRequest extends Request {
         this.isConfirmAudit = builder.isConfirmAudit;
         this.isvTerms = builder.isvTerms;
         this.officeAddress = builder.officeAddress;
-        this.ownerId = builder.ownerId;
         this.resourceGroupId = builder.resourceGroupId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -177,31 +162,10 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
@@ -215,10 +179,7 @@ public class CreateInstanceRequest extends Request {
         private String isConfirmAudit; 
         private String isvTerms; 
         private String officeAddress; 
-        private Long ownerId; 
         private String resourceGroupId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -236,10 +197,7 @@ public class CreateInstanceRequest extends Request {
             this.isConfirmAudit = request.isConfirmAudit;
             this.isvTerms = request.isvTerms;
             this.officeAddress = request.officeAddress;
-            this.ownerId = request.ownerId;
             this.resourceGroupId = request.resourceGroupId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -342,38 +300,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
          * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerAccount.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

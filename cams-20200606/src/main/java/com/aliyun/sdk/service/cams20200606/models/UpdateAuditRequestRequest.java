@@ -415,8 +415,20 @@ public class UpdateAuditRequestRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("CompleteAddressOfHeadquarters")
         private String completeAddressOfHeadquarters;
 
+        @com.aliyun.core.annotation.NameInMap("ContactEmail")
+        private String contactEmail;
+
         @com.aliyun.core.annotation.NameInMap("ContactMail")
         private String contactMail;
+
+        @com.aliyun.core.annotation.NameInMap("ContactName")
+        private String contactName;
+
+        @com.aliyun.core.annotation.NameInMap("ContactPhone")
+        private String contactPhone;
+
+        @com.aliyun.core.annotation.NameInMap("ContactPosition")
+        private String contactPosition;
 
         @com.aliyun.core.annotation.NameInMap("EnableAutoReply")
         private String enableAutoReply;
@@ -476,7 +488,11 @@ public class UpdateAuditRequestRequest extends Request {
             this.companyRegisteredCountry = builder.companyRegisteredCountry;
             this.companyTel = builder.companyTel;
             this.completeAddressOfHeadquarters = builder.completeAddressOfHeadquarters;
+            this.contactEmail = builder.contactEmail;
             this.contactMail = builder.contactMail;
+            this.contactName = builder.contactName;
+            this.contactPhone = builder.contactPhone;
+            this.contactPosition = builder.contactPosition;
             this.enableAutoReply = builder.enableAutoReply;
             this.industryDescription = builder.industryDescription;
             this.industryInvolved = builder.industryInvolved;
@@ -587,10 +603,38 @@ public class UpdateAuditRequestRequest extends Request {
         }
 
         /**
+         * @return contactEmail
+         */
+        public String getContactEmail() {
+            return this.contactEmail;
+        }
+
+        /**
          * @return contactMail
          */
         public String getContactMail() {
             return this.contactMail;
+        }
+
+        /**
+         * @return contactName
+         */
+        public String getContactName() {
+            return this.contactName;
+        }
+
+        /**
+         * @return contactPhone
+         */
+        public String getContactPhone() {
+            return this.contactPhone;
+        }
+
+        /**
+         * @return contactPosition
+         */
+        public String getContactPosition() {
+            return this.contactPosition;
         }
 
         /**
@@ -711,7 +755,11 @@ public class UpdateAuditRequestRequest extends Request {
             private String companyRegisteredCountry; 
             private java.util.List<CompanyTel> companyTel; 
             private String completeAddressOfHeadquarters; 
+            private String contactEmail; 
             private String contactMail; 
+            private String contactName; 
+            private String contactPhone; 
+            private String contactPosition; 
             private String enableAutoReply; 
             private String industryDescription; 
             private String industryInvolved; 
@@ -744,7 +792,11 @@ public class UpdateAuditRequestRequest extends Request {
                 this.companyRegisteredCountry = model.companyRegisteredCountry;
                 this.companyTel = model.companyTel;
                 this.completeAddressOfHeadquarters = model.completeAddressOfHeadquarters;
+                this.contactEmail = model.contactEmail;
                 this.contactMail = model.contactMail;
+                this.contactName = model.contactName;
+                this.contactPhone = model.contactPhone;
+                this.contactPosition = model.contactPosition;
                 this.enableAutoReply = model.enableAutoReply;
                 this.industryDescription = model.industryDescription;
                 this.industryInvolved = model.industryInvolved;
@@ -859,10 +911,42 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
+             * ContactEmail.
+             */
+            public Builder contactEmail(String contactEmail) {
+                this.contactEmail = contactEmail;
+                return this;
+            }
+
+            /**
              * ContactMail.
              */
             public Builder contactMail(String contactMail) {
                 this.contactMail = contactMail;
+                return this;
+            }
+
+            /**
+             * ContactName.
+             */
+            public Builder contactName(String contactName) {
+                this.contactName = contactName;
+                return this;
+            }
+
+            /**
+             * ContactPhone.
+             */
+            public Builder contactPhone(String contactPhone) {
+                this.contactPhone = contactPhone;
+                return this;
+            }
+
+            /**
+             * ContactPosition.
+             */
+            public Builder contactPosition(String contactPosition) {
+                this.contactPosition = contactPosition;
                 return this;
             }
 

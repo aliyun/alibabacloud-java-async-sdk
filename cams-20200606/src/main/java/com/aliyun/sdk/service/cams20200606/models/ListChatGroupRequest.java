@@ -32,8 +32,16 @@ public class ListChatGroupRequest extends Request {
     private String custSpaceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupLink")
+    private String groupLink;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupStatus")
     private String groupStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupType")
+    private String groupType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -61,7 +69,9 @@ public class ListChatGroupRequest extends Request {
         this.businessNumber = builder.businessNumber;
         this.channelType = builder.channelType;
         this.custSpaceId = builder.custSpaceId;
+        this.groupLink = builder.groupLink;
         this.groupStatus = builder.groupStatus;
+        this.groupType = builder.groupType;
         this.ownerId = builder.ownerId;
         this.page = builder.page;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -104,10 +114,24 @@ public class ListChatGroupRequest extends Request {
     }
 
     /**
+     * @return groupLink
+     */
+    public String getGroupLink() {
+        return this.groupLink;
+    }
+
+    /**
      * @return groupStatus
      */
     public String getGroupStatus() {
         return this.groupStatus;
+    }
+
+    /**
+     * @return groupType
+     */
+    public String getGroupType() {
+        return this.groupType;
     }
 
     /**
@@ -149,7 +173,9 @@ public class ListChatGroupRequest extends Request {
         private String businessNumber; 
         private String channelType; 
         private String custSpaceId; 
+        private String groupLink; 
         private String groupStatus; 
+        private String groupType; 
         private Long ownerId; 
         private Page page; 
         private String resourceOwnerAccount; 
@@ -165,7 +191,9 @@ public class ListChatGroupRequest extends Request {
             this.businessNumber = request.businessNumber;
             this.channelType = request.channelType;
             this.custSpaceId = request.custSpaceId;
+            this.groupLink = request.groupLink;
             this.groupStatus = request.groupStatus;
+            this.groupType = request.groupType;
             this.ownerId = request.ownerId;
             this.page = request.page;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -207,11 +235,29 @@ public class ListChatGroupRequest extends Request {
         }
 
         /**
+         * GroupLink.
+         */
+        public Builder groupLink(String groupLink) {
+            this.putQueryParameter("GroupLink", groupLink);
+            this.groupLink = groupLink;
+            return this;
+        }
+
+        /**
          * GroupStatus.
          */
         public Builder groupStatus(String groupStatus) {
             this.putQueryParameter("GroupStatus", groupStatus);
             this.groupStatus = groupStatus;
+            return this;
+        }
+
+        /**
+         * GroupType.
+         */
+        public Builder groupType(String groupType) {
+            this.putQueryParameter("GroupType", groupType);
+            this.groupType = groupType;
             return this;
         }
 
