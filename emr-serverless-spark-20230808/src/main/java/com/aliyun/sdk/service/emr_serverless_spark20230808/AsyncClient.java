@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateLivyComputeTokenResponse> createLivyComputeToken(CreateLivyComputeTokenRequest request);
 
     /**
+     * @param request the request parameters of CreateNetworkService  CreateNetworkServiceRequest
+     * @return CreateNetworkServiceResponse
+     */
+    CompletableFuture<CreateNetworkServiceResponse> createNetworkService(CreateNetworkServiceRequest request);
+
+    /**
      * @param request the request parameters of CreateProcessDefinitionWithSchedule  CreateProcessDefinitionWithScheduleRequest
      * @return CreateProcessDefinitionWithScheduleResponse
      */
@@ -276,6 +282,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListMembersResponse
      */
     CompletableFuture<ListMembersResponse> listMembers(ListMembersRequest request);
+
+    /**
+     * @param request the request parameters of ListNetworkServices  ListNetworkServicesRequest
+     * @return ListNetworkServicesResponse
+     */
+    CompletableFuture<ListNetworkServicesResponse> listNetworkServices(ListNetworkServicesRequest request);
 
     /**
      * @param request the request parameters of ListRayCluster  ListRayClusterRequest
