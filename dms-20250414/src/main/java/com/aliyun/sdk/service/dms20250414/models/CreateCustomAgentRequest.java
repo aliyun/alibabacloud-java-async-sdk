@@ -619,11 +619,15 @@ public class CreateCustomAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AccessType")
         private String accessType;
 
+        @com.aliyun.core.annotation.NameInMap("KbUuid")
+        private String kbUuid;
+
         @com.aliyun.core.annotation.NameInMap("McpServerId")
         private String mcpServerId;
 
         private KnowledgeConfigList(Builder builder) {
             this.accessType = builder.accessType;
+            this.kbUuid = builder.kbUuid;
             this.mcpServerId = builder.mcpServerId;
         }
 
@@ -643,6 +647,13 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
+         * @return kbUuid
+         */
+        public String getKbUuid() {
+            return this.kbUuid;
+        }
+
+        /**
          * @return mcpServerId
          */
         public String getMcpServerId() {
@@ -651,6 +662,7 @@ public class CreateCustomAgentRequest extends Request {
 
         public static final class Builder {
             private String accessType; 
+            private String kbUuid; 
             private String mcpServerId; 
 
             private Builder() {
@@ -658,6 +670,7 @@ public class CreateCustomAgentRequest extends Request {
 
             private Builder(KnowledgeConfigList model) {
                 this.accessType = model.accessType;
+                this.kbUuid = model.kbUuid;
                 this.mcpServerId = model.mcpServerId;
             } 
 
@@ -666,6 +679,14 @@ public class CreateCustomAgentRequest extends Request {
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
+                return this;
+            }
+
+            /**
+             * KbUuid.
+             */
+            public Builder kbUuid(String kbUuid) {
+                this.kbUuid = kbUuid;
                 return this;
             }
 

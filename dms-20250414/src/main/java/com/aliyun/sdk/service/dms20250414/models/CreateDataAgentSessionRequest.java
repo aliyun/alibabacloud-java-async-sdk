@@ -189,6 +189,9 @@ public class CreateDataAgentSessionRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("EncryptType")
         private String encryptType;
 
+        @com.aliyun.core.annotation.NameInMap("KbUuidList")
+        private java.util.List<String> kbUuidList;
+
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
@@ -213,6 +216,7 @@ public class CreateDataAgentSessionRequest extends Request {
             this.enableSearch = builder.enableSearch;
             this.encryptKey = builder.encryptKey;
             this.encryptType = builder.encryptType;
+            this.kbUuidList = builder.kbUuidList;
             this.language = builder.language;
             this.mcpServerIds = builder.mcpServerIds;
             this.mode = builder.mode;
@@ -265,6 +269,13 @@ public class CreateDataAgentSessionRequest extends Request {
         }
 
         /**
+         * @return kbUuidList
+         */
+        public java.util.List<String> getKbUuidList() {
+            return this.kbUuidList;
+        }
+
+        /**
          * @return language
          */
         public String getLanguage() {
@@ -312,6 +323,7 @@ public class CreateDataAgentSessionRequest extends Request {
             private Boolean enableSearch; 
             private String encryptKey; 
             private String encryptType; 
+            private java.util.List<String> kbUuidList; 
             private String language; 
             private java.util.List<String> mcpServerIds; 
             private String mode; 
@@ -328,6 +340,7 @@ public class CreateDataAgentSessionRequest extends Request {
                 this.enableSearch = model.enableSearch;
                 this.encryptKey = model.encryptKey;
                 this.encryptType = model.encryptType;
+                this.kbUuidList = model.kbUuidList;
                 this.language = model.language;
                 this.mcpServerIds = model.mcpServerIds;
                 this.mode = model.mode;
@@ -373,6 +386,14 @@ public class CreateDataAgentSessionRequest extends Request {
              */
             public Builder encryptType(String encryptType) {
                 this.encryptType = encryptType;
+                return this;
+            }
+
+            /**
+             * KbUuidList.
+             */
+            public Builder kbUuidList(java.util.List<String> kbUuidList) {
+                this.kbUuidList = kbUuidList;
                 return this;
             }
 
