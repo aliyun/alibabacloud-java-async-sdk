@@ -143,11 +143,15 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;
 
+        @com.aliyun.core.annotation.NameInMap("IspName")
+        private String ispName;
+
         @com.aliyun.core.annotation.NameInMap("SubCode")
         private String subCode;
 
         private ResultObject(Builder builder) {
             this.bizCode = builder.bizCode;
+            this.ispName = builder.ispName;
             this.subCode = builder.subCode;
         }
 
@@ -167,6 +171,13 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
         }
 
         /**
+         * @return ispName
+         */
+        public String getIspName() {
+            return this.ispName;
+        }
+
+        /**
          * @return subCode
          */
         public String getSubCode() {
@@ -175,6 +186,7 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bizCode; 
+            private String ispName; 
             private String subCode; 
 
             private Builder() {
@@ -182,6 +194,7 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
 
             private Builder(ResultObject model) {
                 this.bizCode = model.bizCode;
+                this.ispName = model.ispName;
                 this.subCode = model.subCode;
             } 
 
@@ -190,6 +203,14 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
+                return this;
+            }
+
+            /**
+             * IspName.
+             */
+            public Builder ispName(String ispName) {
+                this.ispName = ispName;
                 return this;
             }
 

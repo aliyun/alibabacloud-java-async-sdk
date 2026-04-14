@@ -214,14 +214,7 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         } 
 
         /**
-         * <p>Whether to enable binding to a mini program:</p>
-         * <ul>
-         * <li><strong>Y</strong>: Enable</li>
-         * <li><strong>N (default)</strong>: Do not enable<blockquote>
-         * <p>Notice: If enabling the binding of a mini program, please ensure all parameters for the mini program are passed.</p>
-         * </blockquote>
-         * </li>
-         * </ul>
+         * <p>Update Ant Blockchain Transaction Scenario</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -233,7 +226,14 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Content of the uploaded verification file.</p>
+         * <p>Whether to enable binding with a mini program:</p>
+         * <ul>
+         * <li><strong>Y</strong>: Enable</li>
+         * <li><strong>N (default)</strong>: Disable<blockquote>
+         * <p>Notice: If you enable binding with a mini program, please ensure that all parameters for the mini program are passed.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>774c4aab45981ff4a86cde9255a11xxx</p>
@@ -245,10 +245,14 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Name of the uploaded verification file.</p>
+         * <p>Scenario name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试.txt</p>
+         * <p>Whether to enable storing the authentication files generated during the authentication process to the user&quot;s OSS:</p>
+         * <ul>
+         * <li><strong>Y</strong>: Enable</li>
+         * <li><strong>N (default)</strong>: Disable</li>
+         * </ul>
          */
         public Builder checkFileName(String checkFileName) {
             this.putQueryParameter("CheckFileName", checkFileName);
@@ -257,7 +261,10 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * DeviceRiskPlus.
+         * <p>Name of the uploaded verification file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder deviceRiskPlus(String deviceRiskPlus) {
             this.putQueryParameter("DeviceRiskPlus", deviceRiskPlus);
@@ -266,10 +273,10 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Mini program name.</p>
+         * <p>System-defined parameter. Value: <strong>UpdateAntCloudAuthScene</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试APP</p>
+         * <p>Scenario ID.</p>
          */
         public Builder miniProgramName(String miniProgramName) {
             this.putQueryParameter("MiniProgramName", miniProgramName);
@@ -278,12 +285,7 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Binding mini program platform:</p>
-         * <ul>
-         * <li><strong>WECHAT</strong>: WeChat</li>
-         * <li><strong>ALIPAY</strong>: Alipay</li>
-         * <li><strong>TIKTOK</strong>: TikTok</li>
-         * </ul>
+         * <p>Currently meaningless, can be omitted.</p>
          * 
          * <strong>example:</strong>
          * <p>IOS</p>
@@ -295,7 +297,10 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * ReturnPicCount.
+         * <p>Mini program name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder returnPicCount(Long returnPicCount) {
             this.putQueryParameter("ReturnPicCount", returnPicCount);
@@ -304,7 +309,15 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * ReturnVideoLength.
+         * <p>Platform for binding the mini program:</p>
+         * <ul>
+         * <li><strong>WECHAT</strong>: WeChat</li>
+         * <li><strong>ALIPAY</strong>: Alipay</li>
+         * <li><strong>TIKTOK</strong>: TikTok</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder returnVideoLength(Long returnVideoLength) {
             this.putQueryParameter("ReturnVideoLength", returnVideoLength);
@@ -313,7 +326,7 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Scenario ID.</p>
+         * <p>Update Financial-Level Authentication Scenario</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -326,7 +339,11 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Scenario name.</p>
+         * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
+         * <ul>
+         * <li>Service address: cloudauth.aliyuncs.com.</li>
+         * <li>Request method: HTTPS POST.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -338,7 +355,7 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Currently meaningless, can be omitted.</p>
+         * <p>Update Ant Blockchain Transaction Scenario</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -352,10 +369,10 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable delivering the authentication files generated during the authentication process to the user&quot;s OSS:</p>
+         * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
          * <ul>
-         * <li><strong>Y</strong>: Enable</li>
-         * <li><strong>N (default)</strong>: Disable</li>
+         * <li>Service address: cloudauth.aliyuncs.com.</li>
+         * <li>Request method: HTTPS POST.</li>
          * </ul>
          * 
          * <strong>example:</strong>

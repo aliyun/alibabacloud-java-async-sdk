@@ -54,7 +54,7 @@ public class UpdateAntCloudAuthSceneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of this request.</p>
+         * <p>Content of the uploaded verification file.</p>
          * 
          * <strong>example:</strong>
          * <p>A07D5838-2BE0-5D2E-B864-D05ADAA5EDE3</p>

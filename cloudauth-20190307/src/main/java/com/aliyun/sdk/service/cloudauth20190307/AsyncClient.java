@@ -961,11 +961,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
-     * <ul>
-     * <li>Service address: cloudauth.aliyuncs.com.</li>
-     * <li>Request method: HTTPS POST.</li>
-     * </ul>
+     * <p>Content of the uploaded verification file.</p>
      * 
      * @param request the request parameters of UpdateAntCloudAuthScene  UpdateAntCloudAuthSceneRequest
      * @return UpdateAntCloudAuthSceneResponse
