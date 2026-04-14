@@ -862,6 +862,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRunningTasksResponse> getRunningTasks(GetRunningTasksRequest request);
 
     /**
+     * @param request the request parameters of GetScenegroup  GetScenegroupRequest
+     * @return GetScenegroupResponse
+     */
+    CompletableFuture<GetScenegroupResponse> getScenegroup(GetScenegroupRequest request);
+
+    /**
      * @param request the request parameters of GetSchedule  GetScheduleRequest
      * @return GetScheduleResponse
      */

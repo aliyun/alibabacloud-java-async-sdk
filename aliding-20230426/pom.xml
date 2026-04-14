@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-aliding20230426</artifactId>
-  <version>1.0.66</version>
+  <version>1.0.67</version>
   <packaging>jar</packaging>
   <name>alibabacloud-aliding20230426</name>
   <description>Alibaba Cloud aliding (20230426) Async SDK for Java
@@ -104,7 +104,7 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.9.0</version>
+        <version>0.10.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>
