@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCloneVoiceResponse> createCloneVoice(CreateCloneVoiceRequest request);
 
     /**
+     * @param request the request parameters of CreateLlmAccessProfile  CreateLlmAccessProfileRequest
+     * @return CreateLlmAccessProfileResponse
+     */
+    CompletableFuture<CreateLlmAccessProfileResponse> createLlmAccessProfile(CreateLlmAccessProfileRequest request);
+
+    /**
      * @param request the request parameters of CreateScript  CreateScriptRequest
      * @return CreateScriptResponse
      */
@@ -60,6 +66,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCloneVoiceResponse
      */
     CompletableFuture<DeleteCloneVoiceResponse> deleteCloneVoice(DeleteCloneVoiceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteLlmAccessProfile  DeleteLlmAccessProfileRequest
+     * @return DeleteLlmAccessProfileResponse
+     */
+    CompletableFuture<DeleteLlmAccessProfileResponse> deleteLlmAccessProfile(DeleteLlmAccessProfileRequest request);
 
     /**
      * @param request the request parameters of DeleteScript  DeleteScriptRequest
@@ -176,6 +188,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCloneVoiceModelsResponse> listCloneVoiceModels(ListCloneVoiceModelsRequest request);
 
     /**
+     * @param request the request parameters of ListLlmAccessProfiles  ListLlmAccessProfilesRequest
+     * @return ListLlmAccessProfilesResponse
+     */
+    CompletableFuture<ListLlmAccessProfilesResponse> listLlmAccessProfiles(ListLlmAccessProfilesRequest request);
+
+    /**
      * @param request the request parameters of ListNluModels  ListNluModelsRequest
      * @return ListNluModelsResponse
      */
@@ -240,6 +258,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCloneVoiceResponse
      */
     CompletableFuture<UpdateCloneVoiceResponse> updateCloneVoice(UpdateCloneVoiceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLlmAccessProfile  UpdateLlmAccessProfileRequest
+     * @return UpdateLlmAccessProfileResponse
+     */
+    CompletableFuture<UpdateLlmAccessProfileResponse> updateLlmAccessProfile(UpdateLlmAccessProfileRequest request);
 
     /**
      * @param request the request parameters of UpdateScript  UpdateScriptRequest
