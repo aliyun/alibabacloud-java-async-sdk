@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSupabaseProjectResponseBody</p>
  */
 public class GetSupabaseProjectResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AutoScale")
+    private String autoScale;
+
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
@@ -90,6 +93,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     private String zoneId;
 
     private GetSupabaseProjectResponseBody(Builder builder) {
+        this.autoScale = builder.autoScale;
         this.createTime = builder.createTime;
         this.DBSecurityIpList = builder.DBSecurityIpList;
         this.dashboardPassword = builder.dashboardPassword;
@@ -126,6 +130,13 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoScale
+     */
+    public String getAutoScale() {
+        return this.autoScale;
     }
 
     /**
@@ -297,6 +308,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String autoScale; 
         private String createTime; 
         private String DBSecurityIpList; 
         private String dashboardPassword; 
@@ -326,6 +338,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         } 
 
         private Builder(GetSupabaseProjectResponseBody model) {
+            this.autoScale = model.autoScale;
             this.createTime = model.createTime;
             this.DBSecurityIpList = model.DBSecurityIpList;
             this.dashboardPassword = model.dashboardPassword;
@@ -351,6 +364,14 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
             this.vpcId = model.vpcId;
             this.zoneId = model.zoneId;
         } 
+
+        /**
+         * AutoScale.
+         */
+        public Builder autoScale(String autoScale) {
+            this.autoScale = autoScale;
+            return this;
+        }
 
         /**
          * <p>The creation time.</p>

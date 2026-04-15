@@ -37,6 +37,22 @@ public class ListSupabaseProjectsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchField")
+    private String searchField;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchValue")
+    private String searchValue;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortField")
+    private String sortField;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
+    private String sortOrder;
+
     private ListSupabaseProjectsRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
@@ -44,6 +60,10 @@ public class ListSupabaseProjectsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.searchField = builder.searchField;
+        this.searchValue = builder.searchValue;
+        this.sortField = builder.sortField;
+        this.sortOrder = builder.sortOrder;
     }
 
     public static Builder builder() {
@@ -94,12 +114,44 @@ public class ListSupabaseProjectsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return searchField
+     */
+    public String getSearchField() {
+        return this.searchField;
+    }
+
+    /**
+     * @return searchValue
+     */
+    public String getSearchValue() {
+        return this.searchValue;
+    }
+
+    /**
+     * @return sortField
+     */
+    public String getSortField() {
+        return this.sortField;
+    }
+
+    /**
+     * @return sortOrder
+     */
+    public String getSortOrder() {
+        return this.sortOrder;
+    }
+
     public static final class Builder extends Request.Builder<ListSupabaseProjectsRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String searchField; 
+        private String searchValue; 
+        private String sortField; 
+        private String sortOrder; 
 
         private Builder() {
             super();
@@ -112,6 +164,10 @@ public class ListSupabaseProjectsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.searchField = request.searchField;
+            this.searchValue = request.searchValue;
+            this.sortField = request.sortField;
+            this.sortOrder = request.sortOrder;
         } 
 
         /**
@@ -168,6 +224,42 @@ public class ListSupabaseProjectsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SearchField.
+         */
+        public Builder searchField(String searchField) {
+            this.putQueryParameter("SearchField", searchField);
+            this.searchField = searchField;
+            return this;
+        }
+
+        /**
+         * SearchValue.
+         */
+        public Builder searchValue(String searchValue) {
+            this.putQueryParameter("SearchValue", searchValue);
+            this.searchValue = searchValue;
+            return this;
+        }
+
+        /**
+         * SortField.
+         */
+        public Builder sortField(String sortField) {
+            this.putQueryParameter("SortField", sortField);
+            this.sortField = sortField;
+            return this;
+        }
+
+        /**
+         * SortOrder.
+         */
+        public Builder sortOrder(String sortOrder) {
+            this.putQueryParameter("SortOrder", sortOrder);
+            this.sortOrder = sortOrder;
             return this;
         }
 

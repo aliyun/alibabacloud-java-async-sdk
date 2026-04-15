@@ -218,6 +218,9 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
      * <p>ListSupabaseProjectsResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoScale")
+        private String autoScale;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -279,6 +282,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         private String zoneId;
 
         private Items(Builder builder) {
+            this.autoScale = builder.autoScale;
             this.createTime = builder.createTime;
             this.dashboardPassword = builder.dashboardPassword;
             this.dashboardUserName = builder.dashboardUserName;
@@ -307,6 +311,13 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoScale
+         */
+        public String getAutoScale() {
+            return this.autoScale;
         }
 
         /**
@@ -450,6 +461,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String autoScale; 
             private String createTime; 
             private String dashboardPassword; 
             private String dashboardUserName; 
@@ -475,6 +487,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.autoScale = model.autoScale;
                 this.createTime = model.createTime;
                 this.dashboardPassword = model.dashboardPassword;
                 this.dashboardUserName = model.dashboardUserName;
@@ -496,6 +509,14 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
                 this.vpcId = model.vpcId;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * AutoScale.
+             */
+            public Builder autoScale(String autoScale) {
+                this.autoScale = autoScale;
+                return this;
+            }
 
             /**
              * <p>The creation time.</p>

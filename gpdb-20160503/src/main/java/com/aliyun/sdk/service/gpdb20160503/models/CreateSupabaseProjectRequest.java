@@ -23,6 +23,10 @@ public class CreateSupabaseProjectRequest extends Request {
     private String accountPassword;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoScale")
+    private Boolean autoScale;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -83,6 +87,7 @@ public class CreateSupabaseProjectRequest extends Request {
     private CreateSupabaseProjectRequest(Builder builder) {
         super(builder);
         this.accountPassword = builder.accountPassword;
+        this.autoScale = builder.autoScale;
         this.clientToken = builder.clientToken;
         this.diskPerformanceLevel = builder.diskPerformanceLevel;
         this.payType = builder.payType;
@@ -116,6 +121,13 @@ public class CreateSupabaseProjectRequest extends Request {
      */
     public String getAccountPassword() {
         return this.accountPassword;
+    }
+
+    /**
+     * @return autoScale
+     */
+    public Boolean getAutoScale() {
+        return this.autoScale;
     }
 
     /**
@@ -211,6 +223,7 @@ public class CreateSupabaseProjectRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSupabaseProjectRequest, Builder> {
         private String accountPassword; 
+        private Boolean autoScale; 
         private String clientToken; 
         private String diskPerformanceLevel; 
         private String payType; 
@@ -232,6 +245,7 @@ public class CreateSupabaseProjectRequest extends Request {
         private Builder(CreateSupabaseProjectRequest request) {
             super(request);
             this.accountPassword = request.accountPassword;
+            this.autoScale = request.autoScale;
             this.clientToken = request.clientToken;
             this.diskPerformanceLevel = request.diskPerformanceLevel;
             this.payType = request.payType;
@@ -262,6 +276,15 @@ public class CreateSupabaseProjectRequest extends Request {
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
             this.accountPassword = accountPassword;
+            return this;
+        }
+
+        /**
+         * AutoScale.
+         */
+        public Builder autoScale(Boolean autoScale) {
+            this.putQueryParameter("AutoScale", autoScale);
+            this.autoScale = autoScale;
             return this;
         }
 
