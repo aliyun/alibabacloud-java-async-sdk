@@ -80,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProductResponse> createProduct(CreateProductRequest request);
 
     /**
+     * @param request the request parameters of CreateResponseRule  CreateResponseRuleRequest
+     * @return CreateResponseRuleResponse
+     */
+    CompletableFuture<CreateResponseRuleResponse> createResponseRule(CreateResponseRuleRequest request);
+
+    /**
      * @param request the request parameters of CreateVendor  CreateVendorRequest
      * @return CreateVendorResponse
      */
@@ -138,6 +144,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteProductResponse
      */
     CompletableFuture<DeleteProductResponse> deleteProduct(DeleteProductRequest request);
+
+    /**
+     * @param request the request parameters of DeleteResponseRule  DeleteResponseRuleRequest
+     * @return DeleteResponseRuleResponse
+     */
+    CompletableFuture<DeleteResponseRuleResponse> deleteResponseRule(DeleteResponseRuleRequest request);
 
     /**
      * @param request the request parameters of DeleteVendor  DeleteVendorRequest
@@ -338,6 +350,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListProductsResponse> listProducts(ListProductsRequest request);
 
     /**
+     * @param request the request parameters of ListResponseRules  ListResponseRulesRequest
+     * @return ListResponseRulesResponse
+     */
+    CompletableFuture<ListResponseRulesResponse> listResponseRules(ListResponseRulesRequest request);
+
+    /**
      * @param request the request parameters of ListTrafficStatistics  ListTrafficStatisticsRequest
      * @return ListTrafficStatisticsResponse
      */
@@ -456,6 +474,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateProductResponse
      */
     CompletableFuture<UpdateProductResponse> updateProduct(UpdateProductRequest request);
+
+    /**
+     * @param request the request parameters of UpdateResponseRule  UpdateResponseRuleRequest
+     * @return UpdateResponseRuleResponse
+     */
+    CompletableFuture<UpdateResponseRuleResponse> updateResponseRule(UpdateResponseRuleRequest request);
 
     /**
      * @param request the request parameters of UpdateVendor  UpdateVendorRequest
