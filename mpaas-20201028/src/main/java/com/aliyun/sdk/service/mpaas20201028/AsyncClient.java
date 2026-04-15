@@ -200,6 +200,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateOpenSingleDataResponse> createOpenSingleData(CreateOpenSingleDataRequest request);
 
     /**
+     * @param request the request parameters of CreatePayOrderToMsence  CreatePayOrderToMsenceRequest
+     * @return CreatePayOrderToMsenceResponse
+     */
+    CompletableFuture<CreatePayOrderToMsenceResponse> createPayOrderToMsence(CreatePayOrderToMsenceRequest request);
+
+    /**
      * @param request the request parameters of CreateTemplate  CreateTemplateRequest
      * @return CreateTemplateResponse
      */
@@ -288,6 +294,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExportMappCenterAppConfigResponse
      */
     CompletableFuture<ExportMappCenterAppConfigResponse> exportMappCenterAppConfig(ExportMappCenterAppConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetAuthTokenToMsence  GetAuthTokenToMsenceRequest
+     * @return GetAuthTokenToMsenceResponse
+     */
+    CompletableFuture<GetAuthTokenToMsenceResponse> getAuthTokenToMsence(GetAuthTokenToMsenceRequest request);
 
     /**
      * @param request the request parameters of GetFileTokenForUploadToMsa  GetFileTokenForUploadToMsaRequest
@@ -644,6 +656,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryMscpRiskInfoResponse> queryMscpRiskInfo(QueryMscpRiskInfoRequest request);
 
     /**
+     * @param request the request parameters of QueryPayOrderToMsence  QueryPayOrderToMsenceRequest
+     * @return QueryPayOrderToMsenceResponse
+     */
+    CompletableFuture<QueryPayOrderToMsenceResponse> queryPayOrderToMsence(QueryPayOrderToMsenceRequest request);
+
+    /**
      * @param request the request parameters of QueryPushAnalysisCoreIndex  QueryPushAnalysisCoreIndexRequest
      * @return QueryPushAnalysisCoreIndexResponse
      */
@@ -668,6 +686,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryPushSchedulerListResponse> queryPushSchedulerList(QueryPushSchedulerListRequest request);
 
     /**
+     * @param request the request parameters of QueryUserInfoToMsence  QueryUserInfoToMsenceRequest
+     * @return QueryUserInfoToMsenceResponse
+     */
+    CompletableFuture<QueryUserInfoToMsenceResponse> queryUserInfoToMsence(QueryUserInfoToMsenceRequest request);
+
+    /**
      * @param request the request parameters of RevokePushMessage  RevokePushMessageRequest
      * @return RevokePushMessageResponse
      */
@@ -690,6 +714,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SaveMgsApirestResponse
      */
     CompletableFuture<SaveMgsApirestResponse> saveMgsApirest(SaveMgsApirestRequest request);
+
+    /**
+     * @param request the request parameters of SaveOrderRelationInfoToMsence  SaveOrderRelationInfoToMsenceRequest
+     * @return SaveOrderRelationInfoToMsenceResponse
+     */
+    CompletableFuture<SaveOrderRelationInfoToMsenceResponse> saveOrderRelationInfoToMsence(SaveOrderRelationInfoToMsenceRequest request);
 
     /**
      * @param request the request parameters of StartUserAppAsyncEnhanceInMsa  StartUserAppAsyncEnhanceInMsaRequest
@@ -750,5 +780,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UploadUserAppToMsaResponse
      */
     CompletableFuture<UploadUserAppToMsaResponse> uploadUserAppToMsa(UploadUserAppToMsaRequest request);
+
+    /**
+     * @param request the request parameters of VirtualDeliveryToMscene  VirtualDeliveryToMsceneRequest
+     * @return VirtualDeliveryToMsceneResponse
+     */
+    CompletableFuture<VirtualDeliveryToMsceneResponse> virtualDeliveryToMscene(VirtualDeliveryToMsceneRequest request);
 
 }

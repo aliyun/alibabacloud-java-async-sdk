@@ -635,6 +635,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreatePayOrderToMsence  CreatePayOrderToMsenceRequest
+     * @return CreatePayOrderToMsenceResponse
+     */
+    @Override
+    public CompletableFuture<CreatePayOrderToMsenceResponse> createPayOrderToMsence(CreatePayOrderToMsenceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreatePayOrderToMsence").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePayOrderToMsenceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePayOrderToMsenceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateTemplate  CreateTemplateRequest
      * @return CreateTemplateResponse
      */
@@ -899,6 +917,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ExportMappCenterAppConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAuthTokenToMsence  GetAuthTokenToMsenceRequest
+     * @return GetAuthTokenToMsenceResponse
+     */
+    @Override
+    public CompletableFuture<GetAuthTokenToMsenceResponse> getAuthTokenToMsence(GetAuthTokenToMsenceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAuthTokenToMsence").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAuthTokenToMsenceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAuthTokenToMsenceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1967,6 +2003,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryPayOrderToMsence  QueryPayOrderToMsenceRequest
+     * @return QueryPayOrderToMsenceResponse
+     */
+    @Override
+    public CompletableFuture<QueryPayOrderToMsenceResponse> queryPayOrderToMsence(QueryPayOrderToMsenceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryPayOrderToMsence").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryPayOrderToMsenceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryPayOrderToMsenceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QueryPushAnalysisCoreIndex  QueryPushAnalysisCoreIndexRequest
      * @return QueryPushAnalysisCoreIndexResponse
      */
@@ -2039,6 +2093,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryUserInfoToMsence  QueryUserInfoToMsenceRequest
+     * @return QueryUserInfoToMsenceResponse
+     */
+    @Override
+    public CompletableFuture<QueryUserInfoToMsenceResponse> queryUserInfoToMsence(QueryUserInfoToMsenceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryUserInfoToMsence").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryUserInfoToMsenceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryUserInfoToMsenceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RevokePushMessage  RevokePushMessageRequest
      * @return RevokePushMessageResponse
      */
@@ -2105,6 +2177,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SaveMgsApirestResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SaveOrderRelationInfoToMsence  SaveOrderRelationInfoToMsenceRequest
+     * @return SaveOrderRelationInfoToMsenceResponse
+     */
+    @Override
+    public CompletableFuture<SaveOrderRelationInfoToMsenceResponse> saveOrderRelationInfoToMsence(SaveOrderRelationInfoToMsenceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SaveOrderRelationInfoToMsence").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SaveOrderRelationInfoToMsenceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SaveOrderRelationInfoToMsenceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2285,6 +2375,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UploadUserAppToMsaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of VirtualDeliveryToMscene  VirtualDeliveryToMsceneRequest
+     * @return VirtualDeliveryToMsceneResponse
+     */
+    @Override
+    public CompletableFuture<VirtualDeliveryToMsceneResponse> virtualDeliveryToMscene(VirtualDeliveryToMsceneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("VirtualDeliveryToMscene").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(VirtualDeliveryToMsceneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<VirtualDeliveryToMsceneResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
