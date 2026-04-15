@@ -173,6 +173,9 @@ public class ListCertResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AfterDate")
         private Long afterDate;
 
+        @com.aliyun.core.annotation.NameInMap("Algorithm")
+        private String algorithm;
+
         @com.aliyun.core.annotation.NameInMap("BeforeDate")
         private Long beforeDate;
 
@@ -194,6 +197,12 @@ public class ListCertResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sans")
         private String sans;
 
+        @com.aliyun.core.annotation.NameInMap("SerialNo")
+        private String serialNo;
+
+        @com.aliyun.core.annotation.NameInMap("SignAlgorithm")
+        private String signAlgorithm;
+
         @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
@@ -208,6 +217,7 @@ public class ListCertResponseBody extends TeaModel {
 
         private CertList(Builder builder) {
             this.afterDate = builder.afterDate;
+            this.algorithm = builder.algorithm;
             this.beforeDate = builder.beforeDate;
             this.certType = builder.certType;
             this.commonName = builder.commonName;
@@ -215,6 +225,8 @@ public class ListCertResponseBody extends TeaModel {
             this.identifier = builder.identifier;
             this.issuer = builder.issuer;
             this.sans = builder.sans;
+            this.serialNo = builder.serialNo;
+            this.signAlgorithm = builder.signAlgorithm;
             this.sourceType = builder.sourceType;
             this.status = builder.status;
             this.whId = builder.whId;
@@ -234,6 +246,13 @@ public class ListCertResponseBody extends TeaModel {
          */
         public Long getAfterDate() {
             return this.afterDate;
+        }
+
+        /**
+         * @return algorithm
+         */
+        public String getAlgorithm() {
+            return this.algorithm;
         }
 
         /**
@@ -286,6 +305,20 @@ public class ListCertResponseBody extends TeaModel {
         }
 
         /**
+         * @return serialNo
+         */
+        public String getSerialNo() {
+            return this.serialNo;
+        }
+
+        /**
+         * @return signAlgorithm
+         */
+        public String getSignAlgorithm() {
+            return this.signAlgorithm;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -315,6 +348,7 @@ public class ListCertResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long afterDate; 
+            private String algorithm; 
             private Long beforeDate; 
             private String certType; 
             private String commonName; 
@@ -322,6 +356,8 @@ public class ListCertResponseBody extends TeaModel {
             private String identifier; 
             private String issuer; 
             private String sans; 
+            private String serialNo; 
+            private String signAlgorithm; 
             private String sourceType; 
             private String status; 
             private Long whId; 
@@ -332,6 +368,7 @@ public class ListCertResponseBody extends TeaModel {
 
             private Builder(CertList model) {
                 this.afterDate = model.afterDate;
+                this.algorithm = model.algorithm;
                 this.beforeDate = model.beforeDate;
                 this.certType = model.certType;
                 this.commonName = model.commonName;
@@ -339,6 +376,8 @@ public class ListCertResponseBody extends TeaModel {
                 this.identifier = model.identifier;
                 this.issuer = model.issuer;
                 this.sans = model.sans;
+                this.serialNo = model.serialNo;
+                this.signAlgorithm = model.signAlgorithm;
                 this.sourceType = model.sourceType;
                 this.status = model.status;
                 this.whId = model.whId;
@@ -353,6 +392,14 @@ public class ListCertResponseBody extends TeaModel {
              */
             public Builder afterDate(Long afterDate) {
                 this.afterDate = afterDate;
+                return this;
+            }
+
+            /**
+             * Algorithm.
+             */
+            public Builder algorithm(String algorithm) {
+                this.algorithm = algorithm;
                 return this;
             }
 
@@ -438,6 +485,22 @@ public class ListCertResponseBody extends TeaModel {
              */
             public Builder sans(String sans) {
                 this.sans = sans;
+                return this;
+            }
+
+            /**
+             * SerialNo.
+             */
+            public Builder serialNo(String serialNo) {
+                this.serialNo = serialNo;
+                return this;
+            }
+
+            /**
+             * SignAlgorithm.
+             */
+            public Builder signAlgorithm(String signAlgorithm) {
+                this.signAlgorithm = signAlgorithm;
                 return this;
             }
 
