@@ -700,6 +700,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAvailableCrossRegionsResponse> describeAvailableCrossRegions(DescribeAvailableCrossRegionsRequest request);
 
     /**
+     * @param request the request parameters of DescribeAvailableModels  DescribeAvailableModelsRequest
+     * @return DescribeAvailableModelsResponse
+     */
+    CompletableFuture<DescribeAvailableModelsResponse> describeAvailableModels(DescribeAvailableModelsRequest request);
+
+    /**
      * @param request the request parameters of DescribeBackupLogs  DescribeBackupLogsRequest
      * @return DescribeBackupLogsResponse
      */
