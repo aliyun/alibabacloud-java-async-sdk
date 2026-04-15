@@ -924,6 +924,9 @@ public class ListStackConfigsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("deploymentContent")
         private String deploymentContent;
 
+        @com.aliyun.core.annotation.NameInMap("failedReason")
+        private String failedReason;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
@@ -936,6 +939,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.deploymentConfig = builder.deploymentConfig;
             this.deploymentContent = builder.deploymentContent;
+            this.failedReason = builder.failedReason;
             this.status = builder.status;
             this.version = builder.version;
         }
@@ -984,6 +988,13 @@ public class ListStackConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return failedReason
+         */
+        public String getFailedReason() {
+            return this.failedReason;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -1003,6 +1014,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
             private String createTime; 
             private DeploymentConfig deploymentConfig; 
             private String deploymentContent; 
+            private String failedReason; 
             private String status; 
             private String version; 
 
@@ -1015,6 +1027,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.deploymentConfig = model.deploymentConfig;
                 this.deploymentContent = model.deploymentContent;
+                this.failedReason = model.failedReason;
                 this.status = model.status;
                 this.version = model.version;
             } 
@@ -1056,6 +1069,14 @@ public class ListStackConfigsResponseBody extends TeaModel {
              */
             public Builder deploymentContent(String deploymentContent) {
                 this.deploymentContent = deploymentContent;
+                return this;
+            }
+
+            /**
+             * failedReason.
+             */
+            public Builder failedReason(String failedReason) {
+                this.failedReason = failedReason;
                 return this;
             }
 
