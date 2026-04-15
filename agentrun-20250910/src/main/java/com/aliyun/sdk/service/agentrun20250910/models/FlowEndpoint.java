@@ -41,9 +41,6 @@ public class FlowEndpoint extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("routingConfiguration")
     private java.util.List<FlowEndpointRoutingConfig> routingConfiguration;
 
-    @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List<String> tags;
-
     @com.aliyun.core.annotation.NameInMap("targetVersion")
     private String targetVersion;
 
@@ -56,7 +53,6 @@ public class FlowEndpoint extends TeaModel {
         this.flowId = builder.flowId;
         this.lastUpdatedAt = builder.lastUpdatedAt;
         this.routingConfiguration = builder.routingConfiguration;
-        this.tags = builder.tags;
         this.targetVersion = builder.targetVersion;
     }
 
@@ -129,13 +125,6 @@ public class FlowEndpoint extends TeaModel {
     }
 
     /**
-     * @return tags
-     */
-    public java.util.List<String> getTags() {
-        return this.tags;
-    }
-
-    /**
      * @return targetVersion
      */
     public String getTargetVersion() {
@@ -151,7 +140,6 @@ public class FlowEndpoint extends TeaModel {
         private String flowId; 
         private String lastUpdatedAt; 
         private java.util.List<FlowEndpointRoutingConfig> routingConfiguration; 
-        private java.util.List<String> tags; 
         private String targetVersion; 
 
         private Builder() {
@@ -166,7 +154,6 @@ public class FlowEndpoint extends TeaModel {
             this.flowId = model.flowId;
             this.lastUpdatedAt = model.lastUpdatedAt;
             this.routingConfiguration = model.routingConfiguration;
-            this.tags = model.tags;
             this.targetVersion = model.targetVersion;
         } 
 
@@ -255,17 +242,6 @@ public class FlowEndpoint extends TeaModel {
          */
         public Builder routingConfiguration(java.util.List<FlowEndpointRoutingConfig> routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
-            return this;
-        }
-
-        /**
-         * <p>工作流端点的标签信息</p>
-         * 
-         * <strong>example:</strong>
-         * <p>production</p>
-         */
-        public Builder tags(java.util.List<String> tags) {
-            this.tags = tags;
             return this;
         }
 

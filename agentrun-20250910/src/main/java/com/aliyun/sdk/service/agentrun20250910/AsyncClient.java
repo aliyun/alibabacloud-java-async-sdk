@@ -27,6 +27,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</p>
+     * 
+     * @param request the request parameters of ConvertFlowDSL  ConvertFlowDSLRequest
+     * @return ConvertFlowDSLResponse
+     */
+    CompletableFuture<ConvertFlowDSLResponse> convertFlowDSL(ConvertFlowDSLRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>创建一个新的智能体运行时实例，用于执行AI代理任务。智能体运行时是AgentRun服务的核心组件，提供代码执行、浏览器操作、内存管理等能力。</p>
      * 
      * @param request the request parameters of CreateAgentRuntime  CreateAgentRuntimeRequest
@@ -72,6 +81,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateCustomDomainResponse
      */
     CompletableFuture<CreateCustomDomainResponse> createCustomDomain(CreateCustomDomainRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</p>
+     * 
+     * @param request the request parameters of CreateFlow  CreateFlowRequest
+     * @return CreateFlowResponse
+     */
+    CompletableFuture<CreateFlowResponse> createFlow(CreateFlowRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>为指定工作流创建一个新的端点，用于对外提供服务访问。</p>
+     * 
+     * @param request the request parameters of CreateFlowEndpoint  CreateFlowEndpointRequest
+     * @return CreateFlowEndpointResponse
+     */
+    CompletableFuture<CreateFlowEndpointResponse> createFlowEndpoint(CreateFlowEndpointRequest request);
 
     /**
      * @param request the request parameters of CreateKnowledgeBase  CreateKnowledgeBaseRequest
@@ -177,6 +204,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCustomDomainResponse
      */
     CompletableFuture<DeleteCustomDomainResponse> deleteCustomDomain(DeleteCustomDomainRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
+     * 
+     * @param request the request parameters of DeleteFlow  DeleteFlowRequest
+     * @return DeleteFlowResponse
+     */
+    CompletableFuture<DeleteFlowResponse> deleteFlow(DeleteFlowRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</p>
+     * 
+     * @param request the request parameters of DeleteFlowEndpoint  DeleteFlowEndpointRequest
+     * @return DeleteFlowEndpointResponse
+     */
+    CompletableFuture<DeleteFlowEndpointResponse> deleteFlowEndpoint(DeleteFlowEndpointRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</p>
+     * 
+     * @param request the request parameters of DeleteFlowVersion  DeleteFlowVersionRequest
+     * @return DeleteFlowVersionResponse
+     */
+    CompletableFuture<DeleteFlowVersionResponse> deleteFlowVersion(DeleteFlowVersionRequest request);
 
     /**
      * @param request the request parameters of DeleteKnowledgeBase  DeleteKnowledgeBaseRequest
@@ -285,6 +339,42 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCustomDomainResponse
      */
     CompletableFuture<GetCustomDomainResponse> getCustomDomain(GetCustomDomainRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>根据工作流ID获取指定工作流的详细信息，包括配置、定义、版本信息等。</p>
+     * 
+     * @param request the request parameters of GetFlow  GetFlowRequest
+     * @return GetFlowResponse
+     */
+    CompletableFuture<GetFlowResponse> getFlow(GetFlowRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>获取指定工作流的草稿版本，返回草稿中的配置信息。</p>
+     * 
+     * @param request the request parameters of GetFlowDraft  GetFlowDraftRequest
+     * @return GetFlowDraftResponse
+     */
+    CompletableFuture<GetFlowDraftResponse> getFlowDraft(GetFlowDraftRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>根据工作流ID和端点ID获取指定工作流端点的详细信息。</p>
+     * 
+     * @param request the request parameters of GetFlowEndpoint  GetFlowEndpointRequest
+     * @return GetFlowEndpointResponse
+     */
+    CompletableFuture<GetFlowEndpointResponse> getFlowEndpoint(GetFlowEndpointRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</p>
+     * 
+     * @param request the request parameters of GetFlowVersion  GetFlowVersionRequest
+     * @return GetFlowVersionResponse
+     */
+    CompletableFuture<GetFlowVersionResponse> getFlowVersion(GetFlowVersionRequest request);
 
     /**
      * @param request the request parameters of GetKnowledgeBase  GetKnowledgeBaseRequest
@@ -407,6 +497,33 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCustomDomainsResponse> listCustomDomains(ListCustomDomainsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>获取指定工作流的所有端点列表，支持分页查询。</p>
+     * 
+     * @param request the request parameters of ListFlowEndpoints  ListFlowEndpointsRequest
+     * @return ListFlowEndpointsResponse
+     */
+    CompletableFuture<ListFlowEndpointsResponse> listFlowEndpoints(ListFlowEndpointsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>获取指定工作流的所有版本列表，支持分页查询。</p>
+     * 
+     * @param request the request parameters of ListFlowVersions  ListFlowVersionsRequest
+     * @return ListFlowVersionsResponse
+     */
+    CompletableFuture<ListFlowVersionsResponse> listFlowVersions(ListFlowVersionsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>获取当前用户的工作流列表，支持按名称、工作空间等条件过滤，支持分页查询。</p>
+     * 
+     * @param request the request parameters of ListFlows  ListFlowsRequest
+     * @return ListFlowsResponse
+     */
+    CompletableFuture<ListFlowsResponse> listFlows(ListFlowsRequest request);
+
+    /**
      * @param request the request parameters of ListKnowledgeBases  ListKnowledgeBasesRequest
      * @return ListKnowledgeBasesResponse
      */
@@ -483,6 +600,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>为指定工作流发布新版本，用于版本管理和回滚。</p>
+     * 
+     * @param request the request parameters of PublishFlowVersion  PublishFlowVersionRequest
+     * @return PublishFlowVersionResponse
+     */
+    CompletableFuture<PublishFlowVersionResponse> publishFlowVersion(PublishFlowVersionRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</p>
      * 
      * @param request the request parameters of PublishRuntimeVersion  PublishRuntimeVersionRequest
@@ -537,6 +663,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCustomDomainResponse
      */
     CompletableFuture<UpdateCustomDomainResponse> updateCustomDomain(UpdateCustomDomainRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</p>
+     * 
+     * @param request the request parameters of UpdateFlow  UpdateFlowRequest
+     * @return UpdateFlowResponse
+     */
+    CompletableFuture<UpdateFlowResponse> updateFlow(UpdateFlowRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定工作流的草稿版本，草稿更新不影响已发布的工作流版本。</p>
+     * 
+     * @param request the request parameters of UpdateFlowDraft  UpdateFlowDraftRequest
+     * @return UpdateFlowDraftResponse
+     */
+    CompletableFuture<UpdateFlowDraftResponse> updateFlowDraft(UpdateFlowDraftRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定工作流端点的配置信息，包括目标版本、路由配置等。</p>
+     * 
+     * @param request the request parameters of UpdateFlowEndpoint  UpdateFlowEndpointRequest
+     * @return UpdateFlowEndpointResponse
+     */
+    CompletableFuture<UpdateFlowEndpointResponse> updateFlowEndpoint(UpdateFlowEndpointRequest request);
 
     /**
      * @param request the request parameters of UpdateKnowledgeBase  UpdateKnowledgeBaseRequest

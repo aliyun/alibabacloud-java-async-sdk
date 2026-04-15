@@ -59,6 +59,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</p>
+     * 
+     * @param request the request parameters of ConvertFlowDSL  ConvertFlowDSLRequest
+     * @return ConvertFlowDSLResponse
+     */
+    @Override
+    public CompletableFuture<ConvertFlowDSLResponse> convertFlowDSL(ConvertFlowDSLRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ConvertFlowDSL").setMethod(HttpMethod.POST).setPathRegex("/2025-09-10/flows/action/convertDsl").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConvertFlowDSLResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ConvertFlowDSLResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>创建一个新的智能体运行时实例，用于执行AI代理任务。智能体运行时是AgentRun服务的核心组件，提供代码执行、浏览器操作、内存管理等能力。</p>
      * 
      * @param request the request parameters of CreateAgentRuntime  CreateAgentRuntimeRequest
@@ -172,6 +193,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateCustomDomainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</p>
+     * 
+     * @param request the request parameters of CreateFlow  CreateFlowRequest
+     * @return CreateFlowResponse
+     */
+    @Override
+    public CompletableFuture<CreateFlowResponse> createFlow(CreateFlowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateFlow").setMethod(HttpMethod.POST).setPathRegex("/2025-09-10/flows").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateFlowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateFlowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>为指定工作流创建一个新的端点，用于对外提供服务访问。</p>
+     * 
+     * @param request the request parameters of CreateFlowEndpoint  CreateFlowEndpointRequest
+     * @return CreateFlowEndpointResponse
+     */
+    @Override
+    public CompletableFuture<CreateFlowEndpointResponse> createFlowEndpoint(CreateFlowEndpointRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateFlowEndpoint").setMethod(HttpMethod.POST).setPathRegex("/2025-09-10/flows/{flowName}/endpoints").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateFlowEndpointResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateFlowEndpointResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -445,6 +508,69 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteCustomDomainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
+     * 
+     * @param request the request parameters of DeleteFlow  DeleteFlowRequest
+     * @return DeleteFlowResponse
+     */
+    @Override
+    public CompletableFuture<DeleteFlowResponse> deleteFlow(DeleteFlowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteFlow").setMethod(HttpMethod.DELETE).setPathRegex("/2025-09-10/flows/{flowName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteFlowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteFlowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</p>
+     * 
+     * @param request the request parameters of DeleteFlowEndpoint  DeleteFlowEndpointRequest
+     * @return DeleteFlowEndpointResponse
+     */
+    @Override
+    public CompletableFuture<DeleteFlowEndpointResponse> deleteFlowEndpoint(DeleteFlowEndpointRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteFlowEndpoint").setMethod(HttpMethod.DELETE).setPathRegex("/2025-09-10/flows/{flowName}/endpoints/{flowEndpointName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteFlowEndpointResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteFlowEndpointResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</p>
+     * 
+     * @param request the request parameters of DeleteFlowVersion  DeleteFlowVersionRequest
+     * @return DeleteFlowVersionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteFlowVersionResponse> deleteFlowVersion(DeleteFlowVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteFlowVersion").setMethod(HttpMethod.DELETE).setPathRegex("/2025-09-10/flows/{flowName}/versions/{flowVersion}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteFlowVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteFlowVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -733,6 +859,90 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetCustomDomainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据工作流ID获取指定工作流的详细信息，包括配置、定义、版本信息等。</p>
+     * 
+     * @param request the request parameters of GetFlow  GetFlowRequest
+     * @return GetFlowResponse
+     */
+    @Override
+    public CompletableFuture<GetFlowResponse> getFlow(GetFlowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetFlow").setMethod(HttpMethod.GET).setPathRegex("/2025-09-10/flows/{flowName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetFlowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetFlowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取指定工作流的草稿版本，返回草稿中的配置信息。</p>
+     * 
+     * @param request the request parameters of GetFlowDraft  GetFlowDraftRequest
+     * @return GetFlowDraftResponse
+     */
+    @Override
+    public CompletableFuture<GetFlowDraftResponse> getFlowDraft(GetFlowDraftRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetFlowDraft").setMethod(HttpMethod.GET).setPathRegex("/2025-09-10/flows/{flowName}/draft").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetFlowDraftResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetFlowDraftResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据工作流ID和端点ID获取指定工作流端点的详细信息。</p>
+     * 
+     * @param request the request parameters of GetFlowEndpoint  GetFlowEndpointRequest
+     * @return GetFlowEndpointResponse
+     */
+    @Override
+    public CompletableFuture<GetFlowEndpointResponse> getFlowEndpoint(GetFlowEndpointRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetFlowEndpoint").setMethod(HttpMethod.GET).setPathRegex("/2025-09-10/flows/{flowName}/endpoints/{flowEndpointName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetFlowEndpointResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetFlowEndpointResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</p>
+     * 
+     * @param request the request parameters of GetFlowVersion  GetFlowVersionRequest
+     * @return GetFlowVersionResponse
+     */
+    @Override
+    public CompletableFuture<GetFlowVersionResponse> getFlowVersion(GetFlowVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetFlowVersion").setMethod(HttpMethod.GET).setPathRegex("/2025-09-10/flows/{flowName}/versions/{flowVersion}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetFlowVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetFlowVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1051,6 +1261,69 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取指定工作流的所有端点列表，支持分页查询。</p>
+     * 
+     * @param request the request parameters of ListFlowEndpoints  ListFlowEndpointsRequest
+     * @return ListFlowEndpointsResponse
+     */
+    @Override
+    public CompletableFuture<ListFlowEndpointsResponse> listFlowEndpoints(ListFlowEndpointsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListFlowEndpoints").setMethod(HttpMethod.GET).setPathRegex("/2025-09-10/flows/{flowId}/endpoints").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListFlowEndpointsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListFlowEndpointsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取指定工作流的所有版本列表，支持分页查询。</p>
+     * 
+     * @param request the request parameters of ListFlowVersions  ListFlowVersionsRequest
+     * @return ListFlowVersionsResponse
+     */
+    @Override
+    public CompletableFuture<ListFlowVersionsResponse> listFlowVersions(ListFlowVersionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListFlowVersions").setMethod(HttpMethod.GET).setPathRegex("/2025-09-10/flows/{flowName}/versions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListFlowVersionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListFlowVersionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取当前用户的工作流列表，支持按名称、工作空间等条件过滤，支持分页查询。</p>
+     * 
+     * @param request the request parameters of ListFlows  ListFlowsRequest
+     * @return ListFlowsResponse
+     */
+    @Override
+    public CompletableFuture<ListFlowsResponse> listFlows(ListFlowsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListFlows").setMethod(HttpMethod.GET).setPathRegex("/2025-09-10/flows").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListFlowsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListFlowsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListKnowledgeBases  ListKnowledgeBasesRequest
      * @return ListKnowledgeBasesResponse
      */
@@ -1247,6 +1520,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>为指定工作流发布新版本，用于版本管理和回滚。</p>
+     * 
+     * @param request the request parameters of PublishFlowVersion  PublishFlowVersionRequest
+     * @return PublishFlowVersionResponse
+     */
+    @Override
+    public CompletableFuture<PublishFlowVersionResponse> publishFlowVersion(PublishFlowVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PublishFlowVersion").setMethod(HttpMethod.POST).setPathRegex("/2025-09-10/flows/{flowName}/versions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PublishFlowVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PublishFlowVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</p>
      * 
      * @param request the request parameters of PublishRuntimeVersion  PublishRuntimeVersionRequest
@@ -1393,6 +1687,69 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateCustomDomainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</p>
+     * 
+     * @param request the request parameters of UpdateFlow  UpdateFlowRequest
+     * @return UpdateFlowResponse
+     */
+    @Override
+    public CompletableFuture<UpdateFlowResponse> updateFlow(UpdateFlowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateFlow").setMethod(HttpMethod.PUT).setPathRegex("/2025-09-10/flows/{flowName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateFlowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateFlowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定工作流的草稿版本，草稿更新不影响已发布的工作流版本。</p>
+     * 
+     * @param request the request parameters of UpdateFlowDraft  UpdateFlowDraftRequest
+     * @return UpdateFlowDraftResponse
+     */
+    @Override
+    public CompletableFuture<UpdateFlowDraftResponse> updateFlowDraft(UpdateFlowDraftRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateFlowDraft").setMethod(HttpMethod.PUT).setPathRegex("/2025-09-10/flows/{flowName}/draft").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateFlowDraftResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateFlowDraftResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定工作流端点的配置信息，包括目标版本、路由配置等。</p>
+     * 
+     * @param request the request parameters of UpdateFlowEndpoint  UpdateFlowEndpointRequest
+     * @return UpdateFlowEndpointResponse
+     */
+    @Override
+    public CompletableFuture<UpdateFlowEndpointResponse> updateFlowEndpoint(UpdateFlowEndpointRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateFlowEndpoint").setMethod(HttpMethod.PUT).setPathRegex("/2025-09-10/flows/{flowName}/endpoints/{flowEndpointName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateFlowEndpointResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateFlowEndpointResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

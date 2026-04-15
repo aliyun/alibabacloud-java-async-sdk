@@ -53,9 +53,6 @@ public class Flow extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List<String> tags;
-
     @com.aliyun.core.annotation.NameInMap("tracingConfiguration")
     private TracingConfiguration tracingConfiguration;
 
@@ -75,7 +72,6 @@ public class Flow extends TeaModel {
         this.lastUpdatedAt = builder.lastUpdatedAt;
         this.loggingConfiguration = builder.loggingConfiguration;
         this.resourceGroupId = builder.resourceGroupId;
-        this.tags = builder.tags;
         this.tracingConfiguration = builder.tracingConfiguration;
         this.workspaceId = builder.workspaceId;
     }
@@ -177,13 +173,6 @@ public class Flow extends TeaModel {
     }
 
     /**
-     * @return tags
-     */
-    public java.util.List<String> getTags() {
-        return this.tags;
-    }
-
-    /**
      * @return tracingConfiguration
      */
     public TracingConfiguration getTracingConfiguration() {
@@ -210,7 +199,6 @@ public class Flow extends TeaModel {
         private String lastUpdatedAt; 
         private LoggingConfiguration loggingConfiguration; 
         private String resourceGroupId; 
-        private java.util.List<String> tags; 
         private TracingConfiguration tracingConfiguration; 
         private String workspaceId; 
 
@@ -230,7 +218,6 @@ public class Flow extends TeaModel {
             this.lastUpdatedAt = model.lastUpdatedAt;
             this.loggingConfiguration = model.loggingConfiguration;
             this.resourceGroupId = model.resourceGroupId;
-            this.tags = model.tags;
             this.tracingConfiguration = model.tracingConfiguration;
             this.workspaceId = model.workspaceId;
         } 
@@ -358,17 +345,6 @@ public class Flow extends TeaModel {
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * <p>工作流的标签信息，用于资源分类和管理</p>
-         * 
-         * <strong>example:</strong>
-         * <p>production,automation</p>
-         */
-        public Builder tags(java.util.List<String> tags) {
-            this.tags = tags;
             return this;
         }
 

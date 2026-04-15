@@ -880,7 +880,7 @@ public class ConvertFlowDSLData extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("spec")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.Map<String, String> spec;
+        private java.util.Map<String, ?> spec;
 
         private ToolsetInstallations(Builder builder) {
             this.description = builder.description;
@@ -913,14 +913,14 @@ public class ConvertFlowDSLData extends TeaModel {
         /**
          * @return spec
          */
-        public java.util.Map<String, String> getSpec() {
+        public java.util.Map<String, ?> getSpec() {
             return this.spec;
         }
 
         public static final class Builder {
             private String description; 
             private String name; 
-            private java.util.Map<String, String> spec; 
+            private java.util.Map<String, ?> spec; 
 
             private Builder() {
             } 
@@ -958,7 +958,7 @@ public class ConvertFlowDSLData extends TeaModel {
              * <p>Toolset规格配置（JSON对象）</p>
              * <p>This parameter is required.</p>
              */
-            public Builder spec(java.util.Map<String, String> spec) {
+            public Builder spec(java.util.Map<String, ?> spec) {
                 this.spec = spec;
                 return this;
             }
