@@ -110,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchGetFormDataByIdListResponse> batchGetFormDataByIdList(BatchGetFormDataByIdListRequest request);
 
     /**
+     * @param request the request parameters of BatchQueryGroupMember  BatchQueryGroupMemberRequest
+     * @return BatchQueryGroupMemberResponse
+     */
+    CompletableFuture<BatchQueryGroupMemberResponse> batchQueryGroupMember(BatchQueryGroupMemberRequest request);
+
+    /**
      * @param request the request parameters of BatchRemovalByFormInstanceIdList  BatchRemovalByFormInstanceIdListRequest
      * @return BatchRemovalByFormInstanceIdListResponse
      */
@@ -860,6 +866,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetRunningTasksResponse
      */
     CompletableFuture<GetRunningTasksResponse> getRunningTasks(GetRunningTasksRequest request);
+
+    /**
+     * @param request the request parameters of GetScencegroupFileDownloadurl  GetScencegroupFileDownloadurlRequest
+     * @return GetScencegroupFileDownloadurlResponse
+     */
+    CompletableFuture<GetScencegroupFileDownloadurlResponse> getScencegroupFileDownloadurl(GetScencegroupFileDownloadurlRequest request);
 
     /**
      * @param request the request parameters of GetScenegroup  GetScenegroupRequest

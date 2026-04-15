@@ -32,12 +32,20 @@ public class CreateScheduleConferenceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("url")
     private String url;
 
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
+    private String vendorRequestId;
+
+    @com.aliyun.core.annotation.NameInMap("vendorType")
+    private String vendorType;
+
     private CreateScheduleConferenceResponseBody(Builder builder) {
         this.phones = builder.phones;
         this.requestId = builder.requestId;
         this.roomCode = builder.roomCode;
         this.scheduleConferenceId = builder.scheduleConferenceId;
         this.url = builder.url;
+        this.vendorRequestId = builder.vendorRequestId;
+        this.vendorType = builder.vendorType;
     }
 
     public static Builder builder() {
@@ -87,12 +95,28 @@ public class CreateScheduleConferenceResponseBody extends TeaModel {
         return this.url;
     }
 
+    /**
+     * @return vendorRequestId
+     */
+    public String getVendorRequestId() {
+        return this.vendorRequestId;
+    }
+
+    /**
+     * @return vendorType
+     */
+    public String getVendorType() {
+        return this.vendorType;
+    }
+
     public static final class Builder {
         private java.util.List<String> phones; 
         private String requestId; 
         private String roomCode; 
         private String scheduleConferenceId; 
         private String url; 
+        private String vendorRequestId; 
+        private String vendorType; 
 
         private Builder() {
         } 
@@ -103,6 +127,8 @@ public class CreateScheduleConferenceResponseBody extends TeaModel {
             this.roomCode = model.roomCode;
             this.scheduleConferenceId = model.scheduleConferenceId;
             this.url = model.url;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
         } 
 
         /**
@@ -145,6 +171,22 @@ public class CreateScheduleConferenceResponseBody extends TeaModel {
          */
         public Builder url(String url) {
             this.url = url;
+            return this;
+        }
+
+        /**
+         * vendorRequestId.
+         */
+        public Builder vendorRequestId(String vendorRequestId) {
+            this.vendorRequestId = vendorRequestId;
+            return this;
+        }
+
+        /**
+         * vendorType.
+         */
+        public Builder vendorType(String vendorType) {
+            this.vendorType = vendorType;
             return this;
         }
 

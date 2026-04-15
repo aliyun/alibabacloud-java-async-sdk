@@ -268,6 +268,123 @@ public class CreateScheduleConferenceRequest extends Request {
      *
      * <p>CreateScheduleConferenceRequest</p>
      */
+    public static class AiAgentSummarySetting extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowAllParticipantsStart")
+        private Integer allowAllParticipantsStart;
+
+        @com.aliyun.core.annotation.NameInMap("ReceiverType")
+        private Integer receiverType;
+
+        @com.aliyun.core.annotation.NameInMap("RestrictShareMinutesSummaryOnly")
+        private Integer restrictShareMinutesSummaryOnly;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private AiAgentSummarySetting(Builder builder) {
+            this.allowAllParticipantsStart = builder.allowAllParticipantsStart;
+            this.receiverType = builder.receiverType;
+            this.restrictShareMinutesSummaryOnly = builder.restrictShareMinutesSummaryOnly;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AiAgentSummarySetting create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowAllParticipantsStart
+         */
+        public Integer getAllowAllParticipantsStart() {
+            return this.allowAllParticipantsStart;
+        }
+
+        /**
+         * @return receiverType
+         */
+        public Integer getReceiverType() {
+            return this.receiverType;
+        }
+
+        /**
+         * @return restrictShareMinutesSummaryOnly
+         */
+        public Integer getRestrictShareMinutesSummaryOnly() {
+            return this.restrictShareMinutesSummaryOnly;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private Integer allowAllParticipantsStart; 
+            private Integer receiverType; 
+            private Integer restrictShareMinutesSummaryOnly; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AiAgentSummarySetting model) {
+                this.allowAllParticipantsStart = model.allowAllParticipantsStart;
+                this.receiverType = model.receiverType;
+                this.restrictShareMinutesSummaryOnly = model.restrictShareMinutesSummaryOnly;
+                this.value = model.value;
+            } 
+
+            /**
+             * AllowAllParticipantsStart.
+             */
+            public Builder allowAllParticipantsStart(Integer allowAllParticipantsStart) {
+                this.allowAllParticipantsStart = allowAllParticipantsStart;
+                return this;
+            }
+
+            /**
+             * ReceiverType.
+             */
+            public Builder receiverType(Integer receiverType) {
+                this.receiverType = receiverType;
+                return this;
+            }
+
+            /**
+             * RestrictShareMinutesSummaryOnly.
+             */
+            public Builder restrictShareMinutesSummaryOnly(Integer restrictShareMinutesSummaryOnly) {
+                this.restrictShareMinutesSummaryOnly = restrictShareMinutesSummaryOnly;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public AiAgentSummarySetting build() {
+                return new AiAgentSummarySetting(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateScheduleConferenceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateScheduleConferenceRequest</p>
+     */
     public static class MoziConfOpenRecordSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsFollowHost")
         private Boolean isFollowHost;
@@ -281,11 +398,15 @@ public class CreateScheduleConferenceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RecordAutoStartType")
         private Integer recordAutoStartType;
 
+        @com.aliyun.core.annotation.NameInMap("RestrictShareMinutesSummaryOnly")
+        private Integer restrictShareMinutesSummaryOnly;
+
         private MoziConfOpenRecordSetting(Builder builder) {
             this.isFollowHost = builder.isFollowHost;
             this.mode = builder.mode;
             this.recordAutoStart = builder.recordAutoStart;
             this.recordAutoStartType = builder.recordAutoStartType;
+            this.restrictShareMinutesSummaryOnly = builder.restrictShareMinutesSummaryOnly;
         }
 
         public static Builder builder() {
@@ -324,11 +445,19 @@ public class CreateScheduleConferenceRequest extends Request {
             return this.recordAutoStartType;
         }
 
+        /**
+         * @return restrictShareMinutesSummaryOnly
+         */
+        public Integer getRestrictShareMinutesSummaryOnly() {
+            return this.restrictShareMinutesSummaryOnly;
+        }
+
         public static final class Builder {
             private Boolean isFollowHost; 
             private String mode; 
             private Integer recordAutoStart; 
             private Integer recordAutoStartType; 
+            private Integer restrictShareMinutesSummaryOnly; 
 
             private Builder() {
             } 
@@ -338,6 +467,7 @@ public class CreateScheduleConferenceRequest extends Request {
                 this.mode = model.mode;
                 this.recordAutoStart = model.recordAutoStart;
                 this.recordAutoStartType = model.recordAutoStartType;
+                this.restrictShareMinutesSummaryOnly = model.restrictShareMinutesSummaryOnly;
             } 
 
             /**
@@ -369,6 +499,14 @@ public class CreateScheduleConferenceRequest extends Request {
              */
             public Builder recordAutoStartType(Integer recordAutoStartType) {
                 this.recordAutoStartType = recordAutoStartType;
+                return this;
+            }
+
+            /**
+             * RestrictShareMinutesSummaryOnly.
+             */
+            public Builder restrictShareMinutesSummaryOnly(Integer restrictShareMinutesSummaryOnly) {
+                this.restrictShareMinutesSummaryOnly = restrictShareMinutesSummaryOnly;
                 return this;
             }
 
@@ -491,6 +629,9 @@ public class CreateScheduleConferenceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("EnableWebAnonymousJoin")
         private Boolean enableWebAnonymousJoin;
 
+        @com.aliyun.core.annotation.NameInMap("HiddenOwnerNick")
+        private Boolean hiddenOwnerNick;
+
         @com.aliyun.core.annotation.NameInMap("JoinBeforeHost")
         private Integer joinBeforeHost;
 
@@ -502,6 +643,15 @@ public class CreateScheduleConferenceRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("MinutesOwnerUserId")
         private String minutesOwnerUserId;
+
+        @com.aliyun.core.annotation.NameInMap("MinutesSummaryDiyTemplateVersion")
+        private String minutesSummaryDiyTemplateVersion;
+
+        @com.aliyun.core.annotation.NameInMap("MinutesSummaryTemplateId")
+        private String minutesSummaryTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("MinutesSummaryTemplateType")
+        private String minutesSummaryTemplateType;
 
         @com.aliyun.core.annotation.NameInMap("MoziConfExtensionAppSettings")
         private java.util.List<MoziConfExtensionAppSettings> moziConfExtensionAppSettings;
@@ -522,10 +672,14 @@ public class CreateScheduleConferenceRequest extends Request {
             this.cloudRecordOwnerUserId = builder.cloudRecordOwnerUserId;
             this.enableChat = builder.enableChat;
             this.enableWebAnonymousJoin = builder.enableWebAnonymousJoin;
+            this.hiddenOwnerNick = builder.hiddenOwnerNick;
             this.joinBeforeHost = builder.joinBeforeHost;
             this.lockMediaStatusMicMute = builder.lockMediaStatusMicMute;
             this.lockNick = builder.lockNick;
             this.minutesOwnerUserId = builder.minutesOwnerUserId;
+            this.minutesSummaryDiyTemplateVersion = builder.minutesSummaryDiyTemplateVersion;
+            this.minutesSummaryTemplateId = builder.minutesSummaryTemplateId;
+            this.minutesSummaryTemplateType = builder.minutesSummaryTemplateType;
             this.moziConfExtensionAppSettings = builder.moziConfExtensionAppSettings;
             this.pushAllMeetingRecords = builder.pushAllMeetingRecords;
             this.pushCloudRecordCard = builder.pushCloudRecordCard;
@@ -563,6 +717,13 @@ public class CreateScheduleConferenceRequest extends Request {
         }
 
         /**
+         * @return hiddenOwnerNick
+         */
+        public Boolean getHiddenOwnerNick() {
+            return this.hiddenOwnerNick;
+        }
+
+        /**
          * @return joinBeforeHost
          */
         public Integer getJoinBeforeHost() {
@@ -588,6 +749,27 @@ public class CreateScheduleConferenceRequest extends Request {
          */
         public String getMinutesOwnerUserId() {
             return this.minutesOwnerUserId;
+        }
+
+        /**
+         * @return minutesSummaryDiyTemplateVersion
+         */
+        public String getMinutesSummaryDiyTemplateVersion() {
+            return this.minutesSummaryDiyTemplateVersion;
+        }
+
+        /**
+         * @return minutesSummaryTemplateId
+         */
+        public String getMinutesSummaryTemplateId() {
+            return this.minutesSummaryTemplateId;
+        }
+
+        /**
+         * @return minutesSummaryTemplateType
+         */
+        public String getMinutesSummaryTemplateType() {
+            return this.minutesSummaryTemplateType;
         }
 
         /**
@@ -629,10 +811,14 @@ public class CreateScheduleConferenceRequest extends Request {
             private String cloudRecordOwnerUserId; 
             private Integer enableChat; 
             private Boolean enableWebAnonymousJoin; 
+            private Boolean hiddenOwnerNick; 
             private Integer joinBeforeHost; 
             private Integer lockMediaStatusMicMute; 
             private Integer lockNick; 
             private String minutesOwnerUserId; 
+            private String minutesSummaryDiyTemplateVersion; 
+            private String minutesSummaryTemplateId; 
+            private String minutesSummaryTemplateType; 
             private java.util.List<MoziConfExtensionAppSettings> moziConfExtensionAppSettings; 
             private Boolean pushAllMeetingRecords; 
             private Boolean pushCloudRecordCard; 
@@ -646,10 +832,14 @@ public class CreateScheduleConferenceRequest extends Request {
                 this.cloudRecordOwnerUserId = model.cloudRecordOwnerUserId;
                 this.enableChat = model.enableChat;
                 this.enableWebAnonymousJoin = model.enableWebAnonymousJoin;
+                this.hiddenOwnerNick = model.hiddenOwnerNick;
                 this.joinBeforeHost = model.joinBeforeHost;
                 this.lockMediaStatusMicMute = model.lockMediaStatusMicMute;
                 this.lockNick = model.lockNick;
                 this.minutesOwnerUserId = model.minutesOwnerUserId;
+                this.minutesSummaryDiyTemplateVersion = model.minutesSummaryDiyTemplateVersion;
+                this.minutesSummaryTemplateId = model.minutesSummaryTemplateId;
+                this.minutesSummaryTemplateType = model.minutesSummaryTemplateType;
                 this.moziConfExtensionAppSettings = model.moziConfExtensionAppSettings;
                 this.pushAllMeetingRecords = model.pushAllMeetingRecords;
                 this.pushCloudRecordCard = model.pushCloudRecordCard;
@@ -682,6 +872,14 @@ public class CreateScheduleConferenceRequest extends Request {
             }
 
             /**
+             * HiddenOwnerNick.
+             */
+            public Builder hiddenOwnerNick(Boolean hiddenOwnerNick) {
+                this.hiddenOwnerNick = hiddenOwnerNick;
+                return this;
+            }
+
+            /**
              * JoinBeforeHost.
              */
             public Builder joinBeforeHost(Integer joinBeforeHost) {
@@ -710,6 +908,30 @@ public class CreateScheduleConferenceRequest extends Request {
              */
             public Builder minutesOwnerUserId(String minutesOwnerUserId) {
                 this.minutesOwnerUserId = minutesOwnerUserId;
+                return this;
+            }
+
+            /**
+             * MinutesSummaryDiyTemplateVersion.
+             */
+            public Builder minutesSummaryDiyTemplateVersion(String minutesSummaryDiyTemplateVersion) {
+                this.minutesSummaryDiyTemplateVersion = minutesSummaryDiyTemplateVersion;
+                return this;
+            }
+
+            /**
+             * MinutesSummaryTemplateId.
+             */
+            public Builder minutesSummaryTemplateId(String minutesSummaryTemplateId) {
+                this.minutesSummaryTemplateId = minutesSummaryTemplateId;
+                return this;
+            }
+
+            /**
+             * MinutesSummaryTemplateType.
+             */
+            public Builder minutesSummaryTemplateType(String minutesSummaryTemplateType) {
+                this.minutesSummaryTemplateType = minutesSummaryTemplateType;
                 return this;
             }
 
@@ -767,6 +989,9 @@ public class CreateScheduleConferenceRequest extends Request {
      * <p>CreateScheduleConferenceRequest</p>
      */
     public static class ScheduleConfSettingModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AiAgentSummarySetting")
+        private AiAgentSummarySetting aiAgentSummarySetting;
+
         @com.aliyun.core.annotation.NameInMap("CohostUserIds")
         private java.util.List<String> cohostUserIds;
 
@@ -792,6 +1017,7 @@ public class CreateScheduleConferenceRequest extends Request {
         private Integer screenShareForbidden;
 
         private ScheduleConfSettingModel(Builder builder) {
+            this.aiAgentSummarySetting = builder.aiAgentSummarySetting;
             this.cohostUserIds = builder.cohostUserIds;
             this.confAllowedCorpId = builder.confAllowedCorpId;
             this.hostUserId = builder.hostUserId;
@@ -808,6 +1034,13 @@ public class CreateScheduleConferenceRequest extends Request {
 
         public static ScheduleConfSettingModel create() {
             return builder().build();
+        }
+
+        /**
+         * @return aiAgentSummarySetting
+         */
+        public AiAgentSummarySetting getAiAgentSummarySetting() {
+            return this.aiAgentSummarySetting;
         }
 
         /**
@@ -867,6 +1100,7 @@ public class CreateScheduleConferenceRequest extends Request {
         }
 
         public static final class Builder {
+            private AiAgentSummarySetting aiAgentSummarySetting; 
             private java.util.List<String> cohostUserIds; 
             private String confAllowedCorpId; 
             private String hostUserId; 
@@ -880,6 +1114,7 @@ public class CreateScheduleConferenceRequest extends Request {
             } 
 
             private Builder(ScheduleConfSettingModel model) {
+                this.aiAgentSummarySetting = model.aiAgentSummarySetting;
                 this.cohostUserIds = model.cohostUserIds;
                 this.confAllowedCorpId = model.confAllowedCorpId;
                 this.hostUserId = model.hostUserId;
@@ -889,6 +1124,14 @@ public class CreateScheduleConferenceRequest extends Request {
                 this.muteOnJoin = model.muteOnJoin;
                 this.screenShareForbidden = model.screenShareForbidden;
             } 
+
+            /**
+             * AiAgentSummarySetting.
+             */
+            public Builder aiAgentSummarySetting(AiAgentSummarySetting aiAgentSummarySetting) {
+                this.aiAgentSummarySetting = aiAgentSummarySetting;
+                return this;
+            }
 
             /**
              * CohostUserIds.

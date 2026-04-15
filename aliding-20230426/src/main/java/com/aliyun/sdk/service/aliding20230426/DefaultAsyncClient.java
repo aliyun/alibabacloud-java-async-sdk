@@ -311,6 +311,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchQueryGroupMember  BatchQueryGroupMemberRequest
+     * @return BatchQueryGroupMemberResponse
+     */
+    @Override
+    public CompletableFuture<BatchQueryGroupMemberResponse> batchQueryGroupMember(BatchQueryGroupMemberRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchQueryGroupMember").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/im/batchQueryGroupMember").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchQueryGroupMemberResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchQueryGroupMemberResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BatchRemovalByFormInstanceIdList  BatchRemovalByFormInstanceIdListRequest
      * @return BatchRemovalByFormInstanceIdListResponse
      */
@@ -2565,6 +2583,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetRunningTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetScencegroupFileDownloadurl  GetScencegroupFileDownloadurlRequest
+     * @return GetScencegroupFileDownloadurlResponse
+     */
+    @Override
+    public CompletableFuture<GetScencegroupFileDownloadurlResponse> getScencegroupFileDownloadurl(GetScencegroupFileDownloadurlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetScencegroupFileDownloadurl").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/im/getScencegroupFileDownloadurl").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetScencegroupFileDownloadurlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetScencegroupFileDownloadurlResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
