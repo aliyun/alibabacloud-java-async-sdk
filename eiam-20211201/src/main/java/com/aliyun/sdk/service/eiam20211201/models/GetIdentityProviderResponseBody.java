@@ -580,6 +580,102 @@ public class GetIdentityProviderResponseBody extends TeaModel {
      *
      * <p>GetIdentityProviderResponseBody</p>
      */
+    public static class EndpointMetadata extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SamlAcsEndpoint")
+        private String samlAcsEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("SamlEntityId")
+        private String samlEntityId;
+
+        @com.aliyun.core.annotation.NameInMap("SamlMetaEndpoint")
+        private String samlMetaEndpoint;
+
+        private EndpointMetadata(Builder builder) {
+            this.samlAcsEndpoint = builder.samlAcsEndpoint;
+            this.samlEntityId = builder.samlEntityId;
+            this.samlMetaEndpoint = builder.samlMetaEndpoint;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EndpointMetadata create() {
+            return builder().build();
+        }
+
+        /**
+         * @return samlAcsEndpoint
+         */
+        public String getSamlAcsEndpoint() {
+            return this.samlAcsEndpoint;
+        }
+
+        /**
+         * @return samlEntityId
+         */
+        public String getSamlEntityId() {
+            return this.samlEntityId;
+        }
+
+        /**
+         * @return samlMetaEndpoint
+         */
+        public String getSamlMetaEndpoint() {
+            return this.samlMetaEndpoint;
+        }
+
+        public static final class Builder {
+            private String samlAcsEndpoint; 
+            private String samlEntityId; 
+            private String samlMetaEndpoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndpointMetadata model) {
+                this.samlAcsEndpoint = model.samlAcsEndpoint;
+                this.samlEntityId = model.samlEntityId;
+                this.samlMetaEndpoint = model.samlMetaEndpoint;
+            } 
+
+            /**
+             * SamlAcsEndpoint.
+             */
+            public Builder samlAcsEndpoint(String samlAcsEndpoint) {
+                this.samlAcsEndpoint = samlAcsEndpoint;
+                return this;
+            }
+
+            /**
+             * SamlEntityId.
+             */
+            public Builder samlEntityId(String samlEntityId) {
+                this.samlEntityId = samlEntityId;
+                return this;
+            }
+
+            /**
+             * SamlMetaEndpoint.
+             */
+            public Builder samlMetaEndpoint(String samlMetaEndpoint) {
+                this.samlMetaEndpoint = samlMetaEndpoint;
+                return this;
+            }
+
+            public EndpointMetadata build() {
+                return new EndpointMetadata(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetIdentityProviderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIdentityProviderResponseBody</p>
+     */
     public static class LarkConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -1384,6 +1480,315 @@ public class GetIdentityProviderResponseBody extends TeaModel {
      *
      * <p>GetIdentityProviderResponseBody</p>
      */
+    public static class CertificateMetadata extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NotAfter")
+        private Long notAfter;
+
+        @com.aliyun.core.annotation.NameInMap("NotBefore")
+        private Long notBefore;
+
+        private CertificateMetadata(Builder builder) {
+            this.notAfter = builder.notAfter;
+            this.notBefore = builder.notBefore;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CertificateMetadata create() {
+            return builder().build();
+        }
+
+        /**
+         * @return notAfter
+         */
+        public Long getNotAfter() {
+            return this.notAfter;
+        }
+
+        /**
+         * @return notBefore
+         */
+        public Long getNotBefore() {
+            return this.notBefore;
+        }
+
+        public static final class Builder {
+            private Long notAfter; 
+            private Long notBefore; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertificateMetadata model) {
+                this.notAfter = model.notAfter;
+                this.notBefore = model.notBefore;
+            } 
+
+            /**
+             * NotAfter.
+             */
+            public Builder notAfter(Long notAfter) {
+                this.notAfter = notAfter;
+                return this;
+            }
+
+            /**
+             * NotBefore.
+             */
+            public Builder notBefore(Long notBefore) {
+                this.notBefore = notBefore;
+                return this;
+            }
+
+            public CertificateMetadata build() {
+                return new CertificateMetadata(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetIdentityProviderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIdentityProviderResponseBody</p>
+     */
+    public static class Certificates extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CertificateMetadata")
+        private CertificateMetadata certificateMetadata;
+
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        private Certificates(Builder builder) {
+            this.certificateMetadata = builder.certificateMetadata;
+            this.content = builder.content;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Certificates create() {
+            return builder().build();
+        }
+
+        /**
+         * @return certificateMetadata
+         */
+        public CertificateMetadata getCertificateMetadata() {
+            return this.certificateMetadata;
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        public static final class Builder {
+            private CertificateMetadata certificateMetadata; 
+            private String content; 
+
+            private Builder() {
+            } 
+
+            private Builder(Certificates model) {
+                this.certificateMetadata = model.certificateMetadata;
+                this.content = model.content;
+            } 
+
+            /**
+             * CertificateMetadata.
+             */
+            public Builder certificateMetadata(CertificateMetadata certificateMetadata) {
+                this.certificateMetadata = certificateMetadata;
+                return this;
+            }
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            public Certificates build() {
+                return new Certificates(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetIdentityProviderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIdentityProviderResponseBody</p>
+     */
+    public static class SamlConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BindingMethod")
+        private String bindingMethod;
+
+        @com.aliyun.core.annotation.NameInMap("Certificates")
+        private java.util.List<Certificates> certificates;
+
+        @com.aliyun.core.annotation.NameInMap("IdPEntityId")
+        private String idPEntityId;
+
+        @com.aliyun.core.annotation.NameInMap("IdPSsoUrl")
+        private String idPSsoUrl;
+
+        @com.aliyun.core.annotation.NameInMap("MaxClockSkew")
+        private Long maxClockSkew;
+
+        @com.aliyun.core.annotation.NameInMap("RequireRequestSigned")
+        private Boolean requireRequestSigned;
+
+        private SamlConfig(Builder builder) {
+            this.bindingMethod = builder.bindingMethod;
+            this.certificates = builder.certificates;
+            this.idPEntityId = builder.idPEntityId;
+            this.idPSsoUrl = builder.idPSsoUrl;
+            this.maxClockSkew = builder.maxClockSkew;
+            this.requireRequestSigned = builder.requireRequestSigned;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SamlConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bindingMethod
+         */
+        public String getBindingMethod() {
+            return this.bindingMethod;
+        }
+
+        /**
+         * @return certificates
+         */
+        public java.util.List<Certificates> getCertificates() {
+            return this.certificates;
+        }
+
+        /**
+         * @return idPEntityId
+         */
+        public String getIdPEntityId() {
+            return this.idPEntityId;
+        }
+
+        /**
+         * @return idPSsoUrl
+         */
+        public String getIdPSsoUrl() {
+            return this.idPSsoUrl;
+        }
+
+        /**
+         * @return maxClockSkew
+         */
+        public Long getMaxClockSkew() {
+            return this.maxClockSkew;
+        }
+
+        /**
+         * @return requireRequestSigned
+         */
+        public Boolean getRequireRequestSigned() {
+            return this.requireRequestSigned;
+        }
+
+        public static final class Builder {
+            private String bindingMethod; 
+            private java.util.List<Certificates> certificates; 
+            private String idPEntityId; 
+            private String idPSsoUrl; 
+            private Long maxClockSkew; 
+            private Boolean requireRequestSigned; 
+
+            private Builder() {
+            } 
+
+            private Builder(SamlConfig model) {
+                this.bindingMethod = model.bindingMethod;
+                this.certificates = model.certificates;
+                this.idPEntityId = model.idPEntityId;
+                this.idPSsoUrl = model.idPSsoUrl;
+                this.maxClockSkew = model.maxClockSkew;
+                this.requireRequestSigned = model.requireRequestSigned;
+            } 
+
+            /**
+             * BindingMethod.
+             */
+            public Builder bindingMethod(String bindingMethod) {
+                this.bindingMethod = bindingMethod;
+                return this;
+            }
+
+            /**
+             * Certificates.
+             */
+            public Builder certificates(java.util.List<Certificates> certificates) {
+                this.certificates = certificates;
+                return this;
+            }
+
+            /**
+             * IdPEntityId.
+             */
+            public Builder idPEntityId(String idPEntityId) {
+                this.idPEntityId = idPEntityId;
+                return this;
+            }
+
+            /**
+             * IdPSsoUrl.
+             */
+            public Builder idPSsoUrl(String idPSsoUrl) {
+                this.idPSsoUrl = idPSsoUrl;
+                return this;
+            }
+
+            /**
+             * MaxClockSkew.
+             */
+            public Builder maxClockSkew(Long maxClockSkew) {
+                this.maxClockSkew = maxClockSkew;
+                return this;
+            }
+
+            /**
+             * RequireRequestSigned.
+             */
+            public Builder requireRequestSigned(Boolean requireRequestSigned) {
+                this.requireRequestSigned = requireRequestSigned;
+                return this;
+            }
+
+            public SamlConfig build() {
+                return new SamlConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetIdentityProviderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIdentityProviderResponseBody</p>
+     */
     public static class UdSyncScopeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceScopes")
         private java.util.List<String> sourceScopes;
@@ -1900,6 +2305,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DingtalkProvisioningConfig")
         private DingtalkProvisioningConfig dingtalkProvisioningConfig;
 
+        @com.aliyun.core.annotation.NameInMap("EndpointMetadata")
+        private EndpointMetadata endpointMetadata;
+
         @com.aliyun.core.annotation.NameInMap("IdentityProviderExternalId")
         private String identityProviderExternalId;
 
@@ -1936,6 +2344,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OidcConfig")
         private OidcConfig oidcConfig;
 
+        @com.aliyun.core.annotation.NameInMap("SamlConfig")
+        private SamlConfig samlConfig;
+
         @com.aliyun.core.annotation.NameInMap("UdPullConfig")
         private UdPullConfig udPullConfig;
 
@@ -1963,6 +2374,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             this.description = builder.description;
             this.dingtalkAppConfig = builder.dingtalkAppConfig;
             this.dingtalkProvisioningConfig = builder.dingtalkProvisioningConfig;
+            this.endpointMetadata = builder.endpointMetadata;
             this.identityProviderExternalId = builder.identityProviderExternalId;
             this.identityProviderId = builder.identityProviderId;
             this.identityProviderName = builder.identityProviderName;
@@ -1975,6 +2387,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             this.logoUrl = builder.logoUrl;
             this.networkAccessEndpointId = builder.networkAccessEndpointId;
             this.oidcConfig = builder.oidcConfig;
+            this.samlConfig = builder.samlConfig;
             this.udPullConfig = builder.udPullConfig;
             this.udPullStatus = builder.udPullStatus;
             this.udPushConfig = builder.udPushConfig;
@@ -2045,6 +2458,13 @@ public class GetIdentityProviderResponseBody extends TeaModel {
          */
         public DingtalkProvisioningConfig getDingtalkProvisioningConfig() {
             return this.dingtalkProvisioningConfig;
+        }
+
+        /**
+         * @return endpointMetadata
+         */
+        public EndpointMetadata getEndpointMetadata() {
+            return this.endpointMetadata;
         }
 
         /**
@@ -2132,6 +2552,13 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
+         * @return samlConfig
+         */
+        public SamlConfig getSamlConfig() {
+            return this.samlConfig;
+        }
+
+        /**
          * @return udPullConfig
          */
         public UdPullConfig getUdPullConfig() {
@@ -2182,6 +2609,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             private String description; 
             private DingtalkAppConfig dingtalkAppConfig; 
             private DingtalkProvisioningConfig dingtalkProvisioningConfig; 
+            private EndpointMetadata endpointMetadata; 
             private String identityProviderExternalId; 
             private String identityProviderId; 
             private String identityProviderName; 
@@ -2194,6 +2622,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             private String logoUrl; 
             private String networkAccessEndpointId; 
             private OidcConfig oidcConfig; 
+            private SamlConfig samlConfig; 
             private UdPullConfig udPullConfig; 
             private String udPullStatus; 
             private UdPushConfig udPushConfig; 
@@ -2213,6 +2642,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
                 this.description = model.description;
                 this.dingtalkAppConfig = model.dingtalkAppConfig;
                 this.dingtalkProvisioningConfig = model.dingtalkProvisioningConfig;
+                this.endpointMetadata = model.endpointMetadata;
                 this.identityProviderExternalId = model.identityProviderExternalId;
                 this.identityProviderId = model.identityProviderId;
                 this.identityProviderName = model.identityProviderName;
@@ -2225,6 +2655,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
                 this.logoUrl = model.logoUrl;
                 this.networkAccessEndpointId = model.networkAccessEndpointId;
                 this.oidcConfig = model.oidcConfig;
+                this.samlConfig = model.samlConfig;
                 this.udPullConfig = model.udPullConfig;
                 this.udPullStatus = model.udPullStatus;
                 this.udPushConfig = model.udPushConfig;
@@ -2324,6 +2755,14 @@ public class GetIdentityProviderResponseBody extends TeaModel {
              */
             public Builder dingtalkProvisioningConfig(DingtalkProvisioningConfig dingtalkProvisioningConfig) {
                 this.dingtalkProvisioningConfig = dingtalkProvisioningConfig;
+                return this;
+            }
+
+            /**
+             * EndpointMetadata.
+             */
+            public Builder endpointMetadata(EndpointMetadata endpointMetadata) {
+                this.endpointMetadata = endpointMetadata;
                 return this;
             }
 
@@ -2447,6 +2886,14 @@ public class GetIdentityProviderResponseBody extends TeaModel {
              */
             public Builder oidcConfig(OidcConfig oidcConfig) {
                 this.oidcConfig = oidcConfig;
+                return this;
+            }
+
+            /**
+             * SamlConfig.
+             */
+            public Builder samlConfig(SamlConfig samlConfig) {
+                this.samlConfig = samlConfig;
                 return this;
             }
 

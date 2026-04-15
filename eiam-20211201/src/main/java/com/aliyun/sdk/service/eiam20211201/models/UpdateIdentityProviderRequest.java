@@ -64,6 +64,10 @@ public class UpdateIdentityProviderRequest extends Request {
     private OidcConfig oidcConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SamlConfig")
+    private SamlConfig samlConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WeComConfig")
     private WeComConfig weComConfig;
 
@@ -80,6 +84,7 @@ public class UpdateIdentityProviderRequest extends Request {
         this.logoUrl = builder.logoUrl;
         this.networkAccessEndpointId = builder.networkAccessEndpointId;
         this.oidcConfig = builder.oidcConfig;
+        this.samlConfig = builder.samlConfig;
         this.weComConfig = builder.weComConfig;
     }
 
@@ -174,6 +179,13 @@ public class UpdateIdentityProviderRequest extends Request {
     }
 
     /**
+     * @return samlConfig
+     */
+    public SamlConfig getSamlConfig() {
+        return this.samlConfig;
+    }
+
+    /**
      * @return weComConfig
      */
     public WeComConfig getWeComConfig() {
@@ -192,6 +204,7 @@ public class UpdateIdentityProviderRequest extends Request {
         private String logoUrl; 
         private String networkAccessEndpointId; 
         private OidcConfig oidcConfig; 
+        private SamlConfig samlConfig; 
         private WeComConfig weComConfig; 
 
         private Builder() {
@@ -211,6 +224,7 @@ public class UpdateIdentityProviderRequest extends Request {
             this.logoUrl = request.logoUrl;
             this.networkAccessEndpointId = request.networkAccessEndpointId;
             this.oidcConfig = request.oidcConfig;
+            this.samlConfig = request.samlConfig;
             this.weComConfig = request.weComConfig;
         } 
 
@@ -324,6 +338,15 @@ public class UpdateIdentityProviderRequest extends Request {
         public Builder oidcConfig(OidcConfig oidcConfig) {
             this.putQueryParameter("OidcConfig", oidcConfig);
             this.oidcConfig = oidcConfig;
+            return this;
+        }
+
+        /**
+         * SamlConfig.
+         */
+        public Builder samlConfig(SamlConfig samlConfig) {
+            this.putQueryParameter("SamlConfig", samlConfig);
+            this.samlConfig = samlConfig;
             return this;
         }
 
@@ -1229,6 +1252,219 @@ public class UpdateIdentityProviderRequest extends Request {
 
             public OidcConfig build() {
                 return new OidcConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateIdentityProviderRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateIdentityProviderRequest</p>
+     */
+    public static class Certificates extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        private Certificates(Builder builder) {
+            this.content = builder.content;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Certificates create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        public static final class Builder {
+            private String content; 
+
+            private Builder() {
+            } 
+
+            private Builder(Certificates model) {
+                this.content = model.content;
+            } 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            public Certificates build() {
+                return new Certificates(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateIdentityProviderRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateIdentityProviderRequest</p>
+     */
+    public static class SamlConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BindingMethod")
+        private String bindingMethod;
+
+        @com.aliyun.core.annotation.NameInMap("Certificates")
+        private java.util.List<Certificates> certificates;
+
+        @com.aliyun.core.annotation.NameInMap("IdPEntityId")
+        private String idPEntityId;
+
+        @com.aliyun.core.annotation.NameInMap("IdPSsoUrl")
+        private String idPSsoUrl;
+
+        @com.aliyun.core.annotation.NameInMap("MaxClockSkew")
+        private Long maxClockSkew;
+
+        @com.aliyun.core.annotation.NameInMap("RequireRequestSigned")
+        private Boolean requireRequestSigned;
+
+        private SamlConfig(Builder builder) {
+            this.bindingMethod = builder.bindingMethod;
+            this.certificates = builder.certificates;
+            this.idPEntityId = builder.idPEntityId;
+            this.idPSsoUrl = builder.idPSsoUrl;
+            this.maxClockSkew = builder.maxClockSkew;
+            this.requireRequestSigned = builder.requireRequestSigned;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SamlConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bindingMethod
+         */
+        public String getBindingMethod() {
+            return this.bindingMethod;
+        }
+
+        /**
+         * @return certificates
+         */
+        public java.util.List<Certificates> getCertificates() {
+            return this.certificates;
+        }
+
+        /**
+         * @return idPEntityId
+         */
+        public String getIdPEntityId() {
+            return this.idPEntityId;
+        }
+
+        /**
+         * @return idPSsoUrl
+         */
+        public String getIdPSsoUrl() {
+            return this.idPSsoUrl;
+        }
+
+        /**
+         * @return maxClockSkew
+         */
+        public Long getMaxClockSkew() {
+            return this.maxClockSkew;
+        }
+
+        /**
+         * @return requireRequestSigned
+         */
+        public Boolean getRequireRequestSigned() {
+            return this.requireRequestSigned;
+        }
+
+        public static final class Builder {
+            private String bindingMethod; 
+            private java.util.List<Certificates> certificates; 
+            private String idPEntityId; 
+            private String idPSsoUrl; 
+            private Long maxClockSkew; 
+            private Boolean requireRequestSigned; 
+
+            private Builder() {
+            } 
+
+            private Builder(SamlConfig model) {
+                this.bindingMethod = model.bindingMethod;
+                this.certificates = model.certificates;
+                this.idPEntityId = model.idPEntityId;
+                this.idPSsoUrl = model.idPSsoUrl;
+                this.maxClockSkew = model.maxClockSkew;
+                this.requireRequestSigned = model.requireRequestSigned;
+            } 
+
+            /**
+             * BindingMethod.
+             */
+            public Builder bindingMethod(String bindingMethod) {
+                this.bindingMethod = bindingMethod;
+                return this;
+            }
+
+            /**
+             * Certificates.
+             */
+            public Builder certificates(java.util.List<Certificates> certificates) {
+                this.certificates = certificates;
+                return this;
+            }
+
+            /**
+             * IdPEntityId.
+             */
+            public Builder idPEntityId(String idPEntityId) {
+                this.idPEntityId = idPEntityId;
+                return this;
+            }
+
+            /**
+             * IdPSsoUrl.
+             */
+            public Builder idPSsoUrl(String idPSsoUrl) {
+                this.idPSsoUrl = idPSsoUrl;
+                return this;
+            }
+
+            /**
+             * MaxClockSkew.
+             */
+            public Builder maxClockSkew(Long maxClockSkew) {
+                this.maxClockSkew = maxClockSkew;
+                return this;
+            }
+
+            /**
+             * RequireRequestSigned.
+             */
+            public Builder requireRequestSigned(Boolean requireRequestSigned) {
+                this.requireRequestSigned = requireRequestSigned;
+                return this;
+            }
+
+            public SamlConfig build() {
+                return new SamlConfig(this);
             } 
 
         } 

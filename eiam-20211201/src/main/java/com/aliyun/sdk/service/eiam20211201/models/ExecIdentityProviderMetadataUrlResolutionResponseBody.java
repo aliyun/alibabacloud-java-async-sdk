@@ -247,12 +247,166 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
      *
      * <p>ExecIdentityProviderMetadataUrlResolutionResponseBody</p>
      */
+    public static class Certificates extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        private Certificates(Builder builder) {
+            this.content = builder.content;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Certificates create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        public static final class Builder {
+            private String content; 
+
+            private Builder() {
+            } 
+
+            private Builder(Certificates model) {
+                this.content = model.content;
+            } 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            public Certificates build() {
+                return new Certificates(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ExecIdentityProviderMetadataUrlResolutionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecIdentityProviderMetadataUrlResolutionResponseBody</p>
+     */
+    public static class SamlMetadataConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Certificates")
+        private java.util.List<Certificates> certificates;
+
+        @com.aliyun.core.annotation.NameInMap("IdPEntityId")
+        private String idPEntityId;
+
+        @com.aliyun.core.annotation.NameInMap("IdPSsoUrl")
+        private String idPSsoUrl;
+
+        private SamlMetadataConfiguration(Builder builder) {
+            this.certificates = builder.certificates;
+            this.idPEntityId = builder.idPEntityId;
+            this.idPSsoUrl = builder.idPSsoUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SamlMetadataConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return certificates
+         */
+        public java.util.List<Certificates> getCertificates() {
+            return this.certificates;
+        }
+
+        /**
+         * @return idPEntityId
+         */
+        public String getIdPEntityId() {
+            return this.idPEntityId;
+        }
+
+        /**
+         * @return idPSsoUrl
+         */
+        public String getIdPSsoUrl() {
+            return this.idPSsoUrl;
+        }
+
+        public static final class Builder {
+            private java.util.List<Certificates> certificates; 
+            private String idPEntityId; 
+            private String idPSsoUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(SamlMetadataConfiguration model) {
+                this.certificates = model.certificates;
+                this.idPEntityId = model.idPEntityId;
+                this.idPSsoUrl = model.idPSsoUrl;
+            } 
+
+            /**
+             * Certificates.
+             */
+            public Builder certificates(java.util.List<Certificates> certificates) {
+                this.certificates = certificates;
+                return this;
+            }
+
+            /**
+             * IdPEntityId.
+             */
+            public Builder idPEntityId(String idPEntityId) {
+                this.idPEntityId = idPEntityId;
+                return this;
+            }
+
+            /**
+             * IdPSsoUrl.
+             */
+            public Builder idPSsoUrl(String idPSsoUrl) {
+                this.idPSsoUrl = idPSsoUrl;
+                return this;
+            }
+
+            public SamlMetadataConfiguration build() {
+                return new SamlMetadataConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ExecIdentityProviderMetadataUrlResolutionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecIdentityProviderMetadataUrlResolutionResponseBody</p>
+     */
     public static class IdentityProviderMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OidcOpenIdConfiguration")
         private OidcOpenIdConfiguration oidcOpenIdConfiguration;
 
+        @com.aliyun.core.annotation.NameInMap("SamlMetadataConfiguration")
+        private SamlMetadataConfiguration samlMetadataConfiguration;
+
         private IdentityProviderMetadata(Builder builder) {
             this.oidcOpenIdConfiguration = builder.oidcOpenIdConfiguration;
+            this.samlMetadataConfiguration = builder.samlMetadataConfiguration;
         }
 
         public static Builder builder() {
@@ -270,14 +424,23 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             return this.oidcOpenIdConfiguration;
         }
 
+        /**
+         * @return samlMetadataConfiguration
+         */
+        public SamlMetadataConfiguration getSamlMetadataConfiguration() {
+            return this.samlMetadataConfiguration;
+        }
+
         public static final class Builder {
             private OidcOpenIdConfiguration oidcOpenIdConfiguration; 
+            private SamlMetadataConfiguration samlMetadataConfiguration; 
 
             private Builder() {
             } 
 
             private Builder(IdentityProviderMetadata model) {
                 this.oidcOpenIdConfiguration = model.oidcOpenIdConfiguration;
+                this.samlMetadataConfiguration = model.samlMetadataConfiguration;
             } 
 
             /**
@@ -285,6 +448,14 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
              */
             public Builder oidcOpenIdConfiguration(OidcOpenIdConfiguration oidcOpenIdConfiguration) {
                 this.oidcOpenIdConfiguration = oidcOpenIdConfiguration;
+                return this;
+            }
+
+            /**
+             * SamlMetadataConfiguration.
+             */
+            public Builder samlMetadataConfiguration(SamlMetadataConfiguration samlMetadataConfiguration) {
+                this.samlMetadataConfiguration = samlMetadataConfiguration;
                 return this;
             }
 

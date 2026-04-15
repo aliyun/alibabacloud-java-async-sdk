@@ -36,8 +36,12 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OidcIssuer")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 512)
+    @com.aliyun.core.annotation.Validation(maxLength = 512)
     private String oidcIssuer;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SamlMetadataUrl")
+    private String samlMetadataUrl;
 
     private ExecIdentityProviderMetadataUrlResolutionRequest(Builder builder) {
         super(builder);
@@ -46,6 +50,7 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends Request {
         this.instanceId = builder.instanceId;
         this.networkAccessEndpointId = builder.networkAccessEndpointId;
         this.oidcIssuer = builder.oidcIssuer;
+        this.samlMetadataUrl = builder.samlMetadataUrl;
     }
 
     public static Builder builder() {
@@ -96,12 +101,20 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends Request {
         return this.oidcIssuer;
     }
 
+    /**
+     * @return samlMetadataUrl
+     */
+    public String getSamlMetadataUrl() {
+        return this.samlMetadataUrl;
+    }
+
     public static final class Builder extends Request.Builder<ExecIdentityProviderMetadataUrlResolutionRequest, Builder> {
         private String regionId; 
         private String identityProviderId; 
         private String instanceId; 
         private String networkAccessEndpointId; 
         private String oidcIssuer; 
+        private String samlMetadataUrl; 
 
         private Builder() {
             super();
@@ -114,6 +127,7 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends Request {
             this.instanceId = request.instanceId;
             this.networkAccessEndpointId = request.networkAccessEndpointId;
             this.oidcIssuer = request.oidcIssuer;
+            this.samlMetadataUrl = request.samlMetadataUrl;
         } 
 
         /**
@@ -158,7 +172,6 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends Request {
 
         /**
          * <p>OIDC Issuer地址。</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://login.example.com/.well-known/openid-configuration">https://login.example.com/.well-known/openid-configuration</a></p>
@@ -166,6 +179,15 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends Request {
         public Builder oidcIssuer(String oidcIssuer) {
             this.putQueryParameter("OidcIssuer", oidcIssuer);
             this.oidcIssuer = oidcIssuer;
+            return this;
+        }
+
+        /**
+         * SamlMetadataUrl.
+         */
+        public Builder samlMetadataUrl(String samlMetadataUrl) {
+            this.putQueryParameter("SamlMetadataUrl", samlMetadataUrl);
+            this.samlMetadataUrl = samlMetadataUrl;
             return this;
         }
 
