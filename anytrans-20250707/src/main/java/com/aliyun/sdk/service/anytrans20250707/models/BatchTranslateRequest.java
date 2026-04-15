@@ -566,6 +566,9 @@ public class BatchTranslateRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("examples")
         private java.util.List<Examples> examples;
 
+        @com.aliyun.core.annotation.NameInMap("langDetect")
+        private Boolean langDetect;
+
         @com.aliyun.core.annotation.NameInMap("paramMap")
         private Object paramMap;
 
@@ -582,6 +585,7 @@ public class BatchTranslateRequest extends Request {
             this.config = builder.config;
             this.domainHint = builder.domainHint;
             this.examples = builder.examples;
+            this.langDetect = builder.langDetect;
             this.paramMap = builder.paramMap;
             this.sensitives = builder.sensitives;
             this.terminologies = builder.terminologies;
@@ -618,6 +622,13 @@ public class BatchTranslateRequest extends Request {
         }
 
         /**
+         * @return langDetect
+         */
+        public Boolean getLangDetect() {
+            return this.langDetect;
+        }
+
+        /**
          * @return paramMap
          */
         public Object getParamMap() {
@@ -649,6 +660,7 @@ public class BatchTranslateRequest extends Request {
             private Config config; 
             private String domainHint; 
             private java.util.List<Examples> examples; 
+            private Boolean langDetect; 
             private Object paramMap; 
             private java.util.List<String> sensitives; 
             private java.util.List<Terminologies> terminologies; 
@@ -661,6 +673,7 @@ public class BatchTranslateRequest extends Request {
                 this.config = model.config;
                 this.domainHint = model.domainHint;
                 this.examples = model.examples;
+                this.langDetect = model.langDetect;
                 this.paramMap = model.paramMap;
                 this.sensitives = model.sensitives;
                 this.terminologies = model.terminologies;
@@ -688,6 +701,14 @@ public class BatchTranslateRequest extends Request {
              */
             public Builder examples(java.util.List<Examples> examples) {
                 this.examples = examples;
+                return this;
+            }
+
+            /**
+             * langDetect.
+             */
+            public Builder langDetect(Boolean langDetect) {
+                this.langDetect = langDetect;
                 return this;
             }
 

@@ -566,6 +566,9 @@ public class BatchTranslateForHtmlRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("examples")
         private java.util.List<Examples> examples;
 
+        @com.aliyun.core.annotation.NameInMap("langDetect")
+        private Boolean langDetect;
+
         @com.aliyun.core.annotation.NameInMap("sensitives")
         private java.util.List<String> sensitives;
 
@@ -579,6 +582,7 @@ public class BatchTranslateForHtmlRequest extends Request {
             this.config = builder.config;
             this.domainHint = builder.domainHint;
             this.examples = builder.examples;
+            this.langDetect = builder.langDetect;
             this.sensitives = builder.sensitives;
             this.terminologies = builder.terminologies;
             this.textTransform = builder.textTransform;
@@ -614,6 +618,13 @@ public class BatchTranslateForHtmlRequest extends Request {
         }
 
         /**
+         * @return langDetect
+         */
+        public Boolean getLangDetect() {
+            return this.langDetect;
+        }
+
+        /**
          * @return sensitives
          */
         public java.util.List<String> getSensitives() {
@@ -638,6 +649,7 @@ public class BatchTranslateForHtmlRequest extends Request {
             private Config config; 
             private String domainHint; 
             private java.util.List<Examples> examples; 
+            private Boolean langDetect; 
             private java.util.List<String> sensitives; 
             private java.util.List<Terminologies> terminologies; 
             private TextTransform textTransform; 
@@ -649,6 +661,7 @@ public class BatchTranslateForHtmlRequest extends Request {
                 this.config = model.config;
                 this.domainHint = model.domainHint;
                 this.examples = model.examples;
+                this.langDetect = model.langDetect;
                 this.sensitives = model.sensitives;
                 this.terminologies = model.terminologies;
                 this.textTransform = model.textTransform;
@@ -675,6 +688,14 @@ public class BatchTranslateForHtmlRequest extends Request {
              */
             public Builder examples(java.util.List<Examples> examples) {
                 this.examples = examples;
+                return this;
+            }
+
+            /**
+             * langDetect.
+             */
+            public Builder langDetect(Boolean langDetect) {
+                this.langDetect = langDetect;
                 return this;
             }
 
