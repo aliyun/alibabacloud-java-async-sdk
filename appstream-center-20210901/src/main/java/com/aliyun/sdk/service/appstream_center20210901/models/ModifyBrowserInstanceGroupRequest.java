@@ -31,12 +31,20 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
     private String cloudBrowserName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxAmount")
+    private Integer maxAmount;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Network")
     private Network network;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Policy")
     private Policy policy;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StoragePolicy")
+    private StoragePolicy storagePolicy;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Timers")
@@ -47,8 +55,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         this.browserConfig = builder.browserConfig;
         this.browserInstanceGroupId = builder.browserInstanceGroupId;
         this.cloudBrowserName = builder.cloudBrowserName;
+        this.maxAmount = builder.maxAmount;
         this.network = builder.network;
         this.policy = builder.policy;
+        this.storagePolicy = builder.storagePolicy;
         this.timers = builder.timers;
     }
 
@@ -87,6 +97,13 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return maxAmount
+     */
+    public Integer getMaxAmount() {
+        return this.maxAmount;
+    }
+
+    /**
      * @return network
      */
     public Network getNetwork() {
@@ -101,6 +118,13 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return storagePolicy
+     */
+    public StoragePolicy getStoragePolicy() {
+        return this.storagePolicy;
+    }
+
+    /**
      * @return timers
      */
     public java.util.List<Timers> getTimers() {
@@ -111,8 +135,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         private BrowserConfig browserConfig; 
         private String browserInstanceGroupId; 
         private String cloudBrowserName; 
+        private Integer maxAmount; 
         private Network network; 
         private Policy policy; 
+        private StoragePolicy storagePolicy; 
         private java.util.List<Timers> timers; 
 
         private Builder() {
@@ -124,8 +150,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             this.browserConfig = request.browserConfig;
             this.browserInstanceGroupId = request.browserInstanceGroupId;
             this.cloudBrowserName = request.cloudBrowserName;
+            this.maxAmount = request.maxAmount;
             this.network = request.network;
             this.policy = request.policy;
+            this.storagePolicy = request.storagePolicy;
             this.timers = request.timers;
         } 
 
@@ -165,6 +193,15 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
+         * MaxAmount.
+         */
+        public Builder maxAmount(Integer maxAmount) {
+            this.putBodyParameter("MaxAmount", maxAmount);
+            this.maxAmount = maxAmount;
+            return this;
+        }
+
+        /**
          * <p>The network configurations.</p>
          */
         public Builder network(Network network) {
@@ -181,6 +218,16 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             String policyShrink = shrink(policy, "Policy", "json");
             this.putQueryParameter("Policy", policyShrink);
             this.policy = policy;
+            return this;
+        }
+
+        /**
+         * StoragePolicy.
+         */
+        public Builder storagePolicy(StoragePolicy storagePolicy) {
+            String storagePolicyShrink = shrink(storagePolicy, "StoragePolicy", "json");
+            this.putBodyParameter("StoragePolicy", storagePolicyShrink);
+            this.storagePolicy = storagePolicy;
             return this;
         }
 
@@ -344,8 +391,14 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Bookmarks")
         private java.util.List<Bookmarks> bookmarks;
 
+        @com.aliyun.core.annotation.NameInMap("BookmarksFilePath")
+        private String bookmarksFilePath;
+
         @com.aliyun.core.annotation.NameInMap("BrowserParam")
         private String browserParam;
+
+        @com.aliyun.core.annotation.NameInMap("CookiesSync")
+        private String cookiesSync;
 
         @com.aliyun.core.annotation.NameInMap("Homepage")
         private String homepage;
@@ -355,7 +408,9 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
 
         private BrowserConfig(Builder builder) {
             this.bookmarks = builder.bookmarks;
+            this.bookmarksFilePath = builder.bookmarksFilePath;
             this.browserParam = builder.browserParam;
+            this.cookiesSync = builder.cookiesSync;
             this.homepage = builder.homepage;
             this.removeBookmarks = builder.removeBookmarks;
         }
@@ -376,10 +431,24 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
+         * @return bookmarksFilePath
+         */
+        public String getBookmarksFilePath() {
+            return this.bookmarksFilePath;
+        }
+
+        /**
          * @return browserParam
          */
         public String getBrowserParam() {
             return this.browserParam;
+        }
+
+        /**
+         * @return cookiesSync
+         */
+        public String getCookiesSync() {
+            return this.cookiesSync;
         }
 
         /**
@@ -398,7 +467,9 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
 
         public static final class Builder {
             private java.util.List<Bookmarks> bookmarks; 
+            private String bookmarksFilePath; 
             private String browserParam; 
+            private String cookiesSync; 
             private String homepage; 
             private java.util.List<String> removeBookmarks; 
 
@@ -407,7 +478,9 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
 
             private Builder(BrowserConfig model) {
                 this.bookmarks = model.bookmarks;
+                this.bookmarksFilePath = model.bookmarksFilePath;
                 this.browserParam = model.browserParam;
+                this.cookiesSync = model.cookiesSync;
                 this.homepage = model.homepage;
                 this.removeBookmarks = model.removeBookmarks;
             } 
@@ -421,6 +494,14 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
+             * BookmarksFilePath.
+             */
+            public Builder bookmarksFilePath(String bookmarksFilePath) {
+                this.bookmarksFilePath = bookmarksFilePath;
+                return this;
+            }
+
+            /**
              * <p>The startup parameter.</p>
              * 
              * <strong>example:</strong>
@@ -428,6 +509,14 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
              */
             public Builder browserParam(String browserParam) {
                 this.browserParam = browserParam;
+                return this;
+            }
+
+            /**
+             * CookiesSync.
+             */
+            public Builder cookiesSync(String cookiesSync) {
+                this.cookiesSync = cookiesSync;
                 return this;
             }
 
@@ -554,10 +643,14 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RestrictedURLs")
         private java.util.List<RestrictedURLs> restrictedURLs;
 
+        @com.aliyun.core.annotation.NameInMap("RestrictedURLsFilePath")
+        private String restrictedURLsFilePath;
+
         private Network(Builder builder) {
             this.accessRestriction = builder.accessRestriction;
             this.removeRestrictedURLIds = builder.removeRestrictedURLIds;
             this.restrictedURLs = builder.restrictedURLs;
+            this.restrictedURLsFilePath = builder.restrictedURLsFilePath;
         }
 
         public static Builder builder() {
@@ -589,10 +682,18 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             return this.restrictedURLs;
         }
 
+        /**
+         * @return restrictedURLsFilePath
+         */
+        public String getRestrictedURLsFilePath() {
+            return this.restrictedURLsFilePath;
+        }
+
         public static final class Builder {
             private String accessRestriction; 
             private java.util.List<String> removeRestrictedURLIds; 
             private java.util.List<RestrictedURLs> restrictedURLs; 
+            private String restrictedURLsFilePath; 
 
             private Builder() {
             } 
@@ -601,6 +702,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
                 this.accessRestriction = model.accessRestriction;
                 this.removeRestrictedURLIds = model.removeRestrictedURLIds;
                 this.restrictedURLs = model.restrictedURLs;
+                this.restrictedURLsFilePath = model.restrictedURLsFilePath;
             } 
 
             /**
@@ -631,6 +733,14 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
              */
             public Builder restrictedURLs(java.util.List<RestrictedURLs> restrictedURLs) {
                 this.restrictedURLs = restrictedURLs;
+                return this;
+            }
+
+            /**
+             * RestrictedURLsFilePath.
+             */
+            public Builder restrictedURLsFilePath(String restrictedURLsFilePath) {
+                this.restrictedURLsFilePath = restrictedURLsFilePath;
                 return this;
             }
 
@@ -1340,6 +1450,114 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
 
             public Policy build() {
                 return new Policy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyBrowserInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyBrowserInstanceGroupRequest</p>
+     */
+    public static class UserProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("UserProfileSwitch")
+        private Boolean userProfileSwitch;
+
+        private UserProfile(Builder builder) {
+            this.userProfileSwitch = builder.userProfileSwitch;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserProfile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return userProfileSwitch
+         */
+        public Boolean getUserProfileSwitch() {
+            return this.userProfileSwitch;
+        }
+
+        public static final class Builder {
+            private Boolean userProfileSwitch; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserProfile model) {
+                this.userProfileSwitch = model.userProfileSwitch;
+            } 
+
+            /**
+             * UserProfileSwitch.
+             */
+            public Builder userProfileSwitch(Boolean userProfileSwitch) {
+                this.userProfileSwitch = userProfileSwitch;
+                return this;
+            }
+
+            public UserProfile build() {
+                return new UserProfile(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyBrowserInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyBrowserInstanceGroupRequest</p>
+     */
+    public static class StoragePolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("UserProfile")
+        private UserProfile userProfile;
+
+        private StoragePolicy(Builder builder) {
+            this.userProfile = builder.userProfile;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StoragePolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return userProfile
+         */
+        public UserProfile getUserProfile() {
+            return this.userProfile;
+        }
+
+        public static final class Builder {
+            private UserProfile userProfile; 
+
+            private Builder() {
+            } 
+
+            private Builder(StoragePolicy model) {
+                this.userProfile = model.userProfile;
+            } 
+
+            /**
+             * UserProfile.
+             */
+            public Builder userProfile(UserProfile userProfile) {
+                this.userProfile = userProfile;
+                return this;
+            }
+
+            public StoragePolicy build() {
+                return new StoragePolicy(this);
             } 
 
         } 
