@@ -23,6 +23,9 @@ public class JobSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AutoScalingSpec")
     private AutoScalingSpec autoScalingSpec;
 
+    @com.aliyun.core.annotation.NameInMap("ConsiderInSuccessPolicy")
+    private Boolean considerInSuccessPolicy;
+
     @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
@@ -79,6 +82,7 @@ public class JobSpec extends TeaModel {
     private JobSpec(Builder builder) {
         this.assignNodeSpec = builder.assignNodeSpec;
         this.autoScalingSpec = builder.autoScalingSpec;
+        this.considerInSuccessPolicy = builder.considerInSuccessPolicy;
         this.ecsSpec = builder.ecsSpec;
         this.extraPodSpec = builder.extraPodSpec;
         this.image = builder.image;
@@ -122,6 +126,13 @@ public class JobSpec extends TeaModel {
      */
     public AutoScalingSpec getAutoScalingSpec() {
         return this.autoScalingSpec;
+    }
+
+    /**
+     * @return considerInSuccessPolicy
+     */
+    public Boolean getConsiderInSuccessPolicy() {
+        return this.considerInSuccessPolicy;
     }
 
     /**
@@ -246,6 +257,7 @@ public class JobSpec extends TeaModel {
     public static final class Builder {
         private AssignNodeSpec assignNodeSpec; 
         private AutoScalingSpec autoScalingSpec; 
+        private Boolean considerInSuccessPolicy; 
         private String ecsSpec; 
         private ExtraPodSpec extraPodSpec; 
         private String image; 
@@ -270,6 +282,7 @@ public class JobSpec extends TeaModel {
         private Builder(JobSpec model) {
             this.assignNodeSpec = model.assignNodeSpec;
             this.autoScalingSpec = model.autoScalingSpec;
+            this.considerInSuccessPolicy = model.considerInSuccessPolicy;
             this.ecsSpec = model.ecsSpec;
             this.extraPodSpec = model.extraPodSpec;
             this.image = model.image;
@@ -302,6 +315,14 @@ public class JobSpec extends TeaModel {
          */
         public Builder autoScalingSpec(AutoScalingSpec autoScalingSpec) {
             this.autoScalingSpec = autoScalingSpec;
+            return this;
+        }
+
+        /**
+         * ConsiderInSuccessPolicy.
+         */
+        public Builder considerInSuccessPolicy(Boolean considerInSuccessPolicy) {
+            this.considerInSuccessPolicy = considerInSuccessPolicy;
             return this;
         }
 
