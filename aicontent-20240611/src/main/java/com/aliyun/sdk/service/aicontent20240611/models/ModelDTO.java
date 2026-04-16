@@ -38,6 +38,9 @@ public class ModelDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("gmtModified")
     private String gmtModified;
 
+    @com.aliyun.core.annotation.NameInMap("hasBillingRule")
+    private Boolean hasBillingRule;
+
     @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
@@ -82,6 +85,7 @@ public class ModelDTO extends TeaModel {
         this.extensions = builder.extensions;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
+        this.hasBillingRule = builder.hasBillingRule;
         this.id = builder.id;
         this.inOut = builder.inOut;
         this.isCustom = builder.isCustom;
@@ -155,6 +159,13 @@ public class ModelDTO extends TeaModel {
      */
     public String getGmtModified() {
         return this.gmtModified;
+    }
+
+    /**
+     * @return hasBillingRule
+     */
+    public Boolean getHasBillingRule() {
+        return this.hasBillingRule;
     }
 
     /**
@@ -249,6 +260,7 @@ public class ModelDTO extends TeaModel {
         private String extensions; 
         private String gmtCreate; 
         private String gmtModified; 
+        private Boolean hasBillingRule; 
         private Long id; 
         private String inOut; 
         private Boolean isCustom; 
@@ -273,6 +285,7 @@ public class ModelDTO extends TeaModel {
             this.extensions = model.extensions;
             this.gmtCreate = model.gmtCreate;
             this.gmtModified = model.gmtModified;
+            this.hasBillingRule = model.hasBillingRule;
             this.id = model.id;
             this.inOut = model.inOut;
             this.isCustom = model.isCustom;
@@ -340,6 +353,14 @@ public class ModelDTO extends TeaModel {
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
+            return this;
+        }
+
+        /**
+         * hasBillingRule.
+         */
+        public Builder hasBillingRule(Boolean hasBillingRule) {
+            this.hasBillingRule = hasBillingRule;
             return this;
         }
 

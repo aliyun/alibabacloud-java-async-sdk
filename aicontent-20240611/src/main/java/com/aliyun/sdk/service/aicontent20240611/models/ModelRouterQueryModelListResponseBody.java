@@ -29,6 +29,9 @@ public class ModelRouterQueryModelListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
 
+    @com.aliyun.core.annotation.NameInMap("maxResults")
+    private Integer maxResults;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
@@ -40,6 +43,7 @@ public class ModelRouterQueryModelListResponseBody extends TeaModel {
         this.errCode = builder.errCode;
         this.errMessage = builder.errMessage;
         this.httpStatusCode = builder.httpStatusCode;
+        this.maxResults = builder.maxResults;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -85,6 +89,13 @@ public class ModelRouterQueryModelListResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -103,6 +114,7 @@ public class ModelRouterQueryModelListResponseBody extends TeaModel {
         private String errCode; 
         private String errMessage; 
         private Integer httpStatusCode; 
+        private Integer maxResults; 
         private String requestId; 
         private Boolean success; 
 
@@ -114,6 +126,7 @@ public class ModelRouterQueryModelListResponseBody extends TeaModel {
             this.errCode = model.errCode;
             this.errMessage = model.errMessage;
             this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
             this.requestId = model.requestId;
             this.success = model.success;
         } 
@@ -147,6 +160,17 @@ public class ModelRouterQueryModelListResponseBody extends TeaModel {
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * <p>maxResults</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
             return this;
         }
 
@@ -285,7 +309,10 @@ public class ModelRouterQueryModelListResponseBody extends TeaModel {
             }
 
             /**
-             * maxResults.
+             * <p>maxResults</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(String maxResults) {
                 this.maxResults = maxResults;

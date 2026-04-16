@@ -30,6 +30,10 @@ public class ModelRouterCreateClientRequest extends Request {
     private String contact;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("discount")
+    private Double discount;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
@@ -46,6 +50,7 @@ public class ModelRouterCreateClientRequest extends Request {
         this.address = builder.address;
         this.allowedModels = builder.allowedModels;
         this.contact = builder.contact;
+        this.discount = builder.discount;
         this.name = builder.name;
         this.parentId = builder.parentId;
         this.remark = builder.remark;
@@ -86,6 +91,13 @@ public class ModelRouterCreateClientRequest extends Request {
     }
 
     /**
+     * @return discount
+     */
+    public Double getDiscount() {
+        return this.discount;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -110,6 +122,7 @@ public class ModelRouterCreateClientRequest extends Request {
         private String address; 
         private String allowedModels; 
         private String contact; 
+        private Double discount; 
         private String name; 
         private Long parentId; 
         private String remark; 
@@ -123,6 +136,7 @@ public class ModelRouterCreateClientRequest extends Request {
             this.address = request.address;
             this.allowedModels = request.allowedModels;
             this.contact = request.contact;
+            this.discount = request.discount;
             this.name = request.name;
             this.parentId = request.parentId;
             this.remark = request.remark;
@@ -152,6 +166,15 @@ public class ModelRouterCreateClientRequest extends Request {
         public Builder contact(String contact) {
             this.putBodyParameter("contact", contact);
             this.contact = contact;
+            return this;
+        }
+
+        /**
+         * discount.
+         */
+        public Builder discount(Double discount) {
+            this.putBodyParameter("discount", discount);
+            this.discount = discount;
             return this;
         }
 

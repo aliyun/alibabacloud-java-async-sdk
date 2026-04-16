@@ -35,6 +35,9 @@ public class ClientTreeDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("deleteTag")
     private Integer deleteTag;
 
+    @com.aliyun.core.annotation.NameInMap("discount")
+    private Double discount;
+
     @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private String gmtCreate;
 
@@ -66,6 +69,7 @@ public class ClientTreeDTO extends TeaModel {
         this.clientUuid = builder.clientUuid;
         this.contact = builder.contact;
         this.deleteTag = builder.deleteTag;
+        this.discount = builder.discount;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
         this.id = builder.id;
@@ -131,6 +135,13 @@ public class ClientTreeDTO extends TeaModel {
     }
 
     /**
+     * @return discount
+     */
+    public Double getDiscount() {
+        return this.discount;
+    }
+
+    /**
      * @return gmtCreate
      */
     public String getGmtCreate() {
@@ -193,6 +204,7 @@ public class ClientTreeDTO extends TeaModel {
         private String clientUuid; 
         private String contact; 
         private Integer deleteTag; 
+        private Double discount; 
         private String gmtCreate; 
         private String gmtModified; 
         private Long id; 
@@ -212,6 +224,7 @@ public class ClientTreeDTO extends TeaModel {
             this.clientUuid = model.clientUuid;
             this.contact = model.contact;
             this.deleteTag = model.deleteTag;
+            this.discount = model.discount;
             this.gmtCreate = model.gmtCreate;
             this.gmtModified = model.gmtModified;
             this.id = model.id;
@@ -267,6 +280,14 @@ public class ClientTreeDTO extends TeaModel {
          */
         public Builder deleteTag(Integer deleteTag) {
             this.deleteTag = deleteTag;
+            return this;
+        }
+
+        /**
+         * discount.
+         */
+        public Builder discount(Double discount) {
+            this.discount = discount;
             return this;
         }
 
