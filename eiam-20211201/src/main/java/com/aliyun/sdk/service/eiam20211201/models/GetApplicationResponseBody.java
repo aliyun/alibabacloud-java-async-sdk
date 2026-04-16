@@ -320,6 +320,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
+        @com.aliyun.core.annotation.NameInMap("SmartConfigCapabilities")
+        private java.util.List<String> smartConfigCapabilities;
+
         @com.aliyun.core.annotation.NameInMap("SsoType")
         private String ssoType;
 
@@ -354,6 +357,7 @@ public class GetApplicationResponseBody extends TeaModel {
             this.resourceServerSourceType = builder.resourceServerSourceType;
             this.resourceServerStatus = builder.resourceServerStatus;
             this.serviceManaged = builder.serviceManaged;
+            this.smartConfigCapabilities = builder.smartConfigCapabilities;
             this.ssoType = builder.ssoType;
             this.status = builder.status;
             this.updateTime = builder.updateTime;
@@ -536,6 +540,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return smartConfigCapabilities
+         */
+        public java.util.List<String> getSmartConfigCapabilities() {
+            return this.smartConfigCapabilities;
+        }
+
+        /**
          * @return ssoType
          */
         public String getSsoType() {
@@ -581,6 +592,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String resourceServerSourceType; 
             private String resourceServerStatus; 
             private Boolean serviceManaged; 
+            private java.util.List<String> smartConfigCapabilities; 
             private String ssoType; 
             private String status; 
             private Long updateTime; 
@@ -613,6 +625,7 @@ public class GetApplicationResponseBody extends TeaModel {
                 this.resourceServerSourceType = model.resourceServerSourceType;
                 this.resourceServerStatus = model.resourceServerStatus;
                 this.serviceManaged = model.serviceManaged;
+                this.smartConfigCapabilities = model.smartConfigCapabilities;
                 this.ssoType = model.ssoType;
                 this.status = model.status;
                 this.updateTime = model.updateTime;
@@ -875,6 +888,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
+                return this;
+            }
+
+            /**
+             * SmartConfigCapabilities.
+             */
+            public Builder smartConfigCapabilities(java.util.List<String> smartConfigCapabilities) {
+                this.smartConfigCapabilities = smartConfigCapabilities;
                 return this;
             }
 
