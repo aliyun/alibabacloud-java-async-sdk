@@ -179,6 +179,9 @@ public class ConfigSetDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpPool")
         private IpPool ipPool;
 
+        @com.aliyun.core.annotation.NameInMap("IsPublicChannelBackoff")
+        private Boolean isPublicChannelBackoff;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -186,6 +189,7 @@ public class ConfigSetDetailResponseBody extends TeaModel {
             this.description = builder.description;
             this.id = builder.id;
             this.ipPool = builder.ipPool;
+            this.isPublicChannelBackoff = builder.isPublicChannelBackoff;
             this.name = builder.name;
         }
 
@@ -219,6 +223,13 @@ public class ConfigSetDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return isPublicChannelBackoff
+         */
+        public Boolean getIsPublicChannelBackoff() {
+            return this.isPublicChannelBackoff;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -229,6 +240,7 @@ public class ConfigSetDetailResponseBody extends TeaModel {
             private String description; 
             private String id; 
             private IpPool ipPool; 
+            private Boolean isPublicChannelBackoff; 
             private String name; 
 
             private Builder() {
@@ -238,6 +250,7 @@ public class ConfigSetDetailResponseBody extends TeaModel {
                 this.description = model.description;
                 this.id = model.id;
                 this.ipPool = model.ipPool;
+                this.isPublicChannelBackoff = model.isPublicChannelBackoff;
                 this.name = model.name;
             } 
 
@@ -262,6 +275,14 @@ public class ConfigSetDetailResponseBody extends TeaModel {
              */
             public Builder ipPool(IpPool ipPool) {
                 this.ipPool = ipPool;
+                return this;
+            }
+
+            /**
+             * IsPublicChannelBackoff.
+             */
+            public Builder isPublicChannelBackoff(Boolean isPublicChannelBackoff) {
+                this.isPublicChannelBackoff = isPublicChannelBackoff;
                 return this;
             }
 

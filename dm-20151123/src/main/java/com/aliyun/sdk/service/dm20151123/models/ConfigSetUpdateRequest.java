@@ -34,6 +34,10 @@ public class ConfigSetUpdateRequest extends Request {
     private String ipPoolId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsPublicChannelBackoff")
+    private Boolean isPublicChannelBackoff;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -43,6 +47,7 @@ public class ConfigSetUpdateRequest extends Request {
         this.description = builder.description;
         this.id = builder.id;
         this.ipPoolId = builder.ipPoolId;
+        this.isPublicChannelBackoff = builder.isPublicChannelBackoff;
         this.name = builder.name;
     }
 
@@ -88,6 +93,13 @@ public class ConfigSetUpdateRequest extends Request {
     }
 
     /**
+     * @return isPublicChannelBackoff
+     */
+    public Boolean getIsPublicChannelBackoff() {
+        return this.isPublicChannelBackoff;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -99,6 +111,7 @@ public class ConfigSetUpdateRequest extends Request {
         private String description; 
         private String id; 
         private String ipPoolId; 
+        private Boolean isPublicChannelBackoff; 
         private String name; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class ConfigSetUpdateRequest extends Request {
             this.description = request.description;
             this.id = request.id;
             this.ipPoolId = request.ipPoolId;
+            this.isPublicChannelBackoff = request.isPublicChannelBackoff;
             this.name = request.name;
         } 
 
@@ -147,6 +161,15 @@ public class ConfigSetUpdateRequest extends Request {
         public Builder ipPoolId(String ipPoolId) {
             this.putQueryParameter("IpPoolId", ipPoolId);
             this.ipPoolId = ipPoolId;
+            return this;
+        }
+
+        /**
+         * IsPublicChannelBackoff.
+         */
+        public Builder isPublicChannelBackoff(Boolean isPublicChannelBackoff) {
+            this.putQueryParameter("IsPublicChannelBackoff", isPublicChannelBackoff);
+            this.isPublicChannelBackoff = isPublicChannelBackoff;
             return this;
         }
 
