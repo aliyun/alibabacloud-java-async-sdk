@@ -1943,6 +1943,9 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("compactionServiceCuConstraint")
         private CompactionServiceCuConstraint compactionServiceCuConstraint;
 
+        @com.aliyun.core.annotation.NameInMap("zoneSupportCompactionService")
+        private java.util.Map<String, java.util.List<DataZoneSupportCompactionServiceValue>> zoneSupportCompactionService;
+
         private Data(Builder builder) {
             this.agentCu = builder.agentCu;
             this.beCu = builder.beCu;
@@ -1964,6 +1967,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             this.zoneSupportedEedTypes = builder.zoneSupportedEedTypes;
             this.zoneSupportedSpecTypes = builder.zoneSupportedSpecTypes;
             this.compactionServiceCuConstraint = builder.compactionServiceCuConstraint;
+            this.zoneSupportCompactionService = builder.zoneSupportCompactionService;
         }
 
         public static Builder builder() {
@@ -2114,6 +2118,13 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             return this.compactionServiceCuConstraint;
         }
 
+        /**
+         * @return zoneSupportCompactionService
+         */
+        public java.util.Map<String, java.util.List<DataZoneSupportCompactionServiceValue>> getZoneSupportCompactionService() {
+            return this.zoneSupportCompactionService;
+        }
+
         public static final class Builder {
             private java.util.List<Integer> agentCu; 
             private java.util.List<Integer> beCu; 
@@ -2135,6 +2146,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             private java.util.Map<String, java.util.List<String>> zoneSupportedEedTypes; 
             private java.util.Map<String, java.util.List<String>> zoneSupportedSpecTypes; 
             private CompactionServiceCuConstraint compactionServiceCuConstraint; 
+            private java.util.Map<String, java.util.List<DataZoneSupportCompactionServiceValue>> zoneSupportCompactionService; 
 
             private Builder() {
             } 
@@ -2160,6 +2172,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
                 this.zoneSupportedEedTypes = model.zoneSupportedEedTypes;
                 this.zoneSupportedSpecTypes = model.zoneSupportedSpecTypes;
                 this.compactionServiceCuConstraint = model.compactionServiceCuConstraint;
+                this.zoneSupportCompactionService = model.zoneSupportCompactionService;
             } 
 
             /**
@@ -2319,6 +2332,14 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
              */
             public Builder compactionServiceCuConstraint(CompactionServiceCuConstraint compactionServiceCuConstraint) {
                 this.compactionServiceCuConstraint = compactionServiceCuConstraint;
+                return this;
+            }
+
+            /**
+             * zoneSupportCompactionService.
+             */
+            public Builder zoneSupportCompactionService(java.util.Map<String, java.util.List<DataZoneSupportCompactionServiceValue>> zoneSupportCompactionService) {
+                this.zoneSupportCompactionService = zoneSupportCompactionService;
                 return this;
             }
 
