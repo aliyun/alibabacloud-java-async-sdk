@@ -23,6 +23,9 @@ public class BroadcastAudio extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("errorCode")
+    private String errorCode;
+
     @com.aliyun.core.annotation.NameInMap("id")
     private String id;
 
@@ -38,6 +41,7 @@ public class BroadcastAudio extends TeaModel {
     private BroadcastAudio(Builder builder) {
         this.audioLength = builder.audioLength;
         this.createTime = builder.createTime;
+        this.errorCode = builder.errorCode;
         this.id = builder.id;
         this.modifiedTime = builder.modifiedTime;
         this.name = builder.name;
@@ -71,6 +75,13 @@ public class BroadcastAudio extends TeaModel {
     }
 
     /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
      * @return id
      */
     public String getId() {
@@ -101,6 +112,7 @@ public class BroadcastAudio extends TeaModel {
     public static final class Builder {
         private Integer audioLength; 
         private String createTime; 
+        private String errorCode; 
         private String id; 
         private String modifiedTime; 
         private String name; 
@@ -112,6 +124,7 @@ public class BroadcastAudio extends TeaModel {
         private Builder(BroadcastAudio model) {
             this.audioLength = model.audioLength;
             this.createTime = model.createTime;
+            this.errorCode = model.errorCode;
             this.id = model.id;
             this.modifiedTime = model.modifiedTime;
             this.name = model.name;
@@ -131,6 +144,14 @@ public class BroadcastAudio extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * errorCode.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
             return this;
         }
 
