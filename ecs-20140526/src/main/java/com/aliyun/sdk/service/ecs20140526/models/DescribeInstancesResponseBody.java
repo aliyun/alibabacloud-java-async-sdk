@@ -200,8 +200,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableHighDensityMode")
         private Boolean enableHighDensityMode;
 
+        @com.aliyun.core.annotation.NameInMap("NodeSerialNumber")
+        private String nodeSerialNumber;
+
         private AdditionalInfo(Builder builder) {
             this.enableHighDensityMode = builder.enableHighDensityMode;
+            this.nodeSerialNumber = builder.nodeSerialNumber;
         }
 
         public static Builder builder() {
@@ -219,14 +223,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.enableHighDensityMode;
         }
 
+        /**
+         * @return nodeSerialNumber
+         */
+        public String getNodeSerialNumber() {
+            return this.nodeSerialNumber;
+        }
+
         public static final class Builder {
             private Boolean enableHighDensityMode; 
+            private String nodeSerialNumber; 
 
             private Builder() {
             } 
 
             private Builder(AdditionalInfo model) {
                 this.enableHighDensityMode = model.enableHighDensityMode;
+                this.nodeSerialNumber = model.nodeSerialNumber;
             } 
 
             /**
@@ -239,6 +252,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder enableHighDensityMode(Boolean enableHighDensityMode) {
                 this.enableHighDensityMode = enableHighDensityMode;
+                return this;
+            }
+
+            /**
+             * NodeSerialNumber.
+             */
+            public Builder nodeSerialNumber(String nodeSerialNumber) {
+                this.nodeSerialNumber = nodeSerialNumber;
                 return this;
             }
 
@@ -319,6 +340,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableVRDT")
         private Boolean enableVRDT;
 
+        @com.aliyun.core.annotation.NameInMap("NestedVirtualization")
+        private String nestedVirtualization;
+
         @com.aliyun.core.annotation.NameInMap("Numa")
         private String numa;
 
@@ -335,6 +359,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.coreCount = builder.coreCount;
             this.enableVISST = builder.enableVISST;
             this.enableVRDT = builder.enableVRDT;
+            this.nestedVirtualization = builder.nestedVirtualization;
             this.numa = builder.numa;
             this.threadsPerCore = builder.threadsPerCore;
             this.topologyType = builder.topologyType;
@@ -371,6 +396,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return nestedVirtualization
+         */
+        public String getNestedVirtualization() {
+            return this.nestedVirtualization;
+        }
+
+        /**
          * @return numa
          */
         public String getNuma() {
@@ -402,6 +434,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer coreCount; 
             private Boolean enableVISST; 
             private Boolean enableVRDT; 
+            private String nestedVirtualization; 
             private String numa; 
             private Integer threadsPerCore; 
             private String topologyType; 
@@ -414,6 +447,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.coreCount = model.coreCount;
                 this.enableVISST = model.enableVISST;
                 this.enableVRDT = model.enableVRDT;
+                this.nestedVirtualization = model.nestedVirtualization;
                 this.numa = model.numa;
                 this.threadsPerCore = model.threadsPerCore;
                 this.topologyType = model.topologyType;
@@ -444,6 +478,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder enableVRDT(Boolean enableVRDT) {
                 this.enableVRDT = enableVRDT;
+                return this;
+            }
+
+            /**
+             * NestedVirtualization.
+             */
+            public Builder nestedVirtualization(String nestedVirtualization) {
+                this.nestedVirtualization = nestedVirtualization;
                 return this;
             }
 
