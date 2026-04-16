@@ -44,6 +44,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
+    @com.aliyun.core.annotation.NameInMap("ColumnTable")
+    private String columnTable;
+
     @com.aliyun.core.annotation.NameInMap("CompressStorageMode")
     private String compressStorageMode;
 
@@ -237,6 +240,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.branch = builder.branch;
         this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
+        this.columnTable = builder.columnTable;
         this.compressStorageMode = builder.compressStorageMode;
         this.compressStorageUsed = builder.compressStorageUsed;
         this.creationTime = builder.creationTime;
@@ -373,6 +377,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getCategory() {
         return this.category;
+    }
+
+    /**
+     * @return columnTable
+     */
+    public String getColumnTable() {
+        return this.columnTable;
     }
 
     /**
@@ -812,6 +823,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private Branch branch; 
         private String burstingEnabled; 
         private String category; 
+        private String columnTable; 
         private String compressStorageMode; 
         private Long compressStorageUsed; 
         private String creationTime; 
@@ -887,6 +899,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.branch = model.branch;
             this.burstingEnabled = model.burstingEnabled;
             this.category = model.category;
+            this.columnTable = model.columnTable;
             this.compressStorageMode = model.compressStorageMode;
             this.compressStorageUsed = model.compressStorageUsed;
             this.creationTime = model.creationTime;
@@ -1066,6 +1079,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder category(String category) {
             this.category = category;
+            return this;
+        }
+
+        /**
+         * ColumnTable.
+         */
+        public Builder columnTable(String columnTable) {
+            this.columnTable = columnTable;
             return this;
         }
 
