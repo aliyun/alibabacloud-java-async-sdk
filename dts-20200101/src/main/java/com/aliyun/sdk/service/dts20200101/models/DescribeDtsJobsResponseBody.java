@@ -6125,6 +6125,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IncDataCheckStatus")
         private IncDataCheckStatus incDataCheckStatus;
 
+        @com.aliyun.core.annotation.NameInMap("InsightModule")
+        private Boolean insightModule;
+
         @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
@@ -6231,6 +6234,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             this.expireTime = builder.expireTime;
             this.fullDataCheckStatus = builder.fullDataCheckStatus;
             this.incDataCheckStatus = builder.incDataCheckStatus;
+            this.insightModule = builder.insightModule;
             this.jobType = builder.jobType;
             this.maxDu = builder.maxDu;
             this.memUsage = builder.memUsage;
@@ -6477,6 +6481,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return insightModule
+         */
+        public Boolean getInsightModule() {
+            return this.insightModule;
+        }
+
+        /**
          * @return jobType
          */
         public String getJobType() {
@@ -6682,6 +6693,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String expireTime; 
             private FullDataCheckStatus fullDataCheckStatus; 
             private IncDataCheckStatus incDataCheckStatus; 
+            private Boolean insightModule; 
             private String jobType; 
             private Double maxDu; 
             private String memUsage; 
@@ -6742,6 +6754,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
                 this.expireTime = model.expireTime;
                 this.fullDataCheckStatus = model.fullDataCheckStatus;
                 this.incDataCheckStatus = model.incDataCheckStatus;
+                this.insightModule = model.insightModule;
                 this.jobType = model.jobType;
                 this.maxDu = model.maxDu;
                 this.memUsage = model.memUsage;
@@ -7088,6 +7101,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              */
             public Builder incDataCheckStatus(IncDataCheckStatus incDataCheckStatus) {
                 this.incDataCheckStatus = incDataCheckStatus;
+                return this;
+            }
+
+            /**
+             * InsightModule.
+             */
+            public Builder insightModule(Boolean insightModule) {
+                this.insightModule = insightModule;
                 return this;
             }
 
