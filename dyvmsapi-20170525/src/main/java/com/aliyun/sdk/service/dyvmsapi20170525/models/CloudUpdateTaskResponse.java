@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link QueryVirtualNumberResponse} extends {@link TeaModel}
+ * {@link CloudUpdateTaskResponse} extends {@link TeaModel}
  *
- * <p>QueryVirtualNumberResponse</p>
+ * <p>CloudUpdateTaskResponse</p>
  */
-public class QueryVirtualNumberResponse extends Response {
+public class CloudUpdateTaskResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class QueryVirtualNumberResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private QueryVirtualNumberResponseBody body;
+    private CloudUpdateTaskResponseBody body;
 
-    private QueryVirtualNumberResponse(BuilderImpl builder) {
+    private CloudUpdateTaskResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static QueryVirtualNumberResponse create() {
+    public static CloudUpdateTaskResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class QueryVirtualNumberResponse extends Response {
     /**
      * @return body
      */
-    public QueryVirtualNumberResponseBody getBody() {
+    public CloudUpdateTaskResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<QueryVirtualNumberResponse, Builder> {
+    public interface Builder extends Response.Builder<CloudUpdateTaskResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(QueryVirtualNumberResponseBody body);
+        Builder body(CloudUpdateTaskResponseBody body);
 
         @Override
-        QueryVirtualNumberResponse build();
+        CloudUpdateTaskResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<QueryVirtualNumberResponse, Builder>
+            extends Response.BuilderImpl<CloudUpdateTaskResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private QueryVirtualNumberResponseBody body; 
+        private CloudUpdateTaskResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(QueryVirtualNumberResponse response) {
+        private BuilderImpl(CloudUpdateTaskResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class QueryVirtualNumberResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(QueryVirtualNumberResponseBody body) {
+        public Builder body(CloudUpdateTaskResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public QueryVirtualNumberResponse build() {
-            return new QueryVirtualNumberResponse(this);
+        public CloudUpdateTaskResponse build() {
+            return new CloudUpdateTaskResponse(this);
         } 
 
     } 

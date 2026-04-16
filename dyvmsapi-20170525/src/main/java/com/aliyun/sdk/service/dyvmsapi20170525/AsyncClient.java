@@ -84,6 +84,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeMediaTypeResponse> changeMediaType(ChangeMediaTypeRequest request);
 
     /**
+     * @param request the request parameters of CloudCreateTask  CloudCreateTaskRequest
+     * @return CloudCreateTaskResponse
+     */
+    CompletableFuture<CloudCreateTaskResponse> cloudCreateTask(CloudCreateTaskRequest request);
+
+    /**
+     * @param request the request parameters of CloudImportTaskTel  CloudImportTaskTelRequest
+     * @return CloudImportTaskTelResponse
+     */
+    CompletableFuture<CloudImportTaskTelResponse> cloudImportTaskTel(CloudImportTaskTelRequest request);
+
+    /**
+     * @param request the request parameters of CloudStartTask  CloudStartTaskRequest
+     * @return CloudStartTaskResponse
+     */
+    CompletableFuture<CloudStartTaskResponse> cloudStartTask(CloudStartTaskRequest request);
+
+    /**
+     * @param request the request parameters of CloudUpdateTask  CloudUpdateTaskRequest
+     * @return CloudUpdateTaskResponse
+     */
+    CompletableFuture<CloudUpdateTaskResponse> cloudUpdateTask(CloudUpdateTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can create up to 1,000 voice notifications for each task.</p>
      * <h3>QPS limits</h3>
@@ -337,16 +361,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryVideoPlayProgressResponse
      */
     CompletableFuture<QueryVideoPlayProgressResponse> queryVideoPlayProgress(QueryVideoPlayProgressRequest request);
-
-    /**
-     * <b>description</b> :
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 100 times per second per account.</p>
-     * 
-     * @param request the request parameters of QueryVirtualNumber  QueryVirtualNumberRequest
-     * @return QueryVirtualNumberResponse
-     */
-    CompletableFuture<QueryVirtualNumberResponse> queryVirtualNumber(QueryVirtualNumberRequest request);
 
     /**
      * <b>description</b> :
