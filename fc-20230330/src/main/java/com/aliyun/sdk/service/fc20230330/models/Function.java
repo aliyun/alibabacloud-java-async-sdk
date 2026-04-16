@@ -106,6 +106,9 @@ public class Function extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("layers")
     private java.util.List<FunctionLayer> layers;
 
+    @com.aliyun.core.annotation.NameInMap("lockInfo")
+    private FunctionLockInfo lockInfo;
+
     @com.aliyun.core.annotation.NameInMap("logConfig")
     private LogConfig logConfig;
 
@@ -187,6 +190,7 @@ public class Function extends TeaModel {
         this.lastUpdateStatusReason = builder.lastUpdateStatusReason;
         this.lastUpdateStatusReasonCode = builder.lastUpdateStatusReasonCode;
         this.layers = builder.layers;
+        this.lockInfo = builder.lockInfo;
         this.logConfig = builder.logConfig;
         this.memorySize = builder.memorySize;
         this.nasConfig = builder.nasConfig;
@@ -422,6 +426,13 @@ public class Function extends TeaModel {
     }
 
     /**
+     * @return lockInfo
+     */
+    public FunctionLockInfo getLockInfo() {
+        return this.lockInfo;
+    }
+
+    /**
      * @return logConfig
      */
     public LogConfig getLogConfig() {
@@ -570,6 +581,7 @@ public class Function extends TeaModel {
         private String lastUpdateStatusReason; 
         private String lastUpdateStatusReasonCode; 
         private java.util.List<FunctionLayer> layers; 
+        private FunctionLockInfo lockInfo; 
         private LogConfig logConfig; 
         private Integer memorySize; 
         private NASConfig nasConfig; 
@@ -621,6 +633,7 @@ public class Function extends TeaModel {
             this.lastUpdateStatusReason = model.lastUpdateStatusReason;
             this.lastUpdateStatusReasonCode = model.lastUpdateStatusReasonCode;
             this.layers = model.layers;
+            this.lockInfo = model.lockInfo;
             this.logConfig = model.logConfig;
             this.memorySize = model.memorySize;
             this.nasConfig = model.nasConfig;
@@ -869,6 +882,14 @@ public class Function extends TeaModel {
          */
         public Builder layers(java.util.List<FunctionLayer> layers) {
             this.layers = layers;
+            return this;
+        }
+
+        /**
+         * lockInfo.
+         */
+        public Builder lockInfo(FunctionLockInfo lockInfo) {
+            this.lockInfo = lockInfo;
             return this;
         }
 
