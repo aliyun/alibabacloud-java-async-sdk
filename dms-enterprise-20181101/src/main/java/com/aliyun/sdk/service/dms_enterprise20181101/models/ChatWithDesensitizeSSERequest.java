@@ -119,6 +119,14 @@ public class ChatWithDesensitizeSSERequest extends Request {
     private Integer thinkingBudget;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ToolChoice")
+    private String toolChoice;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tools")
+    private String tools;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopK")
     private Integer topK;
 
@@ -165,6 +173,8 @@ public class ChatWithDesensitizeSSERequest extends Request {
         this.stream = builder.stream;
         this.temperature = builder.temperature;
         this.thinkingBudget = builder.thinkingBudget;
+        this.toolChoice = builder.toolChoice;
+        this.tools = builder.tools;
         this.topK = builder.topK;
         this.topLogprobs = builder.topLogprobs;
         this.topP = builder.topP;
@@ -361,6 +371,20 @@ public class ChatWithDesensitizeSSERequest extends Request {
     }
 
     /**
+     * @return toolChoice
+     */
+    public String getToolChoice() {
+        return this.toolChoice;
+    }
+
+    /**
+     * @return tools
+     */
+    public String getTools() {
+        return this.tools;
+    }
+
+    /**
      * @return topK
      */
     public Integer getTopK() {
@@ -421,6 +445,8 @@ public class ChatWithDesensitizeSSERequest extends Request {
         private Boolean stream; 
         private String temperature; 
         private Integer thinkingBudget; 
+        private String toolChoice; 
+        private String tools; 
         private Integer topK; 
         private Integer topLogprobs; 
         private String topP; 
@@ -458,6 +484,8 @@ public class ChatWithDesensitizeSSERequest extends Request {
             this.stream = request.stream;
             this.temperature = request.temperature;
             this.thinkingBudget = request.thinkingBudget;
+            this.toolChoice = request.toolChoice;
+            this.tools = request.tools;
             this.topK = request.topK;
             this.topLogprobs = request.topLogprobs;
             this.topP = request.topP;
@@ -766,6 +794,24 @@ public class ChatWithDesensitizeSSERequest extends Request {
         public Builder thinkingBudget(Integer thinkingBudget) {
             this.putQueryParameter("ThinkingBudget", thinkingBudget);
             this.thinkingBudget = thinkingBudget;
+            return this;
+        }
+
+        /**
+         * ToolChoice.
+         */
+        public Builder toolChoice(String toolChoice) {
+            this.putQueryParameter("ToolChoice", toolChoice);
+            this.toolChoice = toolChoice;
+            return this;
+        }
+
+        /**
+         * Tools.
+         */
+        public Builder tools(String tools) {
+            this.putQueryParameter("Tools", tools);
+            this.tools = tools;
             return this;
         }
 
