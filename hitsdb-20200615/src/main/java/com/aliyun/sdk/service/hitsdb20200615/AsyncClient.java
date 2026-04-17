@@ -26,10 +26,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
+     * @param request the request parameters of CheckCreateLindormV2Instance  CheckCreateLindormV2InstanceRequest
+     * @return CheckCreateLindormV2InstanceResponse
+     */
+    CompletableFuture<CheckCreateLindormV2InstanceResponse> checkCreateLindormV2Instance(CheckCreateLindormV2InstanceRequest request);
+
+    /**
      * @param request the request parameters of CheckLdpsColumnarIndexStatus  CheckLdpsColumnarIndexStatusRequest
      * @return CheckLdpsColumnarIndexStatusResponse
      */
     CompletableFuture<CheckLdpsColumnarIndexStatusResponse> checkLdpsColumnarIndexStatus(CheckLdpsColumnarIndexStatusRequest request);
+
+    /**
+     * @param request the request parameters of CreateAdditionalVpcLink  CreateAdditionalVpcLinkRequest
+     * @return CreateAdditionalVpcLinkResponse
+     */
+    CompletableFuture<CreateAdditionalVpcLinkResponse> createAdditionalVpcLink(CreateAdditionalVpcLinkRequest request);
 
     /**
      * @param request the request parameters of CreateAutoScalingConfig  CreateAutoScalingConfigRequest

@@ -1262,6 +1262,9 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableCDC")
         private String enableCDC;
 
+        @com.aliyun.core.annotation.NameInMap("EnableMaaS")
+        private String enableMaaS;
+
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
@@ -1281,6 +1284,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             this.connectAddressList = builder.connectAddressList;
             this.enableBackup = builder.enableBackup;
             this.enableCDC = builder.enableCDC;
+            this.enableMaaS = builder.enableMaaS;
             this.engine = builder.engine;
             this.isLastVersion = builder.isLastVersion;
             this.latestVersion = builder.latestVersion;
@@ -1315,6 +1319,13 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
          */
         public String getEnableCDC() {
             return this.enableCDC;
+        }
+
+        /**
+         * @return enableMaaS
+         */
+        public String getEnableMaaS() {
+            return this.enableMaaS;
         }
 
         /**
@@ -1356,6 +1367,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             private java.util.List<ConnectAddressList> connectAddressList; 
             private String enableBackup; 
             private String enableCDC; 
+            private String enableMaaS; 
             private String engine; 
             private Boolean isLastVersion; 
             private String latestVersion; 
@@ -1369,6 +1381,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
                 this.connectAddressList = model.connectAddressList;
                 this.enableBackup = model.enableBackup;
                 this.enableCDC = model.enableCDC;
+                this.enableMaaS = model.enableMaaS;
                 this.engine = model.engine;
                 this.isLastVersion = model.isLastVersion;
                 this.latestVersion = model.latestVersion;
@@ -1397,6 +1410,14 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
              */
             public Builder enableCDC(String enableCDC) {
                 this.enableCDC = enableCDC;
+                return this;
+            }
+
+            /**
+             * EnableMaaS.
+             */
+            public Builder enableMaaS(String enableMaaS) {
+                this.enableMaaS = enableMaaS;
                 return this;
             }
 

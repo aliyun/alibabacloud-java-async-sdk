@@ -58,6 +58,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CheckCreateLindormV2Instance  CheckCreateLindormV2InstanceRequest
+     * @return CheckCreateLindormV2InstanceResponse
+     */
+    @Override
+    public CompletableFuture<CheckCreateLindormV2InstanceResponse> checkCreateLindormV2Instance(CheckCreateLindormV2InstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckCreateLindormV2Instance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckCreateLindormV2InstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckCreateLindormV2InstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CheckLdpsColumnarIndexStatus  CheckLdpsColumnarIndexStatusRequest
      * @return CheckLdpsColumnarIndexStatusResponse
      */
@@ -70,6 +88,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CheckLdpsColumnarIndexStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAdditionalVpcLink  CreateAdditionalVpcLinkRequest
+     * @return CreateAdditionalVpcLinkResponse
+     */
+    @Override
+    public CompletableFuture<CreateAdditionalVpcLinkResponse> createAdditionalVpcLink(CreateAdditionalVpcLinkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAdditionalVpcLink").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAdditionalVpcLinkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAdditionalVpcLinkResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
