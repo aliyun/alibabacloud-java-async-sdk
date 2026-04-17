@@ -22,6 +22,10 @@ public class CreateDiagnosticReportRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdditionalOptions")
+    private java.util.Map<String, String> additionalOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
@@ -46,6 +50,7 @@ public class CreateDiagnosticReportRequest extends Request {
     private CreateDiagnosticReportRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.additionalOptions = builder.additionalOptions;
         this.endTime = builder.endTime;
         this.metricSetId = builder.metricSetId;
         this.regionId = builder.regionId;
@@ -71,6 +76,13 @@ public class CreateDiagnosticReportRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return additionalOptions
+     */
+    public java.util.Map<String, String> getAdditionalOptions() {
+        return this.additionalOptions;
     }
 
     /**
@@ -110,6 +122,7 @@ public class CreateDiagnosticReportRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDiagnosticReportRequest, Builder> {
         private String sourceRegionId; 
+        private java.util.Map<String, String> additionalOptions; 
         private String endTime; 
         private String metricSetId; 
         private String regionId; 
@@ -123,6 +136,7 @@ public class CreateDiagnosticReportRequest extends Request {
         private Builder(CreateDiagnosticReportRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.additionalOptions = request.additionalOptions;
             this.endTime = request.endTime;
             this.metricSetId = request.metricSetId;
             this.regionId = request.regionId;
@@ -136,6 +150,16 @@ public class CreateDiagnosticReportRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * AdditionalOptions.
+         */
+        public Builder additionalOptions(java.util.Map<String, String> additionalOptions) {
+            String additionalOptionsShrink = shrink(additionalOptions, "AdditionalOptions", "json");
+            this.putQueryParameter("AdditionalOptions", additionalOptionsShrink);
+            this.additionalOptions = additionalOptions;
             return this;
         }
 
