@@ -572,6 +572,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAlertActionsResponse> listAlertActions(ListAlertActionsRequest request);
 
     /**
+     * @param request the request parameters of ListAlertRobots  ListAlertRobotsRequest
+     * @return ListAlertRobotsResponse
+     */
+    CompletableFuture<ListAlertRobotsResponse> listAlertRobots(ListAlertRobotsRequest request);
+
+    /**
      * @param request the request parameters of ListAlertWebhooks  ListAlertWebhooksRequest
      * @return ListAlertWebhooksResponse
      */
@@ -582,6 +588,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListBizTracesResponse
      */
     CompletableFuture<ListBizTracesResponse> listBizTraces(ListBizTracesRequest request);
+
+    /**
+     * @param request the request parameters of ListContactGroups  ListContactGroupsRequest
+     * @return ListContactGroupsResponse
+     */
+    CompletableFuture<ListContactGroupsResponse> listContactGroups(ListContactGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListContacts  ListContactsRequest
+     * @return ListContactsResponse
+     */
+    CompletableFuture<ListContactsResponse> listContacts(ListContactsRequest request);
 
     /**
      * @param request the request parameters of ListDatasets  ListDatasetsRequest
