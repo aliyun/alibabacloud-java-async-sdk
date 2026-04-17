@@ -69,6 +69,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchGetAcpConnectionTicketResponse> batchGetAcpConnectionTicket(BatchGetAcpConnectionTicketRequest request);
 
     /**
+     * @param request the request parameters of CancelAgentTask  CancelAgentTaskRequest
+     * @return CancelAgentTaskResponse
+     */
+    CompletableFuture<CancelAgentTaskResponse> cancelAgentTask(CancelAgentTaskRequest request);
+
+    /**
      * @param request the request parameters of ChangeCloudPhoneNode  ChangeCloudPhoneNodeRequest
      * @return ChangeCloudPhoneNodeResponse
      */

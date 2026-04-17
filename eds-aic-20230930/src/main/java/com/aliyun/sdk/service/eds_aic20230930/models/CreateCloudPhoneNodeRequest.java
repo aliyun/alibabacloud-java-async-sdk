@@ -83,6 +83,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
     private String nodeName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaidCallBackUrl")
+    private String paidCallBackUrl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
@@ -162,6 +166,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         this.networkInfo = builder.networkInfo;
         this.networkType = builder.networkType;
         this.nodeName = builder.nodeName;
+        this.paidCallBackUrl = builder.paidCallBackUrl;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.phoneCount = builder.phoneCount;
@@ -305,6 +310,13 @@ public class CreateCloudPhoneNodeRequest extends Request {
     }
 
     /**
+     * @return paidCallBackUrl
+     */
+    public String getPaidCallBackUrl() {
+        return this.paidCallBackUrl;
+    }
+
+    /**
      * @return period
      */
     public Integer getPeriod() {
@@ -426,6 +438,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         private NetworkInfo networkInfo; 
         private String networkType; 
         private String nodeName; 
+        private String paidCallBackUrl; 
         private Integer period; 
         private String periodUnit; 
         private Integer phoneCount; 
@@ -464,6 +477,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
             this.networkInfo = request.networkInfo;
             this.networkType = request.networkType;
             this.nodeName = request.nodeName;
+            this.paidCallBackUrl = request.paidCallBackUrl;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.phoneCount = request.phoneCount;
@@ -667,6 +681,15 @@ public class CreateCloudPhoneNodeRequest extends Request {
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
             this.nodeName = nodeName;
+            return this;
+        }
+
+        /**
+         * PaidCallBackUrl.
+         */
+        public Builder paidCallBackUrl(String paidCallBackUrl) {
+            this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
+            this.paidCallBackUrl = paidCallBackUrl;
             return this;
         }
 

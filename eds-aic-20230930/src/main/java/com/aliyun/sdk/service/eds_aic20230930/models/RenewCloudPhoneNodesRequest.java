@@ -29,6 +29,10 @@ public class RenewCloudPhoneNodesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NodeIds")
     private java.util.List<String> nodeIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaidCallBackUrl")
+    private String paidCallBackUrl;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
@@ -46,6 +50,7 @@ public class RenewCloudPhoneNodesRequest extends Request {
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.nodeIds = builder.nodeIds;
+        this.paidCallBackUrl = builder.paidCallBackUrl;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.promotionId = builder.promotionId;
@@ -86,6 +91,13 @@ public class RenewCloudPhoneNodesRequest extends Request {
     }
 
     /**
+     * @return paidCallBackUrl
+     */
+    public String getPaidCallBackUrl() {
+        return this.paidCallBackUrl;
+    }
+
+    /**
      * @return period
      */
     public Integer getPeriod() {
@@ -110,6 +122,7 @@ public class RenewCloudPhoneNodesRequest extends Request {
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private java.util.List<String> nodeIds; 
+        private String paidCallBackUrl; 
         private Integer period; 
         private String periodUnit; 
         private String promotionId; 
@@ -123,6 +136,7 @@ public class RenewCloudPhoneNodesRequest extends Request {
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.nodeIds = request.nodeIds;
+            this.paidCallBackUrl = request.paidCallBackUrl;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.promotionId = request.promotionId;
@@ -160,6 +174,15 @@ public class RenewCloudPhoneNodesRequest extends Request {
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putBodyParameter("NodeIds", nodeIds);
             this.nodeIds = nodeIds;
+            return this;
+        }
+
+        /**
+         * PaidCallBackUrl.
+         */
+        public Builder paidCallBackUrl(String paidCallBackUrl) {
+            this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
+            this.paidCallBackUrl = paidCallBackUrl;
             return this;
         }
 

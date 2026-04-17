@@ -122,6 +122,9 @@ public class UninstallAppResponseBody extends TeaModel {
      * <p>UninstallAppResponseBody</p>
      */
     public static class ChildTaskInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppId")
+        private String appId;
+
         @com.aliyun.core.annotation.NameInMap("ChildTaskId")
         private String childTaskId;
 
@@ -129,6 +132,7 @@ public class UninstallAppResponseBody extends TeaModel {
         private String instanceId;
 
         private ChildTaskInfo(Builder builder) {
+            this.appId = builder.appId;
             this.childTaskId = builder.childTaskId;
             this.instanceId = builder.instanceId;
         }
@@ -139,6 +143,13 @@ public class UninstallAppResponseBody extends TeaModel {
 
         public static ChildTaskInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
         }
 
         /**
@@ -156,6 +167,7 @@ public class UninstallAppResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appId; 
             private String childTaskId; 
             private String instanceId; 
 
@@ -163,9 +175,18 @@ public class UninstallAppResponseBody extends TeaModel {
             } 
 
             private Builder(ChildTaskInfo model) {
+                this.appId = model.appId;
                 this.childTaskId = model.childTaskId;
                 this.instanceId = model.instanceId;
             } 
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
 
             /**
              * ChildTaskId.

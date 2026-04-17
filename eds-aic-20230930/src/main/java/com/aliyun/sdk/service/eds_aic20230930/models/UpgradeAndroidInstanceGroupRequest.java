@@ -30,6 +30,10 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
     private String instanceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaidCallBackUrl")
+    private String paidCallBackUrl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
@@ -38,6 +42,7 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
         this.autoPay = builder.autoPay;
         this.increaseNumberOfInstance = builder.increaseNumberOfInstance;
         this.instanceGroupId = builder.instanceGroupId;
+        this.paidCallBackUrl = builder.paidCallBackUrl;
         this.promotionId = builder.promotionId;
     }
 
@@ -76,6 +81,13 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return paidCallBackUrl
+     */
+    public String getPaidCallBackUrl() {
+        return this.paidCallBackUrl;
+    }
+
+    /**
      * @return promotionId
      */
     public String getPromotionId() {
@@ -86,6 +98,7 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
         private Boolean autoPay; 
         private Integer increaseNumberOfInstance; 
         private String instanceGroupId; 
+        private String paidCallBackUrl; 
         private String promotionId; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
             this.autoPay = request.autoPay;
             this.increaseNumberOfInstance = request.increaseNumberOfInstance;
             this.instanceGroupId = request.instanceGroupId;
+            this.paidCallBackUrl = request.paidCallBackUrl;
             this.promotionId = request.promotionId;
         } 
 
@@ -138,6 +152,15 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
         public Builder instanceGroupId(String instanceGroupId) {
             this.putQueryParameter("InstanceGroupId", instanceGroupId);
             this.instanceGroupId = instanceGroupId;
+            return this;
+        }
+
+        /**
+         * PaidCallBackUrl.
+         */
+        public Builder paidCallBackUrl(String paidCallBackUrl) {
+            this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
+            this.paidCallBackUrl = paidCallBackUrl;
             return this;
         }
 

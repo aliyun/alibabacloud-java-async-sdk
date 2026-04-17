@@ -30,6 +30,10 @@ public class ExpandPhoneDataVolumeRequest extends Request {
     private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaidCallBackUrl")
+    private String paidCallBackUrl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PhoneDataVolume")
     private Integer phoneDataVolume;
 
@@ -42,6 +46,7 @@ public class ExpandPhoneDataVolumeRequest extends Request {
         this.autoPay = builder.autoPay;
         this.bizRegionId = builder.bizRegionId;
         this.instanceIds = builder.instanceIds;
+        this.paidCallBackUrl = builder.paidCallBackUrl;
         this.phoneDataVolume = builder.phoneDataVolume;
         this.promotionId = builder.promotionId;
     }
@@ -81,6 +86,13 @@ public class ExpandPhoneDataVolumeRequest extends Request {
     }
 
     /**
+     * @return paidCallBackUrl
+     */
+    public String getPaidCallBackUrl() {
+        return this.paidCallBackUrl;
+    }
+
+    /**
      * @return phoneDataVolume
      */
     public Integer getPhoneDataVolume() {
@@ -98,6 +110,7 @@ public class ExpandPhoneDataVolumeRequest extends Request {
         private Boolean autoPay; 
         private String bizRegionId; 
         private java.util.List<String> instanceIds; 
+        private String paidCallBackUrl; 
         private Integer phoneDataVolume; 
         private String promotionId; 
 
@@ -110,6 +123,7 @@ public class ExpandPhoneDataVolumeRequest extends Request {
             this.autoPay = request.autoPay;
             this.bizRegionId = request.bizRegionId;
             this.instanceIds = request.instanceIds;
+            this.paidCallBackUrl = request.paidCallBackUrl;
             this.phoneDataVolume = request.phoneDataVolume;
             this.promotionId = request.promotionId;
         } 
@@ -138,6 +152,15 @@ public class ExpandPhoneDataVolumeRequest extends Request {
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * PaidCallBackUrl.
+         */
+        public Builder paidCallBackUrl(String paidCallBackUrl) {
+            this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
+            this.paidCallBackUrl = paidCallBackUrl;
             return this;
         }
 

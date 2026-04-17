@@ -30,6 +30,10 @@ public class ExpandDataVolumeRequest extends Request {
     private java.util.List<String> nodeIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaidCallBackUrl")
+    private String paidCallBackUrl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PhoneDataVolume")
     private Integer phoneDataVolume;
 
@@ -46,6 +50,7 @@ public class ExpandDataVolumeRequest extends Request {
         this.autoPay = builder.autoPay;
         this.bizRegionId = builder.bizRegionId;
         this.nodeIds = builder.nodeIds;
+        this.paidCallBackUrl = builder.paidCallBackUrl;
         this.phoneDataVolume = builder.phoneDataVolume;
         this.promotionId = builder.promotionId;
         this.shareDataVolume = builder.shareDataVolume;
@@ -86,6 +91,13 @@ public class ExpandDataVolumeRequest extends Request {
     }
 
     /**
+     * @return paidCallBackUrl
+     */
+    public String getPaidCallBackUrl() {
+        return this.paidCallBackUrl;
+    }
+
+    /**
      * @return phoneDataVolume
      */
     public Integer getPhoneDataVolume() {
@@ -110,6 +122,7 @@ public class ExpandDataVolumeRequest extends Request {
         private Boolean autoPay; 
         private String bizRegionId; 
         private java.util.List<String> nodeIds; 
+        private String paidCallBackUrl; 
         private Integer phoneDataVolume; 
         private String promotionId; 
         private Integer shareDataVolume; 
@@ -123,6 +136,7 @@ public class ExpandDataVolumeRequest extends Request {
             this.autoPay = request.autoPay;
             this.bizRegionId = request.bizRegionId;
             this.nodeIds = request.nodeIds;
+            this.paidCallBackUrl = request.paidCallBackUrl;
             this.phoneDataVolume = request.phoneDataVolume;
             this.promotionId = request.promotionId;
             this.shareDataVolume = request.shareDataVolume;
@@ -152,6 +166,15 @@ public class ExpandDataVolumeRequest extends Request {
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putQueryParameter("NodeIds", nodeIds);
             this.nodeIds = nodeIds;
+            return this;
+        }
+
+        /**
+         * PaidCallBackUrl.
+         */
+        public Builder paidCallBackUrl(String paidCallBackUrl) {
+            this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
+            this.paidCallBackUrl = paidCallBackUrl;
             return this;
         }
 

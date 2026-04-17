@@ -26,6 +26,10 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
     private java.util.List<String> instanceGroupIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaidCallBackUrl")
+    private String paidCallBackUrl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
@@ -41,6 +45,7 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
         super(builder);
         this.autoPay = builder.autoPay;
         this.instanceGroupIds = builder.instanceGroupIds;
+        this.paidCallBackUrl = builder.paidCallBackUrl;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.promotionId = builder.promotionId;
@@ -74,6 +79,13 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
     }
 
     /**
+     * @return paidCallBackUrl
+     */
+    public String getPaidCallBackUrl() {
+        return this.paidCallBackUrl;
+    }
+
+    /**
      * @return period
      */
     public Integer getPeriod() {
@@ -97,6 +109,7 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
     public static final class Builder extends Request.Builder<RenewAndroidInstanceGroupsRequest, Builder> {
         private Boolean autoPay; 
         private java.util.List<String> instanceGroupIds; 
+        private String paidCallBackUrl; 
         private Integer period; 
         private String periodUnit; 
         private String promotionId; 
@@ -109,6 +122,7 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
             super(request);
             this.autoPay = request.autoPay;
             this.instanceGroupIds = request.instanceGroupIds;
+            this.paidCallBackUrl = request.paidCallBackUrl;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.promotionId = request.promotionId;
@@ -137,6 +151,15 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.putQueryParameter("InstanceGroupIds", instanceGroupIds);
             this.instanceGroupIds = instanceGroupIds;
+            return this;
+        }
+
+        /**
+         * PaidCallBackUrl.
+         */
+        public Builder paidCallBackUrl(String paidCallBackUrl) {
+            this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
+            this.paidCallBackUrl = paidCallBackUrl;
             return this;
         }
 

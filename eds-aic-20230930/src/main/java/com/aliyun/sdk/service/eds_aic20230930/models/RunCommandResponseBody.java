@@ -26,10 +26,14 @@ public class RunCommandResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RunCommandInfos")
     private java.util.List<RunCommandInfos> runCommandInfos;
 
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
     private RunCommandResponseBody(Builder builder) {
         this.invokeId = builder.invokeId;
         this.requestId = builder.requestId;
         this.runCommandInfos = builder.runCommandInfos;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -65,10 +69,18 @@ public class RunCommandResponseBody extends TeaModel {
         return this.runCommandInfos;
     }
 
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
         private String invokeId; 
         private String requestId; 
         private java.util.List<RunCommandInfos> runCommandInfos; 
+        private String taskId; 
 
         private Builder() {
         } 
@@ -77,6 +89,7 @@ public class RunCommandResponseBody extends TeaModel {
             this.invokeId = model.invokeId;
             this.requestId = model.requestId;
             this.runCommandInfos = model.runCommandInfos;
+            this.taskId = model.taskId;
         } 
 
         /**
@@ -109,6 +122,14 @@ public class RunCommandResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+
         public RunCommandResponseBody build() {
             return new RunCommandResponseBody(this);
         } 
@@ -122,6 +143,9 @@ public class RunCommandResponseBody extends TeaModel {
      * <p>RunCommandResponseBody</p>
      */
     public static class RunCommandInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ChildTaskId")
+        private String childTaskId;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -129,6 +153,7 @@ public class RunCommandResponseBody extends TeaModel {
         private String invokeId;
 
         private RunCommandInfos(Builder builder) {
+            this.childTaskId = builder.childTaskId;
             this.instanceId = builder.instanceId;
             this.invokeId = builder.invokeId;
         }
@@ -139,6 +164,13 @@ public class RunCommandResponseBody extends TeaModel {
 
         public static RunCommandInfos create() {
             return builder().build();
+        }
+
+        /**
+         * @return childTaskId
+         */
+        public String getChildTaskId() {
+            return this.childTaskId;
         }
 
         /**
@@ -156,6 +188,7 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String childTaskId; 
             private String instanceId; 
             private String invokeId; 
 
@@ -163,9 +196,18 @@ public class RunCommandResponseBody extends TeaModel {
             } 
 
             private Builder(RunCommandInfos model) {
+                this.childTaskId = model.childTaskId;
                 this.instanceId = model.instanceId;
                 this.invokeId = model.invokeId;
             } 
+
+            /**
+             * ChildTaskId.
+             */
+            public Builder childTaskId(String childTaskId) {
+                this.childTaskId = childTaskId;
+                return this;
+            }
 
             /**
              * InstanceId.
