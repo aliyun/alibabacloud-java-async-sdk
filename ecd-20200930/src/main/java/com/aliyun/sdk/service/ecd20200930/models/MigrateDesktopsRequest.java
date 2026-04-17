@@ -28,15 +28,25 @@ public class MigrateDesktopsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetMemberIp")
+    private String targetMemberIp;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetOfficeSiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String targetOfficeSiteId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetSubnetId")
+    private String targetSubnetId;
 
     private MigrateDesktopsRequest(Builder builder) {
         super(builder);
         this.desktopId = builder.desktopId;
         this.regionId = builder.regionId;
+        this.targetMemberIp = builder.targetMemberIp;
         this.targetOfficeSiteId = builder.targetOfficeSiteId;
+        this.targetSubnetId = builder.targetSubnetId;
     }
 
     public static Builder builder() {
@@ -67,16 +77,32 @@ public class MigrateDesktopsRequest extends Request {
     }
 
     /**
+     * @return targetMemberIp
+     */
+    public String getTargetMemberIp() {
+        return this.targetMemberIp;
+    }
+
+    /**
      * @return targetOfficeSiteId
      */
     public String getTargetOfficeSiteId() {
         return this.targetOfficeSiteId;
     }
 
+    /**
+     * @return targetSubnetId
+     */
+    public String getTargetSubnetId() {
+        return this.targetSubnetId;
+    }
+
     public static final class Builder extends Request.Builder<MigrateDesktopsRequest, Builder> {
         private java.util.List<String> desktopId; 
         private String regionId; 
+        private String targetMemberIp; 
         private String targetOfficeSiteId; 
+        private String targetSubnetId; 
 
         private Builder() {
             super();
@@ -86,7 +112,9 @@ public class MigrateDesktopsRequest extends Request {
             super(request);
             this.desktopId = request.desktopId;
             this.regionId = request.regionId;
+            this.targetMemberIp = request.targetMemberIp;
             this.targetOfficeSiteId = request.targetOfficeSiteId;
+            this.targetSubnetId = request.targetSubnetId;
         } 
 
         /**
@@ -113,6 +141,15 @@ public class MigrateDesktopsRequest extends Request {
         }
 
         /**
+         * TargetMemberIp.
+         */
+        public Builder targetMemberIp(String targetMemberIp) {
+            this.putQueryParameter("TargetMemberIp", targetMemberIp);
+            this.targetMemberIp = targetMemberIp;
+            return this;
+        }
+
+        /**
          * <p>The ID of the destination office network.</p>
          * <p>This parameter is required.</p>
          * 
@@ -122,6 +159,20 @@ public class MigrateDesktopsRequest extends Request {
         public Builder targetOfficeSiteId(String targetOfficeSiteId) {
             this.putQueryParameter("TargetOfficeSiteId", targetOfficeSiteId);
             this.targetOfficeSiteId = targetOfficeSiteId;
+            return this;
+        }
+
+        /**
+         * <blockquote>
+         * <p>This parameter is for internal use only.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
+        public Builder targetSubnetId(String targetSubnetId) {
+            this.putQueryParameter("TargetSubnetId", targetSubnetId);
+            this.targetSubnetId = targetSubnetId;
             return this;
         }
 
