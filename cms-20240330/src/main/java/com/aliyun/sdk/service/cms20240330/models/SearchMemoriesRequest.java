@@ -56,6 +56,10 @@ public class SearchMemoriesRequest extends Request {
     private String runId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("searchType")
+    private String searchType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("threshold")
     private Double threshold;
 
@@ -78,6 +82,7 @@ public class SearchMemoriesRequest extends Request {
         this.rerank = builder.rerank;
         this.retrieveLevel = builder.retrieveLevel;
         this.runId = builder.runId;
+        this.searchType = builder.searchType;
         this.threshold = builder.threshold;
         this.topK = builder.topK;
         this.userId = builder.userId;
@@ -160,6 +165,13 @@ public class SearchMemoriesRequest extends Request {
     }
 
     /**
+     * @return searchType
+     */
+    public String getSearchType() {
+        return this.searchType;
+    }
+
+    /**
      * @return threshold
      */
     public Double getThreshold() {
@@ -190,6 +202,7 @@ public class SearchMemoriesRequest extends Request {
         private Boolean rerank; 
         private String retrieveLevel; 
         private String runId; 
+        private String searchType; 
         private Double threshold; 
         private Integer topK; 
         private String userId; 
@@ -209,6 +222,7 @@ public class SearchMemoriesRequest extends Request {
             this.rerank = request.rerank;
             this.retrieveLevel = request.retrieveLevel;
             this.runId = request.runId;
+            this.searchType = request.searchType;
             this.threshold = request.threshold;
             this.topK = request.topK;
             this.userId = request.userId;
@@ -298,6 +312,15 @@ public class SearchMemoriesRequest extends Request {
         public Builder runId(String runId) {
             this.putBodyParameter("runId", runId);
             this.runId = runId;
+            return this;
+        }
+
+        /**
+         * searchType.
+         */
+        public Builder searchType(String searchType) {
+            this.putBodyParameter("searchType", searchType);
+            this.searchType = searchType;
             return this;
         }
 
