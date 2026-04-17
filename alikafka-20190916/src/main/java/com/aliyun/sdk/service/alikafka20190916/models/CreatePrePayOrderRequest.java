@@ -520,6 +520,144 @@ public class CreatePrePayOrderRequest extends Request {
      *
      * <p>CreatePrePayOrderRequest</p>
      */
+    public static class KsqlList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Cu")
+        private Integer cu;
+
+        @com.aliyun.core.annotation.NameInMap("InternalId")
+        private String internalId;
+
+        @com.aliyun.core.annotation.NameInMap("Replica")
+        private Integer replica;
+
+        @com.aliyun.core.annotation.NameInMap("Storage")
+        private Integer storage;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private KsqlList(Builder builder) {
+            this.cu = builder.cu;
+            this.internalId = builder.internalId;
+            this.replica = builder.replica;
+            this.storage = builder.storage;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static KsqlList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cu
+         */
+        public Integer getCu() {
+            return this.cu;
+        }
+
+        /**
+         * @return internalId
+         */
+        public String getInternalId() {
+            return this.internalId;
+        }
+
+        /**
+         * @return replica
+         */
+        public Integer getReplica() {
+            return this.replica;
+        }
+
+        /**
+         * @return storage
+         */
+        public Integer getStorage() {
+            return this.storage;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Integer cu; 
+            private String internalId; 
+            private Integer replica; 
+            private Integer storage; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(KsqlList model) {
+                this.cu = model.cu;
+                this.internalId = model.internalId;
+                this.replica = model.replica;
+                this.storage = model.storage;
+                this.type = model.type;
+            } 
+
+            /**
+             * Cu.
+             */
+            public Builder cu(Integer cu) {
+                this.cu = cu;
+                return this;
+            }
+
+            /**
+             * InternalId.
+             */
+            public Builder internalId(String internalId) {
+                this.internalId = internalId;
+                return this;
+            }
+
+            /**
+             * Replica.
+             */
+            public Builder replica(Integer replica) {
+                this.replica = replica;
+                return this;
+            }
+
+            /**
+             * Storage.
+             */
+            public Builder storage(Integer storage) {
+                this.storage = storage;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public KsqlList build() {
+                return new KsqlList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreatePrePayOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePrePayOrderRequest</p>
+     */
     public static class ConfluentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectCU")
         private Integer connectCU;
@@ -554,6 +692,9 @@ public class CreatePrePayOrderRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("KsqlCU")
         private Integer ksqlCU;
 
+        @com.aliyun.core.annotation.NameInMap("KsqlList")
+        private java.util.List<KsqlList> ksqlList;
+
         @com.aliyun.core.annotation.NameInMap("KsqlReplica")
         private Integer ksqlReplica;
 
@@ -587,6 +728,7 @@ public class CreatePrePayOrderRequest extends Request {
             this.kafkaRestProxyReplica = builder.kafkaRestProxyReplica;
             this.kafkaStorage = builder.kafkaStorage;
             this.ksqlCU = builder.ksqlCU;
+            this.ksqlList = builder.ksqlList;
             this.ksqlReplica = builder.ksqlReplica;
             this.ksqlStorage = builder.ksqlStorage;
             this.schemaRegistryCU = builder.schemaRegistryCU;
@@ -682,6 +824,13 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
+         * @return ksqlList
+         */
+        public java.util.List<KsqlList> getKsqlList() {
+            return this.ksqlList;
+        }
+
+        /**
          * @return ksqlReplica
          */
         public Integer getKsqlReplica() {
@@ -742,6 +891,7 @@ public class CreatePrePayOrderRequest extends Request {
             private Integer kafkaRestProxyReplica; 
             private Integer kafkaStorage; 
             private Integer ksqlCU; 
+            private java.util.List<KsqlList> ksqlList; 
             private Integer ksqlReplica; 
             private Integer ksqlStorage; 
             private Integer schemaRegistryCU; 
@@ -765,6 +915,7 @@ public class CreatePrePayOrderRequest extends Request {
                 this.kafkaRestProxyReplica = model.kafkaRestProxyReplica;
                 this.kafkaStorage = model.kafkaStorage;
                 this.ksqlCU = model.ksqlCU;
+                this.ksqlList = model.ksqlList;
                 this.ksqlReplica = model.ksqlReplica;
                 this.ksqlStorage = model.ksqlStorage;
                 this.schemaRegistryCU = model.schemaRegistryCU;
@@ -892,6 +1043,14 @@ public class CreatePrePayOrderRequest extends Request {
              */
             public Builder ksqlCU(Integer ksqlCU) {
                 this.ksqlCU = ksqlCU;
+                return this;
+            }
+
+            /**
+             * KsqlList.
+             */
+            public Builder ksqlList(java.util.List<KsqlList> ksqlList) {
+                this.ksqlList = ksqlList;
                 return this;
             }
 

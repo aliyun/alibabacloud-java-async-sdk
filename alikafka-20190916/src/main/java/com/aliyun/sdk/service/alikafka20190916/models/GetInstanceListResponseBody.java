@@ -169,6 +169,198 @@ public class GetInstanceListResponseBody extends TeaModel {
      *
      * <p>GetInstanceListResponseBody</p>
      */
+    public static class ConfluentInstanceComponentResourceVO extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Cu")
+        private Integer cu;
+
+        @com.aliyun.core.annotation.NameInMap("InternalId")
+        private String internalId;
+
+        @com.aliyun.core.annotation.NameInMap("Replica")
+        private Integer replica;
+
+        @com.aliyun.core.annotation.NameInMap("Storage")
+        private Integer storage;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private ConfluentInstanceComponentResourceVO(Builder builder) {
+            this.cu = builder.cu;
+            this.internalId = builder.internalId;
+            this.replica = builder.replica;
+            this.storage = builder.storage;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfluentInstanceComponentResourceVO create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cu
+         */
+        public Integer getCu() {
+            return this.cu;
+        }
+
+        /**
+         * @return internalId
+         */
+        public String getInternalId() {
+            return this.internalId;
+        }
+
+        /**
+         * @return replica
+         */
+        public Integer getReplica() {
+            return this.replica;
+        }
+
+        /**
+         * @return storage
+         */
+        public Integer getStorage() {
+            return this.storage;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Integer cu; 
+            private String internalId; 
+            private Integer replica; 
+            private Integer storage; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfluentInstanceComponentResourceVO model) {
+                this.cu = model.cu;
+                this.internalId = model.internalId;
+                this.replica = model.replica;
+                this.storage = model.storage;
+                this.type = model.type;
+            } 
+
+            /**
+             * Cu.
+             */
+            public Builder cu(Integer cu) {
+                this.cu = cu;
+                return this;
+            }
+
+            /**
+             * InternalId.
+             */
+            public Builder internalId(String internalId) {
+                this.internalId = internalId;
+                return this;
+            }
+
+            /**
+             * Replica.
+             */
+            public Builder replica(Integer replica) {
+                this.replica = replica;
+                return this;
+            }
+
+            /**
+             * Storage.
+             */
+            public Builder storage(Integer storage) {
+                this.storage = storage;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public ConfluentInstanceComponentResourceVO build() {
+                return new ConfluentInstanceComponentResourceVO(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceListResponseBody</p>
+     */
+    public static class KsqlList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfluentInstanceComponentResourceVO")
+        private java.util.List<ConfluentInstanceComponentResourceVO> confluentInstanceComponentResourceVO;
+
+        private KsqlList(Builder builder) {
+            this.confluentInstanceComponentResourceVO = builder.confluentInstanceComponentResourceVO;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static KsqlList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confluentInstanceComponentResourceVO
+         */
+        public java.util.List<ConfluentInstanceComponentResourceVO> getConfluentInstanceComponentResourceVO() {
+            return this.confluentInstanceComponentResourceVO;
+        }
+
+        public static final class Builder {
+            private java.util.List<ConfluentInstanceComponentResourceVO> confluentInstanceComponentResourceVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(KsqlList model) {
+                this.confluentInstanceComponentResourceVO = model.confluentInstanceComponentResourceVO;
+            } 
+
+            /**
+             * ConfluentInstanceComponentResourceVO.
+             */
+            public Builder confluentInstanceComponentResourceVO(java.util.List<ConfluentInstanceComponentResourceVO> confluentInstanceComponentResourceVO) {
+                this.confluentInstanceComponentResourceVO = confluentInstanceComponentResourceVO;
+                return this;
+            }
+
+            public KsqlList build() {
+                return new KsqlList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceListResponseBody</p>
+     */
     public static class ConfluentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectCU")
         private Integer connectCU;
@@ -203,6 +395,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KsqlCU")
         private Integer ksqlCU;
 
+        @com.aliyun.core.annotation.NameInMap("KsqlList")
+        private KsqlList ksqlList;
+
         @com.aliyun.core.annotation.NameInMap("KsqlReplica")
         private Integer ksqlReplica;
 
@@ -236,6 +431,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.kafkaRestProxyReplica = builder.kafkaRestProxyReplica;
             this.kafkaStorage = builder.kafkaStorage;
             this.ksqlCU = builder.ksqlCU;
+            this.ksqlList = builder.ksqlList;
             this.ksqlReplica = builder.ksqlReplica;
             this.ksqlStorage = builder.ksqlStorage;
             this.schemaRegistryCU = builder.schemaRegistryCU;
@@ -331,6 +527,13 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return ksqlList
+         */
+        public KsqlList getKsqlList() {
+            return this.ksqlList;
+        }
+
+        /**
          * @return ksqlReplica
          */
         public Integer getKsqlReplica() {
@@ -391,6 +594,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private Integer kafkaRestProxyReplica; 
             private Integer kafkaStorage; 
             private Integer ksqlCU; 
+            private KsqlList ksqlList; 
             private Integer ksqlReplica; 
             private Integer ksqlStorage; 
             private Integer schemaRegistryCU; 
@@ -414,6 +618,7 @@ public class GetInstanceListResponseBody extends TeaModel {
                 this.kafkaRestProxyReplica = model.kafkaRestProxyReplica;
                 this.kafkaStorage = model.kafkaStorage;
                 this.ksqlCU = model.ksqlCU;
+                this.ksqlList = model.ksqlList;
                 this.ksqlReplica = model.ksqlReplica;
                 this.ksqlStorage = model.ksqlStorage;
                 this.schemaRegistryCU = model.schemaRegistryCU;
@@ -545,6 +750,14 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
+             * KsqlList.
+             */
+            public Builder ksqlList(KsqlList ksqlList) {
+                this.ksqlList = ksqlList;
+                return this;
+            }
+
+            /**
              * <p>The number of replicas of ksqlDB.</p>
              * 
              * <strong>example:</strong>
@@ -647,11 +860,15 @@ public class GetInstanceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpcEndpoint")
         private String vpcEndpoint;
 
+        @com.aliyun.core.annotation.NameInMap("internalId")
+        private String internalId;
+
         private ConfluentInstanceComponentVO(Builder builder) {
             this.componentType = builder.componentType;
             this.deployModule = builder.deployModule;
             this.pubEndpoint = builder.pubEndpoint;
             this.vpcEndpoint = builder.vpcEndpoint;
+            this.internalId = builder.internalId;
         }
 
         public static Builder builder() {
@@ -690,11 +907,19 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.vpcEndpoint;
         }
 
+        /**
+         * @return internalId
+         */
+        public String getInternalId() {
+            return this.internalId;
+        }
+
         public static final class Builder {
             private String componentType; 
             private String deployModule; 
             private String pubEndpoint; 
             private String vpcEndpoint; 
+            private String internalId; 
 
             private Builder() {
             } 
@@ -704,6 +929,7 @@ public class GetInstanceListResponseBody extends TeaModel {
                 this.deployModule = model.deployModule;
                 this.pubEndpoint = model.pubEndpoint;
                 this.vpcEndpoint = model.vpcEndpoint;
+                this.internalId = model.internalId;
             } 
 
             /**
@@ -735,6 +961,14 @@ public class GetInstanceListResponseBody extends TeaModel {
              */
             public Builder vpcEndpoint(String vpcEndpoint) {
                 this.vpcEndpoint = vpcEndpoint;
+                return this;
+            }
+
+            /**
+             * internalId.
+             */
+            public Builder internalId(String internalId) {
+                this.internalId = internalId;
                 return this;
             }
 
