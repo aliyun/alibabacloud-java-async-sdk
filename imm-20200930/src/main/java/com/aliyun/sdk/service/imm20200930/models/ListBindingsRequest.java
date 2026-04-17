@@ -30,6 +30,10 @@ public class ListBindingsRequest extends Request {
     private Long maxResults;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
@@ -43,6 +47,7 @@ public class ListBindingsRequest extends Request {
         this.regionId = builder.regionId;
         this.datasetName = builder.datasetName;
         this.maxResults = builder.maxResults;
+        this.name = builder.name;
         this.nextToken = builder.nextToken;
         this.projectName = builder.projectName;
     }
@@ -82,6 +87,13 @@ public class ListBindingsRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return nextToken
      */
     public String getNextToken() {
@@ -99,6 +111,7 @@ public class ListBindingsRequest extends Request {
         private String regionId; 
         private String datasetName; 
         private Long maxResults; 
+        private String name; 
         private String nextToken; 
         private String projectName; 
 
@@ -111,6 +124,7 @@ public class ListBindingsRequest extends Request {
             this.regionId = request.regionId;
             this.datasetName = request.datasetName;
             this.maxResults = request.maxResults;
+            this.name = request.name;
             this.nextToken = request.nextToken;
             this.projectName = request.projectName;
         } 
@@ -148,6 +162,15 @@ public class ListBindingsRequest extends Request {
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 
