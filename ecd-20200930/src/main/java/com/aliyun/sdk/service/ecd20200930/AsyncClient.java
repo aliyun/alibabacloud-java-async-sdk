@@ -1854,6 +1854,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MoveCdsFileResponse> moveCdsFile(MoveCdsFileRequest request);
 
     /**
+     * @param request the request parameters of QueryHistoryActiveUserCount  QueryHistoryActiveUserCountRequest
+     * @return QueryHistoryActiveUserCountResponse
+     */
+    CompletableFuture<QueryHistoryActiveUserCountResponse> queryHistoryActiveUserCount(QueryHistoryActiveUserCountRequest request);
+
+    /**
+     * @param request the request parameters of QueryHistoryMetricDistribution  QueryHistoryMetricDistributionRequest
+     * @return QueryHistoryMetricDistributionResponse
+     */
+    CompletableFuture<QueryHistoryMetricDistributionResponse> queryHistoryMetricDistribution(QueryHistoryMetricDistributionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The cloud computers that you want to restart must be in the Running state.</p>
      * 

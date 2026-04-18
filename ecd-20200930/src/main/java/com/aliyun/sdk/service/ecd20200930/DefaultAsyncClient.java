@@ -4826,6 +4826,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryHistoryActiveUserCount  QueryHistoryActiveUserCountRequest
+     * @return QueryHistoryActiveUserCountResponse
+     */
+    @Override
+    public CompletableFuture<QueryHistoryActiveUserCountResponse> queryHistoryActiveUserCount(QueryHistoryActiveUserCountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryHistoryActiveUserCount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryHistoryActiveUserCountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryHistoryActiveUserCountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryHistoryMetricDistribution  QueryHistoryMetricDistributionRequest
+     * @return QueryHistoryMetricDistributionResponse
+     */
+    @Override
+    public CompletableFuture<QueryHistoryMetricDistributionResponse> queryHistoryMetricDistribution(QueryHistoryMetricDistributionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryHistoryMetricDistribution").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryHistoryMetricDistributionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryHistoryMetricDistributionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>The cloud computers that you want to restart must be in the Running state.</p>
      * 
