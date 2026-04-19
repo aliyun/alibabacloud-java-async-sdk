@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelKyuubiSparkApplicationResponse> cancelKyuubiSparkApplication(CancelKyuubiSparkApplicationRequest request);
 
     /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
+    /**
      * @param request the request parameters of CreateKyuubiService  CreateKyuubiServiceRequest
      * @return CreateKyuubiServiceResponse
      */
