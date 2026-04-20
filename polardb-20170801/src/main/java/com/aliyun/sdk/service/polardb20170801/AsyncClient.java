@@ -161,6 +161,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ContinueDBClusterMigrationResponse> continueDBClusterMigration(ContinueDBClusterMigrationRequest request);
 
     /**
+     * @param request the request parameters of CreateAIDBClusterDataset  CreateAIDBClusterDatasetRequest
+     * @return CreateAIDBClusterDatasetResponse
+     */
+    CompletableFuture<CreateAIDBClusterDatasetResponse> createAIDBClusterDataset(CreateAIDBClusterDatasetRequest request);
+
+    /**
+     * @param request the request parameters of CreateAIDBClusterTask  CreateAIDBClusterTaskRequest
+     * @return CreateAIDBClusterTaskResponse
+     */
+    CompletableFuture<CreateAIDBClusterTaskResponse> createAIDBClusterTask(CreateAIDBClusterTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateAINodes  CreateAINodesRequest
      * @return CreateAINodesResponse
      */
@@ -369,6 +381,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAIDBClusterResponse
      */
     CompletableFuture<DeleteAIDBClusterResponse> deleteAIDBCluster(DeleteAIDBClusterRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAIDBClusterDataset  DeleteAIDBClusterDatasetRequest
+     * @return DeleteAIDBClusterDatasetResponse
+     */
+    CompletableFuture<DeleteAIDBClusterDatasetResponse> deleteAIDBClusterDataset(DeleteAIDBClusterDatasetRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAIDBClusterTask  DeleteAIDBClusterTaskRequest
+     * @return DeleteAIDBClusterTaskResponse
+     */
+    CompletableFuture<DeleteAIDBClusterTaskResponse> deleteAIDBClusterTask(DeleteAIDBClusterTaskRequest request);
 
     /**
      * @param request the request parameters of DeleteAINodes  DeleteAINodesRequest
@@ -592,10 +616,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAIDBClusterAttributeResponse> describeAIDBClusterAttribute(DescribeAIDBClusterAttributeRequest request);
 
     /**
+     * @param request the request parameters of DescribeAIDBClusterDatasets  DescribeAIDBClusterDatasetsRequest
+     * @return DescribeAIDBClusterDatasetsResponse
+     */
+    CompletableFuture<DescribeAIDBClusterDatasetsResponse> describeAIDBClusterDatasets(DescribeAIDBClusterDatasetsRequest request);
+
+    /**
      * @param request the request parameters of DescribeAIDBClusterPerformance  DescribeAIDBClusterPerformanceRequest
      * @return DescribeAIDBClusterPerformanceResponse
      */
     CompletableFuture<DescribeAIDBClusterPerformanceResponse> describeAIDBClusterPerformance(DescribeAIDBClusterPerformanceRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAIDBClusterTaskAttribute  DescribeAIDBClusterTaskAttributeRequest
+     * @return DescribeAIDBClusterTaskAttributeResponse
+     */
+    CompletableFuture<DescribeAIDBClusterTaskAttributeResponse> describeAIDBClusterTaskAttribute(DescribeAIDBClusterTaskAttributeRequest request);
 
     /**
      * @param request the request parameters of DescribeAIDBClusterTaskLogFiles  DescribeAIDBClusterTaskLogFilesRequest
@@ -608,6 +644,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAIDBClusterTaskMetricsResponse
      */
     CompletableFuture<DescribeAIDBClusterTaskMetricsResponse> describeAIDBClusterTaskMetrics(DescribeAIDBClusterTaskMetricsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAIDBClusterTasks  DescribeAIDBClusterTasksRequest
+     * @return DescribeAIDBClusterTasksResponse
+     */
+    CompletableFuture<DescribeAIDBClusterTasksResponse> describeAIDBClusterTasks(DescribeAIDBClusterTasksRequest request);
 
     /**
      * @param request the request parameters of DescribeAIDBClusters  DescribeAIDBClustersRequest
