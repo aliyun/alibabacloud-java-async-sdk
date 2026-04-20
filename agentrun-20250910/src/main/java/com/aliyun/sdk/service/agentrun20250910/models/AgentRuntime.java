@@ -109,6 +109,9 @@ public class AgentRuntime extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("statusReason")
     private String statusReason;
 
+    @com.aliyun.core.annotation.NameInMap("systemTags")
+    private java.util.List<String> systemTags;
+
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     private String workspaceId;
 
@@ -143,6 +146,7 @@ public class AgentRuntime extends TeaModel {
         this.sessionIdleTimeoutSeconds = builder.sessionIdleTimeoutSeconds;
         this.status = builder.status;
         this.statusReason = builder.statusReason;
+        this.systemTags = builder.systemTags;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -369,6 +373,13 @@ public class AgentRuntime extends TeaModel {
     }
 
     /**
+     * @return systemTags
+     */
+    public java.util.List<String> getSystemTags() {
+        return this.systemTags;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -406,6 +417,7 @@ public class AgentRuntime extends TeaModel {
         private Integer sessionIdleTimeoutSeconds; 
         private String status; 
         private String statusReason; 
+        private java.util.List<String> systemTags; 
         private String workspaceId; 
 
         private Builder() {
@@ -442,6 +454,7 @@ public class AgentRuntime extends TeaModel {
             this.sessionIdleTimeoutSeconds = model.sessionIdleTimeoutSeconds;
             this.status = model.status;
             this.statusReason = model.statusReason;
+            this.systemTags = model.systemTags;
             this.workspaceId = model.workspaceId;
         } 
 
@@ -766,6 +779,17 @@ public class AgentRuntime extends TeaModel {
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
+            return this;
+        }
+
+        /**
+         * <p>智能体运行时的系统标签信息，用于系统级别的资源分类和管理</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system-tag-1,system-tag-2</p>
+         */
+        public Builder systemTags(java.util.List<String> systemTags) {
+            this.systemTags = systemTags;
             return this;
         }
 

@@ -88,6 +88,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sessionIdleTimeoutSeconds")
     private Integer sessionIdleTimeoutSeconds;
 
+    @com.aliyun.core.annotation.NameInMap("systemTags")
+    private java.util.List<String> systemTags;
+
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     private String workspaceId;
 
@@ -115,6 +118,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         this.protocolConfiguration = builder.protocolConfiguration;
         this.sessionConcurrencyLimitPerInstance = builder.sessionConcurrencyLimitPerInstance;
         this.sessionIdleTimeoutSeconds = builder.sessionIdleTimeoutSeconds;
+        this.systemTags = builder.systemTags;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -292,6 +296,13 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     }
 
     /**
+     * @return systemTags
+     */
+    public java.util.List<String> getSystemTags() {
+        return this.systemTags;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -322,6 +333,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         private ProtocolConfiguration protocolConfiguration; 
         private Integer sessionConcurrencyLimitPerInstance; 
         private Integer sessionIdleTimeoutSeconds; 
+        private java.util.List<String> systemTags; 
         private String workspaceId; 
 
         private Builder() {
@@ -351,6 +363,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
             this.protocolConfiguration = model.protocolConfiguration;
             this.sessionConcurrencyLimitPerInstance = model.sessionConcurrencyLimitPerInstance;
             this.sessionIdleTimeoutSeconds = model.sessionIdleTimeoutSeconds;
+            this.systemTags = model.systemTags;
             this.workspaceId = model.workspaceId;
         } 
 
@@ -586,6 +599,17 @@ public class UpdateAgentRuntimeInput extends TeaModel {
          */
         public Builder sessionIdleTimeoutSeconds(Integer sessionIdleTimeoutSeconds) {
             this.sessionIdleTimeoutSeconds = sessionIdleTimeoutSeconds;
+            return this;
+        }
+
+        /**
+         * <p>智能体运行时的系统标签信息，用于系统级别的资源分类和管理</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system-tag-1,system-tag-2</p>
+         */
+        public Builder systemTags(java.util.List<String> systemTags) {
+            this.systemTags = systemTags;
             return this;
         }
 
