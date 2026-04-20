@@ -218,6 +218,18 @@ public class InitializeRequest extends Request {
     private String targetFacePictureUrl;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    private String templateConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateRanCount")
+    private String templateRanCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
+    private String templateType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UseNFC")
     private String useNFC;
 
@@ -277,6 +289,9 @@ public class InitializeRequest extends Request {
         this.styleConfig = builder.styleConfig;
         this.targetFacePicture = builder.targetFacePicture;
         this.targetFacePictureUrl = builder.targetFacePictureUrl;
+        this.templateConfig = builder.templateConfig;
+        this.templateRanCount = builder.templateRanCount;
+        this.templateType = builder.templateType;
         this.useNFC = builder.useNFC;
         this.verifyModel = builder.verifyModel;
     }
@@ -645,6 +660,27 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return templateConfig
+     */
+    public String getTemplateConfig() {
+        return this.templateConfig;
+    }
+
+    /**
+     * @return templateRanCount
+     */
+    public String getTemplateRanCount() {
+        return this.templateRanCount;
+    }
+
+    /**
+     * @return templateType
+     */
+    public String getTemplateType() {
+        return this.templateType;
+    }
+
+    /**
      * @return useNFC
      */
     public String getUseNFC() {
@@ -709,6 +745,9 @@ public class InitializeRequest extends Request {
         private String styleConfig; 
         private String targetFacePicture; 
         private String targetFacePictureUrl; 
+        private String templateConfig; 
+        private String templateRanCount; 
+        private String templateType; 
         private String useNFC; 
         private String verifyModel; 
 
@@ -768,6 +807,9 @@ public class InitializeRequest extends Request {
             this.styleConfig = request.styleConfig;
             this.targetFacePicture = request.targetFacePicture;
             this.targetFacePictureUrl = request.targetFacePictureUrl;
+            this.templateConfig = request.templateConfig;
+            this.templateRanCount = request.templateRanCount;
+            this.templateType = request.templateType;
             this.useNFC = request.useNFC;
             this.verifyModel = request.verifyModel;
         } 
@@ -1500,6 +1542,33 @@ public class InitializeRequest extends Request {
         public Builder targetFacePictureUrl(String targetFacePictureUrl) {
             this.putQueryParameter("TargetFacePictureUrl", targetFacePictureUrl);
             this.targetFacePictureUrl = targetFacePictureUrl;
+            return this;
+        }
+
+        /**
+         * TemplateConfig.
+         */
+        public Builder templateConfig(String templateConfig) {
+            this.putQueryParameter("TemplateConfig", templateConfig);
+            this.templateConfig = templateConfig;
+            return this;
+        }
+
+        /**
+         * TemplateRanCount.
+         */
+        public Builder templateRanCount(String templateRanCount) {
+            this.putQueryParameter("TemplateRanCount", templateRanCount);
+            this.templateRanCount = templateRanCount;
+            return this;
+        }
+
+        /**
+         * TemplateType.
+         */
+        public Builder templateType(String templateType) {
+            this.putQueryParameter("TemplateType", templateType);
+            this.templateType = templateType;
             return this;
         }
 
