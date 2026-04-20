@@ -169,6 +169,60 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
      *
      * <p>DescribeScalingConfigurationsResponseBody</p>
      */
+    public static class CpuOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NestedVirtualization")
+        private String nestedVirtualization;
+
+        private CpuOptions(Builder builder) {
+            this.nestedVirtualization = builder.nestedVirtualization;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CpuOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nestedVirtualization
+         */
+        public String getNestedVirtualization() {
+            return this.nestedVirtualization;
+        }
+
+        public static final class Builder {
+            private String nestedVirtualization; 
+
+            private Builder() {
+            } 
+
+            private Builder(CpuOptions model) {
+                this.nestedVirtualization = model.nestedVirtualization;
+            } 
+
+            /**
+             * NestedVirtualization.
+             */
+            public Builder nestedVirtualization(String nestedVirtualization) {
+                this.nestedVirtualization = nestedVirtualization;
+                return this;
+            }
+
+            public CpuOptions build() {
+                return new CpuOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeScalingConfigurationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScalingConfigurationsResponseBody</p>
+     */
     public static class CustomPriorities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -1933,6 +1987,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
+        @com.aliyun.core.annotation.NameInMap("CpuOptions")
+        private CpuOptions cpuOptions;
+
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
@@ -2152,6 +2209,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private ScalingConfigurations(Builder builder) {
             this.affinity = builder.affinity;
             this.cpu = builder.cpu;
+            this.cpuOptions = builder.cpuOptions;
             this.creationTime = builder.creationTime;
             this.creditSpecification = builder.creditSpecification;
             this.customPriorities = builder.customPriorities;
@@ -2246,6 +2304,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          */
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return cpuOptions
+         */
+        public CpuOptions getCpuOptions() {
+            return this.cpuOptions;
         }
 
         /**
@@ -2755,6 +2820,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public static final class Builder {
             private String affinity; 
             private Integer cpu; 
+            private CpuOptions cpuOptions; 
             private String creationTime; 
             private String creditSpecification; 
             private java.util.List<CustomPriorities> customPriorities; 
@@ -2834,6 +2900,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private Builder(ScalingConfigurations model) {
                 this.affinity = model.affinity;
                 this.cpu = model.cpu;
+                this.cpuOptions = model.cpuOptions;
                 this.creationTime = model.creationTime;
                 this.creditSpecification = model.creditSpecification;
                 this.customPriorities = model.customPriorities;
@@ -2935,6 +3002,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * CpuOptions.
+             */
+            public Builder cpuOptions(CpuOptions cpuOptions) {
+                this.cpuOptions = cpuOptions;
                 return this;
             }
 
