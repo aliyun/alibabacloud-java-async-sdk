@@ -81,6 +81,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddTaskFlowEdgesResponse> addTaskFlowEdges(AddTaskFlowEdgesRequest request);
 
     /**
+     * @param request the request parameters of AddWorkspaceUser  AddWorkspaceUserRequest
+     * @return AddWorkspaceUserResponse
+     */
+    CompletableFuture<AddWorkspaceUserResponse> addWorkspaceUser(AddWorkspaceUserRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The following conditions must be met before you call this API operation.</p>
      * <ul>
@@ -1781,6 +1787,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWorkFlowTemplatesResponse> listWorkFlowTemplates(ListWorkFlowTemplatesRequest request);
 
     /**
+     * @param request the request parameters of ListWorkspaceUsers  ListWorkspaceUsersRequest
+     * @return ListWorkspaceUsersResponse
+     */
+    CompletableFuture<ListWorkspaceUsersResponse> listWorkspaceUsers(ListWorkspaceUsersRequest request);
+
+    /**
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
      * @return ListWorkspacesResponse
      */
@@ -1931,6 +1943,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveTableFromCategoryResponse> removeTableFromCategory(RemoveTableFromCategoryRequest request);
 
     /**
+     * @param request the request parameters of RemoveWorkspaceUser  RemoveWorkspaceUserRequest
+     * @return RemoveWorkspaceUserResponse
+     */
+    CompletableFuture<RemoveWorkspaceUserResponse> removeWorkspaceUser(RemoveWorkspaceUserRequest request);
+
+    /**
      * @param request the request parameters of RestartDataCorrectSQLJob  RestartDataCorrectSQLJobRequest
      * @return RestartDataCorrectSQLJobResponse
      */
@@ -2001,6 +2019,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SearchTableKnowledgeResponse
      */
     CompletableFuture<SearchTableKnowledgeResponse> searchTableKnowledge(SearchTableKnowledgeRequest request);
+
+    /**
+     * @param request the request parameters of SearchWorkspaceRoles  SearchWorkspaceRolesRequest
+     * @return SearchWorkspaceRolesResponse
+     */
+    CompletableFuture<SearchWorkspaceRolesResponse> searchWorkspaceRoles(SearchWorkspaceRolesRequest request);
 
     /**
      * @param request the request parameters of SetOwners  SetOwnersRequest
@@ -2292,5 +2316,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateWorkspaceResponse
      */
     CompletableFuture<UpdateWorkspaceResponse> updateWorkspace(UpdateWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWorkspaceUser  UpdateWorkspaceUserRequest
+     * @return UpdateWorkspaceUserResponse
+     */
+    CompletableFuture<UpdateWorkspaceUserResponse> updateWorkspaceUser(UpdateWorkspaceUserRequest request);
 
 }
