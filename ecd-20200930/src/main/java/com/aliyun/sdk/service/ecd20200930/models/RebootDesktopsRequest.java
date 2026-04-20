@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RebootDesktopsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateSnapshot")
+    private Boolean createSnapshot;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> desktopId;
@@ -27,14 +31,20 @@ public class RebootDesktopsRequest extends Request {
     private Boolean osUpdate;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PatchId")
+    private String patchId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private RebootDesktopsRequest(Builder builder) {
         super(builder);
+        this.createSnapshot = builder.createSnapshot;
         this.desktopId = builder.desktopId;
         this.osUpdate = builder.osUpdate;
+        this.patchId = builder.patchId;
         this.regionId = builder.regionId;
     }
 
@@ -52,6 +62,13 @@ public class RebootDesktopsRequest extends Request {
     }
 
     /**
+     * @return createSnapshot
+     */
+    public Boolean getCreateSnapshot() {
+        return this.createSnapshot;
+    }
+
+    /**
      * @return desktopId
      */
     public java.util.List<String> getDesktopId() {
@@ -66,6 +83,13 @@ public class RebootDesktopsRequest extends Request {
     }
 
     /**
+     * @return patchId
+     */
+    public String getPatchId() {
+        return this.patchId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -73,8 +97,10 @@ public class RebootDesktopsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RebootDesktopsRequest, Builder> {
+        private Boolean createSnapshot; 
         private java.util.List<String> desktopId; 
         private Boolean osUpdate; 
+        private String patchId; 
         private String regionId; 
 
         private Builder() {
@@ -83,10 +109,21 @@ public class RebootDesktopsRequest extends Request {
 
         private Builder(RebootDesktopsRequest request) {
             super(request);
+            this.createSnapshot = request.createSnapshot;
             this.desktopId = request.desktopId;
             this.osUpdate = request.osUpdate;
+            this.patchId = request.patchId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * CreateSnapshot.
+         */
+        public Builder createSnapshot(Boolean createSnapshot) {
+            this.putQueryParameter("CreateSnapshot", createSnapshot);
+            this.createSnapshot = createSnapshot;
+            return this;
+        }
 
         /**
          * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
@@ -107,6 +144,15 @@ public class RebootDesktopsRequest extends Request {
         public Builder osUpdate(Boolean osUpdate) {
             this.putQueryParameter("OsUpdate", osUpdate);
             this.osUpdate = osUpdate;
+            return this;
+        }
+
+        /**
+         * PatchId.
+         */
+        public Builder patchId(String patchId) {
+            this.putQueryParameter("PatchId", patchId);
+            this.patchId = patchId;
             return this;
         }
 

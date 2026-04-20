@@ -101,6 +101,9 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppointmentTimer")
         private Long appointmentTimer;
 
+        @com.aliyun.core.annotation.NameInMap("CreateSnapshot")
+        private Boolean createSnapshot;
+
         @com.aliyun.core.annotation.NameInMap("EndCronExpression")
         private String endCronExpression;
 
@@ -122,6 +125,9 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
+        @com.aliyun.core.annotation.NameInMap("PatchId")
+        private String patchId;
+
         @com.aliyun.core.annotation.NameInMap("ProcessWhitelist")
         private java.util.List<String> processWhitelist;
 
@@ -142,6 +148,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
 
         private SegmentTimers(Builder builder) {
             this.appointmentTimer = builder.appointmentTimer;
+            this.createSnapshot = builder.createSnapshot;
             this.endCronExpression = builder.endCronExpression;
             this.enforce = builder.enforce;
             this.imageId = builder.imageId;
@@ -149,6 +156,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             this.lockScreenTime = builder.lockScreenTime;
             this.notificationTime = builder.notificationTime;
             this.operationType = builder.operationType;
+            this.patchId = builder.patchId;
             this.processWhitelist = builder.processWhitelist;
             this.resetType = builder.resetType;
             this.startCronExpression = builder.startCronExpression;
@@ -170,6 +178,13 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
          */
         public Long getAppointmentTimer() {
             return this.appointmentTimer;
+        }
+
+        /**
+         * @return createSnapshot
+         */
+        public Boolean getCreateSnapshot() {
+            return this.createSnapshot;
         }
 
         /**
@@ -222,6 +237,13 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return patchId
+         */
+        public String getPatchId() {
+            return this.patchId;
+        }
+
+        /**
          * @return processWhitelist
          */
         public java.util.List<String> getProcessWhitelist() {
@@ -265,6 +287,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long appointmentTimer; 
+            private Boolean createSnapshot; 
             private String endCronExpression; 
             private Boolean enforce; 
             private String imageId; 
@@ -272,6 +295,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             private Integer lockScreenTime; 
             private Integer notificationTime; 
             private String operationType; 
+            private String patchId; 
             private java.util.List<String> processWhitelist; 
             private String resetType; 
             private String startCronExpression; 
@@ -284,6 +308,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
 
             private Builder(SegmentTimers model) {
                 this.appointmentTimer = model.appointmentTimer;
+                this.createSnapshot = model.createSnapshot;
                 this.endCronExpression = model.endCronExpression;
                 this.enforce = model.enforce;
                 this.imageId = model.imageId;
@@ -291,6 +316,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
                 this.lockScreenTime = model.lockScreenTime;
                 this.notificationTime = model.notificationTime;
                 this.operationType = model.operationType;
+                this.patchId = model.patchId;
                 this.processWhitelist = model.processWhitelist;
                 this.resetType = model.resetType;
                 this.startCronExpression = model.startCronExpression;
@@ -304,6 +330,14 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
              */
             public Builder appointmentTimer(Long appointmentTimer) {
                 this.appointmentTimer = appointmentTimer;
+                return this;
+            }
+
+            /**
+             * CreateSnapshot.
+             */
+            public Builder createSnapshot(Boolean createSnapshot) {
+                this.createSnapshot = createSnapshot;
                 return this;
             }
 
@@ -360,6 +394,14 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
+                return this;
+            }
+
+            /**
+             * PatchId.
+             */
+            public Builder patchId(String patchId) {
+                this.patchId = patchId;
                 return this;
             }
 

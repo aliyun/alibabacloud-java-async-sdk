@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class StopDesktopsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateSnapshot")
+    private String createSnapshot;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> desktopId;
@@ -25,6 +29,10 @@ public class StopDesktopsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OsUpdate")
     private Boolean osUpdate;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PatchId")
+    private String patchId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -37,8 +45,10 @@ public class StopDesktopsRequest extends Request {
 
     private StopDesktopsRequest(Builder builder) {
         super(builder);
+        this.createSnapshot = builder.createSnapshot;
         this.desktopId = builder.desktopId;
         this.osUpdate = builder.osUpdate;
+        this.patchId = builder.patchId;
         this.regionId = builder.regionId;
         this.stoppedMode = builder.stoppedMode;
     }
@@ -57,6 +67,13 @@ public class StopDesktopsRequest extends Request {
     }
 
     /**
+     * @return createSnapshot
+     */
+    public String getCreateSnapshot() {
+        return this.createSnapshot;
+    }
+
+    /**
      * @return desktopId
      */
     public java.util.List<String> getDesktopId() {
@@ -68,6 +85,13 @@ public class StopDesktopsRequest extends Request {
      */
     public Boolean getOsUpdate() {
         return this.osUpdate;
+    }
+
+    /**
+     * @return patchId
+     */
+    public String getPatchId() {
+        return this.patchId;
     }
 
     /**
@@ -85,8 +109,10 @@ public class StopDesktopsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StopDesktopsRequest, Builder> {
+        private String createSnapshot; 
         private java.util.List<String> desktopId; 
         private Boolean osUpdate; 
+        private String patchId; 
         private String regionId; 
         private String stoppedMode; 
 
@@ -96,11 +122,22 @@ public class StopDesktopsRequest extends Request {
 
         private Builder(StopDesktopsRequest request) {
             super(request);
+            this.createSnapshot = request.createSnapshot;
             this.desktopId = request.desktopId;
             this.osUpdate = request.osUpdate;
+            this.patchId = request.patchId;
             this.regionId = request.regionId;
             this.stoppedMode = request.stoppedMode;
         } 
+
+        /**
+         * CreateSnapshot.
+         */
+        public Builder createSnapshot(String createSnapshot) {
+            this.putQueryParameter("CreateSnapshot", createSnapshot);
+            this.createSnapshot = createSnapshot;
+            return this;
+        }
 
         /**
          * <p>The cloud computer IDs. You can specify the IDs of 1 to 100 cloud computers.</p>
@@ -124,6 +161,15 @@ public class StopDesktopsRequest extends Request {
         public Builder osUpdate(Boolean osUpdate) {
             this.putQueryParameter("OsUpdate", osUpdate);
             this.osUpdate = osUpdate;
+            return this;
+        }
+
+        /**
+         * PatchId.
+         */
+        public Builder patchId(String patchId) {
+            this.putQueryParameter("PatchId", patchId);
+            this.patchId = patchId;
             return this;
         }
 
