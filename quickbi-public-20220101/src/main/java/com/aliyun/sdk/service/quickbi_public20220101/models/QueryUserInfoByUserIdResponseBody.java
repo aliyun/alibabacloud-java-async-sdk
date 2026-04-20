@@ -138,6 +138,9 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthAdminUser")
         private Boolean authAdminUser;
 
+        @com.aliyun.core.annotation.NameInMap("CopilotModules")
+        private java.util.List<String> copilotModules;
+
         @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
@@ -161,6 +164,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             this.accountName = builder.accountName;
             this.adminUser = builder.adminUser;
             this.authAdminUser = builder.authAdminUser;
+            this.copilotModules = builder.copilotModules;
             this.email = builder.email;
             this.nickName = builder.nickName;
             this.phone = builder.phone;
@@ -203,6 +207,13 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
          */
         public Boolean getAuthAdminUser() {
             return this.authAdminUser;
+        }
+
+        /**
+         * @return copilotModules
+         */
+        public java.util.List<String> getCopilotModules() {
+            return this.copilotModules;
         }
 
         /**
@@ -252,6 +263,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             private String accountName; 
             private Boolean adminUser; 
             private Boolean authAdminUser; 
+            private java.util.List<String> copilotModules; 
             private String email; 
             private String nickName; 
             private String phone; 
@@ -267,6 +279,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
                 this.accountName = model.accountName;
                 this.adminUser = model.adminUser;
                 this.authAdminUser = model.authAdminUser;
+                this.copilotModules = model.copilotModules;
                 this.email = model.email;
                 this.nickName = model.nickName;
                 this.phone = model.phone;
@@ -324,6 +337,14 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
              */
             public Builder authAdminUser(Boolean authAdminUser) {
                 this.authAdminUser = authAdminUser;
+                return this;
+            }
+
+            /**
+             * CopilotModules.
+             */
+            public Builder copilotModules(java.util.List<String> copilotModules) {
+                this.copilotModules = copilotModules;
                 return this;
             }
 

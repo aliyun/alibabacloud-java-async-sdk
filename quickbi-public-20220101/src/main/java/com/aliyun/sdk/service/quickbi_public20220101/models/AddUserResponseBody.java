@@ -135,6 +135,9 @@ public class AddUserResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthAdminUser")
         private Boolean authAdminUser;
 
+        @com.aliyun.core.annotation.NameInMap("CopilotModules")
+        private java.util.List<String> copilotModules;
+
         @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
@@ -151,6 +154,7 @@ public class AddUserResponseBody extends TeaModel {
             this.accountName = builder.accountName;
             this.adminUser = builder.adminUser;
             this.authAdminUser = builder.authAdminUser;
+            this.copilotModules = builder.copilotModules;
             this.nickName = builder.nickName;
             this.roleIdList = builder.roleIdList;
             this.userId = builder.userId;
@@ -187,6 +191,13 @@ public class AddUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return copilotModules
+         */
+        public java.util.List<String> getCopilotModules() {
+            return this.copilotModules;
+        }
+
+        /**
          * @return nickName
          */
         public String getNickName() {
@@ -218,6 +229,7 @@ public class AddUserResponseBody extends TeaModel {
             private String accountName; 
             private Boolean adminUser; 
             private Boolean authAdminUser; 
+            private java.util.List<String> copilotModules; 
             private String nickName; 
             private java.util.List<Long> roleIdList; 
             private String userId; 
@@ -230,6 +242,7 @@ public class AddUserResponseBody extends TeaModel {
                 this.accountName = model.accountName;
                 this.adminUser = model.adminUser;
                 this.authAdminUser = model.authAdminUser;
+                this.copilotModules = model.copilotModules;
                 this.nickName = model.nickName;
                 this.roleIdList = model.roleIdList;
                 this.userId = model.userId;
@@ -276,6 +289,14 @@ public class AddUserResponseBody extends TeaModel {
              */
             public Builder authAdminUser(Boolean authAdminUser) {
                 this.authAdminUser = authAdminUser;
+                return this;
+            }
+
+            /**
+             * CopilotModules.
+             */
+            public Builder copilotModules(java.util.List<String> copilotModules) {
+                this.copilotModules = copilotModules;
                 return this;
             }
 

@@ -82,6 +82,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddUserToWorkspaceResponse> addUserToWorkspace(AddUserToWorkspaceRequest request);
 
     /**
+     * @param request the request parameters of AddWorksAuthorization  AddWorksAuthorizationRequest
+     * @return AddWorksAuthorizationResponse
+     */
+    CompletableFuture<AddWorksAuthorizationResponse> addWorksAuthorization(AddWorksAuthorizationRequest request);
+
+    /**
      * @param request the request parameters of AddWorkspaceUsers  AddWorkspaceUsersRequest
      * @return AddWorkspaceUsersResponse
      */

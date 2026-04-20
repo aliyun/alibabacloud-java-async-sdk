@@ -138,6 +138,9 @@ public class QueryUserListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthAdminUser")
         private Boolean authAdminUser;
 
+        @com.aliyun.core.annotation.NameInMap("CopilotModules")
+        private java.util.List<String> copilotModules;
+
         @com.aliyun.core.annotation.NameInMap("IsDeleted")
         private Boolean isDeleted;
 
@@ -164,6 +167,7 @@ public class QueryUserListResponseBody extends TeaModel {
             this.accountName = builder.accountName;
             this.adminUser = builder.adminUser;
             this.authAdminUser = builder.authAdminUser;
+            this.copilotModules = builder.copilotModules;
             this.isDeleted = builder.isDeleted;
             this.joinedDate = builder.joinedDate;
             this.lastLoginTime = builder.lastLoginTime;
@@ -207,6 +211,13 @@ public class QueryUserListResponseBody extends TeaModel {
          */
         public Boolean getAuthAdminUser() {
             return this.authAdminUser;
+        }
+
+        /**
+         * @return copilotModules
+         */
+        public java.util.List<String> getCopilotModules() {
+            return this.copilotModules;
         }
 
         /**
@@ -263,6 +274,7 @@ public class QueryUserListResponseBody extends TeaModel {
             private String accountName; 
             private Boolean adminUser; 
             private Boolean authAdminUser; 
+            private java.util.List<String> copilotModules; 
             private Boolean isDeleted; 
             private Long joinedDate; 
             private Long lastLoginTime; 
@@ -279,6 +291,7 @@ public class QueryUserListResponseBody extends TeaModel {
                 this.accountName = model.accountName;
                 this.adminUser = model.adminUser;
                 this.authAdminUser = model.authAdminUser;
+                this.copilotModules = model.copilotModules;
                 this.isDeleted = model.isDeleted;
                 this.joinedDate = model.joinedDate;
                 this.lastLoginTime = model.lastLoginTime;
@@ -337,6 +350,14 @@ public class QueryUserListResponseBody extends TeaModel {
              */
             public Builder authAdminUser(Boolean authAdminUser) {
                 this.authAdminUser = authAdminUser;
+                return this;
+            }
+
+            /**
+             * CopilotModules.
+             */
+            public Builder copilotModules(java.util.List<String> copilotModules) {
+                this.copilotModules = copilotModules;
                 return this;
             }
 

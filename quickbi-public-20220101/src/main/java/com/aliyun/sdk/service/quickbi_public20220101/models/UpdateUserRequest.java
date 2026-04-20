@@ -26,6 +26,10 @@ public class UpdateUserRequest extends Request {
     private Boolean authAdminUser;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CopilotModules")
+    private String copilotModules;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsDeleted")
     private Boolean isDeleted;
 
@@ -51,6 +55,7 @@ public class UpdateUserRequest extends Request {
         super(builder);
         this.adminUser = builder.adminUser;
         this.authAdminUser = builder.authAdminUser;
+        this.copilotModules = builder.copilotModules;
         this.isDeleted = builder.isDeleted;
         this.nickName = builder.nickName;
         this.roleIds = builder.roleIds;
@@ -83,6 +88,13 @@ public class UpdateUserRequest extends Request {
      */
     public Boolean getAuthAdminUser() {
         return this.authAdminUser;
+    }
+
+    /**
+     * @return copilotModules
+     */
+    public String getCopilotModules() {
+        return this.copilotModules;
     }
 
     /**
@@ -123,6 +135,7 @@ public class UpdateUserRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateUserRequest, Builder> {
         private Boolean adminUser; 
         private Boolean authAdminUser; 
+        private String copilotModules; 
         private Boolean isDeleted; 
         private String nickName; 
         private String roleIds; 
@@ -137,6 +150,7 @@ public class UpdateUserRequest extends Request {
             super(request);
             this.adminUser = request.adminUser;
             this.authAdminUser = request.authAdminUser;
+            this.copilotModules = request.copilotModules;
             this.isDeleted = request.isDeleted;
             this.nickName = request.nickName;
             this.roleIds = request.roleIds;
@@ -173,6 +187,15 @@ public class UpdateUserRequest extends Request {
         public Builder authAdminUser(Boolean authAdminUser) {
             this.putQueryParameter("AuthAdminUser", authAdminUser);
             this.authAdminUser = authAdminUser;
+            return this;
+        }
+
+        /**
+         * CopilotModules.
+         */
+        public Builder copilotModules(String copilotModules) {
+            this.putQueryParameter("CopilotModules", copilotModules);
+            this.copilotModules = copilotModules;
             return this;
         }
 
