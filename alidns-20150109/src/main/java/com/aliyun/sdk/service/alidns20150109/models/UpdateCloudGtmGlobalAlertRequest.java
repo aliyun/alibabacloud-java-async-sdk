@@ -171,6 +171,9 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("NoticeType")
         private String noticeType;
 
+        @com.aliyun.core.annotation.NameInMap("QpsThreshold")
+        private Long qpsThreshold;
+
         @com.aliyun.core.annotation.NameInMap("SmsNotice")
         private Boolean smsNotice;
 
@@ -181,6 +184,7 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
             this.dingtalkNotice = builder.dingtalkNotice;
             this.emailNotice = builder.emailNotice;
             this.noticeType = builder.noticeType;
+            this.qpsThreshold = builder.qpsThreshold;
             this.smsNotice = builder.smsNotice;
             this.threshold = builder.threshold;
         }
@@ -215,6 +219,13 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
         }
 
         /**
+         * @return qpsThreshold
+         */
+        public Long getQpsThreshold() {
+            return this.qpsThreshold;
+        }
+
+        /**
          * @return smsNotice
          */
         public Boolean getSmsNotice() {
@@ -232,6 +243,7 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
             private Boolean dingtalkNotice; 
             private Boolean emailNotice; 
             private String noticeType; 
+            private Long qpsThreshold; 
             private Boolean smsNotice; 
             private Integer threshold; 
 
@@ -242,6 +254,7 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
                 this.dingtalkNotice = model.dingtalkNotice;
                 this.emailNotice = model.emailNotice;
                 this.noticeType = model.noticeType;
+                this.qpsThreshold = model.qpsThreshold;
                 this.smsNotice = model.smsNotice;
                 this.threshold = model.threshold;
             } 
@@ -290,6 +303,14 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
              */
             public Builder noticeType(String noticeType) {
                 this.noticeType = noticeType;
+                return this;
+            }
+
+            /**
+             * QpsThreshold.
+             */
+            public Builder qpsThreshold(Long qpsThreshold) {
+                this.qpsThreshold = qpsThreshold;
                 return this;
             }
 
