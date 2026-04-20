@@ -44,6 +44,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEmbodiedAIPlatformResponse> deleteEmbodiedAIPlatform(DeleteEmbodiedAIPlatformRequest request);
 
     /**
+     * @param request the request parameters of DescribeChatMessage  DescribeChatMessageRequest
+     * @return DescribeChatMessageResponse
+     */
+    CompletableFuture<DescribeChatMessageResponse> describeChatMessage(DescribeChatMessageRequest request);
+
+    ResponseIterable<DescribeChatMessageResponseBody> describeChatMessageWithResponseIterable(DescribeChatMessageRequest request);
+
+    /**
      * @param request the request parameters of DescribeEmbodiedAIPlatforms  DescribeEmbodiedAIPlatformsRequest
      * @return DescribeEmbodiedAIPlatformsResponse
      */
