@@ -17,11 +17,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMmAppResponseBody</p>
  */
 public class DescribeMmAppResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AppConfig")
+    private AppConfig appConfig;
+
     @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
     @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
+
+    @com.aliyun.core.annotation.NameInMap("BindingConfig")
+    private BindingConfig bindingConfig;
 
     @com.aliyun.core.annotation.NameInMap("ConversationConfig")
     private ConversationConfig conversationConfig;
@@ -60,8 +66,10 @@ public class DescribeMmAppResponseBody extends TeaModel {
     private String status;
 
     private DescribeMmAppResponseBody(Builder builder) {
+        this.appConfig = builder.appConfig;
         this.appId = builder.appId;
         this.appName = builder.appName;
+        this.bindingConfig = builder.bindingConfig;
         this.conversationConfig = builder.conversationConfig;
         this.createUserId = builder.createUserId;
         this.createUserName = builder.createUserName;
@@ -89,6 +97,13 @@ public class DescribeMmAppResponseBody extends TeaModel {
     }
 
     /**
+     * @return appConfig
+     */
+    public AppConfig getAppConfig() {
+        return this.appConfig;
+    }
+
+    /**
      * @return appId
      */
     public String getAppId() {
@@ -100,6 +115,13 @@ public class DescribeMmAppResponseBody extends TeaModel {
      */
     public String getAppName() {
         return this.appName;
+    }
+
+    /**
+     * @return bindingConfig
+     */
+    public BindingConfig getBindingConfig() {
+        return this.bindingConfig;
     }
 
     /**
@@ -187,8 +209,10 @@ public class DescribeMmAppResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AppConfig appConfig; 
         private String appId; 
         private String appName; 
+        private BindingConfig bindingConfig; 
         private ConversationConfig conversationConfig; 
         private String createUserId; 
         private String createUserName; 
@@ -206,8 +230,10 @@ public class DescribeMmAppResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeMmAppResponseBody model) {
+            this.appConfig = model.appConfig;
             this.appId = model.appId;
             this.appName = model.appName;
+            this.bindingConfig = model.bindingConfig;
             this.conversationConfig = model.conversationConfig;
             this.createUserId = model.createUserId;
             this.createUserName = model.createUserName;
@@ -223,6 +249,14 @@ public class DescribeMmAppResponseBody extends TeaModel {
         } 
 
         /**
+         * AppConfig.
+         */
+        public Builder appConfig(AppConfig appConfig) {
+            this.appConfig = appConfig;
+            return this;
+        }
+
+        /**
          * AppId.
          */
         public Builder appId(String appId) {
@@ -235,6 +269,14 @@ public class DescribeMmAppResponseBody extends TeaModel {
          */
         public Builder appName(String appName) {
             this.appName = appName;
+            return this;
+        }
+
+        /**
+         * BindingConfig.
+         */
+        public Builder bindingConfig(BindingConfig bindingConfig) {
+            this.bindingConfig = bindingConfig;
             return this;
         }
 
@@ -319,7 +361,10 @@ public class DescribeMmAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -340,6 +385,486 @@ public class DescribeMmAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMmAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMmAppResponseBody</p>
+     */
+    public static class AppConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableTransition")
+        private Boolean enableTransition;
+
+        private AppConfig(Builder builder) {
+            this.enableTransition = builder.enableTransition;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AppConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableTransition
+         */
+        public Boolean getEnableTransition() {
+            return this.enableTransition;
+        }
+
+        public static final class Builder {
+            private Boolean enableTransition; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppConfig model) {
+                this.enableTransition = model.enableTransition;
+            } 
+
+            /**
+             * EnableTransition.
+             */
+            public Builder enableTransition(Boolean enableTransition) {
+                this.enableTransition = enableTransition;
+                return this;
+            }
+
+            public AppConfig build() {
+                return new AppConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeMmAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMmAppResponseBody</p>
+     */
+    public static class Commands extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DomainCode")
+        private String domainCode;
+
+        @com.aliyun.core.annotation.NameInMap("Tools")
+        private java.util.List<String> tools;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Commands(Builder builder) {
+            this.domainCode = builder.domainCode;
+            this.tools = builder.tools;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Commands create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domainCode
+         */
+        public String getDomainCode() {
+            return this.domainCode;
+        }
+
+        /**
+         * @return tools
+         */
+        public java.util.List<String> getTools() {
+            return this.tools;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String domainCode; 
+            private java.util.List<String> tools; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Commands model) {
+                this.domainCode = model.domainCode;
+                this.tools = model.tools;
+                this.type = model.type;
+            } 
+
+            /**
+             * DomainCode.
+             */
+            public Builder domainCode(String domainCode) {
+                this.domainCode = domainCode;
+                return this;
+            }
+
+            /**
+             * Tools.
+             */
+            public Builder tools(java.util.List<String> tools) {
+                this.tools = tools;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Commands build() {
+                return new Commands(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeMmAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMmAppResponseBody</p>
+     */
+    public static class Mcps extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("ToolList")
+        private java.util.List<String> toolList;
+
+        private Mcps(Builder builder) {
+            this.code = builder.code;
+            this.toolList = builder.toolList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Mcps create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return toolList
+         */
+        public java.util.List<String> getToolList() {
+            return this.toolList;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private java.util.List<String> toolList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Mcps model) {
+                this.code = model.code;
+                this.toolList = model.toolList;
+            } 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * ToolList.
+             */
+            public Builder toolList(java.util.List<String> toolList) {
+                this.toolList = toolList;
+                return this;
+            }
+
+            public Mcps build() {
+                return new Mcps(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeMmAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMmAppResponseBody</p>
+     */
+    public static class RagConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableSearch")
+        private String enableSearch;
+
+        @com.aliyun.core.annotation.NameInMap("KnowledgeBaseCodeList")
+        private java.util.List<String> knowledgeBaseCodeList;
+
+        @com.aliyun.core.annotation.NameInMap("PromptStrategy")
+        private String promptStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("RankWeights")
+        private java.util.Map<String, Double> rankWeights;
+
+        @com.aliyun.core.annotation.NameInMap("RetrieveMaxLength")
+        private Integer retrieveMaxLength;
+
+        @com.aliyun.core.annotation.NameInMap("TopK")
+        private Integer topK;
+
+        private RagConfig(Builder builder) {
+            this.enableSearch = builder.enableSearch;
+            this.knowledgeBaseCodeList = builder.knowledgeBaseCodeList;
+            this.promptStrategy = builder.promptStrategy;
+            this.rankWeights = builder.rankWeights;
+            this.retrieveMaxLength = builder.retrieveMaxLength;
+            this.topK = builder.topK;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RagConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableSearch
+         */
+        public String getEnableSearch() {
+            return this.enableSearch;
+        }
+
+        /**
+         * @return knowledgeBaseCodeList
+         */
+        public java.util.List<String> getKnowledgeBaseCodeList() {
+            return this.knowledgeBaseCodeList;
+        }
+
+        /**
+         * @return promptStrategy
+         */
+        public String getPromptStrategy() {
+            return this.promptStrategy;
+        }
+
+        /**
+         * @return rankWeights
+         */
+        public java.util.Map<String, Double> getRankWeights() {
+            return this.rankWeights;
+        }
+
+        /**
+         * @return retrieveMaxLength
+         */
+        public Integer getRetrieveMaxLength() {
+            return this.retrieveMaxLength;
+        }
+
+        /**
+         * @return topK
+         */
+        public Integer getTopK() {
+            return this.topK;
+        }
+
+        public static final class Builder {
+            private String enableSearch; 
+            private java.util.List<String> knowledgeBaseCodeList; 
+            private String promptStrategy; 
+            private java.util.Map<String, Double> rankWeights; 
+            private Integer retrieveMaxLength; 
+            private Integer topK; 
+
+            private Builder() {
+            } 
+
+            private Builder(RagConfig model) {
+                this.enableSearch = model.enableSearch;
+                this.knowledgeBaseCodeList = model.knowledgeBaseCodeList;
+                this.promptStrategy = model.promptStrategy;
+                this.rankWeights = model.rankWeights;
+                this.retrieveMaxLength = model.retrieveMaxLength;
+                this.topK = model.topK;
+            } 
+
+            /**
+             * EnableSearch.
+             */
+            public Builder enableSearch(String enableSearch) {
+                this.enableSearch = enableSearch;
+                return this;
+            }
+
+            /**
+             * KnowledgeBaseCodeList.
+             */
+            public Builder knowledgeBaseCodeList(java.util.List<String> knowledgeBaseCodeList) {
+                this.knowledgeBaseCodeList = knowledgeBaseCodeList;
+                return this;
+            }
+
+            /**
+             * PromptStrategy.
+             */
+            public Builder promptStrategy(String promptStrategy) {
+                this.promptStrategy = promptStrategy;
+                return this;
+            }
+
+            /**
+             * RankWeights.
+             */
+            public Builder rankWeights(java.util.Map<String, Double> rankWeights) {
+                this.rankWeights = rankWeights;
+                return this;
+            }
+
+            /**
+             * RetrieveMaxLength.
+             */
+            public Builder retrieveMaxLength(Integer retrieveMaxLength) {
+                this.retrieveMaxLength = retrieveMaxLength;
+                return this;
+            }
+
+            /**
+             * TopK.
+             */
+            public Builder topK(Integer topK) {
+                this.topK = topK;
+                return this;
+            }
+
+            public RagConfig build() {
+                return new RagConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeMmAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMmAppResponseBody</p>
+     */
+    public static class BindingConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Commands")
+        private java.util.List<Commands> commands;
+
+        @com.aliyun.core.annotation.NameInMap("Mcps")
+        private java.util.List<Mcps> mcps;
+
+        @com.aliyun.core.annotation.NameInMap("RagConfig")
+        private RagConfig ragConfig;
+
+        private BindingConfig(Builder builder) {
+            this.commands = builder.commands;
+            this.mcps = builder.mcps;
+            this.ragConfig = builder.ragConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BindingConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return commands
+         */
+        public java.util.List<Commands> getCommands() {
+            return this.commands;
+        }
+
+        /**
+         * @return mcps
+         */
+        public java.util.List<Mcps> getMcps() {
+            return this.mcps;
+        }
+
+        /**
+         * @return ragConfig
+         */
+        public RagConfig getRagConfig() {
+            return this.ragConfig;
+        }
+
+        public static final class Builder {
+            private java.util.List<Commands> commands; 
+            private java.util.List<Mcps> mcps; 
+            private RagConfig ragConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindingConfig model) {
+                this.commands = model.commands;
+                this.mcps = model.mcps;
+                this.ragConfig = model.ragConfig;
+            } 
+
+            /**
+             * Commands.
+             */
+            public Builder commands(java.util.List<Commands> commands) {
+                this.commands = commands;
+                return this;
+            }
+
+            /**
+             * Mcps.
+             */
+            public Builder mcps(java.util.List<Mcps> mcps) {
+                this.mcps = mcps;
+                return this;
+            }
+
+            /**
+             * RagConfig.
+             */
+            public Builder ragConfig(RagConfig ragConfig) {
+                this.ragConfig = ragConfig;
+                return this;
+            }
+
+            public BindingConfig build() {
+                return new BindingConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeMmAppResponseBody} extends {@link TeaModel}
@@ -470,6 +995,9 @@ public class DescribeMmAppResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModelType")
         private String modelType;
 
+        @com.aliyun.core.annotation.NameInMap("OpenMemory")
+        private Boolean openMemory;
+
         @com.aliyun.core.annotation.NameInMap("OpenWebSearch")
         private Boolean openWebSearch;
 
@@ -479,6 +1007,7 @@ public class DescribeMmAppResponseBody extends TeaModel {
         private ModelConfig(Builder builder) {
             this.historyLimit = builder.historyLimit;
             this.modelType = builder.modelType;
+            this.openMemory = builder.openMemory;
             this.openWebSearch = builder.openWebSearch;
             this.textModal = builder.textModal;
         }
@@ -506,6 +1035,13 @@ public class DescribeMmAppResponseBody extends TeaModel {
         }
 
         /**
+         * @return openMemory
+         */
+        public Boolean getOpenMemory() {
+            return this.openMemory;
+        }
+
+        /**
          * @return openWebSearch
          */
         public Boolean getOpenWebSearch() {
@@ -522,6 +1058,7 @@ public class DescribeMmAppResponseBody extends TeaModel {
         public static final class Builder {
             private Integer historyLimit; 
             private String modelType; 
+            private Boolean openMemory; 
             private Boolean openWebSearch; 
             private String textModal; 
 
@@ -531,6 +1068,7 @@ public class DescribeMmAppResponseBody extends TeaModel {
             private Builder(ModelConfig model) {
                 this.historyLimit = model.historyLimit;
                 this.modelType = model.modelType;
+                this.openMemory = model.openMemory;
                 this.openWebSearch = model.openWebSearch;
                 this.textModal = model.textModal;
             } 
@@ -548,6 +1086,14 @@ public class DescribeMmAppResponseBody extends TeaModel {
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
+                return this;
+            }
+
+            /**
+             * OpenMemory.
+             */
+            public Builder openMemory(Boolean openMemory) {
+                this.openMemory = openMemory;
                 return this;
             }
 

@@ -98,6 +98,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPublishedMmAppResponse> listPublishedMmApp(ListPublishedMmAppRequest request);
 
     /**
+     * @param request the request parameters of MmAppBindingMcp  MmAppBindingMcpRequest
+     * @return MmAppBindingMcpResponse
+     */
+    CompletableFuture<MmAppBindingMcpResponse> mmAppBindingMcp(MmAppBindingMcpRequest request);
+
+    /**
+     * @param request the request parameters of MmAppBindingRag  MmAppBindingRagRequest
+     * @return MmAppBindingRagResponse
+     */
+    CompletableFuture<MmAppBindingRagResponse> mmAppBindingRag(MmAppBindingRagRequest request);
+
+    /**
      * @param request the request parameters of PatchMemoryConfig  PatchMemoryConfigRequest
      * @return PatchMemoryConfigResponse
      */
@@ -150,6 +162,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMmAppResponse
      */
     CompletableFuture<UpdateMmAppResponse> updateMmApp(UpdateMmAppRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMmAppMemory  UpdateMmAppMemoryRequest
+     * @return UpdateMmAppMemoryResponse
+     */
+    CompletableFuture<UpdateMmAppMemoryResponse> updateMmAppMemory(UpdateMmAppMemoryRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMmAppRag  UpdateMmAppRagRequest
+     * @return UpdateMmAppRagResponse
+     */
+    CompletableFuture<UpdateMmAppRagResponse> updateMmAppRag(UpdateMmAppRagRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMmAppRagConfig  UpdateMmAppRagConfigRequest
+     * @return UpdateMmAppRagConfigResponse
+     */
+    CompletableFuture<UpdateMmAppRagConfigResponse> updateMmAppRagConfig(UpdateMmAppRagConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMmAppRagWeight  UpdateMmAppRagWeightRequest
+     * @return UpdateMmAppRagWeightResponse
+     */
+    CompletableFuture<UpdateMmAppRagWeightResponse> updateMmAppRagWeight(UpdateMmAppRagWeightRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMmAppTransition  UpdateMmAppTransitionRequest
+     * @return UpdateMmAppTransitionResponse
+     */
+    CompletableFuture<UpdateMmAppTransitionResponse> updateMmAppTransition(UpdateMmAppTransitionRequest request);
 
     /**
      * @param request the request parameters of UpdateProfile  UpdateProfileRequest
