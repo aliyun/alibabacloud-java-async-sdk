@@ -209,8 +209,20 @@ public class ConvertFlowDSLInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("compatibilityCheck")
         private Boolean compatibilityCheck;
 
+        @com.aliyun.core.annotation.NameInMap("credentialName")
+        private String credentialName;
+
+        @com.aliyun.core.annotation.NameInMap("flowName")
+        private String flowName;
+
+        @com.aliyun.core.annotation.NameInMap("vpcEndpointName")
+        private String vpcEndpointName;
+
         private Options(Builder builder) {
             this.compatibilityCheck = builder.compatibilityCheck;
+            this.credentialName = builder.credentialName;
+            this.flowName = builder.flowName;
+            this.vpcEndpointName = builder.vpcEndpointName;
         }
 
         public static Builder builder() {
@@ -228,14 +240,41 @@ public class ConvertFlowDSLInput extends TeaModel {
             return this.compatibilityCheck;
         }
 
+        /**
+         * @return credentialName
+         */
+        public String getCredentialName() {
+            return this.credentialName;
+        }
+
+        /**
+         * @return flowName
+         */
+        public String getFlowName() {
+            return this.flowName;
+        }
+
+        /**
+         * @return vpcEndpointName
+         */
+        public String getVpcEndpointName() {
+            return this.vpcEndpointName;
+        }
+
         public static final class Builder {
             private Boolean compatibilityCheck; 
+            private String credentialName; 
+            private String flowName; 
+            private String vpcEndpointName; 
 
             private Builder() {
             } 
 
             private Builder(Options model) {
                 this.compatibilityCheck = model.compatibilityCheck;
+                this.credentialName = model.credentialName;
+                this.flowName = model.flowName;
+                this.vpcEndpointName = model.vpcEndpointName;
             } 
 
             /**
@@ -246,6 +285,30 @@ public class ConvertFlowDSLInput extends TeaModel {
              */
             public Builder compatibilityCheck(Boolean compatibilityCheck) {
                 this.compatibilityCheck = compatibilityCheck;
+                return this;
+            }
+
+            /**
+             * credentialName.
+             */
+            public Builder credentialName(String credentialName) {
+                this.credentialName = credentialName;
+                return this;
+            }
+
+            /**
+             * flowName.
+             */
+            public Builder flowName(String flowName) {
+                this.flowName = flowName;
+                return this;
+            }
+
+            /**
+             * vpcEndpointName.
+             */
+            public Builder vpcEndpointName(String vpcEndpointName) {
+                this.vpcEndpointName = vpcEndpointName;
                 return this;
             }
 
