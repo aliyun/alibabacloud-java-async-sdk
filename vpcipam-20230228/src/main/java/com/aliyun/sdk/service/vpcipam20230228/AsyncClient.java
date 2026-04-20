@@ -209,6 +209,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetVpcIpamServiceStatusResponse> getVpcIpamServiceStatus(GetVpcIpamServiceStatusRequest request);
 
     /**
+     * @param request the request parameters of ListIpamDiscoveredIpAddresses  ListIpamDiscoveredIpAddressesRequest
+     * @return ListIpamDiscoveredIpAddressesResponse
+     */
+    CompletableFuture<ListIpamDiscoveredIpAddressesResponse> listIpamDiscoveredIpAddresses(ListIpamDiscoveredIpAddressesRequest request);
+
+    /**
      * @param request the request parameters of ListIpamDiscoveredResource  ListIpamDiscoveredResourceRequest
      * @return ListIpamDiscoveredResourceResponse
      */
