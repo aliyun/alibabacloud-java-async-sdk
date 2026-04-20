@@ -4240,6 +4240,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifySupabaseAutoScalePolicy  ModifySupabaseAutoScalePolicyRequest
+     * @return ModifySupabaseAutoScalePolicyResponse
+     */
+    @Override
+    public CompletableFuture<ModifySupabaseAutoScalePolicyResponse> modifySupabaseAutoScalePolicy(ModifySupabaseAutoScalePolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifySupabaseAutoScalePolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifySupabaseAutoScalePolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifySupabaseAutoScalePolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</p>
      * 
