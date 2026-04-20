@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateUser  CreateUserRequest
+     * @return CreateUserResponse
+     */
+    CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
+
+    /**
      * @param request the request parameters of DeleteHoloWarehouse  DeleteHoloWarehouseRequest
      * @return DeleteHoloWarehouseResponse
      */
@@ -93,6 +99,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DisableSSLResponse
      */
     CompletableFuture<DisableSSLResponse> disableSSL(DisableSSLRequest request);
+
+    /**
+     * @param request the request parameters of DropUser  DropUserRequest
+     * @return DropUserResponse
+     */
+    CompletableFuture<DropUserResponse> dropUser(DropUserRequest request);
 
     /**
      * @param request the request parameters of EnableHiveAccess  EnableHiveAccessRequest
