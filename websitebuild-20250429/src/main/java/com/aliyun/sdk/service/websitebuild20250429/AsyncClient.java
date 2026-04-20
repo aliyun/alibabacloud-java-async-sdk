@@ -218,9 +218,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAppAssistantAgentsResponse> listAppAssistantAgents(ListAppAssistantAgentsRequest request);
 
     /**
-     * @param request the request parameters of ListAppCommoditySpecificationsForPartner  ListAppCommoditySpecificationsForPartnerRequest
+     * @deprecated OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.  * @param request  the request parameters of ListAppCommoditySpecificationsForPartner  ListAppCommoditySpecificationsForPartnerRequest
      * @return ListAppCommoditySpecificationsForPartnerResponse
      */
+    @Deprecated
     CompletableFuture<ListAppCommoditySpecificationsForPartnerResponse> listAppCommoditySpecificationsForPartner(ListAppCommoditySpecificationsForPartnerRequest request);
 
     /**

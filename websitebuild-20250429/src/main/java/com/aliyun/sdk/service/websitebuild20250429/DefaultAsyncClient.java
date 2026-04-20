@@ -634,9 +634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ListAppCommoditySpecificationsForPartner  ListAppCommoditySpecificationsForPartnerRequest
+     * @deprecated OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.  * @param request  the request parameters of ListAppCommoditySpecificationsForPartner  ListAppCommoditySpecificationsForPartnerRequest
      * @return ListAppCommoditySpecificationsForPartnerResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ListAppCommoditySpecificationsForPartnerResponse> listAppCommoditySpecificationsForPartner(ListAppCommoditySpecificationsForPartnerRequest request) {
         try {

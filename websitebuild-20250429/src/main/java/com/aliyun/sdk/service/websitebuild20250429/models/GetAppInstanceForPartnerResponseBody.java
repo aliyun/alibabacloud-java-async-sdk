@@ -2243,6 +2243,9 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceSpecText")
         private String serviceSpecText;
 
+        @com.aliyun.core.annotation.NameInMap("UpgradeStatus")
+        private String upgradeStatus;
+
         private Profile(Builder builder) {
             this.bizId = builder.bizId;
             this.designType = builder.designType;
@@ -2254,6 +2257,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             this.orderId = builder.orderId;
             this.serviceSpec = builder.serviceSpec;
             this.serviceSpecText = builder.serviceSpecText;
+            this.upgradeStatus = builder.upgradeStatus;
         }
 
         public static Builder builder() {
@@ -2334,6 +2338,13 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             return this.serviceSpecText;
         }
 
+        /**
+         * @return upgradeStatus
+         */
+        public String getUpgradeStatus() {
+            return this.upgradeStatus;
+        }
+
         public static final class Builder {
             private String bizId; 
             private String designType; 
@@ -2345,6 +2356,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             private String orderId; 
             private String serviceSpec; 
             private String serviceSpecText; 
+            private String upgradeStatus; 
 
             private Builder() {
             } 
@@ -2360,6 +2372,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
                 this.orderId = model.orderId;
                 this.serviceSpec = model.serviceSpec;
                 this.serviceSpecText = model.serviceSpecText;
+                this.upgradeStatus = model.upgradeStatus;
             } 
 
             /**
@@ -2439,6 +2452,14 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
              */
             public Builder serviceSpecText(String serviceSpecText) {
                 this.serviceSpecText = serviceSpecText;
+                return this;
+            }
+
+            /**
+             * UpgradeStatus.
+             */
+            public Builder upgradeStatus(String upgradeStatus) {
+                this.upgradeStatus = upgradeStatus;
                 return this;
             }
 
@@ -3308,6 +3329,9 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Thumbnail")
         private String thumbnail;
 
+        @com.aliyun.core.annotation.NameInMap("UpgradeStatus")
+        private String upgradeStatus;
+
         private ModuleProfile(Builder builder) {
             this.adminUrl = builder.adminUrl;
             this.applicationType = builder.applicationType;
@@ -3339,6 +3363,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             this.templateId = builder.templateId;
             this.textList = builder.textList;
             this.thumbnail = builder.thumbnail;
+            this.upgradeStatus = builder.upgradeStatus;
         }
 
         public static Builder builder() {
@@ -3559,6 +3584,13 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             return this.thumbnail;
         }
 
+        /**
+         * @return upgradeStatus
+         */
+        public String getUpgradeStatus() {
+            return this.upgradeStatus;
+        }
+
         public static final class Builder {
             private String adminUrl; 
             private String applicationType; 
@@ -3590,6 +3622,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             private String templateId; 
             private String textList; 
             private String thumbnail; 
+            private String upgradeStatus; 
 
             private Builder() {
             } 
@@ -3625,6 +3658,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
                 this.templateId = model.templateId;
                 this.textList = model.textList;
                 this.thumbnail = model.thumbnail;
+                this.upgradeStatus = model.upgradeStatus;
             } 
 
             /**
@@ -3870,6 +3904,14 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * UpgradeStatus.
+             */
+            public Builder upgradeStatus(String upgradeStatus) {
+                this.upgradeStatus = upgradeStatus;
+                return this;
+            }
+
             public ModuleProfile build() {
                 return new ModuleProfile(this);
             } 
@@ -3974,6 +4016,9 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Thumbnail")
         private String thumbnail;
 
+        @com.aliyun.core.annotation.NameInMap("UpgradeStatus")
+        private String upgradeStatus;
+
         private RelatedInstanceListProfile(Builder builder) {
             this.adminUrl = builder.adminUrl;
             this.applicationType = builder.applicationType;
@@ -4005,6 +4050,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             this.templateId = builder.templateId;
             this.textList = builder.textList;
             this.thumbnail = builder.thumbnail;
+            this.upgradeStatus = builder.upgradeStatus;
         }
 
         public static Builder builder() {
@@ -4225,6 +4271,13 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             return this.thumbnail;
         }
 
+        /**
+         * @return upgradeStatus
+         */
+        public String getUpgradeStatus() {
+            return this.upgradeStatus;
+        }
+
         public static final class Builder {
             private String adminUrl; 
             private String applicationType; 
@@ -4256,6 +4309,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             private String templateId; 
             private String textList; 
             private String thumbnail; 
+            private String upgradeStatus; 
 
             private Builder() {
             } 
@@ -4291,6 +4345,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
                 this.templateId = model.templateId;
                 this.textList = model.textList;
                 this.thumbnail = model.thumbnail;
+                this.upgradeStatus = model.upgradeStatus;
             } 
 
             /**
@@ -4533,6 +4588,14 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
              */
             public Builder thumbnail(String thumbnail) {
                 this.thumbnail = thumbnail;
+                return this;
+            }
+
+            /**
+             * UpgradeStatus.
+             */
+            public Builder upgradeStatus(String upgradeStatus) {
+                this.upgradeStatus = upgradeStatus;
                 return this;
             }
 
