@@ -1498,6 +1498,81 @@ public class GetScriptResponseBody extends TeaModel {
      *
      * <p>GetScriptResponseBody</p>
      */
+    public static class CorrectionRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Pattern")
+        private String pattern;
+
+        @com.aliyun.core.annotation.NameInMap("Replacement")
+        private String replacement;
+
+        private CorrectionRules(Builder builder) {
+            this.pattern = builder.pattern;
+            this.replacement = builder.replacement;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CorrectionRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pattern
+         */
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        /**
+         * @return replacement
+         */
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+        public static final class Builder {
+            private String pattern; 
+            private String replacement; 
+
+            private Builder() {
+            } 
+
+            private Builder(CorrectionRules model) {
+                this.pattern = model.pattern;
+                this.replacement = model.replacement;
+            } 
+
+            /**
+             * Pattern.
+             */
+            public Builder pattern(String pattern) {
+                this.pattern = pattern;
+                return this;
+            }
+
+            /**
+             * Replacement.
+             */
+            public Builder replacement(String replacement) {
+                this.replacement = replacement;
+                return this;
+            }
+
+            public CorrectionRules build() {
+                return new CorrectionRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScriptResponseBody</p>
+     */
     public static class TranscriberConfigNlsAccessProfile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessProfileId")
         private String accessProfileId;
@@ -1553,6 +1628,9 @@ public class GetScriptResponseBody extends TeaModel {
      * <p>GetScriptResponseBody</p>
      */
     public static class TranscriberConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CorrectionRules")
+        private java.util.List<CorrectionRules> correctionRules;
+
         @com.aliyun.core.annotation.NameInMap("CustomizationId")
         private String customizationId;
 
@@ -1578,6 +1656,7 @@ public class GetScriptResponseBody extends TeaModel {
         private String vocabularyId;
 
         private TranscriberConfig(Builder builder) {
+            this.correctionRules = builder.correctionRules;
             this.customizationId = builder.customizationId;
             this.endSilenceTimeout = builder.endSilenceTimeout;
             this.model = builder.model;
@@ -1594,6 +1673,13 @@ public class GetScriptResponseBody extends TeaModel {
 
         public static TranscriberConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return correctionRules
+         */
+        public java.util.List<CorrectionRules> getCorrectionRules() {
+            return this.correctionRules;
         }
 
         /**
@@ -1653,6 +1739,7 @@ public class GetScriptResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<CorrectionRules> correctionRules; 
             private String customizationId; 
             private Integer endSilenceTimeout; 
             private String model; 
@@ -1666,6 +1753,7 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             private Builder(TranscriberConfig model) {
+                this.correctionRules = model.correctionRules;
                 this.customizationId = model.customizationId;
                 this.endSilenceTimeout = model.endSilenceTimeout;
                 this.model = model.model;
@@ -1675,6 +1763,14 @@ public class GetScriptResponseBody extends TeaModel {
                 this.speechNoiseThreshold = model.speechNoiseThreshold;
                 this.vocabularyId = model.vocabularyId;
             } 
+
+            /**
+             * CorrectionRules.
+             */
+            public Builder correctionRules(java.util.List<CorrectionRules> correctionRules) {
+                this.correctionRules = correctionRules;
+                return this;
+            }
 
             /**
              * CustomizationId.
@@ -3274,6 +3370,81 @@ public class GetScriptResponseBody extends TeaModel {
      *
      * <p>GetScriptResponseBody</p>
      */
+    public static class TranscriberConfigCorrectionRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Pattern")
+        private String pattern;
+
+        @com.aliyun.core.annotation.NameInMap("Replacement")
+        private String replacement;
+
+        private TranscriberConfigCorrectionRules(Builder builder) {
+            this.pattern = builder.pattern;
+            this.replacement = builder.replacement;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TranscriberConfigCorrectionRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pattern
+         */
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        /**
+         * @return replacement
+         */
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+        public static final class Builder {
+            private String pattern; 
+            private String replacement; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscriberConfigCorrectionRules model) {
+                this.pattern = model.pattern;
+                this.replacement = model.replacement;
+            } 
+
+            /**
+             * Pattern.
+             */
+            public Builder pattern(String pattern) {
+                this.pattern = pattern;
+                return this;
+            }
+
+            /**
+             * Replacement.
+             */
+            public Builder replacement(String replacement) {
+                this.replacement = replacement;
+                return this;
+            }
+
+            public TranscriberConfigCorrectionRules build() {
+                return new TranscriberConfigCorrectionRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScriptResponseBody</p>
+     */
     public static class PublishedVersionTranscriberConfigNlsAccessProfile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessProfileId")
         private String accessProfileId;
@@ -3329,6 +3500,9 @@ public class GetScriptResponseBody extends TeaModel {
      * <p>GetScriptResponseBody</p>
      */
     public static class PublishedVersionTranscriberConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CorrectionRules")
+        private java.util.List<TranscriberConfigCorrectionRules> correctionRules;
+
         @com.aliyun.core.annotation.NameInMap("CustomizationId")
         private String customizationId;
 
@@ -3354,6 +3528,7 @@ public class GetScriptResponseBody extends TeaModel {
         private String vocabularyId;
 
         private PublishedVersionTranscriberConfig(Builder builder) {
+            this.correctionRules = builder.correctionRules;
             this.customizationId = builder.customizationId;
             this.endSilenceTimeout = builder.endSilenceTimeout;
             this.model = builder.model;
@@ -3370,6 +3545,13 @@ public class GetScriptResponseBody extends TeaModel {
 
         public static PublishedVersionTranscriberConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return correctionRules
+         */
+        public java.util.List<TranscriberConfigCorrectionRules> getCorrectionRules() {
+            return this.correctionRules;
         }
 
         /**
@@ -3429,6 +3611,7 @@ public class GetScriptResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<TranscriberConfigCorrectionRules> correctionRules; 
             private String customizationId; 
             private Integer endSilenceTimeout; 
             private String model; 
@@ -3442,6 +3625,7 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             private Builder(PublishedVersionTranscriberConfig model) {
+                this.correctionRules = model.correctionRules;
                 this.customizationId = model.customizationId;
                 this.endSilenceTimeout = model.endSilenceTimeout;
                 this.model = model.model;
@@ -3451,6 +3635,14 @@ public class GetScriptResponseBody extends TeaModel {
                 this.speechNoiseThreshold = model.speechNoiseThreshold;
                 this.vocabularyId = model.vocabularyId;
             } 
+
+            /**
+             * CorrectionRules.
+             */
+            public Builder correctionRules(java.util.List<TranscriberConfigCorrectionRules> correctionRules) {
+                this.correctionRules = correctionRules;
+                return this;
+            }
 
             /**
              * CustomizationId.

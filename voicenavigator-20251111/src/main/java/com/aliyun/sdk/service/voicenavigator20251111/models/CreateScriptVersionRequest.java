@@ -248,7 +248,6 @@ public class CreateScriptVersionRequest extends Request {
      */
     public static class Triggers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClosingStatement")
-        @com.aliyun.core.annotation.Validation(maxLength = 128)
         private String closingStatement;
 
         @com.aliyun.core.annotation.NameInMap("KeyWords")
@@ -366,7 +365,6 @@ public class CreateScriptVersionRequest extends Request {
      */
     public static class EndConversationConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Delay")
-        @com.aliyun.core.annotation.Validation(maximum = 5)
         private Integer delay;
 
         @com.aliyun.core.annotation.NameInMap("Triggers")
@@ -445,7 +443,6 @@ public class CreateScriptVersionRequest extends Request {
         private Integer maxRepeats;
 
         @com.aliyun.core.annotation.NameInMap("Timeout")
-        @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 2000)
         private Integer timeout;
 
         private SilenceDetectionConfig(Builder builder) {
@@ -518,14 +515,12 @@ public class CreateScriptVersionRequest extends Request {
      */
     public static class InteractionConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackgroundMusicId")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String backgroundMusicId;
 
         @com.aliyun.core.annotation.NameInMap("EndConversationConfig")
         private EndConversationConfig endConversationConfig;
 
         @com.aliyun.core.annotation.NameInMap("InitialGreetingDelayMilliseconds")
-        @com.aliyun.core.annotation.Validation(maximum = 5000)
         private Integer initialGreetingDelayMilliseconds;
 
         @com.aliyun.core.annotation.NameInMap("SilenceDetectionConfig")
@@ -640,11 +635,9 @@ public class CreateScriptVersionRequest extends Request {
         private java.util.List<String> candidateValues;
 
         @com.aliyun.core.annotation.NameInMap("Description")
-        @com.aliyun.core.annotation.Validation(maxLength = 128)
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Name")
-        @com.aliyun.core.annotation.Validation(maxLength = 32)
         private String name;
 
         private LabelConfig(Builder builder) {
@@ -735,11 +728,9 @@ public class CreateScriptVersionRequest extends Request {
      */
     public static class AgentProfile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PromptsJson")
-        @com.aliyun.core.annotation.Validation(maxLength = 2048)
         private String promptsJson;
 
         @com.aliyun.core.annotation.NameInMap("ScriptProfileTemplateId")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String scriptProfileTemplateId;
 
         private AgentProfile(Builder builder) {
@@ -812,23 +803,18 @@ public class CreateScriptVersionRequest extends Request {
      */
     public static class FunctionMeta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FunctionId")
-        @com.aliyun.core.annotation.Validation(maxLength = 48)
         private String functionId;
 
         @com.aliyun.core.annotation.NameInMap("FunctionName")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String functionName;
 
         @com.aliyun.core.annotation.NameInMap("HttpTriggerName")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String httpTriggerName;
 
         @com.aliyun.core.annotation.NameInMap("HttpTriggerUrl")
-        @com.aliyun.core.annotation.Validation(maxLength = 128)
         private String httpTriggerUrl;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
-        @com.aliyun.core.annotation.Validation(maxLength = 16)
         private String regionId;
 
         private FunctionMeta(Builder builder) {
@@ -955,7 +941,6 @@ public class CreateScriptVersionRequest extends Request {
      */
     public static class NluAccessProfile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessProfileId")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String accessProfileId;
 
         private NluAccessProfile(Builder builder) {
@@ -1010,28 +995,24 @@ public class CreateScriptVersionRequest extends Request {
      */
     public static class ScriptProfile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentKey")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String agentKey;
 
         @com.aliyun.core.annotation.NameInMap("AgentProfile")
         private AgentProfile agentProfile;
 
         @com.aliyun.core.annotation.NameInMap("ChatbotId")
-        @com.aliyun.core.annotation.Validation(maxLength = 32)
         private String chatbotId;
 
         @com.aliyun.core.annotation.NameInMap("FunctionMeta")
         private FunctionMeta functionMeta;
 
         @com.aliyun.core.annotation.NameInMap("Model")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String model;
 
         @com.aliyun.core.annotation.NameInMap("NluAccessProfile")
         private NluAccessProfile nluAccessProfile;
 
         @com.aliyun.core.annotation.NameInMap("NluAccessType")
-        @com.aliyun.core.annotation.Validation(maxLength = 32)
         private String nluAccessType;
 
         @com.aliyun.core.annotation.NameInMap("OmniModel")
@@ -1215,7 +1196,6 @@ public class CreateScriptVersionRequest extends Request {
      */
     public static class NlsAccessProfile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessProfileId")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String accessProfileId;
 
         private NlsAccessProfile(Builder builder) {
@@ -1270,11 +1250,9 @@ public class CreateScriptVersionRequest extends Request {
      */
     public static class PronRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Pattern")
-        @com.aliyun.core.annotation.Validation(maxLength = 5)
         private String pattern;
 
         @com.aliyun.core.annotation.NameInMap("Replacement")
-        @com.aliyun.core.annotation.Validation(maxLength = 20)
         private String replacement;
 
         private PronRules(Builder builder) {
@@ -1347,7 +1325,6 @@ public class CreateScriptVersionRequest extends Request {
      */
     public static class SynthesizerConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Model")
-        @com.aliyun.core.annotation.Validation(maxLength = 32)
         private String model;
 
         @com.aliyun.core.annotation.NameInMap("NlsAccessProfile")
@@ -1360,22 +1337,18 @@ public class CreateScriptVersionRequest extends Request {
         private String nlsEngine;
 
         @com.aliyun.core.annotation.NameInMap("PitchRate")
-        @com.aliyun.core.annotation.Validation(maximum = 500)
         private Integer pitchRate;
 
         @com.aliyun.core.annotation.NameInMap("PronRules")
         private java.util.List<PronRules> pronRules;
 
         @com.aliyun.core.annotation.NameInMap("SpeechRate")
-        @com.aliyun.core.annotation.Validation(maximum = 500)
         private Integer speechRate;
 
         @com.aliyun.core.annotation.NameInMap("Voice")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String voice;
 
         @com.aliyun.core.annotation.NameInMap("Volume")
-        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer volume;
 
         private SynthesizerConfig(Builder builder) {
@@ -1572,9 +1545,83 @@ public class CreateScriptVersionRequest extends Request {
      *
      * <p>CreateScriptVersionRequest</p>
      */
+    public static class CorrectionRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Pattern")
+        private String pattern;
+
+        @com.aliyun.core.annotation.NameInMap("Replacement")
+        private String replacement;
+
+        private CorrectionRules(Builder builder) {
+            this.pattern = builder.pattern;
+            this.replacement = builder.replacement;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CorrectionRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pattern
+         */
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        /**
+         * @return replacement
+         */
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+        public static final class Builder {
+            private String pattern; 
+            private String replacement; 
+
+            private Builder() {
+            } 
+
+            private Builder(CorrectionRules model) {
+                this.pattern = model.pattern;
+                this.replacement = model.replacement;
+            } 
+
+            /**
+             * Pattern.
+             */
+            public Builder pattern(String pattern) {
+                this.pattern = pattern;
+                return this;
+            }
+
+            /**
+             * Replacement.
+             */
+            public Builder replacement(String replacement) {
+                this.replacement = replacement;
+                return this;
+            }
+
+            public CorrectionRules build() {
+                return new CorrectionRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateScriptVersionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateScriptVersionRequest</p>
+     */
     public static class TranscriberConfigNlsAccessProfile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessProfileId")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String accessProfileId;
 
         private TranscriberConfigNlsAccessProfile(Builder builder) {
@@ -1628,16 +1675,16 @@ public class CreateScriptVersionRequest extends Request {
      * <p>CreateScriptVersionRequest</p>
      */
     public static class TranscriberConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CorrectionRules")
+        private java.util.List<CorrectionRules> correctionRules;
+
         @com.aliyun.core.annotation.NameInMap("CustomizationId")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String customizationId;
 
         @com.aliyun.core.annotation.NameInMap("EndSilenceTimeout")
-        @com.aliyun.core.annotation.Validation(maximum = 2000, minimum = 200)
         private Integer endSilenceTimeout;
 
         @com.aliyun.core.annotation.NameInMap("Model")
-        @com.aliyun.core.annotation.Validation(maxLength = 32)
         private String model;
 
         @com.aliyun.core.annotation.NameInMap("NlsAccessProfile")
@@ -1650,14 +1697,13 @@ public class CreateScriptVersionRequest extends Request {
         private String nlsEngine;
 
         @com.aliyun.core.annotation.NameInMap("SpeechNoiseThreshold")
-        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer speechNoiseThreshold;
 
         @com.aliyun.core.annotation.NameInMap("VocabularyId")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String vocabularyId;
 
         private TranscriberConfig(Builder builder) {
+            this.correctionRules = builder.correctionRules;
             this.customizationId = builder.customizationId;
             this.endSilenceTimeout = builder.endSilenceTimeout;
             this.model = builder.model;
@@ -1674,6 +1720,13 @@ public class CreateScriptVersionRequest extends Request {
 
         public static TranscriberConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return correctionRules
+         */
+        public java.util.List<CorrectionRules> getCorrectionRules() {
+            return this.correctionRules;
         }
 
         /**
@@ -1733,6 +1786,7 @@ public class CreateScriptVersionRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<CorrectionRules> correctionRules; 
             private String customizationId; 
             private Integer endSilenceTimeout; 
             private String model; 
@@ -1746,6 +1800,7 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             private Builder(TranscriberConfig model) {
+                this.correctionRules = model.correctionRules;
                 this.customizationId = model.customizationId;
                 this.endSilenceTimeout = model.endSilenceTimeout;
                 this.model = model.model;
@@ -1755,6 +1810,14 @@ public class CreateScriptVersionRequest extends Request {
                 this.speechNoiseThreshold = model.speechNoiseThreshold;
                 this.vocabularyId = model.vocabularyId;
             } 
+
+            /**
+             * CorrectionRules.
+             */
+            public Builder correctionRules(java.util.List<CorrectionRules> correctionRules) {
+                this.correctionRules = correctionRules;
+                return this;
+            }
 
             /**
              * CustomizationId.
