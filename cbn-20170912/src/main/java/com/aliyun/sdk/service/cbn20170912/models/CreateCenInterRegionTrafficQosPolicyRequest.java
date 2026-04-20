@@ -26,6 +26,10 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsoleDryRun")
+    private Boolean consoleDryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -71,6 +75,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         super(builder);
         this.bandwidthGuaranteeMode = builder.bandwidthGuaranteeMode;
         this.clientToken = builder.clientToken;
+        this.consoleDryRun = builder.consoleDryRun;
         this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -108,6 +113,13 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return consoleDryRun
+     */
+    public Boolean getConsoleDryRun() {
+        return this.consoleDryRun;
     }
 
     /**
@@ -183,6 +195,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCenInterRegionTrafficQosPolicyRequest, Builder> {
         private String bandwidthGuaranteeMode; 
         private String clientToken; 
+        private Boolean consoleDryRun; 
         private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -202,6 +215,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             super(request);
             this.bandwidthGuaranteeMode = request.bandwidthGuaranteeMode;
             this.clientToken = request.clientToken;
+            this.consoleDryRun = request.consoleDryRun;
             this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -240,6 +254,15 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * ConsoleDryRun.
+         */
+        public Builder consoleDryRun(Boolean consoleDryRun) {
+            this.putQueryParameter("ConsoleDryRun", consoleDryRun);
+            this.consoleDryRun = consoleDryRun;
             return this;
         }
 
