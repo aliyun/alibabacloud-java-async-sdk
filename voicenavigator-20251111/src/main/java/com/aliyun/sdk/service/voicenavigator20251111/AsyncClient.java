@@ -20,10 +20,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of BeginSession  BeginSessionRequest
+     * @return BeginSessionResponse
+     */
+    CompletableFuture<BeginSessionResponse> beginSession(BeginSessionRequest request);
+
+    ResponseIterable<BeginSessionResponseBody> beginSessionWithResponseIterable(BeginSessionRequest request);
+
+    /**
+     * @param request the request parameters of BridgeWebCall  BridgeWebCallRequest
+     * @return BridgeWebCallResponse
+     */
+    CompletableFuture<BridgeWebCallResponse> bridgeWebCall(BridgeWebCallRequest request);
+
+    /**
+     * @param request the request parameters of CreateCallCenterProvider  CreateCallCenterProviderRequest
+     * @return CreateCallCenterProviderResponse
+     */
+    CompletableFuture<CreateCallCenterProviderResponse> createCallCenterProvider(CreateCallCenterProviderRequest request);
+
+    /**
      * @param request the request parameters of CreateCloneVoice  CreateCloneVoiceRequest
      * @return CreateCloneVoiceResponse
      */
     CompletableFuture<CreateCloneVoiceResponse> createCloneVoice(CreateCloneVoiceRequest request);
+
+    /**
+     * @param request the request parameters of CreateInstruction  CreateInstructionRequest
+     * @return CreateInstructionResponse
+     */
+    CompletableFuture<CreateInstructionResponse> createInstruction(CreateInstructionRequest request);
 
     /**
      * @param request the request parameters of CreateLlmAccessProfile  CreateLlmAccessProfileRequest
@@ -62,10 +88,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVoiceAccessProfileResponse> createVoiceAccessProfile(CreateVoiceAccessProfileRequest request);
 
     /**
+     * @param request the request parameters of DeleteCallCenterProvider  DeleteCallCenterProviderRequest
+     * @return DeleteCallCenterProviderResponse
+     */
+    CompletableFuture<DeleteCallCenterProviderResponse> deleteCallCenterProvider(DeleteCallCenterProviderRequest request);
+
+    /**
      * @param request the request parameters of DeleteCloneVoice  DeleteCloneVoiceRequest
      * @return DeleteCloneVoiceResponse
      */
     CompletableFuture<DeleteCloneVoiceResponse> deleteCloneVoice(DeleteCloneVoiceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteInstruction  DeleteInstructionRequest
+     * @return DeleteInstructionResponse
+     */
+    CompletableFuture<DeleteInstructionResponse> deleteInstruction(DeleteInstructionRequest request);
 
     /**
      * @param request the request parameters of DeleteLlmAccessProfile  DeleteLlmAccessProfileRequest
@@ -98,10 +136,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVoiceAccessProfileResponse> deleteVoiceAccessProfile(DeleteVoiceAccessProfileRequest request);
 
     /**
+     * @param request the request parameters of Dialogue  DialogueRequest
+     * @return DialogueResponse
+     */
+    CompletableFuture<DialogueResponse> dialogue(DialogueRequest request);
+
+    ResponseIterable<DialogueResponseBody> dialogueWithResponseIterable(DialogueRequest request);
+
+    /**
      * @param request the request parameters of DisableSubscription  DisableSubscriptionRequest
      * @return DisableSubscriptionResponse
      */
     CompletableFuture<DisableSubscriptionResponse> disableSubscription(DisableSubscriptionRequest request);
+
+    /**
+     * @param request the request parameters of EndSession  EndSessionRequest
+     * @return EndSessionResponse
+     */
+    CompletableFuture<EndSessionResponse> endSession(EndSessionRequest request);
 
     /**
      * @param request the request parameters of ExportScript  ExportScriptRequest
@@ -126,6 +178,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCallDetailRecordResponse
      */
     CompletableFuture<GetCallDetailRecordResponse> getCallDetailRecord(GetCallDetailRecordRequest request);
+
+    /**
+     * @param request the request parameters of GetDataChannelCredential  GetDataChannelCredentialRequest
+     * @return GetDataChannelCredentialResponse
+     */
+    CompletableFuture<GetDataChannelCredentialResponse> getDataChannelCredential(GetDataChannelCredentialRequest request);
 
     /**
      * @param request the request parameters of GetRealtimeInstanceStats  GetRealtimeInstanceStatsRequest
@@ -170,6 +228,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListBackgroundMusicsResponse> listBackgroundMusics(ListBackgroundMusicsRequest request);
 
     /**
+     * @param request the request parameters of ListCallCenterProviders  ListCallCenterProvidersRequest
+     * @return ListCallCenterProvidersResponse
+     */
+    CompletableFuture<ListCallCenterProvidersResponse> listCallCenterProviders(ListCallCenterProvidersRequest request);
+
+    /**
      * @param request the request parameters of ListCallDetailRecords  ListCallDetailRecordsRequest
      * @return ListCallDetailRecordsResponse
      */
@@ -186,6 +250,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCloneVoiceModelsResponse
      */
     CompletableFuture<ListCloneVoiceModelsResponse> listCloneVoiceModels(ListCloneVoiceModelsRequest request);
+
+    /**
+     * @param request the request parameters of ListInstructions  ListInstructionsRequest
+     * @return ListInstructionsResponse
+     */
+    CompletableFuture<ListInstructionsResponse> listInstructions(ListInstructionsRequest request);
 
     /**
      * @param request the request parameters of ListLlmAccessProfiles  ListLlmAccessProfilesRequest
@@ -254,10 +324,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishScriptResponse> publishScript(PublishScriptRequest request);
 
     /**
+     * @param request the request parameters of UpdateCallCenterProvider  UpdateCallCenterProviderRequest
+     * @return UpdateCallCenterProviderResponse
+     */
+    CompletableFuture<UpdateCallCenterProviderResponse> updateCallCenterProvider(UpdateCallCenterProviderRequest request);
+
+    /**
      * @param request the request parameters of UpdateCloneVoice  UpdateCloneVoiceRequest
      * @return UpdateCloneVoiceResponse
      */
     CompletableFuture<UpdateCloneVoiceResponse> updateCloneVoice(UpdateCloneVoiceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateInstruction  UpdateInstructionRequest
+     * @return UpdateInstructionResponse
+     */
+    CompletableFuture<UpdateInstructionResponse> updateInstruction(UpdateInstructionRequest request);
 
     /**
      * @param request the request parameters of UpdateLlmAccessProfile  UpdateLlmAccessProfileRequest
