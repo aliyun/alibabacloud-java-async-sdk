@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVariableResponse> deleteVariable(DeleteVariableRequest request);
 
     /**
+     * @param request the request parameters of GenerateFileUploadParams  GenerateFileUploadParamsRequest
+     * @return GenerateFileUploadParamsResponse
+     */
+    CompletableFuture<GenerateFileUploadParamsResponse> generateFileUploadParams(GenerateFileUploadParamsRequest request);
+
+    /**
      * @param request the request parameters of GetApplication  GetApplicationRequest
      * @return GetApplicationResponse
      */
