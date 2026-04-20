@@ -37,6 +37,10 @@ public class AddCategoryRequest extends Request {
     private String categoryType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConnectorId")
+    private String connectorId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ParentCategoryId")
     private String parentCategoryId;
 
@@ -46,6 +50,7 @@ public class AddCategoryRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.categoryName = builder.categoryName;
         this.categoryType = builder.categoryType;
+        this.connectorId = builder.connectorId;
         this.parentCategoryId = builder.parentCategoryId;
     }
 
@@ -91,6 +96,13 @@ public class AddCategoryRequest extends Request {
     }
 
     /**
+     * @return connectorId
+     */
+    public String getConnectorId() {
+        return this.connectorId;
+    }
+
+    /**
      * @return parentCategoryId
      */
     public String getParentCategoryId() {
@@ -102,6 +114,7 @@ public class AddCategoryRequest extends Request {
         private String workspaceId; 
         private String categoryName; 
         private String categoryType; 
+        private String connectorId; 
         private String parentCategoryId; 
 
         private Builder() {
@@ -114,6 +127,7 @@ public class AddCategoryRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.categoryName = request.categoryName;
             this.categoryType = request.categoryType;
+            this.connectorId = request.connectorId;
             this.parentCategoryId = request.parentCategoryId;
         } 
 
@@ -157,6 +171,15 @@ public class AddCategoryRequest extends Request {
         public Builder categoryType(String categoryType) {
             this.putBodyParameter("CategoryType", categoryType);
             this.categoryType = categoryType;
+            return this;
+        }
+
+        /**
+         * ConnectorId.
+         */
+        public Builder connectorId(String connectorId) {
+            this.putBodyParameter("ConnectorId", connectorId);
+            this.connectorId = connectorId;
             return this;
         }
 
