@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckUpgradeItemResponse> checkUpgradeItem(CheckUpgradeItemRequest request);
 
     /**
+     * @param request the request parameters of CreateAutoDisposeConfig  CreateAutoDisposeConfigRequest
+     * @return CreateAutoDisposeConfigResponse
+     */
+    CompletableFuture<CreateAutoDisposeConfigResponse> createAutoDisposeConfig(CreateAutoDisposeConfigRequest request);
+
+    /**
      * @param request the request parameters of CreateDataIngestion  CreateDataIngestionRequest
      * @return CreateDataIngestionResponse
      */
@@ -170,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableDataIngestionResponse> enableDataIngestion(EnableDataIngestionRequest request);
 
     /**
+     * @param request the request parameters of ExecuteAutoDisposeRecords  ExecuteAutoDisposeRecordsRequest
+     * @return ExecuteAutoDisposeRecordsResponse
+     */
+    CompletableFuture<ExecuteAutoDisposeRecordsResponse> executeAutoDisposeRecords(ExecuteAutoDisposeRecordsRequest request);
+
+    /**
      * @param request the request parameters of ExecuteLogQuery  ExecuteLogQueryRequest
      * @return ExecuteLogQueryResponse
      */
@@ -180,6 +192,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExecuteUpgradeResponse
      */
     CompletableFuture<ExecuteUpgradeResponse> executeUpgrade(ExecuteUpgradeRequest request);
+
+    /**
+     * @param request the request parameters of GetAutoDisposeConfig  GetAutoDisposeConfigRequest
+     * @return GetAutoDisposeConfigResponse
+     */
+    CompletableFuture<GetAutoDisposeConfigResponse> getAutoDisposeConfig(GetAutoDisposeConfigRequest request);
 
     /**
      * @param request the request parameters of GetDataBatchIngestion  GetDataBatchIngestionRequest
@@ -240,6 +258,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUserConfigResponse
      */
     CompletableFuture<GetUserConfigResponse> getUserConfig(GetUserConfigRequest request);
+
+    /**
+     * @param request the request parameters of ListAutoDisposeEntities  ListAutoDisposeEntitiesRequest
+     * @return ListAutoDisposeEntitiesResponse
+     */
+    CompletableFuture<ListAutoDisposeEntitiesResponse> listAutoDisposeEntities(ListAutoDisposeEntitiesRequest request);
 
     /**
      * @param request the request parameters of ListDataIngestionTemplates  ListDataIngestionTemplatesRequest
@@ -390,6 +414,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetDefaultNormalizationRuleVersionResponse
      */
     CompletableFuture<SetDefaultNormalizationRuleVersionResponse> setDefaultNormalizationRuleVersion(SetDefaultNormalizationRuleVersionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAutoDisposeConfig  UpdateAutoDisposeConfigRequest
+     * @return UpdateAutoDisposeConfigResponse
+     */
+    CompletableFuture<UpdateAutoDisposeConfigResponse> updateAutoDisposeConfig(UpdateAutoDisposeConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAutoDisposeRecord  UpdateAutoDisposeRecordRequest
+     * @return UpdateAutoDisposeRecordResponse
+     */
+    CompletableFuture<UpdateAutoDisposeRecordResponse> updateAutoDisposeRecord(UpdateAutoDisposeRecordRequest request);
 
     /**
      * @param request the request parameters of UpdateDataBatchIngestion  UpdateDataBatchIngestionRequest

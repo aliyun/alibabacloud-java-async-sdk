@@ -72,12 +72,11 @@ public class UpdateDetectionRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DetectionRuleId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private String detectionRuleId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DetectionRuleName")
-    @com.aliyun.core.annotation.Validation(maxLength = 100)
     private String detectionRuleName;
 
     @com.aliyun.core.annotation.Body

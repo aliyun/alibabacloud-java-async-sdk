@@ -75,7 +75,7 @@ public class CreateDetectionRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DetectionRuleName")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 100)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private String detectionRuleName;
 
     @com.aliyun.core.annotation.Body
