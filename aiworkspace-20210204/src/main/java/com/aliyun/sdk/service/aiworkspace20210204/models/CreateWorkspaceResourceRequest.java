@@ -226,7 +226,6 @@ public class CreateWorkspaceResourceRequest extends Request {
      */
     public static class Quotas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
         private Quotas(Builder builder) {
@@ -260,7 +259,6 @@ public class CreateWorkspaceResourceRequest extends Request {
 
             /**
              * <p>The quota ID. You can call <a href="https://help.aliyun.com/document_detail/449144.html">ListQuotas</a> to obtain the quota ID.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>232892******92912</p>
