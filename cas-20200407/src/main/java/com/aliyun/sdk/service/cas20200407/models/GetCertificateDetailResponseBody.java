@@ -41,6 +41,12 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CommonName")
     private String commonName;
 
+    @com.aliyun.core.annotation.NameInMap("CompanyId")
+    private Long companyId;
+
+    @com.aliyun.core.annotation.NameInMap("ContactId")
+    private Long contactId;
+
     @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
@@ -89,6 +95,8 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         this.certificateSource = builder.certificateSource;
         this.certificateStatus = builder.certificateStatus;
         this.commonName = builder.commonName;
+        this.companyId = builder.companyId;
+        this.contactId = builder.contactId;
         this.domain = builder.domain;
         this.existPrivateKey = builder.existPrivateKey;
         this.fingerPrint = builder.fingerPrint;
@@ -170,6 +178,20 @@ public class GetCertificateDetailResponseBody extends TeaModel {
      */
     public String getCommonName() {
         return this.commonName;
+    }
+
+    /**
+     * @return companyId
+     */
+    public Long getCompanyId() {
+        return this.companyId;
+    }
+
+    /**
+     * @return contactId
+     */
+    public Long getContactId() {
+        return this.contactId;
     }
 
     /**
@@ -272,6 +294,8 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         private String certificateSource; 
         private String certificateStatus; 
         private String commonName; 
+        private Long companyId; 
+        private Long contactId; 
         private String domain; 
         private Boolean existPrivateKey; 
         private String fingerPrint; 
@@ -298,6 +322,8 @@ public class GetCertificateDetailResponseBody extends TeaModel {
             this.certificateSource = model.certificateSource;
             this.certificateStatus = model.certificateStatus;
             this.commonName = model.commonName;
+            this.companyId = model.companyId;
+            this.contactId = model.contactId;
             this.domain = model.domain;
             this.existPrivateKey = model.existPrivateKey;
             this.fingerPrint = model.fingerPrint;
@@ -374,6 +400,22 @@ public class GetCertificateDetailResponseBody extends TeaModel {
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
+            return this;
+        }
+
+        /**
+         * CompanyId.
+         */
+        public Builder companyId(Long companyId) {
+            this.companyId = companyId;
+            return this;
+        }
+
+        /**
+         * ContactId.
+         */
+        public Builder contactId(Long contactId) {
+            this.contactId = contactId;
             return this;
         }
 
