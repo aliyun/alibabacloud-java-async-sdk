@@ -104,6 +104,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListVariableResponse> listVariable(ListVariableRequest request);
 
     /**
+     * @param request the request parameters of ListVoices  ListVoicesRequest
+     * @return ListVoicesResponse
+     */
+    CompletableFuture<ListVoicesResponse> listVoices(ListVoicesRequest request);
+
+    /**
      * @param request the request parameters of PublishApplicationVersion  PublishApplicationVersionRequest
      * @return PublishApplicationVersionResponse
      */
