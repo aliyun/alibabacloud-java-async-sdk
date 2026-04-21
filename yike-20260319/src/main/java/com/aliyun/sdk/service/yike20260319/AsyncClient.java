@@ -20,10 +20,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddYikeUserCredit  AddYikeUserCreditRequest
+     * @return AddYikeUserCreditResponse
+     */
+    CompletableFuture<AddYikeUserCreditResponse> addYikeUserCredit(AddYikeUserCreditRequest request);
+
+    /**
      * @param request the request parameters of BatchGetYikeAIAppJob  BatchGetYikeAIAppJobRequest
      * @return BatchGetYikeAIAppJobResponse
      */
     CompletableFuture<BatchGetYikeAIAppJobResponse> batchGetYikeAIAppJob(BatchGetYikeAIAppJobRequest request);
+
+    /**
+     * @param request the request parameters of BatchGetYikeAssetMediaInfos  BatchGetYikeAssetMediaInfosRequest
+     * @return BatchGetYikeAssetMediaInfosResponse
+     */
+    CompletableFuture<BatchGetYikeAssetMediaInfosResponse> batchGetYikeAssetMediaInfos(BatchGetYikeAssetMediaInfosRequest request);
 
     /**
      * @param request the request parameters of CreateYikeAssetUpload  CreateYikeAssetUploadRequest
@@ -32,16 +44,100 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateYikeAssetUploadResponse> createYikeAssetUpload(CreateYikeAssetUploadRequest request);
 
     /**
+     * @param request the request parameters of CreateYikeProduction  CreateYikeProductionRequest
+     * @return CreateYikeProductionResponse
+     */
+    CompletableFuture<CreateYikeProductionResponse> createYikeProduction(CreateYikeProductionRequest request);
+
+    /**
+     * @param request the request parameters of CreateYikeUser  CreateYikeUserRequest
+     * @return CreateYikeUserResponse
+     */
+    CompletableFuture<CreateYikeUserResponse> createYikeUser(CreateYikeUserRequest request);
+
+    /**
+     * @param request the request parameters of CreateYikeWorkspace  CreateYikeWorkspaceRequest
+     * @return CreateYikeWorkspaceResponse
+     */
+    CompletableFuture<CreateYikeWorkspaceResponse> createYikeWorkspace(CreateYikeWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteYikeAssetMediaInfos  DeleteYikeAssetMediaInfosRequest
+     * @return DeleteYikeAssetMediaInfosResponse
+     */
+    CompletableFuture<DeleteYikeAssetMediaInfosResponse> deleteYikeAssetMediaInfos(DeleteYikeAssetMediaInfosRequest request);
+
+    /**
      * @param request the request parameters of GetYikeAIAppJob  GetYikeAIAppJobRequest
      * @return GetYikeAIAppJobResponse
      */
     CompletableFuture<GetYikeAIAppJobResponse> getYikeAIAppJob(GetYikeAIAppJobRequest request);
 
     /**
+     * @param request the request parameters of GetYikeAssetMediaInfo  GetYikeAssetMediaInfoRequest
+     * @return GetYikeAssetMediaInfoResponse
+     */
+    CompletableFuture<GetYikeAssetMediaInfoResponse> getYikeAssetMediaInfo(GetYikeAssetMediaInfoRequest request);
+
+    /**
      * @param request the request parameters of GetYikeStoryboardJob  GetYikeStoryboardJobRequest
      * @return GetYikeStoryboardJobResponse
      */
     CompletableFuture<GetYikeStoryboardJobResponse> getYikeStoryboardJob(GetYikeStoryboardJobRequest request);
+
+    /**
+     * @param request the request parameters of GetYikeUser  GetYikeUserRequest
+     * @return GetYikeUserResponse
+     */
+    CompletableFuture<GetYikeUserResponse> getYikeUser(GetYikeUserRequest request);
+
+    /**
+     * @param request the request parameters of GetYikeUserCredit  GetYikeUserCreditRequest
+     * @return GetYikeUserCreditResponse
+     */
+    CompletableFuture<GetYikeUserCreditResponse> getYikeUserCredit(GetYikeUserCreditRequest request);
+
+    /**
+     * @param request the request parameters of ListYikeAssetFolders  ListYikeAssetFoldersRequest
+     * @return ListYikeAssetFoldersResponse
+     */
+    CompletableFuture<ListYikeAssetFoldersResponse> listYikeAssetFolders(ListYikeAssetFoldersRequest request);
+
+    /**
+     * @param request the request parameters of ListYikeProductions  ListYikeProductionsRequest
+     * @return ListYikeProductionsResponse
+     */
+    CompletableFuture<ListYikeProductionsResponse> listYikeProductions(ListYikeProductionsRequest request);
+
+    /**
+     * @param request the request parameters of PrecheckYikeAIAppJob  PrecheckYikeAIAppJobRequest
+     * @return PrecheckYikeAIAppJobResponse
+     */
+    CompletableFuture<PrecheckYikeAIAppJobResponse> precheckYikeAIAppJob(PrecheckYikeAIAppJobRequest request);
+
+    /**
+     * @param request the request parameters of RegisterYikeAssetMediaInfo  RegisterYikeAssetMediaInfoRequest
+     * @return RegisterYikeAssetMediaInfoResponse
+     */
+    CompletableFuture<RegisterYikeAssetMediaInfoResponse> registerYikeAssetMediaInfo(RegisterYikeAssetMediaInfoRequest request);
+
+    /**
+     * @param request the request parameters of ResumeYikeStoryboardJob  ResumeYikeStoryboardJobRequest
+     * @return ResumeYikeStoryboardJobResponse
+     */
+    CompletableFuture<ResumeYikeStoryboardJobResponse> resumeYikeStoryboardJob(ResumeYikeStoryboardJobRequest request);
+
+    /**
+     * @param request the request parameters of SetYikeUserRole  SetYikeUserRoleRequest
+     * @return SetYikeUserRoleResponse
+     */
+    CompletableFuture<SetYikeUserRoleResponse> setYikeUserRole(SetYikeUserRoleRequest request);
+
+    /**
+     * @param request the request parameters of SubYikeUserCredit  SubYikeUserCreditRequest
+     * @return SubYikeUserCreditResponse
+     */
+    CompletableFuture<SubYikeUserCreditResponse> subYikeUserCredit(SubYikeUserCreditRequest request);
 
     /**
      * @param request the request parameters of SubmitYikeAIAppJob  SubmitYikeAIAppJobRequest
