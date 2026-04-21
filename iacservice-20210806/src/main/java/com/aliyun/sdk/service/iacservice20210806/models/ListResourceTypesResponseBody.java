@@ -173,6 +173,9 @@ public class ListResourceTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceListPageUrl")
         private String resourceListPageUrl;
 
+        @com.aliyun.core.annotation.NameInMap("resourceType")
+        private String resourceType;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
@@ -200,6 +203,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             this.productName = builder.productName;
             this.resourceDetailPageUrl = builder.resourceDetailPageUrl;
             this.resourceListPageUrl = builder.resourceListPageUrl;
+            this.resourceType = builder.resourceType;
             this.status = builder.status;
             this.statusStartVersion = builder.statusStartVersion;
             this.subcategory = builder.subcategory;
@@ -250,6 +254,13 @@ public class ListResourceTypesResponseBody extends TeaModel {
          */
         public String getResourceListPageUrl() {
             return this.resourceListPageUrl;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         /**
@@ -307,6 +318,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             private String productName; 
             private String resourceDetailPageUrl; 
             private String resourceListPageUrl; 
+            private String resourceType; 
             private String status; 
             private String statusStartVersion; 
             private String subcategory; 
@@ -324,6 +336,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
                 this.productName = model.productName;
                 this.resourceDetailPageUrl = model.resourceDetailPageUrl;
                 this.resourceListPageUrl = model.resourceListPageUrl;
+                this.resourceType = model.resourceType;
                 this.status = model.status;
                 this.statusStartVersion = model.statusStartVersion;
                 this.subcategory = model.subcategory;
@@ -370,6 +383,14 @@ public class ListResourceTypesResponseBody extends TeaModel {
              */
             public Builder resourceListPageUrl(String resourceListPageUrl) {
                 this.resourceListPageUrl = resourceListPageUrl;
+                return this;
+            }
+
+            /**
+             * resourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
                 return this;
             }
 
