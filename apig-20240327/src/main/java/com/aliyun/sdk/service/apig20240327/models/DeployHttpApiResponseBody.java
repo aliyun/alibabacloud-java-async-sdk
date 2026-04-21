@@ -20,6 +20,9 @@ public class DeployHttpApiResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("data")
+    private Data data;
+
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
@@ -28,6 +31,7 @@ public class DeployHttpApiResponseBody extends TeaModel {
 
     private DeployHttpApiResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
     }
@@ -52,6 +56,13 @@ public class DeployHttpApiResponseBody extends TeaModel {
     }
 
     /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -67,6 +78,7 @@ public class DeployHttpApiResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private Data data; 
         private String message; 
         private String requestId; 
 
@@ -75,6 +87,7 @@ public class DeployHttpApiResponseBody extends TeaModel {
 
         private Builder(DeployHttpApiResponseBody model) {
             this.code = model.code;
+            this.data = model.data;
             this.message = model.message;
             this.requestId = model.requestId;
         } 
@@ -87,6 +100,14 @@ public class DeployHttpApiResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
             return this;
         }
 
@@ -118,4 +139,58 @@ public class DeployHttpApiResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeployHttpApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeployHttpApiResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("httpApiId")
+        private String httpApiId;
+
+        private Data(Builder builder) {
+            this.httpApiId = builder.httpApiId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return httpApiId
+         */
+        public String getHttpApiId() {
+            return this.httpApiId;
+        }
+
+        public static final class Builder {
+            private String httpApiId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.httpApiId = model.httpApiId;
+            } 
+
+            /**
+             * httpApiId.
+             */
+            public Builder httpApiId(String httpApiId) {
+                this.httpApiId = httpApiId;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }
