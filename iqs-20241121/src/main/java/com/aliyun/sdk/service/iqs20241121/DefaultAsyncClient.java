@@ -184,6 +184,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetNormalServiceConfig  GetNormalServiceConfigRequest
+     * @return GetNormalServiceConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetNormalServiceConfigResponse> getNormalServiceConfig(GetNormalServiceConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetNormalServiceConfig").setMethod(HttpMethod.GET).setPathRegex("/linked-retrieval/linked-retrieval-admin/console/v1/services/commands/normalServiceConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetNormalServiceConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetNormalServiceConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetServiceConfig  GetServiceConfigRequest
      * @return GetServiceConfigResponse
      */
@@ -220,6 +238,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListApiInfos  ListApiInfosRequest
+     * @return ListApiInfosResponse
+     */
+    @Override
+    public CompletableFuture<ListApiInfosResponse> listApiInfos(ListApiInfosRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListApiInfos").setMethod(HttpMethod.GET).setPathRegex("/linked-retrieval/linked-retrieval-admin/console/v1/monitors/commands/apiInfos").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApiInfosResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListApiInfosResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListApiNames  ListApiNamesRequest
      * @return ListApiNamesResponse
      */
@@ -232,6 +268,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListApiNamesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListLimitations  ListLimitationsRequest
+     * @return ListLimitationsResponse
+     */
+    @Override
+    public CompletableFuture<ListLimitationsResponse> listLimitations(ListLimitationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListLimitations").setMethod(HttpMethod.GET).setPathRegex("/linked-retrieval/linked-retrieval-admin/openService/v1/console/limitation/commands/list/account").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListLimitationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListLimitationsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -286,6 +340,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ManageSearchAccountInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of OpenAutoNormalReview  OpenAutoNormalReviewRequest
+     * @return OpenAutoNormalReviewResponse
+     */
+    @Override
+    public CompletableFuture<OpenAutoNormalReviewResponse> openAutoNormalReview(OpenAutoNormalReviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("OpenAutoNormalReview").setMethod(HttpMethod.POST).setPathRegex("/linked-retrieval/linked-retrieval-admin/openService/v1/account/commands/openAutoNormalReview").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenAutoNormalReviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OpenAutoNormalReviewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopAutoNormalReview  StopAutoNormalReviewRequest
+     * @return StopAutoNormalReviewResponse
+     */
+    @Override
+    public CompletableFuture<StopAutoNormalReviewResponse> stopAutoNormalReview(StopAutoNormalReviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopAutoNormalReview").setMethod(HttpMethod.POST).setPathRegex("/linked-retrieval/linked-retrieval-admin/openService/v1/account/commands/stopAutoNormalReview").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopAutoNormalReviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopAutoNormalReviewResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

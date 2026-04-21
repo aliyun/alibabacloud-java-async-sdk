@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMeteringSummaryResponse> getMeteringSummary(GetMeteringSummaryRequest request);
 
     /**
+     * @param request the request parameters of GetNormalServiceConfig  GetNormalServiceConfigRequest
+     * @return GetNormalServiceConfigResponse
+     */
+    CompletableFuture<GetNormalServiceConfigResponse> getNormalServiceConfig(GetNormalServiceConfigRequest request);
+
+    /**
      * @param request the request parameters of GetServiceConfig  GetServiceConfigRequest
      * @return GetServiceConfigResponse
      */
@@ -80,10 +86,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApiCallDailyDetailResponse> listApiCallDailyDetail(ListApiCallDailyDetailRequest request);
 
     /**
+     * @param request the request parameters of ListApiInfos  ListApiInfosRequest
+     * @return ListApiInfosResponse
+     */
+    CompletableFuture<ListApiInfosResponse> listApiInfos(ListApiInfosRequest request);
+
+    /**
      * @param request the request parameters of ListApiNames  ListApiNamesRequest
      * @return ListApiNamesResponse
      */
     CompletableFuture<ListApiNamesResponse> listApiNames(ListApiNamesRequest request);
+
+    /**
+     * @param request the request parameters of ListLimitations  ListLimitationsRequest
+     * @return ListLimitationsResponse
+     */
+    CompletableFuture<ListLimitationsResponse> listLimitations(ListLimitationsRequest request);
 
     /**
      * @param request the request parameters of ListMeteringDailyDetail  ListMeteringDailyDetailRequest
@@ -102,5 +120,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ManageSearchAccountInfoResponse
      */
     CompletableFuture<ManageSearchAccountInfoResponse> manageSearchAccountInfo(ManageSearchAccountInfoRequest request);
+
+    /**
+     * @param request the request parameters of OpenAutoNormalReview  OpenAutoNormalReviewRequest
+     * @return OpenAutoNormalReviewResponse
+     */
+    CompletableFuture<OpenAutoNormalReviewResponse> openAutoNormalReview(OpenAutoNormalReviewRequest request);
+
+    /**
+     * @param request the request parameters of StopAutoNormalReview  StopAutoNormalReviewRequest
+     * @return StopAutoNormalReviewResponse
+     */
+    CompletableFuture<StopAutoNormalReviewResponse> stopAutoNormalReview(StopAutoNormalReviewRequest request);
 
 }
