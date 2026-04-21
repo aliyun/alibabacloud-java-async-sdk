@@ -116,6 +116,9 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("sparkRole")
+        private java.util.List<String> sparkRole;
+
         @com.aliyun.core.annotation.NameInMap("token")
         private String token;
 
@@ -130,6 +133,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             this.lastUsedTime = builder.lastUsedTime;
             this.memberArns = builder.memberArns;
             this.name = builder.name;
+            this.sparkRole = builder.sparkRole;
             this.token = builder.token;
             this.tokenId = builder.tokenId;
         }
@@ -192,6 +196,13 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         }
 
         /**
+         * @return sparkRole
+         */
+        public java.util.List<String> getSparkRole() {
+            return this.sparkRole;
+        }
+
+        /**
          * @return token
          */
         public String getToken() {
@@ -213,6 +224,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             private Long lastUsedTime; 
             private java.util.List<String> memberArns; 
             private String name; 
+            private java.util.List<String> sparkRole; 
             private String token; 
             private String tokenId; 
 
@@ -227,6 +239,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
                 this.lastUsedTime = model.lastUsedTime;
                 this.memberArns = model.memberArns;
                 this.name = model.name;
+                this.sparkRole = model.sparkRole;
                 this.token = model.token;
                 this.tokenId = model.tokenId;
             } 
@@ -284,6 +297,14 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * sparkRole.
+             */
+            public Builder sparkRole(java.util.List<String> sparkRole) {
+                this.sparkRole = sparkRole;
                 return this;
             }
 

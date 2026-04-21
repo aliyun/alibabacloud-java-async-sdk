@@ -38,6 +38,10 @@ public class CreateKyuubiTokenRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sparkRole")
+    private java.util.List<String> sparkRole;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("token")
     private String token;
 
@@ -52,6 +56,7 @@ public class CreateKyuubiTokenRequest extends Request {
         this.autoExpireConfiguration = builder.autoExpireConfiguration;
         this.memberArns = builder.memberArns;
         this.name = builder.name;
+        this.sparkRole = builder.sparkRole;
         this.token = builder.token;
         this.regionId = builder.regionId;
     }
@@ -105,6 +110,13 @@ public class CreateKyuubiTokenRequest extends Request {
     }
 
     /**
+     * @return sparkRole
+     */
+    public java.util.List<String> getSparkRole() {
+        return this.sparkRole;
+    }
+
+    /**
      * @return token
      */
     public String getToken() {
@@ -124,6 +136,7 @@ public class CreateKyuubiTokenRequest extends Request {
         private AutoExpireConfiguration autoExpireConfiguration; 
         private java.util.List<String> memberArns; 
         private String name; 
+        private java.util.List<String> sparkRole; 
         private String token; 
         private String regionId; 
 
@@ -138,6 +151,7 @@ public class CreateKyuubiTokenRequest extends Request {
             this.autoExpireConfiguration = request.autoExpireConfiguration;
             this.memberArns = request.memberArns;
             this.name = request.name;
+            this.sparkRole = request.sparkRole;
             this.token = request.token;
             this.regionId = request.regionId;
         } 
@@ -184,6 +198,15 @@ public class CreateKyuubiTokenRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * sparkRole.
+         */
+        public Builder sparkRole(java.util.List<String> sparkRole) {
+            this.putBodyParameter("sparkRole", sparkRole);
+            this.sparkRole = sparkRole;
             return this;
         }
 
