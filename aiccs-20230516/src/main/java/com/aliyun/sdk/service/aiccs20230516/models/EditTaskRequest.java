@@ -110,6 +110,10 @@ public class EditTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TemplateType")
     private Long templateType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WeekTag")
+    private java.util.List<String> weekTag;
+
     private EditTaskRequest(Builder builder) {
         super(builder);
         this.callTimeList = builder.callTimeList;
@@ -135,6 +139,7 @@ public class EditTaskRequest extends Request {
         this.taskId = builder.taskId;
         this.templateId = builder.templateId;
         this.templateType = builder.templateType;
+        this.weekTag = builder.weekTag;
     }
 
     public static Builder builder() {
@@ -311,6 +316,13 @@ public class EditTaskRequest extends Request {
         return this.templateType;
     }
 
+    /**
+     * @return weekTag
+     */
+    public java.util.List<String> getWeekTag() {
+        return this.weekTag;
+    }
+
     public static final class Builder extends Request.Builder<EditTaskRequest, Builder> {
         private java.util.List<CallTimeList> callTimeList; 
         private java.util.List<CallTimeStrList> callTimeStrList; 
@@ -335,6 +347,7 @@ public class EditTaskRequest extends Request {
         private Long taskId; 
         private Long templateId; 
         private Long templateType; 
+        private java.util.List<String> weekTag; 
 
         private Builder() {
             super();
@@ -365,13 +378,11 @@ public class EditTaskRequest extends Request {
             this.taskId = request.taskId;
             this.templateId = request.templateId;
             this.templateType = request.templateType;
+            this.weekTag = request.weekTag;
         } 
 
         /**
          * <p>外呼时间</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[]</p>
          */
         public Builder callTimeList(java.util.List<CallTimeList> callTimeList) {
             String callTimeListShrink = shrink(callTimeList, "CallTimeList", "json");
@@ -381,9 +392,6 @@ public class EditTaskRequest extends Request {
         }
 
         /**
-         * <p>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
-         * 
-         * <strong>example:</strong>
          * <p>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
          */
         public Builder callTimeStrList(java.util.List<CallTimeStrList> callTimeStrList) {
@@ -628,6 +636,16 @@ public class EditTaskRequest extends Request {
         public Builder templateType(Long templateType) {
             this.putQueryParameter("TemplateType", templateType);
             this.templateType = templateType;
+            return this;
+        }
+
+        /**
+         * <p>外呼时间需要的按星期几进行外呼，例：“1,2,3,4,5,6,7”，代表周一到周日都外呼</p>
+         */
+        public Builder weekTag(java.util.List<String> weekTag) {
+            String weekTagShrink = shrink(weekTag, "WeekTag", "json");
+            this.putQueryParameter("WeekTag", weekTagShrink);
+            this.weekTag = weekTag;
             return this;
         }
 
