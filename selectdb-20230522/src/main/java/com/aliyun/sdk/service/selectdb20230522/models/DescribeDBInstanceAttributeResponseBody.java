@@ -56,6 +56,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
+    @com.aliyun.core.annotation.NameInMap("LangfuseInstanceIds")
+    private java.util.List<String> langfuseInstanceIds;
+
     @com.aliyun.core.annotation.NameInMap("LockMode")
     private Long lockMode;
 
@@ -136,6 +139,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         this.engineVersion = builder.engineVersion;
         this.expireTime = builder.expireTime;
         this.gmtModified = builder.gmtModified;
+        this.langfuseInstanceIds = builder.langfuseInstanceIds;
         this.lockMode = builder.lockMode;
         this.lockReason = builder.lockReason;
         this.maintainEndtime = builder.maintainEndtime;
@@ -261,6 +265,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      */
     public String getGmtModified() {
         return this.gmtModified;
+    }
+
+    /**
+     * @return langfuseInstanceIds
+     */
+    public java.util.List<String> getLangfuseInstanceIds() {
+        return this.langfuseInstanceIds;
     }
 
     /**
@@ -431,6 +442,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String engineVersion; 
         private String expireTime; 
         private String gmtModified; 
+        private java.util.List<String> langfuseInstanceIds; 
         private Long lockMode; 
         private String lockReason; 
         private String maintainEndtime; 
@@ -471,6 +483,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.engineVersion = model.engineVersion;
             this.expireTime = model.expireTime;
             this.gmtModified = model.gmtModified;
+            this.langfuseInstanceIds = model.langfuseInstanceIds;
             this.lockMode = model.lockMode;
             this.lockReason = model.lockReason;
             this.maintainEndtime = model.maintainEndtime;
@@ -627,6 +640,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
+            return this;
+        }
+
+        /**
+         * LangfuseInstanceIds.
+         */
+        public Builder langfuseInstanceIds(java.util.List<String> langfuseInstanceIds) {
+            this.langfuseInstanceIds = langfuseInstanceIds;
             return this;
         }
 

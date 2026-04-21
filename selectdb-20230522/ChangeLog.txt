@@ -1,3 +1,6 @@
+2026-04-21 Version: 5.0.4
+- Generated java-async 2023-05-22 for selectdb.
+
 2026-04-08 Version: 5.0.3
 - Generated java-async 2023-05-22 for selectdb.
 
