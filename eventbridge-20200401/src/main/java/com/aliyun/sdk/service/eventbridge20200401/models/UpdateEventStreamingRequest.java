@@ -903,6 +903,102 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
+    public static class DynamicTopic extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private DynamicTopic(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DynamicTopic create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DynamicTopic model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public DynamicTopic build() {
+                return new DynamicTopic(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -1287,6 +1383,81 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
+    public static class SslKeystoreKey extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("KmsArn")
+        private String kmsArn;
+
+        @com.aliyun.core.annotation.NameInMap("KmsSecretValueKey")
+        private String kmsSecretValueKey;
+
+        private SslKeystoreKey(Builder builder) {
+            this.kmsArn = builder.kmsArn;
+            this.kmsSecretValueKey = builder.kmsSecretValueKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SslKeystoreKey create() {
+            return builder().build();
+        }
+
+        /**
+         * @return kmsArn
+         */
+        public String getKmsArn() {
+            return this.kmsArn;
+        }
+
+        /**
+         * @return kmsSecretValueKey
+         */
+        public String getKmsSecretValueKey() {
+            return this.kmsSecretValueKey;
+        }
+
+        public static final class Builder {
+            private String kmsArn; 
+            private String kmsSecretValueKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(SslKeystoreKey model) {
+                this.kmsArn = model.kmsArn;
+                this.kmsSecretValueKey = model.kmsSecretValueKey;
+            } 
+
+            /**
+             * KmsArn.
+             */
+            public Builder kmsArn(String kmsArn) {
+                this.kmsArn = kmsArn;
+                return this;
+            }
+
+            /**
+             * KmsSecretValueKey.
+             */
+            public Builder kmsSecretValueKey(String kmsSecretValueKey) {
+                this.kmsSecretValueKey = kmsSecretValueKey;
+                return this;
+            }
+
+            public SslKeystoreKey build() {
+                return new SslKeystoreKey(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
     public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -1585,6 +1756,9 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("CompressionType")
         private String compressionType;
 
+        @com.aliyun.core.annotation.NameInMap("DynamicTopic")
+        private DynamicTopic dynamicTopic;
+
         @com.aliyun.core.annotation.NameInMap("Headers")
         private Headers headers;
 
@@ -1609,6 +1783,15 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SecurityProtocol")
         private String securityProtocol;
 
+        @com.aliyun.core.annotation.NameInMap("SslKeyPassword")
+        private String sslKeyPassword;
+
+        @com.aliyun.core.annotation.NameInMap("SslKeystoreCertificateChain")
+        private String sslKeystoreCertificateChain;
+
+        @com.aliyun.core.annotation.NameInMap("SslKeystoreKey")
+        private SslKeystoreKey sslKeystoreKey;
+
         @com.aliyun.core.annotation.NameInMap("SslTruststoreCertificates")
         private String sslTruststoreCertificates;
 
@@ -1628,6 +1811,7 @@ public class UpdateEventStreamingRequest extends Request {
             this.acks = builder.acks;
             this.bootstraps = builder.bootstraps;
             this.compressionType = builder.compressionType;
+            this.dynamicTopic = builder.dynamicTopic;
             this.headers = builder.headers;
             this.key = builder.key;
             this.networkType = builder.networkType;
@@ -1636,6 +1820,9 @@ public class UpdateEventStreamingRequest extends Request {
             this.saslUser = builder.saslUser;
             this.securityGroupId = builder.securityGroupId;
             this.securityProtocol = builder.securityProtocol;
+            this.sslKeyPassword = builder.sslKeyPassword;
+            this.sslKeystoreCertificateChain = builder.sslKeystoreCertificateChain;
+            this.sslKeystoreKey = builder.sslKeystoreKey;
             this.sslTruststoreCertificates = builder.sslTruststoreCertificates;
             this.topic = builder.topic;
             this.vSwitchIds = builder.vSwitchIds;
@@ -1670,6 +1857,13 @@ public class UpdateEventStreamingRequest extends Request {
          */
         public String getCompressionType() {
             return this.compressionType;
+        }
+
+        /**
+         * @return dynamicTopic
+         */
+        public DynamicTopic getDynamicTopic() {
+            return this.dynamicTopic;
         }
 
         /**
@@ -1729,6 +1923,27 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         /**
+         * @return sslKeyPassword
+         */
+        public String getSslKeyPassword() {
+            return this.sslKeyPassword;
+        }
+
+        /**
+         * @return sslKeystoreCertificateChain
+         */
+        public String getSslKeystoreCertificateChain() {
+            return this.sslKeystoreCertificateChain;
+        }
+
+        /**
+         * @return sslKeystoreKey
+         */
+        public SslKeystoreKey getSslKeystoreKey() {
+            return this.sslKeystoreKey;
+        }
+
+        /**
          * @return sslTruststoreCertificates
          */
         public String getSslTruststoreCertificates() {
@@ -1767,6 +1982,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String acks; 
             private String bootstraps; 
             private String compressionType; 
+            private DynamicTopic dynamicTopic; 
             private Headers headers; 
             private Key key; 
             private NetworkType networkType; 
@@ -1775,6 +1991,9 @@ public class UpdateEventStreamingRequest extends Request {
             private String saslUser; 
             private SecurityGroupId securityGroupId; 
             private String securityProtocol; 
+            private String sslKeyPassword; 
+            private String sslKeystoreCertificateChain; 
+            private SslKeystoreKey sslKeystoreKey; 
             private String sslTruststoreCertificates; 
             private String topic; 
             private VSwitchIds vSwitchIds; 
@@ -1788,6 +2007,7 @@ public class UpdateEventStreamingRequest extends Request {
                 this.acks = model.acks;
                 this.bootstraps = model.bootstraps;
                 this.compressionType = model.compressionType;
+                this.dynamicTopic = model.dynamicTopic;
                 this.headers = model.headers;
                 this.key = model.key;
                 this.networkType = model.networkType;
@@ -1796,6 +2016,9 @@ public class UpdateEventStreamingRequest extends Request {
                 this.saslUser = model.saslUser;
                 this.securityGroupId = model.securityGroupId;
                 this.securityProtocol = model.securityProtocol;
+                this.sslKeyPassword = model.sslKeyPassword;
+                this.sslKeystoreCertificateChain = model.sslKeystoreCertificateChain;
+                this.sslKeystoreKey = model.sslKeystoreKey;
                 this.sslTruststoreCertificates = model.sslTruststoreCertificates;
                 this.topic = model.topic;
                 this.vSwitchIds = model.vSwitchIds;
@@ -1824,6 +2047,14 @@ public class UpdateEventStreamingRequest extends Request {
              */
             public Builder compressionType(String compressionType) {
                 this.compressionType = compressionType;
+                return this;
+            }
+
+            /**
+             * DynamicTopic.
+             */
+            public Builder dynamicTopic(DynamicTopic dynamicTopic) {
+                this.dynamicTopic = dynamicTopic;
                 return this;
             }
 
@@ -1891,6 +2122,30 @@ public class UpdateEventStreamingRequest extends Request {
              */
             public Builder securityProtocol(String securityProtocol) {
                 this.securityProtocol = securityProtocol;
+                return this;
+            }
+
+            /**
+             * SslKeyPassword.
+             */
+            public Builder sslKeyPassword(String sslKeyPassword) {
+                this.sslKeyPassword = sslKeyPassword;
+                return this;
+            }
+
+            /**
+             * SslKeystoreCertificateChain.
+             */
+            public Builder sslKeystoreCertificateChain(String sslKeystoreCertificateChain) {
+                this.sslKeystoreCertificateChain = sslKeystoreCertificateChain;
+                return this;
+            }
+
+            /**
+             * SslKeystoreKey.
+             */
+            public Builder sslKeystoreKey(SslKeystoreKey sslKeystoreKey) {
+                this.sslKeystoreKey = sslKeystoreKey;
                 return this;
             }
 
@@ -8244,6 +8499,113 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
+    public static class SinkKafkaParametersDynamicTopic extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SinkKafkaParametersDynamicTopic(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkKafkaParametersDynamicTopic create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkKafkaParametersDynamicTopic model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The ACK mode.</p>
+             * <ul>
+             * <li>If you set this parameter to 0, no response is returned from the broker. In this mode, the performance is high, but the risk of data loss is also high.</li>
+             * <li>If you set this parameter to 1, a response is returned when data is written to the leader. In this mode, the performance and the risk of data loss are moderate. Data loss may occur if a failure occurs on the leader.</li>
+             * <li>If you set this parameter to all, a response is returned when data is written to the leader and synchronized to the followers. In this mode, the performance is low, but the risk of data loss is also low. Data loss occurs if the leader and the followers fail at the same time.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SinkKafkaParametersDynamicTopic build() {
+                return new SinkKafkaParametersDynamicTopic(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
     public static class SinkKafkaParametersHeaders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -8777,6 +9139,9 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("CompressionType")
         private String compressionType;
 
+        @com.aliyun.core.annotation.NameInMap("DynamicTopic")
+        private SinkKafkaParametersDynamicTopic dynamicTopic;
+
         @com.aliyun.core.annotation.NameInMap("Headers")
         private SinkKafkaParametersHeaders headers;
 
@@ -8795,6 +9160,7 @@ public class UpdateEventStreamingRequest extends Request {
         private SinkKafkaParameters(Builder builder) {
             this.acks = builder.acks;
             this.compressionType = builder.compressionType;
+            this.dynamicTopic = builder.dynamicTopic;
             this.headers = builder.headers;
             this.instanceId = builder.instanceId;
             this.key = builder.key;
@@ -8822,6 +9188,13 @@ public class UpdateEventStreamingRequest extends Request {
          */
         public String getCompressionType() {
             return this.compressionType;
+        }
+
+        /**
+         * @return dynamicTopic
+         */
+        public SinkKafkaParametersDynamicTopic getDynamicTopic() {
+            return this.dynamicTopic;
         }
 
         /**
@@ -8862,6 +9235,7 @@ public class UpdateEventStreamingRequest extends Request {
         public static final class Builder {
             private Acks acks; 
             private String compressionType; 
+            private SinkKafkaParametersDynamicTopic dynamicTopic; 
             private SinkKafkaParametersHeaders headers; 
             private InstanceId instanceId; 
             private SinkKafkaParametersKey key; 
@@ -8874,6 +9248,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder(SinkKafkaParameters model) {
                 this.acks = model.acks;
                 this.compressionType = model.compressionType;
+                this.dynamicTopic = model.dynamicTopic;
                 this.headers = model.headers;
                 this.instanceId = model.instanceId;
                 this.key = model.key;
@@ -8899,6 +9274,14 @@ public class UpdateEventStreamingRequest extends Request {
              */
             public Builder compressionType(String compressionType) {
                 this.compressionType = compressionType;
+                return this;
+            }
+
+            /**
+             * DynamicTopic.
+             */
+            public Builder dynamicTopic(SinkKafkaParametersDynamicTopic dynamicTopic) {
+                this.dynamicTopic = dynamicTopic;
                 return this;
             }
 
@@ -16633,6 +17016,81 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
+    public static class SourceApacheKafkaParametersSslKeystoreKey extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("KmsArn")
+        private String kmsArn;
+
+        @com.aliyun.core.annotation.NameInMap("KmsSecretValueKey")
+        private String kmsSecretValueKey;
+
+        private SourceApacheKafkaParametersSslKeystoreKey(Builder builder) {
+            this.kmsArn = builder.kmsArn;
+            this.kmsSecretValueKey = builder.kmsSecretValueKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourceApacheKafkaParametersSslKeystoreKey create() {
+            return builder().build();
+        }
+
+        /**
+         * @return kmsArn
+         */
+        public String getKmsArn() {
+            return this.kmsArn;
+        }
+
+        /**
+         * @return kmsSecretValueKey
+         */
+        public String getKmsSecretValueKey() {
+            return this.kmsSecretValueKey;
+        }
+
+        public static final class Builder {
+            private String kmsArn; 
+            private String kmsSecretValueKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceApacheKafkaParametersSslKeystoreKey model) {
+                this.kmsArn = model.kmsArn;
+                this.kmsSecretValueKey = model.kmsSecretValueKey;
+            } 
+
+            /**
+             * KmsArn.
+             */
+            public Builder kmsArn(String kmsArn) {
+                this.kmsArn = kmsArn;
+                return this;
+            }
+
+            /**
+             * KmsSecretValueKey.
+             */
+            public Builder kmsSecretValueKey(String kmsSecretValueKey) {
+                this.kmsSecretValueKey = kmsSecretValueKey;
+                return this;
+            }
+
+            public SourceApacheKafkaParametersSslKeystoreKey build() {
+                return new SourceApacheKafkaParametersSslKeystoreKey(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
     public static class SourceApacheKafkaParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bootstraps")
         private String bootstraps;
@@ -16661,6 +17119,15 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SecurityProtocol")
         private String securityProtocol;
 
+        @com.aliyun.core.annotation.NameInMap("SslKeyPassword")
+        private String sslKeyPassword;
+
+        @com.aliyun.core.annotation.NameInMap("SslKeystoreCertificateChain")
+        private String sslKeystoreCertificateChain;
+
+        @com.aliyun.core.annotation.NameInMap("SslKeystoreKey")
+        private SourceApacheKafkaParametersSslKeystoreKey sslKeystoreKey;
+
         @com.aliyun.core.annotation.NameInMap("SslTruststoreCertificates")
         private String sslTruststoreCertificates;
 
@@ -16686,6 +17153,9 @@ public class UpdateEventStreamingRequest extends Request {
             this.saslUser = builder.saslUser;
             this.securityGroupId = builder.securityGroupId;
             this.securityProtocol = builder.securityProtocol;
+            this.sslKeyPassword = builder.sslKeyPassword;
+            this.sslKeystoreCertificateChain = builder.sslKeystoreCertificateChain;
+            this.sslKeystoreKey = builder.sslKeystoreKey;
             this.sslTruststoreCertificates = builder.sslTruststoreCertificates;
             this.topic = builder.topic;
             this.vSwitchIds = builder.vSwitchIds;
@@ -16765,6 +17235,27 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         /**
+         * @return sslKeyPassword
+         */
+        public String getSslKeyPassword() {
+            return this.sslKeyPassword;
+        }
+
+        /**
+         * @return sslKeystoreCertificateChain
+         */
+        public String getSslKeystoreCertificateChain() {
+            return this.sslKeystoreCertificateChain;
+        }
+
+        /**
+         * @return sslKeystoreKey
+         */
+        public SourceApacheKafkaParametersSslKeystoreKey getSslKeystoreKey() {
+            return this.sslKeystoreKey;
+        }
+
+        /**
          * @return sslTruststoreCertificates
          */
         public String getSslTruststoreCertificates() {
@@ -16809,6 +17300,9 @@ public class UpdateEventStreamingRequest extends Request {
             private String saslUser; 
             private String securityGroupId; 
             private String securityProtocol; 
+            private String sslKeyPassword; 
+            private String sslKeystoreCertificateChain; 
+            private SourceApacheKafkaParametersSslKeystoreKey sslKeystoreKey; 
             private String sslTruststoreCertificates; 
             private String topic; 
             private String vSwitchIds; 
@@ -16828,6 +17322,9 @@ public class UpdateEventStreamingRequest extends Request {
                 this.saslUser = model.saslUser;
                 this.securityGroupId = model.securityGroupId;
                 this.securityProtocol = model.securityProtocol;
+                this.sslKeyPassword = model.sslKeyPassword;
+                this.sslKeystoreCertificateChain = model.sslKeystoreCertificateChain;
+                this.sslKeystoreKey = model.sslKeystoreKey;
                 this.sslTruststoreCertificates = model.sslTruststoreCertificates;
                 this.topic = model.topic;
                 this.vSwitchIds = model.vSwitchIds;
@@ -16904,6 +17401,30 @@ public class UpdateEventStreamingRequest extends Request {
              */
             public Builder securityProtocol(String securityProtocol) {
                 this.securityProtocol = securityProtocol;
+                return this;
+            }
+
+            /**
+             * SslKeyPassword.
+             */
+            public Builder sslKeyPassword(String sslKeyPassword) {
+                this.sslKeyPassword = sslKeyPassword;
+                return this;
+            }
+
+            /**
+             * SslKeystoreCertificateChain.
+             */
+            public Builder sslKeystoreCertificateChain(String sslKeystoreCertificateChain) {
+                this.sslKeystoreCertificateChain = sslKeystoreCertificateChain;
+                return this;
+            }
+
+            /**
+             * SslKeystoreKey.
+             */
+            public Builder sslKeystoreKey(SourceApacheKafkaParametersSslKeystoreKey sslKeystoreKey) {
+                this.sslKeystoreKey = sslKeystoreKey;
                 return this;
             }
 

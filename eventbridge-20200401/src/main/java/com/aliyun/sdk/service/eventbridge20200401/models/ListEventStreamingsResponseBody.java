@@ -6420,6 +6420,113 @@ public class ListEventStreamingsResponseBody extends TeaModel {
      *
      * <p>ListEventStreamingsResponseBody</p>
      */
+    public static class DynamicTopic extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private DynamicTopic(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DynamicTopic create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DynamicTopic model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that is used to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The ACK mode.</p>
+             * <ul>
+             * <li>If you set this parameter to 0, no response is returned from the broker. In this mode, the performance is high, but the risk of data loss is also high.</li>
+             * <li>If you set this parameter to 1, a response is returned when data is written to the leader. In this mode, the performance and the risk of data loss are moderate. Data loss may occur if a failure occurs on the leader.</li>
+             * <li>If you set this parameter to all, a response is returned when data is written to the leader and synchronized to the followers. In this mode, the performance is low, but the risk of data loss is also low. Data loss occurs if the leader and the followers fail at the same time.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public DynamicTopic build() {
+                return new DynamicTopic(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListEventStreamingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventStreamingsResponseBody</p>
+     */
     public static class InstanceId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -6840,6 +6947,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompressionType")
         private String compressionType;
 
+        @com.aliyun.core.annotation.NameInMap("DynamicTopic")
+        private DynamicTopic dynamicTopic;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private InstanceId instanceId;
 
@@ -6855,6 +6965,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         private SinkKafkaParameters(Builder builder) {
             this.acks = builder.acks;
             this.compressionType = builder.compressionType;
+            this.dynamicTopic = builder.dynamicTopic;
             this.instanceId = builder.instanceId;
             this.key = builder.key;
             this.topic = builder.topic;
@@ -6881,6 +6992,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
          */
         public String getCompressionType() {
             return this.compressionType;
+        }
+
+        /**
+         * @return dynamicTopic
+         */
+        public DynamicTopic getDynamicTopic() {
+            return this.dynamicTopic;
         }
 
         /**
@@ -6914,6 +7032,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public static final class Builder {
             private Acks acks; 
             private String compressionType; 
+            private DynamicTopic dynamicTopic; 
             private InstanceId instanceId; 
             private Key key; 
             private SinkKafkaParametersTopic topic; 
@@ -6925,6 +7044,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private Builder(SinkKafkaParameters model) {
                 this.acks = model.acks;
                 this.compressionType = model.compressionType;
+                this.dynamicTopic = model.dynamicTopic;
                 this.instanceId = model.instanceId;
                 this.key = model.key;
                 this.topic = model.topic;
@@ -6949,6 +7069,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
              */
             public Builder compressionType(String compressionType) {
                 this.compressionType = compressionType;
+                return this;
+            }
+
+            /**
+             * DynamicTopic.
+             */
+            public Builder dynamicTopic(DynamicTopic dynamicTopic) {
+                this.dynamicTopic = dynamicTopic;
                 return this;
             }
 
