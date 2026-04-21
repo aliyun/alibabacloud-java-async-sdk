@@ -274,6 +274,12 @@ public class CreateConfigGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("TriggerType")
         private String triggerType;
 
+        @com.aliyun.core.annotation.NameInMap("VerificationNotificationTime")
+        private Integer verificationNotificationTime;
+
+        @com.aliyun.core.annotation.NameInMap("VerificationTime")
+        private Integer verificationTime;
+
         private SegmentTimers(Builder builder) {
             this.appointmentTimer = builder.appointmentTimer;
             this.createSnapshot = builder.createSnapshot;
@@ -291,6 +297,8 @@ public class CreateConfigGroupRequest extends Request {
             this.timerOrder = builder.timerOrder;
             this.timezone = builder.timezone;
             this.triggerType = builder.triggerType;
+            this.verificationNotificationTime = builder.verificationNotificationTime;
+            this.verificationTime = builder.verificationTime;
         }
 
         public static Builder builder() {
@@ -413,6 +421,20 @@ public class CreateConfigGroupRequest extends Request {
             return this.triggerType;
         }
 
+        /**
+         * @return verificationNotificationTime
+         */
+        public Integer getVerificationNotificationTime() {
+            return this.verificationNotificationTime;
+        }
+
+        /**
+         * @return verificationTime
+         */
+        public Integer getVerificationTime() {
+            return this.verificationTime;
+        }
+
         public static final class Builder {
             private Long appointmentTimer; 
             private Boolean createSnapshot; 
@@ -430,6 +452,8 @@ public class CreateConfigGroupRequest extends Request {
             private Integer timerOrder; 
             private String timezone; 
             private String triggerType; 
+            private Integer verificationNotificationTime; 
+            private Integer verificationTime; 
 
             private Builder() {
             } 
@@ -451,6 +475,8 @@ public class CreateConfigGroupRequest extends Request {
                 this.timerOrder = model.timerOrder;
                 this.timezone = model.timezone;
                 this.triggerType = model.triggerType;
+                this.verificationNotificationTime = model.verificationNotificationTime;
+                this.verificationTime = model.verificationTime;
             } 
 
             /**
@@ -578,6 +604,22 @@ public class CreateConfigGroupRequest extends Request {
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
+                return this;
+            }
+
+            /**
+             * VerificationNotificationTime.
+             */
+            public Builder verificationNotificationTime(Integer verificationNotificationTime) {
+                this.verificationNotificationTime = verificationNotificationTime;
+                return this;
+            }
+
+            /**
+             * VerificationTime.
+             */
+            public Builder verificationTime(Integer verificationTime) {
+                this.verificationTime = verificationTime;
                 return this;
             }
 
