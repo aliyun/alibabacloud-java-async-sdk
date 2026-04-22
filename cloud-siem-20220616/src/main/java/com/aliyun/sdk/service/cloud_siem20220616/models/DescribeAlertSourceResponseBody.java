@@ -177,6 +177,9 @@ public class DescribeAlertSourceResponseBody extends TeaModel {
      * <p>DescribeAlertSourceResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Modules")
+        private java.util.List<String> modules;
+
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
@@ -184,6 +187,7 @@ public class DescribeAlertSourceResponseBody extends TeaModel {
         private String sourceName;
 
         private Data(Builder builder) {
+            this.modules = builder.modules;
             this.source = builder.source;
             this.sourceName = builder.sourceName;
         }
@@ -194,6 +198,13 @@ public class DescribeAlertSourceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return modules
+         */
+        public java.util.List<String> getModules() {
+            return this.modules;
         }
 
         /**
@@ -211,6 +222,7 @@ public class DescribeAlertSourceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> modules; 
             private String source; 
             private String sourceName; 
 
@@ -218,9 +230,18 @@ public class DescribeAlertSourceResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.modules = model.modules;
                 this.source = model.source;
                 this.sourceName = model.sourceName;
             } 
+
+            /**
+             * Modules.
+             */
+            public Builder modules(java.util.List<String> modules) {
+                this.modules = modules;
+                return this;
+            }
 
             /**
              * <p>The internal code of the alert data source.</p>
