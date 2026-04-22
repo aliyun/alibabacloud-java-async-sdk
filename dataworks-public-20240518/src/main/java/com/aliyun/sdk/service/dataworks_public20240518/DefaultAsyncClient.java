@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.dataworks_public20240518;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.dataworks_public20240518.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -206,6 +207,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CancelAgentSession  CancelAgentSessionRequest
+     * @return CancelAgentSessionResponse
+     */
+    @Override
+    public CompletableFuture<CancelAgentSessionResponse> cancelAgentSession(CancelAgentSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CancelAgentSession").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelAgentSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelAgentSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>This API operation is available for all DataWorks editions.</li>
@@ -227,6 +246,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CloneDataSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAgentSession  CreateAgentSessionRequest
+     * @return CreateAgentSessionResponse
+     */
+    @Override
+    public CompletableFuture<CreateAgentSessionResponse> createAgentSession(CreateAgentSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAgentSession").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAgentSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAgentSessionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1808,6 +1845,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAgentSessionArtifactMeta  GetAgentSessionArtifactMetaRequest
+     * @return GetAgentSessionArtifactMetaResponse
+     */
+    @Override
+    public CompletableFuture<GetAgentSessionArtifactMetaResponse> getAgentSessionArtifactMeta(GetAgentSessionArtifactMetaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAgentSessionArtifactMeta").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentSessionArtifactMetaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgentSessionArtifactMetaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAgentSessionTokenUsage  GetAgentSessionTokenUsageRequest
+     * @return GetAgentSessionTokenUsageResponse
+     */
+    @Override
+    public CompletableFuture<GetAgentSessionTokenUsageResponse> getAgentSessionTokenUsage(GetAgentSessionTokenUsageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAgentSessionTokenUsage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentSessionTokenUsageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgentSessionTokenUsageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAlertRule  GetAlertRuleRequest
      * @return GetAlertRuleResponse
      */
@@ -2879,6 +2952,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ImportWorkflowDefinitionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAgentSessionArtifacts  ListAgentSessionArtifactsRequest
+     * @return ListAgentSessionArtifactsResponse
+     */
+    @Override
+    public CompletableFuture<ListAgentSessionArtifactsResponse> listAgentSessionArtifacts(ListAgentSessionArtifactsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAgentSessionArtifacts").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgentSessionArtifactsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgentSessionArtifactsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAgentSessions  ListAgentSessionsRequest
+     * @return ListAgentSessionsResponse
+     */
+    @Override
+    public CompletableFuture<ListAgentSessionsResponse> listAgentSessions(ListAgentSessionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAgentSessions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgentSessionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgentSessionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAgents  ListAgentsRequest
+     * @return ListAgentsResponse
+     */
+    @Override
+    public CompletableFuture<ListAgentsResponse> listAgents(ListAgentsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAgents").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgentsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgentsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4220,6 +4347,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of LoadAgentSession  LoadAgentSessionRequest
+     * @return LoadAgentSessionResponse
+     */
+    @Override
+    public CompletableFuture<LoadAgentSessionResponse> loadAgentSession(LoadAgentSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("LoadAgentSession").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(LoadAgentSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<LoadAgentSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<LoadAgentSessionResponseBody> loadAgentSessionWithResponseIterable(LoadAgentSessionRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("LoadAgentSession").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        LoadAgentSessionResponseBodyIterator iterator = LoadAgentSessionResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of MoveFunction  MoveFunctionRequest
      * @return MoveFunctionResponse
      */
@@ -4307,6 +4462,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * @param request the request parameters of PromptAgentSession  PromptAgentSessionRequest
+     * @return PromptAgentSessionResponse
+     */
+    @Override
+    public CompletableFuture<PromptAgentSessionResponse> promptAgentSession(PromptAgentSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PromptAgentSession").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PromptAgentSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PromptAgentSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<PromptAgentSessionResponseBody> promptAgentSessionWithResponseIterable(PromptAgentSessionRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("PromptAgentSession").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        PromptAgentSessionResponseBodyIterator iterator = PromptAgentSessionResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**

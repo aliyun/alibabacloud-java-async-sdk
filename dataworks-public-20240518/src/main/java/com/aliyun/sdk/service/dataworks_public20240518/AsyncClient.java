@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchUpdateTasksResponse> batchUpdateTasks(BatchUpdateTasksRequest request);
 
     /**
+     * @param request the request parameters of CancelAgentSession  CancelAgentSessionRequest
+     * @return CancelAgentSessionResponse
+     */
+    CompletableFuture<CancelAgentSessionResponse> cancelAgentSession(CancelAgentSessionRequest request);
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>This API operation is available for all DataWorks editions.</li>
@@ -81,6 +87,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CloneDataSourceResponse
      */
     CompletableFuture<CloneDataSourceResponse> cloneDataSource(CloneDataSourceRequest request);
+
+    /**
+     * @param request the request parameters of CreateAgentSession  CreateAgentSessionRequest
+     * @return CreateAgentSessionResponse
+     */
+    CompletableFuture<CreateAgentSessionResponse> createAgentSession(CreateAgentSessionRequest request);
 
     /**
      * @param request the request parameters of CreateAlertRule  CreateAlertRuleRequest
@@ -746,6 +758,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteAdhocWorkflowInstanceResponse> executeAdhocWorkflowInstance(ExecuteAdhocWorkflowInstanceRequest request);
 
     /**
+     * @param request the request parameters of GetAgentSessionArtifactMeta  GetAgentSessionArtifactMetaRequest
+     * @return GetAgentSessionArtifactMetaResponse
+     */
+    CompletableFuture<GetAgentSessionArtifactMetaResponse> getAgentSessionArtifactMeta(GetAgentSessionArtifactMetaRequest request);
+
+    /**
+     * @param request the request parameters of GetAgentSessionTokenUsage  GetAgentSessionTokenUsageRequest
+     * @return GetAgentSessionTokenUsageResponse
+     */
+    CompletableFuture<GetAgentSessionTokenUsageResponse> getAgentSessionTokenUsage(GetAgentSessionTokenUsageRequest request);
+
+    /**
      * @param request the request parameters of GetAlertRule  GetAlertRuleRequest
      * @return GetAlertRuleResponse
      */
@@ -1173,6 +1197,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ImportWorkflowDefinitionResponse
      */
     CompletableFuture<ImportWorkflowDefinitionResponse> importWorkflowDefinition(ImportWorkflowDefinitionRequest request);
+
+    /**
+     * @param request the request parameters of ListAgentSessionArtifacts  ListAgentSessionArtifactsRequest
+     * @return ListAgentSessionArtifactsResponse
+     */
+    CompletableFuture<ListAgentSessionArtifactsResponse> listAgentSessionArtifacts(ListAgentSessionArtifactsRequest request);
+
+    /**
+     * @param request the request parameters of ListAgentSessions  ListAgentSessionsRequest
+     * @return ListAgentSessionsResponse
+     */
+    CompletableFuture<ListAgentSessionsResponse> listAgentSessions(ListAgentSessionsRequest request);
+
+    /**
+     * @param request the request parameters of ListAgents  ListAgentsRequest
+     * @return ListAgentsResponse
+     */
+    CompletableFuture<ListAgentsResponse> listAgents(ListAgentsRequest request);
 
     /**
      * @param request the request parameters of ListAlertRules  ListAlertRulesRequest
@@ -1694,6 +1736,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWorkflowsResponse> listWorkflows(ListWorkflowsRequest request);
 
     /**
+     * @param request the request parameters of LoadAgentSession  LoadAgentSessionRequest
+     * @return LoadAgentSessionResponse
+     */
+    CompletableFuture<LoadAgentSessionResponse> loadAgentSession(LoadAgentSessionRequest request);
+
+    ResponseIterable<LoadAgentSessionResponseBody> loadAgentSessionWithResponseIterable(LoadAgentSessionRequest request);
+
+    /**
      * @param request the request parameters of MoveFunction  MoveFunctionRequest
      * @return MoveFunctionResponse
      */
@@ -1722,6 +1772,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PreviewDatasetVersionResponse
      */
     CompletableFuture<PreviewDatasetVersionResponse> previewDatasetVersion(PreviewDatasetVersionRequest request);
+
+    /**
+     * @param request the request parameters of PromptAgentSession  PromptAgentSessionRequest
+     * @return PromptAgentSessionResponse
+     */
+    CompletableFuture<PromptAgentSessionResponse> promptAgentSession(PromptAgentSessionRequest request);
+
+    ResponseIterable<PromptAgentSessionResponseBody> promptAgentSessionWithResponseIterable(PromptAgentSessionRequest request);
 
     /**
      * @param request the request parameters of RemoveEntityFromMetaCollection  RemoveEntityFromMetaCollectionRequest
