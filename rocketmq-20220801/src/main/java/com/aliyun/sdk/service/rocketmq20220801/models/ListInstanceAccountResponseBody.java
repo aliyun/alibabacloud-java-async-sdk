@@ -278,6 +278,9 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("remark")
+        private String remark;
+
         @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
@@ -286,6 +289,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             this.accountType = builder.accountType;
             this.instanceId = builder.instanceId;
             this.regionId = builder.regionId;
+            this.remark = builder.remark;
             this.username = builder.username;
         }
 
@@ -326,6 +330,13 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
          * @return username
          */
         public String getUsername() {
@@ -337,6 +348,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             private String accountType; 
             private String instanceId; 
             private String regionId; 
+            private String remark; 
             private String username; 
 
             private Builder() {
@@ -347,6 +359,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
                 this.accountType = model.accountType;
                 this.instanceId = model.instanceId;
                 this.regionId = model.regionId;
+                this.remark = model.remark;
                 this.username = model.username;
             } 
 
@@ -400,6 +413,14 @@ public class ListInstanceAccountResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 

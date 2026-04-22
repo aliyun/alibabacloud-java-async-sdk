@@ -35,12 +35,17 @@ public class UpdateInstanceAccountRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("password")
     private String password;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("remark")
+    private String remark;
+
     private UpdateInstanceAccountRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.username = builder.username;
         this.accountStatus = builder.accountStatus;
         this.password = builder.password;
+        this.remark = builder.remark;
     }
 
     public static Builder builder() {
@@ -84,11 +89,19 @@ public class UpdateInstanceAccountRequest extends Request {
         return this.password;
     }
 
+    /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
     public static final class Builder extends Request.Builder<UpdateInstanceAccountRequest, Builder> {
         private String instanceId; 
         private String username; 
         private String accountStatus; 
         private String password; 
+        private String remark; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class UpdateInstanceAccountRequest extends Request {
             this.username = request.username;
             this.accountStatus = request.accountStatus;
             this.password = request.password;
+            this.remark = request.remark;
         } 
 
         /**
@@ -154,6 +168,15 @@ public class UpdateInstanceAccountRequest extends Request {
         public Builder password(String password) {
             this.putQueryParameter("password", password);
             this.password = password;
+            return this;
+        }
+
+        /**
+         * remark.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("remark", remark);
+            this.remark = remark;
             return this;
         }
 

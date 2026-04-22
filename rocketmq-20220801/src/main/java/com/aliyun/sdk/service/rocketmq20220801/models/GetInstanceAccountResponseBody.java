@@ -248,12 +248,16 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("password")
         private String password;
 
+        @com.aliyun.core.annotation.NameInMap("remark")
+        private String remark;
+
         @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private Data(Builder builder) {
             this.accountStatus = builder.accountStatus;
             this.password = builder.password;
+            this.remark = builder.remark;
             this.username = builder.username;
         }
 
@@ -280,6 +284,13 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
          * @return username
          */
         public String getUsername() {
@@ -289,6 +300,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         public static final class Builder {
             private String accountStatus; 
             private String password; 
+            private String remark; 
             private String username; 
 
             private Builder() {
@@ -297,6 +309,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.accountStatus = model.accountStatus;
                 this.password = model.password;
+                this.remark = model.remark;
                 this.username = model.username;
             } 
 
@@ -324,6 +337,14 @@ public class GetInstanceAccountResponseBody extends TeaModel {
              */
             public Builder password(String password) {
                 this.password = password;
+                return this;
+            }
+
+            /**
+             * remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 

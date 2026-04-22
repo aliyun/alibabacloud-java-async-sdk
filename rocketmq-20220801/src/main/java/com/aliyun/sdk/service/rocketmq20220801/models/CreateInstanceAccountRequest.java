@@ -28,6 +28,10 @@ public class CreateInstanceAccountRequest extends Request {
     private String password;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("remark")
+    private String remark;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("username")
     @com.aliyun.core.annotation.Validation(required = true)
     private String username;
@@ -36,6 +40,7 @@ public class CreateInstanceAccountRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.password = builder.password;
+        this.remark = builder.remark;
         this.username = builder.username;
     }
 
@@ -67,6 +72,13 @@ public class CreateInstanceAccountRequest extends Request {
     }
 
     /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
+    /**
      * @return username
      */
     public String getUsername() {
@@ -76,6 +88,7 @@ public class CreateInstanceAccountRequest extends Request {
     public static final class Builder extends Request.Builder<CreateInstanceAccountRequest, Builder> {
         private String instanceId; 
         private String password; 
+        private String remark; 
         private String username; 
 
         private Builder() {
@@ -86,6 +99,7 @@ public class CreateInstanceAccountRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.password = request.password;
+            this.remark = request.remark;
             this.username = request.username;
         } 
 
@@ -112,6 +126,15 @@ public class CreateInstanceAccountRequest extends Request {
         public Builder password(String password) {
             this.putBodyParameter("password", password);
             this.password = password;
+            return this;
+        }
+
+        /**
+         * remark.
+         */
+        public Builder remark(String remark) {
+            this.putBodyParameter("remark", remark);
+            this.remark = remark;
             return this;
         }
 
