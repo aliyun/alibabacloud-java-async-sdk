@@ -590,6 +590,12 @@ public class GetPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskRedirection")
         private String diskRedirection;
 
+        @com.aliyun.core.annotation.NameInMap("DiskRedirectionDownload")
+        private String diskRedirectionDownload;
+
+        @com.aliyun.core.annotation.NameInMap("DiskRedirectionUpload")
+        private String diskRedirectionUpload;
+
         @com.aliyun.core.annotation.NameInMap("RecordKeyboard")
         private String recordKeyboard;
 
@@ -597,6 +603,8 @@ public class GetPolicyResponseBody extends TeaModel {
             this.clipboardDownload = builder.clipboardDownload;
             this.clipboardUpload = builder.clipboardUpload;
             this.diskRedirection = builder.diskRedirection;
+            this.diskRedirectionDownload = builder.diskRedirectionDownload;
+            this.diskRedirectionUpload = builder.diskRedirectionUpload;
             this.recordKeyboard = builder.recordKeyboard;
         }
 
@@ -630,6 +638,20 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return diskRedirectionDownload
+         */
+        public String getDiskRedirectionDownload() {
+            return this.diskRedirectionDownload;
+        }
+
+        /**
+         * @return diskRedirectionUpload
+         */
+        public String getDiskRedirectionUpload() {
+            return this.diskRedirectionUpload;
+        }
+
+        /**
          * @return recordKeyboard
          */
         public String getRecordKeyboard() {
@@ -640,6 +662,8 @@ public class GetPolicyResponseBody extends TeaModel {
             private String clipboardDownload; 
             private String clipboardUpload; 
             private String diskRedirection; 
+            private String diskRedirectionDownload; 
+            private String diskRedirectionUpload; 
             private String recordKeyboard; 
 
             private Builder() {
@@ -649,6 +673,8 @@ public class GetPolicyResponseBody extends TeaModel {
                 this.clipboardDownload = model.clipboardDownload;
                 this.clipboardUpload = model.clipboardUpload;
                 this.diskRedirection = model.diskRedirection;
+                this.diskRedirectionDownload = model.diskRedirectionDownload;
+                this.diskRedirectionUpload = model.diskRedirectionUpload;
                 this.recordKeyboard = model.recordKeyboard;
             } 
 
@@ -698,6 +724,22 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
+             * DiskRedirectionDownload.
+             */
+            public Builder diskRedirectionDownload(String diskRedirectionDownload) {
+                this.diskRedirectionDownload = diskRedirectionDownload;
+                return this;
+            }
+
+            /**
+             * DiskRedirectionUpload.
+             */
+            public Builder diskRedirectionUpload(String diskRedirectionUpload) {
+                this.diskRedirectionUpload = diskRedirectionUpload;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether keyboard recording is enabled. Valid values:</p>
              * <ul>
              * <li>Enable</li>
@@ -726,6 +768,12 @@ public class GetPolicyResponseBody extends TeaModel {
      * <p>GetPolicyResponseBody</p>
      */
     public static class SSH extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowDirectTcp")
+        private String allowDirectTcp;
+
+        @com.aliyun.core.annotation.NameInMap("AllowTcpForwarding")
+        private String allowTcpForwarding;
+
         @com.aliyun.core.annotation.NameInMap("ExecCommand")
         private String execCommand;
 
@@ -753,10 +801,15 @@ public class GetPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SSHChannel")
         private String SSHChannel;
 
+        @com.aliyun.core.annotation.NameInMap("TcpForwarding")
+        private String tcpForwarding;
+
         @com.aliyun.core.annotation.NameInMap("X11Forwarding")
         private String x11Forwarding;
 
         private SSH(Builder builder) {
+            this.allowDirectTcp = builder.allowDirectTcp;
+            this.allowTcpForwarding = builder.allowTcpForwarding;
             this.execCommand = builder.execCommand;
             this.SFTPChannel = builder.SFTPChannel;
             this.SFTPDownloadFile = builder.SFTPDownloadFile;
@@ -766,6 +819,7 @@ public class GetPolicyResponseBody extends TeaModel {
             this.SFTPRmdir = builder.SFTPRmdir;
             this.SFTPUploadFile = builder.SFTPUploadFile;
             this.SSHChannel = builder.SSHChannel;
+            this.tcpForwarding = builder.tcpForwarding;
             this.x11Forwarding = builder.x11Forwarding;
         }
 
@@ -775,6 +829,20 @@ public class GetPolicyResponseBody extends TeaModel {
 
         public static SSH create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowDirectTcp
+         */
+        public String getAllowDirectTcp() {
+            return this.allowDirectTcp;
+        }
+
+        /**
+         * @return allowTcpForwarding
+         */
+        public String getAllowTcpForwarding() {
+            return this.allowTcpForwarding;
         }
 
         /**
@@ -841,6 +909,13 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return tcpForwarding
+         */
+        public String getTcpForwarding() {
+            return this.tcpForwarding;
+        }
+
+        /**
          * @return x11Forwarding
          */
         public String getX11Forwarding() {
@@ -848,6 +923,8 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String allowDirectTcp; 
+            private String allowTcpForwarding; 
             private String execCommand; 
             private String SFTPChannel; 
             private String SFTPDownloadFile; 
@@ -857,12 +934,15 @@ public class GetPolicyResponseBody extends TeaModel {
             private String SFTPRmdir; 
             private String SFTPUploadFile; 
             private String SSHChannel; 
+            private String tcpForwarding; 
             private String x11Forwarding; 
 
             private Builder() {
             } 
 
             private Builder(SSH model) {
+                this.allowDirectTcp = model.allowDirectTcp;
+                this.allowTcpForwarding = model.allowTcpForwarding;
                 this.execCommand = model.execCommand;
                 this.SFTPChannel = model.SFTPChannel;
                 this.SFTPDownloadFile = model.SFTPDownloadFile;
@@ -872,8 +952,25 @@ public class GetPolicyResponseBody extends TeaModel {
                 this.SFTPRmdir = model.SFTPRmdir;
                 this.SFTPUploadFile = model.SFTPUploadFile;
                 this.SSHChannel = model.SSHChannel;
+                this.tcpForwarding = model.tcpForwarding;
                 this.x11Forwarding = model.x11Forwarding;
             } 
+
+            /**
+             * AllowDirectTcp.
+             */
+            public Builder allowDirectTcp(String allowDirectTcp) {
+                this.allowDirectTcp = allowDirectTcp;
+                return this;
+            }
+
+            /**
+             * AllowTcpForwarding.
+             */
+            public Builder allowTcpForwarding(String allowTcpForwarding) {
+                this.allowTcpForwarding = allowTcpForwarding;
+                return this;
+            }
 
             /**
              * <p>Indicates whether remote command execution is enabled. Valid values:</p>
@@ -1007,6 +1104,14 @@ public class GetPolicyResponseBody extends TeaModel {
              */
             public Builder SSHChannel(String SSHChannel) {
                 this.SSHChannel = SSHChannel;
+                return this;
+            }
+
+            /**
+             * TcpForwarding.
+             */
+            public Builder tcpForwarding(String tcpForwarding) {
+                this.tcpForwarding = tcpForwarding;
                 return this;
             }
 

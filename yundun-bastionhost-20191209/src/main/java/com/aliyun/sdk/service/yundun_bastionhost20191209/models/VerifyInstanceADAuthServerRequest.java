@@ -48,7 +48,6 @@ public class VerifyInstanceADAuthServerRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Password")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
     @com.aliyun.core.annotation.Query
@@ -276,10 +275,7 @@ public class VerifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <hr>
+         * Password.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);

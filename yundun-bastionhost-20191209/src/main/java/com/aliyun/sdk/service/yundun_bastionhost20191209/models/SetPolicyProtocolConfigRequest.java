@@ -407,6 +407,9 @@ public class SetPolicyProtocolConfigRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SSHChannel")
         private String SSHChannel;
 
+        @com.aliyun.core.annotation.NameInMap("TcpForwarding")
+        private String tcpForwarding;
+
         @com.aliyun.core.annotation.NameInMap("X11Forwarding")
         private String x11Forwarding;
 
@@ -422,6 +425,7 @@ public class SetPolicyProtocolConfigRequest extends Request {
             this.SFTPRmdir = builder.SFTPRmdir;
             this.SFTPUploadFile = builder.SFTPUploadFile;
             this.SSHChannel = builder.SSHChannel;
+            this.tcpForwarding = builder.tcpForwarding;
             this.x11Forwarding = builder.x11Forwarding;
         }
 
@@ -511,6 +515,13 @@ public class SetPolicyProtocolConfigRequest extends Request {
         }
 
         /**
+         * @return tcpForwarding
+         */
+        public String getTcpForwarding() {
+            return this.tcpForwarding;
+        }
+
+        /**
          * @return x11Forwarding
          */
         public String getX11Forwarding() {
@@ -529,6 +540,7 @@ public class SetPolicyProtocolConfigRequest extends Request {
             private String SFTPRmdir; 
             private String SFTPUploadFile; 
             private String SSHChannel; 
+            private String tcpForwarding; 
             private String x11Forwarding; 
 
             private Builder() {
@@ -546,6 +558,7 @@ public class SetPolicyProtocolConfigRequest extends Request {
                 this.SFTPRmdir = model.SFTPRmdir;
                 this.SFTPUploadFile = model.SFTPUploadFile;
                 this.SSHChannel = model.SSHChannel;
+                this.tcpForwarding = model.tcpForwarding;
                 this.x11Forwarding = model.x11Forwarding;
             } 
 
@@ -738,6 +751,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
              */
             public Builder SSHChannel(String SSHChannel) {
                 this.SSHChannel = SSHChannel;
+                return this;
+            }
+
+            /**
+             * TcpForwarding.
+             */
+            public Builder tcpForwarding(String tcpForwarding) {
+                this.tcpForwarding = tcpForwarding;
                 return this;
             }
 
