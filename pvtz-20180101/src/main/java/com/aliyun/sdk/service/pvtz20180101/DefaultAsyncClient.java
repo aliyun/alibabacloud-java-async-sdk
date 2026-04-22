@@ -411,6 +411,96 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeIntranetUserCanAnalysisVpcs  DescribeIntranetUserCanAnalysisVpcsRequest
+     * @return DescribeIntranetUserCanAnalysisVpcsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeIntranetUserCanAnalysisVpcsResponse> describeIntranetUserCanAnalysisVpcs(DescribeIntranetUserCanAnalysisVpcsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeIntranetUserCanAnalysisVpcs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeIntranetUserCanAnalysisVpcsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeIntranetUserCanAnalysisVpcsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePvtzStatisticsGlobalOverview  DescribePvtzStatisticsGlobalOverviewRequest
+     * @return DescribePvtzStatisticsGlobalOverviewResponse
+     */
+    @Override
+    public CompletableFuture<DescribePvtzStatisticsGlobalOverviewResponse> describePvtzStatisticsGlobalOverview(DescribePvtzStatisticsGlobalOverviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePvtzStatisticsGlobalOverview").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePvtzStatisticsGlobalOverviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePvtzStatisticsGlobalOverviewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePvtzStatisticsHistory  DescribePvtzStatisticsHistoryRequest
+     * @return DescribePvtzStatisticsHistoryResponse
+     */
+    @Override
+    public CompletableFuture<DescribePvtzStatisticsHistoryResponse> describePvtzStatisticsHistory(DescribePvtzStatisticsHistoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePvtzStatisticsHistory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePvtzStatisticsHistoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePvtzStatisticsHistoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePvtzStatisticsSummary  DescribePvtzStatisticsSummaryRequest
+     * @return DescribePvtzStatisticsSummaryResponse
+     */
+    @Override
+    public CompletableFuture<DescribePvtzStatisticsSummaryResponse> describePvtzStatisticsSummary(DescribePvtzStatisticsSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePvtzStatisticsSummary").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePvtzStatisticsSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePvtzStatisticsSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePvtzStatisticsZoneOverview  DescribePvtzStatisticsZoneOverviewRequest
+     * @return DescribePvtzStatisticsZoneOverviewResponse
+     */
+    @Override
+    public CompletableFuture<DescribePvtzStatisticsZoneOverviewResponse> describePvtzStatisticsZoneOverview(DescribePvtzStatisticsZoneOverviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePvtzStatisticsZoneOverview").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePvtzStatisticsZoneOverviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePvtzStatisticsZoneOverviewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */

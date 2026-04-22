@@ -163,6 +163,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCustomLinesResponse> describeCustomLines(DescribeCustomLinesRequest request);
 
     /**
+     * @param request the request parameters of DescribeIntranetUserCanAnalysisVpcs  DescribeIntranetUserCanAnalysisVpcsRequest
+     * @return DescribeIntranetUserCanAnalysisVpcsResponse
+     */
+    CompletableFuture<DescribeIntranetUserCanAnalysisVpcsResponse> describeIntranetUserCanAnalysisVpcs(DescribeIntranetUserCanAnalysisVpcsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePvtzStatisticsGlobalOverview  DescribePvtzStatisticsGlobalOverviewRequest
+     * @return DescribePvtzStatisticsGlobalOverviewResponse
+     */
+    CompletableFuture<DescribePvtzStatisticsGlobalOverviewResponse> describePvtzStatisticsGlobalOverview(DescribePvtzStatisticsGlobalOverviewRequest request);
+
+    /**
+     * @param request the request parameters of DescribePvtzStatisticsHistory  DescribePvtzStatisticsHistoryRequest
+     * @return DescribePvtzStatisticsHistoryResponse
+     */
+    CompletableFuture<DescribePvtzStatisticsHistoryResponse> describePvtzStatisticsHistory(DescribePvtzStatisticsHistoryRequest request);
+
+    /**
+     * @param request the request parameters of DescribePvtzStatisticsSummary  DescribePvtzStatisticsSummaryRequest
+     * @return DescribePvtzStatisticsSummaryResponse
+     */
+    CompletableFuture<DescribePvtzStatisticsSummaryResponse> describePvtzStatisticsSummary(DescribePvtzStatisticsSummaryRequest request);
+
+    /**
+     * @param request the request parameters of DescribePvtzStatisticsZoneOverview  DescribePvtzStatisticsZoneOverviewRequest
+     * @return DescribePvtzStatisticsZoneOverviewResponse
+     */
+    CompletableFuture<DescribePvtzStatisticsZoneOverviewResponse> describePvtzStatisticsZoneOverview(DescribePvtzStatisticsZoneOverviewRequest request);
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
