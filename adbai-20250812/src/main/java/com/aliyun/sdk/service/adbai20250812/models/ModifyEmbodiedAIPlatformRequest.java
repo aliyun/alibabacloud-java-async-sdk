@@ -23,13 +23,16 @@ public class ModifyEmbodiedAIPlatformRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceCount")
+    private String deviceCount;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PlatformName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String platformName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RayConfig")
-    @com.aliyun.core.annotation.Validation(required = true)
     private RayConfig rayConfig;
 
     @com.aliyun.core.annotation.Query
@@ -39,12 +42,12 @@ public class ModifyEmbodiedAIPlatformRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WebserverSpecName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String webserverSpecName;
 
     private ModifyEmbodiedAIPlatformRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.deviceCount = builder.deviceCount;
         this.platformName = builder.platformName;
         this.rayConfig = builder.rayConfig;
         this.regionId = builder.regionId;
@@ -69,6 +72,13 @@ public class ModifyEmbodiedAIPlatformRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return deviceCount
+     */
+    public String getDeviceCount() {
+        return this.deviceCount;
     }
 
     /**
@@ -101,6 +111,7 @@ public class ModifyEmbodiedAIPlatformRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyEmbodiedAIPlatformRequest, Builder> {
         private String DBClusterId; 
+        private String deviceCount; 
         private String platformName; 
         private RayConfig rayConfig; 
         private String regionId; 
@@ -113,6 +124,7 @@ public class ModifyEmbodiedAIPlatformRequest extends Request {
         private Builder(ModifyEmbodiedAIPlatformRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.deviceCount = request.deviceCount;
             this.platformName = request.platformName;
             this.rayConfig = request.rayConfig;
             this.regionId = request.regionId;
@@ -132,6 +144,15 @@ public class ModifyEmbodiedAIPlatformRequest extends Request {
         }
 
         /**
+         * DeviceCount.
+         */
+        public Builder deviceCount(String deviceCount) {
+            this.putQueryParameter("DeviceCount", deviceCount);
+            this.deviceCount = deviceCount;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +165,7 @@ public class ModifyEmbodiedAIPlatformRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * RayConfig.
          */
         public Builder rayConfig(RayConfig rayConfig) {
             String rayConfigShrink = shrink(rayConfig, "RayConfig", "json");
@@ -166,10 +187,7 @@ public class ModifyEmbodiedAIPlatformRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>large</p>
+         * WebserverSpecName.
          */
         public Builder webserverSpecName(String webserverSpecName) {
             this.putQueryParameter("WebserverSpecName", webserverSpecName);

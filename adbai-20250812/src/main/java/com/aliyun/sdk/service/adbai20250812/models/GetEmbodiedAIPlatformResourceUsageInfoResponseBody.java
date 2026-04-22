@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetEmbodiedAIPlatformResourceUsageInfoResponseBody</p>
  */
 public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AcuDetails")
+    private AcuDetails acuDetails;
+
     @com.aliyun.core.annotation.NameInMap("GpuDetails")
     private java.util.List<GpuDetails> gpuDetails;
 
@@ -36,6 +39,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
     private StorageUsage storageUsage;
 
     private GetEmbodiedAIPlatformResourceUsageInfoResponseBody(Builder builder) {
+        this.acuDetails = builder.acuDetails;
         this.gpuDetails = builder.gpuDetails;
         this.maxRegisteredDevices = builder.maxRegisteredDevices;
         this.registeredDeviceCount = builder.registeredDeviceCount;
@@ -54,6 +58,13 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acuDetails
+     */
+    public AcuDetails getAcuDetails() {
+        return this.acuDetails;
     }
 
     /**
@@ -99,6 +110,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
     }
 
     public static final class Builder {
+        private AcuDetails acuDetails; 
         private java.util.List<GpuDetails> gpuDetails; 
         private Long maxRegisteredDevices; 
         private Long registeredDeviceCount; 
@@ -110,6 +122,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         } 
 
         private Builder(GetEmbodiedAIPlatformResourceUsageInfoResponseBody model) {
+            this.acuDetails = model.acuDetails;
             this.gpuDetails = model.gpuDetails;
             this.maxRegisteredDevices = model.maxRegisteredDevices;
             this.registeredDeviceCount = model.registeredDeviceCount;
@@ -117,6 +130,14 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             this.slbTraffic = model.slbTraffic;
             this.storageUsage = model.storageUsage;
         } 
+
+        /**
+         * AcuDetails.
+         */
+        public Builder acuDetails(AcuDetails acuDetails) {
+            this.acuDetails = acuDetails;
+            return this;
+        }
 
         /**
          * GpuDetails.
@@ -175,6 +196,123 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link GetEmbodiedAIPlatformResourceUsageInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEmbodiedAIPlatformResourceUsageInfoResponseBody</p>
+     */
+    public static class AcuDetails extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EapWebserverACUCount")
+        private Double eapWebserverACUCount;
+
+        @com.aliyun.core.annotation.NameInMap("RayHeadACUCount")
+        private Double rayHeadACUCount;
+
+        @com.aliyun.core.annotation.NameInMap("RayWorkerACUCount")
+        private Double rayWorkerACUCount;
+
+        @com.aliyun.core.annotation.NameInMap("TotalACUCount")
+        private Double totalACUCount;
+
+        private AcuDetails(Builder builder) {
+            this.eapWebserverACUCount = builder.eapWebserverACUCount;
+            this.rayHeadACUCount = builder.rayHeadACUCount;
+            this.rayWorkerACUCount = builder.rayWorkerACUCount;
+            this.totalACUCount = builder.totalACUCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AcuDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return eapWebserverACUCount
+         */
+        public Double getEapWebserverACUCount() {
+            return this.eapWebserverACUCount;
+        }
+
+        /**
+         * @return rayHeadACUCount
+         */
+        public Double getRayHeadACUCount() {
+            return this.rayHeadACUCount;
+        }
+
+        /**
+         * @return rayWorkerACUCount
+         */
+        public Double getRayWorkerACUCount() {
+            return this.rayWorkerACUCount;
+        }
+
+        /**
+         * @return totalACUCount
+         */
+        public Double getTotalACUCount() {
+            return this.totalACUCount;
+        }
+
+        public static final class Builder {
+            private Double eapWebserverACUCount; 
+            private Double rayHeadACUCount; 
+            private Double rayWorkerACUCount; 
+            private Double totalACUCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(AcuDetails model) {
+                this.eapWebserverACUCount = model.eapWebserverACUCount;
+                this.rayHeadACUCount = model.rayHeadACUCount;
+                this.rayWorkerACUCount = model.rayWorkerACUCount;
+                this.totalACUCount = model.totalACUCount;
+            } 
+
+            /**
+             * EapWebserverACUCount.
+             */
+            public Builder eapWebserverACUCount(Double eapWebserverACUCount) {
+                this.eapWebserverACUCount = eapWebserverACUCount;
+                return this;
+            }
+
+            /**
+             * RayHeadACUCount.
+             */
+            public Builder rayHeadACUCount(Double rayHeadACUCount) {
+                this.rayHeadACUCount = rayHeadACUCount;
+                return this;
+            }
+
+            /**
+             * RayWorkerACUCount.
+             */
+            public Builder rayWorkerACUCount(Double rayWorkerACUCount) {
+                this.rayWorkerACUCount = rayWorkerACUCount;
+                return this;
+            }
+
+            /**
+             * TotalACUCount.
+             */
+            public Builder totalACUCount(Double totalACUCount) {
+                this.totalACUCount = totalACUCount;
+                return this;
+            }
+
+            public AcuDetails build() {
+                return new AcuDetails(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link GetEmbodiedAIPlatformResourceUsageInfoResponseBody} extends {@link TeaModel}

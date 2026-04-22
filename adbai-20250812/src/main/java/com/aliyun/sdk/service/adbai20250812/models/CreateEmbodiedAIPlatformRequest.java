@@ -23,6 +23,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceCount")
+    private Integer deviceCount;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PlatformName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String platformName;
@@ -43,6 +47,7 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
     private CreateEmbodiedAIPlatformRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.deviceCount = builder.deviceCount;
         this.platformName = builder.platformName;
         this.rayConfig = builder.rayConfig;
         this.regionId = builder.regionId;
@@ -67,6 +72,13 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return deviceCount
+     */
+    public Integer getDeviceCount() {
+        return this.deviceCount;
     }
 
     /**
@@ -99,6 +111,7 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateEmbodiedAIPlatformRequest, Builder> {
         private String DBClusterId; 
+        private Integer deviceCount; 
         private String platformName; 
         private RayConfig rayConfig; 
         private String regionId; 
@@ -111,6 +124,7 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
         private Builder(CreateEmbodiedAIPlatformRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.deviceCount = request.deviceCount;
             this.platformName = request.platformName;
             this.rayConfig = request.rayConfig;
             this.regionId = request.regionId;
@@ -126,6 +140,15 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * DeviceCount.
+         */
+        public Builder deviceCount(Integer deviceCount) {
+            this.putQueryParameter("DeviceCount", deviceCount);
+            this.deviceCount = deviceCount;
             return this;
         }
 

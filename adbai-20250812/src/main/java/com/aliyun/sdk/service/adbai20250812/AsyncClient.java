@@ -52,6 +52,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<DescribeChatMessageResponseBody> describeChatMessageWithResponseIterable(DescribeChatMessageRequest request);
 
     /**
+     * @param request the request parameters of DescribeEapDeviceResourceAllocation  DescribeEapDeviceResourceAllocationRequest
+     * @return DescribeEapDeviceResourceAllocationResponse
+     */
+    CompletableFuture<DescribeEapDeviceResourceAllocationResponse> describeEapDeviceResourceAllocation(DescribeEapDeviceResourceAllocationRequest request);
+
+    /**
      * @param request the request parameters of DescribeEmbodiedAIPlatforms  DescribeEmbodiedAIPlatformsRequest
      * @return DescribeEmbodiedAIPlatformsResponse
      */
