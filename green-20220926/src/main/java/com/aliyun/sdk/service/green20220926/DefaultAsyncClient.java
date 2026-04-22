@@ -456,6 +456,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeOssV2Result  DescribeOssV2ResultRequest
+     * @return DescribeOssV2ResultResponse
+     */
+    @Override
+    public CompletableFuture<DescribeOssV2ResultResponse> describeOssV2Result(DescribeOssV2ResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeOssV2Result").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeOssV2ResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeOssV2ResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ExportAnswerSample  ExportAnswerSampleRequest
      * @return ExportAnswerSampleResponse
      */
@@ -1273,6 +1291,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);
         return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of MarkOssV2Result  MarkOssV2ResultRequest
+     * @return MarkOssV2ResultResponse
+     */
+    @Override
+    public CompletableFuture<MarkOssV2ResultResponse> markOssV2Result(MarkOssV2ResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("MarkOssV2Result").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MarkOssV2ResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MarkOssV2ResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
     }
 
     /**

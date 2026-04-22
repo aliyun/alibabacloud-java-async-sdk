@@ -152,6 +152,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeOnlineTestResultResponse> describeOnlineTestResult(DescribeOnlineTestResultRequest request);
 
     /**
+     * @param request the request parameters of DescribeOssV2Result  DescribeOssV2ResultRequest
+     * @return DescribeOssV2ResultResponse
+     */
+    CompletableFuture<DescribeOssV2ResultResponse> describeOssV2Result(DescribeOssV2ResultRequest request);
+
+    /**
      * @param request the request parameters of ExportAnswerSample  ExportAnswerSampleRequest
      * @return ExportAnswerSampleResponse
      */
@@ -422,6 +428,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<LlmStreamChatResponse> llmStreamChat(LlmStreamChatRequest request);
 
     ResponseIterable<LlmStreamChatResponseBody> llmStreamChatWithResponseIterable(LlmStreamChatRequest request);
+
+    /**
+     * @param request the request parameters of MarkOssV2Result  MarkOssV2ResultRequest
+     * @return MarkOssV2ResultResponse
+     */
+    CompletableFuture<MarkOssV2ResultResponse> markOssV2Result(MarkOssV2ResultRequest request);
 
     /**
      * @param request the request parameters of ModifyAnswerLib  ModifyAnswerLibRequest
