@@ -58,6 +58,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAclGroup  CreateAclGroupRequest
+     * @return CreateAclGroupResponse
+     */
+    @Override
+    public CompletableFuture<CreateAclGroupResponse> createAclGroup(CreateAclGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAclGroup").setMethod(HttpMethod.POST).setPathRegex("/webapi/milvus/createAclGroup").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAclGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAclGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateDefaultRole  CreateDefaultRoleRequest
      * @return CreateDefaultRoleResponse
      */
@@ -184,6 +202,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAclGroups  ListAclGroupsRequest
+     * @return ListAclGroupsResponse
+     */
+    @Override
+    public CompletableFuture<ListAclGroupsResponse> listAclGroups(ListAclGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAclGroups").setMethod(HttpMethod.POST).setPathRegex("/webapi/milvus/listAclGroups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAclGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAclGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListInstances  ListInstancesRequest
      * @return ListInstancesResponse
      */
@@ -286,6 +322,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAccessControlListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAclGroupCidrs  UpdateAclGroupCidrsRequest
+     * @return UpdateAclGroupCidrsResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAclGroupCidrsResponse> updateAclGroupCidrs(UpdateAclGroupCidrsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAclGroupCidrs").setMethod(HttpMethod.POST).setPathRegex("/webapi/milvus/updateAclGroupCidrs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAclGroupCidrsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAclGroupCidrsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

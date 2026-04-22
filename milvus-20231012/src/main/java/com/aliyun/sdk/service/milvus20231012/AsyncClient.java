@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateAclGroup  CreateAclGroupRequest
+     * @return CreateAclGroupResponse
+     */
+    CompletableFuture<CreateAclGroupResponse> createAclGroup(CreateAclGroupRequest request);
+
+    /**
      * @param request the request parameters of CreateDefaultRole  CreateDefaultRoleRequest
      * @return CreateDefaultRoleResponse
      */
@@ -68,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceDetailResponse> getInstanceDetail(GetInstanceDetailRequest request);
 
     /**
+     * @param request the request parameters of ListAclGroups  ListAclGroupsRequest
+     * @return ListAclGroupsResponse
+     */
+    CompletableFuture<ListAclGroupsResponse> listAclGroups(ListAclGroupsRequest request);
+
+    /**
      * @param request the request parameters of ListInstances  ListInstancesRequest
      * @return ListInstancesResponse
      */
@@ -102,6 +114,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAccessControlListResponse
      */
     CompletableFuture<UpdateAccessControlListResponse> updateAccessControlList(UpdateAccessControlListRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAclGroupCidrs  UpdateAclGroupCidrsRequest
+     * @return UpdateAclGroupCidrsResponse
+     */
+    CompletableFuture<UpdateAclGroupCidrsResponse> updateAclGroupCidrs(UpdateAclGroupCidrsRequest request);
 
     /**
      * @param request the request parameters of UpdateInstance  UpdateInstanceRequest
