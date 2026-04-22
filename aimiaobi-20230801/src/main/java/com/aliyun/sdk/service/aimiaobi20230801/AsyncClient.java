@@ -620,6 +620,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InitiatePptCreationResponse> initiatePptCreation(InitiatePptCreationRequest request);
 
     /**
+     * @param request the request parameters of InitiatePptCreationV2  InitiatePptCreationV2Request
+     * @return InitiatePptCreationV2Response
+     */
+    CompletableFuture<InitiatePptCreationV2Response> initiatePptCreationV2(InitiatePptCreationV2Request request);
+
+    /**
      * @param request the request parameters of InsertInterveneGlobalReply  InsertInterveneGlobalReplyRequest
      * @return InsertInterveneGlobalReplyResponse
      */
@@ -720,6 +726,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDocumentRetrieveResponse
      */
     CompletableFuture<ListDocumentRetrieveResponse> listDocumentRetrieve(ListDocumentRetrieveRequest request);
+
+    /**
+     * @param request the request parameters of ListEnterprisePptTemplates  ListEnterprisePptTemplatesRequest
+     * @return ListEnterprisePptTemplatesResponse
+     */
+    CompletableFuture<ListEnterprisePptTemplatesResponse> listEnterprisePptTemplates(ListEnterprisePptTemplatesRequest request);
 
     /**
      * @param request the request parameters of ListFreshViewPoints  ListFreshViewPointsRequest
