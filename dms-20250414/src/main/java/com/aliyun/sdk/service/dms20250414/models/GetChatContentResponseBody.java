@@ -35,6 +35,9 @@ public class GetChatContentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("level")
     private Long level;
 
+    @com.aliyun.core.annotation.NameInMap("timestamp")
+    private String timestamp;
+
     private GetChatContentResponseBody(Builder builder) {
         this.category = builder.category;
         this.checkpoint = builder.checkpoint;
@@ -42,6 +45,7 @@ public class GetChatContentResponseBody extends TeaModel {
         this.contentType = builder.contentType;
         this.eventType = builder.eventType;
         this.level = builder.level;
+        this.timestamp = builder.timestamp;
     }
 
     public static Builder builder() {
@@ -98,6 +102,13 @@ public class GetChatContentResponseBody extends TeaModel {
         return this.level;
     }
 
+    /**
+     * @return timestamp
+     */
+    public String getTimestamp() {
+        return this.timestamp;
+    }
+
     public static final class Builder {
         private String category; 
         private Long checkpoint; 
@@ -105,6 +116,7 @@ public class GetChatContentResponseBody extends TeaModel {
         private String contentType; 
         private String eventType; 
         private Long level; 
+        private String timestamp; 
 
         private Builder() {
         } 
@@ -116,6 +128,7 @@ public class GetChatContentResponseBody extends TeaModel {
             this.contentType = model.contentType;
             this.eventType = model.eventType;
             this.level = model.level;
+            this.timestamp = model.timestamp;
         } 
 
         /**
@@ -163,6 +176,14 @@ public class GetChatContentResponseBody extends TeaModel {
          */
         public Builder level(Long level) {
             this.level = level;
+            return this;
+        }
+
+        /**
+         * timestamp.
+         */
+        public Builder timestamp(String timestamp) {
+            this.timestamp = timestamp;
             return this;
         }
 
