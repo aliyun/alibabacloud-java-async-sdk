@@ -777,6 +777,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceDomainsResponse> describeInstanceDomains(DescribeInstanceDomainsRequest request);
 
     /**
+     * @param request the request parameters of DescribeInterAuthStatisticsGlobalOverview  DescribeInterAuthStatisticsGlobalOverviewRequest
+     * @return DescribeInterAuthStatisticsGlobalOverviewResponse
+     */
+    CompletableFuture<DescribeInterAuthStatisticsGlobalOverviewResponse> describeInterAuthStatisticsGlobalOverview(DescribeInterAuthStatisticsGlobalOverviewRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInterAuthStatisticsHistory  DescribeInterAuthStatisticsHistoryRequest
+     * @return DescribeInterAuthStatisticsHistoryResponse
+     */
+    CompletableFuture<DescribeInterAuthStatisticsHistoryResponse> describeInterAuthStatisticsHistory(DescribeInterAuthStatisticsHistoryRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInterAuthStatisticsSummary  DescribeInterAuthStatisticsSummaryRequest
+     * @return DescribeInterAuthStatisticsSummaryResponse
+     */
+    CompletableFuture<DescribeInterAuthStatisticsSummaryResponse> describeInterAuthStatisticsSummary(DescribeInterAuthStatisticsSummaryRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInterAuthStatisticsZoneOverview  DescribeInterAuthStatisticsZoneOverviewRequest
+     * @return DescribeInterAuthStatisticsZoneOverviewResponse
+     */
+    CompletableFuture<DescribeInterAuthStatisticsZoneOverviewResponse> describeInterAuthStatisticsZoneOverview(DescribeInterAuthStatisticsZoneOverviewRequest request);
+
+    /**
      * @param request the request parameters of DescribeInternetDnsLogs  DescribeInternetDnsLogsRequest
      * @return DescribeInternetDnsLogsResponse
      */

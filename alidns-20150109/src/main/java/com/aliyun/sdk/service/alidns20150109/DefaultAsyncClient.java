@@ -2129,6 +2129,78 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeInterAuthStatisticsGlobalOverview  DescribeInterAuthStatisticsGlobalOverviewRequest
+     * @return DescribeInterAuthStatisticsGlobalOverviewResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInterAuthStatisticsGlobalOverviewResponse> describeInterAuthStatisticsGlobalOverview(DescribeInterAuthStatisticsGlobalOverviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInterAuthStatisticsGlobalOverview").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInterAuthStatisticsGlobalOverviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInterAuthStatisticsGlobalOverviewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInterAuthStatisticsHistory  DescribeInterAuthStatisticsHistoryRequest
+     * @return DescribeInterAuthStatisticsHistoryResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInterAuthStatisticsHistoryResponse> describeInterAuthStatisticsHistory(DescribeInterAuthStatisticsHistoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInterAuthStatisticsHistory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInterAuthStatisticsHistoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInterAuthStatisticsHistoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInterAuthStatisticsSummary  DescribeInterAuthStatisticsSummaryRequest
+     * @return DescribeInterAuthStatisticsSummaryResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInterAuthStatisticsSummaryResponse> describeInterAuthStatisticsSummary(DescribeInterAuthStatisticsSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInterAuthStatisticsSummary").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInterAuthStatisticsSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInterAuthStatisticsSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInterAuthStatisticsZoneOverview  DescribeInterAuthStatisticsZoneOverviewRequest
+     * @return DescribeInterAuthStatisticsZoneOverviewResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInterAuthStatisticsZoneOverviewResponse> describeInterAuthStatisticsZoneOverview(DescribeInterAuthStatisticsZoneOverviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInterAuthStatisticsZoneOverview").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInterAuthStatisticsZoneOverviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInterAuthStatisticsZoneOverviewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeInternetDnsLogs  DescribeInternetDnsLogsRequest
      * @return DescribeInternetDnsLogsResponse
      */
