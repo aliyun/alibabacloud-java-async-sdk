@@ -959,6 +959,9 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         @com.aliyun.core.annotation.NameInMap("RecallType")
         private String recallType;
 
+        @com.aliyun.core.annotation.NameInMap("SortFields")
+        private String sortFields;
+
         @com.aliyun.core.annotation.NameInMap("UserVectorField")
         private String userVectorField;
 
@@ -977,6 +980,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             this.priority = builder.priority;
             this.recallManagementTableId = builder.recallManagementTableId;
             this.recallType = builder.recallType;
+            this.sortFields = builder.sortFields;
             this.userVectorField = builder.userVectorField;
             this.userVectorRecallManagementTableId = builder.userVectorRecallManagementTableId;
         }
@@ -1067,6 +1071,13 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         }
 
         /**
+         * @return sortFields
+         */
+        public String getSortFields() {
+            return this.sortFields;
+        }
+
+        /**
          * @return userVectorField
          */
         public String getUserVectorField() {
@@ -1092,6 +1103,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             private Long priority; 
             private String recallManagementTableId; 
             private String recallType; 
+            private String sortFields; 
             private String userVectorField; 
             private String userVectorRecallManagementTableId; 
 
@@ -1110,6 +1122,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
                 this.priority = model.priority;
                 this.recallManagementTableId = model.recallManagementTableId;
                 this.recallType = model.recallType;
+                this.sortFields = model.sortFields;
                 this.userVectorField = model.userVectorField;
                 this.userVectorRecallManagementTableId = model.userVectorRecallManagementTableId;
             } 
@@ -1199,6 +1212,14 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
              */
             public Builder recallType(String recallType) {
                 this.recallType = recallType;
+                return this;
+            }
+
+            /**
+             * SortFields.
+             */
+            public Builder sortFields(String sortFields) {
+                this.sortFields = sortFields;
                 return this;
             }
 
