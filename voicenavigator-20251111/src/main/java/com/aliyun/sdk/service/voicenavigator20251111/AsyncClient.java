@@ -186,10 +186,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataChannelCredentialResponse> getDataChannelCredential(GetDataChannelCredentialRequest request);
 
     /**
+     * @param request the request parameters of GetInstanceTrendingReport  GetInstanceTrendingReportRequest
+     * @return GetInstanceTrendingReportResponse
+     */
+    CompletableFuture<GetInstanceTrendingReportResponse> getInstanceTrendingReport(GetInstanceTrendingReportRequest request);
+
+    /**
      * @param request the request parameters of GetRealtimeInstanceStats  GetRealtimeInstanceStatsRequest
      * @return GetRealtimeInstanceStatsResponse
      */
     CompletableFuture<GetRealtimeInstanceStatsResponse> getRealtimeInstanceStats(GetRealtimeInstanceStatsRequest request);
+
+    /**
+     * @param request the request parameters of GetRealtimeScriptStats  GetRealtimeScriptStatsRequest
+     * @return GetRealtimeScriptStatsResponse
+     */
+    CompletableFuture<GetRealtimeScriptStatsResponse> getRealtimeScriptStats(GetRealtimeScriptStatsRequest request);
 
     /**
      * @param request the request parameters of GetRecording  GetRecordingRequest
@@ -202,6 +214,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetScriptResponse
      */
     CompletableFuture<GetScriptResponse> getScript(GetScriptRequest request);
+
+    /**
+     * @param request the request parameters of GetScriptTrendingReport  GetScriptTrendingReportRequest
+     * @return GetScriptTrendingReportResponse
+     */
+    CompletableFuture<GetScriptTrendingReportResponse> getScriptTrendingReport(GetScriptTrendingReportRequest request);
 
     /**
      * @param request the request parameters of GetSubscription  GetSubscriptionRequest
@@ -252,6 +270,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCloneVoiceModelsResponse> listCloneVoiceModels(ListCloneVoiceModelsRequest request);
 
     /**
+     * @param request the request parameters of ListHistoricalInstanceReport  ListHistoricalInstanceReportRequest
+     * @return ListHistoricalInstanceReportResponse
+     */
+    CompletableFuture<ListHistoricalInstanceReportResponse> listHistoricalInstanceReport(ListHistoricalInstanceReportRequest request);
+
+    /**
+     * @param request the request parameters of ListHistoricalScriptReport  ListHistoricalScriptReportRequest
+     * @return ListHistoricalScriptReportResponse
+     */
+    CompletableFuture<ListHistoricalScriptReportResponse> listHistoricalScriptReport(ListHistoricalScriptReportRequest request);
+
+    /**
      * @param request the request parameters of ListInstructions  ListInstructionsRequest
      * @return ListInstructionsResponse
      */
@@ -268,6 +298,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListNluModelsResponse
      */
     CompletableFuture<ListNluModelsResponse> listNluModels(ListNluModelsRequest request);
+
+    /**
+     * @param request the request parameters of ListRealtimeInstanceStats  ListRealtimeInstanceStatsRequest
+     * @return ListRealtimeInstanceStatsResponse
+     */
+    CompletableFuture<ListRealtimeInstanceStatsResponse> listRealtimeInstanceStats(ListRealtimeInstanceStatsRequest request);
 
     /**
      * @param request the request parameters of ListScriptProfileTemplates  ListScriptProfileTemplatesRequest
