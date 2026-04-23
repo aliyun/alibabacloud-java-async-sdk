@@ -83,6 +83,9 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RegistrantUpdatingStatus")
     private String registrantUpdatingStatus;
 
+    @com.aliyun.core.annotation.NameInMap("Registrar")
+    private String registrar;
+
     @com.aliyun.core.annotation.NameInMap("RegistrationDate")
     private String registrationDate;
 
@@ -142,6 +145,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         this.registrantOrganization = builder.registrantOrganization;
         this.registrantType = builder.registrantType;
         this.registrantUpdatingStatus = builder.registrantUpdatingStatus;
+        this.registrar = builder.registrar;
         this.registrationDate = builder.registrationDate;
         this.registrationDateLong = builder.registrationDateLong;
         this.remark = builder.remark;
@@ -323,6 +327,13 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     }
 
     /**
+     * @return registrar
+     */
+    public String getRegistrar() {
+        return this.registrar;
+    }
+
+    /**
      * @return registrationDate
      */
     public String getRegistrationDate() {
@@ -429,6 +440,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         private String registrantOrganization; 
         private String registrantType; 
         private String registrantUpdatingStatus; 
+        private String registrar; 
         private String registrationDate; 
         private Long registrationDateLong; 
         private String remark; 
@@ -468,6 +480,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
             this.registrantOrganization = model.registrantOrganization;
             this.registrantType = model.registrantType;
             this.registrantUpdatingStatus = model.registrantUpdatingStatus;
+            this.registrar = model.registrar;
             this.registrationDate = model.registrationDate;
             this.registrationDateLong = model.registrationDateLong;
             this.remark = model.remark;
@@ -753,6 +766,14 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
          */
         public Builder registrantUpdatingStatus(String registrantUpdatingStatus) {
             this.registrantUpdatingStatus = registrantUpdatingStatus;
+            return this;
+        }
+
+        /**
+         * Registrar.
+         */
+        public Builder registrar(String registrar) {
+            this.registrar = registrar;
             return this;
         }
 

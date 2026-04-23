@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryDomainListRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewEnabled")
+    private Boolean autoRenewEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ccompany")
     private String ccompany;
 
@@ -97,6 +101,7 @@ public class QueryDomainListRequest extends Request {
 
     private QueryDomainListRequest(Builder builder) {
         super(builder);
+        this.autoRenewEnabled = builder.autoRenewEnabled;
         this.ccompany = builder.ccompany;
         this.dns = builder.dns;
         this.domainGroupId = builder.domainGroupId;
@@ -129,6 +134,13 @@ public class QueryDomainListRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoRenewEnabled
+     */
+    public Boolean getAutoRenewEnabled() {
+        return this.autoRenewEnabled;
     }
 
     /**
@@ -265,6 +277,7 @@ public class QueryDomainListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryDomainListRequest, Builder> {
+        private Boolean autoRenewEnabled; 
         private String ccompany; 
         private String dns; 
         private String domainGroupId; 
@@ -291,6 +304,7 @@ public class QueryDomainListRequest extends Request {
 
         private Builder(QueryDomainListRequest request) {
             super(request);
+            this.autoRenewEnabled = request.autoRenewEnabled;
             this.ccompany = request.ccompany;
             this.dns = request.dns;
             this.domainGroupId = request.domainGroupId;
@@ -311,6 +325,15 @@ public class QueryDomainListRequest extends Request {
             this.tag = request.tag;
             this.userClientIp = request.userClientIp;
         } 
+
+        /**
+         * AutoRenewEnabled.
+         */
+        public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
+            this.putQueryParameter("AutoRenewEnabled", autoRenewEnabled);
+            this.autoRenewEnabled = autoRenewEnabled;
+            return this;
+        }
 
         /**
          * <p>The name of the domain name registrant.</p>

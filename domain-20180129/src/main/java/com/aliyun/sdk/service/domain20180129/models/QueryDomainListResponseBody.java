@@ -431,6 +431,9 @@ public class QueryDomainListResponseBody extends TeaModel {
      * <p>QueryDomainListResponseBody</p>
      */
     public static class Domain extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoRenewEnabled")
+        private Boolean autoRenewEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Ccompany")
         private String ccompany;
 
@@ -501,6 +504,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         private DomainTag tag;
 
         private Domain(Builder builder) {
+            this.autoRenewEnabled = builder.autoRenewEnabled;
             this.ccompany = builder.ccompany;
             this.chgholderStatus = builder.chgholderStatus;
             this.dnsList = builder.dnsList;
@@ -532,6 +536,13 @@ public class QueryDomainListResponseBody extends TeaModel {
 
         public static Domain create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoRenewEnabled
+         */
+        public Boolean getAutoRenewEnabled() {
+            return this.autoRenewEnabled;
         }
 
         /**
@@ -696,6 +707,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean autoRenewEnabled; 
             private String ccompany; 
             private String chgholderStatus; 
             private DnsList dnsList; 
@@ -724,6 +736,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             } 
 
             private Builder(Domain model) {
+                this.autoRenewEnabled = model.autoRenewEnabled;
                 this.ccompany = model.ccompany;
                 this.chgholderStatus = model.chgholderStatus;
                 this.dnsList = model.dnsList;
@@ -748,6 +761,14 @@ public class QueryDomainListResponseBody extends TeaModel {
                 this.resourceGroupId = model.resourceGroupId;
                 this.tag = model.tag;
             } 
+
+            /**
+             * AutoRenewEnabled.
+             */
+            public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
+                this.autoRenewEnabled = autoRenewEnabled;
+                return this;
+            }
 
             /**
              * <p>The name of the domain name registrant.</p>
