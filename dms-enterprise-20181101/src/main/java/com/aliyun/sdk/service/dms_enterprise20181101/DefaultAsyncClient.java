@@ -495,6 +495,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询资产盘点任务的执行状态与进度信息，包含子任务列表、进度百分比、知识统计等</p>
+     * 
+     * @param request the request parameters of CheckInventoryJob  CheckInventoryJobRequest
+     * @return CheckInventoryJobResponse
+     */
+    @Override
+    public CompletableFuture<CheckInventoryJobResponse> checkInventoryJob(CheckInventoryJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckInventoryJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckInventoryJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckInventoryJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CloseOrder  CloseOrderRequest
      * @return CloseOrderResponse
      */
@@ -507,6 +528,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CloseOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>确认盘点任务中的单条知识，将其标记为已认证状态（解锁级别）</p>
+     * 
+     * @param request the request parameters of ConfirmInventoryKnowledge  ConfirmInventoryKnowledgeRequest
+     * @return ConfirmInventoryKnowledgeResponse
+     */
+    @Override
+    public CompletableFuture<ConfirmInventoryKnowledgeResponse> confirmInventoryKnowledge(ConfirmInventoryKnowledgeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ConfirmInventoryKnowledge").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConfirmInventoryKnowledgeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ConfirmInventoryKnowledgeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -833,6 +875,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateFreeLockCorrectOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建资产盘点任务，支持选择实例、数据库、表维度进行知识盘点，返回任务ID</p>
+     * 
+     * @param request the request parameters of CreateInventoryJob  CreateInventoryJobRequest
+     * @return CreateInventoryJobResponse
+     */
+    @Override
+    public CompletableFuture<CreateInventoryJobResponse> createInventoryJob(CreateInventoryJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateInventoryJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateInventoryJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateInventoryJobResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5286,6 +5349,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SearchDatabaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询盘点任务产出的知识列表，支持按关键词、知识类型、排序方式等条件筛选</p>
+     * 
+     * @param request the request parameters of SearchInventoryKnowledge  SearchInventoryKnowledgeRequest
+     * @return SearchInventoryKnowledgeResponse
+     */
+    @Override
+    public CompletableFuture<SearchInventoryKnowledgeResponse> searchInventoryKnowledge(SearchInventoryKnowledgeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SearchInventoryKnowledge").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchInventoryKnowledgeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchInventoryKnowledgeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

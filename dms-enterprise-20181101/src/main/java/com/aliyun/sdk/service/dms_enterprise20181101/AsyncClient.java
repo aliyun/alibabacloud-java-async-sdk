@@ -202,10 +202,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckBatchTableAccessPermissionResponse> checkBatchTableAccessPermission(CheckBatchTableAccessPermissionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>查询资产盘点任务的执行状态与进度信息，包含子任务列表、进度百分比、知识统计等</p>
+     * 
+     * @param request the request parameters of CheckInventoryJob  CheckInventoryJobRequest
+     * @return CheckInventoryJobResponse
+     */
+    CompletableFuture<CheckInventoryJobResponse> checkInventoryJob(CheckInventoryJobRequest request);
+
+    /**
      * @param request the request parameters of CloseOrder  CloseOrderRequest
      * @return CloseOrderResponse
      */
     CompletableFuture<CloseOrderResponse> closeOrder(CloseOrderRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>确认盘点任务中的单条知识，将其标记为已认证状态（解锁级别）</p>
+     * 
+     * @param request the request parameters of ConfirmInventoryKnowledge  ConfirmInventoryKnowledgeRequest
+     * @return ConfirmInventoryKnowledgeResponse
+     */
+    CompletableFuture<ConfirmInventoryKnowledgeResponse> confirmInventoryKnowledge(ConfirmInventoryKnowledgeRequest request);
 
     /**
      * @param request the request parameters of CreateAbacAuthorization  CreateAbacAuthorizationRequest
@@ -340,6 +358,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateFreeLockCorrectOrderResponse
      */
     CompletableFuture<CreateFreeLockCorrectOrderResponse> createFreeLockCorrectOrder(CreateFreeLockCorrectOrderRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>创建资产盘点任务，支持选择实例、数据库、表维度进行知识盘点，返回任务ID</p>
+     * 
+     * @param request the request parameters of CreateInventoryJob  CreateInventoryJobRequest
+     * @return CreateInventoryJobResponse
+     */
+    CompletableFuture<CreateInventoryJobResponse> createInventoryJob(CreateInventoryJobRequest request);
 
     /**
      * <b>description</b> :
@@ -2001,6 +2028,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SearchDatabaseResponse
      */
     CompletableFuture<SearchDatabaseResponse> searchDatabase(SearchDatabaseRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询盘点任务产出的知识列表，支持按关键词、知识类型、排序方式等条件筛选</p>
+     * 
+     * @param request the request parameters of SearchInventoryKnowledge  SearchInventoryKnowledgeRequest
+     * @return SearchInventoryKnowledgeResponse
+     */
+    CompletableFuture<SearchInventoryKnowledgeResponse> searchInventoryKnowledge(SearchInventoryKnowledgeRequest request);
 
     /**
      * <b>description</b> :
