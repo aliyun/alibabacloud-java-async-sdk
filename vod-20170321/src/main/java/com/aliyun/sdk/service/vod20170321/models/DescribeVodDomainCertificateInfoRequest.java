@@ -23,12 +23,17 @@ public class DescribeVodDomainCertificateInfoRequest extends Request {
     private String domainName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HeraApiAutoVersion")
+    private String heraApiAutoVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private DescribeVodDomainCertificateInfoRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
+        this.heraApiAutoVersion = builder.heraApiAutoVersion;
         this.ownerId = builder.ownerId;
     }
 
@@ -53,6 +58,13 @@ public class DescribeVodDomainCertificateInfoRequest extends Request {
     }
 
     /**
+     * @return heraApiAutoVersion
+     */
+    public String getHeraApiAutoVersion() {
+        return this.heraApiAutoVersion;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -61,6 +73,7 @@ public class DescribeVodDomainCertificateInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeVodDomainCertificateInfoRequest, Builder> {
         private String domainName; 
+        private String heraApiAutoVersion; 
         private Long ownerId; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class DescribeVodDomainCertificateInfoRequest extends Request {
         private Builder(DescribeVodDomainCertificateInfoRequest request) {
             super(request);
             this.domainName = request.domainName;
+            this.heraApiAutoVersion = request.heraApiAutoVersion;
             this.ownerId = request.ownerId;
         } 
 
@@ -83,6 +97,15 @@ public class DescribeVodDomainCertificateInfoRequest extends Request {
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * HeraApiAutoVersion.
+         */
+        public Builder heraApiAutoVersion(String heraApiAutoVersion) {
+            this.putQueryParameter("HeraApiAutoVersion", heraApiAutoVersion);
+            this.heraApiAutoVersion = heraApiAutoVersion;
             return this;
         }
 
