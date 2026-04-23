@@ -724,6 +724,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListSSLDetails  ListSSLDetailsRequest
+     * @return ListSSLDetailsResponse
+     */
+    @Override
+    public CompletableFuture<ListSSLDetailsResponse> listSSLDetails(ListSSLDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSSLDetails").setMethod(HttpMethod.POST).setPathRegex("/webapi/starrocks/listSSLDetails").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSSLDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSSLDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifyChargeType  ModifyChargeTypeRequest
      * @return ModifyChargeTypeResponse
      */

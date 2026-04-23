@@ -248,6 +248,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListOperationHistoryResponse> listOperationHistory(ListOperationHistoryRequest request);
 
     /**
+     * @param request the request parameters of ListSSLDetails  ListSSLDetailsRequest
+     * @return ListSSLDetailsResponse
+     */
+    CompletableFuture<ListSSLDetailsResponse> listSSLDetails(ListSSLDetailsRequest request);
+
+    /**
      * @param request the request parameters of ModifyChargeType  ModifyChargeTypeRequest
      * @return ModifyChargeTypeResponse
      */
