@@ -670,6 +670,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListExecutorLogs  ListExecutorLogsRequest
+     * @return ListExecutorLogsResponse
+     */
+    @Override
+    public CompletableFuture<ListExecutorLogsResponse> listExecutorLogs(ListExecutorLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListExecutorLogs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{workspaceId}/jobRuns/{jobRunId}/executors/{executorId}/logs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListExecutorLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListExecutorLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListJobExecutors  ListJobExecutorsRequest
      * @return ListJobExecutorsResponse
      */
