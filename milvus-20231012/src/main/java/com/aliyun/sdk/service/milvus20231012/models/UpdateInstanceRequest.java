@@ -273,6 +273,9 @@ public class UpdateInstanceRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private Integer cuNum;
 
+        @com.aliyun.core.annotation.NameInMap("cuType")
+        private String cuType;
+
         @com.aliyun.core.annotation.NameInMap("payType")
         private String payType;
 
@@ -286,6 +289,7 @@ public class UpdateInstanceRequest extends Request {
 
         private Components(Builder builder) {
             this.cuNum = builder.cuNum;
+            this.cuType = builder.cuType;
             this.payType = builder.payType;
             this.replica = builder.replica;
             this.type = builder.type;
@@ -304,6 +308,13 @@ public class UpdateInstanceRequest extends Request {
          */
         public Integer getCuNum() {
             return this.cuNum;
+        }
+
+        /**
+         * @return cuType
+         */
+        public String getCuType() {
+            return this.cuType;
         }
 
         /**
@@ -329,6 +340,7 @@ public class UpdateInstanceRequest extends Request {
 
         public static final class Builder {
             private Integer cuNum; 
+            private String cuType; 
             private String payType; 
             private Integer replica; 
             private String type; 
@@ -338,6 +350,7 @@ public class UpdateInstanceRequest extends Request {
 
             private Builder(Components model) {
                 this.cuNum = model.cuNum;
+                this.cuType = model.cuType;
                 this.payType = model.payType;
                 this.replica = model.replica;
                 this.type = model.type;
@@ -351,6 +364,14 @@ public class UpdateInstanceRequest extends Request {
              */
             public Builder cuNum(Integer cuNum) {
                 this.cuNum = cuNum;
+                return this;
+            }
+
+            /**
+             * cuType.
+             */
+            public Builder cuType(String cuType) {
+                this.cuType = cuType;
                 return this;
             }
 
