@@ -59,18 +59,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBizTraceResponse> createBizTrace(CreateBizTraceRequest request);
 
     /**
-     * @param request the request parameters of CreateChat  CreateChatRequest
-     * @return CreateChatResponse
-     */
-    CompletableFuture<CreateChatResponse> createChat(CreateChatRequest request);
-
-    CompletableFuture<CreateChatResponse> createChatWithRequestBody(CreateChatRequest request, RequestBody requestBody);
-
-<ReturnT> CompletableFuture<ReturnT> createChatWithAsyncResponseHandler(CreateChatRequest request, AsyncResponseHandler<CreateChatResponse, ReturnT> responseHandler);
-
-    ResponseIterable<CreateChatResponseBody> createChatWithResponseIterable(CreateChatRequest request);
-
-    /**
      * @param request the request parameters of CreateCloudResource  CreateCloudResourceRequest
      * @return CreateCloudResourceResponse
      */
@@ -87,18 +75,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDeliveryTaskResponse
      */
     CompletableFuture<CreateDeliveryTaskResponse> createDeliveryTask(CreateDeliveryTaskRequest request);
-
-    /**
-     * @param request the request parameters of CreateDigitalEmployee  CreateDigitalEmployeeRequest
-     * @return CreateDigitalEmployeeResponse
-     */
-    CompletableFuture<CreateDigitalEmployeeResponse> createDigitalEmployee(CreateDigitalEmployeeRequest request);
-
-    /**
-     * @param request the request parameters of CreateDigitalEmployeeSkill  CreateDigitalEmployeeSkillRequest
-     * @return CreateDigitalEmployeeSkillResponse
-     */
-    CompletableFuture<CreateDigitalEmployeeSkillResponse> createDigitalEmployeeSkill(CreateDigitalEmployeeSkillRequest request);
 
     /**
      * @param request the request parameters of CreateEntityStore  CreateEntityStoreRequest
@@ -158,12 +134,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceObservabilityResponse> createServiceObservability(CreateServiceObservabilityRequest request);
 
     /**
-     * @param request the request parameters of CreateThread  CreateThreadRequest
-     * @return CreateThreadResponse
-     */
-    CompletableFuture<CreateThreadResponse> createThread(CreateThreadRequest request);
-
-    /**
      * @param request the request parameters of CreateTicket  CreateTicketRequest
      * @return CreateTicketResponse
      */
@@ -219,18 +189,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDeliveryTaskResponse
      */
     CompletableFuture<DeleteDeliveryTaskResponse> deleteDeliveryTask(DeleteDeliveryTaskRequest request);
-
-    /**
-     * @param request the request parameters of DeleteDigitalEmployee  DeleteDigitalEmployeeRequest
-     * @return DeleteDigitalEmployeeResponse
-     */
-    CompletableFuture<DeleteDigitalEmployeeResponse> deleteDigitalEmployee(DeleteDigitalEmployeeRequest request);
-
-    /**
-     * @param request the request parameters of DeleteDigitalEmployeeSkill  DeleteDigitalEmployeeSkillRequest
-     * @return DeleteDigitalEmployeeSkillResponse
-     */
-    CompletableFuture<DeleteDigitalEmployeeSkillResponse> deleteDigitalEmployeeSkill(DeleteDigitalEmployeeSkillRequest request);
 
     /**
      * @param request the request parameters of DeleteEntityStore  DeleteEntityStoreRequest
@@ -291,12 +249,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteServiceResponse
      */
     CompletableFuture<DeleteServiceResponse> deleteService(DeleteServiceRequest request);
-
-    /**
-     * @param request the request parameters of DeleteThread  DeleteThreadRequest
-     * @return DeleteThreadResponse
-     */
-    CompletableFuture<DeleteThreadResponse> deleteThread(DeleteThreadRequest request);
 
     /**
      * <b>description</b> :
@@ -407,18 +359,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDeliveryTaskResponse> getDeliveryTask(GetDeliveryTaskRequest request);
 
     /**
-     * @param request the request parameters of GetDigitalEmployee  GetDigitalEmployeeRequest
-     * @return GetDigitalEmployeeResponse
-     */
-    CompletableFuture<GetDigitalEmployeeResponse> getDigitalEmployee(GetDigitalEmployeeRequest request);
-
-    /**
-     * @param request the request parameters of GetDigitalEmployeeSkill  GetDigitalEmployeeSkillRequest
-     * @return GetDigitalEmployeeSkillResponse
-     */
-    CompletableFuture<GetDigitalEmployeeSkillResponse> getDigitalEmployeeSkill(GetDigitalEmployeeSkillRequest request);
-
-    /**
      * @param request the request parameters of GetEntityStore  GetEntityStoreRequest
      * @return GetEntityStoreResponse
      */
@@ -501,18 +441,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetServiceObservabilityResponse
      */
     CompletableFuture<GetServiceObservabilityResponse> getServiceObservability(GetServiceObservabilityRequest request);
-
-    /**
-     * @param request the request parameters of GetThread  GetThreadRequest
-     * @return GetThreadResponse
-     */
-    CompletableFuture<GetThreadResponse> getThread(GetThreadRequest request);
-
-    /**
-     * @param request the request parameters of GetThreadData  GetThreadDataRequest
-     * @return GetThreadDataResponse
-     */
-    CompletableFuture<GetThreadDataResponse> getThreadData(GetThreadDataRequest request);
 
     /**
      * <b>description</b> :
@@ -612,24 +540,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDeliveryTasksResponse
      */
     CompletableFuture<ListDeliveryTasksResponse> listDeliveryTasks(ListDeliveryTasksRequest request);
-
-    /**
-     * @param request the request parameters of ListDigitalEmployeeSkillVersions  ListDigitalEmployeeSkillVersionsRequest
-     * @return ListDigitalEmployeeSkillVersionsResponse
-     */
-    CompletableFuture<ListDigitalEmployeeSkillVersionsResponse> listDigitalEmployeeSkillVersions(ListDigitalEmployeeSkillVersionsRequest request);
-
-    /**
-     * @param request the request parameters of ListDigitalEmployeeSkills  ListDigitalEmployeeSkillsRequest
-     * @return ListDigitalEmployeeSkillsResponse
-     */
-    CompletableFuture<ListDigitalEmployeeSkillsResponse> listDigitalEmployeeSkills(ListDigitalEmployeeSkillsRequest request);
-
-    /**
-     * @param request the request parameters of ListDigitalEmployees  ListDigitalEmployeesRequest
-     * @return ListDigitalEmployeesResponse
-     */
-    CompletableFuture<ListDigitalEmployeesResponse> listDigitalEmployees(ListDigitalEmployeesRequest request);
 
     /**
      * <b>description</b> :
@@ -747,12 +657,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
-     * @param request the request parameters of ListThreads  ListThreadsRequest
-     * @return ListThreadsResponse
-     */
-    CompletableFuture<ListThreadsResponse> listThreads(ListThreadsRequest request);
-
-    /**
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
      * @return ListWorkspacesResponse
      */
@@ -837,18 +741,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDeliveryTaskResponse> updateDeliveryTask(UpdateDeliveryTaskRequest request);
 
     /**
-     * @param request the request parameters of UpdateDigitalEmployee  UpdateDigitalEmployeeRequest
-     * @return UpdateDigitalEmployeeResponse
-     */
-    CompletableFuture<UpdateDigitalEmployeeResponse> updateDigitalEmployee(UpdateDigitalEmployeeRequest request);
-
-    /**
-     * @param request the request parameters of UpdateDigitalEmployeeSkill  UpdateDigitalEmployeeSkillRequest
-     * @return UpdateDigitalEmployeeSkillResponse
-     */
-    CompletableFuture<UpdateDigitalEmployeeSkillResponse> updateDigitalEmployeeSkill(UpdateDigitalEmployeeSkillRequest request);
-
-    /**
      * @param request the request parameters of UpdateIntegrationPolicy  UpdateIntegrationPolicyRequest
      * @return UpdateIntegrationPolicyResponse
      */
@@ -907,12 +799,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSubscriptionResponse
      */
     CompletableFuture<UpdateSubscriptionResponse> updateSubscription(UpdateSubscriptionRequest request);
-
-    /**
-     * @param request the request parameters of UpdateThread  UpdateThreadRequest
-     * @return UpdateThreadResponse
-     */
-    CompletableFuture<UpdateThreadResponse> updateThread(UpdateThreadRequest request);
 
     /**
      * <b>description</b> :
