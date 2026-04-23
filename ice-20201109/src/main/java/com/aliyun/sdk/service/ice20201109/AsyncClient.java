@@ -1001,6 +1001,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateMessageChatTokenResponse> generateMessageChatToken(GenerateMessageChatTokenRequest request);
 
     /**
+     * @param request the request parameters of GetAIAgentConcurrency  GetAIAgentConcurrencyRequest
+     * @return GetAIAgentConcurrencyResponse
+     */
+    CompletableFuture<GetAIAgentConcurrencyResponse> getAIAgentConcurrency(GetAIAgentConcurrencyRequest request);
+
+    /**
      * @param request the request parameters of GetAIWorkflowTask  GetAIWorkflowTaskRequest
      * @return GetAIWorkflowTaskResponse
      */
