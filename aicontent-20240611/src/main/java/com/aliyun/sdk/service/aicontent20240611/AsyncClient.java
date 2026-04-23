@@ -250,6 +250,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTextbookAssistantSceneDetailsResponse> listTextbookAssistantSceneDetails(ListTextbookAssistantSceneDetailsRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterBillingCostTabs  ModelRouterBillingCostTabsRequest
+     * @return ModelRouterBillingCostTabsResponse
+     */
+    CompletableFuture<ModelRouterBillingCostTabsResponse> modelRouterBillingCostTabs(ModelRouterBillingCostTabsRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterChatCompletions  ModelRouterChatCompletionsRequest
      * @return ModelRouterChatCompletionsResponse
      */
@@ -270,6 +276,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelRouterCreateApiKeyResponse
      */
     CompletableFuture<ModelRouterCreateApiKeyResponse> modelRouterCreateApiKey(ModelRouterCreateApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterCreateBillingRule  ModelRouterCreateBillingRuleRequest
+     * @return ModelRouterCreateBillingRuleResponse
+     */
+    CompletableFuture<ModelRouterCreateBillingRuleResponse> modelRouterCreateBillingRule(ModelRouterCreateBillingRuleRequest request);
 
     /**
      * @param request the request parameters of ModelRouterCreateClient  ModelRouterCreateClientRequest
@@ -326,10 +338,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterQueryApiKeyListResponse> modelRouterQueryApiKeyList(ModelRouterQueryApiKeyListRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterQueryBillingRuleList  ModelRouterQueryBillingRuleListRequest
+     * @return ModelRouterQueryBillingRuleListResponse
+     */
+    CompletableFuture<ModelRouterQueryBillingRuleListResponse> modelRouterQueryBillingRuleList(ModelRouterQueryBillingRuleListRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryClientDiscountLogs  ModelRouterQueryClientDiscountLogsRequest
+     * @return ModelRouterQueryClientDiscountLogsResponse
+     */
+    CompletableFuture<ModelRouterQueryClientDiscountLogsResponse> modelRouterQueryClientDiscountLogs(ModelRouterQueryClientDiscountLogsRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterQueryClientList  ModelRouterQueryClientListRequest
      * @return ModelRouterQueryClientListResponse
      */
     CompletableFuture<ModelRouterQueryClientListResponse> modelRouterQueryClientList(ModelRouterQueryClientListRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryClientTree  ModelRouterQueryClientTreeRequest
+     * @return ModelRouterQueryClientTreeResponse
+     */
+    CompletableFuture<ModelRouterQueryClientTreeResponse> modelRouterQueryClientTree(ModelRouterQueryClientTreeRequest request);
 
     /**
      * @param request the request parameters of ModelRouterQueryConversation  ModelRouterQueryConversationRequest
@@ -342,6 +372,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelRouterQueryConversationListResponse
      */
     CompletableFuture<ModelRouterQueryConversationListResponse> modelRouterQueryConversationList(ModelRouterQueryConversationListRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryCostModelDetail  ModelRouterQueryCostModelDetailRequest
+     * @return ModelRouterQueryCostModelDetailResponse
+     */
+    CompletableFuture<ModelRouterQueryCostModelDetailResponse> modelRouterQueryCostModelDetail(ModelRouterQueryCostModelDetailRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryCostModelList  ModelRouterQueryCostModelListRequest
+     * @return ModelRouterQueryCostModelListResponse
+     */
+    CompletableFuture<ModelRouterQueryCostModelListResponse> modelRouterQueryCostModelList(ModelRouterQueryCostModelListRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryCostOverviewMetrics  ModelRouterQueryCostOverviewMetricsRequest
+     * @return ModelRouterQueryCostOverviewMetricsResponse
+     */
+    CompletableFuture<ModelRouterQueryCostOverviewMetricsResponse> modelRouterQueryCostOverviewMetrics(ModelRouterQueryCostOverviewMetricsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryCostTrendMetrics  ModelRouterQueryCostTrendMetricsRequest
+     * @return ModelRouterQueryCostTrendMetricsResponse
+     */
+    CompletableFuture<ModelRouterQueryCostTrendMetricsResponse> modelRouterQueryCostTrendMetrics(ModelRouterQueryCostTrendMetricsRequest request);
 
     /**
      * @param request the request parameters of ModelRouterQueryModel  ModelRouterQueryModelRequest
@@ -384,6 +438,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelRouterQueryObservationMetricsResponse
      */
     CompletableFuture<ModelRouterQueryObservationMetricsResponse> modelRouterQueryObservationMetrics(ModelRouterQueryObservationMetricsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterUpdateBillingRule  ModelRouterUpdateBillingRuleRequest
+     * @return ModelRouterUpdateBillingRuleResponse
+     */
+    CompletableFuture<ModelRouterUpdateBillingRuleResponse> modelRouterUpdateBillingRule(ModelRouterUpdateBillingRuleRequest request);
 
     /**
      * @param request the request parameters of ModelRouterUpdateClient  ModelRouterUpdateClientRequest

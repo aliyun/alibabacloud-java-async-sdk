@@ -747,6 +747,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterBillingCostTabs  ModelRouterBillingCostTabsRequest
+     * @return ModelRouterBillingCostTabsResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterBillingCostTabsResponse> modelRouterBillingCostTabs(ModelRouterBillingCostTabsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterBillingCostTabs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/billing/cost/tabs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterBillingCostTabsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterBillingCostTabsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterChatCompletions  ModelRouterChatCompletionsRequest
      * @return ModelRouterChatCompletionsResponse
      */
@@ -820,6 +838,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterCreateApiKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterCreateBillingRule  ModelRouterCreateBillingRuleRequest
+     * @return ModelRouterCreateBillingRuleResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterCreateBillingRuleResponse> modelRouterCreateBillingRule(ModelRouterCreateBillingRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterCreateBillingRule").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/billing/rules").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterCreateBillingRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterCreateBillingRuleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -988,6 +1024,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterQueryBillingRuleList  ModelRouterQueryBillingRuleListRequest
+     * @return ModelRouterQueryBillingRuleListResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryBillingRuleListResponse> modelRouterQueryBillingRuleList(ModelRouterQueryBillingRuleListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryBillingRuleList").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/billing/rules").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryBillingRuleListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryBillingRuleListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterQueryClientDiscountLogs  ModelRouterQueryClientDiscountLogsRequest
+     * @return ModelRouterQueryClientDiscountLogsResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryClientDiscountLogsResponse> modelRouterQueryClientDiscountLogs(ModelRouterQueryClientDiscountLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryClientDiscountLogs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/clients/{id}/discount-logs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryClientDiscountLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryClientDiscountLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterQueryClientList  ModelRouterQueryClientListRequest
      * @return ModelRouterQueryClientListResponse
      */
@@ -1000,6 +1072,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterQueryClientListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterQueryClientTree  ModelRouterQueryClientTreeRequest
+     * @return ModelRouterQueryClientTreeResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryClientTreeResponse> modelRouterQueryClientTree(ModelRouterQueryClientTreeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryClientTree").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/clients/tree").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryClientTreeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryClientTreeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1036,6 +1126,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterQueryConversationListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterQueryCostModelDetail  ModelRouterQueryCostModelDetailRequest
+     * @return ModelRouterQueryCostModelDetailResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryCostModelDetailResponse> modelRouterQueryCostModelDetail(ModelRouterQueryCostModelDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryCostModelDetail").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/billing/cost/model-detail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryCostModelDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryCostModelDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterQueryCostModelList  ModelRouterQueryCostModelListRequest
+     * @return ModelRouterQueryCostModelListResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryCostModelListResponse> modelRouterQueryCostModelList(ModelRouterQueryCostModelListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryCostModelList").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/billing/cost/models").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryCostModelListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryCostModelListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterQueryCostOverviewMetrics  ModelRouterQueryCostOverviewMetricsRequest
+     * @return ModelRouterQueryCostOverviewMetricsResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryCostOverviewMetricsResponse> modelRouterQueryCostOverviewMetrics(ModelRouterQueryCostOverviewMetricsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryCostOverviewMetrics").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/billing/cost/overview").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryCostOverviewMetricsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryCostOverviewMetricsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterQueryCostTrendMetrics  ModelRouterQueryCostTrendMetricsRequest
+     * @return ModelRouterQueryCostTrendMetricsResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryCostTrendMetricsResponse> modelRouterQueryCostTrendMetrics(ModelRouterQueryCostTrendMetricsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryCostTrendMetrics").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/billing/cost/trend").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryCostTrendMetricsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryCostTrendMetricsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1162,6 +1324,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterQueryObservationMetricsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterUpdateBillingRule  ModelRouterUpdateBillingRuleRequest
+     * @return ModelRouterUpdateBillingRuleResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterUpdateBillingRuleResponse> modelRouterUpdateBillingRule(ModelRouterUpdateBillingRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterUpdateBillingRule").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/modelRouter/open/billing/rules/{id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterUpdateBillingRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterUpdateBillingRuleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
