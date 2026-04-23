@@ -83,6 +83,14 @@ public class CreateDBClusterEndpointRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SccMode")
     private String sccMode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
+    private String VPCId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    private String vSwitchId;
+
     private CreateDBClusterEndpointRequest(Builder builder) {
         super(builder);
         this.autoAddNewNodes = builder.autoAddNewNodes;
@@ -101,6 +109,8 @@ public class CreateDBClusterEndpointRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sccMode = builder.sccMode;
+        this.VPCId = builder.VPCId;
+        this.vSwitchId = builder.vSwitchId;
     }
 
     public static Builder builder() {
@@ -228,6 +238,20 @@ public class CreateDBClusterEndpointRequest extends Request {
         return this.sccMode;
     }
 
+    /**
+     * @return VPCId
+     */
+    public String getVPCId() {
+        return this.VPCId;
+    }
+
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
     public static final class Builder extends Request.Builder<CreateDBClusterEndpointRequest, Builder> {
         private String autoAddNewNodes; 
         private String clientToken; 
@@ -245,6 +269,8 @@ public class CreateDBClusterEndpointRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String sccMode; 
+        private String VPCId; 
+        private String vSwitchId; 
 
         private Builder() {
             super();
@@ -268,6 +294,8 @@ public class CreateDBClusterEndpointRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.sccMode = request.sccMode;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**
@@ -510,6 +538,24 @@ public class CreateDBClusterEndpointRequest extends Request {
         public Builder sccMode(String sccMode) {
             this.putQueryParameter("SccMode", sccMode);
             this.sccMode = sccMode;
+            return this;
+        }
+
+        /**
+         * VPCId.
+         */
+        public Builder VPCId(String VPCId) {
+            this.putQueryParameter("VPCId", VPCId);
+            this.VPCId = VPCId;
+            return this;
+        }
+
+        /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
             return this;
         }
 
