@@ -23,6 +23,12 @@ public class OneMetaKnowledgeBase extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    private String domain;
+
+    @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+    private String extraInfo;
+
     @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
@@ -44,6 +50,8 @@ public class OneMetaKnowledgeBase extends TeaModel {
     private OneMetaKnowledgeBase(Builder builder) {
         this.creator = builder.creator;
         this.description = builder.description;
+        this.domain = builder.domain;
+        this.extraInfo = builder.extraInfo;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
         this.kbUuid = builder.kbUuid;
@@ -76,6 +84,20 @@ public class OneMetaKnowledgeBase extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
+    }
+
+    /**
+     * @return extraInfo
+     */
+    public String getExtraInfo() {
+        return this.extraInfo;
     }
 
     /**
@@ -123,6 +145,8 @@ public class OneMetaKnowledgeBase extends TeaModel {
     public static final class Builder {
         private String creator; 
         private String description; 
+        private String domain; 
+        private String extraInfo; 
         private String gmtCreate; 
         private String gmtModified; 
         private String kbUuid; 
@@ -136,6 +160,8 @@ public class OneMetaKnowledgeBase extends TeaModel {
         private Builder(OneMetaKnowledgeBase model) {
             this.creator = model.creator;
             this.description = model.description;
+            this.domain = model.domain;
+            this.extraInfo = model.extraInfo;
             this.gmtCreate = model.gmtCreate;
             this.gmtModified = model.gmtModified;
             this.kbUuid = model.kbUuid;
@@ -157,6 +183,22 @@ public class OneMetaKnowledgeBase extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Domain.
+         */
+        public Builder domain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(String extraInfo) {
+            this.extraInfo = extraInfo;
             return this;
         }
 

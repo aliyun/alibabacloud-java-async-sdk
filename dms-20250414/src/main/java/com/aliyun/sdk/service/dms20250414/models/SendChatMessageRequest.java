@@ -886,6 +886,9 @@ public class SendChatMessageRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
         @com.aliyun.core.annotation.NameInMap("ReportWaterMark")
         private String reportWaterMark;
 
@@ -893,6 +896,7 @@ public class SendChatMessageRequest extends Request {
             this.customAgentId = builder.customAgentId;
             this.customAgentStage = builder.customAgentStage;
             this.language = builder.language;
+            this.mode = builder.mode;
             this.reportWaterMark = builder.reportWaterMark;
         }
 
@@ -926,6 +930,13 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
          * @return reportWaterMark
          */
         public String getReportWaterMark() {
@@ -936,6 +947,7 @@ public class SendChatMessageRequest extends Request {
             private String customAgentId; 
             private String customAgentStage; 
             private String language; 
+            private String mode; 
             private String reportWaterMark; 
 
             private Builder() {
@@ -945,6 +957,7 @@ public class SendChatMessageRequest extends Request {
                 this.customAgentId = model.customAgentId;
                 this.customAgentStage = model.customAgentStage;
                 this.language = model.language;
+                this.mode = model.mode;
                 this.reportWaterMark = model.reportWaterMark;
             } 
 
@@ -969,6 +982,14 @@ public class SendChatMessageRequest extends Request {
              */
             public Builder language(String language) {
                 this.language = language;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
                 return this;
             }
 
