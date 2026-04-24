@@ -29,6 +29,9 @@ public class AlertRuleCondition extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("compositeEscalation")
     private CompositeEscalation compositeEscalation;
 
+    @com.aliyun.core.annotation.NameInMap("enableSeveritySuppression")
+    private Boolean enableSeveritySuppression;
+
     @com.aliyun.core.annotation.NameInMap("escalationType")
     private String escalationType;
 
@@ -53,6 +56,9 @@ public class AlertRuleCondition extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("simpleEscalation")
     private SimpleEscalation simpleEscalation;
 
+    @com.aliyun.core.annotation.NameInMap("triggers")
+    private java.util.List<Triggers> triggers;
+
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -65,6 +71,7 @@ public class AlertRuleCondition extends TeaModel {
         this.caseList = builder.caseList;
         this.compareList = builder.compareList;
         this.compositeEscalation = builder.compositeEscalation;
+        this.enableSeveritySuppression = builder.enableSeveritySuppression;
         this.escalationType = builder.escalationType;
         this.expressEscalation = builder.expressEscalation;
         this.noDataAlertLevel = builder.noDataAlertLevel;
@@ -73,6 +80,7 @@ public class AlertRuleCondition extends TeaModel {
         this.oper = builder.oper;
         this.relation = builder.relation;
         this.simpleEscalation = builder.simpleEscalation;
+        this.triggers = builder.triggers;
         this.type = builder.type;
         this.value = builder.value;
     }
@@ -115,6 +123,13 @@ public class AlertRuleCondition extends TeaModel {
      */
     public CompositeEscalation getCompositeEscalation() {
         return this.compositeEscalation;
+    }
+
+    /**
+     * @return enableSeveritySuppression
+     */
+    public Boolean getEnableSeveritySuppression() {
+        return this.enableSeveritySuppression;
     }
 
     /**
@@ -174,6 +189,13 @@ public class AlertRuleCondition extends TeaModel {
     }
 
     /**
+     * @return triggers
+     */
+    public java.util.List<Triggers> getTriggers() {
+        return this.triggers;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -192,6 +214,7 @@ public class AlertRuleCondition extends TeaModel {
         private java.util.List<CaseList> caseList; 
         private java.util.List<CompareList> compareList; 
         private CompositeEscalation compositeEscalation; 
+        private Boolean enableSeveritySuppression; 
         private String escalationType; 
         private ExpressEscalation expressEscalation; 
         private String noDataAlertLevel; 
@@ -200,6 +223,7 @@ public class AlertRuleCondition extends TeaModel {
         private String oper; 
         private String relation; 
         private SimpleEscalation simpleEscalation; 
+        private java.util.List<Triggers> triggers; 
         private String type; 
         private Double value; 
 
@@ -211,6 +235,7 @@ public class AlertRuleCondition extends TeaModel {
             this.caseList = model.caseList;
             this.compareList = model.compareList;
             this.compositeEscalation = model.compositeEscalation;
+            this.enableSeveritySuppression = model.enableSeveritySuppression;
             this.escalationType = model.escalationType;
             this.expressEscalation = model.expressEscalation;
             this.noDataAlertLevel = model.noDataAlertLevel;
@@ -219,6 +244,7 @@ public class AlertRuleCondition extends TeaModel {
             this.oper = model.oper;
             this.relation = model.relation;
             this.simpleEscalation = model.simpleEscalation;
+            this.triggers = model.triggers;
             this.type = model.type;
             this.value = model.value;
         } 
@@ -252,6 +278,14 @@ public class AlertRuleCondition extends TeaModel {
          */
         public Builder compositeEscalation(CompositeEscalation compositeEscalation) {
             this.compositeEscalation = compositeEscalation;
+            return this;
+        }
+
+        /**
+         * enableSeveritySuppression.
+         */
+        public Builder enableSeveritySuppression(Boolean enableSeveritySuppression) {
+            this.enableSeveritySuppression = enableSeveritySuppression;
             return this;
         }
 
@@ -316,6 +350,14 @@ public class AlertRuleCondition extends TeaModel {
          */
         public Builder simpleEscalation(SimpleEscalation simpleEscalation) {
             this.simpleEscalation = simpleEscalation;
+            return this;
+        }
+
+        /**
+         * triggers.
+         */
+        public Builder triggers(java.util.List<Triggers> triggers) {
+            this.triggers = triggers;
             return this;
         }
 
@@ -1316,6 +1358,315 @@ public class AlertRuleCondition extends TeaModel {
 
             public SimpleEscalation build() {
                 return new SimpleEscalation(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleCondition} extends {@link TeaModel}
+     *
+     * <p>AlertRuleCondition</p>
+     */
+    public static class Conditions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expressionType")
+        private String expressionType;
+
+        @com.aliyun.core.annotation.NameInMap("operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("queryName")
+        private String queryName;
+
+        @com.aliyun.core.annotation.NameInMap("threshold")
+        private Double threshold;
+
+        private Conditions(Builder builder) {
+            this.expressionType = builder.expressionType;
+            this.operator = builder.operator;
+            this.queryName = builder.queryName;
+            this.threshold = builder.threshold;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Conditions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expressionType
+         */
+        public String getExpressionType() {
+            return this.expressionType;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return queryName
+         */
+        public String getQueryName() {
+            return this.queryName;
+        }
+
+        /**
+         * @return threshold
+         */
+        public Double getThreshold() {
+            return this.threshold;
+        }
+
+        public static final class Builder {
+            private String expressionType; 
+            private String operator; 
+            private String queryName; 
+            private Double threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.expressionType = model.expressionType;
+                this.operator = model.operator;
+                this.queryName = model.queryName;
+                this.threshold = model.threshold;
+            } 
+
+            /**
+             * expressionType.
+             */
+            public Builder expressionType(String expressionType) {
+                this.expressionType = expressionType;
+                return this;
+            }
+
+            /**
+             * operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * queryName.
+             */
+            public Builder queryName(String queryName) {
+                this.queryName = queryName;
+                return this;
+            }
+
+            /**
+             * threshold.
+             */
+            public Builder threshold(Double threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public Conditions build() {
+                return new Conditions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleCondition} extends {@link TeaModel}
+     *
+     * <p>AlertRuleCondition</p>
+     */
+    public static class Expression extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conditions")
+        private java.util.List<Conditions> conditions;
+
+        @com.aliyun.core.annotation.NameInMap("expressionType")
+        private String expressionType;
+
+        @com.aliyun.core.annotation.NameInMap("logicOperator")
+        private String logicOperator;
+
+        private Expression(Builder builder) {
+            this.conditions = builder.conditions;
+            this.expressionType = builder.expressionType;
+            this.logicOperator = builder.logicOperator;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Expression create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditions
+         */
+        public java.util.List<Conditions> getConditions() {
+            return this.conditions;
+        }
+
+        /**
+         * @return expressionType
+         */
+        public String getExpressionType() {
+            return this.expressionType;
+        }
+
+        /**
+         * @return logicOperator
+         */
+        public String getLogicOperator() {
+            return this.logicOperator;
+        }
+
+        public static final class Builder {
+            private java.util.List<Conditions> conditions; 
+            private String expressionType; 
+            private String logicOperator; 
+
+            private Builder() {
+            } 
+
+            private Builder(Expression model) {
+                this.conditions = model.conditions;
+                this.expressionType = model.expressionType;
+                this.logicOperator = model.logicOperator;
+            } 
+
+            /**
+             * conditions.
+             */
+            public Builder conditions(java.util.List<Conditions> conditions) {
+                this.conditions = conditions;
+                return this;
+            }
+
+            /**
+             * expressionType.
+             */
+            public Builder expressionType(String expressionType) {
+                this.expressionType = expressionType;
+                return this;
+            }
+
+            /**
+             * logicOperator.
+             */
+            public Builder logicOperator(String logicOperator) {
+                this.logicOperator = logicOperator;
+                return this;
+            }
+
+            public Expression build() {
+                return new Expression(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleCondition} extends {@link TeaModel}
+     *
+     * <p>AlertRuleCondition</p>
+     */
+    public static class Triggers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("durationSecs")
+        private Integer durationSecs;
+
+        @com.aliyun.core.annotation.NameInMap("expression")
+        private Expression expression;
+
+        @com.aliyun.core.annotation.NameInMap("severity")
+        private String severity;
+
+        private Triggers(Builder builder) {
+            this.durationSecs = builder.durationSecs;
+            this.expression = builder.expression;
+            this.severity = builder.severity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Triggers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return durationSecs
+         */
+        public Integer getDurationSecs() {
+            return this.durationSecs;
+        }
+
+        /**
+         * @return expression
+         */
+        public Expression getExpression() {
+            return this.expression;
+        }
+
+        /**
+         * @return severity
+         */
+        public String getSeverity() {
+            return this.severity;
+        }
+
+        public static final class Builder {
+            private Integer durationSecs; 
+            private Expression expression; 
+            private String severity; 
+
+            private Builder() {
+            } 
+
+            private Builder(Triggers model) {
+                this.durationSecs = model.durationSecs;
+                this.expression = model.expression;
+                this.severity = model.severity;
+            } 
+
+            /**
+             * durationSecs.
+             */
+            public Builder durationSecs(Integer durationSecs) {
+                this.durationSecs = durationSecs;
+                return this;
+            }
+
+            /**
+             * expression.
+             */
+            public Builder expression(Expression expression) {
+                this.expression = expression;
+                return this;
+            }
+
+            /**
+             * severity.
+             */
+            public Builder severity(String severity) {
+                this.severity = severity;
+                return this;
+            }
+
+            public Triggers build() {
+                return new Triggers(this);
             } 
 
         } 

@@ -1050,6 +1050,12 @@ public class AlertRuleQuery extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expr")
         private String expr;
 
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("promQl")
+        private String promQl;
+
         @com.aliyun.core.annotation.NameInMap("start")
         private Long start;
 
@@ -1066,6 +1072,8 @@ public class AlertRuleQuery extends TeaModel {
             this.duration = builder.duration;
             this.end = builder.end;
             this.expr = builder.expr;
+            this.name = builder.name;
+            this.promQl = builder.promQl;
             this.start = builder.start;
             this.timeUnit = builder.timeUnit;
             this.window = builder.window;
@@ -1122,6 +1130,20 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return promQl
+         */
+        public String getPromQl() {
+            return this.promQl;
+        }
+
+        /**
          * @return start
          */
         public Long getStart() {
@@ -1149,6 +1171,8 @@ public class AlertRuleQuery extends TeaModel {
             private Long duration; 
             private Long end; 
             private String expr; 
+            private String name; 
+            private String promQl; 
             private Long start; 
             private String timeUnit; 
             private Long window; 
@@ -1163,6 +1187,8 @@ public class AlertRuleQuery extends TeaModel {
                 this.duration = model.duration;
                 this.end = model.end;
                 this.expr = model.expr;
+                this.name = model.name;
+                this.promQl = model.promQl;
                 this.start = model.start;
                 this.timeUnit = model.timeUnit;
                 this.window = model.window;
@@ -1213,6 +1239,22 @@ public class AlertRuleQuery extends TeaModel {
              */
             public Builder expr(String expr) {
                 this.expr = expr;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * promQl.
+             */
+            public Builder promQl(String promQl) {
+                this.promQl = promQl;
                 return this;
             }
 

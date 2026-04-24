@@ -221,6 +221,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("httpApiInterUrl")
         private String httpApiInterUrl;
 
+        @com.aliyun.core.annotation.NameInMap("httpApiInternalUrl")
+        private String httpApiInternalUrl;
+
         @com.aliyun.core.annotation.NameInMap("httpApiIntraUrl")
         private String httpApiIntraUrl;
 
@@ -245,6 +248,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("pushGatewayInterUrl")
         private String pushGatewayInterUrl;
 
+        @com.aliyun.core.annotation.NameInMap("pushGatewayInternalUrl")
+        private String pushGatewayInternalUrl;
+
         @com.aliyun.core.annotation.NameInMap("pushGatewayIntraUrl")
         private String pushGatewayIntraUrl;
 
@@ -254,11 +260,17 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("remoteReadInterUrl")
         private String remoteReadInterUrl;
 
+        @com.aliyun.core.annotation.NameInMap("remoteReadInternalUrl")
+        private String remoteReadInternalUrl;
+
         @com.aliyun.core.annotation.NameInMap("remoteReadIntraUrl")
         private String remoteReadIntraUrl;
 
         @com.aliyun.core.annotation.NameInMap("remoteWriteInterUrl")
         private String remoteWriteInterUrl;
+
+        @com.aliyun.core.annotation.NameInMap("remoteWriteInternalUrl")
+        private String remoteWriteInternalUrl;
 
         @com.aliyun.core.annotation.NameInMap("remoteWriteIntraUrl")
         private String remoteWriteIntraUrl;
@@ -305,6 +317,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             this.grafanaInstanceId = builder.grafanaInstanceId;
             this.grafanaInstanceName = builder.grafanaInstanceName;
             this.httpApiInterUrl = builder.httpApiInterUrl;
+            this.httpApiInternalUrl = builder.httpApiInternalUrl;
             this.httpApiIntraUrl = builder.httpApiIntraUrl;
             this.instanceType = builder.instanceType;
             this.paymentType = builder.paymentType;
@@ -313,11 +326,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             this.prometheusInstanceId = builder.prometheusInstanceId;
             this.prometheusInstanceName = builder.prometheusInstanceName;
             this.pushGatewayInterUrl = builder.pushGatewayInterUrl;
+            this.pushGatewayInternalUrl = builder.pushGatewayInternalUrl;
             this.pushGatewayIntraUrl = builder.pushGatewayIntraUrl;
             this.regionId = builder.regionId;
             this.remoteReadInterUrl = builder.remoteReadInterUrl;
+            this.remoteReadInternalUrl = builder.remoteReadInternalUrl;
             this.remoteReadIntraUrl = builder.remoteReadIntraUrl;
             this.remoteWriteInterUrl = builder.remoteWriteInterUrl;
+            this.remoteWriteInternalUrl = builder.remoteWriteInternalUrl;
             this.remoteWriteIntraUrl = builder.remoteWriteIntraUrl;
             this.resourceGroupId = builder.resourceGroupId;
             this.resourceType = builder.resourceType;
@@ -437,6 +453,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return httpApiInternalUrl
+         */
+        public String getHttpApiInternalUrl() {
+            return this.httpApiInternalUrl;
+        }
+
+        /**
          * @return httpApiIntraUrl
          */
         public String getHttpApiIntraUrl() {
@@ -493,6 +516,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return pushGatewayInternalUrl
+         */
+        public String getPushGatewayInternalUrl() {
+            return this.pushGatewayInternalUrl;
+        }
+
+        /**
          * @return pushGatewayIntraUrl
          */
         public String getPushGatewayIntraUrl() {
@@ -514,6 +544,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return remoteReadInternalUrl
+         */
+        public String getRemoteReadInternalUrl() {
+            return this.remoteReadInternalUrl;
+        }
+
+        /**
          * @return remoteReadIntraUrl
          */
         public String getRemoteReadIntraUrl() {
@@ -525,6 +562,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
          */
         public String getRemoteWriteInterUrl() {
             return this.remoteWriteInterUrl;
+        }
+
+        /**
+         * @return remoteWriteInternalUrl
+         */
+        public String getRemoteWriteInternalUrl() {
+            return this.remoteWriteInternalUrl;
         }
 
         /**
@@ -612,6 +656,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String grafanaInstanceId; 
             private String grafanaInstanceName; 
             private String httpApiInterUrl; 
+            private String httpApiInternalUrl; 
             private String httpApiIntraUrl; 
             private String instanceType; 
             private String paymentType; 
@@ -620,11 +665,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String prometheusInstanceId; 
             private String prometheusInstanceName; 
             private String pushGatewayInterUrl; 
+            private String pushGatewayInternalUrl; 
             private String pushGatewayIntraUrl; 
             private String regionId; 
             private String remoteReadInterUrl; 
+            private String remoteReadInternalUrl; 
             private String remoteReadIntraUrl; 
             private String remoteWriteInterUrl; 
+            private String remoteWriteInternalUrl; 
             private String remoteWriteIntraUrl; 
             private String resourceGroupId; 
             private String resourceType; 
@@ -654,6 +702,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
                 this.grafanaInstanceId = model.grafanaInstanceId;
                 this.grafanaInstanceName = model.grafanaInstanceName;
                 this.httpApiInterUrl = model.httpApiInterUrl;
+                this.httpApiInternalUrl = model.httpApiInternalUrl;
                 this.httpApiIntraUrl = model.httpApiIntraUrl;
                 this.instanceType = model.instanceType;
                 this.paymentType = model.paymentType;
@@ -662,11 +711,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
                 this.prometheusInstanceId = model.prometheusInstanceId;
                 this.prometheusInstanceName = model.prometheusInstanceName;
                 this.pushGatewayInterUrl = model.pushGatewayInterUrl;
+                this.pushGatewayInternalUrl = model.pushGatewayInternalUrl;
                 this.pushGatewayIntraUrl = model.pushGatewayIntraUrl;
                 this.regionId = model.regionId;
                 this.remoteReadInterUrl = model.remoteReadInterUrl;
+                this.remoteReadInternalUrl = model.remoteReadInternalUrl;
                 this.remoteReadIntraUrl = model.remoteReadIntraUrl;
                 this.remoteWriteInterUrl = model.remoteWriteInterUrl;
+                this.remoteWriteInternalUrl = model.remoteWriteInternalUrl;
                 this.remoteWriteIntraUrl = model.remoteWriteIntraUrl;
                 this.resourceGroupId = model.resourceGroupId;
                 this.resourceType = model.resourceType;
@@ -850,6 +902,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * httpApiInternalUrl.
+             */
+            public Builder httpApiInternalUrl(String httpApiInternalUrl) {
+                this.httpApiInternalUrl = httpApiInternalUrl;
+                return this;
+            }
+
+            /**
              * <p>HTTP intranet address.</p>
              * 
              * <strong>example:</strong>
@@ -940,6 +1000,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * pushGatewayInternalUrl.
+             */
+            public Builder pushGatewayInternalUrl(String pushGatewayInternalUrl) {
+                this.pushGatewayInternalUrl = pushGatewayInternalUrl;
+                return this;
+            }
+
+            /**
              * <p>Intranet address of PushGateway.</p>
              * 
              * <strong>example:</strong>
@@ -973,6 +1041,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * remoteReadInternalUrl.
+             */
+            public Builder remoteReadInternalUrl(String remoteReadInternalUrl) {
+                this.remoteReadInternalUrl = remoteReadInternalUrl;
+                return this;
+            }
+
+            /**
              * <p>Intranet read address.</p>
              * 
              * <strong>example:</strong>
@@ -991,6 +1067,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
              */
             public Builder remoteWriteInterUrl(String remoteWriteInterUrl) {
                 this.remoteWriteInterUrl = remoteWriteInterUrl;
+                return this;
+            }
+
+            /**
+             * remoteWriteInternalUrl.
+             */
+            public Builder remoteWriteInternalUrl(String remoteWriteInternalUrl) {
+                this.remoteWriteInternalUrl = remoteWriteInternalUrl;
                 return this;
             }
 

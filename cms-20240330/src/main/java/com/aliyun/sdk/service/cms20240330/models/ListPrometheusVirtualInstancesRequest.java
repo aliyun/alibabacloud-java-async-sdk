@@ -22,8 +22,16 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
+    private String nextToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
@@ -32,7 +40,9 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
     private ListPrometheusVirtualInstancesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.maxResults = builder.maxResults;
         this.namespace = builder.namespace;
+        this.nextToken = builder.nextToken;
         this.tenantId = builder.tenantId;
     }
 
@@ -57,10 +67,24 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
         return this.namespace;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -72,7 +96,9 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListPrometheusVirtualInstancesRequest, Builder> {
         private String regionId; 
+        private Integer maxResults; 
         private String namespace; 
+        private String nextToken; 
         private String tenantId; 
 
         private Builder() {
@@ -82,7 +108,9 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
         private Builder(ListPrometheusVirtualInstancesRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.maxResults = request.maxResults;
             this.namespace = request.namespace;
+            this.nextToken = request.nextToken;
             this.tenantId = request.tenantId;
         } 
 
@@ -96,6 +124,15 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
         }
 
         /**
+         * maxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("maxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
          * <p>Optional cloud product</p>
          * 
          * <strong>example:</strong>
@@ -104,6 +141,15 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * nextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("nextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

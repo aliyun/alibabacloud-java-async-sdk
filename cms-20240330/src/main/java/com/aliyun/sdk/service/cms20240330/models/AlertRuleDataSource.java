@@ -32,6 +32,9 @@ public class AlertRuleDataSource extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.NameInMap("tenantId")
+    private String tenantId;
+
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -42,6 +45,7 @@ public class AlertRuleDataSource extends TeaModel {
         this.instanceId = builder.instanceId;
         this.namespace = builder.namespace;
         this.regionId = builder.regionId;
+        this.tenantId = builder.tenantId;
         this.type = builder.type;
     }
 
@@ -93,6 +97,13 @@ public class AlertRuleDataSource extends TeaModel {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -105,6 +116,7 @@ public class AlertRuleDataSource extends TeaModel {
         private String instanceId; 
         private String namespace; 
         private String regionId; 
+        private String tenantId; 
         private String type; 
 
         private Builder() {
@@ -116,6 +128,7 @@ public class AlertRuleDataSource extends TeaModel {
             this.instanceId = model.instanceId;
             this.namespace = model.namespace;
             this.regionId = model.regionId;
+            this.tenantId = model.tenantId;
             this.type = model.type;
         } 
 
@@ -156,6 +169,14 @@ public class AlertRuleDataSource extends TeaModel {
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * tenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.tenantId = tenantId;
             return this;
         }
 

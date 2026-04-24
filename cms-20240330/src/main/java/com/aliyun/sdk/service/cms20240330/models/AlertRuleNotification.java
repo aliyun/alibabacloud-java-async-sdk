@@ -38,6 +38,9 @@ public class AlertRuleNotification extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("notifyTime")
     private AlertRuleTimeSpan notifyTime;
 
+    @com.aliyun.core.annotation.NameInMap("qwencloudContacts")
+    private java.util.Map<String, java.util.Map<String, ?>> qwencloudContacts;
+
     @com.aliyun.core.annotation.NameInMap("silenceTime")
     private Long silenceTime;
 
@@ -55,6 +58,7 @@ public class AlertRuleNotification extends TeaModel {
         this.fsWebhooks = builder.fsWebhooks;
         this.groups = builder.groups;
         this.notifyTime = builder.notifyTime;
+        this.qwencloudContacts = builder.qwencloudContacts;
         this.silenceTime = builder.silenceTime;
         this.slackWebhooks = builder.slackWebhooks;
         this.wxWebhooks = builder.wxWebhooks;
@@ -122,6 +126,13 @@ public class AlertRuleNotification extends TeaModel {
     }
 
     /**
+     * @return qwencloudContacts
+     */
+    public java.util.Map<String, java.util.Map<String, ?>> getQwencloudContacts() {
+        return this.qwencloudContacts;
+    }
+
+    /**
      * @return silenceTime
      */
     public Long getSilenceTime() {
@@ -150,6 +161,7 @@ public class AlertRuleNotification extends TeaModel {
         private java.util.List<String> fsWebhooks; 
         private java.util.List<String> groups; 
         private AlertRuleTimeSpan notifyTime; 
+        private java.util.Map<String, java.util.Map<String, ?>> qwencloudContacts; 
         private Long silenceTime; 
         private java.util.List<String> slackWebhooks; 
         private java.util.List<String> wxWebhooks; 
@@ -165,6 +177,7 @@ public class AlertRuleNotification extends TeaModel {
             this.fsWebhooks = model.fsWebhooks;
             this.groups = model.groups;
             this.notifyTime = model.notifyTime;
+            this.qwencloudContacts = model.qwencloudContacts;
             this.silenceTime = model.silenceTime;
             this.slackWebhooks = model.slackWebhooks;
             this.wxWebhooks = model.wxWebhooks;
@@ -223,6 +236,14 @@ public class AlertRuleNotification extends TeaModel {
          */
         public Builder notifyTime(AlertRuleTimeSpan notifyTime) {
             this.notifyTime = notifyTime;
+            return this;
+        }
+
+        /**
+         * qwencloudContacts.
+         */
+        public Builder qwencloudContacts(java.util.Map<String, java.util.Map<String, ?>> qwencloudContacts) {
+            this.qwencloudContacts = qwencloudContacts;
             return this;
         }
 

@@ -20,12 +20,24 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("instances")
     private java.util.List<Instances> instances;
 
+    @com.aliyun.core.annotation.NameInMap("maxResults")
+    private String maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("nextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("totalCount")
+    private String totalCount;
+
     private ListPrometheusVirtualInstancesResponseBody(Builder builder) {
         this.instances = builder.instances;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -48,22 +60,49 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxResults
+     */
+    public String getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private java.util.List<Instances> instances; 
+        private String maxResults; 
+        private String nextToken; 
         private String requestId; 
+        private String totalCount; 
 
         private Builder() {
         } 
 
         private Builder(ListPrometheusVirtualInstancesResponseBody model) {
             this.instances = model.instances;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
             this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
         } 
 
         /**
@@ -75,6 +114,22 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * maxResults.
+         */
+        public Builder maxResults(String maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * nextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
          * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
@@ -82,6 +137,14 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * totalCount.
+         */
+        public Builder totalCount(String totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
