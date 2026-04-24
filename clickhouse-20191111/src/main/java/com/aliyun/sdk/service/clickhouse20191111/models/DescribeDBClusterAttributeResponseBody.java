@@ -482,6 +482,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpcIpAddr")
         private String vpcIpAddr;
 
+        @com.aliyun.core.annotation.NameInMap("WebUISnatStatus")
+        private String webUISnatStatus;
+
+        @com.aliyun.core.annotation.NameInMap("WebUIStatus")
+        private String webUIStatus;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
@@ -546,6 +552,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.vpcCloudInstanceId = builder.vpcCloudInstanceId;
             this.vpcId = builder.vpcId;
             this.vpcIpAddr = builder.vpcIpAddr;
+            this.webUISnatStatus = builder.webUISnatStatus;
+            this.webUIStatus = builder.webUIStatus;
             this.zoneId = builder.zoneId;
             this.zoneIdVswitchMap = builder.zoneIdVswitchMap;
             this.zookeeperClass = builder.zookeeperClass;
@@ -938,6 +946,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return webUISnatStatus
+         */
+        public String getWebUISnatStatus() {
+            return this.webUISnatStatus;
+        }
+
+        /**
+         * @return webUIStatus
+         */
+        public String getWebUIStatus() {
+            return this.webUIStatus;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -1013,6 +1035,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String vpcCloudInstanceId; 
             private String vpcId; 
             private String vpcIpAddr; 
+            private String webUISnatStatus; 
+            private String webUIStatus; 
             private String zoneId; 
             private java.util.Map<String, ?> zoneIdVswitchMap; 
             private String zookeeperClass; 
@@ -1075,6 +1099,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
                 this.vpcCloudInstanceId = model.vpcCloudInstanceId;
                 this.vpcId = model.vpcId;
                 this.vpcIpAddr = model.vpcIpAddr;
+                this.webUISnatStatus = model.webUISnatStatus;
+                this.webUIStatus = model.webUIStatus;
                 this.zoneId = model.zoneId;
                 this.zoneIdVswitchMap = model.zoneIdVswitchMap;
                 this.zookeeperClass = model.zookeeperClass;
@@ -1761,6 +1787,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder vpcIpAddr(String vpcIpAddr) {
                 this.vpcIpAddr = vpcIpAddr;
+                return this;
+            }
+
+            /**
+             * WebUISnatStatus.
+             */
+            public Builder webUISnatStatus(String webUISnatStatus) {
+                this.webUISnatStatus = webUISnatStatus;
+                return this;
+            }
+
+            /**
+             * WebUIStatus.
+             */
+            public Builder webUIStatus(String webUIStatus) {
+                this.webUIStatus = webUIStatus;
                 return this;
             }
 
