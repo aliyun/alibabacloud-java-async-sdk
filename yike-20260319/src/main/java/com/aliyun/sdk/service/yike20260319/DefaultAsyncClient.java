@@ -274,6 +274,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetYikeVoiceNarratorJob  GetYikeVoiceNarratorJobRequest
+     * @return GetYikeVoiceNarratorJobResponse
+     */
+    @Override
+    public CompletableFuture<GetYikeVoiceNarratorJobResponse> getYikeVoiceNarratorJob(GetYikeVoiceNarratorJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetYikeVoiceNarratorJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetYikeVoiceNarratorJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetYikeVoiceNarratorJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListYikeAssetFolders  ListYikeAssetFoldersRequest
      * @return ListYikeAssetFoldersResponse
      */
@@ -448,6 +466,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitYikeStoryboardJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitYikeVoiceNarratorJob  SubmitYikeVoiceNarratorJobRequest
+     * @return SubmitYikeVoiceNarratorJobResponse
+     */
+    @Override
+    public CompletableFuture<SubmitYikeVoiceNarratorJobResponse> submitYikeVoiceNarratorJob(SubmitYikeVoiceNarratorJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitYikeVoiceNarratorJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitYikeVoiceNarratorJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitYikeVoiceNarratorJobResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
