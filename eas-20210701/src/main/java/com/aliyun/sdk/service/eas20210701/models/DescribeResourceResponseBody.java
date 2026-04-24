@@ -83,6 +83,9 @@ public class DescribeResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
+    @com.aliyun.core.annotation.NameInMap("ServiceCount")
+    private String serviceCount;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -115,6 +118,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         this.resourceId = builder.resourceId;
         this.resourceName = builder.resourceName;
         this.resourceType = builder.resourceType;
+        this.serviceCount = builder.serviceCount;
         this.status = builder.status;
         this.updateTime = builder.updateTime;
         this.usageMode = builder.usageMode;
@@ -287,6 +291,13 @@ public class DescribeResourceResponseBody extends TeaModel {
     }
 
     /**
+     * @return serviceCount
+     */
+    public String getServiceCount() {
+        return this.serviceCount;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -330,6 +341,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         private String resourceId; 
         private String resourceName; 
         private String resourceType; 
+        private String serviceCount; 
         private String status; 
         private String updateTime; 
         private String usageMode; 
@@ -360,6 +372,7 @@ public class DescribeResourceResponseBody extends TeaModel {
             this.resourceId = model.resourceId;
             this.resourceName = model.resourceName;
             this.resourceType = model.resourceType;
+            this.serviceCount = model.serviceCount;
             this.status = model.status;
             this.updateTime = model.updateTime;
             this.usageMode = model.usageMode;
@@ -596,6 +609,14 @@ public class DescribeResourceResponseBody extends TeaModel {
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * ServiceCount.
+         */
+        public Builder serviceCount(String serviceCount) {
+            this.serviceCount = serviceCount;
             return this;
         }
 

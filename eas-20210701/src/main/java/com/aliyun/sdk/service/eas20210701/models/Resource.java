@@ -77,6 +77,9 @@ public class Resource extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
+    @com.aliyun.core.annotation.NameInMap("ServiceCount")
+    private Integer serviceCount;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -110,6 +113,7 @@ public class Resource extends TeaModel {
         this.resourceId = builder.resourceId;
         this.resourceName = builder.resourceName;
         this.resourceType = builder.resourceType;
+        this.serviceCount = builder.serviceCount;
         this.status = builder.status;
         this.updateTime = builder.updateTime;
         this.usageMode = builder.usageMode;
@@ -269,6 +273,13 @@ public class Resource extends TeaModel {
     }
 
     /**
+     * @return serviceCount
+     */
+    public Integer getServiceCount() {
+        return this.serviceCount;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -317,6 +328,7 @@ public class Resource extends TeaModel {
         private String resourceId; 
         private String resourceName; 
         private String resourceType; 
+        private Integer serviceCount; 
         private String status; 
         private String updateTime; 
         private String usageMode; 
@@ -346,6 +358,7 @@ public class Resource extends TeaModel {
             this.resourceId = model.resourceId;
             this.resourceName = model.resourceName;
             this.resourceType = model.resourceType;
+            this.serviceCount = model.serviceCount;
             this.status = model.status;
             this.updateTime = model.updateTime;
             this.usageMode = model.usageMode;
@@ -509,6 +522,14 @@ public class Resource extends TeaModel {
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * ServiceCount.
+         */
+        public Builder serviceCount(Integer serviceCount) {
+            this.serviceCount = serviceCount;
             return this;
         }
 
