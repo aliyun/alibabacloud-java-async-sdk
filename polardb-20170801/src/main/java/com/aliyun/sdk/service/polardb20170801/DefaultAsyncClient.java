@@ -135,6 +135,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddPolarFsPathMapping  AddPolarFsPathMappingRequest
+     * @return AddPolarFsPathMappingResponse
+     */
+    @Override
+    public CompletableFuture<AddPolarFsPathMappingResponse> addPolarFsPathMapping(AddPolarFsPathMappingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddPolarFsPathMapping").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddPolarFsPathMappingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddPolarFsPathMappingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddPolarFsQuota  AddPolarFsQuotaRequest
      * @return AddPolarFsQuotaResponse
      */
@@ -1601,6 +1619,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeletePolarFsObjectsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeletePolarFsPathMapping  DeletePolarFsPathMappingRequest
+     * @return DeletePolarFsPathMappingResponse
+     */
+    @Override
+    public CompletableFuture<DeletePolarFsPathMappingResponse> deletePolarFsPathMapping(DeletePolarFsPathMappingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeletePolarFsPathMapping").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePolarFsPathMappingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeletePolarFsPathMappingResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

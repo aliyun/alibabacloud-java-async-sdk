@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddFirewallRulesResponse> addFirewallRules(AddFirewallRulesRequest request);
 
     /**
+     * @param request the request parameters of AddPolarFsPathMapping  AddPolarFsPathMappingRequest
+     * @return AddPolarFsPathMappingResponse
+     */
+    CompletableFuture<AddPolarFsPathMappingResponse> addPolarFsPathMapping(AddPolarFsPathMappingRequest request);
+
+    /**
      * @param request the request parameters of AddPolarFsQuota  AddPolarFsQuotaRequest
      * @return AddPolarFsQuotaResponse
      */
@@ -596,6 +602,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePolarFsObjectsResponse
      */
     CompletableFuture<DeletePolarFsObjectsResponse> deletePolarFsObjects(DeletePolarFsObjectsRequest request);
+
+    /**
+     * @param request the request parameters of DeletePolarFsPathMapping  DeletePolarFsPathMappingRequest
+     * @return DeletePolarFsPathMappingResponse
+     */
+    CompletableFuture<DeletePolarFsPathMappingResponse> deletePolarFsPathMapping(DeletePolarFsPathMappingRequest request);
 
     /**
      * @param request the request parameters of DeletePolarFsQuota  DeletePolarFsQuotaRequest

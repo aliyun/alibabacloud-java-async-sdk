@@ -132,8 +132,14 @@ public class SetPolarFsFileQuotaRequest extends Request {
      * <p>SetPolarFsFileQuotaRequest</p>
      */
     public static class FilePathQuotas extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Capacity")
+        private Long capacity;
+
         @com.aliyun.core.annotation.NameInMap("FilePathId")
         private String filePathId;
+
+        @com.aliyun.core.annotation.NameInMap("Inodes")
+        private Long inodes;
 
         @com.aliyun.core.annotation.NameInMap("MaxDepth")
         private Integer maxDepth;
@@ -145,7 +151,9 @@ public class SetPolarFsFileQuotaRequest extends Request {
         private String strategy;
 
         private FilePathQuotas(Builder builder) {
+            this.capacity = builder.capacity;
             this.filePathId = builder.filePathId;
+            this.inodes = builder.inodes;
             this.maxDepth = builder.maxDepth;
             this.quotaIds = builder.quotaIds;
             this.strategy = builder.strategy;
@@ -160,10 +168,24 @@ public class SetPolarFsFileQuotaRequest extends Request {
         }
 
         /**
+         * @return capacity
+         */
+        public Long getCapacity() {
+            return this.capacity;
+        }
+
+        /**
          * @return filePathId
          */
         public String getFilePathId() {
             return this.filePathId;
+        }
+
+        /**
+         * @return inodes
+         */
+        public Long getInodes() {
+            return this.inodes;
         }
 
         /**
@@ -188,7 +210,9 @@ public class SetPolarFsFileQuotaRequest extends Request {
         }
 
         public static final class Builder {
+            private Long capacity; 
             private String filePathId; 
+            private Long inodes; 
             private Integer maxDepth; 
             private String quotaIds; 
             private String strategy; 
@@ -197,17 +221,35 @@ public class SetPolarFsFileQuotaRequest extends Request {
             } 
 
             private Builder(FilePathQuotas model) {
+                this.capacity = model.capacity;
                 this.filePathId = model.filePathId;
+                this.inodes = model.inodes;
                 this.maxDepth = model.maxDepth;
                 this.quotaIds = model.quotaIds;
                 this.strategy = model.strategy;
             } 
 
             /**
+             * Capacity.
+             */
+            public Builder capacity(Long capacity) {
+                this.capacity = capacity;
+                return this;
+            }
+
+            /**
              * FilePathId.
              */
             public Builder filePathId(String filePathId) {
                 this.filePathId = filePathId;
+                return this;
+            }
+
+            /**
+             * Inodes.
+             */
+            public Builder inodes(Long inodes) {
+                this.inodes = inodes;
                 return this;
             }
 

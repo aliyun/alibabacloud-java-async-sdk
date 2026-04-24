@@ -22,9 +22,17 @@ public class DescribePolarFsQuotaRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
+    private String path;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolarFsInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String polarFsInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QuotaType")
+    private String quotaType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -33,7 +41,9 @@ public class DescribePolarFsQuotaRequest extends Request {
     private DescribePolarFsQuotaRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.path = builder.path;
         this.polarFsInstanceId = builder.polarFsInstanceId;
+        this.quotaType = builder.quotaType;
         this.regionId = builder.regionId;
     }
 
@@ -58,10 +68,24 @@ public class DescribePolarFsQuotaRequest extends Request {
     }
 
     /**
+     * @return path
+     */
+    public String getPath() {
+        return this.path;
+    }
+
+    /**
      * @return polarFsInstanceId
      */
     public String getPolarFsInstanceId() {
         return this.polarFsInstanceId;
+    }
+
+    /**
+     * @return quotaType
+     */
+    public String getQuotaType() {
+        return this.quotaType;
     }
 
     /**
@@ -73,7 +97,9 @@ public class DescribePolarFsQuotaRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribePolarFsQuotaRequest, Builder> {
         private String DBClusterId; 
+        private String path; 
         private String polarFsInstanceId; 
+        private String quotaType; 
         private String regionId; 
 
         private Builder() {
@@ -83,7 +109,9 @@ public class DescribePolarFsQuotaRequest extends Request {
         private Builder(DescribePolarFsQuotaRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.path = request.path;
             this.polarFsInstanceId = request.polarFsInstanceId;
+            this.quotaType = request.quotaType;
             this.regionId = request.regionId;
         } 
 
@@ -97,6 +125,15 @@ public class DescribePolarFsQuotaRequest extends Request {
         }
 
         /**
+         * Path.
+         */
+        public Builder path(String path) {
+            this.putQueryParameter("Path", path);
+            this.path = path;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +142,15 @@ public class DescribePolarFsQuotaRequest extends Request {
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.putQueryParameter("PolarFsInstanceId", polarFsInstanceId);
             this.polarFsInstanceId = polarFsInstanceId;
+            return this;
+        }
+
+        /**
+         * QuotaType.
+         */
+        public Builder quotaType(String quotaType) {
+            this.putQueryParameter("QuotaType", quotaType);
+            this.quotaType = quotaType;
             return this;
         }
 

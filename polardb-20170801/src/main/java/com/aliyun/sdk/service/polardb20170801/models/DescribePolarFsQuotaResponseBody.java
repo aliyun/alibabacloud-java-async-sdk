@@ -26,11 +26,17 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
+    @com.aliyun.core.annotation.NameInMap("Path")
+    private String path;
+
     @com.aliyun.core.annotation.NameInMap("PolarFsInstanceId")
     private String polarFsInstanceId;
 
     @com.aliyun.core.annotation.NameInMap("PolicyItems")
     private java.util.List<PolicyItems> policyItems;
+
+    @com.aliyun.core.annotation.NameInMap("QuotaItems")
+    private java.util.List<QuotaItems> quotaItems;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,8 +48,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         this.pageNumber = builder.pageNumber;
         this.pageRecordCount = builder.pageRecordCount;
         this.pageSize = builder.pageSize;
+        this.path = builder.path;
         this.polarFsInstanceId = builder.polarFsInstanceId;
         this.policyItems = builder.policyItems;
+        this.quotaItems = builder.quotaItems;
         this.requestId = builder.requestId;
         this.totalRecordCount = builder.totalRecordCount;
     }
@@ -82,6 +90,13 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
     }
 
     /**
+     * @return path
+     */
+    public String getPath() {
+        return this.path;
+    }
+
+    /**
      * @return polarFsInstanceId
      */
     public String getPolarFsInstanceId() {
@@ -93,6 +108,13 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
      */
     public java.util.List<PolicyItems> getPolicyItems() {
         return this.policyItems;
+    }
+
+    /**
+     * @return quotaItems
+     */
+    public java.util.List<QuotaItems> getQuotaItems() {
+        return this.quotaItems;
     }
 
     /**
@@ -113,8 +135,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         private String pageNumber; 
         private String pageRecordCount; 
         private String pageSize; 
+        private String path; 
         private String polarFsInstanceId; 
         private java.util.List<PolicyItems> policyItems; 
+        private java.util.List<QuotaItems> quotaItems; 
         private String requestId; 
         private String totalRecordCount; 
 
@@ -125,8 +149,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             this.pageNumber = model.pageNumber;
             this.pageRecordCount = model.pageRecordCount;
             this.pageSize = model.pageSize;
+            this.path = model.path;
             this.polarFsInstanceId = model.polarFsInstanceId;
             this.policyItems = model.policyItems;
+            this.quotaItems = model.quotaItems;
             this.requestId = model.requestId;
             this.totalRecordCount = model.totalRecordCount;
         } 
@@ -156,6 +182,14 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
+         * Path.
+         */
+        public Builder path(String path) {
+            this.path = path;
+            return this;
+        }
+
+        /**
          * PolarFsInstanceId.
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
@@ -168,6 +202,14 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
          */
         public Builder policyItems(java.util.List<PolicyItems> policyItems) {
             this.policyItems = policyItems;
+            return this;
+        }
+
+        /**
+         * QuotaItems.
+         */
+        public Builder quotaItems(java.util.List<QuotaItems> quotaItems) {
+            this.quotaItems = quotaItems;
             return this;
         }
 
@@ -455,6 +497,144 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
 
             public PolicyItems build() {
                 return new PolicyItems(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePolarFsQuotaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolarFsQuotaResponseBody</p>
+     */
+    public static class QuotaItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Capacity")
+        private Long capacity;
+
+        @com.aliyun.core.annotation.NameInMap("Inodes")
+        private Long inodes;
+
+        @com.aliyun.core.annotation.NameInMap("Path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("UsedCapacity")
+        private Long usedCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("UsedInodes")
+        private Long usedInodes;
+
+        private QuotaItems(Builder builder) {
+            this.capacity = builder.capacity;
+            this.inodes = builder.inodes;
+            this.path = builder.path;
+            this.usedCapacity = builder.usedCapacity;
+            this.usedInodes = builder.usedInodes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QuotaItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return capacity
+         */
+        public Long getCapacity() {
+            return this.capacity;
+        }
+
+        /**
+         * @return inodes
+         */
+        public Long getInodes() {
+            return this.inodes;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return usedCapacity
+         */
+        public Long getUsedCapacity() {
+            return this.usedCapacity;
+        }
+
+        /**
+         * @return usedInodes
+         */
+        public Long getUsedInodes() {
+            return this.usedInodes;
+        }
+
+        public static final class Builder {
+            private Long capacity; 
+            private Long inodes; 
+            private String path; 
+            private Long usedCapacity; 
+            private Long usedInodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuotaItems model) {
+                this.capacity = model.capacity;
+                this.inodes = model.inodes;
+                this.path = model.path;
+                this.usedCapacity = model.usedCapacity;
+                this.usedInodes = model.usedInodes;
+            } 
+
+            /**
+             * Capacity.
+             */
+            public Builder capacity(Long capacity) {
+                this.capacity = capacity;
+                return this;
+            }
+
+            /**
+             * Inodes.
+             */
+            public Builder inodes(Long inodes) {
+                this.inodes = inodes;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * UsedCapacity.
+             */
+            public Builder usedCapacity(Long usedCapacity) {
+                this.usedCapacity = usedCapacity;
+                return this;
+            }
+
+            /**
+             * UsedInodes.
+             */
+            public Builder usedInodes(Long usedInodes) {
+                this.usedInodes = usedInodes;
+                return this;
+            }
+
+            public QuotaItems build() {
+                return new QuotaItems(this);
             } 
 
         } 
