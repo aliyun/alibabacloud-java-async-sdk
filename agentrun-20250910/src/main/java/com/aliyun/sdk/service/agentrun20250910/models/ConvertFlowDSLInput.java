@@ -218,11 +218,15 @@ public class ConvertFlowDSLInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("vpcEndpointName")
         private String vpcEndpointName;
 
+        @com.aliyun.core.annotation.NameInMap("vpcEndpoints")
+        private java.util.Map<String, String> vpcEndpoints;
+
         private Options(Builder builder) {
             this.compatibilityCheck = builder.compatibilityCheck;
             this.credentialName = builder.credentialName;
             this.flowName = builder.flowName;
             this.vpcEndpointName = builder.vpcEndpointName;
+            this.vpcEndpoints = builder.vpcEndpoints;
         }
 
         public static Builder builder() {
@@ -261,11 +265,19 @@ public class ConvertFlowDSLInput extends TeaModel {
             return this.vpcEndpointName;
         }
 
+        /**
+         * @return vpcEndpoints
+         */
+        public java.util.Map<String, String> getVpcEndpoints() {
+            return this.vpcEndpoints;
+        }
+
         public static final class Builder {
             private Boolean compatibilityCheck; 
             private String credentialName; 
             private String flowName; 
             private String vpcEndpointName; 
+            private java.util.Map<String, String> vpcEndpoints; 
 
             private Builder() {
             } 
@@ -275,6 +287,7 @@ public class ConvertFlowDSLInput extends TeaModel {
                 this.credentialName = model.credentialName;
                 this.flowName = model.flowName;
                 this.vpcEndpointName = model.vpcEndpointName;
+                this.vpcEndpoints = model.vpcEndpoints;
             } 
 
             /**
@@ -305,10 +318,21 @@ public class ConvertFlowDSLInput extends TeaModel {
             }
 
             /**
-             * vpcEndpointName.
+             * <p>全局VPC端点名称，对所有节点统一生效。如果指定了vpcEndpoints映射，则映射中的节点优先使用映射值</p>
              */
             public Builder vpcEndpointName(String vpcEndpointName) {
                 this.vpcEndpointName = vpcEndpointName;
+                return this;
+            }
+
+            /**
+             * <p>按节点名称指定VPC端点，key为节点名称(stateName)，value为该节点使用的VPC端点名称。优先级高于vpcEndpointName</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;LLM节点&quot;:&quot;vpc-endpoint-1&quot;,&quot;Agent节点&quot;:&quot;vpc-endpoint-2&quot;}</p>
+             */
+            public Builder vpcEndpoints(java.util.Map<String, String> vpcEndpoints) {
+                this.vpcEndpoints = vpcEndpoints;
                 return this;
             }
 

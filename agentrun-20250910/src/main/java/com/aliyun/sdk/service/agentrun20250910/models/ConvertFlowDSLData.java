@@ -144,7 +144,7 @@ public class ConvertFlowDSLData extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("details")
-        private java.util.Map<String, String> details;
+        private java.util.Map<String, ?> details;
 
         @com.aliyun.core.annotation.NameInMap("issueType")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -197,7 +197,7 @@ public class ConvertFlowDSLData extends TeaModel {
         /**
          * @return details
          */
-        public java.util.Map<String, String> getDetails() {
+        public java.util.Map<String, ?> getDetails() {
             return this.details;
         }
 
@@ -245,7 +245,7 @@ public class ConvertFlowDSLData extends TeaModel {
 
         public static final class Builder {
             private String description; 
-            private java.util.Map<String, String> details; 
+            private java.util.Map<String, ?> details; 
             private String issueType; 
             private String level; 
             private String nodeId; 
@@ -282,7 +282,7 @@ public class ConvertFlowDSLData extends TeaModel {
             /**
              * <p>问题的详细信息（JSON对象）</p>
              */
-            public Builder details(java.util.Map<String, String> details) {
+            public Builder details(java.util.Map<String, ?> details) {
                 this.details = details;
                 return this;
             }
