@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeEdgeFunctionsResponse} extends {@link TeaModel}
+ * {@link DeleteApiKeyResponse} extends {@link TeaModel}
  *
- * <p>DescribeEdgeFunctionsResponse</p>
+ * <p>DeleteApiKeyResponse</p>
  */
-public class DescribeEdgeFunctionsResponse extends Response {
+public class DeleteApiKeyResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeEdgeFunctionsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeEdgeFunctionsResponseBody body;
+    private DeleteApiKeyResponseBody body;
 
-    private DescribeEdgeFunctionsResponse(BuilderImpl builder) {
+    private DeleteApiKeyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeEdgeFunctionsResponse create() {
+    public static DeleteApiKeyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeEdgeFunctionsResponse extends Response {
     /**
      * @return body
      */
-    public DescribeEdgeFunctionsResponseBody getBody() {
+    public DeleteApiKeyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeEdgeFunctionsResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteApiKeyResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeEdgeFunctionsResponseBody body);
+        Builder body(DeleteApiKeyResponseBody body);
 
         @Override
-        DescribeEdgeFunctionsResponse build();
+        DeleteApiKeyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeEdgeFunctionsResponse, Builder>
+            extends Response.BuilderImpl<DeleteApiKeyResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeEdgeFunctionsResponseBody body; 
+        private DeleteApiKeyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeEdgeFunctionsResponse response) {
+        private BuilderImpl(DeleteApiKeyResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeEdgeFunctionsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeEdgeFunctionsResponseBody body) {
+        public Builder body(DeleteApiKeyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeEdgeFunctionsResponse build() {
-            return new DescribeEdgeFunctionsResponse(this);
+        public DeleteApiKeyResponse build() {
+            return new DeleteApiKeyResponse(this);
         } 
 
     } 

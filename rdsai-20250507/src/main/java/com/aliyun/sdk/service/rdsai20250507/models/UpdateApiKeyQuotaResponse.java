@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateEdgeFunctionResponse} extends {@link TeaModel}
+ * {@link UpdateApiKeyQuotaResponse} extends {@link TeaModel}
  *
- * <p>UpdateEdgeFunctionResponse</p>
+ * <p>UpdateApiKeyQuotaResponse</p>
  */
-public class UpdateEdgeFunctionResponse extends Response {
+public class UpdateApiKeyQuotaResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class UpdateEdgeFunctionResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateEdgeFunctionResponseBody body;
+    private UpdateApiKeyQuotaResponseBody body;
 
-    private UpdateEdgeFunctionResponse(BuilderImpl builder) {
+    private UpdateApiKeyQuotaResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateEdgeFunctionResponse create() {
+    public static UpdateApiKeyQuotaResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class UpdateEdgeFunctionResponse extends Response {
     /**
      * @return body
      */
-    public UpdateEdgeFunctionResponseBody getBody() {
+    public UpdateApiKeyQuotaResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateEdgeFunctionResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateApiKeyQuotaResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateEdgeFunctionResponseBody body);
+        Builder body(UpdateApiKeyQuotaResponseBody body);
 
         @Override
-        UpdateEdgeFunctionResponse build();
+        UpdateApiKeyQuotaResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateEdgeFunctionResponse, Builder>
+            extends Response.BuilderImpl<UpdateApiKeyQuotaResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UpdateEdgeFunctionResponseBody body; 
+        private UpdateApiKeyQuotaResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateEdgeFunctionResponse response) {
+        private BuilderImpl(UpdateApiKeyQuotaResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class UpdateEdgeFunctionResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateEdgeFunctionResponseBody body) {
+        public Builder body(UpdateApiKeyQuotaResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateEdgeFunctionResponse build() {
-            return new UpdateEdgeFunctionResponse(this);
+        public UpdateApiKeyQuotaResponse build() {
+            return new UpdateApiKeyQuotaResponse(this);
         } 
 
     } 

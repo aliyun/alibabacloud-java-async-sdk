@@ -26,6 +26,10 @@ public class CreateScheduledTaskRequest extends Request {
     private String frequency;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InspectionItems")
+    private String inspectionItems;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
 
@@ -62,6 +66,7 @@ public class CreateScheduledTaskRequest extends Request {
         super(builder);
         this.description = builder.description;
         this.frequency = builder.frequency;
+        this.inspectionItems = builder.inspectionItems;
         this.instanceIds = builder.instanceIds;
         this.name = builder.name;
         this.regionId = builder.regionId;
@@ -97,6 +102,13 @@ public class CreateScheduledTaskRequest extends Request {
      */
     public String getFrequency() {
         return this.frequency;
+    }
+
+    /**
+     * @return inspectionItems
+     */
+    public String getInspectionItems() {
+        return this.inspectionItems;
     }
 
     /**
@@ -158,6 +170,7 @@ public class CreateScheduledTaskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateScheduledTaskRequest, Builder> {
         private String description; 
         private String frequency; 
+        private String inspectionItems; 
         private String instanceIds; 
         private String name; 
         private String regionId; 
@@ -175,6 +188,7 @@ public class CreateScheduledTaskRequest extends Request {
             super(request);
             this.description = request.description;
             this.frequency = request.frequency;
+            this.inspectionItems = request.inspectionItems;
             this.instanceIds = request.instanceIds;
             this.name = request.name;
             this.regionId = request.regionId;
@@ -213,6 +227,15 @@ public class CreateScheduledTaskRequest extends Request {
         public Builder frequency(String frequency) {
             this.putQueryParameter("Frequency", frequency);
             this.frequency = frequency;
+            return this;
+        }
+
+        /**
+         * InspectionItems.
+         */
+        public Builder inspectionItems(String inspectionItems) {
+            this.putQueryParameter("InspectionItems", inspectionItems);
+            this.inspectionItems = inspectionItems;
             return this;
         }
 

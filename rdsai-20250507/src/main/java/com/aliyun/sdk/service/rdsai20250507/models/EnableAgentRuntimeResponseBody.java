@@ -12,22 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteEdgeFunctionResponseBody} extends {@link TeaModel}
+ * {@link EnableAgentRuntimeResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteEdgeFunctionResponseBody</p>
+ * <p>EnableAgentRuntimeResponseBody</p>
  */
-public class DeleteEdgeFunctionResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("EdgeFunctionName")
-    private String edgeFunctionName;
-
+public class EnableAgentRuntimeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DeleteEdgeFunctionResponseBody(Builder builder) {
-        this.edgeFunctionName = builder.edgeFunctionName;
+    private EnableAgentRuntimeResponseBody(Builder builder) {
         this.instanceName = builder.instanceName;
         this.requestId = builder.requestId;
     }
@@ -36,19 +32,12 @@ public class DeleteEdgeFunctionResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteEdgeFunctionResponseBody create() {
+    public static EnableAgentRuntimeResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return edgeFunctionName
-     */
-    public String getEdgeFunctionName() {
-        return this.edgeFunctionName;
     }
 
     /**
@@ -66,35 +55,19 @@ public class DeleteEdgeFunctionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String edgeFunctionName; 
         private String instanceName; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(DeleteEdgeFunctionResponseBody model) {
-            this.edgeFunctionName = model.edgeFunctionName;
+        private Builder(EnableAgentRuntimeResponseBody model) {
             this.instanceName = model.instanceName;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>fc-xxxx</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ef-****</p>
-         */
-        public Builder edgeFunctionName(String edgeFunctionName) {
-            this.edgeFunctionName = edgeFunctionName;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the RDS Supabase instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ra-supabase-8moov5lxba***</p>
+         * InstanceName.
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -105,15 +78,15 @@ public class DeleteEdgeFunctionResponseBody extends TeaModel {
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteEdgeFunctionResponseBody build() {
-            return new DeleteEdgeFunctionResponseBody(this);
+        public EnableAgentRuntimeResponseBody build() {
+            return new EnableAgentRuntimeResponseBody(this);
         } 
 
     } 

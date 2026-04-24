@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteEdgeFunctionResponse} extends {@link TeaModel}
+ * {@link CreateApiKeyResponse} extends {@link TeaModel}
  *
- * <p>DeleteEdgeFunctionResponse</p>
+ * <p>CreateApiKeyResponse</p>
  */
-public class DeleteEdgeFunctionResponse extends Response {
+public class CreateApiKeyResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DeleteEdgeFunctionResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteEdgeFunctionResponseBody body;
+    private CreateApiKeyResponseBody body;
 
-    private DeleteEdgeFunctionResponse(BuilderImpl builder) {
+    private CreateApiKeyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteEdgeFunctionResponse create() {
+    public static CreateApiKeyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DeleteEdgeFunctionResponse extends Response {
     /**
      * @return body
      */
-    public DeleteEdgeFunctionResponseBody getBody() {
+    public CreateApiKeyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteEdgeFunctionResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateApiKeyResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteEdgeFunctionResponseBody body);
+        Builder body(CreateApiKeyResponseBody body);
 
         @Override
-        DeleteEdgeFunctionResponse build();
+        CreateApiKeyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteEdgeFunctionResponse, Builder>
+            extends Response.BuilderImpl<CreateApiKeyResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DeleteEdgeFunctionResponseBody body; 
+        private CreateApiKeyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteEdgeFunctionResponse response) {
+        private BuilderImpl(CreateApiKeyResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DeleteEdgeFunctionResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteEdgeFunctionResponseBody body) {
+        public Builder body(CreateApiKeyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteEdgeFunctionResponse build() {
-            return new DeleteEdgeFunctionResponse(this);
+        public CreateApiKeyResponse build() {
+            return new CreateApiKeyResponse(this);
         } 
 
     } 

@@ -12,18 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteEdgeFunctionRequest} extends {@link RequestModel}
+ * {@link EnableAgentRuntimeRequest} extends {@link RequestModel}
  *
- * <p>DeleteEdgeFunctionRequest</p>
+ * <p>EnableAgentRuntimeRequest</p>
  */
-public class DeleteEdgeFunctionRequest extends Request {
+public class EnableAgentRuntimeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("EdgeFunctionName")
-    private String edgeFunctionName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
@@ -34,19 +30,28 @@ public class DeleteEdgeFunctionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    private DeleteEdgeFunctionRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    private String securityGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    private String vSwitchId;
+
+    private EnableAgentRuntimeRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
-        this.edgeFunctionName = builder.edgeFunctionName;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
+        this.securityGroupId = builder.securityGroupId;
+        this.vSwitchId = builder.vSwitchId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteEdgeFunctionRequest create() {
+    public static EnableAgentRuntimeRequest create() {
         return builder().build();
     }
 
@@ -63,13 +68,6 @@ public class DeleteEdgeFunctionRequest extends Request {
     }
 
     /**
-     * @return edgeFunctionName
-     */
-    public String getEdgeFunctionName() {
-        return this.edgeFunctionName;
-    }
-
-    /**
      * @return instanceName
      */
     public String getInstanceName() {
@@ -83,29 +81,42 @@ public class DeleteEdgeFunctionRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteEdgeFunctionRequest, Builder> {
+    /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public static final class Builder extends Request.Builder<EnableAgentRuntimeRequest, Builder> {
         private String clientToken; 
-        private String edgeFunctionName; 
         private String instanceName; 
         private String regionId; 
+        private String securityGroupId; 
+        private String vSwitchId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteEdgeFunctionRequest request) {
+        private Builder(EnableAgentRuntimeRequest request) {
             super(request);
             this.clientToken = request.clientToken;
-            this.edgeFunctionName = request.edgeFunctionName;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
+            this.securityGroupId = request.securityGroupId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCz****</p>
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -114,19 +125,6 @@ public class DeleteEdgeFunctionRequest extends Request {
         }
 
         /**
-         * <p>The name of the edge function.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ef-****</p>
-         */
-        public Builder edgeFunctionName(String edgeFunctionName) {
-            this.putQueryParameter("EdgeFunctionName", edgeFunctionName);
-            this.edgeFunctionName = edgeFunctionName;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the RDS Supabase instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,10 +137,7 @@ public class DeleteEdgeFunctionRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -150,9 +145,27 @@ public class DeleteEdgeFunctionRequest extends Request {
             return this;
         }
 
+        /**
+         * SecurityGroupId.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+
         @Override
-        public DeleteEdgeFunctionRequest build() {
-            return new DeleteEdgeFunctionRequest(this);
+        public EnableAgentRuntimeRequest build() {
+            return new EnableAgentRuntimeRequest(this);
         } 
 
     } 

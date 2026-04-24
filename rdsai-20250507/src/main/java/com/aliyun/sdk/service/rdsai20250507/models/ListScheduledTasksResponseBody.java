@@ -224,6 +224,9 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Frequency")
         private String frequency;
 
+        @com.aliyun.core.annotation.NameInMap("InspectionItems")
+        private String inspectionItems;
+
         @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Long instanceCount;
 
@@ -252,6 +255,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.frequency = builder.frequency;
+            this.inspectionItems = builder.inspectionItems;
             this.instanceCount = builder.instanceCount;
             this.name = builder.name;
             this.regionId = builder.regionId;
@@ -289,6 +293,13 @@ public class ListScheduledTasksResponseBody extends TeaModel {
          */
         public String getFrequency() {
             return this.frequency;
+        }
+
+        /**
+         * @return inspectionItems
+         */
+        public String getInspectionItems() {
+            return this.inspectionItems;
         }
 
         /**
@@ -351,6 +362,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             private String createTime; 
             private String description; 
             private String frequency; 
+            private String inspectionItems; 
             private Long instanceCount; 
             private String name; 
             private String regionId; 
@@ -367,6 +379,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.frequency = model.frequency;
+                this.inspectionItems = model.inspectionItems;
                 this.instanceCount = model.instanceCount;
                 this.name = model.name;
                 this.regionId = model.regionId;
@@ -415,6 +428,14 @@ public class ListScheduledTasksResponseBody extends TeaModel {
              */
             public Builder frequency(String frequency) {
                 this.frequency = frequency;
+                return this;
+            }
+
+            /**
+             * InspectionItems.
+             */
+            public Builder inspectionItems(String inspectionItems) {
+                this.inspectionItems = inspectionItems;
                 return this;
             }
 

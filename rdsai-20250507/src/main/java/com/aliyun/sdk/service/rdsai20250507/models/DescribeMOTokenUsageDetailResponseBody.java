@@ -1,0 +1,316 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.rdsai20250507.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link DescribeMOTokenUsageDetailResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeMOTokenUsageDetailResponseBody</p>
+ */
+public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Page")
+    private Integer page;
+
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.NameInMap("Records")
+    private java.util.List<Records> records;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
+    private DescribeMOTokenUsageDetailResponseBody(Builder builder) {
+        this.page = builder.page;
+        this.pageSize = builder.pageSize;
+        this.records = builder.records;
+        this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeMOTokenUsageDetailResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return page
+     */
+    public Integer getPage() {
+        return this.page;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return records
+     */
+    public java.util.List<Records> getRecords() {
+        return this.records;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static final class Builder {
+        private Integer page; 
+        private Integer pageSize; 
+        private java.util.List<Records> records; 
+        private String requestId; 
+        private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMOTokenUsageDetailResponseBody model) {
+            this.page = model.page;
+            this.pageSize = model.pageSize;
+            this.records = model.records;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
+        /**
+         * Page.
+         */
+        public Builder page(Integer page) {
+            this.page = page;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Records.
+         */
+        public Builder records(java.util.List<Records> records) {
+            this.records = records;
+            return this;
+        }
+
+        /**
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
+        public DescribeMOTokenUsageDetailResponseBody build() {
+            return new DescribeMOTokenUsageDetailResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link DescribeMOTokenUsageDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMOTokenUsageDetailResponseBody</p>
+     */
+    public static class Records extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConsumerName")
+        private String consumerName;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
+
+        @com.aliyun.core.annotation.NameInMap("Region")
+        private String region;
+
+        @com.aliyun.core.annotation.NameInMap("RequestTime")
+        private String requestTime;
+
+        @com.aliyun.core.annotation.NameInMap("TotalTokens")
+        private Double totalTokens;
+
+        private Records(Builder builder) {
+            this.consumerName = builder.consumerName;
+            this.instanceId = builder.instanceId;
+            this.model = builder.model;
+            this.region = builder.region;
+            this.requestTime = builder.requestTime;
+            this.totalTokens = builder.totalTokens;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Records create() {
+            return builder().build();
+        }
+
+        /**
+         * @return consumerName
+         */
+        public String getConsumerName() {
+            return this.consumerName;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
+        }
+
+        /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
+        }
+
+        /**
+         * @return requestTime
+         */
+        public String getRequestTime() {
+            return this.requestTime;
+        }
+
+        /**
+         * @return totalTokens
+         */
+        public Double getTotalTokens() {
+            return this.totalTokens;
+        }
+
+        public static final class Builder {
+            private String consumerName; 
+            private String instanceId; 
+            private String model; 
+            private String region; 
+            private String requestTime; 
+            private Double totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.consumerName = model.consumerName;
+                this.instanceId = model.instanceId;
+                this.model = model.model;
+                this.region = model.region;
+                this.requestTime = model.requestTime;
+                this.totalTokens = model.totalTokens;
+            } 
+
+            /**
+             * ConsumerName.
+             */
+            public Builder consumerName(String consumerName) {
+                this.consumerName = consumerName;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
+             * Region.
+             */
+            public Builder region(String region) {
+                this.region = region;
+                return this;
+            }
+
+            /**
+             * RequestTime.
+             */
+            public Builder requestTime(String requestTime) {
+                this.requestTime = requestTime;
+                return this;
+            }
+
+            /**
+             * TotalTokens.
+             */
+            public Builder totalTokens(Double totalTokens) {
+                this.totalTokens = totalTokens;
+                return this;
+            }
+
+            public Records build() {
+                return new Records(this);
+            } 
+
+        } 
+
+    }
+}

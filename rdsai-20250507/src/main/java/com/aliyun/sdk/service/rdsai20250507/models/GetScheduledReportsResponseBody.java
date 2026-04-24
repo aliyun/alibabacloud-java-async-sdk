@@ -221,6 +221,9 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
+        @com.aliyun.core.annotation.NameInMap("InspectionItems")
+        private String inspectionItems;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -242,6 +245,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         private Reports(Builder builder) {
             this.createdTime = builder.createdTime;
             this.endTime = builder.endTime;
+            this.inspectionItems = builder.inspectionItems;
             this.regionId = builder.regionId;
             this.reportLanguage = builder.reportLanguage;
             this.reportType = builder.reportType;
@@ -270,6 +274,13 @@ public class GetScheduledReportsResponseBody extends TeaModel {
          */
         public String getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return inspectionItems
+         */
+        public String getInspectionItems() {
+            return this.inspectionItems;
         }
 
         /**
@@ -317,6 +328,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         public static final class Builder {
             private String createdTime; 
             private String endTime; 
+            private String inspectionItems; 
             private String regionId; 
             private String reportLanguage; 
             private String reportType; 
@@ -330,6 +342,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             private Builder(Reports model) {
                 this.createdTime = model.createdTime;
                 this.endTime = model.endTime;
+                this.inspectionItems = model.inspectionItems;
                 this.regionId = model.regionId;
                 this.reportLanguage = model.reportLanguage;
                 this.reportType = model.reportType;
@@ -357,6 +370,14 @@ public class GetScheduledReportsResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * InspectionItems.
+             */
+            public Builder inspectionItems(String inspectionItems) {
+                this.inspectionItems = inspectionItems;
                 return this;
             }
 

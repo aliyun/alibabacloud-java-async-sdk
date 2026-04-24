@@ -34,6 +34,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChatMessagesTaskStopResponse> chatMessagesTaskStop(ChatMessagesTaskStopRequest request);
 
     /**
+     * @param request the request parameters of CreateApiKey  CreateApiKeyRequest
+     * @return CreateApiKeyResponse
+     */
+    CompletableFuture<CreateApiKeyResponse> createApiKey(CreateApiKeyRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engine</h3>
      * <p>RDS PostgreSQL</p>
@@ -55,15 +61,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCustomAgentResponse> createCustomAgent(CreateCustomAgentRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Creates an edge function, compresses the code into a zip file, and uploads it to Supabase Storage.</p>
-     * 
-     * @param request the request parameters of CreateEdgeFunction  CreateEdgeFunctionRequest
-     * @return CreateEdgeFunctionResponse
-     */
-    CompletableFuture<CreateEdgeFunctionResponse> createEdgeFunction(CreateEdgeFunctionRequest request);
-
-    /**
      * @param request the request parameters of CreateInspectionTask  CreateInspectionTaskRequest
      * @return CreateInspectionTaskResponse
      */
@@ -80,6 +77,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateSkillResponse
      */
     CompletableFuture<CreateSkillResponse> createSkill(CreateSkillRequest request);
+
+    /**
+     * @param request the request parameters of DeleteApiKey  DeleteApiKeyRequest
+     * @return DeleteApiKeyResponse
+     */
+    CompletableFuture<DeleteApiKeyResponse> deleteApiKey(DeleteApiKeyRequest request);
 
     /**
      * <b>description</b> :
@@ -102,15 +105,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCustomAgentResponse
      */
     CompletableFuture<DeleteCustomAgentResponse> deleteCustomAgent(DeleteCustomAgentRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>Deletes an edge function.</p>
-     * 
-     * @param request the request parameters of DeleteEdgeFunction  DeleteEdgeFunctionRequest
-     * @return DeleteEdgeFunctionResponse
-     */
-    CompletableFuture<DeleteEdgeFunctionResponse> deleteEdgeFunction(DeleteEdgeFunctionRequest request);
 
     /**
      * @param request the request parameters of DeleteScheduledTask  DeleteScheduledTaskRequest
@@ -147,15 +141,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAppInstancesResponse
      */
     CompletableFuture<DescribeAppInstancesResponse> describeAppInstances(DescribeAppInstancesRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>Query the list of edge functions or a specified edge function.</p>
-     * 
-     * @param request the request parameters of DescribeEdgeFunctions  DescribeEdgeFunctionsRequest
-     * @return DescribeEdgeFunctionsResponse
-     */
-    CompletableFuture<DescribeEdgeFunctionsResponse> describeEdgeFunctions(DescribeEdgeFunctionsRequest request);
 
     /**
      * @param request the request parameters of DescribeEventsList  DescribeEventsListRequest
@@ -233,10 +218,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceStorageConfigResponse> describeInstanceStorageConfig(DescribeInstanceStorageConfigRequest request);
 
     /**
+     * @param request the request parameters of DescribeMOTokenUsageDetail  DescribeMOTokenUsageDetailRequest
+     * @return DescribeMOTokenUsageDetailResponse
+     */
+    CompletableFuture<DescribeMOTokenUsageDetailResponse> describeMOTokenUsageDetail(DescribeMOTokenUsageDetailRequest request);
+
+    /**
+     * @param request the request parameters of DescribeModelOperator  DescribeModelOperatorRequest
+     * @return DescribeModelOperatorResponse
+     */
+    CompletableFuture<DescribeModelOperatorResponse> describeModelOperator(DescribeModelOperatorRequest request);
+
+    /**
+     * @param request the request parameters of DescribeMonitorData  DescribeMonitorDataRequest
+     * @return DescribeMonitorDataResponse
+     */
+    CompletableFuture<DescribeMonitorDataResponse> describeMonitorData(DescribeMonitorDataRequest request);
+
+    /**
      * @param request the request parameters of DescribeSandboxTemplates  DescribeSandboxTemplatesRequest
      * @return DescribeSandboxTemplatesResponse
      */
     CompletableFuture<DescribeSandboxTemplatesResponse> describeSandboxTemplates(DescribeSandboxTemplatesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeWhitelistIps  DescribeWhitelistIpsRequest
+     * @return DescribeWhitelistIpsResponse
+     */
+    CompletableFuture<DescribeWhitelistIpsResponse> describeWhitelistIps(DescribeWhitelistIpsRequest request);
+
+    /**
+     * @param request the request parameters of EnableAgentRuntime  EnableAgentRuntimeRequest
+     * @return EnableAgentRuntimeResponse
+     */
+    CompletableFuture<EnableAgentRuntimeResponse> enableAgentRuntime(EnableAgentRuntimeRequest request);
 
     /**
      * @param request the request parameters of GetConversations  GetConversationsRequest
@@ -263,6 +278,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMessagesResponse> getMessages(GetMessagesRequest request);
 
     /**
+     * @param request the request parameters of GetModelOperatorOrder  GetModelOperatorOrderRequest
+     * @return GetModelOperatorOrderResponse
+     */
+    CompletableFuture<GetModelOperatorOrderResponse> getModelOperatorOrder(GetModelOperatorOrderRequest request);
+
+    /**
      * @param request the request parameters of GetScheduledInstances  GetScheduledInstancesRequest
      * @return GetScheduledInstancesResponse
      */
@@ -285,6 +306,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetStandAloneReportsResponse
      */
     CompletableFuture<GetStandAloneReportsResponse> getStandAloneReports(GetStandAloneReportsRequest request);
+
+    /**
+     * @param request the request parameters of ListApiKeys  ListApiKeysRequest
+     * @return ListApiKeysResponse
+     */
+    CompletableFuture<ListApiKeysResponse> listApiKeys(ListApiKeysRequest request);
 
     /**
      * @param request the request parameters of ListCustomAgent  ListCustomAgentRequest
@@ -398,6 +425,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyScheduledTaskResponse> modifyScheduledTask(ModifyScheduledTaskRequest request);
 
     /**
+     * @param request the request parameters of ModifyWhitelistIps  ModifyWhitelistIpsRequest
+     * @return ModifyWhitelistIpsResponse
+     */
+    CompletableFuture<ModifyWhitelistIpsResponse> modifyWhitelistIps(ModifyWhitelistIpsRequest request);
+
+    /**
+     * @param request the request parameters of RenameApiKey  RenameApiKeyRequest
+     * @return RenameApiKeyResponse
+     */
+    CompletableFuture<RenameApiKeyResponse> renameApiKey(RenameApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of ResetApiKey  ResetApiKeyRequest
+     * @return ResetApiKeyResponse
+     */
+    CompletableFuture<ResetApiKeyResponse> resetApiKey(ResetApiKeyRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engine</h3>
      * <p>RDS PostgreSQL</p>
@@ -449,19 +494,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
 
     /**
+     * @param request the request parameters of UpdateApiKeyQuota  UpdateApiKeyQuotaRequest
+     * @return UpdateApiKeyQuotaResponse
+     */
+    CompletableFuture<UpdateApiKeyQuotaResponse> updateApiKeyQuota(UpdateApiKeyQuotaRequest request);
+
+    /**
      * @param request the request parameters of UpdateCustomAgent  UpdateCustomAgentRequest
      * @return UpdateCustomAgentResponse
      */
     CompletableFuture<UpdateCustomAgentResponse> updateCustomAgent(UpdateCustomAgentRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>Updates an edge function, including updating code versions, adding environment variables, and modifying configurations.</p>
-     * 
-     * @param request the request parameters of UpdateEdgeFunction  UpdateEdgeFunctionRequest
-     * @return UpdateEdgeFunctionResponse
-     */
-    CompletableFuture<UpdateEdgeFunctionResponse> updateEdgeFunction(UpdateEdgeFunctionRequest request);
 
     /**
      * @param request the request parameters of UpdateSkill  UpdateSkillRequest
