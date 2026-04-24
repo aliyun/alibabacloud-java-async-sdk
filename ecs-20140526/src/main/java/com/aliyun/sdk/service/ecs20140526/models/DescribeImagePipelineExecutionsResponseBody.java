@@ -309,6 +309,12 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
+        private String errorInfo;
+
         @com.aliyun.core.annotation.NameInMap("ExecutionId")
         private String executionId;
 
@@ -335,6 +341,8 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
         private ImagePipelineExecutionSet(Builder builder) {
             this.creationTime = builder.creationTime;
+            this.errorCode = builder.errorCode;
+            this.errorInfo = builder.errorInfo;
             this.executionId = builder.executionId;
             this.imageId = builder.imageId;
             this.imagePipelineId = builder.imagePipelineId;
@@ -358,6 +366,20 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorInfo
+         */
+        public String getErrorInfo() {
+            return this.errorInfo;
         }
 
         /**
@@ -418,6 +440,8 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String creationTime; 
+            private String errorCode; 
+            private String errorInfo; 
             private String executionId; 
             private String imageId; 
             private String imagePipelineId; 
@@ -432,6 +456,8 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
             private Builder(ImagePipelineExecutionSet model) {
                 this.creationTime = model.creationTime;
+                this.errorCode = model.errorCode;
+                this.errorInfo = model.errorInfo;
                 this.executionId = model.executionId;
                 this.imageId = model.imageId;
                 this.imagePipelineId = model.imagePipelineId;
@@ -450,6 +476,22 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * ErrorInfo.
+             */
+            public Builder errorInfo(String errorInfo) {
+                this.errorInfo = errorInfo;
                 return this;
             }
 
