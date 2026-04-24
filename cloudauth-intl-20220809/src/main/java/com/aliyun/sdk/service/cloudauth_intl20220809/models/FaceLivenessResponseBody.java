@@ -158,15 +158,31 @@ public class FaceLivenessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FaceQualityScore")
         private Double faceQualityScore;
 
+        @com.aliyun.core.annotation.NameInMap("IlluminationScore")
+        private Double illuminationScore;
+
+        @com.aliyun.core.annotation.NameInMap("KaOcclusionScore")
+        private Double kaOcclusionScore;
+
         @com.aliyun.core.annotation.NameInMap("OcclusionResult")
         private String occlusionResult;
+
+        @com.aliyun.core.annotation.NameInMap("OcclusionScore")
+        private Double occlusionScore;
+
+        @com.aliyun.core.annotation.NameInMap("SharpnessScore")
+        private Double sharpnessScore;
 
         private ExtFaceInfo(Builder builder) {
             this.faceAge = builder.faceAge;
             this.faceAttack = builder.faceAttack;
             this.faceGender = builder.faceGender;
             this.faceQualityScore = builder.faceQualityScore;
+            this.illuminationScore = builder.illuminationScore;
+            this.kaOcclusionScore = builder.kaOcclusionScore;
             this.occlusionResult = builder.occlusionResult;
+            this.occlusionScore = builder.occlusionScore;
+            this.sharpnessScore = builder.sharpnessScore;
         }
 
         public static Builder builder() {
@@ -206,10 +222,38 @@ public class FaceLivenessResponseBody extends TeaModel {
         }
 
         /**
+         * @return illuminationScore
+         */
+        public Double getIlluminationScore() {
+            return this.illuminationScore;
+        }
+
+        /**
+         * @return kaOcclusionScore
+         */
+        public Double getKaOcclusionScore() {
+            return this.kaOcclusionScore;
+        }
+
+        /**
          * @return occlusionResult
          */
         public String getOcclusionResult() {
             return this.occlusionResult;
+        }
+
+        /**
+         * @return occlusionScore
+         */
+        public Double getOcclusionScore() {
+            return this.occlusionScore;
+        }
+
+        /**
+         * @return sharpnessScore
+         */
+        public Double getSharpnessScore() {
+            return this.sharpnessScore;
         }
 
         public static final class Builder {
@@ -217,7 +261,11 @@ public class FaceLivenessResponseBody extends TeaModel {
             private String faceAttack; 
             private String faceGender; 
             private Double faceQualityScore; 
+            private Double illuminationScore; 
+            private Double kaOcclusionScore; 
             private String occlusionResult; 
+            private Double occlusionScore; 
+            private Double sharpnessScore; 
 
             private Builder() {
             } 
@@ -227,7 +275,11 @@ public class FaceLivenessResponseBody extends TeaModel {
                 this.faceAttack = model.faceAttack;
                 this.faceGender = model.faceGender;
                 this.faceQualityScore = model.faceQualityScore;
+                this.illuminationScore = model.illuminationScore;
+                this.kaOcclusionScore = model.kaOcclusionScore;
                 this.occlusionResult = model.occlusionResult;
+                this.occlusionScore = model.occlusionScore;
+                this.sharpnessScore = model.sharpnessScore;
             } 
 
             /**
@@ -281,6 +333,22 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
+             * IlluminationScore.
+             */
+            public Builder illuminationScore(Double illuminationScore) {
+                this.illuminationScore = illuminationScore;
+                return this;
+            }
+
+            /**
+             * KaOcclusionScore.
+             */
+            public Builder kaOcclusionScore(Double kaOcclusionScore) {
+                this.kaOcclusionScore = kaOcclusionScore;
+                return this;
+            }
+
+            /**
              * <p>Optional. Indicates whether the face is occluded. Y means the face is occluded. N means the face is not occluded.</p>
              * 
              * <strong>example:</strong>
@@ -288,6 +356,22 @@ public class FaceLivenessResponseBody extends TeaModel {
              */
             public Builder occlusionResult(String occlusionResult) {
                 this.occlusionResult = occlusionResult;
+                return this;
+            }
+
+            /**
+             * OcclusionScore.
+             */
+            public Builder occlusionScore(Double occlusionScore) {
+                this.occlusionScore = occlusionScore;
+                return this;
+            }
+
+            /**
+             * SharpnessScore.
+             */
+            public Builder sharpnessScore(Double sharpnessScore) {
+                this.sharpnessScore = sharpnessScore;
                 return this;
             }
 

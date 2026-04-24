@@ -145,9 +145,150 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
      *
      * <p>FaceDuplicationCheckIntlResponseBody</p>
      */
+    public static class ExtFaceInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FaceQualityScore")
+        private Double faceQualityScore;
+
+        @com.aliyun.core.annotation.NameInMap("IlluminationScore")
+        private Double illuminationScore;
+
+        @com.aliyun.core.annotation.NameInMap("KaOcclusionScore")
+        private Double kaOcclusionScore;
+
+        @com.aliyun.core.annotation.NameInMap("OcclusionScore")
+        private Double occlusionScore;
+
+        @com.aliyun.core.annotation.NameInMap("SharpnessScore")
+        private Double sharpnessScore;
+
+        private ExtFaceInfo(Builder builder) {
+            this.faceQualityScore = builder.faceQualityScore;
+            this.illuminationScore = builder.illuminationScore;
+            this.kaOcclusionScore = builder.kaOcclusionScore;
+            this.occlusionScore = builder.occlusionScore;
+            this.sharpnessScore = builder.sharpnessScore;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExtFaceInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return faceQualityScore
+         */
+        public Double getFaceQualityScore() {
+            return this.faceQualityScore;
+        }
+
+        /**
+         * @return illuminationScore
+         */
+        public Double getIlluminationScore() {
+            return this.illuminationScore;
+        }
+
+        /**
+         * @return kaOcclusionScore
+         */
+        public Double getKaOcclusionScore() {
+            return this.kaOcclusionScore;
+        }
+
+        /**
+         * @return occlusionScore
+         */
+        public Double getOcclusionScore() {
+            return this.occlusionScore;
+        }
+
+        /**
+         * @return sharpnessScore
+         */
+        public Double getSharpnessScore() {
+            return this.sharpnessScore;
+        }
+
+        public static final class Builder {
+            private Double faceQualityScore; 
+            private Double illuminationScore; 
+            private Double kaOcclusionScore; 
+            private Double occlusionScore; 
+            private Double sharpnessScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtFaceInfo model) {
+                this.faceQualityScore = model.faceQualityScore;
+                this.illuminationScore = model.illuminationScore;
+                this.kaOcclusionScore = model.kaOcclusionScore;
+                this.occlusionScore = model.occlusionScore;
+                this.sharpnessScore = model.sharpnessScore;
+            } 
+
+            /**
+             * FaceQualityScore.
+             */
+            public Builder faceQualityScore(Double faceQualityScore) {
+                this.faceQualityScore = faceQualityScore;
+                return this;
+            }
+
+            /**
+             * IlluminationScore.
+             */
+            public Builder illuminationScore(Double illuminationScore) {
+                this.illuminationScore = illuminationScore;
+                return this;
+            }
+
+            /**
+             * KaOcclusionScore.
+             */
+            public Builder kaOcclusionScore(Double kaOcclusionScore) {
+                this.kaOcclusionScore = kaOcclusionScore;
+                return this;
+            }
+
+            /**
+             * OcclusionScore.
+             */
+            public Builder occlusionScore(Double occlusionScore) {
+                this.occlusionScore = occlusionScore;
+                return this;
+            }
+
+            /**
+             * SharpnessScore.
+             */
+            public Builder sharpnessScore(Double sharpnessScore) {
+                this.sharpnessScore = sharpnessScore;
+                return this;
+            }
+
+            public ExtFaceInfo build() {
+                return new ExtFaceInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FaceDuplicationCheckIntlResponseBody} extends {@link TeaModel}
+     *
+     * <p>FaceDuplicationCheckIntlResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DuplicateFace")
         private String duplicateFace;
+
+        @com.aliyun.core.annotation.NameInMap("ExtFaceInfo")
+        private ExtFaceInfo extFaceInfo;
 
         @com.aliyun.core.annotation.NameInMap("FaceAge")
         private String faceAge;
@@ -181,6 +322,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
 
         private Result(Builder builder) {
             this.duplicateFace = builder.duplicateFace;
+            this.extFaceInfo = builder.extFaceInfo;
             this.faceAge = builder.faceAge;
             this.faceAttack = builder.faceAttack;
             this.faceAttackScore = builder.faceAttackScore;
@@ -206,6 +348,13 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
          */
         public String getDuplicateFace() {
             return this.duplicateFace;
+        }
+
+        /**
+         * @return extFaceInfo
+         */
+        public ExtFaceInfo getExtFaceInfo() {
+            return this.extFaceInfo;
         }
 
         /**
@@ -280,6 +429,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
 
         public static final class Builder {
             private String duplicateFace; 
+            private ExtFaceInfo extFaceInfo; 
             private String faceAge; 
             private String faceAttack; 
             private String faceAttackScore; 
@@ -296,6 +446,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
 
             private Builder(Result model) {
                 this.duplicateFace = model.duplicateFace;
+                this.extFaceInfo = model.extFaceInfo;
                 this.faceAge = model.faceAge;
                 this.faceAttack = model.faceAttack;
                 this.faceAttackScore = model.faceAttackScore;
@@ -318,6 +469,14 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
              */
             public Builder duplicateFace(String duplicateFace) {
                 this.duplicateFace = duplicateFace;
+                return this;
+            }
+
+            /**
+             * ExtFaceInfo.
+             */
+            public Builder extFaceInfo(ExtFaceInfo extFaceInfo) {
+                this.extFaceInfo = extFaceInfo;
                 return this;
             }
 

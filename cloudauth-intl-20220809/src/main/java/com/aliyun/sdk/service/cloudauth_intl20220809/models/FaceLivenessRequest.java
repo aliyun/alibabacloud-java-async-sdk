@@ -34,6 +34,10 @@ public class FaceLivenessRequest extends Request {
     private String faceQuality;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceQualityCheck")
+    private String faceQualityCheck;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MerchantBizId")
     private String merchantBizId;
 
@@ -55,6 +59,7 @@ public class FaceLivenessRequest extends Request {
         this.facePictureBase64 = builder.facePictureBase64;
         this.facePictureUrl = builder.facePictureUrl;
         this.faceQuality = builder.faceQuality;
+        this.faceQualityCheck = builder.faceQualityCheck;
         this.merchantBizId = builder.merchantBizId;
         this.merchantUserId = builder.merchantUserId;
         this.occlusion = builder.occlusion;
@@ -103,6 +108,13 @@ public class FaceLivenessRequest extends Request {
     }
 
     /**
+     * @return faceQualityCheck
+     */
+    public String getFaceQualityCheck() {
+        return this.faceQualityCheck;
+    }
+
+    /**
      * @return merchantBizId
      */
     public String getMerchantBizId() {
@@ -135,6 +147,7 @@ public class FaceLivenessRequest extends Request {
         private String facePictureBase64; 
         private String facePictureUrl; 
         private String faceQuality; 
+        private String faceQualityCheck; 
         private String merchantBizId; 
         private String merchantUserId; 
         private String occlusion; 
@@ -150,6 +163,7 @@ public class FaceLivenessRequest extends Request {
             this.facePictureBase64 = request.facePictureBase64;
             this.facePictureUrl = request.facePictureUrl;
             this.faceQuality = request.faceQuality;
+            this.faceQualityCheck = request.faceQualityCheck;
             this.merchantBizId = request.merchantBizId;
             this.merchantUserId = request.merchantUserId;
             this.occlusion = request.occlusion;
@@ -210,6 +224,15 @@ public class FaceLivenessRequest extends Request {
         public Builder faceQuality(String faceQuality) {
             this.putQueryParameter("FaceQuality", faceQuality);
             this.faceQuality = faceQuality;
+            return this;
+        }
+
+        /**
+         * FaceQualityCheck.
+         */
+        public Builder faceQualityCheck(String faceQualityCheck) {
+            this.putQueryParameter("FaceQualityCheck", faceQualityCheck);
+            this.faceQualityCheck = faceQualityCheck;
             return this;
         }
 

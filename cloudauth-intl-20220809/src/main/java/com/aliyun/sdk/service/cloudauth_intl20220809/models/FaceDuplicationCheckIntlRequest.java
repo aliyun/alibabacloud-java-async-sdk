@@ -30,6 +30,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
     private String faceGroupCodes;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FaceQualityCheck")
+    private String faceQualityCheck;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FaceRegisterGroupCode")
     private String faceRegisterGroupCode;
 
@@ -94,6 +98,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         this.regionId = builder.regionId;
         this.autoRegistration = builder.autoRegistration;
         this.faceGroupCodes = builder.faceGroupCodes;
+        this.faceQualityCheck = builder.faceQualityCheck;
         this.faceRegisterGroupCode = builder.faceRegisterGroupCode;
         this.faceVerifyThreshold = builder.faceVerifyThreshold;
         this.liveness = builder.liveness;
@@ -142,6 +147,13 @@ public class FaceDuplicationCheckIntlRequest extends Request {
      */
     public String getFaceGroupCodes() {
         return this.faceGroupCodes;
+    }
+
+    /**
+     * @return faceQualityCheck
+     */
+    public String getFaceQualityCheck() {
+        return this.faceQualityCheck;
     }
 
     /**
@@ -246,6 +258,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         private String regionId; 
         private String autoRegistration; 
         private String faceGroupCodes; 
+        private String faceQualityCheck; 
         private String faceRegisterGroupCode; 
         private String faceVerifyThreshold; 
         private String liveness; 
@@ -270,6 +283,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
             this.regionId = request.regionId;
             this.autoRegistration = request.autoRegistration;
             this.faceGroupCodes = request.faceGroupCodes;
+            this.faceQualityCheck = request.faceQualityCheck;
             this.faceRegisterGroupCode = request.faceRegisterGroupCode;
             this.faceVerifyThreshold = request.faceVerifyThreshold;
             this.liveness = request.liveness;
@@ -320,6 +334,15 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         public Builder faceGroupCodes(String faceGroupCodes) {
             this.putBodyParameter("FaceGroupCodes", faceGroupCodes);
             this.faceGroupCodes = faceGroupCodes;
+            return this;
+        }
+
+        /**
+         * FaceQualityCheck.
+         */
+        public Builder faceQualityCheck(String faceQualityCheck) {
+            this.putBodyParameter("FaceQualityCheck", faceQualityCheck);
+            this.faceQualityCheck = faceQualityCheck;
             return this;
         }
 

@@ -22,6 +22,10 @@ public class FaceCompareRequest extends Request {
     private String facePictureQualityCheck;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceQualityCheck")
+    private String faceQualityCheck;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MerchantBizId")
     private String merchantBizId;
 
@@ -44,6 +48,7 @@ public class FaceCompareRequest extends Request {
     private FaceCompareRequest(Builder builder) {
         super(builder);
         this.facePictureQualityCheck = builder.facePictureQualityCheck;
+        this.faceQualityCheck = builder.faceQualityCheck;
         this.merchantBizId = builder.merchantBizId;
         this.sourceFacePicture = builder.sourceFacePicture;
         this.sourceFacePictureUrl = builder.sourceFacePictureUrl;
@@ -69,6 +74,13 @@ public class FaceCompareRequest extends Request {
      */
     public String getFacePictureQualityCheck() {
         return this.facePictureQualityCheck;
+    }
+
+    /**
+     * @return faceQualityCheck
+     */
+    public String getFaceQualityCheck() {
+        return this.faceQualityCheck;
     }
 
     /**
@@ -108,6 +120,7 @@ public class FaceCompareRequest extends Request {
 
     public static final class Builder extends Request.Builder<FaceCompareRequest, Builder> {
         private String facePictureQualityCheck; 
+        private String faceQualityCheck; 
         private String merchantBizId; 
         private String sourceFacePicture; 
         private String sourceFacePictureUrl; 
@@ -121,6 +134,7 @@ public class FaceCompareRequest extends Request {
         private Builder(FaceCompareRequest request) {
             super(request);
             this.facePictureQualityCheck = request.facePictureQualityCheck;
+            this.faceQualityCheck = request.faceQualityCheck;
             this.merchantBizId = request.merchantBizId;
             this.sourceFacePicture = request.sourceFacePicture;
             this.sourceFacePictureUrl = request.sourceFacePictureUrl;
@@ -137,6 +151,15 @@ public class FaceCompareRequest extends Request {
         public Builder facePictureQualityCheck(String facePictureQualityCheck) {
             this.putQueryParameter("FacePictureQualityCheck", facePictureQualityCheck);
             this.facePictureQualityCheck = facePictureQualityCheck;
+            return this;
+        }
+
+        /**
+         * FaceQualityCheck.
+         */
+        public Builder faceQualityCheck(String faceQualityCheck) {
+            this.putQueryParameter("FaceQualityCheck", faceQualityCheck);
+            this.faceQualityCheck = faceQualityCheck;
             return this;
         }
 

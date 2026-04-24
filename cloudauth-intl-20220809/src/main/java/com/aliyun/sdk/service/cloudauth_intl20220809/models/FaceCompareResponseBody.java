@@ -145,7 +145,148 @@ public class FaceCompareResponseBody extends TeaModel {
      *
      * <p>FaceCompareResponseBody</p>
      */
+    public static class ExtFaceInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FaceQualityScore")
+        private Double faceQualityScore;
+
+        @com.aliyun.core.annotation.NameInMap("IlluminationScore")
+        private Double illuminationScore;
+
+        @com.aliyun.core.annotation.NameInMap("KaOcclusionScore")
+        private Double kaOcclusionScore;
+
+        @com.aliyun.core.annotation.NameInMap("OcclusionScore")
+        private Double occlusionScore;
+
+        @com.aliyun.core.annotation.NameInMap("SharpnessScore")
+        private Double sharpnessScore;
+
+        private ExtFaceInfo(Builder builder) {
+            this.faceQualityScore = builder.faceQualityScore;
+            this.illuminationScore = builder.illuminationScore;
+            this.kaOcclusionScore = builder.kaOcclusionScore;
+            this.occlusionScore = builder.occlusionScore;
+            this.sharpnessScore = builder.sharpnessScore;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExtFaceInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return faceQualityScore
+         */
+        public Double getFaceQualityScore() {
+            return this.faceQualityScore;
+        }
+
+        /**
+         * @return illuminationScore
+         */
+        public Double getIlluminationScore() {
+            return this.illuminationScore;
+        }
+
+        /**
+         * @return kaOcclusionScore
+         */
+        public Double getKaOcclusionScore() {
+            return this.kaOcclusionScore;
+        }
+
+        /**
+         * @return occlusionScore
+         */
+        public Double getOcclusionScore() {
+            return this.occlusionScore;
+        }
+
+        /**
+         * @return sharpnessScore
+         */
+        public Double getSharpnessScore() {
+            return this.sharpnessScore;
+        }
+
+        public static final class Builder {
+            private Double faceQualityScore; 
+            private Double illuminationScore; 
+            private Double kaOcclusionScore; 
+            private Double occlusionScore; 
+            private Double sharpnessScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtFaceInfo model) {
+                this.faceQualityScore = model.faceQualityScore;
+                this.illuminationScore = model.illuminationScore;
+                this.kaOcclusionScore = model.kaOcclusionScore;
+                this.occlusionScore = model.occlusionScore;
+                this.sharpnessScore = model.sharpnessScore;
+            } 
+
+            /**
+             * FaceQualityScore.
+             */
+            public Builder faceQualityScore(Double faceQualityScore) {
+                this.faceQualityScore = faceQualityScore;
+                return this;
+            }
+
+            /**
+             * IlluminationScore.
+             */
+            public Builder illuminationScore(Double illuminationScore) {
+                this.illuminationScore = illuminationScore;
+                return this;
+            }
+
+            /**
+             * KaOcclusionScore.
+             */
+            public Builder kaOcclusionScore(Double kaOcclusionScore) {
+                this.kaOcclusionScore = kaOcclusionScore;
+                return this;
+            }
+
+            /**
+             * OcclusionScore.
+             */
+            public Builder occlusionScore(Double occlusionScore) {
+                this.occlusionScore = occlusionScore;
+                return this;
+            }
+
+            /**
+             * SharpnessScore.
+             */
+            public Builder sharpnessScore(Double sharpnessScore) {
+                this.sharpnessScore = sharpnessScore;
+                return this;
+            }
+
+            public ExtFaceInfo build() {
+                return new ExtFaceInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FaceCompareResponseBody} extends {@link TeaModel}
+     *
+     * <p>FaceCompareResponseBody</p>
+     */
     public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExtFaceInfo")
+        private ExtFaceInfo extFaceInfo;
+
         @com.aliyun.core.annotation.NameInMap("FaceComparisonScore")
         private Double faceComparisonScore;
 
@@ -156,6 +297,7 @@ public class FaceCompareResponseBody extends TeaModel {
         private String transactionId;
 
         private Result(Builder builder) {
+            this.extFaceInfo = builder.extFaceInfo;
             this.faceComparisonScore = builder.faceComparisonScore;
             this.passed = builder.passed;
             this.transactionId = builder.transactionId;
@@ -167,6 +309,13 @@ public class FaceCompareResponseBody extends TeaModel {
 
         public static Result create() {
             return builder().build();
+        }
+
+        /**
+         * @return extFaceInfo
+         */
+        public ExtFaceInfo getExtFaceInfo() {
+            return this.extFaceInfo;
         }
 
         /**
@@ -191,6 +340,7 @@ public class FaceCompareResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ExtFaceInfo extFaceInfo; 
             private Double faceComparisonScore; 
             private String passed; 
             private String transactionId; 
@@ -199,10 +349,19 @@ public class FaceCompareResponseBody extends TeaModel {
             } 
 
             private Builder(Result model) {
+                this.extFaceInfo = model.extFaceInfo;
                 this.faceComparisonScore = model.faceComparisonScore;
                 this.passed = model.passed;
                 this.transactionId = model.transactionId;
             } 
+
+            /**
+             * ExtFaceInfo.
+             */
+            public Builder extFaceInfo(ExtFaceInfo extFaceInfo) {
+                this.extFaceInfo = extFaceInfo;
+                return this;
+            }
 
             /**
              * <p>The face comparison score. The value ranges from 0 to 100.</p>
