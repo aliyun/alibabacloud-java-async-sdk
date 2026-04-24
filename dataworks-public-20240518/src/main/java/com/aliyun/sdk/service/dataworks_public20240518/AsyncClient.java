@@ -37,6 +37,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddEntityIntoMetaCollectionResponse> addEntityIntoMetaCollection(AddEntityIntoMetaCollectionRequest request);
 
     /**
+     * @param request the request parameters of AssociateProjectToImage  AssociateProjectToImageRequest
+     * @return AssociateProjectToImageResponse
+     */
+    CompletableFuture<AssociateProjectToImageResponse> associateProjectToImage(AssociateProjectToImageRequest request);
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
@@ -716,6 +722,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DetachDataQualityRulesFromEvaluationTaskResponse> detachDataQualityRulesFromEvaluationTask(DetachDataQualityRulesFromEvaluationTaskRequest request);
 
     /**
+     * @param request the request parameters of DissociateProjectFromImage  DissociateProjectFromImageRequest
+     * @return DissociateProjectFromImageResponse
+     */
+    CompletableFuture<DissociateProjectFromImageResponse> dissociateProjectFromImage(DissociateProjectFromImageRequest request);
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
@@ -994,6 +1006,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetIDEEventDetailResponse
      */
     CompletableFuture<GetIDEEventDetailResponse> getIDEEventDetail(GetIDEEventDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetImage  GetImageRequest
+     * @return GetImageResponse
+     */
+    CompletableFuture<GetImageResponse> getImage(GetImageRequest request);
 
     /**
      * @param request the request parameters of GetJobStatus  GetJobStatusRequest
@@ -1516,6 +1534,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListFunctionsResponse
      */
     CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request);
+
+    /**
+     * @param request the request parameters of ListImageAssociatedProjects  ListImageAssociatedProjectsRequest
+     * @return ListImageAssociatedProjectsResponse
+     */
+    CompletableFuture<ListImageAssociatedProjectsResponse> listImageAssociatedProjects(ListImageAssociatedProjectsRequest request);
+
+    /**
+     * @param request the request parameters of ListImageVersions  ListImageVersionsRequest
+     * @return ListImageVersionsResponse
+     */
+    CompletableFuture<ListImageVersionsResponse> listImageVersions(ListImageVersionsRequest request);
+
+    /**
+     * @param request the request parameters of ListImages  ListImagesRequest
+     * @return ListImagesResponse
+     */
+    CompletableFuture<ListImagesResponse> listImages(ListImagesRequest request);
 
     /**
      * @param request the request parameters of ListLineageRelationships  ListLineageRelationshipsRequest

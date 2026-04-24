@@ -182,8 +182,12 @@ public class ListNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
+        @com.aliyun.core.annotation.NameInMap("RefTableName")
+        private String refTableName;
+
         private NodeOutputs(Builder builder) {
             this.data = builder.data;
+            this.refTableName = builder.refTableName;
         }
 
         public static Builder builder() {
@@ -201,14 +205,23 @@ public class ListNodesResponseBody extends TeaModel {
             return this.data;
         }
 
+        /**
+         * @return refTableName
+         */
+        public String getRefTableName() {
+            return this.refTableName;
+        }
+
         public static final class Builder {
             private String data; 
+            private String refTableName; 
 
             private Builder() {
             } 
 
             private Builder(NodeOutputs model) {
                 this.data = model.data;
+                this.refTableName = model.refTableName;
             } 
 
             /**
@@ -219,6 +232,14 @@ public class ListNodesResponseBody extends TeaModel {
              */
             public Builder data(String data) {
                 this.data = data;
+                return this;
+            }
+
+            /**
+             * RefTableName.
+             */
+            public Builder refTableName(String refTableName) {
+                this.refTableName = refTableName;
                 return this;
             }
 
@@ -663,8 +684,12 @@ public class ListNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
+        @com.aliyun.core.annotation.NameInMap("RefTableName")
+        private String refTableName;
+
         private OutputsNodeOutputs(Builder builder) {
             this.data = builder.data;
+            this.refTableName = builder.refTableName;
         }
 
         public static Builder builder() {
@@ -682,14 +707,23 @@ public class ListNodesResponseBody extends TeaModel {
             return this.data;
         }
 
+        /**
+         * @return refTableName
+         */
+        public String getRefTableName() {
+            return this.refTableName;
+        }
+
         public static final class Builder {
             private String data; 
+            private String refTableName; 
 
             private Builder() {
             } 
 
             private Builder(OutputsNodeOutputs model) {
                 this.data = model.data;
+                this.refTableName = model.refTableName;
             } 
 
             /**
@@ -700,6 +734,14 @@ public class ListNodesResponseBody extends TeaModel {
              */
             public Builder data(String data) {
                 this.data = data;
+                return this;
+            }
+
+            /**
+             * RefTableName.
+             */
+            public Builder refTableName(String refTableName) {
+                this.refTableName = refTableName;
                 return this;
             }
 
