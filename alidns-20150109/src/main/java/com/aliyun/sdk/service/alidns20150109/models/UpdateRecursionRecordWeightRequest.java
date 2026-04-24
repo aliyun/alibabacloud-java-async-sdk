@@ -23,6 +23,7 @@ public class UpdateRecursionRecordWeightRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordId;
 
     @com.aliyun.core.annotation.Query
@@ -96,7 +97,10 @@ public class UpdateRecursionRecordWeightRequest extends Request {
         }
 
         /**
-         * RecordId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17363242424</p>
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);

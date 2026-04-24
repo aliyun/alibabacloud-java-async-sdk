@@ -27,6 +27,7 @@ public class UpdateRecursionRecordEnableStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordId;
 
     private UpdateRecursionRecordEnableStatusRequest(Builder builder) {
@@ -105,7 +106,10 @@ public class UpdateRecursionRecordEnableStatusRequest extends Request {
         }
 
         /**
-         * RecordId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1781234321</p>
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);

@@ -27,6 +27,7 @@ public class UpdateRecursionZoneEffectiveScopeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private UpdateRecursionZoneEffectiveScopeRequest(Builder builder) {
@@ -106,7 +107,10 @@ public class UpdateRecursionZoneEffectiveScopeRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173671468000011</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

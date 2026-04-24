@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeRecursionRecordRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordId;
 
     private DescribeRecursionRecordRequest(Builder builder) {
@@ -59,7 +60,10 @@ public class DescribeRecursionRecordRequest extends Request {
         } 
 
         /**
-         * RecordId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1917628665627259904</p>
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);

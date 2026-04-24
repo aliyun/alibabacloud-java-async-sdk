@@ -55,6 +55,7 @@ public class AddRecursionRecordRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private AddRecursionRecordRequest(Builder builder) {
@@ -267,6 +268,7 @@ public class AddRecursionRecordRequest extends Request {
 
         /**
          * <p>Zone ID。</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>173671468000011</p>

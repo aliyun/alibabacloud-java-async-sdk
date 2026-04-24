@@ -23,6 +23,7 @@ public class UpdateRecursionRecordRemarkRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordId;
 
     @com.aliyun.core.annotation.Query
@@ -97,6 +98,7 @@ public class UpdateRecursionRecordRemarkRequest extends Request {
 
         /**
          * <p>record id</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>173671468000010</p>
