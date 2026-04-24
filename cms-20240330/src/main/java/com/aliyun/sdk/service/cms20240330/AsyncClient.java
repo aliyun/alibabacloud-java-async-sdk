@@ -281,6 +281,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWorkspaceResponse> deleteWorkspace(DeleteWorkspaceRequest request);
 
     /**
+     * @param request the request parameters of DescribeMetricMetaList  DescribeMetricMetaListRequest
+     * @return DescribeMetricMetaListResponse
+     */
+    CompletableFuture<DescribeMetricMetaListResponse> describeMetricMetaList(DescribeMetricMetaListRequest request);
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
