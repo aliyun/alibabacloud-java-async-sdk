@@ -364,6 +364,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SetYikeCallbackConfig  SetYikeCallbackConfigRequest
+     * @return SetYikeCallbackConfigResponse
+     */
+    @Override
+    public CompletableFuture<SetYikeCallbackConfigResponse> setYikeCallbackConfig(SetYikeCallbackConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetYikeCallbackConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetYikeCallbackConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetYikeCallbackConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SetYikeUserRole  SetYikeUserRoleRequest
      * @return SetYikeUserRoleResponse
      */

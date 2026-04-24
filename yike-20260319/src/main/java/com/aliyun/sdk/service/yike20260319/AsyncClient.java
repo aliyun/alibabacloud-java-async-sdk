@@ -128,6 +128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResumeYikeStoryboardJobResponse> resumeYikeStoryboardJob(ResumeYikeStoryboardJobRequest request);
 
     /**
+     * @param request the request parameters of SetYikeCallbackConfig  SetYikeCallbackConfigRequest
+     * @return SetYikeCallbackConfigResponse
+     */
+    CompletableFuture<SetYikeCallbackConfigResponse> setYikeCallbackConfig(SetYikeCallbackConfigRequest request);
+
+    /**
      * @param request the request parameters of SetYikeUserRole  SetYikeUserRoleRequest
      * @return SetYikeUserRoleResponse
      */
