@@ -84,6 +84,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeMediaTypeResponse> changeMediaType(ChangeMediaTypeRequest request);
 
     /**
+     * @param request the request parameters of CloudCreateAgent  CloudCreateAgentRequest
+     * @return CloudCreateAgentResponse
+     */
+    CompletableFuture<CloudCreateAgentResponse> cloudCreateAgent(CloudCreateAgentRequest request);
+
+    /**
      * @param request the request parameters of CloudCreateTask  CloudCreateTaskRequest
      * @return CloudCreateTaskResponse
      */
