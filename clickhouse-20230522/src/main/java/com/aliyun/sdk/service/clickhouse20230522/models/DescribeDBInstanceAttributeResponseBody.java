@@ -452,6 +452,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
+        @com.aliyun.core.annotation.NameInMap("WebUISnatStatus")
+        private String webUISnatStatus;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
@@ -494,6 +497,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
+            this.webUISnatStatus = builder.webUISnatStatus;
             this.zoneId = builder.zoneId;
         }
 
@@ -772,6 +776,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return webUISnatStatus
+         */
+        public String getWebUISnatStatus() {
+            return this.webUISnatStatus;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -817,6 +828,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String vSwitchId; 
             private String vpcId; 
+            private String webUISnatStatus; 
             private String zoneId; 
 
             private Builder() {
@@ -861,6 +873,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.tags = model.tags;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
+                this.webUISnatStatus = model.webUISnatStatus;
                 this.zoneId = model.zoneId;
             } 
 
@@ -1257,6 +1270,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * WebUISnatStatus.
+             */
+            public Builder webUISnatStatus(String webUISnatStatus) {
+                this.webUISnatStatus = webUISnatStatus;
                 return this;
             }
 
