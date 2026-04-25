@@ -398,7 +398,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         private String browserParam;
 
         @com.aliyun.core.annotation.NameInMap("CookiesSync")
-        private String cookiesSync;
+        private Boolean cookiesSync;
 
         @com.aliyun.core.annotation.NameInMap("Homepage")
         private String homepage;
@@ -447,7 +447,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         /**
          * @return cookiesSync
          */
-        public String getCookiesSync() {
+        public Boolean getCookiesSync() {
             return this.cookiesSync;
         }
 
@@ -469,7 +469,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             private java.util.List<Bookmarks> bookmarks; 
             private String bookmarksFilePath; 
             private String browserParam; 
-            private String cookiesSync; 
+            private Boolean cookiesSync; 
             private String homepage; 
             private java.util.List<String> removeBookmarks; 
 
@@ -515,7 +515,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             /**
              * CookiesSync.
              */
-            public Builder cookiesSync(String cookiesSync) {
+            public Builder cookiesSync(Boolean cookiesSync) {
                 this.cookiesSync = cookiesSync;
                 return this;
             }
