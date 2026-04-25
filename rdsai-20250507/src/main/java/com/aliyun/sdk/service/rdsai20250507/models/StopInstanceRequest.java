@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class StopInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
+    private Boolean force;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
@@ -28,6 +32,7 @@ public class StopInstanceRequest extends Request {
 
     private StopInstanceRequest(Builder builder) {
         super(builder);
+        this.force = builder.force;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
     }
@@ -46,6 +51,13 @@ public class StopInstanceRequest extends Request {
     }
 
     /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
      * @return instanceName
      */
     public String getInstanceName() {
@@ -60,6 +72,7 @@ public class StopInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StopInstanceRequest, Builder> {
+        private Boolean force; 
         private String instanceName; 
         private String regionId; 
 
@@ -69,9 +82,19 @@ public class StopInstanceRequest extends Request {
 
         private Builder(StopInstanceRequest request) {
             super(request);
+            this.force = request.force;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
+            return this;
+        }
 
         /**
          * <p>The region ID of the instance.</p>
