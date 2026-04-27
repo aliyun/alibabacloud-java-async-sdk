@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBInstanceClassRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoScaleConfig")
+    private AutoScaleConfig autoScaleConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ComputingGroupId")
     private String computingGroupId;
 
@@ -63,6 +67,7 @@ public class ModifyDBInstanceClassRequest extends Request {
 
     private ModifyDBInstanceClassRequest(Builder builder) {
         super(builder);
+        this.autoScaleConfig = builder.autoScaleConfig;
         this.computingGroupId = builder.computingGroupId;
         this.DBInstanceId = builder.DBInstanceId;
         this.nodeCount = builder.nodeCount;
@@ -86,6 +91,13 @@ public class ModifyDBInstanceClassRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoScaleConfig
+     */
+    public AutoScaleConfig getAutoScaleConfig() {
+        return this.autoScaleConfig;
     }
 
     /**
@@ -159,6 +171,7 @@ public class ModifyDBInstanceClassRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceClassRequest, Builder> {
+        private AutoScaleConfig autoScaleConfig; 
         private String computingGroupId; 
         private String DBInstanceId; 
         private Integer nodeCount; 
@@ -176,6 +189,7 @@ public class ModifyDBInstanceClassRequest extends Request {
 
         private Builder(ModifyDBInstanceClassRequest request) {
             super(request);
+            this.autoScaleConfig = request.autoScaleConfig;
             this.computingGroupId = request.computingGroupId;
             this.DBInstanceId = request.DBInstanceId;
             this.nodeCount = request.nodeCount;
@@ -187,6 +201,16 @@ public class ModifyDBInstanceClassRequest extends Request {
             this.storageQuota = request.storageQuota;
             this.storageType = request.storageType;
         } 
+
+        /**
+         * AutoScaleConfig.
+         */
+        public Builder autoScaleConfig(AutoScaleConfig autoScaleConfig) {
+            String autoScaleConfigShrink = shrink(autoScaleConfig, "AutoScaleConfig", "json");
+            this.putQueryParameter("AutoScaleConfig", autoScaleConfigShrink);
+            this.autoScaleConfig = autoScaleConfig;
+            return this;
+        }
 
         /**
          * ComputingGroupId.
@@ -298,4 +322,176 @@ public class ModifyDBInstanceClassRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBInstanceClassRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBInstanceClassRequest</p>
+     */
+    public static class VSwitchInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
+        private VSwitchInfos(Builder builder) {
+            this.vSwitchIds = builder.vSwitchIds;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VSwitchInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> vSwitchIds; 
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchInfos model) {
+                this.vSwitchIds = model.vSwitchIds;
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public VSwitchInfos build() {
+                return new VSwitchInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyDBInstanceClassRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBInstanceClassRequest</p>
+     */
+    public static class AutoScaleConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BurstNum")
+        @com.aliyun.core.annotation.Validation(maximum = 64, minimum = 1)
+        private Integer burstNum;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchInfos")
+        private java.util.List<VSwitchInfos> vSwitchInfos;
+
+        private AutoScaleConfig(Builder builder) {
+            this.burstNum = builder.burstNum;
+            this.status = builder.status;
+            this.vSwitchInfos = builder.vSwitchInfos;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoScaleConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return burstNum
+         */
+        public Integer getBurstNum() {
+            return this.burstNum;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return vSwitchInfos
+         */
+        public java.util.List<VSwitchInfos> getVSwitchInfos() {
+            return this.vSwitchInfos;
+        }
+
+        public static final class Builder {
+            private Integer burstNum; 
+            private String status; 
+            private java.util.List<VSwitchInfos> vSwitchInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoScaleConfig model) {
+                this.burstNum = model.burstNum;
+                this.status = model.status;
+                this.vSwitchInfos = model.vSwitchInfos;
+            } 
+
+            /**
+             * BurstNum.
+             */
+            public Builder burstNum(Integer burstNum) {
+                this.burstNum = burstNum;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * VSwitchInfos.
+             */
+            public Builder vSwitchInfos(java.util.List<VSwitchInfos> vSwitchInfos) {
+                this.vSwitchInfos = vSwitchInfos;
+                return this;
+            }
+
+            public AutoScaleConfig build() {
+                return new AutoScaleConfig(this);
+            } 
+
+        } 
+
+    }
 }
