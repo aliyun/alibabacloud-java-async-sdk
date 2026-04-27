@@ -1659,6 +1659,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySupabaseAutoScalePolicyResponse> modifySupabaseAutoScalePolicy(ModifySupabaseAutoScalePolicyRequest request);
 
     /**
+     * @param request the request parameters of ModifySupabaseProjectResource  ModifySupabaseProjectResourceRequest
+     * @return ModifySupabaseProjectResourceResponse
+     */
+    CompletableFuture<ModifySupabaseProjectResourceResponse> modifySupabaseProjectResource(ModifySupabaseProjectResourceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</p>
      * 
