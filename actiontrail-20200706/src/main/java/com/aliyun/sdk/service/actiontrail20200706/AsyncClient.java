@@ -160,6 +160,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSearchTemplatesResponse> describeSearchTemplates(DescribeSearchTemplatesRequest request);
 
     /**
+     * @param request the request parameters of DescribeTrailDeliveryMetricData  DescribeTrailDeliveryMetricDataRequest
+     * @return DescribeTrailDeliveryMetricDataResponse
+     */
+    CompletableFuture<DescribeTrailDeliveryMetricDataResponse> describeTrailDeliveryMetricData(DescribeTrailDeliveryMetricDataRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This topic shows you how to query the information about the single-account trails within an Alibaba Cloud account. In this example, the information about a trail named <code>test-4</code> is returned.</p>
      * 
@@ -179,6 +185,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeUserLogCountResponse
      */
     CompletableFuture<DescribeUserLogCountResponse> describeUserLogCount(DescribeUserLogCountRequest request);
+
+    /**
+     * @param request the request parameters of DescribeUserTrailCount  DescribeUserTrailCountRequest
+     * @return DescribeUserTrailCountResponse
+     */
+    CompletableFuture<DescribeUserTrailCountResponse> describeUserTrailCount(DescribeUserTrailCountRequest request);
 
     /**
      * @param request the request parameters of DisableInsight  DisableInsightRequest
