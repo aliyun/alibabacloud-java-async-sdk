@@ -121,12 +121,91 @@ public class DescribeUsersResponseBody extends TeaModel {
      *
      * <p>DescribeUsersResponseBody</p>
      */
+    public static class ResourcePolicyList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
+        private String policyId;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
+        private String policyName;
+
+        private ResourcePolicyList(Builder builder) {
+            this.policyId = builder.policyId;
+            this.policyName = builder.policyName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourcePolicyList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return policyId
+         */
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        /**
+         * @return policyName
+         */
+        public String getPolicyName() {
+            return this.policyName;
+        }
+
+        public static final class Builder {
+            private String policyId; 
+            private String policyName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePolicyList model) {
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+            } 
+
+            /**
+             * PolicyId.
+             */
+            public Builder policyId(String policyId) {
+                this.policyId = policyId;
+                return this;
+            }
+
+            /**
+             * PolicyName.
+             */
+            public Builder policyName(String policyName) {
+                this.policyName = policyName;
+                return this;
+            }
+
+            public ResourcePolicyList build() {
+                return new ResourcePolicyList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsersResponseBody</p>
+     */
     public static class Extras extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssignedResourceCount")
         private java.util.Map<String, ?> assignedResourceCount;
 
+        @com.aliyun.core.annotation.NameInMap("ResourcePolicyList")
+        private java.util.List<ResourcePolicyList> resourcePolicyList;
+
         private Extras(Builder builder) {
             this.assignedResourceCount = builder.assignedResourceCount;
+            this.resourcePolicyList = builder.resourcePolicyList;
         }
 
         public static Builder builder() {
@@ -144,14 +223,23 @@ public class DescribeUsersResponseBody extends TeaModel {
             return this.assignedResourceCount;
         }
 
+        /**
+         * @return resourcePolicyList
+         */
+        public java.util.List<ResourcePolicyList> getResourcePolicyList() {
+            return this.resourcePolicyList;
+        }
+
         public static final class Builder {
             private java.util.Map<String, ?> assignedResourceCount; 
+            private java.util.List<ResourcePolicyList> resourcePolicyList; 
 
             private Builder() {
             } 
 
             private Builder(Extras model) {
                 this.assignedResourceCount = model.assignedResourceCount;
+                this.resourcePolicyList = model.resourcePolicyList;
             } 
 
             /**
@@ -159,6 +247,14 @@ public class DescribeUsersResponseBody extends TeaModel {
              */
             public Builder assignedResourceCount(java.util.Map<String, ?> assignedResourceCount) {
                 this.assignedResourceCount = assignedResourceCount;
+                return this;
+            }
+
+            /**
+             * ResourcePolicyList.
+             */
+            public Builder resourcePolicyList(java.util.List<ResourcePolicyList> resourcePolicyList) {
+                this.resourcePolicyList = resourcePolicyList;
                 return this;
             }
 

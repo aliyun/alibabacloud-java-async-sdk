@@ -373,6 +373,81 @@ public class FilterUsersResponseBody extends TeaModel {
      *
      * <p>FilterUsersResponseBody</p>
      */
+    public static class ResourcePolicyList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
+        private String policyId;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
+        private String policyName;
+
+        private ResourcePolicyList(Builder builder) {
+            this.policyId = builder.policyId;
+            this.policyName = builder.policyName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourcePolicyList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return policyId
+         */
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        /**
+         * @return policyName
+         */
+        public String getPolicyName() {
+            return this.policyName;
+        }
+
+        public static final class Builder {
+            private String policyId; 
+            private String policyName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePolicyList model) {
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+            } 
+
+            /**
+             * PolicyId.
+             */
+            public Builder policyId(String policyId) {
+                this.policyId = policyId;
+                return this;
+            }
+
+            /**
+             * PolicyName.
+             */
+            public Builder policyName(String policyName) {
+                this.policyName = policyName;
+                return this;
+            }
+
+            public ResourcePolicyList build() {
+                return new ResourcePolicyList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FilterUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>FilterUsersResponseBody</p>
+     */
     public static class SupportLoginIdps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IdpId")
         private String idpId;
@@ -755,6 +830,9 @@ public class FilterUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
+        @com.aliyun.core.annotation.NameInMap("ResourcePolicyList")
+        private java.util.List<ResourcePolicyList> resourcePolicyList;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
@@ -782,6 +860,7 @@ public class FilterUsersResponseBody extends TeaModel {
             this.phone = builder.phone;
             this.realNickName = builder.realNickName;
             this.remark = builder.remark;
+            this.resourcePolicyList = builder.resourcePolicyList;
             this.status = builder.status;
             this.supportLoginIdps = builder.supportLoginIdps;
             this.userSetPropertiesModels = builder.userSetPropertiesModels;
@@ -915,6 +994,13 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourcePolicyList
+         */
+        public java.util.List<ResourcePolicyList> getResourcePolicyList() {
+            return this.resourcePolicyList;
+        }
+
+        /**
          * @return status
          */
         public Long getStatus() {
@@ -953,6 +1039,7 @@ public class FilterUsersResponseBody extends TeaModel {
             private String phone; 
             private String realNickName; 
             private String remark; 
+            private java.util.List<ResourcePolicyList> resourcePolicyList; 
             private Long status; 
             private java.util.List<SupportLoginIdps> supportLoginIdps; 
             private java.util.List<UserSetPropertiesModels> userSetPropertiesModels; 
@@ -978,6 +1065,7 @@ public class FilterUsersResponseBody extends TeaModel {
                 this.phone = model.phone;
                 this.realNickName = model.realNickName;
                 this.remark = model.remark;
+                this.resourcePolicyList = model.resourcePolicyList;
                 this.status = model.status;
                 this.supportLoginIdps = model.supportLoginIdps;
                 this.userSetPropertiesModels = model.userSetPropertiesModels;
@@ -1198,6 +1286,14 @@ public class FilterUsersResponseBody extends TeaModel {
              */
             public Builder remark(String remark) {
                 this.remark = remark;
+                return this;
+            }
+
+            /**
+             * ResourcePolicyList.
+             */
+            public Builder resourcePolicyList(java.util.List<ResourcePolicyList> resourcePolicyList) {
+                this.resourcePolicyList = resourcePolicyList;
                 return this;
             }
 

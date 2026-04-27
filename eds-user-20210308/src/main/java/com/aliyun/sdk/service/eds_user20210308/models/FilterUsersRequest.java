@@ -87,6 +87,10 @@ public class FilterUsersRequest extends Request {
     private java.util.List<PropertyKeyValueFilterParam> propertyKeyValueFilterParam;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowExtras")
+    private java.util.Map<String, String> showExtras;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
@@ -109,6 +113,7 @@ public class FilterUsersRequest extends Request {
         this.ownerType = builder.ownerType;
         this.propertyFilterParam = builder.propertyFilterParam;
         this.propertyKeyValueFilterParam = builder.propertyKeyValueFilterParam;
+        this.showExtras = builder.showExtras;
         this.status = builder.status;
     }
 
@@ -245,6 +250,13 @@ public class FilterUsersRequest extends Request {
     }
 
     /**
+     * @return showExtras
+     */
+    public java.util.Map<String, String> getShowExtras() {
+        return this.showExtras;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -269,6 +281,7 @@ public class FilterUsersRequest extends Request {
         private String ownerType; 
         private java.util.List<PropertyFilterParam> propertyFilterParam; 
         private java.util.List<PropertyKeyValueFilterParam> propertyKeyValueFilterParam; 
+        private java.util.Map<String, String> showExtras; 
         private Integer status; 
 
         private Builder() {
@@ -294,6 +307,7 @@ public class FilterUsersRequest extends Request {
             this.ownerType = request.ownerType;
             this.propertyFilterParam = request.propertyFilterParam;
             this.propertyKeyValueFilterParam = request.propertyKeyValueFilterParam;
+            this.showExtras = request.showExtras;
             this.status = request.status;
         } 
 
@@ -507,6 +521,15 @@ public class FilterUsersRequest extends Request {
         public Builder propertyKeyValueFilterParam(java.util.List<PropertyKeyValueFilterParam> propertyKeyValueFilterParam) {
             this.putQueryParameter("PropertyKeyValueFilterParam", propertyKeyValueFilterParam);
             this.propertyKeyValueFilterParam = propertyKeyValueFilterParam;
+            return this;
+        }
+
+        /**
+         * ShowExtras.
+         */
+        public Builder showExtras(java.util.Map<String, String> showExtras) {
+            this.putQueryParameter("ShowExtras", showExtras);
+            this.showExtras = showExtras;
             return this;
         }
 

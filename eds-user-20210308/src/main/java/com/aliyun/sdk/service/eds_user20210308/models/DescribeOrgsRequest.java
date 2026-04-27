@@ -22,6 +22,10 @@ public class DescribeOrgsRequest extends Request {
     private String businessChannel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeOrgIds")
+    private java.util.List<String> includeOrgIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Long maxResults;
@@ -45,6 +49,7 @@ public class DescribeOrgsRequest extends Request {
     private DescribeOrgsRequest(Builder builder) {
         super(builder);
         this.businessChannel = builder.businessChannel;
+        this.includeOrgIds = builder.includeOrgIds;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orgName = builder.orgName;
@@ -70,6 +75,13 @@ public class DescribeOrgsRequest extends Request {
      */
     public String getBusinessChannel() {
         return this.businessChannel;
+    }
+
+    /**
+     * @return includeOrgIds
+     */
+    public java.util.List<String> getIncludeOrgIds() {
+        return this.includeOrgIds;
     }
 
     /**
@@ -109,6 +121,7 @@ public class DescribeOrgsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeOrgsRequest, Builder> {
         private String businessChannel; 
+        private java.util.List<String> includeOrgIds; 
         private Long maxResults; 
         private String nextToken; 
         private String orgName; 
@@ -122,6 +135,7 @@ public class DescribeOrgsRequest extends Request {
         private Builder(DescribeOrgsRequest request) {
             super(request);
             this.businessChannel = request.businessChannel;
+            this.includeOrgIds = request.includeOrgIds;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orgName = request.orgName;
@@ -135,6 +149,15 @@ public class DescribeOrgsRequest extends Request {
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
             this.businessChannel = businessChannel;
+            return this;
+        }
+
+        /**
+         * IncludeOrgIds.
+         */
+        public Builder includeOrgIds(java.util.List<String> includeOrgIds) {
+            this.putQueryParameter("IncludeOrgIds", includeOrgIds);
+            this.includeOrgIds = includeOrgIds;
             return this;
         }
 
