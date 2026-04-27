@@ -2170,6 +2170,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("TenantId")
+        private String tenantId;
+
         @com.aliyun.core.annotation.NameInMap("TerminalUrl")
         private String terminalUrl;
 
@@ -2233,6 +2236,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.serviceConfig = builder.serviceConfig;
             this.status = builder.status;
             this.tags = builder.tags;
+            this.tenantId = builder.tenantId;
             this.terminalUrl = builder.terminalUrl;
             this.userId = builder.userId;
             this.userName = builder.userName;
@@ -2518,6 +2522,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tenantId
+         */
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
+        /**
          * @return terminalUrl
          */
         public String getTerminalUrl() {
@@ -2612,6 +2623,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private ServiceConfig serviceConfig; 
             private String status; 
             private java.util.List<Tags> tags; 
+            private String tenantId; 
             private String terminalUrl; 
             private String userId; 
             private String userName; 
@@ -2663,6 +2675,7 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.serviceConfig = model.serviceConfig;
                 this.status = model.status;
                 this.tags = model.tags;
+                this.tenantId = model.tenantId;
                 this.terminalUrl = model.terminalUrl;
                 this.userId = model.userId;
                 this.userName = model.userName;
@@ -3074,6 +3087,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * TenantId.
+             */
+            public Builder tenantId(String tenantId) {
+                this.tenantId = tenantId;
                 return this;
             }
 

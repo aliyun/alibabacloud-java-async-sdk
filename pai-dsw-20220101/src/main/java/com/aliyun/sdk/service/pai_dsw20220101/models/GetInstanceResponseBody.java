@@ -158,6 +158,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
     @com.aliyun.core.annotation.NameInMap("TerminalUrl")
     private String terminalUrl;
 
@@ -233,6 +236,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.status = builder.status;
         this.success = builder.success;
         this.tags = builder.tags;
+        this.tenantId = builder.tenantId;
         this.terminalUrl = builder.terminalUrl;
         this.userCommandId = builder.userCommandId;
         this.userId = builder.userId;
@@ -586,6 +590,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return terminalUrl
      */
     public String getTerminalUrl() {
@@ -696,6 +707,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String status; 
         private Boolean success; 
         private java.util.List<Tags> tags; 
+        private String tenantId; 
         private String terminalUrl; 
         private String userCommandId; 
         private String userId; 
@@ -757,6 +769,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.status = model.status;
             this.success = model.success;
             this.tags = model.tags;
+            this.tenantId = model.tenantId;
             this.terminalUrl = model.terminalUrl;
             this.userCommandId = model.userCommandId;
             this.userId = model.userId;
@@ -1294,6 +1307,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.tenantId = tenantId;
             return this;
         }
 
