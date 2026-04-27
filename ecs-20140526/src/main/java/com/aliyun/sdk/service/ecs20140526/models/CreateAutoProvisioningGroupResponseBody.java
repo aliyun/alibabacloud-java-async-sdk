@@ -179,6 +179,9 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
+        @com.aliyun.core.annotation.NameInMap("CandidateEvaluateLevel")
+        private String candidateEvaluateLevel;
+
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
@@ -199,6 +202,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
         private LaunchResult(Builder builder) {
             this.amount = builder.amount;
+            this.candidateEvaluateLevel = builder.candidateEvaluateLevel;
             this.errorCode = builder.errorCode;
             this.errorMsg = builder.errorMsg;
             this.instanceIds = builder.instanceIds;
@@ -220,6 +224,13 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
          */
         public Integer getAmount() {
             return this.amount;
+        }
+
+        /**
+         * @return candidateEvaluateLevel
+         */
+        public String getCandidateEvaluateLevel() {
+            return this.candidateEvaluateLevel;
         }
 
         /**
@@ -266,6 +277,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer amount; 
+            private String candidateEvaluateLevel; 
             private String errorCode; 
             private String errorMsg; 
             private InstanceIds instanceIds; 
@@ -278,6 +290,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
             private Builder(LaunchResult model) {
                 this.amount = model.amount;
+                this.candidateEvaluateLevel = model.candidateEvaluateLevel;
                 this.errorCode = model.errorCode;
                 this.errorMsg = model.errorMsg;
                 this.instanceIds = model.instanceIds;
@@ -294,6 +307,14 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
+                return this;
+            }
+
+            /**
+             * CandidateEvaluateLevel.
+             */
+            public Builder candidateEvaluateLevel(String candidateEvaluateLevel) {
+                this.candidateEvaluateLevel = candidateEvaluateLevel;
                 return this;
             }
 

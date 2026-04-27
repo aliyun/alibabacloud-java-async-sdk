@@ -30,6 +30,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     private String autoProvisioningGroupType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CandidateOptions")
+    private CandidateOptions candidateOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -168,6 +172,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         this.launchConfiguration = builder.launchConfiguration;
         this.autoProvisioningGroupName = builder.autoProvisioningGroupName;
         this.autoProvisioningGroupType = builder.autoProvisioningGroupType;
+        this.candidateOptions = builder.candidateOptions;
         this.clientToken = builder.clientToken;
         this.dataDiskConfig = builder.dataDiskConfig;
         this.defaultTargetCapacityType = builder.defaultTargetCapacityType;
@@ -235,6 +240,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
      */
     public String getAutoProvisioningGroupType() {
         return this.autoProvisioningGroupType;
+    }
+
+    /**
+     * @return candidateOptions
+     */
+    public CandidateOptions getCandidateOptions() {
+        return this.candidateOptions;
     }
 
     /**
@@ -472,6 +484,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private LaunchConfiguration launchConfiguration; 
         private String autoProvisioningGroupName; 
         private String autoProvisioningGroupType; 
+        private CandidateOptions candidateOptions; 
         private String clientToken; 
         private java.util.List<DataDiskConfig> dataDiskConfig; 
         private String defaultTargetCapacityType; 
@@ -515,6 +528,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.launchConfiguration = request.launchConfiguration;
             this.autoProvisioningGroupName = request.autoProvisioningGroupName;
             this.autoProvisioningGroupType = request.autoProvisioningGroupType;
+            this.candidateOptions = request.candidateOptions;
             this.clientToken = request.clientToken;
             this.dataDiskConfig = request.dataDiskConfig;
             this.defaultTargetCapacityType = request.defaultTargetCapacityType;
@@ -586,6 +600,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         public Builder autoProvisioningGroupType(String autoProvisioningGroupType) {
             this.putQueryParameter("AutoProvisioningGroupType", autoProvisioningGroupType);
             this.autoProvisioningGroupType = autoProvisioningGroupType;
+            return this;
+        }
+
+        /**
+         * CandidateOptions.
+         */
+        public Builder candidateOptions(CandidateOptions candidateOptions) {
+            this.putQueryParameter("CandidateOptions", candidateOptions);
+            this.candidateOptions = candidateOptions;
             return this;
         }
 
@@ -3228,6 +3251,81 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
             public LaunchConfiguration build() {
                 return new LaunchConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
+    public static class CandidateOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Evaluate")
+        private Boolean evaluate;
+
+        @com.aliyun.core.annotation.NameInMap("TimeoutMinutes")
+        private Integer timeoutMinutes;
+
+        private CandidateOptions(Builder builder) {
+            this.evaluate = builder.evaluate;
+            this.timeoutMinutes = builder.timeoutMinutes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CandidateOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return evaluate
+         */
+        public Boolean getEvaluate() {
+            return this.evaluate;
+        }
+
+        /**
+         * @return timeoutMinutes
+         */
+        public Integer getTimeoutMinutes() {
+            return this.timeoutMinutes;
+        }
+
+        public static final class Builder {
+            private Boolean evaluate; 
+            private Integer timeoutMinutes; 
+
+            private Builder() {
+            } 
+
+            private Builder(CandidateOptions model) {
+                this.evaluate = model.evaluate;
+                this.timeoutMinutes = model.timeoutMinutes;
+            } 
+
+            /**
+             * Evaluate.
+             */
+            public Builder evaluate(Boolean evaluate) {
+                this.evaluate = evaluate;
+                return this;
+            }
+
+            /**
+             * TimeoutMinutes.
+             */
+            public Builder timeoutMinutes(Integer timeoutMinutes) {
+                this.timeoutMinutes = timeoutMinutes;
+                return this;
+            }
+
+            public CandidateOptions build() {
+                return new CandidateOptions(this);
             } 
 
         } 

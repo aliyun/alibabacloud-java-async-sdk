@@ -30,6 +30,10 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
     private java.util.List<String> autoProvisioningGroupStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupTypes")
+    private java.util.List<String> autoProvisioningGroupTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -72,6 +76,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         this.autoProvisioningGroupId = builder.autoProvisioningGroupId;
         this.autoProvisioningGroupName = builder.autoProvisioningGroupName;
         this.autoProvisioningGroupStatus = builder.autoProvisioningGroupStatus;
+        this.autoProvisioningGroupTypes = builder.autoProvisioningGroupTypes;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -115,6 +120,13 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
      */
     public java.util.List<String> getAutoProvisioningGroupStatus() {
         return this.autoProvisioningGroupStatus;
+    }
+
+    /**
+     * @return autoProvisioningGroupTypes
+     */
+    public java.util.List<String> getAutoProvisioningGroupTypes() {
+        return this.autoProvisioningGroupTypes;
     }
 
     /**
@@ -184,6 +196,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         private java.util.List<String> autoProvisioningGroupId; 
         private String autoProvisioningGroupName; 
         private java.util.List<String> autoProvisioningGroupStatus; 
+        private java.util.List<String> autoProvisioningGroupTypes; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -203,6 +216,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
             this.autoProvisioningGroupId = request.autoProvisioningGroupId;
             this.autoProvisioningGroupName = request.autoProvisioningGroupName;
             this.autoProvisioningGroupStatus = request.autoProvisioningGroupStatus;
+            this.autoProvisioningGroupTypes = request.autoProvisioningGroupTypes;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -247,6 +261,15 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         public Builder autoProvisioningGroupStatus(java.util.List<String> autoProvisioningGroupStatus) {
             this.putQueryParameter("AutoProvisioningGroupStatus", autoProvisioningGroupStatus);
             this.autoProvisioningGroupStatus = autoProvisioningGroupStatus;
+            return this;
+        }
+
+        /**
+         * AutoProvisioningGroupTypes.
+         */
+        public Builder autoProvisioningGroupTypes(java.util.List<String> autoProvisioningGroupTypes) {
+            this.putQueryParameter("AutoProvisioningGroupTypes", autoProvisioningGroupTypes);
+            this.autoProvisioningGroupTypes = autoProvisioningGroupTypes;
             return this;
         }
 

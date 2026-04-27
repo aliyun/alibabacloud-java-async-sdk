@@ -381,6 +381,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HyperThreadingAdjustable")
         private Boolean hyperThreadingAdjustable;
 
+        @com.aliyun.core.annotation.NameInMap("NestedVirtualizationSupport")
+        private String nestedVirtualizationSupport;
+
         @com.aliyun.core.annotation.NameInMap("SupportedTopologyTypes")
         private SupportedTopologyTypes supportedTopologyTypes;
 
@@ -391,6 +394,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             this.core = builder.core;
             this.coreFactor = builder.coreFactor;
             this.hyperThreadingAdjustable = builder.hyperThreadingAdjustable;
+            this.nestedVirtualizationSupport = builder.nestedVirtualizationSupport;
             this.supportedTopologyTypes = builder.supportedTopologyTypes;
             this.threadsPerCore = builder.threadsPerCore;
         }
@@ -425,6 +429,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return nestedVirtualizationSupport
+         */
+        public String getNestedVirtualizationSupport() {
+            return this.nestedVirtualizationSupport;
+        }
+
+        /**
          * @return supportedTopologyTypes
          */
         public SupportedTopologyTypes getSupportedTopologyTypes() {
@@ -442,6 +453,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer core; 
             private Integer coreFactor; 
             private Boolean hyperThreadingAdjustable; 
+            private String nestedVirtualizationSupport; 
             private SupportedTopologyTypes supportedTopologyTypes; 
             private Integer threadsPerCore; 
 
@@ -452,6 +464,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
                 this.core = model.core;
                 this.coreFactor = model.coreFactor;
                 this.hyperThreadingAdjustable = model.hyperThreadingAdjustable;
+                this.nestedVirtualizationSupport = model.nestedVirtualizationSupport;
                 this.supportedTopologyTypes = model.supportedTopologyTypes;
                 this.threadsPerCore = model.threadsPerCore;
             } 
@@ -486,6 +499,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              */
             public Builder hyperThreadingAdjustable(Boolean hyperThreadingAdjustable) {
                 this.hyperThreadingAdjustable = hyperThreadingAdjustable;
+                return this;
+            }
+
+            /**
+             * NestedVirtualizationSupport.
+             */
+            public Builder nestedVirtualizationSupport(String nestedVirtualizationSupport) {
+                this.nestedVirtualizationSupport = nestedVirtualizationSupport;
                 return this;
             }
 

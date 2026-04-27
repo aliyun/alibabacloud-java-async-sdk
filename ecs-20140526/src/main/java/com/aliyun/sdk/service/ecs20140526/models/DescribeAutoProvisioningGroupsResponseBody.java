@@ -169,6 +169,177 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
      *
      * <p>DescribeAutoProvisioningGroupsResponseBody</p>
      */
+    public static class CandidateOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TimeoutMinutes")
+        private Integer timeoutMinutes;
+
+        private CandidateOptions(Builder builder) {
+            this.timeoutMinutes = builder.timeoutMinutes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CandidateOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return timeoutMinutes
+         */
+        public Integer getTimeoutMinutes() {
+            return this.timeoutMinutes;
+        }
+
+        public static final class Builder {
+            private Integer timeoutMinutes; 
+
+            private Builder() {
+            } 
+
+            private Builder(CandidateOptions model) {
+                this.timeoutMinutes = model.timeoutMinutes;
+            } 
+
+            /**
+             * TimeoutMinutes.
+             */
+            public Builder timeoutMinutes(Integer timeoutMinutes) {
+                this.timeoutMinutes = timeoutMinutes;
+                return this;
+            }
+
+            public CandidateOptions build() {
+                return new CandidateOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupsResponseBody</p>
+     */
+    public static class CapacitySpecification extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PayAsYouGoCapacity")
+        private Float payAsYouGoCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("PrePaidCapacity")
+        private Float prePaidCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("SpotCapacity")
+        private Float spotCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCapacity")
+        private Float totalCapacity;
+
+        private CapacitySpecification(Builder builder) {
+            this.payAsYouGoCapacity = builder.payAsYouGoCapacity;
+            this.prePaidCapacity = builder.prePaidCapacity;
+            this.spotCapacity = builder.spotCapacity;
+            this.totalCapacity = builder.totalCapacity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CapacitySpecification create() {
+            return builder().build();
+        }
+
+        /**
+         * @return payAsYouGoCapacity
+         */
+        public Float getPayAsYouGoCapacity() {
+            return this.payAsYouGoCapacity;
+        }
+
+        /**
+         * @return prePaidCapacity
+         */
+        public Float getPrePaidCapacity() {
+            return this.prePaidCapacity;
+        }
+
+        /**
+         * @return spotCapacity
+         */
+        public Float getSpotCapacity() {
+            return this.spotCapacity;
+        }
+
+        /**
+         * @return totalCapacity
+         */
+        public Float getTotalCapacity() {
+            return this.totalCapacity;
+        }
+
+        public static final class Builder {
+            private Float payAsYouGoCapacity; 
+            private Float prePaidCapacity; 
+            private Float spotCapacity; 
+            private Float totalCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(CapacitySpecification model) {
+                this.payAsYouGoCapacity = model.payAsYouGoCapacity;
+                this.prePaidCapacity = model.prePaidCapacity;
+                this.spotCapacity = model.spotCapacity;
+                this.totalCapacity = model.totalCapacity;
+            } 
+
+            /**
+             * PayAsYouGoCapacity.
+             */
+            public Builder payAsYouGoCapacity(Float payAsYouGoCapacity) {
+                this.payAsYouGoCapacity = payAsYouGoCapacity;
+                return this;
+            }
+
+            /**
+             * PrePaidCapacity.
+             */
+            public Builder prePaidCapacity(Float prePaidCapacity) {
+                this.prePaidCapacity = prePaidCapacity;
+                return this;
+            }
+
+            /**
+             * SpotCapacity.
+             */
+            public Builder spotCapacity(Float spotCapacity) {
+                this.spotCapacity = spotCapacity;
+                return this;
+            }
+
+            /**
+             * TotalCapacity.
+             */
+            public Builder totalCapacity(Float totalCapacity) {
+                this.totalCapacity = totalCapacity;
+                return this;
+            }
+
+            public CapacitySpecification build() {
+                return new CapacitySpecification(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupsResponseBody</p>
+     */
     public static class LaunchTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -556,6 +727,60 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
      *
      * <p>DescribeAutoProvisioningGroupsResponseBody</p>
      */
+    public static class SuspendedProcesses extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SuspendedProcess")
+        private java.util.List<String> suspendedProcess;
+
+        private SuspendedProcesses(Builder builder) {
+            this.suspendedProcess = builder.suspendedProcess;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SuspendedProcesses create() {
+            return builder().build();
+        }
+
+        /**
+         * @return suspendedProcess
+         */
+        public java.util.List<String> getSuspendedProcess() {
+            return this.suspendedProcess;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> suspendedProcess; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuspendedProcesses model) {
+                this.suspendedProcess = model.suspendedProcess;
+            } 
+
+            /**
+             * SuspendedProcess.
+             */
+            public Builder suspendedProcess(java.util.List<String> suspendedProcess) {
+                this.suspendedProcess = suspendedProcess;
+                return this;
+            }
+
+            public SuspendedProcesses build() {
+                return new SuspendedProcesses(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -841,6 +1066,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupType")
         private String autoProvisioningGroupType;
 
+        @com.aliyun.core.annotation.NameInMap("CandidateOptions")
+        private CandidateOptions candidateOptions;
+
+        @com.aliyun.core.annotation.NameInMap("CapacitySpecification")
+        private CapacitySpecification capacitySpecification;
+
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
@@ -877,6 +1108,9 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("SuspendedProcesses")
+        private SuspendedProcesses suspendedProcesses;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
@@ -899,6 +1133,8 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             this.autoProvisioningGroupId = builder.autoProvisioningGroupId;
             this.autoProvisioningGroupName = builder.autoProvisioningGroupName;
             this.autoProvisioningGroupType = builder.autoProvisioningGroupType;
+            this.candidateOptions = builder.candidateOptions;
+            this.capacitySpecification = builder.capacitySpecification;
             this.creationTime = builder.creationTime;
             this.excessCapacityTerminationPolicy = builder.excessCapacityTerminationPolicy;
             this.launchTemplateConfigs = builder.launchTemplateConfigs;
@@ -911,6 +1147,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             this.spotOptions = builder.spotOptions;
             this.state = builder.state;
             this.status = builder.status;
+            this.suspendedProcesses = builder.suspendedProcesses;
             this.tags = builder.tags;
             this.targetCapacitySpecification = builder.targetCapacitySpecification;
             this.terminateInstances = builder.terminateInstances;
@@ -946,6 +1183,20 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
          */
         public String getAutoProvisioningGroupType() {
             return this.autoProvisioningGroupType;
+        }
+
+        /**
+         * @return candidateOptions
+         */
+        public CandidateOptions getCandidateOptions() {
+            return this.candidateOptions;
+        }
+
+        /**
+         * @return capacitySpecification
+         */
+        public CapacitySpecification getCapacitySpecification() {
+            return this.capacitySpecification;
         }
 
         /**
@@ -1033,6 +1284,13 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return suspendedProcesses
+         */
+        public SuspendedProcesses getSuspendedProcesses() {
+            return this.suspendedProcesses;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
@@ -1078,6 +1336,8 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private String autoProvisioningGroupId; 
             private String autoProvisioningGroupName; 
             private String autoProvisioningGroupType; 
+            private CandidateOptions candidateOptions; 
+            private CapacitySpecification capacitySpecification; 
             private String creationTime; 
             private String excessCapacityTerminationPolicy; 
             private LaunchTemplateConfigs launchTemplateConfigs; 
@@ -1090,6 +1350,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private SpotOptions spotOptions; 
             private String state; 
             private String status; 
+            private SuspendedProcesses suspendedProcesses; 
             private Tags tags; 
             private TargetCapacitySpecification targetCapacitySpecification; 
             private Boolean terminateInstances; 
@@ -1104,6 +1365,8 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
                 this.autoProvisioningGroupId = model.autoProvisioningGroupId;
                 this.autoProvisioningGroupName = model.autoProvisioningGroupName;
                 this.autoProvisioningGroupType = model.autoProvisioningGroupType;
+                this.candidateOptions = model.candidateOptions;
+                this.capacitySpecification = model.capacitySpecification;
                 this.creationTime = model.creationTime;
                 this.excessCapacityTerminationPolicy = model.excessCapacityTerminationPolicy;
                 this.launchTemplateConfigs = model.launchTemplateConfigs;
@@ -1116,6 +1379,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
                 this.spotOptions = model.spotOptions;
                 this.state = model.state;
                 this.status = model.status;
+                this.suspendedProcesses = model.suspendedProcesses;
                 this.tags = model.tags;
                 this.targetCapacitySpecification = model.targetCapacitySpecification;
                 this.terminateInstances = model.terminateInstances;
@@ -1158,6 +1422,22 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
              */
             public Builder autoProvisioningGroupType(String autoProvisioningGroupType) {
                 this.autoProvisioningGroupType = autoProvisioningGroupType;
+                return this;
+            }
+
+            /**
+             * CandidateOptions.
+             */
+            public Builder candidateOptions(CandidateOptions candidateOptions) {
+                this.candidateOptions = candidateOptions;
+                return this;
+            }
+
+            /**
+             * CapacitySpecification.
+             */
+            public Builder capacitySpecification(CapacitySpecification capacitySpecification) {
+                this.capacitySpecification = capacitySpecification;
                 return this;
             }
 
@@ -1302,6 +1582,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * SuspendedProcesses.
+             */
+            public Builder suspendedProcesses(SuspendedProcesses suspendedProcesses) {
+                this.suspendedProcesses = suspendedProcesses;
                 return this;
             }
 
