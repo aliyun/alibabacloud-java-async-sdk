@@ -84,6 +84,48 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeMediaTypeResponse> changeMediaType(ChangeMediaTypeRequest request);
 
     /**
+     * @param request the request parameters of CloudAgentLogin  CloudAgentLoginRequest
+     * @return CloudAgentLoginResponse
+     */
+    CompletableFuture<CloudAgentLoginResponse> cloudAgentLogin(CloudAgentLoginRequest request);
+
+    /**
+     * @param request the request parameters of CloudAgentLogout  CloudAgentLogoutRequest
+     * @return CloudAgentLogoutResponse
+     */
+    CompletableFuture<CloudAgentLogoutResponse> cloudAgentLogout(CloudAgentLogoutRequest request);
+
+    /**
+     * @param request the request parameters of CloudAgentSetUserData  CloudAgentSetUserDataRequest
+     * @return CloudAgentSetUserDataResponse
+     */
+    CompletableFuture<CloudAgentSetUserDataResponse> cloudAgentSetUserData(CloudAgentSetUserDataRequest request);
+
+    /**
+     * @param request the request parameters of CloudAgentUnlink  CloudAgentUnlinkRequest
+     * @return CloudAgentUnlinkResponse
+     */
+    CompletableFuture<CloudAgentUnlinkResponse> cloudAgentUnlink(CloudAgentUnlinkRequest request);
+
+    /**
+     * @param request the request parameters of CloudBatchCreateAgent  CloudBatchCreateAgentRequest
+     * @return CloudBatchCreateAgentResponse
+     */
+    CompletableFuture<CloudBatchCreateAgentResponse> cloudBatchCreateAgent(CloudBatchCreateAgentRequest request);
+
+    /**
+     * @param request the request parameters of CloudBatchGetAgentStatus  CloudBatchGetAgentStatusRequest
+     * @return CloudBatchGetAgentStatusResponse
+     */
+    CompletableFuture<CloudBatchGetAgentStatusResponse> cloudBatchGetAgentStatus(CloudBatchGetAgentStatusRequest request);
+
+    /**
+     * @param request the request parameters of CloudBatchUpdateAgent  CloudBatchUpdateAgentRequest
+     * @return CloudBatchUpdateAgentResponse
+     */
+    CompletableFuture<CloudBatchUpdateAgentResponse> cloudBatchUpdateAgent(CloudBatchUpdateAgentRequest request);
+
+    /**
      * @param request the request parameters of CloudCreateAgent  CloudCreateAgentRequest
      * @return CloudCreateAgentResponse
      */
@@ -96,10 +138,88 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloudCreateTaskResponse> cloudCreateTask(CloudCreateTaskRequest request);
 
     /**
+     * @param request the request parameters of CloudDeleteAgent  CloudDeleteAgentRequest
+     * @return CloudDeleteAgentResponse
+     */
+    CompletableFuture<CloudDeleteAgentResponse> cloudDeleteAgent(CloudDeleteAgentRequest request);
+
+    /**
+     * @param request the request parameters of CloudDeleteAgentTel  CloudDeleteAgentTelRequest
+     * @return CloudDeleteAgentTelResponse
+     */
+    CompletableFuture<CloudDeleteAgentTelResponse> cloudDeleteAgentTel(CloudDeleteAgentTelRequest request);
+
+    /**
+     * @param request the request parameters of CloudGetAgent  CloudGetAgentRequest
+     * @return CloudGetAgentResponse
+     */
+    CompletableFuture<CloudGetAgentResponse> cloudGetAgent(CloudGetAgentRequest request);
+
+    /**
+     * @param request the request parameters of CloudGetAgentStatus  CloudGetAgentStatusRequest
+     * @return CloudGetAgentStatusResponse
+     */
+    CompletableFuture<CloudGetAgentStatusResponse> cloudGetAgentStatus(CloudGetAgentStatusRequest request);
+
+    /**
      * @param request the request parameters of CloudImportTaskTel  CloudImportTaskTelRequest
      * @return CloudImportTaskTelResponse
      */
     CompletableFuture<CloudImportTaskTelResponse> cloudImportTaskTel(CloudImportTaskTelRequest request);
+
+    /**
+     * @param request the request parameters of CloudInterruptIvr  CloudInterruptIvrRequest
+     * @return CloudInterruptIvrResponse
+     */
+    CompletableFuture<CloudInterruptIvrResponse> cloudInterruptIvr(CloudInterruptIvrRequest request);
+
+    /**
+     * @param request the request parameters of CloudListAgentTel  CloudListAgentTelRequest
+     * @return CloudListAgentTelResponse
+     */
+    CompletableFuture<CloudListAgentTelResponse> cloudListAgentTel(CloudListAgentTelRequest request);
+
+    /**
+     * @param request the request parameters of CloudListFreeAgent  CloudListFreeAgentRequest
+     * @return CloudListFreeAgentResponse
+     */
+    CompletableFuture<CloudListFreeAgentResponse> cloudListFreeAgent(CloudListFreeAgentRequest request);
+
+    /**
+     * @param request the request parameters of CloudListOnlineAgent  CloudListOnlineAgentRequest
+     * @return CloudListOnlineAgentResponse
+     */
+    CompletableFuture<CloudListOnlineAgentResponse> cloudListOnlineAgent(CloudListOnlineAgentRequest request);
+
+    /**
+     * @param request the request parameters of CloudPreviewoutcall  CloudPreviewoutcallRequest
+     * @return CloudPreviewoutcallResponse
+     */
+    CompletableFuture<CloudPreviewoutcallResponse> cloudPreviewoutcall(CloudPreviewoutcallRequest request);
+
+    /**
+     * @param request the request parameters of CloudQueryAgent  CloudQueryAgentRequest
+     * @return CloudQueryAgentResponse
+     */
+    CompletableFuture<CloudQueryAgentResponse> cloudQueryAgent(CloudQueryAgentRequest request);
+
+    /**
+     * @param request the request parameters of CloudQueryAgentCnoAndName  CloudQueryAgentCnoAndNameRequest
+     * @return CloudQueryAgentCnoAndNameResponse
+     */
+    CompletableFuture<CloudQueryAgentCnoAndNameResponse> cloudQueryAgentCnoAndName(CloudQueryAgentCnoAndNameRequest request);
+
+    /**
+     * @param request the request parameters of CloudQueryAgentGroup  CloudQueryAgentGroupRequest
+     * @return CloudQueryAgentGroupResponse
+     */
+    CompletableFuture<CloudQueryAgentGroupResponse> cloudQueryAgentGroup(CloudQueryAgentGroupRequest request);
+
+    /**
+     * @param request the request parameters of CloudQueryAgentSkill  CloudQueryAgentSkillRequest
+     * @return CloudQueryAgentSkillResponse
+     */
+    CompletableFuture<CloudQueryAgentSkillResponse> cloudQueryAgentSkill(CloudQueryAgentSkillRequest request);
 
     /**
      * @param request the request parameters of CloudStartTask  CloudStartTaskRequest
@@ -108,10 +228,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloudStartTaskResponse> cloudStartTask(CloudStartTaskRequest request);
 
     /**
+     * @param request the request parameters of CloudUpdateAgent  CloudUpdateAgentRequest
+     * @return CloudUpdateAgentResponse
+     */
+    CompletableFuture<CloudUpdateAgentResponse> cloudUpdateAgent(CloudUpdateAgentRequest request);
+
+    /**
      * @param request the request parameters of CloudUpdateTask  CloudUpdateTaskRequest
      * @return CloudUpdateTaskResponse
      */
     CompletableFuture<CloudUpdateTaskResponse> cloudUpdateTask(CloudUpdateTaskRequest request);
+
+    /**
+     * @param request the request parameters of CloudWebcall  CloudWebcallRequest
+     * @return CloudWebcallResponse
+     */
+    CompletableFuture<CloudWebcallResponse> cloudWebcall(CloudWebcallRequest request);
 
     /**
      * <b>description</b> :

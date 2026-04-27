@@ -1,0 +1,409 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dyvmsapi20170525.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link CloudQueryAgentSkillResponseBody} extends {@link TeaModel}
+ *
+ * <p>CloudQueryAgentSkillResponseBody</p>
+ */
+public class CloudQueryAgentSkillResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Data data;
+
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    private CloudQueryAgentSkillResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
+        this.code = builder.code;
+        this.data = builder.data;
+        this.message = builder.message;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CloudQueryAgentSkillResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private String accessDeniedDetail; 
+        private String code; 
+        private Data data; 
+        private String message; 
+        private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CloudQueryAgentSkillResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public CloudQueryAgentSkillResponseBody build() {
+            return new CloudQueryAgentSkillResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link CloudQueryAgentSkillResponseBody} extends {@link TeaModel}
+     *
+     * <p>CloudQueryAgentSkillResponseBody</p>
+     */
+    public static class List extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentId")
+        private Long agentId;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("EnterpriseId")
+        private Long enterpriseId;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("SkillId")
+        private Long skillId;
+
+        @com.aliyun.core.annotation.NameInMap("SkillLevel")
+        private Long skillLevel;
+
+        @com.aliyun.core.annotation.NameInMap("SkillName")
+        private String skillName;
+
+        private List(Builder builder) {
+            this.agentId = builder.agentId;
+            this.createTime = builder.createTime;
+            this.enterpriseId = builder.enterpriseId;
+            this.id = builder.id;
+            this.skillId = builder.skillId;
+            this.skillLevel = builder.skillLevel;
+            this.skillName = builder.skillName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static List create() {
+            return builder().build();
+        }
+
+        /**
+         * @return agentId
+         */
+        public Long getAgentId() {
+            return this.agentId;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return enterpriseId
+         */
+        public Long getEnterpriseId() {
+            return this.enterpriseId;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return skillId
+         */
+        public Long getSkillId() {
+            return this.skillId;
+        }
+
+        /**
+         * @return skillLevel
+         */
+        public Long getSkillLevel() {
+            return this.skillLevel;
+        }
+
+        /**
+         * @return skillName
+         */
+        public String getSkillName() {
+            return this.skillName;
+        }
+
+        public static final class Builder {
+            private Long agentId; 
+            private String createTime; 
+            private Long enterpriseId; 
+            private Long id; 
+            private Long skillId; 
+            private Long skillLevel; 
+            private String skillName; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.agentId = model.agentId;
+                this.createTime = model.createTime;
+                this.enterpriseId = model.enterpriseId;
+                this.id = model.id;
+                this.skillId = model.skillId;
+                this.skillLevel = model.skillLevel;
+                this.skillName = model.skillName;
+            } 
+
+            /**
+             * <p>座席id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
+             */
+            public Builder agentId(Long agentId) {
+                this.agentId = agentId;
+                return this;
+            }
+
+            /**
+             * <p>创建时间，格式: yyyy-MM-dd HH:mm:ss</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-20 10:00:00</p>
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * <p>企业编号</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7000002</p>
+             */
+            public Builder enterpriseId(Long enterpriseId) {
+                this.enterpriseId = enterpriseId;
+                return this;
+            }
+
+            /**
+             * <p>queueSkill关系表中id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * <p>skill的id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79</p>
+             */
+            public Builder skillId(Long skillId) {
+                this.skillId = skillId;
+                return this;
+            }
+
+            /**
+             * <p>技能值</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
+             */
+            public Builder skillLevel(Long skillLevel) {
+                this.skillLevel = skillLevel;
+                return this;
+            }
+
+            /**
+             * <p>技能名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillname</p>
+             */
+            public Builder skillName(String skillName) {
+                this.skillName = skillName;
+                return this;
+            }
+
+            public List build() {
+                return new List(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CloudQueryAgentSkillResponseBody} extends {@link TeaModel}
+     *
+     * <p>CloudQueryAgentSkillResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
+
+        private Data(Builder builder) {
+            this.list = builder.list;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return list
+         */
+        public java.util.List<List> getList() {
+            return this.list;
+        }
+
+        public static final class Builder {
+            private java.util.List<List> list; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+            } 
+
+            /**
+             * <p>座席技能列表</p>
+             */
+            public Builder list(java.util.List<List> list) {
+                this.list = list;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+}
