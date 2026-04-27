@@ -446,6 +446,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddUnknownThreatDetectProcess  AddUnknownThreatDetectProcessRequest
+     * @return AddUnknownThreatDetectProcessResponse
+     */
+    @Override
+    public CompletableFuture<AddUnknownThreatDetectProcessResponse> addUnknownThreatDetectProcess(AddUnknownThreatDetectProcessRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddUnknownThreatDetectProcess").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddUnknownThreatDetectProcessResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddUnknownThreatDetectProcessResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddVpcHoneyPot  AddVpcHoneyPotRequest
      * @return AddVpcHoneyPotResponse
      */
@@ -1752,6 +1770,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateUnknownThreatDetectStrategy  CreateUnknownThreatDetectStrategyRequest
+     * @return CreateUnknownThreatDetectStrategyResponse
+     */
+    @Override
+    public CompletableFuture<CreateUnknownThreatDetectStrategyResponse> createUnknownThreatDetectStrategy(CreateUnknownThreatDetectStrategyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateUnknownThreatDetectStrategy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateUnknownThreatDetectStrategyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateUnknownThreatDetectStrategyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateUserSetting  CreateUserSettingRequest
      * @return CreateUserSettingResponse
      */
@@ -2773,6 +2809,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteUnknownThreatDetectProcess  DeleteUnknownThreatDetectProcessRequest
+     * @return DeleteUnknownThreatDetectProcessResponse
+     */
+    @Override
+    public CompletableFuture<DeleteUnknownThreatDetectProcessResponse> deleteUnknownThreatDetectProcess(DeleteUnknownThreatDetectProcessRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteUnknownThreatDetectProcess").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteUnknownThreatDetectProcessResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteUnknownThreatDetectProcessResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteUnknownThreatDetectStrategy  DeleteUnknownThreatDetectStrategyRequest
+     * @return DeleteUnknownThreatDetectStrategyResponse
+     */
+    @Override
+    public CompletableFuture<DeleteUnknownThreatDetectStrategyResponse> deleteUnknownThreatDetectStrategy(DeleteUnknownThreatDetectStrategyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteUnknownThreatDetectStrategy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteUnknownThreatDetectStrategyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteUnknownThreatDetectStrategyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteVpcHoneyPot  DeleteVpcHoneyPotRequest
      * @return DeleteVpcHoneyPotResponse
      */
@@ -3194,9 +3266,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribeAttackAnalysisData  DescribeAttackAnalysisDataRequest
+     * @deprecated OpenAPI DescribeAttackAnalysisData is deprecated, please use Sas::2018-12-03::ListAttackEventInfo instead.  * @param request  the request parameters of DescribeAttackAnalysisData  DescribeAttackAnalysisDataRequest
      * @return DescribeAttackAnalysisDataResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeAttackAnalysisDataResponse> describeAttackAnalysisData(DescribeAttackAnalysisDataRequest request) {
         try {
@@ -11036,6 +11109,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetUnknownThreatDetectStatistic  GetUnknownThreatDetectStatisticRequest
+     * @return GetUnknownThreatDetectStatisticResponse
+     */
+    @Override
+    public CompletableFuture<GetUnknownThreatDetectStatisticResponse> getUnknownThreatDetectStatistic(GetUnknownThreatDetectStatisticRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetUnknownThreatDetectStatistic").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetUnknownThreatDetectStatisticResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetUnknownThreatDetectStatisticResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetUserLang  GetUserLangRequest
      * @return GetUserLangResponse
      */
@@ -11231,6 +11322,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<HandleSimilarSecurityEventsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of HandleUnknownThreatDetectEvent  HandleUnknownThreatDetectEventRequest
+     * @return HandleUnknownThreatDetectEventResponse
+     */
+    @Override
+    public CompletableFuture<HandleUnknownThreatDetectEventResponse> handleUnknownThreatDetectEvent(HandleUnknownThreatDetectEventRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("HandleUnknownThreatDetectEvent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(HandleUnknownThreatDetectEventResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<HandleUnknownThreatDetectEventResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -13380,6 +13489,78 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListUnknownThreatDetectEvent  ListUnknownThreatDetectEventRequest
+     * @return ListUnknownThreatDetectEventResponse
+     */
+    @Override
+    public CompletableFuture<ListUnknownThreatDetectEventResponse> listUnknownThreatDetectEvent(ListUnknownThreatDetectEventRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListUnknownThreatDetectEvent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUnknownThreatDetectEventResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUnknownThreatDetectEventResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListUnknownThreatDetectMachine  ListUnknownThreatDetectMachineRequest
+     * @return ListUnknownThreatDetectMachineResponse
+     */
+    @Override
+    public CompletableFuture<ListUnknownThreatDetectMachineResponse> listUnknownThreatDetectMachine(ListUnknownThreatDetectMachineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListUnknownThreatDetectMachine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUnknownThreatDetectMachineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUnknownThreatDetectMachineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListUnknownThreatDetectProcess  ListUnknownThreatDetectProcessRequest
+     * @return ListUnknownThreatDetectProcessResponse
+     */
+    @Override
+    public CompletableFuture<ListUnknownThreatDetectProcessResponse> listUnknownThreatDetectProcess(ListUnknownThreatDetectProcessRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListUnknownThreatDetectProcess").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUnknownThreatDetectProcessResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUnknownThreatDetectProcessResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListUnknownThreatDetectStrategy  ListUnknownThreatDetectStrategyRequest
+     * @return ListUnknownThreatDetectStrategyResponse
+     */
+    @Override
+    public CompletableFuture<ListUnknownThreatDetectStrategyResponse> listUnknownThreatDetectStrategy(ListUnknownThreatDetectStrategyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListUnknownThreatDetectStrategy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUnknownThreatDetectStrategyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUnknownThreatDetectStrategyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListUserVpc  ListUserVpcRequest
      * @return ListUserVpcResponse
      */
@@ -15150,6 +15331,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<OperateSwitchStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of OperateUnknownThreatDetectMachine  OperateUnknownThreatDetectMachineRequest
+     * @return OperateUnknownThreatDetectMachineResponse
+     */
+    @Override
+    public CompletableFuture<OperateUnknownThreatDetectMachineResponse> operateUnknownThreatDetectMachine(OperateUnknownThreatDetectMachineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OperateUnknownThreatDetectMachine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OperateUnknownThreatDetectMachineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OperateUnknownThreatDetectMachineResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -16944,6 +17143,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateTargetListByBatchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateUnknownThreatDetectProcess  UpdateUnknownThreatDetectProcessRequest
+     * @return UpdateUnknownThreatDetectProcessResponse
+     */
+    @Override
+    public CompletableFuture<UpdateUnknownThreatDetectProcessResponse> updateUnknownThreatDetectProcess(UpdateUnknownThreatDetectProcessRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateUnknownThreatDetectProcess").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateUnknownThreatDetectProcessResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateUnknownThreatDetectProcessResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateUnknownThreatDetectStrategy  UpdateUnknownThreatDetectStrategyRequest
+     * @return UpdateUnknownThreatDetectStrategyResponse
+     */
+    @Override
+    public CompletableFuture<UpdateUnknownThreatDetectStrategyResponse> updateUnknownThreatDetectStrategy(UpdateUnknownThreatDetectStrategyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateUnknownThreatDetectStrategy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateUnknownThreatDetectStrategyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateUnknownThreatDetectStrategyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

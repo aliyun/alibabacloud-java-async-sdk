@@ -146,6 +146,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddUninstallClientsByUuidsResponse> addUninstallClientsByUuids(AddUninstallClientsByUuidsRequest request);
 
     /**
+     * @param request the request parameters of AddUnknownThreatDetectProcess  AddUnknownThreatDetectProcessRequest
+     * @return AddUnknownThreatDetectProcessResponse
+     */
+    CompletableFuture<AddUnknownThreatDetectProcessResponse> addUnknownThreatDetectProcess(AddUnknownThreatDetectProcessRequest request);
+
+    /**
      * @param request the request parameters of AddVpcHoneyPot  AddVpcHoneyPotRequest
      * @return AddVpcHoneyPotResponse
      */
@@ -600,6 +606,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUniRestorePlanResponse> createUniRestorePlan(CreateUniRestorePlanRequest request);
 
     /**
+     * @param request the request parameters of CreateUnknownThreatDetectStrategy  CreateUnknownThreatDetectStrategyRequest
+     * @return CreateUnknownThreatDetectStrategyResponse
+     */
+    CompletableFuture<CreateUnknownThreatDetectStrategyResponse> createUnknownThreatDetectStrategy(CreateUnknownThreatDetectStrategyRequest request);
+
+    /**
      * @param request the request parameters of CreateUserSetting  CreateUserSettingRequest
      * @return CreateUserSettingResponse
      */
@@ -949,6 +961,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteUniBackupPolicyResponse> deleteUniBackupPolicy(DeleteUniBackupPolicyRequest request);
 
     /**
+     * @param request the request parameters of DeleteUnknownThreatDetectProcess  DeleteUnknownThreatDetectProcessRequest
+     * @return DeleteUnknownThreatDetectProcessResponse
+     */
+    CompletableFuture<DeleteUnknownThreatDetectProcessResponse> deleteUnknownThreatDetectProcess(DeleteUnknownThreatDetectProcessRequest request);
+
+    /**
+     * @param request the request parameters of DeleteUnknownThreatDetectStrategy  DeleteUnknownThreatDetectStrategyRequest
+     * @return DeleteUnknownThreatDetectStrategyResponse
+     */
+    CompletableFuture<DeleteUnknownThreatDetectStrategyResponse> deleteUnknownThreatDetectStrategy(DeleteUnknownThreatDetectStrategyRequest request);
+
+    /**
      * @param request the request parameters of DeleteVpcHoneyPot  DeleteVpcHoneyPotRequest
      * @return DeleteVpcHoneyPotResponse
      */
@@ -1094,9 +1118,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAssetsSecurityEventSummaryResponse> describeAssetsSecurityEventSummary(DescribeAssetsSecurityEventSummaryRequest request);
 
     /**
-     * @param request the request parameters of DescribeAttackAnalysisData  DescribeAttackAnalysisDataRequest
+     * @deprecated OpenAPI DescribeAttackAnalysisData is deprecated, please use Sas::2018-12-03::ListAttackEventInfo instead.  * @param request  the request parameters of DescribeAttackAnalysisData  DescribeAttackAnalysisDataRequest
      * @return DescribeAttackAnalysisDataResponse
      */
+    @Deprecated
     CompletableFuture<DescribeAttackAnalysisDataResponse> describeAttackAnalysisData(DescribeAttackAnalysisDataRequest request);
 
     /**
@@ -3800,6 +3825,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTenantCheckAvailableResponse> getTenantCheckAvailable(GetTenantCheckAvailableRequest request);
 
     /**
+     * @param request the request parameters of GetUnknownThreatDetectStatistic  GetUnknownThreatDetectStatisticRequest
+     * @return GetUnknownThreatDetectStatisticResponse
+     */
+    CompletableFuture<GetUnknownThreatDetectStatisticResponse> getUnknownThreatDetectStatistic(GetUnknownThreatDetectStatisticRequest request);
+
+    /**
      * @param request the request parameters of GetUserLang  GetUserLangRequest
      * @return GetUserLangResponse
      */
@@ -3867,6 +3898,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return HandleSimilarSecurityEventsResponse
      */
     CompletableFuture<HandleSimilarSecurityEventsResponse> handleSimilarSecurityEvents(HandleSimilarSecurityEventsRequest request);
+
+    /**
+     * @param request the request parameters of HandleUnknownThreatDetectEvent  HandleUnknownThreatDetectEventRequest
+     * @return HandleUnknownThreatDetectEventResponse
+     */
+    CompletableFuture<HandleUnknownThreatDetectEventResponse> handleUnknownThreatDetectEvent(HandleUnknownThreatDetectEventRequest request);
 
     /**
      * @param request the request parameters of IgnoreCheckItems  IgnoreCheckItemsRequest
@@ -4608,6 +4645,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUninstallAegisMachinesResponse> listUninstallAegisMachines(ListUninstallAegisMachinesRequest request);
 
     /**
+     * @param request the request parameters of ListUnknownThreatDetectEvent  ListUnknownThreatDetectEventRequest
+     * @return ListUnknownThreatDetectEventResponse
+     */
+    CompletableFuture<ListUnknownThreatDetectEventResponse> listUnknownThreatDetectEvent(ListUnknownThreatDetectEventRequest request);
+
+    /**
+     * @param request the request parameters of ListUnknownThreatDetectMachine  ListUnknownThreatDetectMachineRequest
+     * @return ListUnknownThreatDetectMachineResponse
+     */
+    CompletableFuture<ListUnknownThreatDetectMachineResponse> listUnknownThreatDetectMachine(ListUnknownThreatDetectMachineRequest request);
+
+    /**
+     * @param request the request parameters of ListUnknownThreatDetectProcess  ListUnknownThreatDetectProcessRequest
+     * @return ListUnknownThreatDetectProcessResponse
+     */
+    CompletableFuture<ListUnknownThreatDetectProcessResponse> listUnknownThreatDetectProcess(ListUnknownThreatDetectProcessRequest request);
+
+    /**
+     * @param request the request parameters of ListUnknownThreatDetectStrategy  ListUnknownThreatDetectStrategyRequest
+     * @return ListUnknownThreatDetectStrategyResponse
+     */
+    CompletableFuture<ListUnknownThreatDetectStrategyResponse> listUnknownThreatDetectStrategy(ListUnknownThreatDetectStrategyRequest request);
+
+    /**
      * @param request the request parameters of ListUserVpc  ListUserVpcRequest
      * @return ListUserVpcResponse
      */
@@ -5218,6 +5279,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OperateSwitchStatusResponse
      */
     CompletableFuture<OperateSwitchStatusResponse> operateSwitchStatus(OperateSwitchStatusRequest request);
+
+    /**
+     * @param request the request parameters of OperateUnknownThreatDetectMachine  OperateUnknownThreatDetectMachineRequest
+     * @return OperateUnknownThreatDetectMachineResponse
+     */
+    CompletableFuture<OperateUnknownThreatDetectMachineResponse> operateUnknownThreatDetectMachine(OperateUnknownThreatDetectMachineRequest request);
 
     /**
      * @param request the request parameters of OperateVirusEvents  OperateVirusEventsRequest
@@ -5836,6 +5903,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateTargetListByBatchResponse
      */
     CompletableFuture<UpdateTargetListByBatchResponse> updateTargetListByBatch(UpdateTargetListByBatchRequest request);
+
+    /**
+     * @param request the request parameters of UpdateUnknownThreatDetectProcess  UpdateUnknownThreatDetectProcessRequest
+     * @return UpdateUnknownThreatDetectProcessResponse
+     */
+    CompletableFuture<UpdateUnknownThreatDetectProcessResponse> updateUnknownThreatDetectProcess(UpdateUnknownThreatDetectProcessRequest request);
+
+    /**
+     * @param request the request parameters of UpdateUnknownThreatDetectStrategy  UpdateUnknownThreatDetectStrategyRequest
+     * @return UpdateUnknownThreatDetectStrategyResponse
+     */
+    CompletableFuture<UpdateUnknownThreatDetectStrategyResponse> updateUnknownThreatDetectStrategy(UpdateUnknownThreatDetectStrategyRequest request);
 
     /**
      * @param request the request parameters of UpdateWhiteList  UpdateWhiteListRequest
