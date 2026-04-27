@@ -18,12 +18,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateWorkspaceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("serviceSite")
+    @com.aliyun.core.annotation.Validation(maxLength = 30)
+    private String serviceSite;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("workspaceName")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 30)
     private String workspaceName;
 
     private CreateWorkspaceRequest(Builder builder) {
         super(builder);
+        this.serviceSite = builder.serviceSite;
         this.workspaceName = builder.workspaceName;
     }
 
@@ -41,6 +47,13 @@ public class CreateWorkspaceRequest extends Request {
     }
 
     /**
+     * @return serviceSite
+     */
+    public String getServiceSite() {
+        return this.serviceSite;
+    }
+
+    /**
      * @return workspaceName
      */
     public String getWorkspaceName() {
@@ -48,6 +61,7 @@ public class CreateWorkspaceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateWorkspaceRequest, Builder> {
+        private String serviceSite; 
         private String workspaceName; 
 
         private Builder() {
@@ -56,8 +70,18 @@ public class CreateWorkspaceRequest extends Request {
 
         private Builder(CreateWorkspaceRequest request) {
             super(request);
+            this.serviceSite = request.serviceSite;
             this.workspaceName = request.workspaceName;
         } 
+
+        /**
+         * serviceSite.
+         */
+        public Builder serviceSite(String serviceSite) {
+            this.putQueryParameter("serviceSite", serviceSite);
+            this.serviceSite = serviceSite;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
