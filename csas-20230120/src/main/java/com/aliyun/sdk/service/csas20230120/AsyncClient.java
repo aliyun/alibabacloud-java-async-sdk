@@ -441,6 +441,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListExcessiveDeviceRegistrationApplicationsResponse> listExcessiveDeviceRegistrationApplications(ListExcessiveDeviceRegistrationApplicationsRequest request);
 
     /**
+     * @param request the request parameters of ListForwardStrategies  ListForwardStrategiesRequest
+     * @return ListForwardStrategiesResponse
+     */
+    CompletableFuture<ListForwardStrategiesResponse> listForwardStrategies(ListForwardStrategiesRequest request);
+
+    /**
+     * @param request the request parameters of ListForwardStrategyBindingItems  ListForwardStrategyBindingItemsRequest
+     * @return ListForwardStrategyBindingItemsResponse
+     */
+    CompletableFuture<ListForwardStrategyBindingItemsResponse> listForwardStrategyBindingItems(ListForwardStrategyBindingItemsRequest request);
+
+    /**
      * @param request the request parameters of ListIdpConfigs  ListIdpConfigsRequest
      * @return ListIdpConfigsResponse
      */
