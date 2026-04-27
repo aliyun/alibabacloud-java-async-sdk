@@ -48,8 +48,8 @@ public class SearchMemoriesRequest extends Request {
     private Boolean rerank;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("retrieveLevel")
-    private String retrieveLevel;
+    @com.aliyun.core.annotation.NameInMap("retrievalOption")
+    private String retrievalOption;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("runId")
@@ -80,7 +80,7 @@ public class SearchMemoriesRequest extends Request {
         this.filters = builder.filters;
         this.query = builder.query;
         this.rerank = builder.rerank;
-        this.retrieveLevel = builder.retrieveLevel;
+        this.retrievalOption = builder.retrievalOption;
         this.runId = builder.runId;
         this.searchType = builder.searchType;
         this.threshold = builder.threshold;
@@ -151,10 +151,10 @@ public class SearchMemoriesRequest extends Request {
     }
 
     /**
-     * @return retrieveLevel
+     * @return retrievalOption
      */
-    public String getRetrieveLevel() {
-        return this.retrieveLevel;
+    public String getRetrievalOption() {
+        return this.retrievalOption;
     }
 
     /**
@@ -200,7 +200,7 @@ public class SearchMemoriesRequest extends Request {
         private java.util.Map<String, ?> filters; 
         private String query; 
         private Boolean rerank; 
-        private String retrieveLevel; 
+        private String retrievalOption; 
         private String runId; 
         private String searchType; 
         private Double threshold; 
@@ -220,7 +220,7 @@ public class SearchMemoriesRequest extends Request {
             this.filters = request.filters;
             this.query = request.query;
             this.rerank = request.rerank;
-            this.retrieveLevel = request.retrieveLevel;
+            this.retrievalOption = request.retrievalOption;
             this.runId = request.runId;
             this.searchType = request.searchType;
             this.threshold = request.threshold;
@@ -298,11 +298,11 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * retrieveLevel.
+         * retrievalOption.
          */
-        public Builder retrieveLevel(String retrieveLevel) {
-            this.putBodyParameter("retrieveLevel", retrieveLevel);
-            this.retrieveLevel = retrieveLevel;
+        public Builder retrievalOption(String retrievalOption) {
+            this.putBodyParameter("retrievalOption", retrievalOption);
+            this.retrievalOption = retrievalOption;
             return this;
         }
 

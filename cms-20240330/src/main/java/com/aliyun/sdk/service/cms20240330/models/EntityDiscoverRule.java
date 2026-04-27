@@ -30,7 +30,7 @@ public class EntityDiscoverRule extends TeaModel {
     private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.NameInMap("ipMatchRule")
-    private java.util.List<IpMatchRule> ipMatchRule;
+    private IpMatchRule ipMatchRule;
 
     @com.aliyun.core.annotation.NameInMap("labels")
     private java.util.List<Labels> labels;
@@ -99,7 +99,7 @@ public class EntityDiscoverRule extends TeaModel {
     /**
      * @return ipMatchRule
      */
-    public java.util.List<IpMatchRule> getIpMatchRule() {
+    public IpMatchRule getIpMatchRule() {
         return this.ipMatchRule;
     }
 
@@ -136,7 +136,7 @@ public class EntityDiscoverRule extends TeaModel {
         private java.util.List<String> entityTypes; 
         private java.util.List<FieldRules> fieldRules; 
         private java.util.List<String> instanceIds; 
-        private java.util.List<IpMatchRule> ipMatchRule; 
+        private IpMatchRule ipMatchRule; 
         private java.util.List<Labels> labels; 
         private java.util.List<String> regionIds; 
         private String resourceGroupId; 
@@ -192,7 +192,7 @@ public class EntityDiscoverRule extends TeaModel {
         /**
          * ipMatchRule.
          */
-        public Builder ipMatchRule(java.util.List<IpMatchRule> ipMatchRule) {
+        public Builder ipMatchRule(IpMatchRule ipMatchRule) {
             this.ipMatchRule = ipMatchRule;
             return this;
         }
