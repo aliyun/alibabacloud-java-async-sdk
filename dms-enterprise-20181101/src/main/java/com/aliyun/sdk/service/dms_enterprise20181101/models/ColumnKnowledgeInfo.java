@@ -32,6 +32,9 @@ public class ColumnKnowledgeInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("Level")
+    private Integer level;
+
     @com.aliyun.core.annotation.NameInMap("Position")
     private Integer position;
 
@@ -41,6 +44,7 @@ public class ColumnKnowledgeInfo extends TeaModel {
         this.columnName = builder.columnName;
         this.columnType = builder.columnType;
         this.description = builder.description;
+        this.level = builder.level;
         this.position = builder.position;
     }
 
@@ -92,6 +96,13 @@ public class ColumnKnowledgeInfo extends TeaModel {
     }
 
     /**
+     * @return level
+     */
+    public Integer getLevel() {
+        return this.level;
+    }
+
+    /**
      * @return position
      */
     public Integer getPosition() {
@@ -104,6 +115,7 @@ public class ColumnKnowledgeInfo extends TeaModel {
         private String columnName; 
         private String columnType; 
         private String description; 
+        private Integer level; 
         private Integer position; 
 
         private Builder() {
@@ -115,6 +127,7 @@ public class ColumnKnowledgeInfo extends TeaModel {
             this.columnName = model.columnName;
             this.columnType = model.columnType;
             this.description = model.description;
+            this.level = model.level;
             this.position = model.position;
         } 
 
@@ -155,6 +168,14 @@ public class ColumnKnowledgeInfo extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Level.
+         */
+        public Builder level(Integer level) {
+            this.level = level;
             return this;
         }
 

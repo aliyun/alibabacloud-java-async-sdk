@@ -29,6 +29,9 @@ public class TableKnowledgeInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("Level")
+    private Integer level;
+
     @com.aliyun.core.annotation.NameInMap("Summary")
     private String summary;
 
@@ -40,6 +43,7 @@ public class TableKnowledgeInfo extends TeaModel {
         this.assetModifiedGmt = builder.assetModifiedGmt;
         this.columnList = builder.columnList;
         this.description = builder.description;
+        this.level = builder.level;
         this.summary = builder.summary;
         this.tableName = builder.tableName;
     }
@@ -85,6 +89,13 @@ public class TableKnowledgeInfo extends TeaModel {
     }
 
     /**
+     * @return level
+     */
+    public Integer getLevel() {
+        return this.level;
+    }
+
+    /**
      * @return summary
      */
     public String getSummary() {
@@ -103,6 +114,7 @@ public class TableKnowledgeInfo extends TeaModel {
         private String assetModifiedGmt; 
         private java.util.List<ColumnKnowledgeInfo> columnList; 
         private String description; 
+        private Integer level; 
         private String summary; 
         private String tableName; 
 
@@ -114,6 +126,7 @@ public class TableKnowledgeInfo extends TeaModel {
             this.assetModifiedGmt = model.assetModifiedGmt;
             this.columnList = model.columnList;
             this.description = model.description;
+            this.level = model.level;
             this.summary = model.summary;
             this.tableName = model.tableName;
         } 
@@ -147,6 +160,14 @@ public class TableKnowledgeInfo extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Level.
+         */
+        public Builder level(Integer level) {
+            this.level = level;
             return this;
         }
 
