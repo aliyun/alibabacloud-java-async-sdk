@@ -452,6 +452,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterQueryUsageBreakdownResponse> modelRouterQueryUsageBreakdown(ModelRouterQueryUsageBreakdownRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterSaveFlowConfig  ModelRouterSaveFlowConfigRequest
+     * @return ModelRouterSaveFlowConfigResponse
+     */
+    CompletableFuture<ModelRouterSaveFlowConfigResponse> modelRouterSaveFlowConfig(ModelRouterSaveFlowConfigRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterUpdateBillingRule  ModelRouterUpdateBillingRuleRequest
      * @return ModelRouterUpdateBillingRuleResponse
      */

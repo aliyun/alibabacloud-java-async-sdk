@@ -23,6 +23,9 @@ public class ClientTreeDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("allowedModels")
     private String allowedModels;
 
+    @com.aliyun.core.annotation.NameInMap("balance")
+    private ClientBalanceDTO balance;
+
     @com.aliyun.core.annotation.NameInMap("children")
     private java.util.List<ClientTreeDTO> children;
 
@@ -65,6 +68,7 @@ public class ClientTreeDTO extends TeaModel {
     private ClientTreeDTO(Builder builder) {
         this.address = builder.address;
         this.allowedModels = builder.allowedModels;
+        this.balance = builder.balance;
         this.children = builder.children;
         this.clientUuid = builder.clientUuid;
         this.contact = builder.contact;
@@ -104,6 +108,13 @@ public class ClientTreeDTO extends TeaModel {
      */
     public String getAllowedModels() {
         return this.allowedModels;
+    }
+
+    /**
+     * @return balance
+     */
+    public ClientBalanceDTO getBalance() {
+        return this.balance;
     }
 
     /**
@@ -200,6 +211,7 @@ public class ClientTreeDTO extends TeaModel {
     public static final class Builder {
         private String address; 
         private String allowedModels; 
+        private ClientBalanceDTO balance; 
         private java.util.List<ClientTreeDTO> children; 
         private String clientUuid; 
         private String contact; 
@@ -220,6 +232,7 @@ public class ClientTreeDTO extends TeaModel {
         private Builder(ClientTreeDTO model) {
             this.address = model.address;
             this.allowedModels = model.allowedModels;
+            this.balance = model.balance;
             this.children = model.children;
             this.clientUuid = model.clientUuid;
             this.contact = model.contact;
@@ -248,6 +261,14 @@ public class ClientTreeDTO extends TeaModel {
          */
         public Builder allowedModels(String allowedModels) {
             this.allowedModels = allowedModels;
+            return this;
+        }
+
+        /**
+         * balance.
+         */
+        public Builder balance(ClientBalanceDTO balance) {
+            this.balance = balance;
             return this;
         }
 
