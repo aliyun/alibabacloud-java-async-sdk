@@ -86,6 +86,10 @@ public class DescribeDesktopGroupsRequest extends Request {
     private String protocolType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QosRuleId")
+    private String qosRuleId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -117,6 +121,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
         this.protocolType = builder.protocolType;
+        this.qosRuleId = builder.qosRuleId;
         this.regionId = builder.regionId;
         this.status = builder.status;
         this.tag = builder.tag;
@@ -255,6 +260,13 @@ public class DescribeDesktopGroupsRequest extends Request {
     }
 
     /**
+     * @return qosRuleId
+     */
+    public String getQosRuleId() {
+        return this.qosRuleId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -293,6 +305,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         private String periodUnit; 
         private String policyGroupId; 
         private String protocolType; 
+        private String qosRuleId; 
         private String regionId; 
         private Integer status; 
         private java.util.List<Tag> tag; 
@@ -320,6 +333,7 @@ public class DescribeDesktopGroupsRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
             this.protocolType = request.protocolType;
+            this.qosRuleId = request.qosRuleId;
             this.regionId = request.regionId;
             this.status = request.status;
             this.tag = request.tag;
@@ -556,6 +570,15 @@ public class DescribeDesktopGroupsRequest extends Request {
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
             this.protocolType = protocolType;
+            return this;
+        }
+
+        /**
+         * QosRuleId.
+         */
+        public Builder qosRuleId(String qosRuleId) {
+            this.putQueryParameter("QosRuleId", qosRuleId);
+            this.qosRuleId = qosRuleId;
             return this;
         }
 

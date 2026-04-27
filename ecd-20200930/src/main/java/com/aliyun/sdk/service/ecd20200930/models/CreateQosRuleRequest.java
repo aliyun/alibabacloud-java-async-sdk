@@ -22,6 +22,10 @@ public class CreateQosRuleRequest extends Request {
     private java.util.List<String> authAndroidId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthDesktopGroupId")
+    private java.util.List<String> authDesktopGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthDesktopId")
     private java.util.List<String> authDesktopId;
 
@@ -48,6 +52,7 @@ public class CreateQosRuleRequest extends Request {
     private CreateQosRuleRequest(Builder builder) {
         super(builder);
         this.authAndroidId = builder.authAndroidId;
+        this.authDesktopGroupId = builder.authDesktopGroupId;
         this.authDesktopId = builder.authDesktopId;
         this.download = builder.download;
         this.networkPackageId = builder.networkPackageId;
@@ -73,6 +78,13 @@ public class CreateQosRuleRequest extends Request {
      */
     public java.util.List<String> getAuthAndroidId() {
         return this.authAndroidId;
+    }
+
+    /**
+     * @return authDesktopGroupId
+     */
+    public java.util.List<String> getAuthDesktopGroupId() {
+        return this.authDesktopGroupId;
     }
 
     /**
@@ -112,6 +124,7 @@ public class CreateQosRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateQosRuleRequest, Builder> {
         private java.util.List<String> authAndroidId; 
+        private java.util.List<String> authDesktopGroupId; 
         private java.util.List<String> authDesktopId; 
         private Integer download; 
         private String networkPackageId; 
@@ -125,6 +138,7 @@ public class CreateQosRuleRequest extends Request {
         private Builder(CreateQosRuleRequest request) {
             super(request);
             this.authAndroidId = request.authAndroidId;
+            this.authDesktopGroupId = request.authDesktopGroupId;
             this.authDesktopId = request.authDesktopId;
             this.download = request.download;
             this.networkPackageId = request.networkPackageId;
@@ -138,6 +152,15 @@ public class CreateQosRuleRequest extends Request {
         public Builder authAndroidId(java.util.List<String> authAndroidId) {
             this.putQueryParameter("AuthAndroidId", authAndroidId);
             this.authAndroidId = authAndroidId;
+            return this;
+        }
+
+        /**
+         * AuthDesktopGroupId.
+         */
+        public Builder authDesktopGroupId(java.util.List<String> authDesktopGroupId) {
+            this.putQueryParameter("AuthDesktopGroupId", authDesktopGroupId);
+            this.authDesktopGroupId = authDesktopGroupId;
             return this;
         }
 

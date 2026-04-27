@@ -115,6 +115,10 @@ public class CreateDesktopsRequest extends Request {
     private String promotionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PurchaseOptions")
+    private PurchaseOptions purchaseOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QosRuleId")
     private String qosRuleId;
 
@@ -201,6 +205,7 @@ public class CreateDesktopsRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
         this.promotionId = builder.promotionId;
+        this.purchaseOptions = builder.purchaseOptions;
         this.qosRuleId = builder.qosRuleId;
         this.regionId = builder.regionId;
         this.resellerOwnerUid = builder.resellerOwnerUid;
@@ -400,6 +405,13 @@ public class CreateDesktopsRequest extends Request {
     }
 
     /**
+     * @return purchaseOptions
+     */
+    public PurchaseOptions getPurchaseOptions() {
+        return this.purchaseOptions;
+    }
+
+    /**
      * @return qosRuleId
      */
     public String getQosRuleId() {
@@ -529,6 +541,7 @@ public class CreateDesktopsRequest extends Request {
         private String periodUnit; 
         private String policyGroupId; 
         private String promotionId; 
+        private PurchaseOptions purchaseOptions; 
         private String qosRuleId; 
         private String regionId; 
         private Long resellerOwnerUid; 
@@ -575,6 +588,7 @@ public class CreateDesktopsRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
             this.promotionId = request.promotionId;
+            this.purchaseOptions = request.purchaseOptions;
             this.qosRuleId = request.qosRuleId;
             this.regionId = request.regionId;
             this.resellerOwnerUid = request.resellerOwnerUid;
@@ -928,6 +942,16 @@ public class CreateDesktopsRequest extends Request {
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
             this.promotionId = promotionId;
+            return this;
+        }
+
+        /**
+         * PurchaseOptions.
+         */
+        public Builder purchaseOptions(PurchaseOptions purchaseOptions) {
+            String purchaseOptionsShrink = shrink(purchaseOptions, "PurchaseOptions", "json");
+            this.putQueryParameter("PurchaseOptions", purchaseOptionsShrink);
+            this.purchaseOptions = purchaseOptions;
             return this;
         }
 
@@ -1972,6 +1996,60 @@ public class CreateDesktopsRequest extends Request {
 
             public MonthDesktopSetting build() {
                 return new MonthDesktopSetting(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDesktopsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDesktopsRequest</p>
+     */
+    public static class PurchaseOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MonthlyCredits")
+        private Integer monthlyCredits;
+
+        private PurchaseOptions(Builder builder) {
+            this.monthlyCredits = builder.monthlyCredits;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PurchaseOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return monthlyCredits
+         */
+        public Integer getMonthlyCredits() {
+            return this.monthlyCredits;
+        }
+
+        public static final class Builder {
+            private Integer monthlyCredits; 
+
+            private Builder() {
+            } 
+
+            private Builder(PurchaseOptions model) {
+                this.monthlyCredits = model.monthlyCredits;
+            } 
+
+            /**
+             * MonthlyCredits.
+             */
+            public Builder monthlyCredits(Integer monthlyCredits) {
+                this.monthlyCredits = monthlyCredits;
+                return this;
+            }
+
+            public PurchaseOptions build() {
+                return new PurchaseOptions(this);
             } 
 
         } 

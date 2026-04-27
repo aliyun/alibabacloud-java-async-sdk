@@ -98,6 +98,9 @@ public class DescribeQosRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesktopCount")
         private String desktopCount;
 
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupCount")
+        private Integer desktopGroupCount;
+
         @com.aliyun.core.annotation.NameInMap("Download")
         private String download;
 
@@ -115,6 +118,7 @@ public class DescribeQosRulesResponseBody extends TeaModel {
 
         private QosRules(Builder builder) {
             this.desktopCount = builder.desktopCount;
+            this.desktopGroupCount = builder.desktopGroupCount;
             this.download = builder.download;
             this.networkPackageId = builder.networkPackageId;
             this.qosRuleId = builder.qosRuleId;
@@ -135,6 +139,13 @@ public class DescribeQosRulesResponseBody extends TeaModel {
          */
         public String getDesktopCount() {
             return this.desktopCount;
+        }
+
+        /**
+         * @return desktopGroupCount
+         */
+        public Integer getDesktopGroupCount() {
+            return this.desktopGroupCount;
         }
 
         /**
@@ -174,6 +185,7 @@ public class DescribeQosRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String desktopCount; 
+            private Integer desktopGroupCount; 
             private String download; 
             private String networkPackageId; 
             private String qosRuleId; 
@@ -185,6 +197,7 @@ public class DescribeQosRulesResponseBody extends TeaModel {
 
             private Builder(QosRules model) {
                 this.desktopCount = model.desktopCount;
+                this.desktopGroupCount = model.desktopGroupCount;
                 this.download = model.download;
                 this.networkPackageId = model.networkPackageId;
                 this.qosRuleId = model.qosRuleId;
@@ -197,6 +210,14 @@ public class DescribeQosRulesResponseBody extends TeaModel {
              */
             public Builder desktopCount(String desktopCount) {
                 this.desktopCount = desktopCount;
+                return this;
+            }
+
+            /**
+             * DesktopGroupCount.
+             */
+            public Builder desktopGroupCount(Integer desktopGroupCount) {
+                this.desktopGroupCount = desktopGroupCount;
                 return this;
             }
 

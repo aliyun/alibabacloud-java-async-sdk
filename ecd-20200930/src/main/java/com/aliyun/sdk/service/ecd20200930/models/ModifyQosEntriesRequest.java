@@ -22,6 +22,10 @@ public class ModifyQosEntriesRequest extends Request {
     private java.util.List<String> authAndroidId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthDesktopGroupId")
+    private java.util.List<String> authDesktopGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthDesktopId")
     private java.util.List<String> authDesktopId;
 
@@ -35,15 +39,21 @@ public class ModifyQosEntriesRequest extends Request {
     private java.util.List<String> revokeAndroidId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevokeDesktopGroupId")
+    private java.util.List<String> revokeDesktopGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RevokeDesktopId")
     private java.util.List<String> revokeDesktopId;
 
     private ModifyQosEntriesRequest(Builder builder) {
         super(builder);
         this.authAndroidId = builder.authAndroidId;
+        this.authDesktopGroupId = builder.authDesktopGroupId;
         this.authDesktopId = builder.authDesktopId;
         this.qosRuleId = builder.qosRuleId;
         this.revokeAndroidId = builder.revokeAndroidId;
+        this.revokeDesktopGroupId = builder.revokeDesktopGroupId;
         this.revokeDesktopId = builder.revokeDesktopId;
     }
 
@@ -68,6 +78,13 @@ public class ModifyQosEntriesRequest extends Request {
     }
 
     /**
+     * @return authDesktopGroupId
+     */
+    public java.util.List<String> getAuthDesktopGroupId() {
+        return this.authDesktopGroupId;
+    }
+
+    /**
      * @return authDesktopId
      */
     public java.util.List<String> getAuthDesktopId() {
@@ -89,6 +106,13 @@ public class ModifyQosEntriesRequest extends Request {
     }
 
     /**
+     * @return revokeDesktopGroupId
+     */
+    public java.util.List<String> getRevokeDesktopGroupId() {
+        return this.revokeDesktopGroupId;
+    }
+
+    /**
      * @return revokeDesktopId
      */
     public java.util.List<String> getRevokeDesktopId() {
@@ -97,9 +121,11 @@ public class ModifyQosEntriesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyQosEntriesRequest, Builder> {
         private java.util.List<String> authAndroidId; 
+        private java.util.List<String> authDesktopGroupId; 
         private java.util.List<String> authDesktopId; 
         private String qosRuleId; 
         private java.util.List<String> revokeAndroidId; 
+        private java.util.List<String> revokeDesktopGroupId; 
         private java.util.List<String> revokeDesktopId; 
 
         private Builder() {
@@ -109,9 +135,11 @@ public class ModifyQosEntriesRequest extends Request {
         private Builder(ModifyQosEntriesRequest request) {
             super(request);
             this.authAndroidId = request.authAndroidId;
+            this.authDesktopGroupId = request.authDesktopGroupId;
             this.authDesktopId = request.authDesktopId;
             this.qosRuleId = request.qosRuleId;
             this.revokeAndroidId = request.revokeAndroidId;
+            this.revokeDesktopGroupId = request.revokeDesktopGroupId;
             this.revokeDesktopId = request.revokeDesktopId;
         } 
 
@@ -121,6 +149,15 @@ public class ModifyQosEntriesRequest extends Request {
         public Builder authAndroidId(java.util.List<String> authAndroidId) {
             this.putQueryParameter("AuthAndroidId", authAndroidId);
             this.authAndroidId = authAndroidId;
+            return this;
+        }
+
+        /**
+         * AuthDesktopGroupId.
+         */
+        public Builder authDesktopGroupId(java.util.List<String> authDesktopGroupId) {
+            this.putQueryParameter("AuthDesktopGroupId", authDesktopGroupId);
+            this.authDesktopGroupId = authDesktopGroupId;
             return this;
         }
 
@@ -151,6 +188,15 @@ public class ModifyQosEntriesRequest extends Request {
         public Builder revokeAndroidId(java.util.List<String> revokeAndroidId) {
             this.putQueryParameter("RevokeAndroidId", revokeAndroidId);
             this.revokeAndroidId = revokeAndroidId;
+            return this;
+        }
+
+        /**
+         * RevokeDesktopGroupId.
+         */
+        public Builder revokeDesktopGroupId(java.util.List<String> revokeDesktopGroupId) {
+            this.putQueryParameter("RevokeDesktopGroupId", revokeDesktopGroupId);
+            this.revokeDesktopGroupId = revokeDesktopGroupId;
             return this;
         }
 

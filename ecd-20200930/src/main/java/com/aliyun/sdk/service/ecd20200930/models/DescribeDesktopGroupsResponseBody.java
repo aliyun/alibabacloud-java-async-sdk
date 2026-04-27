@@ -477,6 +477,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
+        @com.aliyun.core.annotation.NameInMap("QosRuleId")
+        private String qosRuleId;
+
         @com.aliyun.core.annotation.NameInMap("RatioThreshold")
         private Float ratioThreshold;
 
@@ -565,6 +568,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.policyGroupName = builder.policyGroupName;
             this.policyGroupNameList = builder.policyGroupNameList;
             this.protocolType = builder.protocolType;
+            this.qosRuleId = builder.qosRuleId;
             this.ratioThreshold = builder.ratioThreshold;
             this.resetType = builder.resetType;
             this.simpleUserGroupId = builder.simpleUserGroupId;
@@ -905,6 +909,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return qosRuleId
+         */
+        public String getQosRuleId() {
+            return this.qosRuleId;
+        }
+
+        /**
          * @return ratioThreshold
          */
         public Float getRatioThreshold() {
@@ -1048,6 +1059,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String policyGroupName; 
             private java.util.List<String> policyGroupNameList; 
             private String protocolType; 
+            private String qosRuleId; 
             private Float ratioThreshold; 
             private Long resetType; 
             private String simpleUserGroupId; 
@@ -1112,6 +1124,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
                 this.policyGroupName = model.policyGroupName;
                 this.policyGroupNameList = model.policyGroupNameList;
                 this.protocolType = model.protocolType;
+                this.qosRuleId = model.qosRuleId;
                 this.ratioThreshold = model.ratioThreshold;
                 this.resetType = model.resetType;
                 this.simpleUserGroupId = model.simpleUserGroupId;
@@ -1660,6 +1673,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
+                return this;
+            }
+
+            /**
+             * QosRuleId.
+             */
+            public Builder qosRuleId(String qosRuleId) {
+                this.qosRuleId = qosRuleId;
                 return this;
             }
 
