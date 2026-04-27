@@ -405,6 +405,35 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API允许用户验证指定PolarFS实例内的配额配置是否一致，包括但不限于目录路径上的存储容量和inode限制。如果存在不一致的情况，将返回具体的不一致路径列表及可能的错误信息。</p>
+     * <h3>注意事项</h3>
+     * <ul>
+     * <li>确保<code>PolarFsInstanceId</code>参数正确无误地指向了目标PolarFS实例。</li>
+     * <li>当系统检测到配额不一致时，除了返回<code>IsConsistent=false</code>外，还会提供<code>InconsistentPaths</code>数组来指示具体哪些路径存在问题。</li>
+     * <li>如果请求成功但没有发现任何不一致，则<code>InconsistentPaths</code>为空数组，并且<code>IsConsistent=true</code>。</li>
+     * <li>错误处理：若请求过程中遇到权限不足、资源不存在等问题，请参考提供的错误码定义部分以获取更详细的错误信息。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CheckPolarFsQuotaConsistency  CheckPolarFsQuotaConsistencyRequest
+     * @return CheckPolarFsQuotaConsistencyResponse
+     */
+    @Override
+    public CompletableFuture<CheckPolarFsQuotaConsistencyResponse> checkPolarFsQuotaConsistency(CheckPolarFsQuotaConsistencyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckPolarFsQuotaConsistency").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckPolarFsQuotaConsistencyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckPolarFsQuotaConsistencyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CheckServiceLinkedRole  CheckServiceLinkedRoleRequest
      * @return CheckServiceLinkedRoleResponse
      */
@@ -1026,6 +1055,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateParameterGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>Path</strong>：需要创建的目录绝对路径。</li>
+     * <li><strong>Recursive</strong>：是否递归创建父目录，默认为 <code>false</code>。</li>
+     * <li>该接口支持在指定的PolarFS实例中创建单个或多个层级的目录结构。</li>
+     * <li>如果设置 <code>Recursive</code> 为 <code>true</code>，则会自动创建所有不存在的父目录。</li>
+     * <li>创建目录时，请确保具有足够的权限。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreatePolarFsObject  CreatePolarFsObjectRequest
+     * @return CreatePolarFsObjectResponse
+     */
+    @Override
+    public CompletableFuture<CreatePolarFsObjectResponse> createPolarFsObject(CreatePolarFsObjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreatePolarFsObject").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePolarFsObjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePolarFsObjectResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3568,6 +3625,33 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>Path</strong> 参数必须提供一个绝对路径。</li>
+     * <li><strong>Recursive</strong> 参数默认为 <code>false</code>，如果设置为 <code>true</code>，则会递归列出所有子目录的内容。</li>
+     * <li><strong>Depth</strong> 参数用于限制递归深度，默认值为 <code>1</code>。</li>
+     * <li><strong>Filter</strong> 参数支持通配符或正则表达式过滤结果。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribePolarFsObjects  DescribePolarFsObjectsRequest
+     * @return DescribePolarFsObjectsResponse
+     */
+    @Override
+    public CompletableFuture<DescribePolarFsObjectsResponse> describePolarFsObjects(DescribePolarFsObjectsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePolarFsObjects").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePolarFsObjectsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePolarFsObjectsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribePolarFsQuota  DescribePolarFsQuotaRequest
      * @return DescribePolarFsQuotaResponse
      */
@@ -5433,6 +5517,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyScheduleTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of MovePolarFsObjects  MovePolarFsObjectsRequest
+     * @return MovePolarFsObjectsResponse
+     */
+    @Override
+    public CompletableFuture<MovePolarFsObjectsResponse> movePolarFsObjects(MovePolarFsObjectsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("MovePolarFsObjects").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MovePolarFsObjectsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MovePolarFsObjectsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
