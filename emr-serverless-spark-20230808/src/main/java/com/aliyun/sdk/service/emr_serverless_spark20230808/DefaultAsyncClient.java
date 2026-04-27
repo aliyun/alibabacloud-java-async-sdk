@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ActivateAICenter  ActivateAICenterRequest
+     * @return ActivateAICenterResponse
+     */
+    @Override
+    public CompletableFuture<ActivateAICenterResponse> activateAICenter(ActivateAICenterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ActivateAICenter").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/{workspaceId}/activateaicenter").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ActivateAICenterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ActivateAICenterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddMembers  AddMembersRequest
      * @return AddMembersResponse
      */
@@ -412,6 +430,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GenerateTaskCodesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAICenterState  GetAICenterStateRequest
+     * @return GetAICenterStateResponse
+     */
+    @Override
+    public CompletableFuture<GetAICenterStateResponse> getAICenterState(GetAICenterStateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAICenterState").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{workspaceId}/aicenter").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAICenterStateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAICenterStateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

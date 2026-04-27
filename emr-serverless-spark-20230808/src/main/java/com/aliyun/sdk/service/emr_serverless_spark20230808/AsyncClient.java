@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ActivateAICenter  ActivateAICenterRequest
+     * @return ActivateAICenterResponse
+     */
+    CompletableFuture<ActivateAICenterResponse> activateAICenter(ActivateAICenterRequest request);
+
+    /**
      * @param request the request parameters of AddMembers  AddMembersRequest
      * @return AddMembersResponse
      */
@@ -144,6 +150,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GenerateTaskCodesResponse
      */
     CompletableFuture<GenerateTaskCodesResponse> generateTaskCodes(GenerateTaskCodesRequest request);
+
+    /**
+     * @param request the request parameters of GetAICenterState  GetAICenterStateRequest
+     * @return GetAICenterStateResponse
+     */
+    CompletableFuture<GetAICenterStateResponse> getAICenterState(GetAICenterStateRequest request);
 
     /**
      * @param request the request parameters of GetCuHours  GetCuHoursRequest
