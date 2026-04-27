@@ -231,6 +231,9 @@ public class DescribeMultiPriceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Components")
         private java.util.List<Components> components;
 
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private String data;
+
         @com.aliyun.core.annotation.NameInMap("InstanceIds")
         private java.util.List<String> instanceIds;
 
@@ -255,6 +258,7 @@ public class DescribeMultiPriceRequest extends Request {
         private OrderItems(Builder builder) {
             this.amount = builder.amount;
             this.components = builder.components;
+            this.data = builder.data;
             this.instanceIds = builder.instanceIds;
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
@@ -284,6 +288,13 @@ public class DescribeMultiPriceRequest extends Request {
          */
         public java.util.List<Components> getComponents() {
             return this.components;
+        }
+
+        /**
+         * @return data
+         */
+        public String getData() {
+            return this.data;
         }
 
         /**
@@ -338,6 +349,7 @@ public class DescribeMultiPriceRequest extends Request {
         public static final class Builder {
             private Integer amount; 
             private java.util.List<Components> components; 
+            private String data; 
             private java.util.List<String> instanceIds; 
             private Integer period; 
             private String periodUnit; 
@@ -352,6 +364,7 @@ public class DescribeMultiPriceRequest extends Request {
             private Builder(OrderItems model) {
                 this.amount = model.amount;
                 this.components = model.components;
+                this.data = model.data;
                 this.instanceIds = model.instanceIds;
                 this.period = model.period;
                 this.periodUnit = model.periodUnit;
@@ -374,6 +387,14 @@ public class DescribeMultiPriceRequest extends Request {
              */
             public Builder components(java.util.List<Components> components) {
                 this.components = components;
+                return this;
+            }
+
+            /**
+             * Data.
+             */
+            public Builder data(String data) {
+                this.data = data;
                 return this;
             }
 
