@@ -1024,6 +1024,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterQueryBillingCostBreakdown  ModelRouterQueryBillingCostBreakdownRequest
+     * @return ModelRouterQueryBillingCostBreakdownResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryBillingCostBreakdownResponse> modelRouterQueryBillingCostBreakdown(ModelRouterQueryBillingCostBreakdownRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryBillingCostBreakdown").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/billing/cost/breakdown").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryBillingCostBreakdownResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryBillingCostBreakdownResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterQueryBillingRuleList  ModelRouterQueryBillingRuleListRequest
      * @return ModelRouterQueryBillingRuleListResponse
      */
@@ -1324,6 +1342,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterQueryObservationMetricsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterQueryUsageBreakdown  ModelRouterQueryUsageBreakdownRequest
+     * @return ModelRouterQueryUsageBreakdownResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryUsageBreakdownResponse> modelRouterQueryUsageBreakdown(ModelRouterQueryUsageBreakdownRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryUsageBreakdown").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/usage/breakdown").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryUsageBreakdownResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryUsageBreakdownResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

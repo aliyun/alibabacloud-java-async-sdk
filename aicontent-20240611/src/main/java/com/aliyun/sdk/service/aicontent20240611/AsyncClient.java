@@ -338,6 +338,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterQueryApiKeyListResponse> modelRouterQueryApiKeyList(ModelRouterQueryApiKeyListRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterQueryBillingCostBreakdown  ModelRouterQueryBillingCostBreakdownRequest
+     * @return ModelRouterQueryBillingCostBreakdownResponse
+     */
+    CompletableFuture<ModelRouterQueryBillingCostBreakdownResponse> modelRouterQueryBillingCostBreakdown(ModelRouterQueryBillingCostBreakdownRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterQueryBillingRuleList  ModelRouterQueryBillingRuleListRequest
      * @return ModelRouterQueryBillingRuleListResponse
      */
@@ -438,6 +444,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelRouterQueryObservationMetricsResponse
      */
     CompletableFuture<ModelRouterQueryObservationMetricsResponse> modelRouterQueryObservationMetrics(ModelRouterQueryObservationMetricsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryUsageBreakdown  ModelRouterQueryUsageBreakdownRequest
+     * @return ModelRouterQueryUsageBreakdownResponse
+     */
+    CompletableFuture<ModelRouterQueryUsageBreakdownResponse> modelRouterQueryUsageBreakdown(ModelRouterQueryUsageBreakdownRequest request);
 
     /**
      * @param request the request parameters of ModelRouterUpdateBillingRule  ModelRouterUpdateBillingRuleRequest
