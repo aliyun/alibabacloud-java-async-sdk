@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DocumentParseOnlineApi  DocumentParseOnlineApiRequest
+     * @return DocumentParseOnlineApiResponse
+     */
+    @Override
+    public CompletableFuture<DocumentParseOnlineApiResponse> documentParseOnlineApi(DocumentParseOnlineApiRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DocumentParseOnlineApi").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DocumentParseOnlineApiResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DocumentParseOnlineApiResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DocumentParseTestApi  DocumentParseTestApiRequest
      * @return DocumentParseTestApiResponse
      */
