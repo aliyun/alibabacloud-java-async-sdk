@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatasourceResponse> createDatasource(CreateDatasourceRequest request);
 
     /**
+     * @param request the request parameters of CreateExecutorGroup  CreateExecutorGroupRequest
+     * @return CreateExecutorGroupResponse
+     */
+    CompletableFuture<CreateExecutorGroupResponse> createExecutorGroup(CreateExecutorGroupRequest request);
+
+    /**
      * @param request the request parameters of CreateExecutors  CreateExecutorsRequest
      * @return CreateExecutorsResponse
      */
@@ -84,6 +90,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDatasourceResponse
      */
     CompletableFuture<DeleteDatasourceResponse> deleteDatasource(DeleteDatasourceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteExecutorGroup  DeleteExecutorGroupRequest
+     * @return DeleteExecutorGroupResponse
+     */
+    CompletableFuture<DeleteExecutorGroupResponse> deleteExecutorGroup(DeleteExecutorGroupRequest request);
 
     /**
      * @param request the request parameters of DeleteJobs  DeleteJobsRequest
@@ -174,6 +186,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetLogEventResponse
      */
     CompletableFuture<GetLogEventResponse> getLogEvent(GetLogEventRequest request);
+
+    /**
+     * @param request the request parameters of GetPageLog  GetPageLogRequest
+     * @return GetPageLogResponse
+     */
+    CompletableFuture<GetPageLogResponse> getPageLog(GetPageLogRequest request);
 
     /**
      * @param request the request parameters of GetWorkflow  GetWorkflowRequest
@@ -498,6 +516,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDatasourceResponse
      */
     CompletableFuture<UpdateDatasourceResponse> updateDatasource(UpdateDatasourceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateExecutorGroup  UpdateExecutorGroupRequest
+     * @return UpdateExecutorGroupResponse
+     */
+    CompletableFuture<UpdateExecutorGroupResponse> updateExecutorGroup(UpdateExecutorGroupRequest request);
 
     /**
      * @param request the request parameters of UpdateExecutors  UpdateExecutorsRequest

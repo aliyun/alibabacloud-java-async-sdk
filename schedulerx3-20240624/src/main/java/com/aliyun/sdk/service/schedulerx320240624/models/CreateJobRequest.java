@@ -137,6 +137,10 @@ public class CreateJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Weight")
     private Integer weight;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("XAttrs")
+    private String xAttrs;
+
     private CreateJobRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -167,6 +171,7 @@ public class CreateJobRequest extends Request {
         this.timeType = builder.timeType;
         this.timezone = builder.timezone;
         this.weight = builder.weight;
+        this.xAttrs = builder.xAttrs;
     }
 
     public static Builder builder() {
@@ -378,6 +383,13 @@ public class CreateJobRequest extends Request {
         return this.weight;
     }
 
+    /**
+     * @return xAttrs
+     */
+    public String getXAttrs() {
+        return this.xAttrs;
+    }
+
     public static final class Builder extends Request.Builder<CreateJobRequest, Builder> {
         private String regionId; 
         private String appName; 
@@ -407,6 +419,7 @@ public class CreateJobRequest extends Request {
         private Integer timeType; 
         private String timezone; 
         private Integer weight; 
+        private String xAttrs; 
 
         private Builder() {
             super();
@@ -442,6 +455,7 @@ public class CreateJobRequest extends Request {
             this.timeType = request.timeType;
             this.timezone = request.timezone;
             this.weight = request.weight;
+            this.xAttrs = request.xAttrs;
         } 
 
         /**
@@ -711,6 +725,15 @@ public class CreateJobRequest extends Request {
         public Builder weight(Integer weight) {
             this.putBodyParameter("Weight", weight);
             this.weight = weight;
+            return this;
+        }
+
+        /**
+         * XAttrs.
+         */
+        public Builder xAttrs(String xAttrs) {
+            this.putBodyParameter("XAttrs", xAttrs);
+            this.xAttrs = xAttrs;
             return this;
         }
 

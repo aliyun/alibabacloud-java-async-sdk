@@ -233,6 +233,9 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkflowName")
         private String workflowName;
 
+        @com.aliyun.core.annotation.NameInMap("XAttrs")
+        private String xAttrs;
+
         private Records(Builder builder) {
             this.appName = builder.appName;
             this.attempt = builder.attempt;
@@ -257,6 +260,7 @@ public class ListJobExecutionsResponseBody extends TeaModel {
             this.workflowExecutionId = builder.workflowExecutionId;
             this.workflowId = builder.workflowId;
             this.workflowName = builder.workflowName;
+            this.xAttrs = builder.xAttrs;
         }
 
         public static Builder builder() {
@@ -428,6 +432,13 @@ public class ListJobExecutionsResponseBody extends TeaModel {
             return this.workflowName;
         }
 
+        /**
+         * @return xAttrs
+         */
+        public String getXAttrs() {
+            return this.xAttrs;
+        }
+
         public static final class Builder {
             private String appName; 
             private Integer attempt; 
@@ -452,6 +463,7 @@ public class ListJobExecutionsResponseBody extends TeaModel {
             private String workflowExecutionId; 
             private Long workflowId; 
             private String workflowName; 
+            private String xAttrs; 
 
             private Builder() {
             } 
@@ -480,6 +492,7 @@ public class ListJobExecutionsResponseBody extends TeaModel {
                 this.workflowExecutionId = model.workflowExecutionId;
                 this.workflowId = model.workflowId;
                 this.workflowName = model.workflowName;
+                this.xAttrs = model.xAttrs;
             } 
 
             /**
@@ -663,6 +676,14 @@ public class ListJobExecutionsResponseBody extends TeaModel {
              */
             public Builder workflowName(String workflowName) {
                 this.workflowName = workflowName;
+                return this;
+            }
+
+            /**
+             * XAttrs.
+             */
+            public Builder xAttrs(String xAttrs) {
+                this.xAttrs = xAttrs;
                 return this;
             }
 

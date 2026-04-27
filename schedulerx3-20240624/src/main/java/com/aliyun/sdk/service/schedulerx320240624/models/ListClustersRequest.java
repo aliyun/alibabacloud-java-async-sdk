@@ -30,6 +30,10 @@ public class ListClustersRequest extends Request {
     private String clusterName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    private Integer clusterType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
@@ -46,6 +50,7 @@ public class ListClustersRequest extends Request {
         this.regionId = builder.regionId;
         this.clusterId = builder.clusterId;
         this.clusterName = builder.clusterName;
+        this.clusterType = builder.clusterType;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.tag = builder.tag;
@@ -86,6 +91,13 @@ public class ListClustersRequest extends Request {
     }
 
     /**
+     * @return clusterType
+     */
+    public Integer getClusterType() {
+        return this.clusterType;
+    }
+
+    /**
      * @return pageNum
      */
     public Integer getPageNum() {
@@ -110,6 +122,7 @@ public class ListClustersRequest extends Request {
         private String regionId; 
         private String clusterId; 
         private String clusterName; 
+        private Integer clusterType; 
         private Integer pageNum; 
         private Integer pageSize; 
         private java.util.List<Tag> tag; 
@@ -123,6 +136,7 @@ public class ListClustersRequest extends Request {
             this.regionId = request.regionId;
             this.clusterId = request.clusterId;
             this.clusterName = request.clusterName;
+            this.clusterType = request.clusterType;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.tag = request.tag;
@@ -152,6 +166,15 @@ public class ListClustersRequest extends Request {
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
             this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * ClusterType.
+         */
+        public Builder clusterType(Integer clusterType) {
+            this.putQueryParameter("ClusterType", clusterType);
+            this.clusterType = clusterType;
             return this;
         }
 

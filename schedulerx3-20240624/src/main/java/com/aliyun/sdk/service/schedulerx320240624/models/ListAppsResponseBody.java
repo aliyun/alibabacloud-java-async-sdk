@@ -203,8 +203,15 @@ public class ListAppsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Updater")
         private String updater;
 
+        @com.aliyun.core.annotation.NameInMap("WorkerId")
+        private Integer workerId;
+
         @com.aliyun.core.annotation.NameInMap("WorkerRegistry")
+        @Deprecated
         private String workerRegistry;
+
+        @com.aliyun.core.annotation.NameInMap("WorkerType")
+        private String workerType;
 
         @com.aliyun.core.annotation.NameInMap("WorkflowNum")
         private Integer workflowNum;
@@ -224,7 +231,9 @@ public class ListAppsResponseBody extends TeaModel {
             this.maxJobs = builder.maxJobs;
             this.title = builder.title;
             this.updater = builder.updater;
+            this.workerId = builder.workerId;
             this.workerRegistry = builder.workerRegistry;
+            this.workerType = builder.workerType;
             this.workflowNum = builder.workflowNum;
         }
 
@@ -335,10 +344,24 @@ public class ListAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return workerId
+         */
+        public Integer getWorkerId() {
+            return this.workerId;
+        }
+
+        /**
          * @return workerRegistry
          */
         public String getWorkerRegistry() {
             return this.workerRegistry;
+        }
+
+        /**
+         * @return workerType
+         */
+        public String getWorkerType() {
+            return this.workerType;
         }
 
         /**
@@ -363,7 +386,9 @@ public class ListAppsResponseBody extends TeaModel {
             private Integer maxJobs; 
             private String title; 
             private String updater; 
+            private Integer workerId; 
             private String workerRegistry; 
+            private String workerType; 
             private Integer workflowNum; 
 
             private Builder() {
@@ -384,7 +409,9 @@ public class ListAppsResponseBody extends TeaModel {
                 this.maxJobs = model.maxJobs;
                 this.title = model.title;
                 this.updater = model.updater;
+                this.workerId = model.workerId;
                 this.workerRegistry = model.workerRegistry;
+                this.workerType = model.workerType;
                 this.workflowNum = model.workflowNum;
             } 
 
@@ -504,10 +531,26 @@ public class ListAppsResponseBody extends TeaModel {
             }
 
             /**
+             * WorkerId.
+             */
+            public Builder workerId(Integer workerId) {
+                this.workerId = workerId;
+                return this;
+            }
+
+            /**
              * WorkerRegistry.
              */
             public Builder workerRegistry(String workerRegistry) {
                 this.workerRegistry = workerRegistry;
+                return this;
+            }
+
+            /**
+             * WorkerType.
+             */
+            public Builder workerType(String workerType) {
+                this.workerType = workerType;
                 return this;
             }
 

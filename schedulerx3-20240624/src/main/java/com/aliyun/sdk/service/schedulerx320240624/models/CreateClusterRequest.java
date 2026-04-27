@@ -32,8 +32,11 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClusterSpec")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterSpec;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    private Integer clusterType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Duration")
@@ -42,7 +45,6 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EngineType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String engineType;
 
     @com.aliyun.core.annotation.Body
@@ -55,12 +57,10 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VSwitches")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<VSwitches> vSwitches;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VpcId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private CreateClusterRequest(Builder builder) {
@@ -69,6 +69,7 @@ public class CreateClusterRequest extends Request {
         this.chargeType = builder.chargeType;
         this.clusterName = builder.clusterName;
         this.clusterSpec = builder.clusterSpec;
+        this.clusterType = builder.clusterType;
         this.duration = builder.duration;
         this.engineType = builder.engineType;
         this.pricingCycle = builder.pricingCycle;
@@ -119,6 +120,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return clusterType
+     */
+    public Integer getClusterType() {
+        return this.clusterType;
+    }
+
+    /**
      * @return duration
      */
     public Integer getDuration() {
@@ -165,6 +173,7 @@ public class CreateClusterRequest extends Request {
         private String chargeType; 
         private String clusterName; 
         private String clusterSpec; 
+        private Integer clusterType; 
         private Integer duration; 
         private String engineType; 
         private String pricingCycle; 
@@ -182,6 +191,7 @@ public class CreateClusterRequest extends Request {
             this.chargeType = request.chargeType;
             this.clusterName = request.clusterName;
             this.clusterSpec = request.clusterSpec;
+            this.clusterType = request.clusterType;
             this.duration = request.duration;
             this.engineType = request.engineType;
             this.pricingCycle = request.pricingCycle;
@@ -221,14 +231,20 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>scx.dev.x1</p>
+         * ClusterSpec.
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putBodyParameter("ClusterSpec", clusterSpec);
             this.clusterSpec = clusterSpec;
+            return this;
+        }
+
+        /**
+         * ClusterType.
+         */
+        public Builder clusterType(Integer clusterType) {
+            this.putBodyParameter("ClusterType", clusterType);
+            this.clusterType = clusterType;
             return this;
         }
 
@@ -242,10 +258,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxljob</p>
+         * EngineType.
          */
         public Builder engineType(String engineType) {
             this.putBodyParameter("EngineType", engineType);
@@ -272,7 +285,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * VSwitches.
          */
         public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
             String vSwitchesShrink = shrink(vSwitches, "VSwitches", "json");
@@ -283,7 +296,6 @@ public class CreateClusterRequest extends Request {
 
         /**
          * <p>VPC id</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-aa1a18236n90rqhuhhnhh</p>
@@ -384,11 +396,9 @@ public class CreateClusterRequest extends Request {
      */
     public static class VSwitches extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String vSwitchId;
 
         @com.aliyun.core.annotation.NameInMap("ZoneId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String zoneId;
 
         private VSwitches(Builder builder) {
@@ -431,10 +441,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-2ze745n3r2sfqtahhubpl</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -442,10 +449,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-j</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

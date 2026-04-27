@@ -53,6 +53,10 @@ public class UpdateAppRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String title;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkerId")
+    private Integer workerId;
+
     private UpdateAppRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -63,6 +67,7 @@ public class UpdateAppRequest extends Request {
         this.labelRouteStrategy = builder.labelRouteStrategy;
         this.maxConcurrency = builder.maxConcurrency;
         this.title = builder.title;
+        this.workerId = builder.workerId;
     }
 
     public static Builder builder() {
@@ -134,6 +139,13 @@ public class UpdateAppRequest extends Request {
         return this.title;
     }
 
+    /**
+     * @return workerId
+     */
+    public Integer getWorkerId() {
+        return this.workerId;
+    }
+
     public static final class Builder extends Request.Builder<UpdateAppRequest, Builder> {
         private String regionId; 
         private String accessToken; 
@@ -143,6 +155,7 @@ public class UpdateAppRequest extends Request {
         private Integer labelRouteStrategy; 
         private Integer maxConcurrency; 
         private String title; 
+        private Integer workerId; 
 
         private Builder() {
             super();
@@ -158,6 +171,7 @@ public class UpdateAppRequest extends Request {
             this.labelRouteStrategy = request.labelRouteStrategy;
             this.maxConcurrency = request.maxConcurrency;
             this.title = request.title;
+            this.workerId = request.workerId;
         } 
 
         /**
@@ -235,6 +249,15 @@ public class UpdateAppRequest extends Request {
         public Builder title(String title) {
             this.putBodyParameter("Title", title);
             this.title = title;
+            return this;
+        }
+
+        /**
+         * WorkerId.
+         */
+        public Builder workerId(Integer workerId) {
+            this.putBodyParameter("WorkerId", workerId);
+            this.workerId = workerId;
             return this;
         }
 

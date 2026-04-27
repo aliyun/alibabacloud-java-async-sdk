@@ -251,6 +251,9 @@ public class ListClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterSpec")
         private String clusterSpec;
 
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
+        private Integer clusterType;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -295,6 +298,7 @@ public class ListClustersResponseBody extends TeaModel {
             this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
             this.clusterSpec = builder.clusterSpec;
+            this.clusterType = builder.clusterType;
             this.createTime = builder.createTime;
             this.endTime = builder.endTime;
             this.engineType = builder.engineType;
@@ -344,6 +348,13 @@ public class ListClustersResponseBody extends TeaModel {
          */
         public String getClusterSpec() {
             return this.clusterSpec;
+        }
+
+        /**
+         * @return clusterType
+         */
+        public Integer getClusterType() {
+            return this.clusterType;
         }
 
         /**
@@ -442,6 +453,7 @@ public class ListClustersResponseBody extends TeaModel {
             private String clusterId; 
             private String clusterName; 
             private String clusterSpec; 
+            private Integer clusterType; 
             private String createTime; 
             private String endTime; 
             private String engineType; 
@@ -464,6 +476,7 @@ public class ListClustersResponseBody extends TeaModel {
                 this.clusterId = model.clusterId;
                 this.clusterName = model.clusterName;
                 this.clusterSpec = model.clusterSpec;
+                this.clusterType = model.clusterType;
                 this.createTime = model.createTime;
                 this.endTime = model.endTime;
                 this.engineType = model.engineType;
@@ -508,6 +521,14 @@ public class ListClustersResponseBody extends TeaModel {
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
+                return this;
+            }
+
+            /**
+             * ClusterType.
+             */
+            public Builder clusterType(Integer clusterType) {
+                this.clusterType = clusterType;
                 return this;
             }
 
