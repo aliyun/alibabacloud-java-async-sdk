@@ -457,4 +457,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateRayClusterResponse> updateRayCluster(UpdateRayClusterRequest request);
 
+    /**
+     * @param request the request parameters of UpdateWorkspace  UpdateWorkspaceRequest
+     * @return UpdateWorkspaceResponse
+     */
+    CompletableFuture<UpdateWorkspaceResponse> updateWorkspace(UpdateWorkspaceRequest request);
+
 }
