@@ -23,6 +23,9 @@ public class ExtraPodSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Lifecycle")
     private Lifecycle lifecycle;
 
+    @com.aliyun.core.annotation.NameInMap("MainContainerSecurityContext")
+    private SecurityContext mainContainerSecurityContext;
+
     @com.aliyun.core.annotation.NameInMap("PodAnnotations")
     @Deprecated
     private java.util.Map<String, String> podAnnotations;
@@ -40,6 +43,7 @@ public class ExtraPodSpec extends TeaModel {
     private ExtraPodSpec(Builder builder) {
         this.initContainers = builder.initContainers;
         this.lifecycle = builder.lifecycle;
+        this.mainContainerSecurityContext = builder.mainContainerSecurityContext;
         this.podAnnotations = builder.podAnnotations;
         this.podLabels = builder.podLabels;
         this.sharedVolumeMountPaths = builder.sharedVolumeMountPaths;
@@ -73,6 +77,13 @@ public class ExtraPodSpec extends TeaModel {
     }
 
     /**
+     * @return mainContainerSecurityContext
+     */
+    public SecurityContext getMainContainerSecurityContext() {
+        return this.mainContainerSecurityContext;
+    }
+
+    /**
      * @return podAnnotations
      */
     public java.util.Map<String, String> getPodAnnotations() {
@@ -103,6 +114,7 @@ public class ExtraPodSpec extends TeaModel {
     public static final class Builder {
         private java.util.List<ContainerSpec> initContainers; 
         private Lifecycle lifecycle; 
+        private SecurityContext mainContainerSecurityContext; 
         private java.util.Map<String, String> podAnnotations; 
         private java.util.Map<String, String> podLabels; 
         private java.util.List<String> sharedVolumeMountPaths; 
@@ -114,6 +126,7 @@ public class ExtraPodSpec extends TeaModel {
         private Builder(ExtraPodSpec model) {
             this.initContainers = model.initContainers;
             this.lifecycle = model.lifecycle;
+            this.mainContainerSecurityContext = model.mainContainerSecurityContext;
             this.podAnnotations = model.podAnnotations;
             this.podLabels = model.podLabels;
             this.sharedVolumeMountPaths = model.sharedVolumeMountPaths;
@@ -133,6 +146,14 @@ public class ExtraPodSpec extends TeaModel {
          */
         public Builder lifecycle(Lifecycle lifecycle) {
             this.lifecycle = lifecycle;
+            return this;
+        }
+
+        /**
+         * MainContainerSecurityContext.
+         */
+        public Builder mainContainerSecurityContext(SecurityContext mainContainerSecurityContext) {
+            this.mainContainerSecurityContext = mainContainerSecurityContext;
             return this;
         }
 
