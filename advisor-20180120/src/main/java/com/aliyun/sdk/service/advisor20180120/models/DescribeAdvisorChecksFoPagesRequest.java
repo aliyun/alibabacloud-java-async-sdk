@@ -34,6 +34,10 @@ public class DescribeAdvisorChecksFoPagesRequest extends Request {
     private java.util.List<Long> checkTypes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -67,6 +71,7 @@ public class DescribeAdvisorChecksFoPagesRequest extends Request {
         this.bizCategory = builder.bizCategory;
         this.category = builder.category;
         this.checkTypes = builder.checkTypes;
+        this.language = builder.language;
         this.name = builder.name;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -115,6 +120,13 @@ public class DescribeAdvisorChecksFoPagesRequest extends Request {
      */
     public java.util.List<Long> getCheckTypes() {
         return this.checkTypes;
+    }
+
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
     }
 
     /**
@@ -171,6 +183,7 @@ public class DescribeAdvisorChecksFoPagesRequest extends Request {
         private String bizCategory; 
         private String category; 
         private java.util.List<Long> checkTypes; 
+        private String language; 
         private String name; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -189,6 +202,7 @@ public class DescribeAdvisorChecksFoPagesRequest extends Request {
             this.bizCategory = request.bizCategory;
             this.category = request.category;
             this.checkTypes = request.checkTypes;
+            this.language = request.language;
             this.name = request.name;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -232,6 +246,15 @@ public class DescribeAdvisorChecksFoPagesRequest extends Request {
             String checkTypesShrink = shrink(checkTypes, "CheckTypes", "json");
             this.putQueryParameter("CheckTypes", checkTypesShrink);
             this.checkTypes = checkTypes;
+            return this;
+        }
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
             return this;
         }
 

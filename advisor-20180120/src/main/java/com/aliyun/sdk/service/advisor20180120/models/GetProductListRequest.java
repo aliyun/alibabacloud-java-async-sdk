@@ -18,11 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetProductListRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
     private GetProductListRequest(Builder builder) {
         super(builder);
+        this.language = builder.language;
         this.token = builder.token;
     }
 
@@ -40,6 +45,13 @@ public class GetProductListRequest extends Request {
     }
 
     /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
      * @return token
      */
     public String getToken() {
@@ -47,6 +59,7 @@ public class GetProductListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetProductListRequest, Builder> {
+        private String language; 
         private String token; 
 
         private Builder() {
@@ -55,8 +68,18 @@ public class GetProductListRequest extends Request {
 
         private Builder(GetProductListRequest request) {
             super(request);
+            this.language = request.language;
             this.token = request.token;
         } 
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
+            return this;
+        }
 
         /**
          * Token.

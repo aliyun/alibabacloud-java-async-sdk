@@ -34,6 +34,10 @@ public class DescribeCostCheckResultsRequest extends Request {
     private String groupBy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
@@ -79,6 +83,7 @@ public class DescribeCostCheckResultsRequest extends Request {
         this.checkIds = builder.checkIds;
         this.checkPlanId = builder.checkPlanId;
         this.groupBy = builder.groupBy;
+        this.language = builder.language;
         this.product = builder.product;
         this.regionIds = builder.regionIds;
         this.resourceGroupIdList = builder.resourceGroupIdList;
@@ -130,6 +135,13 @@ public class DescribeCostCheckResultsRequest extends Request {
      */
     public String getGroupBy() {
         return this.groupBy;
+    }
+
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
     }
 
     /**
@@ -207,6 +219,7 @@ public class DescribeCostCheckResultsRequest extends Request {
         private java.util.List<String> checkIds; 
         private Long checkPlanId; 
         private String groupBy; 
+        private String language; 
         private String product; 
         private java.util.List<String> regionIds; 
         private java.util.List<String> resourceGroupIdList; 
@@ -228,6 +241,7 @@ public class DescribeCostCheckResultsRequest extends Request {
             this.checkIds = request.checkIds;
             this.checkPlanId = request.checkPlanId;
             this.groupBy = request.groupBy;
+            this.language = request.language;
             this.product = request.product;
             this.regionIds = request.regionIds;
             this.resourceGroupIdList = request.resourceGroupIdList;
@@ -275,6 +289,15 @@ public class DescribeCostCheckResultsRequest extends Request {
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
             this.groupBy = groupBy;
+            return this;
+        }
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
             return this;
         }
 
