@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateAudioAsrTaskRequest} extends {@link RequestModel}
+ * {@link CreateVideoSegmentationTaskRequest} extends {@link RequestModel}
  *
- * <p>CreateAudioAsrTaskRequest</p>
+ * <p>CreateVideoSegmentationTaskRequest</p>
  */
-public class CreateAudioAsrTaskRequest extends Request {
+public class CreateVideoSegmentationTaskRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspace_name")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -39,7 +39,7 @@ public class CreateAudioAsrTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("parameters")
     private java.util.Map<String, ?> parameters;
 
-    private CreateAudioAsrTaskRequest(Builder builder) {
+    private CreateVideoSegmentationTaskRequest(Builder builder) {
         super(builder);
         this.workspaceName = builder.workspaceName;
         this.serviceId = builder.serviceId;
@@ -52,7 +52,7 @@ public class CreateAudioAsrTaskRequest extends Request {
         return new Builder();
     }
 
-    public static CreateAudioAsrTaskRequest create() {
+    public static CreateVideoSegmentationTaskRequest create() {
         return builder().build();
     }
 
@@ -96,7 +96,7 @@ public class CreateAudioAsrTaskRequest extends Request {
         return this.parameters;
     }
 
-    public static final class Builder extends Request.Builder<CreateAudioAsrTaskRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateVideoSegmentationTaskRequest, Builder> {
         private String workspaceName; 
         private String serviceId; 
         private Input input; 
@@ -107,7 +107,7 @@ public class CreateAudioAsrTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAudioAsrTaskRequest request) {
+        private Builder(CreateVideoSegmentationTaskRequest request) {
             super(request);
             this.workspaceName = request.workspaceName;
             this.serviceId = request.serviceId;
@@ -162,22 +162,19 @@ public class CreateAudioAsrTaskRequest extends Request {
         }
 
         @Override
-        public CreateAudioAsrTaskRequest build() {
-            return new CreateAudioAsrTaskRequest(this);
+        public CreateVideoSegmentationTaskRequest build() {
+            return new CreateVideoSegmentationTaskRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CreateAudioAsrTaskRequest} extends {@link TeaModel}
+     * {@link CreateVideoSegmentationTaskRequest} extends {@link TeaModel}
      *
-     * <p>CreateAudioAsrTaskRequest</p>
+     * <p>CreateVideoSegmentationTaskRequest</p>
      */
     public static class Input extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("content")
-        private String content;
-
         @com.aliyun.core.annotation.NameInMap("file_name")
         private String fileName;
 
@@ -188,7 +185,6 @@ public class CreateAudioAsrTaskRequest extends Request {
         private String url;
 
         private Input(Builder builder) {
-            this.content = builder.content;
             this.fileName = builder.fileName;
             this.oss = builder.oss;
             this.url = builder.url;
@@ -200,13 +196,6 @@ public class CreateAudioAsrTaskRequest extends Request {
 
         public static Input create() {
             return builder().build();
-        }
-
-        /**
-         * @return content
-         */
-        public String getContent() {
-            return this.content;
         }
 
         /**
@@ -231,7 +220,6 @@ public class CreateAudioAsrTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private String content; 
             private String fileName; 
             private String oss; 
             private String url; 
@@ -240,19 +228,10 @@ public class CreateAudioAsrTaskRequest extends Request {
             } 
 
             private Builder(Input model) {
-                this.content = model.content;
                 this.fileName = model.fileName;
                 this.oss = model.oss;
                 this.url = model.url;
             } 
-
-            /**
-             * content.
-             */
-            public Builder content(String content) {
-                this.content = content;
-                return this;
-            }
 
             /**
              * file_name.
@@ -287,9 +266,9 @@ public class CreateAudioAsrTaskRequest extends Request {
     }
     /**
      * 
-     * {@link CreateAudioAsrTaskRequest} extends {@link TeaModel}
+     * {@link CreateVideoSegmentationTaskRequest} extends {@link TeaModel}
      *
-     * <p>CreateAudioAsrTaskRequest</p>
+     * <p>CreateVideoSegmentationTaskRequest</p>
      */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("oss")

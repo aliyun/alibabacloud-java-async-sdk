@@ -146,10 +146,14 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("page_num")
         private Integer pageNum;
 
+        @com.aliyun.core.annotation.NameInMap("pages")
+        private java.util.List<String> pages;
+
         private Data(Builder builder) {
             this.content = builder.content;
             this.contentType = builder.contentType;
             this.pageNum = builder.pageNum;
+            this.pages = builder.pages;
         }
 
         public static Builder builder() {
@@ -181,10 +185,18 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
             return this.pageNum;
         }
 
+        /**
+         * @return pages
+         */
+        public java.util.List<String> getPages() {
+            return this.pages;
+        }
+
         public static final class Builder {
             private String content; 
             private String contentType; 
             private Integer pageNum; 
+            private java.util.List<String> pages; 
 
             private Builder() {
             } 
@@ -193,6 +205,7 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
                 this.content = model.content;
                 this.contentType = model.contentType;
                 this.pageNum = model.pageNum;
+                this.pages = model.pages;
             } 
 
             /**
@@ -216,6 +229,14 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
+                return this;
+            }
+
+            /**
+             * pages.
+             */
+            public Builder pages(java.util.List<String> pages) {
+                this.pages = pages;
                 return this;
             }
 
@@ -353,6 +374,9 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("image_count")
         private Long imageCount;
 
+        @com.aliyun.core.annotation.NameInMap("semantic_token_count")
+        private Long semanticTokenCount;
+
         @com.aliyun.core.annotation.NameInMap("table_count")
         private Long tableCount;
 
@@ -361,6 +385,7 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
 
         private Usage(Builder builder) {
             this.imageCount = builder.imageCount;
+            this.semanticTokenCount = builder.semanticTokenCount;
             this.tableCount = builder.tableCount;
             this.tokenCount = builder.tokenCount;
         }
@@ -381,6 +406,13 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return semanticTokenCount
+         */
+        public Long getSemanticTokenCount() {
+            return this.semanticTokenCount;
+        }
+
+        /**
          * @return tableCount
          */
         public Long getTableCount() {
@@ -396,6 +428,7 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long imageCount; 
+            private Long semanticTokenCount; 
             private Long tableCount; 
             private Long tokenCount; 
 
@@ -404,6 +437,7 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
 
             private Builder(Usage model) {
                 this.imageCount = model.imageCount;
+                this.semanticTokenCount = model.semanticTokenCount;
                 this.tableCount = model.tableCount;
                 this.tokenCount = model.tokenCount;
             } 
@@ -413,6 +447,14 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
              */
             public Builder imageCount(Long imageCount) {
                 this.imageCount = imageCount;
+                return this;
+            }
+
+            /**
+             * semantic_token_count.
+             */
+            public Builder semanticTokenCount(Long semanticTokenCount) {
+                this.semanticTokenCount = semanticTokenCount;
                 return this;
             }
 

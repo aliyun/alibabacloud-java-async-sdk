@@ -143,6 +143,9 @@ public class GetWebSearchResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("link")
         private String link;
 
+        @com.aliyun.core.annotation.NameInMap("meta_info")
+        private java.util.Map<String, ?> metaInfo;
+
         @com.aliyun.core.annotation.NameInMap("position")
         private Long position;
 
@@ -155,6 +158,7 @@ public class GetWebSearchResponseBody extends TeaModel {
         private SearchResult(Builder builder) {
             this.content = builder.content;
             this.link = builder.link;
+            this.metaInfo = builder.metaInfo;
             this.position = builder.position;
             this.snippet = builder.snippet;
             this.tilte = builder.tilte;
@@ -183,6 +187,13 @@ public class GetWebSearchResponseBody extends TeaModel {
         }
 
         /**
+         * @return metaInfo
+         */
+        public java.util.Map<String, ?> getMetaInfo() {
+            return this.metaInfo;
+        }
+
+        /**
          * @return position
          */
         public Long getPosition() {
@@ -206,6 +217,7 @@ public class GetWebSearchResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private String link; 
+            private java.util.Map<String, ?> metaInfo; 
             private Long position; 
             private String snippet; 
             private String tilte; 
@@ -216,6 +228,7 @@ public class GetWebSearchResponseBody extends TeaModel {
             private Builder(SearchResult model) {
                 this.content = model.content;
                 this.link = model.link;
+                this.metaInfo = model.metaInfo;
                 this.position = model.position;
                 this.snippet = model.snippet;
                 this.tilte = model.tilte;
@@ -234,6 +247,14 @@ public class GetWebSearchResponseBody extends TeaModel {
              */
             public Builder link(String link) {
                 this.link = link;
+                return this;
+            }
+
+            /**
+             * meta_info.
+             */
+            public Builder metaInfo(java.util.Map<String, ?> metaInfo) {
+                this.metaInfo = metaInfo;
                 return this;
             }
 

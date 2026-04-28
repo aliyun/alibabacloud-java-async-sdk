@@ -38,10 +38,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateImageAnalyzeTaskResponse> createImageAnalyzeTask(CreateImageAnalyzeTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateMemory  CreateMemoryRequest
+     * @return CreateMemoryResponse
+     */
+    CompletableFuture<CreateMemoryResponse> createMemory(CreateMemoryRequest request);
+
+    /**
+     * @param request the request parameters of CreateMemorySkill  CreateMemorySkillRequest
+     * @return CreateMemorySkillResponse
+     */
+    CompletableFuture<CreateMemorySkillResponse> createMemorySkill(CreateMemorySkillRequest request);
+
+    /**
+     * @param request the request parameters of CreateVideoSegmentationTask  CreateVideoSegmentationTaskRequest
+     * @return CreateVideoSegmentationTaskResponse
+     */
+    CompletableFuture<CreateVideoSegmentationTaskResponse> createVideoSegmentationTask(CreateVideoSegmentationTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateVideoSnapshotTask  CreateVideoSnapshotTaskRequest
      * @return CreateVideoSnapshotTaskResponse
      */
     CompletableFuture<CreateVideoSnapshotTaskResponse> createVideoSnapshotTask(CreateVideoSnapshotTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateVideoSummarizationTask  CreateVideoSummarizationTaskRequest
+     * @return CreateVideoSummarizationTaskResponse
+     */
+    CompletableFuture<CreateVideoSummarizationTaskResponse> createVideoSummarizationTask(CreateVideoSummarizationTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMemory  DeleteMemoryRequest
+     * @return DeleteMemoryResponse
+     */
+    CompletableFuture<DeleteMemoryResponse> deleteMemory(DeleteMemoryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMemorySkill  DeleteMemorySkillRequest
+     * @return DeleteMemorySkillResponse
+     */
+    CompletableFuture<DeleteMemorySkillResponse> deleteMemorySkill(DeleteMemorySkillRequest request);
 
     /**
      * @param request the request parameters of GetAudioAsrTaskStatus  GetAudioAsrTaskStatusRequest
@@ -80,10 +116,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetImageAnalyzeTaskStatusResponse> getImageAnalyzeTaskStatus(GetImageAnalyzeTaskStatusRequest request);
 
     /**
+     * @param request the request parameters of GetImageObjectDetection  GetImageObjectDetectionRequest
+     * @return GetImageObjectDetectionResponse
+     */
+    CompletableFuture<GetImageObjectDetectionResponse> getImageObjectDetection(GetImageObjectDetectionRequest request);
+
+    /**
+     * @param request the request parameters of GetMemory  GetMemoryRequest
+     * @return GetMemoryResponse
+     */
+    CompletableFuture<GetMemoryResponse> getMemory(GetMemoryRequest request);
+
+    /**
+     * @param request the request parameters of GetMemoryHealth  GetMemoryHealthRequest
+     * @return GetMemoryHealthResponse
+     */
+    CompletableFuture<GetMemoryHealthResponse> getMemoryHealth(GetMemoryHealthRequest request);
+
+    /**
+     * @param request the request parameters of GetMemorySkill  GetMemorySkillRequest
+     * @return GetMemorySkillResponse
+     */
+    CompletableFuture<GetMemorySkillResponse> getMemorySkill(GetMemorySkillRequest request);
+
+    /**
+     * @param request the request parameters of GetMemoryTask  GetMemoryTaskRequest
+     * @return GetMemoryTaskResponse
+     */
+    CompletableFuture<GetMemoryTaskResponse> getMemoryTask(GetMemoryTaskRequest request);
+
+    /**
      * @param request the request parameters of GetMultiModalEmbedding  GetMultiModalEmbeddingRequest
      * @return GetMultiModalEmbeddingResponse
      */
     CompletableFuture<GetMultiModalEmbeddingResponse> getMultiModalEmbedding(GetMultiModalEmbeddingRequest request);
+
+    /**
+     * @param request the request parameters of GetMultiModalReranker  GetMultiModalRerankerRequest
+     * @return GetMultiModalRerankerResponse
+     */
+    CompletableFuture<GetMultiModalRerankerResponse> getMultiModalReranker(GetMultiModalRerankerRequest request);
 
     /**
      * @param request the request parameters of GetPrediction  GetPredictionRequest
@@ -116,15 +188,45 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTextSparseEmbeddingResponse> getTextSparseEmbedding(GetTextSparseEmbeddingRequest request);
 
     /**
+     * @param request the request parameters of GetVideoSegmentationTaskStatus  GetVideoSegmentationTaskStatusRequest
+     * @return GetVideoSegmentationTaskStatusResponse
+     */
+    CompletableFuture<GetVideoSegmentationTaskStatusResponse> getVideoSegmentationTaskStatus(GetVideoSegmentationTaskStatusRequest request);
+
+    /**
      * @param request the request parameters of GetVideoSnapshotTaskStatus  GetVideoSnapshotTaskStatusRequest
      * @return GetVideoSnapshotTaskStatusResponse
      */
     CompletableFuture<GetVideoSnapshotTaskStatusResponse> getVideoSnapshotTaskStatus(GetVideoSnapshotTaskStatusRequest request);
 
     /**
+     * @param request the request parameters of GetVideoSummarizationTaskStatus  GetVideoSummarizationTaskStatusRequest
+     * @return GetVideoSummarizationTaskStatusResponse
+     */
+    CompletableFuture<GetVideoSummarizationTaskStatusResponse> getVideoSummarizationTaskStatus(GetVideoSummarizationTaskStatusRequest request);
+
+    /**
      * @param request the request parameters of GetWebSearch  GetWebSearchRequest
      * @return GetWebSearchResponse
      */
     CompletableFuture<GetWebSearchResponse> getWebSearch(GetWebSearchRequest request);
+
+    /**
+     * @param request the request parameters of SearchMemory  SearchMemoryRequest
+     * @return SearchMemoryResponse
+     */
+    CompletableFuture<SearchMemoryResponse> searchMemory(SearchMemoryRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMemory  UpdateMemoryRequest
+     * @return UpdateMemoryResponse
+     */
+    CompletableFuture<UpdateMemoryResponse> updateMemory(UpdateMemoryRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMemorySkill  UpdateMemorySkillRequest
+     * @return UpdateMemorySkillResponse
+     */
+    CompletableFuture<UpdateMemorySkillResponse> updateMemorySkill(UpdateMemorySkillRequest request);
 
 }

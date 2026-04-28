@@ -12,42 +12,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetMultiModalEmbeddingRequest} extends {@link RequestModel}
+ * {@link GetMultiModalRerankerRequest} extends {@link RequestModel}
  *
- * <p>GetMultiModalEmbeddingRequest</p>
+ * <p>GetMultiModalRerankerRequest</p>
  */
-public class GetMultiModalEmbeddingRequest extends Request {
+public class GetMultiModalRerankerRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspace_name")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceName;
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("service_id")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("input")
-    private java.util.List<Input> input;
+    @com.aliyun.core.annotation.NameInMap("docs")
+    private java.util.List<Docs> docs;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("options")
     private java.util.Map<String, ?> options;
 
-    private GetMultiModalEmbeddingRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("query")
+    private GetMultiModalRerankerRequestQuery query;
+
+    private GetMultiModalRerankerRequest(Builder builder) {
         super(builder);
         this.workspaceName = builder.workspaceName;
         this.serviceId = builder.serviceId;
-        this.input = builder.input;
+        this.docs = builder.docs;
         this.options = builder.options;
+        this.query = builder.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetMultiModalEmbeddingRequest create() {
+    public static GetMultiModalRerankerRequest create() {
         return builder().build();
     }
 
@@ -71,10 +74,10 @@ public class GetMultiModalEmbeddingRequest extends Request {
     }
 
     /**
-     * @return input
+     * @return docs
      */
-    public java.util.List<Input> getInput() {
-        return this.input;
+    public java.util.List<Docs> getDocs() {
+        return this.docs;
     }
 
     /**
@@ -84,26 +87,35 @@ public class GetMultiModalEmbeddingRequest extends Request {
         return this.options;
     }
 
-    public static final class Builder extends Request.Builder<GetMultiModalEmbeddingRequest, Builder> {
+    /**
+     * @return query
+     */
+    public GetMultiModalRerankerRequestQuery getQuery() {
+        return this.query;
+    }
+
+    public static final class Builder extends Request.Builder<GetMultiModalRerankerRequest, Builder> {
         private String workspaceName; 
         private String serviceId; 
-        private java.util.List<Input> input; 
+        private java.util.List<Docs> docs; 
         private java.util.Map<String, ?> options; 
+        private GetMultiModalRerankerRequestQuery query; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetMultiModalEmbeddingRequest request) {
+        private Builder(GetMultiModalRerankerRequest request) {
             super(request);
             this.workspaceName = request.workspaceName;
             this.serviceId = request.serviceId;
-            this.input = request.input;
+            this.docs = request.docs;
             this.options = request.options;
+            this.query = request.query;
         } 
 
         /**
-         * <p>This parameter is required.</p>
+         * workspace_name.
          */
         public Builder workspaceName(String workspaceName) {
             this.putPathParameter("workspace_name", workspaceName);
@@ -112,7 +124,7 @@ public class GetMultiModalEmbeddingRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * service_id.
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("service_id", serviceId);
@@ -121,11 +133,11 @@ public class GetMultiModalEmbeddingRequest extends Request {
         }
 
         /**
-         * input.
+         * docs.
          */
-        public Builder input(java.util.List<Input> input) {
-            this.putBodyParameter("input", input);
-            this.input = input;
+        public Builder docs(java.util.List<Docs> docs) {
+            this.putBodyParameter("docs", docs);
+            this.docs = docs;
             return this;
         }
 
@@ -138,27 +150,36 @@ public class GetMultiModalEmbeddingRequest extends Request {
             return this;
         }
 
+        /**
+         * query.
+         */
+        public Builder query(GetMultiModalRerankerRequestQuery query) {
+            this.putBodyParameter("query", query);
+            this.query = query;
+            return this;
+        }
+
         @Override
-        public GetMultiModalEmbeddingRequest build() {
-            return new GetMultiModalEmbeddingRequest(this);
+        public GetMultiModalRerankerRequest build() {
+            return new GetMultiModalRerankerRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetMultiModalEmbeddingRequest} extends {@link TeaModel}
+     * {@link GetMultiModalRerankerRequest} extends {@link TeaModel}
      *
-     * <p>GetMultiModalEmbeddingRequest</p>
+     * <p>GetMultiModalRerankerRequest</p>
      */
-    public static class Input extends TeaModel {
+    public static class Docs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("image")
         private String image;
 
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
 
-        private Input(Builder builder) {
+        private Docs(Builder builder) {
             this.image = builder.image;
             this.text = builder.text;
         }
@@ -167,7 +188,7 @@ public class GetMultiModalEmbeddingRequest extends Request {
             return new Builder();
         }
 
-        public static Input create() {
+        public static Docs create() {
             return builder().build();
         }
 
@@ -192,7 +213,7 @@ public class GetMultiModalEmbeddingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(Input model) {
+            private Builder(Docs model) {
                 this.image = model.image;
                 this.text = model.text;
             } 
@@ -213,8 +234,83 @@ public class GetMultiModalEmbeddingRequest extends Request {
                 return this;
             }
 
-            public Input build() {
-                return new Input(this);
+            public Docs build() {
+                return new Docs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMultiModalRerankerRequest} extends {@link TeaModel}
+     *
+     * <p>GetMultiModalRerankerRequest</p>
+     */
+    public static class GetMultiModalRerankerRequestQuery extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("image")
+        private String image;
+
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        private GetMultiModalRerankerRequestQuery(Builder builder) {
+            this.image = builder.image;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GetMultiModalRerankerRequestQuery create() {
+            return builder().build();
+        }
+
+        /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private String image; 
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(GetMultiModalRerankerRequestQuery model) {
+                this.image = model.image;
+                this.text = model.text;
+            } 
+
+            /**
+             * image.
+             */
+            public Builder image(String image) {
+                this.image = image;
+                return this;
+            }
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public GetMultiModalRerankerRequestQuery build() {
+                return new GetMultiModalRerankerRequestQuery(this);
             } 
 
         } 

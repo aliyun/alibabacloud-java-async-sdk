@@ -184,10 +184,14 @@ public class CreateVideoSnapshotTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("oss")
         private String oss;
 
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
         private Input(Builder builder) {
             this.content = builder.content;
             this.fileName = builder.fileName;
             this.oss = builder.oss;
+            this.url = builder.url;
         }
 
         public static Builder builder() {
@@ -219,10 +223,18 @@ public class CreateVideoSnapshotTaskRequest extends Request {
             return this.oss;
         }
 
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
         public static final class Builder {
             private String content; 
             private String fileName; 
             private String oss; 
+            private String url; 
 
             private Builder() {
             } 
@@ -231,6 +243,7 @@ public class CreateVideoSnapshotTaskRequest extends Request {
                 this.content = model.content;
                 this.fileName = model.fileName;
                 this.oss = model.oss;
+                this.url = model.url;
             } 
 
             /**
@@ -254,6 +267,14 @@ public class CreateVideoSnapshotTaskRequest extends Request {
              */
             public Builder oss(String oss) {
                 this.oss = oss;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
                 return this;
             }
 

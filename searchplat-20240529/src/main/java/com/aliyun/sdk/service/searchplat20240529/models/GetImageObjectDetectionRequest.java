@@ -12,34 +12,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetMultiModalEmbeddingRequest} extends {@link RequestModel}
+ * {@link GetImageObjectDetectionRequest} extends {@link RequestModel}
  *
- * <p>GetMultiModalEmbeddingRequest</p>
+ * <p>GetImageObjectDetectionRequest</p>
  */
-public class GetMultiModalEmbeddingRequest extends Request {
+public class GetImageObjectDetectionRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspace_name")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceName;
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("service_id")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("input")
-    private java.util.List<Input> input;
+    @com.aliyun.core.annotation.NameInMap("image")
+    private Image image;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("options")
     private java.util.Map<String, ?> options;
 
-    private GetMultiModalEmbeddingRequest(Builder builder) {
+    private GetImageObjectDetectionRequest(Builder builder) {
         super(builder);
         this.workspaceName = builder.workspaceName;
         this.serviceId = builder.serviceId;
-        this.input = builder.input;
+        this.image = builder.image;
         this.options = builder.options;
     }
 
@@ -47,7 +45,7 @@ public class GetMultiModalEmbeddingRequest extends Request {
         return new Builder();
     }
 
-    public static GetMultiModalEmbeddingRequest create() {
+    public static GetImageObjectDetectionRequest create() {
         return builder().build();
     }
 
@@ -71,10 +69,10 @@ public class GetMultiModalEmbeddingRequest extends Request {
     }
 
     /**
-     * @return input
+     * @return image
      */
-    public java.util.List<Input> getInput() {
-        return this.input;
+    public Image getImage() {
+        return this.image;
     }
 
     /**
@@ -84,26 +82,26 @@ public class GetMultiModalEmbeddingRequest extends Request {
         return this.options;
     }
 
-    public static final class Builder extends Request.Builder<GetMultiModalEmbeddingRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetImageObjectDetectionRequest, Builder> {
         private String workspaceName; 
         private String serviceId; 
-        private java.util.List<Input> input; 
+        private Image image; 
         private java.util.Map<String, ?> options; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetMultiModalEmbeddingRequest request) {
+        private Builder(GetImageObjectDetectionRequest request) {
             super(request);
             this.workspaceName = request.workspaceName;
             this.serviceId = request.serviceId;
-            this.input = request.input;
+            this.image = request.image;
             this.options = request.options;
         } 
 
         /**
-         * <p>This parameter is required.</p>
+         * workspace_name.
          */
         public Builder workspaceName(String workspaceName) {
             this.putPathParameter("workspace_name", workspaceName);
@@ -112,7 +110,7 @@ public class GetMultiModalEmbeddingRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * service_id.
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("service_id", serviceId);
@@ -121,11 +119,11 @@ public class GetMultiModalEmbeddingRequest extends Request {
         }
 
         /**
-         * input.
+         * image.
          */
-        public Builder input(java.util.List<Input> input) {
-            this.putBodyParameter("input", input);
-            this.input = input;
+        public Builder image(Image image) {
+            this.putBodyParameter("image", image);
+            this.image = image;
             return this;
         }
 
@@ -139,82 +137,82 @@ public class GetMultiModalEmbeddingRequest extends Request {
         }
 
         @Override
-        public GetMultiModalEmbeddingRequest build() {
-            return new GetMultiModalEmbeddingRequest(this);
+        public GetImageObjectDetectionRequest build() {
+            return new GetImageObjectDetectionRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetMultiModalEmbeddingRequest} extends {@link TeaModel}
+     * {@link GetImageObjectDetectionRequest} extends {@link TeaModel}
      *
-     * <p>GetMultiModalEmbeddingRequest</p>
+     * <p>GetImageObjectDetectionRequest</p>
      */
-    public static class Input extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("image")
-        private String image;
+    public static class Image extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("content")
+        private String content;
 
-        @com.aliyun.core.annotation.NameInMap("text")
-        private String text;
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
 
-        private Input(Builder builder) {
-            this.image = builder.image;
-            this.text = builder.text;
+        private Image(Builder builder) {
+            this.content = builder.content;
+            this.url = builder.url;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Input create() {
+        public static Image create() {
             return builder().build();
         }
 
         /**
-         * @return image
+         * @return content
          */
-        public String getImage() {
-            return this.image;
+        public String getContent() {
+            return this.content;
         }
 
         /**
-         * @return text
+         * @return url
          */
-        public String getText() {
-            return this.text;
+        public String getUrl() {
+            return this.url;
         }
 
         public static final class Builder {
-            private String image; 
-            private String text; 
+            private String content; 
+            private String url; 
 
             private Builder() {
             } 
 
-            private Builder(Input model) {
-                this.image = model.image;
-                this.text = model.text;
+            private Builder(Image model) {
+                this.content = model.content;
+                this.url = model.url;
             } 
 
             /**
-             * image.
+             * content.
              */
-            public Builder image(String image) {
-                this.image = image;
+            public Builder content(String content) {
+                this.content = content;
                 return this;
             }
 
             /**
-             * text.
+             * url.
              */
-            public Builder text(String text) {
-                this.text = text;
+            public Builder url(String url) {
+                this.url = url;
                 return this;
             }
 
-            public Input build() {
-                return new Input(this);
+            public Image build() {
+                return new Image(this);
             } 
 
         } 

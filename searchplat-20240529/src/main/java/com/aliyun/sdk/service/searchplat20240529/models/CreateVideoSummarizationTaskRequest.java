@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateAudioAsrTaskRequest} extends {@link RequestModel}
+ * {@link CreateVideoSummarizationTaskRequest} extends {@link RequestModel}
  *
- * <p>CreateAudioAsrTaskRequest</p>
+ * <p>CreateVideoSummarizationTaskRequest</p>
  */
-public class CreateAudioAsrTaskRequest extends Request {
+public class CreateVideoSummarizationTaskRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspace_name")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -39,7 +39,7 @@ public class CreateAudioAsrTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("parameters")
     private java.util.Map<String, ?> parameters;
 
-    private CreateAudioAsrTaskRequest(Builder builder) {
+    private CreateVideoSummarizationTaskRequest(Builder builder) {
         super(builder);
         this.workspaceName = builder.workspaceName;
         this.serviceId = builder.serviceId;
@@ -52,7 +52,7 @@ public class CreateAudioAsrTaskRequest extends Request {
         return new Builder();
     }
 
-    public static CreateAudioAsrTaskRequest create() {
+    public static CreateVideoSummarizationTaskRequest create() {
         return builder().build();
     }
 
@@ -96,7 +96,7 @@ public class CreateAudioAsrTaskRequest extends Request {
         return this.parameters;
     }
 
-    public static final class Builder extends Request.Builder<CreateAudioAsrTaskRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateVideoSummarizationTaskRequest, Builder> {
         private String workspaceName; 
         private String serviceId; 
         private Input input; 
@@ -107,7 +107,7 @@ public class CreateAudioAsrTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAudioAsrTaskRequest request) {
+        private Builder(CreateVideoSummarizationTaskRequest request) {
             super(request);
             this.workspaceName = request.workspaceName;
             this.serviceId = request.serviceId;
@@ -162,21 +162,234 @@ public class CreateAudioAsrTaskRequest extends Request {
         }
 
         @Override
-        public CreateAudioAsrTaskRequest build() {
-            return new CreateAudioAsrTaskRequest(this);
+        public CreateVideoSummarizationTaskRequest build() {
+            return new CreateVideoSummarizationTaskRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CreateAudioAsrTaskRequest} extends {@link TeaModel}
+     * {@link CreateVideoSummarizationTaskRequest} extends {@link TeaModel}
      *
-     * <p>CreateAudioAsrTaskRequest</p>
+     * <p>CreateVideoSummarizationTaskRequest</p>
+     */
+    public static class Snapshots extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("frame_index")
+        private Integer frameIndex;
+
+        @com.aliyun.core.annotation.NameInMap("frame_time")
+        private Float frameTime;
+
+        @com.aliyun.core.annotation.NameInMap("path")
+        private String path;
+
+        private Snapshots(Builder builder) {
+            this.frameIndex = builder.frameIndex;
+            this.frameTime = builder.frameTime;
+            this.path = builder.path;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Snapshots create() {
+            return builder().build();
+        }
+
+        /**
+         * @return frameIndex
+         */
+        public Integer getFrameIndex() {
+            return this.frameIndex;
+        }
+
+        /**
+         * @return frameTime
+         */
+        public Float getFrameTime() {
+            return this.frameTime;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        public static final class Builder {
+            private Integer frameIndex; 
+            private Float frameTime; 
+            private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.frameIndex = model.frameIndex;
+                this.frameTime = model.frameTime;
+                this.path = model.path;
+            } 
+
+            /**
+             * frame_index.
+             */
+            public Builder frameIndex(Integer frameIndex) {
+                this.frameIndex = frameIndex;
+                return this;
+            }
+
+            /**
+             * frame_time.
+             */
+            public Builder frameTime(Float frameTime) {
+                this.frameTime = frameTime;
+                return this;
+            }
+
+            /**
+             * path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            public Snapshots build() {
+                return new Snapshots(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateVideoSummarizationTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateVideoSummarizationTaskRequest</p>
+     */
+    public static class Chunks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("end_time")
+        private Float endTime;
+
+        @com.aliyun.core.annotation.NameInMap("snapshots")
+        private java.util.List<Snapshots> snapshots;
+
+        @com.aliyun.core.annotation.NameInMap("start_time")
+        private Float startTime;
+
+        @com.aliyun.core.annotation.NameInMap("transcript")
+        private String transcript;
+
+        private Chunks(Builder builder) {
+            this.endTime = builder.endTime;
+            this.snapshots = builder.snapshots;
+            this.startTime = builder.startTime;
+            this.transcript = builder.transcript;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Chunks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public Float getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return snapshots
+         */
+        public java.util.List<Snapshots> getSnapshots() {
+            return this.snapshots;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Float getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return transcript
+         */
+        public String getTranscript() {
+            return this.transcript;
+        }
+
+        public static final class Builder {
+            private Float endTime; 
+            private java.util.List<Snapshots> snapshots; 
+            private Float startTime; 
+            private String transcript; 
+
+            private Builder() {
+            } 
+
+            private Builder(Chunks model) {
+                this.endTime = model.endTime;
+                this.snapshots = model.snapshots;
+                this.startTime = model.startTime;
+                this.transcript = model.transcript;
+            } 
+
+            /**
+             * end_time.
+             */
+            public Builder endTime(Float endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * snapshots.
+             */
+            public Builder snapshots(java.util.List<Snapshots> snapshots) {
+                this.snapshots = snapshots;
+                return this;
+            }
+
+            /**
+             * start_time.
+             */
+            public Builder startTime(Float startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * transcript.
+             */
+            public Builder transcript(String transcript) {
+                this.transcript = transcript;
+                return this;
+            }
+
+            public Chunks build() {
+                return new Chunks(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateVideoSummarizationTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateVideoSummarizationTaskRequest</p>
      */
     public static class Input extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("content")
-        private String content;
+        @com.aliyun.core.annotation.NameInMap("chunks")
+        private java.util.List<Chunks> chunks;
 
         @com.aliyun.core.annotation.NameInMap("file_name")
         private String fileName;
@@ -188,7 +401,7 @@ public class CreateAudioAsrTaskRequest extends Request {
         private String url;
 
         private Input(Builder builder) {
-            this.content = builder.content;
+            this.chunks = builder.chunks;
             this.fileName = builder.fileName;
             this.oss = builder.oss;
             this.url = builder.url;
@@ -203,10 +416,10 @@ public class CreateAudioAsrTaskRequest extends Request {
         }
 
         /**
-         * @return content
+         * @return chunks
          */
-        public String getContent() {
-            return this.content;
+        public java.util.List<Chunks> getChunks() {
+            return this.chunks;
         }
 
         /**
@@ -231,7 +444,7 @@ public class CreateAudioAsrTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private String content; 
+            private java.util.List<Chunks> chunks; 
             private String fileName; 
             private String oss; 
             private String url; 
@@ -240,17 +453,17 @@ public class CreateAudioAsrTaskRequest extends Request {
             } 
 
             private Builder(Input model) {
-                this.content = model.content;
+                this.chunks = model.chunks;
                 this.fileName = model.fileName;
                 this.oss = model.oss;
                 this.url = model.url;
             } 
 
             /**
-             * content.
+             * chunks.
              */
-            public Builder content(String content) {
-                this.content = content;
+            public Builder chunks(java.util.List<Chunks> chunks) {
+                this.chunks = chunks;
                 return this;
             }
 
@@ -287,9 +500,9 @@ public class CreateAudioAsrTaskRequest extends Request {
     }
     /**
      * 
-     * {@link CreateAudioAsrTaskRequest} extends {@link TeaModel}
+     * {@link CreateVideoSummarizationTaskRequest} extends {@link TeaModel}
      *
-     * <p>CreateAudioAsrTaskRequest</p>
+     * <p>CreateVideoSummarizationTaskRequest</p>
      */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("oss")

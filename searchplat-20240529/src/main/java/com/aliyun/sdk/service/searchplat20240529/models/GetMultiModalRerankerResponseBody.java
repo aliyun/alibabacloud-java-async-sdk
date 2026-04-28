@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetMultiModalEmbeddingResponseBody} extends {@link TeaModel}
+ * {@link GetMultiModalRerankerResponseBody} extends {@link TeaModel}
  *
- * <p>GetMultiModalEmbeddingResponseBody</p>
+ * <p>GetMultiModalRerankerResponseBody</p>
  */
-public class GetMultiModalEmbeddingResponseBody extends TeaModel {
+public class GetMultiModalRerankerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("latency")
     private Integer latency;
 
@@ -29,7 +29,7 @@ public class GetMultiModalEmbeddingResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("usage")
     private Usage usage;
 
-    private GetMultiModalEmbeddingResponseBody(Builder builder) {
+    private GetMultiModalRerankerResponseBody(Builder builder) {
         this.latency = builder.latency;
         this.requestId = builder.requestId;
         this.result = builder.result;
@@ -40,7 +40,7 @@ public class GetMultiModalEmbeddingResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetMultiModalEmbeddingResponseBody create() {
+    public static GetMultiModalRerankerResponseBody create() {
         return builder().build();
     }
 
@@ -85,7 +85,7 @@ public class GetMultiModalEmbeddingResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetMultiModalEmbeddingResponseBody model) {
+        private Builder(GetMultiModalRerankerResponseBody model) {
             this.latency = model.latency;
             this.requestId = model.requestId;
             this.result = model.result;
@@ -124,82 +124,82 @@ public class GetMultiModalEmbeddingResponseBody extends TeaModel {
             return this;
         }
 
-        public GetMultiModalEmbeddingResponseBody build() {
-            return new GetMultiModalEmbeddingResponseBody(this);
+        public GetMultiModalRerankerResponseBody build() {
+            return new GetMultiModalRerankerResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetMultiModalEmbeddingResponseBody} extends {@link TeaModel}
+     * {@link GetMultiModalRerankerResponseBody} extends {@link TeaModel}
      *
-     * <p>GetMultiModalEmbeddingResponseBody</p>
+     * <p>GetMultiModalRerankerResponseBody</p>
      */
-    public static class Embeddings extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("embedding")
-        private java.util.List<Double> embedding;
-
+    public static class Scores extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("index")
-        private Long index;
+        private Integer index;
 
-        private Embeddings(Builder builder) {
-            this.embedding = builder.embedding;
+        @com.aliyun.core.annotation.NameInMap("score")
+        private Double score;
+
+        private Scores(Builder builder) {
             this.index = builder.index;
+            this.score = builder.score;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Embeddings create() {
+        public static Scores create() {
             return builder().build();
-        }
-
-        /**
-         * @return embedding
-         */
-        public java.util.List<Double> getEmbedding() {
-            return this.embedding;
         }
 
         /**
          * @return index
          */
-        public Long getIndex() {
+        public Integer getIndex() {
             return this.index;
         }
 
+        /**
+         * @return score
+         */
+        public Double getScore() {
+            return this.score;
+        }
+
         public static final class Builder {
-            private java.util.List<Double> embedding; 
-            private Long index; 
+            private Integer index; 
+            private Double score; 
 
             private Builder() {
             } 
 
-            private Builder(Embeddings model) {
-                this.embedding = model.embedding;
+            private Builder(Scores model) {
                 this.index = model.index;
+                this.score = model.score;
             } 
-
-            /**
-             * embedding.
-             */
-            public Builder embedding(java.util.List<Double> embedding) {
-                this.embedding = embedding;
-                return this;
-            }
 
             /**
              * index.
              */
-            public Builder index(Long index) {
+            public Builder index(Integer index) {
                 this.index = index;
                 return this;
             }
 
-            public Embeddings build() {
-                return new Embeddings(this);
+            /**
+             * score.
+             */
+            public Builder score(Double score) {
+                this.score = score;
+                return this;
+            }
+
+            public Scores build() {
+                return new Scores(this);
             } 
 
         } 
@@ -207,16 +207,16 @@ public class GetMultiModalEmbeddingResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetMultiModalEmbeddingResponseBody} extends {@link TeaModel}
+     * {@link GetMultiModalRerankerResponseBody} extends {@link TeaModel}
      *
-     * <p>GetMultiModalEmbeddingResponseBody</p>
+     * <p>GetMultiModalRerankerResponseBody</p>
      */
     public static class Result extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("embeddings")
-        private java.util.List<Embeddings> embeddings;
+        @com.aliyun.core.annotation.NameInMap("scores")
+        private java.util.List<Scores> scores;
 
         private Result(Builder builder) {
-            this.embeddings = builder.embeddings;
+            this.scores = builder.scores;
         }
 
         public static Builder builder() {
@@ -228,27 +228,27 @@ public class GetMultiModalEmbeddingResponseBody extends TeaModel {
         }
 
         /**
-         * @return embeddings
+         * @return scores
          */
-        public java.util.List<Embeddings> getEmbeddings() {
-            return this.embeddings;
+        public java.util.List<Scores> getScores() {
+            return this.scores;
         }
 
         public static final class Builder {
-            private java.util.List<Embeddings> embeddings; 
+            private java.util.List<Scores> scores; 
 
             private Builder() {
             } 
 
             private Builder(Result model) {
-                this.embeddings = model.embeddings;
+                this.scores = model.scores;
             } 
 
             /**
-             * embeddings.
+             * scores.
              */
-            public Builder embeddings(java.util.List<Embeddings> embeddings) {
-                this.embeddings = embeddings;
+            public Builder scores(java.util.List<Scores> scores) {
+                this.scores = scores;
                 return this;
             }
 
@@ -261,28 +261,20 @@ public class GetMultiModalEmbeddingResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetMultiModalEmbeddingResponseBody} extends {@link TeaModel}
+     * {@link GetMultiModalRerankerResponseBody} extends {@link TeaModel}
      *
-     * <p>GetMultiModalEmbeddingResponseBody</p>
+     * <p>GetMultiModalRerankerResponseBody</p>
      */
     public static class Usage extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("image")
-        private Long image;
-
         @com.aliyun.core.annotation.NameInMap("image_token")
         private Long imageToken;
 
         @com.aliyun.core.annotation.NameInMap("text_token")
         private Long textToken;
 
-        @com.aliyun.core.annotation.NameInMap("token_count")
-        private Long tokenCount;
-
         private Usage(Builder builder) {
-            this.image = builder.image;
             this.imageToken = builder.imageToken;
             this.textToken = builder.textToken;
-            this.tokenCount = builder.tokenCount;
         }
 
         public static Builder builder() {
@@ -291,13 +283,6 @@ public class GetMultiModalEmbeddingResponseBody extends TeaModel {
 
         public static Usage create() {
             return builder().build();
-        }
-
-        /**
-         * @return image
-         */
-        public Long getImage() {
-            return this.image;
         }
 
         /**
@@ -314,36 +299,17 @@ public class GetMultiModalEmbeddingResponseBody extends TeaModel {
             return this.textToken;
         }
 
-        /**
-         * @return tokenCount
-         */
-        public Long getTokenCount() {
-            return this.tokenCount;
-        }
-
         public static final class Builder {
-            private Long image; 
             private Long imageToken; 
             private Long textToken; 
-            private Long tokenCount; 
 
             private Builder() {
             } 
 
             private Builder(Usage model) {
-                this.image = model.image;
                 this.imageToken = model.imageToken;
                 this.textToken = model.textToken;
-                this.tokenCount = model.tokenCount;
             } 
-
-            /**
-             * image.
-             */
-            public Builder image(Long image) {
-                this.image = image;
-                return this;
-            }
 
             /**
              * image_token.
@@ -358,14 +324,6 @@ public class GetMultiModalEmbeddingResponseBody extends TeaModel {
              */
             public Builder textToken(Long textToken) {
                 this.textToken = textToken;
-                return this;
-            }
-
-            /**
-             * token_count.
-             */
-            public Builder tokenCount(Long tokenCount) {
-                this.tokenCount = tokenCount;
                 return this;
             }
 
