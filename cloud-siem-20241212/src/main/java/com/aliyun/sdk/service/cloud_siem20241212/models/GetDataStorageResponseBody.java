@@ -101,9 +101,13 @@ public class GetDataStorageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogStoreTtl")
         private Integer logStoreTtl;
 
+        @com.aliyun.core.annotation.NameInMap("UsedCapacity")
+        private Double usedCapacity;
+
         private NormalizationLogStores(Builder builder) {
             this.logStoreName = builder.logStoreName;
             this.logStoreTtl = builder.logStoreTtl;
+            this.usedCapacity = builder.usedCapacity;
         }
 
         public static Builder builder() {
@@ -128,9 +132,17 @@ public class GetDataStorageResponseBody extends TeaModel {
             return this.logStoreTtl;
         }
 
+        /**
+         * @return usedCapacity
+         */
+        public Double getUsedCapacity() {
+            return this.usedCapacity;
+        }
+
         public static final class Builder {
             private String logStoreName; 
             private Integer logStoreTtl; 
+            private Double usedCapacity; 
 
             private Builder() {
             } 
@@ -138,6 +150,7 @@ public class GetDataStorageResponseBody extends TeaModel {
             private Builder(NormalizationLogStores model) {
                 this.logStoreName = model.logStoreName;
                 this.logStoreTtl = model.logStoreTtl;
+                this.usedCapacity = model.usedCapacity;
             } 
 
             /**
@@ -153,6 +166,14 @@ public class GetDataStorageResponseBody extends TeaModel {
              */
             public Builder logStoreTtl(Integer logStoreTtl) {
                 this.logStoreTtl = logStoreTtl;
+                return this;
+            }
+
+            /**
+             * UsedCapacity.
+             */
+            public Builder usedCapacity(Double usedCapacity) {
+                this.usedCapacity = usedCapacity;
                 return this;
             }
 
@@ -401,6 +422,9 @@ public class GetDataStorageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogStoreTtl")
         private Integer logStoreTtl;
 
+        @com.aliyun.core.annotation.NameInMap("UsedCapacity")
+        private Double usedCapacity;
+
         private SasLogStores(Builder builder) {
             this.logCode = builder.logCode;
             this.logDeliveryGroup = builder.logDeliveryGroup;
@@ -412,6 +436,7 @@ public class GetDataStorageResponseBody extends TeaModel {
             this.logStoreExisted = builder.logStoreExisted;
             this.logStoreName = builder.logStoreName;
             this.logStoreTtl = builder.logStoreTtl;
+            this.usedCapacity = builder.usedCapacity;
         }
 
         public static Builder builder() {
@@ -492,6 +517,13 @@ public class GetDataStorageResponseBody extends TeaModel {
             return this.logStoreTtl;
         }
 
+        /**
+         * @return usedCapacity
+         */
+        public Double getUsedCapacity() {
+            return this.usedCapacity;
+        }
+
         public static final class Builder {
             private String logCode; 
             private String logDeliveryGroup; 
@@ -503,6 +535,7 @@ public class GetDataStorageResponseBody extends TeaModel {
             private Boolean logStoreExisted; 
             private String logStoreName; 
             private Integer logStoreTtl; 
+            private Double usedCapacity; 
 
             private Builder() {
             } 
@@ -518,6 +551,7 @@ public class GetDataStorageResponseBody extends TeaModel {
                 this.logStoreExisted = model.logStoreExisted;
                 this.logStoreName = model.logStoreName;
                 this.logStoreTtl = model.logStoreTtl;
+                this.usedCapacity = model.usedCapacity;
             } 
 
             /**
@@ -600,8 +634,112 @@ public class GetDataStorageResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * UsedCapacity.
+             */
+            public Builder usedCapacity(Double usedCapacity) {
+                this.usedCapacity = usedCapacity;
+                return this;
+            }
+
             public SasLogStores build() {
                 return new SasLogStores(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDataStorageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataStorageResponseBody</p>
+     */
+    public static class UnusedLogStores extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LogStoreName")
+        private String logStoreName;
+
+        @com.aliyun.core.annotation.NameInMap("LogStoreTtl")
+        private Integer logStoreTtl;
+
+        @com.aliyun.core.annotation.NameInMap("UsedCapacity")
+        private Double usedCapacity;
+
+        private UnusedLogStores(Builder builder) {
+            this.logStoreName = builder.logStoreName;
+            this.logStoreTtl = builder.logStoreTtl;
+            this.usedCapacity = builder.usedCapacity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UnusedLogStores create() {
+            return builder().build();
+        }
+
+        /**
+         * @return logStoreName
+         */
+        public String getLogStoreName() {
+            return this.logStoreName;
+        }
+
+        /**
+         * @return logStoreTtl
+         */
+        public Integer getLogStoreTtl() {
+            return this.logStoreTtl;
+        }
+
+        /**
+         * @return usedCapacity
+         */
+        public Double getUsedCapacity() {
+            return this.usedCapacity;
+        }
+
+        public static final class Builder {
+            private String logStoreName; 
+            private Integer logStoreTtl; 
+            private Double usedCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnusedLogStores model) {
+                this.logStoreName = model.logStoreName;
+                this.logStoreTtl = model.logStoreTtl;
+                this.usedCapacity = model.usedCapacity;
+            } 
+
+            /**
+             * LogStoreName.
+             */
+            public Builder logStoreName(String logStoreName) {
+                this.logStoreName = logStoreName;
+                return this;
+            }
+
+            /**
+             * LogStoreTtl.
+             */
+            public Builder logStoreTtl(Integer logStoreTtl) {
+                this.logStoreTtl = logStoreTtl;
+                return this;
+            }
+
+            /**
+             * UsedCapacity.
+             */
+            public Builder usedCapacity(Double usedCapacity) {
+                this.usedCapacity = usedCapacity;
+                return this;
+            }
+
+            public UnusedLogStores build() {
+                return new UnusedLogStores(this);
             } 
 
         } 
@@ -644,6 +782,9 @@ public class GetDataStorageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SasLogStores")
         private java.util.List<SasLogStores> sasLogStores;
 
+        @com.aliyun.core.annotation.NameInMap("UnusedLogStores")
+        private java.util.List<UnusedLogStores> unusedLogStores;
+
         private Data(Builder builder) {
             this.coldStorageUsedCapacity = builder.coldStorageUsedCapacity;
             this.dataStorageRegionId = builder.dataStorageRegionId;
@@ -655,6 +796,7 @@ public class GetDataStorageResponseBody extends TeaModel {
             this.normalizationLogStores = builder.normalizationLogStores;
             this.normalizationLogViews = builder.normalizationLogViews;
             this.sasLogStores = builder.sasLogStores;
+            this.unusedLogStores = builder.unusedLogStores;
         }
 
         public static Builder builder() {
@@ -735,6 +877,13 @@ public class GetDataStorageResponseBody extends TeaModel {
             return this.sasLogStores;
         }
 
+        /**
+         * @return unusedLogStores
+         */
+        public java.util.List<UnusedLogStores> getUnusedLogStores() {
+            return this.unusedLogStores;
+        }
+
         public static final class Builder {
             private Double coldStorageUsedCapacity; 
             private String dataStorageRegionId; 
@@ -746,6 +895,7 @@ public class GetDataStorageResponseBody extends TeaModel {
             private java.util.List<NormalizationLogStores> normalizationLogStores; 
             private java.util.List<NormalizationLogViews> normalizationLogViews; 
             private java.util.List<SasLogStores> sasLogStores; 
+            private java.util.List<UnusedLogStores> unusedLogStores; 
 
             private Builder() {
             } 
@@ -761,6 +911,7 @@ public class GetDataStorageResponseBody extends TeaModel {
                 this.normalizationLogStores = model.normalizationLogStores;
                 this.normalizationLogViews = model.normalizationLogViews;
                 this.sasLogStores = model.sasLogStores;
+                this.unusedLogStores = model.unusedLogStores;
             } 
 
             /**
@@ -840,6 +991,14 @@ public class GetDataStorageResponseBody extends TeaModel {
              */
             public Builder sasLogStores(java.util.List<SasLogStores> sasLogStores) {
                 this.sasLogStores = sasLogStores;
+                return this;
+            }
+
+            /**
+             * UnusedLogStores.
+             */
+            public Builder unusedLogStores(java.util.List<UnusedLogStores> unusedLogStores) {
+                this.unusedLogStores = unusedLogStores;
                 return this;
             }
 
