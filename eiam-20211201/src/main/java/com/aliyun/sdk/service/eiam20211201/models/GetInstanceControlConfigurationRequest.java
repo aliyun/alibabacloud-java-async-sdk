@@ -22,6 +22,10 @@ public class GetInstanceControlConfigurationRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElementName")
+    private String elementName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
@@ -29,6 +33,7 @@ public class GetInstanceControlConfigurationRequest extends Request {
     private GetInstanceControlConfigurationRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.elementName = builder.elementName;
         this.instanceId = builder.instanceId;
     }
 
@@ -53,6 +58,13 @@ public class GetInstanceControlConfigurationRequest extends Request {
     }
 
     /**
+     * @return elementName
+     */
+    public String getElementName() {
+        return this.elementName;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -61,6 +73,7 @@ public class GetInstanceControlConfigurationRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetInstanceControlConfigurationRequest, Builder> {
         private String regionId; 
+        private String elementName; 
         private String instanceId; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class GetInstanceControlConfigurationRequest extends Request {
         private Builder(GetInstanceControlConfigurationRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.elementName = request.elementName;
             this.instanceId = request.instanceId;
         } 
 
@@ -79,6 +93,15 @@ public class GetInstanceControlConfigurationRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ElementName.
+         */
+        public Builder elementName(String elementName) {
+            this.putQueryParameter("ElementName", elementName);
+            this.elementName = elementName;
             return this;
         }
 
