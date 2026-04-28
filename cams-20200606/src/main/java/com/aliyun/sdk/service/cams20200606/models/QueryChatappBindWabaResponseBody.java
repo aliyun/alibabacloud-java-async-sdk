@@ -220,6 +220,9 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
+        @com.aliyun.core.annotation.NameInMap("IsOnBizApp")
+        private String isOnBizApp;
+
         @com.aliyun.core.annotation.NameInMap("MarketingMessageLiteStatus")
         private String marketingMessageLiteStatus;
 
@@ -239,6 +242,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             this.businessName = builder.businessName;
             this.currency = builder.currency;
             this.id = builder.id;
+            this.isOnBizApp = builder.isOnBizApp;
             this.marketingMessageLiteStatus = builder.marketingMessageLiteStatus;
             this.messageTemplateNamespace = builder.messageTemplateNamespace;
             this.name = builder.name;
@@ -296,6 +300,13 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
+         * @return isOnBizApp
+         */
+        public String getIsOnBizApp() {
+            return this.isOnBizApp;
+        }
+
+        /**
          * @return marketingMessageLiteStatus
          */
         public String getMarketingMessageLiteStatus() {
@@ -330,6 +341,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             private String businessName; 
             private String currency; 
             private String id; 
+            private String isOnBizApp; 
             private String marketingMessageLiteStatus; 
             private String messageTemplateNamespace; 
             private String name; 
@@ -345,6 +357,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
                 this.businessName = model.businessName;
                 this.currency = model.currency;
                 this.id = model.id;
+                this.isOnBizApp = model.isOnBizApp;
                 this.marketingMessageLiteStatus = model.marketingMessageLiteStatus;
                 this.messageTemplateNamespace = model.messageTemplateNamespace;
                 this.name = model.name;
@@ -424,6 +437,14 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * IsOnBizApp.
+             */
+            public Builder isOnBizApp(String isOnBizApp) {
+                this.isOnBizApp = isOnBizApp;
                 return this;
             }
 
