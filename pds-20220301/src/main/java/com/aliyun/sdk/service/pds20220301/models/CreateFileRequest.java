@@ -55,10 +55,6 @@ public class CreateFileRequest extends Request {
     private Boolean hidden;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("image_media_metadata")
-    private ImageMediaMetadata imageMediaMetadata;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("local_created_at")
     private String localCreatedAt;
 
@@ -105,10 +101,6 @@ public class CreateFileRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("user_tags")
     private java.util.List<UserTag> userTags;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("video_media_metadata")
-    private VideoMediaMetadata videoMediaMetadata;
-
     private CreateFileRequest(Builder builder) {
         super(builder);
         this.domainId = builder.domainId;
@@ -120,7 +112,6 @@ public class CreateFileRequest extends Request {
         this.driveId = builder.driveId;
         this.fileId = builder.fileId;
         this.hidden = builder.hidden;
-        this.imageMediaMetadata = builder.imageMediaMetadata;
         this.localCreatedAt = builder.localCreatedAt;
         this.localModifiedAt = builder.localModifiedAt;
         this.name = builder.name;
@@ -132,7 +123,6 @@ public class CreateFileRequest extends Request {
         this.size = builder.size;
         this.type = builder.type;
         this.userTags = builder.userTags;
-        this.videoMediaMetadata = builder.videoMediaMetadata;
     }
 
     public static Builder builder() {
@@ -212,13 +202,6 @@ public class CreateFileRequest extends Request {
     }
 
     /**
-     * @return imageMediaMetadata
-     */
-    public ImageMediaMetadata getImageMediaMetadata() {
-        return this.imageMediaMetadata;
-    }
-
-    /**
      * @return localCreatedAt
      */
     public String getLocalCreatedAt() {
@@ -295,13 +278,6 @@ public class CreateFileRequest extends Request {
         return this.userTags;
     }
 
-    /**
-     * @return videoMediaMetadata
-     */
-    public VideoMediaMetadata getVideoMediaMetadata() {
-        return this.videoMediaMetadata;
-    }
-
     public static final class Builder extends Request.Builder<CreateFileRequest, Builder> {
         private String domainId; 
         private String checkNameMode; 
@@ -312,7 +288,6 @@ public class CreateFileRequest extends Request {
         private String driveId; 
         private String fileId; 
         private Boolean hidden; 
-        private ImageMediaMetadata imageMediaMetadata; 
         private String localCreatedAt; 
         private String localModifiedAt; 
         private String name; 
@@ -324,7 +299,6 @@ public class CreateFileRequest extends Request {
         private Long size; 
         private String type; 
         private java.util.List<UserTag> userTags; 
-        private VideoMediaMetadata videoMediaMetadata; 
 
         private Builder() {
             super();
@@ -341,7 +315,6 @@ public class CreateFileRequest extends Request {
             this.driveId = request.driveId;
             this.fileId = request.fileId;
             this.hidden = request.hidden;
-            this.imageMediaMetadata = request.imageMediaMetadata;
             this.localCreatedAt = request.localCreatedAt;
             this.localModifiedAt = request.localModifiedAt;
             this.name = request.name;
@@ -353,7 +326,6 @@ public class CreateFileRequest extends Request {
             this.size = request.size;
             this.type = request.type;
             this.userTags = request.userTags;
-            this.videoMediaMetadata = request.videoMediaMetadata;
         } 
 
         /**
@@ -462,15 +434,6 @@ public class CreateFileRequest extends Request {
         public Builder hidden(Boolean hidden) {
             this.putBodyParameter("hidden", hidden);
             this.hidden = hidden;
-            return this;
-        }
-
-        /**
-         * <p>The information about the image specified by the client.</p>
-         */
-        public Builder imageMediaMetadata(ImageMediaMetadata imageMediaMetadata) {
-            this.putBodyParameter("image_media_metadata", imageMediaMetadata);
-            this.imageMediaMetadata = imageMediaMetadata;
             return this;
         }
 
@@ -604,15 +567,6 @@ public class CreateFileRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>The information about the video specified by the client.</p>
-         */
-        public Builder videoMediaMetadata(VideoMediaMetadata videoMediaMetadata) {
-            this.putBodyParameter("video_media_metadata", videoMediaMetadata);
-            this.videoMediaMetadata = videoMediaMetadata;
-            return this;
-        }
-
         @Override
         public CreateFileRequest build() {
             return new CreateFileRequest(this);
@@ -708,6 +662,9 @@ public class CreateFileRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("content_md5")
         private String contentMd5;
 
+        @com.aliyun.core.annotation.NameInMap("content_type")
+        private String contentType;
+
         @com.aliyun.core.annotation.NameInMap("parallel_sha1_ctx")
         private ParallelSha1Ctx parallelSha1Ctx;
 
@@ -716,6 +673,7 @@ public class CreateFileRequest extends Request {
 
         private PartInfoList(Builder builder) {
             this.contentMd5 = builder.contentMd5;
+            this.contentType = builder.contentType;
             this.parallelSha1Ctx = builder.parallelSha1Ctx;
             this.partNumber = builder.partNumber;
         }
@@ -736,6 +694,13 @@ public class CreateFileRequest extends Request {
         }
 
         /**
+         * @return contentType
+         */
+        public String getContentType() {
+            return this.contentType;
+        }
+
+        /**
          * @return parallelSha1Ctx
          */
         public ParallelSha1Ctx getParallelSha1Ctx() {
@@ -751,6 +716,7 @@ public class CreateFileRequest extends Request {
 
         public static final class Builder {
             private String contentMd5; 
+            private String contentType; 
             private ParallelSha1Ctx parallelSha1Ctx; 
             private Integer partNumber; 
 
@@ -759,6 +725,7 @@ public class CreateFileRequest extends Request {
 
             private Builder(PartInfoList model) {
                 this.contentMd5 = model.contentMd5;
+                this.contentType = model.contentType;
                 this.parallelSha1Ctx = model.parallelSha1Ctx;
                 this.partNumber = model.partNumber;
             } 
@@ -771,6 +738,17 @@ public class CreateFileRequest extends Request {
              */
             public Builder contentMd5(String contentMd5) {
                 this.contentMd5 = contentMd5;
+                return this;
+            }
+
+            /**
+             * <p>The type of the file content. Default value: application/oct-stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application/json</p>
+             */
+            public Builder contentType(String contentType) {
+                this.contentType = contentType;
                 return this;
             }
 

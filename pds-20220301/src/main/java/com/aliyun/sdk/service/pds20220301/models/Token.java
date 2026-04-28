@@ -29,9 +29,6 @@ public class Token extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("default_sbox_drive_id")
     private String defaultSboxDriveId;
 
-    @com.aliyun.core.annotation.NameInMap("device_id")
-    private String deviceId;
-
     @com.aliyun.core.annotation.NameInMap("device_name")
     private String deviceName;
 
@@ -91,7 +88,6 @@ public class Token extends TeaModel {
         this.avatar = builder.avatar;
         this.defaultDriveId = builder.defaultDriveId;
         this.defaultSboxDriveId = builder.defaultSboxDriveId;
-        this.deviceId = builder.deviceId;
         this.deviceName = builder.deviceName;
         this.domainId = builder.domainId;
         this.existLink = builder.existLink;
@@ -150,13 +146,6 @@ public class Token extends TeaModel {
      */
     public String getDefaultSboxDriveId() {
         return this.defaultSboxDriveId;
-    }
-
-    /**
-     * @return deviceId
-     */
-    public String getDeviceId() {
-        return this.deviceId;
     }
 
     /**
@@ -290,7 +279,6 @@ public class Token extends TeaModel {
         private String avatar; 
         private String defaultDriveId; 
         private String defaultSboxDriveId; 
-        private String deviceId; 
         private String deviceName; 
         private String domainId; 
         private java.util.List<LinkInfo> existLink; 
@@ -318,7 +306,6 @@ public class Token extends TeaModel {
             this.avatar = model.avatar;
             this.defaultDriveId = model.defaultDriveId;
             this.defaultSboxDriveId = model.defaultSboxDriveId;
-            this.deviceId = model.deviceId;
             this.deviceName = model.deviceName;
             this.domainId = model.domainId;
             this.existLink = model.existLink;
@@ -368,14 +355,6 @@ public class Token extends TeaModel {
          */
         public Builder defaultSboxDriveId(String defaultSboxDriveId) {
             this.defaultSboxDriveId = defaultSboxDriveId;
-            return this;
-        }
-
-        /**
-         * device_id.
-         */
-        public Builder deviceId(String deviceId) {
-            this.deviceId = deviceId;
             return this;
         }
 

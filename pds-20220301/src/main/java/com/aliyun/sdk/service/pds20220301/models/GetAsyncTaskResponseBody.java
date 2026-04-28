@@ -59,6 +59,9 @@ public class GetAsyncTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
+    @com.aliyun.core.annotation.NameInMap("task_type")
+    private String taskType;
+
     @com.aliyun.core.annotation.NameInMap("total_process")
     private Long totalProcess;
 
@@ -83,6 +86,7 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         this.startedAt = builder.startedAt;
         this.state = builder.state;
         this.status = builder.status;
+        this.taskType = builder.taskType;
         this.totalProcess = builder.totalProcess;
         this.uncompressFileList = builder.uncompressFileList;
         this.url = builder.url;
@@ -199,6 +203,13 @@ public class GetAsyncTaskResponseBody extends TeaModel {
     }
 
     /**
+     * @return taskType
+     */
+    public String getTaskType() {
+        return this.taskType;
+    }
+
+    /**
      * @return totalProcess
      */
     public Long getTotalProcess() {
@@ -234,6 +245,7 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         private String startedAt; 
         private String state; 
         private String status; 
+        private String taskType; 
         private Long totalProcess; 
         private java.util.List<UncompressedFileInfo> uncompressFileList; 
         private String url; 
@@ -256,6 +268,7 @@ public class GetAsyncTaskResponseBody extends TeaModel {
             this.startedAt = model.startedAt;
             this.state = model.state;
             this.status = model.status;
+            this.taskType = model.taskType;
             this.totalProcess = model.totalProcess;
             this.uncompressFileList = model.uncompressFileList;
             this.url = model.url;
@@ -421,6 +434,14 @@ public class GetAsyncTaskResponseBody extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * task_type.
+         */
+        public Builder taskType(String taskType) {
+            this.taskType = taskType;
             return this;
         }
 

@@ -32,12 +32,24 @@ public class MoveFileResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("file_id")
     private String fileId;
 
+    @com.aliyun.core.annotation.NameInMap("file_name")
+    private String fileName;
+
+    @com.aliyun.core.annotation.NameInMap("revision_id")
+    private String revisionId;
+
+    @com.aliyun.core.annotation.NameInMap("updated_at")
+    private String updatedAt;
+
     private MoveFileResponseBody(Builder builder) {
         this.asyncTaskId = builder.asyncTaskId;
         this.domainId = builder.domainId;
         this.driveId = builder.driveId;
         this.exist = builder.exist;
         this.fileId = builder.fileId;
+        this.fileName = builder.fileName;
+        this.revisionId = builder.revisionId;
+        this.updatedAt = builder.updatedAt;
     }
 
     public static Builder builder() {
@@ -87,12 +99,36 @@ public class MoveFileResponseBody extends TeaModel {
         return this.fileId;
     }
 
+    /**
+     * @return fileName
+     */
+    public String getFileName() {
+        return this.fileName;
+    }
+
+    /**
+     * @return revisionId
+     */
+    public String getRevisionId() {
+        return this.revisionId;
+    }
+
+    /**
+     * @return updatedAt
+     */
+    public String getUpdatedAt() {
+        return this.updatedAt;
+    }
+
     public static final class Builder {
         private String asyncTaskId; 
         private String domainId; 
         private String driveId; 
         private Boolean exist; 
         private String fileId; 
+        private String fileName; 
+        private String revisionId; 
+        private String updatedAt; 
 
         private Builder() {
         } 
@@ -103,6 +139,9 @@ public class MoveFileResponseBody extends TeaModel {
             this.driveId = model.driveId;
             this.exist = model.exist;
             this.fileId = model.fileId;
+            this.fileName = model.fileName;
+            this.revisionId = model.revisionId;
+            this.updatedAt = model.updatedAt;
         } 
 
         /**
@@ -159,6 +198,30 @@ public class MoveFileResponseBody extends TeaModel {
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;
+            return this;
+        }
+
+        /**
+         * file_name.
+         */
+        public Builder fileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+
+        /**
+         * revision_id.
+         */
+        public Builder revisionId(String revisionId) {
+            this.revisionId = revisionId;
+            return this;
+        }
+
+        /**
+         * updated_at.
+         */
+        public Builder updatedAt(String updatedAt) {
+            this.updatedAt = updatedAt;
             return this;
         }
 

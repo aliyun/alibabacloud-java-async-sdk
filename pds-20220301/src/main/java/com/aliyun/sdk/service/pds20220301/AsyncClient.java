@@ -583,6 +583,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MoveFileResponse> moveFile(MoveFileRequest request);
 
     /**
+     * @param request the request parameters of PunishFile  PunishFileRequest
+     * @return PunishFileResponse
+     */
+    CompletableFuture<PunishFileResponse> punishFile(PunishFileRequest request);
+
+    /**
      * @param request the request parameters of QueryOrderPrice  QueryOrderPriceRequest
      * @return QueryOrderPriceResponse
      */

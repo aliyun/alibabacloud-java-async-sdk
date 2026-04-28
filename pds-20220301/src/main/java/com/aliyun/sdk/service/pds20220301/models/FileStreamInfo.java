@@ -27,7 +27,7 @@ public class FileStreamInfo extends TeaModel {
     private String contentMd5;
 
     @com.aliyun.core.annotation.NameInMap("part_info_list")
-    private UploadPartInfo partInfoList;
+    private java.util.List<UploadPartInfo> partInfoList;
 
     @com.aliyun.core.annotation.NameInMap("pre_hash")
     private String preHash;
@@ -88,7 +88,7 @@ public class FileStreamInfo extends TeaModel {
     /**
      * @return partInfoList
      */
-    public UploadPartInfo getPartInfoList() {
+    public java.util.List<UploadPartInfo> getPartInfoList() {
         return this.partInfoList;
     }
 
@@ -124,7 +124,7 @@ public class FileStreamInfo extends TeaModel {
         private String contentHash; 
         private String contentHashName; 
         private String contentMd5; 
-        private UploadPartInfo partInfoList; 
+        private java.util.List<UploadPartInfo> partInfoList; 
         private String preHash; 
         private String proofCode; 
         private String proofVersion; 
@@ -171,7 +171,7 @@ public class FileStreamInfo extends TeaModel {
         /**
          * part_info_list.
          */
-        public Builder partInfoList(UploadPartInfo partInfoList) {
+        public Builder partInfoList(java.util.List<UploadPartInfo> partInfoList) {
             this.partInfoList = partInfoList;
             return this;
         }

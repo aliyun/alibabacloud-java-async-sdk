@@ -43,6 +43,10 @@ public class CreateDomainRequest extends Request {
     private Long sizeQuota;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("store_redundancy_type")
+    private String storeRedundancyType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_count_quota")
     private Long userCountQuota;
 
@@ -54,6 +58,7 @@ public class CreateDomainRequest extends Request {
         this.initDriveSize = builder.initDriveSize;
         this.parentDomainId = builder.parentDomainId;
         this.sizeQuota = builder.sizeQuota;
+        this.storeRedundancyType = builder.storeRedundancyType;
         this.userCountQuota = builder.userCountQuota;
     }
 
@@ -113,6 +118,13 @@ public class CreateDomainRequest extends Request {
     }
 
     /**
+     * @return storeRedundancyType
+     */
+    public String getStoreRedundancyType() {
+        return this.storeRedundancyType;
+    }
+
+    /**
      * @return userCountQuota
      */
     public Long getUserCountQuota() {
@@ -126,6 +138,7 @@ public class CreateDomainRequest extends Request {
         private Long initDriveSize; 
         private String parentDomainId; 
         private Long sizeQuota; 
+        private String storeRedundancyType; 
         private Long userCountQuota; 
 
         private Builder() {
@@ -140,14 +153,15 @@ public class CreateDomainRequest extends Request {
             this.initDriveSize = request.initDriveSize;
             this.parentDomainId = request.parentDomainId;
             this.sizeQuota = request.sizeQuota;
+            this.storeRedundancyType = request.storeRedundancyType;
             this.userCountQuota = request.userCountQuota;
         } 
 
         /**
-         * <p>domain 描述</p>
+         * <p>The description of the domain.</p>
          * 
          * <strong>example:</strong>
-         * <p>你好企业网盘开发环境</p>
+         * <p>cloud drive dev</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -156,11 +170,11 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.</p>
+         * <p>The name of the domain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>你好企业网盘</p>
+         * <p>cloud drive</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("domain_name", domainName);
@@ -169,7 +183,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>https</p>
+         * <p>Specifies whether to enable the default drive feature. A value of true specifies that all users are assigned a drive by default on the first logon. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -181,7 +195,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>http</p>
+         * <p>This parameter is required when the init_drive_enable is set to true. The size of the default drive. Unit: bytes. The default is 0, meaning the created drive size is 0, and files cannot be uploaded. If you need to initialize the drive, set this value. A value of -1 indicates that the size is unlimited.</p>
          * 
          * <strong>example:</strong>
          * <p>1073741824</p>
@@ -193,7 +207,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>Create domain.</p>
+         * <p>The ID of the parent domain. If you want to create a child domain, specify parent_domain_id. In most cases, you do not need to create a child domain. If you want to perform secondary operations based on Drive and Photo Service, contact the customer service.</p>
          * 
          * <strong>example:</strong>
          * <p>bj1</p>
@@ -205,7 +219,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parent domain. If you want to create a child domain, specify parent_domain_id. In most cases, you do not need to create a child domain. If you want to perform secondary operations based on Drive and Photo Service, contact the customer service.</p>
+         * <p>The total storage quota for all drives in the domain. A value of 0 indicates that the quota is unlimited.</p>
          * 
          * <strong>example:</strong>
          * <p>1099511627776</p>
@@ -217,7 +231,23 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>The information about the domain.</p>
+         * <p>Specifies the storage redundancy type. Valid values:</p>
+         * <ul>
+         * <li>LRS: locally redundant storage</li>
+         * <li>ZRS: zone-redundant storage</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LRS</p>
+         */
+        public Builder storeRedundancyType(String storeRedundancyType) {
+            this.putBodyParameter("store_redundancy_type", storeRedundancyType);
+            this.storeRedundancyType = storeRedundancyType;
+            return this;
+        }
+
+        /**
+         * <p>The largest number of users that can be created in the domain. A value of 0 specifies that the number is unlimited.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

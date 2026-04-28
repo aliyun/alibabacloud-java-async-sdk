@@ -1625,6 +1625,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of PunishFile  PunishFileRequest
+     * @return PunishFileResponse
+     */
+    @Override
+    public CompletableFuture<PunishFileResponse> punishFile(PunishFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PunishFile").setMethod(HttpMethod.POST).setPathRegex("/v2/csi/business/punish_file").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PunishFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PunishFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QueryOrderPrice  QueryOrderPriceRequest
      * @return QueryOrderPriceResponse
      */
