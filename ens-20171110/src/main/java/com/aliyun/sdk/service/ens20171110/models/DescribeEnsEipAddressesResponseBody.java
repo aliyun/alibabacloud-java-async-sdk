@@ -172,6 +172,114 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
      *
      * <p>DescribeEnsEipAddressesResponseBody</p>
      */
+    public static class Lock extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LockReason")
+        private String lockReason;
+
+        private Lock(Builder builder) {
+            this.lockReason = builder.lockReason;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Lock create() {
+            return builder().build();
+        }
+
+        /**
+         * @return lockReason
+         */
+        public String getLockReason() {
+            return this.lockReason;
+        }
+
+        public static final class Builder {
+            private String lockReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(Lock model) {
+                this.lockReason = model.lockReason;
+            } 
+
+            /**
+             * LockReason.
+             */
+            public Builder lockReason(String lockReason) {
+                this.lockReason = lockReason;
+                return this;
+            }
+
+            public Lock build() {
+                return new Lock(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeEnsEipAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsEipAddressesResponseBody</p>
+     */
+    public static class OperationLocks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Lock")
+        private java.util.List<Lock> lock;
+
+        private OperationLocks(Builder builder) {
+            this.lock = builder.lock;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OperationLocks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return lock
+         */
+        public java.util.List<Lock> getLock() {
+            return this.lock;
+        }
+
+        public static final class Builder {
+            private java.util.List<Lock> lock; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationLocks model) {
+                this.lock = model.lock;
+            } 
+
+            /**
+             * Lock.
+             */
+            public Builder lock(java.util.List<Lock> lock) {
+                this.lock = lock;
+                return this;
+            }
+
+            public OperationLocks build() {
+                return new OperationLocks(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeEnsEipAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsEipAddressesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -355,6 +463,12 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageBandwidth")
+        private Integer bandwidthPackageBandwidth;
+
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+        private String bandwidthPackageId;
+
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
@@ -388,6 +502,9 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("OperationLocks")
+        private OperationLocks operationLocks;
+
         @com.aliyun.core.annotation.NameInMap("Standby")
         private Boolean standby;
 
@@ -401,6 +518,8 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             this.allocationId = builder.allocationId;
             this.allocationTime = builder.allocationTime;
             this.bandwidth = builder.bandwidth;
+            this.bandwidthPackageBandwidth = builder.bandwidthPackageBandwidth;
+            this.bandwidthPackageId = builder.bandwidthPackageId;
             this.chargeType = builder.chargeType;
             this.description = builder.description;
             this.ensRegionId = builder.ensRegionId;
@@ -412,6 +531,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             this.ipStatus = builder.ipStatus;
             this.isp = builder.isp;
             this.name = builder.name;
+            this.operationLocks = builder.operationLocks;
             this.standby = builder.standby;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -444,6 +564,20 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
          */
         public Integer getBandwidth() {
             return this.bandwidth;
+        }
+
+        /**
+         * @return bandwidthPackageBandwidth
+         */
+        public Integer getBandwidthPackageBandwidth() {
+            return this.bandwidthPackageBandwidth;
+        }
+
+        /**
+         * @return bandwidthPackageId
+         */
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
         }
 
         /**
@@ -524,6 +658,13 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
 
         /**
+         * @return operationLocks
+         */
+        public OperationLocks getOperationLocks() {
+            return this.operationLocks;
+        }
+
+        /**
          * @return standby
          */
         public Boolean getStandby() {
@@ -548,6 +689,8 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             private String allocationId; 
             private String allocationTime; 
             private Integer bandwidth; 
+            private Integer bandwidthPackageBandwidth; 
+            private String bandwidthPackageId; 
             private String chargeType; 
             private String description; 
             private String ensRegionId; 
@@ -559,6 +702,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             private String ipStatus; 
             private String isp; 
             private String name; 
+            private OperationLocks operationLocks; 
             private Boolean standby; 
             private String status; 
             private Tags tags; 
@@ -570,6 +714,8 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
                 this.allocationId = model.allocationId;
                 this.allocationTime = model.allocationTime;
                 this.bandwidth = model.bandwidth;
+                this.bandwidthPackageBandwidth = model.bandwidthPackageBandwidth;
+                this.bandwidthPackageId = model.bandwidthPackageId;
                 this.chargeType = model.chargeType;
                 this.description = model.description;
                 this.ensRegionId = model.ensRegionId;
@@ -581,6 +727,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
                 this.ipStatus = model.ipStatus;
                 this.isp = model.isp;
                 this.name = model.name;
+                this.operationLocks = model.operationLocks;
                 this.standby = model.standby;
                 this.status = model.status;
                 this.tags = model.tags;
@@ -607,6 +754,22 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
+                return this;
+            }
+
+            /**
+             * BandwidthPackageBandwidth.
+             */
+            public Builder bandwidthPackageBandwidth(Integer bandwidthPackageBandwidth) {
+                this.bandwidthPackageBandwidth = bandwidthPackageBandwidth;
+                return this;
+            }
+
+            /**
+             * BandwidthPackageId.
+             */
+            public Builder bandwidthPackageId(String bandwidthPackageId) {
+                this.bandwidthPackageId = bandwidthPackageId;
                 return this;
             }
 
@@ -695,6 +858,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * OperationLocks.
+             */
+            public Builder operationLocks(OperationLocks operationLocks) {
+                this.operationLocks = operationLocks;
                 return this;
             }
 

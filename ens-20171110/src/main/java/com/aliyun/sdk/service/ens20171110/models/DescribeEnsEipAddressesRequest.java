@@ -50,6 +50,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
     private Boolean icmpReplyEnabled;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LockReason")
+    private String lockReason;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -62,6 +66,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Standby")
     private String standby;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
     private DescribeEnsEipAddressesRequest(Builder builder) {
         super(builder);
         this.allocationId = builder.allocationId;
@@ -72,9 +80,11 @@ public class DescribeEnsEipAddressesRequest extends Request {
         this.ensRegionId = builder.ensRegionId;
         this.ensRegionIds = builder.ensRegionIds;
         this.icmpReplyEnabled = builder.icmpReplyEnabled;
+        this.lockReason = builder.lockReason;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.standby = builder.standby;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -147,6 +157,13 @@ public class DescribeEnsEipAddressesRequest extends Request {
     }
 
     /**
+     * @return lockReason
+     */
+    public String getLockReason() {
+        return this.lockReason;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -167,6 +184,13 @@ public class DescribeEnsEipAddressesRequest extends Request {
         return this.standby;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<DescribeEnsEipAddressesRequest, Builder> {
         private String allocationId; 
         private String associatedInstanceId; 
@@ -176,9 +200,11 @@ public class DescribeEnsEipAddressesRequest extends Request {
         private String ensRegionId; 
         private java.util.List<String> ensRegionIds; 
         private Boolean icmpReplyEnabled; 
+        private String lockReason; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String standby; 
+        private String status; 
 
         private Builder() {
             super();
@@ -194,9 +220,11 @@ public class DescribeEnsEipAddressesRequest extends Request {
             this.ensRegionId = request.ensRegionId;
             this.ensRegionIds = request.ensRegionIds;
             this.icmpReplyEnabled = request.icmpReplyEnabled;
+            this.lockReason = request.lockReason;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.standby = request.standby;
+            this.status = request.status;
         } 
 
         /**
@@ -294,6 +322,15 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
+         * LockReason.
+         */
+        public Builder lockReason(String lockReason) {
+            this.putQueryParameter("LockReason", lockReason);
+            this.lockReason = lockReason;
+            return this;
+        }
+
+        /**
          * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -330,6 +367,15 @@ public class DescribeEnsEipAddressesRequest extends Request {
         public Builder standby(String standby) {
             this.putQueryParameter("Standby", standby);
             this.standby = standby;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 
