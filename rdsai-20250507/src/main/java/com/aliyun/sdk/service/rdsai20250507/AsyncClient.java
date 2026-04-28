@@ -248,6 +248,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeWhitelistIpsResponse> describeWhitelistIps(DescribeWhitelistIpsRequest request);
 
     /**
+     * @param request the request parameters of DisableAgentRuntime  DisableAgentRuntimeRequest
+     * @return DisableAgentRuntimeResponse
+     */
+    CompletableFuture<DisableAgentRuntimeResponse> disableAgentRuntime(DisableAgentRuntimeRequest request);
+
+    /**
      * @param request the request parameters of EnableAgentRuntime  EnableAgentRuntimeRequest
      * @return EnableAgentRuntimeResponse
      */

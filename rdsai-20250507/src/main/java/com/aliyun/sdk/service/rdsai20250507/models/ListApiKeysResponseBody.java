@@ -155,6 +155,9 @@ public class ListApiKeysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LimitType")
         private String limitType;
 
+        @com.aliyun.core.annotation.NameInMap("ThresholdPercent")
+        private Integer thresholdPercent;
+
         @com.aliyun.core.annotation.NameInMap("TokenQuota")
         private Long tokenQuota;
 
@@ -164,6 +167,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             this.keyName = builder.keyName;
             this.limitRate = builder.limitRate;
             this.limitType = builder.limitType;
+            this.thresholdPercent = builder.thresholdPercent;
             this.tokenQuota = builder.tokenQuota;
         }
 
@@ -211,6 +215,13 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
 
         /**
+         * @return thresholdPercent
+         */
+        public Integer getThresholdPercent() {
+            return this.thresholdPercent;
+        }
+
+        /**
          * @return tokenQuota
          */
         public Long getTokenQuota() {
@@ -223,6 +234,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             private String keyName; 
             private Float limitRate; 
             private String limitType; 
+            private Integer thresholdPercent; 
             private Long tokenQuota; 
 
             private Builder() {
@@ -234,6 +246,7 @@ public class ListApiKeysResponseBody extends TeaModel {
                 this.keyName = model.keyName;
                 this.limitRate = model.limitRate;
                 this.limitType = model.limitType;
+                this.thresholdPercent = model.thresholdPercent;
                 this.tokenQuota = model.tokenQuota;
             } 
 
@@ -281,6 +294,14 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
+             * ThresholdPercent.
+             */
+            public Builder thresholdPercent(Integer thresholdPercent) {
+                this.thresholdPercent = thresholdPercent;
+                return this;
+            }
+
+            /**
              * TokenQuota.
              */
             public Builder tokenQuota(Long tokenQuota) {
@@ -320,6 +341,9 @@ public class ListApiKeysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemApiKey")
         private String systemApiKey;
 
+        @com.aliyun.core.annotation.NameInMap("ThresholdPercent")
+        private Integer thresholdPercent;
+
         @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
@@ -330,6 +354,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             this.page = builder.page;
             this.pageSize = builder.pageSize;
             this.systemApiKey = builder.systemApiKey;
+            this.thresholdPercent = builder.thresholdPercent;
             this.total = builder.total;
         }
 
@@ -384,6 +409,13 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
 
         /**
+         * @return thresholdPercent
+         */
+        public Integer getThresholdPercent() {
+            return this.thresholdPercent;
+        }
+
+        /**
          * @return total
          */
         public Integer getTotal() {
@@ -397,6 +429,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             private Integer page; 
             private Integer pageSize; 
             private String systemApiKey; 
+            private Integer thresholdPercent; 
             private Integer total; 
 
             private Builder() {
@@ -409,6 +442,7 @@ public class ListApiKeysResponseBody extends TeaModel {
                 this.page = model.page;
                 this.pageSize = model.pageSize;
                 this.systemApiKey = model.systemApiKey;
+                this.thresholdPercent = model.thresholdPercent;
                 this.total = model.total;
             } 
 
@@ -457,6 +491,14 @@ public class ListApiKeysResponseBody extends TeaModel {
              */
             public Builder systemApiKey(String systemApiKey) {
                 this.systemApiKey = systemApiKey;
+                return this;
+            }
+
+            /**
+             * ThresholdPercent.
+             */
+            public Builder thresholdPercent(Integer thresholdPercent) {
+                this.thresholdPercent = thresholdPercent;
                 return this;
             }
 

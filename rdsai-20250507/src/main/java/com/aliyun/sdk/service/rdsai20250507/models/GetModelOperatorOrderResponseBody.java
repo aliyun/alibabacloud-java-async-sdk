@@ -93,7 +93,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +123,10 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +231,10 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The instance end time (format: Timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1775145600000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -233,7 +242,10 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClass.
+             * <p>instance type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xlarge</p>
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -241,7 +253,10 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_copilot***_public_cn-*********6</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -249,7 +264,10 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The instance start time (format: Timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1772439028000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -257,7 +275,10 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active/creating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -324,7 +345,10 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * HasValidOrder.
+             * <p>Indicates whether a valid order exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasValidOrder(Boolean hasValidOrder) {
                 this.hasValidOrder = hasValidOrder;
@@ -332,7 +356,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceList.
+             * <p>The instance list.</p>
              */
             public Builder instanceList(java.util.List<InstanceList> instanceList) {
                 this.instanceList = instanceList;
