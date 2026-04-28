@@ -22,12 +22,20 @@ public class UpdateDetectionRuleRequest extends Request {
     private String alertAttCk;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertAttCkMapping")
+    private String alertAttCkMapping;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AlertDescription")
     private String alertDescription;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AlertLevel")
     private String alertLevel;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertLevelMapping")
+    private String alertLevelMapping;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AlertName")
@@ -56,6 +64,10 @@ public class UpdateDetectionRuleRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AlertType")
     private String alertType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertTypeMapping")
+    private String alertTypeMapping;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DetectionExpressionContent")
@@ -151,8 +163,10 @@ public class UpdateDetectionRuleRequest extends Request {
     private UpdateDetectionRuleRequest(Builder builder) {
         super(builder);
         this.alertAttCk = builder.alertAttCk;
+        this.alertAttCkMapping = builder.alertAttCkMapping;
         this.alertDescription = builder.alertDescription;
         this.alertLevel = builder.alertLevel;
+        this.alertLevelMapping = builder.alertLevelMapping;
         this.alertName = builder.alertName;
         this.alertSchemaId = builder.alertSchemaId;
         this.alertTacticId = builder.alertTacticId;
@@ -160,6 +174,7 @@ public class UpdateDetectionRuleRequest extends Request {
         this.alertThresholdGroup = builder.alertThresholdGroup;
         this.alertThresholdPeriod = builder.alertThresholdPeriod;
         this.alertType = builder.alertType;
+        this.alertTypeMapping = builder.alertTypeMapping;
         this.detectionExpressionContent = builder.detectionExpressionContent;
         this.detectionExpressionType = builder.detectionExpressionType;
         this.detectionRuleDescription = builder.detectionRuleDescription;
@@ -205,6 +220,13 @@ public class UpdateDetectionRuleRequest extends Request {
     }
 
     /**
+     * @return alertAttCkMapping
+     */
+    public String getAlertAttCkMapping() {
+        return this.alertAttCkMapping;
+    }
+
+    /**
      * @return alertDescription
      */
     public String getAlertDescription() {
@@ -216,6 +238,13 @@ public class UpdateDetectionRuleRequest extends Request {
      */
     public String getAlertLevel() {
         return this.alertLevel;
+    }
+
+    /**
+     * @return alertLevelMapping
+     */
+    public String getAlertLevelMapping() {
+        return this.alertLevelMapping;
     }
 
     /**
@@ -265,6 +294,13 @@ public class UpdateDetectionRuleRequest extends Request {
      */
     public String getAlertType() {
         return this.alertType;
+    }
+
+    /**
+     * @return alertTypeMapping
+     */
+    public String getAlertTypeMapping() {
+        return this.alertTypeMapping;
     }
 
     /**
@@ -423,8 +459,10 @@ public class UpdateDetectionRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateDetectionRuleRequest, Builder> {
         private String alertAttCk; 
+        private String alertAttCkMapping; 
         private String alertDescription; 
         private String alertLevel; 
+        private String alertLevelMapping; 
         private String alertName; 
         private String alertSchemaId; 
         private String alertTacticId; 
@@ -432,6 +470,7 @@ public class UpdateDetectionRuleRequest extends Request {
         private String alertThresholdGroup; 
         private String alertThresholdPeriod; 
         private String alertType; 
+        private String alertTypeMapping; 
         private String detectionExpressionContent; 
         private String detectionExpressionType; 
         private String detectionRuleDescription; 
@@ -462,8 +501,10 @@ public class UpdateDetectionRuleRequest extends Request {
         private Builder(UpdateDetectionRuleRequest request) {
             super(request);
             this.alertAttCk = request.alertAttCk;
+            this.alertAttCkMapping = request.alertAttCkMapping;
             this.alertDescription = request.alertDescription;
             this.alertLevel = request.alertLevel;
+            this.alertLevelMapping = request.alertLevelMapping;
             this.alertName = request.alertName;
             this.alertSchemaId = request.alertSchemaId;
             this.alertTacticId = request.alertTacticId;
@@ -471,6 +512,7 @@ public class UpdateDetectionRuleRequest extends Request {
             this.alertThresholdGroup = request.alertThresholdGroup;
             this.alertThresholdPeriod = request.alertThresholdPeriod;
             this.alertType = request.alertType;
+            this.alertTypeMapping = request.alertTypeMapping;
             this.detectionExpressionContent = request.detectionExpressionContent;
             this.detectionExpressionType = request.detectionExpressionType;
             this.detectionRuleDescription = request.detectionRuleDescription;
@@ -505,6 +547,15 @@ public class UpdateDetectionRuleRequest extends Request {
         }
 
         /**
+         * AlertAttCkMapping.
+         */
+        public Builder alertAttCkMapping(String alertAttCkMapping) {
+            this.putBodyParameter("AlertAttCkMapping", alertAttCkMapping);
+            this.alertAttCkMapping = alertAttCkMapping;
+            return this;
+        }
+
+        /**
          * AlertDescription.
          */
         public Builder alertDescription(String alertDescription) {
@@ -519,6 +570,15 @@ public class UpdateDetectionRuleRequest extends Request {
         public Builder alertLevel(String alertLevel) {
             this.putBodyParameter("AlertLevel", alertLevel);
             this.alertLevel = alertLevel;
+            return this;
+        }
+
+        /**
+         * AlertLevelMapping.
+         */
+        public Builder alertLevelMapping(String alertLevelMapping) {
+            this.putBodyParameter("AlertLevelMapping", alertLevelMapping);
+            this.alertLevelMapping = alertLevelMapping;
             return this;
         }
 
@@ -582,6 +642,15 @@ public class UpdateDetectionRuleRequest extends Request {
         public Builder alertType(String alertType) {
             this.putBodyParameter("AlertType", alertType);
             this.alertType = alertType;
+            return this;
+        }
+
+        /**
+         * AlertTypeMapping.
+         */
+        public Builder alertTypeMapping(String alertTypeMapping) {
+            this.putBodyParameter("AlertTypeMapping", alertTypeMapping);
+            this.alertTypeMapping = alertTypeMapping;
             return this;
         }
 

@@ -449,11 +449,17 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertAttCk")
         private String alertAttCk;
 
+        @com.aliyun.core.annotation.NameInMap("AlertAttCkMapping")
+        private String alertAttCkMapping;
+
         @com.aliyun.core.annotation.NameInMap("AlertDescription")
         private String alertDescription;
 
         @com.aliyun.core.annotation.NameInMap("AlertLevel")
         private String alertLevel;
+
+        @com.aliyun.core.annotation.NameInMap("AlertLevelMapping")
+        private String alertLevelMapping;
 
         @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
@@ -475,6 +481,9 @@ public class ListDetectionRulesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
+
+        @com.aliyun.core.annotation.NameInMap("AlertTypeMapping")
+        private String alertTypeMapping;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -547,8 +556,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
 
         private DetectionRules(Builder builder) {
             this.alertAttCk = builder.alertAttCk;
+            this.alertAttCkMapping = builder.alertAttCkMapping;
             this.alertDescription = builder.alertDescription;
             this.alertLevel = builder.alertLevel;
+            this.alertLevelMapping = builder.alertLevelMapping;
             this.alertName = builder.alertName;
             this.alertSchemaId = builder.alertSchemaId;
             this.alertTacticId = builder.alertTacticId;
@@ -556,6 +567,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             this.alertThresholdGroup = builder.alertThresholdGroup;
             this.alertThresholdPeriod = builder.alertThresholdPeriod;
             this.alertType = builder.alertType;
+            this.alertTypeMapping = builder.alertTypeMapping;
             this.createTime = builder.createTime;
             this.detectionExpressionContent = builder.detectionExpressionContent;
             this.detectionExpressionType = builder.detectionExpressionType;
@@ -597,6 +609,13 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return alertAttCkMapping
+         */
+        public String getAlertAttCkMapping() {
+            return this.alertAttCkMapping;
+        }
+
+        /**
          * @return alertDescription
          */
         public String getAlertDescription() {
@@ -608,6 +627,13 @@ public class ListDetectionRulesResponseBody extends TeaModel {
          */
         public String getAlertLevel() {
             return this.alertLevel;
+        }
+
+        /**
+         * @return alertLevelMapping
+         */
+        public String getAlertLevelMapping() {
+            return this.alertLevelMapping;
         }
 
         /**
@@ -657,6 +683,13 @@ public class ListDetectionRulesResponseBody extends TeaModel {
          */
         public String getAlertType() {
             return this.alertType;
+        }
+
+        /**
+         * @return alertTypeMapping
+         */
+        public String getAlertTypeMapping() {
+            return this.alertTypeMapping;
         }
 
         /**
@@ -822,8 +855,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alertAttCk; 
+            private String alertAttCkMapping; 
             private String alertDescription; 
             private String alertLevel; 
+            private String alertLevelMapping; 
             private String alertName; 
             private String alertSchemaId; 
             private String alertTacticId; 
@@ -831,6 +866,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             private String alertThresholdGroup; 
             private String alertThresholdPeriod; 
             private String alertType; 
+            private String alertTypeMapping; 
             private Long createTime; 
             private String detectionExpressionContent; 
             private String detectionExpressionType; 
@@ -860,8 +896,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
 
             private Builder(DetectionRules model) {
                 this.alertAttCk = model.alertAttCk;
+                this.alertAttCkMapping = model.alertAttCkMapping;
                 this.alertDescription = model.alertDescription;
                 this.alertLevel = model.alertLevel;
+                this.alertLevelMapping = model.alertLevelMapping;
                 this.alertName = model.alertName;
                 this.alertSchemaId = model.alertSchemaId;
                 this.alertTacticId = model.alertTacticId;
@@ -869,6 +907,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
                 this.alertThresholdGroup = model.alertThresholdGroup;
                 this.alertThresholdPeriod = model.alertThresholdPeriod;
                 this.alertType = model.alertType;
+                this.alertTypeMapping = model.alertTypeMapping;
                 this.createTime = model.createTime;
                 this.detectionExpressionContent = model.detectionExpressionContent;
                 this.detectionExpressionType = model.detectionExpressionType;
@@ -903,6 +942,14 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
+             * AlertAttCkMapping.
+             */
+            public Builder alertAttCkMapping(String alertAttCkMapping) {
+                this.alertAttCkMapping = alertAttCkMapping;
+                return this;
+            }
+
+            /**
              * AlertDescription.
              */
             public Builder alertDescription(String alertDescription) {
@@ -915,6 +962,14 @@ public class ListDetectionRulesResponseBody extends TeaModel {
              */
             public Builder alertLevel(String alertLevel) {
                 this.alertLevel = alertLevel;
+                return this;
+            }
+
+            /**
+             * AlertLevelMapping.
+             */
+            public Builder alertLevelMapping(String alertLevelMapping) {
+                this.alertLevelMapping = alertLevelMapping;
                 return this;
             }
 
@@ -971,6 +1026,14 @@ public class ListDetectionRulesResponseBody extends TeaModel {
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
+                return this;
+            }
+
+            /**
+             * AlertTypeMapping.
+             */
+            public Builder alertTypeMapping(String alertTypeMapping) {
+                this.alertTypeMapping = alertTypeMapping;
                 return this;
             }
 
