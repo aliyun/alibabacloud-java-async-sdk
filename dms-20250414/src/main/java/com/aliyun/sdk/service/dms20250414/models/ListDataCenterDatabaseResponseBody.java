@@ -182,6 +182,9 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DmsInstanceId")
         private Long dmsInstanceId;
 
+        @com.aliyun.core.annotation.NameInMap("DownloadLink")
+        private String downloadLink;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
@@ -191,11 +194,20 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
+        @com.aliyun.core.annotation.NameInMap("IntranetDownloadLink")
+        private String intranetDownloadLink;
+
         @com.aliyun.core.annotation.NameInMap("IsInternal")
         private String isInternal;
 
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
+        private String ossBucket;
+
         @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
+
+        @com.aliyun.core.annotation.NameInMap("UseUserOssBucket")
+        private Boolean useUserOssBucket;
 
         private Data(Builder builder) {
             this.databaseDesc = builder.databaseDesc;
@@ -205,11 +217,15 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             this.descUpdateTime = builder.descUpdateTime;
             this.dmsDbId = builder.dmsDbId;
             this.dmsInstanceId = builder.dmsInstanceId;
+            this.downloadLink = builder.downloadLink;
             this.gmtCreated = builder.gmtCreated;
             this.importType = builder.importType;
             this.instanceName = builder.instanceName;
+            this.intranetDownloadLink = builder.intranetDownloadLink;
             this.isInternal = builder.isInternal;
+            this.ossBucket = builder.ossBucket;
             this.size = builder.size;
+            this.useUserOssBucket = builder.useUserOssBucket;
         }
 
         public static Builder builder() {
@@ -270,6 +286,13 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         }
 
         /**
+         * @return downloadLink
+         */
+        public String getDownloadLink() {
+            return this.downloadLink;
+        }
+
+        /**
          * @return gmtCreated
          */
         public String getGmtCreated() {
@@ -291,6 +314,13 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         }
 
         /**
+         * @return intranetDownloadLink
+         */
+        public String getIntranetDownloadLink() {
+            return this.intranetDownloadLink;
+        }
+
+        /**
          * @return isInternal
          */
         public String getIsInternal() {
@@ -298,10 +328,24 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         }
 
         /**
+         * @return ossBucket
+         */
+        public String getOssBucket() {
+            return this.ossBucket;
+        }
+
+        /**
          * @return size
          */
         public Long getSize() {
             return this.size;
+        }
+
+        /**
+         * @return useUserOssBucket
+         */
+        public Boolean getUseUserOssBucket() {
+            return this.useUserOssBucket;
         }
 
         public static final class Builder {
@@ -312,11 +356,15 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             private String descUpdateTime; 
             private Long dmsDbId; 
             private Long dmsInstanceId; 
+            private String downloadLink; 
             private String gmtCreated; 
             private String importType; 
             private String instanceName; 
+            private String intranetDownloadLink; 
             private String isInternal; 
+            private String ossBucket; 
             private Long size; 
+            private Boolean useUserOssBucket; 
 
             private Builder() {
             } 
@@ -329,11 +377,15 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
                 this.descUpdateTime = model.descUpdateTime;
                 this.dmsDbId = model.dmsDbId;
                 this.dmsInstanceId = model.dmsInstanceId;
+                this.downloadLink = model.downloadLink;
                 this.gmtCreated = model.gmtCreated;
                 this.importType = model.importType;
                 this.instanceName = model.instanceName;
+                this.intranetDownloadLink = model.intranetDownloadLink;
                 this.isInternal = model.isInternal;
+                this.ossBucket = model.ossBucket;
                 this.size = model.size;
+                this.useUserOssBucket = model.useUserOssBucket;
             } 
 
             /**
@@ -393,6 +445,14 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
+             * DownloadLink.
+             */
+            public Builder downloadLink(String downloadLink) {
+                this.downloadLink = downloadLink;
+                return this;
+            }
+
+            /**
              * GmtCreated.
              */
             public Builder gmtCreated(String gmtCreated) {
@@ -417,6 +477,14 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
+             * IntranetDownloadLink.
+             */
+            public Builder intranetDownloadLink(String intranetDownloadLink) {
+                this.intranetDownloadLink = intranetDownloadLink;
+                return this;
+            }
+
+            /**
              * IsInternal.
              */
             public Builder isInternal(String isInternal) {
@@ -425,10 +493,26 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
+             * OssBucket.
+             */
+            public Builder ossBucket(String ossBucket) {
+                this.ossBucket = ossBucket;
+                return this;
+            }
+
+            /**
              * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
+                return this;
+            }
+
+            /**
+             * UseUserOssBucket.
+             */
+            public Builder useUserOssBucket(Boolean useUserOssBucket) {
+                this.useUserOssBucket = useUserOssBucket;
                 return this;
             }
 
