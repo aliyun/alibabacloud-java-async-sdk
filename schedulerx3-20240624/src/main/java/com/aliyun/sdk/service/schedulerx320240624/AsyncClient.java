@@ -278,6 +278,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDatasourcesResponse> listDatasources(ListDatasourcesRequest request);
 
     /**
+     * @param request the request parameters of ListExecutorGroup  ListExecutorGroupRequest
+     * @return ListExecutorGroupResponse
+     */
+    CompletableFuture<ListExecutorGroupResponse> listExecutorGroup(ListExecutorGroupRequest request);
+
+    /**
      * @param request the request parameters of ListExecutors  ListExecutorsRequest
      * @return ListExecutorsResponse
      */
