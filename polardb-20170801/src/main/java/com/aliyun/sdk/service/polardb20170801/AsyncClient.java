@@ -253,10 +253,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
 
     /**
+     * @param request the request parameters of CreateBudgetPolicy  CreateBudgetPolicyRequest
+     * @return CreateBudgetPolicyResponse
+     */
+    CompletableFuture<CreateBudgetPolicyResponse> createBudgetPolicy(CreateBudgetPolicyRequest request);
+
+    /**
      * @param request the request parameters of CreateColdStorageInstance  CreateColdStorageInstanceRequest
      * @return CreateColdStorageInstanceResponse
      */
     CompletableFuture<CreateColdStorageInstanceResponse> createColdStorageInstance(CreateColdStorageInstanceRequest request);
+
+    /**
+     * @param request the request parameters of CreateConsumer  CreateConsumerRequest
+     * @return CreateConsumerResponse
+     */
+    CompletableFuture<CreateConsumerResponse> createConsumer(CreateConsumerRequest request);
+
+    /**
+     * @param request the request parameters of CreateConsumerGroup  CreateConsumerGroupRequest
+     * @return CreateConsumerGroupResponse
+     */
+    CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreateCostRule  CreateCostRuleRequest
+     * @return CreateCostRuleResponse
+     */
+    CompletableFuture<CreateCostRuleResponse> createCostRule(CreateCostRuleRequest request);
 
     /**
      * @param request the request parameters of CreateCronJobPolicyServerless  CreateCronJobPolicyServerlessRequest
@@ -341,6 +365,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateExtensionsResponse> createExtensions(CreateExtensionsRequest request);
 
     /**
+     * @param request the request parameters of CreateGateway  CreateGatewayRequest
+     * @return CreateGatewayResponse
+     */
+    CompletableFuture<CreateGatewayResponse> createGateway(CreateGatewayRequest request);
+
+    /**
      * @param request the request parameters of CreateGlobalDataNetwork  CreateGlobalDataNetworkRequest
      * @return CreateGlobalDataNetworkResponse
      */
@@ -362,6 +392,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateGlobalSecurityIPGroupResponse
      */
     CompletableFuture<CreateGlobalSecurityIPGroupResponse> createGlobalSecurityIPGroup(CreateGlobalSecurityIPGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreateModelApi  CreateModelApiRequest
+     * @return CreateModelApiResponse
+     */
+    CompletableFuture<CreateModelApiResponse> createModelApi(CreateModelApiRequest request);
+
+    /**
+     * @param request the request parameters of CreateModelService  CreateModelServiceRequest
+     * @return CreateModelServiceResponse
+     */
+    CompletableFuture<CreateModelServiceResponse> createModelService(CreateModelServiceRequest request);
 
     /**
      * @param request the request parameters of CreateNetworkChannel  CreateNetworkChannelRequest
@@ -402,6 +444,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePolarFsObjectResponse
      */
     CompletableFuture<CreatePolarFsObjectResponse> createPolarFsObject(CreatePolarFsObjectRequest request);
+
+    /**
+     * @param request the request parameters of CreateRateLimitPolicy  CreateRateLimitPolicyRequest
+     * @return CreateRateLimitPolicyResponse
+     */
+    CompletableFuture<CreateRateLimitPolicyResponse> createRateLimitPolicy(CreateRateLimitPolicyRequest request);
 
     /**
      * @param request the request parameters of CreateServiceLinkedRole  CreateServiceLinkedRoleRequest
@@ -494,6 +542,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteBackupResponse> deleteBackup(DeleteBackupRequest request);
 
     /**
+     * @param request the request parameters of DeleteBudgetPolicy  DeleteBudgetPolicyRequest
+     * @return DeleteBudgetPolicyResponse
+     */
+    CompletableFuture<DeleteBudgetPolicyResponse> deleteBudgetPolicy(DeleteBudgetPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteConsumer  DeleteConsumerRequest
+     * @return DeleteConsumerResponse
+     */
+    CompletableFuture<DeleteConsumerResponse> deleteConsumer(DeleteConsumerRequest request);
+
+    /**
+     * @param request the request parameters of DeleteConsumerGroup  DeleteConsumerGroupRequest
+     * @return DeleteConsumerGroupResponse
+     */
+    CompletableFuture<DeleteConsumerGroupResponse> deleteConsumerGroup(DeleteConsumerGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCostRule  DeleteCostRuleRequest
+     * @return DeleteCostRuleResponse
+     */
+    CompletableFuture<DeleteCostRuleResponse> deleteCostRule(DeleteCostRuleRequest request);
+
+    /**
      * @param request the request parameters of DeleteDBCluster  DeleteDBClusterRequest
      * @return DeleteDBClusterResponse
      */
@@ -576,6 +648,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteFirewallRulesResponse> deleteFirewallRules(DeleteFirewallRulesRequest request);
 
     /**
+     * @param request the request parameters of DeleteGateway  DeleteGatewayRequest
+     * @return DeleteGatewayResponse
+     */
+    CompletableFuture<DeleteGatewayResponse> deleteGateway(DeleteGatewayRequest request);
+
+    /**
      * @param request the request parameters of DeleteGlobalDataNetwork  DeleteGlobalDataNetworkRequest
      * @return DeleteGlobalDataNetworkResponse
      */
@@ -603,6 +681,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteMaskingRulesResponse
      */
     CompletableFuture<DeleteMaskingRulesResponse> deleteMaskingRules(DeleteMaskingRulesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteModelApi  DeleteModelApiRequest
+     * @return DeleteModelApiResponse
+     */
+    CompletableFuture<DeleteModelApiResponse> deleteModelApi(DeleteModelApiRequest request);
+
+    /**
+     * @param request the request parameters of DeleteModelService  DeleteModelServiceRequest
+     * @return DeleteModelServiceResponse
+     */
+    CompletableFuture<DeleteModelServiceResponse> deleteModelService(DeleteModelServiceRequest request);
 
     /**
      * @param request the request parameters of DeleteNetworkChannel  DeleteNetworkChannelRequest
@@ -647,6 +737,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePolarFsQuotaResponse
      */
     CompletableFuture<DeletePolarFsQuotaResponse> deletePolarFsQuota(DeletePolarFsQuotaRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRateLimitPolicy  DeleteRateLimitPolicyRequest
+     * @return DeleteRateLimitPolicyResponse
+     */
+    CompletableFuture<DeleteRateLimitPolicyResponse> deleteRateLimitPolicy(DeleteRateLimitPolicyRequest request);
 
     /**
      * @param request the request parameters of DeleteSQLRateLimitingRules  DeleteSQLRateLimitingRulesRequest
@@ -829,6 +925,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request);
 
     /**
+     * @param request the request parameters of DescribeBudgetPolicies  DescribeBudgetPoliciesRequest
+     * @return DescribeBudgetPoliciesResponse
+     */
+    CompletableFuture<DescribeBudgetPoliciesResponse> describeBudgetPolicies(DescribeBudgetPoliciesRequest request);
+
+    /**
      * @param request the request parameters of DescribeCharacterSetName  DescribeCharacterSetNameRequest
      * @return DescribeCharacterSetNameResponse
      */
@@ -845,6 +947,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeColdStorageInstanceResponse
      */
     CompletableFuture<DescribeColdStorageInstanceResponse> describeColdStorageInstance(DescribeColdStorageInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DescribeConsumerGroups  DescribeConsumerGroupsRequest
+     * @return DescribeConsumerGroupsResponse
+     */
+    CompletableFuture<DescribeConsumerGroupsResponse> describeConsumerGroups(DescribeConsumerGroupsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeConsumers  DescribeConsumersRequest
+     * @return DescribeConsumersResponse
+     */
+    CompletableFuture<DescribeConsumersResponse> describeConsumers(DescribeConsumersRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCostRules  DescribeCostRulesRequest
+     * @return DescribeCostRulesResponse
+     */
+    CompletableFuture<DescribeCostRulesResponse> describeCostRules(DescribeCostRulesRequest request);
 
     /**
      * @param request the request parameters of DescribeCronJobPolicyServerless  DescribeCronJobPolicyServerlessRequest
@@ -1164,6 +1284,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFirewallRulesResponse> describeFirewallRules(DescribeFirewallRulesRequest request);
 
     /**
+     * @param request the request parameters of DescribeGatewayAttribute  DescribeGatewayAttributeRequest
+     * @return DescribeGatewayAttributeResponse
+     */
+    CompletableFuture<DescribeGatewayAttributeResponse> describeGatewayAttribute(DescribeGatewayAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeGatewayList  DescribeGatewayListRequest
+     * @return DescribeGatewayListResponse
+     */
+    CompletableFuture<DescribeGatewayListResponse> describeGatewayList(DescribeGatewayListRequest request);
+
+    /**
      * @param request the request parameters of DescribeGlobalDataNetworkList  DescribeGlobalDataNetworkListRequest
      * @return DescribeGlobalDataNetworkListResponse
      */
@@ -1252,6 +1384,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeMetaListResponse
      */
     CompletableFuture<DescribeMetaListResponse> describeMetaList(DescribeMetaListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeModelApis  DescribeModelApisRequest
+     * @return DescribeModelApisResponse
+     */
+    CompletableFuture<DescribeModelApisResponse> describeModelApis(DescribeModelApisRequest request);
+
+    /**
+     * @param request the request parameters of DescribeModelServices  DescribeModelServicesRequest
+     * @return DescribeModelServicesResponse
+     */
+    CompletableFuture<DescribeModelServicesResponse> describeModelServices(DescribeModelServicesRequest request);
 
     /**
      * @param request the request parameters of DescribeModifyParameterLog  DescribeModifyParameterLogRequest
@@ -1357,6 +1501,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePolarSQLCollectorPolicyResponse
      */
     CompletableFuture<DescribePolarSQLCollectorPolicyResponse> describePolarSQLCollectorPolicy(DescribePolarSQLCollectorPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRateLimitPolicy  DescribeRateLimitPolicyRequest
+     * @return DescribeRateLimitPolicyResponse
+     */
+    CompletableFuture<DescribeRateLimitPolicyResponse> describeRateLimitPolicy(DescribeRateLimitPolicyRequest request);
 
     /**
      * @param request the request parameters of DescribeRdsVSwitchs  DescribeRdsVSwitchsRequest
@@ -1696,6 +1846,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request);
 
     /**
+     * @param request the request parameters of ModifyBudgetPolicy  ModifyBudgetPolicyRequest
+     * @return ModifyBudgetPolicyResponse
+     */
+    CompletableFuture<ModifyBudgetPolicyResponse> modifyBudgetPolicy(ModifyBudgetPolicyRequest request);
+
+    /**
+     * @param request the request parameters of ModifyConsumer  ModifyConsumerRequest
+     * @return ModifyConsumerResponse
+     */
+    CompletableFuture<ModifyConsumerResponse> modifyConsumer(ModifyConsumerRequest request);
+
+    /**
+     * @param request the request parameters of ModifyConsumerGroup  ModifyConsumerGroupRequest
+     * @return ModifyConsumerGroupResponse
+     */
+    CompletableFuture<ModifyConsumerGroupResponse> modifyConsumerGroup(ModifyConsumerGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifyCostRule  ModifyCostRuleRequest
+     * @return ModifyCostRuleResponse
+     */
+    CompletableFuture<ModifyCostRuleResponse> modifyCostRule(ModifyCostRuleRequest request);
+
+    /**
      * @param request the request parameters of ModifyCronJobPolicyServerless  ModifyCronJobPolicyServerlessRequest
      * @return ModifyCronJobPolicyServerlessResponse
      */
@@ -1998,10 +2172,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyMaskingRulesResponse> modifyMaskingRules(ModifyMaskingRulesRequest request);
 
     /**
+     * @param request the request parameters of ModifyModelApi  ModifyModelApiRequest
+     * @return ModifyModelApiResponse
+     */
+    CompletableFuture<ModifyModelApiResponse> modifyModelApi(ModifyModelApiRequest request);
+
+    /**
+     * @param request the request parameters of ModifyModelService  ModifyModelServiceRequest
+     * @return ModifyModelServiceResponse
+     */
+    CompletableFuture<ModifyModelServiceResponse> modifyModelService(ModifyModelServiceRequest request);
+
+    /**
      * @param request the request parameters of ModifyPendingMaintenanceAction  ModifyPendingMaintenanceActionRequest
      * @return ModifyPendingMaintenanceActionResponse
      */
     CompletableFuture<ModifyPendingMaintenanceActionResponse> modifyPendingMaintenanceAction(ModifyPendingMaintenanceActionRequest request);
+
+    /**
+     * @param request the request parameters of ModifyRateLimitPolicy  ModifyRateLimitPolicyRequest
+     * @return ModifyRateLimitPolicyResponse
+     */
+    CompletableFuture<ModifyRateLimitPolicyResponse> modifyRateLimitPolicy(ModifyRateLimitPolicyRequest request);
 
     /**
      * @param request the request parameters of ModifyResourcePackage  ModifyResourcePackageRequest
@@ -2081,6 +2273,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResetAccountZonalResponse
      */
     CompletableFuture<ResetAccountZonalResponse> resetAccountZonal(ResetAccountZonalRequest request);
+
+    /**
+     * @param request the request parameters of ResetConsumerApiKey  ResetConsumerApiKeyRequest
+     * @return ResetConsumerApiKeyResponse
+     */
+    CompletableFuture<ResetConsumerApiKeyResponse> resetConsumerApiKey(ResetConsumerApiKeyRequest request);
 
     /**
      * @param request the request parameters of ResetGlobalDatabaseNetwork  ResetGlobalDatabaseNetworkRequest
