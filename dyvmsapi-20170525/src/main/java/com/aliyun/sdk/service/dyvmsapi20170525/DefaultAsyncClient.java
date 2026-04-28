@@ -410,6 +410,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CloudGetObCdr  CloudGetObCdrRequest
+     * @return CloudGetObCdrResponse
+     */
+    @Override
+    public CompletableFuture<CloudGetObCdrResponse> cloudGetObCdr(CloudGetObCdrRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CloudGetObCdr").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CloudGetObCdrResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CloudGetObCdrResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CloudGetRecordUrl  CloudGetRecordUrlRequest
+     * @return CloudGetRecordUrlResponse
+     */
+    @Override
+    public CompletableFuture<CloudGetRecordUrlResponse> cloudGetRecordUrl(CloudGetRecordUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CloudGetRecordUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CloudGetRecordUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CloudGetRecordUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CloudImportTaskTel  CloudImportTaskTelRequest
      * @return CloudImportTaskTelResponse
      */
@@ -500,6 +536,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CloudOutboundObClidReport  CloudOutboundObClidReportRequest
+     * @return CloudOutboundObClidReportResponse
+     */
+    @Override
+    public CompletableFuture<CloudOutboundObClidReportResponse> cloudOutboundObClidReport(CloudOutboundObClidReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CloudOutboundObClidReport").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CloudOutboundObClidReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CloudOutboundObClidReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CloudOutboundPreviewObReport  CloudOutboundPreviewObReportRequest
+     * @return CloudOutboundPreviewObReportResponse
+     */
+    @Override
+    public CompletableFuture<CloudOutboundPreviewObReportResponse> cloudOutboundPreviewObReport(CloudOutboundPreviewObReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CloudOutboundPreviewObReport").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CloudOutboundPreviewObReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CloudOutboundPreviewObReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CloudPreviewoutcall  CloudPreviewoutcallRequest
      * @return CloudPreviewoutcallResponse
      */
@@ -584,6 +656,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CloudQueryAgentSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CloudQueryIbCdr  CloudQueryIbCdrRequest
+     * @return CloudQueryIbCdrResponse
+     */
+    @Override
+    public CompletableFuture<CloudQueryIbCdrResponse> cloudQueryIbCdr(CloudQueryIbCdrRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CloudQueryIbCdr").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CloudQueryIbCdrResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CloudQueryIbCdrResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CloudQueryObCdr  CloudQueryObCdrRequest
+     * @return CloudQueryObCdrResponse
+     */
+    @Override
+    public CompletableFuture<CloudQueryObCdrResponse> cloudQueryObCdr(CloudQueryObCdrRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CloudQueryObCdr").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CloudQueryObCdrResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CloudQueryObCdrResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CloudQueryPredictiveCallCdr  CloudQueryPredictiveCallCdrRequest
+     * @return CloudQueryPredictiveCallCdrResponse
+     */
+    @Override
+    public CompletableFuture<CloudQueryPredictiveCallCdrResponse> cloudQueryPredictiveCallCdr(CloudQueryPredictiveCallCdrRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CloudQueryPredictiveCallCdr").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CloudQueryPredictiveCallCdrResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CloudQueryPredictiveCallCdrResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CloudQueryWebcallCdr  CloudQueryWebcallCdrRequest
+     * @return CloudQueryWebcallCdrResponse
+     */
+    @Override
+    public CompletableFuture<CloudQueryWebcallCdrResponse> cloudQueryWebcallCdr(CloudQueryWebcallCdrRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CloudQueryWebcallCdr").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CloudQueryWebcallCdrResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CloudQueryWebcallCdrResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

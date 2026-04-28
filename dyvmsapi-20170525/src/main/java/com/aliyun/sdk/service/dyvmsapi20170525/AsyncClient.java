@@ -162,6 +162,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloudGetAgentStatusResponse> cloudGetAgentStatus(CloudGetAgentStatusRequest request);
 
     /**
+     * @param request the request parameters of CloudGetObCdr  CloudGetObCdrRequest
+     * @return CloudGetObCdrResponse
+     */
+    CompletableFuture<CloudGetObCdrResponse> cloudGetObCdr(CloudGetObCdrRequest request);
+
+    /**
+     * @param request the request parameters of CloudGetRecordUrl  CloudGetRecordUrlRequest
+     * @return CloudGetRecordUrlResponse
+     */
+    CompletableFuture<CloudGetRecordUrlResponse> cloudGetRecordUrl(CloudGetRecordUrlRequest request);
+
+    /**
      * @param request the request parameters of CloudImportTaskTel  CloudImportTaskTelRequest
      * @return CloudImportTaskTelResponse
      */
@@ -192,6 +204,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloudListOnlineAgentResponse> cloudListOnlineAgent(CloudListOnlineAgentRequest request);
 
     /**
+     * @param request the request parameters of CloudOutboundObClidReport  CloudOutboundObClidReportRequest
+     * @return CloudOutboundObClidReportResponse
+     */
+    CompletableFuture<CloudOutboundObClidReportResponse> cloudOutboundObClidReport(CloudOutboundObClidReportRequest request);
+
+    /**
+     * @param request the request parameters of CloudOutboundPreviewObReport  CloudOutboundPreviewObReportRequest
+     * @return CloudOutboundPreviewObReportResponse
+     */
+    CompletableFuture<CloudOutboundPreviewObReportResponse> cloudOutboundPreviewObReport(CloudOutboundPreviewObReportRequest request);
+
+    /**
      * @param request the request parameters of CloudPreviewoutcall  CloudPreviewoutcallRequest
      * @return CloudPreviewoutcallResponse
      */
@@ -220,6 +244,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CloudQueryAgentSkillResponse
      */
     CompletableFuture<CloudQueryAgentSkillResponse> cloudQueryAgentSkill(CloudQueryAgentSkillRequest request);
+
+    /**
+     * @param request the request parameters of CloudQueryIbCdr  CloudQueryIbCdrRequest
+     * @return CloudQueryIbCdrResponse
+     */
+    CompletableFuture<CloudQueryIbCdrResponse> cloudQueryIbCdr(CloudQueryIbCdrRequest request);
+
+    /**
+     * @param request the request parameters of CloudQueryObCdr  CloudQueryObCdrRequest
+     * @return CloudQueryObCdrResponse
+     */
+    CompletableFuture<CloudQueryObCdrResponse> cloudQueryObCdr(CloudQueryObCdrRequest request);
+
+    /**
+     * @param request the request parameters of CloudQueryPredictiveCallCdr  CloudQueryPredictiveCallCdrRequest
+     * @return CloudQueryPredictiveCallCdrResponse
+     */
+    CompletableFuture<CloudQueryPredictiveCallCdrResponse> cloudQueryPredictiveCallCdr(CloudQueryPredictiveCallCdrRequest request);
+
+    /**
+     * @param request the request parameters of CloudQueryWebcallCdr  CloudQueryWebcallCdrRequest
+     * @return CloudQueryWebcallCdrResponse
+     */
+    CompletableFuture<CloudQueryWebcallCdrResponse> cloudQueryWebcallCdr(CloudQueryWebcallCdrRequest request);
 
     /**
      * @param request the request parameters of CloudStartTask  CloudStartTaskRequest
