@@ -26,6 +26,10 @@ public class InstancePreivewRequest extends Request {
     private String consoleSessionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
@@ -33,6 +37,7 @@ public class InstancePreivewRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.consoleSessionId = builder.consoleSessionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
     }
 
@@ -64,6 +69,13 @@ public class InstancePreivewRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tags
      */
     public String getTags() {
@@ -73,6 +85,7 @@ public class InstancePreivewRequest extends Request {
     public static final class Builder extends Request.Builder<InstancePreivewRequest, Builder> {
         private String regionId; 
         private String consoleSessionId; 
+        private String resourceGroupId; 
         private String tags; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class InstancePreivewRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.consoleSessionId = request.consoleSessionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
         } 
 
@@ -101,6 +115,15 @@ public class InstancePreivewRequest extends Request {
         public Builder consoleSessionId(String consoleSessionId) {
             this.putQueryParameter("ConsoleSessionId", consoleSessionId);
             this.consoleSessionId = consoleSessionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
