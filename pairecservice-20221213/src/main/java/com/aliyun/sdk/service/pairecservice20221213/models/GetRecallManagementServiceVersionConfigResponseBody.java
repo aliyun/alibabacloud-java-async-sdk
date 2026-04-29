@@ -953,6 +953,9 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Long priority;
 
+        @com.aliyun.core.annotation.NameInMap("RecallManagementServiceVersionConfigId")
+        private String recallManagementServiceVersionConfigId;
+
         @com.aliyun.core.annotation.NameInMap("RecallManagementTableId")
         private String recallManagementTableId;
 
@@ -978,6 +981,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             this.name = builder.name;
             this.operators = builder.operators;
             this.priority = builder.priority;
+            this.recallManagementServiceVersionConfigId = builder.recallManagementServiceVersionConfigId;
             this.recallManagementTableId = builder.recallManagementTableId;
             this.recallType = builder.recallType;
             this.sortFields = builder.sortFields;
@@ -1057,6 +1061,13 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         }
 
         /**
+         * @return recallManagementServiceVersionConfigId
+         */
+        public String getRecallManagementServiceVersionConfigId() {
+            return this.recallManagementServiceVersionConfigId;
+        }
+
+        /**
          * @return recallManagementTableId
          */
         public String getRecallManagementTableId() {
@@ -1101,6 +1112,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             private String name; 
             private java.util.List<Operators> operators; 
             private Long priority; 
+            private String recallManagementServiceVersionConfigId; 
             private String recallManagementTableId; 
             private String recallType; 
             private String sortFields; 
@@ -1120,6 +1132,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
                 this.name = model.name;
                 this.operators = model.operators;
                 this.priority = model.priority;
+                this.recallManagementServiceVersionConfigId = model.recallManagementServiceVersionConfigId;
                 this.recallManagementTableId = model.recallManagementTableId;
                 this.recallType = model.recallType;
                 this.sortFields = model.sortFields;
@@ -1196,6 +1209,14 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
+                return this;
+            }
+
+            /**
+             * RecallManagementServiceVersionConfigId.
+             */
+            public Builder recallManagementServiceVersionConfigId(String recallManagementServiceVersionConfigId) {
+                this.recallManagementServiceVersionConfigId = recallManagementServiceVersionConfigId;
                 return this;
             }
 

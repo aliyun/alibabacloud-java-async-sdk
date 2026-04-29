@@ -29,7 +29,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RecallManagementServiceVersionConfigId")
     private String recallManagementServiceVersionConfigId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -187,7 +187,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
          * RegionId.
          */
         public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
+            this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }
@@ -576,7 +576,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         private String field;
 
         @com.aliyun.core.annotation.NameInMap("OutputFields")
-        private String outputFields;
+        private java.util.List<String> outputFields;
 
         @com.aliyun.core.annotation.NameInMap("RecallManagementTableId")
         private String recallManagementTableId;
@@ -605,7 +605,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         /**
          * @return outputFields
          */
-        public String getOutputFields() {
+        public java.util.List<String> getOutputFields() {
             return this.outputFields;
         }
 
@@ -618,7 +618,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
 
         public static final class Builder {
             private String field; 
-            private String outputFields; 
+            private java.util.List<String> outputFields; 
             private String recallManagementTableId; 
 
             private Builder() {
@@ -641,7 +641,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             /**
              * OutputFields.
              */
-            public Builder outputFields(String outputFields) {
+            public Builder outputFields(java.util.List<String> outputFields) {
                 this.outputFields = outputFields;
                 return this;
             }
@@ -672,10 +672,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         private String field;
 
         @com.aliyun.core.annotation.NameInMap("FieldQuantityLimit")
-        private String fieldQuantityLimit;
+        private Integer fieldQuantityLimit;
 
         @com.aliyun.core.annotation.NameInMap("IsRandSort")
-        private String isRandSort;
+        private Boolean isRandSort;
 
         @com.aliyun.core.annotation.NameInMap("SortField")
         private String sortField;
@@ -705,14 +705,14 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         /**
          * @return fieldQuantityLimit
          */
-        public String getFieldQuantityLimit() {
+        public Integer getFieldQuantityLimit() {
             return this.fieldQuantityLimit;
         }
 
         /**
          * @return isRandSort
          */
-        public String getIsRandSort() {
+        public Boolean getIsRandSort() {
             return this.isRandSort;
         }
 
@@ -725,8 +725,8 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
 
         public static final class Builder {
             private String field; 
-            private String fieldQuantityLimit; 
-            private String isRandSort; 
+            private Integer fieldQuantityLimit; 
+            private Boolean isRandSort; 
             private String sortField; 
 
             private Builder() {
@@ -750,7 +750,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             /**
              * FieldQuantityLimit.
              */
-            public Builder fieldQuantityLimit(String fieldQuantityLimit) {
+            public Builder fieldQuantityLimit(Integer fieldQuantityLimit) {
                 this.fieldQuantityLimit = fieldQuantityLimit;
                 return this;
             }
@@ -758,7 +758,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             /**
              * IsRandSort.
              */
-            public Builder isRandSort(String isRandSort) {
+            public Builder isRandSort(Boolean isRandSort) {
                 this.isRandSort = isRandSort;
                 return this;
             }
@@ -794,8 +794,8 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("JoinConfig")
         private JoinConfig joinConfig;
 
-        @com.aliyun.core.annotation.NameInMap("OperatorsType")
-        private String operatorsType;
+        @com.aliyun.core.annotation.NameInMap("OperatorType")
+        private String operatorType;
 
         @com.aliyun.core.annotation.NameInMap("TriggerConfig")
         private TriggerConfig triggerConfig;
@@ -804,7 +804,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             this.featureConfig = builder.featureConfig;
             this.filterConfig = builder.filterConfig;
             this.joinConfig = builder.joinConfig;
-            this.operatorsType = builder.operatorsType;
+            this.operatorType = builder.operatorType;
             this.triggerConfig = builder.triggerConfig;
         }
 
@@ -838,10 +838,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         }
 
         /**
-         * @return operatorsType
+         * @return operatorType
          */
-        public String getOperatorsType() {
-            return this.operatorsType;
+        public String getOperatorType() {
+            return this.operatorType;
         }
 
         /**
@@ -855,7 +855,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             private FeatureConfig featureConfig; 
             private FilterConfig filterConfig; 
             private JoinConfig joinConfig; 
-            private String operatorsType; 
+            private String operatorType; 
             private TriggerConfig triggerConfig; 
 
             private Builder() {
@@ -865,7 +865,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
                 this.featureConfig = model.featureConfig;
                 this.filterConfig = model.filterConfig;
                 this.joinConfig = model.joinConfig;
-                this.operatorsType = model.operatorsType;
+                this.operatorType = model.operatorType;
                 this.triggerConfig = model.triggerConfig;
             } 
 
@@ -894,10 +894,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * OperatorsType.
+             * OperatorType.
              */
-            public Builder operatorsType(String operatorsType) {
-                this.operatorsType = operatorsType;
+            public Builder operatorType(String operatorType) {
+                this.operatorType = operatorType;
                 return this;
             }
 

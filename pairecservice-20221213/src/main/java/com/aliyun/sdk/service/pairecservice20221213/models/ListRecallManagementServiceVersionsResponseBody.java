@@ -122,8 +122,8 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @com.aliyun.core.annotation.NameInMap("IsDefault")
-        private String isDefault;
+        @com.aliyun.core.annotation.NameInMap("IsEffective")
+        private Boolean isEffective;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -134,7 +134,7 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
         private RecallManagementServiceVersions(Builder builder) {
             this.gmtCreateTime = builder.gmtCreateTime;
             this.gmtModifiedTime = builder.gmtModifiedTime;
-            this.isDefault = builder.isDefault;
+            this.isEffective = builder.isEffective;
             this.name = builder.name;
             this.recallManagementServiceVersionId = builder.recallManagementServiceVersionId;
         }
@@ -162,10 +162,10 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return isDefault
+         * @return isEffective
          */
-        public String getIsDefault() {
-            return this.isDefault;
+        public Boolean getIsEffective() {
+            return this.isEffective;
         }
 
         /**
@@ -185,7 +185,7 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
         public static final class Builder {
             private String gmtCreateTime; 
             private String gmtModifiedTime; 
-            private String isDefault; 
+            private Boolean isEffective; 
             private String name; 
             private String recallManagementServiceVersionId; 
 
@@ -195,7 +195,7 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
             private Builder(RecallManagementServiceVersions model) {
                 this.gmtCreateTime = model.gmtCreateTime;
                 this.gmtModifiedTime = model.gmtModifiedTime;
-                this.isDefault = model.isDefault;
+                this.isEffective = model.isEffective;
                 this.name = model.name;
                 this.recallManagementServiceVersionId = model.recallManagementServiceVersionId;
             } 
@@ -217,10 +217,10 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * IsEffective.
              */
-            public Builder isDefault(String isDefault) {
-                this.isDefault = isDefault;
+            public Builder isEffective(Boolean isEffective) {
+                this.isEffective = isEffective;
                 return this;
             }
 

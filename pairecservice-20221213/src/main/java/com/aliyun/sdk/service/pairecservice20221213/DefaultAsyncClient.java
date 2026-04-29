@@ -1210,6 +1210,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ExportRecallManagementTable  ExportRecallManagementTableRequest
+     * @return ExportRecallManagementTableResponse
+     */
+    @Override
+    public CompletableFuture<ExportRecallManagementTableResponse> exportRecallManagementTable(ExportRecallManagementTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExportRecallManagementTable").setMethod(HttpMethod.POST).setPathRegex("/api/v1/recallmanagementtables/{RecallManagementTableId}/action/export").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExportRecallManagementTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExportRecallManagementTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GenerateAlgorithmCustomizationScript  GenerateAlgorithmCustomizationScriptRequest
      * @return GenerateAlgorithmCustomizationScriptResponse
      */
@@ -2608,6 +2626,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryDataDiagnosisStatisticsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryRecallManagementTableRecords  QueryRecallManagementTableRecordsRequest
+     * @return QueryRecallManagementTableRecordsResponse
+     */
+    @Override
+    public CompletableFuture<QueryRecallManagementTableRecordsResponse> queryRecallManagementTableRecords(QueryRecallManagementTableRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryRecallManagementTableRecords").setMethod(HttpMethod.GET).setPathRegex("/api/v1/recallmanagementtables/{RecallManagementTableId}/queryrecords").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRecallManagementTableRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryRecallManagementTableRecordsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

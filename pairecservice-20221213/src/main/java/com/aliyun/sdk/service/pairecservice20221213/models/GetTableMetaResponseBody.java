@@ -50,6 +50,12 @@ public class GetTableMetaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
+    @com.aliyun.core.annotation.NameInMap("ResourceUri")
+    private String resourceUri;
+
     @com.aliyun.core.annotation.NameInMap("TableMetaId")
     private String tableMetaId;
 
@@ -74,6 +80,8 @@ public class GetTableMetaResponseBody extends TeaModel {
         this.name = builder.name;
         this.requestId = builder.requestId;
         this.resourceId = builder.resourceId;
+        this.resourceType = builder.resourceType;
+        this.resourceUri = builder.resourceUri;
         this.tableMetaId = builder.tableMetaId;
         this.tableName = builder.tableName;
         this.type = builder.type;
@@ -170,6 +178,20 @@ public class GetTableMetaResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
+     * @return resourceUri
+     */
+    public String getResourceUri() {
+        return this.resourceUri;
+    }
+
+    /**
      * @return tableMetaId
      */
     public String getTableMetaId() {
@@ -209,6 +231,8 @@ public class GetTableMetaResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private String resourceId; 
+        private String resourceType; 
+        private String resourceUri; 
         private String tableMetaId; 
         private String tableName; 
         private String type; 
@@ -229,6 +253,8 @@ public class GetTableMetaResponseBody extends TeaModel {
             this.name = model.name;
             this.requestId = model.requestId;
             this.resourceId = model.resourceId;
+            this.resourceType = model.resourceType;
+            this.resourceUri = model.resourceUri;
             this.tableMetaId = model.tableMetaId;
             this.tableName = model.tableName;
             this.type = model.type;
@@ -320,6 +346,22 @@ public class GetTableMetaResponseBody extends TeaModel {
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * ResourceUri.
+         */
+        public Builder resourceUri(String resourceUri) {
+            this.resourceUri = resourceUri;
             return this;
         }
 

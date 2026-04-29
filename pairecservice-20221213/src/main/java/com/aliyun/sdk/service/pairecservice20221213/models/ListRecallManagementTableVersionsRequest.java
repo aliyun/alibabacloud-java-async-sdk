@@ -146,6 +146,9 @@ public class ListRecallManagementTableVersionsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recallManagementTableId(String recallManagementTableId) {
             this.putPathParameter("RecallManagementTableId", recallManagementTableId);
@@ -164,6 +167,9 @@ public class ListRecallManagementTableVersionsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-1324***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -26,9 +26,6 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @com.aliyun.core.annotation.NameInMap("IsDefault")
-    private String isDefault;
-
     @com.aliyun.core.annotation.NameInMap("IsEffective")
     private Boolean isEffective;
 
@@ -45,7 +42,6 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         this.configs = builder.configs;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
-        this.isDefault = builder.isDefault;
         this.isEffective = builder.isEffective;
         this.name = builder.name;
         this.recallManagementServiceVersionId = builder.recallManagementServiceVersionId;
@@ -86,13 +82,6 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
     }
 
     /**
-     * @return isDefault
-     */
-    public String getIsDefault() {
-        return this.isDefault;
-    }
-
-    /**
      * @return isEffective
      */
     public Boolean getIsEffective() {
@@ -124,7 +113,6 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         private Configs configs; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
-        private String isDefault; 
         private Boolean isEffective; 
         private String name; 
         private String recallManagementServiceVersionId; 
@@ -137,7 +125,6 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
             this.configs = model.configs;
             this.gmtCreateTime = model.gmtCreateTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
-            this.isDefault = model.isDefault;
             this.isEffective = model.isEffective;
             this.name = model.name;
             this.recallManagementServiceVersionId = model.recallManagementServiceVersionId;
@@ -165,14 +152,6 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
-            return this;
-        }
-
-        /**
-         * IsDefault.
-         */
-        public Builder isDefault(String isDefault) {
-            this.isDefault = isDefault;
             return this;
         }
 
@@ -654,10 +633,10 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         private String field;
 
         @com.aliyun.core.annotation.NameInMap("FieldQuantityLimit")
-        private String fieldQuantityLimit;
+        private Integer fieldQuantityLimit;
 
         @com.aliyun.core.annotation.NameInMap("IsRandSort")
-        private String isRandSort;
+        private Boolean isRandSort;
 
         @com.aliyun.core.annotation.NameInMap("SortField")
         private String sortField;
@@ -687,14 +666,14 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         /**
          * @return fieldQuantityLimit
          */
-        public String getFieldQuantityLimit() {
+        public Integer getFieldQuantityLimit() {
             return this.fieldQuantityLimit;
         }
 
         /**
          * @return isRandSort
          */
-        public String getIsRandSort() {
+        public Boolean getIsRandSort() {
             return this.isRandSort;
         }
 
@@ -707,8 +686,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String field; 
-            private String fieldQuantityLimit; 
-            private String isRandSort; 
+            private Integer fieldQuantityLimit; 
+            private Boolean isRandSort; 
             private String sortField; 
 
             private Builder() {
@@ -732,7 +711,7 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
             /**
              * FieldQuantityLimit.
              */
-            public Builder fieldQuantityLimit(String fieldQuantityLimit) {
+            public Builder fieldQuantityLimit(Integer fieldQuantityLimit) {
                 this.fieldQuantityLimit = fieldQuantityLimit;
                 return this;
             }
@@ -740,7 +719,7 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
             /**
              * IsRandSort.
              */
-            public Builder isRandSort(String isRandSort) {
+            public Builder isRandSort(Boolean isRandSort) {
                 this.isRandSort = isRandSort;
                 return this;
             }

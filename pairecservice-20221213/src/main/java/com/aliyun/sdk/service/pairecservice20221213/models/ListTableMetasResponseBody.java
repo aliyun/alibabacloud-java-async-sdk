@@ -263,6 +263,12 @@ public class ListTableMetasResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        private String resourceType;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceUri")
+        private String resourceUri;
+
         @com.aliyun.core.annotation.NameInMap("TableMetaId")
         private String tableMetaId;
 
@@ -286,6 +292,8 @@ public class ListTableMetasResponseBody extends TeaModel {
             this.module = builder.module;
             this.name = builder.name;
             this.resourceId = builder.resourceId;
+            this.resourceType = builder.resourceType;
+            this.resourceUri = builder.resourceUri;
             this.tableMetaId = builder.tableMetaId;
             this.tableName = builder.tableName;
             this.type = builder.type;
@@ -371,6 +379,20 @@ public class ListTableMetasResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
+         * @return resourceUri
+         */
+        public String getResourceUri() {
+            return this.resourceUri;
+        }
+
+        /**
          * @return tableMetaId
          */
         public String getTableMetaId() {
@@ -409,6 +431,8 @@ public class ListTableMetasResponseBody extends TeaModel {
             private String module; 
             private String name; 
             private String resourceId; 
+            private String resourceType; 
+            private String resourceUri; 
             private String tableMetaId; 
             private String tableName; 
             private String type; 
@@ -428,6 +452,8 @@ public class ListTableMetasResponseBody extends TeaModel {
                 this.module = model.module;
                 this.name = model.name;
                 this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.resourceUri = model.resourceUri;
                 this.tableMetaId = model.tableMetaId;
                 this.tableName = model.tableName;
                 this.type = model.type;
@@ -511,6 +537,22 @@ public class ListTableMetasResponseBody extends TeaModel {
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * ResourceUri.
+             */
+            public Builder resourceUri(String resourceUri) {
+                this.resourceUri = resourceUri;
                 return this;
             }
 

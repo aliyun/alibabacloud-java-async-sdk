@@ -12,14 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteRecallManagementTableRequest} extends {@link RequestModel}
+ * {@link QueryRecallManagementTableRecordsRequest} extends {@link RequestModel}
  *
- * <p>DeleteRecallManagementTableRequest</p>
+ * <p>QueryRecallManagementTableRecordsRequest</p>
  */
-public class DeleteRecallManagementTableRequest extends Request {
+public class QueryRecallManagementTableRecordsRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("RecallManagementTableId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String recallManagementTableId;
 
     @com.aliyun.core.annotation.Host
@@ -28,21 +27,30 @@ public class DeleteRecallManagementTableRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    private DeleteRecallManagementTableRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
+    private byte[] primaryKeys;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecallManagementTableVersionId")
+    private String recallManagementTableVersionId;
+
+    private QueryRecallManagementTableRecordsRequest(Builder builder) {
         super(builder);
         this.recallManagementTableId = builder.recallManagementTableId;
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
+        this.primaryKeys = builder.primaryKeys;
+        this.recallManagementTableVersionId = builder.recallManagementTableVersionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteRecallManagementTableRequest create() {
+    public static QueryRecallManagementTableRecordsRequest create() {
         return builder().build();
     }
 
@@ -72,27 +80,42 @@ public class DeleteRecallManagementTableRequest extends Request {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteRecallManagementTableRequest, Builder> {
+    /**
+     * @return primaryKeys
+     */
+    public byte[] getPrimaryKeys() {
+        return this.primaryKeys;
+    }
+
+    /**
+     * @return recallManagementTableVersionId
+     */
+    public String getRecallManagementTableVersionId() {
+        return this.recallManagementTableVersionId;
+    }
+
+    public static final class Builder extends Request.Builder<QueryRecallManagementTableRecordsRequest, Builder> {
         private String recallManagementTableId; 
         private String regionId; 
         private String instanceId; 
+        private byte[] primaryKeys; 
+        private String recallManagementTableVersionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteRecallManagementTableRequest request) {
+        private Builder(QueryRecallManagementTableRecordsRequest request) {
             super(request);
             this.recallManagementTableId = request.recallManagementTableId;
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
+            this.primaryKeys = request.primaryKeys;
+            this.recallManagementTableVersionId = request.recallManagementTableVersionId;
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
+         * RecallManagementTableId.
          */
         public Builder recallManagementTableId(String recallManagementTableId) {
             this.putPathParameter("RecallManagementTableId", recallManagementTableId);
@@ -110,10 +133,7 @@ public class DeleteRecallManagementTableRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pairec-cn-test123</p>
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -121,9 +141,27 @@ public class DeleteRecallManagementTableRequest extends Request {
             return this;
         }
 
+        /**
+         * PrimaryKeys.
+         */
+        public Builder primaryKeys(byte[] primaryKeys) {
+            this.putQueryParameter("PrimaryKeys", primaryKeys);
+            this.primaryKeys = primaryKeys;
+            return this;
+        }
+
+        /**
+         * RecallManagementTableVersionId.
+         */
+        public Builder recallManagementTableVersionId(String recallManagementTableVersionId) {
+            this.putQueryParameter("RecallManagementTableVersionId", recallManagementTableVersionId);
+            this.recallManagementTableVersionId = recallManagementTableVersionId;
+            return this;
+        }
+
         @Override
-        public DeleteRecallManagementTableRequest build() {
-            return new DeleteRecallManagementTableRequest(this);
+        public QueryRecallManagementTableRecordsRequest build() {
+            return new QueryRecallManagementTableRecordsRequest(this);
         } 
 
     } 

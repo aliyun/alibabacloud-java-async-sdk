@@ -35,6 +35,10 @@ public class UpdateRecallManagementTableRequest extends Request {
     private Boolean enableRowCountFluctuationThreshold;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Fields")
+    private Fields fields;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IndexVersionId")
     private String indexVersionId;
 
@@ -65,6 +69,7 @@ public class UpdateRecallManagementTableRequest extends Request {
         this.regionId = builder.regionId;
         this.enableDataSizeFluctuationThreshold = builder.enableDataSizeFluctuationThreshold;
         this.enableRowCountFluctuationThreshold = builder.enableRowCountFluctuationThreshold;
+        this.fields = builder.fields;
         this.indexVersionId = builder.indexVersionId;
         this.instanceId = builder.instanceId;
         this.maxDataSizeFluctuationThreshold = builder.maxDataSizeFluctuationThreshold;
@@ -115,6 +120,13 @@ public class UpdateRecallManagementTableRequest extends Request {
     }
 
     /**
+     * @return fields
+     */
+    public Fields getFields() {
+        return this.fields;
+    }
+
+    /**
      * @return indexVersionId
      */
     public String getIndexVersionId() {
@@ -161,6 +173,7 @@ public class UpdateRecallManagementTableRequest extends Request {
         private String regionId; 
         private Boolean enableDataSizeFluctuationThreshold; 
         private Boolean enableRowCountFluctuationThreshold; 
+        private Fields fields; 
         private String indexVersionId; 
         private String instanceId; 
         private Integer maxDataSizeFluctuationThreshold; 
@@ -178,6 +191,7 @@ public class UpdateRecallManagementTableRequest extends Request {
             this.regionId = request.regionId;
             this.enableDataSizeFluctuationThreshold = request.enableDataSizeFluctuationThreshold;
             this.enableRowCountFluctuationThreshold = request.enableRowCountFluctuationThreshold;
+            this.fields = request.fields;
             this.indexVersionId = request.indexVersionId;
             this.instanceId = request.instanceId;
             this.maxDataSizeFluctuationThreshold = request.maxDataSizeFluctuationThreshold;
@@ -188,6 +202,9 @@ public class UpdateRecallManagementTableRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementTableId(String recallManagementTableId) {
             this.putPathParameter("RecallManagementTableId", recallManagementTableId);
@@ -223,6 +240,15 @@ public class UpdateRecallManagementTableRequest extends Request {
         }
 
         /**
+         * Fields.
+         */
+        public Builder fields(Fields fields) {
+            this.putBodyParameter("Fields", fields);
+            this.fields = fields;
+            return this;
+        }
+
+        /**
          * IndexVersionId.
          */
         public Builder indexVersionId(String indexVersionId) {
@@ -233,6 +259,9 @@ public class UpdateRecallManagementTableRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -283,4 +312,142 @@ public class UpdateRecallManagementTableRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRecallManagementTableRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRecallManagementTableRequest</p>
+     */
+    public static class Fields extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Attributes")
+        private java.util.List<String> attributes;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("VectorDimension")
+        private Integer vectorDimension;
+
+        @com.aliyun.core.annotation.NameInMap("VectorMetricType")
+        private String vectorMetricType;
+
+        private Fields(Builder builder) {
+            this.attributes = builder.attributes;
+            this.name = builder.name;
+            this.type = builder.type;
+            this.vectorDimension = builder.vectorDimension;
+            this.vectorMetricType = builder.vectorMetricType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Fields create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attributes
+         */
+        public java.util.List<String> getAttributes() {
+            return this.attributes;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return vectorDimension
+         */
+        public Integer getVectorDimension() {
+            return this.vectorDimension;
+        }
+
+        /**
+         * @return vectorMetricType
+         */
+        public String getVectorMetricType() {
+            return this.vectorMetricType;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> attributes; 
+            private String name; 
+            private String type; 
+            private Integer vectorDimension; 
+            private String vectorMetricType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.attributes = model.attributes;
+                this.name = model.name;
+                this.type = model.type;
+                this.vectorDimension = model.vectorDimension;
+                this.vectorMetricType = model.vectorMetricType;
+            } 
+
+            /**
+             * Attributes.
+             */
+            public Builder attributes(java.util.List<String> attributes) {
+                this.attributes = attributes;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * VectorDimension.
+             */
+            public Builder vectorDimension(Integer vectorDimension) {
+                this.vectorDimension = vectorDimension;
+                return this;
+            }
+
+            /**
+             * VectorMetricType.
+             */
+            public Builder vectorMetricType(String vectorMetricType) {
+                this.vectorMetricType = vectorMetricType;
+                return this;
+            }
+
+            public Fields build() {
+                return new Fields(this);
+            } 
+
+        } 
+
+    }
 }

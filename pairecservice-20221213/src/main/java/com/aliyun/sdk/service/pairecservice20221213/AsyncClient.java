@@ -410,6 +410,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeployTrafficControlTaskCodeResponse> deployTrafficControlTaskCode(DeployTrafficControlTaskCodeRequest request);
 
     /**
+     * @param request the request parameters of ExportRecallManagementTable  ExportRecallManagementTableRequest
+     * @return ExportRecallManagementTableResponse
+     */
+    CompletableFuture<ExportRecallManagementTableResponse> exportRecallManagementTable(ExportRecallManagementTableRequest request);
+
+    /**
      * @param request the request parameters of GenerateAlgorithmCustomizationScript  GenerateAlgorithmCustomizationScriptRequest
      * @return GenerateAlgorithmCustomizationScriptResponse
      */
@@ -876,6 +882,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryDataDiagnosisStatisticsResponse
      */
     CompletableFuture<QueryDataDiagnosisStatisticsResponse> queryDataDiagnosisStatistics(QueryDataDiagnosisStatisticsRequest request);
+
+    /**
+     * @param request the request parameters of QueryRecallManagementTableRecords  QueryRecallManagementTableRecordsRequest
+     * @return QueryRecallManagementTableRecordsResponse
+     */
+    CompletableFuture<QueryRecallManagementTableRecordsResponse> queryRecallManagementTableRecords(QueryRecallManagementTableRecordsRequest request);
 
     /**
      * @param request the request parameters of QuerySampleConsistencyJobDifference  QuerySampleConsistencyJobDifferenceRequest
