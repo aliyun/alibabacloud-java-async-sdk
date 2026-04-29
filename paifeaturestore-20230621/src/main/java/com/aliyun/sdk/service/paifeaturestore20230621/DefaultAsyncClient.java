@@ -1012,6 +1012,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateFeatureView  UpdateFeatureViewRequest
+     * @return UpdateFeatureViewResponse
+     */
+    @Override
+    public CompletableFuture<UpdateFeatureViewResponse> updateFeatureView(UpdateFeatureViewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateFeatureView").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/instances/{InstanceId}/featureviews/{FeatureViewId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateFeatureViewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateFeatureViewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateLLMConfig  UpdateLLMConfigRequest
      * @return UpdateLLMConfigResponse
      */

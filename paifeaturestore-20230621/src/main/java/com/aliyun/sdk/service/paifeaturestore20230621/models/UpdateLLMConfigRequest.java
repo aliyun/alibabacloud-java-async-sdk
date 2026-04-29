@@ -50,6 +50,10 @@ public class UpdateLLMConfigRequest extends Request {
     private Integer embeddingDimension;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableFusion")
+    private Boolean enableFusion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxTokens")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer maxTokens;
@@ -58,6 +62,10 @@ public class UpdateLLMConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Model")
     @com.aliyun.core.annotation.Validation(required = true)
     private String model;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelType")
+    private String modelType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -78,8 +86,10 @@ public class UpdateLLMConfigRequest extends Request {
         this.baseUrl = builder.baseUrl;
         this.batchSize = builder.batchSize;
         this.embeddingDimension = builder.embeddingDimension;
+        this.enableFusion = builder.enableFusion;
         this.maxTokens = builder.maxTokens;
         this.model = builder.model;
+        this.modelType = builder.modelType;
         this.name = builder.name;
         this.rps = builder.rps;
     }
@@ -147,6 +157,13 @@ public class UpdateLLMConfigRequest extends Request {
     }
 
     /**
+     * @return enableFusion
+     */
+    public Boolean getEnableFusion() {
+        return this.enableFusion;
+    }
+
+    /**
      * @return maxTokens
      */
     public Integer getMaxTokens() {
@@ -158,6 +175,13 @@ public class UpdateLLMConfigRequest extends Request {
      */
     public String getModel() {
         return this.model;
+    }
+
+    /**
+     * @return modelType
+     */
+    public String getModelType() {
+        return this.modelType;
     }
 
     /**
@@ -182,8 +206,10 @@ public class UpdateLLMConfigRequest extends Request {
         private String baseUrl; 
         private Integer batchSize; 
         private Integer embeddingDimension; 
+        private Boolean enableFusion; 
         private Integer maxTokens; 
         private String model; 
+        private String modelType; 
         private String name; 
         private Integer rps; 
 
@@ -200,8 +226,10 @@ public class UpdateLLMConfigRequest extends Request {
             this.baseUrl = request.baseUrl;
             this.batchSize = request.batchSize;
             this.embeddingDimension = request.embeddingDimension;
+            this.enableFusion = request.enableFusion;
             this.maxTokens = request.maxTokens;
             this.model = request.model;
+            this.modelType = request.modelType;
             this.name = request.name;
             this.rps = request.rps;
         } 
@@ -282,6 +310,15 @@ public class UpdateLLMConfigRequest extends Request {
         }
 
         /**
+         * EnableFusion.
+         */
+        public Builder enableFusion(Boolean enableFusion) {
+            this.putBodyParameter("EnableFusion", enableFusion);
+            this.enableFusion = enableFusion;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,6 +339,15 @@ public class UpdateLLMConfigRequest extends Request {
         public Builder model(String model) {
             this.putBodyParameter("Model", model);
             this.model = model;
+            return this;
+        }
+
+        /**
+         * ModelType.
+         */
+        public Builder modelType(String modelType) {
+            this.putBodyParameter("ModelType", modelType);
+            this.modelType = modelType;
             return this;
         }
 

@@ -12,114 +12,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateFeatureViewRequest} extends {@link RequestModel}
+ * {@link UpdateFeatureViewRequest} extends {@link RequestModel}
  *
- * <p>CreateFeatureViewRequest</p>
+ * <p>UpdateFeatureViewRequest</p>
  */
-public class CreateFeatureViewRequest extends Request {
+public class UpdateFeatureViewRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Config")
-    private String config;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("FeatureEntityId")
-    private String featureEntityId;
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("FeatureViewId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String featureViewId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Fields")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Fields> fields;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Name")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String name;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ProjectId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String projectId;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("RegisterDatasourceId")
-    private String registerDatasourceId;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("RegisterTable")
-    private String registerTable;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("SyncOnlineTable")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Boolean syncOnlineTable;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("TTL")
-    private Integer TTL;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List<String> tags;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Type")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String type;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("WriteMethod")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String writeMethod;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("WriteToFeatureDB")
-    private Boolean writeToFeatureDB;
-
-    private CreateFeatureViewRequest(Builder builder) {
+    private UpdateFeatureViewRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
-        this.config = builder.config;
-        this.featureEntityId = builder.featureEntityId;
+        this.instanceId = builder.instanceId;
+        this.featureViewId = builder.featureViewId;
         this.fields = builder.fields;
-        this.name = builder.name;
-        this.projectId = builder.projectId;
-        this.registerDatasourceId = builder.registerDatasourceId;
-        this.registerTable = builder.registerTable;
-        this.syncOnlineTable = builder.syncOnlineTable;
-        this.TTL = builder.TTL;
-        this.tags = builder.tags;
-        this.type = builder.type;
-        this.writeMethod = builder.writeMethod;
-        this.writeToFeatureDB = builder.writeToFeatureDB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateFeatureViewRequest create() {
+    public static UpdateFeatureViewRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     /**
@@ -130,17 +65,17 @@ public class CreateFeatureViewRequest extends Request {
     }
 
     /**
-     * @return config
+     * @return instanceId
      */
-    public String getConfig() {
-        return this.config;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
-     * @return featureEntityId
+     * @return featureViewId
      */
-    public String getFeatureEntityId() {
-        return this.featureEntityId;
+    public String getFeatureViewId() {
+        return this.featureViewId;
     }
 
     /**
@@ -150,115 +85,32 @@ public class CreateFeatureViewRequest extends Request {
         return this.fields;
     }
 
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @return projectId
-     */
-    public String getProjectId() {
-        return this.projectId;
-    }
-
-    /**
-     * @return registerDatasourceId
-     */
-    public String getRegisterDatasourceId() {
-        return this.registerDatasourceId;
-    }
-
-    /**
-     * @return registerTable
-     */
-    public String getRegisterTable() {
-        return this.registerTable;
-    }
-
-    /**
-     * @return syncOnlineTable
-     */
-    public Boolean getSyncOnlineTable() {
-        return this.syncOnlineTable;
-    }
-
-    /**
-     * @return TTL
-     */
-    public Integer getTTL() {
-        return this.TTL;
-    }
-
-    /**
-     * @return tags
-     */
-    public java.util.List<String> getTags() {
-        return this.tags;
-    }
-
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
-    /**
-     * @return writeMethod
-     */
-    public String getWriteMethod() {
-        return this.writeMethod;
-    }
-
-    /**
-     * @return writeToFeatureDB
-     */
-    public Boolean getWriteToFeatureDB() {
-        return this.writeToFeatureDB;
-    }
-
-    public static final class Builder extends Request.Builder<CreateFeatureViewRequest, Builder> {
-        private String instanceId; 
+    public static final class Builder extends Request.Builder<UpdateFeatureViewRequest, Builder> {
         private String regionId; 
-        private String config; 
-        private String featureEntityId; 
+        private String instanceId; 
+        private String featureViewId; 
         private java.util.List<Fields> fields; 
-        private String name; 
-        private String projectId; 
-        private String registerDatasourceId; 
-        private String registerTable; 
-        private Boolean syncOnlineTable; 
-        private Integer TTL; 
-        private java.util.List<String> tags; 
-        private String type; 
-        private String writeMethod; 
-        private Boolean writeToFeatureDB; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateFeatureViewRequest request) {
+        private Builder(UpdateFeatureViewRequest request) {
             super(request);
-            this.instanceId = request.instanceId;
             this.regionId = request.regionId;
-            this.config = request.config;
-            this.featureEntityId = request.featureEntityId;
+            this.instanceId = request.instanceId;
+            this.featureViewId = request.featureViewId;
             this.fields = request.fields;
-            this.name = request.name;
-            this.projectId = request.projectId;
-            this.registerDatasourceId = request.registerDatasourceId;
-            this.registerTable = request.registerTable;
-            this.syncOnlineTable = request.syncOnlineTable;
-            this.TTL = request.TTL;
-            this.tags = request.tags;
-            this.type = request.type;
-            this.writeMethod = request.writeMethod;
-            this.writeToFeatureDB = request.writeToFeatureDB;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -273,34 +125,19 @@ public class CreateFeatureViewRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder featureViewId(String featureViewId) {
+            this.putPathParameter("FeatureViewId", featureViewId);
+            this.featureViewId = featureViewId;
             return this;
         }
 
         /**
-         * Config.
-         */
-        public Builder config(String config) {
-            this.putBodyParameter("Config", config);
-            this.config = config;
-            return this;
-        }
-
-        /**
-         * FeatureEntityId.
-         */
-        public Builder featureEntityId(String featureEntityId) {
-            this.putBodyParameter("FeatureEntityId", featureEntityId);
-            this.featureEntityId = featureEntityId;
-            return this;
-        }
-
-        /**
-         * Fields.
+         * <p>This parameter is required.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
             this.putBodyParameter("Fields", fields);
@@ -308,132 +145,29 @@ public class CreateFeatureViewRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FeatureView1</p>
-         */
-        public Builder name(String name) {
-            this.putBodyParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
-        public Builder projectId(String projectId) {
-            this.putBodyParameter("ProjectId", projectId);
-            this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegisterDatasourceId.
-         */
-        public Builder registerDatasourceId(String registerDatasourceId) {
-            this.putBodyParameter("RegisterDatasourceId", registerDatasourceId);
-            this.registerDatasourceId = registerDatasourceId;
-            return this;
-        }
-
-        /**
-         * RegisterTable.
-         */
-        public Builder registerTable(String registerTable) {
-            this.putBodyParameter("RegisterTable", registerTable);
-            this.registerTable = registerTable;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        public Builder syncOnlineTable(Boolean syncOnlineTable) {
-            this.putBodyParameter("SyncOnlineTable", syncOnlineTable);
-            this.syncOnlineTable = syncOnlineTable;
-            return this;
-        }
-
-        /**
-         * TTL.
-         */
-        public Builder TTL(Integer TTL) {
-            this.putBodyParameter("TTL", TTL);
-            this.TTL = TTL;
-            return this;
-        }
-
-        /**
-         * Tags.
-         */
-        public Builder tags(java.util.List<String> tags) {
-            this.putBodyParameter("Tags", tags);
-            this.tags = tags;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Batch</p>
-         */
-        public Builder type(String type) {
-            this.putBodyParameter("Type", type);
-            this.type = type;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Custom</p>
-         */
-        public Builder writeMethod(String writeMethod) {
-            this.putBodyParameter("WriteMethod", writeMethod);
-            this.writeMethod = writeMethod;
-            return this;
-        }
-
-        /**
-         * WriteToFeatureDB.
-         */
-        public Builder writeToFeatureDB(Boolean writeToFeatureDB) {
-            this.putBodyParameter("WriteToFeatureDB", writeToFeatureDB);
-            this.writeToFeatureDB = writeToFeatureDB;
-            return this;
-        }
-
         @Override
-        public CreateFeatureViewRequest build() {
-            return new CreateFeatureViewRequest(this);
+        public UpdateFeatureViewRequest build() {
+            return new UpdateFeatureViewRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CreateFeatureViewRequest} extends {@link TeaModel}
+     * {@link UpdateFeatureViewRequest} extends {@link TeaModel}
      *
-     * <p>CreateFeatureViewRequest</p>
+     * <p>UpdateFeatureViewRequest</p>
      */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Modality")
         private String modality;
 
         @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Input(Builder builder) {
@@ -497,7 +231,7 @@ public class CreateFeatureViewRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>FeatureView1</p>
+             * <p>f1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -508,7 +242,7 @@ public class CreateFeatureViewRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Batch</p>
+             * <p>STRING</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -524,18 +258,21 @@ public class CreateFeatureViewRequest extends Request {
     }
     /**
      * 
-     * {@link CreateFeatureViewRequest} extends {@link TeaModel}
+     * {@link UpdateFeatureViewRequest} extends {@link TeaModel}
      *
-     * <p>CreateFeatureViewRequest</p>
+     * <p>UpdateFeatureViewRequest</p>
      */
     public static class Transform extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Input")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<Input> input;
 
         @com.aliyun.core.annotation.NameInMap("LLMConfigId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer LLMConfigId;
 
         @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Transform(Builder builder) {
@@ -588,7 +325,7 @@ public class CreateFeatureViewRequest extends Request {
             } 
 
             /**
-             * Input.
+             * <p>This parameter is required.</p>
              */
             public Builder input(java.util.List<Input> input) {
                 this.input = input;
@@ -596,7 +333,10 @@ public class CreateFeatureViewRequest extends Request {
             }
 
             /**
-             * LLMConfigId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder LLMConfigId(Integer LLMConfigId) {
                 this.LLMConfigId = LLMConfigId;
@@ -607,7 +347,7 @@ public class CreateFeatureViewRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Batch</p>
+             * <p>LLMEmbedding</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -623,21 +363,24 @@ public class CreateFeatureViewRequest extends Request {
     }
     /**
      * 
-     * {@link CreateFeatureViewRequest} extends {@link TeaModel}
+     * {@link UpdateFeatureViewRequest} extends {@link TeaModel}
      *
-     * <p>CreateFeatureViewRequest</p>
+     * <p>UpdateFeatureViewRequest</p>
      */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<String> attributes;
 
         @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Transform")
         private java.util.List<Transform> transform;
 
         @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Fields(Builder builder) {
@@ -700,7 +443,7 @@ public class CreateFeatureViewRequest extends Request {
             } 
 
             /**
-             * Attributes.
+             * <p>This parameter is required.</p>
              */
             public Builder attributes(java.util.List<String> attributes) {
                 this.attributes = attributes;
@@ -711,7 +454,7 @@ public class CreateFeatureViewRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>FeatureView1</p>
+             * <p>user_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -730,7 +473,7 @@ public class CreateFeatureViewRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Batch</p>
+             * <p>INT32</p>
              */
             public Builder type(String type) {
                 this.type = type;

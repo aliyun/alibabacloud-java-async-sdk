@@ -578,6 +578,9 @@ public class GetFeatureViewResponseBody extends TeaModel {
      * <p>GetFeatureViewResponseBody</p>
      */
     public static class Input extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Modality")
+        private String modality;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -585,6 +588,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         private String type;
 
         private Input(Builder builder) {
+            this.modality = builder.modality;
             this.name = builder.name;
             this.type = builder.type;
         }
@@ -595,6 +599,13 @@ public class GetFeatureViewResponseBody extends TeaModel {
 
         public static Input create() {
             return builder().build();
+        }
+
+        /**
+         * @return modality
+         */
+        public String getModality() {
+            return this.modality;
         }
 
         /**
@@ -612,6 +623,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String modality; 
             private String name; 
             private String type; 
 
@@ -619,9 +631,18 @@ public class GetFeatureViewResponseBody extends TeaModel {
             } 
 
             private Builder(Input model) {
+                this.modality = model.modality;
                 this.name = model.name;
                 this.type = model.type;
             } 
+
+            /**
+             * Modality.
+             */
+            public Builder modality(String modality) {
+                this.modality = modality;
+                return this;
+            }
 
             /**
              * Name.

@@ -344,6 +344,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDatasourceResponse> updateDatasource(UpdateDatasourceRequest request);
 
     /**
+     * @param request the request parameters of UpdateFeatureView  UpdateFeatureViewRequest
+     * @return UpdateFeatureViewResponse
+     */
+    CompletableFuture<UpdateFeatureViewResponse> updateFeatureView(UpdateFeatureViewRequest request);
+
+    /**
      * @param request the request parameters of UpdateLLMConfig  UpdateLLMConfigRequest
      * @return UpdateLLMConfigResponse
      */

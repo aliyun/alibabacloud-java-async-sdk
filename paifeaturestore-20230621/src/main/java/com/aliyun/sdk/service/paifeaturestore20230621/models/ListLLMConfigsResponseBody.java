@@ -174,6 +174,9 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EmbeddingDimension")
         private Integer embeddingDimension;
 
+        @com.aliyun.core.annotation.NameInMap("EnableFusion")
+        private Boolean enableFusion;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
@@ -188,6 +191,9 @@ public class ListLLMConfigsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
+
+        @com.aliyun.core.annotation.NameInMap("ModelType")
+        private String modelType;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -206,11 +212,13 @@ public class ListLLMConfigsResponseBody extends TeaModel {
             this.baseUrl = builder.baseUrl;
             this.batchSize = builder.batchSize;
             this.embeddingDimension = builder.embeddingDimension;
+            this.enableFusion = builder.enableFusion;
             this.gmtCreateTime = builder.gmtCreateTime;
             this.gmtModifiedTime = builder.gmtModifiedTime;
             this.LLMConfigId = builder.LLMConfigId;
             this.maxTokens = builder.maxTokens;
             this.model = builder.model;
+            this.modelType = builder.modelType;
             this.name = builder.name;
             this.resourceGroupId = builder.resourceGroupId;
             this.rps = builder.rps;
@@ -254,6 +262,13 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableFusion
+         */
+        public Boolean getEnableFusion() {
+            return this.enableFusion;
+        }
+
+        /**
          * @return gmtCreateTime
          */
         public String getGmtCreateTime() {
@@ -289,6 +304,13 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return modelType
+         */
+        public String getModelType() {
+            return this.modelType;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -321,11 +343,13 @@ public class ListLLMConfigsResponseBody extends TeaModel {
             private String baseUrl; 
             private Integer batchSize; 
             private Integer embeddingDimension; 
+            private Boolean enableFusion; 
             private String gmtCreateTime; 
             private String gmtModifiedTime; 
             private String LLMConfigId; 
             private Integer maxTokens; 
             private String model; 
+            private String modelType; 
             private String name; 
             private String resourceGroupId; 
             private Integer rps; 
@@ -339,11 +363,13 @@ public class ListLLMConfigsResponseBody extends TeaModel {
                 this.baseUrl = model.baseUrl;
                 this.batchSize = model.batchSize;
                 this.embeddingDimension = model.embeddingDimension;
+                this.enableFusion = model.enableFusion;
                 this.gmtCreateTime = model.gmtCreateTime;
                 this.gmtModifiedTime = model.gmtModifiedTime;
                 this.LLMConfigId = model.LLMConfigId;
                 this.maxTokens = model.maxTokens;
                 this.model = model.model;
+                this.modelType = model.modelType;
                 this.name = model.name;
                 this.resourceGroupId = model.resourceGroupId;
                 this.rps = model.rps;
@@ -379,6 +405,14 @@ public class ListLLMConfigsResponseBody extends TeaModel {
              */
             public Builder embeddingDimension(Integer embeddingDimension) {
                 this.embeddingDimension = embeddingDimension;
+                return this;
+            }
+
+            /**
+             * EnableFusion.
+             */
+            public Builder enableFusion(Boolean enableFusion) {
+                this.enableFusion = enableFusion;
                 return this;
             }
 
@@ -419,6 +453,14 @@ public class ListLLMConfigsResponseBody extends TeaModel {
              */
             public Builder model(String model) {
                 this.model = model;
+                return this;
+            }
+
+            /**
+             * ModelType.
+             */
+            public Builder modelType(String modelType) {
+                this.modelType = modelType;
                 return this;
             }
 

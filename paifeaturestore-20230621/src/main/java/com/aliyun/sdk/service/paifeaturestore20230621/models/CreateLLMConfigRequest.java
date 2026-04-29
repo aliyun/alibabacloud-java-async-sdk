@@ -44,6 +44,10 @@ public class CreateLLMConfigRequest extends Request {
     private Integer embeddingDimension;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableFusion")
+    private Boolean enableFusion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxTokens")
     private Integer maxTokens;
 
@@ -51,6 +55,10 @@ public class CreateLLMConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Model")
     @com.aliyun.core.annotation.Validation(required = true)
     private String model;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelType")
+    private String modelType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -74,8 +82,10 @@ public class CreateLLMConfigRequest extends Request {
         this.baseUrl = builder.baseUrl;
         this.batchSize = builder.batchSize;
         this.embeddingDimension = builder.embeddingDimension;
+        this.enableFusion = builder.enableFusion;
         this.maxTokens = builder.maxTokens;
         this.model = builder.model;
+        this.modelType = builder.modelType;
         this.name = builder.name;
         this.rps = builder.rps;
         this.workspaceId = builder.workspaceId;
@@ -137,6 +147,13 @@ public class CreateLLMConfigRequest extends Request {
     }
 
     /**
+     * @return enableFusion
+     */
+    public Boolean getEnableFusion() {
+        return this.enableFusion;
+    }
+
+    /**
      * @return maxTokens
      */
     public Integer getMaxTokens() {
@@ -148,6 +165,13 @@ public class CreateLLMConfigRequest extends Request {
      */
     public String getModel() {
         return this.model;
+    }
+
+    /**
+     * @return modelType
+     */
+    public String getModelType() {
+        return this.modelType;
     }
 
     /**
@@ -178,8 +202,10 @@ public class CreateLLMConfigRequest extends Request {
         private String baseUrl; 
         private Integer batchSize; 
         private Integer embeddingDimension; 
+        private Boolean enableFusion; 
         private Integer maxTokens; 
         private String model; 
+        private String modelType; 
         private String name; 
         private Integer rps; 
         private String workspaceId; 
@@ -196,8 +222,10 @@ public class CreateLLMConfigRequest extends Request {
             this.baseUrl = request.baseUrl;
             this.batchSize = request.batchSize;
             this.embeddingDimension = request.embeddingDimension;
+            this.enableFusion = request.enableFusion;
             this.maxTokens = request.maxTokens;
             this.model = request.model;
+            this.modelType = request.modelType;
             this.name = request.name;
             this.rps = request.rps;
             this.workspaceId = request.workspaceId;
@@ -264,6 +292,15 @@ public class CreateLLMConfigRequest extends Request {
         }
 
         /**
+         * EnableFusion.
+         */
+        public Builder enableFusion(Boolean enableFusion) {
+            this.putBodyParameter("EnableFusion", enableFusion);
+            this.enableFusion = enableFusion;
+            return this;
+        }
+
+        /**
          * MaxTokens.
          */
         public Builder maxTokens(Integer maxTokens) {
@@ -281,6 +318,15 @@ public class CreateLLMConfigRequest extends Request {
         public Builder model(String model) {
             this.putBodyParameter("Model", model);
             this.model = model;
+            return this;
+        }
+
+        /**
+         * ModelType.
+         */
+        public Builder modelType(String modelType) {
+            this.putBodyParameter("ModelType", modelType);
+            this.modelType = modelType;
             return this;
         }
 
