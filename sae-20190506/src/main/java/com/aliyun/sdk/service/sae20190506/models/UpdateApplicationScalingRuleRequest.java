@@ -47,6 +47,10 @@ public class UpdateApplicationScalingRuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ScalingRuleTimer")
     private String scalingRuleTimer;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleType")
+    private String scalingRuleType;
+
     private UpdateApplicationScalingRuleRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
@@ -56,6 +60,7 @@ public class UpdateApplicationScalingRuleRequest extends Request {
         this.scalingRuleMetric = builder.scalingRuleMetric;
         this.scalingRuleName = builder.scalingRuleName;
         this.scalingRuleTimer = builder.scalingRuleTimer;
+        this.scalingRuleType = builder.scalingRuleType;
     }
 
     public static Builder builder() {
@@ -120,6 +125,13 @@ public class UpdateApplicationScalingRuleRequest extends Request {
         return this.scalingRuleTimer;
     }
 
+    /**
+     * @return scalingRuleType
+     */
+    public String getScalingRuleType() {
+        return this.scalingRuleType;
+    }
+
     public static final class Builder extends Request.Builder<UpdateApplicationScalingRuleRequest, Builder> {
         private String appId; 
         private Boolean enableIdle; 
@@ -128,6 +140,7 @@ public class UpdateApplicationScalingRuleRequest extends Request {
         private String scalingRuleMetric; 
         private String scalingRuleName; 
         private String scalingRuleTimer; 
+        private String scalingRuleType; 
 
         private Builder() {
             super();
@@ -142,6 +155,7 @@ public class UpdateApplicationScalingRuleRequest extends Request {
             this.scalingRuleMetric = request.scalingRuleMetric;
             this.scalingRuleName = request.scalingRuleName;
             this.scalingRuleTimer = request.scalingRuleTimer;
+            this.scalingRuleType = request.scalingRuleType;
         } 
 
         /**
@@ -327,6 +341,15 @@ public class UpdateApplicationScalingRuleRequest extends Request {
         public Builder scalingRuleTimer(String scalingRuleTimer) {
             this.putQueryParameter("ScalingRuleTimer", scalingRuleTimer);
             this.scalingRuleTimer = scalingRuleTimer;
+            return this;
+        }
+
+        /**
+         * ScalingRuleType.
+         */
+        public Builder scalingRuleType(String scalingRuleType) {
+            this.putQueryParameter("ScalingRuleType", scalingRuleType);
+            this.scalingRuleType = scalingRuleType;
             return this;
         }
 
