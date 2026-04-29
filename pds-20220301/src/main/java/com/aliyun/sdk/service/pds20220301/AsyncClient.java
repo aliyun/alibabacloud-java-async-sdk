@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddStoryFilesResponse> addStoryFiles(AddStoryFilesRequest request);
 
     /**
+     * @param request the request parameters of ArchiveFiles  ArchiveFilesRequest
+     * @return ArchiveFilesResponse
+     */
+    CompletableFuture<ArchiveFilesResponse> archiveFiles(ArchiveFilesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to assign a group administrator role to a user.</p>
      * 

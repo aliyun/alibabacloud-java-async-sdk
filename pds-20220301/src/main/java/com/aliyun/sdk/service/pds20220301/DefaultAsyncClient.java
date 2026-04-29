@@ -76,6 +76,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ArchiveFiles  ArchiveFilesRequest
+     * @return ArchiveFilesResponse
+     */
+    @Override
+    public CompletableFuture<ArchiveFilesResponse> archiveFiles(ArchiveFilesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ArchiveFiles").setMethod(HttpMethod.POST).setPathRegex("/v2/file/archive_files").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ArchiveFilesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ArchiveFilesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to assign a group administrator role to a user.</p>
      * 
