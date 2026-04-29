@@ -242,6 +242,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePartnerReservePriceResponse> updatePartnerReservePrice(UpdatePartnerReservePriceRequest request);
 
     /**
+     * @param request the request parameters of UpdateProxyPrice  UpdateProxyPriceRequest
+     * @return UpdateProxyPriceResponse
+     */
+    CompletableFuture<UpdateProxyPriceResponse> updateProxyPrice(UpdateProxyPriceRequest request);
+
+    /**
      * @param request the request parameters of WebsiteAddDnsRecord  WebsiteAddDnsRecordRequest
      * @return WebsiteAddDnsRecordResponse
      */
