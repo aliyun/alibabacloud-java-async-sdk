@@ -500,6 +500,9 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyUsageList")
         private java.util.List<KeyUsageList> keyUsageList;
 
+        @com.aliyun.core.annotation.NameInMap("PrefixCacheEnabled")
+        private Boolean prefixCacheEnabled;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
@@ -522,6 +525,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             this.instanceClass = builder.instanceClass;
             this.instanceId = builder.instanceId;
             this.keyUsageList = builder.keyUsageList;
+            this.prefixCacheEnabled = builder.prefixCacheEnabled;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.totalQuota = builder.totalQuota;
@@ -600,6 +604,13 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         }
 
         /**
+         * @return prefixCacheEnabled
+         */
+        public Boolean getPrefixCacheEnabled() {
+            return this.prefixCacheEnabled;
+        }
+
+        /**
          * @return startTime
          */
         public Long getStartTime() {
@@ -637,6 +648,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             private String instanceClass; 
             private String instanceId; 
             private java.util.List<KeyUsageList> keyUsageList; 
+            private Boolean prefixCacheEnabled; 
             private Long startTime; 
             private String status; 
             private Long totalQuota; 
@@ -655,6 +667,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
                 this.instanceClass = model.instanceClass;
                 this.instanceId = model.instanceId;
                 this.keyUsageList = model.keyUsageList;
+                this.prefixCacheEnabled = model.prefixCacheEnabled;
                 this.startTime = model.startTime;
                 this.status = model.status;
                 this.totalQuota = model.totalQuota;
@@ -733,6 +746,14 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
              */
             public Builder keyUsageList(java.util.List<KeyUsageList> keyUsageList) {
                 this.keyUsageList = keyUsageList;
+                return this;
+            }
+
+            /**
+             * PrefixCacheEnabled.
+             */
+            public Builder prefixCacheEnabled(Boolean prefixCacheEnabled) {
+                this.prefixCacheEnabled = prefixCacheEnabled;
                 return this;
             }
 

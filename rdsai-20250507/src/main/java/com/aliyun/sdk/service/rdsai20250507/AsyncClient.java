@@ -512,6 +512,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateCustomAgentResponse> updateCustomAgent(UpdateCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of UpdateMOQuotaAlertThreshold  UpdateMOQuotaAlertThresholdRequest
+     * @return UpdateMOQuotaAlertThresholdResponse
+     */
+    CompletableFuture<UpdateMOQuotaAlertThresholdResponse> updateMOQuotaAlertThreshold(UpdateMOQuotaAlertThresholdRequest request);
+
+    /**
      * @param request the request parameters of UpdateSkill  UpdateSkillRequest
      * @return UpdateSkillResponse
      */
