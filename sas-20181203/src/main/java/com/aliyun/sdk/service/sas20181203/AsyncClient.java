@@ -3879,6 +3879,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<HandleMaliciousFilesResponse> handleMaliciousFiles(HandleMaliciousFilesRequest request);
 
     /**
+     * @param request the request parameters of HandleObjectScanEvent  HandleObjectScanEventRequest
+     * @return HandleObjectScanEventResponse
+     */
+    CompletableFuture<HandleObjectScanEventResponse> handleObjectScanEvent(HandleObjectScanEventRequest request);
+
+    /**
      * @param request the request parameters of HandleSecurityEvents  HandleSecurityEventsRequest
      * @return HandleSecurityEventsResponse
      */
