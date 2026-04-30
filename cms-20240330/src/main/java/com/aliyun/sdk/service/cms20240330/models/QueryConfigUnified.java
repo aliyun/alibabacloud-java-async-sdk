@@ -32,6 +32,9 @@ public class QueryConfigUnified extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("entityType")
     private String entityType;
 
+    @com.aliyun.core.annotation.NameInMap("expr")
+    private String expr;
+
     @com.aliyun.core.annotation.NameInMap("filterList")
     private java.util.List<ApmFilterConfig> filterList;
 
@@ -63,6 +66,7 @@ public class QueryConfigUnified extends TeaModel {
         this.entityFields = builder.entityFields;
         this.entityFilters = builder.entityFilters;
         this.entityType = builder.entityType;
+        this.expr = builder.expr;
         this.filterList = builder.filterList;
         this.labelFilters = builder.labelFilters;
         this.measureList = builder.measureList;
@@ -118,6 +122,13 @@ public class QueryConfigUnified extends TeaModel {
      */
     public String getEntityType() {
         return this.entityType;
+    }
+
+    /**
+     * @return expr
+     */
+    public String getExpr() {
+        return this.expr;
     }
 
     /**
@@ -182,6 +193,7 @@ public class QueryConfigUnified extends TeaModel {
         private java.util.List<UmodelEntityField> entityFields; 
         private java.util.List<UmodelEntityFilter> entityFilters; 
         private String entityType; 
+        private String expr; 
         private java.util.List<ApmFilterConfig> filterList; 
         private java.util.List<UmodelLabelFilter> labelFilters; 
         private java.util.List<ApmMeasureConfig> measureList; 
@@ -200,6 +212,7 @@ public class QueryConfigUnified extends TeaModel {
             this.entityFields = model.entityFields;
             this.entityFilters = model.entityFilters;
             this.entityType = model.entityType;
+            this.expr = model.expr;
             this.filterList = model.filterList;
             this.labelFilters = model.labelFilters;
             this.measureList = model.measureList;
@@ -247,6 +260,14 @@ public class QueryConfigUnified extends TeaModel {
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
+            return this;
+        }
+
+        /**
+         * expr.
+         */
+        public Builder expr(String expr) {
+            this.expr = expr;
             return this;
         }
 
