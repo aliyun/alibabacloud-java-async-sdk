@@ -3099,6 +3099,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询表的字段知识列表，返回每个字段的元信息（类型、可空、自增等）、业务描述、术语、数据标准、安全等级与索引信息</p>
+     * 
+     * @param request the request parameters of GetTableColumnList  GetTableColumnListRequest
+     * @return GetTableColumnListResponse
+     */
+    @Override
+    public CompletableFuture<GetTableColumnListResponse> getTableColumnList(GetTableColumnListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTableColumnList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTableColumnListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTableColumnListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTableDBTopology  GetTableDBTopologyRequest
      * @return GetTableDBTopologyResponse
      */
@@ -3147,6 +3168,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetTableDesignProjectInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询表的业务知识/使用说明，返回 AI 增强业务描述、表业务摘要、关联资产列表，用于辅助语义找表与表用法说明</p>
+     * 
+     * @param request the request parameters of GetTableInstructions  GetTableInstructionsRequest
+     * @return GetTableInstructionsResponse
+     */
+    @Override
+    public CompletableFuture<GetTableInstructionsResponse> getTableInstructions(GetTableInstructionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTableInstructions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTableInstructionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTableInstructionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5391,6 +5433,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SearchTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询某张表相关的资产知识列表，支持按知识类型、关键词等条件筛选，返回 KnowledgeBaseVO 分页结果</p>
+     * 
+     * @param request the request parameters of SearchTableAssetKnowledge  SearchTableAssetKnowledgeRequest
+     * @return SearchTableAssetKnowledgeResponse
+     */
+    @Override
+    public CompletableFuture<SearchTableAssetKnowledgeResponse> searchTableAssetKnowledge(SearchTableAssetKnowledgeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SearchTableAssetKnowledge").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchTableAssetKnowledgeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchTableAssetKnowledgeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

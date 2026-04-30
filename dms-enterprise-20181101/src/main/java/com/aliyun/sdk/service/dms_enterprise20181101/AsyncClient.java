@@ -1226,6 +1226,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetStructSyncOrderDetailResponse> getStructSyncOrderDetail(GetStructSyncOrderDetailRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>查询表的字段知识列表，返回每个字段的元信息（类型、可空、自增等）、业务描述、术语、数据标准、安全等级与索引信息</p>
+     * 
+     * @param request the request parameters of GetTableColumnList  GetTableColumnListRequest
+     * @return GetTableColumnListResponse
+     */
+    CompletableFuture<GetTableColumnListResponse> getTableColumnList(GetTableColumnListRequest request);
+
+    /**
      * @param request the request parameters of GetTableDBTopology  GetTableDBTopologyRequest
      * @return GetTableDBTopologyResponse
      */
@@ -1242,6 +1251,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTableDesignProjectInfoResponse
      */
     CompletableFuture<GetTableDesignProjectInfoResponse> getTableDesignProjectInfo(GetTableDesignProjectInfoRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>查询表的业务知识/使用说明，返回 AI 增强业务描述、表业务摘要、关联资产列表，用于辅助语义找表与表用法说明</p>
+     * 
+     * @param request the request parameters of GetTableInstructions  GetTableInstructionsRequest
+     * @return GetTableInstructionsResponse
+     */
+    CompletableFuture<GetTableInstructionsResponse> getTableInstructions(GetTableInstructionsRequest request);
 
     /**
      * <b>description</b> :
@@ -2046,6 +2064,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SearchTableResponse
      */
     CompletableFuture<SearchTableResponse> searchTable(SearchTableRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询某张表相关的资产知识列表，支持按知识类型、关键词等条件筛选，返回 KnowledgeBaseVO 分页结果</p>
+     * 
+     * @param request the request parameters of SearchTableAssetKnowledge  SearchTableAssetKnowledgeRequest
+     * @return SearchTableAssetKnowledgeResponse
+     */
+    CompletableFuture<SearchTableAssetKnowledgeResponse> searchTableAssetKnowledge(SearchTableAssetKnowledgeRequest request);
 
     /**
      * <b>description</b> :
