@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddFirewallRulesResponse> addFirewallRules(AddFirewallRulesRequest request);
 
     /**
+     * @param request the request parameters of AddPolarClawMCPServer  AddPolarClawMCPServerRequest
+     * @return AddPolarClawMCPServerResponse
+     */
+    CompletableFuture<AddPolarClawMCPServerResponse> addPolarClawMCPServer(AddPolarClawMCPServerRequest request);
+
+    /**
      * @param request the request parameters of AddPolarFsPathMapping  AddPolarFsPathMappingRequest
      * @return AddPolarFsPathMappingResponse
      */
@@ -66,6 +72,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return AttachApplicationPolarFSResponse
      */
     CompletableFuture<AttachApplicationPolarFSResponse> attachApplicationPolarFS(AttachApplicationPolarFSRequest request);
+
+    /**
+     * @param request the request parameters of BindPolarClawAgent  BindPolarClawAgentRequest
+     * @return BindPolarClawAgentResponse
+     */
+    CompletableFuture<BindPolarClawAgentResponse> bindPolarClawAgent(BindPolarClawAgentRequest request);
 
     /**
      * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
@@ -182,6 +194,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ContinueDBClusterMigrationResponse
      */
     CompletableFuture<ContinueDBClusterMigrationResponse> continueDBClusterMigration(ContinueDBClusterMigrationRequest request);
+
+    /**
+     * @param request the request parameters of CreateAIDBCluster  CreateAIDBClusterRequest
+     * @return CreateAIDBClusterResponse
+     */
+    CompletableFuture<CreateAIDBClusterResponse> createAIDBCluster(CreateAIDBClusterRequest request);
 
     /**
      * @param request the request parameters of CreateAIDBClusterDataset  CreateAIDBClusterDatasetRequest
@@ -428,6 +446,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateParameterGroupResponse
      */
     CompletableFuture<CreateParameterGroupResponse> createParameterGroup(CreateParameterGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreatePolarClawAgent  CreatePolarClawAgentRequest
+     * @return CreatePolarClawAgentResponse
+     */
+    CompletableFuture<CreatePolarClawAgentResponse> createPolarClawAgent(CreatePolarClawAgentRequest request);
+
+    /**
+     * @param request the request parameters of CreatePolarClawChannel  CreatePolarClawChannelRequest
+     * @return CreatePolarClawChannelResponse
+     */
+    CompletableFuture<CreatePolarClawChannelResponse> createPolarClawChannel(CreatePolarClawChannelRequest request);
+
+    /**
+     * @param request the request parameters of CreatePolarClawCronJob  CreatePolarClawCronJobRequest
+     * @return CreatePolarClawCronJobResponse
+     */
+    CompletableFuture<CreatePolarClawCronJobResponse> createPolarClawCronJob(CreatePolarClawCronJobRequest request);
 
     /**
      * <b>description</b> :
@@ -711,6 +747,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteParameterGroupResponse
      */
     CompletableFuture<DeleteParameterGroupResponse> deleteParameterGroup(DeleteParameterGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeletePolarClawAgent  DeletePolarClawAgentRequest
+     * @return DeletePolarClawAgentResponse
+     */
+    CompletableFuture<DeletePolarClawAgentResponse> deletePolarClawAgent(DeletePolarClawAgentRequest request);
+
+    /**
+     * @param request the request parameters of DeletePolarClawChannel  DeletePolarClawChannelRequest
+     * @return DeletePolarClawChannelResponse
+     */
+    CompletableFuture<DeletePolarClawChannelResponse> deletePolarClawChannel(DeletePolarClawChannelRequest request);
+
+    /**
+     * @param request the request parameters of DeletePolarClawCronJob  DeletePolarClawCronJobRequest
+     * @return DeletePolarClawCronJobResponse
+     */
+    CompletableFuture<DeletePolarClawCronJobResponse> deletePolarClawCronJob(DeletePolarClawCronJobRequest request);
 
     /**
      * <b>description</b> :
@@ -1470,6 +1524,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarAgentUserSessionsResponse> describePolarAgentUserSessions(DescribePolarAgentUserSessionsRequest request);
 
     /**
+     * @param request the request parameters of DescribePolarClawAgents  DescribePolarClawAgentsRequest
+     * @return DescribePolarClawAgentsResponse
+     */
+    CompletableFuture<DescribePolarClawAgentsResponse> describePolarClawAgents(DescribePolarClawAgentsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarClawChannels  DescribePolarClawChannelsRequest
+     * @return DescribePolarClawChannelsResponse
+     */
+    CompletableFuture<DescribePolarClawChannelsResponse> describePolarClawChannels(DescribePolarClawChannelsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarClawCronJobs  DescribePolarClawCronJobsRequest
+     * @return DescribePolarClawCronJobsResponse
+     */
+    CompletableFuture<DescribePolarClawCronJobsResponse> describePolarClawCronJobs(DescribePolarClawCronJobsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarClawMCPServers  DescribePolarClawMCPServersRequest
+     * @return DescribePolarClawMCPServersResponse
+     */
+    CompletableFuture<DescribePolarClawMCPServersResponse> describePolarClawMCPServers(DescribePolarClawMCPServersRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarClawPlugins  DescribePolarClawPluginsRequest
+     * @return DescribePolarClawPluginsResponse
+     */
+    CompletableFuture<DescribePolarClawPluginsResponse> describePolarClawPlugins(DescribePolarClawPluginsRequest request);
+
+    /**
      * @param request the request parameters of DescribePolarFsAttribute  DescribePolarFsAttributeRequest
      * @return DescribePolarFsAttributeResponse
      */
@@ -1636,6 +1720,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableDBClusterServerlessResponse> disableDBClusterServerless(DisableDBClusterServerlessRequest request);
 
     /**
+     * @param request the request parameters of DisablePolarClawChannel  DisablePolarClawChannelRequest
+     * @return DisablePolarClawChannelResponse
+     */
+    CompletableFuture<DisablePolarClawChannelResponse> disablePolarClawChannel(DisablePolarClawChannelRequest request);
+
+    /**
+     * @param request the request parameters of DisablePolarClawCronJob  DisablePolarClawCronJobRequest
+     * @return DisablePolarClawCronJobResponse
+     */
+    CompletableFuture<DisablePolarClawCronJobResponse> disablePolarClawCronJob(DisablePolarClawCronJobRequest request);
+
+    /**
+     * @param request the request parameters of DisablePolarClawPlugin  DisablePolarClawPluginRequest
+     * @return DisablePolarClawPluginResponse
+     */
+    CompletableFuture<DisablePolarClawPluginResponse> disablePolarClawPlugin(DisablePolarClawPluginRequest request);
+
+    /**
      * @param request the request parameters of EnableDBClusterDynamoDB  EnableDBClusterDynamoDBRequest
      * @return EnableDBClusterDynamoDBResponse
      */
@@ -1658,6 +1760,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableFirewallRulesResponse
      */
     CompletableFuture<EnableFirewallRulesResponse> enableFirewallRules(EnableFirewallRulesRequest request);
+
+    /**
+     * @param request the request parameters of EnablePolarClawChannel  EnablePolarClawChannelRequest
+     * @return EnablePolarClawChannelResponse
+     */
+    CompletableFuture<EnablePolarClawChannelResponse> enablePolarClawChannel(EnablePolarClawChannelRequest request);
+
+    /**
+     * @param request the request parameters of EnablePolarClawCronJob  EnablePolarClawCronJobRequest
+     * @return EnablePolarClawCronJobResponse
+     */
+    CompletableFuture<EnablePolarClawCronJobResponse> enablePolarClawCronJob(EnablePolarClawCronJobRequest request);
+
+    /**
+     * @param request the request parameters of EnablePolarClawPlugin  EnablePolarClawPluginRequest
+     * @return EnablePolarClawPluginResponse
+     */
+    CompletableFuture<EnablePolarClawPluginResponse> enablePolarClawPlugin(EnablePolarClawPluginRequest request);
 
     /**
      * @param request the request parameters of EnableSQLRateLimitingRules  EnableSQLRateLimitingRulesRequest
@@ -1704,6 +1824,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<GetPolarAgentResponseBody> getPolarAgentWithResponseIterable(GetPolarAgentRequest request);
 
     /**
+     * @param request the request parameters of GetPolarClawConfig  GetPolarClawConfigRequest
+     * @return GetPolarClawConfigResponse
+     */
+    CompletableFuture<GetPolarClawConfigResponse> getPolarClawConfig(GetPolarClawConfigRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <ul>
@@ -1727,10 +1853,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GrantAccountPrivilegeZonalResponse> grantAccountPrivilegeZonal(GrantAccountPrivilegeZonalRequest request);
 
     /**
+     * @param request the request parameters of InstallPolarClawPlugin  InstallPolarClawPluginRequest
+     * @return InstallPolarClawPluginResponse
+     */
+    CompletableFuture<InstallPolarClawPluginResponse> installPolarClawPlugin(InstallPolarClawPluginRequest request);
+
+    /**
      * @param request the request parameters of ListOrders  ListOrdersRequest
      * @return ListOrdersResponse
      */
     CompletableFuture<ListOrdersResponse> listOrders(ListOrdersRequest request);
+
+    /**
+     * @param request the request parameters of ListPolarClawBindings  ListPolarClawBindingsRequest
+     * @return ListPolarClawBindingsResponse
+     */
+    CompletableFuture<ListPolarClawBindingsResponse> listPolarClawBindings(ListPolarClawBindingsRequest request);
 
     /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
@@ -2226,6 +2364,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OpenAITaskResponse> openAITask(OpenAITaskRequest request);
 
     /**
+     * @param request the request parameters of PatchPolarClawConfig  PatchPolarClawConfigRequest
+     * @return PatchPolarClawConfigResponse
+     */
+    CompletableFuture<PatchPolarClawConfigResponse> patchPolarClawConfig(PatchPolarClawConfigRequest request);
+
+    /**
      * @param request the request parameters of ReactivateDBClusterBackup  ReactivateDBClusterBackupRequest
      * @return ReactivateDBClusterBackupResponse
      */
@@ -2238,6 +2382,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefreshDBClusterStorageUsageResponse> refreshDBClusterStorageUsage(RefreshDBClusterStorageUsageRequest request);
 
     /**
+     * @param request the request parameters of RemoveApplicationEnvironmentVariables  RemoveApplicationEnvironmentVariablesRequest
+     * @return RemoveApplicationEnvironmentVariablesResponse
+     */
+    CompletableFuture<RemoveApplicationEnvironmentVariablesResponse> removeApplicationEnvironmentVariables(RemoveApplicationEnvironmentVariablesRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> You cannot remove the primary cluster from a GDN.</p>
@@ -2247,6 +2397,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveDBClusterFromGDNResponse
      */
     CompletableFuture<RemoveDBClusterFromGDNResponse> removeDBClusterFromGDN(RemoveDBClusterFromGDNRequest request);
+
+    /**
+     * @param request the request parameters of RemovePolarClawMCPServer  RemovePolarClawMCPServerRequest
+     * @return RemovePolarClawMCPServerResponse
+     */
+    CompletableFuture<RemovePolarClawMCPServerResponse> removePolarClawMCPServer(RemovePolarClawMCPServerRequest request);
 
     /**
      * <b>description</b> :
@@ -2323,6 +2479,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeAccountPrivilegeZonalResponse> revokeAccountPrivilegeZonal(RevokeAccountPrivilegeZonalRequest request);
 
     /**
+     * @param request the request parameters of RunPolarClawCronJob  RunPolarClawCronJobRequest
+     * @return RunPolarClawCronJobResponse
+     */
+    CompletableFuture<RunPolarClawCronJobResponse> runPolarClawCronJob(RunPolarClawCronJobRequest request);
+
+    /**
      * @param request the request parameters of SearchMemories  SearchMemoriesRequest
      * @return SearchMemoriesResponse
      */
@@ -2368,16 +2530,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TransformDBClusterPayTypeResponse> transformDBClusterPayType(TransformDBClusterPayTypeRequest request);
 
     /**
+     * @param request the request parameters of UnbindPolarClawAgent  UnbindPolarClawAgentRequest
+     * @return UnbindPolarClawAgentResponse
+     */
+    CompletableFuture<UnbindPolarClawAgentResponse> unbindPolarClawAgent(UnbindPolarClawAgentRequest request);
+
+    /**
+     * @param request the request parameters of UninstallPolarClawPlugin  UninstallPolarClawPluginRequest
+     * @return UninstallPolarClawPluginResponse
+     */
+    CompletableFuture<UninstallPolarClawPluginResponse> uninstallPolarClawPlugin(UninstallPolarClawPluginRequest request);
+
+    /**
      * @param request the request parameters of UntagResources  UntagResourcesRequest
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
+     * @param request the request parameters of UpdateApplicationEnvironmentVariables  UpdateApplicationEnvironmentVariablesRequest
+     * @return UpdateApplicationEnvironmentVariablesResponse
+     */
+    CompletableFuture<UpdateApplicationEnvironmentVariablesResponse> updateApplicationEnvironmentVariables(UpdateApplicationEnvironmentVariablesRequest request);
+
+    /**
      * @param request the request parameters of UpdateExtensions  UpdateExtensionsRequest
      * @return UpdateExtensionsResponse
      */
     CompletableFuture<UpdateExtensionsResponse> updateExtensions(UpdateExtensionsRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePolarClawAgent  UpdatePolarClawAgentRequest
+     * @return UpdatePolarClawAgentResponse
+     */
+    CompletableFuture<UpdatePolarClawAgentResponse> updatePolarClawAgent(UpdatePolarClawAgentRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePolarClawCronJob  UpdatePolarClawCronJobRequest
+     * @return UpdatePolarClawCronJobResponse
+     */
+    CompletableFuture<UpdatePolarClawCronJobResponse> updatePolarClawCronJob(UpdatePolarClawCronJobRequest request);
 
     /**
      * <b>description</b> :
@@ -2398,6 +2590,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpgradeDBClusterVersionZonalResponse
      */
     CompletableFuture<UpgradeDBClusterVersionZonalResponse> upgradeDBClusterVersionZonal(UpgradeDBClusterVersionZonalRequest request);
+
+    /**
+     * @param request the request parameters of UpgradePolarClawChannel  UpgradePolarClawChannelRequest
+     * @return UpgradePolarClawChannelResponse
+     */
+    CompletableFuture<UpgradePolarClawChannelResponse> upgradePolarClawChannel(UpgradePolarClawChannelRequest request);
+
+    /**
+     * @param request the request parameters of UpgradePolarClawPlugin  UpgradePolarClawPluginRequest
+     * @return UpgradePolarClawPluginResponse
+     */
+    CompletableFuture<UpgradePolarClawPluginResponse> upgradePolarClawPlugin(UpgradePolarClawPluginRequest request);
 
     /**
      * @param request the request parameters of UpgradePolarClawSkills  UpgradePolarClawSkillsRequest
