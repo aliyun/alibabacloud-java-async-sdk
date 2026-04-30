@@ -407,6 +407,9 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
+        @com.aliyun.core.annotation.NameInMap("PreferVpcAccess")
+        private Boolean preferVpcAccess;
+
         @com.aliyun.core.annotation.NameInMap("ProviderId")
         private String providerId;
 
@@ -416,12 +419,17 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SsoServiceUrl")
         private String ssoServiceUrl;
 
+        @com.aliyun.core.annotation.NameInMap("VpcAccessAddress")
+        private String vpcAccessAddress;
+
         private OfficeSiteInfo(Builder builder) {
             this.accessType = builder.accessType;
             this.officeSiteId = builder.officeSiteId;
+            this.preferVpcAccess = builder.preferVpcAccess;
             this.providerId = builder.providerId;
             this.regionId = builder.regionId;
             this.ssoServiceUrl = builder.ssoServiceUrl;
+            this.vpcAccessAddress = builder.vpcAccessAddress;
         }
 
         public static Builder builder() {
@@ -447,6 +455,13 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         }
 
         /**
+         * @return preferVpcAccess
+         */
+        public Boolean getPreferVpcAccess() {
+            return this.preferVpcAccess;
+        }
+
+        /**
          * @return providerId
          */
         public String getProviderId() {
@@ -467,12 +482,21 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
             return this.ssoServiceUrl;
         }
 
+        /**
+         * @return vpcAccessAddress
+         */
+        public String getVpcAccessAddress() {
+            return this.vpcAccessAddress;
+        }
+
         public static final class Builder {
             private String accessType; 
             private String officeSiteId; 
+            private Boolean preferVpcAccess; 
             private String providerId; 
             private String regionId; 
             private String ssoServiceUrl; 
+            private String vpcAccessAddress; 
 
             private Builder() {
             } 
@@ -480,9 +504,11 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
             private Builder(OfficeSiteInfo model) {
                 this.accessType = model.accessType;
                 this.officeSiteId = model.officeSiteId;
+                this.preferVpcAccess = model.preferVpcAccess;
                 this.providerId = model.providerId;
                 this.regionId = model.regionId;
                 this.ssoServiceUrl = model.ssoServiceUrl;
+                this.vpcAccessAddress = model.vpcAccessAddress;
             } 
 
             /**
@@ -498,6 +524,14 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
+                return this;
+            }
+
+            /**
+             * PreferVpcAccess.
+             */
+            public Builder preferVpcAccess(Boolean preferVpcAccess) {
+                this.preferVpcAccess = preferVpcAccess;
                 return this;
             }
 
@@ -525,6 +559,14 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * VpcAccessAddress.
+             */
+            public Builder vpcAccessAddress(String vpcAccessAddress) {
+                this.vpcAccessAddress = vpcAccessAddress;
+                return this;
+            }
+
             public OfficeSiteInfo build() {
                 return new OfficeSiteInfo(this);
             } 
@@ -542,12 +584,20 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessType")
         private String accessType;
 
+        @com.aliyun.core.annotation.NameInMap("PreferVpcAccess")
+        private Boolean preferVpcAccess;
+
         @com.aliyun.core.annotation.NameInMap("TenantAlias")
         private String tenantAlias;
 
+        @com.aliyun.core.annotation.NameInMap("VpcAccessAddress")
+        private String vpcAccessAddress;
+
         private TenantAliasInfo(Builder builder) {
             this.accessType = builder.accessType;
+            this.preferVpcAccess = builder.preferVpcAccess;
             this.tenantAlias = builder.tenantAlias;
+            this.vpcAccessAddress = builder.vpcAccessAddress;
         }
 
         public static Builder builder() {
@@ -566,22 +616,40 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         }
 
         /**
+         * @return preferVpcAccess
+         */
+        public Boolean getPreferVpcAccess() {
+            return this.preferVpcAccess;
+        }
+
+        /**
          * @return tenantAlias
          */
         public String getTenantAlias() {
             return this.tenantAlias;
         }
 
+        /**
+         * @return vpcAccessAddress
+         */
+        public String getVpcAccessAddress() {
+            return this.vpcAccessAddress;
+        }
+
         public static final class Builder {
             private String accessType; 
+            private Boolean preferVpcAccess; 
             private String tenantAlias; 
+            private String vpcAccessAddress; 
 
             private Builder() {
             } 
 
             private Builder(TenantAliasInfo model) {
                 this.accessType = model.accessType;
+                this.preferVpcAccess = model.preferVpcAccess;
                 this.tenantAlias = model.tenantAlias;
+                this.vpcAccessAddress = model.vpcAccessAddress;
             } 
 
             /**
@@ -593,10 +661,26 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
             }
 
             /**
+             * PreferVpcAccess.
+             */
+            public Builder preferVpcAccess(Boolean preferVpcAccess) {
+                this.preferVpcAccess = preferVpcAccess;
+                return this;
+            }
+
+            /**
              * TenantAlias.
              */
             public Builder tenantAlias(String tenantAlias) {
                 this.tenantAlias = tenantAlias;
+                return this;
+            }
+
+            /**
+             * VpcAccessAddress.
+             */
+            public Builder vpcAccessAddress(String vpcAccessAddress) {
+                this.vpcAccessAddress = vpcAccessAddress;
                 return this;
             }
 
