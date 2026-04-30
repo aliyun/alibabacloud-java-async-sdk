@@ -782,11 +782,35 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RichTextClipboardLimit")
         private Integer richTextClipboardLimit;
 
+        @com.aliyun.core.annotation.NameInMap("RichTextClipboardReadLimit")
+        private Integer richTextClipboardReadLimit;
+
+        @com.aliyun.core.annotation.NameInMap("RichTextClipboardReadSizeUnit")
+        private String richTextClipboardReadSizeUnit;
+
         @com.aliyun.core.annotation.NameInMap("RichTextClipboardSizeUnit")
         private String richTextClipboardSizeUnit;
 
+        @com.aliyun.core.annotation.NameInMap("RichTextClipboardWriteLimit")
+        private Integer richTextClipboardWriteLimit;
+
+        @com.aliyun.core.annotation.NameInMap("RichTextClipboardWriteSizeUnit")
+        private String richTextClipboardWriteSizeUnit;
+
         @com.aliyun.core.annotation.NameInMap("TextClipboard")
         private String textClipboard;
+
+        @com.aliyun.core.annotation.NameInMap("TextClipboardReadLimit")
+        private Integer textClipboardReadLimit;
+
+        @com.aliyun.core.annotation.NameInMap("TextClipboardReadSizeUnit")
+        private String textClipboardReadSizeUnit;
+
+        @com.aliyun.core.annotation.NameInMap("TextClipboardWriteLimit")
+        private Integer textClipboardWriteLimit;
+
+        @com.aliyun.core.annotation.NameInMap("TextClipboardWriteSizeUnit")
+        private String textClipboardWriteSizeUnit;
 
         private ClipboardPolicy(Builder builder) {
             this.clipboard = builder.clipboard;
@@ -797,8 +821,16 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             this.fileClipboard = builder.fileClipboard;
             this.richTextClipboard = builder.richTextClipboard;
             this.richTextClipboardLimit = builder.richTextClipboardLimit;
+            this.richTextClipboardReadLimit = builder.richTextClipboardReadLimit;
+            this.richTextClipboardReadSizeUnit = builder.richTextClipboardReadSizeUnit;
             this.richTextClipboardSizeUnit = builder.richTextClipboardSizeUnit;
+            this.richTextClipboardWriteLimit = builder.richTextClipboardWriteLimit;
+            this.richTextClipboardWriteSizeUnit = builder.richTextClipboardWriteSizeUnit;
             this.textClipboard = builder.textClipboard;
+            this.textClipboardReadLimit = builder.textClipboardReadLimit;
+            this.textClipboardReadSizeUnit = builder.textClipboardReadSizeUnit;
+            this.textClipboardWriteLimit = builder.textClipboardWriteLimit;
+            this.textClipboardWriteSizeUnit = builder.textClipboardWriteSizeUnit;
         }
 
         public static Builder builder() {
@@ -866,6 +898,20 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
+         * @return richTextClipboardReadLimit
+         */
+        public Integer getRichTextClipboardReadLimit() {
+            return this.richTextClipboardReadLimit;
+        }
+
+        /**
+         * @return richTextClipboardReadSizeUnit
+         */
+        public String getRichTextClipboardReadSizeUnit() {
+            return this.richTextClipboardReadSizeUnit;
+        }
+
+        /**
          * @return richTextClipboardSizeUnit
          */
         public String getRichTextClipboardSizeUnit() {
@@ -873,10 +919,52 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
+         * @return richTextClipboardWriteLimit
+         */
+        public Integer getRichTextClipboardWriteLimit() {
+            return this.richTextClipboardWriteLimit;
+        }
+
+        /**
+         * @return richTextClipboardWriteSizeUnit
+         */
+        public String getRichTextClipboardWriteSizeUnit() {
+            return this.richTextClipboardWriteSizeUnit;
+        }
+
+        /**
          * @return textClipboard
          */
         public String getTextClipboard() {
             return this.textClipboard;
+        }
+
+        /**
+         * @return textClipboardReadLimit
+         */
+        public Integer getTextClipboardReadLimit() {
+            return this.textClipboardReadLimit;
+        }
+
+        /**
+         * @return textClipboardReadSizeUnit
+         */
+        public String getTextClipboardReadSizeUnit() {
+            return this.textClipboardReadSizeUnit;
+        }
+
+        /**
+         * @return textClipboardWriteLimit
+         */
+        public Integer getTextClipboardWriteLimit() {
+            return this.textClipboardWriteLimit;
+        }
+
+        /**
+         * @return textClipboardWriteSizeUnit
+         */
+        public String getTextClipboardWriteSizeUnit() {
+            return this.textClipboardWriteSizeUnit;
         }
 
         public static final class Builder {
@@ -888,8 +976,16 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             private String fileClipboard; 
             private String richTextClipboard; 
             private Integer richTextClipboardLimit; 
+            private Integer richTextClipboardReadLimit; 
+            private String richTextClipboardReadSizeUnit; 
             private String richTextClipboardSizeUnit; 
+            private Integer richTextClipboardWriteLimit; 
+            private String richTextClipboardWriteSizeUnit; 
             private String textClipboard; 
+            private Integer textClipboardReadLimit; 
+            private String textClipboardReadSizeUnit; 
+            private Integer textClipboardWriteLimit; 
+            private String textClipboardWriteSizeUnit; 
 
             private Builder() {
             } 
@@ -903,8 +999,16 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
                 this.fileClipboard = model.fileClipboard;
                 this.richTextClipboard = model.richTextClipboard;
                 this.richTextClipboardLimit = model.richTextClipboardLimit;
+                this.richTextClipboardReadLimit = model.richTextClipboardReadLimit;
+                this.richTextClipboardReadSizeUnit = model.richTextClipboardReadSizeUnit;
                 this.richTextClipboardSizeUnit = model.richTextClipboardSizeUnit;
+                this.richTextClipboardWriteLimit = model.richTextClipboardWriteLimit;
+                this.richTextClipboardWriteSizeUnit = model.richTextClipboardWriteSizeUnit;
                 this.textClipboard = model.textClipboard;
+                this.textClipboardReadLimit = model.textClipboardReadLimit;
+                this.textClipboardReadSizeUnit = model.textClipboardReadSizeUnit;
+                this.textClipboardWriteLimit = model.textClipboardWriteLimit;
+                this.textClipboardWriteSizeUnit = model.textClipboardWriteSizeUnit;
             } 
 
             /**
@@ -1016,10 +1120,42 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
+             * RichTextClipboardReadLimit.
+             */
+            public Builder richTextClipboardReadLimit(Integer richTextClipboardReadLimit) {
+                this.richTextClipboardReadLimit = richTextClipboardReadLimit;
+                return this;
+            }
+
+            /**
+             * RichTextClipboardReadSizeUnit.
+             */
+            public Builder richTextClipboardReadSizeUnit(String richTextClipboardReadSizeUnit) {
+                this.richTextClipboardReadSizeUnit = richTextClipboardReadSizeUnit;
+                return this;
+            }
+
+            /**
              * RichTextClipboardSizeUnit.
              */
             public Builder richTextClipboardSizeUnit(String richTextClipboardSizeUnit) {
                 this.richTextClipboardSizeUnit = richTextClipboardSizeUnit;
+                return this;
+            }
+
+            /**
+             * RichTextClipboardWriteLimit.
+             */
+            public Builder richTextClipboardWriteLimit(Integer richTextClipboardWriteLimit) {
+                this.richTextClipboardWriteLimit = richTextClipboardWriteLimit;
+                return this;
+            }
+
+            /**
+             * RichTextClipboardWriteSizeUnit.
+             */
+            public Builder richTextClipboardWriteSizeUnit(String richTextClipboardWriteSizeUnit) {
+                this.richTextClipboardWriteSizeUnit = richTextClipboardWriteSizeUnit;
                 return this;
             }
 
@@ -1038,6 +1174,38 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
              */
             public Builder textClipboard(String textClipboard) {
                 this.textClipboard = textClipboard;
+                return this;
+            }
+
+            /**
+             * TextClipboardReadLimit.
+             */
+            public Builder textClipboardReadLimit(Integer textClipboardReadLimit) {
+                this.textClipboardReadLimit = textClipboardReadLimit;
+                return this;
+            }
+
+            /**
+             * TextClipboardReadSizeUnit.
+             */
+            public Builder textClipboardReadSizeUnit(String textClipboardReadSizeUnit) {
+                this.textClipboardReadSizeUnit = textClipboardReadSizeUnit;
+                return this;
+            }
+
+            /**
+             * TextClipboardWriteLimit.
+             */
+            public Builder textClipboardWriteLimit(Integer textClipboardWriteLimit) {
+                this.textClipboardWriteLimit = textClipboardWriteLimit;
+                return this;
+            }
+
+            /**
+             * TextClipboardWriteSizeUnit.
+             */
+            public Builder textClipboardWriteSizeUnit(String textClipboardWriteSizeUnit) {
+                this.textClipboardWriteSizeUnit = textClipboardWriteSizeUnit;
                 return this;
             }
 
@@ -1204,6 +1372,9 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DisconnectKeepSessionTime")
         private Integer disconnectKeepSessionTime;
 
+        @com.aliyun.core.annotation.NameInMap("FileManager")
+        private String fileManager;
+
         @com.aliyun.core.annotation.NameInMap("Html5FileTransfer")
         private String html5FileTransfer;
 
@@ -1229,6 +1400,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             this.clipboardPolicy = builder.clipboardPolicy;
             this.disconnectKeepSession = builder.disconnectKeepSession;
             this.disconnectKeepSessionTime = builder.disconnectKeepSessionTime;
+            this.fileManager = builder.fileManager;
             this.html5FileTransfer = builder.html5FileTransfer;
             this.noOperationDisconnect = builder.noOperationDisconnect;
             this.noOperationDisconnectTime = builder.noOperationDisconnectTime;
@@ -1265,6 +1437,13 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
          */
         public Integer getDisconnectKeepSessionTime() {
             return this.disconnectKeepSessionTime;
+        }
+
+        /**
+         * @return fileManager
+         */
+        public String getFileManager() {
+            return this.fileManager;
         }
 
         /**
@@ -1320,6 +1499,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             private ClipboardPolicy clipboardPolicy; 
             private String disconnectKeepSession; 
             private Integer disconnectKeepSessionTime; 
+            private String fileManager; 
             private String html5FileTransfer; 
             private String noOperationDisconnect; 
             private Integer noOperationDisconnectTime; 
@@ -1335,6 +1515,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
                 this.clipboardPolicy = model.clipboardPolicy;
                 this.disconnectKeepSession = model.disconnectKeepSession;
                 this.disconnectKeepSessionTime = model.disconnectKeepSessionTime;
+                this.fileManager = model.fileManager;
                 this.html5FileTransfer = model.html5FileTransfer;
                 this.noOperationDisconnect = model.noOperationDisconnect;
                 this.noOperationDisconnectTime = model.noOperationDisconnectTime;
@@ -1376,6 +1557,14 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
              */
             public Builder disconnectKeepSessionTime(Integer disconnectKeepSessionTime) {
                 this.disconnectKeepSessionTime = disconnectKeepSessionTime;
+                return this;
+            }
+
+            /**
+             * FileManager.
+             */
+            public Builder fileManager(String fileManager) {
+                this.fileManager = fileManager;
                 return this;
             }
 
