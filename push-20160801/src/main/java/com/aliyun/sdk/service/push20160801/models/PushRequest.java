@@ -210,6 +210,10 @@ public class PushRequest extends Request {
     private Integer androidTargetUserType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidVivoLiveMessage")
+    private String androidVivoLiveMessage;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidVivoPushMode")
     private Integer androidVivoPushMode;
 
@@ -547,6 +551,7 @@ public class PushRequest extends Request {
         this.androidRemind = builder.androidRemind;
         this.androidRenderStyle = builder.androidRenderStyle;
         this.androidTargetUserType = builder.androidTargetUserType;
+        this.androidVivoLiveMessage = builder.androidVivoLiveMessage;
         this.androidVivoPushMode = builder.androidVivoPushMode;
         this.androidVivoReceiptId = builder.androidVivoReceiptId;
         this.androidXiaoMiActivity = builder.androidXiaoMiActivity;
@@ -958,6 +963,13 @@ public class PushRequest extends Request {
      */
     public Integer getAndroidTargetUserType() {
         return this.androidTargetUserType;
+    }
+
+    /**
+     * @return androidVivoLiveMessage
+     */
+    public String getAndroidVivoLiveMessage() {
+        return this.androidVivoLiveMessage;
     }
 
     /**
@@ -1491,6 +1503,7 @@ public class PushRequest extends Request {
         private Boolean androidRemind; 
         private Integer androidRenderStyle; 
         private Integer androidTargetUserType; 
+        private String androidVivoLiveMessage; 
         private Integer androidVivoPushMode; 
         private String androidVivoReceiptId; 
         private String androidXiaoMiActivity; 
@@ -1614,6 +1627,7 @@ public class PushRequest extends Request {
             this.androidRemind = request.androidRemind;
             this.androidRenderStyle = request.androidRenderStyle;
             this.androidTargetUserType = request.androidTargetUserType;
+            this.androidVivoLiveMessage = request.androidVivoLiveMessage;
             this.androidVivoPushMode = request.androidVivoPushMode;
             this.androidVivoReceiptId = request.androidVivoReceiptId;
             this.androidXiaoMiActivity = request.androidXiaoMiActivity;
@@ -2107,6 +2121,15 @@ public class PushRequest extends Request {
         public Builder androidTargetUserType(Integer androidTargetUserType) {
             this.putQueryParameter("AndroidTargetUserType", androidTargetUserType);
             this.androidTargetUserType = androidTargetUserType;
+            return this;
+        }
+
+        /**
+         * AndroidVivoLiveMessage.
+         */
+        public Builder androidVivoLiveMessage(String androidVivoLiveMessage) {
+            this.putQueryParameter("AndroidVivoLiveMessage", androidVivoLiveMessage);
+            this.androidVivoLiveMessage = androidVivoLiveMessage;
             return this;
         }
 

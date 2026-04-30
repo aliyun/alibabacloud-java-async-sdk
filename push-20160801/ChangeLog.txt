@@ -1,3 +1,6 @@
+2026-04-30 Version: 2.0.6
+- Generated java-async 2016-08-01 for Push.
+
 2026-01-22 Version: 2.0.5
 - Generated java-async 2016-08-01 for Push.
 

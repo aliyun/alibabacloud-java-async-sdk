@@ -277,6 +277,9 @@ public class MassPushRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AndroidTargetUserType")
         private Integer androidTargetUserType;
 
+        @com.aliyun.core.annotation.NameInMap("AndroidVivoLiveMessage")
+        private String androidVivoLiveMessage;
+
         @com.aliyun.core.annotation.NameInMap("AndroidVivoPushMode")
         private Integer androidVivoPushMode;
 
@@ -521,6 +524,7 @@ public class MassPushRequest extends Request {
             this.androidRemind = builder.androidRemind;
             this.androidRenderStyle = builder.androidRenderStyle;
             this.androidTargetUserType = builder.androidTargetUserType;
+            this.androidVivoLiveMessage = builder.androidVivoLiveMessage;
             this.androidVivoPushMode = builder.androidVivoPushMode;
             this.androidVivoReceiptId = builder.androidVivoReceiptId;
             this.androidXiaoMiActivity = builder.androidXiaoMiActivity;
@@ -920,6 +924,13 @@ public class MassPushRequest extends Request {
          */
         public Integer getAndroidTargetUserType() {
             return this.androidTargetUserType;
+        }
+
+        /**
+         * @return androidVivoLiveMessage
+         */
+        public String getAndroidVivoLiveMessage() {
+            return this.androidVivoLiveMessage;
         }
 
         /**
@@ -1404,6 +1415,7 @@ public class MassPushRequest extends Request {
             private Boolean androidRemind; 
             private String androidRenderStyle; 
             private Integer androidTargetUserType; 
+            private String androidVivoLiveMessage; 
             private Integer androidVivoPushMode; 
             private String androidVivoReceiptId; 
             private String androidXiaoMiActivity; 
@@ -1518,6 +1530,7 @@ public class MassPushRequest extends Request {
                 this.androidRemind = model.androidRemind;
                 this.androidRenderStyle = model.androidRenderStyle;
                 this.androidTargetUserType = model.androidTargetUserType;
+                this.androidVivoLiveMessage = model.androidVivoLiveMessage;
                 this.androidVivoPushMode = model.androidVivoPushMode;
                 this.androidVivoReceiptId = model.androidVivoReceiptId;
                 this.androidXiaoMiActivity = model.androidXiaoMiActivity;
@@ -1955,6 +1968,14 @@ public class MassPushRequest extends Request {
              */
             public Builder androidTargetUserType(Integer androidTargetUserType) {
                 this.androidTargetUserType = androidTargetUserType;
+                return this;
+            }
+
+            /**
+             * AndroidVivoLiveMessage.
+             */
+            public Builder androidVivoLiveMessage(String androidVivoLiveMessage) {
+                this.androidVivoLiveMessage = androidVivoLiveMessage;
                 return this;
             }
 

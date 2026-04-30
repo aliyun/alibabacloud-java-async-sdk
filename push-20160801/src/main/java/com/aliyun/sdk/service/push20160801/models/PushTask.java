@@ -866,12 +866,16 @@ public class PushTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Importance")
         private Integer importance;
 
+        @com.aliyun.core.annotation.NameInMap("LiveMessage")
+        private String liveMessage;
+
         @com.aliyun.core.annotation.NameInMap("ReceiptId")
         private String receiptId;
 
         private Vivo(Builder builder) {
             this.category = builder.category;
             this.importance = builder.importance;
+            this.liveMessage = builder.liveMessage;
             this.receiptId = builder.receiptId;
         }
 
@@ -898,6 +902,13 @@ public class PushTask extends TeaModel {
         }
 
         /**
+         * @return liveMessage
+         */
+        public String getLiveMessage() {
+            return this.liveMessage;
+        }
+
+        /**
          * @return receiptId
          */
         public String getReceiptId() {
@@ -907,6 +918,7 @@ public class PushTask extends TeaModel {
         public static final class Builder {
             private String category; 
             private Integer importance; 
+            private String liveMessage; 
             private String receiptId; 
 
             private Builder() {
@@ -915,6 +927,7 @@ public class PushTask extends TeaModel {
             private Builder(Vivo model) {
                 this.category = model.category;
                 this.importance = model.importance;
+                this.liveMessage = model.liveMessage;
                 this.receiptId = model.receiptId;
             } 
 
@@ -931,6 +944,14 @@ public class PushTask extends TeaModel {
              */
             public Builder importance(Integer importance) {
                 this.importance = importance;
+                return this;
+            }
+
+            /**
+             * LiveMessage.
+             */
+            public Builder liveMessage(String liveMessage) {
+                this.liveMessage = liveMessage;
                 return this;
             }
 
