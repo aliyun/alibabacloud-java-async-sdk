@@ -266,6 +266,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<ModelRouterChatCompletionsResponseBody> modelRouterChatCompletionsWithResponseIterable(ModelRouterChatCompletionsRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterConfigureClientBalance  ModelRouterConfigureClientBalanceRequest
+     * @return ModelRouterConfigureClientBalanceResponse
+     */
+    CompletableFuture<ModelRouterConfigureClientBalanceResponse> modelRouterConfigureClientBalance(ModelRouterConfigureClientBalanceRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterCopyApiKey  ModelRouterCopyApiKeyRequest
      * @return ModelRouterCopyApiKeyResponse
      */
@@ -276,6 +282,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelRouterCreateApiKeyResponse
      */
     CompletableFuture<ModelRouterCreateApiKeyResponse> modelRouterCreateApiKey(ModelRouterCreateApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterCreateBalanceTransaction  ModelRouterCreateBalanceTransactionRequest
+     * @return ModelRouterCreateBalanceTransactionResponse
+     */
+    CompletableFuture<ModelRouterCreateBalanceTransactionResponse> modelRouterCreateBalanceTransaction(ModelRouterCreateBalanceTransactionRequest request);
 
     /**
      * @param request the request parameters of ModelRouterCreateBillingRule  ModelRouterCreateBillingRuleRequest
@@ -324,6 +336,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelRouterDeleteModelResponse
      */
     CompletableFuture<ModelRouterDeleteModelResponse> modelRouterDeleteModel(ModelRouterDeleteModelRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterGetClientBalance  ModelRouterGetClientBalanceRequest
+     * @return ModelRouterGetClientBalanceResponse
+     */
+    CompletableFuture<ModelRouterGetClientBalanceResponse> modelRouterGetClientBalance(ModelRouterGetClientBalanceRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterGetClientBalanceLogs  ModelRouterGetClientBalanceLogsRequest
+     * @return ModelRouterGetClientBalanceLogsResponse
+     */
+    CompletableFuture<ModelRouterGetClientBalanceLogsResponse> modelRouterGetClientBalanceLogs(ModelRouterGetClientBalanceLogsRequest request);
 
     /**
      * @param request the request parameters of ModelRouterQueryApiKey  ModelRouterQueryApiKeyRequest
