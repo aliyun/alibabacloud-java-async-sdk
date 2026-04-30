@@ -25,10 +25,4 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DocumentParseOnlineApiResponse> documentParseOnlineApi(DocumentParseOnlineApiRequest request);
 
-    /**
-     * @param request the request parameters of DocumentParseTestApi  DocumentParseTestApiRequest
-     * @return DocumentParseTestApiResponse
-     */
-    CompletableFuture<DocumentParseTestApiResponse> documentParseTestApi(DocumentParseTestApiRequest request);
-
 }
