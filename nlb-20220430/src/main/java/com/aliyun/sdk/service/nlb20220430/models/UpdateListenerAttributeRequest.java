@@ -51,7 +51,6 @@ public class UpdateListenerAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IdleTimeout")
-    @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 10)
     private Integer idleTimeout;
 
     @com.aliyun.core.annotation.Body
