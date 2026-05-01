@@ -100,6 +100,10 @@ public class GetConnectionTicketRequest extends Request {
     private String productType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequireUuidValidation")
+    private Boolean requireUuidValidation;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
@@ -141,6 +145,7 @@ public class GetConnectionTicketRequest extends Request {
         this.loginToken = builder.loginToken;
         this.param = builder.param;
         this.productType = builder.productType;
+        this.requireUuidValidation = builder.requireUuidValidation;
         this.resourceId = builder.resourceId;
         this.sessionId = builder.sessionId;
         this.taskId = builder.taskId;
@@ -302,6 +307,13 @@ public class GetConnectionTicketRequest extends Request {
     }
 
     /**
+     * @return requireUuidValidation
+     */
+    public Boolean getRequireUuidValidation() {
+        return this.requireUuidValidation;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -357,6 +369,7 @@ public class GetConnectionTicketRequest extends Request {
         private String loginToken; 
         private String param; 
         private String productType; 
+        private Boolean requireUuidValidation; 
         private String resourceId; 
         private String sessionId; 
         private String taskId; 
@@ -389,6 +402,7 @@ public class GetConnectionTicketRequest extends Request {
             this.loginToken = request.loginToken;
             this.param = request.param;
             this.productType = request.productType;
+            this.requireUuidValidation = request.requireUuidValidation;
             this.resourceId = request.resourceId;
             this.sessionId = request.sessionId;
             this.taskId = request.taskId;
@@ -576,6 +590,15 @@ public class GetConnectionTicketRequest extends Request {
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
             this.productType = productType;
+            return this;
+        }
+
+        /**
+         * RequireUuidValidation.
+         */
+        public Builder requireUuidValidation(Boolean requireUuidValidation) {
+            this.putBodyParameter("RequireUuidValidation", requireUuidValidation);
+            this.requireUuidValidation = requireUuidValidation;
             return this;
         }
 
