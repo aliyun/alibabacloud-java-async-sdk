@@ -32,6 +32,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AuthorizeInstanceGroupResponse> authorizeInstanceGroup(AuthorizeInstanceGroupRequest request);
 
     /**
+     * @param request the request parameters of ConfigResourceGroupModelTemplate  ConfigResourceGroupModelTemplateRequest
+     * @return ConfigResourceGroupModelTemplateResponse
+     */
+    CompletableFuture<ConfigResourceGroupModelTemplateResponse> configResourceGroupModelTemplate(ConfigResourceGroupModelTemplateRequest request);
+
+    /**
+     * @param request the request parameters of ConfigRuntimeChannel  ConfigRuntimeChannelRequest
+     * @return ConfigRuntimeChannelResponse
+     */
+    CompletableFuture<ConfigRuntimeChannelResponse> configRuntimeChannel(ConfigRuntimeChannelRequest request);
+
+    /**
+     * @param request the request parameters of ConfigRuntimeModelTemplate  ConfigRuntimeModelTemplateRequest
+     * @return ConfigRuntimeModelTemplateResponse
+     */
+    CompletableFuture<ConfigRuntimeModelTemplateResponse> configRuntimeModelTemplate(ConfigRuntimeModelTemplateRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.
      * A delivery group is a logical group that is used to deliver cloud applications to end users, including the images, resource management policies, and user groups on which the cloud applications rely. For more information, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish delivery groups</a>.</p>
@@ -52,6 +70,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateImageFromAppInstanceGroupResponse
      */
     CompletableFuture<CreateImageFromAppInstanceGroupResponse> createImageFromAppInstanceGroup(CreateImageFromAppInstanceGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreateModelTemplate  CreateModelTemplateRequest
+     * @return CreateModelTemplateResponse
+     */
+    CompletableFuture<CreateModelTemplateResponse> createModelTemplate(CreateModelTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -160,6 +184,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceRenewPriceResponse> getResourceRenewPrice(GetResourceRenewPriceRequest request);
 
     /**
+     * @param request the request parameters of GetRuntimeChannel  GetRuntimeChannelRequest
+     * @return GetRuntimeChannelResponse
+     */
+    CompletableFuture<GetRuntimeChannelResponse> getRuntimeChannel(GetRuntimeChannelRequest request);
+
+    /**
+     * @param request the request parameters of GetRuntimeModelConfig  GetRuntimeModelConfigRequest
+     * @return GetRuntimeModelConfigResponse
+     */
+    CompletableFuture<GetRuntimeModelConfigResponse> getRuntimeModelConfig(GetRuntimeModelConfigRequest request);
+
+    /**
      * @param request the request parameters of ListAppInstanceGroup  ListAppInstanceGroupRequest
      * @return ListAppInstanceGroupResponse
      */
@@ -184,10 +220,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListBindInfoResponse> listBindInfo(ListBindInfoRequest request);
 
     /**
+     * @param request the request parameters of ListDesktopAgentRuntime  ListDesktopAgentRuntimeRequest
+     * @return ListDesktopAgentRuntimeResponse
+     */
+    CompletableFuture<ListDesktopAgentRuntimeResponse> listDesktopAgentRuntime(ListDesktopAgentRuntimeRequest request);
+
+    /**
      * @param request the request parameters of ListImage  ListImageRequest
      * @return ListImageResponse
      */
     CompletableFuture<ListImageResponse> listImage(ListImageRequest request);
+
+    /**
+     * @param request the request parameters of ListModelTemplateResourceGroup  ListModelTemplateResourceGroupRequest
+     * @return ListModelTemplateResourceGroupResponse
+     */
+    CompletableFuture<ListModelTemplateResourceGroupResponse> listModelTemplateResourceGroup(ListModelTemplateResourceGroupRequest request);
 
     /**
      * @param request the request parameters of ListNodeInstanceType  ListNodeInstanceTypeRequest
@@ -312,6 +360,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PageListAppInstanceGroupUserResponse
      */
     CompletableFuture<PageListAppInstanceGroupUserResponse> pageListAppInstanceGroupUser(PageListAppInstanceGroupUserRequest request);
+
+    /**
+     * @param request the request parameters of RemoveResourceGroupModelTemplate  RemoveResourceGroupModelTemplateRequest
+     * @return RemoveResourceGroupModelTemplateResponse
+     */
+    CompletableFuture<RemoveResourceGroupModelTemplateResponse> removeResourceGroupModelTemplate(RemoveResourceGroupModelTemplateRequest request);
+
+    /**
+     * @param request the request parameters of RemoveRuntimeChannel  RemoveRuntimeChannelRequest
+     * @return RemoveRuntimeChannelResponse
+     */
+    CompletableFuture<RemoveRuntimeChannelResponse> removeRuntimeChannel(RemoveRuntimeChannelRequest request);
+
+    /**
+     * @param request the request parameters of RemoveRuntimeModelTemplate  RemoveRuntimeModelTemplateRequest
+     * @return RemoveRuntimeModelTemplateResponse
+     */
+    CompletableFuture<RemoveRuntimeModelTemplateResponse> removeRuntimeModelTemplate(RemoveRuntimeModelTemplateRequest request);
 
     /**
      * <b>description</b> :
