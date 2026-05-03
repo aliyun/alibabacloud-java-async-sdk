@@ -302,6 +302,9 @@ public class DescribeUserResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
+        @com.aliyun.core.annotation.NameInMap("NickName")
+        private String nickName;
+
         @com.aliyun.core.annotation.NameInMap("OrgIds")
         private java.util.List<String> orgIds;
 
@@ -329,6 +332,7 @@ public class DescribeUserResponseBody extends TeaModel {
             this.externalInfo = builder.externalInfo;
             this.extras = builder.extras;
             this.gmtCreate = builder.gmtCreate;
+            this.nickName = builder.nickName;
             this.orgIds = builder.orgIds;
             this.orgPaths = builder.orgPaths;
             this.phone = builder.phone;
@@ -379,6 +383,13 @@ public class DescribeUserResponseBody extends TeaModel {
          */
         public Long getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        /**
+         * @return nickName
+         */
+        public String getNickName() {
+            return this.nickName;
         }
 
         /**
@@ -436,6 +447,7 @@ public class DescribeUserResponseBody extends TeaModel {
             private ExternalInfo externalInfo; 
             private java.util.Map<String, String> extras; 
             private Long gmtCreate; 
+            private String nickName; 
             private java.util.List<String> orgIds; 
             private java.util.List<String> orgPaths; 
             private String phone; 
@@ -453,6 +465,7 @@ public class DescribeUserResponseBody extends TeaModel {
                 this.externalInfo = model.externalInfo;
                 this.extras = model.extras;
                 this.gmtCreate = model.gmtCreate;
+                this.nickName = model.nickName;
                 this.orgIds = model.orgIds;
                 this.orgPaths = model.orgPaths;
                 this.phone = model.phone;
@@ -499,6 +512,14 @@ public class DescribeUserResponseBody extends TeaModel {
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * NickName.
+             */
+            public Builder nickName(String nickName) {
+                this.nickName = nickName;
                 return this;
             }
 
