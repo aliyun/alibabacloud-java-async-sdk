@@ -26,6 +26,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMultiOrderResponse> createMultiOrder(CreateMultiOrderRequest request);
 
     /**
+     * @param request the request parameters of DescribeCreditPackageAgents  DescribeCreditPackageAgentsRequest
+     * @return DescribeCreditPackageAgentsResponse
+     */
+    CompletableFuture<DescribeCreditPackageAgentsResponse> describeCreditPackageAgents(DescribeCreditPackageAgentsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCreditUsageInfo  DescribeCreditUsageInfoRequest
+     * @return DescribeCreditUsageInfoResponse
+     */
+    CompletableFuture<DescribeCreditUsageInfoResponse> describeCreditUsageInfo(DescribeCreditUsageInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDeductionStatistic  DescribeDeductionStatisticRequest
+     * @return DescribeDeductionStatisticResponse
+     */
+    CompletableFuture<DescribeDeductionStatisticResponse> describeDeductionStatistic(DescribeDeductionStatisticRequest request);
+
+    /**
      * @param request the request parameters of DescribeDeliveryAddress  DescribeDeliveryAddressRequest
      * @return DescribeDeliveryAddressResponse
      */
@@ -48,5 +66,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyInstancePropertiesResponse
      */
     CompletableFuture<ModifyInstancePropertiesResponse> modifyInstanceProperties(ModifyInstancePropertiesRequest request);
+
+    /**
+     * @param request the request parameters of SetAgentCreditQuota  SetAgentCreditQuotaRequest
+     * @return SetAgentCreditQuotaResponse
+     */
+    CompletableFuture<SetAgentCreditQuotaResponse> setAgentCreditQuota(SetAgentCreditQuotaRequest request);
 
 }

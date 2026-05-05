@@ -241,6 +241,9 @@ public class CreateMultiOrderRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Components")
         private java.util.List<Components> components;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceIds")
+        private java.util.List<String> instanceIds;
+
         @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
@@ -263,6 +266,7 @@ public class CreateMultiOrderRequest extends Request {
             this.autoRenew = builder.autoRenew;
             this.buyChange = builder.buyChange;
             this.components = builder.components;
+            this.instanceIds = builder.instanceIds;
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
             this.promotionId = builder.promotionId;
@@ -314,6 +318,13 @@ public class CreateMultiOrderRequest extends Request {
         }
 
         /**
+         * @return instanceIds
+         */
+        public java.util.List<String> getInstanceIds() {
+            return this.instanceIds;
+        }
+
+        /**
          * @return period
          */
         public Integer getPeriod() {
@@ -354,6 +365,7 @@ public class CreateMultiOrderRequest extends Request {
             private Boolean autoRenew; 
             private Boolean buyChange; 
             private java.util.List<Components> components; 
+            private java.util.List<String> instanceIds; 
             private Integer period; 
             private String periodUnit; 
             private String promotionId; 
@@ -369,6 +381,7 @@ public class CreateMultiOrderRequest extends Request {
                 this.autoRenew = model.autoRenew;
                 this.buyChange = model.buyChange;
                 this.components = model.components;
+                this.instanceIds = model.instanceIds;
                 this.period = model.period;
                 this.periodUnit = model.periodUnit;
                 this.promotionId = model.promotionId;
@@ -413,6 +426,14 @@ public class CreateMultiOrderRequest extends Request {
              */
             public Builder components(java.util.List<Components> components) {
                 this.components = components;
+                return this;
+            }
+
+            /**
+             * InstanceIds.
+             */
+            public Builder instanceIds(java.util.List<String> instanceIds) {
+                this.instanceIds = instanceIds;
                 return this;
             }
 
