@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeListPocRequest} extends {@link RequestModel}
+ * {@link ListTaskGroupRequest} extends {@link RequestModel}
  *
- * <p>DescribeListPocRequest</p>
+ * <p>ListTaskGroupRequest</p>
  */
-public class DescribeListPocRequest extends Request {
+public class ListTaskGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
-    private Long currentPage;
+    private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -27,32 +27,32 @@ public class DescribeListPocRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    private Long pageSize;
+    private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegId")
     private String regId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TaskName")
-    private String taskName;
+    @com.aliyun.core.annotation.NameInMap("SampleName")
+    private String sampleName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TaskStatus")
-    private String taskStatus;
+    @com.aliyun.core.annotation.NameInMap("TaskGroupName")
+    private String taskGroupName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    private DescribeListPocRequest(Builder builder) {
+    private ListTaskGroupRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.regId = builder.regId;
-        this.taskName = builder.taskName;
-        this.taskStatus = builder.taskStatus;
+        this.sampleName = builder.sampleName;
+        this.taskGroupName = builder.taskGroupName;
         this.type = builder.type;
     }
 
@@ -60,7 +60,7 @@ public class DescribeListPocRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeListPocRequest create() {
+    public static ListTaskGroupRequest create() {
         return builder().build();
     }
 
@@ -72,7 +72,7 @@ public class DescribeListPocRequest extends Request {
     /**
      * @return currentPage
      */
-    public Long getCurrentPage() {
+    public Integer getCurrentPage() {
         return this.currentPage;
     }
 
@@ -86,7 +86,7 @@ public class DescribeListPocRequest extends Request {
     /**
      * @return pageSize
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -98,17 +98,17 @@ public class DescribeListPocRequest extends Request {
     }
 
     /**
-     * @return taskName
+     * @return sampleName
      */
-    public String getTaskName() {
-        return this.taskName;
+    public String getSampleName() {
+        return this.sampleName;
     }
 
     /**
-     * @return taskStatus
+     * @return taskGroupName
      */
-    public String getTaskStatus() {
-        return this.taskStatus;
+    public String getTaskGroupName() {
+        return this.taskGroupName;
     }
 
     /**
@@ -118,51 +118,41 @@ public class DescribeListPocRequest extends Request {
         return this.type;
     }
 
-    public static final class Builder extends Request.Builder<DescribeListPocRequest, Builder> {
-        private Long currentPage; 
+    public static final class Builder extends Request.Builder<ListTaskGroupRequest, Builder> {
+        private Integer currentPage; 
         private String lang; 
-        private Long pageSize; 
+        private Integer pageSize; 
         private String regId; 
-        private String taskName; 
-        private String taskStatus; 
+        private String sampleName; 
+        private String taskGroupName; 
         private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeListPocRequest request) {
+        private Builder(ListTaskGroupRequest request) {
             super(request);
             this.currentPage = request.currentPage;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.regId = request.regId;
-            this.taskName = request.taskName;
-            this.taskStatus = request.taskStatus;
+            this.sampleName = request.sampleName;
+            this.taskGroupName = request.taskGroupName;
             this.type = request.type;
         } 
 
         /**
-         * <p>Current page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * CurrentPage.
          */
-        public Builder currentPage(Long currentPage) {
+        public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
             return this;
         }
 
         /**
-         * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
-         * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>zh</p>
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -171,22 +161,16 @@ public class DescribeListPocRequest extends Request {
         }
 
         /**
-         * <p>Page size.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
+         * PageSize.
          */
-        public Builder pageSize(Long pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * <p>Region code</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegId.
          */
         public Builder regId(String regId) {
             this.putQueryParameter("RegId", regId);
@@ -195,38 +179,25 @@ public class DescribeListPocRequest extends Request {
         }
 
         /**
-         * <p>Task name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Task_001</p>
+         * SampleName.
          */
-        public Builder taskName(String taskName) {
-            this.putQueryParameter("TaskName", taskName);
-            this.taskName = taskName;
+        public Builder sampleName(String sampleName) {
+            this.putQueryParameter("SampleName", sampleName);
+            this.sampleName = sampleName;
             return this;
         }
 
         /**
-         * <p>The status of the import task. Valid values:</p>
-         * <ul>
-         * <li>DOING</li>
-         * <li>FINISH</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>FINISH</p>
+         * TaskGroupName.
          */
-        public Builder taskStatus(String taskStatus) {
-            this.putQueryParameter("TaskStatus", taskStatus);
-            this.taskStatus = taskStatus;
+        public Builder taskGroupName(String taskGroupName) {
+            this.putQueryParameter("TaskGroupName", taskGroupName);
+            this.taskGroupName = taskGroupName;
             return this;
         }
 
         /**
-         * <p>Type</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SAF_CONSOLE</p>
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -235,8 +206,8 @@ public class DescribeListPocRequest extends Request {
         }
 
         @Override
-        public DescribeListPocRequest build() {
-            return new DescribeListPocRequest(this);
+        public ListTaskGroupRequest build() {
+            return new ListTaskGroupRequest(this);
         } 
 
     } 

@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindVariableResponse> bindVariable(BindVariableRequest request);
 
     /**
+     * @param request the request parameters of CancelSubTask  CancelSubTaskRequest
+     * @return CancelSubTaskResponse
+     */
+    CompletableFuture<CancelSubTaskResponse> cancelSubTask(CancelSubTaskRequest request);
+
+    /**
      * @param request the request parameters of CheckCopyRuleVariable  CheckCopyRuleVariableRequest
      * @return CheckCopyRuleVariableResponse
      */
@@ -66,6 +72,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CheckFieldLimitResponse
      */
     CompletableFuture<CheckFieldLimitResponse> checkFieldLimit(CheckFieldLimitRequest request);
+
+    /**
+     * @param request the request parameters of CheckSampleName  CheckSampleNameRequest
+     * @return CheckSampleNameResponse
+     */
+    CompletableFuture<CheckSampleNameResponse> checkSampleName(CheckSampleNameRequest request);
+
+    /**
+     * @param request the request parameters of CheckTaskGroupName  CheckTaskGroupNameRequest
+     * @return CheckTaskGroupNameResponse
+     */
+    CompletableFuture<CheckTaskGroupNameResponse> checkTaskGroupName(CheckTaskGroupNameRequest request);
 
     /**
      * @param request the request parameters of CheckUsageVariable  CheckUsageVariableRequest
@@ -146,6 +164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePocEvResponse> createPocEv(CreatePocEvRequest request);
 
     /**
+     * @param request the request parameters of CreatePocSample  CreatePocSampleRequest
+     * @return CreatePocSampleResponse
+     */
+    CompletableFuture<CreatePocSampleResponse> createPocSample(CreatePocSampleRequest request);
+
+    /**
      * @param request the request parameters of CreateQueryVariable  CreateQueryVariableRequest
      * @return CreateQueryVariableResponse
      */
@@ -198,6 +222,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateSimulationTaskResponse
      */
     CompletableFuture<CreateSimulationTaskResponse> createSimulationTask(CreateSimulationTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateTaskGroup  CreateTaskGroupRequest
+     * @return CreateTaskGroupResponse
+     */
+    CompletableFuture<CreateTaskGroupResponse> createTaskGroup(CreateTaskGroupRequest request);
 
     /**
      * @param request the request parameters of DeepCopyRule  DeepCopyRuleRequest
@@ -270,6 +300,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRuleResponse
      */
     CompletableFuture<DeleteRuleResponse> deleteRule(DeleteRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSample  DeleteSampleRequest
+     * @return DeleteSampleResponse
+     */
+    CompletableFuture<DeleteSampleResponse> deleteSample(DeleteSampleRequest request);
 
     /**
      * @param request the request parameters of DeleteSampleBatch  DeleteSampleBatchRequest
@@ -1391,10 +1427,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVersionPageListResponse> describeVersionPageList(DescribeVersionPageListRequest request);
 
     /**
+     * @param request the request parameters of DownloadSampleFile  DownloadSampleFileRequest
+     * @return DownloadSampleFileResponse
+     */
+    CompletableFuture<DownloadSampleFileResponse> downloadSampleFile(DownloadSampleFileRequest request);
+
+    /**
      * @param request the request parameters of DownloadSmapleBatch  DownloadSmapleBatchRequest
      * @return DownloadSmapleBatchResponse
      */
     CompletableFuture<DownloadSmapleBatchResponse> downloadSmapleBatch(DownloadSmapleBatchRequest request);
+
+    /**
+     * @param request the request parameters of DownloadSubTaskResult  DownloadSubTaskResultRequest
+     * @return DownloadSubTaskResultResponse
+     */
+    CompletableFuture<DownloadSubTaskResultResponse> downloadSubTaskResult(DownloadSubTaskResultRequest request);
 
     /**
      * @param request the request parameters of ExpressionTest  ExpressionTestRequest
@@ -1407,6 +1455,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return FileUploadResponse
      */
     CompletableFuture<FileUploadResponse> fileUpload(FileUploadRequest request);
+
+    /**
+     * @param request the request parameters of GetSampleDetail  GetSampleDetailRequest
+     * @return GetSampleDetailResponse
+     */
+    CompletableFuture<GetSampleDetailResponse> getSampleDetail(GetSampleDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetSubTaskResult  GetSubTaskResultRequest
+     * @return GetSubTaskResultResponse
+     */
+    CompletableFuture<GetSubTaskResultResponse> getSubTaskResult(GetSubTaskResultRequest request);
 
     /**
      * @param request the request parameters of ImportField  ImportFieldRequest
@@ -1427,10 +1487,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImportTemplateEventResponse> importTemplateEvent(ImportTemplateEventRequest request);
 
     /**
+     * @param request the request parameters of ListSample  ListSampleRequest
+     * @return ListSampleResponse
+     */
+    CompletableFuture<ListSampleResponse> listSample(ListSampleRequest request);
+
+    /**
+     * @param request the request parameters of ListTaskGroup  ListTaskGroupRequest
+     * @return ListTaskGroupResponse
+     */
+    CompletableFuture<ListTaskGroupResponse> listTaskGroup(ListTaskGroupRequest request);
+
+    /**
      * @param request the request parameters of ListVariableDefine  ListVariableDefineRequest
      * @return ListVariableDefineResponse
      */
     CompletableFuture<ListVariableDefineResponse> listVariableDefine(ListVariableDefineRequest request);
+
+    /**
+     * @param request the request parameters of MergeDownload  MergeDownloadRequest
+     * @return MergeDownloadResponse
+     */
+    CompletableFuture<MergeDownloadResponse> mergeDownload(MergeDownloadRequest request);
 
     /**
      * @param request the request parameters of ModelDelete  ModelDeleteRequest
@@ -1589,6 +1667,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SaveByPassOrShuntEventResponse> saveByPassOrShuntEvent(SaveByPassOrShuntEventRequest request);
 
     /**
+     * @param request the request parameters of SearchSample  SearchSampleRequest
+     * @return SearchSampleResponse
+     */
+    CompletableFuture<SearchSampleResponse> searchSample(SearchSampleRequest request);
+
+    /**
      * @param request the request parameters of StartOrStopByPassShuntEvent  StartOrStopByPassShuntEventRequest
      * @return StartOrStopByPassShuntEventResponse
      */
@@ -1701,5 +1785,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UploadFileCheckResponse
      */
     CompletableFuture<UploadFileCheckResponse> uploadFileCheck(UploadFileCheckRequest request);
+
+    /**
+     * @param request the request parameters of UploadSampleFile  UploadSampleFileRequest
+     * @return UploadSampleFileResponse
+     */
+    CompletableFuture<UploadSampleFileResponse> uploadSampleFile(UploadSampleFileRequest request);
 
 }

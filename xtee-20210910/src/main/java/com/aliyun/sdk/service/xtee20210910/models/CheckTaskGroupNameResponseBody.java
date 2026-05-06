@@ -1,0 +1,154 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.xtee20210910.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link CheckTaskGroupNameResponseBody} extends {@link TeaModel}
+ *
+ * <p>CheckTaskGroupNameResponseBody</p>
+ */
+public class CheckTaskGroupNameResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
+    private String httpStatusCode;
+
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("ResultObject")
+    private Boolean resultObject;
+
+    private CheckTaskGroupNameResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.httpStatusCode = builder.httpStatusCode;
+        this.message = builder.message;
+        this.requestId = builder.requestId;
+        this.resultObject = builder.resultObject;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CheckTaskGroupNameResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public String getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return resultObject
+     */
+    public Boolean getResultObject() {
+        return this.resultObject;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private String httpStatusCode; 
+        private String message; 
+        private String requestId; 
+        private Boolean resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckTaskGroupNameResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(String httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResultObject.
+         */
+        public Builder resultObject(Boolean resultObject) {
+            this.resultObject = resultObject;
+            return this;
+        }
+
+        public CheckTaskGroupNameResponseBody build() {
+            return new CheckTaskGroupNameResponseBody(this);
+        } 
+
+    } 
+
+}
