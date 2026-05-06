@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Instance</p>
  */
 public class Instance extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
+    private String createTime;
+
     @com.aliyun.core.annotation.NameInMap("CurrentAmount")
     private Float currentAmount;
 
@@ -109,6 +112,7 @@ public class Instance extends TeaModel {
     private String zone;
 
     private Instance(Builder builder) {
+        this.createTime = builder.createTime;
         this.currentAmount = builder.currentAmount;
         this.detached = builder.detached;
         this.externalIP = builder.externalIP;
@@ -151,6 +155,13 @@ public class Instance extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return createTime
+     */
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     /**
@@ -364,6 +375,7 @@ public class Instance extends TeaModel {
     }
 
     public static final class Builder {
+        private String createTime; 
         private Float currentAmount; 
         private Boolean detached; 
         private String externalIP; 
@@ -399,6 +411,7 @@ public class Instance extends TeaModel {
         } 
 
         private Builder(Instance model) {
+            this.createTime = model.createTime;
             this.currentAmount = model.currentAmount;
             this.detached = model.detached;
             this.externalIP = model.externalIP;
@@ -430,6 +443,14 @@ public class Instance extends TeaModel {
             this.totalProcesses = model.totalProcesses;
             this.zone = model.zone;
         } 
+
+        /**
+         * CreateTime.
+         */
+        public Builder createTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
 
         /**
          * CurrentAmount.
