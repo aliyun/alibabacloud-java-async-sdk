@@ -563,6 +563,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
 
+        @com.aliyun.core.annotation.NameInMap("AccessAttribute")
+        private String accessAttribute;
+
         @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
@@ -758,6 +761,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         private OfficeSites(Builder builder) {
             this.ADConnectors = builder.ADConnectors;
             this.acceleratorId = builder.acceleratorId;
+            this.accessAttribute = builder.accessAttribute;
             this.accountType = builder.accountType;
             this.adHostname = builder.adHostname;
             this.authorityHost = builder.authorityHost;
@@ -844,6 +848,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         public String getAcceleratorId() {
             return this.acceleratorId;
+        }
+
+        /**
+         * @return accessAttribute
+         */
+        public String getAccessAttribute() {
+            return this.accessAttribute;
         }
 
         /**
@@ -1297,6 +1308,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ADConnectors> ADConnectors; 
             private String acceleratorId; 
+            private String accessAttribute; 
             private String accountType; 
             private String adHostname; 
             private String authorityHost; 
@@ -1368,6 +1380,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private Builder(OfficeSites model) {
                 this.ADConnectors = model.ADConnectors;
                 this.acceleratorId = model.acceleratorId;
+                this.accessAttribute = model.accessAttribute;
                 this.accountType = model.accountType;
                 this.adHostname = model.adHostname;
                 this.authorityHost = model.authorityHost;
@@ -1450,6 +1463,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
+                return this;
+            }
+
+            /**
+             * AccessAttribute.
+             */
+            public Builder accessAttribute(String accessAttribute) {
+                this.accessAttribute = accessAttribute;
                 return this;
             }
 

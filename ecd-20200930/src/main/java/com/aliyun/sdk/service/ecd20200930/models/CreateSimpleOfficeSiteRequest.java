@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateSimpleOfficeSiteRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessAttribute")
+    private String accessAttribute;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountType")
     private String accountType;
 
@@ -104,6 +108,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
 
     private CreateSimpleOfficeSiteRequest(Builder builder) {
         super(builder);
+        this.accessAttribute = builder.accessAttribute;
         this.accountType = builder.accountType;
         this.authorityHost = builder.authorityHost;
         this.bandwidth = builder.bandwidth;
@@ -138,6 +143,13 @@ public class CreateSimpleOfficeSiteRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessAttribute
+     */
+    public String getAccessAttribute() {
+        return this.accessAttribute;
     }
 
     /**
@@ -288,6 +300,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSimpleOfficeSiteRequest, Builder> {
+        private String accessAttribute; 
         private String accountType; 
         private String authorityHost; 
         private Integer bandwidth; 
@@ -316,6 +329,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
 
         private Builder(CreateSimpleOfficeSiteRequest request) {
             super(request);
+            this.accessAttribute = request.accessAttribute;
             this.accountType = request.accountType;
             this.authorityHost = request.authorityHost;
             this.bandwidth = request.bandwidth;
@@ -338,6 +352,15 @@ public class CreateSimpleOfficeSiteRequest extends Request {
             this.verifyCode = request.verifyCode;
             this.vpcType = request.vpcType;
         } 
+
+        /**
+         * AccessAttribute.
+         */
+        public Builder accessAttribute(String accessAttribute) {
+            this.putQueryParameter("AccessAttribute", accessAttribute);
+            this.accessAttribute = accessAttribute;
+            return this;
+        }
 
         /**
          * AccountType.

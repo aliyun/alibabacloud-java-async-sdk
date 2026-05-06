@@ -416,6 +416,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OfficeSites")
         private java.util.List<OfficeSites> officeSites;
 
+        @com.aliyun.core.annotation.NameInMap("ProductType")
+        private String productType;
+
         @com.aliyun.core.annotation.NameInMap("ProfileCompatible")
         private Boolean profileCompatible;
 
@@ -424,6 +427,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
+
+        @com.aliyun.core.annotation.NameInMap("SizeQuota")
+        private Long sizeQuota;
 
         @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
@@ -452,9 +458,11 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
             this.officeSites = builder.officeSites;
+            this.productType = builder.productType;
             this.profileCompatible = builder.profileCompatible;
             this.regionId = builder.regionId;
             this.scene = builder.scene;
+            this.sizeQuota = builder.sizeQuota;
             this.storageType = builder.storageType;
             this.supportAcl = builder.supportAcl;
             this.zoneId = builder.zoneId;
@@ -588,6 +596,13 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return productType
+         */
+        public String getProductType() {
+            return this.productType;
+        }
+
+        /**
          * @return profileCompatible
          */
         public Boolean getProfileCompatible() {
@@ -606,6 +621,13 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
          */
         public String getScene() {
             return this.scene;
+        }
+
+        /**
+         * @return sizeQuota
+         */
+        public Long getSizeQuota() {
+            return this.sizeQuota;
         }
 
         /**
@@ -647,9 +669,11 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             private String officeSiteId; 
             private String officeSiteName; 
             private java.util.List<OfficeSites> officeSites; 
+            private String productType; 
             private Boolean profileCompatible; 
             private String regionId; 
             private String scene; 
+            private Long sizeQuota; 
             private String storageType; 
             private Boolean supportAcl; 
             private String zoneId; 
@@ -675,9 +699,11 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
                 this.officeSiteId = model.officeSiteId;
                 this.officeSiteName = model.officeSiteName;
                 this.officeSites = model.officeSites;
+                this.productType = model.productType;
                 this.profileCompatible = model.profileCompatible;
                 this.regionId = model.regionId;
                 this.scene = model.scene;
+                this.sizeQuota = model.sizeQuota;
                 this.storageType = model.storageType;
                 this.supportAcl = model.supportAcl;
                 this.zoneId = model.zoneId;
@@ -880,6 +906,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
+             * ProductType.
+             */
+            public Builder productType(String productType) {
+                this.productType = productType;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether the User Profile Management (UPM) feature is supported.</p>
              * 
              * <strong>example:</strong>
@@ -914,6 +948,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
              */
             public Builder scene(String scene) {
                 this.scene = scene;
+                return this;
+            }
+
+            /**
+             * SizeQuota.
+             */
+            public Builder sizeQuota(Long sizeQuota) {
+                this.sizeQuota = sizeQuota;
                 return this;
             }
 

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateADConnectorOfficeSiteRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessAttribute")
+    private String accessAttribute;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AdHostname")
     private String adHostname;
 
@@ -114,6 +118,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
 
     private CreateADConnectorOfficeSiteRequest(Builder builder) {
         super(builder);
+        this.accessAttribute = builder.accessAttribute;
         this.adHostname = builder.adHostname;
         this.backupDCHostname = builder.backupDCHostname;
         this.backupDns = builder.backupDns;
@@ -150,6 +155,13 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessAttribute
+     */
+    public String getAccessAttribute() {
+        return this.accessAttribute;
     }
 
     /**
@@ -314,6 +326,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateADConnectorOfficeSiteRequest, Builder> {
+        private String accessAttribute; 
         private String adHostname; 
         private String backupDCHostname; 
         private String backupDns; 
@@ -344,6 +357,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
 
         private Builder(CreateADConnectorOfficeSiteRequest request) {
             super(request);
+            this.accessAttribute = request.accessAttribute;
             this.adHostname = request.adHostname;
             this.backupDCHostname = request.backupDCHostname;
             this.backupDns = request.backupDns;
@@ -368,6 +382,15 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
             this.vSwitchId = request.vSwitchId;
             this.verifyCode = request.verifyCode;
         } 
+
+        /**
+         * AccessAttribute.
+         */
+        public Builder accessAttribute(String accessAttribute) {
+            this.putQueryParameter("AccessAttribute", accessAttribute);
+            this.accessAttribute = accessAttribute;
+            return this;
+        }
 
         /**
          * <p>The hostname of the domain controller. The hostname must comply with the naming conventions for Windows hosts.</p>

@@ -1076,6 +1076,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeOfficeSitesResponse> describeOfficeSites(DescribeOfficeSitesRequest request);
 
     /**
+     * @param request the request parameters of DescribeOnlineUserCount  DescribeOnlineUserCountRequest
+     * @return DescribeOnlineUserCountResponse
+     */
+    CompletableFuture<DescribeOnlineUserCountResponse> describeOnlineUserCount(DescribeOnlineUserCountRequest request);
+
+    /**
      * @param request the request parameters of DescribePolicyGroups  DescribePolicyGroupsRequest
      * @return DescribePolicyGroupsResponse
      */
@@ -1858,6 +1864,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryHistoryActiveUserCountResponse
      */
     CompletableFuture<QueryHistoryActiveUserCountResponse> queryHistoryActiveUserCount(QueryHistoryActiveUserCountRequest request);
+
+    /**
+     * @param request the request parameters of QueryHistoryAvgMetricList  QueryHistoryAvgMetricListRequest
+     * @return QueryHistoryAvgMetricListResponse
+     */
+    CompletableFuture<QueryHistoryAvgMetricListResponse> queryHistoryAvgMetricList(QueryHistoryAvgMetricListRequest request);
 
     /**
      * @param request the request parameters of QueryHistoryMetricDistribution  QueryHistoryMetricDistributionRequest

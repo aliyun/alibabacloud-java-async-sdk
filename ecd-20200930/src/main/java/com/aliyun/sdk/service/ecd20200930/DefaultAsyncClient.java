@@ -2800,6 +2800,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeOnlineUserCount  DescribeOnlineUserCountRequest
+     * @return DescribeOnlineUserCountResponse
+     */
+    @Override
+    public CompletableFuture<DescribeOnlineUserCountResponse> describeOnlineUserCount(DescribeOnlineUserCountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeOnlineUserCount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeOnlineUserCountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeOnlineUserCountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribePolicyGroups  DescribePolicyGroupsRequest
      * @return DescribePolicyGroupsResponse
      */
@@ -4838,6 +4856,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryHistoryActiveUserCountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryHistoryAvgMetricList  QueryHistoryAvgMetricListRequest
+     * @return QueryHistoryAvgMetricListResponse
+     */
+    @Override
+    public CompletableFuture<QueryHistoryAvgMetricListResponse> queryHistoryAvgMetricList(QueryHistoryAvgMetricListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryHistoryAvgMetricList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryHistoryAvgMetricListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryHistoryAvgMetricListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

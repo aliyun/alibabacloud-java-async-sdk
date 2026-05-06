@@ -1514,6 +1514,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndUserApplyAdminCoordinate")
         private String endUserApplyAdminCoordinate;
 
+        @com.aliyun.core.annotation.NameInMap("EndUserCount")
+        private String endUserCount;
+
         @com.aliyun.core.annotation.NameInMap("EndUserGroupCoordinate")
         private String endUserGroupCoordinate;
 
@@ -1621,6 +1624,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NetRedirectRule")
         private java.util.List<NetRedirectRule> netRedirectRule;
+
+        @com.aliyun.core.annotation.NameInMap("NetworkPrinter")
+        private String networkPrinter;
+
+        @com.aliyun.core.annotation.NameInMap("OrganizationCount")
+        private String organizationCount;
 
         @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
         private String policyGroupId;
@@ -1859,6 +1868,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.domainResolveRuleType = builder.domainResolveRuleType;
             this.edsCount = builder.edsCount;
             this.endUserApplyAdminCoordinate = builder.endUserApplyAdminCoordinate;
+            this.endUserCount = builder.endUserCount;
             this.endUserGroupCoordinate = builder.endUserGroupCoordinate;
             this.externalDrive = builder.externalDrive;
             this.fileMigrate = builder.fileMigrate;
@@ -1895,6 +1905,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.name = builder.name;
             this.netRedirect = builder.netRedirect;
             this.netRedirectRule = builder.netRedirectRule;
+            this.networkPrinter = builder.networkPrinter;
+            this.organizationCount = builder.organizationCount;
             this.policyGroupId = builder.policyGroupId;
             this.policyGroupType = builder.policyGroupType;
             this.policyStatus = builder.policyStatus;
@@ -2238,6 +2250,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return endUserCount
+         */
+        public String getEndUserCount() {
+            return this.endUserCount;
+        }
+
+        /**
          * @return endUserGroupCoordinate
          */
         public String getEndUserGroupCoordinate() {
@@ -2487,6 +2506,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public java.util.List<NetRedirectRule> getNetRedirectRule() {
             return this.netRedirectRule;
+        }
+
+        /**
+         * @return networkPrinter
+         */
+        public String getNetworkPrinter() {
+            return this.networkPrinter;
+        }
+
+        /**
+         * @return organizationCount
+         */
+        public String getOrganizationCount() {
+            return this.organizationCount;
         }
 
         /**
@@ -2990,6 +3023,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String domainResolveRuleType; 
             private Integer edsCount; 
             private String endUserApplyAdminCoordinate; 
+            private String endUserCount; 
             private String endUserGroupCoordinate; 
             private String externalDrive; 
             private String fileMigrate; 
@@ -3026,6 +3060,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String name; 
             private String netRedirect; 
             private java.util.List<NetRedirectRule> netRedirectRule; 
+            private String networkPrinter; 
+            private String organizationCount; 
             private String policyGroupId; 
             private String policyGroupType; 
             private String policyStatus; 
@@ -3135,6 +3171,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.domainResolveRuleType = model.domainResolveRuleType;
                 this.edsCount = model.edsCount;
                 this.endUserApplyAdminCoordinate = model.endUserApplyAdminCoordinate;
+                this.endUserCount = model.endUserCount;
                 this.endUserGroupCoordinate = model.endUserGroupCoordinate;
                 this.externalDrive = model.externalDrive;
                 this.fileMigrate = model.fileMigrate;
@@ -3171,6 +3208,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.name = model.name;
                 this.netRedirect = model.netRedirect;
                 this.netRedirectRule = model.netRedirectRule;
+                this.networkPrinter = model.networkPrinter;
+                this.organizationCount = model.organizationCount;
                 this.policyGroupId = model.policyGroupId;
                 this.policyGroupType = model.policyGroupType;
                 this.policyStatus = model.policyStatus;
@@ -3653,6 +3692,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * EndUserCount.
+             */
+            public Builder endUserCount(String endUserCount) {
+                this.endUserCount = endUserCount;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether the User Stream Collaboration switch is turned on.</p>
              * <p>Valid values:</p>
              * <ul>
@@ -4062,6 +4109,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder netRedirectRule(java.util.List<NetRedirectRule> netRedirectRule) {
                 this.netRedirectRule = netRedirectRule;
+                return this;
+            }
+
+            /**
+             * NetworkPrinter.
+             */
+            public Builder networkPrinter(String networkPrinter) {
+                this.networkPrinter = networkPrinter;
+                return this;
+            }
+
+            /**
+             * OrganizationCount.
+             */
+            public Builder organizationCount(String organizationCount) {
+                this.organizationCount = organizationCount;
                 return this;
             }
 
