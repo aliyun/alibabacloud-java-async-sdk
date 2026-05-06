@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AuthorizeInstanceGroupResponse> authorizeInstanceGroup(AuthorizeInstanceGroupRequest request);
 
     /**
+     * @param request the request parameters of BatchCreateLlmTemplates  BatchCreateLlmTemplatesRequest
+     * @return BatchCreateLlmTemplatesResponse
+     */
+    CompletableFuture<BatchCreateLlmTemplatesResponse> batchCreateLlmTemplates(BatchCreateLlmTemplatesRequest request);
+
+    /**
      * @param request the request parameters of ConfigResourceGroupModelTemplate  ConfigResourceGroupModelTemplateRequest
      * @return ConfigResourceGroupModelTemplateResponse
      */
@@ -70,6 +76,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateImageFromAppInstanceGroupResponse
      */
     CompletableFuture<CreateImageFromAppInstanceGroupResponse> createImageFromAppInstanceGroup(CreateImageFromAppInstanceGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreateModelProviderTemplate  CreateModelProviderTemplateRequest
+     * @return CreateModelProviderTemplateResponse
+     */
+    CompletableFuture<CreateModelProviderTemplateResponse> createModelProviderTemplate(CreateModelProviderTemplateRequest request);
 
     /**
      * @param request the request parameters of CreateModelTemplate  CreateModelTemplateRequest
@@ -128,6 +140,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteImageResponse> deleteImage(DeleteImageRequest request);
 
     /**
+     * @param request the request parameters of DeleteLlmTemplate  DeleteLlmTemplateRequest
+     * @return DeleteLlmTemplateResponse
+     */
+    CompletableFuture<DeleteLlmTemplateResponse> deleteLlmTemplate(DeleteLlmTemplateRequest request);
+
+    /**
+     * @param request the request parameters of DeleteModelProviderTemplate  DeleteModelProviderTemplateRequest
+     * @return DeleteModelProviderTemplateResponse
+     */
+    CompletableFuture<DeleteModelProviderTemplateResponse> deleteModelProviderTemplate(DeleteModelProviderTemplateRequest request);
+
+    /**
+     * @param request the request parameters of DeleteModelTemplate  DeleteModelTemplateRequest
+     * @return DeleteModelTemplateResponse
+     */
+    CompletableFuture<DeleteModelTemplateResponse> deleteModelTemplate(DeleteModelTemplateRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Deletes a workstation.</p>
      * 
@@ -164,6 +194,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDebugAppInstanceResponse
      */
     CompletableFuture<GetDebugAppInstanceResponse> getDebugAppInstance(GetDebugAppInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetModelProviderTemplate  GetModelProviderTemplateRequest
+     * @return GetModelProviderTemplateResponse
+     */
+    CompletableFuture<GetModelProviderTemplateResponse> getModelProviderTemplate(GetModelProviderTemplateRequest request);
 
     /**
      * @param request the request parameters of GetOtaTaskByTaskId  GetOtaTaskByTaskIdRequest
@@ -232,10 +268,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListImageResponse> listImage(ListImageRequest request);
 
     /**
+     * @param request the request parameters of ListLlmTemplates  ListLlmTemplatesRequest
+     * @return ListLlmTemplatesResponse
+     */
+    CompletableFuture<ListLlmTemplatesResponse> listLlmTemplates(ListLlmTemplatesRequest request);
+
+    /**
+     * @param request the request parameters of ListModelProviderTemplates  ListModelProviderTemplatesRequest
+     * @return ListModelProviderTemplatesResponse
+     */
+    CompletableFuture<ListModelProviderTemplatesResponse> listModelProviderTemplates(ListModelProviderTemplatesRequest request);
+
+    /**
      * @param request the request parameters of ListModelTemplateResourceGroup  ListModelTemplateResourceGroupRequest
      * @return ListModelTemplateResourceGroupResponse
      */
     CompletableFuture<ListModelTemplateResourceGroupResponse> listModelTemplateResourceGroup(ListModelTemplateResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of ListModelTemplates  ListModelTemplatesRequest
+     * @return ListModelTemplatesResponse
+     */
+    CompletableFuture<ListModelTemplatesResponse> listModelTemplates(ListModelTemplatesRequest request);
 
     /**
      * @param request the request parameters of ListNodeInstanceType  ListNodeInstanceTypeRequest
@@ -449,6 +503,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAppInstanceGroupImageResponse
      */
     CompletableFuture<UpdateAppInstanceGroupImageResponse> updateAppInstanceGroupImage(UpdateAppInstanceGroupImageRequest request);
+
+    /**
+     * @param request the request parameters of UpdateModelProviderTemplate  UpdateModelProviderTemplateRequest
+     * @return UpdateModelProviderTemplateResponse
+     */
+    CompletableFuture<UpdateModelProviderTemplateResponse> updateModelProviderTemplate(UpdateModelProviderTemplateRequest request);
+
+    /**
+     * @param request the request parameters of UpdateModelTemplate  UpdateModelTemplateRequest
+     * @return UpdateModelTemplateResponse
+     */
+    CompletableFuture<UpdateModelTemplateResponse> updateModelTemplate(UpdateModelTemplateRequest request);
 
     /**
      * @param request the request parameters of UpdateWuyingServerImage  UpdateWuyingServerImageRequest
