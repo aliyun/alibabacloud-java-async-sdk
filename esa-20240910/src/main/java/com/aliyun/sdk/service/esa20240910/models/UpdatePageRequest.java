@@ -42,6 +42,10 @@ public class UpdatePageRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SiteIds")
+    private java.util.List<Long> siteIds;
+
     private UpdatePageRequest(Builder builder) {
         super(builder);
         this.content = builder.content;
@@ -49,6 +53,7 @@ public class UpdatePageRequest extends Request {
         this.description = builder.description;
         this.id = builder.id;
         this.name = builder.name;
+        this.siteIds = builder.siteIds;
     }
 
     public static Builder builder() {
@@ -99,12 +104,20 @@ public class UpdatePageRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return siteIds
+     */
+    public java.util.List<Long> getSiteIds() {
+        return this.siteIds;
+    }
+
     public static final class Builder extends Request.Builder<UpdatePageRequest, Builder> {
         private String content; 
         private String contentType; 
         private String description; 
         private Long id; 
         private String name; 
+        private java.util.List<Long> siteIds; 
 
         private Builder() {
             super();
@@ -117,6 +130,7 @@ public class UpdatePageRequest extends Request {
             this.description = request.description;
             this.id = request.id;
             this.name = request.name;
+            this.siteIds = request.siteIds;
         } 
 
         /**
@@ -185,6 +199,16 @@ public class UpdatePageRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * SiteIds.
+         */
+        public Builder siteIds(java.util.List<Long> siteIds) {
+            String siteIdsShrink = shrink(siteIds, "SiteIds", "json");
+            this.putBodyParameter("SiteIds", siteIdsShrink);
+            this.siteIds = siteIds;
             return this;
         }
 

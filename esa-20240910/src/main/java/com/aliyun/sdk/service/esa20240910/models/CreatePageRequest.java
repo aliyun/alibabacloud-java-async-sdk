@@ -35,12 +35,17 @@ public class CreatePageRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SiteIds")
+    private java.util.List<Long> siteIds;
+
     private CreatePageRequest(Builder builder) {
         super(builder);
         this.content = builder.content;
         this.contentType = builder.contentType;
         this.description = builder.description;
         this.name = builder.name;
+        this.siteIds = builder.siteIds;
     }
 
     public static Builder builder() {
@@ -84,11 +89,19 @@ public class CreatePageRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return siteIds
+     */
+    public java.util.List<Long> getSiteIds() {
+        return this.siteIds;
+    }
+
     public static final class Builder extends Request.Builder<CreatePageRequest, Builder> {
         private String content; 
         private String contentType; 
         private String description; 
         private String name; 
+        private java.util.List<Long> siteIds; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class CreatePageRequest extends Request {
             this.contentType = request.contentType;
             this.description = request.description;
             this.name = request.name;
+            this.siteIds = request.siteIds;
         } 
 
         /**
@@ -153,6 +167,16 @@ public class CreatePageRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * SiteIds.
+         */
+        public Builder siteIds(java.util.List<Long> siteIds) {
+            String siteIdsShrink = shrink(siteIds, "SiteIds", "json");
+            this.putBodyParameter("SiteIds", siteIdsShrink);
+            this.siteIds = siteIds;
             return this;
         }
 

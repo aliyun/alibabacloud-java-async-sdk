@@ -26,10 +26,6 @@ public class ListTagResourcesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -55,7 +51,6 @@ public class ListTagResourcesRequest extends Request {
         super(builder);
         this.maxItem = builder.maxItem;
         this.nextToken = builder.nextToken;
-        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
@@ -88,13 +83,6 @@ public class ListTagResourcesRequest extends Request {
      */
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     /**
@@ -135,7 +123,6 @@ public class ListTagResourcesRequest extends Request {
     public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
         private Integer maxItem; 
         private String nextToken; 
-        private Long ownerId; 
         private String regionId; 
         private java.util.List<String> resourceId; 
         private String resourceType; 
@@ -150,7 +137,6 @@ public class ListTagResourcesRequest extends Request {
             super(request);
             this.maxItem = request.maxItem;
             this.nextToken = request.nextToken;
-            this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
@@ -182,15 +168,6 @@ public class ListTagResourcesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

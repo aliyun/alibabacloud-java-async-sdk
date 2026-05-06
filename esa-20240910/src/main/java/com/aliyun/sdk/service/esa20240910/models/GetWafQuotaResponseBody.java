@@ -556,6 +556,81 @@ public class GetWafQuotaResponseBody extends TeaModel {
      *
      * <p>GetWafQuotaResponseBody</p>
      */
+    public static class SliderCaptchaPage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("NumberTotal")
+        private WafQuotaInteger numberTotal;
+
+        private SliderCaptchaPage(Builder builder) {
+            this.enable = builder.enable;
+            this.numberTotal = builder.numberTotal;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SliderCaptchaPage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return numberTotal
+         */
+        public WafQuotaInteger getNumberTotal() {
+            return this.numberTotal;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+            private WafQuotaInteger numberTotal; 
+
+            private Builder() {
+            } 
+
+            private Builder(SliderCaptchaPage model) {
+                this.enable = model.enable;
+                this.numberTotal = model.numberTotal;
+            } 
+
+            /**
+             * <p>Indicates whether the scene protection feature is enabled.</p>
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * <p>The total number quota for scene protection rules.</p>
+             */
+            public Builder numberTotal(WafQuotaInteger numberTotal) {
+                this.numberTotal = numberTotal;
+                return this;
+            }
+
+            public SliderCaptchaPage build() {
+                return new SliderCaptchaPage(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetWafQuotaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWafQuotaResponseBody</p>
+     */
     public static class Quota extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Captcha")
         private Captcha captcha;
@@ -572,12 +647,16 @@ public class GetWafQuotaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScenePolicy")
         private ScenePolicy scenePolicy;
 
+        @com.aliyun.core.annotation.NameInMap("SliderCaptchaPage")
+        private SliderCaptchaPage sliderCaptchaPage;
+
         private Quota(Builder builder) {
             this.captcha = builder.captcha;
             this.list = builder.list;
             this.managedRulesGroup = builder.managedRulesGroup;
             this.page = builder.page;
             this.scenePolicy = builder.scenePolicy;
+            this.sliderCaptchaPage = builder.sliderCaptchaPage;
         }
 
         public static Builder builder() {
@@ -623,12 +702,20 @@ public class GetWafQuotaResponseBody extends TeaModel {
             return this.scenePolicy;
         }
 
+        /**
+         * @return sliderCaptchaPage
+         */
+        public SliderCaptchaPage getSliderCaptchaPage() {
+            return this.sliderCaptchaPage;
+        }
+
         public static final class Builder {
             private Captcha captcha; 
             private List list; 
             private ManagedRulesGroup managedRulesGroup; 
             private Page page; 
             private ScenePolicy scenePolicy; 
+            private SliderCaptchaPage sliderCaptchaPage; 
 
             private Builder() {
             } 
@@ -639,6 +726,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
                 this.managedRulesGroup = model.managedRulesGroup;
                 this.page = model.page;
                 this.scenePolicy = model.scenePolicy;
+                this.sliderCaptchaPage = model.sliderCaptchaPage;
             } 
 
             /**
@@ -678,6 +766,14 @@ public class GetWafQuotaResponseBody extends TeaModel {
              */
             public Builder scenePolicy(ScenePolicy scenePolicy) {
                 this.scenePolicy = scenePolicy;
+                return this;
+            }
+
+            /**
+             * SliderCaptchaPage.
+             */
+            public Builder sliderCaptchaPage(SliderCaptchaPage sliderCaptchaPage) {
+                this.sliderCaptchaPage = sliderCaptchaPage;
                 return this;
             }
 

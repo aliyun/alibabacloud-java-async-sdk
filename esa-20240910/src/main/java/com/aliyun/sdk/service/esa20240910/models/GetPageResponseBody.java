@@ -42,6 +42,9 @@ public class GetPageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SiteIds")
+    private java.util.List<Long> siteIds;
+
     @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
@@ -53,6 +56,7 @@ public class GetPageResponseBody extends TeaModel {
         this.kind = builder.kind;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.siteIds = builder.siteIds;
         this.updateTime = builder.updateTime;
     }
 
@@ -118,6 +122,13 @@ public class GetPageResponseBody extends TeaModel {
     }
 
     /**
+     * @return siteIds
+     */
+    public java.util.List<Long> getSiteIds() {
+        return this.siteIds;
+    }
+
+    /**
      * @return updateTime
      */
     public String getUpdateTime() {
@@ -132,6 +143,7 @@ public class GetPageResponseBody extends TeaModel {
         private String kind; 
         private String name; 
         private String requestId; 
+        private java.util.List<Long> siteIds; 
         private String updateTime; 
 
         private Builder() {
@@ -145,6 +157,7 @@ public class GetPageResponseBody extends TeaModel {
             this.kind = model.kind;
             this.name = model.name;
             this.requestId = model.requestId;
+            this.siteIds = model.siteIds;
             this.updateTime = model.updateTime;
         } 
 
@@ -225,6 +238,14 @@ public class GetPageResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SiteIds.
+         */
+        public Builder siteIds(java.util.List<Long> siteIds) {
+            this.siteIds = siteIds;
             return this;
         }
 

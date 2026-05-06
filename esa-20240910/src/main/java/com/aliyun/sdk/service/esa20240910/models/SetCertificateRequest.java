@@ -38,10 +38,6 @@ public class SetCertificateRequest extends Request {
     @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String name;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private Long ownerId;
-
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PrivateKey")
     private String privateKey;
@@ -71,7 +67,6 @@ public class SetCertificateRequest extends Request {
         this.id = builder.id;
         this.keyServerId = builder.keyServerId;
         this.name = builder.name;
-        this.ownerId = builder.ownerId;
         this.privateKey = builder.privateKey;
         this.region = builder.region;
         this.securityToken = builder.securityToken;
@@ -128,13 +123,6 @@ public class SetCertificateRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return privateKey
      */
     public String getPrivateKey() {
@@ -175,7 +163,6 @@ public class SetCertificateRequest extends Request {
         private String id; 
         private String keyServerId; 
         private String name; 
-        private Long ownerId; 
         private String privateKey; 
         private String region; 
         private String securityToken; 
@@ -193,7 +180,6 @@ public class SetCertificateRequest extends Request {
             this.id = request.id;
             this.keyServerId = request.keyServerId;
             this.name = request.name;
-            this.ownerId = request.ownerId;
             this.privateKey = request.privateKey;
             this.region = request.region;
             this.securityToken = request.securityToken;
@@ -255,15 +241,6 @@ public class SetCertificateRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

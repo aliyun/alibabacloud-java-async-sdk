@@ -30,6 +30,10 @@ public class CreateTransportLayerApplicationRequest extends Request {
     private String ipv6;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepAliveProtection")
+    private String keepAliveProtection;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String recordName;
@@ -53,6 +57,7 @@ public class CreateTransportLayerApplicationRequest extends Request {
         this.crossBorderOptimization = builder.crossBorderOptimization;
         this.ipAccessRule = builder.ipAccessRule;
         this.ipv6 = builder.ipv6;
+        this.keepAliveProtection = builder.keepAliveProtection;
         this.recordName = builder.recordName;
         this.rules = builder.rules;
         this.siteId = builder.siteId;
@@ -94,6 +99,13 @@ public class CreateTransportLayerApplicationRequest extends Request {
     }
 
     /**
+     * @return keepAliveProtection
+     */
+    public String getKeepAliveProtection() {
+        return this.keepAliveProtection;
+    }
+
+    /**
      * @return recordName
      */
     public String getRecordName() {
@@ -125,6 +137,7 @@ public class CreateTransportLayerApplicationRequest extends Request {
         private String crossBorderOptimization; 
         private String ipAccessRule; 
         private String ipv6; 
+        private String keepAliveProtection; 
         private String recordName; 
         private java.util.List<Rules> rules; 
         private Long siteId; 
@@ -139,6 +152,7 @@ public class CreateTransportLayerApplicationRequest extends Request {
             this.crossBorderOptimization = request.crossBorderOptimization;
             this.ipAccessRule = request.ipAccessRule;
             this.ipv6 = request.ipv6;
+            this.keepAliveProtection = request.keepAliveProtection;
             this.recordName = request.recordName;
             this.rules = request.rules;
             this.siteId = request.siteId;
@@ -186,6 +200,15 @@ public class CreateTransportLayerApplicationRequest extends Request {
         public Builder ipv6(String ipv6) {
             this.putQueryParameter("Ipv6", ipv6);
             this.ipv6 = ipv6;
+            return this;
+        }
+
+        /**
+         * KeepAliveProtection.
+         */
+        public Builder keepAliveProtection(String keepAliveProtection) {
+            this.putQueryParameter("KeepAliveProtection", keepAliveProtection);
+            this.keepAliveProtection = keepAliveProtection;
             return this;
         }
 

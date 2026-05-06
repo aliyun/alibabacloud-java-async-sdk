@@ -510,6 +510,9 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6")
         private String ipv6;
 
+        @com.aliyun.core.annotation.NameInMap("KeepAliveProtection")
+        private String keepAliveProtection;
+
         @com.aliyun.core.annotation.NameInMap("RecordName")
         private String recordName;
 
@@ -538,6 +541,7 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
             this.crossBorderOptimization = builder.crossBorderOptimization;
             this.ipAccessRule = builder.ipAccessRule;
             this.ipv6 = builder.ipv6;
+            this.keepAliveProtection = builder.keepAliveProtection;
             this.recordName = builder.recordName;
             this.rules = builder.rules;
             this.rulesCount = builder.rulesCount;
@@ -588,6 +592,13 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
          */
         public String getIpv6() {
             return this.ipv6;
+        }
+
+        /**
+         * @return keepAliveProtection
+         */
+        public String getKeepAliveProtection() {
+            return this.keepAliveProtection;
         }
 
         /**
@@ -645,6 +656,7 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
             private String crossBorderOptimization; 
             private String ipAccessRule; 
             private String ipv6; 
+            private String keepAliveProtection; 
             private String recordName; 
             private java.util.List<Rules> rules; 
             private Integer rulesCount; 
@@ -662,6 +674,7 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
                 this.crossBorderOptimization = model.crossBorderOptimization;
                 this.ipAccessRule = model.ipAccessRule;
                 this.ipv6 = model.ipv6;
+                this.keepAliveProtection = model.keepAliveProtection;
                 this.recordName = model.recordName;
                 this.rules = model.rules;
                 this.rulesCount = model.rulesCount;
@@ -731,6 +744,14 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
              */
             public Builder ipv6(String ipv6) {
                 this.ipv6 = ipv6;
+                return this;
+            }
+
+            /**
+             * KeepAliveProtection.
+             */
+            public Builder keepAliveProtection(String keepAliveProtection) {
+                this.keepAliveProtection = keepAliveProtection;
                 return this;
             }
 

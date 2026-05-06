@@ -18,16 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class OpenErServiceRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private OpenErServiceRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.securityToken = builder.securityToken;
     }
 
@@ -45,13 +40,6 @@ public class OpenErServiceRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -59,7 +47,6 @@ public class OpenErServiceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<OpenErServiceRequest, Builder> {
-        private Long ownerId; 
         private String securityToken; 
 
         private Builder() {
@@ -68,18 +55,8 @@ public class OpenErServiceRequest extends Request {
 
         private Builder(OpenErServiceRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
             this.securityToken = request.securityToken;
         } 
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
 
         /**
          * SecurityToken.

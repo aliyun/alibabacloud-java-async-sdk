@@ -597,6 +597,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteImageTransformResponse> deleteImageTransform(DeleteImageTransformRequest request);
 
     /**
+     * @param request the request parameters of DeleteKeylessServer  DeleteKeylessServerRequest
+     * @return DeleteKeylessServerResponse
+     */
+    CompletableFuture<DeleteKeylessServerResponse> deleteKeylessServer(DeleteKeylessServerRequest request);
+
+    /**
      * @param request the request parameters of DeleteKv  DeleteKvRequest
      * @return DeleteKvResponse
      */
@@ -905,6 +911,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRatePlanInstanceStatusResponse> describeRatePlanInstanceStatus(DescribeRatePlanInstanceStatusRequest request);
 
     /**
+     * @param request the request parameters of DescribeRatePlanPrice  DescribeRatePlanPriceRequest
+     * @return DescribeRatePlanPriceResponse
+     */
+    CompletableFuture<DescribeRatePlanPriceResponse> describeRatePlanPrice(DescribeRatePlanPriceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  If you do not specify StartTime or EndTime, the log data generated in the last 24 hours is queried. If you specify StartTime and EndTime, the log data generated within the specified time range is queried.</p>
      * <ul>
@@ -987,6 +999,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApiSchemaUsageResponse> getApiSchemaUsage(GetApiSchemaUsageRequest request);
 
     /**
+     * @param request the request parameters of GetAutomaticFrequencyControlConfig  GetAutomaticFrequencyControlConfigRequest
+     * @return GetAutomaticFrequencyControlConfigResponse
+     */
+    CompletableFuture<GetAutomaticFrequencyControlConfigResponse> getAutomaticFrequencyControlConfig(GetAutomaticFrequencyControlConfigRequest request);
+
+    /**
      * @param request the request parameters of GetCacheReserveSpecification  GetCacheReserveSpecificationRequest
      * @return GetCacheReserveSpecificationResponse
      */
@@ -1021,6 +1039,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetClientCaCertificateResponse
      */
     CompletableFuture<GetClientCaCertificateResponse> getClientCaCertificate(GetClientCaCertificateRequest request);
+
+    /**
+     * @param request the request parameters of GetClientCaCertificateHostnames  GetClientCaCertificateHostnamesRequest
+     * @return GetClientCaCertificateHostnamesResponse
+     */
+    CompletableFuture<GetClientCaCertificateHostnamesResponse> getClientCaCertificateHostnames(GetClientCaCertificateHostnamesRequest request);
 
     /**
      * @param request the request parameters of GetClientCertificate  GetClientCertificateRequest
@@ -1191,6 +1215,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetImageTransformResponse> getImageTransform(GetImageTransformRequest request);
 
     /**
+     * @param request the request parameters of GetKeylessServer  GetKeylessServerRequest
+     * @return GetKeylessServerResponse
+     */
+    CompletableFuture<GetKeylessServerResponse> getKeylessServer(GetKeylessServerRequest request);
+
+    /**
      * @param request the request parameters of GetKv  GetKvRequest
      * @return GetKvResponse
      */
@@ -1282,6 +1312,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPageResponse
      */
     CompletableFuture<GetPageResponse> getPage(GetPageRequest request);
+
+    /**
+     * @param request the request parameters of GetPerformanceDataCollection  GetPerformanceDataCollectionRequest
+     * @return GetPerformanceDataCollectionResponse
+     */
+    CompletableFuture<GetPerformanceDataCollectionResponse> getPerformanceDataCollection(GetPerformanceDataCollectionRequest request);
 
     /**
      * @param request the request parameters of GetPurgeQuota  GetPurgeQuotaRequest
@@ -1588,6 +1624,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCustomResponseCodeRulesResponse> listCustomResponseCodeRules(ListCustomResponseCodeRulesRequest request);
 
     /**
+     * @param request the request parameters of ListDDoSInstances  ListDDoSInstancesRequest
+     * @return ListDDoSInstancesResponse
+     */
+    CompletableFuture<ListDDoSInstancesResponse> listDDoSInstances(ListDDoSInstancesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This interface is used to check whether the vs_addr parameter in the vipInfo collection is vip.</p>
      * 
@@ -1696,6 +1738,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListInstanceQuotasWithUsageResponse
      */
     CompletableFuture<ListInstanceQuotasWithUsageResponse> listInstanceQuotasWithUsage(ListInstanceQuotasWithUsageRequest request);
+
+    /**
+     * @param request the request parameters of ListKeylessServers  ListKeylessServersRequest
+     * @return ListKeylessServersResponse
+     */
+    CompletableFuture<ListKeylessServersResponse> listKeylessServers(ListKeylessServersRequest request);
 
     /**
      * @param request the request parameters of ListKvs  ListKvsRequest
@@ -2051,6 +2099,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RebuildEdgeContainerAppStagingEnvResponse> rebuildEdgeContainerAppStagingEnv(RebuildEdgeContainerAppStagingEnvRequest request);
 
     /**
+     * @param request the request parameters of ReleaseInstance  ReleaseInstanceRequest
+     * @return ReleaseInstanceResponse
+     */
+    CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request);
+
+    /**
      * @param request the request parameters of ResetScheduledPreloadJob  ResetScheduledPreloadJobRequest
      * @return ResetScheduledPreloadJobResponse
      */
@@ -2069,10 +2123,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RollbackEdgeContainerAppVersionResponse> rollbackEdgeContainerAppVersion(RollbackEdgeContainerAppVersionRequest request);
 
     /**
+     * @param request the request parameters of SetAutomaticFrequencyControlConfig  SetAutomaticFrequencyControlConfigRequest
+     * @return SetAutomaticFrequencyControlConfigResponse
+     */
+    CompletableFuture<SetAutomaticFrequencyControlConfigResponse> setAutomaticFrequencyControlConfig(SetAutomaticFrequencyControlConfigRequest request);
+
+    /**
      * @param request the request parameters of SetCertificate  SetCertificateRequest
      * @return SetCertificateResponse
      */
     CompletableFuture<SetCertificateResponse> setCertificate(SetCertificateRequest request);
+
+    /**
+     * @param request the request parameters of SetClientCaCertificateHostnames  SetClientCaCertificateHostnamesRequest
+     * @return SetClientCaCertificateHostnamesResponse
+     */
+    CompletableFuture<SetClientCaCertificateHostnamesResponse> setClientCaCertificateHostnames(SetClientCaCertificateHostnamesRequest request);
 
     /**
      * @param request the request parameters of SetClientCertificateHostnames  SetClientCertificateHostnamesRequest
@@ -2109,6 +2175,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetHttpDDoSAttackRuleStatusResponse
      */
     CompletableFuture<SetHttpDDoSAttackRuleStatusResponse> setHttpDDoSAttackRuleStatus(SetHttpDDoSAttackRuleStatusRequest request);
+
+    /**
+     * @param request the request parameters of SetKeylessServer  SetKeylessServerRequest
+     * @return SetKeylessServerResponse
+     */
+    CompletableFuture<SetKeylessServerResponse> setKeylessServer(SetKeylessServerRequest request);
 
     /**
      * @param request the request parameters of SetOriginClientCertificateHostnames  SetOriginClientCertificateHostnamesRequest
@@ -2316,6 +2388,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePageResponse
      */
     CompletableFuture<UpdatePageResponse> updatePage(UpdatePageRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePerformanceDataCollection  UpdatePerformanceDataCollectionRequest
+     * @return UpdatePerformanceDataCollectionResponse
+     */
+    CompletableFuture<UpdatePerformanceDataCollectionResponse> updatePerformanceDataCollection(UpdatePerformanceDataCollectionRequest request);
 
     /**
      * @param request the request parameters of UpdateRatePlanSpec  UpdateRatePlanSpecRequest

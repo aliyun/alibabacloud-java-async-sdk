@@ -134,10 +134,14 @@ public class ListPagesRequest extends Request {
      * <p>ListPagesRequest</p>
      */
     public static class QueryArgs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContentType")
+        private String contentType;
+
         @com.aliyun.core.annotation.NameInMap("NameDescriptionLike")
         private String nameDescriptionLike;
 
         private QueryArgs(Builder builder) {
+            this.contentType = builder.contentType;
             this.nameDescriptionLike = builder.nameDescriptionLike;
         }
 
@@ -150,6 +154,13 @@ public class ListPagesRequest extends Request {
         }
 
         /**
+         * @return contentType
+         */
+        public String getContentType() {
+            return this.contentType;
+        }
+
+        /**
          * @return nameDescriptionLike
          */
         public String getNameDescriptionLike() {
@@ -157,14 +168,24 @@ public class ListPagesRequest extends Request {
         }
 
         public static final class Builder {
+            private String contentType; 
             private String nameDescriptionLike; 
 
             private Builder() {
             } 
 
             private Builder(QueryArgs model) {
+                this.contentType = model.contentType;
                 this.nameDescriptionLike = model.nameDescriptionLike;
             } 
+
+            /**
+             * ContentType.
+             */
+            public Builder contentType(String contentType) {
+                this.contentType = contentType;
+                return this;
+            }
 
             /**
              * NameDescriptionLike.

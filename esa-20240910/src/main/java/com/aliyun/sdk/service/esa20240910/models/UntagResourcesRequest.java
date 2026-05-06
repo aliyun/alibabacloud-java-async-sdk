@@ -22,10 +22,6 @@ public class UntagResourcesRequest extends Request {
     private Boolean all;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -51,7 +47,6 @@ public class UntagResourcesRequest extends Request {
     private UntagResourcesRequest(Builder builder) {
         super(builder);
         this.all = builder.all;
-        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
@@ -77,13 +72,6 @@ public class UntagResourcesRequest extends Request {
      */
     public Boolean getAll() {
         return this.all;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     /**
@@ -123,7 +111,6 @@ public class UntagResourcesRequest extends Request {
 
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private Boolean all; 
-        private Long ownerId; 
         private String regionId; 
         private java.util.List<String> resourceId; 
         private String resourceType; 
@@ -137,7 +124,6 @@ public class UntagResourcesRequest extends Request {
         private Builder(UntagResourcesRequest request) {
             super(request);
             this.all = request.all;
-            this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
@@ -159,15 +145,6 @@ public class UntagResourcesRequest extends Request {
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
             this.all = all;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteSiteRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
@@ -31,7 +27,6 @@ public class DeleteSiteRequest extends Request {
 
     private DeleteSiteRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.securityToken = builder.securityToken;
         this.siteId = builder.siteId;
     }
@@ -50,13 +45,6 @@ public class DeleteSiteRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -71,7 +59,6 @@ public class DeleteSiteRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteSiteRequest, Builder> {
-        private Long ownerId; 
         private String securityToken; 
         private Long siteId; 
 
@@ -81,19 +68,9 @@ public class DeleteSiteRequest extends Request {
 
         private Builder(DeleteSiteRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
             this.securityToken = request.securityToken;
             this.siteId = request.siteId;
         } 
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
 
         /**
          * SecurityToken.

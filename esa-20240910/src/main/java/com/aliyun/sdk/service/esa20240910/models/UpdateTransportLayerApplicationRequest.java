@@ -35,6 +35,10 @@ public class UpdateTransportLayerApplicationRequest extends Request {
     private String ipv6;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepAliveProtection")
+    private String keepAliveProtection;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Rules")
     private java.util.List<Rules> rules;
 
@@ -53,6 +57,7 @@ public class UpdateTransportLayerApplicationRequest extends Request {
         this.crossBorderOptimization = builder.crossBorderOptimization;
         this.ipAccessRule = builder.ipAccessRule;
         this.ipv6 = builder.ipv6;
+        this.keepAliveProtection = builder.keepAliveProtection;
         this.rules = builder.rules;
         this.siteId = builder.siteId;
         this.staticIp = builder.staticIp;
@@ -100,6 +105,13 @@ public class UpdateTransportLayerApplicationRequest extends Request {
     }
 
     /**
+     * @return keepAliveProtection
+     */
+    public String getKeepAliveProtection() {
+        return this.keepAliveProtection;
+    }
+
+    /**
      * @return rules
      */
     public java.util.List<Rules> getRules() {
@@ -125,6 +137,7 @@ public class UpdateTransportLayerApplicationRequest extends Request {
         private String crossBorderOptimization; 
         private String ipAccessRule; 
         private String ipv6; 
+        private String keepAliveProtection; 
         private java.util.List<Rules> rules; 
         private Long siteId; 
         private String staticIp; 
@@ -139,6 +152,7 @@ public class UpdateTransportLayerApplicationRequest extends Request {
             this.crossBorderOptimization = request.crossBorderOptimization;
             this.ipAccessRule = request.ipAccessRule;
             this.ipv6 = request.ipv6;
+            this.keepAliveProtection = request.keepAliveProtection;
             this.rules = request.rules;
             this.siteId = request.siteId;
             this.staticIp = request.staticIp;
@@ -198,6 +212,15 @@ public class UpdateTransportLayerApplicationRequest extends Request {
         public Builder ipv6(String ipv6) {
             this.putQueryParameter("Ipv6", ipv6);
             this.ipv6 = ipv6;
+            return this;
+        }
+
+        /**
+         * KeepAliveProtection.
+         */
+        public Builder keepAliveProtection(String keepAliveProtection) {
+            this.putQueryParameter("KeepAliveProtection", keepAliveProtection);
+            this.keepAliveProtection = keepAliveProtection;
             return this;
         }
 

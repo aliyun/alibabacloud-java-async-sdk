@@ -23,10 +23,6 @@ public class BlockObjectRequest extends Request {
     private java.util.List<String> content;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Extension")
-    private String extension;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Maxage")
     @com.aliyun.core.annotation.Validation(maximum = 864000, minimum = 600)
     private Integer maxage;
@@ -44,7 +40,6 @@ public class BlockObjectRequest extends Request {
     private BlockObjectRequest(Builder builder) {
         super(builder);
         this.content = builder.content;
-        this.extension = builder.extension;
         this.maxage = builder.maxage;
         this.siteId = builder.siteId;
         this.type = builder.type;
@@ -71,13 +66,6 @@ public class BlockObjectRequest extends Request {
     }
 
     /**
-     * @return extension
-     */
-    public String getExtension() {
-        return this.extension;
-    }
-
-    /**
      * @return maxage
      */
     public Integer getMaxage() {
@@ -100,7 +88,6 @@ public class BlockObjectRequest extends Request {
 
     public static final class Builder extends Request.Builder<BlockObjectRequest, Builder> {
         private java.util.List<String> content; 
-        private String extension; 
         private Integer maxage; 
         private Long siteId; 
         private String type; 
@@ -112,7 +99,6 @@ public class BlockObjectRequest extends Request {
         private Builder(BlockObjectRequest request) {
             super(request);
             this.content = request.content;
-            this.extension = request.extension;
             this.maxage = request.maxage;
             this.siteId = request.siteId;
             this.type = request.type;
@@ -126,18 +112,6 @@ public class BlockObjectRequest extends Request {
             String contentShrink = shrink(content, "Content", "json");
             this.putQueryParameter("Content", contentShrink);
             this.content = content;
-            return this;
-        }
-
-        /**
-         * <p>The blocking period that you can extend. Set the value to 2year.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2year</p>
-         */
-        public Builder extension(String extension) {
-            this.putQueryParameter("Extension", extension);
-            this.extension = extension;
             return this;
         }
 

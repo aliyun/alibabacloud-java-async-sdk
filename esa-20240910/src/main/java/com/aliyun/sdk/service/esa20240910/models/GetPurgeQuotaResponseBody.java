@@ -20,16 +20,24 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Quota")
     private String quota;
 
+    @com.aliyun.core.annotation.NameInMap("Quota30Day")
+    private String quota30Day;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Usage")
     private String usage;
 
+    @com.aliyun.core.annotation.NameInMap("Usage30Day")
+    private String usage30Day;
+
     private GetPurgeQuotaResponseBody(Builder builder) {
         this.quota = builder.quota;
+        this.quota30Day = builder.quota30Day;
         this.requestId = builder.requestId;
         this.usage = builder.usage;
+        this.usage30Day = builder.usage30Day;
     }
 
     public static Builder builder() {
@@ -52,6 +60,13 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
     }
 
     /**
+     * @return quota30Day
+     */
+    public String getQuota30Day() {
+        return this.quota30Day;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -65,18 +80,29 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
         return this.usage;
     }
 
+    /**
+     * @return usage30Day
+     */
+    public String getUsage30Day() {
+        return this.usage30Day;
+    }
+
     public static final class Builder {
         private String quota; 
+        private String quota30Day; 
         private String requestId; 
         private String usage; 
+        private String usage30Day; 
 
         private Builder() {
         } 
 
         private Builder(GetPurgeQuotaResponseBody model) {
             this.quota = model.quota;
+            this.quota30Day = model.quota30Day;
             this.requestId = model.requestId;
             this.usage = model.usage;
+            this.usage30Day = model.usage30Day;
         } 
 
         /**
@@ -87,6 +113,14 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
          */
         public Builder quota(String quota) {
             this.quota = quota;
+            return this;
+        }
+
+        /**
+         * Quota30Day.
+         */
+        public Builder quota30Day(String quota30Day) {
+            this.quota30Day = quota30Day;
             return this;
         }
 
@@ -109,6 +143,14 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
          */
         public Builder usage(String usage) {
             this.usage = usage;
+            return this;
+        }
+
+        /**
+         * Usage30Day.
+         */
+        public Builder usage30Day(String usage30Day) {
+            this.usage30Day = usage30Day;
             return this;
         }
 

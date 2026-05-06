@@ -35,6 +35,9 @@ public class WafSiteSettings extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DisableSecurityModule")
     private DisableSecurityModule disableSecurityModule;
 
+    @com.aliyun.core.annotation.NameInMap("RequestBodyInspection")
+    private RequestBodyInspection requestBodyInspection;
+
     @com.aliyun.core.annotation.NameInMap("SecurityLevel")
     private SecurityLevel securityLevel;
 
@@ -45,6 +48,7 @@ public class WafSiteSettings extends TeaModel {
         this.botManagement = builder.botManagement;
         this.clientIpIdentifier = builder.clientIpIdentifier;
         this.disableSecurityModule = builder.disableSecurityModule;
+        this.requestBodyInspection = builder.requestBodyInspection;
         this.securityLevel = builder.securityLevel;
     }
 
@@ -103,6 +107,13 @@ public class WafSiteSettings extends TeaModel {
     }
 
     /**
+     * @return requestBodyInspection
+     */
+    public RequestBodyInspection getRequestBodyInspection() {
+        return this.requestBodyInspection;
+    }
+
+    /**
      * @return securityLevel
      */
     public SecurityLevel getSecurityLevel() {
@@ -116,6 +127,7 @@ public class WafSiteSettings extends TeaModel {
         private BotManagement botManagement; 
         private ClientIpIdentifier clientIpIdentifier; 
         private DisableSecurityModule disableSecurityModule; 
+        private RequestBodyInspection requestBodyInspection; 
         private SecurityLevel securityLevel; 
 
         private Builder() {
@@ -128,6 +140,7 @@ public class WafSiteSettings extends TeaModel {
             this.botManagement = model.botManagement;
             this.clientIpIdentifier = model.clientIpIdentifier;
             this.disableSecurityModule = model.disableSecurityModule;
+            this.requestBodyInspection = model.requestBodyInspection;
             this.securityLevel = model.securityLevel;
         } 
 
@@ -176,6 +189,14 @@ public class WafSiteSettings extends TeaModel {
          */
         public Builder disableSecurityModule(DisableSecurityModule disableSecurityModule) {
             this.disableSecurityModule = disableSecurityModule;
+            return this;
+        }
+
+        /**
+         * RequestBodyInspection.
+         */
+        public Builder requestBodyInspection(RequestBodyInspection requestBodyInspection) {
+            this.requestBodyInspection = requestBodyInspection;
             return this;
         }
 
@@ -992,6 +1013,102 @@ public class WafSiteSettings extends TeaModel {
 
             public DisableSecurityModule build() {
                 return new DisableSecurityModule(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link WafSiteSettings} extends {@link TeaModel}
+     *
+     * <p>WafSiteSettings</p>
+     */
+    public static class RequestBodyInspection extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Action")
+        private String action;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("SizeLimit")
+        private String sizeLimit;
+
+        private RequestBodyInspection(Builder builder) {
+            this.action = builder.action;
+            this.id = builder.id;
+            this.sizeLimit = builder.sizeLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RequestBodyInspection create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return sizeLimit
+         */
+        public String getSizeLimit() {
+            return this.sizeLimit;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private Long id; 
+            private String sizeLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestBodyInspection model) {
+                this.action = model.action;
+                this.id = model.id;
+                this.sizeLimit = model.sizeLimit;
+            } 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * SizeLimit.
+             */
+            public Builder sizeLimit(String sizeLimit) {
+                this.sizeLimit = sizeLimit;
+                return this;
+            }
+
+            public RequestBodyInspection build() {
+                return new RequestBodyInspection(this);
             } 
 
         } 

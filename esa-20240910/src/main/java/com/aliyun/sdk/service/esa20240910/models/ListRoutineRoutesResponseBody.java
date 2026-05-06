@@ -233,6 +233,9 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SiteVersion")
         private Integer siteVersion;
 
+        @com.aliyun.core.annotation.NameInMap("Timeout")
+        private String timeout;
+
         private Configs(Builder builder) {
             this.bypass = builder.bypass;
             this.configId = builder.configId;
@@ -247,6 +250,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             this.siteId = builder.siteId;
             this.siteName = builder.siteName;
             this.siteVersion = builder.siteVersion;
+            this.timeout = builder.timeout;
         }
 
         public static Builder builder() {
@@ -348,6 +352,13 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             return this.siteVersion;
         }
 
+        /**
+         * @return timeout
+         */
+        public String getTimeout() {
+            return this.timeout;
+        }
+
         public static final class Builder {
             private String bypass; 
             private Long configId; 
@@ -362,6 +373,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             private Long siteId; 
             private String siteName; 
             private Integer siteVersion; 
+            private String timeout; 
 
             private Builder() {
             } 
@@ -380,6 +392,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
                 this.siteId = model.siteId;
                 this.siteName = model.siteName;
                 this.siteVersion = model.siteVersion;
+                this.timeout = model.timeout;
             } 
 
             /**
@@ -542,6 +555,14 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
              */
             public Builder siteVersion(Integer siteVersion) {
                 this.siteVersion = siteVersion;
+                return this;
+            }
+
+            /**
+             * Timeout.
+             */
+            public Builder timeout(String timeout) {
+                this.timeout = timeout;
                 return this;
             }
 

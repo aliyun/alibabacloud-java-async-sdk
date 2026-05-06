@@ -19,10 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateCustomResponseCodeRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pageId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReturnCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String returnCode;
 
     @com.aliyun.core.annotation.Query
@@ -159,6 +161,7 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
 
         /**
          * <p>Response page.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -171,6 +174,7 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
 
         /**
          * <p>Response code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>400</p>

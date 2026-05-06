@@ -53,6 +53,9 @@ public class GetRoutineRouteResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SiteVersion")
     private Integer siteVersion;
 
+    @com.aliyun.core.annotation.NameInMap("Timeout")
+    private String timeout;
+
     private GetRoutineRouteResponseBody(Builder builder) {
         this.bypass = builder.bypass;
         this.configId = builder.configId;
@@ -66,6 +69,7 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         this.rule = builder.rule;
         this.sequence = builder.sequence;
         this.siteVersion = builder.siteVersion;
+        this.timeout = builder.timeout;
     }
 
     public static Builder builder() {
@@ -164,6 +168,13 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         return this.siteVersion;
     }
 
+    /**
+     * @return timeout
+     */
+    public String getTimeout() {
+        return this.timeout;
+    }
+
     public static final class Builder {
         private String bypass; 
         private Long configId; 
@@ -177,6 +188,7 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         private String rule; 
         private Integer sequence; 
         private Integer siteVersion; 
+        private String timeout; 
 
         private Builder() {
         } 
@@ -194,6 +206,7 @@ public class GetRoutineRouteResponseBody extends TeaModel {
             this.rule = model.rule;
             this.sequence = model.sequence;
             this.siteVersion = model.siteVersion;
+            this.timeout = model.timeout;
         } 
 
         /**
@@ -345,6 +358,14 @@ public class GetRoutineRouteResponseBody extends TeaModel {
          */
         public Builder siteVersion(Integer siteVersion) {
             this.siteVersion = siteVersion;
+            return this;
+        }
+
+        /**
+         * Timeout.
+         */
+        public Builder timeout(String timeout) {
+            this.timeout = timeout;
             return this;
         }
 

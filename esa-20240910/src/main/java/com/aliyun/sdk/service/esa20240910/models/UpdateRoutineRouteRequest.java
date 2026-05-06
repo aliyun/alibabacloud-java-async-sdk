@@ -55,6 +55,10 @@ public class UpdateRoutineRouteRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
+    private String timeout;
+
     private UpdateRoutineRouteRequest(Builder builder) {
         super(builder);
         this.bypass = builder.bypass;
@@ -66,6 +70,7 @@ public class UpdateRoutineRouteRequest extends Request {
         this.rule = builder.rule;
         this.sequence = builder.sequence;
         this.siteId = builder.siteId;
+        this.timeout = builder.timeout;
     }
 
     public static Builder builder() {
@@ -144,6 +149,13 @@ public class UpdateRoutineRouteRequest extends Request {
         return this.siteId;
     }
 
+    /**
+     * @return timeout
+     */
+    public String getTimeout() {
+        return this.timeout;
+    }
+
     public static final class Builder extends Request.Builder<UpdateRoutineRouteRequest, Builder> {
         private String bypass; 
         private Long configId; 
@@ -154,6 +166,7 @@ public class UpdateRoutineRouteRequest extends Request {
         private String rule; 
         private Integer sequence; 
         private Long siteId; 
+        private String timeout; 
 
         private Builder() {
             super();
@@ -170,6 +183,7 @@ public class UpdateRoutineRouteRequest extends Request {
             this.rule = request.rule;
             this.sequence = request.sequence;
             this.siteId = request.siteId;
+            this.timeout = request.timeout;
         } 
 
         /**
@@ -291,6 +305,15 @@ public class UpdateRoutineRouteRequest extends Request {
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
             this.siteId = siteId;
+            return this;
+        }
+
+        /**
+         * Timeout.
+         */
+        public Builder timeout(String timeout) {
+            this.putQueryParameter("Timeout", timeout);
+            this.timeout = timeout;
             return this;
         }
 
