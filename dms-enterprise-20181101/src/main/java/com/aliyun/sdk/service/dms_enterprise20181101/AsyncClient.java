@@ -1263,6 +1263,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>查询表的资产知识详情，返回表的基本元信息、AI 增强的业务描述、汇总信息以及字段知识列表</p>
+     * 
+     * @param request the request parameters of GetTableKnowledgeDetails  GetTableKnowledgeDetailsRequest
+     * @return GetTableKnowledgeDetailsResponse
+     */
+    CompletableFuture<GetTableKnowledgeDetailsResponse> getTableKnowledgeDetails(GetTableKnowledgeDetailsRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>This API can be called only for database instances that are enabled for security hosting.</p>
      * 
      * @param request the request parameters of GetTableKnowledgeInfo  GetTableKnowledgeInfoRequest

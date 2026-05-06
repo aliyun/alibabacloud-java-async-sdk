@@ -3196,6 +3196,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>查询表的资产知识详情，返回表的基本元信息、AI 增强的业务描述、汇总信息以及字段知识列表</p>
+     * 
+     * @param request the request parameters of GetTableKnowledgeDetails  GetTableKnowledgeDetailsRequest
+     * @return GetTableKnowledgeDetailsResponse
+     */
+    @Override
+    public CompletableFuture<GetTableKnowledgeDetailsResponse> getTableKnowledgeDetails(GetTableKnowledgeDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTableKnowledgeDetails").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTableKnowledgeDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTableKnowledgeDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>This API can be called only for database instances that are enabled for security hosting.</p>
      * 
      * @param request the request parameters of GetTableKnowledgeInfo  GetTableKnowledgeInfoRequest
