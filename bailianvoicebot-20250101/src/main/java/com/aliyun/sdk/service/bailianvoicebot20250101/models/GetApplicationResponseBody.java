@@ -265,6 +265,144 @@ public class GetApplicationResponseBody extends TeaModel {
      *
      * <p>GetApplicationResponseBody</p>
      */
+    public static class RagConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("KnowledgeBaseIds")
+        private java.util.List<String> knowledgeBaseIds;
+
+        @com.aliyun.core.annotation.NameInMap("MaxContentLength")
+        private Integer maxContentLength;
+
+        @com.aliyun.core.annotation.NameInMap("RagEngine")
+        private String ragEngine;
+
+        @com.aliyun.core.annotation.NameInMap("TopN")
+        private Integer topN;
+
+        private RagConfig(Builder builder) {
+            this.enabled = builder.enabled;
+            this.knowledgeBaseIds = builder.knowledgeBaseIds;
+            this.maxContentLength = builder.maxContentLength;
+            this.ragEngine = builder.ragEngine;
+            this.topN = builder.topN;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RagConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return knowledgeBaseIds
+         */
+        public java.util.List<String> getKnowledgeBaseIds() {
+            return this.knowledgeBaseIds;
+        }
+
+        /**
+         * @return maxContentLength
+         */
+        public Integer getMaxContentLength() {
+            return this.maxContentLength;
+        }
+
+        /**
+         * @return ragEngine
+         */
+        public String getRagEngine() {
+            return this.ragEngine;
+        }
+
+        /**
+         * @return topN
+         */
+        public Integer getTopN() {
+            return this.topN;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private java.util.List<String> knowledgeBaseIds; 
+            private Integer maxContentLength; 
+            private String ragEngine; 
+            private Integer topN; 
+
+            private Builder() {
+            } 
+
+            private Builder(RagConfig model) {
+                this.enabled = model.enabled;
+                this.knowledgeBaseIds = model.knowledgeBaseIds;
+                this.maxContentLength = model.maxContentLength;
+                this.ragEngine = model.ragEngine;
+                this.topN = model.topN;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * KnowledgeBaseIds.
+             */
+            public Builder knowledgeBaseIds(java.util.List<String> knowledgeBaseIds) {
+                this.knowledgeBaseIds = knowledgeBaseIds;
+                return this;
+            }
+
+            /**
+             * MaxContentLength.
+             */
+            public Builder maxContentLength(Integer maxContentLength) {
+                this.maxContentLength = maxContentLength;
+                return this;
+            }
+
+            /**
+             * RagEngine.
+             */
+            public Builder ragEngine(String ragEngine) {
+                this.ragEngine = ragEngine;
+                return this;
+            }
+
+            /**
+             * TopN.
+             */
+            public Builder topN(Integer topN) {
+                this.topN = topN;
+                return this;
+            }
+
+            public RagConfig build() {
+                return new RagConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class AgentProfile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentProfileId")
         private String agentProfileId;
@@ -737,6 +875,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InteractionConfig")
         private InteractionConfig interactionConfig;
 
+        @com.aliyun.core.annotation.NameInMap("RagConfig")
+        private RagConfig ragConfig;
+
         @com.aliyun.core.annotation.NameInMap("ScriptProfile")
         private ScriptProfile scriptProfile;
 
@@ -751,6 +892,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
         private DraftVersion(Builder builder) {
             this.interactionConfig = builder.interactionConfig;
+            this.ragConfig = builder.ragConfig;
             this.scriptProfile = builder.scriptProfile;
             this.synthesizerConfig = builder.synthesizerConfig;
             this.transcriberConfig = builder.transcriberConfig;
@@ -770,6 +912,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public InteractionConfig getInteractionConfig() {
             return this.interactionConfig;
+        }
+
+        /**
+         * @return ragConfig
+         */
+        public RagConfig getRagConfig() {
+            return this.ragConfig;
         }
 
         /**
@@ -802,6 +951,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static final class Builder {
             private InteractionConfig interactionConfig; 
+            private RagConfig ragConfig; 
             private ScriptProfile scriptProfile; 
             private SynthesizerConfig synthesizerConfig; 
             private TranscriberConfig transcriberConfig; 
@@ -812,6 +962,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
             private Builder(DraftVersion model) {
                 this.interactionConfig = model.interactionConfig;
+                this.ragConfig = model.ragConfig;
                 this.scriptProfile = model.scriptProfile;
                 this.synthesizerConfig = model.synthesizerConfig;
                 this.transcriberConfig = model.transcriberConfig;
@@ -823,6 +974,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder interactionConfig(InteractionConfig interactionConfig) {
                 this.interactionConfig = interactionConfig;
+                return this;
+            }
+
+            /**
+             * RagConfig.
+             */
+            public Builder ragConfig(RagConfig ragConfig) {
+                this.ragConfig = ragConfig;
                 return this;
             }
 
@@ -968,6 +1127,144 @@ public class GetApplicationResponseBody extends TeaModel {
 
             public PublishedVersionInteractionConfig build() {
                 return new PublishedVersionInteractionConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class PublishedVersionRagConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("KnowledgeBaseIds")
+        private java.util.List<String> knowledgeBaseIds;
+
+        @com.aliyun.core.annotation.NameInMap("MaxContentLength")
+        private Integer maxContentLength;
+
+        @com.aliyun.core.annotation.NameInMap("RagEngine")
+        private String ragEngine;
+
+        @com.aliyun.core.annotation.NameInMap("TopN")
+        private Integer topN;
+
+        private PublishedVersionRagConfig(Builder builder) {
+            this.enabled = builder.enabled;
+            this.knowledgeBaseIds = builder.knowledgeBaseIds;
+            this.maxContentLength = builder.maxContentLength;
+            this.ragEngine = builder.ragEngine;
+            this.topN = builder.topN;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PublishedVersionRagConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return knowledgeBaseIds
+         */
+        public java.util.List<String> getKnowledgeBaseIds() {
+            return this.knowledgeBaseIds;
+        }
+
+        /**
+         * @return maxContentLength
+         */
+        public Integer getMaxContentLength() {
+            return this.maxContentLength;
+        }
+
+        /**
+         * @return ragEngine
+         */
+        public String getRagEngine() {
+            return this.ragEngine;
+        }
+
+        /**
+         * @return topN
+         */
+        public Integer getTopN() {
+            return this.topN;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private java.util.List<String> knowledgeBaseIds; 
+            private Integer maxContentLength; 
+            private String ragEngine; 
+            private Integer topN; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublishedVersionRagConfig model) {
+                this.enabled = model.enabled;
+                this.knowledgeBaseIds = model.knowledgeBaseIds;
+                this.maxContentLength = model.maxContentLength;
+                this.ragEngine = model.ragEngine;
+                this.topN = model.topN;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * KnowledgeBaseIds.
+             */
+            public Builder knowledgeBaseIds(java.util.List<String> knowledgeBaseIds) {
+                this.knowledgeBaseIds = knowledgeBaseIds;
+                return this;
+            }
+
+            /**
+             * MaxContentLength.
+             */
+            public Builder maxContentLength(Integer maxContentLength) {
+                this.maxContentLength = maxContentLength;
+                return this;
+            }
+
+            /**
+             * RagEngine.
+             */
+            public Builder ragEngine(String ragEngine) {
+                this.ragEngine = ragEngine;
+                return this;
+            }
+
+            /**
+             * TopN.
+             */
+            public Builder topN(Integer topN) {
+                this.topN = topN;
+                return this;
+            }
+
+            public PublishedVersionRagConfig build() {
+                return new PublishedVersionRagConfig(this);
             } 
 
         } 
@@ -1451,6 +1748,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InteractionConfig")
         private PublishedVersionInteractionConfig interactionConfig;
 
+        @com.aliyun.core.annotation.NameInMap("RagConfig")
+        private PublishedVersionRagConfig ragConfig;
+
         @com.aliyun.core.annotation.NameInMap("ScriptProfile")
         private PublishedVersionScriptProfile scriptProfile;
 
@@ -1465,6 +1765,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
         private PublishedVersion(Builder builder) {
             this.interactionConfig = builder.interactionConfig;
+            this.ragConfig = builder.ragConfig;
             this.scriptProfile = builder.scriptProfile;
             this.synthesizerConfig = builder.synthesizerConfig;
             this.transcriberConfig = builder.transcriberConfig;
@@ -1484,6 +1785,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public PublishedVersionInteractionConfig getInteractionConfig() {
             return this.interactionConfig;
+        }
+
+        /**
+         * @return ragConfig
+         */
+        public PublishedVersionRagConfig getRagConfig() {
+            return this.ragConfig;
         }
 
         /**
@@ -1516,6 +1824,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static final class Builder {
             private PublishedVersionInteractionConfig interactionConfig; 
+            private PublishedVersionRagConfig ragConfig; 
             private PublishedVersionScriptProfile scriptProfile; 
             private PublishedVersionSynthesizerConfig synthesizerConfig; 
             private PublishedVersionTranscriberConfig transcriberConfig; 
@@ -1526,6 +1835,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
             private Builder(PublishedVersion model) {
                 this.interactionConfig = model.interactionConfig;
+                this.ragConfig = model.ragConfig;
                 this.scriptProfile = model.scriptProfile;
                 this.synthesizerConfig = model.synthesizerConfig;
                 this.transcriberConfig = model.transcriberConfig;
@@ -1537,6 +1847,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder interactionConfig(PublishedVersionInteractionConfig interactionConfig) {
                 this.interactionConfig = interactionConfig;
+                return this;
+            }
+
+            /**
+             * RagConfig.
+             */
+            public Builder ragConfig(PublishedVersionRagConfig ragConfig) {
+                this.ragConfig = ragConfig;
                 return this;
             }
 

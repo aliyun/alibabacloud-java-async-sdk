@@ -32,6 +32,10 @@ public class CreateApplicationVersionRequest extends Request {
     private InteractionConfig interactionConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RagConfig")
+    private RagConfig ragConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScriptProfile")
     private ScriptProfile scriptProfile;
 
@@ -52,6 +56,7 @@ public class CreateApplicationVersionRequest extends Request {
         this.applicationId = builder.applicationId;
         this.businessUnitId = builder.businessUnitId;
         this.interactionConfig = builder.interactionConfig;
+        this.ragConfig = builder.ragConfig;
         this.scriptProfile = builder.scriptProfile;
         this.sourceVersionId = builder.sourceVersionId;
         this.synthesizerConfig = builder.synthesizerConfig;
@@ -93,6 +98,13 @@ public class CreateApplicationVersionRequest extends Request {
     }
 
     /**
+     * @return ragConfig
+     */
+    public RagConfig getRagConfig() {
+        return this.ragConfig;
+    }
+
+    /**
      * @return scriptProfile
      */
     public ScriptProfile getScriptProfile() {
@@ -124,6 +136,7 @@ public class CreateApplicationVersionRequest extends Request {
         private String applicationId; 
         private String businessUnitId; 
         private InteractionConfig interactionConfig; 
+        private RagConfig ragConfig; 
         private ScriptProfile scriptProfile; 
         private String sourceVersionId; 
         private SynthesizerConfig synthesizerConfig; 
@@ -138,6 +151,7 @@ public class CreateApplicationVersionRequest extends Request {
             this.applicationId = request.applicationId;
             this.businessUnitId = request.businessUnitId;
             this.interactionConfig = request.interactionConfig;
+            this.ragConfig = request.ragConfig;
             this.scriptProfile = request.scriptProfile;
             this.sourceVersionId = request.sourceVersionId;
             this.synthesizerConfig = request.synthesizerConfig;
@@ -175,6 +189,16 @@ public class CreateApplicationVersionRequest extends Request {
             String interactionConfigShrink = shrink(interactionConfig, "InteractionConfig", "json");
             this.putQueryParameter("InteractionConfig", interactionConfigShrink);
             this.interactionConfig = interactionConfig;
+            return this;
+        }
+
+        /**
+         * RagConfig.
+         */
+        public Builder ragConfig(RagConfig ragConfig) {
+            String ragConfigShrink = shrink(ragConfig, "RagConfig", "json");
+            this.putQueryParameter("RagConfig", ragConfigShrink);
+            this.ragConfig = ragConfig;
             return this;
         }
 
@@ -327,6 +351,146 @@ public class CreateApplicationVersionRequest extends Request {
 
             public InteractionConfig build() {
                 return new InteractionConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationVersionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationVersionRequest</p>
+     */
+    public static class RagConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("KnowledgeBaseIds")
+        private java.util.List<String> knowledgeBaseIds;
+
+        @com.aliyun.core.annotation.NameInMap("MaxContentLength")
+        @com.aliyun.core.annotation.Validation(maximum = 2000, minimum = 1)
+        private Integer maxContentLength;
+
+        @com.aliyun.core.annotation.NameInMap("RagEngine")
+        private String ragEngine;
+
+        @com.aliyun.core.annotation.NameInMap("TopN")
+        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
+        private Integer topN;
+
+        private RagConfig(Builder builder) {
+            this.enabled = builder.enabled;
+            this.knowledgeBaseIds = builder.knowledgeBaseIds;
+            this.maxContentLength = builder.maxContentLength;
+            this.ragEngine = builder.ragEngine;
+            this.topN = builder.topN;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RagConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return knowledgeBaseIds
+         */
+        public java.util.List<String> getKnowledgeBaseIds() {
+            return this.knowledgeBaseIds;
+        }
+
+        /**
+         * @return maxContentLength
+         */
+        public Integer getMaxContentLength() {
+            return this.maxContentLength;
+        }
+
+        /**
+         * @return ragEngine
+         */
+        public String getRagEngine() {
+            return this.ragEngine;
+        }
+
+        /**
+         * @return topN
+         */
+        public Integer getTopN() {
+            return this.topN;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private java.util.List<String> knowledgeBaseIds; 
+            private Integer maxContentLength; 
+            private String ragEngine; 
+            private Integer topN; 
+
+            private Builder() {
+            } 
+
+            private Builder(RagConfig model) {
+                this.enabled = model.enabled;
+                this.knowledgeBaseIds = model.knowledgeBaseIds;
+                this.maxContentLength = model.maxContentLength;
+                this.ragEngine = model.ragEngine;
+                this.topN = model.topN;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * KnowledgeBaseIds.
+             */
+            public Builder knowledgeBaseIds(java.util.List<String> knowledgeBaseIds) {
+                this.knowledgeBaseIds = knowledgeBaseIds;
+                return this;
+            }
+
+            /**
+             * MaxContentLength.
+             */
+            public Builder maxContentLength(Integer maxContentLength) {
+                this.maxContentLength = maxContentLength;
+                return this;
+            }
+
+            /**
+             * RagEngine.
+             */
+            public Builder ragEngine(String ragEngine) {
+                this.ragEngine = ragEngine;
+                return this;
+            }
+
+            /**
+             * TopN.
+             */
+            public Builder topN(Integer topN) {
+                this.topN = topN;
+                return this;
+            }
+
+            public RagConfig build() {
+                return new RagConfig(this);
             } 
 
         } 
