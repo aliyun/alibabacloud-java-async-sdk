@@ -31,6 +31,10 @@ public class RunEssayCorrectionRequest extends Request {
     private String answer;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dimensions")
+    private java.util.List<Dimensions> dimensions;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("grade")
     private String grade;
 
@@ -59,6 +63,7 @@ public class RunEssayCorrectionRequest extends Request {
         this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
         this.answer = builder.answer;
+        this.dimensions = builder.dimensions;
         this.grade = builder.grade;
         this.modelId = builder.modelId;
         this.otherReviewPoints = builder.otherReviewPoints;
@@ -99,6 +104,13 @@ public class RunEssayCorrectionRequest extends Request {
      */
     public String getAnswer() {
         return this.answer;
+    }
+
+    /**
+     * @return dimensions
+     */
+    public java.util.List<Dimensions> getDimensions() {
+        return this.dimensions;
     }
 
     /**
@@ -147,6 +159,7 @@ public class RunEssayCorrectionRequest extends Request {
         private String regionId; 
         private String workspaceId; 
         private String answer; 
+        private java.util.List<Dimensions> dimensions; 
         private String grade; 
         private String modelId; 
         private String otherReviewPoints; 
@@ -163,6 +176,7 @@ public class RunEssayCorrectionRequest extends Request {
             this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
             this.answer = request.answer;
+            this.dimensions = request.dimensions;
             this.grade = request.grade;
             this.modelId = request.modelId;
             this.otherReviewPoints = request.otherReviewPoints;
@@ -198,6 +212,16 @@ public class RunEssayCorrectionRequest extends Request {
         public Builder answer(String answer) {
             this.putBodyParameter("answer", answer);
             this.answer = answer;
+            return this;
+        }
+
+        /**
+         * dimensions.
+         */
+        public Builder dimensions(java.util.List<Dimensions> dimensions) {
+            String dimensionsShrink = shrink(dimensions, "dimensions", "json");
+            this.putBodyParameter("dimensions", dimensionsShrink);
+            this.dimensions = dimensions;
             return this;
         }
 
@@ -262,4 +286,100 @@ public class RunEssayCorrectionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunEssayCorrectionRequest} extends {@link TeaModel}
+     *
+     * <p>RunEssayCorrectionRequest</p>
+     */
+    public static class Dimensions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("maxScore")
+        private Integer maxScore;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("rubric")
+        private String rubric;
+
+        private Dimensions(Builder builder) {
+            this.maxScore = builder.maxScore;
+            this.name = builder.name;
+            this.rubric = builder.rubric;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Dimensions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxScore
+         */
+        public Integer getMaxScore() {
+            return this.maxScore;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return rubric
+         */
+        public String getRubric() {
+            return this.rubric;
+        }
+
+        public static final class Builder {
+            private Integer maxScore; 
+            private String name; 
+            private String rubric; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.maxScore = model.maxScore;
+                this.name = model.name;
+                this.rubric = model.rubric;
+            } 
+
+            /**
+             * maxScore.
+             */
+            public Builder maxScore(Integer maxScore) {
+                this.maxScore = maxScore;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * rubric.
+             */
+            public Builder rubric(String rubric) {
+                this.rubric = rubric;
+                return this;
+            }
+
+            public Dimensions build() {
+                return new Dimensions(this);
+            } 
+
+        } 
+
+    }
 }

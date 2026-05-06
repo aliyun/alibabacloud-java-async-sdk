@@ -277,7 +277,133 @@ public class RunEssayCorrectionResponseBody extends TeaModel {
      *
      * <p>RunEssayCorrectionResponseBody</p>
      */
+    public static class DimensionResults extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("analysis")
+        private String analysis;
+
+        @com.aliyun.core.annotation.NameInMap("maxScore")
+        private Double maxScore;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("score")
+        private Double score;
+
+        private DimensionResults(Builder builder) {
+            this.analysis = builder.analysis;
+            this.maxScore = builder.maxScore;
+            this.name = builder.name;
+            this.score = builder.score;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DimensionResults create() {
+            return builder().build();
+        }
+
+        /**
+         * @return analysis
+         */
+        public String getAnalysis() {
+            return this.analysis;
+        }
+
+        /**
+         * @return maxScore
+         */
+        public Double getMaxScore() {
+            return this.maxScore;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return score
+         */
+        public Double getScore() {
+            return this.score;
+        }
+
+        public static final class Builder {
+            private String analysis; 
+            private Double maxScore; 
+            private String name; 
+            private Double score; 
+
+            private Builder() {
+            } 
+
+            private Builder(DimensionResults model) {
+                this.analysis = model.analysis;
+                this.maxScore = model.maxScore;
+                this.name = model.name;
+                this.score = model.score;
+            } 
+
+            /**
+             * analysis.
+             */
+            public Builder analysis(String analysis) {
+                this.analysis = analysis;
+                return this;
+            }
+
+            /**
+             * maxScore.
+             */
+            public Builder maxScore(Double maxScore) {
+                this.maxScore = maxScore;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * score.
+             */
+            public Builder score(Double score) {
+                this.score = score;
+                return this;
+            }
+
+            public DimensionResults build() {
+                return new DimensionResults(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunEssayCorrectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunEssayCorrectionResponseBody</p>
+     */
     public static class Output extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dimensionResults")
+        private java.util.List<DimensionResults> dimensionResults;
+
+        @com.aliyun.core.annotation.NameInMap("overallComment")
+        private String overallComment;
+
+        @com.aliyun.core.annotation.NameInMap("reasoningContent")
+        private String reasoningContent;
+
         @com.aliyun.core.annotation.NameInMap("score")
         private Integer score;
 
@@ -285,6 +411,9 @@ public class RunEssayCorrectionResponseBody extends TeaModel {
         private String text;
 
         private Output(Builder builder) {
+            this.dimensionResults = builder.dimensionResults;
+            this.overallComment = builder.overallComment;
+            this.reasoningContent = builder.reasoningContent;
             this.score = builder.score;
             this.text = builder.text;
         }
@@ -295,6 +424,27 @@ public class RunEssayCorrectionResponseBody extends TeaModel {
 
         public static Output create() {
             return builder().build();
+        }
+
+        /**
+         * @return dimensionResults
+         */
+        public java.util.List<DimensionResults> getDimensionResults() {
+            return this.dimensionResults;
+        }
+
+        /**
+         * @return overallComment
+         */
+        public String getOverallComment() {
+            return this.overallComment;
+        }
+
+        /**
+         * @return reasoningContent
+         */
+        public String getReasoningContent() {
+            return this.reasoningContent;
         }
 
         /**
@@ -312,6 +462,9 @@ public class RunEssayCorrectionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<DimensionResults> dimensionResults; 
+            private String overallComment; 
+            private String reasoningContent; 
             private Integer score; 
             private String text; 
 
@@ -319,9 +472,36 @@ public class RunEssayCorrectionResponseBody extends TeaModel {
             } 
 
             private Builder(Output model) {
+                this.dimensionResults = model.dimensionResults;
+                this.overallComment = model.overallComment;
+                this.reasoningContent = model.reasoningContent;
                 this.score = model.score;
                 this.text = model.text;
             } 
+
+            /**
+             * dimensionResults.
+             */
+            public Builder dimensionResults(java.util.List<DimensionResults> dimensionResults) {
+                this.dimensionResults = dimensionResults;
+                return this;
+            }
+
+            /**
+             * overallComment.
+             */
+            public Builder overallComment(String overallComment) {
+                this.overallComment = overallComment;
+                return this;
+            }
+
+            /**
+             * reasoningContent.
+             */
+            public Builder reasoningContent(String reasoningContent) {
+                this.reasoningContent = reasoningContent;
+                return this;
+            }
 
             /**
              * score.

@@ -181,9 +181,138 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
      *
      * <p>GetEssayCorrectionTaskResponseBody</p>
      */
+    public static class DimensionResults extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("analysis")
+        private String analysis;
+
+        @com.aliyun.core.annotation.NameInMap("maxScore")
+        private Double maxScore;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("score")
+        private Double score;
+
+        private DimensionResults(Builder builder) {
+            this.analysis = builder.analysis;
+            this.maxScore = builder.maxScore;
+            this.name = builder.name;
+            this.score = builder.score;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DimensionResults create() {
+            return builder().build();
+        }
+
+        /**
+         * @return analysis
+         */
+        public String getAnalysis() {
+            return this.analysis;
+        }
+
+        /**
+         * @return maxScore
+         */
+        public Double getMaxScore() {
+            return this.maxScore;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return score
+         */
+        public Double getScore() {
+            return this.score;
+        }
+
+        public static final class Builder {
+            private String analysis; 
+            private Double maxScore; 
+            private String name; 
+            private Double score; 
+
+            private Builder() {
+            } 
+
+            private Builder(DimensionResults model) {
+                this.analysis = model.analysis;
+                this.maxScore = model.maxScore;
+                this.name = model.name;
+                this.score = model.score;
+            } 
+
+            /**
+             * analysis.
+             */
+            public Builder analysis(String analysis) {
+                this.analysis = analysis;
+                return this;
+            }
+
+            /**
+             * maxScore.
+             */
+            public Builder maxScore(Double maxScore) {
+                this.maxScore = maxScore;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * score.
+             */
+            public Builder score(Double score) {
+                this.score = score;
+                return this;
+            }
+
+            public DimensionResults build() {
+                return new DimensionResults(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetEssayCorrectionTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEssayCorrectionTaskResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("customId")
         private String customId;
+
+        @com.aliyun.core.annotation.NameInMap("dimensionResults")
+        private java.util.List<DimensionResults> dimensionResults;
+
+        @com.aliyun.core.annotation.NameInMap("errorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("errorMessage")
+        private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("overallComment")
+        private String overallComment;
 
         @com.aliyun.core.annotation.NameInMap("result")
         private String result;
@@ -196,6 +325,10 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
 
         private Results(Builder builder) {
             this.customId = builder.customId;
+            this.dimensionResults = builder.dimensionResults;
+            this.errorCode = builder.errorCode;
+            this.errorMessage = builder.errorMessage;
+            this.overallComment = builder.overallComment;
             this.result = builder.result;
             this.score = builder.score;
             this.usage = builder.usage;
@@ -214,6 +347,34 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
          */
         public String getCustomId() {
             return this.customId;
+        }
+
+        /**
+         * @return dimensionResults
+         */
+        public java.util.List<DimensionResults> getDimensionResults() {
+            return this.dimensionResults;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return overallComment
+         */
+        public String getOverallComment() {
+            return this.overallComment;
         }
 
         /**
@@ -239,6 +400,10 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String customId; 
+            private java.util.List<DimensionResults> dimensionResults; 
+            private String errorCode; 
+            private String errorMessage; 
+            private String overallComment; 
             private String result; 
             private Integer score; 
             private ModelUsage usage; 
@@ -248,6 +413,10 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
 
             private Builder(Results model) {
                 this.customId = model.customId;
+                this.dimensionResults = model.dimensionResults;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.overallComment = model.overallComment;
                 this.result = model.result;
                 this.score = model.score;
                 this.usage = model.usage;
@@ -261,6 +430,38 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
              */
             public Builder customId(String customId) {
                 this.customId = customId;
+                return this;
+            }
+
+            /**
+             * dimensionResults.
+             */
+            public Builder dimensionResults(java.util.List<DimensionResults> dimensionResults) {
+                this.dimensionResults = dimensionResults;
+                return this;
+            }
+
+            /**
+             * errorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * errorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * overallComment.
+             */
+            public Builder overallComment(String overallComment) {
+                this.overallComment = overallComment;
                 return this;
             }
 
