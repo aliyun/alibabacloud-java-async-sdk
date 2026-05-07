@@ -59,6 +59,10 @@ public class DescribeCouponRequest extends Request {
     private Long expireStartDate;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeShare")
+    private Boolean includeShare;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -76,6 +80,10 @@ public class DescribeCouponRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    private String productCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -91,10 +99,12 @@ public class DescribeCouponRequest extends Request {
         this.effectiveStartTime = builder.effectiveStartTime;
         this.expireEndDate = builder.expireEndDate;
         this.expireStartDate = builder.expireStartDate;
+        this.includeShare = builder.includeShare;
         this.maxResults = builder.maxResults;
         this.nbid = builder.nbid;
         this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
+        this.productCode = builder.productCode;
         this.status = builder.status;
     }
 
@@ -182,6 +192,13 @@ public class DescribeCouponRequest extends Request {
     }
 
     /**
+     * @return includeShare
+     */
+    public Boolean getIncludeShare() {
+        return this.includeShare;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -210,6 +227,13 @@ public class DescribeCouponRequest extends Request {
     }
 
     /**
+     * @return productCode
+     */
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -227,10 +251,12 @@ public class DescribeCouponRequest extends Request {
         private Long effectiveStartTime; 
         private Long expireEndDate; 
         private Long expireStartDate; 
+        private Boolean includeShare; 
         private Integer maxResults; 
         private String nbid; 
         private String nextToken; 
         private Integer pageSize; 
+        private String productCode; 
         private String status; 
 
         private Builder() {
@@ -249,10 +275,12 @@ public class DescribeCouponRequest extends Request {
             this.effectiveStartTime = request.effectiveStartTime;
             this.expireEndDate = request.expireEndDate;
             this.expireStartDate = request.expireStartDate;
+            this.includeShare = request.includeShare;
             this.maxResults = request.maxResults;
             this.nbid = request.nbid;
             this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
+            this.productCode = request.productCode;
             this.status = request.status;
         } 
 
@@ -352,6 +380,15 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
+         * IncludeShare.
+         */
+        public Builder includeShare(Boolean includeShare) {
+            this.putQueryParameter("IncludeShare", includeShare);
+            this.includeShare = includeShare;
+            return this;
+        }
+
+        /**
          * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
@@ -387,6 +424,15 @@ public class DescribeCouponRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProductCode.
+         */
+        public Builder productCode(String productCode) {
+            this.putQueryParameter("ProductCode", productCode);
+            this.productCode = productCode;
             return this;
         }
 
