@@ -30,6 +30,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
     private Configs configs;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceRecallManagementServiceVersionId")
     private String sourceRecallManagementServiceVersionId;
 
@@ -38,6 +42,7 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
         this.recallManagementServiceId = builder.recallManagementServiceId;
         this.regionId = builder.regionId;
         this.configs = builder.configs;
+        this.instanceId = builder.instanceId;
         this.sourceRecallManagementServiceVersionId = builder.sourceRecallManagementServiceVersionId;
     }
 
@@ -76,6 +81,13 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return sourceRecallManagementServiceVersionId
      */
     public String getSourceRecallManagementServiceVersionId() {
@@ -86,6 +98,7 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
         private String recallManagementServiceId; 
         private String regionId; 
         private Configs configs; 
+        private String instanceId; 
         private String sourceRecallManagementServiceVersionId; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             this.recallManagementServiceId = request.recallManagementServiceId;
             this.regionId = request.regionId;
             this.configs = request.configs;
+            this.instanceId = request.instanceId;
             this.sourceRecallManagementServiceVersionId = request.sourceRecallManagementServiceVersionId;
         } 
 
@@ -124,6 +138,15 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
         public Builder configs(Configs configs) {
             this.putBodyParameter("Configs", configs);
             this.configs = configs;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

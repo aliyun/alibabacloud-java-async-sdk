@@ -122,8 +122,14 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateLinkAddress")
         private String privateLinkAddress;
 
+        @com.aliyun.core.annotation.NameInMap("PublicEndpoint")
+        private String publicEndpoint;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Token")
+        private String token;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -133,7 +139,9 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
 
         private NetworkConfigs(Builder builder) {
             this.privateLinkAddress = builder.privateLinkAddress;
+            this.publicEndpoint = builder.publicEndpoint;
             this.status = builder.status;
+            this.token = builder.token;
             this.vpcId = builder.vpcId;
             this.vswitchIds = builder.vswitchIds;
         }
@@ -154,10 +162,24 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicEndpoint
+         */
+        public String getPublicEndpoint() {
+            return this.publicEndpoint;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return token
+         */
+        public String getToken() {
+            return this.token;
         }
 
         /**
@@ -176,7 +198,9 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String privateLinkAddress; 
+            private String publicEndpoint; 
             private String status; 
+            private String token; 
             private String vpcId; 
             private java.util.Map<String, String> vswitchIds; 
 
@@ -185,7 +209,9 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
 
             private Builder(NetworkConfigs model) {
                 this.privateLinkAddress = model.privateLinkAddress;
+                this.publicEndpoint = model.publicEndpoint;
                 this.status = model.status;
+                this.token = model.token;
                 this.vpcId = model.vpcId;
                 this.vswitchIds = model.vswitchIds;
             } 
@@ -199,10 +225,26 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
             }
 
             /**
+             * PublicEndpoint.
+             */
+            public Builder publicEndpoint(String publicEndpoint) {
+                this.publicEndpoint = publicEndpoint;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Token.
+             */
+            public Builder token(String token) {
+                this.token = token;
                 return this;
             }
 

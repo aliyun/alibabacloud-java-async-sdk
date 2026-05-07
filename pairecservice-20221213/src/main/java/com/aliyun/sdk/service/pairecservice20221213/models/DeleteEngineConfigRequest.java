@@ -26,6 +26,10 @@ public class DeleteEngineConfigRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteAll")
+    private Boolean deleteAll;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -33,6 +37,7 @@ public class DeleteEngineConfigRequest extends Request {
         super(builder);
         this.engineConfigId = builder.engineConfigId;
         this.regionId = builder.regionId;
+        this.deleteAll = builder.deleteAll;
         this.instanceId = builder.instanceId;
     }
 
@@ -64,6 +69,13 @@ public class DeleteEngineConfigRequest extends Request {
     }
 
     /**
+     * @return deleteAll
+     */
+    public Boolean getDeleteAll() {
+        return this.deleteAll;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -73,6 +85,7 @@ public class DeleteEngineConfigRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteEngineConfigRequest, Builder> {
         private String engineConfigId; 
         private String regionId; 
+        private Boolean deleteAll; 
         private String instanceId; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class DeleteEngineConfigRequest extends Request {
             super(request);
             this.engineConfigId = request.engineConfigId;
             this.regionId = request.regionId;
+            this.deleteAll = request.deleteAll;
             this.instanceId = request.instanceId;
         } 
 
@@ -101,6 +115,15 @@ public class DeleteEngineConfigRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DeleteAll.
+         */
+        public Builder deleteAll(Boolean deleteAll) {
+            this.putQueryParameter("DeleteAll", deleteAll);
+            this.deleteAll = deleteAll;
             return this;
         }
 
