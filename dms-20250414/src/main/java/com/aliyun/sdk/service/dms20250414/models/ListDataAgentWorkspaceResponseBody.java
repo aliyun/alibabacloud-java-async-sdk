@@ -209,6 +209,9 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("IsSessionShareEnabled")
+        private Boolean isSessionShareEnabled;
+
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
@@ -231,6 +234,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.creator = builder.creator;
             this.description = builder.description;
+            this.isSessionShareEnabled = builder.isSessionShareEnabled;
             this.modifyTime = builder.modifyTime;
             this.roleName = builder.roleName;
             this.totalMember = builder.totalMember;
@@ -266,6 +270,13 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return isSessionShareEnabled
+         */
+        public Boolean getIsSessionShareEnabled() {
+            return this.isSessionShareEnabled;
         }
 
         /**
@@ -314,6 +325,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             private Long createTime; 
             private String creator; 
             private String description; 
+            private Boolean isSessionShareEnabled; 
             private Long modifyTime; 
             private String roleName; 
             private Long totalMember; 
@@ -328,6 +340,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.creator = model.creator;
                 this.description = model.description;
+                this.isSessionShareEnabled = model.isSessionShareEnabled;
                 this.modifyTime = model.modifyTime;
                 this.roleName = model.roleName;
                 this.totalMember = model.totalMember;
@@ -357,6 +370,14 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * IsSessionShareEnabled.
+             */
+            public Builder isSessionShareEnabled(Boolean isSessionShareEnabled) {
+                this.isSessionShareEnabled = isSessionShareEnabled;
                 return this;
             }
 

@@ -164,6 +164,9 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
+        @com.aliyun.core.annotation.NameInMap("IsSessionShareEnabled")
+        private Boolean isSessionShareEnabled;
+
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
@@ -188,6 +191,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.createTime = builder.createTime;
             this.creator = builder.creator;
+            this.isSessionShareEnabled = builder.isSessionShareEnabled;
             this.modifyTime = builder.modifyTime;
             this.roleName = builder.roleName;
             this.totalMember = builder.totalMember;
@@ -217,6 +221,13 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
          */
         public String getCreator() {
             return this.creator;
+        }
+
+        /**
+         * @return isSessionShareEnabled
+         */
+        public Boolean getIsSessionShareEnabled() {
+            return this.isSessionShareEnabled;
         }
 
         /**
@@ -271,6 +282,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private String creator; 
+            private Boolean isSessionShareEnabled; 
             private Long modifyTime; 
             private String roleName; 
             private Long totalMember; 
@@ -285,6 +297,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.createTime = model.createTime;
                 this.creator = model.creator;
+                this.isSessionShareEnabled = model.isSessionShareEnabled;
                 this.modifyTime = model.modifyTime;
                 this.roleName = model.roleName;
                 this.totalMember = model.totalMember;
@@ -307,6 +320,14 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
              */
             public Builder creator(String creator) {
                 this.creator = creator;
+                return this;
+            }
+
+            /**
+             * IsSessionShareEnabled.
+             */
+            public Builder isSessionShareEnabled(Boolean isSessionShareEnabled) {
+                this.isSessionShareEnabled = isSessionShareEnabled;
                 return this;
             }
 

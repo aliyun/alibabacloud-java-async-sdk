@@ -22,6 +22,10 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
     private String DMSUnit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSessionShareEnabled")
+    private Boolean isSessionShareEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceDesc")
     private String workspaceDesc;
 
@@ -36,6 +40,7 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
     private UpdateDataAgentSpaceInfoRequest(Builder builder) {
         super(builder);
         this.DMSUnit = builder.DMSUnit;
+        this.isSessionShareEnabled = builder.isSessionShareEnabled;
         this.workspaceDesc = builder.workspaceDesc;
         this.workspaceId = builder.workspaceId;
         this.workspaceName = builder.workspaceName;
@@ -62,6 +67,13 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
     }
 
     /**
+     * @return isSessionShareEnabled
+     */
+    public Boolean getIsSessionShareEnabled() {
+        return this.isSessionShareEnabled;
+    }
+
+    /**
      * @return workspaceDesc
      */
     public String getWorkspaceDesc() {
@@ -84,6 +96,7 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateDataAgentSpaceInfoRequest, Builder> {
         private String DMSUnit; 
+        private Boolean isSessionShareEnabled; 
         private String workspaceDesc; 
         private String workspaceId; 
         private String workspaceName; 
@@ -95,6 +108,7 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
         private Builder(UpdateDataAgentSpaceInfoRequest request) {
             super(request);
             this.DMSUnit = request.DMSUnit;
+            this.isSessionShareEnabled = request.isSessionShareEnabled;
             this.workspaceDesc = request.workspaceDesc;
             this.workspaceId = request.workspaceId;
             this.workspaceName = request.workspaceName;
@@ -106,6 +120,15 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
             this.DMSUnit = DMSUnit;
+            return this;
+        }
+
+        /**
+         * IsSessionShareEnabled.
+         */
+        public Builder isSessionShareEnabled(Boolean isSessionShareEnabled) {
+            this.putQueryParameter("IsSessionShareEnabled", isSessionShareEnabled);
+            this.isSessionShareEnabled = isSessionShareEnabled;
             return this;
         }
 

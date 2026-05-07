@@ -22,6 +22,10 @@ public class CreateDataAgentWorkspaceRequest extends Request {
     private String DMSUnit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSessionShareEnabled")
+    private Boolean isSessionShareEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceDesc")
     private String workspaceDesc;
 
@@ -32,6 +36,7 @@ public class CreateDataAgentWorkspaceRequest extends Request {
     private CreateDataAgentWorkspaceRequest(Builder builder) {
         super(builder);
         this.DMSUnit = builder.DMSUnit;
+        this.isSessionShareEnabled = builder.isSessionShareEnabled;
         this.workspaceDesc = builder.workspaceDesc;
         this.workspaceName = builder.workspaceName;
     }
@@ -57,6 +62,13 @@ public class CreateDataAgentWorkspaceRequest extends Request {
     }
 
     /**
+     * @return isSessionShareEnabled
+     */
+    public Boolean getIsSessionShareEnabled() {
+        return this.isSessionShareEnabled;
+    }
+
+    /**
      * @return workspaceDesc
      */
     public String getWorkspaceDesc() {
@@ -72,6 +84,7 @@ public class CreateDataAgentWorkspaceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDataAgentWorkspaceRequest, Builder> {
         private String DMSUnit; 
+        private Boolean isSessionShareEnabled; 
         private String workspaceDesc; 
         private String workspaceName; 
 
@@ -82,6 +95,7 @@ public class CreateDataAgentWorkspaceRequest extends Request {
         private Builder(CreateDataAgentWorkspaceRequest request) {
             super(request);
             this.DMSUnit = request.DMSUnit;
+            this.isSessionShareEnabled = request.isSessionShareEnabled;
             this.workspaceDesc = request.workspaceDesc;
             this.workspaceName = request.workspaceName;
         } 
@@ -92,6 +106,15 @@ public class CreateDataAgentWorkspaceRequest extends Request {
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
             this.DMSUnit = DMSUnit;
+            return this;
+        }
+
+        /**
+         * IsSessionShareEnabled.
+         */
+        public Builder isSessionShareEnabled(Boolean isSessionShareEnabled) {
+            this.putQueryParameter("IsSessionShareEnabled", isSessionShareEnabled);
+            this.isSessionShareEnabled = isSessionShareEnabled;
             return this;
         }
 
