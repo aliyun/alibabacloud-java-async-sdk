@@ -43,6 +43,10 @@ public class RunDocBrainmapRequest extends Request {
     private String prompt;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResponseFormat")
+    private Integer responseFormat;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SessionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
@@ -53,7 +57,6 @@ public class RunDocBrainmapRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     @com.aliyun.core.annotation.Body
@@ -68,6 +71,7 @@ public class RunDocBrainmapRequest extends Request {
         this.modelName = builder.modelName;
         this.nodeNumber = builder.nodeNumber;
         this.prompt = builder.prompt;
+        this.responseFormat = builder.responseFormat;
         this.sessionId = builder.sessionId;
         this.wordNumber = builder.wordNumber;
         this.workspaceId = builder.workspaceId;
@@ -130,6 +134,13 @@ public class RunDocBrainmapRequest extends Request {
     }
 
     /**
+     * @return responseFormat
+     */
+    public Integer getResponseFormat() {
+        return this.responseFormat;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -164,6 +175,7 @@ public class RunDocBrainmapRequest extends Request {
         private String modelName; 
         private Integer nodeNumber; 
         private String prompt; 
+        private Integer responseFormat; 
         private String sessionId; 
         private Integer wordNumber; 
         private String workspaceId; 
@@ -181,6 +193,7 @@ public class RunDocBrainmapRequest extends Request {
             this.modelName = request.modelName;
             this.nodeNumber = request.nodeNumber;
             this.prompt = request.prompt;
+            this.responseFormat = request.responseFormat;
             this.sessionId = request.sessionId;
             this.wordNumber = request.wordNumber;
             this.workspaceId = request.workspaceId;
@@ -245,6 +258,15 @@ public class RunDocBrainmapRequest extends Request {
         }
 
         /**
+         * ResponseFormat.
+         */
+        public Builder responseFormat(Integer responseFormat) {
+            this.putBodyParameter("ResponseFormat", responseFormat);
+            this.responseFormat = responseFormat;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,10 +288,7 @@ public class RunDocBrainmapRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>llm-xxx</p>
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

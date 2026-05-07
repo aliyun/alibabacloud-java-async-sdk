@@ -22,6 +22,10 @@ public class RunBookIntroductionRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CleanCache")
+    private Boolean cleanCache;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String docId;
@@ -47,6 +51,7 @@ public class RunBookIntroductionRequest extends Request {
     private RunBookIntroductionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.cleanCache = builder.cleanCache;
         this.docId = builder.docId;
         this.keyPointPrompt = builder.keyPointPrompt;
         this.sessionId = builder.sessionId;
@@ -72,6 +77,13 @@ public class RunBookIntroductionRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return cleanCache
+     */
+    public Boolean getCleanCache() {
+        return this.cleanCache;
     }
 
     /**
@@ -111,6 +123,7 @@ public class RunBookIntroductionRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunBookIntroductionRequest, Builder> {
         private String regionId; 
+        private Boolean cleanCache; 
         private String docId; 
         private String keyPointPrompt; 
         private String sessionId; 
@@ -124,6 +137,7 @@ public class RunBookIntroductionRequest extends Request {
         private Builder(RunBookIntroductionRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.cleanCache = request.cleanCache;
             this.docId = request.docId;
             this.keyPointPrompt = request.keyPointPrompt;
             this.sessionId = request.sessionId;
@@ -137,6 +151,15 @@ public class RunBookIntroductionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CleanCache.
+         */
+        public Builder cleanCache(Boolean cleanCache) {
+            this.putBodyParameter("CleanCache", cleanCache);
+            this.cleanCache = cleanCache;
             return this;
         }
 

@@ -298,7 +298,190 @@ public class RunBookIntroductionResponseBody extends TeaModel {
      *
      * <p>RunBookIntroductionResponseBody</p>
      */
+    public static class Blocks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
+        private Long beginTime;
+
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("Height")
+        private Integer height;
+
+        @com.aliyun.core.annotation.NameInMap("PageId")
+        private Integer pageId;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
+        private Integer width;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        private Integer x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        private Integer y;
+
+        private Blocks(Builder builder) {
+            this.beginTime = builder.beginTime;
+            this.endTime = builder.endTime;
+            this.height = builder.height;
+            this.pageId = builder.pageId;
+            this.width = builder.width;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Blocks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return beginTime
+         */
+        public Long getBeginTime() {
+            return this.beginTime;
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return height
+         */
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        /**
+         * @return pageId
+         */
+        public Integer getPageId() {
+            return this.pageId;
+        }
+
+        /**
+         * @return width
+         */
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        /**
+         * @return x
+         */
+        public Integer getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Integer getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Long beginTime; 
+            private Long endTime; 
+            private Integer height; 
+            private Integer pageId; 
+            private Integer width; 
+            private Integer x; 
+            private Integer y; 
+
+            private Builder() {
+            } 
+
+            private Builder(Blocks model) {
+                this.beginTime = model.beginTime;
+                this.endTime = model.endTime;
+                this.height = model.height;
+                this.pageId = model.pageId;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
+            /**
+             * BeginTime.
+             */
+            public Builder beginTime(Long beginTime) {
+                this.beginTime = beginTime;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * Height.
+             */
+            public Builder height(Integer height) {
+                this.height = height;
+                return this;
+            }
+
+            /**
+             * PageId.
+             */
+            public Builder pageId(Integer pageId) {
+                this.pageId = pageId;
+                return this;
+            }
+
+            /**
+             * Width.
+             */
+            public Builder width(Integer width) {
+                this.width = width;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Integer x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Integer y) {
+                this.y = y;
+                return this;
+            }
+
+            public Blocks build() {
+                return new Blocks(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunBookIntroductionResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunBookIntroductionResponseBody</p>
+     */
     public static class Introductions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Blocks")
+        private java.util.List<Blocks> blocks;
+
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
@@ -306,6 +489,7 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         private String title;
 
         private Introductions(Builder builder) {
+            this.blocks = builder.blocks;
             this.summary = builder.summary;
             this.title = builder.title;
         }
@@ -316,6 +500,13 @@ public class RunBookIntroductionResponseBody extends TeaModel {
 
         public static Introductions create() {
             return builder().build();
+        }
+
+        /**
+         * @return blocks
+         */
+        public java.util.List<Blocks> getBlocks() {
+            return this.blocks;
         }
 
         /**
@@ -333,6 +524,7 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<Blocks> blocks; 
             private String summary; 
             private String title; 
 
@@ -340,9 +532,18 @@ public class RunBookIntroductionResponseBody extends TeaModel {
             } 
 
             private Builder(Introductions model) {
+                this.blocks = model.blocks;
                 this.summary = model.summary;
                 this.title = model.title;
             } 
+
+            /**
+             * Blocks.
+             */
+            public Builder blocks(java.util.List<Blocks> blocks) {
+                this.blocks = blocks;
+                return this;
+            }
 
             /**
              * Summary.

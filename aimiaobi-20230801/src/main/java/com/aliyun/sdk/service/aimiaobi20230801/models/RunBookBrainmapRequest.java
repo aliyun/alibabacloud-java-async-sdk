@@ -39,6 +39,10 @@ public class RunBookBrainmapRequest extends Request {
     private String prompt;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResponseFormat")
+    private Integer responseFormat;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SessionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
@@ -59,6 +63,7 @@ public class RunBookBrainmapRequest extends Request {
         this.docId = builder.docId;
         this.nodeNumber = builder.nodeNumber;
         this.prompt = builder.prompt;
+        this.responseFormat = builder.responseFormat;
         this.sessionId = builder.sessionId;
         this.wordNumber = builder.wordNumber;
         this.workspaceId = builder.workspaceId;
@@ -113,6 +118,13 @@ public class RunBookBrainmapRequest extends Request {
     }
 
     /**
+     * @return responseFormat
+     */
+    public Integer getResponseFormat() {
+        return this.responseFormat;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -139,6 +151,7 @@ public class RunBookBrainmapRequest extends Request {
         private String docId; 
         private Integer nodeNumber; 
         private String prompt; 
+        private Integer responseFormat; 
         private String sessionId; 
         private Integer wordNumber; 
         private String workspaceId; 
@@ -154,6 +167,7 @@ public class RunBookBrainmapRequest extends Request {
             this.docId = request.docId;
             this.nodeNumber = request.nodeNumber;
             this.prompt = request.prompt;
+            this.responseFormat = request.responseFormat;
             this.sessionId = request.sessionId;
             this.wordNumber = request.wordNumber;
             this.workspaceId = request.workspaceId;
@@ -204,6 +218,15 @@ public class RunBookBrainmapRequest extends Request {
         public Builder prompt(String prompt) {
             this.putBodyParameter("Prompt", prompt);
             this.prompt = prompt;
+            return this;
+        }
+
+        /**
+         * ResponseFormat.
+         */
+        public Builder responseFormat(Integer responseFormat) {
+            this.putBodyParameter("ResponseFormat", responseFormat);
+            this.responseFormat = responseFormat;
             return this;
         }
 
