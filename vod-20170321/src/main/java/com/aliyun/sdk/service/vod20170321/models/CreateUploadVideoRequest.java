@@ -34,6 +34,10 @@ public class CreateUploadVideoRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableFirstFrameCover")
+    private Boolean enableFirstFrameCover;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
@@ -41,6 +45,10 @@ public class CreateUploadVideoRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileSize")
     private Long fileSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GenerateThumbnail")
+    private Boolean generateThumbnail;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReferenceId")
@@ -77,8 +85,10 @@ public class CreateUploadVideoRequest extends Request {
         this.cateId = builder.cateId;
         this.coverURL = builder.coverURL;
         this.description = builder.description;
+        this.enableFirstFrameCover = builder.enableFirstFrameCover;
         this.fileName = builder.fileName;
         this.fileSize = builder.fileSize;
+        this.generateThumbnail = builder.generateThumbnail;
         this.referenceId = builder.referenceId;
         this.storageLocation = builder.storageLocation;
         this.tags = builder.tags;
@@ -130,6 +140,13 @@ public class CreateUploadVideoRequest extends Request {
     }
 
     /**
+     * @return enableFirstFrameCover
+     */
+    public Boolean getEnableFirstFrameCover() {
+        return this.enableFirstFrameCover;
+    }
+
+    /**
      * @return fileName
      */
     public String getFileName() {
@@ -141,6 +158,13 @@ public class CreateUploadVideoRequest extends Request {
      */
     public Long getFileSize() {
         return this.fileSize;
+    }
+
+    /**
+     * @return generateThumbnail
+     */
+    public Boolean getGenerateThumbnail() {
+        return this.generateThumbnail;
     }
 
     /**
@@ -197,8 +221,10 @@ public class CreateUploadVideoRequest extends Request {
         private Long cateId; 
         private String coverURL; 
         private String description; 
+        private Boolean enableFirstFrameCover; 
         private String fileName; 
         private Long fileSize; 
+        private Boolean generateThumbnail; 
         private String referenceId; 
         private String storageLocation; 
         private String tags; 
@@ -217,8 +243,10 @@ public class CreateUploadVideoRequest extends Request {
             this.cateId = request.cateId;
             this.coverURL = request.coverURL;
             this.description = request.description;
+            this.enableFirstFrameCover = request.enableFirstFrameCover;
             this.fileName = request.fileName;
             this.fileSize = request.fileSize;
+            this.generateThumbnail = request.generateThumbnail;
             this.referenceId = request.referenceId;
             this.storageLocation = request.storageLocation;
             this.tags = request.tags;
@@ -286,6 +314,15 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
+         * EnableFirstFrameCover.
+         */
+        public Builder enableFirstFrameCover(Boolean enableFirstFrameCover) {
+            this.putQueryParameter("EnableFirstFrameCover", enableFirstFrameCover);
+            this.enableFirstFrameCover = enableFirstFrameCover;
+            return this;
+        }
+
+        /**
          * <p>The name of the source file.</p>
          * <ul>
          * <li>The name must contain a file name extension, which is not case-sensitive.</li>
@@ -311,6 +348,15 @@ public class CreateUploadVideoRequest extends Request {
         public Builder fileSize(Long fileSize) {
             this.putQueryParameter("FileSize", fileSize);
             this.fileSize = fileSize;
+            return this;
+        }
+
+        /**
+         * GenerateThumbnail.
+         */
+        public Builder generateThumbnail(Boolean generateThumbnail) {
+            this.putQueryParameter("GenerateThumbnail", generateThumbnail);
+            this.generateThumbnail = generateThumbnail;
             return this;
         }
 

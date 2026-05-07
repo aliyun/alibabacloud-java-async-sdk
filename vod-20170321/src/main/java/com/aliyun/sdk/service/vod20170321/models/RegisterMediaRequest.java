@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RegisterMediaRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableFirstFrameCover")
+    private Boolean enableFirstFrameCover;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GenerateThumbnail")
+    private Boolean generateThumbnail;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegisterMetadatas")
     @com.aliyun.core.annotation.Validation(required = true)
     private String registerMetadatas;
@@ -36,6 +44,8 @@ public class RegisterMediaRequest extends Request {
 
     private RegisterMediaRequest(Builder builder) {
         super(builder);
+        this.enableFirstFrameCover = builder.enableFirstFrameCover;
+        this.generateThumbnail = builder.generateThumbnail;
         this.registerMetadatas = builder.registerMetadatas;
         this.templateGroupId = builder.templateGroupId;
         this.userData = builder.userData;
@@ -53,6 +63,20 @@ public class RegisterMediaRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return enableFirstFrameCover
+     */
+    public Boolean getEnableFirstFrameCover() {
+        return this.enableFirstFrameCover;
+    }
+
+    /**
+     * @return generateThumbnail
+     */
+    public Boolean getGenerateThumbnail() {
+        return this.generateThumbnail;
     }
 
     /**
@@ -84,6 +108,8 @@ public class RegisterMediaRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RegisterMediaRequest, Builder> {
+        private Boolean enableFirstFrameCover; 
+        private Boolean generateThumbnail; 
         private String registerMetadatas; 
         private String templateGroupId; 
         private String userData; 
@@ -95,11 +121,31 @@ public class RegisterMediaRequest extends Request {
 
         private Builder(RegisterMediaRequest request) {
             super(request);
+            this.enableFirstFrameCover = request.enableFirstFrameCover;
+            this.generateThumbnail = request.generateThumbnail;
             this.registerMetadatas = request.registerMetadatas;
             this.templateGroupId = request.templateGroupId;
             this.userData = request.userData;
             this.workflowId = request.workflowId;
         } 
+
+        /**
+         * EnableFirstFrameCover.
+         */
+        public Builder enableFirstFrameCover(Boolean enableFirstFrameCover) {
+            this.putQueryParameter("EnableFirstFrameCover", enableFirstFrameCover);
+            this.enableFirstFrameCover = enableFirstFrameCover;
+            return this;
+        }
+
+        /**
+         * GenerateThumbnail.
+         */
+        public Builder generateThumbnail(Boolean generateThumbnail) {
+            this.putQueryParameter("GenerateThumbnail", generateThumbnail);
+            this.generateThumbnail = generateThumbnail;
+            return this;
+        }
 
         /**
          * <p>The metadata of the media files. The value must be a JSON string. You can specify the metadata for up to 10 media files at a time. For more information about the metadata of media files, see the <strong>RegisterMetadata</strong> section of this topic.</p>

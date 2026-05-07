@@ -22,6 +22,14 @@ public class UploadMediaByURLRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableFirstFrameCover")
+    private Boolean enableFirstFrameCover;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GenerateThumbnail")
+    private Boolean generateThumbnail;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
@@ -53,6 +61,8 @@ public class UploadMediaByURLRequest extends Request {
     private UploadMediaByURLRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.enableFirstFrameCover = builder.enableFirstFrameCover;
+        this.generateThumbnail = builder.generateThumbnail;
         this.sessionId = builder.sessionId;
         this.storageLocation = builder.storageLocation;
         this.templateGroupId = builder.templateGroupId;
@@ -80,6 +90,20 @@ public class UploadMediaByURLRequest extends Request {
      */
     public String getAppId() {
         return this.appId;
+    }
+
+    /**
+     * @return enableFirstFrameCover
+     */
+    public Boolean getEnableFirstFrameCover() {
+        return this.enableFirstFrameCover;
+    }
+
+    /**
+     * @return generateThumbnail
+     */
+    public Boolean getGenerateThumbnail() {
+        return this.generateThumbnail;
     }
 
     /**
@@ -133,6 +157,8 @@ public class UploadMediaByURLRequest extends Request {
 
     public static final class Builder extends Request.Builder<UploadMediaByURLRequest, Builder> {
         private String appId; 
+        private Boolean enableFirstFrameCover; 
+        private Boolean generateThumbnail; 
         private String sessionId; 
         private String storageLocation; 
         private String templateGroupId; 
@@ -148,6 +174,8 @@ public class UploadMediaByURLRequest extends Request {
         private Builder(UploadMediaByURLRequest request) {
             super(request);
             this.appId = request.appId;
+            this.enableFirstFrameCover = request.enableFirstFrameCover;
+            this.generateThumbnail = request.generateThumbnail;
             this.sessionId = request.sessionId;
             this.storageLocation = request.storageLocation;
             this.templateGroupId = request.templateGroupId;
@@ -166,6 +194,24 @@ public class UploadMediaByURLRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * EnableFirstFrameCover.
+         */
+        public Builder enableFirstFrameCover(Boolean enableFirstFrameCover) {
+            this.putQueryParameter("EnableFirstFrameCover", enableFirstFrameCover);
+            this.enableFirstFrameCover = enableFirstFrameCover;
+            return this;
+        }
+
+        /**
+         * GenerateThumbnail.
+         */
+        public Builder generateThumbnail(Boolean generateThumbnail) {
+            this.putQueryParameter("GenerateThumbnail", generateThumbnail);
+            this.generateThumbnail = generateThumbnail;
             return this;
         }
 
