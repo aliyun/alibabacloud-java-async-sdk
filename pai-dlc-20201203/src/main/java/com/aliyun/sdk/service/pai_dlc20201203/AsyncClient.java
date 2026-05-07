@@ -29,6 +29,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request);
 
     /**
+     * @param request the request parameters of CreateJobTemplate  CreateJobTemplateRequest
+     * @return CreateJobTemplateResponse
+     */
+    CompletableFuture<CreateJobTemplateResponse> createJobTemplate(CreateJobTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreateTensorboard  CreateTensorboardRequest
      * @return CreateTensorboardResponse
      */
@@ -39,6 +45,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteJobResponse
      */
     CompletableFuture<DeleteJobResponse> deleteJob(DeleteJobRequest request);
+
+    /**
+     * @param request the request parameters of DeleteJobTemplate  DeleteJobTemplateRequest
+     * @return DeleteJobTemplateResponse
+     */
+    CompletableFuture<DeleteJobTemplateResponse> deleteJobTemplate(DeleteJobTemplateRequest request);
 
     /**
      * @param request the request parameters of DeleteTensorboard  DeleteTensorboardRequest
@@ -78,6 +90,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetJobSanityCheckResultResponse
      */
     CompletableFuture<GetJobSanityCheckResultResponse> getJobSanityCheckResult(GetJobSanityCheckResultRequest request);
+
+    /**
+     * @param request the request parameters of GetJobTemplate  GetJobTemplateRequest
+     * @return GetJobTemplateResponse
+     */
+    CompletableFuture<GetJobTemplateResponse> getJobTemplate(GetJobTemplateRequest request);
 
     /**
      * @param request the request parameters of GetPodEvents  GetPodEventsRequest
@@ -137,6 +155,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListJobSanityCheckResultsResponse> listJobSanityCheckResults(ListJobSanityCheckResultsRequest request);
 
     /**
+     * @param request the request parameters of ListJobTemplates  ListJobTemplatesRequest
+     * @return ListJobTemplatesResponse
+     */
+    CompletableFuture<ListJobTemplatesResponse> listJobTemplates(ListJobTemplatesRequest request);
+
+    /**
      * @param request the request parameters of ListJobs  ListJobsRequest
      * @return ListJobsResponse
      */
@@ -147,6 +171,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTensorboardsResponse
      */
     CompletableFuture<ListTensorboardsResponse> listTensorboards(ListTensorboardsRequest request);
+
+    /**
+     * @param request the request parameters of SetJobTemplateDefaultVersion  SetJobTemplateDefaultVersionRequest
+     * @return SetJobTemplateDefaultVersionResponse
+     */
+    CompletableFuture<SetJobTemplateDefaultVersionResponse> setJobTemplateDefaultVersion(SetJobTemplateDefaultVersionRequest request);
 
     /**
      * @param request the request parameters of StartTensorboard  StartTensorboardRequest
@@ -171,6 +201,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateJobResponse
      */
     CompletableFuture<UpdateJobResponse> updateJob(UpdateJobRequest request);
+
+    /**
+     * @param request the request parameters of UpdateJobTemplate  UpdateJobTemplateRequest
+     * @return UpdateJobTemplateResponse
+     */
+    CompletableFuture<UpdateJobTemplateResponse> updateJobTemplate(UpdateJobTemplateRequest request);
 
     /**
      * @param request the request parameters of UpdateTensorboard  UpdateTensorboardRequest
