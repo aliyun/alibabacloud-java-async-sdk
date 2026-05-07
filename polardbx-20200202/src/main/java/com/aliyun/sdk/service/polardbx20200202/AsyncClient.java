@@ -767,6 +767,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestartDataImportTaskResponse> restartDataImportTask(RestartDataImportTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of RestoreDBInstance  RestoreDBInstanceRequest
+     * @return RestoreDBInstanceResponse
+     */
+    CompletableFuture<RestoreDBInstanceResponse> restoreDBInstance(RestoreDBInstanceRequest request);
+
+    /**
      * @param request the request parameters of SkipCurrentStep  SkipCurrentStepRequest
      * @return SkipCurrentStepResponse
      */
