@@ -431,6 +431,9 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutputUrl")
         private String outputUrl;
 
+        @com.aliyun.core.annotation.NameInMap("SrtFileUrl")
+        private String srtFileUrl;
+
         @com.aliyun.core.annotation.NameInMap("StoryboardInfoList")
         private String storyboardInfoList;
 
@@ -444,6 +447,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             this.exceptionStoryboardIds = builder.exceptionStoryboardIds;
             this.failureShotList = builder.failureShotList;
             this.outputUrl = builder.outputUrl;
+            this.srtFileUrl = builder.srtFileUrl;
             this.storyboardInfoList = builder.storyboardInfoList;
             this.successStoryboardIds = builder.successStoryboardIds;
             this.successStoryboardList = builder.successStoryboardList;
@@ -479,6 +483,13 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return srtFileUrl
+         */
+        public String getSrtFileUrl() {
+            return this.srtFileUrl;
+        }
+
+        /**
          * @return storyboardInfoList
          */
         public String getStoryboardInfoList() {
@@ -503,6 +514,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
             private String exceptionStoryboardIds; 
             private String failureShotList; 
             private String outputUrl; 
+            private String srtFileUrl; 
             private String storyboardInfoList; 
             private String successStoryboardIds; 
             private String successStoryboardList; 
@@ -514,6 +526,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
                 this.exceptionStoryboardIds = model.exceptionStoryboardIds;
                 this.failureShotList = model.failureShotList;
                 this.outputUrl = model.outputUrl;
+                this.srtFileUrl = model.srtFileUrl;
                 this.storyboardInfoList = model.storyboardInfoList;
                 this.successStoryboardIds = model.successStoryboardIds;
                 this.successStoryboardList = model.successStoryboardList;
@@ -540,6 +553,14 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
+                return this;
+            }
+
+            /**
+             * SrtFileUrl.
+             */
+            public Builder srtFileUrl(String srtFileUrl) {
+                this.srtFileUrl = srtFileUrl;
                 return this;
             }
 
