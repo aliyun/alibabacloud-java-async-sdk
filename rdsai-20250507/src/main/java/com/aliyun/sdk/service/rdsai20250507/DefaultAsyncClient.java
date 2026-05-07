@@ -637,6 +637,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAvailableLLMModels  GetAvailableLLMModelsRequest
+     * @return GetAvailableLLMModelsResponse
+     */
+    @Override
+    public CompletableFuture<GetAvailableLLMModelsResponse> getAvailableLLMModels(GetAvailableLLMModelsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAvailableLLMModels").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAvailableLLMModelsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAvailableLLMModelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetConversations  GetConversationsRequest
      * @return GetConversationsResponse
      */
@@ -847,6 +865,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListCustomAgentToolsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListLLMTokenUsage  ListLLMTokenUsageRequest
+     * @return ListLLMTokenUsageResponse
+     */
+    @Override
+    public CompletableFuture<ListLLMTokenUsageResponse> listLLMTokenUsage(ListLLMTokenUsageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListLLMTokenUsage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListLLMTokenUsageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListLLMTokenUsageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

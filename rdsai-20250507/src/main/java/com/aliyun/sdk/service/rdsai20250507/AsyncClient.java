@@ -260,6 +260,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableAgentRuntimeResponse> enableAgentRuntime(EnableAgentRuntimeRequest request);
 
     /**
+     * @param request the request parameters of GetAvailableLLMModels  GetAvailableLLMModelsRequest
+     * @return GetAvailableLLMModelsResponse
+     */
+    CompletableFuture<GetAvailableLLMModelsResponse> getAvailableLLMModels(GetAvailableLLMModelsRequest request);
+
+    /**
      * @param request the request parameters of GetConversations  GetConversationsRequest
      * @return GetConversationsResponse
      */
@@ -330,6 +336,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCustomAgentToolsResponse
      */
     CompletableFuture<ListCustomAgentToolsResponse> listCustomAgentTools(ListCustomAgentToolsRequest request);
+
+    /**
+     * @param request the request parameters of ListLLMTokenUsage  ListLLMTokenUsageRequest
+     * @return ListLLMTokenUsageResponse
+     */
+    CompletableFuture<ListLLMTokenUsageResponse> listLLMTokenUsage(ListLLMTokenUsageRequest request);
 
     /**
      * @param request the request parameters of ListScheduledTasks  ListScheduledTasksRequest
