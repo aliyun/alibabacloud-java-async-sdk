@@ -2291,6 +2291,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableRealtimeLogDeliveryResponse> enableRealtimeLogDelivery(EnableRealtimeLogDeliveryRequest request);
 
     /**
+     * @param request the request parameters of GenerateCdnDiagnose  GenerateCdnDiagnoseRequest
+     * @return GenerateCdnDiagnoseResponse
+     */
+    CompletableFuture<GenerateCdnDiagnoseResponse> generateCdnDiagnose(GenerateCdnDiagnoseRequest request);
+
+    /**
      * @param request the request parameters of GetGrayDomainFunction  GetGrayDomainFunctionRequest
      * @return GetGrayDomainFunctionResponse
      */
