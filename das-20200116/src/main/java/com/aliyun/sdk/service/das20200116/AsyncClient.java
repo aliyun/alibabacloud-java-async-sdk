@@ -33,6 +33,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddHDMInstanceResponse> addHDMInstance(AddHDMInstanceRequest request);
 
     /**
+     * @param request the request parameters of Chat  ChatRequest
+     * @return ChatResponse
+     */
+    CompletableFuture<ChatResponse> chat(ChatRequest request);
+
+    ResponseIterable<ChatResponseBody> chatWithResponseIterable(ChatRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
@@ -843,12 +851,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDeadlockHistogramResponse> getDeadlockHistogram(GetDeadlockHistogramRequest request);
 
     /**
-     * @param request the request parameters of GetEndpointSwitchTask  GetEndpointSwitchTaskRequest
-     * @return GetEndpointSwitchTaskResponse
-     */
-    CompletableFuture<GetEndpointSwitchTaskResponse> getEndpointSwitchTask(GetEndpointSwitchTaskRequest request);
-
-    /**
      * <b>description</b> :
      * <blockquote>
      * <p> GetErrorRequestSample is an asynchronous operation. After a request is sent, the complete results are not returned immediately. If the value of <strong>isFinish</strong> is <strong>false</strong> in the response, wait for 1 second and then send a request again. If the value of <strong>isFinish</strong> is <strong>true</strong>, the complete results are returned.</p>
@@ -919,18 +921,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetFullRequestStatResultByInstanceIdResponse
      */
     CompletableFuture<GetFullRequestStatResultByInstanceIdResponse> getFullRequestStatResultByInstanceId(GetFullRequestStatResultByInstanceIdRequest request);
-
-    /**
-     * @param request the request parameters of GetHDMAliyunResourceSyncResult  GetHDMAliyunResourceSyncResultRequest
-     * @return GetHDMAliyunResourceSyncResultResponse
-     */
-    CompletableFuture<GetHDMAliyunResourceSyncResultResponse> getHDMAliyunResourceSyncResult(GetHDMAliyunResourceSyncResultRequest request);
-
-    /**
-     * @param request the request parameters of GetHDMLastAliyunResourceSyncResult  GetHDMLastAliyunResourceSyncResultRequest
-     * @return GetHDMLastAliyunResourceSyncResultResponse
-     */
-    CompletableFuture<GetHDMLastAliyunResourceSyncResultResponse> getHDMLastAliyunResourceSyncResult(GetHDMLastAliyunResourceSyncResultRequest request);
 
     /**
      * @param request the request parameters of GetInstanceGroupInspectReportDetail  GetInstanceGroupInspectReportDetailRequest

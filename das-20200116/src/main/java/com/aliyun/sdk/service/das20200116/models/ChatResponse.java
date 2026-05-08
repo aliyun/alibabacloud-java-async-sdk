@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetHDMAliyunResourceSyncResultResponse} extends {@link TeaModel}
+ * {@link ChatResponse} extends {@link TeaModel}
  *
- * <p>GetHDMAliyunResourceSyncResultResponse</p>
+ * <p>ChatResponse</p>
  */
-public class GetHDMAliyunResourceSyncResultResponse extends Response {
+public class ChatResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetHDMAliyunResourceSyncResultResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetHDMAliyunResourceSyncResultResponseBody body;
+    private ChatResponseBody body;
 
-    private GetHDMAliyunResourceSyncResultResponse(BuilderImpl builder) {
+    private ChatResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetHDMAliyunResourceSyncResultResponse create() {
+    public static ChatResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetHDMAliyunResourceSyncResultResponse extends Response {
     /**
      * @return body
      */
-    public GetHDMAliyunResourceSyncResultResponseBody getBody() {
+    public ChatResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetHDMAliyunResourceSyncResultResponse, Builder> {
+    public interface Builder extends Response.Builder<ChatResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetHDMAliyunResourceSyncResultResponseBody body);
+        Builder body(ChatResponseBody body);
 
         @Override
-        GetHDMAliyunResourceSyncResultResponse build();
+        ChatResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetHDMAliyunResourceSyncResultResponse, Builder>
+            extends Response.BuilderImpl<ChatResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetHDMAliyunResourceSyncResultResponseBody body; 
+        private ChatResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetHDMAliyunResourceSyncResultResponse response) {
+        private BuilderImpl(ChatResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetHDMAliyunResourceSyncResultResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetHDMAliyunResourceSyncResultResponseBody body) {
+        public Builder body(ChatResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetHDMAliyunResourceSyncResultResponse build() {
-            return new GetHDMAliyunResourceSyncResultResponse(this);
+        public ChatResponse build() {
+            return new ChatResponse(this);
         } 
 
     } 
