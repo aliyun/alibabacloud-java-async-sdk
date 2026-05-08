@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddYikeProductionMembers  AddYikeProductionMembersRequest
+     * @return AddYikeProductionMembersResponse
+     */
+    CompletableFuture<AddYikeProductionMembersResponse> addYikeProductionMembers(AddYikeProductionMembersRequest request);
+
+    /**
      * @param request the request parameters of AddYikeUserCredit  AddYikeUserCreditRequest
      * @return AddYikeUserCreditResponse
      */
@@ -116,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListYikeProductionsResponse> listYikeProductions(ListYikeProductionsRequest request);
 
     /**
+     * @param request the request parameters of ListYikeWorkspaces  ListYikeWorkspacesRequest
+     * @return ListYikeWorkspacesResponse
+     */
+    CompletableFuture<ListYikeWorkspacesResponse> listYikeWorkspaces(ListYikeWorkspacesRequest request);
+
+    /**
      * @param request the request parameters of PrecheckYikeAIAppJob  PrecheckYikeAIAppJobRequest
      * @return PrecheckYikeAIAppJobResponse
      */
@@ -168,5 +180,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitYikeVoiceNarratorJobResponse
      */
     CompletableFuture<SubmitYikeVoiceNarratorJobResponse> submitYikeVoiceNarratorJob(SubmitYikeVoiceNarratorJobRequest request);
+
+    /**
+     * @param request the request parameters of UpdateYikeProduction  UpdateYikeProductionRequest
+     * @return UpdateYikeProductionResponse
+     */
+    CompletableFuture<UpdateYikeProductionResponse> updateYikeProduction(UpdateYikeProductionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateYikeProductionMemberAuth  UpdateYikeProductionMemberAuthRequest
+     * @return UpdateYikeProductionMemberAuthResponse
+     */
+    CompletableFuture<UpdateYikeProductionMemberAuthResponse> updateYikeProductionMemberAuth(UpdateYikeProductionMemberAuthRequest request);
 
 }

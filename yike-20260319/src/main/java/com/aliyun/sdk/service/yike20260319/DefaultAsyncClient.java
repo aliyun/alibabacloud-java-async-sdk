@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddYikeProductionMembers  AddYikeProductionMembersRequest
+     * @return AddYikeProductionMembersResponse
+     */
+    @Override
+    public CompletableFuture<AddYikeProductionMembersResponse> addYikeProductionMembers(AddYikeProductionMembersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddYikeProductionMembers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddYikeProductionMembersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddYikeProductionMembersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddYikeUserCredit  AddYikeUserCreditRequest
      * @return AddYikeUserCreditResponse
      */
@@ -328,6 +346,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListYikeWorkspaces  ListYikeWorkspacesRequest
+     * @return ListYikeWorkspacesResponse
+     */
+    @Override
+    public CompletableFuture<ListYikeWorkspacesResponse> listYikeWorkspaces(ListYikeWorkspacesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListYikeWorkspaces").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListYikeWorkspacesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListYikeWorkspacesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of PrecheckYikeAIAppJob  PrecheckYikeAIAppJobRequest
      * @return PrecheckYikeAIAppJobResponse
      */
@@ -484,6 +520,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitYikeVoiceNarratorJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateYikeProduction  UpdateYikeProductionRequest
+     * @return UpdateYikeProductionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateYikeProductionResponse> updateYikeProduction(UpdateYikeProductionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateYikeProduction").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateYikeProductionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateYikeProductionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateYikeProductionMemberAuth  UpdateYikeProductionMemberAuthRequest
+     * @return UpdateYikeProductionMemberAuthResponse
+     */
+    @Override
+    public CompletableFuture<UpdateYikeProductionMemberAuthResponse> updateYikeProductionMemberAuth(UpdateYikeProductionMemberAuthRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateYikeProductionMemberAuth").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateYikeProductionMemberAuthResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateYikeProductionMemberAuthResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
