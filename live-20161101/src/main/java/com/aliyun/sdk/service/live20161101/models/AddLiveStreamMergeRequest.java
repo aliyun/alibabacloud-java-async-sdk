@@ -73,6 +73,14 @@ public class AddLiveStreamMergeRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectAppName")
+    private String selectAppName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectStreamName")
+    private String selectStreamName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
@@ -81,6 +89,10 @@ public class AddLiveStreamMergeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StreamName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String streamName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchMode")
+    private String switchMode;
 
     private AddLiveStreamMergeRequest(Builder builder) {
         super(builder);
@@ -96,8 +108,11 @@ public class AddLiveStreamMergeRequest extends Request {
         this.ownerId = builder.ownerId;
         this.protocol = builder.protocol;
         this.regionId = builder.regionId;
+        this.selectAppName = builder.selectAppName;
+        this.selectStreamName = builder.selectStreamName;
         this.startTime = builder.startTime;
         this.streamName = builder.streamName;
+        this.switchMode = builder.switchMode;
     }
 
     public static Builder builder() {
@@ -198,6 +213,20 @@ public class AddLiveStreamMergeRequest extends Request {
     }
 
     /**
+     * @return selectAppName
+     */
+    public String getSelectAppName() {
+        return this.selectAppName;
+    }
+
+    /**
+     * @return selectStreamName
+     */
+    public String getSelectStreamName() {
+        return this.selectStreamName;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -209,6 +238,13 @@ public class AddLiveStreamMergeRequest extends Request {
      */
     public String getStreamName() {
         return this.streamName;
+    }
+
+    /**
+     * @return switchMode
+     */
+    public String getSwitchMode() {
+        return this.switchMode;
     }
 
     public static final class Builder extends Request.Builder<AddLiveStreamMergeRequest, Builder> {
@@ -224,8 +260,11 @@ public class AddLiveStreamMergeRequest extends Request {
         private Long ownerId; 
         private String protocol; 
         private String regionId; 
+        private String selectAppName; 
+        private String selectStreamName; 
         private String startTime; 
         private String streamName; 
+        private String switchMode; 
 
         private Builder() {
             super();
@@ -245,8 +284,11 @@ public class AddLiveStreamMergeRequest extends Request {
             this.ownerId = request.ownerId;
             this.protocol = request.protocol;
             this.regionId = request.regionId;
+            this.selectAppName = request.selectAppName;
+            this.selectStreamName = request.selectStreamName;
             this.startTime = request.startTime;
             this.streamName = request.streamName;
+            this.switchMode = request.switchMode;
         } 
 
         /**
@@ -397,6 +439,24 @@ public class AddLiveStreamMergeRequest extends Request {
         }
 
         /**
+         * SelectAppName.
+         */
+        public Builder selectAppName(String selectAppName) {
+            this.putQueryParameter("SelectAppName", selectAppName);
+            this.selectAppName = selectAppName;
+            return this;
+        }
+
+        /**
+         * SelectStreamName.
+         */
+        public Builder selectStreamName(String selectStreamName) {
+            this.putQueryParameter("SelectStreamName", selectStreamName);
+            this.selectStreamName = selectStreamName;
+            return this;
+        }
+
+        /**
          * <p>The start time of the stream mixing.</p>
          * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
@@ -420,6 +480,15 @@ public class AddLiveStreamMergeRequest extends Request {
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);
             this.streamName = streamName;
+            return this;
+        }
+
+        /**
+         * SwitchMode.
+         */
+        public Builder switchMode(String switchMode) {
+            this.putQueryParameter("SwitchMode", switchMode);
+            this.switchMode = switchMode;
             return this;
         }
 

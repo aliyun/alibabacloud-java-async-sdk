@@ -143,6 +143,9 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StreamUsing")
         private String streamUsing;
 
+        @com.aliyun.core.annotation.NameInMap("SwitchMode")
+        private String switchMode;
+
         private LiveStreamMerge(Builder builder) {
             this.appName = builder.appName;
             this.appUsing = builder.appUsing;
@@ -159,6 +162,7 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
             this.startTime = builder.startTime;
             this.streamName = builder.streamName;
             this.streamUsing = builder.streamUsing;
+            this.switchMode = builder.switchMode;
         }
 
         public static Builder builder() {
@@ -274,6 +278,13 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
             return this.streamUsing;
         }
 
+        /**
+         * @return switchMode
+         */
+        public String getSwitchMode() {
+            return this.switchMode;
+        }
+
         public static final class Builder {
             private String appName; 
             private String appUsing; 
@@ -290,6 +301,7 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
             private String startTime; 
             private String streamName; 
             private String streamUsing; 
+            private String switchMode; 
 
             private Builder() {
             } 
@@ -310,6 +322,7 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
                 this.startTime = model.startTime;
                 this.streamName = model.streamName;
                 this.streamUsing = model.streamUsing;
+                this.switchMode = model.switchMode;
             } 
 
             /**
@@ -468,6 +481,14 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
              */
             public Builder streamUsing(String streamUsing) {
                 this.streamUsing = streamUsing;
+                return this;
+            }
+
+            /**
+             * SwitchMode.
+             */
+            public Builder switchMode(String switchMode) {
+                this.switchMode = switchMode;
                 return this;
             }
 
