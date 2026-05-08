@@ -275,6 +275,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAICoachTaskReport  CreateAICoachTaskReportRequest
+     * @return CreateAICoachTaskReportResponse
+     */
+    @Override
+    public CompletableFuture<CreateAICoachTaskReportResponse> createAICoachTaskReport(CreateAICoachTaskReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAICoachTaskReport").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/aicoach/startSessionReport").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAICoachTaskReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAICoachTaskReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateAICoachTaskSession  CreateAICoachTaskSessionRequest
      * @return CreateAICoachTaskSessionResponse
      */

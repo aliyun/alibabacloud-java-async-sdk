@@ -98,6 +98,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAICoachTaskResponse> createAICoachTask(CreateAICoachTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateAICoachTaskReport  CreateAICoachTaskReportRequest
+     * @return CreateAICoachTaskReportResponse
+     */
+    CompletableFuture<CreateAICoachTaskReportResponse> createAICoachTaskReport(CreateAICoachTaskReportRequest request);
+
+    /**
      * @param request the request parameters of CreateAICoachTaskSession  CreateAICoachTaskSessionRequest
      * @return CreateAICoachTaskSessionResponse
      */

@@ -143,7 +143,10 @@ public class CreateAnchorRequest extends Request {
         } 
 
         /**
-         * anchorCategory.
+         * <p>类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIDEO_ANCHOR</p>
          */
         public Builder anchorCategory(String anchorCategory) {
             this.putBodyParameter("anchorCategory", anchorCategory);
@@ -197,7 +200,10 @@ public class CreateAnchorRequest extends Request {
         }
 
         /**
-         * videoOssKey.
+         * <p>视频文件osskey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>path/key.mp4</p>
          */
         public Builder videoOssKey(String videoOssKey) {
             this.putBodyParameter("videoOssKey", videoOssKey);
