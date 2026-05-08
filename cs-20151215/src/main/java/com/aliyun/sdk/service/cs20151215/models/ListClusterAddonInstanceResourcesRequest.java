@@ -73,7 +73,10 @@ public class ListClusterAddonInstanceResourcesRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb95aa626a47740afbf6aa099b650****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -82,7 +85,10 @@ public class ListClusterAddonInstanceResourcesRequest extends Request {
         }
 
         /**
-         * instance_name.
+         * <p>The name of the add-on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>terway-eniip</p>
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("instance_name", instanceName);

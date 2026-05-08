@@ -27,6 +27,14 @@ public class DescribeEventsForRegionRequest extends Request {
     private String clusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("max_results")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("next_token")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("page_number")
     private Long pageNumber;
 
@@ -38,6 +46,8 @@ public class DescribeEventsForRegionRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.clusterId = builder.clusterId;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -70,6 +80,20 @@ public class DescribeEventsForRegionRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -86,6 +110,8 @@ public class DescribeEventsForRegionRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeEventsForRegionRequest, Builder> {
         private String regionId; 
         private String clusterId; 
+        private Integer maxResults; 
+        private String nextToken; 
         private Long pageNumber; 
         private Long pageSize; 
 
@@ -97,6 +123,8 @@ public class DescribeEventsForRegionRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.clusterId = request.clusterId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
@@ -123,6 +151,24 @@ public class DescribeEventsForRegionRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * max_results.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("max_results", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * next_token.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("next_token", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

@@ -20,11 +20,15 @@ public class DescribeEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("events")
     private java.util.List<Events> events;
 
+    @com.aliyun.core.annotation.NameInMap("next_token")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
 
     private DescribeEventsResponseBody(Builder builder) {
         this.events = builder.events;
+        this.nextToken = builder.nextToken;
         this.pageInfo = builder.pageInfo;
     }
 
@@ -48,6 +52,13 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageInfo
      */
     public PageInfo getPageInfo() {
@@ -56,6 +67,7 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Events> events; 
+        private String nextToken; 
         private PageInfo pageInfo; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class DescribeEventsResponseBody extends TeaModel {
 
         private Builder(DescribeEventsResponseBody model) {
             this.events = model.events;
+            this.nextToken = model.nextToken;
             this.pageInfo = model.pageInfo;
         } 
 
@@ -71,6 +84,14 @@ public class DescribeEventsResponseBody extends TeaModel {
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
+            return this;
+        }
+
+        /**
+         * next_token.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -319,7 +340,7 @@ public class DescribeEventsResponseBody extends TeaModel {
              * <p>The ID of the cluster.</p>
              * 
              * <strong>example:</strong>
-             * <p>cluster-id</p>
+             * <p>cf62854ac2130470897be7a27ed1f****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -338,7 +359,7 @@ public class DescribeEventsResponseBody extends TeaModel {
              * <p>The event ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>A234-1234-1234</p>
+             * <p>e-dba703c8-953b-40d8-82e8-cb713590****</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -347,6 +368,9 @@ public class DescribeEventsResponseBody extends TeaModel {
 
             /**
              * <p>The source of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -357,7 +381,7 @@ public class DescribeEventsResponseBody extends TeaModel {
              * <p>The subject of the event.</p>
              * 
              * <strong>example:</strong>
-             * <p>nodePool-id</p>
+             * <p>np6a5c86f4ecae436f8f4a3dc034a7****</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -368,7 +392,7 @@ public class DescribeEventsResponseBody extends TeaModel {
              * <p>The time when the event started.</p>
              * 
              * <strong>example:</strong>
-             * <p>2022-11-23T20:48:01+08:00</p>
+             * <p>2025-04-23T20:48:01+08:00</p>
              */
             public Builder time(String time) {
                 this.time = time;

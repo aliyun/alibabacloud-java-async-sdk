@@ -80,7 +80,10 @@ public class InstallNodePoolComponentsResponseBody extends TeaModel {
         } 
 
         /**
-         * clusterId.
+         * <p>The ID of the asynchronous task. You can use this ID to track the installation progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8155823d057948c69a****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -88,7 +91,10 @@ public class InstallNodePoolComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49511F2D-D56A-5C24-B9AE-C8491E09B***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class InstallNodePoolComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * taskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-67d7ec016ce37c0106000***</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

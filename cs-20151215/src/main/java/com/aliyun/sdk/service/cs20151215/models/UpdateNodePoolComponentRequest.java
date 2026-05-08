@@ -157,7 +157,10 @@ public class UpdateNodePoolComponentRequest extends Request {
         } 
 
         /**
-         * clusterId.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("clusterId", clusterId);
@@ -166,7 +169,10 @@ public class UpdateNodePoolComponentRequest extends Request {
         }
 
         /**
-         * nodepoolId.
+         * <p>The ID of the node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np7c4fa4a5f1ce412b84967089****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("nodepoolId", nodepoolId);
@@ -175,7 +181,7 @@ public class UpdateNodePoolComponentRequest extends Request {
         }
 
         /**
-         * config.
+         * <p>The configuration details for the component update.</p>
          */
         public Builder config(Config config) {
             this.putBodyParameter("config", config);
@@ -184,7 +190,7 @@ public class UpdateNodePoolComponentRequest extends Request {
         }
 
         /**
-         * disableRolling.
+         * <p>Specifies whether to disable rolling updates. Default: false. If set to false, nodes will be rolled automatically to apply the new configuration.</p>
          */
         public Builder disableRolling(Boolean disableRolling) {
             this.putBodyParameter("disableRolling", disableRolling);
@@ -193,7 +199,10 @@ public class UpdateNodePoolComponentRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the node component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kubelet</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -202,7 +211,7 @@ public class UpdateNodePoolComponentRequest extends Request {
         }
 
         /**
-         * nodeNames.
+         * <p>A list of specific nodes to be rolled. If not specified, all nodes in the node pool will be updated.</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             this.putBodyParameter("nodeNames", nodeNames);
@@ -211,7 +220,7 @@ public class UpdateNodePoolComponentRequest extends Request {
         }
 
         /**
-         * rollingPolicy.
+         * <p>The rolling update configuration.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rollingPolicy", rollingPolicy);
@@ -220,7 +229,10 @@ public class UpdateNodePoolComponentRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The version of the node component to be updated to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.28.9-aliyun.1</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
@@ -275,7 +287,7 @@ public class UpdateNodePoolComponentRequest extends Request {
             } 
 
             /**
-             * customConfig.
+             * <p>Custom configuration parameters for the component.</p>
              */
             public Builder customConfig(java.util.Map<String, String> customConfig) {
                 this.customConfig = customConfig;
@@ -355,7 +367,10 @@ public class UpdateNodePoolComponentRequest extends Request {
             } 
 
             /**
-             * batchInterval.
+             * <p>The time interval between update batches, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder batchInterval(Long batchInterval) {
                 this.batchInterval = batchInterval;
@@ -363,7 +378,10 @@ public class UpdateNodePoolComponentRequest extends Request {
             }
 
             /**
-             * maxParallelism.
+             * <p>The maximum number of nodes that can be updated concurrently. Default: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxParallelism(Long maxParallelism) {
                 this.maxParallelism = maxParallelism;
@@ -371,7 +389,10 @@ public class UpdateNodePoolComponentRequest extends Request {
             }
 
             /**
-             * pausePolicy.
+             * <p>The automatic pause strategy during the update process. Valid values: NotPause, FirstBatchPause, EveryBatchPause.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NotPause</p>
              */
             public Builder pausePolicy(String pausePolicy) {
                 this.pausePolicy = pausePolicy;

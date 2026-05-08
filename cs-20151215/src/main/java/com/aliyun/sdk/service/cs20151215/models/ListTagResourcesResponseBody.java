@@ -94,7 +94,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>E368C761-F8F6-4A36-9B58-BD53D5CD0CEB</p>
+         * <p>E368C761-F8F6-4A36-9B58-BD53D5******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,7 +197,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
              * <p>The ID of the resource.</p>
              * 
              * <strong>example:</strong>
-             * <p>i-xxx</p>
+             * <p>c2e39566adf23481fa1164ed510****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -208,7 +208,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
              * <p>The type of the resource. For more information, see <a href="https://help.aliyun.com/document_detail/110425.html">Labels</a>.</p>
              * 
              * <strong>example:</strong>
-             * <p>CLUSTER</p>
+             * <p>ALIYUN::CS::CLUSTER</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

@@ -20,11 +20,15 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("events")
     private java.util.List<Events> events;
 
+    @com.aliyun.core.annotation.NameInMap("next_token")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
 
     private DescribeClusterEventsResponseBody(Builder builder) {
         this.events = builder.events;
+        this.nextToken = builder.nextToken;
         this.pageInfo = builder.pageInfo;
     }
 
@@ -48,6 +52,13 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageInfo
      */
     public PageInfo getPageInfo() {
@@ -56,6 +67,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Events> events; 
+        private String nextToken; 
         private PageInfo pageInfo; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
 
         private Builder(DescribeClusterEventsResponseBody model) {
             this.events = model.events;
+            this.nextToken = model.nextToken;
             this.pageInfo = model.pageInfo;
         } 
 
@@ -71,6 +84,14 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
+            return this;
+        }
+
+        /**
+         * next_token.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 

@@ -115,7 +115,10 @@ public class InstallNodePoolComponentsRequest extends Request {
         } 
 
         /**
-         * clusterId.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("clusterId", clusterId);
@@ -124,7 +127,10 @@ public class InstallNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * nodePoolId.
+         * <p>The ID of the node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np7c4fa4a5f1ce412b849****</p>
          */
         public Builder nodePoolId(String nodePoolId) {
             this.putPathParameter("nodePoolId", nodePoolId);
@@ -133,7 +139,7 @@ public class InstallNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * components.
+         * <p>A list of node components to be installed.</p>
          */
         public Builder components(java.util.List<Components> components) {
             this.putBodyParameter("components", components);
@@ -142,7 +148,7 @@ public class InstallNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * nodeNames.
+         * <p>A list of specific node names where the component should be installed. If not specified, the component will be installed on all nodes in the node pool.</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             this.putBodyParameter("nodeNames", nodeNames);
@@ -151,7 +157,7 @@ public class InstallNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * rollingPolicy.
+         * <p>Configuration for the rolling update process.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rollingPolicy", rollingPolicy);
@@ -206,7 +212,7 @@ public class InstallNodePoolComponentsRequest extends Request {
             } 
 
             /**
-             * customConfig.
+             * <p>Custom parameters for the component.</p>
              */
             public Builder customConfig(java.util.Map<String, String> customConfig) {
                 this.customConfig = customConfig;
@@ -287,7 +293,7 @@ public class InstallNodePoolComponentsRequest extends Request {
             } 
 
             /**
-             * config.
+             * <p>The configuration details for the component.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -295,6 +301,7 @@ public class InstallNodePoolComponentsRequest extends Request {
             }
 
             /**
+             * <p>The name of the component.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -306,7 +313,10 @@ public class InstallNodePoolComponentsRequest extends Request {
             }
 
             /**
-             * version.
+             * <p>The version of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.28.9-aliyun.1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -386,7 +396,10 @@ public class InstallNodePoolComponentsRequest extends Request {
             } 
 
             /**
-             * batchInterval.
+             * <p>The time interval between update batches, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder batchInterval(Long batchInterval) {
                 this.batchInterval = batchInterval;
@@ -394,7 +407,10 @@ public class InstallNodePoolComponentsRequest extends Request {
             }
 
             /**
-             * maxParallelism.
+             * <p>The maximum number of nodes that can be updated concurrently in each batch. Default: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxParallelism(Long maxParallelism) {
                 this.maxParallelism = maxParallelism;
@@ -402,7 +418,10 @@ public class InstallNodePoolComponentsRequest extends Request {
             }
 
             /**
-             * pausePolicy.
+             * <p>The strategy for automatic pausing during the update process. Valid values: NotPause, FirstBatchPause, EveryBatchPause.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NotPause</p>
              */
             public Builder pausePolicy(String pausePolicy) {
                 this.pausePolicy = pausePolicy;

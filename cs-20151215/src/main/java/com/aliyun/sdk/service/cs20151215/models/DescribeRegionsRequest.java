@@ -87,7 +87,15 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * acceptLanguage.
+         * <p>The language in which the results are returned.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>zh-CN</li>
+         * <li>en-US</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("acceptLanguage", acceptLanguage);
@@ -96,7 +104,16 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * clusterType.
+         * <p>The type of the cluster.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ExternalKubernetes: registered clusters.</li>
+         * <li>ManagedKubernetes: managed clusters.</li>
+         * <li>Kubernetes: dedicated clusters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ManagedKubernetes</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("clusterType", clusterType);
@@ -105,7 +122,17 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * profile.
+         * <p>The subtype of the managed cluster.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Lingjun: ACK Lingjun clusters.</li>
+         * <li>Serverless: ACK serverless clusters.</li>
+         * <li>Default: ACK managed clusters.</li>
+         * <li>Edge: ACK Edge clusters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder profile(String profile) {
             this.putQueryParameter("profile", profile);

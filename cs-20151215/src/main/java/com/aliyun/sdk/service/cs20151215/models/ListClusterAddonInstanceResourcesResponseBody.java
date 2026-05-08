@@ -67,7 +67,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * helm_release.
+         * <p>Information about the Helm release instance corresponding to the add-on.</p>
          */
         public Builder helmRelease(HelmRelease helmRelease) {
             this.helmRelease = helmRelease;
@@ -75,7 +75,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * kubernetes_objects.
+         * <p>A list of Kubernetes objects associated with the add-on.</p>
          */
         public Builder kubernetesObjects(java.util.List<KubernetesObjects> kubernetesObjects) {
             this.kubernetesObjects = kubernetesObjects;
@@ -167,7 +167,10 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * chart_name.
+             * <p>The name of the Helm chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack-node-problem-detector</p>
              */
             public Builder chartName(String chartName) {
                 this.chartName = chartName;
@@ -175,7 +178,10 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * chart_version.
+             * <p>The version of the Helm chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.28</p>
              */
             public Builder chartVersion(String chartVersion) {
                 this.chartVersion = chartVersion;
@@ -183,7 +189,10 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * namespace.
+             * <p>The namespace where the Helm release is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kube-system</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -191,7 +200,10 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * release_name.
+             * <p>The name of the Helm release instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack-node-problem-detector</p>
              */
             public Builder releaseName(String releaseName) {
                 this.releaseName = releaseName;
@@ -297,7 +309,10 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * group.
+             * <p>The Kubernetes API group to which the object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rbac.authorization.k8s.io</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -305,7 +320,10 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * kind.
+             * <p>The Kubernetes API type to which the object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ClusterRole</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -313,7 +331,10 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the Kubernetes object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>terway-pod-reader</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -321,7 +342,10 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * namespace.
+             * <p>The namespace to which the object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kube-system</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -329,7 +353,10 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The Kubernetes API version to which the object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;

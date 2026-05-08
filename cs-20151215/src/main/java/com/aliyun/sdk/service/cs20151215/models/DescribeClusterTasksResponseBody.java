@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterTasksResponseBody</p>
  */
 public class DescribeClusterTasksResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("next_token")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
 
@@ -27,6 +30,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     private java.util.List<Tasks> tasks;
 
     private DescribeClusterTasksResponseBody(Builder builder) {
+        this.nextToken = builder.nextToken;
         this.pageInfo = builder.pageInfo;
         this.requestId = builder.requestId;
         this.tasks = builder.tasks;
@@ -42,6 +46,13 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -66,6 +77,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String nextToken; 
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<Tasks> tasks; 
@@ -74,10 +86,19 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeClusterTasksResponseBody model) {
+            this.nextToken = model.nextToken;
             this.pageInfo = model.pageInfo;
             this.requestId = model.requestId;
             this.tasks = model.tasks;
         } 
+
+        /**
+         * next_token.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
 
         /**
          * <p>The pagination information.</p>
