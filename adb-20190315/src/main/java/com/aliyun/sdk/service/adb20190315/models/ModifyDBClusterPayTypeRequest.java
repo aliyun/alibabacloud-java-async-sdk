@@ -131,7 +131,7 @@ public class ModifyDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The billing method of the cluster. Valid values:</p>
          * <ul>
          * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
          * <li><strong>Prepaid</strong>: subscription.</li>
@@ -139,7 +139,7 @@ public class ModifyDBClusterPayTypeRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Prepaid</p>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -154,7 +154,7 @@ public class ModifyDBClusterPayTypeRequest extends Request {
          * <li><strong>Month</strong>: subscription on a monthly basis.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter must be specified when PayType is set to Prepaid.</p>
+         * <p> This parameter must be specified when PayType is set to Prepaid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -167,10 +167,7 @@ public class ModifyDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
-         * </blockquote>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -182,19 +179,17 @@ public class ModifyDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the subscription cluster.</p>
+         * <p>The subscription period of the subscription cluster.</p>
          * <ul>
-         * <li>Valid values when Period is set to Year: 1, 2, 3, and 5 (integer).</li>
-         * <li>Valid values when Period is set to Month: 1 to 11 (integer).</li>
+         * <li>Valid values when Period is set to Year: 1, 2, and 3 (integer)</li>
+         * <li>Valid values when Period is set to Month: 1 to 9 (integer)</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter must be specified when PayType is set to Prepaid.</p>
-         * </li>
-         * <li><p>Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</p>
-         * </li>
+         * <li>This parameter is required if the PayType parameter is set to Prepaid.</li>
+         * <li>Longer subscription periods offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -160,7 +160,10 @@ public class DescribeTableDetailRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +194,13 @@ public class DescribeTableDetailRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the DescribeRegions operation to query the available region list.<a href="~~612393~~"></a></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +227,7 @@ public class DescribeTableDetailRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

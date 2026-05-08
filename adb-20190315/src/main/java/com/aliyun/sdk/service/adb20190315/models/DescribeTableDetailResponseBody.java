@@ -91,7 +91,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of partitions.</p>
+         * <p>The queried shard.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -99,7 +99,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -168,7 +168,10 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The partition ID. Only the numeric part of the partition name is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -176,7 +179,10 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The number of rows in the partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -230,7 +236,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Shard.
+             * <p>The queried shards.</p>
              */
             public Builder shard(java.util.List<Shard> shard) {
                 this.shard = shard;

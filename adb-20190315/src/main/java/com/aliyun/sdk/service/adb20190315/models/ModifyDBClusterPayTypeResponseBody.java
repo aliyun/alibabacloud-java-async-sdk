@@ -115,14 +115,14 @@ public class ModifyDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The billing method of the cluster. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Prepaid</p>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
