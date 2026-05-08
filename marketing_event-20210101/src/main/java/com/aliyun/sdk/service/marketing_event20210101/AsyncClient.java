@@ -68,6 +68,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryOrderSessionListPopResponse> queryOrderSessionListPop(QueryOrderSessionListPopRequest request);
 
     /**
+     * @param request the request parameters of QueryQwenConferenceSgTicketPop  QueryQwenConferenceSgTicketPopRequest
+     * @return QueryQwenConferenceSgTicketPopResponse
+     */
+    CompletableFuture<QueryQwenConferenceSgTicketPopResponse> queryQwenConferenceSgTicketPop(QueryQwenConferenceSgTicketPopRequest request);
+
+    /**
+     * @param request the request parameters of QueryQwenConferenceSgTicketSearchPop  QueryQwenConferenceSgTicketSearchPopRequest
+     * @return QueryQwenConferenceSgTicketSearchPopResponse
+     */
+    CompletableFuture<QueryQwenConferenceSgTicketSearchPopResponse> queryQwenConferenceSgTicketSearchPop(QueryQwenConferenceSgTicketSearchPopRequest request);
+
+    /**
      * @param request the request parameters of QuerySessionByActivityIdPop  QuerySessionByActivityIdPopRequest
      * @return QuerySessionByActivityIdPopResponse
      */
