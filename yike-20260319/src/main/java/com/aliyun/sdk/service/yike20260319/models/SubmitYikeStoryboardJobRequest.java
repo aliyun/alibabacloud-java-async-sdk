@@ -34,6 +34,10 @@ public class SubmitYikeStoryboardJobRequest extends Request {
     private String fileURL;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepOriginDialogue")
+    private Boolean keepOriginDialogue;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModelParams")
     private String modelParams;
 
@@ -83,6 +87,7 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         this.aspectRatio = builder.aspectRatio;
         this.execMode = builder.execMode;
         this.fileURL = builder.fileURL;
+        this.keepOriginDialogue = builder.keepOriginDialogue;
         this.modelParams = builder.modelParams;
         this.narrationVoiceId = builder.narrationVoiceId;
         this.resolution = builder.resolution;
@@ -135,6 +140,13 @@ public class SubmitYikeStoryboardJobRequest extends Request {
      */
     public String getFileURL() {
         return this.fileURL;
+    }
+
+    /**
+     * @return keepOriginDialogue
+     */
+    public Boolean getKeepOriginDialogue() {
+        return this.keepOriginDialogue;
     }
 
     /**
@@ -219,6 +231,7 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         private String aspectRatio; 
         private String execMode; 
         private String fileURL; 
+        private Boolean keepOriginDialogue; 
         private String modelParams; 
         private String narrationVoiceId; 
         private String resolution; 
@@ -241,6 +254,7 @@ public class SubmitYikeStoryboardJobRequest extends Request {
             this.aspectRatio = request.aspectRatio;
             this.execMode = request.execMode;
             this.fileURL = request.fileURL;
+            this.keepOriginDialogue = request.keepOriginDialogue;
             this.modelParams = request.modelParams;
             this.narrationVoiceId = request.narrationVoiceId;
             this.resolution = request.resolution;
@@ -287,6 +301,15 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         public Builder fileURL(String fileURL) {
             this.putBodyParameter("FileURL", fileURL);
             this.fileURL = fileURL;
+            return this;
+        }
+
+        /**
+         * KeepOriginDialogue.
+         */
+        public Builder keepOriginDialogue(Boolean keepOriginDialogue) {
+            this.putQueryParameter("KeepOriginDialogue", keepOriginDialogue);
+            this.keepOriginDialogue = keepOriginDialogue;
             return this;
         }
 
