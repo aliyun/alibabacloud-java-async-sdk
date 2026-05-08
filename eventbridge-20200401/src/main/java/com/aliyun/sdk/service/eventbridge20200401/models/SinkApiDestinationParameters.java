@@ -29,11 +29,15 @@ public class SinkApiDestinationParameters extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("QueryStringParameters")
     private QueryStringParameters queryStringParameters;
 
+    @com.aliyun.core.annotation.NameInMap("Timeout")
+    private Integer timeout;
+
     private SinkApiDestinationParameters(Builder builder) {
         this.bodyParameters = builder.bodyParameters;
         this.headerParameters = builder.headerParameters;
         this.name = builder.name;
         this.queryStringParameters = builder.queryStringParameters;
+        this.timeout = builder.timeout;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class SinkApiDestinationParameters extends TeaModel {
         return this.queryStringParameters;
     }
 
+    /**
+     * @return timeout
+     */
+    public Integer getTimeout() {
+        return this.timeout;
+    }
+
     public static final class Builder {
         private BodyParameters bodyParameters; 
         private HeaderParameters headerParameters; 
         private String name; 
         private QueryStringParameters queryStringParameters; 
+        private Integer timeout; 
 
         private Builder() {
         } 
@@ -90,6 +102,7 @@ public class SinkApiDestinationParameters extends TeaModel {
             this.headerParameters = model.headerParameters;
             this.name = model.name;
             this.queryStringParameters = model.queryStringParameters;
+            this.timeout = model.timeout;
         } 
 
         /**
@@ -121,6 +134,14 @@ public class SinkApiDestinationParameters extends TeaModel {
          */
         public Builder queryStringParameters(QueryStringParameters queryStringParameters) {
             this.queryStringParameters = queryStringParameters;
+            return this;
+        }
+
+        /**
+         * Timeout.
+         */
+        public Builder timeout(Integer timeout) {
+            this.timeout = timeout;
             return this;
         }
 
