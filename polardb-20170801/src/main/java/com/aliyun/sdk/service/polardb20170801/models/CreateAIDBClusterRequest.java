@@ -30,6 +30,10 @@ public class CreateAIDBClusterRequest extends Request {
     private Boolean autoUseCoupon;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
     private String DBClusterDescription;
 
@@ -118,7 +122,6 @@ public class CreateAIDBClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String securityGroupId;
 
     @com.aliyun.core.annotation.Query
@@ -157,6 +160,7 @@ public class CreateAIDBClusterRequest extends Request {
         this.ackAdmin = builder.ackAdmin;
         this.autoRenew = builder.autoRenew;
         this.autoUseCoupon = builder.autoUseCoupon;
+        this.clientToken = builder.clientToken;
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterId = builder.DBClusterId;
         this.DBNodeClass = builder.DBNodeClass;
@@ -220,6 +224,13 @@ public class CreateAIDBClusterRequest extends Request {
      */
     public Boolean getAutoUseCoupon() {
         return this.autoUseCoupon;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -429,6 +440,7 @@ public class CreateAIDBClusterRequest extends Request {
         private String ackAdmin; 
         private String autoRenew; 
         private Boolean autoUseCoupon; 
+        private String clientToken; 
         private String DBClusterDescription; 
         private String DBClusterId; 
         private String DBNodeClass; 
@@ -468,6 +480,7 @@ public class CreateAIDBClusterRequest extends Request {
             this.ackAdmin = request.ackAdmin;
             this.autoRenew = request.autoRenew;
             this.autoUseCoupon = request.autoUseCoupon;
+            this.clientToken = request.clientToken;
             this.DBClusterDescription = request.DBClusterDescription;
             this.DBClusterId = request.DBClusterId;
             this.DBNodeClass = request.DBNodeClass;
@@ -523,6 +536,15 @@ public class CreateAIDBClusterRequest extends Request {
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
             this.autoUseCoupon = autoUseCoupon;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -728,10 +750,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sg-bp**************</p>
+         * SecurityGroupId.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

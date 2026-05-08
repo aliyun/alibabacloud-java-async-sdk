@@ -23,6 +23,9 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("CurrentVersion")
+    private String currentVersion;
+
     @com.aliyun.core.annotation.NameInMap("DbType")
     private String dbType;
 
@@ -41,6 +44,9 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GwDescription")
     private String gwDescription;
 
+    @com.aliyun.core.annotation.NameInMap("LatestVersion")
+    private String latestVersion;
+
     @com.aliyun.core.annotation.NameInMap("ModifyTime")
     private String modifyTime;
 
@@ -52,6 +58,9 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("RunningVersion")
+    private String runningVersion;
 
     @com.aliyun.core.annotation.NameInMap("SecurityIPArrays")
     private java.util.List<SecurityIPArrays> securityIPArrays;
@@ -68,16 +77,19 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     private DescribeGatewayAttributeResponseBody(Builder builder) {
         this.classCode = builder.classCode;
         this.createTime = builder.createTime;
+        this.currentVersion = builder.currentVersion;
         this.dbType = builder.dbType;
         this.endpoints = builder.endpoints;
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
         this.gwClusterId = builder.gwClusterId;
         this.gwDescription = builder.gwDescription;
+        this.latestVersion = builder.latestVersion;
         this.modifyTime = builder.modifyTime;
         this.payType = builder.payType;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
+        this.runningVersion = builder.runningVersion;
         this.securityIPArrays = builder.securityIPArrays;
         this.status = builder.status;
         this.vSwitchId = builder.vSwitchId;
@@ -108,6 +120,13 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return currentVersion
+     */
+    public String getCurrentVersion() {
+        return this.currentVersion;
     }
 
     /**
@@ -153,6 +172,13 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return latestVersion
+     */
+    public String getLatestVersion() {
+        return this.latestVersion;
+    }
+
+    /**
      * @return modifyTime
      */
     public String getModifyTime() {
@@ -178,6 +204,13 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return runningVersion
+     */
+    public String getRunningVersion() {
+        return this.runningVersion;
     }
 
     /**
@@ -211,16 +244,19 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private String classCode; 
         private String createTime; 
+        private String currentVersion; 
         private String dbType; 
         private java.util.List<Endpoints> endpoints; 
         private String expireTime; 
         private Boolean expired; 
         private String gwClusterId; 
         private String gwDescription; 
+        private String latestVersion; 
         private String modifyTime; 
         private String payType; 
         private String regionId; 
         private String requestId; 
+        private String runningVersion; 
         private java.util.List<SecurityIPArrays> securityIPArrays; 
         private String status; 
         private String vSwitchId; 
@@ -232,16 +268,19 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         private Builder(DescribeGatewayAttributeResponseBody model) {
             this.classCode = model.classCode;
             this.createTime = model.createTime;
+            this.currentVersion = model.currentVersion;
             this.dbType = model.dbType;
             this.endpoints = model.endpoints;
             this.expireTime = model.expireTime;
             this.expired = model.expired;
             this.gwClusterId = model.gwClusterId;
             this.gwDescription = model.gwDescription;
+            this.latestVersion = model.latestVersion;
             this.modifyTime = model.modifyTime;
             this.payType = model.payType;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
+            this.runningVersion = model.runningVersion;
             this.securityIPArrays = model.securityIPArrays;
             this.status = model.status;
             this.vSwitchId = model.vSwitchId;
@@ -261,6 +300,14 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * CurrentVersion.
+         */
+        public Builder currentVersion(String currentVersion) {
+            this.currentVersion = currentVersion;
             return this;
         }
 
@@ -313,6 +360,14 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * LatestVersion.
+         */
+        public Builder latestVersion(String latestVersion) {
+            this.latestVersion = latestVersion;
+            return this;
+        }
+
+        /**
          * ModifyTime.
          */
         public Builder modifyTime(String modifyTime) {
@@ -344,6 +399,14 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * RunningVersion.
+         */
+        public Builder runningVersion(String runningVersion) {
+            this.runningVersion = runningVersion;
             return this;
         }
 
