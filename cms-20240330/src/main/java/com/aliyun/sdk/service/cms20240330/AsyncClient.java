@@ -98,6 +98,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMemoryStoreResponse> createMemoryStore(CreateMemoryStoreRequest request);
 
     /**
+     * @param request the request parameters of CreatePipeline  CreatePipelineRequest
+     * @return CreatePipelineResponse
+     */
+    CompletableFuture<CreatePipelineResponse> createPipeline(CreatePipelineRequest request);
+
+    /**
      * @param request the request parameters of CreatePrometheusInstance  CreatePrometheusInstanceRequest
      * @return CreatePrometheusInstanceResponse
      */
@@ -219,6 +225,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteMemoryStoreResponse
      */
     CompletableFuture<DeleteMemoryStoreResponse> deleteMemoryStore(DeleteMemoryStoreRequest request);
+
+    /**
+     * @param request the request parameters of DeletePipeline  DeletePipelineRequest
+     * @return DeletePipelineResponse
+     */
+    CompletableFuture<DeletePipelineResponse> deletePipeline(DeletePipelineRequest request);
 
     /**
      * <b>description</b> :
@@ -411,6 +423,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetMemoryStoreResponse
      */
     CompletableFuture<GetMemoryStoreResponse> getMemoryStore(GetMemoryStoreRequest request);
+
+    /**
+     * @param request the request parameters of GetPipeline  GetPipelineRequest
+     * @return GetPipelineResponse
+     */
+    CompletableFuture<GetPipelineResponse> getPipeline(GetPipelineRequest request);
 
     /**
      * <b>description</b> :
@@ -615,6 +633,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMemoryStoresResponse> listMemoryStores(ListMemoryStoresRequest request);
 
     /**
+     * @param request the request parameters of ListPipelines  ListPipelinesRequest
+     * @return ListPipelinesResponse
+     */
+    CompletableFuture<ListPipelinesResponse> listPipelines(ListPipelinesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Get the list of Prometheus instance dashboards.</p>
      * 
@@ -769,6 +793,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateNotifyStrategyResponse
      */
     CompletableFuture<UpdateNotifyStrategyResponse> updateNotifyStrategy(UpdateNotifyStrategyRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePipeline  UpdatePipelineRequest
+     * @return UpdatePipelineResponse
+     */
+    CompletableFuture<UpdatePipelineResponse> updatePipeline(UpdatePipelineRequest request);
 
     /**
      * <b>description</b> :
