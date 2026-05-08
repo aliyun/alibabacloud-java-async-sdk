@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddContexts  AddContextsRequest
+     * @return AddContextsResponse
+     */
+    CompletableFuture<AddContextsResponse> addContexts(AddContextsRequest request);
+
+    /**
      * @param request the request parameters of AddMemories  AddMemoriesRequest
      * @return AddMemoriesResponse
      */
@@ -63,6 +69,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateCloudResourceResponse
      */
     CompletableFuture<CreateCloudResourceResponse> createCloudResource(CreateCloudResourceRequest request);
+
+    /**
+     * @param request the request parameters of CreateContextStore  CreateContextStoreRequest
+     * @return CreateContextStoreResponse
+     */
+    CompletableFuture<CreateContextStoreResponse> createContextStore(CreateContextStoreRequest request);
+
+    /**
+     * @param request the request parameters of CreateContextStoreAPIKey  CreateContextStoreAPIKeyRequest
+     * @return CreateContextStoreAPIKeyResponse
+     */
+    CompletableFuture<CreateContextStoreAPIKeyResponse> createContextStoreAPIKey(CreateContextStoreAPIKeyRequest request);
 
     /**
      * @param request the request parameters of CreateDataset  CreateDatasetRequest
@@ -183,6 +201,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCloudResourceResponse
      */
     CompletableFuture<DeleteCloudResourceResponse> deleteCloudResource(DeleteCloudResourceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteContext  DeleteContextRequest
+     * @return DeleteContextResponse
+     */
+    CompletableFuture<DeleteContextResponse> deleteContext(DeleteContextRequest request);
+
+    /**
+     * @param request the request parameters of DeleteContextStore  DeleteContextStoreRequest
+     * @return DeleteContextStoreResponse
+     */
+    CompletableFuture<DeleteContextStoreResponse> deleteContextStore(DeleteContextStoreRequest request);
+
+    /**
+     * @param request the request parameters of DeleteContextStoreAPIKey  DeleteContextStoreAPIKeyRequest
+     * @return DeleteContextStoreAPIKeyResponse
+     */
+    CompletableFuture<DeleteContextStoreAPIKeyResponse> deleteContextStoreAPIKey(DeleteContextStoreAPIKeyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteContexts  DeleteContextsRequest
+     * @return DeleteContextsResponse
+     */
+    CompletableFuture<DeleteContextsResponse> deleteContexts(DeleteContextsRequest request);
 
     /**
      * @param request the request parameters of DeleteDataset  DeleteDatasetRequest
@@ -363,6 +405,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCmsServiceResponse
      */
     CompletableFuture<GetCmsServiceResponse> getCmsService(GetCmsServiceRequest request);
+
+    /**
+     * @param request the request parameters of GetContext  GetContextRequest
+     * @return GetContextResponse
+     */
+    CompletableFuture<GetContextResponse> getContext(GetContextRequest request);
+
+    /**
+     * @param request the request parameters of GetContextStore  GetContextStoreRequest
+     * @return GetContextStoreResponse
+     */
+    CompletableFuture<GetContextStoreResponse> getContextStore(GetContextStoreRequest request);
 
     /**
      * @param request the request parameters of GetDataset  GetDatasetRequest
@@ -554,6 +608,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListContactsResponse> listContacts(ListContactsRequest request);
 
     /**
+     * @param request the request parameters of ListContextStoreAPIKeys  ListContextStoreAPIKeysRequest
+     * @return ListContextStoreAPIKeysResponse
+     */
+    CompletableFuture<ListContextStoreAPIKeysResponse> listContextStoreAPIKeys(ListContextStoreAPIKeysRequest request);
+
+    /**
+     * @param request the request parameters of ListContextStores  ListContextStoresRequest
+     * @return ListContextStoresResponse
+     */
+    CompletableFuture<ListContextStoresResponse> listContextStores(ListContextStoresRequest request);
+
+    /**
      * @param request the request parameters of ListDatasets  ListDatasetsRequest
      * @return ListDatasetsResponse
      */
@@ -711,6 +777,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryAlertRulesResponse> queryAlertRules(QueryAlertRulesRequest request);
 
     /**
+     * @param request the request parameters of SearchContext  SearchContextRequest
+     * @return SearchContextResponse
+     */
+    CompletableFuture<SearchContextResponse> searchContext(SearchContextRequest request);
+
+    /**
      * @param request the request parameters of SearchMemories  SearchMemoriesRequest
      * @return SearchMemoriesResponse
      */
@@ -757,6 +829,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateBizTraceResponse
      */
     CompletableFuture<UpdateBizTraceResponse> updateBizTrace(UpdateBizTraceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateContext  UpdateContextRequest
+     * @return UpdateContextResponse
+     */
+    CompletableFuture<UpdateContextResponse> updateContext(UpdateContextRequest request);
+
+    /**
+     * @param request the request parameters of UpdateContextStore  UpdateContextStoreRequest
+     * @return UpdateContextStoreResponse
+     */
+    CompletableFuture<UpdateContextStoreResponse> updateContextStore(UpdateContextStoreRequest request);
 
     /**
      * @param request the request parameters of UpdateDataset  UpdateDatasetRequest
