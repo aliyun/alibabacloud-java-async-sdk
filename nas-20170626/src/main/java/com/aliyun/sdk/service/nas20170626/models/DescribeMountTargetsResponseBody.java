@@ -478,6 +478,9 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessGroup")
         private String accessGroup;
 
+        @com.aliyun.core.annotation.NameInMap("AccessPointAccessOnly")
+        private Boolean accessPointAccessOnly;
+
         @com.aliyun.core.annotation.NameInMap("ClientMasterNodes")
         private ClientMasterNodes clientMasterNodes;
 
@@ -507,6 +510,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
 
         private MountTarget(Builder builder) {
             this.accessGroup = builder.accessGroup;
+            this.accessPointAccessOnly = builder.accessPointAccessOnly;
             this.clientMasterNodes = builder.clientMasterNodes;
             this.dualStackMountTargetDomain = builder.dualStackMountTargetDomain;
             this.IPVersion = builder.IPVersion;
@@ -531,6 +535,13 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
          */
         public String getAccessGroup() {
             return this.accessGroup;
+        }
+
+        /**
+         * @return accessPointAccessOnly
+         */
+        public Boolean getAccessPointAccessOnly() {
+            return this.accessPointAccessOnly;
         }
 
         /**
@@ -598,6 +609,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accessGroup; 
+            private Boolean accessPointAccessOnly; 
             private ClientMasterNodes clientMasterNodes; 
             private String dualStackMountTargetDomain; 
             private String IPVersion; 
@@ -613,6 +625,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
 
             private Builder(MountTarget model) {
                 this.accessGroup = model.accessGroup;
+                this.accessPointAccessOnly = model.accessPointAccessOnly;
                 this.clientMasterNodes = model.clientMasterNodes;
                 this.dualStackMountTargetDomain = model.dualStackMountTargetDomain;
                 this.IPVersion = model.IPVersion;
@@ -632,6 +645,14 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
              */
             public Builder accessGroup(String accessGroup) {
                 this.accessGroup = accessGroup;
+                return this;
+            }
+
+            /**
+             * AccessPointAccessOnly.
+             */
+            public Builder accessPointAccessOnly(Boolean accessPointAccessOnly) {
+                this.accessPointAccessOnly = accessPointAccessOnly;
                 return this;
             }
 

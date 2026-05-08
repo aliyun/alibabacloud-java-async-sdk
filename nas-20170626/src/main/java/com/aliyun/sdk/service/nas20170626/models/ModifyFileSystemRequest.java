@@ -153,9 +153,13 @@ public class ModifyFileSystemRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("EnableOplock")
         private Boolean enableOplock;
 
+        @com.aliyun.core.annotation.NameInMap("VscAccessPointAccessOnly")
+        private Boolean vscAccessPointAccessOnly;
+
         private Options(Builder builder) {
             this.enableABE = builder.enableABE;
             this.enableOplock = builder.enableOplock;
+            this.vscAccessPointAccessOnly = builder.vscAccessPointAccessOnly;
         }
 
         public static Builder builder() {
@@ -180,9 +184,17 @@ public class ModifyFileSystemRequest extends Request {
             return this.enableOplock;
         }
 
+        /**
+         * @return vscAccessPointAccessOnly
+         */
+        public Boolean getVscAccessPointAccessOnly() {
+            return this.vscAccessPointAccessOnly;
+        }
+
         public static final class Builder {
             private Boolean enableABE; 
             private Boolean enableOplock; 
+            private Boolean vscAccessPointAccessOnly; 
 
             private Builder() {
             } 
@@ -190,6 +202,7 @@ public class ModifyFileSystemRequest extends Request {
             private Builder(Options model) {
                 this.enableABE = model.enableABE;
                 this.enableOplock = model.enableOplock;
+                this.vscAccessPointAccessOnly = model.vscAccessPointAccessOnly;
             } 
 
             /**
@@ -215,6 +228,14 @@ public class ModifyFileSystemRequest extends Request {
              */
             public Builder enableOplock(Boolean enableOplock) {
                 this.enableOplock = enableOplock;
+                return this;
+            }
+
+            /**
+             * VscAccessPointAccessOnly.
+             */
+            public Builder vscAccessPointAccessOnly(Boolean vscAccessPointAccessOnly) {
+                this.vscAccessPointAccessOnly = vscAccessPointAccessOnly;
                 return this;
             }
 

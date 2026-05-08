@@ -22,6 +22,10 @@ public class ModifyMountTargetRequest extends Request {
     private String accessGroupName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessPointAccessOnly")
+    private Boolean accessPointAccessOnly;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DualStackMountTargetDomain")
     private String dualStackMountTargetDomain;
 
@@ -41,6 +45,7 @@ public class ModifyMountTargetRequest extends Request {
     private ModifyMountTargetRequest(Builder builder) {
         super(builder);
         this.accessGroupName = builder.accessGroupName;
+        this.accessPointAccessOnly = builder.accessPointAccessOnly;
         this.dualStackMountTargetDomain = builder.dualStackMountTargetDomain;
         this.fileSystemId = builder.fileSystemId;
         this.mountTargetDomain = builder.mountTargetDomain;
@@ -65,6 +70,13 @@ public class ModifyMountTargetRequest extends Request {
      */
     public String getAccessGroupName() {
         return this.accessGroupName;
+    }
+
+    /**
+     * @return accessPointAccessOnly
+     */
+    public Boolean getAccessPointAccessOnly() {
+        return this.accessPointAccessOnly;
     }
 
     /**
@@ -97,6 +109,7 @@ public class ModifyMountTargetRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyMountTargetRequest, Builder> {
         private String accessGroupName; 
+        private Boolean accessPointAccessOnly; 
         private String dualStackMountTargetDomain; 
         private String fileSystemId; 
         private String mountTargetDomain; 
@@ -109,6 +122,7 @@ public class ModifyMountTargetRequest extends Request {
         private Builder(ModifyMountTargetRequest request) {
             super(request);
             this.accessGroupName = request.accessGroupName;
+            this.accessPointAccessOnly = request.accessPointAccessOnly;
             this.dualStackMountTargetDomain = request.dualStackMountTargetDomain;
             this.fileSystemId = request.fileSystemId;
             this.mountTargetDomain = request.mountTargetDomain;
@@ -124,6 +138,15 @@ public class ModifyMountTargetRequest extends Request {
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
             this.accessGroupName = accessGroupName;
+            return this;
+        }
+
+        /**
+         * AccessPointAccessOnly.
+         */
+        public Builder accessPointAccessOnly(Boolean accessPointAccessOnly) {
+            this.putQueryParameter("AccessPointAccessOnly", accessPointAccessOnly);
+            this.accessPointAccessOnly = accessPointAccessOnly;
             return this;
         }
 
