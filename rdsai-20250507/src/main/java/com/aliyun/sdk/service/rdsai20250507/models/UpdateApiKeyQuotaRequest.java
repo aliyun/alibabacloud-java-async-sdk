@@ -109,7 +109,6 @@ public class UpdateApiKeyQuotaRequest extends Request {
         private String apiKey;
 
         @com.aliyun.core.annotation.NameInMap("LimitRate")
-        @com.aliyun.core.annotation.Validation(maximum = 1)
         private Double limitRate;
 
         @com.aliyun.core.annotation.NameInMap("LimitType")

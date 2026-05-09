@@ -218,6 +218,9 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("Replicas")
+        private Long replicas;
+
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
@@ -227,6 +230,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             this.description = builder.description;
             this.enableVpcAccess = builder.enableVpcAccess;
             this.name = builder.name;
+            this.replicas = builder.replicas;
             this.templateId = builder.templateId;
         }
 
@@ -274,6 +278,13 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return replicas
+         */
+        public Long getReplicas() {
+            return this.replicas;
+        }
+
+        /**
          * @return templateId
          */
         public String getTemplateId() {
@@ -286,6 +297,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             private String description; 
             private String enableVpcAccess; 
             private String name; 
+            private Long replicas; 
             private String templateId; 
 
             private Builder() {
@@ -297,6 +309,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
                 this.description = model.description;
                 this.enableVpcAccess = model.enableVpcAccess;
                 this.name = model.name;
+                this.replicas = model.replicas;
                 this.templateId = model.templateId;
             } 
 
@@ -337,6 +350,14 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Replicas.
+             */
+            public Builder replicas(Long replicas) {
+                this.replicas = replicas;
                 return this;
             }
 

@@ -356,6 +356,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSkillResponse> listSkill(ListSkillRequest request);
 
     /**
+     * @param request the request parameters of ModifyAppInstance  ModifyAppInstanceRequest
+     * @return ModifyAppInstanceResponse
+     */
+    CompletableFuture<ModifyAppInstanceResponse> modifyAppInstance(ModifyAppInstanceRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engine</h3>
      * <p>RDS PostgreSQL</p>
