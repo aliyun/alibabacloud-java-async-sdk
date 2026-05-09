@@ -20,6 +20,9 @@ public class UpdateSessionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("disableSessionIdReuse")
     private Boolean disableSessionIdReuse;
 
+    @com.aliyun.core.annotation.NameInMap("juiceFsConfig")
+    private JuiceFsConfig juiceFsConfig;
+
     @com.aliyun.core.annotation.NameInMap("nasConfig")
     private NASConfig nasConfig;
 
@@ -37,6 +40,7 @@ public class UpdateSessionInput extends TeaModel {
 
     private UpdateSessionInput(Builder builder) {
         this.disableSessionIdReuse = builder.disableSessionIdReuse;
+        this.juiceFsConfig = builder.juiceFsConfig;
         this.nasConfig = builder.nasConfig;
         this.ossMountConfig = builder.ossMountConfig;
         this.polarFsConfig = builder.polarFsConfig;
@@ -61,6 +65,13 @@ public class UpdateSessionInput extends TeaModel {
      */
     public Boolean getDisableSessionIdReuse() {
         return this.disableSessionIdReuse;
+    }
+
+    /**
+     * @return juiceFsConfig
+     */
+    public JuiceFsConfig getJuiceFsConfig() {
+        return this.juiceFsConfig;
     }
 
     /**
@@ -100,6 +111,7 @@ public class UpdateSessionInput extends TeaModel {
 
     public static final class Builder {
         private Boolean disableSessionIdReuse; 
+        private JuiceFsConfig juiceFsConfig; 
         private NASConfig nasConfig; 
         private OSSMountConfig ossMountConfig; 
         private PolarFsConfig polarFsConfig; 
@@ -111,6 +123,7 @@ public class UpdateSessionInput extends TeaModel {
 
         private Builder(UpdateSessionInput model) {
             this.disableSessionIdReuse = model.disableSessionIdReuse;
+            this.juiceFsConfig = model.juiceFsConfig;
             this.nasConfig = model.nasConfig;
             this.ossMountConfig = model.ossMountConfig;
             this.polarFsConfig = model.polarFsConfig;
@@ -123,6 +136,14 @@ public class UpdateSessionInput extends TeaModel {
          */
         public Builder disableSessionIdReuse(Boolean disableSessionIdReuse) {
             this.disableSessionIdReuse = disableSessionIdReuse;
+            return this;
+        }
+
+        /**
+         * juiceFsConfig.
+         */
+        public Builder juiceFsConfig(JuiceFsConfig juiceFsConfig) {
+            this.juiceFsConfig = juiceFsConfig;
             return this;
         }
 

@@ -91,6 +91,9 @@ public class Function extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("invocationRestriction")
     private FunctionRestriction invocationRestriction;
 
+    @com.aliyun.core.annotation.NameInMap("juiceFsConfig")
+    private JuiceFsConfig juiceFsConfig;
+
     @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
@@ -185,6 +188,7 @@ public class Function extends TeaModel {
         this.instanceLifecycleConfig = builder.instanceLifecycleConfig;
         this.internetAccess = builder.internetAccess;
         this.invocationRestriction = builder.invocationRestriction;
+        this.juiceFsConfig = builder.juiceFsConfig;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.lastUpdateStatus = builder.lastUpdateStatus;
         this.lastUpdateStatusReason = builder.lastUpdateStatusReason;
@@ -391,6 +395,13 @@ public class Function extends TeaModel {
     }
 
     /**
+     * @return juiceFsConfig
+     */
+    public JuiceFsConfig getJuiceFsConfig() {
+        return this.juiceFsConfig;
+    }
+
+    /**
      * @return lastModifiedTime
      */
     public String getLastModifiedTime() {
@@ -576,6 +587,7 @@ public class Function extends TeaModel {
         private InstanceLifecycleConfig instanceLifecycleConfig; 
         private Boolean internetAccess; 
         private FunctionRestriction invocationRestriction; 
+        private JuiceFsConfig juiceFsConfig; 
         private String lastModifiedTime; 
         private String lastUpdateStatus; 
         private String lastUpdateStatusReason; 
@@ -628,6 +640,7 @@ public class Function extends TeaModel {
             this.instanceLifecycleConfig = model.instanceLifecycleConfig;
             this.internetAccess = model.internetAccess;
             this.invocationRestriction = model.invocationRestriction;
+            this.juiceFsConfig = model.juiceFsConfig;
             this.lastModifiedTime = model.lastModifiedTime;
             this.lastUpdateStatus = model.lastUpdateStatus;
             this.lastUpdateStatusReason = model.lastUpdateStatusReason;
@@ -842,6 +855,14 @@ public class Function extends TeaModel {
          */
         public Builder invocationRestriction(FunctionRestriction invocationRestriction) {
             this.invocationRestriction = invocationRestriction;
+            return this;
+        }
+
+        /**
+         * juiceFsConfig.
+         */
+        public Builder juiceFsConfig(JuiceFsConfig juiceFsConfig) {
+            this.juiceFsConfig = juiceFsConfig;
             return this;
         }
 

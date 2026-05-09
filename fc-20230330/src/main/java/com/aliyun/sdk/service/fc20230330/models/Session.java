@@ -29,6 +29,9 @@ public class Session extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("functionName")
     private String functionName;
 
+    @com.aliyun.core.annotation.NameInMap("juiceFsConfig")
+    private JuiceFsConfig juiceFsConfig;
+
     @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
@@ -64,6 +67,7 @@ public class Session extends TeaModel {
         this.createdTime = builder.createdTime;
         this.disableSessionIdReuse = builder.disableSessionIdReuse;
         this.functionName = builder.functionName;
+        this.juiceFsConfig = builder.juiceFsConfig;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.nasConfig = builder.nasConfig;
         this.ossMountConfig = builder.ossMountConfig;
@@ -114,6 +118,13 @@ public class Session extends TeaModel {
      */
     public String getFunctionName() {
         return this.functionName;
+    }
+
+    /**
+     * @return juiceFsConfig
+     */
+    public JuiceFsConfig getJuiceFsConfig() {
+        return this.juiceFsConfig;
     }
 
     /**
@@ -191,6 +202,7 @@ public class Session extends TeaModel {
         private String createdTime; 
         private Boolean disableSessionIdReuse; 
         private String functionName; 
+        private JuiceFsConfig juiceFsConfig; 
         private String lastModifiedTime; 
         private NASConfig nasConfig; 
         private OSSMountConfig ossMountConfig; 
@@ -210,6 +222,7 @@ public class Session extends TeaModel {
             this.createdTime = model.createdTime;
             this.disableSessionIdReuse = model.disableSessionIdReuse;
             this.functionName = model.functionName;
+            this.juiceFsConfig = model.juiceFsConfig;
             this.lastModifiedTime = model.lastModifiedTime;
             this.nasConfig = model.nasConfig;
             this.ossMountConfig = model.ossMountConfig;
@@ -251,6 +264,14 @@ public class Session extends TeaModel {
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
+            return this;
+        }
+
+        /**
+         * juiceFsConfig.
+         */
+        public Builder juiceFsConfig(JuiceFsConfig juiceFsConfig) {
+            this.juiceFsConfig = juiceFsConfig;
             return this;
         }
 

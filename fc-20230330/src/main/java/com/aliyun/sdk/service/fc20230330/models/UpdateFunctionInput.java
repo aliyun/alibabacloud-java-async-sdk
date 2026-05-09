@@ -75,6 +75,9 @@ public class UpdateFunctionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("internetAccess")
     private Boolean internetAccess;
 
+    @com.aliyun.core.annotation.NameInMap("juiceFsConfig")
+    private JuiceFsConfig juiceFsConfig;
+
     @com.aliyun.core.annotation.NameInMap("layers")
     private java.util.List<String> layers;
 
@@ -134,6 +137,7 @@ public class UpdateFunctionInput extends TeaModel {
         this.instanceIsolationMode = builder.instanceIsolationMode;
         this.instanceLifecycleConfig = builder.instanceLifecycleConfig;
         this.internetAccess = builder.internetAccess;
+        this.juiceFsConfig = builder.juiceFsConfig;
         this.layers = builder.layers;
         this.logConfig = builder.logConfig;
         this.memorySize = builder.memorySize;
@@ -288,6 +292,13 @@ public class UpdateFunctionInput extends TeaModel {
     }
 
     /**
+     * @return juiceFsConfig
+     */
+    public JuiceFsConfig getJuiceFsConfig() {
+        return this.juiceFsConfig;
+    }
+
+    /**
      * @return layers
      */
     public java.util.List<String> getLayers() {
@@ -397,6 +408,7 @@ public class UpdateFunctionInput extends TeaModel {
         private String instanceIsolationMode; 
         private InstanceLifecycleConfig instanceLifecycleConfig; 
         private Boolean internetAccess; 
+        private JuiceFsConfig juiceFsConfig; 
         private java.util.List<String> layers; 
         private LogConfig logConfig; 
         private Integer memorySize; 
@@ -433,6 +445,7 @@ public class UpdateFunctionInput extends TeaModel {
             this.instanceIsolationMode = model.instanceIsolationMode;
             this.instanceLifecycleConfig = model.instanceLifecycleConfig;
             this.internetAccess = model.internetAccess;
+            this.juiceFsConfig = model.juiceFsConfig;
             this.layers = model.layers;
             this.logConfig = model.logConfig;
             this.memorySize = model.memorySize;
@@ -589,6 +602,14 @@ public class UpdateFunctionInput extends TeaModel {
          */
         public Builder internetAccess(Boolean internetAccess) {
             this.internetAccess = internetAccess;
+            return this;
+        }
+
+        /**
+         * juiceFsConfig.
+         */
+        public Builder juiceFsConfig(JuiceFsConfig juiceFsConfig) {
+            this.juiceFsConfig = juiceFsConfig;
             return this;
         }
 
