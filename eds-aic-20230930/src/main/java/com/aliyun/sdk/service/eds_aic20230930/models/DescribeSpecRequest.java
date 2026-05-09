@@ -22,6 +22,10 @@ public class DescribeSpecRequest extends Request {
     private String bizRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    private String chargeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MatrixSpec")
     private String matrixSpec;
 
@@ -53,6 +57,7 @@ public class DescribeSpecRequest extends Request {
     private DescribeSpecRequest(Builder builder) {
         super(builder);
         this.bizRegionId = builder.bizRegionId;
+        this.chargeType = builder.chargeType;
         this.matrixSpec = builder.matrixSpec;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -80,6 +85,13 @@ public class DescribeSpecRequest extends Request {
      */
     public String getBizRegionId() {
         return this.bizRegionId;
+    }
+
+    /**
+     * @return chargeType
+     */
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     /**
@@ -133,6 +145,7 @@ public class DescribeSpecRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSpecRequest, Builder> {
         private String bizRegionId; 
+        private String chargeType; 
         private String matrixSpec; 
         private Integer maxResults; 
         private String nextToken; 
@@ -148,6 +161,7 @@ public class DescribeSpecRequest extends Request {
         private Builder(DescribeSpecRequest request) {
             super(request);
             this.bizRegionId = request.bizRegionId;
+            this.chargeType = request.chargeType;
             this.matrixSpec = request.matrixSpec;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -163,6 +177,15 @@ public class DescribeSpecRequest extends Request {
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
             this.bizRegionId = bizRegionId;
+            return this;
+        }
+
+        /**
+         * ChargeType.
+         */
+        public Builder chargeType(String chargeType) {
+            this.putQueryParameter("ChargeType", chargeType);
+            this.chargeType = chargeType;
             return this;
         }
 

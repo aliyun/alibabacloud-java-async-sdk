@@ -739,6 +739,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeJVSInstance  DescribeJVSInstanceRequest
+     * @return DescribeJVSInstanceResponse
+     */
+    @Override
+    public CompletableFuture<DescribeJVSInstanceResponse> describeJVSInstance(DescribeJVSInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeJVSInstance").setMethod(HttpMethod.POST).setPathRegex("/anonymous/jvs/instance/describe").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeJVSInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeJVSInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeKeyPairs  DescribeKeyPairsRequest
      * @return DescribeKeyPairsResponse
      */
@@ -1357,6 +1375,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyInstanceChargeTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyJVSInstance  ModifyJVSInstanceRequest
+     * @return ModifyJVSInstanceResponse
+     */
+    @Override
+    public CompletableFuture<ModifyJVSInstanceResponse> modifyJVSInstance(ModifyJVSInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyJVSInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyJVSInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyJVSInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

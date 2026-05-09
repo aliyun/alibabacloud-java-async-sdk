@@ -299,6 +299,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInvocationsResponse> describeInvocations(DescribeInvocationsRequest request);
 
     /**
+     * @param request the request parameters of DescribeJVSInstance  DescribeJVSInstanceRequest
+     * @return DescribeJVSInstanceResponse
+     */
+    CompletableFuture<DescribeJVSInstanceResponse> describeJVSInstance(DescribeJVSInstanceRequest request);
+
+    /**
      * @param request the request parameters of DescribeKeyPairs  DescribeKeyPairsRequest
      * @return DescribeKeyPairsResponse
      */
@@ -525,6 +531,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyInstanceChargeTypeResponse
      */
     CompletableFuture<ModifyInstanceChargeTypeResponse> modifyInstanceChargeType(ModifyInstanceChargeTypeRequest request);
+
+    /**
+     * @param request the request parameters of ModifyJVSInstance  ModifyJVSInstanceRequest
+     * @return ModifyJVSInstanceResponse
+     */
+    CompletableFuture<ModifyJVSInstanceResponse> modifyJVSInstance(ModifyJVSInstanceRequest request);
 
     /**
      * @param request the request parameters of ModifyKeyPairName  ModifyKeyPairNameRequest

@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RunAgentTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String bizRegionId;
 
     @com.aliyun.core.annotation.Query
@@ -118,10 +117,7 @@ public class RunAgentTaskRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
+         * BizRegionId.
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
