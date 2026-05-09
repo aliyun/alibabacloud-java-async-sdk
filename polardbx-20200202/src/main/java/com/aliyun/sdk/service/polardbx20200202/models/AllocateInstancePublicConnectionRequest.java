@@ -28,6 +28,10 @@ public class AllocateInstancePublicConnectionRequest extends Request {
     private String DBInstanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceClusterName")
+    private String instanceClusterName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -56,6 +60,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         super(builder);
         this.connectionStringPrefix = builder.connectionStringPrefix;
         this.DBInstanceName = builder.DBInstanceName;
+        this.instanceClusterName = builder.instanceClusterName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.port = builder.port;
@@ -89,6 +94,13 @@ public class AllocateInstancePublicConnectionRequest extends Request {
      */
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    /**
+     * @return instanceClusterName
+     */
+    public String getInstanceClusterName() {
+        return this.instanceClusterName;
     }
 
     /**
@@ -136,6 +148,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
     public static final class Builder extends Request.Builder<AllocateInstancePublicConnectionRequest, Builder> {
         private String connectionStringPrefix; 
         private String DBInstanceName; 
+        private String instanceClusterName; 
         private String ownerAccount; 
         private Long ownerId; 
         private String port; 
@@ -151,6 +164,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
             super(request);
             this.connectionStringPrefix = request.connectionStringPrefix;
             this.DBInstanceName = request.DBInstanceName;
+            this.instanceClusterName = request.instanceClusterName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.port = request.port;
@@ -180,6 +194,15 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
             this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+
+        /**
+         * InstanceClusterName.
+         */
+        public Builder instanceClusterName(String instanceClusterName) {
+            this.putQueryParameter("InstanceClusterName", instanceClusterName);
+            this.instanceClusterName = instanceClusterName;
             return this;
         }
 

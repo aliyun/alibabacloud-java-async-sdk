@@ -122,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGdnInstanceResponse> createGdnInstance(CreateGdnInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateGdnStandbyMember  CreateGdnStandbyMemberRequest
+     * @return CreateGdnStandbyMemberResponse
+     */
+    CompletableFuture<CreateGdnStandbyMemberResponse> createGdnStandbyMember(CreateGdnStandbyMemberRequest request);
+
+    /**
      * @param request the request parameters of CreateMem0  CreateMem0Request
      * @return CreateMem0Response
      */
@@ -150,6 +156,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateStructureImportTaskResponse
      */
     CompletableFuture<CreateStructureImportTaskResponse> createStructureImportTask(CreateStructureImportTaskRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of CreateSubCNInstance  CreateSubCNInstanceRequest
+     * @return CreateSubCNInstanceResponse
+     */
+    CompletableFuture<CreateSubCNInstanceResponse> createSubCNInstance(CreateSubCNInstanceRequest request);
 
     /**
      * @param request the request parameters of CreateSuperAccount  CreateSuperAccountRequest
@@ -204,6 +219,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteMem0Response
      */
     CompletableFuture<DeleteMem0Response> deleteMem0(DeleteMem0Request request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of DeleteSubCNInstance  DeleteSubCNInstanceRequest
+     * @return DeleteSubCNInstanceResponse
+     */
+    CompletableFuture<DeleteSubCNInstanceResponse> deleteSubCNInstance(DeleteSubCNInstanceRequest request);
 
     /**
      * @param request the request parameters of DescribeAccountList  DescribeAccountListRequest
@@ -336,6 +360,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDBInstanceConfigResponse
      */
     CompletableFuture<DescribeDBInstanceConfigResponse> describeDBInstanceConfig(DescribeDBInstanceConfigRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDBInstanceEndpoint  DescribeDBInstanceEndpointRequest
+     * @return DescribeDBInstanceEndpointResponse
+     */
+    CompletableFuture<DescribeDBInstanceEndpointResponse> describeDBInstanceEndpoint(DescribeDBInstanceEndpointRequest request);
 
     /**
      * @param request the request parameters of DescribeDBInstanceHA  DescribeDBInstanceHARequest
@@ -828,6 +858,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateBackupPolicyResponse
      */
     CompletableFuture<UpdateBackupPolicyResponse> updateBackupPolicy(UpdateBackupPolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCustinsParam  UpdateCustinsParamRequest
+     * @return UpdateCustinsParamResponse
+     */
+    CompletableFuture<UpdateCustinsParamResponse> updateCustinsParam(UpdateCustinsParamRequest request);
 
     /**
      * @param request the request parameters of UpdateDBInstanceSSL  UpdateDBInstanceSSLRequest

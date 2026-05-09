@@ -512,6 +512,9 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceClusterName")
+        private String instanceClusterName;
+
         @com.aliyun.core.annotation.NameInMap("LockMode")
         private Integer lockMode;
 
@@ -535,6 +538,9 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PhyInstanceName")
         private String phyInstanceName;
+
+        @com.aliyun.core.annotation.NameInMap("ReadType")
+        private String readType;
 
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
@@ -567,6 +573,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             this.diskSize = builder.diskSize;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
+            this.instanceClusterName = builder.instanceClusterName;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
             this.maintainEndTime = builder.maintainEndTime;
@@ -575,6 +582,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             this.maxIops = builder.maxIops;
             this.nodeClass = builder.nodeClass;
             this.phyInstanceName = builder.phyInstanceName;
+            this.readType = builder.readType;
             this.region = builder.region;
             this.role = builder.role;
             this.status = builder.status;
@@ -696,6 +704,13 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceClusterName
+         */
+        public String getInstanceClusterName() {
+            return this.instanceClusterName;
+        }
+
+        /**
          * @return lockMode
          */
         public Integer getLockMode() {
@@ -752,6 +767,13 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
+         * @return readType
+         */
+        public String getReadType() {
+            return this.readType;
+        }
+
+        /**
          * @return region
          */
         public String getRegion() {
@@ -802,6 +824,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             private Long diskSize; 
             private String engine; 
             private String engineVersion; 
+            private String instanceClusterName; 
             private Integer lockMode; 
             private String lockReason; 
             private String maintainEndTime; 
@@ -810,6 +833,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             private Integer maxIops; 
             private String nodeClass; 
             private String phyInstanceName; 
+            private String readType; 
             private String region; 
             private String role; 
             private String status; 
@@ -835,6 +859,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
                 this.diskSize = model.diskSize;
                 this.engine = model.engine;
                 this.engineVersion = model.engineVersion;
+                this.instanceClusterName = model.instanceClusterName;
                 this.lockMode = model.lockMode;
                 this.lockReason = model.lockReason;
                 this.maintainEndTime = model.maintainEndTime;
@@ -843,6 +868,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
                 this.maxIops = model.maxIops;
                 this.nodeClass = model.nodeClass;
                 this.phyInstanceName = model.phyInstanceName;
+                this.readType = model.readType;
                 this.region = model.region;
                 this.role = model.role;
                 this.status = model.status;
@@ -971,6 +997,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceClusterName.
+             */
+            public Builder instanceClusterName(String instanceClusterName) {
+                this.instanceClusterName = instanceClusterName;
+                return this;
+            }
+
+            /**
              * LockMode.
              */
             public Builder lockMode(Integer lockMode) {
@@ -1031,6 +1065,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
              */
             public Builder phyInstanceName(String phyInstanceName) {
                 this.phyInstanceName = phyInstanceName;
+                return this;
+            }
+
+            /**
+             * ReadType.
+             */
+            public Builder readType(String readType) {
+                this.readType = readType;
                 return this;
             }
 

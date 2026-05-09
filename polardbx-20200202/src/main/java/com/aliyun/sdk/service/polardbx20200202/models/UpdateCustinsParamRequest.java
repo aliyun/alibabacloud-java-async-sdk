@@ -12,19 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModifyDBInstanceVipRequest} extends {@link RequestModel}
+ * {@link UpdateCustinsParamRequest} extends {@link RequestModel}
  *
- * <p>ModifyDBInstanceVipRequest</p>
+ * <p>UpdateCustinsParamRequest</p>
  */
-public class ModifyDBInstanceVipRequest extends Request {
+public class UpdateCustinsParamRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceClusterName")
-    private String instanceClusterName;
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String name;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -32,29 +33,23 @@ public class ModifyDBInstanceVipRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("Value")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String vSwitchId;
+    private String value;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("VpcId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String vpcId;
-
-    private ModifyDBInstanceVipRequest(Builder builder) {
+    private UpdateCustinsParamRequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
-        this.instanceClusterName = builder.instanceClusterName;
+        this.name = builder.name;
         this.regionId = builder.regionId;
-        this.vSwitchId = builder.vSwitchId;
-        this.vpcId = builder.vpcId;
+        this.value = builder.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifyDBInstanceVipRequest create() {
+    public static UpdateCustinsParamRequest create() {
         return builder().build();
     }
 
@@ -71,10 +66,10 @@ public class ModifyDBInstanceVipRequest extends Request {
     }
 
     /**
-     * @return instanceClusterName
+     * @return name
      */
-    public String getInstanceClusterName() {
-        return this.instanceClusterName;
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -85,37 +80,28 @@ public class ModifyDBInstanceVipRequest extends Request {
     }
 
     /**
-     * @return vSwitchId
+     * @return value
      */
-    public String getVSwitchId() {
-        return this.vSwitchId;
+    public String getValue() {
+        return this.value;
     }
 
-    /**
-     * @return vpcId
-     */
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public static final class Builder extends Request.Builder<ModifyDBInstanceVipRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateCustinsParamRequest, Builder> {
         private String DBInstanceName; 
-        private String instanceClusterName; 
+        private String name; 
         private String regionId; 
-        private String vSwitchId; 
-        private String vpcId; 
+        private String value; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyDBInstanceVipRequest request) {
+        private Builder(UpdateCustinsParamRequest request) {
             super(request);
             this.DBInstanceName = request.DBInstanceName;
-            this.instanceClusterName = request.instanceClusterName;
+            this.name = request.name;
             this.regionId = request.regionId;
-            this.vSwitchId = request.vSwitchId;
-            this.vpcId = request.vpcId;
+            this.value = request.value;
         } 
 
         /**
@@ -131,11 +117,11 @@ public class ModifyDBInstanceVipRequest extends Request {
         }
 
         /**
-         * InstanceClusterName.
+         * <p>This parameter is required.</p>
          */
-        public Builder instanceClusterName(String instanceClusterName) {
-            this.putQueryParameter("InstanceClusterName", instanceClusterName);
-            this.instanceClusterName = instanceClusterName;
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 
@@ -143,7 +129,7 @@ public class ModifyDBInstanceVipRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -155,29 +141,17 @@ public class ModifyDBInstanceVipRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-*********</p>
+         * <p>load_test_4009266</p>
          */
-        public Builder vSwitchId(String vSwitchId) {
-            this.putQueryParameter("VSwitchId", vSwitchId);
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-********</p>
-         */
-        public Builder vpcId(String vpcId) {
-            this.putQueryParameter("VpcId", vpcId);
-            this.vpcId = vpcId;
+        public Builder value(String value) {
+            this.putQueryParameter("Value", value);
+            this.value = value;
             return this;
         }
 
         @Override
-        public ModifyDBInstanceVipRequest build() {
-            return new ModifyDBInstanceVipRequest(this);
+        public UpdateCustinsParamRequest build() {
+            return new UpdateCustinsParamRequest(this);
         } 
 
     } 
