@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-thirdswaicall20251127</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
   <name>alibabacloud-thirdswaicall20251127</name>
   <description>Alibaba Cloud ThirdswAicall (20251127) Async SDK for Java
