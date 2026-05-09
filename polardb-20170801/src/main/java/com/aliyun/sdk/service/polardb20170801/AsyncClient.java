@@ -271,6 +271,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
 
     /**
+     * @param request the request parameters of CreateBatchTask  CreateBatchTaskRequest
+     * @return CreateBatchTaskResponse
+     */
+    CompletableFuture<CreateBatchTaskResponse> createBatchTask(CreateBatchTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateBudgetPolicy  CreateBudgetPolicyRequest
      * @return CreateBudgetPolicyResponse
      */
@@ -977,6 +983,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeBackupsResponse
      */
     CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBatchTask  DescribeBatchTaskRequest
+     * @return DescribeBatchTaskResponse
+     */
+    CompletableFuture<DescribeBatchTaskResponse> describeBatchTask(DescribeBatchTaskRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBatchTasks  DescribeBatchTasksRequest
+     * @return DescribeBatchTasksResponse
+     */
+    CompletableFuture<DescribeBatchTasksResponse> describeBatchTasks(DescribeBatchTasksRequest request);
 
     /**
      * @param request the request parameters of DescribeBudgetPolicies  DescribeBudgetPoliciesRequest
