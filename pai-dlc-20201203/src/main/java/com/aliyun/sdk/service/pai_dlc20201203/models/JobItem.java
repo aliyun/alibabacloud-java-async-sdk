@@ -137,6 +137,9 @@ public class JobItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RestartTimes")
     private String restartTimes;
 
+    @com.aliyun.core.annotation.NameInMap("SchedulingStrategy")
+    private String schedulingStrategy;
+
     @com.aliyun.core.annotation.NameInMap("Settings")
     private JobSettings settings;
 
@@ -235,6 +238,7 @@ public class JobItem extends TeaModel {
         this.resourceQuotaName = builder.resourceQuotaName;
         this.resourceType = builder.resourceType;
         this.restartTimes = builder.restartTimes;
+        this.schedulingStrategy = builder.schedulingStrategy;
         this.settings = builder.settings;
         this.status = builder.status;
         this.statusHistory = builder.statusHistory;
@@ -549,6 +553,13 @@ public class JobItem extends TeaModel {
     }
 
     /**
+     * @return schedulingStrategy
+     */
+    public String getSchedulingStrategy() {
+        return this.schedulingStrategy;
+    }
+
+    /**
      * @return settings
      */
     public JobSettings getSettings() {
@@ -722,6 +733,7 @@ public class JobItem extends TeaModel {
         private String resourceQuotaName; 
         private String resourceType; 
         private String restartTimes; 
+        private String schedulingStrategy; 
         private JobSettings settings; 
         private String status; 
         private java.util.List<StatusTransitionItem> statusHistory; 
@@ -786,6 +798,7 @@ public class JobItem extends TeaModel {
             this.resourceQuotaName = model.resourceQuotaName;
             this.resourceType = model.resourceType;
             this.restartTimes = model.restartTimes;
+            this.schedulingStrategy = model.schedulingStrategy;
             this.settings = model.settings;
             this.status = model.status;
             this.statusHistory = model.statusHistory;
@@ -1124,6 +1137,14 @@ public class JobItem extends TeaModel {
          */
         public Builder restartTimes(String restartTimes) {
             this.restartTimes = restartTimes;
+            return this;
+        }
+
+        /**
+         * SchedulingStrategy.
+         */
+        public Builder schedulingStrategy(String schedulingStrategy) {
+            this.schedulingStrategy = schedulingStrategy;
             return this;
         }
 

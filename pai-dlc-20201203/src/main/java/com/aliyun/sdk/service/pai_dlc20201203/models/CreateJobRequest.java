@@ -85,6 +85,10 @@ public class CreateJobRequest extends Request {
     private String resourceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SchedulingStrategy")
+    private String schedulingStrategy;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Settings")
     private JobSettings settings;
 
@@ -139,6 +143,7 @@ public class CreateJobRequest extends Request {
         this.options = builder.options;
         this.priority = builder.priority;
         this.resourceId = builder.resourceId;
+        this.schedulingStrategy = builder.schedulingStrategy;
         this.settings = builder.settings;
         this.successPolicy = builder.successPolicy;
         this.templateId = builder.templateId;
@@ -276,6 +281,13 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return schedulingStrategy
+     */
+    public String getSchedulingStrategy() {
+        return this.schedulingStrategy;
+    }
+
+    /**
      * @return settings
      */
     public JobSettings getSettings() {
@@ -355,6 +367,7 @@ public class CreateJobRequest extends Request {
         private String options; 
         private Integer priority; 
         private String resourceId; 
+        private String schedulingStrategy; 
         private JobSettings settings; 
         private String successPolicy; 
         private String templateId; 
@@ -387,6 +400,7 @@ public class CreateJobRequest extends Request {
             this.options = request.options;
             this.priority = request.priority;
             this.resourceId = request.resourceId;
+            this.schedulingStrategy = request.schedulingStrategy;
             this.settings = request.settings;
             this.successPolicy = request.successPolicy;
             this.templateId = request.templateId;
@@ -604,6 +618,15 @@ public class CreateJobRequest extends Request {
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * SchedulingStrategy.
+         */
+        public Builder schedulingStrategy(String schedulingStrategy) {
+            this.putBodyParameter("SchedulingStrategy", schedulingStrategy);
+            this.schedulingStrategy = schedulingStrategy;
             return this;
         }
 

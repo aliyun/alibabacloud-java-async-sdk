@@ -20,11 +20,15 @@ public class AutoscalingMetricSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
+    @com.aliyun.core.annotation.NameInMap("StabilizationWindowSeconds")
+    private Integer stabilizationWindowSeconds;
+
     @com.aliyun.core.annotation.NameInMap("TargetValue")
     private Integer targetValue;
 
     private AutoscalingMetricSpec(Builder builder) {
         this.metricName = builder.metricName;
+        this.stabilizationWindowSeconds = builder.stabilizationWindowSeconds;
         this.targetValue = builder.targetValue;
     }
 
@@ -48,6 +52,13 @@ public class AutoscalingMetricSpec extends TeaModel {
     }
 
     /**
+     * @return stabilizationWindowSeconds
+     */
+    public Integer getStabilizationWindowSeconds() {
+        return this.stabilizationWindowSeconds;
+    }
+
+    /**
      * @return targetValue
      */
     public Integer getTargetValue() {
@@ -56,6 +67,7 @@ public class AutoscalingMetricSpec extends TeaModel {
 
     public static final class Builder {
         private String metricName; 
+        private Integer stabilizationWindowSeconds; 
         private Integer targetValue; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class AutoscalingMetricSpec extends TeaModel {
 
         private Builder(AutoscalingMetricSpec model) {
             this.metricName = model.metricName;
+            this.stabilizationWindowSeconds = model.stabilizationWindowSeconds;
             this.targetValue = model.targetValue;
         } 
 
@@ -71,6 +84,14 @@ public class AutoscalingMetricSpec extends TeaModel {
          */
         public Builder metricName(String metricName) {
             this.metricName = metricName;
+            return this;
+        }
+
+        /**
+         * StabilizationWindowSeconds.
+         */
+        public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
+            this.stabilizationWindowSeconds = stabilizationWindowSeconds;
             return this;
         }
 

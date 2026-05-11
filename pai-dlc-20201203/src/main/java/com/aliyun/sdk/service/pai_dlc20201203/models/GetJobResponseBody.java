@@ -119,6 +119,9 @@ public class GetJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RoleSystemEnvs")
     private java.util.Map<String, java.util.Map<String, ?>> roleSystemEnvs;
 
+    @com.aliyun.core.annotation.NameInMap("SchedulingStrategy")
+    private String schedulingStrategy;
+
     @com.aliyun.core.annotation.NameInMap("Settings")
     private JobSettings settings;
 
@@ -190,6 +193,7 @@ public class GetJobResponseBody extends TeaModel {
         this.restartRecord = builder.restartRecord;
         this.restartTimes = builder.restartTimes;
         this.roleSystemEnvs = builder.roleSystemEnvs;
+        this.schedulingStrategy = builder.schedulingStrategy;
         this.settings = builder.settings;
         this.status = builder.status;
         this.statusHistory = builder.statusHistory;
@@ -455,6 +459,13 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return schedulingStrategy
+     */
+    public String getSchedulingStrategy() {
+        return this.schedulingStrategy;
+    }
+
+    /**
      * @return settings
      */
     public JobSettings getSettings() {
@@ -573,6 +584,7 @@ public class GetJobResponseBody extends TeaModel {
         private java.util.List<RestartRecord> restartRecord; 
         private String restartTimes; 
         private java.util.Map<String, java.util.Map<String, ?>> roleSystemEnvs; 
+        private String schedulingStrategy; 
         private JobSettings settings; 
         private String status; 
         private java.util.List<StatusTransitionItem> statusHistory; 
@@ -624,6 +636,7 @@ public class GetJobResponseBody extends TeaModel {
             this.restartRecord = model.restartRecord;
             this.restartTimes = model.restartTimes;
             this.roleSystemEnvs = model.roleSystemEnvs;
+            this.schedulingStrategy = model.schedulingStrategy;
             this.settings = model.settings;
             this.status = model.status;
             this.statusHistory = model.statusHistory;
@@ -977,6 +990,14 @@ public class GetJobResponseBody extends TeaModel {
          */
         public Builder roleSystemEnvs(java.util.Map<String, java.util.Map<String, ?>> roleSystemEnvs) {
             this.roleSystemEnvs = roleSystemEnvs;
+            return this;
+        }
+
+        /**
+         * SchedulingStrategy.
+         */
+        public Builder schedulingStrategy(String schedulingStrategy) {
+            this.schedulingStrategy = schedulingStrategy;
             return this;
         }
 
