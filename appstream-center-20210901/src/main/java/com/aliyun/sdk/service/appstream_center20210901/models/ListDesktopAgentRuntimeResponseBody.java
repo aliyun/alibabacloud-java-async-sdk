@@ -614,6 +614,12 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModelConfigure")
         private Boolean modelConfigure;
 
+        @com.aliyun.core.annotation.NameInMap("OsType")
+        private String osType;
+
+        @com.aliyun.core.annotation.NameInMap("QrCodeConfiguringList")
+        private java.util.List<String> qrCodeConfiguringList;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -637,6 +643,8 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             this.desktopStatus = builder.desktopStatus;
             this.hasAuthUser = builder.hasAuthUser;
             this.modelConfigure = builder.modelConfigure;
+            this.osType = builder.osType;
+            this.qrCodeConfiguringList = builder.qrCodeConfiguringList;
             this.regionId = builder.regionId;
             this.resourceGroup = builder.resourceGroup;
             this.resourceId = builder.resourceId;
@@ -722,6 +730,20 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         }
 
         /**
+         * @return osType
+         */
+        public String getOsType() {
+            return this.osType;
+        }
+
+        /**
+         * @return qrCodeConfiguringList
+         */
+        public java.util.List<String> getQrCodeConfiguringList() {
+            return this.qrCodeConfiguringList;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -760,6 +782,8 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             private String desktopStatus; 
             private Boolean hasAuthUser; 
             private Boolean modelConfigure; 
+            private String osType; 
+            private java.util.List<String> qrCodeConfiguringList; 
             private String regionId; 
             private ResourceGroup resourceGroup; 
             private String resourceId; 
@@ -779,6 +803,8 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
                 this.desktopStatus = model.desktopStatus;
                 this.hasAuthUser = model.hasAuthUser;
                 this.modelConfigure = model.modelConfigure;
+                this.osType = model.osType;
+                this.qrCodeConfiguringList = model.qrCodeConfiguringList;
                 this.regionId = model.regionId;
                 this.resourceGroup = model.resourceGroup;
                 this.resourceId = model.resourceId;
@@ -862,6 +888,22 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
              */
             public Builder modelConfigure(Boolean modelConfigure) {
                 this.modelConfigure = modelConfigure;
+                return this;
+            }
+
+            /**
+             * OsType.
+             */
+            public Builder osType(String osType) {
+                this.osType = osType;
+                return this;
+            }
+
+            /**
+             * QrCodeConfiguringList.
+             */
+            public Builder qrCodeConfiguringList(java.util.List<String> qrCodeConfiguringList) {
+                this.qrCodeConfiguringList = qrCodeConfiguringList;
                 return this;
             }
 

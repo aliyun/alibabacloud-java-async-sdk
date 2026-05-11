@@ -94,6 +94,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    private java.util.List<String> resourceIds;
+
     private ListDesktopAgentRuntimeRequest(Builder builder) {
         super(builder);
         this.agentInstanceStatuses = builder.agentInstanceStatuses;
@@ -115,6 +119,7 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
+        this.resourceIds = builder.resourceIds;
     }
 
     public static Builder builder() {
@@ -263,6 +268,13 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return resourceIds
+     */
+    public java.util.List<String> getResourceIds() {
+        return this.resourceIds;
+    }
+
     public static final class Builder extends Request.Builder<ListDesktopAgentRuntimeRequest, Builder> {
         private java.util.List<String> agentInstanceStatuses; 
         private java.util.List<String> agentInstanceVersions; 
@@ -283,6 +295,7 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
+        private java.util.List<String> resourceIds; 
 
         private Builder() {
             super();
@@ -309,6 +322,7 @@ public class ListDesktopAgentRuntimeRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
+            this.resourceIds = request.resourceIds;
         } 
 
         /**
@@ -482,6 +496,15 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceIds.
+         */
+        public Builder resourceIds(java.util.List<String> resourceIds) {
+            this.putQueryParameter("ResourceIds", resourceIds);
+            this.resourceIds = resourceIds;
             return this;
         }
 

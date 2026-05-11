@@ -17,7 +17,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigRuntimeChannelRequest</p>
  */
 public class ConfigRuntimeChannelRequest extends Request {
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AgentPlatform")
     private String agentPlatform;
 
@@ -35,6 +35,10 @@ public class ConfigRuntimeChannelRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Config")
     @com.aliyun.core.annotation.Validation(required = true)
     private String config;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigMode")
+    private String configMode;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -56,6 +60,7 @@ public class ConfigRuntimeChannelRequest extends Request {
         this.agentProvider = builder.agentProvider;
         this.code = builder.code;
         this.config = builder.config;
+        this.configMode = builder.configMode;
         this.name = builder.name;
         this.runtimeIds = builder.runtimeIds;
         this.runtimeType = builder.runtimeType;
@@ -103,6 +108,13 @@ public class ConfigRuntimeChannelRequest extends Request {
     }
 
     /**
+     * @return configMode
+     */
+    public String getConfigMode() {
+        return this.configMode;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -128,6 +140,7 @@ public class ConfigRuntimeChannelRequest extends Request {
         private String agentProvider; 
         private String code; 
         private String config; 
+        private String configMode; 
         private String name; 
         private java.util.List<String> runtimeIds; 
         private String runtimeType; 
@@ -142,6 +155,7 @@ public class ConfigRuntimeChannelRequest extends Request {
             this.agentProvider = request.agentProvider;
             this.code = request.code;
             this.config = request.config;
+            this.configMode = request.configMode;
             this.name = request.name;
             this.runtimeIds = request.runtimeIds;
             this.runtimeType = request.runtimeType;
@@ -151,7 +165,7 @@ public class ConfigRuntimeChannelRequest extends Request {
          * AgentPlatform.
          */
         public Builder agentPlatform(String agentPlatform) {
-            this.putQueryParameter("AgentPlatform", agentPlatform);
+            this.putBodyParameter("AgentPlatform", agentPlatform);
             this.agentPlatform = agentPlatform;
             return this;
         }
@@ -192,6 +206,15 @@ public class ConfigRuntimeChannelRequest extends Request {
         public Builder config(String config) {
             this.putBodyParameter("Config", config);
             this.config = config;
+            return this;
+        }
+
+        /**
+         * ConfigMode.
+         */
+        public Builder configMode(String configMode) {
+            this.putBodyParameter("ConfigMode", configMode);
+            this.configMode = configMode;
             return this;
         }
 
