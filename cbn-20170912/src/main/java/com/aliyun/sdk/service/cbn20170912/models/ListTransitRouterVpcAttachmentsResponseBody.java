@@ -173,6 +173,81 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
      *
      * <p>ListTransitRouterVpcAttachmentsResponseBody</p>
      */
+    public static class Options extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApplianceModeSupport")
+        private String applianceModeSupport;
+
+        @com.aliyun.core.annotation.NameInMap("Ipv6Support")
+        private String ipv6Support;
+
+        private Options(Builder builder) {
+            this.applianceModeSupport = builder.applianceModeSupport;
+            this.ipv6Support = builder.ipv6Support;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Options create() {
+            return builder().build();
+        }
+
+        /**
+         * @return applianceModeSupport
+         */
+        public String getApplianceModeSupport() {
+            return this.applianceModeSupport;
+        }
+
+        /**
+         * @return ipv6Support
+         */
+        public String getIpv6Support() {
+            return this.ipv6Support;
+        }
+
+        public static final class Builder {
+            private String applianceModeSupport; 
+            private String ipv6Support; 
+
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.applianceModeSupport = model.applianceModeSupport;
+                this.ipv6Support = model.ipv6Support;
+            } 
+
+            /**
+             * ApplianceModeSupport.
+             */
+            public Builder applianceModeSupport(String applianceModeSupport) {
+                this.applianceModeSupport = applianceModeSupport;
+                return this;
+            }
+
+            /**
+             * Ipv6Support.
+             */
+            public Builder ipv6Support(String ipv6Support) {
+                this.ipv6Support = ipv6Support;
+                return this;
+            }
+
+            public Options build() {
+                return new Options(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListTransitRouterVpcAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterVpcAttachmentsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -375,6 +450,9 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ManagedService")
         private String managedService;
 
+        @com.aliyun.core.annotation.NameInMap("Options")
+        private Options options;
+
         @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
@@ -420,6 +498,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             this.chargeType = builder.chargeType;
             this.creationTime = builder.creationTime;
             this.managedService = builder.managedService;
+            this.options = builder.options;
             this.orderType = builder.orderType;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
@@ -476,6 +555,13 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
          */
         public String getManagedService() {
             return this.managedService;
+        }
+
+        /**
+         * @return options
+         */
+        public Options getOptions() {
+            return this.options;
         }
 
         /**
@@ -575,6 +661,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             private String chargeType; 
             private String creationTime; 
             private String managedService; 
+            private Options options; 
             private String orderType; 
             private String resourceType; 
             private String status; 
@@ -598,6 +685,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
                 this.chargeType = model.chargeType;
                 this.creationTime = model.creationTime;
                 this.managedService = model.managedService;
+                this.options = model.options;
                 this.orderType = model.orderType;
                 this.resourceType = model.resourceType;
                 this.status = model.status;
@@ -668,6 +756,14 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
              */
             public Builder managedService(String managedService) {
                 this.managedService = managedService;
+                return this;
+            }
+
+            /**
+             * Options.
+             */
+            public Builder options(Options options) {
+                this.options = options;
                 return this;
             }
 

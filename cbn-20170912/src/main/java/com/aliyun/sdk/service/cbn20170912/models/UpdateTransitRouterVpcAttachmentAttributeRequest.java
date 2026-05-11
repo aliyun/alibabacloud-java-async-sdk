@@ -30,6 +30,10 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Options")
+    private Options options;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
@@ -71,6 +75,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         this.autoPublishRouteEnabled = builder.autoPublishRouteEnabled;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.options = builder.options;
         this.orderType = builder.orderType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -114,6 +119,13 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return options
+     */
+    public Options getOptions() {
+        return this.options;
     }
 
     /**
@@ -183,6 +195,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         private Boolean autoPublishRouteEnabled; 
         private String clientToken; 
         private Boolean dryRun; 
+        private Options options; 
         private String orderType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -202,6 +215,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
             this.autoPublishRouteEnabled = request.autoPublishRouteEnabled;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
+            this.options = request.options;
             this.orderType = request.orderType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -258,6 +272,16 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * Options.
+         */
+        public Builder options(Options options) {
+            String optionsShrink = shrink(options, "Options", "json");
+            this.putQueryParameter("Options", optionsShrink);
+            this.options = options;
             return this;
         }
 
@@ -362,4 +386,79 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTransitRouterVpcAttachmentAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTransitRouterVpcAttachmentAttributeRequest</p>
+     */
+    public static class Options extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApplianceModeSupport")
+        private String applianceModeSupport;
+
+        @com.aliyun.core.annotation.NameInMap("Ipv6Support")
+        private String ipv6Support;
+
+        private Options(Builder builder) {
+            this.applianceModeSupport = builder.applianceModeSupport;
+            this.ipv6Support = builder.ipv6Support;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Options create() {
+            return builder().build();
+        }
+
+        /**
+         * @return applianceModeSupport
+         */
+        public String getApplianceModeSupport() {
+            return this.applianceModeSupport;
+        }
+
+        /**
+         * @return ipv6Support
+         */
+        public String getIpv6Support() {
+            return this.ipv6Support;
+        }
+
+        public static final class Builder {
+            private String applianceModeSupport; 
+            private String ipv6Support; 
+
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.applianceModeSupport = model.applianceModeSupport;
+                this.ipv6Support = model.ipv6Support;
+            } 
+
+            /**
+             * ApplianceModeSupport.
+             */
+            public Builder applianceModeSupport(String applianceModeSupport) {
+                this.applianceModeSupport = applianceModeSupport;
+                return this;
+            }
+
+            /**
+             * Ipv6Support.
+             */
+            public Builder ipv6Support(String ipv6Support) {
+                this.ipv6Support = ipv6Support;
+                return this;
+            }
+
+            public Options build() {
+                return new Options(this);
+            } 
+
+        } 
+
+    }
 }
