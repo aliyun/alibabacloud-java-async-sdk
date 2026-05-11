@@ -170,6 +170,9 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Weight")
     private Integer weight;
 
+    @com.aliyun.core.annotation.NameInMap("WorkloadType")
+    private String workloadType;
+
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -225,6 +228,7 @@ public class Service extends TeaModel {
         this.trafficState = builder.trafficState;
         this.updateTime = builder.updateTime;
         this.weight = builder.weight;
+        this.workloadType = builder.workloadType;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -598,6 +602,13 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return workloadType
+     */
+    public String getWorkloadType() {
+        return this.workloadType;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -656,6 +667,7 @@ public class Service extends TeaModel {
         private String trafficState; 
         private String updateTime; 
         private Integer weight; 
+        private String workloadType; 
         private String workspaceId; 
 
         private Builder() {
@@ -713,6 +725,7 @@ public class Service extends TeaModel {
             this.trafficState = model.trafficState;
             this.updateTime = model.updateTime;
             this.weight = model.weight;
+            this.workloadType = model.workloadType;
             this.workspaceId = model.workspaceId;
         } 
 
@@ -1121,6 +1134,14 @@ public class Service extends TeaModel {
          */
         public Builder weight(Integer weight) {
             this.weight = weight;
+            return this;
+        }
+
+        /**
+         * WorkloadType.
+         */
+        public Builder workloadType(String workloadType) {
+            this.workloadType = workloadType;
             return this;
         }
 

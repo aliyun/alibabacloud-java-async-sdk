@@ -134,6 +134,23 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceMirrorResponse> createServiceMirror(CreateServiceMirrorRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>策略互斥</strong>：<code>Partition</code>（分区发布）和<code>Batch</code>（批量发布）两种策略只能选择其中一种，不能同时使用。</li>
+     * <li><strong>请求速率限制</strong>：每秒最多100次请求。</li>
+     * <li><strong>授权信息</strong>：需要具备<code>eas:CreateServiceRollout</code>权限才能调用此接口。</li>
+     * <li><strong>资源ARN</strong>：<code>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</code>。</li>
+     * <li><strong>暂停发布</strong>：通过设置<code>Paused</code>参数为<code>true</code>可以暂停发布流程，之后可通过<code>UpdateServiceRollout</code>接口恢复或取消发布。</li>
+     * <li><strong>监控与回滚</strong>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<code>Partition</code>值或删除发布策略来实现。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateServiceRollout  CreateServiceRolloutRequest
+     * @return CreateServiceRolloutResponse
+     */
+    CompletableFuture<CreateServiceRolloutResponse> createServiceRollout(CreateServiceRolloutRequest request);
+
+    /**
      * @param request the request parameters of CreateVirtualResource  CreateVirtualResourceRequest
      * @return CreateVirtualResourceResponse
      */
@@ -246,6 +263,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteServiceMirrorResponse
      */
     CompletableFuture<DeleteServiceMirrorResponse> deleteServiceMirror(DeleteServiceMirrorRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>不可恢复</strong>：删除操作不可撤销，请谨慎操作。</li>
+     * <li><strong>不自动回退</strong>：删除策略不会回退已更新的副本。</li>
+     * <li><strong>停止发布</strong>：正在进行的发布会立即停止。</li>
+     * <li><strong>状态保留</strong>：已更新的副本保持新版本，未更新的保持旧版本。</li>
+     * <li>删除后，后续服务更新将采用默认的滚动更新方式。</li>
+     * <li>在删除前，请确认要删除的服务名称和地域，并了解当前发布状态（可以通过调用<code>DescribeServiceRollout</code>接口获取）。</li>
+     * <li>如果需要回退版本，请在删除策略后通过重新创建策略或直接更新服务镜像来实现。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteServiceRollout  DeleteServiceRolloutRequest
+     * @return DeleteServiceRolloutResponse
+     */
+    CompletableFuture<DeleteServiceRolloutResponse> deleteServiceRollout(DeleteServiceRolloutRequest request);
 
     /**
      * @param request the request parameters of DeleteVirtualResource  DeleteVirtualResourceRequest
@@ -366,6 +401,23 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeServiceMirrorResponse
      */
     CompletableFuture<DescribeServiceMirrorResponse> describeServiceMirror(DescribeServiceMirrorRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于查询特定服务的发布策略（Rollout）配置和当前执行状态。</li>
+     * <li>返回的信息包括但不限于发布策略的具体参数、当前发布进度等。</li>
+     * <li>请求时需提供<code>ClusterId</code>和服务名称<code>ServiceName</code>作为路径参数。</li>
+     * <li>注意，请求速率限制为每秒最多100次。</li>
+     * <li>如果服务不存在或未创建发布策略，调用此接口将返回错误。</li>
+     * <li>返回的状态是实时查询的结果，可能会随时间而变化，请根据实际需要调整轮询间隔。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeServiceRollout  DescribeServiceRolloutRequest
+     * @return DescribeServiceRolloutResponse
+     */
+    CompletableFuture<DescribeServiceRolloutResponse> describeServiceRollout(DescribeServiceRolloutRequest request);
 
     /**
      * @param request the request parameters of DescribeServiceSignedUrl  DescribeServiceSignedUrlRequest
@@ -655,6 +707,22 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateServiceMirrorResponse
      */
     CompletableFuture<UpdateServiceMirrorResponse> updateServiceMirror(UpdateServiceMirrorRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>至少提供一个参数</strong>：必须在请求中指定<code>Partition</code>、<code>Batch</code>或<code>Paused</code>中的至少一个参数。</li>
+     * <li><strong>互斥策略</strong>：不能同时提供<code>Partition</code>和<code>Batch</code>配置。</li>
+     * <li><strong>实时生效</strong>：更新将立即生效，影响正在进行的服务发布过程。</li>
+     * <li><strong>回退操作</strong>：通过增加<code>Partition</code>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</li>
+     * <li><strong>暂停不影响参数</strong>：暂停发布不会改变已设置的<code>Partition</code>或<code>Batch</code>参数，仅暂停执行当前策略。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateServiceRollout  UpdateServiceRolloutRequest
+     * @return UpdateServiceRolloutResponse
+     */
+    CompletableFuture<UpdateServiceRolloutResponse> updateServiceRollout(UpdateServiceRolloutRequest request);
 
     /**
      * @param request the request parameters of UpdateServiceSafetyLock  UpdateServiceSafetyLockRequest
