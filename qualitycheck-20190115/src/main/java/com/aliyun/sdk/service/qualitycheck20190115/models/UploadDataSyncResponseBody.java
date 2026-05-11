@@ -374,8 +374,14 @@ public class UploadDataSyncResponseBody extends TeaModel {
      * <p>UploadDataSyncResponseBody</p>
      */
     public static class HitKeyWord extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CustomizeCode")
+        private String customizeCode;
+
         @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
+
+        @com.aliyun.core.annotation.NameInMap("IsMatch")
+        private String isMatch;
 
         @com.aliyun.core.annotation.NameInMap("Pid")
         private Integer pid;
@@ -390,7 +396,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
         private String val;
 
         private HitKeyWord(Builder builder) {
+            this.customizeCode = builder.customizeCode;
             this.from = builder.from;
+            this.isMatch = builder.isMatch;
             this.pid = builder.pid;
             this.tid = builder.tid;
             this.to = builder.to;
@@ -406,10 +414,24 @@ public class UploadDataSyncResponseBody extends TeaModel {
         }
 
         /**
+         * @return customizeCode
+         */
+        public String getCustomizeCode() {
+            return this.customizeCode;
+        }
+
+        /**
          * @return from
          */
         public Integer getFrom() {
             return this.from;
+        }
+
+        /**
+         * @return isMatch
+         */
+        public String getIsMatch() {
+            return this.isMatch;
         }
 
         /**
@@ -441,7 +463,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String customizeCode; 
             private Integer from; 
+            private String isMatch; 
             private Integer pid; 
             private String tid; 
             private Integer to; 
@@ -451,7 +475,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
             } 
 
             private Builder(HitKeyWord model) {
+                this.customizeCode = model.customizeCode;
                 this.from = model.from;
+                this.isMatch = model.isMatch;
                 this.pid = model.pid;
                 this.tid = model.tid;
                 this.to = model.to;
@@ -459,10 +485,26 @@ public class UploadDataSyncResponseBody extends TeaModel {
             } 
 
             /**
+             * CustomizeCode.
+             */
+            public Builder customizeCode(String customizeCode) {
+                this.customizeCode = customizeCode;
+                return this;
+            }
+
+            /**
              * From.
              */
             public Builder from(Integer from) {
                 this.from = from;
+                return this;
+            }
+
+            /**
+             * IsMatch.
+             */
+            public Builder isMatch(String isMatch) {
+                this.isMatch = isMatch;
                 return this;
             }
 
@@ -881,6 +923,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hit")
         private Hit hit;
 
+        @com.aliyun.core.annotation.NameInMap("LlmResponse")
+        private String llmResponse;
+
         @com.aliyun.core.annotation.NameInMap("Rid")
         private String rid;
 
@@ -890,6 +935,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
         private RuleHitInfo(Builder builder) {
             this.conditionInfo = builder.conditionInfo;
             this.hit = builder.hit;
+            this.llmResponse = builder.llmResponse;
             this.rid = builder.rid;
             this.tid = builder.tid;
         }
@@ -917,6 +963,13 @@ public class UploadDataSyncResponseBody extends TeaModel {
         }
 
         /**
+         * @return llmResponse
+         */
+        public String getLlmResponse() {
+            return this.llmResponse;
+        }
+
+        /**
          * @return rid
          */
         public String getRid() {
@@ -933,6 +986,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
         public static final class Builder {
             private ConditionInfo conditionInfo; 
             private Hit hit; 
+            private String llmResponse; 
             private String rid; 
             private String tid; 
 
@@ -942,6 +996,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
             private Builder(RuleHitInfo model) {
                 this.conditionInfo = model.conditionInfo;
                 this.hit = model.hit;
+                this.llmResponse = model.llmResponse;
                 this.rid = model.rid;
                 this.tid = model.tid;
             } 
@@ -959,6 +1014,14 @@ public class UploadDataSyncResponseBody extends TeaModel {
              */
             public Builder hit(Hit hit) {
                 this.hit = hit;
+                return this;
+            }
+
+            /**
+             * LlmResponse.
+             */
+            public Builder llmResponse(String llmResponse) {
+                this.llmResponse = llmResponse;
                 return this;
             }
 
