@@ -42,6 +42,10 @@ public class DescribeResourceGroupsRequest extends Request {
     private String platform;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceClassification")
+    private String resourceClassification;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupIds")
     private java.util.List<String> resourceGroupIds;
 
@@ -57,6 +61,7 @@ public class DescribeResourceGroupsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.platform = builder.platform;
+        this.resourceClassification = builder.resourceClassification;
         this.resourceGroupIds = builder.resourceGroupIds;
         this.resourceGroupName = builder.resourceGroupName;
     }
@@ -117,6 +122,13 @@ public class DescribeResourceGroupsRequest extends Request {
     }
 
     /**
+     * @return resourceClassification
+     */
+    public String getResourceClassification() {
+        return this.resourceClassification;
+    }
+
+    /**
      * @return resourceGroupIds
      */
     public java.util.List<String> getResourceGroupIds() {
@@ -137,6 +149,7 @@ public class DescribeResourceGroupsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String platform; 
+        private String resourceClassification; 
         private java.util.List<String> resourceGroupIds; 
         private String resourceGroupName; 
 
@@ -152,6 +165,7 @@ public class DescribeResourceGroupsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.platform = request.platform;
+            this.resourceClassification = request.resourceClassification;
             this.resourceGroupIds = request.resourceGroupIds;
             this.resourceGroupName = request.resourceGroupName;
         } 
@@ -226,6 +240,15 @@ public class DescribeResourceGroupsRequest extends Request {
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
             this.platform = platform;
+            return this;
+        }
+
+        /**
+         * ResourceClassification.
+         */
+        public Builder resourceClassification(String resourceClassification) {
+            this.putQueryParameter("ResourceClassification", resourceClassification);
+            this.resourceClassification = resourceClassification;
             return this;
         }
 

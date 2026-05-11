@@ -34,6 +34,10 @@ public class CreateResourceGroupRequest extends Request {
     private String platform;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceClassification")
+    private String resourceClassification;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
     private String resourceGroupName;
 
@@ -43,6 +47,7 @@ public class CreateResourceGroupRequest extends Request {
         this.enableAliyunResourceGroup = builder.enableAliyunResourceGroup;
         this.isResourceGroupWithOfficeSite = builder.isResourceGroupWithOfficeSite;
         this.platform = builder.platform;
+        this.resourceClassification = builder.resourceClassification;
         this.resourceGroupName = builder.resourceGroupName;
     }
 
@@ -88,6 +93,13 @@ public class CreateResourceGroupRequest extends Request {
     }
 
     /**
+     * @return resourceClassification
+     */
+    public String getResourceClassification() {
+        return this.resourceClassification;
+    }
+
+    /**
      * @return resourceGroupName
      */
     public String getResourceGroupName() {
@@ -99,6 +111,7 @@ public class CreateResourceGroupRequest extends Request {
         private Boolean enableAliyunResourceGroup; 
         private Long isResourceGroupWithOfficeSite; 
         private String platform; 
+        private String resourceClassification; 
         private String resourceGroupName; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class CreateResourceGroupRequest extends Request {
             this.enableAliyunResourceGroup = request.enableAliyunResourceGroup;
             this.isResourceGroupWithOfficeSite = request.isResourceGroupWithOfficeSite;
             this.platform = request.platform;
+            this.resourceClassification = request.resourceClassification;
             this.resourceGroupName = request.resourceGroupName;
         } 
 
@@ -160,6 +174,15 @@ public class CreateResourceGroupRequest extends Request {
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
             this.platform = platform;
+            return this;
+        }
+
+        /**
+         * ResourceClassification.
+         */
+        public Builder resourceClassification(String resourceClassification) {
+            this.putQueryParameter("ResourceClassification", resourceClassification);
+            this.resourceClassification = resourceClassification;
             return this;
         }
 
