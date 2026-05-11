@@ -40,6 +40,10 @@ public class DescribeExportProgressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileHttpUrl
      */
@@ -65,6 +69,15 @@ public class DescribeExportProgressResponseBody extends TeaModel {
         private String fileHttpUrl; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExportProgressResponseBody model) {
+            this.fileHttpUrl = model.fileHttpUrl;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * FileHttpUrl.

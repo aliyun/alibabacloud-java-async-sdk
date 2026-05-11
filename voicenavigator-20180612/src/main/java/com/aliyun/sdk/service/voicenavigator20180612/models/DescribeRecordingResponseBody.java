@@ -44,6 +44,10 @@ public class DescribeRecordingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileName
      */
@@ -77,6 +81,16 @@ public class DescribeRecordingResponseBody extends TeaModel {
         private String filePath; 
         private String requestId; 
         private String voiceSliceRecordingListJson; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRecordingResponseBody model) {
+            this.fileName = model.fileName;
+            this.filePath = model.filePath;
+            this.requestId = model.requestId;
+            this.voiceSliceRecordingListJson = model.voiceSliceRecordingListJson;
+        } 
 
         /**
          * FileName.

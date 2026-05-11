@@ -64,6 +64,10 @@ public class DescribeConversationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return beginTime
      */
@@ -137,6 +141,21 @@ public class DescribeConversationResponseBody extends TeaModel {
         private String skillGroupId; 
         private Boolean transferredToAgent; 
         private Integer userUtteranceCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeConversationResponseBody model) {
+            this.beginTime = model.beginTime;
+            this.callingNumber = model.callingNumber;
+            this.conversationId = model.conversationId;
+            this.effectiveAnswerCount = model.effectiveAnswerCount;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.skillGroupId = model.skillGroupId;
+            this.transferredToAgent = model.transferredToAgent;
+            this.userUtteranceCount = model.userUtteranceCount;
+        } 
 
         /**
          * BeginTime.

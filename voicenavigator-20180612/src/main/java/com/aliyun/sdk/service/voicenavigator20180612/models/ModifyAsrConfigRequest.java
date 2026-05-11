@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyAsrConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    private String appKey;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AsrAcousticModelId")
     private String asrAcousticModelId;
 
@@ -28,6 +32,10 @@ public class ModifyAsrConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AsrCustomizationId")
     private String asrCustomizationId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrOverrides")
+    private String asrOverrides;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AsrVocabularyId")
@@ -45,15 +53,22 @@ public class ModifyAsrConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("EntryId")
     private String entryId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NlsServiceType")
+    private String nlsServiceType;
+
     private ModifyAsrConfigRequest(Builder builder) {
         super(builder);
+        this.appKey = builder.appKey;
         this.asrAcousticModelId = builder.asrAcousticModelId;
         this.asrClassVocabularyId = builder.asrClassVocabularyId;
         this.asrCustomizationId = builder.asrCustomizationId;
+        this.asrOverrides = builder.asrOverrides;
         this.asrVocabularyId = builder.asrVocabularyId;
         this.configLevel = builder.configLevel;
         this.engine = builder.engine;
         this.entryId = builder.entryId;
+        this.nlsServiceType = builder.nlsServiceType;
     }
 
     public static Builder builder() {
@@ -64,9 +79,16 @@ public class ModifyAsrConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appKey
+     */
+    public String getAppKey() {
+        return this.appKey;
     }
 
     /**
@@ -88,6 +110,13 @@ public class ModifyAsrConfigRequest extends Request {
      */
     public String getAsrCustomizationId() {
         return this.asrCustomizationId;
+    }
+
+    /**
+     * @return asrOverrides
+     */
+    public String getAsrOverrides() {
+        return this.asrOverrides;
     }
 
     /**
@@ -118,14 +147,24 @@ public class ModifyAsrConfigRequest extends Request {
         return this.entryId;
     }
 
+    /**
+     * @return nlsServiceType
+     */
+    public String getNlsServiceType() {
+        return this.nlsServiceType;
+    }
+
     public static final class Builder extends Request.Builder<ModifyAsrConfigRequest, Builder> {
+        private String appKey; 
         private String asrAcousticModelId; 
         private String asrClassVocabularyId; 
         private String asrCustomizationId; 
+        private String asrOverrides; 
         private String asrVocabularyId; 
         private Integer configLevel; 
         private String engine; 
         private String entryId; 
+        private String nlsServiceType; 
 
         private Builder() {
             super();
@@ -133,14 +172,26 @@ public class ModifyAsrConfigRequest extends Request {
 
         private Builder(ModifyAsrConfigRequest request) {
             super(request);
+            this.appKey = request.appKey;
             this.asrAcousticModelId = request.asrAcousticModelId;
             this.asrClassVocabularyId = request.asrClassVocabularyId;
             this.asrCustomizationId = request.asrCustomizationId;
+            this.asrOverrides = request.asrOverrides;
             this.asrVocabularyId = request.asrVocabularyId;
             this.configLevel = request.configLevel;
             this.engine = request.engine;
             this.entryId = request.entryId;
+            this.nlsServiceType = request.nlsServiceType;
         } 
+
+        /**
+         * AppKey.
+         */
+        public Builder appKey(String appKey) {
+            this.putQueryParameter("AppKey", appKey);
+            this.appKey = appKey;
+            return this;
+        }
 
         /**
          * AsrAcousticModelId.
@@ -166,6 +217,15 @@ public class ModifyAsrConfigRequest extends Request {
         public Builder asrCustomizationId(String asrCustomizationId) {
             this.putQueryParameter("AsrCustomizationId", asrCustomizationId);
             this.asrCustomizationId = asrCustomizationId;
+            return this;
+        }
+
+        /**
+         * AsrOverrides.
+         */
+        public Builder asrOverrides(String asrOverrides) {
+            this.putQueryParameter("AsrOverrides", asrOverrides);
+            this.asrOverrides = asrOverrides;
             return this;
         }
 
@@ -202,6 +262,15 @@ public class ModifyAsrConfigRequest extends Request {
         public Builder entryId(String entryId) {
             this.putQueryParameter("EntryId", entryId);
             this.entryId = entryId;
+            return this;
+        }
+
+        /**
+         * NlsServiceType.
+         */
+        public Builder nlsServiceType(String nlsServiceType) {
+            this.putQueryParameter("NlsServiceType", nlsServiceType);
+            this.nlsServiceType = nlsServiceType;
             return this;
         }
 

@@ -30,6 +30,10 @@ public class ExportConversationDetailsRequest extends Request {
     private String callingNumber;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DebugConversation")
+    private Integer debugConversation;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -55,6 +59,7 @@ public class ExportConversationDetailsRequest extends Request {
         this.beginTimeLeftRange = builder.beginTimeLeftRange;
         this.beginTimeRightRange = builder.beginTimeRightRange;
         this.callingNumber = builder.callingNumber;
+        this.debugConversation = builder.debugConversation;
         this.instanceId = builder.instanceId;
         this.options = builder.options;
         this.result = builder.result;
@@ -70,7 +75,7 @@ public class ExportConversationDetailsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -94,6 +99,13 @@ public class ExportConversationDetailsRequest extends Request {
      */
     public String getCallingNumber() {
         return this.callingNumber;
+    }
+
+    /**
+     * @return debugConversation
+     */
+    public Integer getDebugConversation() {
+        return this.debugConversation;
     }
 
     /**
@@ -135,6 +147,7 @@ public class ExportConversationDetailsRequest extends Request {
         private Long beginTimeLeftRange; 
         private Long beginTimeRightRange; 
         private String callingNumber; 
+        private Integer debugConversation; 
         private String instanceId; 
         private java.util.List<String> options; 
         private Integer result; 
@@ -150,6 +163,7 @@ public class ExportConversationDetailsRequest extends Request {
             this.beginTimeLeftRange = request.beginTimeLeftRange;
             this.beginTimeRightRange = request.beginTimeRightRange;
             this.callingNumber = request.callingNumber;
+            this.debugConversation = request.debugConversation;
             this.instanceId = request.instanceId;
             this.options = request.options;
             this.result = request.result;
@@ -181,6 +195,15 @@ public class ExportConversationDetailsRequest extends Request {
         public Builder callingNumber(String callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
             this.callingNumber = callingNumber;
+            return this;
+        }
+
+        /**
+         * DebugConversation.
+         */
+        public Builder debugConversation(Integer debugConversation) {
+            this.putQueryParameter("DebugConversation", debugConversation);
+            this.debugConversation = debugConversation;
             return this;
         }
 

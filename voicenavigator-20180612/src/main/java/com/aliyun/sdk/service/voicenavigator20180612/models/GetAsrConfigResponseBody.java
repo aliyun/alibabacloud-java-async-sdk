@@ -52,6 +52,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetAsrConfigResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAsrConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMsg = model.errorMsg;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -163,6 +179,9 @@ public class GetAsrConfigResponseBody extends TeaModel {
      * <p>GetAsrConfigResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppKey")
+        private String appKey;
+
         @com.aliyun.core.annotation.NameInMap("AsrAcousticModelId")
         private String asrAcousticModelId;
 
@@ -171,6 +190,9 @@ public class GetAsrConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("AsrCustomizationId")
         private String asrCustomizationId;
+
+        @com.aliyun.core.annotation.NameInMap("AsrOverrides")
+        private String asrOverrides;
 
         @com.aliyun.core.annotation.NameInMap("AsrVocabularyId")
         private String asrVocabularyId;
@@ -181,13 +203,19 @@ public class GetAsrConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EngineXufei")
         private String engineXufei;
 
+        @com.aliyun.core.annotation.NameInMap("NlsServiceType")
+        private String nlsServiceType;
+
         private Data(Builder builder) {
+            this.appKey = builder.appKey;
             this.asrAcousticModelId = builder.asrAcousticModelId;
             this.asrClassVocabularyId = builder.asrClassVocabularyId;
             this.asrCustomizationId = builder.asrCustomizationId;
+            this.asrOverrides = builder.asrOverrides;
             this.asrVocabularyId = builder.asrVocabularyId;
             this.engine = builder.engine;
             this.engineXufei = builder.engineXufei;
+            this.nlsServiceType = builder.nlsServiceType;
         }
 
         public static Builder builder() {
@@ -196,6 +224,13 @@ public class GetAsrConfigResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return appKey
+         */
+        public String getAppKey() {
+            return this.appKey;
         }
 
         /**
@@ -220,6 +255,13 @@ public class GetAsrConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return asrOverrides
+         */
+        public String getAsrOverrides() {
+            return this.asrOverrides;
+        }
+
+        /**
          * @return asrVocabularyId
          */
         public String getAsrVocabularyId() {
@@ -240,13 +282,46 @@ public class GetAsrConfigResponseBody extends TeaModel {
             return this.engineXufei;
         }
 
+        /**
+         * @return nlsServiceType
+         */
+        public String getNlsServiceType() {
+            return this.nlsServiceType;
+        }
+
         public static final class Builder {
+            private String appKey; 
             private String asrAcousticModelId; 
             private String asrClassVocabularyId; 
             private String asrCustomizationId; 
+            private String asrOverrides; 
             private String asrVocabularyId; 
             private String engine; 
             private String engineXufei; 
+            private String nlsServiceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appKey = model.appKey;
+                this.asrAcousticModelId = model.asrAcousticModelId;
+                this.asrClassVocabularyId = model.asrClassVocabularyId;
+                this.asrCustomizationId = model.asrCustomizationId;
+                this.asrOverrides = model.asrOverrides;
+                this.asrVocabularyId = model.asrVocabularyId;
+                this.engine = model.engine;
+                this.engineXufei = model.engineXufei;
+                this.nlsServiceType = model.nlsServiceType;
+            } 
+
+            /**
+             * AppKey.
+             */
+            public Builder appKey(String appKey) {
+                this.appKey = appKey;
+                return this;
+            }
 
             /**
              * AsrAcousticModelId.
@@ -273,6 +348,14 @@ public class GetAsrConfigResponseBody extends TeaModel {
             }
 
             /**
+             * AsrOverrides.
+             */
+            public Builder asrOverrides(String asrOverrides) {
+                this.asrOverrides = asrOverrides;
+                return this;
+            }
+
+            /**
              * AsrVocabularyId.
              */
             public Builder asrVocabularyId(String asrVocabularyId) {
@@ -293,6 +376,14 @@ public class GetAsrConfigResponseBody extends TeaModel {
              */
             public Builder engineXufei(String engineXufei) {
                 this.engineXufei = engineXufei;
+                return this;
+            }
+
+            /**
+             * NlsServiceType.
+             */
+            public Builder nlsServiceType(String nlsServiceType) {
+                this.nlsServiceType = nlsServiceType;
                 return this;
             }
 

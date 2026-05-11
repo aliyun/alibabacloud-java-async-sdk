@@ -41,6 +41,9 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SpeechRate")
     private Integer speechRate;
 
+    @com.aliyun.core.annotation.NameInMap("TtsOverrides")
+    private String ttsOverrides;
+
     @com.aliyun.core.annotation.NameInMap("Voice")
     private String voice;
 
@@ -56,6 +59,7 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         this.pitchRate = builder.pitchRate;
         this.requestId = builder.requestId;
         this.speechRate = builder.speechRate;
+        this.ttsOverrides = builder.ttsOverrides;
         this.voice = builder.voice;
         this.volume = builder.volume;
     }
@@ -66,6 +70,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
 
     public static DescribeTTSConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -125,6 +133,13 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return ttsOverrides
+     */
+    public String getTtsOverrides() {
+        return this.ttsOverrides;
+    }
+
+    /**
      * @return voice
      */
     public String getVoice() {
@@ -147,8 +162,26 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         private Integer pitchRate; 
         private String requestId; 
         private Integer speechRate; 
+        private String ttsOverrides; 
         private String voice; 
         private Integer volume; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTTSConfigResponseBody model) {
+            this.aliCustomizedVoice = model.aliCustomizedVoice;
+            this.appKey = model.appKey;
+            this.engine = model.engine;
+            this.engineXunfei = model.engineXunfei;
+            this.nlsServiceType = model.nlsServiceType;
+            this.pitchRate = model.pitchRate;
+            this.requestId = model.requestId;
+            this.speechRate = model.speechRate;
+            this.ttsOverrides = model.ttsOverrides;
+            this.voice = model.voice;
+            this.volume = model.volume;
+        } 
 
         /**
          * AliCustomizedVoice.
@@ -211,6 +244,14 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
          */
         public Builder speechRate(Integer speechRate) {
             this.speechRate = speechRate;
+            return this;
+        }
+
+        /**
+         * TtsOverrides.
+         */
+        public Builder ttsOverrides(String ttsOverrides) {
+            this.ttsOverrides = ttsOverrides;
             return this;
         }
 

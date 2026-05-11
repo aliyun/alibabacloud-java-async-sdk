@@ -48,6 +48,10 @@ public class QueryConversationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conversations
      */
@@ -89,6 +93,17 @@ public class QueryConversationsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryConversationsResponseBody model) {
+            this.conversations = model.conversations;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Conversations.
@@ -251,6 +266,20 @@ public class QueryConversationsResponseBody extends TeaModel {
             private String skillGroupId; 
             private Boolean transferredToAgent; 
             private Integer userUtteranceCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conversations model) {
+                this.beginTime = model.beginTime;
+                this.callingNumber = model.callingNumber;
+                this.conversationId = model.conversationId;
+                this.effectiveAnswerCount = model.effectiveAnswerCount;
+                this.endTime = model.endTime;
+                this.skillGroupId = model.skillGroupId;
+                this.transferredToAgent = model.transferredToAgent;
+                this.userUtteranceCount = model.userUtteranceCount;
+            } 
 
             /**
              * BeginTime.

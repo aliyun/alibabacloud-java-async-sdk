@@ -36,6 +36,10 @@ public class ExportStatisticalDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exportTaskId
      */
@@ -53,6 +57,14 @@ public class ExportStatisticalDataResponseBody extends TeaModel {
     public static final class Builder {
         private String exportTaskId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportStatisticalDataResponseBody model) {
+            this.exportTaskId = model.exportTaskId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ExportTaskId.

@@ -36,6 +36,10 @@ public class ListConversationDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conversationDetails
      */
@@ -53,6 +57,14 @@ public class ListConversationDetailsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ConversationDetails> conversationDetails; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConversationDetailsResponseBody model) {
+            this.conversationDetails = model.conversationDetails;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ConversationDetails.
@@ -179,6 +191,19 @@ public class ListConversationDetailsResponseBody extends TeaModel {
             private String sequenceId; 
             private String speaker; 
             private String utterance; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConversationDetails model) {
+                this.action = model.action;
+                this.actionParams = model.actionParams;
+                this.conversationId = model.conversationId;
+                this.createTime = model.createTime;
+                this.sequenceId = model.sequenceId;
+                this.speaker = model.speaker;
+                this.utterance = model.utterance;
+            } 
 
             /**
              * Action.

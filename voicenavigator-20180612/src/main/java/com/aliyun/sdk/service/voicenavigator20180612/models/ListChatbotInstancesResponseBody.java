@@ -48,6 +48,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bots
      */
@@ -89,6 +93,17 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListChatbotInstancesResponseBody model) {
+            this.bots = model.bots;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Bots.
@@ -239,6 +254,19 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             private String languageCode; 
             private String name; 
             private String timeZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Bots model) {
+                this.avatar = model.avatar;
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.introduction = model.introduction;
+                this.languageCode = model.languageCode;
+                this.name = model.name;
+                this.timeZone = model.timeZone;
+            } 
 
             /**
              * Avatar.

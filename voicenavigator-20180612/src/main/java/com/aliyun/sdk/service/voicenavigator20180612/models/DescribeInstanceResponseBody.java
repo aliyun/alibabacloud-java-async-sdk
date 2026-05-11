@@ -80,6 +80,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return abilityType
      */
@@ -185,6 +189,25 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String status; 
         private String unionInstanceId; 
         private String unionSource; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceResponseBody model) {
+            this.abilityType = model.abilityType;
+            this.applicableOperations = model.applicableOperations;
+            this.concurrency = model.concurrency;
+            this.description = model.description;
+            this.instanceId = model.instanceId;
+            this.modifyTime = model.modifyTime;
+            this.modifyUserName = model.modifyUserName;
+            this.name = model.name;
+            this.nluServiceParamsJson = model.nluServiceParamsJson;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.unionInstanceId = model.unionInstanceId;
+            this.unionSource = model.unionSource;
+        } 
 
         /**
          * AbilityType.

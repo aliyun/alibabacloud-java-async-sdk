@@ -164,12 +164,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportStatisticalDataResponse> exportStatisticalData(ExportStatisticalDataRequest request);
 
     /**
-     * @param request the request parameters of GenerateUploadUrl  GenerateUploadUrlRequest
-     * @return GenerateUploadUrlResponse
-     */
-    CompletableFuture<GenerateUploadUrlResponse> generateUploadUrl(GenerateUploadUrlRequest request);
-
-    /**
      * @param request the request parameters of GetAsrConfig  GetAsrConfigRequest
      * @return GetAsrConfigResponse
      */

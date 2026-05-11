@@ -48,6 +48,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -89,6 +93,17 @@ public class ListInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Instances.
@@ -311,6 +326,25 @@ public class ListInstancesResponseBody extends TeaModel {
             private String status; 
             private String unionInstanceId; 
             private String unionSource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.applicableOperations = model.applicableOperations;
+                this.concurrency = model.concurrency;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.modifyTime = model.modifyTime;
+                this.modifyUserName = model.modifyUserName;
+                this.name = model.name;
+                this.nluServiceParamsJson = model.nluServiceParamsJson;
+                this.numbers = model.numbers;
+                this.status = model.status;
+                this.unionInstanceId = model.unionInstanceId;
+                this.unionSource = model.unionSource;
+            } 
 
             /**
              * ApplicableOperations.

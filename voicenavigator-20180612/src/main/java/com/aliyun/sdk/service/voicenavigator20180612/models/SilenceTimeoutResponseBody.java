@@ -48,6 +48,10 @@ public class SilenceTimeoutResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return action
      */
@@ -89,6 +93,17 @@ public class SilenceTimeoutResponseBody extends TeaModel {
         private Boolean interruptible; 
         private String requestId; 
         private String textResponse; 
+
+        private Builder() {
+        } 
+
+        private Builder(SilenceTimeoutResponseBody model) {
+            this.action = model.action;
+            this.actionParams = model.actionParams;
+            this.interruptible = model.interruptible;
+            this.requestId = model.requestId;
+            this.textResponse = model.textResponse;
+        } 
 
         /**
          * Action.

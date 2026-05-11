@@ -36,6 +36,10 @@ public class AuditTTSVoiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return auditionUrl
      */
@@ -53,6 +57,14 @@ public class AuditTTSVoiceResponseBody extends TeaModel {
     public static final class Builder {
         private String auditionUrl; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AuditTTSVoiceResponseBody model) {
+            this.auditionUrl = model.auditionUrl;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AuditionUrl.

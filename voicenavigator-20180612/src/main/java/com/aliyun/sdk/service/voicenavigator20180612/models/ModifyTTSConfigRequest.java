@@ -43,8 +43,16 @@ public class ModifyTTSConfigRequest extends Request {
     private String nlsServiceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PitchRate")
+    private String pitchRate;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpeechRate")
     private String speechRate;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsOverrides")
+    private String ttsOverrides;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Voice")
@@ -62,7 +70,9 @@ public class ModifyTTSConfigRequest extends Request {
         this.engineXunfei = builder.engineXunfei;
         this.instanceId = builder.instanceId;
         this.nlsServiceType = builder.nlsServiceType;
+        this.pitchRate = builder.pitchRate;
         this.speechRate = builder.speechRate;
+        this.ttsOverrides = builder.ttsOverrides;
         this.voice = builder.voice;
         this.volume = builder.volume;
     }
@@ -75,7 +85,7 @@ public class ModifyTTSConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,10 +133,24 @@ public class ModifyTTSConfigRequest extends Request {
     }
 
     /**
+     * @return pitchRate
+     */
+    public String getPitchRate() {
+        return this.pitchRate;
+    }
+
+    /**
      * @return speechRate
      */
     public String getSpeechRate() {
         return this.speechRate;
+    }
+
+    /**
+     * @return ttsOverrides
+     */
+    public String getTtsOverrides() {
+        return this.ttsOverrides;
     }
 
     /**
@@ -150,7 +174,9 @@ public class ModifyTTSConfigRequest extends Request {
         private String engineXunfei; 
         private String instanceId; 
         private String nlsServiceType; 
+        private String pitchRate; 
         private String speechRate; 
+        private String ttsOverrides; 
         private String voice; 
         private String volume; 
 
@@ -166,7 +192,9 @@ public class ModifyTTSConfigRequest extends Request {
             this.engineXunfei = request.engineXunfei;
             this.instanceId = request.instanceId;
             this.nlsServiceType = request.nlsServiceType;
+            this.pitchRate = request.pitchRate;
             this.speechRate = request.speechRate;
+            this.ttsOverrides = request.ttsOverrides;
             this.voice = request.voice;
             this.volume = request.volume;
         } 
@@ -229,11 +257,29 @@ public class ModifyTTSConfigRequest extends Request {
         }
 
         /**
+         * PitchRate.
+         */
+        public Builder pitchRate(String pitchRate) {
+            this.putQueryParameter("PitchRate", pitchRate);
+            this.pitchRate = pitchRate;
+            return this;
+        }
+
+        /**
          * SpeechRate.
          */
         public Builder speechRate(String speechRate) {
             this.putQueryParameter("SpeechRate", speechRate);
             this.speechRate = speechRate;
+            return this;
+        }
+
+        /**
+         * TtsOverrides.
+         */
+        public Builder ttsOverrides(String ttsOverrides) {
+            this.putQueryParameter("TtsOverrides", ttsOverrides);
+            this.ttsOverrides = ttsOverrides;
             return this;
         }
 

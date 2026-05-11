@@ -52,6 +52,10 @@ public class ModifyAsrConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ModifyAsrConfigResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyAsrConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMsg = model.errorMsg;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -187,6 +203,13 @@ public class ModifyAsrConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer affectedRows; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.affectedRows = model.affectedRows;
+            } 
 
             /**
              * AffectedRows.

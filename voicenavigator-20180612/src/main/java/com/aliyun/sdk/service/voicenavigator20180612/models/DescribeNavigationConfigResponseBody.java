@@ -44,6 +44,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return greetingConfig
      */
@@ -77,6 +81,16 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         private String requestId; 
         private SilenceTimeoutConfig silenceTimeoutConfig; 
         private UnrecognizingConfig unrecognizingConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNavigationConfigResponseBody model) {
+            this.greetingConfig = model.greetingConfig;
+            this.requestId = model.requestId;
+            this.silenceTimeoutConfig = model.silenceTimeoutConfig;
+            this.unrecognizingConfig = model.unrecognizingConfig;
+        } 
 
         /**
          * GreetingConfig.
@@ -171,6 +185,15 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             private String greetingWords; 
             private String intentTrigger; 
             private String sourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(GreetingConfig model) {
+                this.greetingWords = model.greetingWords;
+                this.intentTrigger = model.intentTrigger;
+                this.sourceType = model.sourceType;
+            } 
 
             /**
              * GreetingWords.
@@ -318,6 +341,20 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             private String sourceType; 
             private Integer threshold; 
             private Long timeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(SilenceTimeoutConfig model) {
+                this.finalAction = model.finalAction;
+                this.finalActionParams = model.finalActionParams;
+                this.finalPrompt = model.finalPrompt;
+                this.intentTrigger = model.intentTrigger;
+                this.prompt = model.prompt;
+                this.sourceType = model.sourceType;
+                this.threshold = model.threshold;
+                this.timeout = model.timeout;
+            } 
 
             /**
              * FinalAction.
@@ -472,6 +509,17 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             private String finalPrompt; 
             private String prompt; 
             private Integer threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnrecognizingConfig model) {
+                this.finalAction = model.finalAction;
+                this.finalActionParams = model.finalActionParams;
+                this.finalPrompt = model.finalPrompt;
+                this.prompt = model.prompt;
+                this.threshold = model.threshold;
+            } 
 
             /**
              * FinalAction.

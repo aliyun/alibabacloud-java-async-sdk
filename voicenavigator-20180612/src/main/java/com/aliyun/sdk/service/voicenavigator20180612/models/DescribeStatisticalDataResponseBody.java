@@ -60,6 +60,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conversationTotalNum
      */
@@ -125,6 +129,20 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         private String totalKnowledgeHitRate; 
         private String totalResolutionRate; 
         private String totalValidAnswerRate; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStatisticalDataResponseBody model) {
+            this.conversationTotalNum = model.conversationTotalNum;
+            this.requestId = model.requestId;
+            this.resolvedQuestionTotalNum = model.resolvedQuestionTotalNum;
+            this.statisticalDataReports = model.statisticalDataReports;
+            this.totalDialoguePassRate = model.totalDialoguePassRate;
+            this.totalKnowledgeHitRate = model.totalKnowledgeHitRate;
+            this.totalResolutionRate = model.totalResolutionRate;
+            this.totalValidAnswerRate = model.totalValidAnswerRate;
+        } 
 
         /**
          * ConversationTotalNum.
@@ -299,6 +317,19 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
             private String statisticalDate; 
             private Integer totalConversationNum; 
             private String validAnswerRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatisticalDataReports model) {
+                this.dialoguePassRate = model.dialoguePassRate;
+                this.knowledgeHitRate = model.knowledgeHitRate;
+                this.resolutionRate = model.resolutionRate;
+                this.resolvedQuestionNum = model.resolvedQuestionNum;
+                this.statisticalDate = model.statisticalDate;
+                this.totalConversationNum = model.totalConversationNum;
+                this.validAnswerRate = model.validAnswerRate;
+            } 
 
             /**
              * DialoguePassRate.

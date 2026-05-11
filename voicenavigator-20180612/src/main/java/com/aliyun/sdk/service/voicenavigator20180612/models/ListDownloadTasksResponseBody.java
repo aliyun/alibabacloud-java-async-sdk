@@ -52,6 +52,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDownloadTasksResponseBody model) {
+            this.code = model.code;
+            this.downloadTasks = model.downloadTasks;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -224,6 +240,16 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             private String status; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(DownloadTaskFiles model) {
+                this.fileId = model.fileId;
+                this.progress = model.progress;
+                this.status = model.status;
+                this.title = model.title;
+            } 
+
             /**
              * FileId.
              */
@@ -343,6 +369,17 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             private String taskId; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.downloadTaskFiles = model.downloadTaskFiles;
+                this.expireTime = model.expireTime;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.title = model.title;
+            } 
+
             /**
              * DownloadTaskFiles.
              */
@@ -457,6 +494,16 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(DownloadTasks model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

@@ -44,6 +44,10 @@ public class GetRealTimeConcurrencyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxConcurrency
      */
@@ -77,6 +81,16 @@ public class GetRealTimeConcurrencyResponseBody extends TeaModel {
         private Long realTimeConcurrency; 
         private String requestId; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRealTimeConcurrencyResponseBody model) {
+            this.maxConcurrency = model.maxConcurrency;
+            this.realTimeConcurrency = model.realTimeConcurrency;
+            this.requestId = model.requestId;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * MaxConcurrency.
