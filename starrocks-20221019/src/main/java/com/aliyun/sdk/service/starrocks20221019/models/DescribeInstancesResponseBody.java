@@ -374,6 +374,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
+        @com.aliyun.core.annotation.NameInMap("AiFunctionInstanceId")
+        private String aiFunctionInstanceId;
+
         @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
 
@@ -466,6 +469,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.aclId = builder.aclId;
+            this.aiFunctionInstanceId = builder.aiFunctionInstanceId;
             this.architecture = builder.architecture;
             this.beginTime = builder.beginTime;
             this.enableAiFunction = builder.enableAiFunction;
@@ -511,6 +515,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getAclId() {
             return this.aclId;
+        }
+
+        /**
+         * @return aiFunctionInstanceId
+         */
+        public String getAiFunctionInstanceId() {
+            return this.aiFunctionInstanceId;
         }
 
         /**
@@ -725,6 +736,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aclId; 
+            private String aiFunctionInstanceId; 
             private String architecture; 
             private Long beginTime; 
             private Boolean enableAiFunction; 
@@ -761,6 +773,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.aclId = model.aclId;
+                this.aiFunctionInstanceId = model.aiFunctionInstanceId;
                 this.architecture = model.architecture;
                 this.beginTime = model.beginTime;
                 this.enableAiFunction = model.enableAiFunction;
@@ -798,6 +811,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
+                return this;
+            }
+
+            /**
+             * AiFunctionInstanceId.
+             */
+            public Builder aiFunctionInstanceId(String aiFunctionInstanceId) {
+                this.aiFunctionInstanceId = aiFunctionInstanceId;
                 return this;
             }
 

@@ -284,6 +284,9 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("supportCompactionService")
         private Boolean supportCompactionService;
 
+        @com.aliyun.core.annotation.NameInMap("supportCompactionServiceWhiteList")
+        private Boolean supportCompactionServiceWhiteList;
+
         private Data(Builder builder) {
             this.consoleControlRestart = builder.consoleControlRestart;
             this.enableManageMv = builder.enableManageMv;
@@ -305,6 +308,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             this.supportMultiAZ = builder.supportMultiAZ;
             this.useComputeNode = builder.useComputeNode;
             this.supportCompactionService = builder.supportCompactionService;
+            this.supportCompactionServiceWhiteList = builder.supportCompactionServiceWhiteList;
         }
 
         public static Builder builder() {
@@ -455,6 +459,13 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             return this.supportCompactionService;
         }
 
+        /**
+         * @return supportCompactionServiceWhiteList
+         */
+        public Boolean getSupportCompactionServiceWhiteList() {
+            return this.supportCompactionServiceWhiteList;
+        }
+
         public static final class Builder {
             private Boolean consoleControlRestart; 
             private Boolean enableManageMv; 
@@ -476,6 +487,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             private Boolean supportMultiAZ; 
             private Boolean useComputeNode; 
             private Boolean supportCompactionService; 
+            private Boolean supportCompactionServiceWhiteList; 
 
             private Builder() {
             } 
@@ -501,6 +513,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
                 this.supportMultiAZ = model.supportMultiAZ;
                 this.useComputeNode = model.useComputeNode;
                 this.supportCompactionService = model.supportCompactionService;
+                this.supportCompactionServiceWhiteList = model.supportCompactionServiceWhiteList;
             } 
 
             /**
@@ -660,6 +673,17 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
              */
             public Builder supportCompactionService(Boolean supportCompactionService) {
                 this.supportCompactionService = supportCompactionService;
+                return this;
+            }
+
+            /**
+             * <p>是否支持Compaction Service白名单功能</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder supportCompactionServiceWhiteList(Boolean supportCompactionServiceWhiteList) {
+                this.supportCompactionServiceWhiteList = supportCompactionServiceWhiteList;
                 return this;
             }
 
