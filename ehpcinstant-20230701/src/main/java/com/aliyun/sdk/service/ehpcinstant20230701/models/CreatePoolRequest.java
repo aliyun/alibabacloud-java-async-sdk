@@ -30,11 +30,16 @@ public class CreatePoolRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceLimits")
     private ResourceLimits resourceLimits;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchedulingPolicyId")
+    private String schedulingPolicyId;
+
     private CreatePoolRequest(Builder builder) {
         super(builder);
         this.poolName = builder.poolName;
         this.priority = builder.priority;
         this.resourceLimits = builder.resourceLimits;
+        this.schedulingPolicyId = builder.schedulingPolicyId;
     }
 
     public static Builder builder() {
@@ -71,10 +76,18 @@ public class CreatePoolRequest extends Request {
         return this.resourceLimits;
     }
 
+    /**
+     * @return schedulingPolicyId
+     */
+    public String getSchedulingPolicyId() {
+        return this.schedulingPolicyId;
+    }
+
     public static final class Builder extends Request.Builder<CreatePoolRequest, Builder> {
         private String poolName; 
         private Integer priority; 
         private ResourceLimits resourceLimits; 
+        private String schedulingPolicyId; 
 
         private Builder() {
             super();
@@ -85,6 +98,7 @@ public class CreatePoolRequest extends Request {
             this.poolName = request.poolName;
             this.priority = request.priority;
             this.resourceLimits = request.resourceLimits;
+            this.schedulingPolicyId = request.schedulingPolicyId;
         } 
 
         /**
@@ -130,6 +144,15 @@ public class CreatePoolRequest extends Request {
             return this;
         }
 
+        /**
+         * SchedulingPolicyId.
+         */
+        public Builder schedulingPolicyId(String schedulingPolicyId) {
+            this.putQueryParameter("SchedulingPolicyId", schedulingPolicyId);
+            this.schedulingPolicyId = schedulingPolicyId;
+            return this;
+        }
+
         @Override
         public CreatePoolRequest build() {
             return new CreatePoolRequest(this);
@@ -144,11 +167,11 @@ public class CreatePoolRequest extends Request {
      * <p>CreatePoolRequest</p>
      */
     public static class ResourceLimits extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("MaxExectorNum")
-        private Integer maxExectorNum;
+        @com.aliyun.core.annotation.NameInMap("MaxExecutorNum")
+        private Integer maxExecutorNum;
 
         private ResourceLimits(Builder builder) {
-            this.maxExectorNum = builder.maxExectorNum;
+            this.maxExecutorNum = builder.maxExecutorNum;
         }
 
         public static Builder builder() {
@@ -160,30 +183,27 @@ public class CreatePoolRequest extends Request {
         }
 
         /**
-         * @return maxExectorNum
+         * @return maxExecutorNum
          */
-        public Integer getMaxExectorNum() {
-            return this.maxExectorNum;
+        public Integer getMaxExecutorNum() {
+            return this.maxExecutorNum;
         }
 
         public static final class Builder {
-            private Integer maxExectorNum; 
+            private Integer maxExecutorNum; 
 
             private Builder() {
             } 
 
             private Builder(ResourceLimits model) {
-                this.maxExectorNum = model.maxExectorNum;
+                this.maxExecutorNum = model.maxExecutorNum;
             } 
 
             /**
-             * <p>The maximum number of concurrent execution nodes in a resource pool.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2000</p>
+             * MaxExecutorNum.
              */
-            public Builder maxExectorNum(Integer maxExectorNum) {
-                this.maxExectorNum = maxExectorNum;
+            public Builder maxExecutorNum(Integer maxExecutorNum) {
+                this.maxExecutorNum = maxExecutorNum;
                 return this;
             }
 

@@ -428,6 +428,9 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
+        @com.aliyun.core.annotation.NameInMap("Pool")
+        private String pool;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -435,6 +438,7 @@ public class GetJobResponseBody extends TeaModel {
             this.allocationSpec = builder.allocationSpec;
             this.level = builder.level;
             this.network = builder.network;
+            this.pool = builder.pool;
             this.tags = builder.tags;
         }
 
@@ -468,6 +472,13 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return pool
+         */
+        public String getPool() {
+            return this.pool;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -478,6 +489,7 @@ public class GetJobResponseBody extends TeaModel {
             private String allocationSpec; 
             private String level; 
             private Network network; 
+            private String pool; 
             private java.util.List<Tags> tags; 
 
             private Builder() {
@@ -487,6 +499,7 @@ public class GetJobResponseBody extends TeaModel {
                 this.allocationSpec = model.allocationSpec;
                 this.level = model.level;
                 this.network = model.network;
+                this.pool = model.pool;
                 this.tags = model.tags;
             } 
 
@@ -522,6 +535,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder network(Network network) {
                 this.network = network;
+                return this;
+            }
+
+            /**
+             * Pool.
+             */
+            public Builder pool(String pool) {
+                this.pool = pool;
                 return this;
             }
 

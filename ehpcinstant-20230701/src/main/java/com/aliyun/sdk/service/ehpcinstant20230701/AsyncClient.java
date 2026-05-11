@@ -117,6 +117,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobResponse> getJob(GetJobRequest request);
 
     /**
+     * @param request the request parameters of GetJobRecordDuration  GetJobRecordDurationRequest
+     * @return GetJobRecordDurationResponse
+     */
+    CompletableFuture<GetJobRecordDurationResponse> getJobRecordDuration(GetJobRecordDurationRequest request);
+
+    /**
      * @param request the request parameters of GetPool  GetPoolRequest
      * @return GetPoolResponse
      */
@@ -211,6 +217,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateActionPlanResponse
      */
     CompletableFuture<UpdateActionPlanResponse> updateActionPlan(UpdateActionPlanRequest request);
+
+    /**
+     * @param request the request parameters of UpdateJobRecordDuration  UpdateJobRecordDurationRequest
+     * @return UpdateJobRecordDurationResponse
+     */
+    CompletableFuture<UpdateJobRecordDurationResponse> updateJobRecordDuration(UpdateJobRecordDurationRequest request);
 
     /**
      * @param request the request parameters of UpdatePool  UpdatePoolRequest

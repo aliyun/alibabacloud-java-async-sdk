@@ -170,11 +170,14 @@ public class ListPoolsResponseBody extends TeaModel {
      * <p>ListPoolsResponseBody</p>
      */
     public static class PoolList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
         @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @com.aliyun.core.annotation.NameInMap("MaxExectorNum")
-        private Integer maxExectorNum;
+        @com.aliyun.core.annotation.NameInMap("MaxExecutorNum")
+        private Integer maxExecutorNum;
 
         @com.aliyun.core.annotation.NameInMap("PoolName")
         private String poolName;
@@ -182,15 +185,24 @@ public class ListPoolsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
+        @com.aliyun.core.annotation.NameInMap("SchedulingPolicyId")
+        private String schedulingPolicyId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
+        private String updateTime;
+
         private PoolList(Builder builder) {
+            this.createTime = builder.createTime;
             this.isDefault = builder.isDefault;
-            this.maxExectorNum = builder.maxExectorNum;
+            this.maxExecutorNum = builder.maxExecutorNum;
             this.poolName = builder.poolName;
             this.priority = builder.priority;
+            this.schedulingPolicyId = builder.schedulingPolicyId;
             this.status = builder.status;
+            this.updateTime = builder.updateTime;
         }
 
         public static Builder builder() {
@@ -202,6 +214,13 @@ public class ListPoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return isDefault
          */
         public Boolean getIsDefault() {
@@ -209,10 +228,10 @@ public class ListPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * @return maxExectorNum
+         * @return maxExecutorNum
          */
-        public Integer getMaxExectorNum() {
-            return this.maxExectorNum;
+        public Integer getMaxExecutorNum() {
+            return this.maxExecutorNum;
         }
 
         /**
@@ -230,29 +249,57 @@ public class ListPoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return schedulingPolicyId
+         */
+        public String getSchedulingPolicyId() {
+            return this.schedulingPolicyId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
         }
 
+        /**
+         * @return updateTime
+         */
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
         public static final class Builder {
+            private String createTime; 
             private Boolean isDefault; 
-            private Integer maxExectorNum; 
+            private Integer maxExecutorNum; 
             private String poolName; 
             private Integer priority; 
+            private String schedulingPolicyId; 
             private String status; 
+            private String updateTime; 
 
             private Builder() {
             } 
 
             private Builder(PoolList model) {
+                this.createTime = model.createTime;
                 this.isDefault = model.isDefault;
-                this.maxExectorNum = model.maxExectorNum;
+                this.maxExecutorNum = model.maxExecutorNum;
                 this.poolName = model.poolName;
                 this.priority = model.priority;
+                this.schedulingPolicyId = model.schedulingPolicyId;
                 this.status = model.status;
+                this.updateTime = model.updateTime;
             } 
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
 
             /**
              * <p>Indices whether the resource pool is the default resource pool. Valid values:</p>
@@ -270,13 +317,10 @@ public class ListPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of execution nodes that can run concurrently in a resource pool.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2000</p>
+             * MaxExecutorNum.
              */
-            public Builder maxExectorNum(Integer maxExectorNum) {
-                this.maxExectorNum = maxExectorNum;
+            public Builder maxExecutorNum(Integer maxExecutorNum) {
+                this.maxExecutorNum = maxExecutorNum;
                 return this;
             }
 
@@ -311,6 +355,14 @@ public class ListPoolsResponseBody extends TeaModel {
             }
 
             /**
+             * SchedulingPolicyId.
+             */
+            public Builder schedulingPolicyId(String schedulingPolicyId) {
+                this.schedulingPolicyId = schedulingPolicyId;
+                return this;
+            }
+
+            /**
              * <p>The status of the resource pool. Valid values:</p>
              * <ul>
              * <li>Creating: The resource pool is being created.</li>
@@ -325,6 +377,14 @@ public class ListPoolsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * UpdateTime.
+             */
+            public Builder updateTime(String updateTime) {
+                this.updateTime = updateTime;
                 return this;
             }
 

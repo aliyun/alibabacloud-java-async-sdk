@@ -101,14 +101,14 @@ public class GetPoolResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @com.aliyun.core.annotation.NameInMap("ExectorUsage")
-        private Integer exectorUsage;
+        @com.aliyun.core.annotation.NameInMap("ExecutorUsage")
+        private Integer executorUsage;
 
         @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @com.aliyun.core.annotation.NameInMap("MaxExectorNum")
-        private Integer maxExectorNum;
+        @com.aliyun.core.annotation.NameInMap("MaxExecutorNum")
+        private Integer maxExecutorNum;
 
         @com.aliyun.core.annotation.NameInMap("PoolName")
         private String poolName;
@@ -119,6 +119,9 @@ public class GetPoolResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
+        @com.aliyun.core.annotation.NameInMap("SchedulingPolicyId")
+        private String schedulingPolicyId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -127,12 +130,13 @@ public class GetPoolResponseBody extends TeaModel {
 
         private PoolInfo(Builder builder) {
             this.createTime = builder.createTime;
-            this.exectorUsage = builder.exectorUsage;
+            this.executorUsage = builder.executorUsage;
             this.isDefault = builder.isDefault;
-            this.maxExectorNum = builder.maxExectorNum;
+            this.maxExecutorNum = builder.maxExecutorNum;
             this.poolName = builder.poolName;
             this.priority = builder.priority;
             this.reason = builder.reason;
+            this.schedulingPolicyId = builder.schedulingPolicyId;
             this.status = builder.status;
             this.updateTime = builder.updateTime;
         }
@@ -153,10 +157,10 @@ public class GetPoolResponseBody extends TeaModel {
         }
 
         /**
-         * @return exectorUsage
+         * @return executorUsage
          */
-        public Integer getExectorUsage() {
-            return this.exectorUsage;
+        public Integer getExecutorUsage() {
+            return this.executorUsage;
         }
 
         /**
@@ -167,10 +171,10 @@ public class GetPoolResponseBody extends TeaModel {
         }
 
         /**
-         * @return maxExectorNum
+         * @return maxExecutorNum
          */
-        public Integer getMaxExectorNum() {
-            return this.maxExectorNum;
+        public Integer getMaxExecutorNum() {
+            return this.maxExecutorNum;
         }
 
         /**
@@ -195,6 +199,13 @@ public class GetPoolResponseBody extends TeaModel {
         }
 
         /**
+         * @return schedulingPolicyId
+         */
+        public String getSchedulingPolicyId() {
+            return this.schedulingPolicyId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -210,12 +221,13 @@ public class GetPoolResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
-            private Integer exectorUsage; 
+            private Integer executorUsage; 
             private Boolean isDefault; 
-            private Integer maxExectorNum; 
+            private Integer maxExecutorNum; 
             private String poolName; 
             private Integer priority; 
             private String reason; 
+            private String schedulingPolicyId; 
             private String status; 
             private String updateTime; 
 
@@ -224,12 +236,13 @@ public class GetPoolResponseBody extends TeaModel {
 
             private Builder(PoolInfo model) {
                 this.createTime = model.createTime;
-                this.exectorUsage = model.exectorUsage;
+                this.executorUsage = model.executorUsage;
                 this.isDefault = model.isDefault;
-                this.maxExectorNum = model.maxExectorNum;
+                this.maxExecutorNum = model.maxExecutorNum;
                 this.poolName = model.poolName;
                 this.priority = model.priority;
                 this.reason = model.reason;
+                this.schedulingPolicyId = model.schedulingPolicyId;
                 this.status = model.status;
                 this.updateTime = model.updateTime;
             } 
@@ -246,13 +259,10 @@ public class GetPoolResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage of execution nodes that are running in a resource pool.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * ExecutorUsage.
              */
-            public Builder exectorUsage(Integer exectorUsage) {
-                this.exectorUsage = exectorUsage;
+            public Builder executorUsage(Integer executorUsage) {
+                this.executorUsage = executorUsage;
                 return this;
             }
 
@@ -272,13 +282,10 @@ public class GetPoolResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of execution nodes that can run concurrently in a resource pool.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2000</p>
+             * MaxExecutorNum.
              */
-            public Builder maxExectorNum(Integer maxExectorNum) {
-                this.maxExectorNum = maxExectorNum;
+            public Builder maxExecutorNum(Integer maxExecutorNum) {
+                this.maxExecutorNum = maxExecutorNum;
                 return this;
             }
 
@@ -320,6 +327,14 @@ public class GetPoolResponseBody extends TeaModel {
              */
             public Builder reason(String reason) {
                 this.reason = reason;
+                return this;
+            }
+
+            /**
+             * SchedulingPolicyId.
+             */
+            public Builder schedulingPolicyId(String schedulingPolicyId) {
+                this.schedulingPolicyId = schedulingPolicyId;
                 return this;
             }
 
