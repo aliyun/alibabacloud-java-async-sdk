@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateThreadResponse> createThread(CreateThreadRequest request);
 
     /**
+     * @param request the request parameters of CreateTicket  CreateTicketRequest
+     * @return CreateTicketResponse
+     */
+    CompletableFuture<CreateTicketResponse> createTicket(CreateTicketRequest request);
+
+    /**
      * @param request the request parameters of DeleteDigitalEmployee  DeleteDigitalEmployeeRequest
      * @return DeleteDigitalEmployeeResponse
      */
@@ -66,6 +72,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteThreadResponse
      */
     CompletableFuture<DeleteThreadResponse> deleteThread(DeleteThreadRequest request);
+
+    /**
+     * @param request the request parameters of GetArtifact  GetArtifactRequest
+     * @return GetArtifactResponse
+     */
+    CompletableFuture<GetArtifactResponse> getArtifact(GetArtifactRequest request);
 
     /**
      * @param request the request parameters of GetDigitalEmployee  GetDigitalEmployeeRequest
@@ -90,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetThreadDataResponse
      */
     CompletableFuture<GetThreadDataResponse> getThreadData(GetThreadDataRequest request);
+
+    /**
+     * @param request the request parameters of ListArtifacts  ListArtifactsRequest
+     * @return ListArtifactsResponse
+     */
+    CompletableFuture<ListArtifactsResponse> listArtifacts(ListArtifactsRequest request);
 
     /**
      * @param request the request parameters of ListDigitalEmployeeSkillVersions  ListDigitalEmployeeSkillVersionsRequest
