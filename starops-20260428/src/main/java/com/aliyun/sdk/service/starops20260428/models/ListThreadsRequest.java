@@ -27,6 +27,10 @@ public class ListThreadsRequest extends Request {
     private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("includeMission")
+    private Boolean includeMission;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
     private Long maxResults;
 
@@ -46,6 +50,7 @@ public class ListThreadsRequest extends Request {
         super(builder);
         this.name = builder.name;
         this.filter = builder.filter;
+        this.includeMission = builder.includeMission;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.status = builder.status;
@@ -80,6 +85,13 @@ public class ListThreadsRequest extends Request {
     }
 
     /**
+     * @return includeMission
+     */
+    public Boolean getIncludeMission() {
+        return this.includeMission;
+    }
+
+    /**
      * @return maxResults
      */
     public Long getMaxResults() {
@@ -110,6 +122,7 @@ public class ListThreadsRequest extends Request {
     public static final class Builder extends Request.Builder<ListThreadsRequest, Builder> {
         private String name; 
         private java.util.List<Filter> filter; 
+        private Boolean includeMission; 
         private Long maxResults; 
         private String nextToken; 
         private String status; 
@@ -123,6 +136,7 @@ public class ListThreadsRequest extends Request {
             super(request);
             this.name = request.name;
             this.filter = request.filter;
+            this.includeMission = request.includeMission;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.status = request.status;
@@ -148,6 +162,15 @@ public class ListThreadsRequest extends Request {
             String filterShrink = shrink(filter, "filter", "json");
             this.putQueryParameter("filter", filterShrink);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * includeMission.
+         */
+        public Builder includeMission(Boolean includeMission) {
+            this.putQueryParameter("includeMission", includeMission);
+            this.includeMission = includeMission;
             return this;
         }
 
