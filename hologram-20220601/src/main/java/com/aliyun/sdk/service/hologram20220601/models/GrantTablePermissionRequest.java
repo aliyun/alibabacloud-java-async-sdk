@@ -26,6 +26,10 @@ public class GrantTablePermissionRequest extends Request {
     private Boolean allTable;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("columnNames")
+    private java.util.List<String> columnNames;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("databaseName")
     private String databaseName;
 
@@ -49,6 +53,7 @@ public class GrantTablePermissionRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.allTable = builder.allTable;
+        this.columnNames = builder.columnNames;
         this.databaseName = builder.databaseName;
         this.privileges = builder.privileges;
         this.schemaName = builder.schemaName;
@@ -81,6 +86,13 @@ public class GrantTablePermissionRequest extends Request {
      */
     public Boolean getAllTable() {
         return this.allTable;
+    }
+
+    /**
+     * @return columnNames
+     */
+    public java.util.List<String> getColumnNames() {
+        return this.columnNames;
     }
 
     /**
@@ -121,6 +133,7 @@ public class GrantTablePermissionRequest extends Request {
     public static final class Builder extends Request.Builder<GrantTablePermissionRequest, Builder> {
         private String instanceId; 
         private Boolean allTable; 
+        private java.util.List<String> columnNames; 
         private String databaseName; 
         private java.util.List<String> privileges; 
         private String schemaName; 
@@ -135,6 +148,7 @@ public class GrantTablePermissionRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.allTable = request.allTable;
+            this.columnNames = request.columnNames;
             this.databaseName = request.databaseName;
             this.privileges = request.privileges;
             this.schemaName = request.schemaName;
@@ -157,6 +171,15 @@ public class GrantTablePermissionRequest extends Request {
         public Builder allTable(Boolean allTable) {
             this.putBodyParameter("allTable", allTable);
             this.allTable = allTable;
+            return this;
+        }
+
+        /**
+         * columnNames.
+         */
+        public Builder columnNames(java.util.List<String> columnNames) {
+            this.putBodyParameter("columnNames", columnNames);
+            this.columnNames = columnNames;
             return this;
         }
 
