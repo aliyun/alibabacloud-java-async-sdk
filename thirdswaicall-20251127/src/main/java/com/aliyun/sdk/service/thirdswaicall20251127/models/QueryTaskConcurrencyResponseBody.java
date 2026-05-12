@@ -203,11 +203,19 @@ public class QueryTaskConcurrencyResponseBody extends TeaModel {
      * <p>QueryTaskConcurrencyResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AvailableConcurrency")
+        private Long availableConcurrency;
+
         @com.aliyun.core.annotation.NameInMap("CurrentConcurrency")
         private Long currentConcurrency;
 
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
+        private Long maxConcurrency;
+
         private Data(Builder builder) {
+            this.availableConcurrency = builder.availableConcurrency;
             this.currentConcurrency = builder.currentConcurrency;
+            this.maxConcurrency = builder.maxConcurrency;
         }
 
         public static Builder builder() {
@@ -219,27 +227,61 @@ public class QueryTaskConcurrencyResponseBody extends TeaModel {
         }
 
         /**
+         * @return availableConcurrency
+         */
+        public Long getAvailableConcurrency() {
+            return this.availableConcurrency;
+        }
+
+        /**
          * @return currentConcurrency
          */
         public Long getCurrentConcurrency() {
             return this.currentConcurrency;
         }
 
+        /**
+         * @return maxConcurrency
+         */
+        public Long getMaxConcurrency() {
+            return this.maxConcurrency;
+        }
+
         public static final class Builder {
+            private Long availableConcurrency; 
             private Long currentConcurrency; 
+            private Long maxConcurrency; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.availableConcurrency = model.availableConcurrency;
                 this.currentConcurrency = model.currentConcurrency;
+                this.maxConcurrency = model.maxConcurrency;
             } 
+
+            /**
+             * AvailableConcurrency.
+             */
+            public Builder availableConcurrency(Long availableConcurrency) {
+                this.availableConcurrency = availableConcurrency;
+                return this;
+            }
 
             /**
              * CurrentConcurrency.
              */
             public Builder currentConcurrency(Long currentConcurrency) {
                 this.currentConcurrency = currentConcurrency;
+                return this;
+            }
+
+            /**
+             * MaxConcurrency.
+             */
+            public Builder maxConcurrency(Long maxConcurrency) {
+                this.maxConcurrency = maxConcurrency;
                 return this;
             }
 
