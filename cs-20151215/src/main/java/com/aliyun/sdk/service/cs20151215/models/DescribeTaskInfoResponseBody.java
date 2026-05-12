@@ -32,6 +32,9 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("events")
     private java.util.List<Events> events;
 
+    @com.aliyun.core.annotation.NameInMap("outputs")
+    private java.util.Map<String, ?> outputs;
+
     @com.aliyun.core.annotation.NameInMap("parameters")
     private java.util.Map<String, ?> parameters;
 
@@ -62,6 +65,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         this.currentStage = builder.currentStage;
         this.error = builder.error;
         this.events = builder.events;
+        this.outputs = builder.outputs;
         this.parameters = builder.parameters;
         this.stages = builder.stages;
         this.state = builder.state;
@@ -117,6 +121,13 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
      */
     public java.util.List<Events> getEvents() {
         return this.events;
+    }
+
+    /**
+     * @return outputs
+     */
+    public java.util.Map<String, ?> getOutputs() {
+        return this.outputs;
     }
 
     /**
@@ -181,6 +192,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         private String currentStage; 
         private Error error; 
         private java.util.List<Events> events; 
+        private java.util.Map<String, ?> outputs; 
         private java.util.Map<String, ?> parameters; 
         private java.util.List<Stages> stages; 
         private String state; 
@@ -199,6 +211,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             this.currentStage = model.currentStage;
             this.error = model.error;
             this.events = model.events;
+            this.outputs = model.outputs;
             this.parameters = model.parameters;
             this.stages = model.stages;
             this.state = model.state;
@@ -255,6 +268,14 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
+            return this;
+        }
+
+        /**
+         * outputs.
+         */
+        public Builder outputs(java.util.Map<String, ?> outputs) {
+            this.outputs = outputs;
             return this;
         }
 
