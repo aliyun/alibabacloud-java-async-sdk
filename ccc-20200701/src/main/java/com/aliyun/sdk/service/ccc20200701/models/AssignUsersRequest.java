@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AssignUsersRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Async")
+    private Boolean async;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -43,6 +47,7 @@ public class AssignUsersRequest extends Request {
 
     private AssignUsersRequest(Builder builder) {
         super(builder);
+        this.async = builder.async;
         this.instanceId = builder.instanceId;
         this.ramIdList = builder.ramIdList;
         this.roleId = builder.roleId;
@@ -61,6 +66,13 @@ public class AssignUsersRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return async
+     */
+    public Boolean getAsync() {
+        return this.async;
     }
 
     /**
@@ -99,6 +111,7 @@ public class AssignUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AssignUsersRequest, Builder> {
+        private Boolean async; 
         private String instanceId; 
         private String ramIdList; 
         private String roleId; 
@@ -111,12 +124,22 @@ public class AssignUsersRequest extends Request {
 
         private Builder(AssignUsersRequest request) {
             super(request);
+            this.async = request.async;
             this.instanceId = request.instanceId;
             this.ramIdList = request.ramIdList;
             this.roleId = request.roleId;
             this.skillLevelList = request.skillLevelList;
             this.workMode = request.workMode;
         } 
+
+        /**
+         * Async.
+         */
+        public Builder async(Boolean async) {
+            this.putQueryParameter("Async", async);
+            this.async = async;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
