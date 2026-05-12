@@ -30,6 +30,18 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ISP")
+    private String ISP;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private String imageId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -37,6 +49,14 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
+    private String internetChargeType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
+    private Integer internetMaxBandwidthOut;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -59,18 +79,28 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
     private DescribeInstanceModificationPriceRequest(Builder builder) {
         super(builder);
         this.systemDisk = builder.systemDisk;
         this.sourceRegionId = builder.sourceRegionId;
         this.dataDisk = builder.dataDisk;
+        this.endTime = builder.endTime;
+        this.ISP = builder.ISP;
+        this.imageId = builder.imageId;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
+        this.internetChargeType = builder.internetChargeType;
+        this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -108,6 +138,27 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * @return ISP
+     */
+    public String getISP() {
+        return this.ISP;
+    }
+
+    /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -119,6 +170,20 @@ public class DescribeInstanceModificationPriceRequest extends Request {
      */
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    /**
+     * @return internetChargeType
+     */
+    public String getInternetChargeType() {
+        return this.internetChargeType;
+    }
+
+    /**
+     * @return internetMaxBandwidthOut
+     */
+    public Integer getInternetMaxBandwidthOut() {
+        return this.internetMaxBandwidthOut;
     }
 
     /**
@@ -156,17 +221,30 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<DescribeInstanceModificationPriceRequest, Builder> {
         private SystemDisk systemDisk; 
         private String sourceRegionId; 
         private java.util.List<DataDisk> dataDisk; 
+        private String endTime; 
+        private String ISP; 
+        private String imageId; 
         private String instanceId; 
         private String instanceType; 
+        private String internetChargeType; 
+        private Integer internetMaxBandwidthOut; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String startTime; 
 
         private Builder() {
             super();
@@ -177,13 +255,19 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             this.systemDisk = request.systemDisk;
             this.sourceRegionId = request.sourceRegionId;
             this.dataDisk = request.dataDisk;
+            this.endTime = request.endTime;
+            this.ISP = request.ISP;
+            this.imageId = request.imageId;
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
+            this.internetChargeType = request.internetChargeType;
+            this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**
@@ -214,6 +298,33 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * ISP.
+         */
+        public Builder ISP(String ISP) {
+            this.putQueryParameter("ISP", ISP);
+            this.ISP = ISP;
+            return this;
+        }
+
+        /**
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
+            return this;
+        }
+
+        /**
          * <p>The ID of the instance for which you want to query pricing information for a configuration upgrade.</p>
          * <p>This parameter is required.</p>
          * 
@@ -238,6 +349,24 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
             this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * InternetChargeType.
+         */
+        public Builder internetChargeType(String internetChargeType) {
+            this.putQueryParameter("InternetChargeType", internetChargeType);
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+
+        /**
+         * InternetMaxBandwidthOut.
+         */
+        public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+            this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
+            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
             return this;
         }
 
@@ -290,6 +419,15 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             return this;
         }
 
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
         @Override
         public DescribeInstanceModificationPriceRequest build() {
             return new DescribeInstanceModificationPriceRequest(this);
@@ -307,76 +445,13 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        private SystemDisk(Builder builder) {
-            this.category = builder.category;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SystemDisk create() {
-            return builder().build();
-        }
-
-        /**
-         * @return category
-         */
-        public String getCategory() {
-            return this.category;
-        }
-
-        public static final class Builder {
-            private String category; 
-
-            private Builder() {
-            } 
-
-            private Builder(SystemDisk model) {
-                this.category = model.category;
-            } 
-
-            /**
-             * <p>The category of the system disk. You must specify this parameter only when you upgrade a non-I/O optimized instance of a retired instance type to an I/O optimized instance of an available instance type. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> and <a href="https://help.aliyun.com/document_detail/55263.html">Retired instance types</a>.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>cloud_efficiency: ultra disk</li>
-             * <li>cloud_ssd: standard SSD</li>
-             * </ul>
-             * <p>This parameter is empty by default.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cloud_ssd</p>
-             */
-            public Builder category(String category) {
-                this.category = category;
-                return this;
-            }
-
-            public SystemDisk build() {
-                return new SystemDisk(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link DescribeInstanceModificationPriceRequest} extends {@link TeaModel}
-     *
-     * <p>DescribeInstanceModificationPriceRequest</p>
-     */
-    public static class DataDisk extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Category")
-        private String category;
-
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        private DataDisk(Builder builder) {
+        private SystemDisk(Builder builder) {
             this.category = builder.category;
             this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
@@ -386,7 +461,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             return new Builder();
         }
 
-        public static DataDisk create() {
+        public static SystemDisk create() {
             return builder().build();
         }
 
@@ -419,8 +494,117 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             private Builder() {
             } 
 
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            public SystemDisk build() {
+                return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceModificationPriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceModificationPriceRequest</p>
+     */
+    public static class DataDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("DiskId")
+        private String diskId;
+
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Integer size;
+
+        private DataDisk(Builder builder) {
+            this.category = builder.category;
+            this.diskId = builder.diskId;
+            this.performanceLevel = builder.performanceLevel;
+            this.size = builder.size;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataDisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return diskId
+         */
+        public String getDiskId() {
+            return this.diskId;
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private String diskId; 
+            private String performanceLevel; 
+            private Integer size; 
+
+            private Builder() {
+            } 
+
             private Builder(DataDisk model) {
                 this.category = model.category;
+                this.diskId = model.diskId;
                 this.performanceLevel = model.performanceLevel;
                 this.size = model.size;
             } 
@@ -443,6 +627,14 @@ public class DescribeInstanceModificationPriceRequest extends Request {
              */
             public Builder category(String category) {
                 this.category = category;
+                return this;
+            }
+
+            /**
+             * DiskId.
+             */
+            public Builder diskId(String diskId) {
+                this.diskId = diskId;
                 return this;
             }
 
