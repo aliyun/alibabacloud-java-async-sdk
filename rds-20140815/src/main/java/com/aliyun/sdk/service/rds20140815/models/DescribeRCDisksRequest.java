@@ -22,6 +22,10 @@ public class DescribeRCDisksRequest extends Request {
     private String diskIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskType")
+    private String diskType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -50,6 +54,7 @@ public class DescribeRCDisksRequest extends Request {
     private DescribeRCDisksRequest(Builder builder) {
         super(builder);
         this.diskIds = builder.diskIds;
+        this.diskType = builder.diskType;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -76,6 +81,13 @@ public class DescribeRCDisksRequest extends Request {
      */
     public String getDiskIds() {
         return this.diskIds;
+    }
+
+    /**
+     * @return diskType
+     */
+    public String getDiskType() {
+        return this.diskType;
     }
 
     /**
@@ -122,6 +134,7 @@ public class DescribeRCDisksRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeRCDisksRequest, Builder> {
         private String diskIds; 
+        private String diskType; 
         private String instanceId; 
         private Long pageNumber; 
         private Long pageSize; 
@@ -136,6 +149,7 @@ public class DescribeRCDisksRequest extends Request {
         private Builder(DescribeRCDisksRequest request) {
             super(request);
             this.diskIds = request.diskIds;
+            this.diskType = request.diskType;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -153,6 +167,15 @@ public class DescribeRCDisksRequest extends Request {
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
             this.diskIds = diskIds;
+            return this;
+        }
+
+        /**
+         * DiskType.
+         */
+        public Builder diskType(String diskType) {
+            this.putQueryParameter("DiskType", diskType);
+            this.diskType = diskType;
             return this;
         }
 
