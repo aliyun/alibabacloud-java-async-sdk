@@ -224,6 +224,9 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CrossUser")
         private Boolean crossUser;
 
+        @com.aliyun.core.annotation.NameInMap("LinkId")
+        private String linkId;
+
         @com.aliyun.core.annotation.NameInMap("LocalInstanceId")
         private String localInstanceId;
 
@@ -275,6 +278,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         private SyncRules(Builder builder) {
             this.createTime = builder.createTime;
             this.crossUser = builder.crossUser;
+            this.linkId = builder.linkId;
             this.localInstanceId = builder.localInstanceId;
             this.localNamespaceName = builder.localNamespaceName;
             this.localRegionId = builder.localRegionId;
@@ -313,6 +317,13 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
          */
         public Boolean getCrossUser() {
             return this.crossUser;
+        }
+
+        /**
+         * @return linkId
+         */
+        public String getLinkId() {
+            return this.linkId;
         }
 
         /**
@@ -430,6 +441,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private Boolean crossUser; 
+            private String linkId; 
             private String localInstanceId; 
             private String localNamespaceName; 
             private String localRegionId; 
@@ -453,6 +465,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             private Builder(SyncRules model) {
                 this.createTime = model.createTime;
                 this.crossUser = model.crossUser;
+                this.linkId = model.linkId;
                 this.localInstanceId = model.localInstanceId;
                 this.localNamespaceName = model.localNamespaceName;
                 this.localRegionId = model.localRegionId;
@@ -495,6 +508,14 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
              */
             public Builder crossUser(Boolean crossUser) {
                 this.crossUser = crossUser;
+                return this;
+            }
+
+            /**
+             * LinkId.
+             */
+            public Builder linkId(String linkId) {
+                this.linkId = linkId;
                 return this;
             }
 

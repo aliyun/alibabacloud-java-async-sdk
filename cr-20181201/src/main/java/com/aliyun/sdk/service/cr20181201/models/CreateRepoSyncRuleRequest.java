@@ -27,6 +27,10 @@ public class CreateRepoSyncRuleRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LinkId")
+    private String linkId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NamespaceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceName;
@@ -85,6 +89,7 @@ public class CreateRepoSyncRuleRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
+        this.linkId = builder.linkId;
         this.namespaceName = builder.namespaceName;
         this.repoName = builder.repoName;
         this.repoNameFilter = builder.repoNameFilter;
@@ -124,6 +129,13 @@ public class CreateRepoSyncRuleRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return linkId
+     */
+    public String getLinkId() {
+        return this.linkId;
     }
 
     /**
@@ -213,6 +225,7 @@ public class CreateRepoSyncRuleRequest extends Request {
     public static final class Builder extends Request.Builder<CreateRepoSyncRuleRequest, Builder> {
         private String regionId; 
         private String instanceId; 
+        private String linkId; 
         private String namespaceName; 
         private String repoName; 
         private String repoNameFilter; 
@@ -234,6 +247,7 @@ public class CreateRepoSyncRuleRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
+            this.linkId = request.linkId;
             this.namespaceName = request.namespaceName;
             this.repoName = request.repoName;
             this.repoNameFilter = request.repoNameFilter;
@@ -267,6 +281,15 @@ public class CreateRepoSyncRuleRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * LinkId.
+         */
+        public Builder linkId(String linkId) {
+            this.putQueryParameter("LinkId", linkId);
+            this.linkId = linkId;
             return this;
         }
 

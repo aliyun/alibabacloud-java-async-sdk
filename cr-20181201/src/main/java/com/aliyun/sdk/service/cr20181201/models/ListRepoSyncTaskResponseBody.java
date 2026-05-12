@@ -539,8 +539,15 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageTo")
         private ImageTo imageTo;
 
+        @com.aliyun.core.annotation.NameInMap("LinkId")
+        private String linkId;
+
         @com.aliyun.core.annotation.NameInMap("ModifedTime")
+        @Deprecated
         private Long modifedTime;
+
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
+        private Long modifiedTime;
 
         @com.aliyun.core.annotation.NameInMap("SyncBatchTaskId")
         private String syncBatchTaskId;
@@ -569,7 +576,9 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             this.customLink = builder.customLink;
             this.imageFrom = builder.imageFrom;
             this.imageTo = builder.imageTo;
+            this.linkId = builder.linkId;
             this.modifedTime = builder.modifedTime;
+            this.modifiedTime = builder.modifiedTime;
             this.syncBatchTaskId = builder.syncBatchTaskId;
             this.syncRuleId = builder.syncRuleId;
             this.syncTaskId = builder.syncTaskId;
@@ -623,10 +632,24 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return linkId
+         */
+        public String getLinkId() {
+            return this.linkId;
+        }
+
+        /**
          * @return modifedTime
          */
         public Long getModifedTime() {
             return this.modifedTime;
+        }
+
+        /**
+         * @return modifiedTime
+         */
+        public Long getModifiedTime() {
+            return this.modifiedTime;
         }
 
         /**
@@ -684,7 +707,9 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             private Boolean customLink; 
             private ImageFrom imageFrom; 
             private ImageTo imageTo; 
+            private String linkId; 
             private Long modifedTime; 
+            private Long modifiedTime; 
             private String syncBatchTaskId; 
             private String syncRuleId; 
             private String syncTaskId; 
@@ -702,7 +727,9 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
                 this.customLink = model.customLink;
                 this.imageFrom = model.imageFrom;
                 this.imageTo = model.imageTo;
+                this.linkId = model.linkId;
                 this.modifedTime = model.modifedTime;
+                this.modifiedTime = model.modifiedTime;
                 this.syncBatchTaskId = model.syncBatchTaskId;
                 this.syncRuleId = model.syncRuleId;
                 this.syncTaskId = model.syncTaskId;
@@ -767,6 +794,14 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
+             * LinkId.
+             */
+            public Builder linkId(String linkId) {
+                this.linkId = linkId;
+                return this;
+            }
+
+            /**
              * <p>The time when the synchronization task was last modified.</p>
              * 
              * <strong>example:</strong>
@@ -774,6 +809,14 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
              */
             public Builder modifedTime(Long modifedTime) {
                 this.modifedTime = modifedTime;
+                return this;
+            }
+
+            /**
+             * ModifiedTime.
+             */
+            public Builder modifiedTime(Long modifiedTime) {
+                this.modifiedTime = modifiedTime;
                 return this;
             }
 
