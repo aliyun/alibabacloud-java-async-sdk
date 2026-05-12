@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeMOTokenUsageDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiKey")
+    private String apiKey;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConsumerName")
     private String consumerName;
 
@@ -53,6 +57,7 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
 
     private DescribeMOTokenUsageDetailRequest(Builder builder) {
         super(builder);
+        this.apiKey = builder.apiKey;
         this.consumerName = builder.consumerName;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
@@ -74,6 +79,13 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return apiKey
+     */
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     /**
@@ -133,6 +145,7 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeMOTokenUsageDetailRequest, Builder> {
+        private String apiKey; 
         private String consumerName; 
         private String endTime; 
         private String instanceId; 
@@ -148,6 +161,7 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
 
         private Builder(DescribeMOTokenUsageDetailRequest request) {
             super(request);
+            this.apiKey = request.apiKey;
             this.consumerName = request.consumerName;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
@@ -157,6 +171,15 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
             this.region = request.region;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * ApiKey.
+         */
+        public Builder apiKey(String apiKey) {
+            this.putQueryParameter("ApiKey", apiKey);
+            this.apiKey = apiKey;
+            return this;
+        }
 
         /**
          * ConsumerName.

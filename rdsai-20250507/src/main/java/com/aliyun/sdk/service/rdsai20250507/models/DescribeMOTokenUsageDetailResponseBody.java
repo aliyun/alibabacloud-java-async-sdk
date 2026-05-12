@@ -164,11 +164,17 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumerName")
         private String consumerName;
 
+        @com.aliyun.core.annotation.NameInMap("InputTokens")
+        private Double inputTokens;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
+
+        @com.aliyun.core.annotation.NameInMap("OutputTokens")
+        private Double outputTokens;
 
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
@@ -181,8 +187,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
 
         private Records(Builder builder) {
             this.consumerName = builder.consumerName;
+            this.inputTokens = builder.inputTokens;
             this.instanceId = builder.instanceId;
             this.model = builder.model;
+            this.outputTokens = builder.outputTokens;
             this.region = builder.region;
             this.requestTime = builder.requestTime;
             this.totalTokens = builder.totalTokens;
@@ -204,6 +212,13 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return inputTokens
+         */
+        public Double getInputTokens() {
+            return this.inputTokens;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -215,6 +230,13 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
          */
         public String getModel() {
             return this.model;
+        }
+
+        /**
+         * @return outputTokens
+         */
+        public Double getOutputTokens() {
+            return this.outputTokens;
         }
 
         /**
@@ -240,8 +262,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String consumerName; 
+            private Double inputTokens; 
             private String instanceId; 
             private String model; 
+            private Double outputTokens; 
             private String region; 
             private String requestTime; 
             private Double totalTokens; 
@@ -251,8 +275,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
 
             private Builder(Records model) {
                 this.consumerName = model.consumerName;
+                this.inputTokens = model.inputTokens;
                 this.instanceId = model.instanceId;
                 this.model = model.model;
+                this.outputTokens = model.outputTokens;
                 this.region = model.region;
                 this.requestTime = model.requestTime;
                 this.totalTokens = model.totalTokens;
@@ -263,6 +289,14 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
              */
             public Builder consumerName(String consumerName) {
                 this.consumerName = consumerName;
+                return this;
+            }
+
+            /**
+             * InputTokens.
+             */
+            public Builder inputTokens(Double inputTokens) {
+                this.inputTokens = inputTokens;
                 return this;
             }
 
@@ -279,6 +313,14 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
              */
             public Builder model(String model) {
                 this.model = model;
+                return this;
+            }
+
+            /**
+             * OutputTokens.
+             */
+            public Builder outputTokens(Double outputTokens) {
+                this.outputTokens = outputTokens;
                 return this;
             }
 
