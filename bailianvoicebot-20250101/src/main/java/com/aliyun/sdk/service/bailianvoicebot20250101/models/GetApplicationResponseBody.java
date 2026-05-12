@@ -637,7 +637,142 @@ public class GetApplicationResponseBody extends TeaModel {
      *
      * <p>GetApplicationResponseBody</p>
      */
+    public static class NlsAccessProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessProfileId")
+        private String accessProfileId;
+
+        private NlsAccessProfile(Builder builder) {
+            this.accessProfileId = builder.accessProfileId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NlsAccessProfile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessProfileId
+         */
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+        public static final class Builder {
+            private String accessProfileId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NlsAccessProfile model) {
+                this.accessProfileId = model.accessProfileId;
+            } 
+
+            /**
+             * AccessProfileId.
+             */
+            public Builder accessProfileId(String accessProfileId) {
+                this.accessProfileId = accessProfileId;
+                return this;
+            }
+
+            public NlsAccessProfile build() {
+                return new NlsAccessProfile(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class PronRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Pattern")
+        private String pattern;
+
+        @com.aliyun.core.annotation.NameInMap("Replacement")
+        private String replacement;
+
+        private PronRules(Builder builder) {
+            this.pattern = builder.pattern;
+            this.replacement = builder.replacement;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PronRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pattern
+         */
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        /**
+         * @return replacement
+         */
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+        public static final class Builder {
+            private String pattern; 
+            private String replacement; 
+
+            private Builder() {
+            } 
+
+            private Builder(PronRules model) {
+                this.pattern = model.pattern;
+                this.replacement = model.replacement;
+            } 
+
+            /**
+             * Pattern.
+             */
+            public Builder pattern(String pattern) {
+                this.pattern = pattern;
+                return this;
+            }
+
+            /**
+             * Replacement.
+             */
+            public Builder replacement(String replacement) {
+                this.replacement = replacement;
+                return this;
+            }
+
+            public PronRules build() {
+                return new PronRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class SynthesizerConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
+
+        @com.aliyun.core.annotation.NameInMap("NlsAccessProfile")
+        private NlsAccessProfile nlsAccessProfile;
+
         @com.aliyun.core.annotation.NameInMap("NlsAccessType")
         private String nlsAccessType;
 
@@ -646,6 +781,9 @@ public class GetApplicationResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PitchRate")
         private Integer pitchRate;
+
+        @com.aliyun.core.annotation.NameInMap("PronRules")
+        private java.util.List<PronRules> pronRules;
 
         @com.aliyun.core.annotation.NameInMap("SpeechRate")
         private Integer speechRate;
@@ -657,9 +795,12 @@ public class GetApplicationResponseBody extends TeaModel {
         private Integer volume;
 
         private SynthesizerConfig(Builder builder) {
+            this.model = builder.model;
+            this.nlsAccessProfile = builder.nlsAccessProfile;
             this.nlsAccessType = builder.nlsAccessType;
             this.nlsEngine = builder.nlsEngine;
             this.pitchRate = builder.pitchRate;
+            this.pronRules = builder.pronRules;
             this.speechRate = builder.speechRate;
             this.voice = builder.voice;
             this.volume = builder.volume;
@@ -671,6 +812,20 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static SynthesizerConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
+        }
+
+        /**
+         * @return nlsAccessProfile
+         */
+        public NlsAccessProfile getNlsAccessProfile() {
+            return this.nlsAccessProfile;
         }
 
         /**
@@ -695,6 +850,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return pronRules
+         */
+        public java.util.List<PronRules> getPronRules() {
+            return this.pronRules;
+        }
+
+        /**
          * @return speechRate
          */
         public Integer getSpeechRate() {
@@ -716,9 +878,12 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String model; 
+            private NlsAccessProfile nlsAccessProfile; 
             private String nlsAccessType; 
             private String nlsEngine; 
             private Integer pitchRate; 
+            private java.util.List<PronRules> pronRules; 
             private Integer speechRate; 
             private String voice; 
             private Integer volume; 
@@ -727,13 +892,32 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             private Builder(SynthesizerConfig model) {
+                this.model = model.model;
+                this.nlsAccessProfile = model.nlsAccessProfile;
                 this.nlsAccessType = model.nlsAccessType;
                 this.nlsEngine = model.nlsEngine;
                 this.pitchRate = model.pitchRate;
+                this.pronRules = model.pronRules;
                 this.speechRate = model.speechRate;
                 this.voice = model.voice;
                 this.volume = model.volume;
             } 
+
+            /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
+             * NlsAccessProfile.
+             */
+            public Builder nlsAccessProfile(NlsAccessProfile nlsAccessProfile) {
+                this.nlsAccessProfile = nlsAccessProfile;
+                return this;
+            }
 
             /**
              * NlsAccessType.
@@ -756,6 +940,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder pitchRate(Integer pitchRate) {
                 this.pitchRate = pitchRate;
+                return this;
+            }
+
+            /**
+             * PronRules.
+             */
+            public Builder pronRules(java.util.List<PronRules> pronRules) {
+                this.pronRules = pronRules;
                 return this;
             }
 
@@ -1510,7 +1702,142 @@ public class GetApplicationResponseBody extends TeaModel {
      *
      * <p>GetApplicationResponseBody</p>
      */
+    public static class SynthesizerConfigNlsAccessProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessProfileId")
+        private String accessProfileId;
+
+        private SynthesizerConfigNlsAccessProfile(Builder builder) {
+            this.accessProfileId = builder.accessProfileId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SynthesizerConfigNlsAccessProfile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessProfileId
+         */
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+        public static final class Builder {
+            private String accessProfileId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SynthesizerConfigNlsAccessProfile model) {
+                this.accessProfileId = model.accessProfileId;
+            } 
+
+            /**
+             * AccessProfileId.
+             */
+            public Builder accessProfileId(String accessProfileId) {
+                this.accessProfileId = accessProfileId;
+                return this;
+            }
+
+            public SynthesizerConfigNlsAccessProfile build() {
+                return new SynthesizerConfigNlsAccessProfile(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class SynthesizerConfigPronRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Pattern")
+        private String pattern;
+
+        @com.aliyun.core.annotation.NameInMap("Replacement")
+        private String replacement;
+
+        private SynthesizerConfigPronRules(Builder builder) {
+            this.pattern = builder.pattern;
+            this.replacement = builder.replacement;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SynthesizerConfigPronRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pattern
+         */
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        /**
+         * @return replacement
+         */
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+        public static final class Builder {
+            private String pattern; 
+            private String replacement; 
+
+            private Builder() {
+            } 
+
+            private Builder(SynthesizerConfigPronRules model) {
+                this.pattern = model.pattern;
+                this.replacement = model.replacement;
+            } 
+
+            /**
+             * Pattern.
+             */
+            public Builder pattern(String pattern) {
+                this.pattern = pattern;
+                return this;
+            }
+
+            /**
+             * Replacement.
+             */
+            public Builder replacement(String replacement) {
+                this.replacement = replacement;
+                return this;
+            }
+
+            public SynthesizerConfigPronRules build() {
+                return new SynthesizerConfigPronRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class PublishedVersionSynthesizerConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
+
+        @com.aliyun.core.annotation.NameInMap("NlsAccessProfile")
+        private SynthesizerConfigNlsAccessProfile nlsAccessProfile;
+
         @com.aliyun.core.annotation.NameInMap("NlsAccessType")
         private String nlsAccessType;
 
@@ -1519,6 +1846,9 @@ public class GetApplicationResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PitchRate")
         private Integer pitchRate;
+
+        @com.aliyun.core.annotation.NameInMap("PronRules")
+        private java.util.List<SynthesizerConfigPronRules> pronRules;
 
         @com.aliyun.core.annotation.NameInMap("SpeechRate")
         private Integer speechRate;
@@ -1530,9 +1860,12 @@ public class GetApplicationResponseBody extends TeaModel {
         private Integer volume;
 
         private PublishedVersionSynthesizerConfig(Builder builder) {
+            this.model = builder.model;
+            this.nlsAccessProfile = builder.nlsAccessProfile;
             this.nlsAccessType = builder.nlsAccessType;
             this.nlsEngine = builder.nlsEngine;
             this.pitchRate = builder.pitchRate;
+            this.pronRules = builder.pronRules;
             this.speechRate = builder.speechRate;
             this.voice = builder.voice;
             this.volume = builder.volume;
@@ -1544,6 +1877,20 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static PublishedVersionSynthesizerConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
+        }
+
+        /**
+         * @return nlsAccessProfile
+         */
+        public SynthesizerConfigNlsAccessProfile getNlsAccessProfile() {
+            return this.nlsAccessProfile;
         }
 
         /**
@@ -1568,6 +1915,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return pronRules
+         */
+        public java.util.List<SynthesizerConfigPronRules> getPronRules() {
+            return this.pronRules;
+        }
+
+        /**
          * @return speechRate
          */
         public Integer getSpeechRate() {
@@ -1589,9 +1943,12 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String model; 
+            private SynthesizerConfigNlsAccessProfile nlsAccessProfile; 
             private String nlsAccessType; 
             private String nlsEngine; 
             private Integer pitchRate; 
+            private java.util.List<SynthesizerConfigPronRules> pronRules; 
             private Integer speechRate; 
             private String voice; 
             private Integer volume; 
@@ -1600,13 +1957,32 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             private Builder(PublishedVersionSynthesizerConfig model) {
+                this.model = model.model;
+                this.nlsAccessProfile = model.nlsAccessProfile;
                 this.nlsAccessType = model.nlsAccessType;
                 this.nlsEngine = model.nlsEngine;
                 this.pitchRate = model.pitchRate;
+                this.pronRules = model.pronRules;
                 this.speechRate = model.speechRate;
                 this.voice = model.voice;
                 this.volume = model.volume;
             } 
+
+            /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
+             * NlsAccessProfile.
+             */
+            public Builder nlsAccessProfile(SynthesizerConfigNlsAccessProfile nlsAccessProfile) {
+                this.nlsAccessProfile = nlsAccessProfile;
+                return this;
+            }
 
             /**
              * NlsAccessType.
@@ -1629,6 +2005,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder pitchRate(Integer pitchRate) {
                 this.pitchRate = pitchRate;
+                return this;
+            }
+
+            /**
+             * PronRules.
+             */
+            public Builder pronRules(java.util.List<SynthesizerConfigPronRules> pronRules) {
+                this.pronRules = pronRules;
                 return this;
             }
 
