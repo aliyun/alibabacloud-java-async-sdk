@@ -260,6 +260,9 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("ManagedService")
+        private String managedService;
+
         @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
@@ -297,6 +300,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             this.autoPublishRouteEnabled = builder.autoPublishRouteEnabled;
             this.cenId = builder.cenId;
             this.creationTime = builder.creationTime;
+            this.managedService = builder.managedService;
             this.orderType = builder.orderType;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
@@ -337,6 +341,13 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return managedService
+         */
+        public String getManagedService() {
+            return this.managedService;
         }
 
         /**
@@ -420,6 +431,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             private Boolean autoPublishRouteEnabled; 
             private String cenId; 
             private String creationTime; 
+            private String managedService; 
             private String orderType; 
             private String resourceType; 
             private String status; 
@@ -439,6 +451,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
                 this.autoPublishRouteEnabled = model.autoPublishRouteEnabled;
                 this.cenId = model.cenId;
                 this.creationTime = model.creationTime;
+                this.managedService = model.managedService;
                 this.orderType = model.orderType;
                 this.resourceType = model.resourceType;
                 this.status = model.status;
@@ -487,6 +500,14 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * ManagedService.
+             */
+            public Builder managedService(String managedService) {
+                this.managedService = managedService;
                 return this;
             }
 
