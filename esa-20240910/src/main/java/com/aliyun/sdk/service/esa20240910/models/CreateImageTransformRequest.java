@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateImageTransformRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoAvif")
+    private String autoAvif;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoWebp")
+    private String autoWebp;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Enable")
     private String enable;
 
@@ -48,6 +56,8 @@ public class CreateImageTransformRequest extends Request {
 
     private CreateImageTransformRequest(Builder builder) {
         super(builder);
+        this.autoAvif = builder.autoAvif;
+        this.autoWebp = builder.autoWebp;
         this.enable = builder.enable;
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
@@ -68,6 +78,20 @@ public class CreateImageTransformRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoAvif
+     */
+    public String getAutoAvif() {
+        return this.autoAvif;
+    }
+
+    /**
+     * @return autoWebp
+     */
+    public String getAutoWebp() {
+        return this.autoWebp;
     }
 
     /**
@@ -120,6 +144,8 @@ public class CreateImageTransformRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateImageTransformRequest, Builder> {
+        private String autoAvif; 
+        private String autoWebp; 
         private String enable; 
         private String rule; 
         private String ruleEnable; 
@@ -134,6 +160,8 @@ public class CreateImageTransformRequest extends Request {
 
         private Builder(CreateImageTransformRequest request) {
             super(request);
+            this.autoAvif = request.autoAvif;
+            this.autoWebp = request.autoWebp;
             this.enable = request.enable;
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
@@ -142,6 +170,24 @@ public class CreateImageTransformRequest extends Request {
             this.siteId = request.siteId;
             this.siteVersion = request.siteVersion;
         } 
+
+        /**
+         * AutoAvif.
+         */
+        public Builder autoAvif(String autoAvif) {
+            this.putQueryParameter("AutoAvif", autoAvif);
+            this.autoAvif = autoAvif;
+            return this;
+        }
+
+        /**
+         * AutoWebp.
+         */
+        public Builder autoWebp(String autoWebp) {
+            this.putQueryParameter("AutoWebp", autoWebp);
+            this.autoWebp = autoWebp;
+            return this;
+        }
 
         /**
          * <p>Indicates whether image transformation is enabled. Possible values:</p>

@@ -194,6 +194,12 @@ public class ListImageTransformsResponseBody extends TeaModel {
      * <p>ListImageTransformsResponseBody</p>
      */
     public static class Configs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoAvif")
+        private String autoAvif;
+
+        @com.aliyun.core.annotation.NameInMap("AutoWebp")
+        private String autoWebp;
+
         @com.aliyun.core.annotation.NameInMap("ConfigId")
         private Long configId;
 
@@ -219,6 +225,8 @@ public class ListImageTransformsResponseBody extends TeaModel {
         private Integer siteVersion;
 
         private Configs(Builder builder) {
+            this.autoAvif = builder.autoAvif;
+            this.autoWebp = builder.autoWebp;
             this.configId = builder.configId;
             this.configType = builder.configType;
             this.enable = builder.enable;
@@ -235,6 +243,20 @@ public class ListImageTransformsResponseBody extends TeaModel {
 
         public static Configs create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoAvif
+         */
+        public String getAutoAvif() {
+            return this.autoAvif;
+        }
+
+        /**
+         * @return autoWebp
+         */
+        public String getAutoWebp() {
+            return this.autoWebp;
         }
 
         /**
@@ -294,6 +316,8 @@ public class ListImageTransformsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String autoAvif; 
+            private String autoWebp; 
             private Long configId; 
             private String configType; 
             private String enable; 
@@ -307,6 +331,8 @@ public class ListImageTransformsResponseBody extends TeaModel {
             } 
 
             private Builder(Configs model) {
+                this.autoAvif = model.autoAvif;
+                this.autoWebp = model.autoWebp;
                 this.configId = model.configId;
                 this.configType = model.configType;
                 this.enable = model.enable;
@@ -316,6 +342,22 @@ public class ListImageTransformsResponseBody extends TeaModel {
                 this.sequence = model.sequence;
                 this.siteVersion = model.siteVersion;
             } 
+
+            /**
+             * AutoAvif.
+             */
+            public Builder autoAvif(String autoAvif) {
+                this.autoAvif = autoAvif;
+                return this;
+            }
+
+            /**
+             * AutoWebp.
+             */
+            public Builder autoWebp(String autoWebp) {
+                this.autoWebp = autoWebp;
+                return this;
+            }
 
             /**
              * <p>Configuration ID.</p>

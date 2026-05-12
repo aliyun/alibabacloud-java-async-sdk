@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateImageTransformRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoAvif")
+    private String autoAvif;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoWebp")
+    private String autoWebp;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfigId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long configId;
@@ -49,6 +57,8 @@ public class UpdateImageTransformRequest extends Request {
 
     private UpdateImageTransformRequest(Builder builder) {
         super(builder);
+        this.autoAvif = builder.autoAvif;
+        this.autoWebp = builder.autoWebp;
         this.configId = builder.configId;
         this.enable = builder.enable;
         this.rule = builder.rule;
@@ -69,6 +79,20 @@ public class UpdateImageTransformRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoAvif
+     */
+    public String getAutoAvif() {
+        return this.autoAvif;
+    }
+
+    /**
+     * @return autoWebp
+     */
+    public String getAutoWebp() {
+        return this.autoWebp;
     }
 
     /**
@@ -121,6 +145,8 @@ public class UpdateImageTransformRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateImageTransformRequest, Builder> {
+        private String autoAvif; 
+        private String autoWebp; 
         private Long configId; 
         private String enable; 
         private String rule; 
@@ -135,6 +161,8 @@ public class UpdateImageTransformRequest extends Request {
 
         private Builder(UpdateImageTransformRequest request) {
             super(request);
+            this.autoAvif = request.autoAvif;
+            this.autoWebp = request.autoWebp;
             this.configId = request.configId;
             this.enable = request.enable;
             this.rule = request.rule;
@@ -143,6 +171,24 @@ public class UpdateImageTransformRequest extends Request {
             this.sequence = request.sequence;
             this.siteId = request.siteId;
         } 
+
+        /**
+         * AutoAvif.
+         */
+        public Builder autoAvif(String autoAvif) {
+            this.putQueryParameter("AutoAvif", autoAvif);
+            this.autoAvif = autoAvif;
+            return this;
+        }
+
+        /**
+         * AutoWebp.
+         */
+        public Builder autoWebp(String autoWebp) {
+            this.putQueryParameter("AutoWebp", autoWebp);
+            this.autoWebp = autoWebp;
+            return this;
+        }
 
         /**
          * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> interface.</p>
