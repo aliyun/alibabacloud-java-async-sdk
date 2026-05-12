@@ -38,6 +38,10 @@ public class DescribeDesktopTypesRequest extends Request {
     private String desktopIdForModify;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopScenario")
+    private String desktopScenario;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopTypeId")
     private String desktopTypeId;
 
@@ -109,6 +113,7 @@ public class DescribeDesktopTypesRequest extends Request {
         this.cpuCount = builder.cpuCount;
         this.desktopGroupIdForModify = builder.desktopGroupIdForModify;
         this.desktopIdForModify = builder.desktopIdForModify;
+        this.desktopScenario = builder.desktopScenario;
         this.desktopTypeId = builder.desktopTypeId;
         this.desktopTypeIdList = builder.desktopTypeIdList;
         this.gpuCount = builder.gpuCount;
@@ -173,6 +178,13 @@ public class DescribeDesktopTypesRequest extends Request {
      */
     public String getDesktopIdForModify() {
         return this.desktopIdForModify;
+    }
+
+    /**
+     * @return desktopScenario
+     */
+    public String getDesktopScenario() {
+        return this.desktopScenario;
     }
 
     /**
@@ -293,6 +305,7 @@ public class DescribeDesktopTypesRequest extends Request {
         private Integer cpuCount; 
         private String desktopGroupIdForModify; 
         private String desktopIdForModify; 
+        private String desktopScenario; 
         private String desktopTypeId; 
         private java.util.List<String> desktopTypeIdList; 
         private Float gpuCount; 
@@ -321,6 +334,7 @@ public class DescribeDesktopTypesRequest extends Request {
             this.cpuCount = request.cpuCount;
             this.desktopGroupIdForModify = request.desktopGroupIdForModify;
             this.desktopIdForModify = request.desktopIdForModify;
+            this.desktopScenario = request.desktopScenario;
             this.desktopTypeId = request.desktopTypeId;
             this.desktopTypeIdList = request.desktopTypeIdList;
             this.gpuCount = request.gpuCount;
@@ -393,6 +407,15 @@ public class DescribeDesktopTypesRequest extends Request {
         public Builder desktopIdForModify(String desktopIdForModify) {
             this.putQueryParameter("DesktopIdForModify", desktopIdForModify);
             this.desktopIdForModify = desktopIdForModify;
+            return this;
+        }
+
+        /**
+         * DesktopScenario.
+         */
+        public Builder desktopScenario(String desktopScenario) {
+            this.putQueryParameter("DesktopScenario", desktopScenario);
+            this.desktopScenario = desktopScenario;
             return this;
         }
 
