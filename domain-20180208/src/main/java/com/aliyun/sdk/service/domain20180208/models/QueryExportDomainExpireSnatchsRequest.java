@@ -23,6 +23,10 @@ public class QueryExportDomainExpireSnatchsRequest extends Request {
     private Long currentId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSources")
+    private java.util.List<String> dataSources;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -39,6 +43,7 @@ public class QueryExportDomainExpireSnatchsRequest extends Request {
     private QueryExportDomainExpireSnatchsRequest(Builder builder) {
         super(builder);
         this.currentId = builder.currentId;
+        this.dataSources = builder.dataSources;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
@@ -65,6 +70,13 @@ public class QueryExportDomainExpireSnatchsRequest extends Request {
     }
 
     /**
+     * @return dataSources
+     */
+    public java.util.List<String> getDataSources() {
+        return this.dataSources;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -87,6 +99,7 @@ public class QueryExportDomainExpireSnatchsRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryExportDomainExpireSnatchsRequest, Builder> {
         private Long currentId; 
+        private java.util.List<String> dataSources; 
         private Integer maxResults; 
         private String nextToken; 
         private Integer pageSize; 
@@ -98,6 +111,7 @@ public class QueryExportDomainExpireSnatchsRequest extends Request {
         private Builder(QueryExportDomainExpireSnatchsRequest request) {
             super(request);
             this.currentId = request.currentId;
+            this.dataSources = request.dataSources;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
@@ -112,6 +126,16 @@ public class QueryExportDomainExpireSnatchsRequest extends Request {
         public Builder currentId(Long currentId) {
             this.putQueryParameter("CurrentId", currentId);
             this.currentId = currentId;
+            return this;
+        }
+
+        /**
+         * DataSources.
+         */
+        public Builder dataSources(java.util.List<String> dataSources) {
+            String dataSourcesShrink = shrink(dataSources, "DataSources", "json");
+            this.putQueryParameter("DataSources", dataSourcesShrink);
+            this.dataSources = dataSources;
             return this;
         }
 
