@@ -842,9 +842,13 @@ public class GetPipelineResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
+        @com.aliyun.core.annotation.NameInMap("query")
+        private String query;
+
         private Logstore(Builder builder) {
             this.logstore = builder.logstore;
             this.project = builder.project;
+            this.query = builder.query;
         }
 
         public static Builder builder() {
@@ -869,9 +873,17 @@ public class GetPipelineResponseBody extends TeaModel {
             return this.project;
         }
 
+        /**
+         * @return query
+         */
+        public String getQuery() {
+            return this.query;
+        }
+
         public static final class Builder {
             private String logstore; 
             private String project; 
+            private String query; 
 
             private Builder() {
             } 
@@ -879,6 +891,7 @@ public class GetPipelineResponseBody extends TeaModel {
             private Builder(Logstore model) {
                 this.logstore = model.logstore;
                 this.project = model.project;
+                this.query = model.query;
             } 
 
             /**
@@ -894,6 +907,14 @@ public class GetPipelineResponseBody extends TeaModel {
              */
             public Builder project(String project) {
                 this.project = project;
+                return this;
+            }
+
+            /**
+             * query.
+             */
+            public Builder query(String query) {
+                this.query = query;
                 return this;
             }
 

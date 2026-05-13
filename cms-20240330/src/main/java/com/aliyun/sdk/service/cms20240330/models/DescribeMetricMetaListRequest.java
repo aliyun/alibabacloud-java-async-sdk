@@ -22,6 +22,10 @@ public class DescribeMetricMetaListRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("keywords")
+    private String keywords;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("labels")
     private java.util.List<Labels> labels;
 
@@ -48,6 +52,7 @@ public class DescribeMetricMetaListRequest extends Request {
     private DescribeMetricMetaListRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.keywords = builder.keywords;
         this.labels = builder.labels;
         this.metaFormat = builder.metaFormat;
         this.metricName = builder.metricName;
@@ -74,6 +79,13 @@ public class DescribeMetricMetaListRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return keywords
+     */
+    public String getKeywords() {
+        return this.keywords;
     }
 
     /**
@@ -120,6 +132,7 @@ public class DescribeMetricMetaListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeMetricMetaListRequest, Builder> {
         private String regionId; 
+        private String keywords; 
         private java.util.List<Labels> labels; 
         private String metaFormat; 
         private String metricName; 
@@ -134,6 +147,7 @@ public class DescribeMetricMetaListRequest extends Request {
         private Builder(DescribeMetricMetaListRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.keywords = request.keywords;
             this.labels = request.labels;
             this.metaFormat = request.metaFormat;
             this.metricName = request.metricName;
@@ -148,6 +162,15 @@ public class DescribeMetricMetaListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("regionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * keywords.
+         */
+        public Builder keywords(String keywords) {
+            this.putQueryParameter("keywords", keywords);
+            this.keywords = keywords;
             return this;
         }
 

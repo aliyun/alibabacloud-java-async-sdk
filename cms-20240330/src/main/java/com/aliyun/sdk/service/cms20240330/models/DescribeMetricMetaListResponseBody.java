@@ -227,6 +227,9 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("labels")
         private java.util.Map<String, String> labels;
 
+        @com.aliyun.core.annotation.NameInMap("metaFormat")
+        private String metaFormat;
+
         @com.aliyun.core.annotation.NameInMap("metricName")
         private String metricName;
 
@@ -250,6 +253,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             this.dimensionDescription = builder.dimensionDescription;
             this.dimensions = builder.dimensions;
             this.labels = builder.labels;
+            this.metaFormat = builder.metaFormat;
             this.metricName = builder.metricName;
             this.namespace = builder.namespace;
             this.periods = builder.periods;
@@ -292,6 +296,13 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
          */
         public java.util.Map<String, String> getLabels() {
             return this.labels;
+        }
+
+        /**
+         * @return metaFormat
+         */
+        public String getMetaFormat() {
+            return this.metaFormat;
         }
 
         /**
@@ -341,6 +352,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             private java.util.List<DimensionDescription> dimensionDescription; 
             private java.util.List<String> dimensions; 
             private java.util.Map<String, String> labels; 
+            private String metaFormat; 
             private String metricName; 
             private String namespace; 
             private String periods; 
@@ -356,6 +368,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
                 this.dimensionDescription = model.dimensionDescription;
                 this.dimensions = model.dimensions;
                 this.labels = model.labels;
+                this.metaFormat = model.metaFormat;
                 this.metricName = model.metricName;
                 this.namespace = model.namespace;
                 this.periods = model.periods;
@@ -393,6 +406,14 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
+                return this;
+            }
+
+            /**
+             * metaFormat.
+             */
+            public Builder metaFormat(String metaFormat) {
+                this.metaFormat = metaFormat;
                 return this;
             }
 
