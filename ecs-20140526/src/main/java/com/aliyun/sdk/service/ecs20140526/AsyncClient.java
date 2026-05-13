@@ -1038,6 +1038,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVpcResponse> createVpc(CreateVpcRequest request);
 
     /**
+     * @param request the request parameters of CreateVsc  CreateVscRequest
+     * @return CreateVscResponse
+     */
+    CompletableFuture<CreateVscResponse> createVsc(CreateVscRequest request);
+
+    /**
      * @deprecated OpenAPI DeactivateRouterInterface is deprecated, please use Vpc::2016-04-28::DeactivateRouterInterface instead.  * @param request  the request parameters of DeactivateRouterInterface  DeactivateRouterInterfaceRequest
      * @return DeactivateRouterInterfaceResponse
      */
@@ -1401,6 +1407,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<DeleteVpcResponse> deleteVpc(DeleteVpcRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVsc  DeleteVscRequest
+     * @return DeleteVscResponse
+     */
+    CompletableFuture<DeleteVscResponse> deleteVsc(DeleteVscRequest request);
 
     /**
      * @param request the request parameters of DeregisterManagedInstance  DeregisterManagedInstanceRequest
@@ -2580,6 +2592,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<DescribeVpcsResponse> describeVpcs(DescribeVpcsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeVscs  DescribeVscsRequest
+     * @return DescribeVscsResponse
+     */
+    CompletableFuture<DescribeVscsResponse> describeVscs(DescribeVscsRequest request);
 
     /**
      * <b>description</b> :
