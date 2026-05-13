@@ -54,6 +54,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAlertStrategyResponse> createAlertStrategy(CreateAlertStrategyRequest request);
 
     /**
+     * @param request the request parameters of CreateClusterVpcEndpointConnection  CreateClusterVpcEndpointConnectionRequest
+     * @return CreateClusterVpcEndpointConnectionResponse
+     */
+    CompletableFuture<CreateClusterVpcEndpointConnectionResponse> createClusterVpcEndpointConnection(CreateClusterVpcEndpointConnectionRequest request);
+
+    /**
+     * @param request the request parameters of CreateInstanceInspection  CreateInstanceInspectionRequest
+     * @return CreateInstanceInspectionResponse
+     */
+    CompletableFuture<CreateInstanceInspectionResponse> createInstanceInspection(CreateInstanceInspectionRequest request);
+
+    /**
      * @param request the request parameters of CreateVmcoreDiagnosisTask  CreateVmcoreDiagnosisTaskRequest
      * @return CreateVmcoreDiagnosisTaskResponse
      */
@@ -186,6 +198,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetHotspotTrackingResponse
      */
     CompletableFuture<GetHotspotTrackingResponse> getHotspotTracking(GetHotspotTrackingRequest request);
+
+    /**
+     * @param request the request parameters of GetInspectionReport  GetInspectionReportRequest
+     * @return GetInspectionReportResponse
+     */
+    CompletableFuture<GetInspectionReportResponse> getInspectionReport(GetInspectionReportRequest request);
 
     /**
      * @param request the request parameters of GetInstantScore  GetInstantScoreRequest

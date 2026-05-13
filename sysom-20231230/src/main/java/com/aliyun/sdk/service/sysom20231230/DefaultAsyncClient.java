@@ -156,6 +156,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateClusterVpcEndpointConnection  CreateClusterVpcEndpointConnectionRequest
+     * @return CreateClusterVpcEndpointConnectionResponse
+     */
+    @Override
+    public CompletableFuture<CreateClusterVpcEndpointConnectionResponse> createClusterVpcEndpointConnection(CreateClusterVpcEndpointConnectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateClusterVpcEndpointConnection").setMethod(HttpMethod.POST).setPathRegex("/api/v1/k8sProxy/access/createClusterVpcEndpointConnection").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateClusterVpcEndpointConnectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateClusterVpcEndpointConnectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateInstanceInspection  CreateInstanceInspectionRequest
+     * @return CreateInstanceInspectionResponse
+     */
+    @Override
+    public CompletableFuture<CreateInstanceInspectionResponse> createInstanceInspection(CreateInstanceInspectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateInstanceInspection").setMethod(HttpMethod.POST).setPathRegex("/api/v1/inspection/createInstanceInspection").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateInstanceInspectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateInstanceInspectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateVmcoreDiagnosisTask  CreateVmcoreDiagnosisTaskRequest
      * @return CreateVmcoreDiagnosisTaskResponse
      */
@@ -556,6 +592,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetHotspotTrackingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetInspectionReport  GetInspectionReportRequest
+     * @return GetInspectionReportResponse
+     */
+    @Override
+    public CompletableFuture<GetInspectionReportResponse> getInspectionReport(GetInspectionReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetInspectionReport").setMethod(HttpMethod.GET).setPathRegex("/api/v1/inspection/getInspectionReport").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInspectionReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInspectionReportResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
