@@ -26,6 +26,9 @@ public class ObtainCredentialResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("credentialCreationType")
     private String credentialCreationType;
 
+    @com.aliyun.core.annotation.NameInMap("credentialExternalId")
+    private String credentialExternalId;
+
     @com.aliyun.core.annotation.NameInMap("credentialId")
     private String credentialId;
 
@@ -69,6 +72,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         this.createTime = builder.createTime;
         this.credentialContent = builder.credentialContent;
         this.credentialCreationType = builder.credentialCreationType;
+        this.credentialExternalId = builder.credentialExternalId;
         this.credentialId = builder.credentialId;
         this.credentialIdentifier = builder.credentialIdentifier;
         this.credentialName = builder.credentialName;
@@ -115,6 +119,13 @@ public class ObtainCredentialResponseBody extends TeaModel {
      */
     public String getCredentialCreationType() {
         return this.credentialCreationType;
+    }
+
+    /**
+     * @return credentialExternalId
+     */
+    public String getCredentialExternalId() {
+        return this.credentialExternalId;
     }
 
     /**
@@ -212,6 +223,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         private Long createTime; 
         private CredentialContent credentialContent; 
         private String credentialCreationType; 
+        private String credentialExternalId; 
         private String credentialId; 
         private String credentialIdentifier; 
         private String credentialName; 
@@ -233,6 +245,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
             this.createTime = model.createTime;
             this.credentialContent = model.credentialContent;
             this.credentialCreationType = model.credentialCreationType;
+            this.credentialExternalId = model.credentialExternalId;
             this.credentialId = model.credentialId;
             this.credentialIdentifier = model.credentialIdentifier;
             this.credentialName = model.credentialName;
@@ -275,6 +288,14 @@ public class ObtainCredentialResponseBody extends TeaModel {
          */
         public Builder credentialCreationType(String credentialCreationType) {
             this.credentialCreationType = credentialCreationType;
+            return this;
+        }
+
+        /**
+         * credentialExternalId.
+         */
+        public Builder credentialExternalId(String credentialExternalId) {
+            this.credentialExternalId = credentialExternalId;
             return this;
         }
 

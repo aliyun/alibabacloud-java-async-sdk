@@ -37,6 +37,10 @@ public class CreateUserExclusiveCredentialRequest extends Request {
     private CredentialContent credentialContent;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("credentialExternalId")
+    private String credentialExternalId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("credentialIdentifier")
     @com.aliyun.core.annotation.Validation(required = true)
     private String credentialIdentifier;
@@ -65,6 +69,7 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         this.instanceId = builder.instanceId;
         this.authorization = builder.authorization;
         this.credentialContent = builder.credentialContent;
+        this.credentialExternalId = builder.credentialExternalId;
         this.credentialIdentifier = builder.credentialIdentifier;
         this.credentialName = builder.credentialName;
         this.credentialScenarioLabel = builder.credentialScenarioLabel;
@@ -114,6 +119,13 @@ public class CreateUserExclusiveCredentialRequest extends Request {
     }
 
     /**
+     * @return credentialExternalId
+     */
+    public String getCredentialExternalId() {
+        return this.credentialExternalId;
+    }
+
+    /**
      * @return credentialIdentifier
      */
     public String getCredentialIdentifier() {
@@ -153,6 +165,7 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         private String instanceId; 
         private String authorization; 
         private CredentialContent credentialContent; 
+        private String credentialExternalId; 
         private String credentialIdentifier; 
         private String credentialName; 
         private String credentialScenarioLabel; 
@@ -169,6 +182,7 @@ public class CreateUserExclusiveCredentialRequest extends Request {
             this.instanceId = request.instanceId;
             this.authorization = request.authorization;
             this.credentialContent = request.credentialContent;
+            this.credentialExternalId = request.credentialExternalId;
             this.credentialIdentifier = request.credentialIdentifier;
             this.credentialName = request.credentialName;
             this.credentialScenarioLabel = request.credentialScenarioLabel;
@@ -215,6 +229,15 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         public Builder credentialContent(CredentialContent credentialContent) {
             this.putBodyParameter("credentialContent", credentialContent);
             this.credentialContent = credentialContent;
+            return this;
+        }
+
+        /**
+         * credentialExternalId.
+         */
+        public Builder credentialExternalId(String credentialExternalId) {
+            this.putBodyParameter("credentialExternalId", credentialExternalId);
+            this.credentialExternalId = credentialExternalId;
             return this;
         }
 
