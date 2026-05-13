@@ -26,6 +26,10 @@ public class ListAppInstanceDomainsRequest extends Request {
     private String bizId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainKeyword")
+    private String domainKeyword;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -53,6 +57,7 @@ public class ListAppInstanceDomainsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
+        this.domainKeyword = builder.domainKeyword;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orderColumn = builder.orderColumn;
@@ -86,6 +91,13 @@ public class ListAppInstanceDomainsRequest extends Request {
      */
     public String getBizId() {
         return this.bizId;
+    }
+
+    /**
+     * @return domainKeyword
+     */
+    public String getDomainKeyword() {
+        return this.domainKeyword;
     }
 
     /**
@@ -133,6 +145,7 @@ public class ListAppInstanceDomainsRequest extends Request {
     public static final class Builder extends Request.Builder<ListAppInstanceDomainsRequest, Builder> {
         private String regionId; 
         private String bizId; 
+        private String domainKeyword; 
         private Integer maxResults; 
         private String nextToken; 
         private String orderColumn; 
@@ -148,6 +161,7 @@ public class ListAppInstanceDomainsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.bizId = request.bizId;
+            this.domainKeyword = request.domainKeyword;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orderColumn = request.orderColumn;
@@ -174,6 +188,15 @@ public class ListAppInstanceDomainsRequest extends Request {
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
             this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * DomainKeyword.
+         */
+        public Builder domainKeyword(String domainKeyword) {
+            this.putQueryParameter("DomainKeyword", domainKeyword);
+            this.domainKeyword = domainKeyword;
             return this;
         }
 
