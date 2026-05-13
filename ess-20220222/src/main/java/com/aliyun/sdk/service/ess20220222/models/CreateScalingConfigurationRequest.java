@@ -3763,15 +3763,94 @@ public class CreateScalingConfigurationRequest extends Request {
      *
      * <p>CreateScalingConfigurationRequest</p>
      */
+    public static class PrivatePoolTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private PrivatePoolTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivatePoolTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public PrivatePoolTags build() {
+                return new PrivatePoolTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateScalingConfigurationRequest</p>
+     */
     public static class ResourcePoolOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivatePoolIds")
         private java.util.List<String> privatePoolIds;
+
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolTags")
+        private java.util.List<PrivatePoolTags> privatePoolTags;
 
         @com.aliyun.core.annotation.NameInMap("Strategy")
         private String strategy;
 
         private ResourcePoolOptions(Builder builder) {
             this.privatePoolIds = builder.privatePoolIds;
+            this.privatePoolTags = builder.privatePoolTags;
             this.strategy = builder.strategy;
         }
 
@@ -3791,6 +3870,13 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
+         * @return privatePoolTags
+         */
+        public java.util.List<PrivatePoolTags> getPrivatePoolTags() {
+            return this.privatePoolTags;
+        }
+
+        /**
          * @return strategy
          */
         public String getStrategy() {
@@ -3799,6 +3885,7 @@ public class CreateScalingConfigurationRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> privatePoolIds; 
+            private java.util.List<PrivatePoolTags> privatePoolTags; 
             private String strategy; 
 
             private Builder() {
@@ -3806,6 +3893,7 @@ public class CreateScalingConfigurationRequest extends Request {
 
             private Builder(ResourcePoolOptions model) {
                 this.privatePoolIds = model.privatePoolIds;
+                this.privatePoolTags = model.privatePoolTags;
                 this.strategy = model.strategy;
             } 
 
@@ -3814,6 +3902,14 @@ public class CreateScalingConfigurationRequest extends Request {
              */
             public Builder privatePoolIds(java.util.List<String> privatePoolIds) {
                 this.privatePoolIds = privatePoolIds;
+                return this;
+            }
+
+            /**
+             * PrivatePoolTags.
+             */
+            public Builder privatePoolTags(java.util.List<PrivatePoolTags> privatePoolTags) {
+                this.privatePoolTags = privatePoolTags;
                 return this;
             }
 
