@@ -699,6 +699,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetWorkspaceCodePublishSetting  GetWorkspaceCodePublishSettingRequest
+     * @return GetWorkspaceCodePublishSettingResponse
+     */
+    @Override
+    public CompletableFuture<GetWorkspaceCodePublishSettingResponse> getWorkspaceCodePublishSetting(GetWorkspaceCodePublishSettingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetWorkspaceCodePublishSetting").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorkspaceCodePublishSettingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorkspaceCodePublishSettingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAirflows  ListAirflowsRequest
      * @return ListAirflowsResponse
      */
@@ -1095,6 +1113,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SetWorkspaceCodePublishSetting  SetWorkspaceCodePublishSettingRequest
+     * @return SetWorkspaceCodePublishSettingResponse
+     */
+    @Override
+    public CompletableFuture<SetWorkspaceCodePublishSettingResponse> setWorkspaceCodePublishSetting(SetWorkspaceCodePublishSettingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetWorkspaceCodePublishSetting").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetWorkspaceCodePublishSettingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetWorkspaceCodePublishSettingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateAirflow  UpdateAirflowRequest
      * @return UpdateAirflowResponse
      */
@@ -1215,6 +1251,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateDataLakeTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of WorkspaceActionLog  WorkspaceActionLogRequest
+     * @return WorkspaceActionLogResponse
+     */
+    @Override
+    public CompletableFuture<WorkspaceActionLogResponse> workspaceActionLog(WorkspaceActionLogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("WorkspaceActionLog").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(WorkspaceActionLogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<WorkspaceActionLogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of WorkspaceActionStatus  WorkspaceActionStatusRequest
+     * @return WorkspaceActionStatusResponse
+     */
+    @Override
+    public CompletableFuture<WorkspaceActionStatusResponse> workspaceActionStatus(WorkspaceActionStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("WorkspaceActionStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(WorkspaceActionStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<WorkspaceActionStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of WorkspaceCodePublish  WorkspaceCodePublishRequest
+     * @return WorkspaceCodePublishResponse
+     */
+    @Override
+    public CompletableFuture<WorkspaceCodePublishResponse> workspaceCodePublish(WorkspaceCodePublishRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("WorkspaceCodePublish").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(WorkspaceCodePublishResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<WorkspaceCodePublishResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

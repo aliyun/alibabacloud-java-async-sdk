@@ -238,6 +238,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNotebookTaskStatusResponse> getNotebookTaskStatus(GetNotebookTaskStatusRequest request);
 
     /**
+     * @param request the request parameters of GetWorkspaceCodePublishSetting  GetWorkspaceCodePublishSettingRequest
+     * @return GetWorkspaceCodePublishSettingResponse
+     */
+    CompletableFuture<GetWorkspaceCodePublishSettingResponse> getWorkspaceCodePublishSetting(GetWorkspaceCodePublishSettingRequest request);
+
+    /**
      * @param request the request parameters of ListAirflows  ListAirflowsRequest
      * @return ListAirflowsResponse
      */
@@ -370,6 +376,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SendChatMessageResponse> sendChatMessage(SendChatMessageRequest request);
 
     /**
+     * @param request the request parameters of SetWorkspaceCodePublishSetting  SetWorkspaceCodePublishSettingRequest
+     * @return SetWorkspaceCodePublishSettingResponse
+     */
+    CompletableFuture<SetWorkspaceCodePublishSettingResponse> setWorkspaceCodePublishSetting(SetWorkspaceCodePublishSettingRequest request);
+
+    /**
      * @param request the request parameters of UpdateAirflow  UpdateAirflowRequest
      * @return UpdateAirflowResponse
      */
@@ -410,5 +422,23 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDataLakeTableResponse
      */
     CompletableFuture<UpdateDataLakeTableResponse> updateDataLakeTable(UpdateDataLakeTableRequest request);
+
+    /**
+     * @param request the request parameters of WorkspaceActionLog  WorkspaceActionLogRequest
+     * @return WorkspaceActionLogResponse
+     */
+    CompletableFuture<WorkspaceActionLogResponse> workspaceActionLog(WorkspaceActionLogRequest request);
+
+    /**
+     * @param request the request parameters of WorkspaceActionStatus  WorkspaceActionStatusRequest
+     * @return WorkspaceActionStatusResponse
+     */
+    CompletableFuture<WorkspaceActionStatusResponse> workspaceActionStatus(WorkspaceActionStatusRequest request);
+
+    /**
+     * @param request the request parameters of WorkspaceCodePublish  WorkspaceCodePublishRequest
+     * @return WorkspaceCodePublishResponse
+     */
+    CompletableFuture<WorkspaceCodePublishResponse> workspaceCodePublish(WorkspaceCodePublishRequest request);
 
 }
