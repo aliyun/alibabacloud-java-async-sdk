@@ -26,6 +26,9 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("clientName")
     private String clientName;
 
+    @com.aliyun.core.annotation.NameInMap("dimValues")
+    private String dimValues;
+
     @com.aliyun.core.annotation.NameInMap("modelCode")
     private String modelCode;
 
@@ -44,16 +47,25 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("summaryTime")
     private Long summaryTime;
 
+    @com.aliyun.core.annotation.NameInMap("tiers")
+    private java.util.List<BillingBillTierDTO> tiers;
+
+    @com.aliyun.core.annotation.NameInMap("values")
+    private String values;
+
     private BillingCostBreakdownRowDTO(Builder builder) {
         this.billingType = builder.billingType;
         this.clientId = builder.clientId;
         this.clientName = builder.clientName;
+        this.dimValues = builder.dimValues;
         this.modelCode = builder.modelCode;
         this.modelId = builder.modelId;
         this.modelName = builder.modelName;
         this.modelType = builder.modelType;
         this.payableAmount = builder.payableAmount;
         this.summaryTime = builder.summaryTime;
+        this.tiers = builder.tiers;
+        this.values = builder.values;
     }
 
     public static Builder builder() {
@@ -87,6 +99,13 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
      */
     public String getClientName() {
         return this.clientName;
+    }
+
+    /**
+     * @return dimValues
+     */
+    public String getDimValues() {
+        return this.dimValues;
     }
 
     /**
@@ -131,16 +150,33 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         return this.summaryTime;
     }
 
+    /**
+     * @return tiers
+     */
+    public java.util.List<BillingBillTierDTO> getTiers() {
+        return this.tiers;
+    }
+
+    /**
+     * @return values
+     */
+    public String getValues() {
+        return this.values;
+    }
+
     public static final class Builder {
         private String billingType; 
         private Long clientId; 
         private String clientName; 
+        private String dimValues; 
         private String modelCode; 
         private Long modelId; 
         private String modelName; 
         private String modelType; 
         private Float payableAmount; 
         private Long summaryTime; 
+        private java.util.List<BillingBillTierDTO> tiers; 
+        private String values; 
 
         private Builder() {
         } 
@@ -149,12 +185,15 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
             this.billingType = model.billingType;
             this.clientId = model.clientId;
             this.clientName = model.clientName;
+            this.dimValues = model.dimValues;
             this.modelCode = model.modelCode;
             this.modelId = model.modelId;
             this.modelName = model.modelName;
             this.modelType = model.modelType;
             this.payableAmount = model.payableAmount;
             this.summaryTime = model.summaryTime;
+            this.tiers = model.tiers;
+            this.values = model.values;
         } 
 
         /**
@@ -178,6 +217,14 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
          */
         public Builder clientName(String clientName) {
             this.clientName = clientName;
+            return this;
+        }
+
+        /**
+         * dimValues.
+         */
+        public Builder dimValues(String dimValues) {
+            this.dimValues = dimValues;
             return this;
         }
 
@@ -226,6 +273,22 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
          */
         public Builder summaryTime(Long summaryTime) {
             this.summaryTime = summaryTime;
+            return this;
+        }
+
+        /**
+         * tiers.
+         */
+        public Builder tiers(java.util.List<BillingBillTierDTO> tiers) {
+            this.tiers = tiers;
+            return this;
+        }
+
+        /**
+         * values.
+         */
+        public Builder values(String values) {
+            this.values = values;
             return this;
         }
 

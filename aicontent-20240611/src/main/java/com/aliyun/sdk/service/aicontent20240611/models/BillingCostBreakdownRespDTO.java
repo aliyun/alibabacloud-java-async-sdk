@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BillingCostBreakdownRespDTO</p>
  */
 public class BillingCostBreakdownRespDTO extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("columns")
+    private java.util.List<MetricDefRespDTO> columns;
+
     @com.aliyun.core.annotation.NameInMap("granularity")
     private String granularity;
 
@@ -33,6 +36,7 @@ public class BillingCostBreakdownRespDTO extends TeaModel {
     private Long total;
 
     private BillingCostBreakdownRespDTO(Builder builder) {
+        this.columns = builder.columns;
         this.granularity = builder.granularity;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
@@ -50,6 +54,13 @@ public class BillingCostBreakdownRespDTO extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return columns
+     */
+    public java.util.List<MetricDefRespDTO> getColumns() {
+        return this.columns;
     }
 
     /**
@@ -88,6 +99,7 @@ public class BillingCostBreakdownRespDTO extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<MetricDefRespDTO> columns; 
         private String granularity; 
         private Integer page; 
         private Integer pageSize; 
@@ -98,12 +110,21 @@ public class BillingCostBreakdownRespDTO extends TeaModel {
         } 
 
         private Builder(BillingCostBreakdownRespDTO model) {
+            this.columns = model.columns;
             this.granularity = model.granularity;
             this.page = model.page;
             this.pageSize = model.pageSize;
             this.rows = model.rows;
             this.total = model.total;
         } 
+
+        /**
+         * columns.
+         */
+        public Builder columns(java.util.List<MetricDefRespDTO> columns) {
+            this.columns = columns;
+            return this;
+        }
 
         /**
          * granularity.

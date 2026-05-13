@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientId")
+    private Long clientId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("endTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
@@ -30,6 +34,14 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("modelId")
+    private Long modelId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("modelTypes")
+    private String modelTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("nextToken")
@@ -50,9 +62,12 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
 
     private ModelRouterQueryBillingCostBreakdownRequest(Builder builder) {
         super(builder);
+        this.clientId = builder.clientId;
         this.endTime = builder.endTime;
         this.granularity = builder.granularity;
         this.maxResults = builder.maxResults;
+        this.modelId = builder.modelId;
+        this.modelTypes = builder.modelTypes;
         this.nextToken = builder.nextToken;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
@@ -70,6 +85,13 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientId
+     */
+    public Long getClientId() {
+        return this.clientId;
     }
 
     /**
@@ -91,6 +113,20 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
      */
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    /**
+     * @return modelId
+     */
+    public Long getModelId() {
+        return this.modelId;
+    }
+
+    /**
+     * @return modelTypes
+     */
+    public String getModelTypes() {
+        return this.modelTypes;
     }
 
     /**
@@ -122,9 +158,12 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModelRouterQueryBillingCostBreakdownRequest, Builder> {
+        private Long clientId; 
         private Long endTime; 
         private String granularity; 
         private Integer maxResults; 
+        private Long modelId; 
+        private String modelTypes; 
         private String nextToken; 
         private Integer page; 
         private Integer pageSize; 
@@ -136,14 +175,26 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
 
         private Builder(ModelRouterQueryBillingCostBreakdownRequest request) {
             super(request);
+            this.clientId = request.clientId;
             this.endTime = request.endTime;
             this.granularity = request.granularity;
             this.maxResults = request.maxResults;
+            this.modelId = request.modelId;
+            this.modelTypes = request.modelTypes;
             this.nextToken = request.nextToken;
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * clientId.
+         */
+        public Builder clientId(Long clientId) {
+            this.putQueryParameter("clientId", clientId);
+            this.clientId = clientId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -175,6 +226,24 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * modelId.
+         */
+        public Builder modelId(Long modelId) {
+            this.putQueryParameter("modelId", modelId);
+            this.modelId = modelId;
+            return this;
+        }
+
+        /**
+         * modelTypes.
+         */
+        public Builder modelTypes(String modelTypes) {
+            this.putQueryParameter("modelTypes", modelTypes);
+            this.modelTypes = modelTypes;
             return this;
         }
 
