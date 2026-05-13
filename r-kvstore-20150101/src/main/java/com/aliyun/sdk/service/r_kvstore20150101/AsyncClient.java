@@ -199,6 +199,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTairKVCacheVNodeResponse> createTairKVCacheVNode(CreateTairKVCacheVNodeRequest request);
 
     /**
+     * @param request the request parameters of CreateTairSkvDdbTable  CreateTairSkvDdbTableRequest
+     * @return CreateTairSkvDdbTableResponse
+     */
+    CompletableFuture<CreateTairSkvDdbTableResponse> createTairSkvDdbTable(CreateTairSkvDdbTableRequest request);
+
+    /**
+     * @param request the request parameters of CreateTairSkvDdbWorkspace  CreateTairSkvDdbWorkspaceRequest
+     * @return CreateTairSkvDdbWorkspaceResponse
+     */
+    CompletableFuture<CreateTairSkvDdbWorkspaceResponse> createTairSkvDdbWorkspace(CreateTairSkvDdbWorkspaceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</p>
      * <ul>
@@ -771,6 +783,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeTairKVCacheInferInstancesResponse
      */
     CompletableFuture<DescribeTairKVCacheInferInstancesResponse> describeTairKVCacheInferInstances(DescribeTairKVCacheInferInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTairSkvDdbTable  DescribeTairSkvDdbTableRequest
+     * @return DescribeTairSkvDdbTableResponse
+     */
+    CompletableFuture<DescribeTairSkvDdbTableResponse> describeTairSkvDdbTable(DescribeTairSkvDdbTableRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTairSkvDdbTableSchema  DescribeTairSkvDdbTableSchemaRequest
+     * @return DescribeTairSkvDdbTableSchemaResponse
+     */
+    CompletableFuture<DescribeTairSkvDdbTableSchemaResponse> describeTairSkvDdbTableSchema(DescribeTairSkvDdbTableSchemaRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTaskDetail  DescribeTaskDetailRequest
+     * @return DescribeTaskDetailResponse
+     */
+    CompletableFuture<DescribeTaskDetailResponse> describeTaskDetail(DescribeTaskDetailRequest request);
 
     /**
      * @param request the request parameters of DescribeZones  DescribeZonesRequest
