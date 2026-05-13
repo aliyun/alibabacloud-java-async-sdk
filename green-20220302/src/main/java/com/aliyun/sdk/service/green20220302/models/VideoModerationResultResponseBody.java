@@ -1834,6 +1834,60 @@ public class VideoModerationResultResponseBody extends TeaModel {
      *
      * <p>VideoModerationResultResponseBody</p>
      */
+    public static class VlContent extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OutputText")
+        private String outputText;
+
+        private VlContent(Builder builder) {
+            this.outputText = builder.outputText;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VlContent create() {
+            return builder().build();
+        }
+
+        /**
+         * @return outputText
+         */
+        public String getOutputText() {
+            return this.outputText;
+        }
+
+        public static final class Builder {
+            private String outputText; 
+
+            private Builder() {
+            } 
+
+            private Builder(VlContent model) {
+                this.outputText = model.outputText;
+            } 
+
+            /**
+             * OutputText.
+             */
+            public Builder outputText(String outputText) {
+                this.outputText = outputText;
+                return this;
+            }
+
+            public VlContent build() {
+                return new VlContent(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomImage")
         private java.util.List<CustomImage> customImage;
@@ -1853,6 +1907,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TextInImage")
         private java.util.Map<String, ?> textInImage;
 
+        @com.aliyun.core.annotation.NameInMap("VlContent")
+        private VlContent vlContent;
+
         private Results(Builder builder) {
             this.customImage = builder.customImage;
             this.logoData = builder.logoData;
@@ -1860,6 +1917,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             this.result = builder.result;
             this.service = builder.service;
             this.textInImage = builder.textInImage;
+            this.vlContent = builder.vlContent;
         }
 
         public static Builder builder() {
@@ -1912,6 +1970,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
             return this.textInImage;
         }
 
+        /**
+         * @return vlContent
+         */
+        public VlContent getVlContent() {
+            return this.vlContent;
+        }
+
         public static final class Builder {
             private java.util.List<CustomImage> customImage; 
             private java.util.List<LogoData> logoData; 
@@ -1919,6 +1984,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private java.util.List<Result> result; 
             private String service; 
             private java.util.Map<String, ?> textInImage; 
+            private VlContent vlContent; 
 
             private Builder() {
             } 
@@ -1930,6 +1996,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
                 this.result = model.result;
                 this.service = model.service;
                 this.textInImage = model.textInImage;
+                this.vlContent = model.vlContent;
             } 
 
             /**
@@ -1980,6 +2047,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
              */
             public Builder textInImage(java.util.Map<String, ?> textInImage) {
                 this.textInImage = textInImage;
+                return this;
+            }
+
+            /**
+             * VlContent.
+             */
+            public Builder vlContent(VlContent vlContent) {
+                this.vlContent = vlContent;
                 return this;
             }
 
