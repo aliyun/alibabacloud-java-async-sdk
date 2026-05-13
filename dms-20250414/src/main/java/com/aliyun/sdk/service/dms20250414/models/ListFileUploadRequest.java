@@ -26,6 +26,10 @@ public class ListFileUploadRequest extends Request {
     private String dmsUnit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownloadLinkExpire")
+    private Integer downloadLinkExpire;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileCategory")
     private String fileCategory;
 
@@ -53,6 +57,7 @@ public class ListFileUploadRequest extends Request {
         super(builder);
         this.callFrom = builder.callFrom;
         this.dmsUnit = builder.dmsUnit;
+        this.downloadLinkExpire = builder.downloadLinkExpire;
         this.fileCategory = builder.fileCategory;
         this.fileFrom = builder.fileFrom;
         this.fileId = builder.fileId;
@@ -86,6 +91,13 @@ public class ListFileUploadRequest extends Request {
      */
     public String getDmsUnit() {
         return this.dmsUnit;
+    }
+
+    /**
+     * @return downloadLinkExpire
+     */
+    public Integer getDownloadLinkExpire() {
+        return this.downloadLinkExpire;
     }
 
     /**
@@ -133,6 +145,7 @@ public class ListFileUploadRequest extends Request {
     public static final class Builder extends Request.Builder<ListFileUploadRequest, Builder> {
         private String callFrom; 
         private String dmsUnit; 
+        private Integer downloadLinkExpire; 
         private String fileCategory; 
         private String fileFrom; 
         private String fileId; 
@@ -148,6 +161,7 @@ public class ListFileUploadRequest extends Request {
             super(request);
             this.callFrom = request.callFrom;
             this.dmsUnit = request.dmsUnit;
+            this.downloadLinkExpire = request.downloadLinkExpire;
             this.fileCategory = request.fileCategory;
             this.fileFrom = request.fileFrom;
             this.fileId = request.fileId;
@@ -171,6 +185,15 @@ public class ListFileUploadRequest extends Request {
         public Builder dmsUnit(String dmsUnit) {
             this.putQueryParameter("DmsUnit", dmsUnit);
             this.dmsUnit = dmsUnit;
+            return this;
+        }
+
+        /**
+         * DownloadLinkExpire.
+         */
+        public Builder downloadLinkExpire(Integer downloadLinkExpire) {
+            this.putQueryParameter("DownloadLinkExpire", downloadLinkExpire);
+            this.downloadLinkExpire = downloadLinkExpire;
             return this;
         }
 
