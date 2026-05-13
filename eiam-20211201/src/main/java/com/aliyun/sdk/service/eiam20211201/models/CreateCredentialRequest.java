@@ -32,6 +32,11 @@ public class CreateCredentialRequest extends Request {
     private CredentialContent credentialContent;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CredentialExternalId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String credentialExternalId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CredentialIdentifier")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String credentialIdentifier;
@@ -85,6 +90,7 @@ public class CreateCredentialRequest extends Request {
         this.regionId = builder.regionId;
         this.clientToken = builder.clientToken;
         this.credentialContent = builder.credentialContent;
+        this.credentialExternalId = builder.credentialExternalId;
         this.credentialIdentifier = builder.credentialIdentifier;
         this.credentialName = builder.credentialName;
         this.credentialScenarioLabel = builder.credentialScenarioLabel;
@@ -129,6 +135,13 @@ public class CreateCredentialRequest extends Request {
      */
     public CredentialContent getCredentialContent() {
         return this.credentialContent;
+    }
+
+    /**
+     * @return credentialExternalId
+     */
+    public String getCredentialExternalId() {
+        return this.credentialExternalId;
     }
 
     /**
@@ -205,6 +218,7 @@ public class CreateCredentialRequest extends Request {
         private String regionId; 
         private String clientToken; 
         private CredentialContent credentialContent; 
+        private String credentialExternalId; 
         private String credentialIdentifier; 
         private String credentialName; 
         private String credentialScenarioLabel; 
@@ -225,6 +239,7 @@ public class CreateCredentialRequest extends Request {
             this.regionId = request.regionId;
             this.clientToken = request.clientToken;
             this.credentialContent = request.credentialContent;
+            this.credentialExternalId = request.credentialExternalId;
             this.credentialIdentifier = request.credentialIdentifier;
             this.credentialName = request.credentialName;
             this.credentialScenarioLabel = request.credentialScenarioLabel;
@@ -266,6 +281,15 @@ public class CreateCredentialRequest extends Request {
         public Builder credentialContent(CredentialContent credentialContent) {
             this.putQueryParameter("CredentialContent", credentialContent);
             this.credentialContent = credentialContent;
+            return this;
+        }
+
+        /**
+         * CredentialExternalId.
+         */
+        public Builder credentialExternalId(String credentialExternalId) {
+            this.putQueryParameter("CredentialExternalId", credentialExternalId);
+            this.credentialExternalId = credentialExternalId;
             return this;
         }
 

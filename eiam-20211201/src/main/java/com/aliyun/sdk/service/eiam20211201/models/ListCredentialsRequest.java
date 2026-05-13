@@ -22,6 +22,10 @@ public class ListCredentialsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CredentialExternalIds")
+    private java.util.List<String> credentialExternalIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CredentialIds")
     private java.util.List<String> credentialIds;
 
@@ -57,6 +61,7 @@ public class ListCredentialsRequest extends Request {
     private ListCredentialsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.credentialExternalIds = builder.credentialExternalIds;
         this.credentialIds = builder.credentialIds;
         this.credentialSharingScopes = builder.credentialSharingScopes;
         this.credentialTypes = builder.credentialTypes;
@@ -85,6 +90,13 @@ public class ListCredentialsRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return credentialExternalIds
+     */
+    public java.util.List<String> getCredentialExternalIds() {
+        return this.credentialExternalIds;
     }
 
     /**
@@ -145,6 +157,7 @@ public class ListCredentialsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListCredentialsRequest, Builder> {
         private String regionId; 
+        private java.util.List<String> credentialExternalIds; 
         private java.util.List<String> credentialIds; 
         private java.util.List<String> credentialSharingScopes; 
         private java.util.List<String> credentialTypes; 
@@ -161,6 +174,7 @@ public class ListCredentialsRequest extends Request {
         private Builder(ListCredentialsRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.credentialExternalIds = request.credentialExternalIds;
             this.credentialIds = request.credentialIds;
             this.credentialSharingScopes = request.credentialSharingScopes;
             this.credentialTypes = request.credentialTypes;
@@ -177,6 +191,15 @@ public class ListCredentialsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CredentialExternalIds.
+         */
+        public Builder credentialExternalIds(java.util.List<String> credentialExternalIds) {
+            this.putQueryParameter("CredentialExternalIds", credentialExternalIds);
+            this.credentialExternalIds = credentialExternalIds;
             return this;
         }
 

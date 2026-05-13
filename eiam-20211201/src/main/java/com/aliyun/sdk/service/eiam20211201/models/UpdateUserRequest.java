@@ -354,7 +354,7 @@ public class UpdateUserRequest extends Request {
         private String fieldName;
 
         @com.aliyun.core.annotation.NameInMap("FieldValue")
-        @com.aliyun.core.annotation.Validation(maxLength = 256)
+        @com.aliyun.core.annotation.Validation(maxLength = 1024)
         private String fieldValue;
 
         @com.aliyun.core.annotation.NameInMap("Operation")
