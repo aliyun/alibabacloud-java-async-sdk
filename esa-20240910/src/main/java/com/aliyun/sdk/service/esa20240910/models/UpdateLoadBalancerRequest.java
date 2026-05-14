@@ -462,8 +462,12 @@ public class UpdateLoadBalancerRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("FailoverAcrossPools")
         private Boolean failoverAcrossPools;
 
+        @com.aliyun.core.annotation.NameInMap("OriginLevelRetry")
+        private Boolean originLevelRetry;
+
         private AdaptiveRouting(Builder builder) {
             this.failoverAcrossPools = builder.failoverAcrossPools;
+            this.originLevelRetry = builder.originLevelRetry;
         }
 
         public static Builder builder() {
@@ -481,14 +485,23 @@ public class UpdateLoadBalancerRequest extends Request {
             return this.failoverAcrossPools;
         }
 
+        /**
+         * @return originLevelRetry
+         */
+        public Boolean getOriginLevelRetry() {
+            return this.originLevelRetry;
+        }
+
         public static final class Builder {
             private Boolean failoverAcrossPools; 
+            private Boolean originLevelRetry; 
 
             private Builder() {
             } 
 
             private Builder(AdaptiveRouting model) {
                 this.failoverAcrossPools = model.failoverAcrossPools;
+                this.originLevelRetry = model.originLevelRetry;
             } 
 
             /**
@@ -503,6 +516,14 @@ public class UpdateLoadBalancerRequest extends Request {
              */
             public Builder failoverAcrossPools(Boolean failoverAcrossPools) {
                 this.failoverAcrossPools = failoverAcrossPools;
+                return this;
+            }
+
+            /**
+             * OriginLevelRetry.
+             */
+            public Builder originLevelRetry(Boolean originLevelRetry) {
+                this.originLevelRetry = originLevelRetry;
                 return this;
             }
 
