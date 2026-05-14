@@ -383,11 +383,29 @@ public class GetUserDeviceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
+        @com.aliyun.core.annotation.NameInMap("CityEn")
+        private String cityEn;
+
+        @com.aliyun.core.annotation.NameInMap("CityZh")
+        private String cityZh;
+
         @com.aliyun.core.annotation.NameInMap("Continent")
         private String continent;
 
+        @com.aliyun.core.annotation.NameInMap("ContinentEn")
+        private String continentEn;
+
+        @com.aliyun.core.annotation.NameInMap("ContinentZh")
+        private String continentZh;
+
         @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
+
+        @com.aliyun.core.annotation.NameInMap("CountryEn")
+        private String countryEn;
+
+        @com.aliyun.core.annotation.NameInMap("CountryZh")
+        private String countryZh;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -467,6 +485,12 @@ public class GetUserDeviceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
+        @com.aliyun.core.annotation.NameInMap("ProvinceEn")
+        private String provinceEn;
+
+        @com.aliyun.core.annotation.NameInMap("ProvinceZh")
+        private String provinceZh;
+
         @com.aliyun.core.annotation.NameInMap("SaseUserId")
         private String saseUserId;
 
@@ -511,8 +535,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
             this.batteryRemainingPercentage = builder.batteryRemainingPercentage;
             this.CPU = builder.CPU;
             this.city = builder.city;
+            this.cityEn = builder.cityEn;
+            this.cityZh = builder.cityZh;
             this.continent = builder.continent;
+            this.continentEn = builder.continentEn;
+            this.continentZh = builder.continentZh;
             this.country = builder.country;
+            this.countryEn = builder.countryEn;
+            this.countryZh = builder.countryZh;
             this.createTime = builder.createTime;
             this.department = builder.department;
             this.deviceBelong = builder.deviceBelong;
@@ -539,6 +569,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
             this.paStatus = builder.paStatus;
             this.processes = builder.processes;
             this.province = builder.province;
+            this.provinceEn = builder.provinceEn;
+            this.provinceZh = builder.provinceZh;
             this.saseUserId = builder.saseUserId;
             this.sharingStatus = builder.sharingStatus;
             this.snBaseBoard = builder.snBaseBoard;
@@ -611,6 +643,20 @@ public class GetUserDeviceResponseBody extends TeaModel {
         }
 
         /**
+         * @return cityEn
+         */
+        public String getCityEn() {
+            return this.cityEn;
+        }
+
+        /**
+         * @return cityZh
+         */
+        public String getCityZh() {
+            return this.cityZh;
+        }
+
+        /**
          * @return continent
          */
         public String getContinent() {
@@ -618,10 +664,38 @@ public class GetUserDeviceResponseBody extends TeaModel {
         }
 
         /**
+         * @return continentEn
+         */
+        public String getContinentEn() {
+            return this.continentEn;
+        }
+
+        /**
+         * @return continentZh
+         */
+        public String getContinentZh() {
+            return this.continentZh;
+        }
+
+        /**
          * @return country
          */
         public String getCountry() {
             return this.country;
+        }
+
+        /**
+         * @return countryEn
+         */
+        public String getCountryEn() {
+            return this.countryEn;
+        }
+
+        /**
+         * @return countryZh
+         */
+        public String getCountryZh() {
+            return this.countryZh;
         }
 
         /**
@@ -807,6 +881,20 @@ public class GetUserDeviceResponseBody extends TeaModel {
         }
 
         /**
+         * @return provinceEn
+         */
+        public String getProvinceEn() {
+            return this.provinceEn;
+        }
+
+        /**
+         * @return provinceZh
+         */
+        public String getProvinceZh() {
+            return this.provinceZh;
+        }
+
+        /**
          * @return saseUserId
          */
         public String getSaseUserId() {
@@ -898,8 +986,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
             private Integer batteryRemainingPercentage; 
             private String CPU; 
             private String city; 
+            private String cityEn; 
+            private String cityZh; 
             private String continent; 
+            private String continentEn; 
+            private String continentZh; 
             private String country; 
+            private String countryEn; 
+            private String countryZh; 
             private String createTime; 
             private String department; 
             private String deviceBelong; 
@@ -926,6 +1020,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
             private String paStatus; 
             private java.util.List<Processes> processes; 
             private String province; 
+            private String provinceEn; 
+            private String provinceZh; 
             private String saseUserId; 
             private Boolean sharingStatus; 
             private String snBaseBoard; 
@@ -950,8 +1046,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
                 this.batteryRemainingPercentage = model.batteryRemainingPercentage;
                 this.CPU = model.CPU;
                 this.city = model.city;
+                this.cityEn = model.cityEn;
+                this.cityZh = model.cityZh;
                 this.continent = model.continent;
+                this.continentEn = model.continentEn;
+                this.continentZh = model.continentZh;
                 this.country = model.country;
+                this.countryEn = model.countryEn;
+                this.countryZh = model.countryZh;
                 this.createTime = model.createTime;
                 this.department = model.department;
                 this.deviceBelong = model.deviceBelong;
@@ -978,6 +1080,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
                 this.paStatus = model.paStatus;
                 this.processes = model.processes;
                 this.province = model.province;
+                this.provinceEn = model.provinceEn;
+                this.provinceZh = model.provinceZh;
                 this.saseUserId = model.saseUserId;
                 this.sharingStatus = model.sharingStatus;
                 this.snBaseBoard = model.snBaseBoard;
@@ -1049,6 +1153,22 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
+             * CityEn.
+             */
+            public Builder cityEn(String cityEn) {
+                this.cityEn = cityEn;
+                return this;
+            }
+
+            /**
+             * CityZh.
+             */
+            public Builder cityZh(String cityZh) {
+                this.cityZh = cityZh;
+                return this;
+            }
+
+            /**
              * Continent.
              */
             public Builder continent(String continent) {
@@ -1057,10 +1177,42 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
+             * ContinentEn.
+             */
+            public Builder continentEn(String continentEn) {
+                this.continentEn = continentEn;
+                return this;
+            }
+
+            /**
+             * ContinentZh.
+             */
+            public Builder continentZh(String continentZh) {
+                this.continentZh = continentZh;
+                return this;
+            }
+
+            /**
              * Country.
              */
             public Builder country(String country) {
                 this.country = country;
+                return this;
+            }
+
+            /**
+             * CountryEn.
+             */
+            public Builder countryEn(String countryEn) {
+                this.countryEn = countryEn;
+                return this;
+            }
+
+            /**
+             * CountryZh.
+             */
+            public Builder countryZh(String countryZh) {
+                this.countryZh = countryZh;
                 return this;
             }
 
@@ -1269,6 +1421,22 @@ public class GetUserDeviceResponseBody extends TeaModel {
              */
             public Builder province(String province) {
                 this.province = province;
+                return this;
+            }
+
+            /**
+             * ProvinceEn.
+             */
+            public Builder provinceEn(String provinceEn) {
+                this.provinceEn = provinceEn;
+                return this;
+            }
+
+            /**
+             * ProvinceZh.
+             */
+            public Builder provinceZh(String provinceZh) {
+                this.provinceZh = provinceZh;
                 return this;
             }
 

@@ -615,6 +615,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyEnterpriseAcceleratePolicyResponse> modifyEnterpriseAcceleratePolicy(ModifyEnterpriseAcceleratePolicyRequest request);
 
     /**
+     * @param request the request parameters of RevokeUserDeviceSession  RevokeUserDeviceSessionRequest
+     * @return RevokeUserDeviceSessionResponse
+     */
+    CompletableFuture<RevokeUserDeviceSessionResponse> revokeUserDeviceSession(RevokeUserDeviceSessionRequest request);
+
+    /**
      * @deprecated OpenAPI RevokeUserSession is deprecated  * @param request  the request parameters of RevokeUserSession  RevokeUserSessionRequest
      * @return RevokeUserSessionResponse
      */

@@ -38,6 +38,9 @@ public class IdpDingtalkSubConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Exclusive")
     private Boolean exclusive;
 
+    @com.aliyun.core.annotation.NameInMap("Oauth")
+    private Boolean oauth;
+
     @com.aliyun.core.annotation.NameInMap("RedirectUri")
     private String redirectUri;
 
@@ -49,6 +52,7 @@ public class IdpDingtalkSubConfig extends TeaModel {
         this.eventLabel = builder.eventLabel;
         this.eventVerifyToken = builder.eventVerifyToken;
         this.exclusive = builder.exclusive;
+        this.oauth = builder.oauth;
         this.redirectUri = builder.redirectUri;
     }
 
@@ -114,6 +118,13 @@ public class IdpDingtalkSubConfig extends TeaModel {
     }
 
     /**
+     * @return oauth
+     */
+    public Boolean getOauth() {
+        return this.oauth;
+    }
+
+    /**
      * @return redirectUri
      */
     public String getRedirectUri() {
@@ -128,6 +139,7 @@ public class IdpDingtalkSubConfig extends TeaModel {
         private String eventLabel; 
         private String eventVerifyToken; 
         private Boolean exclusive; 
+        private Boolean oauth; 
         private String redirectUri; 
 
         private Builder() {
@@ -141,6 +153,7 @@ public class IdpDingtalkSubConfig extends TeaModel {
             this.eventLabel = model.eventLabel;
             this.eventVerifyToken = model.eventVerifyToken;
             this.exclusive = model.exclusive;
+            this.oauth = model.oauth;
             this.redirectUri = model.redirectUri;
         } 
 
@@ -197,6 +210,14 @@ public class IdpDingtalkSubConfig extends TeaModel {
          */
         public Builder exclusive(Boolean exclusive) {
             this.exclusive = exclusive;
+            return this;
+        }
+
+        /**
+         * Oauth.
+         */
+        public Builder oauth(Boolean oauth) {
+            this.oauth = oauth;
             return this;
         }
 
