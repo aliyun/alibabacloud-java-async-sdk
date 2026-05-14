@@ -2436,6 +2436,9 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RestartFailReason")
         private String restartFailReason;
 
+        @com.aliyun.core.annotation.NameInMap("RestartLevelType")
+        private String restartLevelType;
+
         @com.aliyun.core.annotation.NameInMap("RestartStatus")
         private String restartStatus;
 
@@ -2450,6 +2453,7 @@ public class GetJobResponseBody extends TeaModel {
             this.reason = builder.reason;
             this.restartDurationInSec = builder.restartDurationInSec;
             this.restartFailReason = builder.restartFailReason;
+            this.restartLevelType = builder.restartLevelType;
             this.restartStatus = builder.restartStatus;
             this.triggerID = builder.triggerID;
         }
@@ -2512,6 +2516,13 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return restartLevelType
+         */
+        public String getRestartLevelType() {
+            return this.restartLevelType;
+        }
+
+        /**
          * @return restartStatus
          */
         public String getRestartStatus() {
@@ -2533,6 +2544,7 @@ public class GetJobResponseBody extends TeaModel {
             private String reason; 
             private Long restartDurationInSec; 
             private String restartFailReason; 
+            private String restartLevelType; 
             private String restartStatus; 
             private String triggerID; 
 
@@ -2547,6 +2559,7 @@ public class GetJobResponseBody extends TeaModel {
                 this.reason = model.reason;
                 this.restartDurationInSec = model.restartDurationInSec;
                 this.restartFailReason = model.restartFailReason;
+                this.restartLevelType = model.restartLevelType;
                 this.restartStatus = model.restartStatus;
                 this.triggerID = model.triggerID;
             } 
@@ -2604,6 +2617,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder restartFailReason(String restartFailReason) {
                 this.restartFailReason = restartFailReason;
+                return this;
+            }
+
+            /**
+             * RestartLevelType.
+             */
+            public Builder restartLevelType(String restartLevelType) {
+                this.restartLevelType = restartLevelType;
                 return this;
             }
 
