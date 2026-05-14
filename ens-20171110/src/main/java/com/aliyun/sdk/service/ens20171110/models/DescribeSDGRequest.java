@@ -30,11 +30,16 @@ public class DescribeSDGRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SDGIds")
     private java.util.List<String> SDGIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SameDiskId")
+    private Boolean sameDiskId;
+
     private DescribeSDGRequest(Builder builder) {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.SDGIds = builder.SDGIds;
+        this.sameDiskId = builder.sameDiskId;
     }
 
     public static Builder builder() {
@@ -71,10 +76,18 @@ public class DescribeSDGRequest extends Request {
         return this.SDGIds;
     }
 
+    /**
+     * @return sameDiskId
+     */
+    public Boolean getSameDiskId() {
+        return this.sameDiskId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeSDGRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
         private java.util.List<String> SDGIds; 
+        private Boolean sameDiskId; 
 
         private Builder() {
             super();
@@ -85,6 +98,7 @@ public class DescribeSDGRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.SDGIds = request.SDGIds;
+            this.sameDiskId = request.sameDiskId;
         } 
 
         /**
@@ -119,6 +133,15 @@ public class DescribeSDGRequest extends Request {
             String SDGIdsShrink = shrink(SDGIds, "SDGIds", "json");
             this.putQueryParameter("SDGIds", SDGIdsShrink);
             this.SDGIds = SDGIds;
+            return this;
+        }
+
+        /**
+         * SameDiskId.
+         */
+        public Builder sameDiskId(Boolean sameDiskId) {
+            this.putQueryParameter("SameDiskId", sameDiskId);
+            this.sameDiskId = sameDiskId;
             return this;
         }
 
