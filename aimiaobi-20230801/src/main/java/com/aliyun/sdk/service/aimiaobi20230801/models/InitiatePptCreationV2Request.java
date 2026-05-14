@@ -38,6 +38,10 @@ public class InitiatePptCreationV2Request extends Request {
     private Integer pptTemplateType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PptTitle")
+    private String pptTitle;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProcessType")
     private Integer processType;
 
@@ -57,6 +61,7 @@ public class InitiatePptCreationV2Request extends Request {
         this.outline = builder.outline;
         this.pptTemplateId = builder.pptTemplateId;
         this.pptTemplateType = builder.pptTemplateType;
+        this.pptTitle = builder.pptTitle;
         this.processType = builder.processType;
         this.taskId = builder.taskId;
         this.workspaceId = builder.workspaceId;
@@ -111,6 +116,13 @@ public class InitiatePptCreationV2Request extends Request {
     }
 
     /**
+     * @return pptTitle
+     */
+    public String getPptTitle() {
+        return this.pptTitle;
+    }
+
+    /**
      * @return processType
      */
     public Integer getProcessType() {
@@ -137,6 +149,7 @@ public class InitiatePptCreationV2Request extends Request {
         private String outline; 
         private Integer pptTemplateId; 
         private Integer pptTemplateType; 
+        private String pptTitle; 
         private Integer processType; 
         private String taskId; 
         private String workspaceId; 
@@ -152,6 +165,7 @@ public class InitiatePptCreationV2Request extends Request {
             this.outline = request.outline;
             this.pptTemplateId = request.pptTemplateId;
             this.pptTemplateType = request.pptTemplateType;
+            this.pptTitle = request.pptTitle;
             this.processType = request.processType;
             this.taskId = request.taskId;
             this.workspaceId = request.workspaceId;
@@ -199,6 +213,15 @@ public class InitiatePptCreationV2Request extends Request {
         public Builder pptTemplateType(Integer pptTemplateType) {
             this.putBodyParameter("PptTemplateType", pptTemplateType);
             this.pptTemplateType = pptTemplateType;
+            return this;
+        }
+
+        /**
+         * PptTitle.
+         */
+        public Builder pptTitle(String pptTitle) {
+            this.putBodyParameter("PptTitle", pptTitle);
+            this.pptTitle = pptTitle;
             return this;
         }
 

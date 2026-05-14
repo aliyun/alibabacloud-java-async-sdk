@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InitiatePptCreationV2ResponseBody} extends {@link TeaModel}
+ * {@link GetPptInfoResponseBody} extends {@link TeaModel}
  *
- * <p>InitiatePptCreationV2ResponseBody</p>
+ * <p>GetPptInfoResponseBody</p>
  */
-public class InitiatePptCreationV2ResponseBody extends TeaModel {
+public class GetPptInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -35,7 +35,7 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private InitiatePptCreationV2ResponseBody(Builder builder) {
+    private GetPptInfoResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
@@ -48,7 +48,7 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static InitiatePptCreationV2ResponseBody create() {
+    public static GetPptInfoResponseBody create() {
         return builder().build();
     }
 
@@ -109,7 +109,7 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(InitiatePptCreationV2ResponseBody model) {
+        private Builder(GetPptInfoResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.httpStatusCode = model.httpStatusCode;
@@ -169,30 +169,24 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
             return this;
         }
 
-        public InitiatePptCreationV2ResponseBody build() {
-            return new InitiatePptCreationV2ResponseBody(this);
+        public GetPptInfoResponseBody build() {
+            return new GetPptInfoResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link InitiatePptCreationV2ResponseBody} extends {@link TeaModel}
+     * {@link GetPptInfoResponseBody} extends {@link TeaModel}
      *
-     * <p>InitiatePptCreationV2ResponseBody</p>
+     * <p>GetPptInfoResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Alert")
-        private String alert;
-
-        @com.aliyun.core.annotation.NameInMap("AppKey")
-        private String appKey;
+        @com.aliyun.core.annotation.NameInMap("ExportFileLink")
+        private java.util.List<String> exportFileLink;
 
         @com.aliyun.core.annotation.NameInMap("ExportTaskId")
         private String exportTaskId;
-
-        @com.aliyun.core.annotation.NameInMap("PptArtifactCover")
-        private String pptArtifactCover;
 
         @com.aliyun.core.annotation.NameInMap("PptArtifactId")
         private String pptArtifactId;
@@ -200,17 +194,19 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PptProcessId")
         private String pptProcessId;
 
-        @com.aliyun.core.annotation.NameInMap("Signature")
-        private String signature;
+        @com.aliyun.core.annotation.NameInMap("Query")
+        private String query;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
 
         private Data(Builder builder) {
-            this.alert = builder.alert;
-            this.appKey = builder.appKey;
+            this.exportFileLink = builder.exportFileLink;
             this.exportTaskId = builder.exportTaskId;
-            this.pptArtifactCover = builder.pptArtifactCover;
             this.pptArtifactId = builder.pptArtifactId;
             this.pptProcessId = builder.pptProcessId;
-            this.signature = builder.signature;
+            this.query = builder.query;
+            this.taskId = builder.taskId;
         }
 
         public static Builder builder() {
@@ -222,17 +218,10 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
         }
 
         /**
-         * @return alert
+         * @return exportFileLink
          */
-        public String getAlert() {
-            return this.alert;
-        }
-
-        /**
-         * @return appKey
-         */
-        public String getAppKey() {
-            return this.appKey;
+        public java.util.List<String> getExportFileLink() {
+            return this.exportFileLink;
         }
 
         /**
@@ -240,13 +229,6 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
          */
         public String getExportTaskId() {
             return this.exportTaskId;
-        }
-
-        /**
-         * @return pptArtifactCover
-         */
-        public String getPptArtifactCover() {
-            return this.pptArtifactCover;
         }
 
         /**
@@ -264,47 +246,44 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
         }
 
         /**
-         * @return signature
+         * @return query
          */
-        public String getSignature() {
-            return this.signature;
+        public String getQuery() {
+            return this.query;
+        }
+
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
         }
 
         public static final class Builder {
-            private String alert; 
-            private String appKey; 
+            private java.util.List<String> exportFileLink; 
             private String exportTaskId; 
-            private String pptArtifactCover; 
             private String pptArtifactId; 
             private String pptProcessId; 
-            private String signature; 
+            private String query; 
+            private String taskId; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.alert = model.alert;
-                this.appKey = model.appKey;
+                this.exportFileLink = model.exportFileLink;
                 this.exportTaskId = model.exportTaskId;
-                this.pptArtifactCover = model.pptArtifactCover;
                 this.pptArtifactId = model.pptArtifactId;
                 this.pptProcessId = model.pptProcessId;
-                this.signature = model.signature;
+                this.query = model.query;
+                this.taskId = model.taskId;
             } 
 
             /**
-             * Alert.
+             * ExportFileLink.
              */
-            public Builder alert(String alert) {
-                this.alert = alert;
-                return this;
-            }
-
-            /**
-             * AppKey.
-             */
-            public Builder appKey(String appKey) {
-                this.appKey = appKey;
+            public Builder exportFileLink(java.util.List<String> exportFileLink) {
+                this.exportFileLink = exportFileLink;
                 return this;
             }
 
@@ -313,14 +292,6 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
              */
             public Builder exportTaskId(String exportTaskId) {
                 this.exportTaskId = exportTaskId;
-                return this;
-            }
-
-            /**
-             * PptArtifactCover.
-             */
-            public Builder pptArtifactCover(String pptArtifactCover) {
-                this.pptArtifactCover = pptArtifactCover;
                 return this;
             }
 
@@ -341,10 +312,18 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * Query.
              */
-            public Builder signature(String signature) {
-                this.signature = signature;
+            public Builder query(String query) {
+                this.query = query;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
                 return this;
             }
 

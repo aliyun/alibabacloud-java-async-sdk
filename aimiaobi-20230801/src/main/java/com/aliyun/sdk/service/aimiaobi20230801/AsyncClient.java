@@ -560,6 +560,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPptConfigResponse> getPptConfig(GetPptConfigRequest request);
 
     /**
+     * @param request the request parameters of GetPptInfo  GetPptInfoRequest
+     * @return GetPptInfoResponse
+     */
+    CompletableFuture<GetPptInfoResponse> getPptInfo(GetPptInfoRequest request);
+
+    /**
      * @param request the request parameters of GetPptTemplateSelector  GetPptTemplateSelectorRequest
      * @return GetPptTemplateSelectorResponse
      */
