@@ -36,6 +36,9 @@ public class UploadPartInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("part_size")
     private Long partSize;
 
+    @com.aliyun.core.annotation.NameInMap("upload_form_info")
+    private UploadFormInfo uploadFormInfo;
+
     @com.aliyun.core.annotation.NameInMap("upload_url")
     @com.aliyun.core.annotation.Validation(required = true)
     private String uploadUrl;
@@ -47,6 +50,7 @@ public class UploadPartInfo extends TeaModel {
         this.parallelSha256Ctx = builder.parallelSha256Ctx;
         this.partNumber = builder.partNumber;
         this.partSize = builder.partSize;
+        this.uploadFormInfo = builder.uploadFormInfo;
         this.uploadUrl = builder.uploadUrl;
     }
 
@@ -105,6 +109,13 @@ public class UploadPartInfo extends TeaModel {
     }
 
     /**
+     * @return uploadFormInfo
+     */
+    public UploadFormInfo getUploadFormInfo() {
+        return this.uploadFormInfo;
+    }
+
+    /**
      * @return uploadUrl
      */
     public String getUploadUrl() {
@@ -118,6 +129,7 @@ public class UploadPartInfo extends TeaModel {
         private ParallelSha256Ctx parallelSha256Ctx; 
         private Integer partNumber; 
         private Long partSize; 
+        private UploadFormInfo uploadFormInfo; 
         private String uploadUrl; 
 
         private Builder() {
@@ -130,6 +142,7 @@ public class UploadPartInfo extends TeaModel {
             this.parallelSha256Ctx = model.parallelSha256Ctx;
             this.partNumber = model.partNumber;
             this.partSize = model.partSize;
+            this.uploadFormInfo = model.uploadFormInfo;
             this.uploadUrl = model.uploadUrl;
         } 
 
@@ -181,6 +194,14 @@ public class UploadPartInfo extends TeaModel {
          */
         public Builder partSize(Long partSize) {
             this.partSize = partSize;
+            return this;
+        }
+
+        /**
+         * upload_form_info.
+         */
+        public Builder uploadFormInfo(UploadFormInfo uploadFormInfo) {
+            this.uploadFormInfo = uploadFormInfo;
             return this;
         }
 

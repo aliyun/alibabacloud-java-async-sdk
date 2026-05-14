@@ -98,6 +98,10 @@ public class CreateFileRequest extends Request {
     private String type;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("upload_type")
+    private String uploadType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_tags")
     private java.util.List<UserTag> userTags;
 
@@ -122,6 +126,7 @@ public class CreateFileRequest extends Request {
         this.shareId = builder.shareId;
         this.size = builder.size;
         this.type = builder.type;
+        this.uploadType = builder.uploadType;
         this.userTags = builder.userTags;
     }
 
@@ -272,6 +277,13 @@ public class CreateFileRequest extends Request {
     }
 
     /**
+     * @return uploadType
+     */
+    public String getUploadType() {
+        return this.uploadType;
+    }
+
+    /**
      * @return userTags
      */
     public java.util.List<UserTag> getUserTags() {
@@ -298,6 +310,7 @@ public class CreateFileRequest extends Request {
         private String shareId; 
         private Long size; 
         private String type; 
+        private String uploadType; 
         private java.util.List<UserTag> userTags; 
 
         private Builder() {
@@ -325,6 +338,7 @@ public class CreateFileRequest extends Request {
             this.shareId = request.shareId;
             this.size = request.size;
             this.type = request.type;
+            this.uploadType = request.uploadType;
             this.userTags = request.userTags;
         } 
 
@@ -555,6 +569,15 @@ public class CreateFileRequest extends Request {
         public Builder type(String type) {
             this.putBodyParameter("type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * upload_type.
+         */
+        public Builder uploadType(String uploadType) {
+            this.putBodyParameter("upload_type", uploadType);
+            this.uploadType = uploadType;
             return this;
         }
 
