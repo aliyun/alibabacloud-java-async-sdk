@@ -44,6 +44,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckAccountExistResponse> checkAccountExist(CheckAccountExistRequest request);
 
     /**
+     * @param request the request parameters of CheckBudgetNameExists  CheckBudgetNameExistsRequest
+     * @return CheckBudgetNameExistsResponse
+     */
+    CompletableFuture<CheckBudgetNameExistsResponse> checkBudgetNameExists(CheckBudgetNameExistsRequest request);
+
+    /**
+     * @param request the request parameters of CreateBudget  CreateBudgetRequest
+     * @return CreateBudgetResponse
+     */
+    CompletableFuture<CreateBudgetResponse> createBudget(CreateBudgetRequest request);
+
+    /**
      * @param request the request parameters of CreateCostCenter  CreateCostCenterRequest
      * @return CreateCostCenterResponse
      */
@@ -102,6 +114,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteReportDefinitionResponse
      */
     CompletableFuture<DeleteReportDefinitionResponse> deleteReportDefinition(DeleteReportDefinitionRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBudget  DescribeBudgetRequest
+     * @return DescribeBudgetResponse
+     */
+    CompletableFuture<DescribeBudgetResponse> describeBudget(DescribeBudgetRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBudgets  DescribeBudgetsRequest
+     * @return DescribeBudgetsResponse
+     */
+    CompletableFuture<DescribeBudgetsResponse> describeBudgets(DescribeBudgetsRequest request);
 
     /**
      * @param request the request parameters of DescribeCoupon  DescribeCouponRequest
@@ -294,5 +318,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetSavingPlanUserDeductRuleResponse
      */
     CompletableFuture<SetSavingPlanUserDeductRuleResponse> setSavingPlanUserDeductRule(SetSavingPlanUserDeductRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateBudget  UpdateBudgetRequest
+     * @return UpdateBudgetResponse
+     */
+    CompletableFuture<UpdateBudgetResponse> updateBudget(UpdateBudgetRequest request);
 
 }
