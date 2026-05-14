@@ -40,6 +40,14 @@ public class ModifyResourceLogStatusRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Boolean status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TraceConfig")
+    private TraceConfig traceConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TraceStatus")
+    private Boolean traceStatus;
+
     private ModifyResourceLogStatusRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
@@ -47,6 +55,8 @@ public class ModifyResourceLogStatusRequest extends Request {
         this.resource = builder.resource;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.status = builder.status;
+        this.traceConfig = builder.traceConfig;
+        this.traceStatus = builder.traceStatus;
     }
 
     public static Builder builder() {
@@ -97,12 +107,28 @@ public class ModifyResourceLogStatusRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return traceConfig
+     */
+    public TraceConfig getTraceConfig() {
+        return this.traceConfig;
+    }
+
+    /**
+     * @return traceStatus
+     */
+    public Boolean getTraceStatus() {
+        return this.traceStatus;
+    }
+
     public static final class Builder extends Request.Builder<ModifyResourceLogStatusRequest, Builder> {
         private String instanceId; 
         private String regionId; 
         private String resource; 
         private String resourceManagerResourceGroupId; 
         private Boolean status; 
+        private TraceConfig traceConfig; 
+        private Boolean traceStatus; 
 
         private Builder() {
             super();
@@ -115,6 +141,8 @@ public class ModifyResourceLogStatusRequest extends Request {
             this.resource = request.resource;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.status = request.status;
+            this.traceConfig = request.traceConfig;
+            this.traceStatus = request.traceStatus;
         } 
 
         /**
@@ -191,6 +219,25 @@ public class ModifyResourceLogStatusRequest extends Request {
             return this;
         }
 
+        /**
+         * TraceConfig.
+         */
+        public Builder traceConfig(TraceConfig traceConfig) {
+            String traceConfigShrink = shrink(traceConfig, "TraceConfig", "json");
+            this.putQueryParameter("TraceConfig", traceConfigShrink);
+            this.traceConfig = traceConfig;
+            return this;
+        }
+
+        /**
+         * TraceStatus.
+         */
+        public Builder traceStatus(Boolean traceStatus) {
+            this.putQueryParameter("TraceStatus", traceStatus);
+            this.traceStatus = traceStatus;
+            return this;
+        }
+
         @Override
         public ModifyResourceLogStatusRequest build() {
             return new ModifyResourceLogStatusRequest(this);
@@ -198,4 +245,80 @@ public class ModifyResourceLogStatusRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyResourceLogStatusRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyResourceLogStatusRequest</p>
+     */
+    public static class TraceConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RatePerMille")
+        @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
+        private Integer ratePerMille;
+
+        @com.aliyun.core.annotation.NameInMap("Workspace")
+        private String workspace;
+
+        private TraceConfig(Builder builder) {
+            this.ratePerMille = builder.ratePerMille;
+            this.workspace = builder.workspace;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TraceConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ratePerMille
+         */
+        public Integer getRatePerMille() {
+            return this.ratePerMille;
+        }
+
+        /**
+         * @return workspace
+         */
+        public String getWorkspace() {
+            return this.workspace;
+        }
+
+        public static final class Builder {
+            private Integer ratePerMille; 
+            private String workspace; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraceConfig model) {
+                this.ratePerMille = model.ratePerMille;
+                this.workspace = model.workspace;
+            } 
+
+            /**
+             * RatePerMille.
+             */
+            public Builder ratePerMille(Integer ratePerMille) {
+                this.ratePerMille = ratePerMille;
+                return this;
+            }
+
+            /**
+             * Workspace.
+             */
+            public Builder workspace(String workspace) {
+                this.workspace = workspace;
+                return this;
+            }
+
+            public TraceConfig build() {
+                return new TraceConfig(this);
+            } 
+
+        } 
+
+    }
 }

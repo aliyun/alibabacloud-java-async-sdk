@@ -97,6 +97,81 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
      *
      * <p>DescribeResourceLogStatusResponseBody</p>
      */
+    public static class TraceConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RatePerMille")
+        private Integer ratePerMille;
+
+        @com.aliyun.core.annotation.NameInMap("Workspace")
+        private String workspace;
+
+        private TraceConfig(Builder builder) {
+            this.ratePerMille = builder.ratePerMille;
+            this.workspace = builder.workspace;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TraceConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ratePerMille
+         */
+        public Integer getRatePerMille() {
+            return this.ratePerMille;
+        }
+
+        /**
+         * @return workspace
+         */
+        public String getWorkspace() {
+            return this.workspace;
+        }
+
+        public static final class Builder {
+            private Integer ratePerMille; 
+            private String workspace; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraceConfig model) {
+                this.ratePerMille = model.ratePerMille;
+                this.workspace = model.workspace;
+            } 
+
+            /**
+             * RatePerMille.
+             */
+            public Builder ratePerMille(Integer ratePerMille) {
+                this.ratePerMille = ratePerMille;
+                return this;
+            }
+
+            /**
+             * Workspace.
+             */
+            public Builder workspace(String workspace) {
+                this.workspace = workspace;
+                return this;
+            }
+
+            public TraceConfig build() {
+                return new TraceConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeResourceLogStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceLogStatusResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
@@ -104,9 +179,17 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private Boolean status;
 
+        @com.aliyun.core.annotation.NameInMap("TraceConfig")
+        private TraceConfig traceConfig;
+
+        @com.aliyun.core.annotation.NameInMap("TraceStatus")
+        private Boolean traceStatus;
+
         private Result(Builder builder) {
             this.resource = builder.resource;
             this.status = builder.status;
+            this.traceConfig = builder.traceConfig;
+            this.traceStatus = builder.traceStatus;
         }
 
         public static Builder builder() {
@@ -131,9 +214,25 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return traceConfig
+         */
+        public TraceConfig getTraceConfig() {
+            return this.traceConfig;
+        }
+
+        /**
+         * @return traceStatus
+         */
+        public Boolean getTraceStatus() {
+            return this.traceStatus;
+        }
+
         public static final class Builder {
             private String resource; 
             private Boolean status; 
+            private TraceConfig traceConfig; 
+            private Boolean traceStatus; 
 
             private Builder() {
             } 
@@ -141,6 +240,8 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
             private Builder(Result model) {
                 this.resource = model.resource;
                 this.status = model.status;
+                this.traceConfig = model.traceConfig;
+                this.traceStatus = model.traceStatus;
             } 
 
             /**
@@ -166,6 +267,22 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
              */
             public Builder status(Boolean status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TraceConfig.
+             */
+            public Builder traceConfig(TraceConfig traceConfig) {
+                this.traceConfig = traceConfig;
+                return this;
+            }
+
+            /**
+             * TraceStatus.
+             */
+            public Builder traceStatus(Boolean traceStatus) {
+                this.traceStatus = traceStatus;
                 return this;
             }
 
