@@ -84,6 +84,192 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeMediaTypeResponse> changeMediaType(ChangeMediaTypeRequest request);
 
     /**
+     * @param request the request parameters of ClinkAgentStatus  ClinkAgentStatusRequest
+     * @return ClinkAgentStatusResponse
+     */
+    CompletableFuture<ClinkAgentStatusResponse> clinkAgentStatus(ClinkAgentStatusRequest request);
+
+    /**
+     * @param request the request parameters of ClinkAgentStatusDetail  ClinkAgentStatusDetailRequest
+     * @return ClinkAgentStatusDetailResponse
+     */
+    CompletableFuture<ClinkAgentStatusDetailResponse> clinkAgentStatusDetail(ClinkAgentStatusDetailRequest request);
+
+    /**
+     * @param request the request parameters of ClinkBindClientTel  ClinkBindClientTelRequest
+     * @return ClinkBindClientTelResponse
+     */
+    CompletableFuture<ClinkBindClientTelResponse> clinkBindClientTel(ClinkBindClientTelRequest request);
+
+    /**
+     * @param request the request parameters of ClinkCdrObDetails  ClinkCdrObDetailsRequest
+     * @return ClinkCdrObDetailsResponse
+     */
+    CompletableFuture<ClinkCdrObDetailsResponse> clinkCdrObDetails(ClinkCdrObDetailsRequest request);
+
+    /**
+     * @param request the request parameters of ClinkCreateClient  ClinkCreateClientRequest
+     * @return ClinkCreateClientResponse
+     */
+    CompletableFuture<ClinkCreateClientResponse> clinkCreateClient(ClinkCreateClientRequest request);
+
+    /**
+     * @param request the request parameters of ClinkCreateEnterprisePause  ClinkCreateEnterprisePauseRequest
+     * @return ClinkCreateEnterprisePauseResponse
+     */
+    CompletableFuture<ClinkCreateEnterprisePauseResponse> clinkCreateEnterprisePause(ClinkCreateEnterprisePauseRequest request);
+
+    /**
+     * @param request the request parameters of ClinkCreateExten  ClinkCreateExtenRequest
+     * @return ClinkCreateExtenResponse
+     */
+    CompletableFuture<ClinkCreateExtenResponse> clinkCreateExten(ClinkCreateExtenRequest request);
+
+    /**
+     * @param request the request parameters of ClinkCreateQueue  ClinkCreateQueueRequest
+     * @return ClinkCreateQueueResponse
+     */
+    CompletableFuture<ClinkCreateQueueResponse> clinkCreateQueue(ClinkCreateQueueRequest request);
+
+    /**
+     * @param request the request parameters of ClinkDeleteClient  ClinkDeleteClientRequest
+     * @return ClinkDeleteClientResponse
+     */
+    CompletableFuture<ClinkDeleteClientResponse> clinkDeleteClient(ClinkDeleteClientRequest request);
+
+    /**
+     * @param request the request parameters of ClinkDeleteExten  ClinkDeleteExtenRequest
+     * @return ClinkDeleteExtenResponse
+     */
+    CompletableFuture<ClinkDeleteExtenResponse> clinkDeleteExten(ClinkDeleteExtenRequest request);
+
+    /**
+     * @param request the request parameters of ClinkDescribeCdrIb  ClinkDescribeCdrIbRequest
+     * @return ClinkDescribeCdrIbResponse
+     */
+    CompletableFuture<ClinkDescribeCdrIbResponse> clinkDescribeCdrIb(ClinkDescribeCdrIbRequest request);
+
+    /**
+     * @param request the request parameters of ClinkDescribeCdrIbDetails  ClinkDescribeCdrIbDetailsRequest
+     * @return ClinkDescribeCdrIbDetailsResponse
+     */
+    CompletableFuture<ClinkDescribeCdrIbDetailsResponse> clinkDescribeCdrIbDetails(ClinkDescribeCdrIbDetailsRequest request);
+
+    /**
+     * @param request the request parameters of ClinkDescribeCdrOb  ClinkDescribeCdrObRequest
+     * @return ClinkDescribeCdrObResponse
+     */
+    CompletableFuture<ClinkDescribeCdrObResponse> clinkDescribeCdrOb(ClinkDescribeCdrObRequest request);
+
+    /**
+     * @param request the request parameters of ClinkDescribeCdrObDetails  ClinkDescribeCdrObDetailsRequest
+     * @return ClinkDescribeCdrObDetailsResponse
+     */
+    CompletableFuture<ClinkDescribeCdrObDetailsResponse> clinkDescribeCdrObDetails(ClinkDescribeCdrObDetailsRequest request);
+
+    /**
+     * @param request the request parameters of ClinkDescribeClient  ClinkDescribeClientRequest
+     * @return ClinkDescribeClientResponse
+     */
+    CompletableFuture<ClinkDescribeClientResponse> clinkDescribeClient(ClinkDescribeClientRequest request);
+
+    /**
+     * @param request the request parameters of ClinkDescribeQueue  ClinkDescribeQueueRequest
+     * @return ClinkDescribeQueueResponse
+     */
+    CompletableFuture<ClinkDescribeQueueResponse> clinkDescribeQueue(ClinkDescribeQueueRequest request);
+
+    /**
+     * @param request the request parameters of ClinkDescribeRecordFileUrl  ClinkDescribeRecordFileUrlRequest
+     * @return ClinkDescribeRecordFileUrlResponse
+     */
+    CompletableFuture<ClinkDescribeRecordFileUrlResponse> clinkDescribeRecordFileUrl(ClinkDescribeRecordFileUrlRequest request);
+
+    /**
+     * @param request the request parameters of ClinkDetailCdrIb  ClinkDetailCdrIbRequest
+     * @return ClinkDetailCdrIbResponse
+     */
+    CompletableFuture<ClinkDetailCdrIbResponse> clinkDetailCdrIb(ClinkDetailCdrIbRequest request);
+
+    /**
+     * @param request the request parameters of ClinkListCdrIb  ClinkListCdrIbRequest
+     * @return ClinkListCdrIbResponse
+     */
+    CompletableFuture<ClinkListCdrIbResponse> clinkListCdrIb(ClinkListCdrIbRequest request);
+
+    /**
+     * @param request the request parameters of ClinkListCdrIbAgent  ClinkListCdrIbAgentRequest
+     * @return ClinkListCdrIbAgentResponse
+     */
+    CompletableFuture<ClinkListCdrIbAgentResponse> clinkListCdrIbAgent(ClinkListCdrIbAgentRequest request);
+
+    /**
+     * @param request the request parameters of ClinkListCdrIbs  ClinkListCdrIbsRequest
+     * @return ClinkListCdrIbsResponse
+     */
+    CompletableFuture<ClinkListCdrIbsResponse> clinkListCdrIbs(ClinkListCdrIbsRequest request);
+
+    /**
+     * @param request the request parameters of ClinkListCdrOb  ClinkListCdrObRequest
+     * @return ClinkListCdrObResponse
+     */
+    CompletableFuture<ClinkListCdrObResponse> clinkListCdrOb(ClinkListCdrObRequest request);
+
+    /**
+     * @param request the request parameters of ClinkListCdrObs  ClinkListCdrObsRequest
+     * @return ClinkListCdrObsResponse
+     */
+    CompletableFuture<ClinkListCdrObsResponse> clinkListCdrObs(ClinkListCdrObsRequest request);
+
+    /**
+     * @param request the request parameters of ClinkListClients  ClinkListClientsRequest
+     * @return ClinkListClientsResponse
+     */
+    CompletableFuture<ClinkListClientsResponse> clinkListClients(ClinkListClientsRequest request);
+
+    /**
+     * @param request the request parameters of ClinkListEnterprisePauses  ClinkListEnterprisePausesRequest
+     * @return ClinkListEnterprisePausesResponse
+     */
+    CompletableFuture<ClinkListEnterprisePausesResponse> clinkListEnterprisePauses(ClinkListEnterprisePausesRequest request);
+
+    /**
+     * @param request the request parameters of ClinkListExtens  ClinkListExtensRequest
+     * @return ClinkListExtensResponse
+     */
+    CompletableFuture<ClinkListExtensResponse> clinkListExtens(ClinkListExtensRequest request);
+
+    /**
+     * @param request the request parameters of ClinkListIvrNodes  ClinkListIvrNodesRequest
+     * @return ClinkListIvrNodesResponse
+     */
+    CompletableFuture<ClinkListIvrNodesResponse> clinkListIvrNodes(ClinkListIvrNodesRequest request);
+
+    /**
+     * @param request the request parameters of ClinkListIvrs  ClinkListIvrsRequest
+     * @return ClinkListIvrsResponse
+     */
+    CompletableFuture<ClinkListIvrsResponse> clinkListIvrs(ClinkListIvrsRequest request);
+
+    /**
+     * @param request the request parameters of ClinkListQueues  ClinkListQueuesRequest
+     * @return ClinkListQueuesResponse
+     */
+    CompletableFuture<ClinkListQueuesResponse> clinkListQueues(ClinkListQueuesRequest request);
+
+    /**
+     * @param request the request parameters of ClinkStatIb  ClinkStatIbRequest
+     * @return ClinkStatIbResponse
+     */
+    CompletableFuture<ClinkStatIbResponse> clinkStatIb(ClinkStatIbRequest request);
+
+    /**
+     * @param request the request parameters of ClinkUpdateClient  ClinkUpdateClientRequest
+     * @return ClinkUpdateClientResponse
+     */
+    CompletableFuture<ClinkUpdateClientResponse> clinkUpdateClient(ClinkUpdateClientRequest request);
+
+    /**
      * @param request the request parameters of CloudAgentLogin  CloudAgentLoginRequest
      * @return CloudAgentLoginResponse
      */
@@ -96,6 +282,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloudAgentLogoutResponse> cloudAgentLogout(CloudAgentLogoutRequest request);
 
     /**
+     * @param request the request parameters of CloudAgentMonitorStatistics  CloudAgentMonitorStatisticsRequest
+     * @return CloudAgentMonitorStatisticsResponse
+     */
+    CompletableFuture<CloudAgentMonitorStatisticsResponse> cloudAgentMonitorStatistics(CloudAgentMonitorStatisticsRequest request);
+
+    /**
      * @param request the request parameters of CloudAgentSetUserData  CloudAgentSetUserDataRequest
      * @return CloudAgentSetUserDataResponse
      */
@@ -106,6 +298,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CloudAgentUnlinkResponse
      */
     CompletableFuture<CloudAgentUnlinkResponse> cloudAgentUnlink(CloudAgentUnlinkRequest request);
+
+    /**
+     * @param request the request parameters of CloudAgentWorkloadReport  CloudAgentWorkloadReportRequest
+     * @return CloudAgentWorkloadReportResponse
+     */
+    CompletableFuture<CloudAgentWorkloadReportResponse> cloudAgentWorkloadReport(CloudAgentWorkloadReportRequest request);
+
+    /**
+     * @param request the request parameters of CloudAssignAgentGroup  CloudAssignAgentGroupRequest
+     * @return CloudAssignAgentGroupResponse
+     */
+    CompletableFuture<CloudAssignAgentGroupResponse> cloudAssignAgentGroup(CloudAssignAgentGroupRequest request);
 
     /**
      * @param request the request parameters of CloudBatchCreateAgent  CloudBatchCreateAgentRequest
@@ -132,6 +336,48 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloudCreateAgentResponse> cloudCreateAgent(CloudCreateAgentRequest request);
 
     /**
+     * @param request the request parameters of CloudCreateAgentGroup  CloudCreateAgentGroupRequest
+     * @return CloudCreateAgentGroupResponse
+     */
+    CompletableFuture<CloudCreateAgentGroupResponse> cloudCreateAgentGroup(CloudCreateAgentGroupRequest request);
+
+    /**
+     * @param request the request parameters of CloudCreateAsr  CloudCreateAsrRequest
+     * @return CloudCreateAsrResponse
+     */
+    CompletableFuture<CloudCreateAsrResponse> cloudCreateAsr(CloudCreateAsrRequest request);
+
+    /**
+     * @param request the request parameters of CloudCreateEnterpriseTime  CloudCreateEnterpriseTimeRequest
+     * @return CloudCreateEnterpriseTimeResponse
+     */
+    CompletableFuture<CloudCreateEnterpriseTimeResponse> cloudCreateEnterpriseTime(CloudCreateEnterpriseTimeRequest request);
+
+    /**
+     * @param request the request parameters of CloudCreateExten  CloudCreateExtenRequest
+     * @return CloudCreateExtenResponse
+     */
+    CompletableFuture<CloudCreateExtenResponse> cloudCreateExten(CloudCreateExtenRequest request);
+
+    /**
+     * @param request the request parameters of CloudCreateQueue  CloudCreateQueueRequest
+     * @return CloudCreateQueueResponse
+     */
+    CompletableFuture<CloudCreateQueueResponse> cloudCreateQueue(CloudCreateQueueRequest request);
+
+    /**
+     * @param request the request parameters of CloudCreateQueueSkill  CloudCreateQueueSkillRequest
+     * @return CloudCreateQueueSkillResponse
+     */
+    CompletableFuture<CloudCreateQueueSkillResponse> cloudCreateQueueSkill(CloudCreateQueueSkillRequest request);
+
+    /**
+     * @param request the request parameters of CloudCreateSkill  CloudCreateSkillRequest
+     * @return CloudCreateSkillResponse
+     */
+    CompletableFuture<CloudCreateSkillResponse> cloudCreateSkill(CloudCreateSkillRequest request);
+
+    /**
      * @param request the request parameters of CloudCreateTask  CloudCreateTaskRequest
      * @return CloudCreateTaskResponse
      */
@@ -144,10 +390,58 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloudDeleteAgentResponse> cloudDeleteAgent(CloudDeleteAgentRequest request);
 
     /**
+     * @param request the request parameters of CloudDeleteAgentGroup  CloudDeleteAgentGroupRequest
+     * @return CloudDeleteAgentGroupResponse
+     */
+    CompletableFuture<CloudDeleteAgentGroupResponse> cloudDeleteAgentGroup(CloudDeleteAgentGroupRequest request);
+
+    /**
      * @param request the request parameters of CloudDeleteAgentTel  CloudDeleteAgentTelRequest
      * @return CloudDeleteAgentTelResponse
      */
     CompletableFuture<CloudDeleteAgentTelResponse> cloudDeleteAgentTel(CloudDeleteAgentTelRequest request);
+
+    /**
+     * @param request the request parameters of CloudDeleteEnterpriseTime  CloudDeleteEnterpriseTimeRequest
+     * @return CloudDeleteEnterpriseTimeResponse
+     */
+    CompletableFuture<CloudDeleteEnterpriseTimeResponse> cloudDeleteEnterpriseTime(CloudDeleteEnterpriseTimeRequest request);
+
+    /**
+     * @param request the request parameters of CloudDeleteExten  CloudDeleteExtenRequest
+     * @return CloudDeleteExtenResponse
+     */
+    CompletableFuture<CloudDeleteExtenResponse> cloudDeleteExten(CloudDeleteExtenRequest request);
+
+    /**
+     * @param request the request parameters of CloudDeleteQueue  CloudDeleteQueueRequest
+     * @return CloudDeleteQueueResponse
+     */
+    CompletableFuture<CloudDeleteQueueResponse> cloudDeleteQueue(CloudDeleteQueueRequest request);
+
+    /**
+     * @param request the request parameters of CloudDeleteQueueSkill  CloudDeleteQueueSkillRequest
+     * @return CloudDeleteQueueSkillResponse
+     */
+    CompletableFuture<CloudDeleteQueueSkillResponse> cloudDeleteQueueSkill(CloudDeleteQueueSkillRequest request);
+
+    /**
+     * @param request the request parameters of CloudDeleteSkill  CloudDeleteSkillRequest
+     * @return CloudDeleteSkillResponse
+     */
+    CompletableFuture<CloudDeleteSkillResponse> cloudDeleteSkill(CloudDeleteSkillRequest request);
+
+    /**
+     * @param request the request parameters of CloudDeleteTask  CloudDeleteTaskRequest
+     * @return CloudDeleteTaskResponse
+     */
+    CompletableFuture<CloudDeleteTaskResponse> cloudDeleteTask(CloudDeleteTaskRequest request);
+
+    /**
+     * @param request the request parameters of CloudDeleteTaskTel  CloudDeleteTaskTelRequest
+     * @return CloudDeleteTaskTelResponse
+     */
+    CompletableFuture<CloudDeleteTaskTelResponse> cloudDeleteTaskTel(CloudDeleteTaskTelRequest request);
 
     /**
      * @param request the request parameters of CloudGetAgent  CloudGetAgentRequest
@@ -162,16 +456,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloudGetAgentStatusResponse> cloudGetAgentStatus(CloudGetAgentStatusRequest request);
 
     /**
+     * @param request the request parameters of CloudGetAreaCode  CloudGetAreaCodeRequest
+     * @return CloudGetAreaCodeResponse
+     */
+    CompletableFuture<CloudGetAreaCodeResponse> cloudGetAreaCode(CloudGetAreaCodeRequest request);
+
+    /**
+     * @param request the request parameters of CloudGetAsr  CloudGetAsrRequest
+     * @return CloudGetAsrResponse
+     */
+    CompletableFuture<CloudGetAsrResponse> cloudGetAsr(CloudGetAsrRequest request);
+
+    /**
+     * @param request the request parameters of CloudGetExten  CloudGetExtenRequest
+     * @return CloudGetExtenResponse
+     */
+    CompletableFuture<CloudGetExtenResponse> cloudGetExten(CloudGetExtenRequest request);
+
+    /**
      * @param request the request parameters of CloudGetObCdr  CloudGetObCdrRequest
      * @return CloudGetObCdrResponse
      */
     CompletableFuture<CloudGetObCdrResponse> cloudGetObCdr(CloudGetObCdrRequest request);
 
     /**
+     * @param request the request parameters of CloudGetQueue  CloudGetQueueRequest
+     * @return CloudGetQueueResponse
+     */
+    CompletableFuture<CloudGetQueueResponse> cloudGetQueue(CloudGetQueueRequest request);
+
+    /**
      * @param request the request parameters of CloudGetRecordUrl  CloudGetRecordUrlRequest
      * @return CloudGetRecordUrlResponse
      */
     CompletableFuture<CloudGetRecordUrlResponse> cloudGetRecordUrl(CloudGetRecordUrlRequest request);
+
+    /**
+     * @param request the request parameters of CloudGetTask  CloudGetTaskRequest
+     * @return CloudGetTaskResponse
+     */
+    CompletableFuture<CloudGetTaskResponse> cloudGetTask(CloudGetTaskRequest request);
 
     /**
      * @param request the request parameters of CloudImportTaskTel  CloudImportTaskTelRequest
@@ -186,10 +510,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloudInterruptIvrResponse> cloudInterruptIvr(CloudInterruptIvrRequest request);
 
     /**
+     * @param request the request parameters of CloudListAgentGroup  CloudListAgentGroupRequest
+     * @return CloudListAgentGroupResponse
+     */
+    CompletableFuture<CloudListAgentGroupResponse> cloudListAgentGroup(CloudListAgentGroupRequest request);
+
+    /**
      * @param request the request parameters of CloudListAgentTel  CloudListAgentTelRequest
      * @return CloudListAgentTelResponse
      */
     CompletableFuture<CloudListAgentTelResponse> cloudListAgentTel(CloudListAgentTelRequest request);
+
+    /**
+     * @param request the request parameters of CloudListAssignedAgentGroup  CloudListAssignedAgentGroupRequest
+     * @return CloudListAssignedAgentGroupResponse
+     */
+    CompletableFuture<CloudListAssignedAgentGroupResponse> cloudListAssignedAgentGroup(CloudListAssignedAgentGroupRequest request);
+
+    /**
+     * @param request the request parameters of CloudListCurlLog  CloudListCurlLogRequest
+     * @return CloudListCurlLogResponse
+     */
+    CompletableFuture<CloudListCurlLogResponse> cloudListCurlLog(CloudListCurlLogRequest request);
+
+    /**
+     * @param request the request parameters of CloudListEnterpriseTime  CloudListEnterpriseTimeRequest
+     * @return CloudListEnterpriseTimeResponse
+     */
+    CompletableFuture<CloudListEnterpriseTimeResponse> cloudListEnterpriseTime(CloudListEnterpriseTimeRequest request);
+
+    /**
+     * @param request the request parameters of CloudListExten  CloudListExtenRequest
+     * @return CloudListExtenResponse
+     */
+    CompletableFuture<CloudListExtenResponse> cloudListExten(CloudListExtenRequest request);
 
     /**
      * @param request the request parameters of CloudListFreeAgent  CloudListFreeAgentRequest
@@ -204,6 +558,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloudListOnlineAgentResponse> cloudListOnlineAgent(CloudListOnlineAgentRequest request);
 
     /**
+     * @param request the request parameters of CloudListQueue  CloudListQueueRequest
+     * @return CloudListQueueResponse
+     */
+    CompletableFuture<CloudListQueueResponse> cloudListQueue(CloudListQueueRequest request);
+
+    /**
+     * @param request the request parameters of CloudListQueueSkill  CloudListQueueSkillRequest
+     * @return CloudListQueueSkillResponse
+     */
+    CompletableFuture<CloudListQueueSkillResponse> cloudListQueueSkill(CloudListQueueSkillRequest request);
+
+    /**
+     * @param request the request parameters of CloudListSkill  CloudListSkillRequest
+     * @return CloudListSkillResponse
+     */
+    CompletableFuture<CloudListSkillResponse> cloudListSkill(CloudListSkillRequest request);
+
+    /**
+     * @param request the request parameters of CloudListTaskFile  CloudListTaskFileRequest
+     * @return CloudListTaskFileResponse
+     */
+    CompletableFuture<CloudListTaskFileResponse> cloudListTaskFile(CloudListTaskFileRequest request);
+
+    /**
+     * @param request the request parameters of CloudMonitorTask  CloudMonitorTaskRequest
+     * @return CloudMonitorTaskResponse
+     */
+    CompletableFuture<CloudMonitorTaskResponse> cloudMonitorTask(CloudMonitorTaskRequest request);
+
+    /**
      * @param request the request parameters of CloudOutboundObClidReport  CloudOutboundObClidReportRequest
      * @return CloudOutboundObClidReportResponse
      */
@@ -214,6 +598,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CloudOutboundPreviewObReportResponse
      */
     CompletableFuture<CloudOutboundPreviewObReportResponse> cloudOutboundPreviewObReport(CloudOutboundPreviewObReportRequest request);
+
+    /**
+     * @param request the request parameters of CloudPauseTask  CloudPauseTaskRequest
+     * @return CloudPauseTaskResponse
+     */
+    CompletableFuture<CloudPauseTaskResponse> cloudPauseTask(CloudPauseTaskRequest request);
 
     /**
      * @param request the request parameters of CloudPreviewoutcall  CloudPreviewoutcallRequest
@@ -264,6 +654,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloudQueryPredictiveCallCdrResponse> cloudQueryPredictiveCallCdr(CloudQueryPredictiveCallCdrRequest request);
 
     /**
+     * @param request the request parameters of CloudQueryRasrEvent  CloudQueryRasrEventRequest
+     * @return CloudQueryRasrEventResponse
+     */
+    CompletableFuture<CloudQueryRasrEventResponse> cloudQueryRasrEvent(CloudQueryRasrEventRequest request);
+
+    /**
+     * @param request the request parameters of CloudQueryTask  CloudQueryTaskRequest
+     * @return CloudQueryTaskResponse
+     */
+    CompletableFuture<CloudQueryTaskResponse> cloudQueryTask(CloudQueryTaskRequest request);
+
+    /**
      * @param request the request parameters of CloudQueryWebcallCdr  CloudQueryWebcallCdrRequest
      * @return CloudQueryWebcallCdrResponse
      */
@@ -274,6 +676,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CloudStartTaskResponse
      */
     CompletableFuture<CloudStartTaskResponse> cloudStartTask(CloudStartTaskRequest request);
+
+    /**
+     * @param request the request parameters of CloudUnassignAgentGroup  CloudUnassignAgentGroupRequest
+     * @return CloudUnassignAgentGroupResponse
+     */
+    CompletableFuture<CloudUnassignAgentGroupResponse> cloudUnassignAgentGroup(CloudUnassignAgentGroupRequest request);
 
     /**
      * @param request the request parameters of CloudUpdateAgent  CloudUpdateAgentRequest
