@@ -26,14 +26,10 @@ public class WebSearchResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @com.aliyun.core.annotation.NameInMap("traceId")
-    private String traceId;
-
     private WebSearchResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
-        this.traceId = builder.traceId;
     }
 
     public static Builder builder() {
@@ -69,18 +65,10 @@ public class WebSearchResponseBody extends TeaModel {
         return this.message;
     }
 
-    /**
-     * @return traceId
-     */
-    public String getTraceId() {
-        return this.traceId;
-    }
-
     public static final class Builder {
         private Integer code; 
         private Data data; 
         private String message; 
-        private String traceId; 
 
         private Builder() {
         } 
@@ -89,7 +77,6 @@ public class WebSearchResponseBody extends TeaModel {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
-            this.traceId = model.traceId;
         } 
 
         /**
@@ -116,17 +103,6 @@ public class WebSearchResponseBody extends TeaModel {
             return this;
         }
 
-        /**
-         * <p>requestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3b5215d417623961959166934d009a</p>
-         */
-        public Builder traceId(String traceId) {
-            this.traceId = traceId;
-            return this;
-        }
-
         public WebSearchResponseBody build() {
             return new WebSearchResponseBody(this);
         } 
@@ -139,9 +115,111 @@ public class WebSearchResponseBody extends TeaModel {
      *
      * <p>WebSearchResponseBody</p>
      */
+    public static class Source extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("domain")
+        private String domain;
+
+        @com.aliyun.core.annotation.NameInMap("favicon")
+        private String favicon;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private Source(Builder builder) {
+            this.domain = builder.domain;
+            this.favicon = builder.favicon;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Source create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return favicon
+         */
+        public String getFavicon() {
+            return this.favicon;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String domain; 
+            private String favicon; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.domain = model.domain;
+                this.favicon = model.favicon;
+                this.name = model.name;
+            } 
+
+            /**
+             * domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * favicon.
+             */
+            public Builder favicon(String favicon) {
+                this.favicon = favicon;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Source build() {
+                return new Source(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link WebSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>WebSearchResponseBody</p>
+     */
     public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("date")
+        private String date;
+
         @com.aliyun.core.annotation.NameInMap("snippet")
         private String snippet;
+
+        @com.aliyun.core.annotation.NameInMap("source")
+        private Source source;
 
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
@@ -150,7 +228,9 @@ public class WebSearchResponseBody extends TeaModel {
         private String url;
 
         private Result(Builder builder) {
+            this.date = builder.date;
             this.snippet = builder.snippet;
+            this.source = builder.source;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -164,10 +244,24 @@ public class WebSearchResponseBody extends TeaModel {
         }
 
         /**
+         * @return date
+         */
+        public String getDate() {
+            return this.date;
+        }
+
+        /**
          * @return snippet
          */
         public String getSnippet() {
             return this.snippet;
+        }
+
+        /**
+         * @return source
+         */
+        public Source getSource() {
+            return this.source;
         }
 
         /**
@@ -185,7 +279,9 @@ public class WebSearchResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String date; 
             private String snippet; 
+            private Source source; 
             private String title; 
             private String url; 
 
@@ -193,16 +289,34 @@ public class WebSearchResponseBody extends TeaModel {
             } 
 
             private Builder(Result model) {
+                this.date = model.date;
                 this.snippet = model.snippet;
+                this.source = model.source;
                 this.title = model.title;
                 this.url = model.url;
             } 
+
+            /**
+             * date.
+             */
+            public Builder date(String date) {
+                this.date = date;
+                return this;
+            }
 
             /**
              * snippet.
              */
             public Builder snippet(String snippet) {
                 this.snippet = snippet;
+                return this;
+            }
+
+            /**
+             * source.
+             */
+            public Builder source(Source source) {
+                this.source = source;
                 return this;
             }
 
