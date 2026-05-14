@@ -65,6 +65,9 @@ public class GetProjectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private GetProjectResponseBody(Builder builder) {
         this.description = builder.description;
         this.featureEntityCount = builder.featureEntityCount;
@@ -82,6 +85,7 @@ public class GetProjectResponseBody extends TeaModel {
         this.onlineDatasourceType = builder.onlineDatasourceType;
         this.owner = builder.owner;
         this.requestId = builder.requestId;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -208,6 +212,13 @@ public class GetProjectResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private String description; 
         private Integer featureEntityCount; 
@@ -225,6 +236,7 @@ public class GetProjectResponseBody extends TeaModel {
         private String onlineDatasourceType; 
         private String owner; 
         private String requestId; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -246,6 +258,7 @@ public class GetProjectResponseBody extends TeaModel {
             this.onlineDatasourceType = model.onlineDatasourceType;
             this.owner = model.owner;
             this.requestId = model.requestId;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -373,6 +386,14 @@ public class GetProjectResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

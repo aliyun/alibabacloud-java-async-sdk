@@ -32,6 +32,10 @@ public class ListFeatureViewOnlineFeaturesRequest extends Request {
     private String featureViewId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    private String config;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JoinIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> joinIds;
@@ -41,6 +45,7 @@ public class ListFeatureViewOnlineFeaturesRequest extends Request {
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.featureViewId = builder.featureViewId;
+        this.config = builder.config;
         this.joinIds = builder.joinIds;
     }
 
@@ -79,6 +84,13 @@ public class ListFeatureViewOnlineFeaturesRequest extends Request {
     }
 
     /**
+     * @return config
+     */
+    public String getConfig() {
+        return this.config;
+    }
+
+    /**
      * @return joinIds
      */
     public java.util.List<String> getJoinIds() {
@@ -89,6 +101,7 @@ public class ListFeatureViewOnlineFeaturesRequest extends Request {
         private String regionId; 
         private String instanceId; 
         private String featureViewId; 
+        private String config; 
         private java.util.List<String> joinIds; 
 
         private Builder() {
@@ -100,6 +113,7 @@ public class ListFeatureViewOnlineFeaturesRequest extends Request {
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.featureViewId = request.featureViewId;
+            this.config = request.config;
             this.joinIds = request.joinIds;
         } 
 
@@ -133,6 +147,15 @@ public class ListFeatureViewOnlineFeaturesRequest extends Request {
         public Builder featureViewId(String featureViewId) {
             this.putPathParameter("FeatureViewId", featureViewId);
             this.featureViewId = featureViewId;
+            return this;
+        }
+
+        /**
+         * Config.
+         */
+        public Builder config(String config) {
+            this.putQueryParameter("Config", config);
+            this.config = config;
             return this;
         }
 
