@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDigitalEmployeeResponseBody</p>
  */
 public class GetDigitalEmployeeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("attributes")
+    private java.util.Map<String, String> attributes;
+
     @com.aliyun.core.annotation.NameInMap("createTime")
     private String createTime;
 
@@ -58,6 +61,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     private String updateTime;
 
     private GetDigitalEmployeeResponseBody(Builder builder) {
+        this.attributes = builder.attributes;
         this.createTime = builder.createTime;
         this.defaultRule = builder.defaultRule;
         this.description = builder.description;
@@ -83,6 +87,13 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return attributes
+     */
+    public java.util.Map<String, String> getAttributes() {
+        return this.attributes;
     }
 
     /**
@@ -177,6 +188,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.Map<String, String> attributes; 
         private String createTime; 
         private String defaultRule; 
         private String description; 
@@ -195,6 +207,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         } 
 
         private Builder(GetDigitalEmployeeResponseBody model) {
+            this.attributes = model.attributes;
             this.createTime = model.createTime;
             this.defaultRule = model.defaultRule;
             this.description = model.description;
@@ -209,6 +222,14 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             this.tags = model.tags;
             this.updateTime = model.updateTime;
         } 
+
+        /**
+         * attributes.
+         */
+        public Builder attributes(java.util.Map<String, String> attributes) {
+            this.attributes = attributes;
+            return this;
+        }
 
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>

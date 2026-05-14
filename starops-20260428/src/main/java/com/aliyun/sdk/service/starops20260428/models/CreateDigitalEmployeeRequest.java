@@ -22,6 +22,10 @@ public class CreateDigitalEmployeeRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("attributes")
+    private java.util.Map<String, String> attributes;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("defaultRule")
     private String defaultRule;
 
@@ -59,6 +63,7 @@ public class CreateDigitalEmployeeRequest extends Request {
     private CreateDigitalEmployeeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.attributes = builder.attributes;
         this.defaultRule = builder.defaultRule;
         this.description = builder.description;
         this.displayName = builder.displayName;
@@ -87,6 +92,13 @@ public class CreateDigitalEmployeeRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return attributes
+     */
+    public java.util.Map<String, String> getAttributes() {
+        return this.attributes;
     }
 
     /**
@@ -147,6 +159,7 @@ public class CreateDigitalEmployeeRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDigitalEmployeeRequest, Builder> {
         private String regionId; 
+        private java.util.Map<String, String> attributes; 
         private String defaultRule; 
         private String description; 
         private String displayName; 
@@ -163,6 +176,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         private Builder(CreateDigitalEmployeeRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.attributes = request.attributes;
             this.defaultRule = request.defaultRule;
             this.description = request.description;
             this.displayName = request.displayName;
@@ -179,6 +193,15 @@ public class CreateDigitalEmployeeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * attributes.
+         */
+        public Builder attributes(java.util.Map<String, String> attributes) {
+            this.putBodyParameter("attributes", attributes);
+            this.attributes = attributes;
             return this;
         }
 
