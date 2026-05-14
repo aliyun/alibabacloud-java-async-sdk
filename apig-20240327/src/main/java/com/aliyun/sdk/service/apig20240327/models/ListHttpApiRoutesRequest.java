@@ -22,6 +22,10 @@ public class ListHttpApiRoutesRequest extends Request {
     private String httpApiId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("backendServiceName")
+    private String backendServiceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("consumerAuthorizationRuleId")
     private String consumerAuthorizationRuleId;
 
@@ -80,6 +84,7 @@ public class ListHttpApiRoutesRequest extends Request {
     private ListHttpApiRoutesRequest(Builder builder) {
         super(builder);
         this.httpApiId = builder.httpApiId;
+        this.backendServiceName = builder.backendServiceName;
         this.consumerAuthorizationRuleId = builder.consumerAuthorizationRuleId;
         this.deployStatuses = builder.deployStatuses;
         this.domainId = builder.domainId;
@@ -114,6 +119,13 @@ public class ListHttpApiRoutesRequest extends Request {
      */
     public String getHttpApiId() {
         return this.httpApiId;
+    }
+
+    /**
+     * @return backendServiceName
+     */
+    public String getBackendServiceName() {
+        return this.backendServiceName;
     }
 
     /**
@@ -216,6 +228,7 @@ public class ListHttpApiRoutesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListHttpApiRoutesRequest, Builder> {
         private String httpApiId; 
+        private String backendServiceName; 
         private String consumerAuthorizationRuleId; 
         private String deployStatuses; 
         private String domainId; 
@@ -238,6 +251,7 @@ public class ListHttpApiRoutesRequest extends Request {
         private Builder(ListHttpApiRoutesRequest request) {
             super(request);
             this.httpApiId = request.httpApiId;
+            this.backendServiceName = request.backendServiceName;
             this.consumerAuthorizationRuleId = request.consumerAuthorizationRuleId;
             this.deployStatuses = request.deployStatuses;
             this.domainId = request.domainId;
@@ -263,6 +277,15 @@ public class ListHttpApiRoutesRequest extends Request {
         public Builder httpApiId(String httpApiId) {
             this.putPathParameter("httpApiId", httpApiId);
             this.httpApiId = httpApiId;
+            return this;
+        }
+
+        /**
+         * backendServiceName.
+         */
+        public Builder backendServiceName(String backendServiceName) {
+            this.putQueryParameter("backendServiceName", backendServiceName);
+            this.backendServiceName = backendServiceName;
             return this;
         }
 
