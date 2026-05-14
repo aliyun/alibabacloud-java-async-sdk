@@ -22,6 +22,10 @@ public class ListServiceConfigsRequest extends Request {
     private String classify;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtectionType")
+    private String protectionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -36,6 +40,7 @@ public class ListServiceConfigsRequest extends Request {
     private ListServiceConfigsRequest(Builder builder) {
         super(builder);
         this.classify = builder.classify;
+        this.protectionType = builder.protectionType;
         this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
         this.useStatus = builder.useStatus;
@@ -62,6 +67,13 @@ public class ListServiceConfigsRequest extends Request {
     }
 
     /**
+     * @return protectionType
+     */
+    public String getProtectionType() {
+        return this.protectionType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -84,6 +96,7 @@ public class ListServiceConfigsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListServiceConfigsRequest, Builder> {
         private String classify; 
+        private String protectionType; 
         private String regionId; 
         private String resourceType; 
         private String useStatus; 
@@ -95,6 +108,7 @@ public class ListServiceConfigsRequest extends Request {
         private Builder(ListServiceConfigsRequest request) {
             super(request);
             this.classify = request.classify;
+            this.protectionType = request.protectionType;
             this.regionId = request.regionId;
             this.resourceType = request.resourceType;
             this.useStatus = request.useStatus;
@@ -109,6 +123,15 @@ public class ListServiceConfigsRequest extends Request {
         public Builder classify(String classify) {
             this.putQueryParameter("Classify", classify);
             this.classify = classify;
+            return this;
+        }
+
+        /**
+         * ProtectionType.
+         */
+        public Builder protectionType(String protectionType) {
+            this.putQueryParameter("ProtectionType", protectionType);
+            this.protectionType = protectionType;
             return this;
         }
 
