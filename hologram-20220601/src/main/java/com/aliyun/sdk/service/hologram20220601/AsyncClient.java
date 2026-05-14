@@ -26,6 +26,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateDatabase  CreateDatabaseRequest
+     * @return CreateDatabaseResponse
+     */
+    CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of CreateExternalDatabase  CreateExternalDatabaseRequest
+     * @return CreateExternalDatabaseResponse
+     */
+    CompletableFuture<CreateExternalDatabaseResponse> createExternalDatabase(CreateExternalDatabaseRequest request);
+
+    /**
      * @param request the request parameters of CreateHoloWarehouse  CreateHoloWarehouseRequest
      * @return CreateHoloWarehouseResponse
      */
@@ -62,10 +74,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateModelService  CreateModelServiceRequest
+     * @return CreateModelServiceResponse
+     */
+    CompletableFuture<CreateModelServiceResponse> createModelService(CreateModelServiceRequest request);
+
+    /**
      * @param request the request parameters of CreateUser  CreateUserRequest
      * @return CreateUserResponse
      */
     CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
+
+    /**
+     * @param request the request parameters of CreateWarehouse  CreateWarehouseRequest
+     * @return CreateWarehouseResponse
+     */
+    CompletableFuture<CreateWarehouseResponse> createWarehouse(CreateWarehouseRequest request);
+
+    /**
+     * @param request the request parameters of CreateWarehouseScheduleTask  CreateWarehouseScheduleTaskRequest
+     * @return CreateWarehouseScheduleTaskResponse
+     */
+    CompletableFuture<CreateWarehouseScheduleTaskResponse> createWarehouseScheduleTask(CreateWarehouseScheduleTaskRequest request);
 
     /**
      * @param request the request parameters of DeleteHoloWarehouse  DeleteHoloWarehouseRequest
@@ -89,6 +119,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
 
     /**
+     * @param request the request parameters of DeleteModelResource  DeleteModelResourceRequest
+     * @return DeleteModelResourceResponse
+     */
+    CompletableFuture<DeleteModelResourceResponse> deleteModelResource(DeleteModelResourceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteModelService  DeleteModelServiceRequest
+     * @return DeleteModelServiceResponse
+     */
+    CompletableFuture<DeleteModelServiceResponse> deleteModelService(DeleteModelServiceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteWarehouseScheduleTask  DeleteWarehouseScheduleTaskRequest
+     * @return DeleteWarehouseScheduleTaskResponse
+     */
+    CompletableFuture<DeleteWarehouseScheduleTaskResponse> deleteWarehouseScheduleTask(DeleteWarehouseScheduleTaskRequest request);
+
+    /**
      * @param request the request parameters of DisableHiveAccess  DisableHiveAccessRequest
      * @return DisableHiveAccessResponse
      */
@@ -99,6 +147,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DisableSSLResponse
      */
     CompletableFuture<DisableSSLResponse> disableSSL(DisableSSLRequest request);
+
+    /**
+     * @param request the request parameters of DisableWarehouseAutoScale  DisableWarehouseAutoScaleRequest
+     * @return DisableWarehouseAutoScaleResponse
+     */
+    CompletableFuture<DisableWarehouseAutoScaleResponse> disableWarehouseAutoScale(DisableWarehouseAutoScaleRequest request);
 
     /**
      * @param request the request parameters of DropUser  DropUserRequest
@@ -119,6 +173,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableSSLResponse> enableSSL(EnableSSLRequest request);
 
     /**
+     * @param request the request parameters of EnableWarehouseAutoScale  EnableWarehouseAutoScaleRequest
+     * @return EnableWarehouseAutoScaleResponse
+     */
+    CompletableFuture<EnableWarehouseAutoScaleResponse> enableWarehouseAutoScale(EnableWarehouseAutoScaleRequest request);
+
+    /**
      * @param request the request parameters of GetCertificateAttribute  GetCertificateAttributeRequest
      * @return GetCertificateAttributeResponse
      */
@@ -129,6 +189,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetInstanceResponse
      */
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceModel  GetInstanceModelRequest
+     * @return GetInstanceModelResponse
+     */
+    CompletableFuture<GetInstanceModelResponse> getInstanceModel(GetInstanceModelRequest request);
 
     /**
      * @param request the request parameters of GetRootCertificate  GetRootCertificateRequest
@@ -173,10 +239,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
 
     /**
+     * @param request the request parameters of ListInstanceModel  ListInstanceModelRequest
+     * @return ListInstanceModelResponse
+     */
+    CompletableFuture<ListInstanceModelResponse> listInstanceModel(ListInstanceModelRequest request);
+
+    /**
      * @param request the request parameters of ListInstances  ListInstancesRequest
      * @return ListInstancesResponse
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListModelCatalog  ListModelCatalogRequest
+     * @return ListModelCatalogResponse
+     */
+    CompletableFuture<ListModelCatalogResponse> listModelCatalog(ListModelCatalogRequest request);
+
+    /**
+     * @param request the request parameters of ListWarehouseScheduleEvent  ListWarehouseScheduleEventRequest
+     * @return ListWarehouseScheduleEventResponse
+     */
+    CompletableFuture<ListWarehouseScheduleEventResponse> listWarehouseScheduleEvent(ListWarehouseScheduleEventRequest request);
+
+    /**
+     * @param request the request parameters of ListWarehouseScheduleTask  ListWarehouseScheduleTaskRequest
+     * @return ListWarehouseScheduleTaskResponse
+     */
+    CompletableFuture<ListWarehouseScheduleTaskResponse> listWarehouseScheduleTask(ListWarehouseScheduleTaskRequest request);
 
     /**
      * @param request the request parameters of ListWarehouses  ListWarehousesRequest
@@ -304,5 +394,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateInstanceNetworkTypeResponse
      */
     CompletableFuture<UpdateInstanceNetworkTypeResponse> updateInstanceNetworkType(UpdateInstanceNetworkTypeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateModelService  UpdateModelServiceRequest
+     * @return UpdateModelServiceResponse
+     */
+    CompletableFuture<UpdateModelServiceResponse> updateModelService(UpdateModelServiceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWarehouseScheduleTask  UpdateWarehouseScheduleTaskRequest
+     * @return UpdateWarehouseScheduleTaskResponse
+     */
+    CompletableFuture<UpdateWarehouseScheduleTaskResponse> updateWarehouseScheduleTask(UpdateWarehouseScheduleTaskRequest request);
 
 }

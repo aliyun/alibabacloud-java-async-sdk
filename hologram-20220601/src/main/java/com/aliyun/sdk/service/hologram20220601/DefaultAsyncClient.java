@@ -58,6 +58,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateDatabase  CreateDatabaseRequest
+     * @return CreateDatabaseResponse
+     */
+    @Override
+    public CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDatabase").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/createDatabase").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDatabaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDatabaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateExternalDatabase  CreateExternalDatabaseRequest
+     * @return CreateExternalDatabaseResponse
+     */
+    @Override
+    public CompletableFuture<CreateExternalDatabaseResponse> createExternalDatabase(CreateExternalDatabaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateExternalDatabase").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/createExternalDatabase").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateExternalDatabaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateExternalDatabaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateHoloWarehouse  CreateHoloWarehouseRequest
      * @return CreateHoloWarehouseResponse
      */
@@ -118,6 +154,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateModelService  CreateModelServiceRequest
+     * @return CreateModelServiceResponse
+     */
+    @Override
+    public CompletableFuture<CreateModelServiceResponse> createModelService(CreateModelServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateModelService").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/createModelService").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateModelServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateModelServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateUser  CreateUserRequest
      * @return CreateUserResponse
      */
@@ -130,6 +184,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateWarehouse  CreateWarehouseRequest
+     * @return CreateWarehouseResponse
+     */
+    @Override
+    public CompletableFuture<CreateWarehouseResponse> createWarehouse(CreateWarehouseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateWarehouse").setMethod(HttpMethod.POST).setPathRegex("/api/v1/warehouse/{instanceId}/create").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWarehouseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWarehouseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateWarehouseScheduleTask  CreateWarehouseScheduleTaskRequest
+     * @return CreateWarehouseScheduleTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateWarehouseScheduleTaskResponse> createWarehouseScheduleTask(CreateWarehouseScheduleTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateWarehouseScheduleTask").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/createWarehouseScheduleTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWarehouseScheduleTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWarehouseScheduleTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -181,6 +271,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteModelResource  DeleteModelResourceRequest
+     * @return DeleteModelResourceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteModelResourceResponse> deleteModelResource(DeleteModelResourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteModelResource").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/instances/{instanceId}/deleteModelResource").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteModelResourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteModelResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteModelService  DeleteModelServiceRequest
+     * @return DeleteModelServiceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteModelServiceResponse> deleteModelService(DeleteModelServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteModelService").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/instances/{instanceId}/deleteModelService").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteModelServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteModelServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteWarehouseScheduleTask  DeleteWarehouseScheduleTaskRequest
+     * @return DeleteWarehouseScheduleTaskResponse
+     */
+    @Override
+    public CompletableFuture<DeleteWarehouseScheduleTaskResponse> deleteWarehouseScheduleTask(DeleteWarehouseScheduleTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteWarehouseScheduleTask").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/deleteWarehouseScheduleTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWarehouseScheduleTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWarehouseScheduleTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DisableHiveAccess  DisableHiveAccessRequest
      * @return DisableHiveAccessResponse
      */
@@ -211,6 +355,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DisableSSLResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DisableWarehouseAutoScale  DisableWarehouseAutoScaleRequest
+     * @return DisableWarehouseAutoScaleResponse
+     */
+    @Override
+    public CompletableFuture<DisableWarehouseAutoScaleResponse> disableWarehouseAutoScale(DisableWarehouseAutoScaleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DisableWarehouseAutoScale").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/instances/{instanceId}/disableWarehouseAutoScale").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableWarehouseAutoScaleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableWarehouseAutoScaleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -271,6 +433,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of EnableWarehouseAutoScale  EnableWarehouseAutoScaleRequest
+     * @return EnableWarehouseAutoScaleResponse
+     */
+    @Override
+    public CompletableFuture<EnableWarehouseAutoScaleResponse> enableWarehouseAutoScale(EnableWarehouseAutoScaleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EnableWarehouseAutoScale").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/enableWarehouseAutoScale").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableWarehouseAutoScaleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableWarehouseAutoScaleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetCertificateAttribute  GetCertificateAttributeRequest
      * @return GetCertificateAttributeResponse
      */
@@ -301,6 +481,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetInstanceModel  GetInstanceModelRequest
+     * @return GetInstanceModelResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceModelResponse> getInstanceModel(GetInstanceModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetInstanceModel").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{instanceId}/getInstanceModel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceModelResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -433,6 +631,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListInstanceModel  ListInstanceModelRequest
+     * @return ListInstanceModelResponse
+     */
+    @Override
+    public CompletableFuture<ListInstanceModelResponse> listInstanceModel(ListInstanceModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListInstanceModel").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/rpc/listInstanceModel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInstanceModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListInstanceModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListInstances  ListInstancesRequest
      * @return ListInstancesResponse
      */
@@ -445,6 +661,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListModelCatalog  ListModelCatalogRequest
+     * @return ListModelCatalogResponse
+     */
+    @Override
+    public CompletableFuture<ListModelCatalogResponse> listModelCatalog(ListModelCatalogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListModelCatalog").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{instanceId}/listModelCatalog").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListModelCatalogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListModelCatalogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListWarehouseScheduleEvent  ListWarehouseScheduleEventRequest
+     * @return ListWarehouseScheduleEventResponse
+     */
+    @Override
+    public CompletableFuture<ListWarehouseScheduleEventResponse> listWarehouseScheduleEvent(ListWarehouseScheduleEventRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListWarehouseScheduleEvent").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/listWarehouseScheduleEvent").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWarehouseScheduleEventResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWarehouseScheduleEventResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListWarehouseScheduleTask  ListWarehouseScheduleTaskRequest
+     * @return ListWarehouseScheduleTaskResponse
+     */
+    @Override
+    public CompletableFuture<ListWarehouseScheduleTaskResponse> listWarehouseScheduleTask(ListWarehouseScheduleTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListWarehouseScheduleTask").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{instanceId}/listWarehouseScheduleTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWarehouseScheduleTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWarehouseScheduleTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -788,6 +1058,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateInstanceNetworkTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateModelService  UpdateModelServiceRequest
+     * @return UpdateModelServiceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateModelServiceResponse> updateModelService(UpdateModelServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateModelService").setMethod(HttpMethod.PATCH).setPathRegex("/api/v1/instances/{instanceId}/updateModelService").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateModelServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateModelServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateWarehouseScheduleTask  UpdateWarehouseScheduleTaskRequest
+     * @return UpdateWarehouseScheduleTaskResponse
+     */
+    @Override
+    public CompletableFuture<UpdateWarehouseScheduleTaskResponse> updateWarehouseScheduleTask(UpdateWarehouseScheduleTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateWarehouseScheduleTask").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/updateWarehouseScheduleTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateWarehouseScheduleTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateWarehouseScheduleTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
