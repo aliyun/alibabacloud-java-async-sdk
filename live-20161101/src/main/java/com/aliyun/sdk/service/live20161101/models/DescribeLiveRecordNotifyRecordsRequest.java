@@ -59,6 +59,10 @@ public class DescribeLiveRecordNotifyRecordsRequest extends Request {
     private String status;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    private String storageType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StreamName")
     private String streamName;
 
@@ -73,6 +77,7 @@ public class DescribeLiveRecordNotifyRecordsRequest extends Request {
         this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.status = builder.status;
+        this.storageType = builder.storageType;
         this.streamName = builder.streamName;
     }
 
@@ -153,6 +158,13 @@ public class DescribeLiveRecordNotifyRecordsRequest extends Request {
     }
 
     /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
      * @return streamName
      */
     public String getStreamName() {
@@ -169,6 +181,7 @@ public class DescribeLiveRecordNotifyRecordsRequest extends Request {
         private String regionId; 
         private String startTime; 
         private String status; 
+        private String storageType; 
         private String streamName; 
 
         private Builder() {
@@ -186,6 +199,7 @@ public class DescribeLiveRecordNotifyRecordsRequest extends Request {
             this.regionId = request.regionId;
             this.startTime = request.startTime;
             this.status = request.status;
+            this.storageType = request.storageType;
             this.streamName = request.streamName;
         } 
 
@@ -300,6 +314,15 @@ public class DescribeLiveRecordNotifyRecordsRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * StorageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 

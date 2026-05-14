@@ -272,6 +272,9 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotifyUrl")
         private String notifyUrl;
 
+        @com.aliyun.core.annotation.NameInMap("StorageType")
+        private String storageType;
+
         @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
@@ -286,6 +289,7 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
             this.notifyTime = builder.notifyTime;
             this.notifyType = builder.notifyType;
             this.notifyUrl = builder.notifyUrl;
+            this.storageType = builder.storageType;
             this.streamName = builder.streamName;
         }
 
@@ -368,6 +372,13 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        /**
          * @return streamName
          */
         public String getStreamName() {
@@ -385,6 +396,7 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
             private String notifyTime; 
             private String notifyType; 
             private String notifyUrl; 
+            private String storageType; 
             private String streamName; 
 
             private Builder() {
@@ -401,6 +413,7 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
                 this.notifyTime = model.notifyTime;
                 this.notifyType = model.notifyType;
                 this.notifyUrl = model.notifyUrl;
+                this.storageType = model.storageType;
                 this.streamName = model.streamName;
             } 
 
@@ -518,6 +531,14 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
              */
             public Builder notifyUrl(String notifyUrl) {
                 this.notifyUrl = notifyUrl;
+                return this;
+            }
+
+            /**
+             * StorageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
                 return this;
             }
 
