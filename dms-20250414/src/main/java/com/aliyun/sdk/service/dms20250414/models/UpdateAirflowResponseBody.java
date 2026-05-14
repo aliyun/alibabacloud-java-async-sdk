@@ -203,6 +203,9 @@ public class UpdateAirflowResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AirflowName")
         private String airflowName;
 
+        @com.aliyun.core.annotation.NameInMap("AirflowVersion")
+        private String airflowVersion;
+
         @com.aliyun.core.annotation.NameInMap("AppSpec")
         private String appSpec;
 
@@ -215,17 +218,26 @@ public class UpdateAirflowResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DagsDir")
         private String dagsDir;
 
+        @com.aliyun.core.annotation.NameInMap("DataMountInfoList")
+        private java.util.List<DataMountInfo> dataMountInfoList;
+
         @com.aliyun.core.annotation.NameInMap("DeployErrorMsg")
         private String deployErrorMsg;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("EnableServerless")
+        private Boolean enableServerless;
+
         @com.aliyun.core.annotation.NameInMap("Environments")
         private String environments;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
+
+        @com.aliyun.core.annotation.NameInMap("GracefulShutdownTimeout")
+        private Integer gracefulShutdownTimeout;
 
         @com.aliyun.core.annotation.NameInMap("OssBucketName")
         private String ossBucketName;
@@ -271,14 +283,18 @@ public class UpdateAirflowResponseBody extends TeaModel {
 
         private Root(Builder builder) {
             this.airflowName = builder.airflowName;
+            this.airflowVersion = builder.airflowVersion;
             this.appSpec = builder.appSpec;
             this.appType = builder.appType;
             this.customAirflowCfg = builder.customAirflowCfg;
             this.dagsDir = builder.dagsDir;
+            this.dataMountInfoList = builder.dataMountInfoList;
             this.deployErrorMsg = builder.deployErrorMsg;
             this.description = builder.description;
+            this.enableServerless = builder.enableServerless;
             this.environments = builder.environments;
             this.gmtCreated = builder.gmtCreated;
+            this.gracefulShutdownTimeout = builder.gracefulShutdownTimeout;
             this.ossBucketName = builder.ossBucketName;
             this.ossPath = builder.ossPath;
             this.pluginsDir = builder.pluginsDir;
@@ -311,6 +327,13 @@ public class UpdateAirflowResponseBody extends TeaModel {
         }
 
         /**
+         * @return airflowVersion
+         */
+        public String getAirflowVersion() {
+            return this.airflowVersion;
+        }
+
+        /**
          * @return appSpec
          */
         public String getAppSpec() {
@@ -339,6 +362,13 @@ public class UpdateAirflowResponseBody extends TeaModel {
         }
 
         /**
+         * @return dataMountInfoList
+         */
+        public java.util.List<DataMountInfo> getDataMountInfoList() {
+            return this.dataMountInfoList;
+        }
+
+        /**
          * @return deployErrorMsg
          */
         public String getDeployErrorMsg() {
@@ -353,6 +383,13 @@ public class UpdateAirflowResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableServerless
+         */
+        public Boolean getEnableServerless() {
+            return this.enableServerless;
+        }
+
+        /**
          * @return environments
          */
         public String getEnvironments() {
@@ -364,6 +401,13 @@ public class UpdateAirflowResponseBody extends TeaModel {
          */
         public String getGmtCreated() {
             return this.gmtCreated;
+        }
+
+        /**
+         * @return gracefulShutdownTimeout
+         */
+        public Integer getGracefulShutdownTimeout() {
+            return this.gracefulShutdownTimeout;
         }
 
         /**
@@ -466,14 +510,18 @@ public class UpdateAirflowResponseBody extends TeaModel {
 
         public static final class Builder {
             private String airflowName; 
+            private String airflowVersion; 
             private String appSpec; 
             private String appType; 
             private java.util.List<String> customAirflowCfg; 
             private String dagsDir; 
+            private java.util.List<DataMountInfo> dataMountInfoList; 
             private String deployErrorMsg; 
             private String description; 
+            private Boolean enableServerless; 
             private String environments; 
             private String gmtCreated; 
+            private Integer gracefulShutdownTimeout; 
             private String ossBucketName; 
             private String ossPath; 
             private String pluginsDir; 
@@ -494,14 +542,18 @@ public class UpdateAirflowResponseBody extends TeaModel {
 
             private Builder(Root model) {
                 this.airflowName = model.airflowName;
+                this.airflowVersion = model.airflowVersion;
                 this.appSpec = model.appSpec;
                 this.appType = model.appType;
                 this.customAirflowCfg = model.customAirflowCfg;
                 this.dagsDir = model.dagsDir;
+                this.dataMountInfoList = model.dataMountInfoList;
                 this.deployErrorMsg = model.deployErrorMsg;
                 this.description = model.description;
+                this.enableServerless = model.enableServerless;
                 this.environments = model.environments;
                 this.gmtCreated = model.gmtCreated;
+                this.gracefulShutdownTimeout = model.gracefulShutdownTimeout;
                 this.ossBucketName = model.ossBucketName;
                 this.ossPath = model.ossPath;
                 this.pluginsDir = model.pluginsDir;
@@ -523,6 +575,14 @@ public class UpdateAirflowResponseBody extends TeaModel {
              */
             public Builder airflowName(String airflowName) {
                 this.airflowName = airflowName;
+                return this;
+            }
+
+            /**
+             * AirflowVersion.
+             */
+            public Builder airflowVersion(String airflowVersion) {
+                this.airflowVersion = airflowVersion;
                 return this;
             }
 
@@ -562,6 +622,14 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
+             * DataMountInfoList.
+             */
+            public Builder dataMountInfoList(java.util.List<DataMountInfo> dataMountInfoList) {
+                this.dataMountInfoList = dataMountInfoList;
+                return this;
+            }
+
+            /**
              * DeployErrorMsg.
              */
             public Builder deployErrorMsg(String deployErrorMsg) {
@@ -578,6 +646,14 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
+             * EnableServerless.
+             */
+            public Builder enableServerless(Boolean enableServerless) {
+                this.enableServerless = enableServerless;
+                return this;
+            }
+
+            /**
              * Environments.
              */
             public Builder environments(String environments) {
@@ -590,6 +666,14 @@ public class UpdateAirflowResponseBody extends TeaModel {
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
+                return this;
+            }
+
+            /**
+             * GracefulShutdownTimeout.
+             */
+            public Builder gracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
+                this.gracefulShutdownTimeout = gracefulShutdownTimeout;
                 return this;
             }
 

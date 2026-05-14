@@ -43,8 +43,20 @@ public class UpdateAirflowRequest extends Request {
     private String dagsDir;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataMountInfoList")
+    private java.util.List<DataMountInfo> dataMountInfoList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableServerless")
+    private Boolean enableServerless;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GracefulShutdownTimeout")
+    private Integer gracefulShutdownTimeout;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PluginsDir")
@@ -75,7 +87,10 @@ public class UpdateAirflowRequest extends Request {
         this.appSpec = builder.appSpec;
         this.clientToken = builder.clientToken;
         this.dagsDir = builder.dagsDir;
+        this.dataMountInfoList = builder.dataMountInfoList;
         this.description = builder.description;
+        this.enableServerless = builder.enableServerless;
+        this.gracefulShutdownTimeout = builder.gracefulShutdownTimeout;
         this.pluginsDir = builder.pluginsDir;
         this.requirementFile = builder.requirementFile;
         this.startupFile = builder.startupFile;
@@ -139,10 +154,31 @@ public class UpdateAirflowRequest extends Request {
     }
 
     /**
+     * @return dataMountInfoList
+     */
+    public java.util.List<DataMountInfo> getDataMountInfoList() {
+        return this.dataMountInfoList;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enableServerless
+     */
+    public Boolean getEnableServerless() {
+        return this.enableServerless;
+    }
+
+    /**
+     * @return gracefulShutdownTimeout
+     */
+    public Integer getGracefulShutdownTimeout() {
+        return this.gracefulShutdownTimeout;
     }
 
     /**
@@ -187,7 +223,10 @@ public class UpdateAirflowRequest extends Request {
         private String appSpec; 
         private String clientToken; 
         private String dagsDir; 
+        private java.util.List<DataMountInfo> dataMountInfoList; 
         private String description; 
+        private Boolean enableServerless; 
+        private Integer gracefulShutdownTimeout; 
         private String pluginsDir; 
         private String requirementFile; 
         private String startupFile; 
@@ -206,7 +245,10 @@ public class UpdateAirflowRequest extends Request {
             this.appSpec = request.appSpec;
             this.clientToken = request.clientToken;
             this.dagsDir = request.dagsDir;
+            this.dataMountInfoList = request.dataMountInfoList;
             this.description = request.description;
+            this.enableServerless = request.enableServerless;
+            this.gracefulShutdownTimeout = request.gracefulShutdownTimeout;
             this.pluginsDir = request.pluginsDir;
             this.requirementFile = request.requirementFile;
             this.startupFile = request.startupFile;
@@ -272,11 +314,39 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
+         * DataMountInfoList.
+         */
+        public Builder dataMountInfoList(java.util.List<DataMountInfo> dataMountInfoList) {
+            String dataMountInfoListShrink = shrink(dataMountInfoList, "DataMountInfoList", "json");
+            this.putQueryParameter("DataMountInfoList", dataMountInfoListShrink);
+            this.dataMountInfoList = dataMountInfoList;
+            return this;
+        }
+
+        /**
          * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EnableServerless.
+         */
+        public Builder enableServerless(Boolean enableServerless) {
+            this.putQueryParameter("EnableServerless", enableServerless);
+            this.enableServerless = enableServerless;
+            return this;
+        }
+
+        /**
+         * GracefulShutdownTimeout.
+         */
+        public Builder gracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
+            this.putQueryParameter("GracefulShutdownTimeout", gracefulShutdownTimeout);
+            this.gracefulShutdownTimeout = gracefulShutdownTimeout;
             return this;
         }
 

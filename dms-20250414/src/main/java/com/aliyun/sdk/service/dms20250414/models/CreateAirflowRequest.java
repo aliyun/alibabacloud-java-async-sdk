@@ -27,6 +27,10 @@ public class CreateAirflowRequest extends Request {
     private String airflowName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AirflowVersion")
+    private String airflowVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppSpec")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appSpec;
@@ -40,9 +44,20 @@ public class CreateAirflowRequest extends Request {
     private String dagsDir;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataMountInfoList")
+    private java.util.List<DataMountInfo> dataMountInfoList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableServerless")
+    private Boolean enableServerless;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GracefulShutdownTimeout")
+    private Integer gracefulShutdownTimeout;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OssBucketName")
@@ -93,17 +108,20 @@ public class CreateAirflowRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private CreateAirflowRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.airflowName = builder.airflowName;
+        this.airflowVersion = builder.airflowVersion;
         this.appSpec = builder.appSpec;
         this.clientToken = builder.clientToken;
         this.dagsDir = builder.dagsDir;
+        this.dataMountInfoList = builder.dataMountInfoList;
         this.description = builder.description;
+        this.enableServerless = builder.enableServerless;
+        this.gracefulShutdownTimeout = builder.gracefulShutdownTimeout;
         this.ossBucketName = builder.ossBucketName;
         this.ossPath = builder.ossPath;
         this.pluginsDir = builder.pluginsDir;
@@ -145,6 +163,13 @@ public class CreateAirflowRequest extends Request {
     }
 
     /**
+     * @return airflowVersion
+     */
+    public String getAirflowVersion() {
+        return this.airflowVersion;
+    }
+
+    /**
      * @return appSpec
      */
     public String getAppSpec() {
@@ -166,10 +191,31 @@ public class CreateAirflowRequest extends Request {
     }
 
     /**
+     * @return dataMountInfoList
+     */
+    public java.util.List<DataMountInfo> getDataMountInfoList() {
+        return this.dataMountInfoList;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enableServerless
+     */
+    public Boolean getEnableServerless() {
+        return this.enableServerless;
+    }
+
+    /**
+     * @return gracefulShutdownTimeout
+     */
+    public Integer getGracefulShutdownTimeout() {
+        return this.gracefulShutdownTimeout;
     }
 
     /**
@@ -252,10 +298,14 @@ public class CreateAirflowRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAirflowRequest, Builder> {
         private String regionId; 
         private String airflowName; 
+        private String airflowVersion; 
         private String appSpec; 
         private String clientToken; 
         private String dagsDir; 
+        private java.util.List<DataMountInfo> dataMountInfoList; 
         private String description; 
+        private Boolean enableServerless; 
+        private Integer gracefulShutdownTimeout; 
         private String ossBucketName; 
         private String ossPath; 
         private String pluginsDir; 
@@ -276,10 +326,14 @@ public class CreateAirflowRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.airflowName = request.airflowName;
+            this.airflowVersion = request.airflowVersion;
             this.appSpec = request.appSpec;
             this.clientToken = request.clientToken;
             this.dagsDir = request.dagsDir;
+            this.dataMountInfoList = request.dataMountInfoList;
             this.description = request.description;
+            this.enableServerless = request.enableServerless;
+            this.gracefulShutdownTimeout = request.gracefulShutdownTimeout;
             this.ossBucketName = request.ossBucketName;
             this.ossPath = request.ossPath;
             this.pluginsDir = request.pluginsDir;
@@ -315,6 +369,15 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
+         * AirflowVersion.
+         */
+        public Builder airflowVersion(String airflowVersion) {
+            this.putQueryParameter("AirflowVersion", airflowVersion);
+            this.airflowVersion = airflowVersion;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -345,14 +408,39 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>order scheduler</p>
+         * DataMountInfoList.
+         */
+        public Builder dataMountInfoList(java.util.List<DataMountInfo> dataMountInfoList) {
+            String dataMountInfoListShrink = shrink(dataMountInfoList, "DataMountInfoList", "json");
+            this.putQueryParameter("DataMountInfoList", dataMountInfoListShrink);
+            this.dataMountInfoList = dataMountInfoList;
+            return this;
+        }
+
+        /**
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EnableServerless.
+         */
+        public Builder enableServerless(Boolean enableServerless) {
+            this.putQueryParameter("EnableServerless", enableServerless);
+            this.enableServerless = enableServerless;
+            return this;
+        }
+
+        /**
+         * GracefulShutdownTimeout.
+         */
+        public Builder gracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
+            this.putQueryParameter("GracefulShutdownTimeout", gracefulShutdownTimeout);
+            this.gracefulShutdownTimeout = gracefulShutdownTimeout;
             return this;
         }
 
@@ -469,10 +557,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-h</p>
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
