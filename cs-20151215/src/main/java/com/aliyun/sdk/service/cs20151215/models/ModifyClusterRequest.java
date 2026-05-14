@@ -44,6 +44,10 @@ public class ModifyClusterRequest extends Request {
     private String clusterName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cluster_spec")
+    private String clusterSpec;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("control_plane_config")
     private ControlPlaneConfig controlPlaneConfig;
 
@@ -110,6 +114,7 @@ public class ModifyClusterRequest extends Request {
         this.apiServerEip = builder.apiServerEip;
         this.apiServerEipId = builder.apiServerEipId;
         this.clusterName = builder.clusterName;
+        this.clusterSpec = builder.clusterSpec;
         this.controlPlaneConfig = builder.controlPlaneConfig;
         this.controlPlaneEndpointsConfig = builder.controlPlaneEndpointsConfig;
         this.deletionProtection = builder.deletionProtection;
@@ -179,6 +184,13 @@ public class ModifyClusterRequest extends Request {
      */
     public String getClusterName() {
         return this.clusterName;
+    }
+
+    /**
+     * @return clusterSpec
+     */
+    public String getClusterSpec() {
+        return this.clusterSpec;
     }
 
     /**
@@ -286,6 +298,7 @@ public class ModifyClusterRequest extends Request {
         private Boolean apiServerEip; 
         private String apiServerEipId; 
         private String clusterName; 
+        private String clusterSpec; 
         private ControlPlaneConfig controlPlaneConfig; 
         private ControlPlaneEndpointsConfig controlPlaneEndpointsConfig; 
         private Boolean deletionProtection; 
@@ -313,6 +326,7 @@ public class ModifyClusterRequest extends Request {
             this.apiServerEip = request.apiServerEip;
             this.apiServerEipId = request.apiServerEipId;
             this.clusterName = request.clusterName;
+            this.clusterSpec = request.clusterSpec;
             this.controlPlaneConfig = request.controlPlaneConfig;
             this.controlPlaneEndpointsConfig = request.controlPlaneEndpointsConfig;
             this.deletionProtection = request.deletionProtection;
@@ -398,6 +412,15 @@ public class ModifyClusterRequest extends Request {
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("cluster_name", clusterName);
             this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * cluster_spec.
+         */
+        public Builder clusterSpec(String clusterSpec) {
+            this.putBodyParameter("cluster_spec", clusterSpec);
+            this.clusterSpec = clusterSpec;
             return this;
         }
 
