@@ -225,6 +225,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ApprovePolarClawDevicePair  ApprovePolarClawDevicePairRequest
+     * @return ApprovePolarClawDevicePairResponse
+     */
+    @Override
+    public CompletableFuture<ApprovePolarClawDevicePairResponse> approvePolarClawDevicePair(ApprovePolarClawDevicePairRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ApprovePolarClawDevicePair").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ApprovePolarClawDevicePairResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ApprovePolarClawDevicePairResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AttachApplicationPolarFS  AttachApplicationPolarFSRequest
      * @return AttachApplicationPolarFSResponse
      */
@@ -2528,6 +2546,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeApplicationPerformance  DescribeApplicationPerformanceRequest
+     * @return DescribeApplicationPerformanceResponse
+     */
+    @Override
+    public CompletableFuture<DescribeApplicationPerformanceResponse> describeApplicationPerformance(DescribeApplicationPerformanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeApplicationPerformance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeApplicationPerformanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeApplicationPerformanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeApplicationPrompts  DescribeApplicationPromptsRequest
      * @return DescribeApplicationPromptsResponse
      */
@@ -4345,6 +4381,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribePolarClawTask  DescribePolarClawTaskRequest
+     * @return DescribePolarClawTaskResponse
+     */
+    @Override
+    public CompletableFuture<DescribePolarClawTaskResponse> describePolarClawTask(DescribePolarClawTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePolarClawTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePolarClawTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePolarClawTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribePolarFsAttribute  DescribePolarFsAttributeRequest
      * @return DescribePolarFsAttributeResponse
      */
@@ -5222,6 +5276,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListPolarClawDevicePairs  ListPolarClawDevicePairsRequest
+     * @return ListPolarClawDevicePairsResponse
+     */
+    @Override
+    public CompletableFuture<ListPolarClawDevicePairsResponse> listPolarClawDevicePairs(ListPolarClawDevicePairsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListPolarClawDevicePairs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPolarClawDevicePairsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPolarClawDevicePairsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -5252,6 +5324,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListTagResourcesForRegionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of LoginPolarClawChannel  LoginPolarClawChannelRequest
+     * @return LoginPolarClawChannelResponse
+     */
+    @Override
+    public CompletableFuture<LoginPolarClawChannelResponse> loginPolarClawChannel(LoginPolarClawChannelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("LoginPolarClawChannel").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(LoginPolarClawChannelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<LoginPolarClawChannelResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -6657,6 +6747,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RejectPolarClawDevicePair  RejectPolarClawDevicePairRequest
+     * @return RejectPolarClawDevicePairResponse
+     */
+    @Override
+    public CompletableFuture<RejectPolarClawDevicePairResponse> rejectPolarClawDevicePair(RejectPolarClawDevicePairRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RejectPolarClawDevicePair").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RejectPolarClawDevicePairResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RejectPolarClawDevicePairResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RemoveApplicationEnvironmentVariables  RemoveApplicationEnvironmentVariablesRequest
      * @return RemoveApplicationEnvironmentVariablesResponse
      */
@@ -6692,6 +6800,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RemoveDBClusterFromGDNResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RemovePolarClawDevicePair  RemovePolarClawDevicePairRequest
+     * @return RemovePolarClawDevicePairResponse
+     */
+    @Override
+    public CompletableFuture<RemovePolarClawDevicePairResponse> removePolarClawDevicePair(RemovePolarClawDevicePairRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemovePolarClawDevicePair").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemovePolarClawDevicePairResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemovePolarClawDevicePairResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -589,6 +589,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SrcType")
         private String srcType;
 
+        @com.aliyun.core.annotation.NameInMap("StorageClass")
+        private String storageClass;
+
         private AdvancedDataPolicy(Builder builder) {
             this.autoCreated = builder.autoCreated;
             this.bakType = builder.bakType;
@@ -605,6 +608,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             this.retentionValue = builder.retentionValue;
             this.srcRegion = builder.srcRegion;
             this.srcType = builder.srcType;
+            this.storageClass = builder.storageClass;
         }
 
         public static Builder builder() {
@@ -720,6 +724,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             return this.srcType;
         }
 
+        /**
+         * @return storageClass
+         */
+        public String getStorageClass() {
+            return this.storageClass;
+        }
+
         public static final class Builder {
             private Boolean autoCreated; 
             private String bakType; 
@@ -736,6 +747,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             private String retentionValue; 
             private String srcRegion; 
             private String srcType; 
+            private String storageClass; 
 
             private Builder() {
             } 
@@ -756,6 +768,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
                 this.retentionValue = model.retentionValue;
                 this.srcRegion = model.srcRegion;
                 this.srcType = model.srcType;
+                this.storageClass = model.storageClass;
             } 
 
             /**
@@ -875,6 +888,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
              */
             public Builder srcType(String srcType) {
                 this.srcType = srcType;
+                return this;
+            }
+
+            /**
+             * StorageClass.
+             */
+            public Builder storageClass(String storageClass) {
+                this.storageClass = storageClass;
                 return this;
             }
 
