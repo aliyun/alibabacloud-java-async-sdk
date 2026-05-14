@@ -97,9 +97,108 @@ public class GetProjectRoleResponseBody extends TeaModel {
      *
      * <p>GetProjectRoleResponseBody</p>
      */
+    public static class ModulePermissions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ModuleId")
+        private Long moduleId;
+
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
+        private String moduleName;
+
+        @com.aliyun.core.annotation.NameInMap("PermissionType")
+        private String permissionType;
+
+        private ModulePermissions(Builder builder) {
+            this.moduleId = builder.moduleId;
+            this.moduleName = builder.moduleName;
+            this.permissionType = builder.permissionType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModulePermissions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return moduleId
+         */
+        public Long getModuleId() {
+            return this.moduleId;
+        }
+
+        /**
+         * @return moduleName
+         */
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
+        /**
+         * @return permissionType
+         */
+        public String getPermissionType() {
+            return this.permissionType;
+        }
+
+        public static final class Builder {
+            private Long moduleId; 
+            private String moduleName; 
+            private String permissionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModulePermissions model) {
+                this.moduleId = model.moduleId;
+                this.moduleName = model.moduleName;
+                this.permissionType = model.permissionType;
+            } 
+
+            /**
+             * ModuleId.
+             */
+            public Builder moduleId(Long moduleId) {
+                this.moduleId = moduleId;
+                return this;
+            }
+
+            /**
+             * ModuleName.
+             */
+            public Builder moduleName(String moduleName) {
+                this.moduleName = moduleName;
+                return this;
+            }
+
+            /**
+             * PermissionType.
+             */
+            public Builder permissionType(String permissionType) {
+                this.permissionType = permissionType;
+                return this;
+            }
+
+            public ModulePermissions build() {
+                return new ModulePermissions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetProjectRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectRoleResponseBody</p>
+     */
     public static class ProjectRole extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
+
+        @com.aliyun.core.annotation.NameInMap("ModulePermissions")
+        private java.util.List<ModulePermissions> modulePermissions;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -112,6 +211,7 @@ public class GetProjectRoleResponseBody extends TeaModel {
 
         private ProjectRole(Builder builder) {
             this.code = builder.code;
+            this.modulePermissions = builder.modulePermissions;
             this.name = builder.name;
             this.projectId = builder.projectId;
             this.type = builder.type;
@@ -130,6 +230,13 @@ public class GetProjectRoleResponseBody extends TeaModel {
          */
         public String getCode() {
             return this.code;
+        }
+
+        /**
+         * @return modulePermissions
+         */
+        public java.util.List<ModulePermissions> getModulePermissions() {
+            return this.modulePermissions;
         }
 
         /**
@@ -155,6 +262,7 @@ public class GetProjectRoleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
+            private java.util.List<ModulePermissions> modulePermissions; 
             private String name; 
             private Long projectId; 
             private String type; 
@@ -164,6 +272,7 @@ public class GetProjectRoleResponseBody extends TeaModel {
 
             private Builder(ProjectRole model) {
                 this.code = model.code;
+                this.modulePermissions = model.modulePermissions;
                 this.name = model.name;
                 this.projectId = model.projectId;
                 this.type = model.type;
@@ -177,6 +286,14 @@ public class GetProjectRoleResponseBody extends TeaModel {
              */
             public Builder code(String code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * ModulePermissions.
+             */
+            public Builder modulePermissions(java.util.List<ModulePermissions> modulePermissions) {
+                this.modulePermissions = modulePermissions;
                 return this;
             }
 
