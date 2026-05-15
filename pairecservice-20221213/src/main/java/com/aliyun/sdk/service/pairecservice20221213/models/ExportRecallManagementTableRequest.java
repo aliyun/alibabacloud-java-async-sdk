@@ -45,6 +45,10 @@ public class ExportRecallManagementTableRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Partitions")
     private java.util.Map<String, String> partitions;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecallManagementTableVersionId")
+    private String recallManagementTableVersionId;
+
     private ExportRecallManagementTableRequest(Builder builder) {
         super(builder);
         this.recallManagementTableId = builder.recallManagementTableId;
@@ -54,6 +58,7 @@ public class ExportRecallManagementTableRequest extends Request {
         this.maxcomputeSchema = builder.maxcomputeSchema;
         this.maxcomputeTableName = builder.maxcomputeTableName;
         this.partitions = builder.partitions;
+        this.recallManagementTableVersionId = builder.recallManagementTableVersionId;
     }
 
     public static Builder builder() {
@@ -118,6 +123,13 @@ public class ExportRecallManagementTableRequest extends Request {
         return this.partitions;
     }
 
+    /**
+     * @return recallManagementTableVersionId
+     */
+    public String getRecallManagementTableVersionId() {
+        return this.recallManagementTableVersionId;
+    }
+
     public static final class Builder extends Request.Builder<ExportRecallManagementTableRequest, Builder> {
         private String recallManagementTableId; 
         private String regionId; 
@@ -126,6 +138,7 @@ public class ExportRecallManagementTableRequest extends Request {
         private String maxcomputeSchema; 
         private String maxcomputeTableName; 
         private java.util.Map<String, String> partitions; 
+        private String recallManagementTableVersionId; 
 
         private Builder() {
             super();
@@ -140,6 +153,7 @@ public class ExportRecallManagementTableRequest extends Request {
             this.maxcomputeSchema = request.maxcomputeSchema;
             this.maxcomputeTableName = request.maxcomputeTableName;
             this.partitions = request.partitions;
+            this.recallManagementTableVersionId = request.recallManagementTableVersionId;
         } 
 
         /**
@@ -205,6 +219,15 @@ public class ExportRecallManagementTableRequest extends Request {
         public Builder partitions(java.util.Map<String, String> partitions) {
             this.putBodyParameter("Partitions", partitions);
             this.partitions = partitions;
+            return this;
+        }
+
+        /**
+         * RecallManagementTableVersionId.
+         */
+        public Builder recallManagementTableVersionId(String recallManagementTableVersionId) {
+            this.putBodyParameter("RecallManagementTableVersionId", recallManagementTableVersionId);
+            this.recallManagementTableVersionId = recallManagementTableVersionId;
             return this;
         }
 
