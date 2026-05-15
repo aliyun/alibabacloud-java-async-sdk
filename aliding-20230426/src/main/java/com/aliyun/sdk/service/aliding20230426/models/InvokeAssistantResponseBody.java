@@ -157,6 +157,219 @@ public class InvokeAssistantResponseBody extends TeaModel {
      *
      * <p>InvokeAssistantResponseBody</p>
      */
+    public static class AguiEventList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("activityType")
+        private String activityType;
+
+        @com.aliyun.core.annotation.NameInMap("content")
+        private Object content;
+
+        @com.aliyun.core.annotation.NameInMap("messageId")
+        private String messageId;
+
+        @com.aliyun.core.annotation.NameInMap("replace")
+        private Boolean replace;
+
+        @com.aliyun.core.annotation.NameInMap("timestamp")
+        private Long timestamp;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private AguiEventList(Builder builder) {
+            this.activityType = builder.activityType;
+            this.content = builder.content;
+            this.messageId = builder.messageId;
+            this.replace = builder.replace;
+            this.timestamp = builder.timestamp;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AguiEventList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return activityType
+         */
+        public String getActivityType() {
+            return this.activityType;
+        }
+
+        /**
+         * @return content
+         */
+        public Object getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return messageId
+         */
+        public String getMessageId() {
+            return this.messageId;
+        }
+
+        /**
+         * @return replace
+         */
+        public Boolean getReplace() {
+            return this.replace;
+        }
+
+        /**
+         * @return timestamp
+         */
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String activityType; 
+            private Object content; 
+            private String messageId; 
+            private Boolean replace; 
+            private Long timestamp; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AguiEventList model) {
+                this.activityType = model.activityType;
+                this.content = model.content;
+                this.messageId = model.messageId;
+                this.replace = model.replace;
+                this.timestamp = model.timestamp;
+                this.type = model.type;
+            } 
+
+            /**
+             * activityType.
+             */
+            public Builder activityType(String activityType) {
+                this.activityType = activityType;
+                return this;
+            }
+
+            /**
+             * content.
+             */
+            public Builder content(Object content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * messageId.
+             */
+            public Builder messageId(String messageId) {
+                this.messageId = messageId;
+                return this;
+            }
+
+            /**
+             * replace.
+             */
+            public Builder replace(Boolean replace) {
+                this.replace = replace;
+                return this;
+            }
+
+            /**
+             * timestamp.
+             */
+            public Builder timestamp(Long timestamp) {
+                this.timestamp = timestamp;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public AguiEventList build() {
+                return new AguiEventList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InvokeAssistantResponseBody} extends {@link TeaModel}
+     *
+     * <p>InvokeAssistantResponseBody</p>
+     */
+    public static class AguiContent extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("aguiEventList")
+        private java.util.List<AguiEventList> aguiEventList;
+
+        private AguiContent(Builder builder) {
+            this.aguiEventList = builder.aguiEventList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AguiContent create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aguiEventList
+         */
+        public java.util.List<AguiEventList> getAguiEventList() {
+            return this.aguiEventList;
+        }
+
+        public static final class Builder {
+            private java.util.List<AguiEventList> aguiEventList; 
+
+            private Builder() {
+            } 
+
+            private Builder(AguiContent model) {
+                this.aguiEventList = model.aguiEventList;
+            } 
+
+            /**
+             * aguiEventList.
+             */
+            public Builder aguiEventList(java.util.List<AguiEventList> aguiEventList) {
+                this.aguiEventList = aguiEventList;
+                return this;
+            }
+
+            public AguiContent build() {
+                return new AguiContent(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InvokeAssistantResponseBody} extends {@link TeaModel}
+     *
+     * <p>InvokeAssistantResponseBody</p>
+     */
     public static class CardCallback extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -1768,6 +1981,9 @@ public class InvokeAssistantResponseBody extends TeaModel {
      * <p>InvokeAssistantResponseBody</p>
      */
     public static class Content extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("aguiContent")
+        private AguiContent aguiContent;
+
         @com.aliyun.core.annotation.NameInMap("cardCallback")
         private CardCallback cardCallback;
 
@@ -1791,6 +2007,7 @@ public class InvokeAssistantResponseBody extends TeaModel {
         private String type;
 
         private Content(Builder builder) {
+            this.aguiContent = builder.aguiContent;
             this.cardCallback = builder.cardCallback;
             this.dingCard = builder.dingCard;
             this.dingNormalCard = builder.dingNormalCard;
@@ -1806,6 +2023,13 @@ public class InvokeAssistantResponseBody extends TeaModel {
 
         public static Content create() {
             return builder().build();
+        }
+
+        /**
+         * @return aguiContent
+         */
+        public AguiContent getAguiContent() {
+            return this.aguiContent;
         }
 
         /**
@@ -1858,6 +2082,7 @@ public class InvokeAssistantResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AguiContent aguiContent; 
             private CardCallback cardCallback; 
             private DingCard dingCard; 
             private DingNormalCard dingNormalCard; 
@@ -1870,6 +2095,7 @@ public class InvokeAssistantResponseBody extends TeaModel {
             } 
 
             private Builder(Content model) {
+                this.aguiContent = model.aguiContent;
                 this.cardCallback = model.cardCallback;
                 this.dingCard = model.dingCard;
                 this.dingNormalCard = model.dingNormalCard;
@@ -1878,6 +2104,14 @@ public class InvokeAssistantResponseBody extends TeaModel {
                 this.text = model.text;
                 this.type = model.type;
             } 
+
+            /**
+             * aguiContent.
+             */
+            public Builder aguiContent(AguiContent aguiContent) {
+                this.aguiContent = aguiContent;
+                return this;
+            }
 
             /**
              * cardCallback.

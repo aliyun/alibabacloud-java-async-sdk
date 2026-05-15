@@ -3473,6 +3473,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of MeetingFlashMinutes  MeetingFlashMinutesRequest
+     * @return MeetingFlashMinutesResponse
+     */
+    @Override
+    public CompletableFuture<MeetingFlashMinutesResponse> meetingFlashMinutes(MeetingFlashMinutesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MeetingFlashMinutes").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/minutes/meetingFlashMinutes").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MeetingFlashMinutesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MeetingFlashMinutesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of MuteAll  MuteAllRequest
+     * @return MuteAllResponse
+     */
+    @Override
+    public CompletableFuture<MuteAllResponse> muteAll(MuteAllRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MuteAll").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/ysp/muteAll").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MuteAllResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MuteAllResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of MuteMembers  MuteMembersRequest
+     * @return MuteMembersResponse
+     */
+    @Override
+    public CompletableFuture<MuteMembersResponse> muteMembers(MuteMembersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MuteMembers").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/ysp/muteMembers").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MuteMembersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MuteMembersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of PatchEvent  PatchEventRequest
      * @return PatchEventResponse
      */
