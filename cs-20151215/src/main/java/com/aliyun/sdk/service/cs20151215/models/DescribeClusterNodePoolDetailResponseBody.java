@@ -23,6 +23,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("auto_scaling")
     private AutoScaling autoScaling;
 
+    @com.aliyun.core.annotation.NameInMap("eflo_node_group")
+    private EfloNodeGroup efloNodeGroup;
+
     @com.aliyun.core.annotation.NameInMap("host_network")
     private Boolean hostNetwork;
 
@@ -65,6 +68,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     private DescribeClusterNodePoolDetailResponseBody(Builder builder) {
         this.autoMode = builder.autoMode;
         this.autoScaling = builder.autoScaling;
+        this.efloNodeGroup = builder.efloNodeGroup;
         this.hostNetwork = builder.hostNetwork;
         this.interconnectConfig = builder.interconnectConfig;
         this.interconnectMode = builder.interconnectMode;
@@ -104,6 +108,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
      */
     public AutoScaling getAutoScaling() {
         return this.autoScaling;
+    }
+
+    /**
+     * @return efloNodeGroup
+     */
+    public EfloNodeGroup getEfloNodeGroup() {
+        return this.efloNodeGroup;
     }
 
     /**
@@ -200,6 +211,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public static final class Builder {
         private AutoMode autoMode; 
         private AutoScaling autoScaling; 
+        private EfloNodeGroup efloNodeGroup; 
         private Boolean hostNetwork; 
         private InterconnectConfig interconnectConfig; 
         private String interconnectMode; 
@@ -220,6 +232,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         private Builder(DescribeClusterNodePoolDetailResponseBody model) {
             this.autoMode = model.autoMode;
             this.autoScaling = model.autoScaling;
+            this.efloNodeGroup = model.efloNodeGroup;
             this.hostNetwork = model.hostNetwork;
             this.interconnectConfig = model.interconnectConfig;
             this.interconnectMode = model.interconnectMode;
@@ -248,6 +261,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
          */
         public Builder autoScaling(AutoScaling autoScaling) {
             this.autoScaling = autoScaling;
+            return this;
+        }
+
+        /**
+         * eflo_node_group.
+         */
+        public Builder efloNodeGroup(EfloNodeGroup efloNodeGroup) {
+            this.efloNodeGroup = efloNodeGroup;
             return this;
         }
 
@@ -648,6 +669,81 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
             public AutoScaling build() {
                 return new AutoScaling(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterNodePoolDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNodePoolDetailResponseBody</p>
+     */
+    public static class EfloNodeGroup extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
+        private String clusterId;
+
+        @com.aliyun.core.annotation.NameInMap("group_id")
+        private String groupId;
+
+        private EfloNodeGroup(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.groupId = builder.groupId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EfloNodeGroup create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return groupId
+         */
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private String groupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EfloNodeGroup model) {
+                this.clusterId = model.clusterId;
+                this.groupId = model.groupId;
+            } 
+
+            /**
+             * cluster_id.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * group_id.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            public EfloNodeGroup build() {
+                return new EfloNodeGroup(this);
             } 
 
         } 
