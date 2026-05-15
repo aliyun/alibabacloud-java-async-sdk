@@ -341,6 +341,9 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("sensitive")
+        private Boolean sensitive;
+
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
@@ -351,6 +354,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             this.defaultValue = builder.defaultValue;
             this.description = builder.description;
             this.name = builder.name;
+            this.sensitive = builder.sensitive;
             this.type = builder.type;
             this.value = builder.value;
         }
@@ -385,6 +389,13 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sensitive
+         */
+        public Boolean getSensitive() {
+            return this.sensitive;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -402,6 +413,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             private String defaultValue; 
             private String description; 
             private String name; 
+            private Boolean sensitive; 
             private String type; 
             private String value; 
 
@@ -412,6 +424,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
                 this.defaultValue = model.defaultValue;
                 this.description = model.description;
                 this.name = model.name;
+                this.sensitive = model.sensitive;
                 this.type = model.type;
                 this.value = model.value;
             } 
@@ -437,6 +450,14 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * sensitive.
+             */
+            public Builder sensitive(Boolean sensitive) {
+                this.sensitive = sensitive;
                 return this;
             }
 

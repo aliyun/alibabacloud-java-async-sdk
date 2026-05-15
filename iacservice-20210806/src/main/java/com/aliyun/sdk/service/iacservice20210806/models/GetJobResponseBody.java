@@ -94,6 +94,102 @@ public class GetJobResponseBody extends TeaModel {
      *
      * <p>GetJobResponseBody</p>
      */
+    public static class AllParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("secret")
+        private Boolean secret;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private AllParameters(Builder builder) {
+            this.name = builder.name;
+            this.secret = builder.secret;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AllParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return secret
+         */
+        public Boolean getSecret() {
+            return this.secret;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private Boolean secret; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AllParameters model) {
+                this.name = model.name;
+                this.secret = model.secret;
+                this.value = model.value;
+            } 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * secret.
+             */
+            public Builder secret(Boolean secret) {
+                this.secret = secret;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public AllParameters build() {
+                return new AllParameters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class AssertCheckDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("comparison")
         private String comparison;
@@ -371,6 +467,9 @@ public class GetJobResponseBody extends TeaModel {
      * <p>GetJobResponseBody</p>
      */
     public static class Job extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("allParameters")
+        private java.util.List<AllParameters> allParameters;
+
         @com.aliyun.core.annotation.NameInMap("assertCheckDetail")
         private java.util.List<AssertCheckDetail> assertCheckDetail;
 
@@ -429,6 +528,7 @@ public class GetJobResponseBody extends TeaModel {
         private String terraformProviderVersion;
 
         private Job(Builder builder) {
+            this.allParameters = builder.allParameters;
             this.assertCheckDetail = builder.assertCheckDetail;
             this.config = builder.config;
             this.createTime = builder.createTime;
@@ -456,6 +556,13 @@ public class GetJobResponseBody extends TeaModel {
 
         public static Job create() {
             return builder().build();
+        }
+
+        /**
+         * @return allParameters
+         */
+        public java.util.List<AllParameters> getAllParameters() {
+            return this.allParameters;
         }
 
         /**
@@ -592,6 +699,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<AllParameters> allParameters; 
             private java.util.List<AssertCheckDetail> assertCheckDetail; 
             private Config config; 
             private String createTime; 
@@ -616,6 +724,7 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             private Builder(Job model) {
+                this.allParameters = model.allParameters;
                 this.assertCheckDetail = model.assertCheckDetail;
                 this.config = model.config;
                 this.createTime = model.createTime;
@@ -636,6 +745,14 @@ public class GetJobResponseBody extends TeaModel {
                 this.taskType = model.taskType;
                 this.terraformProviderVersion = model.terraformProviderVersion;
             } 
+
+            /**
+             * allParameters.
+             */
+            public Builder allParameters(java.util.List<AllParameters> allParameters) {
+                this.allParameters = allParameters;
+                return this;
+            }
 
             /**
              * assertCheckDetail.

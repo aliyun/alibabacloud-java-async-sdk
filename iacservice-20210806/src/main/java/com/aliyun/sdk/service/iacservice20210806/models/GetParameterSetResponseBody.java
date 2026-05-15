@@ -98,6 +98,9 @@ public class GetParameterSetResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("secret")
+        private Boolean secret;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
@@ -109,6 +112,7 @@ public class GetParameterSetResponseBody extends TeaModel {
 
         private Parameters(Builder builder) {
             this.name = builder.name;
+            this.secret = builder.secret;
             this.status = builder.status;
             this.type = builder.type;
             this.value = builder.value;
@@ -127,6 +131,13 @@ public class GetParameterSetResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return secret
+         */
+        public Boolean getSecret() {
+            return this.secret;
         }
 
         /**
@@ -152,6 +163,7 @@ public class GetParameterSetResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+            private Boolean secret; 
             private String status; 
             private String type; 
             private Object value; 
@@ -161,6 +173,7 @@ public class GetParameterSetResponseBody extends TeaModel {
 
             private Builder(Parameters model) {
                 this.name = model.name;
+                this.secret = model.secret;
                 this.status = model.status;
                 this.type = model.type;
                 this.value = model.value;
@@ -171,6 +184,14 @@ public class GetParameterSetResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * secret.
+             */
+            public Builder secret(Boolean secret) {
+                this.secret = secret;
                 return this;
             }
 

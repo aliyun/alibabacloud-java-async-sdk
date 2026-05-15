@@ -22,6 +22,10 @@ public class ListParameterSetsRequest extends Request {
     private String keyword;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("kmsKeyId")
+    private String kmsKeyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
@@ -33,6 +37,7 @@ public class ListParameterSetsRequest extends Request {
     private ListParameterSetsRequest(Builder builder) {
         super(builder);
         this.keyword = builder.keyword;
+        this.kmsKeyId = builder.kmsKeyId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -58,6 +63,13 @@ public class ListParameterSetsRequest extends Request {
     }
 
     /**
+     * @return kmsKeyId
+     */
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -73,6 +85,7 @@ public class ListParameterSetsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListParameterSetsRequest, Builder> {
         private String keyword; 
+        private String kmsKeyId; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -83,6 +96,7 @@ public class ListParameterSetsRequest extends Request {
         private Builder(ListParameterSetsRequest request) {
             super(request);
             this.keyword = request.keyword;
+            this.kmsKeyId = request.kmsKeyId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
@@ -93,6 +107,15 @@ public class ListParameterSetsRequest extends Request {
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
             this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * kmsKeyId.
+         */
+        public Builder kmsKeyId(String kmsKeyId) {
+            this.putQueryParameter("kmsKeyId", kmsKeyId);
+            this.kmsKeyId = kmsKeyId;
             return this;
         }
 

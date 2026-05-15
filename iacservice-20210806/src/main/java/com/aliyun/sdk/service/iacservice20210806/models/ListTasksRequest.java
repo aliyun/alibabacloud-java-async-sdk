@@ -26,6 +26,10 @@ public class ListTasksRequest extends Request {
     private String keyword;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("kmsKeyId")
+    private String kmsKeyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("moduleId")
     private String moduleId;
 
@@ -58,6 +62,7 @@ public class ListTasksRequest extends Request {
         super(builder);
         this.groupId = builder.groupId;
         this.keyword = builder.keyword;
+        this.kmsKeyId = builder.kmsKeyId;
         this.moduleId = builder.moduleId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -92,6 +97,13 @@ public class ListTasksRequest extends Request {
      */
     public String getKeyword() {
         return this.keyword;
+    }
+
+    /**
+     * @return kmsKeyId
+     */
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
     }
 
     /**
@@ -146,6 +158,7 @@ public class ListTasksRequest extends Request {
     public static final class Builder extends Request.Builder<ListTasksRequest, Builder> {
         private String groupId; 
         private String keyword; 
+        private String kmsKeyId; 
         private String moduleId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -162,6 +175,7 @@ public class ListTasksRequest extends Request {
             super(request);
             this.groupId = request.groupId;
             this.keyword = request.keyword;
+            this.kmsKeyId = request.kmsKeyId;
             this.moduleId = request.moduleId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -186,6 +200,15 @@ public class ListTasksRequest extends Request {
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
             this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * kmsKeyId.
+         */
+        public Builder kmsKeyId(String kmsKeyId) {
+            this.putQueryParameter("kmsKeyId", kmsKeyId);
+            this.kmsKeyId = kmsKeyId;
             return this;
         }
 

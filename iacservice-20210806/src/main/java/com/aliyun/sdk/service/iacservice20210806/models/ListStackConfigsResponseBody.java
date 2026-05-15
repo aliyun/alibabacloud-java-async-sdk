@@ -342,6 +342,9 @@ public class ListStackConfigsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("sensitive")
+        private Boolean sensitive;
+
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
@@ -349,6 +352,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
             this._default = builder._default;
             this.description = builder.description;
             this.name = builder.name;
+            this.sensitive = builder.sensitive;
             this.type = builder.type;
         }
 
@@ -382,6 +386,13 @@ public class ListStackConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sensitive
+         */
+        public Boolean getSensitive() {
+            return this.sensitive;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -392,6 +403,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
             private String _default; 
             private String description; 
             private String name; 
+            private Boolean sensitive; 
             private String type; 
 
             private Builder() {
@@ -401,6 +413,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
                 this._default = model._default;
                 this.description = model.description;
                 this.name = model.name;
+                this.sensitive = model.sensitive;
                 this.type = model.type;
             } 
 
@@ -425,6 +438,14 @@ public class ListStackConfigsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * sensitive.
+             */
+            public Builder sensitive(Boolean sensitive) {
+                this.sensitive = sensitive;
                 return this;
             }
 

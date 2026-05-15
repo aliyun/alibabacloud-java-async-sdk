@@ -58,6 +58,10 @@ public class CreateTaskRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("parameterSetIds")
+    private java.util.List<String> parameterSetIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("protectionStrategy")
     private java.util.List<String> protectionStrategy;
 
@@ -96,6 +100,7 @@ public class CreateTaskRequest extends Request {
         this.moduleId = builder.moduleId;
         this.moduleVersion = builder.moduleVersion;
         this.name = builder.name;
+        this.parameterSetIds = builder.parameterSetIds;
         this.protectionStrategy = builder.protectionStrategy;
         this.ramRole = builder.ramRole;
         this.skipPropertyValidation = builder.skipPropertyValidation;
@@ -182,6 +187,13 @@ public class CreateTaskRequest extends Request {
     }
 
     /**
+     * @return parameterSetIds
+     */
+    public java.util.List<String> getParameterSetIds() {
+        return this.parameterSetIds;
+    }
+
+    /**
      * @return protectionStrategy
      */
     public java.util.List<String> getProtectionStrategy() {
@@ -240,6 +252,7 @@ public class CreateTaskRequest extends Request {
         private String moduleId; 
         private String moduleVersion; 
         private String name; 
+        private java.util.List<String> parameterSetIds; 
         private java.util.List<String> protectionStrategy; 
         private String ramRole; 
         private Boolean skipPropertyValidation; 
@@ -263,6 +276,7 @@ public class CreateTaskRequest extends Request {
             this.moduleId = request.moduleId;
             this.moduleVersion = request.moduleVersion;
             this.name = request.name;
+            this.parameterSetIds = request.parameterSetIds;
             this.protectionStrategy = request.protectionStrategy;
             this.ramRole = request.ramRole;
             this.skipPropertyValidation = request.skipPropertyValidation;
@@ -362,6 +376,15 @@ public class CreateTaskRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * parameterSetIds.
+         */
+        public Builder parameterSetIds(java.util.List<String> parameterSetIds) {
+            this.putBodyParameter("parameterSetIds", parameterSetIds);
+            this.parameterSetIds = parameterSetIds;
             return this;
         }
 
