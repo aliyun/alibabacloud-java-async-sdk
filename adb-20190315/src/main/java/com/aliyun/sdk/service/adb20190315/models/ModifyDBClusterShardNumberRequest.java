@@ -27,6 +27,10 @@ public class ModifyDBClusterShardNumberRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsRollback")
+    private Boolean isRollback;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NewShardNumber")
     private Long newShardNumber;
 
@@ -62,6 +66,7 @@ public class ModifyDBClusterShardNumberRequest extends Request {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.dryRun = builder.dryRun;
+        this.isRollback = builder.isRollback;
         this.newShardNumber = builder.newShardNumber;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -97,6 +102,13 @@ public class ModifyDBClusterShardNumberRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return isRollback
+     */
+    public Boolean getIsRollback() {
+        return this.isRollback;
     }
 
     /**
@@ -158,6 +170,7 @@ public class ModifyDBClusterShardNumberRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDBClusterShardNumberRequest, Builder> {
         private String DBClusterId; 
         private Boolean dryRun; 
+        private Boolean isRollback; 
         private Long newShardNumber; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -175,6 +188,7 @@ public class ModifyDBClusterShardNumberRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.dryRun = request.dryRun;
+            this.isRollback = request.isRollback;
             this.newShardNumber = request.newShardNumber;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -214,6 +228,15 @@ public class ModifyDBClusterShardNumberRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * IsRollback.
+         */
+        public Builder isRollback(Boolean isRollback) {
+            this.putQueryParameter("IsRollback", isRollback);
+            this.isRollback = isRollback;
             return this;
         }
 
