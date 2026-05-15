@@ -178,6 +178,81 @@ public class GetDocInfoResponseBody extends TeaModel {
      *
      * <p>GetDocInfoResponseBody</p>
      */
+    public static class PageInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Height")
+        private Integer height;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
+        private Integer width;
+
+        private PageInfo(Builder builder) {
+            this.height = builder.height;
+            this.width = builder.width;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PageInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return height
+         */
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        /**
+         * @return width
+         */
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public static final class Builder {
+            private Integer height; 
+            private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.height = model.height;
+                this.width = model.width;
+            } 
+
+            /**
+             * Height.
+             */
+            public Builder height(Integer height) {
+                this.height = height;
+                return this;
+            }
+
+            /**
+             * Width.
+             */
+            public Builder width(Integer width) {
+                this.width = width;
+                return this;
+            }
+
+            public PageInfo build() {
+                return new PageInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDocInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryId")
         private String categoryId;
@@ -190,6 +265,9 @@ public class GetDocInfoResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
+
+        @com.aliyun.core.annotation.NameInMap("PageInfo")
+        private PageInfo pageInfo;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
@@ -205,6 +283,7 @@ public class GetDocInfoResponseBody extends TeaModel {
             this.docName = builder.docName;
             this.docType = builder.docType;
             this.fileUrl = builder.fileUrl;
+            this.pageInfo = builder.pageInfo;
             this.status = builder.status;
             this.statusMessage = builder.statusMessage;
             this.videoContents = builder.videoContents;
@@ -247,6 +326,13 @@ public class GetDocInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return pageInfo
+         */
+        public PageInfo getPageInfo() {
+            return this.pageInfo;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -272,6 +358,7 @@ public class GetDocInfoResponseBody extends TeaModel {
             private String docName; 
             private String docType; 
             private String fileUrl; 
+            private PageInfo pageInfo; 
             private Integer status; 
             private String statusMessage; 
             private java.util.List<String> videoContents; 
@@ -284,6 +371,7 @@ public class GetDocInfoResponseBody extends TeaModel {
                 this.docName = model.docName;
                 this.docType = model.docType;
                 this.fileUrl = model.fileUrl;
+                this.pageInfo = model.pageInfo;
                 this.status = model.status;
                 this.statusMessage = model.statusMessage;
                 this.videoContents = model.videoContents;
@@ -318,6 +406,14 @@ public class GetDocInfoResponseBody extends TeaModel {
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
+                return this;
+            }
+
+            /**
+             * PageInfo.
+             */
+            public Builder pageInfo(PageInfo pageInfo) {
+                this.pageInfo = pageInfo;
                 return this;
             }
 
