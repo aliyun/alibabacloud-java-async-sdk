@@ -359,6 +359,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProjectMemberResponse> createProjectMember(CreateProjectMemberRequest request);
 
     /**
+     * @param request the request parameters of CreateProjectRole  CreateProjectRoleRequest
+     * @return CreateProjectRoleResponse
+     */
+    CompletableFuture<CreateProjectRoleResponse> createProjectRole(CreateProjectRoleRequest request);
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
@@ -646,6 +652,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteProjectMemberResponse
      */
     CompletableFuture<DeleteProjectMemberResponse> deleteProjectMember(DeleteProjectMemberRequest request);
+
+    /**
+     * @param request the request parameters of DeleteProjectRole  DeleteProjectRoleRequest
+     * @return DeleteProjectRoleResponse
+     */
+    CompletableFuture<DeleteProjectRoleResponse> deleteProjectRole(DeleteProjectRoleRequest request);
 
     /**
      * <b>description</b> :
@@ -2184,6 +2196,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateProjectResponse
      */
     CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request);
+
+    /**
+     * @param request the request parameters of UpdateProjectRole  UpdateProjectRoleRequest
+     * @return UpdateProjectRoleResponse
+     */
+    CompletableFuture<UpdateProjectRoleResponse> updateProjectRole(UpdateProjectRoleRequest request);
 
     /**
      * <b>description</b> :
