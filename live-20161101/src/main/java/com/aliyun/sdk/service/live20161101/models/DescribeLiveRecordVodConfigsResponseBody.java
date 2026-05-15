@@ -169,6 +169,240 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
      *
      * <p>DescribeLiveRecordVodConfigsResponseBody</p>
      */
+    public static class RecordFormat extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoCompose")
+        private String autoCompose;
+
+        @com.aliyun.core.annotation.NameInMap("Format")
+        private String format;
+
+        @com.aliyun.core.annotation.NameInMap("ProcessMethod")
+        private String processMethod;
+
+        @com.aliyun.core.annotation.NameInMap("ProcessTemplateId")
+        private String processTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("SliceDuration")
+        private Integer sliceDuration;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private String tags;
+
+        @com.aliyun.core.annotation.NameInMap("VideoProcess")
+        private String videoProcess;
+
+        private RecordFormat(Builder builder) {
+            this.autoCompose = builder.autoCompose;
+            this.format = builder.format;
+            this.processMethod = builder.processMethod;
+            this.processTemplateId = builder.processTemplateId;
+            this.sliceDuration = builder.sliceDuration;
+            this.tags = builder.tags;
+            this.videoProcess = builder.videoProcess;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecordFormat create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoCompose
+         */
+        public String getAutoCompose() {
+            return this.autoCompose;
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        /**
+         * @return processMethod
+         */
+        public String getProcessMethod() {
+            return this.processMethod;
+        }
+
+        /**
+         * @return processTemplateId
+         */
+        public String getProcessTemplateId() {
+            return this.processTemplateId;
+        }
+
+        /**
+         * @return sliceDuration
+         */
+        public Integer getSliceDuration() {
+            return this.sliceDuration;
+        }
+
+        /**
+         * @return tags
+         */
+        public String getTags() {
+            return this.tags;
+        }
+
+        /**
+         * @return videoProcess
+         */
+        public String getVideoProcess() {
+            return this.videoProcess;
+        }
+
+        public static final class Builder {
+            private String autoCompose; 
+            private String format; 
+            private String processMethod; 
+            private String processTemplateId; 
+            private Integer sliceDuration; 
+            private String tags; 
+            private String videoProcess; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordFormat model) {
+                this.autoCompose = model.autoCompose;
+                this.format = model.format;
+                this.processMethod = model.processMethod;
+                this.processTemplateId = model.processTemplateId;
+                this.sliceDuration = model.sliceDuration;
+                this.tags = model.tags;
+                this.videoProcess = model.videoProcess;
+            } 
+
+            /**
+             * AutoCompose.
+             */
+            public Builder autoCompose(String autoCompose) {
+                this.autoCompose = autoCompose;
+                return this;
+            }
+
+            /**
+             * Format.
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * ProcessMethod.
+             */
+            public Builder processMethod(String processMethod) {
+                this.processMethod = processMethod;
+                return this;
+            }
+
+            /**
+             * ProcessTemplateId.
+             */
+            public Builder processTemplateId(String processTemplateId) {
+                this.processTemplateId = processTemplateId;
+                return this;
+            }
+
+            /**
+             * SliceDuration.
+             */
+            public Builder sliceDuration(Integer sliceDuration) {
+                this.sliceDuration = sliceDuration;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(String tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * VideoProcess.
+             */
+            public Builder videoProcess(String videoProcess) {
+                this.videoProcess = videoProcess;
+                return this;
+            }
+
+            public RecordFormat build() {
+                return new RecordFormat(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeLiveRecordVodConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveRecordVodConfigsResponseBody</p>
+     */
+    public static class RecordFormatList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RecordFormat")
+        private java.util.List<RecordFormat> recordFormat;
+
+        private RecordFormatList(Builder builder) {
+            this.recordFormat = builder.recordFormat;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecordFormatList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return recordFormat
+         */
+        public java.util.List<RecordFormat> getRecordFormat() {
+            return this.recordFormat;
+        }
+
+        public static final class Builder {
+            private java.util.List<RecordFormat> recordFormat; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordFormatList model) {
+                this.recordFormat = model.recordFormat;
+            } 
+
+            /**
+             * RecordFormat.
+             */
+            public Builder recordFormat(java.util.List<RecordFormat> recordFormat) {
+                this.recordFormat = recordFormat;
+                return this;
+            }
+
+            public RecordFormatList build() {
+                return new RecordFormatList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeLiveRecordVodConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveRecordVodConfigsResponseBody</p>
+     */
     public static class LiveRecordVodConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -185,17 +419,35 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CycleDuration")
         private Integer cycleDuration;
 
+        @com.aliyun.core.annotation.NameInMap("DelayTime")
+        private Integer delayTime;
+
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
+        @com.aliyun.core.annotation.NameInMap("FormatConfig")
+        private Boolean formatConfig;
+
         @com.aliyun.core.annotation.NameInMap("OnDemand")
         private Integer onDemand;
+
+        @com.aliyun.core.annotation.NameInMap("RecordContent")
+        private String recordContent;
+
+        @com.aliyun.core.annotation.NameInMap("RecordFormatList")
+        private RecordFormatList recordFormatList;
+
+        @com.aliyun.core.annotation.NameInMap("SpaceId")
+        private String spaceId;
 
         @com.aliyun.core.annotation.NameInMap("StorageLocation")
         private String storageLocation;
 
         @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
+
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplates")
+        private String transcodeTemplates;
 
         @com.aliyun.core.annotation.NameInMap("VodTranscodeGroupId")
         private String vodTranscodeGroupId;
@@ -206,10 +458,16 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             this.composeVodTranscodeGroupId = builder.composeVodTranscodeGroupId;
             this.createTime = builder.createTime;
             this.cycleDuration = builder.cycleDuration;
+            this.delayTime = builder.delayTime;
             this.domainName = builder.domainName;
+            this.formatConfig = builder.formatConfig;
             this.onDemand = builder.onDemand;
+            this.recordContent = builder.recordContent;
+            this.recordFormatList = builder.recordFormatList;
+            this.spaceId = builder.spaceId;
             this.storageLocation = builder.storageLocation;
             this.streamName = builder.streamName;
+            this.transcodeTemplates = builder.transcodeTemplates;
             this.vodTranscodeGroupId = builder.vodTranscodeGroupId;
         }
 
@@ -257,6 +515,13 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return delayTime
+         */
+        public Integer getDelayTime() {
+            return this.delayTime;
+        }
+
+        /**
          * @return domainName
          */
         public String getDomainName() {
@@ -264,10 +529,38 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return formatConfig
+         */
+        public Boolean getFormatConfig() {
+            return this.formatConfig;
+        }
+
+        /**
          * @return onDemand
          */
         public Integer getOnDemand() {
             return this.onDemand;
+        }
+
+        /**
+         * @return recordContent
+         */
+        public String getRecordContent() {
+            return this.recordContent;
+        }
+
+        /**
+         * @return recordFormatList
+         */
+        public RecordFormatList getRecordFormatList() {
+            return this.recordFormatList;
+        }
+
+        /**
+         * @return spaceId
+         */
+        public String getSpaceId() {
+            return this.spaceId;
         }
 
         /**
@@ -285,6 +578,13 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return transcodeTemplates
+         */
+        public String getTranscodeTemplates() {
+            return this.transcodeTemplates;
+        }
+
+        /**
          * @return vodTranscodeGroupId
          */
         public String getVodTranscodeGroupId() {
@@ -297,10 +597,16 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             private String composeVodTranscodeGroupId; 
             private String createTime; 
             private Integer cycleDuration; 
+            private Integer delayTime; 
             private String domainName; 
+            private Boolean formatConfig; 
             private Integer onDemand; 
+            private String recordContent; 
+            private RecordFormatList recordFormatList; 
+            private String spaceId; 
             private String storageLocation; 
             private String streamName; 
+            private String transcodeTemplates; 
             private String vodTranscodeGroupId; 
 
             private Builder() {
@@ -312,10 +618,16 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
                 this.composeVodTranscodeGroupId = model.composeVodTranscodeGroupId;
                 this.createTime = model.createTime;
                 this.cycleDuration = model.cycleDuration;
+                this.delayTime = model.delayTime;
                 this.domainName = model.domainName;
+                this.formatConfig = model.formatConfig;
                 this.onDemand = model.onDemand;
+                this.recordContent = model.recordContent;
+                this.recordFormatList = model.recordFormatList;
+                this.spaceId = model.spaceId;
                 this.storageLocation = model.storageLocation;
                 this.streamName = model.streamName;
+                this.transcodeTemplates = model.transcodeTemplates;
                 this.vodTranscodeGroupId = model.vodTranscodeGroupId;
             } 
 
@@ -382,6 +694,14 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             }
 
             /**
+             * DelayTime.
+             */
+            public Builder delayTime(Integer delayTime) {
+                this.delayTime = delayTime;
+                return this;
+            }
+
+            /**
              * <p>The main streaming domain.</p>
              * 
              * <strong>example:</strong>
@@ -389,6 +709,14 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
+                return this;
+            }
+
+            /**
+             * FormatConfig.
+             */
+            public Builder formatConfig(Boolean formatConfig) {
+                this.formatConfig = formatConfig;
                 return this;
             }
 
@@ -404,6 +732,30 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
              */
             public Builder onDemand(Integer onDemand) {
                 this.onDemand = onDemand;
+                return this;
+            }
+
+            /**
+             * RecordContent.
+             */
+            public Builder recordContent(String recordContent) {
+                this.recordContent = recordContent;
+                return this;
+            }
+
+            /**
+             * RecordFormatList.
+             */
+            public Builder recordFormatList(RecordFormatList recordFormatList) {
+                this.recordFormatList = recordFormatList;
+                return this;
+            }
+
+            /**
+             * SpaceId.
+             */
+            public Builder spaceId(String spaceId) {
+                this.spaceId = spaceId;
                 return this;
             }
 
@@ -426,6 +778,14 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
+                return this;
+            }
+
+            /**
+             * TranscodeTemplates.
+             */
+            public Builder transcodeTemplates(String transcodeTemplates) {
+                this.transcodeTemplates = transcodeTemplates;
                 return this;
             }
 
