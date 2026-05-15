@@ -101,6 +101,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFlowEndpointResponse> createFlowEndpoint(CreateFlowEndpointRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>POST /2025-09-10/agents/im-bots；成功 HTTP 201；请求体无 status（创建后恒为 running）；Body 标准包装，data 为 IMBotInfo</p>
+     * 
+     * @param request the request parameters of CreateIMBot  CreateIMBotRequest
+     * @return CreateIMBotResponse
+     */
+    CompletableFuture<CreateIMBotResponse> createIMBot(CreateIMBotRequest request);
+
+    /**
      * @param request the request parameters of CreateKnowledgeBase  CreateKnowledgeBaseRequest
      * @return CreateKnowledgeBaseResponse
      */
@@ -231,6 +240,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteFlowVersionResponse
      */
     CompletableFuture<DeleteFlowVersionResponse> deleteFlowVersion(DeleteFlowVersionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>DELETE /2025-09-10/agents/im-bots/{imBotId}；成功为 HTTP 204 No Content，无 JSON 响应体</p>
+     * 
+     * @param request the request parameters of DeleteIMBot  DeleteIMBotRequest
+     * @return DeleteIMBotResponse
+     */
+    CompletableFuture<DeleteIMBotResponse> deleteIMBot(DeleteIMBotRequest request);
 
     /**
      * @param request the request parameters of DeleteKnowledgeBase  DeleteKnowledgeBaseRequest
@@ -375,6 +393,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetFlowVersionResponse
      */
     CompletableFuture<GetFlowVersionResponse> getFlowVersion(GetFlowVersionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>GET /2025-09-10/agents/im-bots/{imBotId}；200 OK，Body 标准包装，data 为 IMBotInfo</p>
+     * 
+     * @param request the request parameters of GetIMBot  GetIMBotRequest
+     * @return GetIMBotResponse
+     */
+    CompletableFuture<GetIMBotResponse> getIMBot(GetIMBotRequest request);
 
     /**
      * @param request the request parameters of GetKnowledgeBase  GetKnowledgeBaseRequest
@@ -522,6 +549,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListFlowsResponse
      */
     CompletableFuture<ListFlowsResponse> listFlows(ListFlowsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>GET /2025-09-10/agents/im-bots；200 OK；data 含 items、pageNumber、pageSize、total；pageNumber 默认 1、pageSize 默认 20、上限 100；可按 botName（子串忽略大小写）、agentRuntimeId、botBizType、status 筛选</p>
+     * 
+     * @param request the request parameters of ListIMBots  ListIMBotsRequest
+     * @return ListIMBotsResponse
+     */
+    CompletableFuture<ListIMBotsResponse> listIMBots(ListIMBotsRequest request);
 
     /**
      * @param request the request parameters of ListKnowledgeBases  ListKnowledgeBasesRequest
@@ -690,6 +726,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateFlowEndpointResponse
      */
     CompletableFuture<UpdateFlowEndpointResponse> updateFlowEndpoint(UpdateFlowEndpointRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>PUT /2025-09-10/agents/im-bots/{imBotId}；成功建议 HTTP 202，Body 标准包装，data 为更新后 IMBotInfo</p>
+     * 
+     * @param request the request parameters of UpdateIMBot  UpdateIMBotRequest
+     * @return UpdateIMBotResponse
+     */
+    CompletableFuture<UpdateIMBotResponse> updateIMBot(UpdateIMBotRequest request);
 
     /**
      * @param request the request parameters of UpdateKnowledgeBase  UpdateKnowledgeBaseRequest

@@ -1,0 +1,217 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.agentrun20250910.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ConsumerAPIKey} extends {@link TeaModel}
+ *
+ * <p>ConsumerAPIKey</p>
+ */
+public class ConsumerAPIKey extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("active")
+    private Boolean active;
+
+    @com.aliyun.core.annotation.NameInMap("consumerApiKeyId")
+    private String consumerApiKeyId;
+
+    @com.aliyun.core.annotation.NameInMap("createdAt")
+    private String createdAt;
+
+    @com.aliyun.core.annotation.NameInMap("description")
+    private String description;
+
+    @com.aliyun.core.annotation.NameInMap("lastUpdatedAt")
+    private String lastUpdatedAt;
+
+    @com.aliyun.core.annotation.NameInMap("maskedKey")
+    private String maskedKey;
+
+    @com.aliyun.core.annotation.NameInMap("modelConnectionId")
+    private String modelConnectionId;
+
+    private ConsumerAPIKey(Builder builder) {
+        this.active = builder.active;
+        this.consumerApiKeyId = builder.consumerApiKeyId;
+        this.createdAt = builder.createdAt;
+        this.description = builder.description;
+        this.lastUpdatedAt = builder.lastUpdatedAt;
+        this.maskedKey = builder.maskedKey;
+        this.modelConnectionId = builder.modelConnectionId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ConsumerAPIKey create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return active
+     */
+    public Boolean getActive() {
+        return this.active;
+    }
+
+    /**
+     * @return consumerApiKeyId
+     */
+    public String getConsumerApiKeyId() {
+        return this.consumerApiKeyId;
+    }
+
+    /**
+     * @return createdAt
+     */
+    public String getCreatedAt() {
+        return this.createdAt;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return lastUpdatedAt
+     */
+    public String getLastUpdatedAt() {
+        return this.lastUpdatedAt;
+    }
+
+    /**
+     * @return maskedKey
+     */
+    public String getMaskedKey() {
+        return this.maskedKey;
+    }
+
+    /**
+     * @return modelConnectionId
+     */
+    public String getModelConnectionId() {
+        return this.modelConnectionId;
+    }
+
+    public static final class Builder {
+        private Boolean active; 
+        private String consumerApiKeyId; 
+        private String createdAt; 
+        private String description; 
+        private String lastUpdatedAt; 
+        private String maskedKey; 
+        private String modelConnectionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConsumerAPIKey model) {
+            this.active = model.active;
+            this.consumerApiKeyId = model.consumerApiKeyId;
+            this.createdAt = model.createdAt;
+            this.description = model.description;
+            this.lastUpdatedAt = model.lastUpdatedAt;
+            this.maskedKey = model.maskedKey;
+            this.modelConnectionId = model.modelConnectionId;
+        } 
+
+        /**
+         * <p>密钥是否启用，true表示启用，false表示禁用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder active(Boolean active) {
+            this.active = active;
+            return this;
+        }
+
+        /**
+         * <p>消费者API密钥的唯一标识符</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-123456789abc</p>
+         */
+        public Builder consumerApiKeyId(String consumerApiKeyId) {
+            this.consumerApiKeyId = consumerApiKeyId;
+            return this;
+        }
+
+        /**
+         * <p>消费者API密钥的创建时间，采用ISO 8601格式</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-10T10:30:00Z</p>
+         */
+        public Builder createdAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+
+        /**
+         * <p>消费者API密钥的描述信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用于生产环境的API密钥</p>
+         */
+        public Builder description(String description) {
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>消费者API密钥最后一次更新的时间，采用ISO 8601格式</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-10T11:45:00Z</p>
+         */
+        public Builder lastUpdatedAt(String lastUpdatedAt) {
+            this.lastUpdatedAt = lastUpdatedAt;
+            return this;
+        }
+
+        /**
+         * <p>API密钥的掩码展示形式，仅显示前后几位字符</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-****1234</p>
+         */
+        public Builder maskedKey(String maskedKey) {
+            this.maskedKey = maskedKey;
+            return this;
+        }
+
+        /**
+         * <p>关联的模型连接标识符</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mc-1234567890abcdef</p>
+         */
+        public Builder modelConnectionId(String modelConnectionId) {
+            this.modelConnectionId = modelConnectionId;
+            return this;
+        }
+
+        public ConsumerAPIKey build() {
+            return new ConsumerAPIKey(this);
+        } 
+
+    } 
+
+}

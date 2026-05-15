@@ -80,7 +80,6 @@ public class Template extends TeaModel {
     private String sandboxIdleTimeoutInSeconds;
 
     @com.aliyun.core.annotation.NameInMap("sandboxTTLInSeconds")
-    @Deprecated
     private String sandboxTTLInSeconds;
 
     @com.aliyun.core.annotation.NameInMap("scalingStatus")

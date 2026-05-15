@@ -1,3 +1,6 @@
+2026-05-15 Version: 5.0.32
+- Generated java-async 2025-09-10 for AgentRun.
+
 2026-04-24 Version: 5.0.31
 - Generated java-async 2025-09-10 for AgentRun.
 

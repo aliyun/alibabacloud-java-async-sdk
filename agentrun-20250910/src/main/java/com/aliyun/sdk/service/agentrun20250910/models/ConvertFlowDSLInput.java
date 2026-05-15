@@ -302,7 +302,7 @@ public class ConvertFlowDSLInput extends TeaModel {
             }
 
             /**
-             * credentialName.
+             * <p>调用方指定的 AgentRun 凭证资源名称。转换后会替换模型相关节点访问凭证</p>
              */
             public Builder credentialName(String credentialName) {
                 this.credentialName = credentialName;
