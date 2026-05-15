@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Artifact</p>
  */
 public class Artifact extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("cdcYamlArtifact")
+    private CdcYamlArtifact cdcYamlArtifact;
+
     @com.aliyun.core.annotation.NameInMap("jarArtifact")
     private JarArtifact jarArtifact;
 
@@ -30,6 +33,7 @@ public class Artifact extends TeaModel {
     private SqlArtifact sqlArtifact;
 
     private Artifact(Builder builder) {
+        this.cdcYamlArtifact = builder.cdcYamlArtifact;
         this.jarArtifact = builder.jarArtifact;
         this.kind = builder.kind;
         this.pythonArtifact = builder.pythonArtifact;
@@ -46,6 +50,13 @@ public class Artifact extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cdcYamlArtifact
+     */
+    public CdcYamlArtifact getCdcYamlArtifact() {
+        return this.cdcYamlArtifact;
     }
 
     /**
@@ -77,6 +88,7 @@ public class Artifact extends TeaModel {
     }
 
     public static final class Builder {
+        private CdcYamlArtifact cdcYamlArtifact; 
         private JarArtifact jarArtifact; 
         private String kind; 
         private PythonArtifact pythonArtifact; 
@@ -86,11 +98,20 @@ public class Artifact extends TeaModel {
         } 
 
         private Builder(Artifact model) {
+            this.cdcYamlArtifact = model.cdcYamlArtifact;
             this.jarArtifact = model.jarArtifact;
             this.kind = model.kind;
             this.pythonArtifact = model.pythonArtifact;
             this.sqlArtifact = model.sqlArtifact;
         } 
+
+        /**
+         * cdcYamlArtifact.
+         */
+        public Builder cdcYamlArtifact(CdcYamlArtifact cdcYamlArtifact) {
+            this.cdcYamlArtifact = cdcYamlArtifact;
+            return this;
+        }
 
         /**
          * jarArtifact.
