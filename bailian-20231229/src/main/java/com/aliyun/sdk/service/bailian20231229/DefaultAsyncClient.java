@@ -179,6 +179,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchUpdateFileTag  BatchUpdateFileTagRequest
+     * @return BatchUpdateFileTagResponse
+     */
+    @Override
+    public CompletableFuture<BatchUpdateFileTagResponse> batchUpdateFileTag(BatchUpdateFileTagRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchUpdateFileTag").setMethod(HttpMethod.PUT).setPathRegex("/{WorkspaceId}/datacenter/batchupdatetag").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchUpdateFileTagResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchUpdateFileTagResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ChangeParseSetting  ChangeParseSettingRequest
      * @return ChangeParseSettingResponse
      */

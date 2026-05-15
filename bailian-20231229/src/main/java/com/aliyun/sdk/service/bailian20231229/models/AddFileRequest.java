@@ -50,6 +50,10 @@ public class AddFileRequest extends Request {
     private String parser;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParserConfig")
+    private ParserConfig parserConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<String> tags;
 
@@ -62,6 +66,7 @@ public class AddFileRequest extends Request {
         this.leaseId = builder.leaseId;
         this.originalFileUrl = builder.originalFileUrl;
         this.parser = builder.parser;
+        this.parserConfig = builder.parserConfig;
         this.tags = builder.tags;
     }
 
@@ -128,6 +133,13 @@ public class AddFileRequest extends Request {
     }
 
     /**
+     * @return parserConfig
+     */
+    public ParserConfig getParserConfig() {
+        return this.parserConfig;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<String> getTags() {
@@ -142,6 +154,7 @@ public class AddFileRequest extends Request {
         private String leaseId; 
         private String originalFileUrl; 
         private String parser; 
+        private ParserConfig parserConfig; 
         private java.util.List<String> tags; 
 
         private Builder() {
@@ -157,6 +170,7 @@ public class AddFileRequest extends Request {
             this.leaseId = request.leaseId;
             this.originalFileUrl = request.originalFileUrl;
             this.parser = request.parser;
+            this.parserConfig = request.parserConfig;
             this.tags = request.tags;
         } 
 
@@ -250,6 +264,16 @@ public class AddFileRequest extends Request {
         }
 
         /**
+         * ParserConfig.
+         */
+        public Builder parserConfig(ParserConfig parserConfig) {
+            String parserConfigShrink = shrink(parserConfig, "ParserConfig", "json");
+            this.putBodyParameter("ParserConfig", parserConfigShrink);
+            this.parserConfig = parserConfig;
+            return this;
+        }
+
+        /**
          * <p>A list of tags associated with the document. The default value is null, which means no tags. You can specify up to 10 tags.</p>
          */
         public Builder tags(java.util.List<String> tags) {
@@ -266,4 +290,80 @@ public class AddFileRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddFileRequest} extends {@link TeaModel}
+     *
+     * <p>AddFileRequest</p>
+     */
+    public static class ParserConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ModelName")
+        private String modelName;
+
+        @com.aliyun.core.annotation.NameInMap("ModelPrompt")
+        @com.aliyun.core.annotation.Validation(maxLength = 1500, minLength = 1)
+        private String modelPrompt;
+
+        private ParserConfig(Builder builder) {
+            this.modelName = builder.modelName;
+            this.modelPrompt = builder.modelPrompt;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ParserConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return modelName
+         */
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        /**
+         * @return modelPrompt
+         */
+        public String getModelPrompt() {
+            return this.modelPrompt;
+        }
+
+        public static final class Builder {
+            private String modelName; 
+            private String modelPrompt; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParserConfig model) {
+                this.modelName = model.modelName;
+                this.modelPrompt = model.modelPrompt;
+            } 
+
+            /**
+             * ModelName.
+             */
+            public Builder modelName(String modelName) {
+                this.modelName = modelName;
+                return this;
+            }
+
+            /**
+             * ModelPrompt.
+             */
+            public Builder modelPrompt(String modelPrompt) {
+                this.modelPrompt = modelPrompt;
+                return this;
+            }
+
+            public ParserConfig build() {
+                return new ParserConfig(this);
+            } 
+
+        } 
+
+    }
 }

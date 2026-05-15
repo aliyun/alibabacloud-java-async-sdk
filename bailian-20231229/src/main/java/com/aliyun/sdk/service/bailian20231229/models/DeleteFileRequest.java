@@ -19,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteFileRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("FileId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 32)
     private String fileId;
 
     @com.aliyun.core.annotation.Path

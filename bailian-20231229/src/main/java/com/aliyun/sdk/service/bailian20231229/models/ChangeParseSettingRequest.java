@@ -227,6 +227,7 @@ public class ChangeParseSettingRequest extends Request {
         private String modelName;
 
         @com.aliyun.core.annotation.NameInMap("modelPrompt")
+        @com.aliyun.core.annotation.Validation(maxLength = 1500, minLength = 1)
         private String modelPrompt;
 
         private ParserConfig(Builder builder) {

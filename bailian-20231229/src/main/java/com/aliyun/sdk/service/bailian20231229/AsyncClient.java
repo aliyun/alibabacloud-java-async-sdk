@@ -87,6 +87,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyTempStorageLeaseResponse> applyTempStorageLease(ApplyTempStorageLeaseRequest request);
 
     /**
+     * @param request the request parameters of BatchUpdateFileTag  BatchUpdateFileTagRequest
+     * @return BatchUpdateFileTagResponse
+     */
+    CompletableFuture<BatchUpdateFileTagResponse> batchUpdateFileTag(BatchUpdateFileTagRequest request);
+
+    /**
      * @param request the request parameters of ChangeParseSetting  ChangeParseSettingRequest
      * @return ChangeParseSettingResponse
      */
