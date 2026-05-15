@@ -242,6 +242,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("ServerlessSwitch")
+        private Boolean serverlessSwitch;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -282,6 +285,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.publicEndpoint = builder.publicEndpoint;
             this.resourceGroupId = builder.resourceGroupId;
             this.securityGroupId = builder.securityGroupId;
+            this.serverlessSwitch = builder.serverlessSwitch;
             this.status = builder.status;
             this.storageSize = builder.storageSize;
             this.supportEIP = builder.supportEIP;
@@ -446,6 +450,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverlessSwitch
+         */
+        public Boolean getServerlessSwitch() {
+            return this.serverlessSwitch;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -509,6 +520,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String publicEndpoint; 
             private String resourceGroupId; 
             private String securityGroupId; 
+            private Boolean serverlessSwitch; 
             private String status; 
             private Integer storageSize; 
             private Boolean supportEIP; 
@@ -541,6 +553,7 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.publicEndpoint = model.publicEndpoint;
                 this.resourceGroupId = model.resourceGroupId;
                 this.securityGroupId = model.securityGroupId;
+                this.serverlessSwitch = model.serverlessSwitch;
                 this.status = model.status;
                 this.storageSize = model.storageSize;
                 this.supportEIP = model.supportEIP;
@@ -774,6 +787,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * ServerlessSwitch.
+             */
+            public Builder serverlessSwitch(Boolean serverlessSwitch) {
+                this.serverlessSwitch = serverlessSwitch;
                 return this;
             }
 

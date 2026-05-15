@@ -22,6 +22,10 @@ public class CreateInstanceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthModel")
+    private String authModel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
@@ -112,6 +116,10 @@ public class CreateInstanceRequest extends Request {
     private String serverlessChargeType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerlessSwitch")
+    private Boolean serverlessSwitch;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageSize")
     private Integer storageSize;
 
@@ -144,6 +152,7 @@ public class CreateInstanceRequest extends Request {
     private CreateInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.authModel = builder.authModel;
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
         this.clientToken = builder.clientToken;
@@ -166,6 +175,7 @@ public class CreateInstanceRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.securityGroupId = builder.securityGroupId;
         this.serverlessChargeType = builder.serverlessChargeType;
+        this.serverlessSwitch = builder.serverlessSwitch;
         this.storageSize = builder.storageSize;
         this.supportEip = builder.supportEip;
         this.supportTracing = builder.supportTracing;
@@ -193,6 +203,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return authModel
+     */
+    public String getAuthModel() {
+        return this.authModel;
     }
 
     /**
@@ -350,6 +367,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return serverlessSwitch
+     */
+    public Boolean getServerlessSwitch() {
+        return this.serverlessSwitch;
+    }
+
+    /**
      * @return storageSize
      */
     public Integer getStorageSize() {
@@ -400,6 +424,7 @@ public class CreateInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private String regionId; 
+        private String authModel; 
         private Boolean autoRenew; 
         private Integer autoRenewPeriod; 
         private String clientToken; 
@@ -422,6 +447,7 @@ public class CreateInstanceRequest extends Request {
         private String resourceGroupId; 
         private String securityGroupId; 
         private String serverlessChargeType; 
+        private Boolean serverlessSwitch; 
         private Integer storageSize; 
         private Boolean supportEip; 
         private Boolean supportTracing; 
@@ -437,6 +463,7 @@ public class CreateInstanceRequest extends Request {
         private Builder(CreateInstanceRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.authModel = request.authModel;
             this.autoRenew = request.autoRenew;
             this.autoRenewPeriod = request.autoRenewPeriod;
             this.clientToken = request.clientToken;
@@ -459,6 +486,7 @@ public class CreateInstanceRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.securityGroupId = request.securityGroupId;
             this.serverlessChargeType = request.serverlessChargeType;
+            this.serverlessSwitch = request.serverlessSwitch;
             this.storageSize = request.storageSize;
             this.supportEip = request.supportEip;
             this.supportTracing = request.supportTracing;
@@ -474,6 +502,15 @@ public class CreateInstanceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AuthModel.
+         */
+        public Builder authModel(String authModel) {
+            this.putQueryParameter("AuthModel", authModel);
+            this.authModel = authModel;
             return this;
         }
 
@@ -779,6 +816,15 @@ public class CreateInstanceRequest extends Request {
         public Builder serverlessChargeType(String serverlessChargeType) {
             this.putQueryParameter("ServerlessChargeType", serverlessChargeType);
             this.serverlessChargeType = serverlessChargeType;
+            return this;
+        }
+
+        /**
+         * ServerlessSwitch.
+         */
+        public Builder serverlessSwitch(Boolean serverlessSwitch) {
+            this.putQueryParameter("ServerlessSwitch", serverlessSwitch);
+            this.serverlessSwitch = serverlessSwitch;
             return this;
         }
 
