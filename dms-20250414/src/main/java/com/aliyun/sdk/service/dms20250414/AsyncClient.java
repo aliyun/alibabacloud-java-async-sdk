@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchUpdateDataLakePartitionsResponse> batchUpdateDataLakePartitions(BatchUpdateDataLakePartitionsRequest request);
 
     /**
+     * @param request the request parameters of ConfigAirflow  ConfigAirflowRequest
+     * @return ConfigAirflowResponse
+     */
+    CompletableFuture<ConfigAirflowResponse> configAirflow(ConfigAirflowRequest request);
+
+    /**
      * @param request the request parameters of CreateAirflow  CreateAirflowRequest
      * @return CreateAirflowResponse
      */
@@ -60,6 +66,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateCustomAgentResponse
      */
     CompletableFuture<CreateCustomAgentResponse> createCustomAgent(CreateCustomAgentRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataAgentKnowledgeBase  CreateDataAgentKnowledgeBaseRequest
+     * @return CreateDataAgentKnowledgeBaseResponse
+     */
+    CompletableFuture<CreateDataAgentKnowledgeBaseResponse> createDataAgentKnowledgeBase(CreateDataAgentKnowledgeBaseRequest request);
 
     /**
      * @param request the request parameters of CreateDataAgentSession  CreateDataAgentSessionRequest
@@ -108,6 +120,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCustomAgentResponse
      */
     CompletableFuture<DeleteCustomAgentResponse> deleteCustomAgent(DeleteCustomAgentRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataAgentKnowledgeBase  DeleteDataAgentKnowledgeBaseRequest
+     * @return DeleteDataAgentKnowledgeBaseResponse
+     */
+    CompletableFuture<DeleteDataAgentKnowledgeBaseResponse> deleteDataAgentKnowledgeBase(DeleteDataAgentKnowledgeBaseRequest request);
 
     /**
      * @param request the request parameters of DeleteDataAgentWorkspace  DeleteDataAgentWorkspaceRequest
@@ -162,6 +180,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeFileUploadSignatureResponse
      */
     CompletableFuture<DescribeFileUploadSignatureResponse> describeFileUploadSignature(DescribeFileUploadSignatureRequest request);
+
+    /**
+     * @param request the request parameters of DescribeKnowledgeBaseStats  DescribeKnowledgeBaseStatsRequest
+     * @return DescribeKnowledgeBaseStatsResponse
+     */
+    CompletableFuture<DescribeKnowledgeBaseStatsResponse> describeKnowledgeBaseStats(DescribeKnowledgeBaseStatsRequest request);
 
     /**
      * @param request the request parameters of FileUploadCallback  FileUploadCallbackRequest
@@ -242,6 +266,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetWorkspaceCodePublishSettingResponse
      */
     CompletableFuture<GetWorkspaceCodePublishSettingResponse> getWorkspaceCodePublishSetting(GetWorkspaceCodePublishSettingRequest request);
+
+    /**
+     * @param request the request parameters of GetWorkspaceQuota  GetWorkspaceQuotaRequest
+     * @return GetWorkspaceQuotaResponse
+     */
+    CompletableFuture<GetWorkspaceQuotaResponse> getWorkspaceQuota(GetWorkspaceQuotaRequest request);
+
+    /**
+     * @param request the request parameters of ListAirflowVersions  ListAirflowVersionsRequest
+     * @return ListAirflowVersionsResponse
+     */
+    CompletableFuture<ListAirflowVersionsResponse> listAirflowVersions(ListAirflowVersionsRequest request);
 
     /**
      * @param request the request parameters of ListAirflows  ListAirflowsRequest
@@ -364,6 +400,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateCustomAgentResponse> operateCustomAgent(OperateCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of RedeployAirflow  RedeployAirflowRequest
+     * @return RedeployAirflowResponse
+     */
+    CompletableFuture<RedeployAirflowResponse> redeployAirflow(RedeployAirflowRequest request);
+
+    /**
      * @param request the request parameters of RemoveUserToDataAgentWorkspace  RemoveUserToDataAgentWorkspaceRequest
      * @return RemoveUserToDataAgentWorkspaceResponse
      */
@@ -380,6 +422,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetWorkspaceCodePublishSettingResponse
      */
     CompletableFuture<SetWorkspaceCodePublishSettingResponse> setWorkspaceCodePublishSetting(SetWorkspaceCodePublishSettingRequest request);
+
+    /**
+     * @param request the request parameters of SetWorkspaceQuota  SetWorkspaceQuotaRequest
+     * @return SetWorkspaceQuotaResponse
+     */
+    CompletableFuture<SetWorkspaceQuotaResponse> setWorkspaceQuota(SetWorkspaceQuotaRequest request);
 
     /**
      * @param request the request parameters of UpdateAirflow  UpdateAirflowRequest

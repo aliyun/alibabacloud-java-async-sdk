@@ -113,6 +113,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ConfigAirflow  ConfigAirflowRequest
+     * @return ConfigAirflowResponse
+     */
+    @Override
+    public CompletableFuture<ConfigAirflowResponse> configAirflow(ConfigAirflowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ConfigAirflow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConfigAirflowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ConfigAirflowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateAirflow  CreateAirflowRequest
      * @return CreateAirflowResponse
      */
@@ -161,6 +179,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateCustomAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateDataAgentKnowledgeBase  CreateDataAgentKnowledgeBaseRequest
+     * @return CreateDataAgentKnowledgeBaseResponse
+     */
+    @Override
+    public CompletableFuture<CreateDataAgentKnowledgeBaseResponse> createDataAgentKnowledgeBase(CreateDataAgentKnowledgeBaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDataAgentKnowledgeBase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDataAgentKnowledgeBaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDataAgentKnowledgeBaseResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -305,6 +341,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteCustomAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDataAgentKnowledgeBase  DeleteDataAgentKnowledgeBaseRequest
+     * @return DeleteDataAgentKnowledgeBaseResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDataAgentKnowledgeBaseResponse> deleteDataAgentKnowledgeBase(DeleteDataAgentKnowledgeBaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDataAgentKnowledgeBase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDataAgentKnowledgeBaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDataAgentKnowledgeBaseResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -467,6 +521,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeFileUploadSignatureResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeKnowledgeBaseStats  DescribeKnowledgeBaseStatsRequest
+     * @return DescribeKnowledgeBaseStatsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeKnowledgeBaseStatsResponse> describeKnowledgeBaseStats(DescribeKnowledgeBaseStatsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeKnowledgeBaseStats").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeKnowledgeBaseStatsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeKnowledgeBaseStatsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -711,6 +783,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetWorkspaceCodePublishSettingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetWorkspaceQuota  GetWorkspaceQuotaRequest
+     * @return GetWorkspaceQuotaResponse
+     */
+    @Override
+    public CompletableFuture<GetWorkspaceQuotaResponse> getWorkspaceQuota(GetWorkspaceQuotaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetWorkspaceQuota").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorkspaceQuotaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorkspaceQuotaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAirflowVersions  ListAirflowVersionsRequest
+     * @return ListAirflowVersionsResponse
+     */
+    @Override
+    public CompletableFuture<ListAirflowVersionsResponse> listAirflowVersions(ListAirflowVersionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAirflowVersions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAirflowVersionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAirflowVersionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1077,6 +1185,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RedeployAirflow  RedeployAirflowRequest
+     * @return RedeployAirflowResponse
+     */
+    @Override
+    public CompletableFuture<RedeployAirflowResponse> redeployAirflow(RedeployAirflowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RedeployAirflow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RedeployAirflowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RedeployAirflowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RemoveUserToDataAgentWorkspace  RemoveUserToDataAgentWorkspaceRequest
      * @return RemoveUserToDataAgentWorkspaceResponse
      */
@@ -1125,6 +1251,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetWorkspaceCodePublishSettingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetWorkspaceQuota  SetWorkspaceQuotaRequest
+     * @return SetWorkspaceQuotaResponse
+     */
+    @Override
+    public CompletableFuture<SetWorkspaceQuotaResponse> setWorkspaceQuota(SetWorkspaceQuotaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetWorkspaceQuota").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetWorkspaceQuotaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetWorkspaceQuotaResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
