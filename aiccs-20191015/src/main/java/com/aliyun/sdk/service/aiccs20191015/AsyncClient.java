@@ -764,6 +764,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PageQueryAgentListResponse> pageQueryAgentList(PageQueryAgentListRequest request);
 
     /**
+     * @param request the request parameters of PageQueryAgentListNew  PageQueryAgentListNewRequest
+     * @return PageQueryAgentListNewResponse
+     */
+    CompletableFuture<PageQueryAgentListNewResponse> pageQueryAgentListNew(PageQueryAgentListNewRequest request);
+
+    /**
      * @param request the request parameters of QueryAiCallDetailPage  QueryAiCallDetailPageRequest
      * @return QueryAiCallDetailPageResponse
      */
@@ -786,6 +792,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryAiVoiceAgentDetailResponse
      */
     CompletableFuture<QueryAiVoiceAgentDetailResponse> queryAiVoiceAgentDetail(QueryAiVoiceAgentDetailRequest request);
+
+    /**
+     * @param request the request parameters of QueryAiVoiceAgentDetailNew  QueryAiVoiceAgentDetailNewRequest
+     * @return QueryAiVoiceAgentDetailNewResponse
+     */
+    CompletableFuture<QueryAiVoiceAgentDetailNewResponse> queryAiVoiceAgentDetailNew(QueryAiVoiceAgentDetailNewRequest request);
 
     /**
      * @param request the request parameters of QueryConversationDetailInfo  QueryConversationDetailInfoRequest

@@ -185,6 +185,9 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BranchId")
         private Long branchId;
 
+        @com.aliyun.core.annotation.NameInMap("BranchName")
+        private String branchName;
+
         @com.aliyun.core.annotation.NameInMap("BranchVersionId")
         private Long branchVersionId;
 
@@ -236,9 +239,16 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
+        @com.aliyun.core.annotation.NameInMap("VersionName")
+        private String versionName;
+
+        @com.aliyun.core.annotation.NameInMap("VersionNo")
+        private Long versionNo;
+
         private List(Builder builder) {
             this.batchId = builder.batchId;
             this.branchId = builder.branchId;
+            this.branchName = builder.branchName;
             this.branchVersionId = builder.branchVersionId;
             this.callResult = builder.callResult;
             this.calledNumber = builder.calledNumber;
@@ -256,6 +266,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             this.recordingFilePath = builder.recordingFilePath;
             this.status = builder.status;
             this.taskId = builder.taskId;
+            this.versionName = builder.versionName;
+            this.versionNo = builder.versionNo;
         }
 
         public static Builder builder() {
@@ -278,6 +290,13 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
          */
         public Long getBranchId() {
             return this.branchId;
+        }
+
+        /**
+         * @return branchName
+         */
+        public String getBranchName() {
+            return this.branchName;
         }
 
         /**
@@ -399,9 +418,24 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             return this.taskId;
         }
 
+        /**
+         * @return versionName
+         */
+        public String getVersionName() {
+            return this.versionName;
+        }
+
+        /**
+         * @return versionNo
+         */
+        public Long getVersionNo() {
+            return this.versionNo;
+        }
+
         public static final class Builder {
             private String batchId; 
             private Long branchId; 
+            private String branchName; 
             private Long branchVersionId; 
             private String callResult; 
             private String calledNumber; 
@@ -419,6 +453,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             private String recordingFilePath; 
             private Long status; 
             private String taskId; 
+            private String versionName; 
+            private Long versionNo; 
 
             private Builder() {
             } 
@@ -426,6 +462,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             private Builder(List model) {
                 this.batchId = model.batchId;
                 this.branchId = model.branchId;
+                this.branchName = model.branchName;
                 this.branchVersionId = model.branchVersionId;
                 this.callResult = model.callResult;
                 this.calledNumber = model.calledNumber;
@@ -443,6 +480,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
                 this.recordingFilePath = model.recordingFilePath;
                 this.status = model.status;
                 this.taskId = model.taskId;
+                this.versionName = model.versionName;
+                this.versionNo = model.versionNo;
             } 
 
             /**
@@ -458,6 +497,14 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
              */
             public Builder branchId(Long branchId) {
                 this.branchId = branchId;
+                return this;
+            }
+
+            /**
+             * BranchName.
+             */
+            public Builder branchName(String branchName) {
+                this.branchName = branchName;
                 return this;
             }
 
@@ -594,6 +641,22 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * VersionName.
+             */
+            public Builder versionName(String versionName) {
+                this.versionName = versionName;
+                return this;
+            }
+
+            /**
+             * VersionNo.
+             */
+            public Builder versionNo(Long versionNo) {
+                this.versionNo = versionNo;
                 return this;
             }
 

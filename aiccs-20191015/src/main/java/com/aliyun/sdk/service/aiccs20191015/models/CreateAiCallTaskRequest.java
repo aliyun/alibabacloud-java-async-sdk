@@ -26,10 +26,6 @@ public class CreateAiCallTaskRequest extends Request {
     private String applicationCode;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ApplicationName")
-    private String applicationName;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CallDay")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> callDay;
@@ -109,7 +105,6 @@ public class CreateAiCallTaskRequest extends Request {
         super(builder);
         this.agentId = builder.agentId;
         this.applicationCode = builder.applicationCode;
-        this.applicationName = builder.applicationName;
         this.callDay = builder.callDay;
         this.callRetryInterval = builder.callRetryInterval;
         this.callRetryReason = builder.callRetryReason;
@@ -155,13 +150,6 @@ public class CreateAiCallTaskRequest extends Request {
      */
     public String getApplicationCode() {
         return this.applicationCode;
-    }
-
-    /**
-     * @return applicationName
-     */
-    public String getApplicationName() {
-        return this.applicationName;
     }
 
     /**
@@ -293,7 +281,6 @@ public class CreateAiCallTaskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAiCallTaskRequest, Builder> {
         private String agentId; 
         private String applicationCode; 
-        private String applicationName; 
         private java.util.List<String> callDay; 
         private Long callRetryInterval; 
         private java.util.List<String> callRetryReason; 
@@ -321,7 +308,6 @@ public class CreateAiCallTaskRequest extends Request {
             super(request);
             this.agentId = request.agentId;
             this.applicationCode = request.applicationCode;
-            this.applicationName = request.applicationName;
             this.callDay = request.callDay;
             this.callRetryInterval = request.callRetryInterval;
             this.callRetryReason = request.callRetryReason;
@@ -357,15 +343,6 @@ public class CreateAiCallTaskRequest extends Request {
         public Builder applicationCode(String applicationCode) {
             this.putQueryParameter("ApplicationCode", applicationCode);
             this.applicationCode = applicationCode;
-            return this;
-        }
-
-        /**
-         * ApplicationName.
-         */
-        public Builder applicationName(String applicationName) {
-            this.putQueryParameter("ApplicationName", applicationName);
-            this.applicationName = applicationName;
             return this;
         }
 
