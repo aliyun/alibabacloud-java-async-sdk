@@ -238,6 +238,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetYikePromptExpansionVoiceFixJob  GetYikePromptExpansionVoiceFixJobRequest
+     * @return GetYikePromptExpansionVoiceFixJobResponse
+     */
+    @Override
+    public CompletableFuture<GetYikePromptExpansionVoiceFixJobResponse> getYikePromptExpansionVoiceFixJob(GetYikePromptExpansionVoiceFixJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetYikePromptExpansionVoiceFixJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetYikePromptExpansionVoiceFixJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetYikePromptExpansionVoiceFixJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetYikeStoryboardJob  GetYikeStoryboardJobRequest
      * @return GetYikeStoryboardJobResponse
      */
@@ -484,6 +502,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitYikeAIAppJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitYikePromptExpansionVoiceFixJob  SubmitYikePromptExpansionVoiceFixJobRequest
+     * @return SubmitYikePromptExpansionVoiceFixJobResponse
+     */
+    @Override
+    public CompletableFuture<SubmitYikePromptExpansionVoiceFixJobResponse> submitYikePromptExpansionVoiceFixJob(SubmitYikePromptExpansionVoiceFixJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitYikePromptExpansionVoiceFixJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitYikePromptExpansionVoiceFixJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitYikePromptExpansionVoiceFixJobResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
