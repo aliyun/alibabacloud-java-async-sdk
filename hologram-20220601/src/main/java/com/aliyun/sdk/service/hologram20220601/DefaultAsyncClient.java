@@ -325,6 +325,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DisableExecuteStatement  DisableExecuteStatementRequest
+     * @return DisableExecuteStatementResponse
+     */
+    @Override
+    public CompletableFuture<DisableExecuteStatementResponse> disableExecuteStatement(DisableExecuteStatementRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DisableExecuteStatement").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/disableExecuteStatement").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableExecuteStatementResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableExecuteStatementResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DisableHiveAccess  DisableHiveAccessRequest
      * @return DisableHiveAccessResponse
      */
@@ -397,6 +415,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of EnableExecuteStatement  EnableExecuteStatementRequest
+     * @return EnableExecuteStatementResponse
+     */
+    @Override
+    public CompletableFuture<EnableExecuteStatementResponse> enableExecuteStatement(EnableExecuteStatementRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EnableExecuteStatement").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/enableExecuteStatement").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableExecuteStatementResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableExecuteStatementResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EnableHiveAccess  EnableHiveAccessRequest
      * @return EnableHiveAccessResponse
      */
@@ -451,6 +487,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ExecuteStatement  ExecuteStatementRequest
+     * @return ExecuteStatementResponse
+     */
+    @Override
+    public CompletableFuture<ExecuteStatementResponse> executeStatement(ExecuteStatementRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExecuteStatement").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{instanceId}/executeStatement").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExecuteStatementResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExecuteStatementResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetCertificateAttribute  GetCertificateAttributeRequest
      * @return GetCertificateAttributeResponse
      */
@@ -463,6 +517,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetCertificateAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetExecuteStatementEnabled  GetExecuteStatementEnabledRequest
+     * @return GetExecuteStatementEnabledResponse
+     */
+    @Override
+    public CompletableFuture<GetExecuteStatementEnabledResponse> getExecuteStatementEnabled(GetExecuteStatementEnabledRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetExecuteStatementEnabled").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{instanceId}/executeStatementEnabled").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetExecuteStatementEnabledResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetExecuteStatementEnabledResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

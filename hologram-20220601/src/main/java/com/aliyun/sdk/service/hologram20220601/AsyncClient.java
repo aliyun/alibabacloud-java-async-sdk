@@ -137,6 +137,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWarehouseScheduleTaskResponse> deleteWarehouseScheduleTask(DeleteWarehouseScheduleTaskRequest request);
 
     /**
+     * @param request the request parameters of DisableExecuteStatement  DisableExecuteStatementRequest
+     * @return DisableExecuteStatementResponse
+     */
+    CompletableFuture<DisableExecuteStatementResponse> disableExecuteStatement(DisableExecuteStatementRequest request);
+
+    /**
      * @param request the request parameters of DisableHiveAccess  DisableHiveAccessRequest
      * @return DisableHiveAccessResponse
      */
@@ -161,6 +167,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DropUserResponse> dropUser(DropUserRequest request);
 
     /**
+     * @param request the request parameters of EnableExecuteStatement  EnableExecuteStatementRequest
+     * @return EnableExecuteStatementResponse
+     */
+    CompletableFuture<EnableExecuteStatementResponse> enableExecuteStatement(EnableExecuteStatementRequest request);
+
+    /**
      * @param request the request parameters of EnableHiveAccess  EnableHiveAccessRequest
      * @return EnableHiveAccessResponse
      */
@@ -179,10 +191,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableWarehouseAutoScaleResponse> enableWarehouseAutoScale(EnableWarehouseAutoScaleRequest request);
 
     /**
+     * @param request the request parameters of ExecuteStatement  ExecuteStatementRequest
+     * @return ExecuteStatementResponse
+     */
+    CompletableFuture<ExecuteStatementResponse> executeStatement(ExecuteStatementRequest request);
+
+    /**
      * @param request the request parameters of GetCertificateAttribute  GetCertificateAttributeRequest
      * @return GetCertificateAttributeResponse
      */
     CompletableFuture<GetCertificateAttributeResponse> getCertificateAttribute(GetCertificateAttributeRequest request);
+
+    /**
+     * @param request the request parameters of GetExecuteStatementEnabled  GetExecuteStatementEnabledRequest
+     * @return GetExecuteStatementEnabledResponse
+     */
+    CompletableFuture<GetExecuteStatementEnabledResponse> getExecuteStatementEnabled(GetExecuteStatementEnabledRequest request);
 
     /**
      * @param request the request parameters of GetInstance  GetInstanceRequest
