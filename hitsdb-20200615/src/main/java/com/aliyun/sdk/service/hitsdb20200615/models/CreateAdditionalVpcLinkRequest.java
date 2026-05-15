@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAdditionalVpcLinkRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdditionalAliBid")
+    private String additionalAliBid;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdditionalAliUid")
+    private String additionalAliUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AdditionalVpcId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String additionalVpcId;
@@ -42,6 +50,8 @@ public class CreateAdditionalVpcLinkRequest extends Request {
 
     private CreateAdditionalVpcLinkRequest(Builder builder) {
         super(builder);
+        this.additionalAliBid = builder.additionalAliBid;
+        this.additionalAliUid = builder.additionalAliUid;
         this.additionalVpcId = builder.additionalVpcId;
         this.additionalVswitchId = builder.additionalVswitchId;
         this.instanceId = builder.instanceId;
@@ -60,6 +70,20 @@ public class CreateAdditionalVpcLinkRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return additionalAliBid
+     */
+    public String getAdditionalAliBid() {
+        return this.additionalAliBid;
+    }
+
+    /**
+     * @return additionalAliUid
+     */
+    public String getAdditionalAliUid() {
+        return this.additionalAliUid;
     }
 
     /**
@@ -98,6 +122,8 @@ public class CreateAdditionalVpcLinkRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAdditionalVpcLinkRequest, Builder> {
+        private String additionalAliBid; 
+        private String additionalAliUid; 
         private String additionalVpcId; 
         private String additionalVswitchId; 
         private String instanceId; 
@@ -110,12 +136,32 @@ public class CreateAdditionalVpcLinkRequest extends Request {
 
         private Builder(CreateAdditionalVpcLinkRequest request) {
             super(request);
+            this.additionalAliBid = request.additionalAliBid;
+            this.additionalAliUid = request.additionalAliUid;
             this.additionalVpcId = request.additionalVpcId;
             this.additionalVswitchId = request.additionalVswitchId;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.securityToken = request.securityToken;
         } 
+
+        /**
+         * AdditionalAliBid.
+         */
+        public Builder additionalAliBid(String additionalAliBid) {
+            this.putQueryParameter("AdditionalAliBid", additionalAliBid);
+            this.additionalAliBid = additionalAliBid;
+            return this;
+        }
+
+        /**
+         * AdditionalAliUid.
+         */
+        public Builder additionalAliUid(String additionalAliUid) {
+            this.putQueryParameter("AdditionalAliUid", additionalAliUid);
+            this.additionalAliUid = additionalAliUid;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
