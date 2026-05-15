@@ -38,6 +38,10 @@ public class CreateConsumerGroupRequest extends Request {
     private String deliveryOrderType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("exclusive")
+    private Boolean exclusive;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("maxReceiveTps")
     private Long maxReceiveTps;
 
@@ -59,6 +63,7 @@ public class CreateConsumerGroupRequest extends Request {
         this.consumerGroupId = builder.consumerGroupId;
         this.consumeRetryPolicy = builder.consumeRetryPolicy;
         this.deliveryOrderType = builder.deliveryOrderType;
+        this.exclusive = builder.exclusive;
         this.maxReceiveTps = builder.maxReceiveTps;
         this.messageModel = builder.messageModel;
         this.remark = builder.remark;
@@ -107,6 +112,13 @@ public class CreateConsumerGroupRequest extends Request {
     }
 
     /**
+     * @return exclusive
+     */
+    public Boolean getExclusive() {
+        return this.exclusive;
+    }
+
+    /**
      * @return maxReceiveTps
      */
     public Long getMaxReceiveTps() {
@@ -139,6 +151,7 @@ public class CreateConsumerGroupRequest extends Request {
         private String consumerGroupId; 
         private ConsumeRetryPolicy consumeRetryPolicy; 
         private String deliveryOrderType; 
+        private Boolean exclusive; 
         private Long maxReceiveTps; 
         private String messageModel; 
         private String remark; 
@@ -154,6 +167,7 @@ public class CreateConsumerGroupRequest extends Request {
             this.consumerGroupId = request.consumerGroupId;
             this.consumeRetryPolicy = request.consumeRetryPolicy;
             this.deliveryOrderType = request.deliveryOrderType;
+            this.exclusive = request.exclusive;
             this.maxReceiveTps = request.maxReceiveTps;
             this.messageModel = request.messageModel;
             this.remark = request.remark;
@@ -211,6 +225,15 @@ public class CreateConsumerGroupRequest extends Request {
         public Builder deliveryOrderType(String deliveryOrderType) {
             this.putBodyParameter("deliveryOrderType", deliveryOrderType);
             this.deliveryOrderType = deliveryOrderType;
+            return this;
+        }
+
+        /**
+         * exclusive.
+         */
+        public Builder exclusive(Boolean exclusive) {
+            this.putBodyParameter("exclusive", exclusive);
+            this.exclusive = exclusive;
             return this;
         }
 

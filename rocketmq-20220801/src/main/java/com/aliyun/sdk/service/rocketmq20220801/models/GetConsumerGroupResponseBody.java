@@ -393,6 +393,9 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("deliveryOrderType")
         private String deliveryOrderType;
 
+        @com.aliyun.core.annotation.NameInMap("exclusive")
+        private Boolean exclusive;
+
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
@@ -422,6 +425,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             this.consumerGroupId = builder.consumerGroupId;
             this.createTime = builder.createTime;
             this.deliveryOrderType = builder.deliveryOrderType;
+            this.exclusive = builder.exclusive;
             this.instanceId = builder.instanceId;
             this.maxReceiveTps = builder.maxReceiveTps;
             this.messageModel = builder.messageModel;
@@ -466,6 +470,13 @@ public class GetConsumerGroupResponseBody extends TeaModel {
          */
         public String getDeliveryOrderType() {
             return this.deliveryOrderType;
+        }
+
+        /**
+         * @return exclusive
+         */
+        public Boolean getExclusive() {
+            return this.exclusive;
         }
 
         /**
@@ -529,6 +540,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             private String consumerGroupId; 
             private String createTime; 
             private String deliveryOrderType; 
+            private Boolean exclusive; 
             private String instanceId; 
             private Long maxReceiveTps; 
             private String messageModel; 
@@ -546,6 +558,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
                 this.consumerGroupId = model.consumerGroupId;
                 this.createTime = model.createTime;
                 this.deliveryOrderType = model.deliveryOrderType;
+                this.exclusive = model.exclusive;
                 this.instanceId = model.instanceId;
                 this.maxReceiveTps = model.maxReceiveTps;
                 this.messageModel = model.messageModel;
@@ -599,6 +612,14 @@ public class GetConsumerGroupResponseBody extends TeaModel {
              */
             public Builder deliveryOrderType(String deliveryOrderType) {
                 this.deliveryOrderType = deliveryOrderType;
+                return this;
+            }
+
+            /**
+             * exclusive.
+             */
+            public Builder exclusive(Boolean exclusive) {
+                this.exclusive = exclusive;
                 return this;
             }
 
