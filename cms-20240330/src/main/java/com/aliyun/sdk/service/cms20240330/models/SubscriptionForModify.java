@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubscriptionForModify</p>
  */
 public class SubscriptionForModify extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("agentConfig")
+    private AgentConfig agentConfig;
+
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -37,6 +40,7 @@ public class SubscriptionForModify extends TeaModel {
     private WorkspaceFilterSetting workspaceFilterSetting;
 
     private SubscriptionForModify(Builder builder) {
+        this.agentConfig = builder.agentConfig;
         this.description = builder.description;
         this.filterSetting = builder.filterSetting;
         this.notifyStrategyId = builder.notifyStrategyId;
@@ -55,6 +59,13 @@ public class SubscriptionForModify extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentConfig
+     */
+    public AgentConfig getAgentConfig() {
+        return this.agentConfig;
     }
 
     /**
@@ -100,6 +111,7 @@ public class SubscriptionForModify extends TeaModel {
     }
 
     public static final class Builder {
+        private AgentConfig agentConfig; 
         private String description; 
         private FilterSetting filterSetting; 
         private String notifyStrategyId; 
@@ -111,6 +123,7 @@ public class SubscriptionForModify extends TeaModel {
         } 
 
         private Builder(SubscriptionForModify model) {
+            this.agentConfig = model.agentConfig;
             this.description = model.description;
             this.filterSetting = model.filterSetting;
             this.notifyStrategyId = model.notifyStrategyId;
@@ -118,6 +131,14 @@ public class SubscriptionForModify extends TeaModel {
             this.subscriptionName = model.subscriptionName;
             this.workspaceFilterSetting = model.workspaceFilterSetting;
         } 
+
+        /**
+         * agentConfig.
+         */
+        public Builder agentConfig(AgentConfig agentConfig) {
+            this.agentConfig = agentConfig;
+            return this;
+        }
 
         /**
          * description.
@@ -173,6 +194,81 @@ public class SubscriptionForModify extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubscriptionForModify} extends {@link TeaModel}
+     *
+     * <p>SubscriptionForModify</p>
+     */
+    public static class AgentConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("agentUuid")
+        private String agentUuid;
+
+        @com.aliyun.core.annotation.NameInMap("routes")
+        private java.util.List<NotifyRouteForSubscription> routes;
+
+        private AgentConfig(Builder builder) {
+            this.agentUuid = builder.agentUuid;
+            this.routes = builder.routes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgentConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return agentUuid
+         */
+        public String getAgentUuid() {
+            return this.agentUuid;
+        }
+
+        /**
+         * @return routes
+         */
+        public java.util.List<NotifyRouteForSubscription> getRoutes() {
+            return this.routes;
+        }
+
+        public static final class Builder {
+            private String agentUuid; 
+            private java.util.List<NotifyRouteForSubscription> routes; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentConfig model) {
+                this.agentUuid = model.agentUuid;
+                this.routes = model.routes;
+            } 
+
+            /**
+             * agentUuid.
+             */
+            public Builder agentUuid(String agentUuid) {
+                this.agentUuid = agentUuid;
+                return this;
+            }
+
+            /**
+             * routes.
+             */
+            public Builder routes(java.util.List<NotifyRouteForSubscription> routes) {
+                this.routes = routes;
+                return this;
+            }
+
+            public AgentConfig build() {
+                return new AgentConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link SubscriptionForModify} extends {@link TeaModel}

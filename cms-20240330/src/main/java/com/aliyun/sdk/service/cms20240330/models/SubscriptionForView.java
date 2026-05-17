@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubscriptionForView</p>
  */
 public class SubscriptionForView extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("agentConfig")
+    private AgentConfig agentConfig;
+
     @com.aliyun.core.annotation.NameInMap("createTime")
     private String createTime;
 
@@ -42,6 +45,9 @@ public class SubscriptionForView extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionName;
 
+    @com.aliyun.core.annotation.NameInMap("subscriptionType")
+    private String subscriptionType;
+
     @com.aliyun.core.annotation.NameInMap("syncFromType")
     private String syncFromType;
 
@@ -58,6 +64,7 @@ public class SubscriptionForView extends TeaModel {
     private WorkspaceFilterSetting workspaceFilterSetting;
 
     private SubscriptionForView(Builder builder) {
+        this.agentConfig = builder.agentConfig;
         this.createTime = builder.createTime;
         this.description = builder.description;
         this.enable = builder.enable;
@@ -66,6 +73,7 @@ public class SubscriptionForView extends TeaModel {
         this.pushingSetting = builder.pushingSetting;
         this.subscriptionId = builder.subscriptionId;
         this.subscriptionName = builder.subscriptionName;
+        this.subscriptionType = builder.subscriptionType;
         this.syncFromType = builder.syncFromType;
         this.updateTime = builder.updateTime;
         this.userId = builder.userId;
@@ -83,6 +91,13 @@ public class SubscriptionForView extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentConfig
+     */
+    public AgentConfig getAgentConfig() {
+        return this.agentConfig;
     }
 
     /**
@@ -142,6 +157,13 @@ public class SubscriptionForView extends TeaModel {
     }
 
     /**
+     * @return subscriptionType
+     */
+    public String getSubscriptionType() {
+        return this.subscriptionType;
+    }
+
+    /**
      * @return syncFromType
      */
     public String getSyncFromType() {
@@ -177,6 +199,7 @@ public class SubscriptionForView extends TeaModel {
     }
 
     public static final class Builder {
+        private AgentConfig agentConfig; 
         private String createTime; 
         private String description; 
         private Boolean enable; 
@@ -185,6 +208,7 @@ public class SubscriptionForView extends TeaModel {
         private PushingSetting pushingSetting; 
         private String subscriptionId; 
         private String subscriptionName; 
+        private String subscriptionType; 
         private String syncFromType; 
         private String updateTime; 
         private String userId; 
@@ -195,6 +219,7 @@ public class SubscriptionForView extends TeaModel {
         } 
 
         private Builder(SubscriptionForView model) {
+            this.agentConfig = model.agentConfig;
             this.createTime = model.createTime;
             this.description = model.description;
             this.enable = model.enable;
@@ -203,12 +228,21 @@ public class SubscriptionForView extends TeaModel {
             this.pushingSetting = model.pushingSetting;
             this.subscriptionId = model.subscriptionId;
             this.subscriptionName = model.subscriptionName;
+            this.subscriptionType = model.subscriptionType;
             this.syncFromType = model.syncFromType;
             this.updateTime = model.updateTime;
             this.userId = model.userId;
             this.workspace = model.workspace;
             this.workspaceFilterSetting = model.workspaceFilterSetting;
         } 
+
+        /**
+         * agentConfig.
+         */
+        public Builder agentConfig(AgentConfig agentConfig) {
+            this.agentConfig = agentConfig;
+            return this;
+        }
 
         /**
          * createTime.
@@ -275,6 +309,14 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
+         * subscriptionType.
+         */
+        public Builder subscriptionType(String subscriptionType) {
+            this.subscriptionType = subscriptionType;
+            return this;
+        }
+
+        /**
          * syncFromType.
          */
         public Builder syncFromType(String syncFromType) {
@@ -320,6 +362,81 @@ public class SubscriptionForView extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubscriptionForView} extends {@link TeaModel}
+     *
+     * <p>SubscriptionForView</p>
+     */
+    public static class AgentConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("agentUuid")
+        private String agentUuid;
+
+        @com.aliyun.core.annotation.NameInMap("routes")
+        private java.util.List<NotifyRouteForSubscription> routes;
+
+        private AgentConfig(Builder builder) {
+            this.agentUuid = builder.agentUuid;
+            this.routes = builder.routes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgentConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return agentUuid
+         */
+        public String getAgentUuid() {
+            return this.agentUuid;
+        }
+
+        /**
+         * @return routes
+         */
+        public java.util.List<NotifyRouteForSubscription> getRoutes() {
+            return this.routes;
+        }
+
+        public static final class Builder {
+            private String agentUuid; 
+            private java.util.List<NotifyRouteForSubscription> routes; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentConfig model) {
+                this.agentUuid = model.agentUuid;
+                this.routes = model.routes;
+            } 
+
+            /**
+             * agentUuid.
+             */
+            public Builder agentUuid(String agentUuid) {
+                this.agentUuid = agentUuid;
+                return this;
+            }
+
+            /**
+             * routes.
+             */
+            public Builder routes(java.util.List<NotifyRouteForSubscription> routes) {
+                this.routes = routes;
+                return this;
+            }
+
+            public AgentConfig build() {
+                return new AgentConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link SubscriptionForView} extends {@link TeaModel}
