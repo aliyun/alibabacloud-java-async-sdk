@@ -348,8 +348,8 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("columns")
         private java.util.List<Columns> columns;
 
-        @com.aliyun.core.annotation.NameInMap("emptyNotDesesn")
-        private Boolean emptyNotDesesn;
+        @com.aliyun.core.annotation.NameInMap("emptyNotDesens")
+        private Boolean emptyNotDesens;
 
         private DesensRules(Builder builder) {
             this.checkWatermark = builder.checkWatermark;
@@ -361,7 +361,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             this.sceneIds = builder.sceneIds;
             this.status = builder.status;
             this.columns = builder.columns;
-            this.emptyNotDesesn = builder.emptyNotDesesn;
+            this.emptyNotDesens = builder.emptyNotDesens;
         }
 
         public static Builder builder() {
@@ -436,10 +436,10 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
         }
 
         /**
-         * @return emptyNotDesesn
+         * @return emptyNotDesens
          */
-        public Boolean getEmptyNotDesesn() {
-            return this.emptyNotDesesn;
+        public Boolean getEmptyNotDesens() {
+            return this.emptyNotDesens;
         }
 
         public static final class Builder {
@@ -452,7 +452,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             private java.util.List<Long> sceneIds; 
             private Integer status; 
             private java.util.List<Columns> columns; 
-            private Boolean emptyNotDesesn; 
+            private Boolean emptyNotDesens; 
 
             private Builder() {
             } 
@@ -467,7 +467,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
                 this.sceneIds = model.sceneIds;
                 this.status = model.status;
                 this.columns = model.columns;
-                this.emptyNotDesesn = model.emptyNotDesesn;
+                this.emptyNotDesens = model.emptyNotDesens;
             } 
 
             /**
@@ -573,10 +573,10 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             }
 
             /**
-             * emptyNotDesesn.
+             * emptyNotDesens.
              */
-            public Builder emptyNotDesesn(Boolean emptyNotDesesn) {
-                this.emptyNotDesesn = emptyNotDesesn;
+            public Builder emptyNotDesens(Boolean emptyNotDesens) {
+                this.emptyNotDesens = emptyNotDesens;
                 return this;
             }
 
