@@ -158,6 +158,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDataLakeTableResponse> deleteDataLakeTable(DeleteDataLakeTableRequest request);
 
     /**
+     * @param request the request parameters of DeleteDocument  DeleteDocumentRequest
+     * @return DeleteDocumentResponse
+     */
+    CompletableFuture<DeleteDocumentResponse> deleteDocument(DeleteDocumentRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDocumentChunks  DeleteDocumentChunksRequest
+     * @return DeleteDocumentChunksResponse
+     */
+    CompletableFuture<DeleteDocumentChunksResponse> deleteDocumentChunks(DeleteDocumentChunksRequest request);
+
+    /**
      * @param request the request parameters of DeleteFileUpload  DeleteFileUploadRequest
      * @return DeleteFileUploadResponse
      */
@@ -176,6 +188,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDataAgentSessionResponse> describeDataAgentSession(DescribeDataAgentSessionRequest request);
 
     /**
+     * @param request the request parameters of DescribeDocument  DescribeDocumentRequest
+     * @return DescribeDocumentResponse
+     */
+    CompletableFuture<DescribeDocumentResponse> describeDocument(DescribeDocumentRequest request);
+
+    /**
      * @param request the request parameters of DescribeFileUploadSignature  DescribeFileUploadSignatureRequest
      * @return DescribeFileUploadSignatureResponse
      */
@@ -186,6 +204,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeKnowledgeBaseStatsResponse
      */
     CompletableFuture<DescribeKnowledgeBaseStatsResponse> describeKnowledgeBaseStats(DescribeKnowledgeBaseStatsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeKnowledgeBaseUploadSignature  DescribeKnowledgeBaseUploadSignatureRequest
+     * @return DescribeKnowledgeBaseUploadSignatureResponse
+     */
+    CompletableFuture<DescribeKnowledgeBaseUploadSignatureResponse> describeKnowledgeBaseUploadSignature(DescribeKnowledgeBaseUploadSignatureRequest request);
 
     /**
      * @param request the request parameters of FileUploadCallback  FileUploadCallbackRequest
@@ -382,10 +406,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataLakeTablebaseInfoResponse> listDataLakeTablebaseInfo(ListDataLakeTablebaseInfoRequest request);
 
     /**
+     * @param request the request parameters of ListDocumentChunks  ListDocumentChunksRequest
+     * @return ListDocumentChunksResponse
+     */
+    CompletableFuture<ListDocumentChunksResponse> listDocumentChunks(ListDocumentChunksRequest request);
+
+    /**
+     * @param request the request parameters of ListDocuments  ListDocumentsRequest
+     * @return ListDocumentsResponse
+     */
+    CompletableFuture<ListDocumentsResponse> listDocuments(ListDocumentsRequest request);
+
+    /**
      * @param request the request parameters of ListFileUpload  ListFileUploadRequest
      * @return ListFileUploadResponse
      */
     CompletableFuture<ListFileUploadResponse> listFileUpload(ListFileUploadRequest request);
+
+    /**
+     * @param request the request parameters of ListKnowledgeBases  ListKnowledgeBasesRequest
+     * @return ListKnowledgeBasesResponse
+     */
+    CompletableFuture<ListKnowledgeBasesResponse> listKnowledgeBases(ListKnowledgeBasesRequest request);
 
     /**
      * @param request the request parameters of ModifyCustomAgent  ModifyCustomAgentRequest
@@ -470,6 +512,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDataLakeTableResponse
      */
     CompletableFuture<UpdateDataLakeTableResponse> updateDataLakeTable(UpdateDataLakeTableRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDocument  UpdateDocumentRequest
+     * @return UpdateDocumentResponse
+     */
+    CompletableFuture<UpdateDocumentResponse> updateDocument(UpdateDocumentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateKnowledgeBase  UpdateKnowledgeBaseRequest
+     * @return UpdateKnowledgeBaseResponse
+     */
+    CompletableFuture<UpdateKnowledgeBaseResponse> updateKnowledgeBase(UpdateKnowledgeBaseRequest request);
+
+    /**
+     * @param request the request parameters of UploadDocument  UploadDocumentRequest
+     * @return UploadDocumentResponse
+     */
+    CompletableFuture<UploadDocumentResponse> uploadDocument(UploadDocumentRequest request);
+
+    /**
+     * @param request the request parameters of UpsertDocumentChunks  UpsertDocumentChunksRequest
+     * @return UpsertDocumentChunksResponse
+     */
+    CompletableFuture<UpsertDocumentChunksResponse> upsertDocumentChunks(UpsertDocumentChunksRequest request);
 
     /**
      * @param request the request parameters of WorkspaceActionLog  WorkspaceActionLogRequest
