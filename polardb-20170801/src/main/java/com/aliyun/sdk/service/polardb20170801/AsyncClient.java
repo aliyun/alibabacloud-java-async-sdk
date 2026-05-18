@@ -1617,6 +1617,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarFsQuotaResponse> describePolarFsQuota(DescribePolarFsQuotaRequest request);
 
     /**
+     * @param request the request parameters of DescribePolarFsQuotaList  DescribePolarFsQuotaListRequest
+     * @return DescribePolarFsQuotaListResponse
+     */
+    CompletableFuture<DescribePolarFsQuotaListResponse> describePolarFsQuotaList(DescribePolarFsQuotaListRequest request);
+
+    /**
      * @param request the request parameters of DescribePolarSQLCollectorPolicy  DescribePolarSQLCollectorPolicyRequest
      * @return DescribePolarSQLCollectorPolicyResponse
      */

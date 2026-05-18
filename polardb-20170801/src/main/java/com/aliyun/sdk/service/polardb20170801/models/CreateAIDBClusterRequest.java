@@ -130,7 +130,6 @@ public class CreateAIDBClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String storageType;
 
     @com.aliyun.core.annotation.Query
@@ -768,10 +767,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>essdpl0</p>
+         * StorageType.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
