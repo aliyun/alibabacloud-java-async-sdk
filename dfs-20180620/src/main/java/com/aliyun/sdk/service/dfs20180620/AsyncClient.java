@@ -143,6 +143,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVscMountPointsResponse> describeVscMountPoints(DescribeVscMountPointsRequest request);
 
     /**
+     * @param request the request parameters of DetachVscFromMountPoints  DetachVscFromMountPointsRequest
+     * @return DetachVscFromMountPointsResponse
+     */
+    CompletableFuture<DetachVscFromMountPointsResponse> detachVscFromMountPoints(DetachVscFromMountPointsRequest request);
+
+    /**
      * @param request the request parameters of DetachVscMountPoint  DetachVscMountPointRequest
      * @return DetachVscMountPointResponse
      */
