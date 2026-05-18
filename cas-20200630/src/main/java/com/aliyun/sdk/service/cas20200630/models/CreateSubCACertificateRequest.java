@@ -22,6 +22,10 @@ public class CreateSubCACertificateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String algorithm;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertMaxTime")
+    private Integer certMaxTime;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
@@ -91,6 +95,7 @@ public class CreateSubCACertificateRequest extends Request {
     private CreateSubCACertificateRequest(Builder builder) {
         super(builder);
         this.algorithm = builder.algorithm;
+        this.certMaxTime = builder.certMaxTime;
         this.clientToken = builder.clientToken;
         this.commonName = builder.commonName;
         this.countryCode = builder.countryCode;
@@ -126,6 +131,13 @@ public class CreateSubCACertificateRequest extends Request {
      */
     public String getAlgorithm() {
         return this.algorithm;
+    }
+
+    /**
+     * @return certMaxTime
+     */
+    public Integer getCertMaxTime() {
+        return this.certMaxTime;
     }
 
     /**
@@ -235,6 +247,7 @@ public class CreateSubCACertificateRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSubCACertificateRequest, Builder> {
         private String algorithm; 
+        private Integer certMaxTime; 
         private String clientToken; 
         private String commonName; 
         private String countryCode; 
@@ -258,6 +271,7 @@ public class CreateSubCACertificateRequest extends Request {
         private Builder(CreateSubCACertificateRequest request) {
             super(request);
             this.algorithm = request.algorithm;
+            this.certMaxTime = request.certMaxTime;
             this.clientToken = request.clientToken;
             this.commonName = request.commonName;
             this.countryCode = request.countryCode;
@@ -296,6 +310,15 @@ public class CreateSubCACertificateRequest extends Request {
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
             this.algorithm = algorithm;
+            return this;
+        }
+
+        /**
+         * CertMaxTime.
+         */
+        public Builder certMaxTime(Integer certMaxTime) {
+            this.putQueryParameter("CertMaxTime", certMaxTime);
+            this.certMaxTime = certMaxTime;
             return this;
         }
 

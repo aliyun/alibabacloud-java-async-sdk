@@ -26,6 +26,10 @@ public class CreateExternalCACertificateRequest extends Request {
     private ApiPassthrough apiPassthrough;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertMaxTime")
+    private Integer certMaxTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Csr")
     private String csr;
 
@@ -49,6 +53,7 @@ public class CreateExternalCACertificateRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.apiPassthrough = builder.apiPassthrough;
+        this.certMaxTime = builder.certMaxTime;
         this.csr = builder.csr;
         this.instanceId = builder.instanceId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -81,6 +86,13 @@ public class CreateExternalCACertificateRequest extends Request {
      */
     public ApiPassthrough getApiPassthrough() {
         return this.apiPassthrough;
+    }
+
+    /**
+     * @return certMaxTime
+     */
+    public Integer getCertMaxTime() {
+        return this.certMaxTime;
     }
 
     /**
@@ -121,6 +133,7 @@ public class CreateExternalCACertificateRequest extends Request {
     public static final class Builder extends Request.Builder<CreateExternalCACertificateRequest, Builder> {
         private String regionId; 
         private ApiPassthrough apiPassthrough; 
+        private Integer certMaxTime; 
         private String csr; 
         private String instanceId; 
         private String resourceGroupId; 
@@ -135,6 +148,7 @@ public class CreateExternalCACertificateRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.apiPassthrough = request.apiPassthrough;
+            this.certMaxTime = request.certMaxTime;
             this.csr = request.csr;
             this.instanceId = request.instanceId;
             this.resourceGroupId = request.resourceGroupId;
@@ -158,6 +172,15 @@ public class CreateExternalCACertificateRequest extends Request {
             String apiPassthroughShrink = shrink(apiPassthrough, "ApiPassthrough", "json");
             this.putQueryParameter("ApiPassthrough", apiPassthroughShrink);
             this.apiPassthrough = apiPassthrough;
+            return this;
+        }
+
+        /**
+         * CertMaxTime.
+         */
+        public Builder certMaxTime(Integer certMaxTime) {
+            this.putQueryParameter("CertMaxTime", certMaxTime);
+            this.certMaxTime = certMaxTime;
             return this;
         }
 
