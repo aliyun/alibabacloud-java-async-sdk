@@ -87,6 +87,10 @@ public class PutResourceMetricRuleRequest extends Request {
     private String ruleName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendOK")
+    private Boolean sendOK;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SilenceTime")
     private Integer silenceTime;
 
@@ -112,6 +116,7 @@ public class PutResourceMetricRuleRequest extends Request {
         this.resources = builder.resources;
         this.ruleId = builder.ruleId;
         this.ruleName = builder.ruleName;
+        this.sendOK = builder.sendOK;
         this.silenceTime = builder.silenceTime;
         this.webhook = builder.webhook;
     }
@@ -242,6 +247,13 @@ public class PutResourceMetricRuleRequest extends Request {
     }
 
     /**
+     * @return sendOK
+     */
+    public Boolean getSendOK() {
+        return this.sendOK;
+    }
+
+    /**
      * @return silenceTime
      */
     public Integer getSilenceTime() {
@@ -272,6 +284,7 @@ public class PutResourceMetricRuleRequest extends Request {
         private String resources; 
         private String ruleId; 
         private String ruleName; 
+        private Boolean sendOK; 
         private Integer silenceTime; 
         private String webhook; 
 
@@ -297,6 +310,7 @@ public class PutResourceMetricRuleRequest extends Request {
             this.resources = request.resources;
             this.ruleId = request.ruleId;
             this.ruleName = request.ruleName;
+            this.sendOK = request.sendOK;
             this.silenceTime = request.silenceTime;
             this.webhook = request.webhook;
         } 
@@ -520,6 +534,15 @@ public class PutResourceMetricRuleRequest extends Request {
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
             this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * SendOK.
+         */
+        public Builder sendOK(Boolean sendOK) {
+            this.putQueryParameter("SendOK", sendOK);
+            this.sendOK = sendOK;
             return this;
         }
 
