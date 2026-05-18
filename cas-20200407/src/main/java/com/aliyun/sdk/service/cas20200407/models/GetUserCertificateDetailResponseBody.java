@@ -32,6 +32,9 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CertIdentifier")
     private String certIdentifier;
 
+    @com.aliyun.core.annotation.NameInMap("CertSha2")
+    private String certSha2;
+
     @com.aliyun.core.annotation.NameInMap("City")
     private String city;
 
@@ -119,6 +122,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         this.cert = builder.cert;
         this.certChain = builder.certChain;
         this.certIdentifier = builder.certIdentifier;
+        this.certSha2 = builder.certSha2;
         this.city = builder.city;
         this.common = builder.common;
         this.country = builder.country;
@@ -193,6 +197,13 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
      */
     public String getCertIdentifier() {
         return this.certIdentifier;
+    }
+
+    /**
+     * @return certSha2
+     */
+    public String getCertSha2() {
+        return this.certSha2;
     }
 
     /**
@@ -390,6 +401,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         private String cert; 
         private java.util.List<CertChain> certChain; 
         private String certIdentifier; 
+        private String certSha2; 
         private String city; 
         private String common; 
         private String country; 
@@ -427,6 +439,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
             this.cert = model.cert;
             this.certChain = model.certChain;
             this.certIdentifier = model.certIdentifier;
+            this.certSha2 = model.certSha2;
             this.city = model.city;
             this.common = model.common;
             this.country = model.country;
@@ -509,6 +522,14 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
+            return this;
+        }
+
+        /**
+         * CertSha2.
+         */
+        public Builder certSha2(String certSha2) {
+            this.certSha2 = certSha2;
             return this;
         }
 
