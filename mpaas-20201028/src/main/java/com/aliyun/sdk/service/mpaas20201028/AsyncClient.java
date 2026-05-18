@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeMdsCubeTaskStatusResponse> changeMdsCubeTaskStatus(ChangeMdsCubeTaskStatusRequest request);
 
     /**
+     * @param request the request parameters of CheckUserAuthToMscene  CheckUserAuthToMsceneRequest
+     * @return CheckUserAuthToMsceneResponse
+     */
+    CompletableFuture<CheckUserAuthToMsceneResponse> checkUserAuthToMscene(CheckUserAuthToMsceneRequest request);
+
+    /**
      * @param request the request parameters of CopyMcdpGroup  CopyMcdpGroupRequest
      * @return CopyMcdpGroupResponse
      */

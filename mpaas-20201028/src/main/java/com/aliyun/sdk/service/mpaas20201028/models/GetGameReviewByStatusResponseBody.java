@@ -413,6 +413,9 @@ public class GetGameReviewByStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PublishStatus")
         private Integer publishStatus;
 
+        @com.aliyun.core.annotation.NameInMap("PublishStatusDesc")
+        private String publishStatusDesc;
+
         @com.aliyun.core.annotation.NameInMap("QrCodeUrl")
         private String qrCodeUrl;
 
@@ -440,6 +443,7 @@ public class GetGameReviewByStatusResponseBody extends TeaModel {
             this.miniProgramName = builder.miniProgramName;
             this.miniResourceId = builder.miniResourceId;
             this.publishStatus = builder.publishStatus;
+            this.publishStatusDesc = builder.publishStatusDesc;
             this.qrCodeUrl = builder.qrCodeUrl;
             this.reviewTargetType = builder.reviewTargetType;
             this.subType = builder.subType;
@@ -533,6 +537,13 @@ public class GetGameReviewByStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return publishStatusDesc
+         */
+        public String getPublishStatusDesc() {
+            return this.publishStatusDesc;
+        }
+
+        /**
          * @return qrCodeUrl
          */
         public String getQrCodeUrl() {
@@ -579,6 +590,7 @@ public class GetGameReviewByStatusResponseBody extends TeaModel {
             private String miniProgramName; 
             private Long miniResourceId; 
             private Integer publishStatus; 
+            private String publishStatusDesc; 
             private String qrCodeUrl; 
             private String reviewTargetType; 
             private Integer subType; 
@@ -600,6 +612,7 @@ public class GetGameReviewByStatusResponseBody extends TeaModel {
                 this.miniProgramName = model.miniProgramName;
                 this.miniResourceId = model.miniResourceId;
                 this.publishStatus = model.publishStatus;
+                this.publishStatusDesc = model.publishStatusDesc;
                 this.qrCodeUrl = model.qrCodeUrl;
                 this.reviewTargetType = model.reviewTargetType;
                 this.subType = model.subType;
@@ -692,6 +705,14 @@ public class GetGameReviewByStatusResponseBody extends TeaModel {
              */
             public Builder publishStatus(Integer publishStatus) {
                 this.publishStatus = publishStatus;
+                return this;
+            }
+
+            /**
+             * PublishStatusDesc.
+             */
+            public Builder publishStatusDesc(String publishStatusDesc) {
+                this.publishStatusDesc = publishStatusDesc;
                 return this;
             }
 

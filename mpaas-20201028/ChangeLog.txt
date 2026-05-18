@@ -1,3 +1,6 @@
+2026-05-18 Version: 3.0.5
+- Generated java-async 2020-10-28 for mPaaS.
+
 2026-04-15 Version: 3.0.4
 - Generated java-async 2020-10-28 for mPaaS.
 
