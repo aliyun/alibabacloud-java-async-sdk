@@ -1864,87 +1864,12 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
      *
      * <p>QueryAiVoiceAgentDetailNewResponseBody</p>
      */
-    public static class MappingTag extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Desc")
-        private String desc;
-
-        @com.aliyun.core.annotation.NameInMap("Tag")
-        private String tag;
-
-        private MappingTag(Builder builder) {
-            this.desc = builder.desc;
-            this.tag = builder.tag;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static MappingTag create() {
-            return builder().build();
-        }
-
-        /**
-         * @return desc
-         */
-        public String getDesc() {
-            return this.desc;
-        }
-
-        /**
-         * @return tag
-         */
-        public String getTag() {
-            return this.tag;
-        }
-
-        public static final class Builder {
-            private String desc; 
-            private String tag; 
-
-            private Builder() {
-            } 
-
-            private Builder(MappingTag model) {
-                this.desc = model.desc;
-                this.tag = model.tag;
-            } 
-
-            /**
-             * Desc.
-             */
-            public Builder desc(String desc) {
-                this.desc = desc;
-                return this;
-            }
-
-            /**
-             * Tag.
-             */
-            public Builder tag(String tag) {
-                this.tag = tag;
-                return this;
-            }
-
-            public MappingTag build() {
-                return new MappingTag(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link QueryAiVoiceAgentDetailNewResponseBody} extends {@link TeaModel}
-     *
-     * <p>QueryAiVoiceAgentDetailNewResponseBody</p>
-     */
     public static class CallResultTagConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultTag")
         private DefaultTag defaultTag;
 
         @com.aliyun.core.annotation.NameInMap("MappingTag")
-        private MappingTag mappingTag;
+        private java.util.Map<String, String> mappingTag;
 
         private CallResultTagConfig(Builder builder) {
             this.defaultTag = builder.defaultTag;
@@ -1969,13 +1894,13 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
         /**
          * @return mappingTag
          */
-        public MappingTag getMappingTag() {
+        public java.util.Map<String, String> getMappingTag() {
             return this.mappingTag;
         }
 
         public static final class Builder {
             private DefaultTag defaultTag; 
-            private MappingTag mappingTag; 
+            private java.util.Map<String, String> mappingTag; 
 
             private Builder() {
             } 
@@ -1996,7 +1921,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             /**
              * MappingTag.
              */
-            public Builder mappingTag(MappingTag mappingTag) {
+            public Builder mappingTag(java.util.Map<String, String> mappingTag) {
                 this.mappingTag = mappingTag;
                 return this;
             }

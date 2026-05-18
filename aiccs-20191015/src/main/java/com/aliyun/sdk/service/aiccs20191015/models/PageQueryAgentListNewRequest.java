@@ -19,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class PageQueryAgentListNewRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentId")
-    private Long agentId;
+    private String agentId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentName")
@@ -67,7 +67,7 @@ public class PageQueryAgentListNewRequest extends Request {
     /**
      * @return agentId
      */
-    public Long getAgentId() {
+    public String getAgentId() {
         return this.agentId;
     }
 
@@ -107,7 +107,7 @@ public class PageQueryAgentListNewRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PageQueryAgentListNewRequest, Builder> {
-        private Long agentId; 
+        private String agentId; 
         private String agentName; 
         private Boolean isAvailable; 
         private Long pageIndex; 
@@ -134,7 +134,7 @@ public class PageQueryAgentListNewRequest extends Request {
          * <strong>example:</strong>
          * <p>12345</p>
          */
-        public Builder agentId(Long agentId) {
+        public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
             this.agentId = agentId;
             return this;

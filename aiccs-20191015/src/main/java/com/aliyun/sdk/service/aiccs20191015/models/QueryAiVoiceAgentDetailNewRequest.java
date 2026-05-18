@@ -19,15 +19,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class QueryAiVoiceAgentDetailNewRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentId")
-    private Long agentId;
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String agentId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BranchId")
-    private Long branchId;
+    private String branchId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VersionId")
-    private Long versionId;
+    private String versionId;
 
     private QueryAiVoiceAgentDetailNewRequest(Builder builder) {
         super(builder);
@@ -52,28 +53,28 @@ public class QueryAiVoiceAgentDetailNewRequest extends Request {
     /**
      * @return agentId
      */
-    public Long getAgentId() {
+    public String getAgentId() {
         return this.agentId;
     }
 
     /**
      * @return branchId
      */
-    public Long getBranchId() {
+    public String getBranchId() {
         return this.branchId;
     }
 
     /**
      * @return versionId
      */
-    public Long getVersionId() {
+    public String getVersionId() {
         return this.versionId;
     }
 
     public static final class Builder extends Request.Builder<QueryAiVoiceAgentDetailNewRequest, Builder> {
-        private Long agentId; 
-        private Long branchId; 
-        private Long versionId; 
+        private String agentId; 
+        private String branchId; 
+        private String versionId; 
 
         private Builder() {
             super();
@@ -87,9 +88,12 @@ public class QueryAiVoiceAgentDetailNewRequest extends Request {
         } 
 
         /**
-         * AgentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
-        public Builder agentId(Long agentId) {
+        public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
             this.agentId = agentId;
             return this;
@@ -98,7 +102,7 @@ public class QueryAiVoiceAgentDetailNewRequest extends Request {
         /**
          * BranchId.
          */
-        public Builder branchId(Long branchId) {
+        public Builder branchId(String branchId) {
             this.putQueryParameter("BranchId", branchId);
             this.branchId = branchId;
             return this;
@@ -107,7 +111,7 @@ public class QueryAiVoiceAgentDetailNewRequest extends Request {
         /**
          * VersionId.
          */
-        public Builder versionId(Long versionId) {
+        public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);
             this.versionId = versionId;
             return this;
