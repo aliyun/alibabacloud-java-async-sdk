@@ -156,6 +156,9 @@ public class CreateBroadcastVideoFromTemplateRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("languageHints")
         private java.util.List<String> languageHints;
 
+        @com.aliyun.core.annotation.NameInMap("mode")
+        private String mode;
+
         @com.aliyun.core.annotation.NameInMap("resolution")
         private String resolution;
 
@@ -165,6 +168,7 @@ public class CreateBroadcastVideoFromTemplateRequest extends Request {
         private VideoOptions(Builder builder) {
             this.fps = builder.fps;
             this.languageHints = builder.languageHints;
+            this.mode = builder.mode;
             this.resolution = builder.resolution;
             this.watermark = builder.watermark;
         }
@@ -192,6 +196,13 @@ public class CreateBroadcastVideoFromTemplateRequest extends Request {
         }
 
         /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
          * @return resolution
          */
         public String getResolution() {
@@ -208,6 +219,7 @@ public class CreateBroadcastVideoFromTemplateRequest extends Request {
         public static final class Builder {
             private Integer fps; 
             private java.util.List<String> languageHints; 
+            private String mode; 
             private String resolution; 
             private Boolean watermark; 
 
@@ -217,6 +229,7 @@ public class CreateBroadcastVideoFromTemplateRequest extends Request {
             private Builder(VideoOptions model) {
                 this.fps = model.fps;
                 this.languageHints = model.languageHints;
+                this.mode = model.mode;
                 this.resolution = model.resolution;
                 this.watermark = model.watermark;
             } 
@@ -234,6 +247,14 @@ public class CreateBroadcastVideoFromTemplateRequest extends Request {
              */
             public Builder languageHints(java.util.List<String> languageHints) {
                 this.languageHints = languageHints;
+                return this;
+            }
+
+            /**
+             * mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
                 return this;
             }
 
