@@ -128,6 +128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTagResponse> createTag(CreateTagRequest request);
 
     /**
+     * @param request the request parameters of CreateTemplate  CreateTemplateRequest
+     * @return CreateTemplateResponse
+     */
+    CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreateUserSuppression  CreateUserSuppressionRequest
      * @return CreateUserSuppressionResponse
      */
