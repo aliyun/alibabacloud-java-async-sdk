@@ -51,6 +51,10 @@ public class RunInstancesRequest extends Request {
     private Boolean deletionProtection;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
+    private String deploymentSetId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
@@ -205,6 +209,7 @@ public class RunInstancesRequest extends Request {
         this.carrier = builder.carrier;
         this.dataDisk = builder.dataDisk;
         this.deletionProtection = builder.deletionProtection;
+        this.deploymentSetId = builder.deploymentSetId;
         this.ensRegionId = builder.ensRegionId;
         this.hostName = builder.hostName;
         this.imageId = builder.imageId;
@@ -310,6 +315,13 @@ public class RunInstancesRequest extends Request {
      */
     public Boolean getDeletionProtection() {
         return this.deletionProtection;
+    }
+
+    /**
+     * @return deploymentSetId
+     */
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
     }
 
     /**
@@ -573,6 +585,7 @@ public class RunInstancesRequest extends Request {
         private String carrier; 
         private java.util.List<DataDisk> dataDisk; 
         private Boolean deletionProtection; 
+        private String deploymentSetId; 
         private String ensRegionId; 
         private String hostName; 
         private String imageId; 
@@ -624,6 +637,7 @@ public class RunInstancesRequest extends Request {
             this.carrier = request.carrier;
             this.dataDisk = request.dataDisk;
             this.deletionProtection = request.deletionProtection;
+            this.deploymentSetId = request.deploymentSetId;
             this.ensRegionId = request.ensRegionId;
             this.hostName = request.hostName;
             this.imageId = request.imageId;
@@ -769,6 +783,15 @@ public class RunInstancesRequest extends Request {
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
             this.deletionProtection = deletionProtection;
+            return this;
+        }
+
+        /**
+         * DeploymentSetId.
+         */
+        public Builder deploymentSetId(String deploymentSetId) {
+            this.putQueryParameter("DeploymentSetId", deploymentSetId);
+            this.deploymentSetId = deploymentSetId;
             return this;
         }
 
