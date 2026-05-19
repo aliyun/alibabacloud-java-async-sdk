@@ -50,6 +50,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckUserResourceMeasureResponse> checkUserResourceMeasure(CheckUserResourceMeasureRequest request);
 
     /**
+     * @param request the request parameters of CreateAIStaffChat  CreateAIStaffChatRequest
+     * @return CreateAIStaffChatResponse
+     */
+    CompletableFuture<CreateAIStaffChatResponse> createAIStaffChat(CreateAIStaffChatRequest request);
+
+    /**
+     * @param request the request parameters of CreateAIStaffConversation  CreateAIStaffConversationRequest
+     * @return CreateAIStaffConversationResponse
+     */
+    CompletableFuture<CreateAIStaffConversationResponse> createAIStaffConversation(CreateAIStaffConversationRequest request);
+
+    /**
      * @param request the request parameters of CreateAppAssistantAgent  CreateAppAssistantAgentRequest
      * @return CreateAppAssistantAgentResponse
      */
@@ -216,6 +228,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return IntrospectAppInstanceTicketForPreviewResponse
      */
     CompletableFuture<IntrospectAppInstanceTicketForPreviewResponse> introspectAppInstanceTicketForPreview(IntrospectAppInstanceTicketForPreviewRequest request);
+
+    /**
+     * @param request the request parameters of ListAIStaffChatEvents  ListAIStaffChatEventsRequest
+     * @return ListAIStaffChatEventsResponse
+     */
+    CompletableFuture<ListAIStaffChatEventsResponse> listAIStaffChatEvents(ListAIStaffChatEventsRequest request);
+
+    /**
+     * @param request the request parameters of ListAIStaffChatMessages  ListAIStaffChatMessagesRequest
+     * @return ListAIStaffChatMessagesResponse
+     */
+    CompletableFuture<ListAIStaffChatMessagesResponse> listAIStaffChatMessages(ListAIStaffChatMessagesRequest request);
 
     /**
      * @param request the request parameters of ListAppAssistantAgents  ListAppAssistantAgentsRequest
