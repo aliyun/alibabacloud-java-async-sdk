@@ -95,6 +95,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("orderAckFlag")
     private Boolean orderAckFlag;
 
+    @com.aliyun.core.annotation.NameInMap("pointCoveredFlag")
+    private Boolean pointCoveredFlag;
+
     @com.aliyun.core.annotation.NameInMap("pointDeductionRuleList")
     private java.util.List<PointDeductionRuleList> pointDeductionRuleList;
 
@@ -167,6 +170,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         this.name = builder.name;
         this.openingRemarks = builder.openingRemarks;
         this.orderAckFlag = builder.orderAckFlag;
+        this.pointCoveredFlag = builder.pointCoveredFlag;
         this.pointDeductionRuleList = builder.pointDeductionRuleList;
         this.points = builder.points;
         this.requestId = builder.requestId;
@@ -379,6 +383,13 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
 
     /**
+     * @return pointCoveredFlag
+     */
+    public Boolean getPointCoveredFlag() {
+        return this.pointCoveredFlag;
+    }
+
+    /**
      * @return pointDeductionRuleList
      */
     public java.util.List<PointDeductionRuleList> getPointDeductionRuleList() {
@@ -510,6 +521,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         private String name; 
         private String openingRemarks; 
         private Boolean orderAckFlag; 
+        private Boolean pointCoveredFlag; 
         private java.util.List<PointDeductionRuleList> pointDeductionRuleList; 
         private java.util.List<Points> points; 
         private String requestId; 
@@ -556,6 +568,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             this.name = model.name;
             this.openingRemarks = model.openingRemarks;
             this.orderAckFlag = model.orderAckFlag;
+            this.pointCoveredFlag = model.pointCoveredFlag;
             this.pointDeductionRuleList = model.pointDeductionRuleList;
             this.points = model.points;
             this.requestId = model.requestId;
@@ -778,6 +791,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
          */
         public Builder orderAckFlag(Boolean orderAckFlag) {
             this.orderAckFlag = orderAckFlag;
+            return this;
+        }
+
+        /**
+         * pointCoveredFlag.
+         */
+        public Builder pointCoveredFlag(Boolean pointCoveredFlag) {
+            this.pointCoveredFlag = pointCoveredFlag;
             return this;
         }
 
@@ -2474,6 +2495,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("questionDescription")
         private String questionDescription;
 
+        @com.aliyun.core.annotation.NameInMap("scriptPointId")
+        private String scriptPointId;
+
         @com.aliyun.core.annotation.NameInMap("sortNo")
         private Integer sortNo;
 
@@ -2486,6 +2510,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             this.name = builder.name;
             this.pointId = builder.pointId;
             this.questionDescription = builder.questionDescription;
+            this.scriptPointId = builder.scriptPointId;
             this.sortNo = builder.sortNo;
             this.weight = builder.weight;
         }
@@ -2534,6 +2559,13 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         }
 
         /**
+         * @return scriptPointId
+         */
+        public String getScriptPointId() {
+            return this.scriptPointId;
+        }
+
+        /**
          * @return sortNo
          */
         public Integer getSortNo() {
@@ -2553,6 +2585,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             private String name; 
             private String pointId; 
             private String questionDescription; 
+            private String scriptPointId; 
             private Integer sortNo; 
             private Integer weight; 
 
@@ -2565,6 +2598,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
                 this.name = model.name;
                 this.pointId = model.pointId;
                 this.questionDescription = model.questionDescription;
+                this.scriptPointId = model.scriptPointId;
                 this.sortNo = model.sortNo;
                 this.weight = model.weight;
             } 
@@ -2606,6 +2640,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
              */
             public Builder questionDescription(String questionDescription) {
                 this.questionDescription = questionDescription;
+                return this;
+            }
+
+            /**
+             * scriptPointId.
+             */
+            public Builder scriptPointId(String scriptPointId) {
+                this.scriptPointId = scriptPointId;
                 return this;
             }
 
