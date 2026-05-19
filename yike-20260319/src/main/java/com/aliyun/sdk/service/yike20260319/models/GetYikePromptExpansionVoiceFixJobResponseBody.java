@@ -17,8 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetYikePromptExpansionVoiceFixJobResponseBody</p>
  */
 public class GetYikePromptExpansionVoiceFixJobResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
+
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+    private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
@@ -35,16 +41,22 @@ public class GetYikePromptExpansionVoiceFixJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
     @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private GetYikePromptExpansionVoiceFixJobResponseBody(Builder builder) {
+        this.endTime = builder.endTime;
         this.errorCode = builder.errorCode;
+        this.errorMessage = builder.errorMessage;
         this.jobId = builder.jobId;
         this.jobParams = builder.jobParams;
         this.jobResult = builder.jobResult;
         this.jobStatus = builder.jobStatus;
         this.requestId = builder.requestId;
+        this.startTime = builder.startTime;
         this.userData = builder.userData;
     }
 
@@ -61,10 +73,24 @@ public class GetYikePromptExpansionVoiceFixJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return errorCode
      */
     public String getErrorCode() {
         return this.errorCode;
+    }
+
+    /**
+     * @return errorMessage
+     */
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     /**
@@ -103,6 +129,13 @@ public class GetYikePromptExpansionVoiceFixJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return userData
      */
     public String getUserData() {
@@ -110,32 +143,54 @@ public class GetYikePromptExpansionVoiceFixJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String endTime; 
         private String errorCode; 
+        private String errorMessage; 
         private String jobId; 
         private String jobParams; 
         private java.util.List<JobResult> jobResult; 
         private String jobStatus; 
         private String requestId; 
+        private String startTime; 
         private String userData; 
 
         private Builder() {
         } 
 
         private Builder(GetYikePromptExpansionVoiceFixJobResponseBody model) {
+            this.endTime = model.endTime;
             this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
             this.jobId = model.jobId;
             this.jobParams = model.jobParams;
             this.jobResult = model.jobResult;
             this.jobStatus = model.jobStatus;
             this.requestId = model.requestId;
+            this.startTime = model.startTime;
             this.userData = model.userData;
         } 
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
 
         /**
          * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * ErrorMessage.
+         */
+        public Builder errorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
             return this;
         }
 
@@ -179,6 +234,14 @@ public class GetYikePromptExpansionVoiceFixJobResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
 
