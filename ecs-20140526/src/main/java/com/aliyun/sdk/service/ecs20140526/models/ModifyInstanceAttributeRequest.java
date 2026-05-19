@@ -649,10 +649,26 @@ public class ModifyInstanceAttributeRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("TopologyType")
         private String topologyType;
 
+        @com.aliyun.core.annotation.NameInMap("EnableVISST")
+        private Boolean enableVISST;
+
+        @com.aliyun.core.annotation.NameInMap("EnableVRDT")
+        private Boolean enableVRDT;
+
+        @com.aliyun.core.annotation.NameInMap("NestedVirtualization")
+        private String nestedVirtualization;
+
+        @com.aliyun.core.annotation.NameInMap("TurboMode")
+        private String turboMode;
+
         private CpuOptions(Builder builder) {
             this.core = builder.core;
             this.threadsPerCore = builder.threadsPerCore;
             this.topologyType = builder.topologyType;
+            this.enableVISST = builder.enableVISST;
+            this.enableVRDT = builder.enableVRDT;
+            this.nestedVirtualization = builder.nestedVirtualization;
+            this.turboMode = builder.turboMode;
         }
 
         public static Builder builder() {
@@ -684,10 +700,42 @@ public class ModifyInstanceAttributeRequest extends Request {
             return this.topologyType;
         }
 
+        /**
+         * @return enableVISST
+         */
+        public Boolean getEnableVISST() {
+            return this.enableVISST;
+        }
+
+        /**
+         * @return enableVRDT
+         */
+        public Boolean getEnableVRDT() {
+            return this.enableVRDT;
+        }
+
+        /**
+         * @return nestedVirtualization
+         */
+        public String getNestedVirtualization() {
+            return this.nestedVirtualization;
+        }
+
+        /**
+         * @return turboMode
+         */
+        public String getTurboMode() {
+            return this.turboMode;
+        }
+
         public static final class Builder {
             private Integer core; 
             private Integer threadsPerCore; 
             private String topologyType; 
+            private Boolean enableVISST; 
+            private Boolean enableVRDT; 
+            private String nestedVirtualization; 
+            private String turboMode; 
 
             private Builder() {
             } 
@@ -696,6 +744,10 @@ public class ModifyInstanceAttributeRequest extends Request {
                 this.core = model.core;
                 this.threadsPerCore = model.threadsPerCore;
                 this.topologyType = model.topologyType;
+                this.enableVISST = model.enableVISST;
+                this.enableVRDT = model.enableVRDT;
+                this.nestedVirtualization = model.nestedVirtualization;
+                this.turboMode = model.turboMode;
             } 
 
             /**
@@ -744,6 +796,38 @@ public class ModifyInstanceAttributeRequest extends Request {
              */
             public Builder topologyType(String topologyType) {
                 this.topologyType = topologyType;
+                return this;
+            }
+
+            /**
+             * EnableVISST.
+             */
+            public Builder enableVISST(Boolean enableVISST) {
+                this.enableVISST = enableVISST;
+                return this;
+            }
+
+            /**
+             * EnableVRDT.
+             */
+            public Builder enableVRDT(Boolean enableVRDT) {
+                this.enableVRDT = enableVRDT;
+                return this;
+            }
+
+            /**
+             * NestedVirtualization.
+             */
+            public Builder nestedVirtualization(String nestedVirtualization) {
+                this.nestedVirtualization = nestedVirtualization;
+                return this;
+            }
+
+            /**
+             * TurboMode.
+             */
+            public Builder turboMode(String turboMode) {
+                this.turboMode = turboMode;
                 return this;
             }
 
