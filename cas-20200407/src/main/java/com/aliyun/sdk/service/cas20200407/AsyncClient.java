@@ -296,6 +296,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceSummaryResponse> getInstanceSummary(GetInstanceSummaryRequest request);
 
     /**
+     * @param request the request parameters of GetMatchedResources  GetMatchedResourcesRequest
+     * @return GetMatchedResourcesResponse
+     */
+    CompletableFuture<GetMatchedResourcesResponse> getMatchedResources(GetMatchedResourcesRequest request);
+
+    /**
      * @param request the request parameters of GetRiskCount  GetRiskCountRequest
      * @return GetRiskCountResponse
      */
