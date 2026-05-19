@@ -194,6 +194,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetIcpFilingInfoForPartnerResponse> getIcpFilingInfoForPartner(GetIcpFilingInfoForPartnerRequest request);
 
     /**
+     * @param request the request parameters of GetLlmProxyConfigForAdmin  GetLlmProxyConfigForAdminRequest
+     * @return GetLlmProxyConfigForAdminResponse
+     */
+    CompletableFuture<GetLlmProxyConfigForAdminResponse> getLlmProxyConfigForAdmin(GetLlmProxyConfigForAdminRequest request);
+
+    /**
      * @param request the request parameters of GetUserAccessTokenForPartner  GetUserAccessTokenForPartnerRequest
      * @return GetUserAccessTokenForPartnerResponse
      */
