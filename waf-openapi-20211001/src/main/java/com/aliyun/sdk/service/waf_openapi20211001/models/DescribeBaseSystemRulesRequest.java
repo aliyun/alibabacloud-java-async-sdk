@@ -59,6 +59,10 @@ public class DescribeBaseSystemRulesRequest extends Request {
     private Long ruleId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleIds")
+    private java.util.List<Long> ruleIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
@@ -82,6 +86,7 @@ public class DescribeBaseSystemRulesRequest extends Request {
         this.riskLevel = builder.riskLevel;
         this.ruleAction = builder.ruleAction;
         this.ruleId = builder.ruleId;
+        this.ruleIds = builder.ruleIds;
         this.ruleName = builder.ruleName;
         this.ruleStatus = builder.ruleStatus;
         this.templateId = builder.templateId;
@@ -171,6 +176,13 @@ public class DescribeBaseSystemRulesRequest extends Request {
     }
 
     /**
+     * @return ruleIds
+     */
+    public java.util.List<Long> getRuleIds() {
+        return this.ruleIds;
+    }
+
+    /**
      * @return ruleName
      */
     public String getRuleName() {
@@ -202,6 +214,7 @@ public class DescribeBaseSystemRulesRequest extends Request {
         private String riskLevel; 
         private String ruleAction; 
         private Long ruleId; 
+        private java.util.List<Long> ruleIds; 
         private String ruleName; 
         private Integer ruleStatus; 
         private Long templateId; 
@@ -222,6 +235,7 @@ public class DescribeBaseSystemRulesRequest extends Request {
             this.riskLevel = request.riskLevel;
             this.ruleAction = request.ruleAction;
             this.ruleId = request.ruleId;
+            this.ruleIds = request.ruleIds;
             this.ruleName = request.ruleName;
             this.ruleStatus = request.ruleStatus;
             this.templateId = request.templateId;
@@ -317,6 +331,15 @@ public class DescribeBaseSystemRulesRequest extends Request {
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
             this.ruleId = ruleId;
+            return this;
+        }
+
+        /**
+         * RuleIds.
+         */
+        public Builder ruleIds(java.util.List<Long> ruleIds) {
+            this.putQueryParameter("RuleIds", ruleIds);
+            this.ruleIds = ruleIds;
             return this;
         }
 
