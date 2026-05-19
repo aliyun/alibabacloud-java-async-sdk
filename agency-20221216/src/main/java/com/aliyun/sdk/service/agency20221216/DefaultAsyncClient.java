@@ -611,6 +611,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>The API caller must be a channel general distributor partner of Alibaba Cloud International.</li>
+     * <li>The system automatically determines if the invitation is cross-regional based on whether the <code>registerNation</code> parameter is within the T1 contract coverage area (the contract coverage area can be queried using the ListCountries API).</li>
+     * </ol>
+     * <ul>
+     * <li>If it\&quot;s a cross-regional invitation, a cross-regional approval process will be initiated. After approval by Alibaba Cloud, an invitation registration email will be sent to the invited email address.</li>
+     * <li>If it\&quot;s not a cross-regional invitation, an invitation registration email will be sent directly.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of InviteSubReseller  InviteSubResellerRequest
+     * @return InviteSubResellerResponse
+     */
+    @Override
+    public CompletableFuture<InviteSubResellerResponse> inviteSubReseller(InviteSubResellerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("InviteSubReseller").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InviteSubResellerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InviteSubResellerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of IssueCouponForCustomer  IssueCouponForCustomerRequest
      * @return IssueCouponForCustomerResponse
      */

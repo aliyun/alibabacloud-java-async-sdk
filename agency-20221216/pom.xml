@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-agency20221216</artifactId>
-  <version>1.0.20</version>
+  <version>1.0.21</version>
   <packaging>jar</packaging>
   <name>alibabacloud-agency20221216</name>
   <description>Alibaba Cloud Agency (20221216) Async SDK for Java
@@ -104,7 +104,7 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.9.0</version>
+        <version>0.10.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>

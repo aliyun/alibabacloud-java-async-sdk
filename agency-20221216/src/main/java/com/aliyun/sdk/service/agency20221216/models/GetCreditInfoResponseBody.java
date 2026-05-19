@@ -106,11 +106,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Result Code:</p>
-         * <ul>
-         * <li>200 OK</li>
-         * <li>1109 System Error</li>
-         * </ul>
+         * <p>success</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -121,7 +117,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The Credit Line of Sub Account</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -129,10 +125,10 @@ public class GetCreditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Message Information</p>
+         * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>The data returned.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -140,10 +136,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID, Alibaba Cloud will track errors with this.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +144,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+         * <p>The Credit have been consumed by Sub Account, and haven&quot;t be paid.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -311,12 +304,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Credit Control status, Value Range:</br></p>
-             * <ol>
-             * <li>normal - Sub Account status is running as usual.</li>
-             * <li>arrearsNotShutdown - Sub Account status is running as usual, but have outstanding bill(s).</li>
-             * <li>shutdown -  Sub Account status is down.</li>
-             * </ol>
+             * <p>Percentage value, when the available credit limit is lower than this credit limit percentage, a notification E-mail will be sent to the main account.</p>
              * 
              * <strong>example:</strong>
              * <p>normal</p>
@@ -327,65 +315,17 @@ public class GetCreditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Percentage value, when the available credit limit is lower than this credit limit percentage, a notification E-mail will be sent to the main account.</p>
+             * <p>Manage order operation.</p>
+             * <ul>
+             * <li>ban：Ban the new purchase action.</li>
+             * <li>normal：The account could raise new purchase order as usual.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>20</p>
              */
             public Builder alarmThreshold(String alarmThreshold) {
                 this.alarmThreshold = alarmThreshold;
-                return this;
-            }
-
-            /**
-             * <p>The Credit available to consume.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>800</p>
-             */
-            public Builder availableCredit(String availableCredit) {
-                this.availableCredit = availableCredit;
-                return this;
-            }
-
-            /**
-             * <p>Obtain total unpaid amount on demo bill before simulated deduction.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.000000</p>
-             */
-            public Builder consumedUndeductedValue(String consumedUndeductedValue) {
-                this.consumedUndeductedValue = consumedUndeductedValue;
-                return this;
-            }
-
-            /**
-             * <p>The Credit Line of Sub Account</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
-             */
-            public Builder creditLine(String creditLine) {
-                this.creditLine = creditLine;
-                return this;
-            }
-
-            /**
-             * <p>The Credit have been consumed by Sub Account, and haven&quot;t be paid.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
-             */
-            public Builder outstandingBalance(String outstandingBalance) {
-                this.outstandingBalance = outstandingBalance;
-                return this;
-            }
-
-            /**
-             * PAYGFreezeStatus.
-             */
-            public Builder PAYGFreezeStatus(String PAYGFreezeStatus) {
-                this.PAYGFreezeStatus = PAYGFreezeStatus;
                 return this;
             }
 
@@ -398,6 +338,68 @@ public class GetCreditInfoResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
+             * <p>800</p>
+             */
+            public Builder availableCredit(String availableCredit) {
+                this.availableCredit = availableCredit;
+                return this;
+            }
+
+            /**
+             * <p>Consumed &amp; Undeducted Value（Amount consumption at the current point in time and for which the quota has not been deducted）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.000000</p>
+             */
+            public Builder consumedUndeductedValue(String consumedUndeductedValue) {
+                this.consumedUndeductedValue = consumedUndeductedValue;
+                return this;
+            }
+
+            /**
+             * <p>The Credit available to consume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
+             */
+            public Builder creditLine(String creditLine) {
+                this.creditLine = creditLine;
+                return this;
+            }
+
+            /**
+             * <p>The Credit Control status, Value Range:</br></p>
+             * <ol>
+             * <li>normal - Sub Account status is running as usual.</li>
+             * <li>arrearsNotShutdown - Sub Account status is running as usual, but have outstanding bill(s).</li>
+             * <li>shutdown -  Sub Account status is down.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
+             */
+            public Builder outstandingBalance(String outstandingBalance) {
+                this.outstandingBalance = outstandingBalance;
+                return this;
+            }
+
+            /**
+             * <p>PAYG Freeze Status</p>
+             * <p>freeze：freeze</p>
+             * <p>normal：normal</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
+             */
+            public Builder PAYGFreezeStatus(String PAYGFreezeStatus) {
+                this.PAYGFreezeStatus = PAYGFreezeStatus;
+                return this;
+            }
+
+            /**
+             * <p>Obtain total unpaid amount on demo bill before simulated deduction.</p>
+             * 
+             * <strong>example:</strong>
              * <p>delayStop</p>
              */
             public Builder zeroCreditShutdownPolicy(String zeroCreditShutdownPolicy) {
@@ -406,11 +408,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Manage order operation.</p>
-             * <ul>
-             * <li>ban：Ban the new purchase action.</li>
-             * <li>normal：The account could raise new purchase order as usual.</li>
-             * </ul>
+             * <p>Request ID, Alibaba Cloud will track errors with this.</p>
              * 
              * <strong>example:</strong>
              * <p>ban</p>
