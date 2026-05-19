@@ -655,6 +655,348 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
      *
      * <p>DescribeEmbodiedAIPlatformsResponseBody</p>
      */
+    public static class GpuSpecs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllocateUnit")
+        private String allocateUnit;
+
+        @com.aliyun.core.annotation.NameInMap("Count")
+        private Long count;
+
+        @com.aliyun.core.annotation.NameInMap("SpecName")
+        private String specName;
+
+        private GpuSpecs(Builder builder) {
+            this.allocateUnit = builder.allocateUnit;
+            this.count = builder.count;
+            this.specName = builder.specName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GpuSpecs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allocateUnit
+         */
+        public String getAllocateUnit() {
+            return this.allocateUnit;
+        }
+
+        /**
+         * @return count
+         */
+        public Long getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return specName
+         */
+        public String getSpecName() {
+            return this.specName;
+        }
+
+        public static final class Builder {
+            private String allocateUnit; 
+            private Long count; 
+            private String specName; 
+
+            private Builder() {
+            } 
+
+            private Builder(GpuSpecs model) {
+                this.allocateUnit = model.allocateUnit;
+                this.count = model.count;
+                this.specName = model.specName;
+            } 
+
+            /**
+             * AllocateUnit.
+             */
+            public Builder allocateUnit(String allocateUnit) {
+                this.allocateUnit = allocateUnit;
+                return this;
+            }
+
+            /**
+             * Count.
+             */
+            public Builder count(Long count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * SpecName.
+             */
+            public Builder specName(String specName) {
+                this.specName = specName;
+                return this;
+            }
+
+            public GpuSpecs build() {
+                return new GpuSpecs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeEmbodiedAIPlatformsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEmbodiedAIPlatformsResponseBody</p>
+     */
+    public static class AcrConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("Namespaces")
+        private java.util.List<String> namespaces;
+
+        @com.aliyun.core.annotation.NameInMap("Registry")
+        private String registry;
+
+        private AcrConfig(Builder builder) {
+            this.instanceId = builder.instanceId;
+            this.namespaces = builder.namespaces;
+            this.registry = builder.registry;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AcrConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return namespaces
+         */
+        public java.util.List<String> getNamespaces() {
+            return this.namespaces;
+        }
+
+        /**
+         * @return registry
+         */
+        public String getRegistry() {
+            return this.registry;
+        }
+
+        public static final class Builder {
+            private String instanceId; 
+            private java.util.List<String> namespaces; 
+            private String registry; 
+
+            private Builder() {
+            } 
+
+            private Builder(AcrConfig model) {
+                this.instanceId = model.instanceId;
+                this.namespaces = model.namespaces;
+                this.registry = model.registry;
+            } 
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Namespaces.
+             */
+            public Builder namespaces(java.util.List<String> namespaces) {
+                this.namespaces = namespaces;
+                return this;
+            }
+
+            /**
+             * Registry.
+             */
+            public Builder registry(String registry) {
+                this.registry = registry;
+                return this;
+            }
+
+            public AcrConfig build() {
+                return new AcrConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeEmbodiedAIPlatformsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEmbodiedAIPlatformsResponseBody</p>
+     */
+    public static class TerminalConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AcrConfig")
+        private AcrConfig acrConfig;
+
+        private TerminalConfig(Builder builder) {
+            this.acrConfig = builder.acrConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TerminalConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return acrConfig
+         */
+        public AcrConfig getAcrConfig() {
+            return this.acrConfig;
+        }
+
+        public static final class Builder {
+            private AcrConfig acrConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(TerminalConfig model) {
+                this.acrConfig = model.acrConfig;
+            } 
+
+            /**
+             * AcrConfig.
+             */
+            public Builder acrConfig(AcrConfig acrConfig) {
+                this.acrConfig = acrConfig;
+                return this;
+            }
+
+            public TerminalConfig build() {
+                return new TerminalConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeEmbodiedAIPlatformsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEmbodiedAIPlatformsResponseBody</p>
+     */
+    public static class RayTrainConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CpuAcu")
+        private Long cpuAcu;
+
+        @com.aliyun.core.annotation.NameInMap("GpuSpecs")
+        private java.util.List<GpuSpecs> gpuSpecs;
+
+        @com.aliyun.core.annotation.NameInMap("TerminalConfig")
+        private TerminalConfig terminalConfig;
+
+        private RayTrainConfig(Builder builder) {
+            this.cpuAcu = builder.cpuAcu;
+            this.gpuSpecs = builder.gpuSpecs;
+            this.terminalConfig = builder.terminalConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RayTrainConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpuAcu
+         */
+        public Long getCpuAcu() {
+            return this.cpuAcu;
+        }
+
+        /**
+         * @return gpuSpecs
+         */
+        public java.util.List<GpuSpecs> getGpuSpecs() {
+            return this.gpuSpecs;
+        }
+
+        /**
+         * @return terminalConfig
+         */
+        public TerminalConfig getTerminalConfig() {
+            return this.terminalConfig;
+        }
+
+        public static final class Builder {
+            private Long cpuAcu; 
+            private java.util.List<GpuSpecs> gpuSpecs; 
+            private TerminalConfig terminalConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(RayTrainConfig model) {
+                this.cpuAcu = model.cpuAcu;
+                this.gpuSpecs = model.gpuSpecs;
+                this.terminalConfig = model.terminalConfig;
+            } 
+
+            /**
+             * CpuAcu.
+             */
+            public Builder cpuAcu(Long cpuAcu) {
+                this.cpuAcu = cpuAcu;
+                return this;
+            }
+
+            /**
+             * GpuSpecs.
+             */
+            public Builder gpuSpecs(java.util.List<GpuSpecs> gpuSpecs) {
+                this.gpuSpecs = gpuSpecs;
+                return this;
+            }
+
+            /**
+             * TerminalConfig.
+             */
+            public Builder terminalConfig(TerminalConfig terminalConfig) {
+                this.terminalConfig = terminalConfig;
+                return this;
+            }
+
+            public RayTrainConfig build() {
+                return new RayTrainConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeEmbodiedAIPlatformsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEmbodiedAIPlatformsResponseBody</p>
+     */
     public static class Platforms extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -671,6 +1013,9 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RayConfig")
         private RayConfig rayConfig;
 
+        @com.aliyun.core.annotation.NameInMap("RayTrainConfig")
+        private RayTrainConfig rayTrainConfig;
+
         @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
@@ -680,6 +1025,7 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             this.ossBucketName = builder.ossBucketName;
             this.platformName = builder.platformName;
             this.rayConfig = builder.rayConfig;
+            this.rayTrainConfig = builder.rayTrainConfig;
             this.state = builder.state;
         }
 
@@ -727,6 +1073,13 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         }
 
         /**
+         * @return rayTrainConfig
+         */
+        public RayTrainConfig getRayTrainConfig() {
+            return this.rayTrainConfig;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
@@ -739,6 +1092,7 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             private String ossBucketName; 
             private String platformName; 
             private RayConfig rayConfig; 
+            private RayTrainConfig rayTrainConfig; 
             private String state; 
 
             private Builder() {
@@ -750,6 +1104,7 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
                 this.ossBucketName = model.ossBucketName;
                 this.platformName = model.platformName;
                 this.rayConfig = model.rayConfig;
+                this.rayTrainConfig = model.rayTrainConfig;
                 this.state = model.state;
             } 
 
@@ -790,6 +1145,14 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
              */
             public Builder rayConfig(RayConfig rayConfig) {
                 this.rayConfig = rayConfig;
+                return this;
+            }
+
+            /**
+             * RayTrainConfig.
+             */
+            public Builder rayTrainConfig(RayTrainConfig rayTrainConfig) {
+                this.rayTrainConfig = rayTrainConfig;
                 return this;
             }
 
