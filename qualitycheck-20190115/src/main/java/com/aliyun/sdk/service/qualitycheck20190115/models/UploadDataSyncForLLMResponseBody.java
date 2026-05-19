@@ -869,9 +869,6 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hit")
         private Hit hit;
 
-        @com.aliyun.core.annotation.NameInMap("LlmResponse")
-        private String llmResponse;
-
         @com.aliyun.core.annotation.NameInMap("Rid")
         private String rid;
 
@@ -881,7 +878,6 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         private RuleHitInfo(Builder builder) {
             this.conditionInfo = builder.conditionInfo;
             this.hit = builder.hit;
-            this.llmResponse = builder.llmResponse;
             this.rid = builder.rid;
             this.tid = builder.tid;
         }
@@ -909,13 +905,6 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         }
 
         /**
-         * @return llmResponse
-         */
-        public String getLlmResponse() {
-            return this.llmResponse;
-        }
-
-        /**
          * @return rid
          */
         public String getRid() {
@@ -932,7 +921,6 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         public static final class Builder {
             private ConditionInfo conditionInfo; 
             private Hit hit; 
-            private String llmResponse; 
             private String rid; 
             private String tid; 
 
@@ -942,7 +930,6 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
             private Builder(RuleHitInfo model) {
                 this.conditionInfo = model.conditionInfo;
                 this.hit = model.hit;
-                this.llmResponse = model.llmResponse;
                 this.rid = model.rid;
                 this.tid = model.tid;
             } 
@@ -960,14 +947,6 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
              */
             public Builder hit(Hit hit) {
                 this.hit = hit;
-                return this;
-            }
-
-            /**
-             * LlmResponse.
-             */
-            public Builder llmResponse(String llmResponse) {
-                this.llmResponse = llmResponse;
                 return this;
             }
 
