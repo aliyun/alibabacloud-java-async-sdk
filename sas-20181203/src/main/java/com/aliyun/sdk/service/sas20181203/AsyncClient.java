@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddContainerPluginRuleResponse> addContainerPluginRule(AddContainerPluginRuleRequest request);
 
     /**
+     * @param request the request parameters of AddFileProtectBindMachine  AddFileProtectBindMachineRequest
+     * @return AddFileProtectBindMachineResponse
+     */
+    CompletableFuture<AddFileProtectBindMachineResponse> addFileProtectBindMachine(AddFileProtectBindMachineRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Security Center allows you to create an IDC probe only on servers on which the Security Center agent is installed.</p>
      * 
@@ -397,6 +403,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateFileDetectUploadUrlResponse
      */
     CompletableFuture<CreateFileDetectUploadUrlResponse> createFileDetectUploadUrl(CreateFileDetectUploadUrlRequest request);
+
+    /**
+     * @param request the request parameters of CreateFileProtectClientRule  CreateFileProtectClientRuleRequest
+     * @return CreateFileProtectClientRuleResponse
+     */
+    CompletableFuture<CreateFileProtectClientRuleResponse> createFileProtectClientRule(CreateFileProtectClientRuleRequest request);
 
     /**
      * @param request the request parameters of CreateFileProtectRule  CreateFileProtectRuleRequest
@@ -754,6 +766,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDingTalkResponse
      */
     CompletableFuture<DeleteDingTalkResponse> deleteDingTalk(DeleteDingTalkRequest request);
+
+    /**
+     * @param request the request parameters of DeleteFileProtectClientRule  DeleteFileProtectClientRuleRequest
+     * @return DeleteFileProtectClientRuleResponse
+     */
+    CompletableFuture<DeleteFileProtectClientRuleResponse> deleteFileProtectClientRule(DeleteFileProtectClientRuleRequest request);
 
     /**
      * @param request the request parameters of DeleteFileProtectRule  DeleteFileProtectRuleRequest
@@ -3474,6 +3492,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetFileDetectResultResponse> getFileDetectResult(GetFileDetectResultRequest request);
 
     /**
+     * @param request the request parameters of GetFileProtectClientEvent  GetFileProtectClientEventRequest
+     * @return GetFileProtectClientEventResponse
+     */
+    CompletableFuture<GetFileProtectClientEventResponse> getFileProtectClientEvent(GetFileProtectClientEventRequest request);
+
+    /**
+     * @param request the request parameters of GetFileProtectClientEventDashboard  GetFileProtectClientEventDashboardRequest
+     * @return GetFileProtectClientEventDashboardResponse
+     */
+    CompletableFuture<GetFileProtectClientEventDashboardResponse> getFileProtectClientEventDashboard(GetFileProtectClientEventDashboardRequest request);
+
+    /**
+     * @param request the request parameters of GetFileProtectClientRule  GetFileProtectClientRuleRequest
+     * @return GetFileProtectClientRuleResponse
+     */
+    CompletableFuture<GetFileProtectClientRuleResponse> getFileProtectClientRule(GetFileProtectClientRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetFileProtectClientRuleDashboard  GetFileProtectClientRuleDashboardRequest
+     * @return GetFileProtectClientRuleDashboardResponse
+     */
+    CompletableFuture<GetFileProtectClientRuleDashboardResponse> getFileProtectClientRuleDashboard(GetFileProtectClientRuleDashboardRequest request);
+
+    /**
      * @param request the request parameters of GetFileProtectDashboard  GetFileProtectDashboardRequest
      * @return GetFileProtectDashboardResponse
      */
@@ -4283,6 +4325,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDockerhubImageResponse
      */
     CompletableFuture<ListDockerhubImageResponse> listDockerhubImage(ListDockerhubImageRequest request);
+
+    /**
+     * @param request the request parameters of ListFileProtectBindMachine  ListFileProtectBindMachineRequest
+     * @return ListFileProtectBindMachineResponse
+     */
+    CompletableFuture<ListFileProtectBindMachineResponse> listFileProtectBindMachine(ListFileProtectBindMachineRequest request);
+
+    /**
+     * @param request the request parameters of ListFileProtectClientEvent  ListFileProtectClientEventRequest
+     * @return ListFileProtectClientEventResponse
+     */
+    CompletableFuture<ListFileProtectClientEventResponse> listFileProtectClientEvent(ListFileProtectClientEventRequest request);
+
+    /**
+     * @param request the request parameters of ListFileProtectClientRule  ListFileProtectClientRuleRequest
+     * @return ListFileProtectClientRuleResponse
+     */
+    CompletableFuture<ListFileProtectClientRuleResponse> listFileProtectClientRule(ListFileProtectClientRuleRequest request);
+
+    /**
+     * @param request the request parameters of ListFileProtectClientRuleFileType  ListFileProtectClientRuleFileTypeRequest
+     * @return ListFileProtectClientRuleFileTypeResponse
+     */
+    CompletableFuture<ListFileProtectClientRuleFileTypeResponse> listFileProtectClientRuleFileType(ListFileProtectClientRuleFileTypeRequest request);
 
     /**
      * @param request the request parameters of ListFileProtectEvent  ListFileProtectEventRequest
@@ -5753,6 +5819,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCustomizeReportStatusResponse
      */
     CompletableFuture<UpdateCustomizeReportStatusResponse> updateCustomizeReportStatus(UpdateCustomizeReportStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateFileProtectClientEvent  UpdateFileProtectClientEventRequest
+     * @return UpdateFileProtectClientEventResponse
+     */
+    CompletableFuture<UpdateFileProtectClientEventResponse> updateFileProtectClientEvent(UpdateFileProtectClientEventRequest request);
+
+    /**
+     * @param request the request parameters of UpdateFileProtectClientRule  UpdateFileProtectClientRuleRequest
+     * @return UpdateFileProtectClientRuleResponse
+     */
+    CompletableFuture<UpdateFileProtectClientRuleResponse> updateFileProtectClientRule(UpdateFileProtectClientRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateFileProtectClientRuleStatus  UpdateFileProtectClientRuleStatusRequest
+     * @return UpdateFileProtectClientRuleStatusResponse
+     */
+    CompletableFuture<UpdateFileProtectClientRuleStatusResponse> updateFileProtectClientRuleStatus(UpdateFileProtectClientRuleStatusRequest request);
 
     /**
      * @param request the request parameters of UpdateFileProtectEventStatus  UpdateFileProtectEventStatusRequest
