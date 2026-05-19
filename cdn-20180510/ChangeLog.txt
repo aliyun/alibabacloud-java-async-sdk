@@ -1,3 +1,6 @@
+2026-05-19 Version: 8.0.2
+- Generated java-async 2018-05-10 for Cdn.
+
 2026-05-07 Version: 8.0.1
 - Generated java-async 2018-05-10 for Cdn.
 

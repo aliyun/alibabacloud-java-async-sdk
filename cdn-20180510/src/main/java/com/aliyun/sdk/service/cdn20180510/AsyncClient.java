@@ -396,6 +396,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCdnDeliverListResponse> describeCdnDeliverList(DescribeCdnDeliverListRequest request);
 
     /**
+     * @param request the request parameters of DescribeCdnDiagnoseReport  DescribeCdnDiagnoseReportRequest
+     * @return DescribeCdnDiagnoseReportResponse
+     */
+    CompletableFuture<DescribeCdnDiagnoseReportResponse> describeCdnDiagnoseReport(DescribeCdnDiagnoseReportRequest request);
+
+    /**
      * @param request the request parameters of DescribeCdnDomainAtoaLogs  DescribeCdnDomainAtoaLogsRequest
      * @return DescribeCdnDomainAtoaLogsResponse
      */
@@ -606,6 +612,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeCdnSubListResponse
      */
     CompletableFuture<DescribeCdnSubListResponse> describeCdnSubList(DescribeCdnSubListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCdnTaskList  DescribeCdnTaskListRequest
+     * @return DescribeCdnTaskListResponse
+     */
+    CompletableFuture<DescribeCdnTaskListResponse> describeCdnTaskList(DescribeCdnTaskListRequest request);
 
     /**
      * @param request the request parameters of DescribeCdnTypes  DescribeCdnTypesRequest

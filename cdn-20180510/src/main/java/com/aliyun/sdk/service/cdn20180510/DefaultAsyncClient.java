@@ -860,6 +860,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeCdnDiagnoseReport  DescribeCdnDiagnoseReportRequest
+     * @return DescribeCdnDiagnoseReportResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCdnDiagnoseReportResponse> describeCdnDiagnoseReport(DescribeCdnDiagnoseReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCdnDiagnoseReport").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCdnDiagnoseReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCdnDiagnoseReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeCdnDomainAtoaLogs  DescribeCdnDomainAtoaLogsRequest
      * @return DescribeCdnDomainAtoaLogsResponse
      */
@@ -1306,6 +1324,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeCdnSubListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeCdnTaskList  DescribeCdnTaskListRequest
+     * @return DescribeCdnTaskListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCdnTaskListResponse> describeCdnTaskList(DescribeCdnTaskListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCdnTaskList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCdnTaskListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCdnTaskListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
