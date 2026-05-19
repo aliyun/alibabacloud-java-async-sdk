@@ -236,10 +236,14 @@ public class SubmitDocTranslateTaskRequest extends Request {
      * <p>SubmitDocTranslateTaskRequest</p>
      */
     public static class Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("isBilingual")
+        private Boolean isBilingual;
+
         @com.aliyun.core.annotation.NameInMap("skipImgTrans")
         private Boolean skipImgTrans;
 
         private Config(Builder builder) {
+            this.isBilingual = builder.isBilingual;
             this.skipImgTrans = builder.skipImgTrans;
         }
 
@@ -252,6 +256,13 @@ public class SubmitDocTranslateTaskRequest extends Request {
         }
 
         /**
+         * @return isBilingual
+         */
+        public Boolean getIsBilingual() {
+            return this.isBilingual;
+        }
+
+        /**
          * @return skipImgTrans
          */
         public Boolean getSkipImgTrans() {
@@ -259,14 +270,24 @@ public class SubmitDocTranslateTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean isBilingual; 
             private Boolean skipImgTrans; 
 
             private Builder() {
             } 
 
             private Builder(Config model) {
+                this.isBilingual = model.isBilingual;
                 this.skipImgTrans = model.skipImgTrans;
             } 
+
+            /**
+             * isBilingual.
+             */
+            public Builder isBilingual(Boolean isBilingual) {
+                this.isBilingual = isBilingual;
+                return this;
+            }
 
             /**
              * skipImgTrans.
