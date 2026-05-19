@@ -22,6 +22,14 @@ public class DescribePolarFsQuotaListRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolarFsInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String polarFsInstanceId;
@@ -37,6 +45,8 @@ public class DescribePolarFsQuotaListRequest extends Request {
     private DescribePolarFsQuotaListRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.polarFsInstanceId = builder.polarFsInstanceId;
         this.quotaMode = builder.quotaMode;
         this.regionId = builder.regionId;
@@ -63,6 +73,20 @@ public class DescribePolarFsQuotaListRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return polarFsInstanceId
      */
     public String getPolarFsInstanceId() {
@@ -85,6 +109,8 @@ public class DescribePolarFsQuotaListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribePolarFsQuotaListRequest, Builder> {
         private String DBClusterId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String polarFsInstanceId; 
         private String quotaMode; 
         private String regionId; 
@@ -96,6 +122,8 @@ public class DescribePolarFsQuotaListRequest extends Request {
         private Builder(DescribePolarFsQuotaListRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.polarFsInstanceId = request.polarFsInstanceId;
             this.quotaMode = request.quotaMode;
             this.regionId = request.regionId;
@@ -107,6 +135,24 @@ public class DescribePolarFsQuotaListRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

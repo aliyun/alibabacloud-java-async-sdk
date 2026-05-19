@@ -26,6 +26,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Architecture")
     private String architecture;
 
+    @com.aliyun.core.annotation.NameInMap("CanDisableSnat")
+    private Boolean canDisableSnat;
+
     @com.aliyun.core.annotation.NameInMap("Components")
     private java.util.List<Components> components;
 
@@ -68,6 +71,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MinorVersion")
     private String minorVersion;
 
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    private String natGatewayId;
+
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
@@ -91,6 +97,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ServerlessType")
     private String serverlessType;
+
+    @com.aliyun.core.annotation.NameInMap("SnatStatus")
+    private String snatStatus;
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
@@ -117,6 +126,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         this.applicationId = builder.applicationId;
         this.applicationType = builder.applicationType;
         this.architecture = builder.architecture;
+        this.canDisableSnat = builder.canDisableSnat;
         this.components = builder.components;
         this.creationTime = builder.creationTime;
         this.DBClusterId = builder.DBClusterId;
@@ -131,6 +141,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         this.maintainStartTime = builder.maintainStartTime;
         this.memApplicationAttribute = builder.memApplicationAttribute;
         this.minorVersion = builder.minorVersion;
+        this.natGatewayId = builder.natGatewayId;
         this.payType = builder.payType;
         this.polarClawSaaSApplicationAttribute = builder.polarClawSaaSApplicationAttribute;
         this.polarFSInstanceId = builder.polarFSInstanceId;
@@ -139,6 +150,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         this.securityGroups = builder.securityGroups;
         this.securityIPArrays = builder.securityIPArrays;
         this.serverlessType = builder.serverlessType;
+        this.snatStatus = builder.snatStatus;
         this.status = builder.status;
         this.storages = builder.storages;
         this.upgradeAvailable = builder.upgradeAvailable;
@@ -179,6 +191,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
      */
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    /**
+     * @return canDisableSnat
+     */
+    public Boolean getCanDisableSnat() {
+        return this.canDisableSnat;
     }
 
     /**
@@ -280,6 +299,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return natGatewayId
+     */
+    public String getNatGatewayId() {
+        return this.natGatewayId;
+    }
+
+    /**
      * @return payType
      */
     public String getPayType() {
@@ -336,6 +362,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return snatStatus
+     */
+    public String getSnatStatus() {
+        return this.snatStatus;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -388,6 +421,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private String applicationId; 
         private String applicationType; 
         private String architecture; 
+        private Boolean canDisableSnat; 
         private java.util.List<Components> components; 
         private String creationTime; 
         private String DBClusterId; 
@@ -402,6 +436,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private String maintainStartTime; 
         private MemApplicationAttribute memApplicationAttribute; 
         private String minorVersion; 
+        private String natGatewayId; 
         private String payType; 
         private PolarClawSaaSApplicationAttribute polarClawSaaSApplicationAttribute; 
         private String polarFSInstanceId; 
@@ -410,6 +445,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private java.util.List<SecurityGroups> securityGroups; 
         private java.util.List<SecurityIPArrays> securityIPArrays; 
         private String serverlessType; 
+        private String snatStatus; 
         private String status; 
         private java.util.List<Storages> storages; 
         private String upgradeAvailable; 
@@ -425,6 +461,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             this.applicationId = model.applicationId;
             this.applicationType = model.applicationType;
             this.architecture = model.architecture;
+            this.canDisableSnat = model.canDisableSnat;
             this.components = model.components;
             this.creationTime = model.creationTime;
             this.DBClusterId = model.DBClusterId;
@@ -439,6 +476,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             this.maintainStartTime = model.maintainStartTime;
             this.memApplicationAttribute = model.memApplicationAttribute;
             this.minorVersion = model.minorVersion;
+            this.natGatewayId = model.natGatewayId;
             this.payType = model.payType;
             this.polarClawSaaSApplicationAttribute = model.polarClawSaaSApplicationAttribute;
             this.polarFSInstanceId = model.polarFSInstanceId;
@@ -447,6 +485,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             this.securityGroups = model.securityGroups;
             this.securityIPArrays = model.securityIPArrays;
             this.serverlessType = model.serverlessType;
+            this.snatStatus = model.snatStatus;
             this.status = model.status;
             this.storages = model.storages;
             this.upgradeAvailable = model.upgradeAvailable;
@@ -477,6 +516,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          */
         public Builder architecture(String architecture) {
             this.architecture = architecture;
+            return this;
+        }
+
+        /**
+         * CanDisableSnat.
+         */
+        public Builder canDisableSnat(Boolean canDisableSnat) {
+            this.canDisableSnat = canDisableSnat;
             return this;
         }
 
@@ -593,6 +640,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * NatGatewayId.
+         */
+        public Builder natGatewayId(String natGatewayId) {
+            this.natGatewayId = natGatewayId;
+            return this;
+        }
+
+        /**
          * PayType.
          */
         public Builder payType(String payType) {
@@ -653,6 +708,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          */
         public Builder serverlessType(String serverlessType) {
             this.serverlessType = serverlessType;
+            return this;
+        }
+
+        /**
+         * SnatStatus.
+         */
+        public Builder snatStatus(String snatStatus) {
+            this.snatStatus = snatStatus;
             return this;
         }
 
