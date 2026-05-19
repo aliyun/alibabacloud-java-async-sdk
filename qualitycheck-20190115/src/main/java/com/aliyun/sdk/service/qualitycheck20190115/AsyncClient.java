@@ -451,6 +451,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevertAssignedSessionGroupResponse> revertAssignedSessionGroup(RevertAssignedSessionGroupRequest request);
 
     /**
+     * @param request the request parameters of RunCompletionMessage  RunCompletionMessageRequest
+     * @return RunCompletionMessageResponse
+     */
+    CompletableFuture<RunCompletionMessageResponse> runCompletionMessage(RunCompletionMessageRequest request);
+
+    ResponseIterable<RunCompletionMessageResponseBody> runCompletionMessageWithResponseIterable(RunCompletionMessageRequest request);
+
+    /**
      * @deprecated OpenAPI SaveConfigDataSet is deprecated  * @param request  the request parameters of SaveConfigDataSet  SaveConfigDataSetRequest
      * @return SaveConfigDataSetResponse
      */
