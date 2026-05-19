@@ -566,6 +566,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateAppResponse> operateApp(OperateAppRequest request);
 
     /**
+     * @param request the request parameters of PauseAgentTask  PauseAgentTaskRequest
+     * @return PauseAgentTaskResponse
+     */
+    CompletableFuture<PauseAgentTaskResponse> pauseAgentTask(PauseAgentTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you restart a cloud phone instance, make sure it is in one of the following states: <strong>Available, Abnormal, Backup failure, and Restoration failure</strong>.</p>
      * 
@@ -615,6 +621,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResetAndroidInstancesInGroupResponse
      */
     CompletableFuture<ResetAndroidInstancesInGroupResponse> resetAndroidInstancesInGroup(ResetAndroidInstancesInGroupRequest request);
+
+    /**
+     * @param request the request parameters of ResumeAgentTask  ResumeAgentTaskRequest
+     * @return ResumeAgentTaskResponse
+     */
+    CompletableFuture<ResumeAgentTaskResponse> resumeAgentTask(ResumeAgentTaskRequest request);
 
     /**
      * @param request the request parameters of RunAgentTask  RunAgentTaskRequest
