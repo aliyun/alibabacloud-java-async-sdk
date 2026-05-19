@@ -146,6 +146,9 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
      * <p>GetModelOperatorOrderResponseBody</p>
      */
     public static class InstanceList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        private String chargeType;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
@@ -162,6 +165,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         private String status;
 
         private InstanceList(Builder builder) {
+            this.chargeType = builder.chargeType;
             this.endTime = builder.endTime;
             this.instanceClass = builder.instanceClass;
             this.instanceId = builder.instanceId;
@@ -175,6 +179,13 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
 
         public static InstanceList create() {
             return builder().build();
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         /**
@@ -213,6 +224,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String chargeType; 
             private Long endTime; 
             private String instanceClass; 
             private String instanceId; 
@@ -223,12 +235,21 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             } 
 
             private Builder(InstanceList model) {
+                this.chargeType = model.chargeType;
                 this.endTime = model.endTime;
                 this.instanceClass = model.instanceClass;
                 this.instanceId = model.instanceId;
                 this.startTime = model.startTime;
                 this.status = model.status;
             } 
+
+            /**
+             * ChargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
 
             /**
              * <p>The instance end time (format: Timestamp).</p>

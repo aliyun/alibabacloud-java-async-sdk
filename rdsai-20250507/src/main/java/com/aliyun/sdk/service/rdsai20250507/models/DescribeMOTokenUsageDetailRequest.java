@@ -26,6 +26,10 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
     private String consumerName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cursor")
+    private String cursor;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
@@ -59,6 +63,7 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         super(builder);
         this.apiKey = builder.apiKey;
         this.consumerName = builder.consumerName;
+        this.cursor = builder.cursor;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.model = builder.model;
@@ -93,6 +98,13 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
      */
     public String getConsumerName() {
         return this.consumerName;
+    }
+
+    /**
+     * @return cursor
+     */
+    public String getCursor() {
+        return this.cursor;
     }
 
     /**
@@ -147,6 +159,7 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeMOTokenUsageDetailRequest, Builder> {
         private String apiKey; 
         private String consumerName; 
+        private String cursor; 
         private String endTime; 
         private String instanceId; 
         private String model; 
@@ -163,6 +176,7 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
             super(request);
             this.apiKey = request.apiKey;
             this.consumerName = request.consumerName;
+            this.cursor = request.cursor;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
             this.model = request.model;
@@ -187,6 +201,15 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         public Builder consumerName(String consumerName) {
             this.putQueryParameter("ConsumerName", consumerName);
             this.consumerName = consumerName;
+            return this;
+        }
+
+        /**
+         * Cursor.
+         */
+        public Builder cursor(String cursor) {
+            this.putQueryParameter("Cursor", cursor);
+            this.cursor = cursor;
             return this;
         }
 

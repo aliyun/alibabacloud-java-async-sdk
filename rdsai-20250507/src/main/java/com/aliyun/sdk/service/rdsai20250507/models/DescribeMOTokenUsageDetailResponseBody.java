@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMOTokenUsageDetailResponseBody</p>
  */
 public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("NextCursor")
+    private String nextCursor;
+
     @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
@@ -33,6 +36,7 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
     private Integer totalCount;
 
     private DescribeMOTokenUsageDetailResponseBody(Builder builder) {
+        this.nextCursor = builder.nextCursor;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.records = builder.records;
@@ -50,6 +54,13 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return nextCursor
+     */
+    public String getNextCursor() {
+        return this.nextCursor;
     }
 
     /**
@@ -88,6 +99,7 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String nextCursor; 
         private Integer page; 
         private Integer pageSize; 
         private java.util.List<Records> records; 
@@ -98,12 +110,21 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeMOTokenUsageDetailResponseBody model) {
+            this.nextCursor = model.nextCursor;
             this.page = model.page;
             this.pageSize = model.pageSize;
             this.records = model.records;
             this.requestId = model.requestId;
             this.totalCount = model.totalCount;
         } 
+
+        /**
+         * NextCursor.
+         */
+        public Builder nextCursor(String nextCursor) {
+            this.nextCursor = nextCursor;
+            return this;
+        }
 
         /**
          * Page.
