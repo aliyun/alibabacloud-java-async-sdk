@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetUserRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SceneType")
+    @com.aliyun.core.annotation.NameInMap("scene_type")
     private String sceneType;
 
     private GetUserRequest(Builder builder) {
@@ -59,10 +59,10 @@ public class GetUserRequest extends Request {
         } 
 
         /**
-         * SceneType.
+         * scene_type.
          */
         public Builder sceneType(String sceneType) {
-            this.putQueryParameter("SceneType", sceneType);
+            this.putQueryParameter("scene_type", sceneType);
             this.sceneType = sceneType;
             return this;
         }
