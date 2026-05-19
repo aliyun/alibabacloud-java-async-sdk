@@ -272,6 +272,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PayOrderResponse> payOrder(PayOrderRequest request);
 
     /**
+     * @param request the request parameters of QueryCostByCostCenter  QueryCostByCostCenterRequest
+     * @return QueryCostByCostCenterResponse
+     */
+    CompletableFuture<QueryCostByCostCenterResponse> queryCostByCostCenter(QueryCostByCostCenterRequest request);
+
+    /**
      * @param request the request parameters of QueryCostCenter  QueryCostCenterRequest
      * @return QueryCostCenterResponse
      */
