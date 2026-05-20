@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCallbackResponse> createCallback(CreateCallbackRequest request);
 
     /**
+     * @param request the request parameters of CreateImageLib  CreateImageLibRequest
+     * @return CreateImageLibResponse
+     */
+    CompletableFuture<CreateImageLibResponse> createImageLib(CreateImageLibRequest request);
+
+    /**
      * @param request the request parameters of CreateOnlineTest  CreateOnlineTestRequest
      * @return CreateOnlineTestResponse
      */
