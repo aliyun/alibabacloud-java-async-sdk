@@ -23,6 +23,9 @@ public class FlowEndpoint extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("disablePublicNetworkAccess")
+    private Boolean disablePublicNetworkAccess;
+
     @com.aliyun.core.annotation.NameInMap("flowEndpointArn")
     private String flowEndpointArn;
 
@@ -47,6 +50,7 @@ public class FlowEndpoint extends TeaModel {
     private FlowEndpoint(Builder builder) {
         this.createdAt = builder.createdAt;
         this.description = builder.description;
+        this.disablePublicNetworkAccess = builder.disablePublicNetworkAccess;
         this.flowEndpointArn = builder.flowEndpointArn;
         this.flowEndpointId = builder.flowEndpointId;
         this.flowEndpointName = builder.flowEndpointName;
@@ -80,6 +84,13 @@ public class FlowEndpoint extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return disablePublicNetworkAccess
+     */
+    public Boolean getDisablePublicNetworkAccess() {
+        return this.disablePublicNetworkAccess;
     }
 
     /**
@@ -134,6 +145,7 @@ public class FlowEndpoint extends TeaModel {
     public static final class Builder {
         private String createdAt; 
         private String description; 
+        private Boolean disablePublicNetworkAccess; 
         private String flowEndpointArn; 
         private String flowEndpointId; 
         private String flowEndpointName; 
@@ -148,6 +160,7 @@ public class FlowEndpoint extends TeaModel {
         private Builder(FlowEndpoint model) {
             this.createdAt = model.createdAt;
             this.description = model.description;
+            this.disablePublicNetworkAccess = model.disablePublicNetworkAccess;
             this.flowEndpointArn = model.flowEndpointArn;
             this.flowEndpointId = model.flowEndpointId;
             this.flowEndpointName = model.flowEndpointName;
@@ -176,6 +189,14 @@ public class FlowEndpoint extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>是否禁用该端点的公网访问</p>
+         */
+        public Builder disablePublicNetworkAccess(Boolean disablePublicNetworkAccess) {
+            this.disablePublicNetworkAccess = disablePublicNetworkAccess;
             return this;
         }
 

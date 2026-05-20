@@ -51,6 +51,9 @@ public class CreateAgentRuntimeInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("diskSize")
     private Integer diskSize;
 
+    @com.aliyun.core.annotation.NameInMap("edition")
+    private String edition;
+
     @com.aliyun.core.annotation.NameInMap("enableSessionIsolation")
     private Boolean enableSessionIsolation;
 
@@ -118,6 +121,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
         this.credentialName = builder.credentialName;
         this.description = builder.description;
         this.diskSize = builder.diskSize;
+        this.edition = builder.edition;
         this.enableSessionIsolation = builder.enableSessionIsolation;
         this.environmentVariables = builder.environmentVariables;
         this.executionRoleArn = builder.executionRoleArn;
@@ -217,6 +221,13 @@ public class CreateAgentRuntimeInput extends TeaModel {
      */
     public Integer getDiskSize() {
         return this.diskSize;
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -349,6 +360,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
         private String credentialName; 
         private String description; 
         private Integer diskSize; 
+        private String edition; 
         private Boolean enableSessionIsolation; 
         private java.util.Map<String, String> environmentVariables; 
         private String executionRoleArn; 
@@ -381,6 +393,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
             this.credentialName = model.credentialName;
             this.description = model.description;
             this.diskSize = model.diskSize;
+            this.edition = model.edition;
             this.enableSessionIsolation = model.enableSessionIsolation;
             this.environmentVariables = model.environmentVariables;
             this.executionRoleArn = model.executionRoleArn;
@@ -504,6 +517,14 @@ public class CreateAgentRuntimeInput extends TeaModel {
          */
         public Builder diskSize(Integer diskSize) {
             this.diskSize = diskSize;
+            return this;
+        }
+
+        /**
+         * edition.
+         */
+        public Builder edition(String edition) {
+            this.edition = edition;
             return this;
         }
 

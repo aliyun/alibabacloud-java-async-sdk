@@ -20,6 +20,12 @@ public class PathConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("agentRuntimeEndpointName")
     private String agentRuntimeEndpointName;
 
+    @com.aliyun.core.annotation.NameInMap("compatibleProtocol")
+    private String compatibleProtocol;
+
+    @com.aliyun.core.annotation.NameInMap("flowEndpointName")
+    private String flowEndpointName;
+
     @com.aliyun.core.annotation.NameInMap("methods")
     private java.util.List<String> methods;
 
@@ -37,6 +43,8 @@ public class PathConfig extends TeaModel {
 
     private PathConfig(Builder builder) {
         this.agentRuntimeEndpointName = builder.agentRuntimeEndpointName;
+        this.compatibleProtocol = builder.compatibleProtocol;
+        this.flowEndpointName = builder.flowEndpointName;
         this.methods = builder.methods;
         this.path = builder.path;
         this.removeBasePathOnForward = builder.removeBasePathOnForward;
@@ -61,6 +69,20 @@ public class PathConfig extends TeaModel {
      */
     public String getAgentRuntimeEndpointName() {
         return this.agentRuntimeEndpointName;
+    }
+
+    /**
+     * @return compatibleProtocol
+     */
+    public String getCompatibleProtocol() {
+        return this.compatibleProtocol;
+    }
+
+    /**
+     * @return flowEndpointName
+     */
+    public String getFlowEndpointName() {
+        return this.flowEndpointName;
     }
 
     /**
@@ -100,6 +122,8 @@ public class PathConfig extends TeaModel {
 
     public static final class Builder {
         private String agentRuntimeEndpointName; 
+        private String compatibleProtocol; 
+        private String flowEndpointName; 
         private java.util.List<String> methods; 
         private String path; 
         private Boolean removeBasePathOnForward; 
@@ -111,6 +135,8 @@ public class PathConfig extends TeaModel {
 
         private Builder(PathConfig model) {
             this.agentRuntimeEndpointName = model.agentRuntimeEndpointName;
+            this.compatibleProtocol = model.compatibleProtocol;
+            this.flowEndpointName = model.flowEndpointName;
             this.methods = model.methods;
             this.path = model.path;
             this.removeBasePathOnForward = model.removeBasePathOnForward;
@@ -123,6 +149,28 @@ public class PathConfig extends TeaModel {
          */
         public Builder agentRuntimeEndpointName(String agentRuntimeEndpointName) {
             this.agentRuntimeEndpointName = agentRuntimeEndpointName;
+            return this;
+        }
+
+        /**
+         * <p>兼容协议，指定后端响应格式转换。仅当 resourceType 为 flow 时必填：native 表示 FnF 原生调用；openai、dify-workflow、dify-chatflow 为对应兼容 API。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>native</p>
+         */
+        public Builder compatibleProtocol(String compatibleProtocol) {
+            this.compatibleProtocol = compatibleProtocol;
+            return this;
+        }
+
+        /**
+         * <p>Flow 版本/别名（仅当 resourceType 为 flow 时有效，默认 Default）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
+         */
+        public Builder flowEndpointName(String flowEndpointName) {
+            this.flowEndpointName = flowEndpointName;
             return this;
         }
 

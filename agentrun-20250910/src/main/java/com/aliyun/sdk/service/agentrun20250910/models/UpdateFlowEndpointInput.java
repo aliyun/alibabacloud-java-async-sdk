@@ -20,6 +20,9 @@ public class UpdateFlowEndpointInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("disablePublicNetworkAccess")
+    private Boolean disablePublicNetworkAccess;
+
     @com.aliyun.core.annotation.NameInMap("flowEndpointName")
     private String flowEndpointName;
 
@@ -31,6 +34,7 @@ public class UpdateFlowEndpointInput extends TeaModel {
 
     private UpdateFlowEndpointInput(Builder builder) {
         this.description = builder.description;
+        this.disablePublicNetworkAccess = builder.disablePublicNetworkAccess;
         this.flowEndpointName = builder.flowEndpointName;
         this.routingConfiguration = builder.routingConfiguration;
         this.targetVersion = builder.targetVersion;
@@ -56,6 +60,13 @@ public class UpdateFlowEndpointInput extends TeaModel {
     }
 
     /**
+     * @return disablePublicNetworkAccess
+     */
+    public Boolean getDisablePublicNetworkAccess() {
+        return this.disablePublicNetworkAccess;
+    }
+
+    /**
      * @return flowEndpointName
      */
     public String getFlowEndpointName() {
@@ -78,6 +89,7 @@ public class UpdateFlowEndpointInput extends TeaModel {
 
     public static final class Builder {
         private String description; 
+        private Boolean disablePublicNetworkAccess; 
         private String flowEndpointName; 
         private java.util.List<FlowEndpointRoutingConfig> routingConfiguration; 
         private String targetVersion; 
@@ -87,6 +99,7 @@ public class UpdateFlowEndpointInput extends TeaModel {
 
         private Builder(UpdateFlowEndpointInput model) {
             this.description = model.description;
+            this.disablePublicNetworkAccess = model.disablePublicNetworkAccess;
             this.flowEndpointName = model.flowEndpointName;
             this.routingConfiguration = model.routingConfiguration;
             this.targetVersion = model.targetVersion;
@@ -100,6 +113,14 @@ public class UpdateFlowEndpointInput extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>是否禁用该端点的公网访问</p>
+         */
+        public Builder disablePublicNetworkAccess(Boolean disablePublicNetworkAccess) {
+            this.disablePublicNetworkAccess = disablePublicNetworkAccess;
             return this;
         }
 

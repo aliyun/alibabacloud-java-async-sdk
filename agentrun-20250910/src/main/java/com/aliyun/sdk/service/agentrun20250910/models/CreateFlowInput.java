@@ -23,6 +23,9 @@ public class CreateFlowInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("disablePublicNetworkAccess")
+    private Boolean disablePublicNetworkAccess;
+
     @com.aliyun.core.annotation.NameInMap("environmentConfiguration")
     private EnvironmentConfiguration environmentConfiguration;
 
@@ -51,6 +54,7 @@ public class CreateFlowInput extends TeaModel {
     private CreateFlowInput(Builder builder) {
         this.definition = builder.definition;
         this.description = builder.description;
+        this.disablePublicNetworkAccess = builder.disablePublicNetworkAccess;
         this.environmentConfiguration = builder.environmentConfiguration;
         this.executionRoleArn = builder.executionRoleArn;
         this.externalStorageLocation = builder.externalStorageLocation;
@@ -85,6 +89,13 @@ public class CreateFlowInput extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return disablePublicNetworkAccess
+     */
+    public Boolean getDisablePublicNetworkAccess() {
+        return this.disablePublicNetworkAccess;
     }
 
     /**
@@ -146,6 +157,7 @@ public class CreateFlowInput extends TeaModel {
     public static final class Builder {
         private String definition; 
         private String description; 
+        private Boolean disablePublicNetworkAccess; 
         private EnvironmentConfiguration environmentConfiguration; 
         private String executionRoleArn; 
         private String externalStorageLocation; 
@@ -161,6 +173,7 @@ public class CreateFlowInput extends TeaModel {
         private Builder(CreateFlowInput model) {
             this.definition = model.definition;
             this.description = model.description;
+            this.disablePublicNetworkAccess = model.disablePublicNetworkAccess;
             this.environmentConfiguration = model.environmentConfiguration;
             this.executionRoleArn = model.executionRoleArn;
             this.externalStorageLocation = model.externalStorageLocation;
@@ -190,6 +203,14 @@ public class CreateFlowInput extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>是否禁用该工作流的公网访问，作为工作流级别的默认策略。当 FlowEndpoint 未指定时，将继承此值</p>
+         */
+        public Builder disablePublicNetworkAccess(Boolean disablePublicNetworkAccess) {
+            this.disablePublicNetworkAccess = disablePublicNetworkAccess;
             return this;
         }
 
