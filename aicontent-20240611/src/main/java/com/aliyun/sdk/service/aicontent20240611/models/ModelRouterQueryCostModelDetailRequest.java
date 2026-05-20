@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModelRouterQueryCostModelDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("apiKeyId")
+    private Long apiKeyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("clientId")
     private Long clientId;
 
@@ -58,6 +62,7 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
 
     private ModelRouterQueryCostModelDetailRequest(Builder builder) {
         super(builder);
+        this.apiKeyId = builder.apiKeyId;
         this.clientId = builder.clientId;
         this.endTime = builder.endTime;
         this.maxResults = builder.maxResults;
@@ -80,6 +85,13 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return apiKeyId
+     */
+    public Long getApiKeyId() {
+        return this.apiKeyId;
     }
 
     /**
@@ -146,6 +158,7 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModelRouterQueryCostModelDetailRequest, Builder> {
+        private Long apiKeyId; 
         private Long clientId; 
         private Long endTime; 
         private Integer maxResults; 
@@ -162,6 +175,7 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
 
         private Builder(ModelRouterQueryCostModelDetailRequest request) {
             super(request);
+            this.apiKeyId = request.apiKeyId;
             this.clientId = request.clientId;
             this.endTime = request.endTime;
             this.maxResults = request.maxResults;
@@ -172,6 +186,15 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * apiKeyId.
+         */
+        public Builder apiKeyId(Long apiKeyId) {
+            this.putQueryParameter("apiKeyId", apiKeyId);
+            this.apiKeyId = apiKeyId;
+            return this;
+        }
 
         /**
          * clientId.

@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModelRouterQueryUsageBreakdownRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("apiKeyId")
+    private Long apiKeyId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientId")
+    private Long clientId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("endTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
@@ -50,6 +58,8 @@ public class ModelRouterQueryUsageBreakdownRequest extends Request {
 
     private ModelRouterQueryUsageBreakdownRequest(Builder builder) {
         super(builder);
+        this.apiKeyId = builder.apiKeyId;
+        this.clientId = builder.clientId;
         this.endTime = builder.endTime;
         this.granularity = builder.granularity;
         this.maxResults = builder.maxResults;
@@ -70,6 +80,20 @@ public class ModelRouterQueryUsageBreakdownRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return apiKeyId
+     */
+    public Long getApiKeyId() {
+        return this.apiKeyId;
+    }
+
+    /**
+     * @return clientId
+     */
+    public Long getClientId() {
+        return this.clientId;
     }
 
     /**
@@ -122,6 +146,8 @@ public class ModelRouterQueryUsageBreakdownRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModelRouterQueryUsageBreakdownRequest, Builder> {
+        private Long apiKeyId; 
+        private Long clientId; 
         private Long endTime; 
         private String granularity; 
         private Integer maxResults; 
@@ -136,6 +162,8 @@ public class ModelRouterQueryUsageBreakdownRequest extends Request {
 
         private Builder(ModelRouterQueryUsageBreakdownRequest request) {
             super(request);
+            this.apiKeyId = request.apiKeyId;
+            this.clientId = request.clientId;
             this.endTime = request.endTime;
             this.granularity = request.granularity;
             this.maxResults = request.maxResults;
@@ -144,6 +172,24 @@ public class ModelRouterQueryUsageBreakdownRequest extends Request {
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * apiKeyId.
+         */
+        public Builder apiKeyId(Long apiKeyId) {
+            this.putQueryParameter("apiKeyId", apiKeyId);
+            this.apiKeyId = apiKeyId;
+            return this;
+        }
+
+        /**
+         * clientId.
+         */
+        public Builder clientId(Long clientId) {
+            this.putQueryParameter("clientId", clientId);
+            this.clientId = clientId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

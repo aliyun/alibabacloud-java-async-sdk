@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BillingCostBreakdownRowDTO</p>
  */
 public class BillingCostBreakdownRowDTO extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("apiKeyId")
+    private Long apiKeyId;
+
+    @com.aliyun.core.annotation.NameInMap("apiKeyName")
+    private String apiKeyName;
+
     @com.aliyun.core.annotation.NameInMap("billingType")
     private String billingType;
 
@@ -54,6 +60,8 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     private String values;
 
     private BillingCostBreakdownRowDTO(Builder builder) {
+        this.apiKeyId = builder.apiKeyId;
+        this.apiKeyName = builder.apiKeyName;
         this.billingType = builder.billingType;
         this.clientId = builder.clientId;
         this.clientName = builder.clientName;
@@ -78,6 +86,20 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return apiKeyId
+     */
+    public Long getApiKeyId() {
+        return this.apiKeyId;
+    }
+
+    /**
+     * @return apiKeyName
+     */
+    public String getApiKeyName() {
+        return this.apiKeyName;
     }
 
     /**
@@ -165,6 +187,8 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     }
 
     public static final class Builder {
+        private Long apiKeyId; 
+        private String apiKeyName; 
         private String billingType; 
         private Long clientId; 
         private String clientName; 
@@ -182,6 +206,8 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         } 
 
         private Builder(BillingCostBreakdownRowDTO model) {
+            this.apiKeyId = model.apiKeyId;
+            this.apiKeyName = model.apiKeyName;
             this.billingType = model.billingType;
             this.clientId = model.clientId;
             this.clientName = model.clientName;
@@ -195,6 +221,22 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
             this.tiers = model.tiers;
             this.values = model.values;
         } 
+
+        /**
+         * apiKeyId.
+         */
+        public Builder apiKeyId(Long apiKeyId) {
+            this.apiKeyId = apiKeyId;
+            return this;
+        }
+
+        /**
+         * apiKeyName.
+         */
+        public Builder apiKeyName(String apiKeyName) {
+            this.apiKeyName = apiKeyName;
+            return this;
+        }
 
         /**
          * billingType.

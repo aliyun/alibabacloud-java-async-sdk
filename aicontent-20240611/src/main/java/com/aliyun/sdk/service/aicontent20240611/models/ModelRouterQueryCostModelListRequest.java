@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModelRouterQueryCostModelListRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("apiKeyId")
+    private Long apiKeyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("clientId")
     private Long clientId;
 
@@ -53,6 +57,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
 
     private ModelRouterQueryCostModelListRequest(Builder builder) {
         super(builder);
+        this.apiKeyId = builder.apiKeyId;
         this.clientId = builder.clientId;
         this.endTime = builder.endTime;
         this.granularity = builder.granularity;
@@ -74,6 +79,13 @@ public class ModelRouterQueryCostModelListRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return apiKeyId
+     */
+    public Long getApiKeyId() {
+        return this.apiKeyId;
     }
 
     /**
@@ -133,6 +145,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModelRouterQueryCostModelListRequest, Builder> {
+        private Long apiKeyId; 
         private Long clientId; 
         private Long endTime; 
         private String granularity; 
@@ -148,6 +161,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
 
         private Builder(ModelRouterQueryCostModelListRequest request) {
             super(request);
+            this.apiKeyId = request.apiKeyId;
             this.clientId = request.clientId;
             this.endTime = request.endTime;
             this.granularity = request.granularity;
@@ -157,6 +171,15 @@ public class ModelRouterQueryCostModelListRequest extends Request {
             this.search = request.search;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * apiKeyId.
+         */
+        public Builder apiKeyId(Long apiKeyId) {
+            this.putQueryParameter("apiKeyId", apiKeyId);
+            this.apiKeyId = apiKeyId;
+            return this;
+        }
 
         /**
          * clientId.
