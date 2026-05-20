@@ -1671,6 +1671,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeScheduleTasksResponse> describeScheduleTasks(DescribeScheduleTasksRequest request);
 
     /**
+     * @param request the request parameters of DescribeSharedBackups  DescribeSharedBackupsRequest
+     * @return DescribeSharedBackupsResponse
+     */
+    CompletableFuture<DescribeSharedBackupsResponse> describeSharedBackups(DescribeSharedBackupsRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <ul>
