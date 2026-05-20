@@ -35,6 +35,10 @@ public class FileUploadCallbackRequest extends Request {
     private String filename;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssBucket")
+    private String ossBucket;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UploadLocation")
     @com.aliyun.core.annotation.Validation(required = true)
     private String uploadLocation;
@@ -45,6 +49,7 @@ public class FileUploadCallbackRequest extends Request {
         this.dmsUnit = builder.dmsUnit;
         this.fileSize = builder.fileSize;
         this.filename = builder.filename;
+        this.ossBucket = builder.ossBucket;
         this.uploadLocation = builder.uploadLocation;
     }
 
@@ -90,6 +95,13 @@ public class FileUploadCallbackRequest extends Request {
     }
 
     /**
+     * @return ossBucket
+     */
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    /**
      * @return uploadLocation
      */
     public String getUploadLocation() {
@@ -101,6 +113,7 @@ public class FileUploadCallbackRequest extends Request {
         private String dmsUnit; 
         private Long fileSize; 
         private String filename; 
+        private String ossBucket; 
         private String uploadLocation; 
 
         private Builder() {
@@ -113,6 +126,7 @@ public class FileUploadCallbackRequest extends Request {
             this.dmsUnit = request.dmsUnit;
             this.fileSize = request.fileSize;
             this.filename = request.filename;
+            this.ossBucket = request.ossBucket;
             this.uploadLocation = request.uploadLocation;
         } 
 
@@ -152,6 +166,15 @@ public class FileUploadCallbackRequest extends Request {
         public Builder filename(String filename) {
             this.putQueryParameter("Filename", filename);
             this.filename = filename;
+            return this;
+        }
+
+        /**
+         * OssBucket.
+         */
+        public Builder ossBucket(String ossBucket) {
+            this.putQueryParameter("OssBucket", ossBucket);
+            this.ossBucket = ossBucket;
             return this;
         }
 
