@@ -988,16 +988,173 @@ public class GetApplicationResponseBody extends TeaModel {
      *
      * <p>GetApplicationResponseBody</p>
      */
+    public static class CorrectionRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Pattern")
+        private String pattern;
+
+        @com.aliyun.core.annotation.NameInMap("Replacement")
+        private String replacement;
+
+        private CorrectionRules(Builder builder) {
+            this.pattern = builder.pattern;
+            this.replacement = builder.replacement;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CorrectionRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pattern
+         */
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        /**
+         * @return replacement
+         */
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+        public static final class Builder {
+            private String pattern; 
+            private String replacement; 
+
+            private Builder() {
+            } 
+
+            private Builder(CorrectionRules model) {
+                this.pattern = model.pattern;
+                this.replacement = model.replacement;
+            } 
+
+            /**
+             * Pattern.
+             */
+            public Builder pattern(String pattern) {
+                this.pattern = pattern;
+                return this;
+            }
+
+            /**
+             * Replacement.
+             */
+            public Builder replacement(String replacement) {
+                this.replacement = replacement;
+                return this;
+            }
+
+            public CorrectionRules build() {
+                return new CorrectionRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class TranscriberConfigNlsAccessProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessProfileId")
+        private String accessProfileId;
+
+        private TranscriberConfigNlsAccessProfile(Builder builder) {
+            this.accessProfileId = builder.accessProfileId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TranscriberConfigNlsAccessProfile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessProfileId
+         */
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+        public static final class Builder {
+            private String accessProfileId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscriberConfigNlsAccessProfile model) {
+                this.accessProfileId = model.accessProfileId;
+            } 
+
+            /**
+             * AccessProfileId.
+             */
+            public Builder accessProfileId(String accessProfileId) {
+                this.accessProfileId = accessProfileId;
+                return this;
+            }
+
+            public TranscriberConfigNlsAccessProfile build() {
+                return new TranscriberConfigNlsAccessProfile(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class TranscriberConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CorrectionRules")
+        private java.util.List<CorrectionRules> correctionRules;
+
+        @com.aliyun.core.annotation.NameInMap("CustomizationId")
+        private String customizationId;
+
+        @com.aliyun.core.annotation.NameInMap("EndSilenceTimeout")
+        private Integer endSilenceTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
+
+        @com.aliyun.core.annotation.NameInMap("NlsAccessProfile")
+        private TranscriberConfigNlsAccessProfile nlsAccessProfile;
+
         @com.aliyun.core.annotation.NameInMap("NlsAccessType")
         private String nlsAccessType;
 
         @com.aliyun.core.annotation.NameInMap("NlsEngine")
         private String nlsEngine;
 
+        @com.aliyun.core.annotation.NameInMap("SpeechNoiseThreshold")
+        private Integer speechNoiseThreshold;
+
+        @com.aliyun.core.annotation.NameInMap("VocabularyId")
+        private String vocabularyId;
+
         private TranscriberConfig(Builder builder) {
+            this.correctionRules = builder.correctionRules;
+            this.customizationId = builder.customizationId;
+            this.endSilenceTimeout = builder.endSilenceTimeout;
+            this.model = builder.model;
+            this.nlsAccessProfile = builder.nlsAccessProfile;
             this.nlsAccessType = builder.nlsAccessType;
             this.nlsEngine = builder.nlsEngine;
+            this.speechNoiseThreshold = builder.speechNoiseThreshold;
+            this.vocabularyId = builder.vocabularyId;
         }
 
         public static Builder builder() {
@@ -1006,6 +1163,41 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static TranscriberConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return correctionRules
+         */
+        public java.util.List<CorrectionRules> getCorrectionRules() {
+            return this.correctionRules;
+        }
+
+        /**
+         * @return customizationId
+         */
+        public String getCustomizationId() {
+            return this.customizationId;
+        }
+
+        /**
+         * @return endSilenceTimeout
+         */
+        public Integer getEndSilenceTimeout() {
+            return this.endSilenceTimeout;
+        }
+
+        /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
+        }
+
+        /**
+         * @return nlsAccessProfile
+         */
+        public TranscriberConfigNlsAccessProfile getNlsAccessProfile() {
+            return this.nlsAccessProfile;
         }
 
         /**
@@ -1022,17 +1214,85 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.nlsEngine;
         }
 
+        /**
+         * @return speechNoiseThreshold
+         */
+        public Integer getSpeechNoiseThreshold() {
+            return this.speechNoiseThreshold;
+        }
+
+        /**
+         * @return vocabularyId
+         */
+        public String getVocabularyId() {
+            return this.vocabularyId;
+        }
+
         public static final class Builder {
+            private java.util.List<CorrectionRules> correctionRules; 
+            private String customizationId; 
+            private Integer endSilenceTimeout; 
+            private String model; 
+            private TranscriberConfigNlsAccessProfile nlsAccessProfile; 
             private String nlsAccessType; 
             private String nlsEngine; 
+            private Integer speechNoiseThreshold; 
+            private String vocabularyId; 
 
             private Builder() {
             } 
 
             private Builder(TranscriberConfig model) {
+                this.correctionRules = model.correctionRules;
+                this.customizationId = model.customizationId;
+                this.endSilenceTimeout = model.endSilenceTimeout;
+                this.model = model.model;
+                this.nlsAccessProfile = model.nlsAccessProfile;
                 this.nlsAccessType = model.nlsAccessType;
                 this.nlsEngine = model.nlsEngine;
+                this.speechNoiseThreshold = model.speechNoiseThreshold;
+                this.vocabularyId = model.vocabularyId;
             } 
+
+            /**
+             * CorrectionRules.
+             */
+            public Builder correctionRules(java.util.List<CorrectionRules> correctionRules) {
+                this.correctionRules = correctionRules;
+                return this;
+            }
+
+            /**
+             * CustomizationId.
+             */
+            public Builder customizationId(String customizationId) {
+                this.customizationId = customizationId;
+                return this;
+            }
+
+            /**
+             * EndSilenceTimeout.
+             */
+            public Builder endSilenceTimeout(Integer endSilenceTimeout) {
+                this.endSilenceTimeout = endSilenceTimeout;
+                return this;
+            }
+
+            /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
+             * NlsAccessProfile.
+             */
+            public Builder nlsAccessProfile(TranscriberConfigNlsAccessProfile nlsAccessProfile) {
+                this.nlsAccessProfile = nlsAccessProfile;
+                return this;
+            }
 
             /**
              * NlsAccessType.
@@ -1047,6 +1307,22 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
+                return this;
+            }
+
+            /**
+             * SpeechNoiseThreshold.
+             */
+            public Builder speechNoiseThreshold(Integer speechNoiseThreshold) {
+                this.speechNoiseThreshold = speechNoiseThreshold;
+                return this;
+            }
+
+            /**
+             * VocabularyId.
+             */
+            public Builder vocabularyId(String vocabularyId) {
+                this.vocabularyId = vocabularyId;
                 return this;
             }
 
@@ -2053,16 +2329,173 @@ public class GetApplicationResponseBody extends TeaModel {
      *
      * <p>GetApplicationResponseBody</p>
      */
+    public static class TranscriberConfigCorrectionRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Pattern")
+        private String pattern;
+
+        @com.aliyun.core.annotation.NameInMap("Replacement")
+        private String replacement;
+
+        private TranscriberConfigCorrectionRules(Builder builder) {
+            this.pattern = builder.pattern;
+            this.replacement = builder.replacement;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TranscriberConfigCorrectionRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pattern
+         */
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        /**
+         * @return replacement
+         */
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+        public static final class Builder {
+            private String pattern; 
+            private String replacement; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscriberConfigCorrectionRules model) {
+                this.pattern = model.pattern;
+                this.replacement = model.replacement;
+            } 
+
+            /**
+             * Pattern.
+             */
+            public Builder pattern(String pattern) {
+                this.pattern = pattern;
+                return this;
+            }
+
+            /**
+             * Replacement.
+             */
+            public Builder replacement(String replacement) {
+                this.replacement = replacement;
+                return this;
+            }
+
+            public TranscriberConfigCorrectionRules build() {
+                return new TranscriberConfigCorrectionRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class PublishedVersionTranscriberConfigNlsAccessProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessProfileId")
+        private String accessProfileId;
+
+        private PublishedVersionTranscriberConfigNlsAccessProfile(Builder builder) {
+            this.accessProfileId = builder.accessProfileId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PublishedVersionTranscriberConfigNlsAccessProfile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessProfileId
+         */
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+        public static final class Builder {
+            private String accessProfileId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublishedVersionTranscriberConfigNlsAccessProfile model) {
+                this.accessProfileId = model.accessProfileId;
+            } 
+
+            /**
+             * AccessProfileId.
+             */
+            public Builder accessProfileId(String accessProfileId) {
+                this.accessProfileId = accessProfileId;
+                return this;
+            }
+
+            public PublishedVersionTranscriberConfigNlsAccessProfile build() {
+                return new PublishedVersionTranscriberConfigNlsAccessProfile(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class PublishedVersionTranscriberConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CorrectionRules")
+        private java.util.List<TranscriberConfigCorrectionRules> correctionRules;
+
+        @com.aliyun.core.annotation.NameInMap("CustomizationId")
+        private String customizationId;
+
+        @com.aliyun.core.annotation.NameInMap("EndSilenceTimeout")
+        private Integer endSilenceTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
+
+        @com.aliyun.core.annotation.NameInMap("NlsAccessProfile")
+        private PublishedVersionTranscriberConfigNlsAccessProfile nlsAccessProfile;
+
         @com.aliyun.core.annotation.NameInMap("NlsAccessType")
         private String nlsAccessType;
 
         @com.aliyun.core.annotation.NameInMap("NlsEngine")
         private String nlsEngine;
 
+        @com.aliyun.core.annotation.NameInMap("SpeechNoiseThreshold")
+        private Integer speechNoiseThreshold;
+
+        @com.aliyun.core.annotation.NameInMap("VocabularyId")
+        private String vocabularyId;
+
         private PublishedVersionTranscriberConfig(Builder builder) {
+            this.correctionRules = builder.correctionRules;
+            this.customizationId = builder.customizationId;
+            this.endSilenceTimeout = builder.endSilenceTimeout;
+            this.model = builder.model;
+            this.nlsAccessProfile = builder.nlsAccessProfile;
             this.nlsAccessType = builder.nlsAccessType;
             this.nlsEngine = builder.nlsEngine;
+            this.speechNoiseThreshold = builder.speechNoiseThreshold;
+            this.vocabularyId = builder.vocabularyId;
         }
 
         public static Builder builder() {
@@ -2071,6 +2504,41 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static PublishedVersionTranscriberConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return correctionRules
+         */
+        public java.util.List<TranscriberConfigCorrectionRules> getCorrectionRules() {
+            return this.correctionRules;
+        }
+
+        /**
+         * @return customizationId
+         */
+        public String getCustomizationId() {
+            return this.customizationId;
+        }
+
+        /**
+         * @return endSilenceTimeout
+         */
+        public Integer getEndSilenceTimeout() {
+            return this.endSilenceTimeout;
+        }
+
+        /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
+        }
+
+        /**
+         * @return nlsAccessProfile
+         */
+        public PublishedVersionTranscriberConfigNlsAccessProfile getNlsAccessProfile() {
+            return this.nlsAccessProfile;
         }
 
         /**
@@ -2087,17 +2555,85 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.nlsEngine;
         }
 
+        /**
+         * @return speechNoiseThreshold
+         */
+        public Integer getSpeechNoiseThreshold() {
+            return this.speechNoiseThreshold;
+        }
+
+        /**
+         * @return vocabularyId
+         */
+        public String getVocabularyId() {
+            return this.vocabularyId;
+        }
+
         public static final class Builder {
+            private java.util.List<TranscriberConfigCorrectionRules> correctionRules; 
+            private String customizationId; 
+            private Integer endSilenceTimeout; 
+            private String model; 
+            private PublishedVersionTranscriberConfigNlsAccessProfile nlsAccessProfile; 
             private String nlsAccessType; 
             private String nlsEngine; 
+            private Integer speechNoiseThreshold; 
+            private String vocabularyId; 
 
             private Builder() {
             } 
 
             private Builder(PublishedVersionTranscriberConfig model) {
+                this.correctionRules = model.correctionRules;
+                this.customizationId = model.customizationId;
+                this.endSilenceTimeout = model.endSilenceTimeout;
+                this.model = model.model;
+                this.nlsAccessProfile = model.nlsAccessProfile;
                 this.nlsAccessType = model.nlsAccessType;
                 this.nlsEngine = model.nlsEngine;
+                this.speechNoiseThreshold = model.speechNoiseThreshold;
+                this.vocabularyId = model.vocabularyId;
             } 
+
+            /**
+             * CorrectionRules.
+             */
+            public Builder correctionRules(java.util.List<TranscriberConfigCorrectionRules> correctionRules) {
+                this.correctionRules = correctionRules;
+                return this;
+            }
+
+            /**
+             * CustomizationId.
+             */
+            public Builder customizationId(String customizationId) {
+                this.customizationId = customizationId;
+                return this;
+            }
+
+            /**
+             * EndSilenceTimeout.
+             */
+            public Builder endSilenceTimeout(Integer endSilenceTimeout) {
+                this.endSilenceTimeout = endSilenceTimeout;
+                return this;
+            }
+
+            /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
+             * NlsAccessProfile.
+             */
+            public Builder nlsAccessProfile(PublishedVersionTranscriberConfigNlsAccessProfile nlsAccessProfile) {
+                this.nlsAccessProfile = nlsAccessProfile;
+                return this;
+            }
 
             /**
              * NlsAccessType.
@@ -2112,6 +2648,22 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
+                return this;
+            }
+
+            /**
+             * SpeechNoiseThreshold.
+             */
+            public Builder speechNoiseThreshold(Integer speechNoiseThreshold) {
+                this.speechNoiseThreshold = speechNoiseThreshold;
+                return this;
+            }
+
+            /**
+             * VocabularyId.
+             */
+            public Builder vocabularyId(String vocabularyId) {
+                this.vocabularyId = vocabularyId;
                 return this;
             }
 
