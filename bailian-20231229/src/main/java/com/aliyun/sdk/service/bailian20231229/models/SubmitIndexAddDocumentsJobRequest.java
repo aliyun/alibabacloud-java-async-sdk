@@ -43,6 +43,10 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
     private Boolean enableHeaders;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Extra")
+    private Extra extra;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IndexId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String indexId;
@@ -68,6 +72,7 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         this.chunkSize = builder.chunkSize;
         this.documentIds = builder.documentIds;
         this.enableHeaders = builder.enableHeaders;
+        this.extra = builder.extra;
         this.indexId = builder.indexId;
         this.overlapSize = builder.overlapSize;
         this.separator = builder.separator;
@@ -130,6 +135,13 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
     }
 
     /**
+     * @return extra
+     */
+    public Extra getExtra() {
+        return this.extra;
+    }
+
+    /**
      * @return indexId
      */
     public String getIndexId() {
@@ -164,6 +176,7 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         private Integer chunkSize; 
         private java.util.List<String> documentIds; 
         private Boolean enableHeaders; 
+        private Extra extra; 
         private String indexId; 
         private Integer overlapSize; 
         private String separator; 
@@ -181,6 +194,7 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
             this.chunkSize = request.chunkSize;
             this.documentIds = request.documentIds;
             this.enableHeaders = request.enableHeaders;
+            this.extra = request.extra;
             this.indexId = request.indexId;
             this.overlapSize = request.overlapSize;
             this.separator = request.separator;
@@ -248,6 +262,16 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         }
 
         /**
+         * Extra.
+         */
+        public Builder extra(Extra extra) {
+            String extraShrink = shrink(extra, "Extra", "json");
+            this.putQueryParameter("Extra", extraShrink);
+            this.extra = extra;
+            return this;
+        }
+
+        /**
          * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
@@ -305,4 +329,58 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitIndexAddDocumentsJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitIndexAddDocumentsJobRequest</p>
+     */
+    public static class Extra extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("uniqueId")
+        private String uniqueId;
+
+        private Extra(Builder builder) {
+            this.uniqueId = builder.uniqueId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Extra create() {
+            return builder().build();
+        }
+
+        /**
+         * @return uniqueId
+         */
+        public String getUniqueId() {
+            return this.uniqueId;
+        }
+
+        public static final class Builder {
+            private String uniqueId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Extra model) {
+                this.uniqueId = model.uniqueId;
+            } 
+
+            /**
+             * uniqueId.
+             */
+            public Builder uniqueId(String uniqueId) {
+                this.uniqueId = uniqueId;
+                return this;
+            }
+
+            public Extra build() {
+                return new Extra(this);
+            } 
+
+        } 
+
+    }
 }

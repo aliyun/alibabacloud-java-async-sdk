@@ -35,6 +35,10 @@ public class RetrieveRequest extends Request {
     private Boolean enableRewrite;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Extra")
+    private Extra extra;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Images")
     private java.util.List<String> images;
 
@@ -85,6 +89,7 @@ public class RetrieveRequest extends Request {
         this.denseSimilarityTopK = builder.denseSimilarityTopK;
         this.enableReranking = builder.enableReranking;
         this.enableRewrite = builder.enableRewrite;
+        this.extra = builder.extra;
         this.images = builder.images;
         this.indexId = builder.indexId;
         this.query = builder.query;
@@ -137,6 +142,13 @@ public class RetrieveRequest extends Request {
      */
     public Boolean getEnableRewrite() {
         return this.enableRewrite;
+    }
+
+    /**
+     * @return extra
+     */
+    public Extra getExtra() {
+        return this.extra;
     }
 
     /**
@@ -221,6 +233,7 @@ public class RetrieveRequest extends Request {
         private Integer denseSimilarityTopK; 
         private Boolean enableReranking; 
         private Boolean enableRewrite; 
+        private Extra extra; 
         private java.util.List<String> images; 
         private String indexId; 
         private String query; 
@@ -243,6 +256,7 @@ public class RetrieveRequest extends Request {
             this.denseSimilarityTopK = request.denseSimilarityTopK;
             this.enableReranking = request.enableReranking;
             this.enableRewrite = request.enableRewrite;
+            this.extra = request.extra;
             this.images = request.images;
             this.indexId = request.indexId;
             this.query = request.query;
@@ -313,6 +327,16 @@ public class RetrieveRequest extends Request {
         public Builder enableRewrite(Boolean enableRewrite) {
             this.putQueryParameter("EnableRewrite", enableRewrite);
             this.enableRewrite = enableRewrite;
+            return this;
+        }
+
+        /**
+         * Extra.
+         */
+        public Builder extra(Extra extra) {
+            String extraShrink = shrink(extra, "Extra", "json");
+            this.putQueryParameter("Extra", extraShrink);
+            this.extra = extra;
             return this;
         }
 
@@ -450,6 +474,61 @@ public class RetrieveRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RetrieveRequest} extends {@link TeaModel}
+     *
+     * <p>RetrieveRequest</p>
+     */
+    public static class Extra extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("uniqueId")
+        @com.aliyun.core.annotation.Validation(maxLength = 512)
+        private String uniqueId;
+
+        private Extra(Builder builder) {
+            this.uniqueId = builder.uniqueId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Extra create() {
+            return builder().build();
+        }
+
+        /**
+         * @return uniqueId
+         */
+        public String getUniqueId() {
+            return this.uniqueId;
+        }
+
+        public static final class Builder {
+            private String uniqueId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Extra model) {
+                this.uniqueId = model.uniqueId;
+            } 
+
+            /**
+             * uniqueId.
+             */
+            public Builder uniqueId(String uniqueId) {
+                this.uniqueId = uniqueId;
+                return this;
+            }
+
+            public Extra build() {
+                return new Extra(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link RetrieveRequest} extends {@link TeaModel}
