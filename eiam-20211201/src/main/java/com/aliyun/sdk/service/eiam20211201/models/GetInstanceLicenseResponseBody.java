@@ -107,8 +107,14 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("M2mApplicationQuota")
         private Long m2mApplicationQuota;
 
+        @com.aliyun.core.annotation.NameInMap("MimApplicationLicenseStatus")
+        private String mimApplicationLicenseStatus;
+
         @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointQuota")
         private Long networkAccessEndpointQuota;
+
+        @com.aliyun.core.annotation.NameInMap("PrepaidActiveUserNumber")
+        private Long prepaidActiveUserNumber;
 
         @com.aliyun.core.annotation.NameInMap("UserQuota")
         private Long userQuota;
@@ -117,7 +123,9 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             this.conditionalAccessPolicyLicenseStatus = builder.conditionalAccessPolicyLicenseStatus;
             this.m2mApplicationLicenseStatus = builder.m2mApplicationLicenseStatus;
             this.m2mApplicationQuota = builder.m2mApplicationQuota;
+            this.mimApplicationLicenseStatus = builder.mimApplicationLicenseStatus;
             this.networkAccessEndpointQuota = builder.networkAccessEndpointQuota;
+            this.prepaidActiveUserNumber = builder.prepaidActiveUserNumber;
             this.userQuota = builder.userQuota;
         }
 
@@ -151,10 +159,24 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         }
 
         /**
+         * @return mimApplicationLicenseStatus
+         */
+        public String getMimApplicationLicenseStatus() {
+            return this.mimApplicationLicenseStatus;
+        }
+
+        /**
          * @return networkAccessEndpointQuota
          */
         public Long getNetworkAccessEndpointQuota() {
             return this.networkAccessEndpointQuota;
+        }
+
+        /**
+         * @return prepaidActiveUserNumber
+         */
+        public Long getPrepaidActiveUserNumber() {
+            return this.prepaidActiveUserNumber;
         }
 
         /**
@@ -168,7 +190,9 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             private String conditionalAccessPolicyLicenseStatus; 
             private String m2mApplicationLicenseStatus; 
             private Long m2mApplicationQuota; 
+            private String mimApplicationLicenseStatus; 
             private Long networkAccessEndpointQuota; 
+            private Long prepaidActiveUserNumber; 
             private Long userQuota; 
 
             private Builder() {
@@ -178,7 +202,9 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
                 this.conditionalAccessPolicyLicenseStatus = model.conditionalAccessPolicyLicenseStatus;
                 this.m2mApplicationLicenseStatus = model.m2mApplicationLicenseStatus;
                 this.m2mApplicationQuota = model.m2mApplicationQuota;
+                this.mimApplicationLicenseStatus = model.mimApplicationLicenseStatus;
                 this.networkAccessEndpointQuota = model.networkAccessEndpointQuota;
+                this.prepaidActiveUserNumber = model.prepaidActiveUserNumber;
                 this.userQuota = model.userQuota;
             } 
 
@@ -207,10 +233,26 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             }
 
             /**
+             * MimApplicationLicenseStatus.
+             */
+            public Builder mimApplicationLicenseStatus(String mimApplicationLicenseStatus) {
+                this.mimApplicationLicenseStatus = mimApplicationLicenseStatus;
+                return this;
+            }
+
+            /**
              * NetworkAccessEndpointQuota.
              */
             public Builder networkAccessEndpointQuota(Long networkAccessEndpointQuota) {
                 this.networkAccessEndpointQuota = networkAccessEndpointQuota;
+                return this;
+            }
+
+            /**
+             * PrepaidActiveUserNumber.
+             */
+            public Builder prepaidActiveUserNumber(Long prepaidActiveUserNumber) {
+                this.prepaidActiveUserNumber = prepaidActiveUserNumber;
                 return this;
             }
 
