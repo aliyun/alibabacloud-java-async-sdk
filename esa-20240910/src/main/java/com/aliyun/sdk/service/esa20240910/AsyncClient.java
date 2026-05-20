@@ -960,6 +960,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSiteTopDataResponse> describeSiteTopData(DescribeSiteTopDataRequest request);
 
     /**
+     * @param request the request parameters of DescribeTraceDiagnoseReport  DescribeTraceDiagnoseReportRequest
+     * @return DescribeTraceDiagnoseReportResponse
+     */
+    CompletableFuture<DescribeTraceDiagnoseReportResponse> describeTraceDiagnoseReport(DescribeTraceDiagnoseReportRequest request);
+
+    /**
      * <b>description</b> :
      * <p>If you do not specify the StartTime or EndTime parameter, this operation returns the data collected within the last 24 hours. If you specify both parameters, this operation returns the data collected within the specified time range.</p>
      * 
@@ -991,6 +997,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExportRecordsResponse
      */
     CompletableFuture<ExportRecordsResponse> exportRecords(ExportRecordsRequest request);
+
+    /**
+     * @param request the request parameters of GenerateTraceDiagnose  GenerateTraceDiagnoseRequest
+     * @return GenerateTraceDiagnoseResponse
+     */
+    CompletableFuture<GenerateTraceDiagnoseResponse> generateTraceDiagnose(GenerateTraceDiagnoseRequest request);
 
     /**
      * @param request the request parameters of GetApiSchemaUsage  GetApiSchemaUsageRequest
@@ -1923,6 +1935,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTagResourcesResponse
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListTraceTasks  ListTraceTasksRequest
+     * @return ListTraceTasksResponse
+     */
+    CompletableFuture<ListTraceTasksResponse> listTraceTasks(ListTraceTasksRequest request);
 
     /**
      * @param request the request parameters of ListTransportLayerApplications  ListTransportLayerApplicationsRequest
