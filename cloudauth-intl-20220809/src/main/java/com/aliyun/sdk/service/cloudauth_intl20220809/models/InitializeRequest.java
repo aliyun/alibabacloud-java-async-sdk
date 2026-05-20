@@ -158,6 +158,10 @@ public class InitializeRequest extends Request {
     private String ocr;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OcrValueStandard")
+    private String ocrValueStandard;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Pages")
     private String pages;
 
@@ -274,6 +278,7 @@ public class InitializeRequest extends Request {
         this.mobile = builder.mobile;
         this.model = builder.model;
         this.ocr = builder.ocr;
+        this.ocrValueStandard = builder.ocrValueStandard;
         this.pages = builder.pages;
         this.procedurePriority = builder.procedurePriority;
         this.productCode = builder.productCode;
@@ -555,6 +560,13 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return ocrValueStandard
+     */
+    public String getOcrValueStandard() {
+        return this.ocrValueStandard;
+    }
+
+    /**
      * @return pages
      */
     public String getPages() {
@@ -730,6 +742,7 @@ public class InitializeRequest extends Request {
         private String mobile; 
         private String model; 
         private String ocr; 
+        private String ocrValueStandard; 
         private String pages; 
         private String procedurePriority; 
         private String productCode; 
@@ -792,6 +805,7 @@ public class InitializeRequest extends Request {
             this.mobile = request.mobile;
             this.model = request.model;
             this.ocr = request.ocr;
+            this.ocrValueStandard = request.ocrValueStandard;
             this.pages = request.pages;
             this.procedurePriority = request.procedurePriority;
             this.productCode = request.productCode;
@@ -1308,6 +1322,15 @@ public class InitializeRequest extends Request {
         public Builder ocr(String ocr) {
             this.putQueryParameter("Ocr", ocr);
             this.ocr = ocr;
+            return this;
+        }
+
+        /**
+         * OcrValueStandard.
+         */
+        public Builder ocrValueStandard(String ocrValueStandard) {
+            this.putQueryParameter("OcrValueStandard", ocrValueStandard);
+            this.ocrValueStandard = ocrValueStandard;
             return this;
         }
 
