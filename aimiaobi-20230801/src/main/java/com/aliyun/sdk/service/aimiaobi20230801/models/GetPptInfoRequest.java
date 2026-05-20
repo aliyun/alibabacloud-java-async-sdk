@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetPptInfoRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalUserId")
+    private String externalUserId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
@@ -27,6 +31,7 @@ public class GetPptInfoRequest extends Request {
 
     private GetPptInfoRequest(Builder builder) {
         super(builder);
+        this.externalUserId = builder.externalUserId;
         this.taskId = builder.taskId;
         this.workspaceId = builder.workspaceId;
     }
@@ -45,6 +50,13 @@ public class GetPptInfoRequest extends Request {
     }
 
     /**
+     * @return externalUserId
+     */
+    public String getExternalUserId() {
+        return this.externalUserId;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -59,6 +71,7 @@ public class GetPptInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetPptInfoRequest, Builder> {
+        private String externalUserId; 
         private String taskId; 
         private String workspaceId; 
 
@@ -68,9 +81,19 @@ public class GetPptInfoRequest extends Request {
 
         private Builder(GetPptInfoRequest request) {
             super(request);
+            this.externalUserId = request.externalUserId;
             this.taskId = request.taskId;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * ExternalUserId.
+         */
+        public Builder externalUserId(String externalUserId) {
+            this.putBodyParameter("ExternalUserId", externalUserId);
+            this.externalUserId = externalUserId;
+            return this;
+        }
 
         /**
          * TaskId.

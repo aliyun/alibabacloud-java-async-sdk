@@ -22,12 +22,17 @@ public class GetPptArtifactExportResultRequest extends Request {
     private String exportTaskId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalUserId")
+    private String externalUserId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private GetPptArtifactExportResultRequest(Builder builder) {
         super(builder);
         this.exportTaskId = builder.exportTaskId;
+        this.externalUserId = builder.externalUserId;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -52,6 +57,13 @@ public class GetPptArtifactExportResultRequest extends Request {
     }
 
     /**
+     * @return externalUserId
+     */
+    public String getExternalUserId() {
+        return this.externalUserId;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -60,6 +72,7 @@ public class GetPptArtifactExportResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetPptArtifactExportResultRequest, Builder> {
         private String exportTaskId; 
+        private String externalUserId; 
         private String workspaceId; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class GetPptArtifactExportResultRequest extends Request {
         private Builder(GetPptArtifactExportResultRequest request) {
             super(request);
             this.exportTaskId = request.exportTaskId;
+            this.externalUserId = request.externalUserId;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -78,6 +92,15 @@ public class GetPptArtifactExportResultRequest extends Request {
         public Builder exportTaskId(String exportTaskId) {
             this.putBodyParameter("ExportTaskId", exportTaskId);
             this.exportTaskId = exportTaskId;
+            return this;
+        }
+
+        /**
+         * ExternalUserId.
+         */
+        public Builder externalUserId(String externalUserId) {
+            this.putBodyParameter("ExternalUserId", externalUserId);
+            this.externalUserId = externalUserId;
             return this;
         }
 

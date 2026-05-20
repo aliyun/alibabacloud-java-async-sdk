@@ -26,6 +26,10 @@ public class ExportPptArtifactRequest extends Request {
     private String exportFileType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalUserId")
+    private String externalUserId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PptArtifactId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long pptArtifactId;
@@ -42,6 +46,7 @@ public class ExportPptArtifactRequest extends Request {
         super(builder);
         this.edit = builder.edit;
         this.exportFileType = builder.exportFileType;
+        this.externalUserId = builder.externalUserId;
         this.pptArtifactId = builder.pptArtifactId;
         this.workspaceId = builder.workspaceId;
         this.zip = builder.zip;
@@ -75,6 +80,13 @@ public class ExportPptArtifactRequest extends Request {
     }
 
     /**
+     * @return externalUserId
+     */
+    public String getExternalUserId() {
+        return this.externalUserId;
+    }
+
+    /**
      * @return pptArtifactId
      */
     public Long getPptArtifactId() {
@@ -98,6 +110,7 @@ public class ExportPptArtifactRequest extends Request {
     public static final class Builder extends Request.Builder<ExportPptArtifactRequest, Builder> {
         private Boolean edit; 
         private String exportFileType; 
+        private String externalUserId; 
         private Long pptArtifactId; 
         private String workspaceId; 
         private Boolean zip; 
@@ -110,6 +123,7 @@ public class ExportPptArtifactRequest extends Request {
             super(request);
             this.edit = request.edit;
             this.exportFileType = request.exportFileType;
+            this.externalUserId = request.externalUserId;
             this.pptArtifactId = request.pptArtifactId;
             this.workspaceId = request.workspaceId;
             this.zip = request.zip;
@@ -130,6 +144,15 @@ public class ExportPptArtifactRequest extends Request {
         public Builder exportFileType(String exportFileType) {
             this.putBodyParameter("ExportFileType", exportFileType);
             this.exportFileType = exportFileType;
+            return this;
+        }
+
+        /**
+         * ExternalUserId.
+         */
+        public Builder externalUserId(String externalUserId) {
+            this.putBodyParameter("ExternalUserId", externalUserId);
+            this.externalUserId = externalUserId;
             return this;
         }
 
