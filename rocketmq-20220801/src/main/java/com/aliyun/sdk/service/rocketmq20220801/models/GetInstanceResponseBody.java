@@ -1930,6 +1930,12 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aclInfo")
         private AclInfo aclInfo;
 
+        @com.aliyun.core.annotation.NameInMap("autoRenew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("autoRenewPeriod")
+        private Integer autoRenewPeriod;
+
         @com.aliyun.core.annotation.NameInMap("bid")
         private String bid;
 
@@ -2012,6 +2018,8 @@ public class GetInstanceResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.accountInfo = builder.accountInfo;
             this.aclInfo = builder.aclInfo;
+            this.autoRenew = builder.autoRenew;
+            this.autoRenewPeriod = builder.autoRenewPeriod;
             this.bid = builder.bid;
             this.commodityCode = builder.commodityCode;
             this.createTime = builder.createTime;
@@ -2060,6 +2068,20 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public AclInfo getAclInfo() {
             return this.aclInfo;
+        }
+
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        /**
+         * @return autoRenewPeriod
+         */
+        public Integer getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
         }
 
         /**
@@ -2247,6 +2269,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private AccountInfo accountInfo; 
             private AclInfo aclInfo; 
+            private Boolean autoRenew; 
+            private Integer autoRenewPeriod; 
             private String bid; 
             private String commodityCode; 
             private String createTime; 
@@ -2280,6 +2304,8 @@ public class GetInstanceResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.accountInfo = model.accountInfo;
                 this.aclInfo = model.aclInfo;
+                this.autoRenew = model.autoRenew;
+                this.autoRenewPeriod = model.autoRenewPeriod;
                 this.bid = model.bid;
                 this.commodityCode = model.commodityCode;
                 this.createTime = model.createTime;
@@ -2321,6 +2347,22 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder aclInfo(AclInfo aclInfo) {
                 this.aclInfo = aclInfo;
+                return this;
+            }
+
+            /**
+             * autoRenew.
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * autoRenewPeriod.
+             */
+            public Builder autoRenewPeriod(Integer autoRenewPeriod) {
+                this.autoRenewPeriod = autoRenewPeriod;
                 return this;
             }
 

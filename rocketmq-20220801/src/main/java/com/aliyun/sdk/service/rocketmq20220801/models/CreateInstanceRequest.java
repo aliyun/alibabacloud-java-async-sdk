@@ -31,6 +31,7 @@ public class CreateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("commodityCode")
+    @Deprecated
     private String commodityCode;
 
     @com.aliyun.core.annotation.Body
