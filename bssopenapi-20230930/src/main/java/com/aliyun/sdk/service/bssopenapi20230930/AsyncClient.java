@@ -92,6 +92,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateReportDefinitionResponse> createReportDefinition(CreateReportDefinitionRequest request);
 
     /**
+     * @param request the request parameters of DeleteBudget  DeleteBudgetRequest
+     * @return DeleteBudgetResponse
+     */
+    CompletableFuture<DeleteBudgetResponse> deleteBudget(DeleteBudgetRequest request);
+
+    /**
      * @param request the request parameters of DeleteCostCenter  DeleteCostCenterRequest
      * @return DeleteCostCenterResponse
      */
