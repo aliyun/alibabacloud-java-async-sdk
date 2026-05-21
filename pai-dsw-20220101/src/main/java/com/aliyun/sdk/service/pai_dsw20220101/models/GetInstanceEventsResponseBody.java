@@ -38,6 +38,9 @@ public class GetInstanceEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
     private GetInstanceEventsResponseBody(Builder builder) {
         this.code = builder.code;
         this.events = builder.events;
@@ -46,6 +49,7 @@ public class GetInstanceEventsResponseBody extends TeaModel {
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -109,6 +113,13 @@ public class GetInstanceEventsResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private String code; 
         private java.util.List<String> events; 
@@ -117,6 +128,7 @@ public class GetInstanceEventsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+        private Integer totalCount; 
 
         private Builder() {
         } 
@@ -129,6 +141,7 @@ public class GetInstanceEventsResponseBody extends TeaModel {
             this.message = model.message;
             this.requestId = model.requestId;
             this.success = model.success;
+            this.totalCount = model.totalCount;
         } 
 
         /**
@@ -215,6 +228,14 @@ public class GetInstanceEventsResponseBody extends TeaModel {
          */
         public Builder success(Boolean success) {
             this.success = success;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 

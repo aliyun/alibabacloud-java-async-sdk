@@ -35,6 +35,14 @@ public class GetInstanceEventsRequest extends Request {
     private Integer maxEventsNum;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Offset")
+    private Integer offset;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reverse")
+    private Boolean reverse;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
@@ -48,6 +56,8 @@ public class GetInstanceEventsRequest extends Request {
         this.endTime = builder.endTime;
         this.eventLevel = builder.eventLevel;
         this.maxEventsNum = builder.maxEventsNum;
+        this.offset = builder.offset;
+        this.reverse = builder.reverse;
         this.startTime = builder.startTime;
         this.token = builder.token;
     }
@@ -94,6 +104,20 @@ public class GetInstanceEventsRequest extends Request {
     }
 
     /**
+     * @return offset
+     */
+    public Integer getOffset() {
+        return this.offset;
+    }
+
+    /**
+     * @return reverse
+     */
+    public Boolean getReverse() {
+        return this.reverse;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -112,6 +136,8 @@ public class GetInstanceEventsRequest extends Request {
         private String endTime; 
         private String eventLevel; 
         private Integer maxEventsNum; 
+        private Integer offset; 
+        private Boolean reverse; 
         private String startTime; 
         private String token; 
 
@@ -125,6 +151,8 @@ public class GetInstanceEventsRequest extends Request {
             this.endTime = request.endTime;
             this.eventLevel = request.eventLevel;
             this.maxEventsNum = request.maxEventsNum;
+            this.offset = request.offset;
+            this.reverse = request.reverse;
             this.startTime = request.startTime;
             this.token = request.token;
         } 
@@ -172,6 +200,24 @@ public class GetInstanceEventsRequest extends Request {
         public Builder maxEventsNum(Integer maxEventsNum) {
             this.putQueryParameter("MaxEventsNum", maxEventsNum);
             this.maxEventsNum = maxEventsNum;
+            return this;
+        }
+
+        /**
+         * Offset.
+         */
+        public Builder offset(Integer offset) {
+            this.putQueryParameter("Offset", offset);
+            this.offset = offset;
+            return this;
+        }
+
+        /**
+         * Reverse.
+         */
+        public Builder reverse(Boolean reverse) {
+            this.putQueryParameter("Reverse", reverse);
+            this.reverse = reverse;
             return this;
         }
 
