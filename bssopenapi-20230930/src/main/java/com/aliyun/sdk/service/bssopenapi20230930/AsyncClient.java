@@ -308,6 +308,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryCostCenterShareRuleResponse> queryCostCenterShareRule(QueryCostCenterShareRuleRequest request);
 
     /**
+     * @param request the request parameters of QueryMonthlySlaList  QueryMonthlySlaListRequest
+     * @return QueryMonthlySlaListResponse
+     */
+    CompletableFuture<QueryMonthlySlaListResponse> queryMonthlySlaList(QueryMonthlySlaListRequest request);
+
+    /**
      * @param request the request parameters of SaveCostCenterShareRule  SaveCostCenterShareRuleRequest
      * @return SaveCostCenterShareRuleResponse
      */
@@ -330,6 +336,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetSavingPlanUserDeductRuleResponse
      */
     CompletableFuture<SetSavingPlanUserDeductRuleResponse> setSavingPlanUserDeductRule(SetSavingPlanUserDeductRuleRequest request);
+
+    /**
+     * @param request the request parameters of SubmitSlaCouponApply  SubmitSlaCouponApplyRequest
+     * @return SubmitSlaCouponApplyResponse
+     */
+    CompletableFuture<SubmitSlaCouponApplyResponse> submitSlaCouponApply(SubmitSlaCouponApplyRequest request);
 
     /**
      * @param request the request parameters of UpdateBudget  UpdateBudgetRequest

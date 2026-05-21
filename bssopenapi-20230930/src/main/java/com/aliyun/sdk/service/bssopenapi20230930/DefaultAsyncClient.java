@@ -963,6 +963,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryMonthlySlaList  QueryMonthlySlaListRequest
+     * @return QueryMonthlySlaListResponse
+     */
+    @Override
+    public CompletableFuture<QueryMonthlySlaListResponse> queryMonthlySlaList(QueryMonthlySlaListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryMonthlySlaList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryMonthlySlaListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryMonthlySlaListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SaveCostCenterShareRule  SaveCostCenterShareRuleRequest
      * @return SaveCostCenterShareRuleResponse
      */
@@ -1029,6 +1047,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetSavingPlanUserDeductRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitSlaCouponApply  SubmitSlaCouponApplyRequest
+     * @return SubmitSlaCouponApplyResponse
+     */
+    @Override
+    public CompletableFuture<SubmitSlaCouponApplyResponse> submitSlaCouponApply(SubmitSlaCouponApplyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitSlaCouponApply").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitSlaCouponApplyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitSlaCouponApplyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
