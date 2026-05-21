@@ -121,6 +121,81 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
      *
      * <p>ListMultiAccountResourceGroupsResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMultiAccountResourceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMultiAccountResourceGroupsResponseBody</p>
+     */
     public static class ResourceGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -140,6 +215,9 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         private ResourceGroups(Builder builder) {
             this.accountId = builder.accountId;
             this.createDate = builder.createDate;
@@ -147,6 +225,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             this.id = builder.id;
             this.name = builder.name;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -199,6 +278,13 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String accountId; 
             private String createDate; 
@@ -206,6 +292,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String status; 
+            private java.util.List<Tags> tags; 
 
             private Builder() {
             } 
@@ -217,6 +304,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
                 this.id = model.id;
                 this.name = model.name;
                 this.status = model.status;
+                this.tags = model.tags;
             } 
 
             /**
@@ -287,6 +375,14 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
