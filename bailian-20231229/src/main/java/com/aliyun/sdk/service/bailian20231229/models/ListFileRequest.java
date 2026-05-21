@@ -32,6 +32,10 @@ public class ListFileRequest extends Request {
     private String categoryId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileIds")
+    private java.util.List<String> fileIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
@@ -48,6 +52,7 @@ public class ListFileRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.regionId = builder.regionId;
         this.categoryId = builder.categoryId;
+        this.fileIds = builder.fileIds;
         this.fileName = builder.fileName;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -88,6 +93,13 @@ public class ListFileRequest extends Request {
     }
 
     /**
+     * @return fileIds
+     */
+    public java.util.List<String> getFileIds() {
+        return this.fileIds;
+    }
+
+    /**
      * @return fileName
      */
     public String getFileName() {
@@ -112,6 +124,7 @@ public class ListFileRequest extends Request {
         private String workspaceId; 
         private String regionId; 
         private String categoryId; 
+        private java.util.List<String> fileIds; 
         private String fileName; 
         private Integer maxResults; 
         private String nextToken; 
@@ -125,6 +138,7 @@ public class ListFileRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.regionId = request.regionId;
             this.categoryId = request.categoryId;
+            this.fileIds = request.fileIds;
             this.fileName = request.fileName;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -162,6 +176,16 @@ public class ListFileRequest extends Request {
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
             this.categoryId = categoryId;
+            return this;
+        }
+
+        /**
+         * FileIds.
+         */
+        public Builder fileIds(java.util.List<String> fileIds) {
+            String fileIdsShrink = shrink(fileIds, "FileIds", "json");
+            this.putQueryParameter("FileIds", fileIdsShrink);
+            this.fileIds = fileIds;
             return this;
         }
 

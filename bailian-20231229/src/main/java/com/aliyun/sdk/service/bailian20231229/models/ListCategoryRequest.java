@@ -36,6 +36,10 @@ public class ListCategoryRequest extends Request {
     private String categoryType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConnectorId")
+    private String connectorId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer maxResults;
@@ -54,6 +58,7 @@ public class ListCategoryRequest extends Request {
         this.regionId = builder.regionId;
         this.categoryName = builder.categoryName;
         this.categoryType = builder.categoryType;
+        this.connectorId = builder.connectorId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.parentCategoryId = builder.parentCategoryId;
@@ -101,6 +106,13 @@ public class ListCategoryRequest extends Request {
     }
 
     /**
+     * @return connectorId
+     */
+    public String getConnectorId() {
+        return this.connectorId;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -126,6 +138,7 @@ public class ListCategoryRequest extends Request {
         private String regionId; 
         private String categoryName; 
         private String categoryType; 
+        private String connectorId; 
         private Integer maxResults; 
         private String nextToken; 
         private String parentCategoryId; 
@@ -140,6 +153,7 @@ public class ListCategoryRequest extends Request {
             this.regionId = request.regionId;
             this.categoryName = request.categoryName;
             this.categoryType = request.categoryType;
+            this.connectorId = request.connectorId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.parentCategoryId = request.parentCategoryId;
@@ -184,6 +198,15 @@ public class ListCategoryRequest extends Request {
         public Builder categoryType(String categoryType) {
             this.putBodyParameter("CategoryType", categoryType);
             this.categoryType = categoryType;
+            return this;
+        }
+
+        /**
+         * ConnectorId.
+         */
+        public Builder connectorId(String connectorId) {
+            this.putBodyParameter("ConnectorId", connectorId);
+            this.connectorId = connectorId;
             return this;
         }
 

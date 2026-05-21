@@ -35,6 +35,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddCategoryResponse> addCategory(AddCategoryRequest request);
 
     /**
+     * @param request the request parameters of AddConnector  AddConnectorRequest
+     * @return AddConnectorResponse
+     */
+    CompletableFuture<AddConnectorResponse> addConnector(AddConnectorRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Before you call this operation, make sure that you have obtained the lease and uploaded the document to the temporary storage space by using the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/upload-files-by-calling-api">Upload files by calling API</a>.</p>
      * <blockquote>
@@ -259,6 +265,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAvailableParserTypesResponse
      */
     CompletableFuture<GetAvailableParserTypesResponse> getAvailableParserTypes(GetAvailableParserTypesRequest request);
+
+    /**
+     * @param request the request parameters of GetConnector  GetConnectorRequest
+     * @return GetConnectorResponse
+     */
+    CompletableFuture<GetConnectorResponse> getConnector(GetConnectorRequest request);
 
     /**
      * <b>description</b> :
