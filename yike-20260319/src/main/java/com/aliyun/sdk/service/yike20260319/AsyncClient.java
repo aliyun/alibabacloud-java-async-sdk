@@ -80,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetYikeAIAppJobResponse> getYikeAIAppJob(GetYikeAIAppJobRequest request);
 
     /**
+     * @param request the request parameters of GetYikeAgentJob  GetYikeAgentJobRequest
+     * @return GetYikeAgentJobResponse
+     */
+    CompletableFuture<GetYikeAgentJobResponse> getYikeAgentJob(GetYikeAgentJobRequest request);
+
+    /**
      * @param request the request parameters of GetYikeAssetMediaInfo  GetYikeAssetMediaInfoRequest
      * @return GetYikeAssetMediaInfoResponse
      */
@@ -174,6 +180,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitYikeAIAppJobResponse
      */
     CompletableFuture<SubmitYikeAIAppJobResponse> submitYikeAIAppJob(SubmitYikeAIAppJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitYikeAvatarNarratorJob  SubmitYikeAvatarNarratorJobRequest
+     * @return SubmitYikeAvatarNarratorJobResponse
+     */
+    CompletableFuture<SubmitYikeAvatarNarratorJobResponse> submitYikeAvatarNarratorJob(SubmitYikeAvatarNarratorJobRequest request);
 
     /**
      * @param request the request parameters of SubmitYikePromptExpansionVoiceFixJob  SubmitYikePromptExpansionVoiceFixJobRequest
