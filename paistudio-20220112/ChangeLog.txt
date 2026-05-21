@@ -1,6 +1,9 @@
 2026-05-21 Version: 2.0.30
 - Generated java-async 2022-01-12 for PaiStudio.
 
+2026-05-21 Version: 2.0.30
+- Generated java-async 2022-01-12 for PaiStudio.
+
 2026-03-20 Version: 2.0.29
 - Generated java-async 2022-01-12 for PaiStudio.
 
