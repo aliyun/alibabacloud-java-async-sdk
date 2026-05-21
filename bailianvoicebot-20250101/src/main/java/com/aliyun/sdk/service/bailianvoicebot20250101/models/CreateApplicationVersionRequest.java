@@ -48,6 +48,10 @@ public class CreateApplicationVersionRequest extends Request {
     private SynthesizerConfig synthesizerConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ToolConfig")
+    private ToolConfig toolConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TranscriberConfig")
     private TranscriberConfig transcriberConfig;
 
@@ -60,6 +64,7 @@ public class CreateApplicationVersionRequest extends Request {
         this.scriptProfile = builder.scriptProfile;
         this.sourceVersionId = builder.sourceVersionId;
         this.synthesizerConfig = builder.synthesizerConfig;
+        this.toolConfig = builder.toolConfig;
         this.transcriberConfig = builder.transcriberConfig;
     }
 
@@ -126,6 +131,13 @@ public class CreateApplicationVersionRequest extends Request {
     }
 
     /**
+     * @return toolConfig
+     */
+    public ToolConfig getToolConfig() {
+        return this.toolConfig;
+    }
+
+    /**
      * @return transcriberConfig
      */
     public TranscriberConfig getTranscriberConfig() {
@@ -140,6 +152,7 @@ public class CreateApplicationVersionRequest extends Request {
         private ScriptProfile scriptProfile; 
         private String sourceVersionId; 
         private SynthesizerConfig synthesizerConfig; 
+        private ToolConfig toolConfig; 
         private TranscriberConfig transcriberConfig; 
 
         private Builder() {
@@ -155,6 +168,7 @@ public class CreateApplicationVersionRequest extends Request {
             this.scriptProfile = request.scriptProfile;
             this.sourceVersionId = request.sourceVersionId;
             this.synthesizerConfig = request.synthesizerConfig;
+            this.toolConfig = request.toolConfig;
             this.transcriberConfig = request.transcriberConfig;
         } 
 
@@ -228,6 +242,16 @@ public class CreateApplicationVersionRequest extends Request {
             String synthesizerConfigShrink = shrink(synthesizerConfig, "SynthesizerConfig", "json");
             this.putQueryParameter("SynthesizerConfig", synthesizerConfigShrink);
             this.synthesizerConfig = synthesizerConfig;
+            return this;
+        }
+
+        /**
+         * ToolConfig.
+         */
+        public Builder toolConfig(ToolConfig toolConfig) {
+            String toolConfigShrink = shrink(toolConfig, "ToolConfig", "json");
+            this.putQueryParameter("ToolConfig", toolConfigShrink);
+            this.toolConfig = toolConfig;
             return this;
         }
 
@@ -1034,6 +1058,156 @@ public class CreateApplicationVersionRequest extends Request {
 
             public SynthesizerConfig build() {
                 return new SynthesizerConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationVersionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationVersionRequest</p>
+     */
+    public static class McpServers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BaseUrl")
+        private String baseUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("SseEndpoint")
+        private String sseEndpoint;
+
+        private McpServers(Builder builder) {
+            this.baseUrl = builder.baseUrl;
+            this.name = builder.name;
+            this.sseEndpoint = builder.sseEndpoint;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static McpServers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return baseUrl
+         */
+        public String getBaseUrl() {
+            return this.baseUrl;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return sseEndpoint
+         */
+        public String getSseEndpoint() {
+            return this.sseEndpoint;
+        }
+
+        public static final class Builder {
+            private String baseUrl; 
+            private String name; 
+            private String sseEndpoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(McpServers model) {
+                this.baseUrl = model.baseUrl;
+                this.name = model.name;
+                this.sseEndpoint = model.sseEndpoint;
+            } 
+
+            /**
+             * BaseUrl.
+             */
+            public Builder baseUrl(String baseUrl) {
+                this.baseUrl = baseUrl;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * SseEndpoint.
+             */
+            public Builder sseEndpoint(String sseEndpoint) {
+                this.sseEndpoint = sseEndpoint;
+                return this;
+            }
+
+            public McpServers build() {
+                return new McpServers(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationVersionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationVersionRequest</p>
+     */
+    public static class ToolConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("McpServers")
+        private java.util.List<McpServers> mcpServers;
+
+        private ToolConfig(Builder builder) {
+            this.mcpServers = builder.mcpServers;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ToolConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mcpServers
+         */
+        public java.util.List<McpServers> getMcpServers() {
+            return this.mcpServers;
+        }
+
+        public static final class Builder {
+            private java.util.List<McpServers> mcpServers; 
+
+            private Builder() {
+            } 
+
+            private Builder(ToolConfig model) {
+                this.mcpServers = model.mcpServers;
+            } 
+
+            /**
+             * McpServers.
+             */
+            public Builder mcpServers(java.util.List<McpServers> mcpServers) {
+                this.mcpServers = mcpServers;
+                return this;
+            }
+
+            public ToolConfig build() {
+                return new ToolConfig(this);
             } 
 
         } 
