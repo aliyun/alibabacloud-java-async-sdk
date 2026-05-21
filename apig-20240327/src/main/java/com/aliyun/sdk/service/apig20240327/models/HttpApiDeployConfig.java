@@ -32,6 +32,12 @@ public class HttpApiDeployConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("customDomainInfos")
     private java.util.List<CustomDomainInfos> customDomainInfos;
 
+    @com.aliyun.core.annotation.NameInMap("envDomainIds")
+    private java.util.List<String> envDomainIds;
+
+    @com.aliyun.core.annotation.NameInMap("envDomainInfos")
+    private java.util.List<EnvDomainInfos> envDomainInfos;
+
     @com.aliyun.core.annotation.NameInMap("environmentId")
     private String environmentId;
 
@@ -65,6 +71,8 @@ public class HttpApiDeployConfig extends TeaModel {
         this.builtinRouteNames = builder.builtinRouteNames;
         this.customDomainIds = builder.customDomainIds;
         this.customDomainInfos = builder.customDomainInfos;
+        this.envDomainIds = builder.envDomainIds;
+        this.envDomainInfos = builder.envDomainInfos;
         this.environmentId = builder.environmentId;
         this.gatewayId = builder.gatewayId;
         this.gatewayInfo = builder.gatewayInfo;
@@ -121,6 +129,20 @@ public class HttpApiDeployConfig extends TeaModel {
      */
     public java.util.List<CustomDomainInfos> getCustomDomainInfos() {
         return this.customDomainInfos;
+    }
+
+    /**
+     * @return envDomainIds
+     */
+    public java.util.List<String> getEnvDomainIds() {
+        return this.envDomainIds;
+    }
+
+    /**
+     * @return envDomainInfos
+     */
+    public java.util.List<EnvDomainInfos> getEnvDomainInfos() {
+        return this.envDomainInfos;
     }
 
     /**
@@ -192,6 +214,8 @@ public class HttpApiDeployConfig extends TeaModel {
         private java.util.List<String> builtinRouteNames; 
         private java.util.List<String> customDomainIds; 
         private java.util.List<CustomDomainInfos> customDomainInfos; 
+        private java.util.List<String> envDomainIds; 
+        private java.util.List<EnvDomainInfos> envDomainInfos; 
         private String environmentId; 
         private String gatewayId; 
         private GatewayInfo gatewayInfo; 
@@ -211,6 +235,8 @@ public class HttpApiDeployConfig extends TeaModel {
             this.builtinRouteNames = model.builtinRouteNames;
             this.customDomainIds = model.customDomainIds;
             this.customDomainInfos = model.customDomainInfos;
+            this.envDomainIds = model.envDomainIds;
+            this.envDomainInfos = model.envDomainInfos;
             this.environmentId = model.environmentId;
             this.gatewayId = model.gatewayId;
             this.gatewayInfo = model.gatewayInfo;
@@ -259,6 +285,22 @@ public class HttpApiDeployConfig extends TeaModel {
          */
         public Builder customDomainInfos(java.util.List<CustomDomainInfos> customDomainInfos) {
             this.customDomainInfos = customDomainInfos;
+            return this;
+        }
+
+        /**
+         * envDomainIds.
+         */
+        public Builder envDomainIds(java.util.List<String> envDomainIds) {
+            this.envDomainIds = envDomainIds;
+            return this;
+        }
+
+        /**
+         * envDomainInfos.
+         */
+        public Builder envDomainInfos(java.util.List<EnvDomainInfos> envDomainInfos) {
+            this.envDomainInfos = envDomainInfos;
             return this;
         }
 
@@ -431,6 +473,102 @@ public class HttpApiDeployConfig extends TeaModel {
 
             public CustomDomainInfos build() {
                 return new CustomDomainInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HttpApiDeployConfig} extends {@link TeaModel}
+     *
+     * <p>HttpApiDeployConfig</p>
+     */
+    public static class EnvDomainInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("domainId")
+        private String domainId;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("protocol")
+        private String protocol;
+
+        private EnvDomainInfos(Builder builder) {
+            this.domainId = builder.domainId;
+            this.name = builder.name;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EnvDomainInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domainId
+         */
+        public String getDomainId() {
+            return this.domainId;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private String domainId; 
+            private String name; 
+            private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvDomainInfos model) {
+                this.domainId = model.domainId;
+                this.name = model.name;
+                this.protocol = model.protocol;
+            } 
+
+            /**
+             * domainId.
+             */
+            public Builder domainId(String domainId) {
+                this.domainId = domainId;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public EnvDomainInfos build() {
+                return new EnvDomainInfos(this);
             } 
 
         } 

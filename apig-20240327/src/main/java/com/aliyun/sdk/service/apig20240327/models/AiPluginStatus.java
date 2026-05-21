@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AiPluginStatus extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("errorLogs")
-    private java.util.Map<String, String> errorLogs;
+    private java.util.List<java.util.Map<String, ?>> errorLogs;
 
     @com.aliyun.core.annotation.NameInMap("pluginId")
     private String pluginId;
@@ -47,7 +47,7 @@ public class AiPluginStatus extends TeaModel {
     /**
      * @return errorLogs
      */
-    public java.util.Map<String, String> getErrorLogs() {
+    public java.util.List<java.util.Map<String, ?>> getErrorLogs() {
         return this.errorLogs;
     }
 
@@ -66,7 +66,7 @@ public class AiPluginStatus extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map<String, String> errorLogs; 
+        private java.util.List<java.util.Map<String, ?>> errorLogs; 
         private String pluginId; 
         private Boolean serviceHealthy; 
 
@@ -82,7 +82,7 @@ public class AiPluginStatus extends TeaModel {
         /**
          * errorLogs.
          */
-        public Builder errorLogs(java.util.Map<String, String> errorLogs) {
+        public Builder errorLogs(java.util.List<java.util.Map<String, ?>> errorLogs) {
             this.errorLogs = errorLogs;
             return this;
         }
