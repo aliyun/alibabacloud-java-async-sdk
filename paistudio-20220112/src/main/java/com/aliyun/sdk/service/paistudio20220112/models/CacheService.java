@@ -23,6 +23,9 @@ public class CacheService extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CacheServiceId")
     private String cacheServiceId;
 
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    private String clusterId;
+
     @com.aliyun.core.annotation.NameInMap("CreatedBy")
     private String createdBy;
 
@@ -56,6 +59,7 @@ public class CacheService extends TeaModel {
     private CacheService(Builder builder) {
         this.cacheInfos = builder.cacheInfos;
         this.cacheServiceId = builder.cacheServiceId;
+        this.clusterId = builder.clusterId;
         this.createdBy = builder.createdBy;
         this.gmtCreated = builder.gmtCreated;
         this.networkType = builder.networkType;
@@ -92,6 +96,13 @@ public class CacheService extends TeaModel {
      */
     public String getCacheServiceId() {
         return this.cacheServiceId;
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -167,6 +178,7 @@ public class CacheService extends TeaModel {
     public static final class Builder {
         private java.util.List<CacheInfo> cacheInfos; 
         private String cacheServiceId; 
+        private String clusterId; 
         private String createdBy; 
         private String gmtCreated; 
         private String networkType; 
@@ -184,6 +196,7 @@ public class CacheService extends TeaModel {
         private Builder(CacheService model) {
             this.cacheInfos = model.cacheInfos;
             this.cacheServiceId = model.cacheServiceId;
+            this.clusterId = model.clusterId;
             this.createdBy = model.createdBy;
             this.gmtCreated = model.gmtCreated;
             this.networkType = model.networkType;
@@ -209,6 +222,14 @@ public class CacheService extends TeaModel {
          */
         public Builder cacheServiceId(String cacheServiceId) {
             this.cacheServiceId = cacheServiceId;
+            return this;
+        }
+
+        /**
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.clusterId = clusterId;
             return this;
         }
 

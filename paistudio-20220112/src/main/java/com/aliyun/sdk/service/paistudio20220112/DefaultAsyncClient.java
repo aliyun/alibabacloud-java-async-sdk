@@ -642,6 +642,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListNodeTypes  ListNodeTypesRequest
+     * @return ListNodeTypesResponse
+     */
+    @Override
+    public CompletableFuture<ListNodeTypesResponse> listNodeTypes(ListNodeTypesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListNodeTypes").setMethod(HttpMethod.GET).setPathRegex("/api/v1/nodetypes").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListNodeTypesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListNodeTypesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListNodes  ListNodesRequest
      * @return ListNodesResponse
      */
