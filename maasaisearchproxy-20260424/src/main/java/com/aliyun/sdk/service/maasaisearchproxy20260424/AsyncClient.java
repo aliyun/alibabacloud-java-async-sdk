@@ -20,6 +20,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of OpenDatasetImportData  OpenDatasetImportDataRequest
+     * @return OpenDatasetImportDataResponse
+     */
+    CompletableFuture<OpenDatasetImportDataResponse> openDatasetImportData(OpenDatasetImportDataRequest request);
+
+    /**
+     * @param request the request parameters of OpenDatasetResourceUrl  OpenDatasetResourceUrlRequest
+     * @return OpenDatasetResourceUrlResponse
+     */
+    CompletableFuture<OpenDatasetResourceUrlResponse> openDatasetResourceUrl(OpenDatasetResourceUrlRequest request);
+
+    /**
      * @param request the request parameters of WebSearch  WebSearchRequest
      * @return WebSearchResponse
      */

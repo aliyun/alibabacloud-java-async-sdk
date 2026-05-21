@@ -40,6 +40,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of OpenDatasetImportData  OpenDatasetImportDataRequest
+     * @return OpenDatasetImportDataResponse
+     */
+    @Override
+    public CompletableFuture<OpenDatasetImportDataResponse> openDatasetImportData(OpenDatasetImportDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("OpenDatasetImportData").setMethod(HttpMethod.POST).setPathRegex("/api/v1/dataset/open/upsert").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenDatasetImportDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OpenDatasetImportDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of OpenDatasetResourceUrl  OpenDatasetResourceUrlRequest
+     * @return OpenDatasetResourceUrlResponse
+     */
+    @Override
+    public CompletableFuture<OpenDatasetResourceUrlResponse> openDatasetResourceUrl(OpenDatasetResourceUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("OpenDatasetResourceUrl").setMethod(HttpMethod.POST).setPathRegex("/api/v1/dataset/open/resources").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenDatasetResourceUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OpenDatasetResourceUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of WebSearch  WebSearchRequest
      * @return WebSearchResponse
      */

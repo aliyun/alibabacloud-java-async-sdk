@@ -42,6 +42,10 @@ public class WebSearchRequest extends Request {
     private String region;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("searchType")
+    private String searchType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("startTime")
     private String startTime;
 
@@ -53,6 +57,7 @@ public class WebSearchRequest extends Request {
         this.limit = builder.limit;
         this.query = builder.query;
         this.region = builder.region;
+        this.searchType = builder.searchType;
         this.startTime = builder.startTime;
     }
 
@@ -112,6 +117,13 @@ public class WebSearchRequest extends Request {
     }
 
     /**
+     * @return searchType
+     */
+    public String getSearchType() {
+        return this.searchType;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -125,6 +137,7 @@ public class WebSearchRequest extends Request {
         private Integer limit; 
         private String query; 
         private String region; 
+        private String searchType; 
         private String startTime; 
 
         private Builder() {
@@ -139,6 +152,7 @@ public class WebSearchRequest extends Request {
             this.limit = request.limit;
             this.query = request.query;
             this.region = request.region;
+            this.searchType = request.searchType;
             this.startTime = request.startTime;
         } 
 
@@ -193,6 +207,15 @@ public class WebSearchRequest extends Request {
         public Builder region(String region) {
             this.putBodyParameter("region", region);
             this.region = region;
+            return this;
+        }
+
+        /**
+         * searchType.
+         */
+        public Builder searchType(String searchType) {
+            this.putBodyParameter("searchType", searchType);
+            this.searchType = searchType;
             return this;
         }
 
