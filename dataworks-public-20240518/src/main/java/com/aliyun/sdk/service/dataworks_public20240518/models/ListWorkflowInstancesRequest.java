@@ -27,6 +27,10 @@ public class ListWorkflowInstancesRequest extends Request {
     private Long bizDate;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnvType")
+    private String envType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
@@ -79,6 +83,7 @@ public class ListWorkflowInstancesRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.bizDate = builder.bizDate;
+        this.envType = builder.envType;
         this.filter = builder.filter;
         this.ids = builder.ids;
         this.name = builder.name;
@@ -118,6 +123,13 @@ public class ListWorkflowInstancesRequest extends Request {
      */
     public Long getBizDate() {
         return this.bizDate;
+    }
+
+    /**
+     * @return envType
+     */
+    public String getEnvType() {
+        return this.envType;
     }
 
     /**
@@ -207,6 +219,7 @@ public class ListWorkflowInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<ListWorkflowInstancesRequest, Builder> {
         private String regionId; 
         private Long bizDate; 
+        private String envType; 
         private String filter; 
         private java.util.List<Long> ids; 
         private String name; 
@@ -228,6 +241,7 @@ public class ListWorkflowInstancesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.bizDate = request.bizDate;
+            this.envType = request.envType;
             this.filter = request.filter;
             this.ids = request.ids;
             this.name = request.name;
@@ -261,6 +275,15 @@ public class ListWorkflowInstancesRequest extends Request {
         public Builder bizDate(Long bizDate) {
             this.putBodyParameter("BizDate", bizDate);
             this.bizDate = bizDate;
+            return this;
+        }
+
+        /**
+         * EnvType.
+         */
+        public Builder envType(String envType) {
+            this.putBodyParameter("EnvType", envType);
+            this.envType = envType;
             return this;
         }
 
