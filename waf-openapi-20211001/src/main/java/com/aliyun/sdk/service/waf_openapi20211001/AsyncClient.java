@@ -845,6 +845,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePocFunctionsResponse> describePocFunctions(DescribePocFunctionsRequest request);
 
     /**
+     * @param request the request parameters of DescribePostpayBills  DescribePostpayBillsRequest
+     * @return DescribePostpayBillsResponse
+     */
+    CompletableFuture<DescribePostpayBillsResponse> describePostpayBills(DescribePostpayBillsRequest request);
+
+    /**
      * @param request the request parameters of DescribePrepayDailyBills  DescribePrepayDailyBillsRequest
      * @return DescribePrepayDailyBillsResponse
      */

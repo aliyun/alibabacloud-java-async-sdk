@@ -2534,6 +2534,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribePostpayBills  DescribePostpayBillsRequest
+     * @return DescribePostpayBillsResponse
+     */
+    @Override
+    public CompletableFuture<DescribePostpayBillsResponse> describePostpayBills(DescribePostpayBillsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePostpayBills").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePostpayBillsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePostpayBillsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribePrepayDailyBills  DescribePrepayDailyBillsRequest
      * @return DescribePrepayDailyBillsResponse
      */
