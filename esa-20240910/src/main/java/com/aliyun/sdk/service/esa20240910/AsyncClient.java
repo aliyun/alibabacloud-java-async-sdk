@@ -1842,6 +1842,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPagesResponse> listPages(ListPagesRequest request);
 
     /**
+     * @param request the request parameters of ListPostpaidRatePlanInstances  ListPostpaidRatePlanInstancesRequest
+     * @return ListPostpaidRatePlanInstancesResponse
+     */
+    CompletableFuture<ListPostpaidRatePlanInstancesResponse> listPostpaidRatePlanInstances(ListPostpaidRatePlanInstancesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The DNS records related to Edge Container, Edge Routine, and TCP/UDP proxy are not returned in this operation.</p>
      * 
