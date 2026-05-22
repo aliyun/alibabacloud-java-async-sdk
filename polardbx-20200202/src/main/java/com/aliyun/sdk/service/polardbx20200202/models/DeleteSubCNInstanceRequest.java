@@ -23,6 +23,10 @@ public class DeleteSubCNInstanceRequest extends Request {
     private String DBInstanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceClusterName")
+    private String instanceClusterName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -30,6 +34,7 @@ public class DeleteSubCNInstanceRequest extends Request {
     private DeleteSubCNInstanceRequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
+        this.instanceClusterName = builder.instanceClusterName;
         this.regionId = builder.regionId;
     }
 
@@ -54,6 +59,13 @@ public class DeleteSubCNInstanceRequest extends Request {
     }
 
     /**
+     * @return instanceClusterName
+     */
+    public String getInstanceClusterName() {
+        return this.instanceClusterName;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -62,6 +74,7 @@ public class DeleteSubCNInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteSubCNInstanceRequest, Builder> {
         private String DBInstanceName; 
+        private String instanceClusterName; 
         private String regionId; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class DeleteSubCNInstanceRequest extends Request {
         private Builder(DeleteSubCNInstanceRequest request) {
             super(request);
             this.DBInstanceName = request.DBInstanceName;
+            this.instanceClusterName = request.instanceClusterName;
             this.regionId = request.regionId;
         } 
 
@@ -83,6 +97,15 @@ public class DeleteSubCNInstanceRequest extends Request {
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
             this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+
+        /**
+         * InstanceClusterName.
+         */
+        public Builder instanceClusterName(String instanceClusterName) {
+            this.putQueryParameter("InstanceClusterName", instanceClusterName);
+            this.instanceClusterName = instanceClusterName;
             return this;
         }
 
