@@ -122,6 +122,9 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ruleStatus")
         private String ruleStatus;
 
+        @com.aliyun.core.annotation.NameInMap("ruleType")
+        private String ruleType;
+
         private RuleHitRecords(Builder builder) {
             this.cost = builder.cost;
             this.hitSuccessful = builder.hitSuccessful;
@@ -131,6 +134,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             this.ruleName = builder.ruleName;
             this.ruleSnapshotId = builder.ruleSnapshotId;
             this.ruleStatus = builder.ruleStatus;
+            this.ruleType = builder.ruleType;
         }
 
         public static Builder builder() {
@@ -197,6 +201,13 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             return this.ruleStatus;
         }
 
+        /**
+         * @return ruleType
+         */
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
         public static final class Builder {
             private Integer cost; 
             private Boolean hitSuccessful; 
@@ -206,6 +217,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             private String ruleName; 
             private String ruleSnapshotId; 
             private String ruleStatus; 
+            private String ruleType; 
 
             private Builder() {
             } 
@@ -219,6 +231,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
                 this.ruleName = model.ruleName;
                 this.ruleSnapshotId = model.ruleSnapshotId;
                 this.ruleStatus = model.ruleStatus;
+                this.ruleType = model.ruleType;
             } 
 
             /**
@@ -306,6 +319,14 @@ public class DescribeRequestHitResponseBody extends TeaModel {
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
+                return this;
+            }
+
+            /**
+             * ruleType.
+             */
+            public Builder ruleType(String ruleType) {
+                this.ruleType = ruleType;
                 return this;
             }
 
