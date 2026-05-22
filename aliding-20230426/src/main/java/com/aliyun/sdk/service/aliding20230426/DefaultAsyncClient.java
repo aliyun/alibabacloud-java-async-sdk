@@ -2859,6 +2859,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetUserIdByOpenDingtalkId  GetUserIdByOpenDingtalkIdRequest
+     * @return GetUserIdByOpenDingtalkIdResponse
+     */
+    @Override
+    public CompletableFuture<GetUserIdByOpenDingtalkIdResponse> getUserIdByOpenDingtalkId(GetUserIdByOpenDingtalkIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetUserIdByOpenDingtalkId").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/im/getUserIdByOpenDingtalkId").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetUserIdByOpenDingtalkIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetUserIdByOpenDingtalkIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetUserIdByOrgIdAndStaffId  GetUserIdByOrgIdAndStaffIdRequest
      * @return GetUserIdByOrgIdAndStaffIdResponse
      */

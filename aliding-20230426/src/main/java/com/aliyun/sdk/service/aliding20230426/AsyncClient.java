@@ -958,6 +958,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserIdResponse> getUserId(GetUserIdRequest request);
 
     /**
+     * @param request the request parameters of GetUserIdByOpenDingtalkId  GetUserIdByOpenDingtalkIdRequest
+     * @return GetUserIdByOpenDingtalkIdResponse
+     */
+    CompletableFuture<GetUserIdByOpenDingtalkIdResponse> getUserIdByOpenDingtalkId(GetUserIdByOpenDingtalkIdRequest request);
+
+    /**
      * @param request the request parameters of GetUserIdByOrgIdAndStaffId  GetUserIdByOrgIdAndStaffIdRequest
      * @return GetUserIdByOrgIdAndStaffIdResponse
      */
