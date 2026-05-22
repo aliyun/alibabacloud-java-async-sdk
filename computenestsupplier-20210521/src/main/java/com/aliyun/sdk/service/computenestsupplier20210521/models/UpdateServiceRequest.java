@@ -58,6 +58,10 @@ public class UpdateServiceRequest extends Request {
     private Long duration;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
+    private Boolean isDefault;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsSupportOperated")
     private Boolean isSupportOperated;
 
@@ -94,6 +98,10 @@ public class UpdateServiceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceInfo")
     private java.util.List<ServiceInfo> serviceInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceLocaleConfigs")
+    private java.util.List<ServiceLocaleConfigs> serviceLocaleConfigs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceType")
@@ -139,6 +147,7 @@ public class UpdateServiceRequest extends Request {
         this.deployType = builder.deployType;
         this.dryRun = builder.dryRun;
         this.duration = builder.duration;
+        this.isDefault = builder.isDefault;
         this.isSupportOperated = builder.isSupportOperated;
         this.licenseMetadata = builder.licenseMetadata;
         this.logMetadata = builder.logMetadata;
@@ -148,6 +157,7 @@ public class UpdateServiceRequest extends Request {
         this.resellable = builder.resellable;
         this.serviceId = builder.serviceId;
         this.serviceInfo = builder.serviceInfo;
+        this.serviceLocaleConfigs = builder.serviceLocaleConfigs;
         this.serviceType = builder.serviceType;
         this.serviceVersion = builder.serviceVersion;
         this.shareType = builder.shareType;
@@ -242,6 +252,13 @@ public class UpdateServiceRequest extends Request {
     }
 
     /**
+     * @return isDefault
+     */
+    public Boolean getIsDefault() {
+        return this.isDefault;
+    }
+
+    /**
      * @return isSupportOperated
      */
     public Boolean getIsSupportOperated() {
@@ -302,6 +319,13 @@ public class UpdateServiceRequest extends Request {
      */
     public java.util.List<ServiceInfo> getServiceInfo() {
         return this.serviceInfo;
+    }
+
+    /**
+     * @return serviceLocaleConfigs
+     */
+    public java.util.List<ServiceLocaleConfigs> getServiceLocaleConfigs() {
+        return this.serviceLocaleConfigs;
     }
 
     /**
@@ -371,6 +395,7 @@ public class UpdateServiceRequest extends Request {
         private String deployType; 
         private Boolean dryRun; 
         private Long duration; 
+        private Boolean isDefault; 
         private Boolean isSupportOperated; 
         private String licenseMetadata; 
         private String logMetadata; 
@@ -380,6 +405,7 @@ public class UpdateServiceRequest extends Request {
         private Boolean resellable; 
         private String serviceId; 
         private java.util.List<ServiceInfo> serviceInfo; 
+        private java.util.List<ServiceLocaleConfigs> serviceLocaleConfigs; 
         private String serviceType; 
         private String serviceVersion; 
         private String shareType; 
@@ -405,6 +431,7 @@ public class UpdateServiceRequest extends Request {
             this.deployType = request.deployType;
             this.dryRun = request.dryRun;
             this.duration = request.duration;
+            this.isDefault = request.isDefault;
             this.isSupportOperated = request.isSupportOperated;
             this.licenseMetadata = request.licenseMetadata;
             this.logMetadata = request.logMetadata;
@@ -414,6 +441,7 @@ public class UpdateServiceRequest extends Request {
             this.resellable = request.resellable;
             this.serviceId = request.serviceId;
             this.serviceInfo = request.serviceInfo;
+            this.serviceLocaleConfigs = request.serviceLocaleConfigs;
             this.serviceType = request.serviceType;
             this.serviceVersion = request.serviceVersion;
             this.shareType = request.shareType;
@@ -557,6 +585,15 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
+         * IsDefault.
+         */
+        public Builder isDefault(Boolean isDefault) {
+            this.putQueryParameter("IsDefault", isDefault);
+            this.isDefault = isDefault;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to enable the hosted O&amp;M feature for the service. Default value: false. Valid values:</p>
          * <ul>
          * <li>true</li>
@@ -671,6 +708,15 @@ public class UpdateServiceRequest extends Request {
         public Builder serviceInfo(java.util.List<ServiceInfo> serviceInfo) {
             this.putQueryParameter("ServiceInfo", serviceInfo);
             this.serviceInfo = serviceInfo;
+            return this;
+        }
+
+        /**
+         * ServiceLocaleConfigs.
+         */
+        public Builder serviceLocaleConfigs(java.util.List<ServiceLocaleConfigs> serviceLocaleConfigs) {
+            this.putQueryParameter("ServiceLocaleConfigs", serviceLocaleConfigs);
+            this.serviceLocaleConfigs = serviceLocaleConfigs;
             return this;
         }
 
@@ -1768,6 +1814,102 @@ public class UpdateServiceRequest extends Request {
 
             public ServiceInfo build() {
                 return new ServiceInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateServiceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateServiceRequest</p>
+     */
+    public static class ServiceLocaleConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnValue")
+        private String enValue;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalValue")
+        private String originalValue;
+
+        @com.aliyun.core.annotation.NameInMap("ZhValue")
+        private String zhValue;
+
+        private ServiceLocaleConfigs(Builder builder) {
+            this.enValue = builder.enValue;
+            this.originalValue = builder.originalValue;
+            this.zhValue = builder.zhValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServiceLocaleConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enValue
+         */
+        public String getEnValue() {
+            return this.enValue;
+        }
+
+        /**
+         * @return originalValue
+         */
+        public String getOriginalValue() {
+            return this.originalValue;
+        }
+
+        /**
+         * @return zhValue
+         */
+        public String getZhValue() {
+            return this.zhValue;
+        }
+
+        public static final class Builder {
+            private String enValue; 
+            private String originalValue; 
+            private String zhValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceLocaleConfigs model) {
+                this.enValue = model.enValue;
+                this.originalValue = model.originalValue;
+                this.zhValue = model.zhValue;
+            } 
+
+            /**
+             * EnValue.
+             */
+            public Builder enValue(String enValue) {
+                this.enValue = enValue;
+                return this;
+            }
+
+            /**
+             * OriginalValue.
+             */
+            public Builder originalValue(String originalValue) {
+                this.originalValue = originalValue;
+                return this;
+            }
+
+            /**
+             * ZhValue.
+             */
+            public Builder zhValue(String zhValue) {
+                this.zhValue = zhValue;
+                return this;
+            }
+
+            public ServiceLocaleConfigs build() {
+                return new ServiceLocaleConfigs(this);
             } 
 
         } 

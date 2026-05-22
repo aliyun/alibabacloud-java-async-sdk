@@ -412,6 +412,102 @@ public class ListServicesResponseBody extends TeaModel {
      *
      * <p>ListServicesResponseBody</p>
      */
+    public static class ServiceLocaleConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnValue")
+        private String enValue;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalValue")
+        private String originalValue;
+
+        @com.aliyun.core.annotation.NameInMap("ZhValue")
+        private String zhValue;
+
+        private ServiceLocaleConfigs(Builder builder) {
+            this.enValue = builder.enValue;
+            this.originalValue = builder.originalValue;
+            this.zhValue = builder.zhValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServiceLocaleConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enValue
+         */
+        public String getEnValue() {
+            return this.enValue;
+        }
+
+        /**
+         * @return originalValue
+         */
+        public String getOriginalValue() {
+            return this.originalValue;
+        }
+
+        /**
+         * @return zhValue
+         */
+        public String getZhValue() {
+            return this.zhValue;
+        }
+
+        public static final class Builder {
+            private String enValue; 
+            private String originalValue; 
+            private String zhValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceLocaleConfigs model) {
+                this.enValue = model.enValue;
+                this.originalValue = model.originalValue;
+                this.zhValue = model.zhValue;
+            } 
+
+            /**
+             * EnValue.
+             */
+            public Builder enValue(String enValue) {
+                this.enValue = enValue;
+                return this;
+            }
+
+            /**
+             * OriginalValue.
+             */
+            public Builder originalValue(String originalValue) {
+                this.originalValue = originalValue;
+                return this;
+            }
+
+            /**
+             * ZhValue.
+             */
+            public Builder zhValue(String zhValue) {
+                this.zhValue = zhValue;
+                return this;
+            }
+
+            public ServiceLocaleConfigs build() {
+                return new ServiceLocaleConfigs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServicesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -557,6 +653,9 @@ public class ListServicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceInfos")
         private java.util.List<ServiceInfos> serviceInfos;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceLocaleConfigs")
+        private java.util.List<ServiceLocaleConfigs> serviceLocaleConfigs;
+
         @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
@@ -627,6 +726,7 @@ public class ListServicesResponseBody extends TeaModel {
             this.serviceDiscoverable = builder.serviceDiscoverable;
             this.serviceId = builder.serviceId;
             this.serviceInfos = builder.serviceInfos;
+            this.serviceLocaleConfigs = builder.serviceLocaleConfigs;
             this.serviceType = builder.serviceType;
             this.shareType = builder.shareType;
             this.sourceImage = builder.sourceImage;
@@ -801,6 +901,13 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceLocaleConfigs
+         */
+        public java.util.List<ServiceLocaleConfigs> getServiceLocaleConfigs() {
+            return this.serviceLocaleConfigs;
+        }
+
+        /**
          * @return serviceType
          */
         public String getServiceType() {
@@ -934,6 +1041,7 @@ public class ListServicesResponseBody extends TeaModel {
             private String serviceDiscoverable; 
             private String serviceId; 
             private java.util.List<ServiceInfos> serviceInfos; 
+            private java.util.List<ServiceLocaleConfigs> serviceLocaleConfigs; 
             private String serviceType; 
             private String shareType; 
             private String sourceImage; 
@@ -976,6 +1084,7 @@ public class ListServicesResponseBody extends TeaModel {
                 this.serviceDiscoverable = model.serviceDiscoverable;
                 this.serviceId = model.serviceId;
                 this.serviceInfos = model.serviceInfos;
+                this.serviceLocaleConfigs = model.serviceLocaleConfigs;
                 this.serviceType = model.serviceType;
                 this.shareType = model.shareType;
                 this.sourceImage = model.sourceImage;
@@ -1253,6 +1362,14 @@ public class ListServicesResponseBody extends TeaModel {
              */
             public Builder serviceInfos(java.util.List<ServiceInfos> serviceInfos) {
                 this.serviceInfos = serviceInfos;
+                return this;
+            }
+
+            /**
+             * ServiceLocaleConfigs.
+             */
+            public Builder serviceLocaleConfigs(java.util.List<ServiceLocaleConfigs> serviceLocaleConfigs) {
+                this.serviceLocaleConfigs = serviceLocaleConfigs;
                 return this;
             }
 

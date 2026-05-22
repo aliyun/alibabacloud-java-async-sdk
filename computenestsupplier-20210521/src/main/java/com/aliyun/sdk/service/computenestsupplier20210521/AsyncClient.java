@@ -53,6 +53,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateArtifactResponse> createArtifact(CreateArtifactRequest request);
 
     /**
+     * @param request the request parameters of CreateOpsNotice  CreateOpsNoticeRequest
+     * @return CreateOpsNoticeResponse
+     */
+    CompletableFuture<CreateOpsNoticeResponse> createOpsNotice(CreateOpsNoticeRequest request);
+
+    /**
      * @param request the request parameters of CreateService  CreateServiceRequest
      * @return CreateServiceResponse
      */
@@ -161,6 +167,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNetworkAvailableZonesResponse> getNetworkAvailableZones(GetNetworkAvailableZonesRequest request);
 
     /**
+     * @param request the request parameters of GetOpsNotice  GetOpsNoticeRequest
+     * @return GetOpsNoticeResponse
+     */
+    CompletableFuture<GetOpsNoticeResponse> getOpsNotice(GetOpsNoticeRequest request);
+
+    /**
      * @param request the request parameters of GetService  GetServiceRequest
      * @return GetServiceResponse
      */
@@ -264,6 +276,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListArtifactsResponse
      */
     CompletableFuture<ListArtifactsResponse> listArtifacts(ListArtifactsRequest request);
+
+    /**
+     * @param request the request parameters of ListOpsNotices  ListOpsNoticesRequest
+     * @return ListOpsNoticesResponse
+     */
+    CompletableFuture<ListOpsNoticesResponse> listOpsNotices(ListOpsNoticesRequest request);
 
     /**
      * @param request the request parameters of ListResellers  ListResellersRequest

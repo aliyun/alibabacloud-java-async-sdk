@@ -169,6 +169,81 @@ public class ListServiceInstancesResponseBody extends TeaModel {
      *
      * <p>ListServiceInstancesResponseBody</p>
      */
+    public static class GrantedPermission extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OperationEndTime")
+        private String operationEndTime;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyNames")
+        private String policyNames;
+
+        private GrantedPermission(Builder builder) {
+            this.operationEndTime = builder.operationEndTime;
+            this.policyNames = builder.policyNames;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GrantedPermission create() {
+            return builder().build();
+        }
+
+        /**
+         * @return operationEndTime
+         */
+        public String getOperationEndTime() {
+            return this.operationEndTime;
+        }
+
+        /**
+         * @return policyNames
+         */
+        public String getPolicyNames() {
+            return this.policyNames;
+        }
+
+        public static final class Builder {
+            private String operationEndTime; 
+            private String policyNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(GrantedPermission model) {
+                this.operationEndTime = model.operationEndTime;
+                this.policyNames = model.policyNames;
+            } 
+
+            /**
+             * OperationEndTime.
+             */
+            public Builder operationEndTime(String operationEndTime) {
+                this.operationEndTime = operationEndTime;
+                return this;
+            }
+
+            /**
+             * PolicyNames.
+             */
+            public Builder policyNames(String policyNames) {
+                this.policyNames = policyNames;
+                return this;
+            }
+
+            public GrantedPermission build() {
+                return new GrantedPermission(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListServiceInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceInstancesResponseBody</p>
+     */
     public static class ServiceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
@@ -748,6 +823,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
+        @com.aliyun.core.annotation.NameInMap("GrantedPermission")
+        private GrantedPermission grantedPermission;
+
         @com.aliyun.core.annotation.NameInMap("IsOperated")
         private Boolean isOperated;
 
@@ -768,6 +846,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyNames")
+        private String policyNames;
 
         @com.aliyun.core.annotation.NameInMap("Progress")
         private Long progress;
@@ -810,6 +891,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.enableInstanceOps = builder.enableInstanceOps;
             this.endTime = builder.endTime;
+            this.grantedPermission = builder.grantedPermission;
             this.isOperated = builder.isOperated;
             this.name = builder.name;
             this.operatedServiceInstanceId = builder.operatedServiceInstanceId;
@@ -817,6 +899,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             this.operationStartTime = builder.operationStartTime;
             this.parameters = builder.parameters;
             this.payType = builder.payType;
+            this.policyNames = builder.policyNames;
             this.progress = builder.progress;
             this.resourceGroupId = builder.resourceGroupId;
             this.service = builder.service;
@@ -868,6 +951,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return grantedPermission
+         */
+        public GrantedPermission getGrantedPermission() {
+            return this.grantedPermission;
+        }
+
+        /**
          * @return isOperated
          */
         public Boolean getIsOperated() {
@@ -914,6 +1004,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
          */
         public String getPayType() {
             return this.payType;
+        }
+
+        /**
+         * @return policyNames
+         */
+        public String getPolicyNames() {
+            return this.policyNames;
         }
 
         /**
@@ -1005,6 +1102,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String createTime; 
             private Boolean enableInstanceOps; 
             private String endTime; 
+            private GrantedPermission grantedPermission; 
             private Boolean isOperated; 
             private String name; 
             private String operatedServiceInstanceId; 
@@ -1012,6 +1110,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String operationStartTime; 
             private String parameters; 
             private String payType; 
+            private String policyNames; 
             private Long progress; 
             private String resourceGroupId; 
             private Service service; 
@@ -1033,6 +1132,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.enableInstanceOps = model.enableInstanceOps;
                 this.endTime = model.endTime;
+                this.grantedPermission = model.grantedPermission;
                 this.isOperated = model.isOperated;
                 this.name = model.name;
                 this.operatedServiceInstanceId = model.operatedServiceInstanceId;
@@ -1040,6 +1140,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
                 this.operationStartTime = model.operationStartTime;
                 this.parameters = model.parameters;
                 this.payType = model.payType;
+                this.policyNames = model.policyNames;
                 this.progress = model.progress;
                 this.resourceGroupId = model.resourceGroupId;
                 this.service = model.service;
@@ -1105,6 +1206,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * GrantedPermission.
+             */
+            public Builder grantedPermission(GrantedPermission grantedPermission) {
+                this.grantedPermission = grantedPermission;
                 return this;
             }
 
@@ -1192,6 +1301,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
              */
             public Builder payType(String payType) {
                 this.payType = payType;
+                return this;
+            }
+
+            /**
+             * PolicyNames.
+             */
+            public Builder policyNames(String policyNames) {
+                this.policyNames = policyNames;
                 return this;
             }
 

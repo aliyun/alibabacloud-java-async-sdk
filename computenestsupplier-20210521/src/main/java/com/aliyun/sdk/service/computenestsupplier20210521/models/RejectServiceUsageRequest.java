@@ -26,6 +26,10 @@ public class RejectServiceUsageRequest extends Request {
     private String comments;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
@@ -43,6 +47,7 @@ public class RejectServiceUsageRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.comments = builder.comments;
+        this.regionId = builder.regionId;
         this.serviceId = builder.serviceId;
         this.type = builder.type;
         this.userAliUid = builder.userAliUid;
@@ -76,6 +81,13 @@ public class RejectServiceUsageRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return serviceId
      */
     public String getServiceId() {
@@ -99,6 +111,7 @@ public class RejectServiceUsageRequest extends Request {
     public static final class Builder extends Request.Builder<RejectServiceUsageRequest, Builder> {
         private String clientToken; 
         private String comments; 
+        private String regionId; 
         private String serviceId; 
         private Integer type; 
         private Long userAliUid; 
@@ -111,6 +124,7 @@ public class RejectServiceUsageRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.comments = request.comments;
+            this.regionId = request.regionId;
             this.serviceId = request.serviceId;
             this.type = request.type;
             this.userAliUid = request.userAliUid;
@@ -137,6 +151,15 @@ public class RejectServiceUsageRequest extends Request {
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
             this.comments = comments;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
