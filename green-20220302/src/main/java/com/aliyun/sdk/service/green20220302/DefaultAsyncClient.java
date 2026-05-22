@@ -363,6 +363,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of MultiModalGuardAsync  MultiModalGuardAsyncRequest
+     * @return MultiModalGuardAsyncResponse
+     */
+    @Override
+    public CompletableFuture<MultiModalGuardAsyncResponse> multiModalGuardAsync(MultiModalGuardAsyncRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("MultiModalGuardAsync").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MultiModalGuardAsyncResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MultiModalGuardAsyncResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of MultiModalGuardAsyncResult  MultiModalGuardAsyncResultRequest
+     * @return MultiModalGuardAsyncResultResponse
+     */
+    @Override
+    public CompletableFuture<MultiModalGuardAsyncResultResponse> multiModalGuardAsyncResult(MultiModalGuardAsyncResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("MultiModalGuardAsyncResult").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MultiModalGuardAsyncResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MultiModalGuardAsyncResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of MultiModalGuardForBase64  MultiModalGuardForBase64Request
      * @return MultiModalGuardForBase64Response
      */
