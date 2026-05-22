@@ -236,8 +236,20 @@ public class GetMessagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Feedback")
         private String feedback;
 
+        @com.aliyun.core.annotation.NameInMap("GenerationFinishedAt")
+        private String generationFinishedAt;
+
+        @com.aliyun.core.annotation.NameInMap("GenerationStartedAt")
+        private String generationStartedAt;
+
+        @com.aliyun.core.annotation.NameInMap("GenerationStatus")
+        private String generationStatus;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
+
+        @com.aliyun.core.annotation.NameInMap("LastSentEntryId")
+        private String lastSentEntryId;
 
         @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
@@ -245,15 +257,23 @@ public class GetMessagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RetrieverResources")
         private java.util.List<?> retrieverResources;
 
+        @com.aliyun.core.annotation.NameInMap("StreamKey")
+        private String streamKey;
+
         private Data(Builder builder) {
             this.answer = builder.answer;
             this.conversationId = builder.conversationId;
             this.createdAt = builder.createdAt;
             this.events = builder.events;
             this.feedback = builder.feedback;
+            this.generationFinishedAt = builder.generationFinishedAt;
+            this.generationStartedAt = builder.generationStartedAt;
+            this.generationStatus = builder.generationStatus;
             this.id = builder.id;
+            this.lastSentEntryId = builder.lastSentEntryId;
             this.query = builder.query;
             this.retrieverResources = builder.retrieverResources;
+            this.streamKey = builder.streamKey;
         }
 
         public static Builder builder() {
@@ -300,10 +320,38 @@ public class GetMessagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return generationFinishedAt
+         */
+        public String getGenerationFinishedAt() {
+            return this.generationFinishedAt;
+        }
+
+        /**
+         * @return generationStartedAt
+         */
+        public String getGenerationStartedAt() {
+            return this.generationStartedAt;
+        }
+
+        /**
+         * @return generationStatus
+         */
+        public String getGenerationStatus() {
+            return this.generationStatus;
+        }
+
+        /**
          * @return id
          */
         public String getId() {
             return this.id;
+        }
+
+        /**
+         * @return lastSentEntryId
+         */
+        public String getLastSentEntryId() {
+            return this.lastSentEntryId;
         }
 
         /**
@@ -320,15 +368,27 @@ public class GetMessagesResponseBody extends TeaModel {
             return this.retrieverResources;
         }
 
+        /**
+         * @return streamKey
+         */
+        public String getStreamKey() {
+            return this.streamKey;
+        }
+
         public static final class Builder {
             private String answer; 
             private String conversationId; 
             private String createdAt; 
             private java.util.List<Events> events; 
             private String feedback; 
+            private String generationFinishedAt; 
+            private String generationStartedAt; 
+            private String generationStatus; 
             private String id; 
+            private String lastSentEntryId; 
             private String query; 
             private java.util.List<?> retrieverResources; 
+            private String streamKey; 
 
             private Builder() {
             } 
@@ -339,9 +399,14 @@ public class GetMessagesResponseBody extends TeaModel {
                 this.createdAt = model.createdAt;
                 this.events = model.events;
                 this.feedback = model.feedback;
+                this.generationFinishedAt = model.generationFinishedAt;
+                this.generationStartedAt = model.generationStartedAt;
+                this.generationStatus = model.generationStatus;
                 this.id = model.id;
+                this.lastSentEntryId = model.lastSentEntryId;
                 this.query = model.query;
                 this.retrieverResources = model.retrieverResources;
+                this.streamKey = model.streamKey;
             } 
 
             /**
@@ -394,6 +459,30 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
+             * GenerationFinishedAt.
+             */
+            public Builder generationFinishedAt(String generationFinishedAt) {
+                this.generationFinishedAt = generationFinishedAt;
+                return this;
+            }
+
+            /**
+             * GenerationStartedAt.
+             */
+            public Builder generationStartedAt(String generationStartedAt) {
+                this.generationStartedAt = generationStartedAt;
+                return this;
+            }
+
+            /**
+             * GenerationStatus.
+             */
+            public Builder generationStatus(String generationStatus) {
+                this.generationStatus = generationStatus;
+                return this;
+            }
+
+            /**
              * <p>The message ID.</p>
              * 
              * <strong>example:</strong>
@@ -401,6 +490,14 @@ public class GetMessagesResponseBody extends TeaModel {
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * LastSentEntryId.
+             */
+            public Builder lastSentEntryId(String lastSentEntryId) {
+                this.lastSentEntryId = lastSentEntryId;
                 return this;
             }
 
@@ -417,6 +514,14 @@ public class GetMessagesResponseBody extends TeaModel {
              */
             public Builder retrieverResources(java.util.List<?> retrieverResources) {
                 this.retrieverResources = retrieverResources;
+                return this;
+            }
+
+            /**
+             * StreamKey.
+             */
+            public Builder streamKey(String streamKey) {
+                this.streamKey = streamKey;
                 return this;
             }
 
