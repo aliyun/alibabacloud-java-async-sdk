@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetApiKeyResponseBody} extends {@link TeaModel}
+ * {@link ResetApiKeyResponseBody} extends {@link TeaModel}
  *
- * <p>GetApiKeyResponseBody</p>
+ * <p>ResetApiKeyResponseBody</p>
  */
-public class GetApiKeyResponseBody extends TeaModel {
+public class ResetApiKeyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("apiKey")
     private ApiKey apiKey;
 
@@ -35,7 +35,7 @@ public class GetApiKeyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private GetApiKeyResponseBody(Builder builder) {
+    private ResetApiKeyResponseBody(Builder builder) {
         this.apiKey = builder.apiKey;
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
@@ -48,7 +48,7 @@ public class GetApiKeyResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetApiKeyResponseBody create() {
+    public static ResetApiKeyResponseBody create() {
         return builder().build();
     }
 
@@ -109,7 +109,7 @@ public class GetApiKeyResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetApiKeyResponseBody model) {
+        private Builder(ResetApiKeyResponseBody model) {
             this.apiKey = model.apiKey;
             this.code = model.code;
             this.httpStatusCode = model.httpStatusCode;
@@ -154,7 +154,7 @@ public class GetApiKeyResponseBody extends TeaModel {
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>DFD55E7B-0615-5343-BDA0-FBEE86F29935</p>
+         * <p>36045E0A-551D-592D-B1BC-4C56596CE59E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,92 +169,17 @@ public class GetApiKeyResponseBody extends TeaModel {
             return this;
         }
 
-        public GetApiKeyResponseBody build() {
-            return new GetApiKeyResponseBody(this);
+        public ResetApiKeyResponseBody build() {
+            return new ResetApiKeyResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetApiKeyResponseBody} extends {@link TeaModel}
+     * {@link ResetApiKeyResponseBody} extends {@link TeaModel}
      *
-     * <p>GetApiKeyResponseBody</p>
-     */
-    public static class Auth extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("accessIps")
-        private java.util.List<String> accessIps;
-
-        @com.aliyun.core.annotation.NameInMap("type")
-        private String type;
-
-        private Auth(Builder builder) {
-            this.accessIps = builder.accessIps;
-            this.type = builder.type;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Auth create() {
-            return builder().build();
-        }
-
-        /**
-         * @return accessIps
-         */
-        public java.util.List<String> getAccessIps() {
-            return this.accessIps;
-        }
-
-        /**
-         * @return type
-         */
-        public String getType() {
-            return this.type;
-        }
-
-        public static final class Builder {
-            private java.util.List<String> accessIps; 
-            private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Auth model) {
-                this.accessIps = model.accessIps;
-                this.type = model.type;
-            } 
-
-            /**
-             * accessIps.
-             */
-            public Builder accessIps(java.util.List<String> accessIps) {
-                this.accessIps = accessIps;
-                return this;
-            }
-
-            /**
-             * type.
-             */
-            public Builder type(String type) {
-                this.type = type;
-                return this;
-            }
-
-            public Auth build() {
-                return new Auth(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link GetApiKeyResponseBody} extends {@link TeaModel}
-     *
-     * <p>GetApiKeyResponseBody</p>
+     * <p>ResetApiKeyResponseBody</p>
      */
     public static class ApiKey extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apiKeyId")
@@ -263,32 +188,12 @@ public class GetApiKeyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apiKeyValue")
         private String apiKeyValue;
 
-        @com.aliyun.core.annotation.NameInMap("auth")
-        private Auth auth;
-
-        @com.aliyun.core.annotation.NameInMap("createdBy")
-        private String createdBy;
-
-        @com.aliyun.core.annotation.NameInMap("description")
-        private String description;
-
-        @com.aliyun.core.annotation.NameInMap("disabled")
-        private Integer disabled;
-
-        @com.aliyun.core.annotation.NameInMap("gmtCreate")
-        private Long gmtCreate;
-
         @com.aliyun.core.annotation.NameInMap("workspaceId")
         private String workspaceId;
 
         private ApiKey(Builder builder) {
             this.apiKeyId = builder.apiKeyId;
             this.apiKeyValue = builder.apiKeyValue;
-            this.auth = builder.auth;
-            this.createdBy = builder.createdBy;
-            this.description = builder.description;
-            this.disabled = builder.disabled;
-            this.gmtCreate = builder.gmtCreate;
             this.workspaceId = builder.workspaceId;
         }
 
@@ -315,41 +220,6 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * @return auth
-         */
-        public Auth getAuth() {
-            return this.auth;
-        }
-
-        /**
-         * @return createdBy
-         */
-        public String getCreatedBy() {
-            return this.createdBy;
-        }
-
-        /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
-        }
-
-        /**
-         * @return disabled
-         */
-        public Integer getDisabled() {
-            return this.disabled;
-        }
-
-        /**
-         * @return gmtCreate
-         */
-        public Long getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        /**
          * @return workspaceId
          */
         public String getWorkspaceId() {
@@ -359,11 +229,6 @@ public class GetApiKeyResponseBody extends TeaModel {
         public static final class Builder {
             private Long apiKeyId; 
             private String apiKeyValue; 
-            private Auth auth; 
-            private String createdBy; 
-            private String description; 
-            private Integer disabled; 
-            private Long gmtCreate; 
             private String workspaceId; 
 
             private Builder() {
@@ -372,11 +237,6 @@ public class GetApiKeyResponseBody extends TeaModel {
             private Builder(ApiKey model) {
                 this.apiKeyId = model.apiKeyId;
                 this.apiKeyValue = model.apiKeyValue;
-                this.auth = model.auth;
-                this.createdBy = model.createdBy;
-                this.description = model.description;
-                this.disabled = model.disabled;
-                this.gmtCreate = model.gmtCreate;
                 this.workspaceId = model.workspaceId;
             } 
 
@@ -396,46 +256,6 @@ public class GetApiKeyResponseBody extends TeaModel {
              */
             public Builder apiKeyValue(String apiKeyValue) {
                 this.apiKeyValue = apiKeyValue;
-                return this;
-            }
-
-            /**
-             * auth.
-             */
-            public Builder auth(Auth auth) {
-                this.auth = auth;
-                return this;
-            }
-
-            /**
-             * createdBy.
-             */
-            public Builder createdBy(String createdBy) {
-                this.createdBy = createdBy;
-                return this;
-            }
-
-            /**
-             * description.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * disabled.
-             */
-            public Builder disabled(Integer disabled) {
-                this.disabled = disabled;
-                return this;
-            }
-
-            /**
-             * gmtCreate.
-             */
-            public Builder gmtCreate(Long gmtCreate) {
-                this.gmtCreate = gmtCreate;
                 return this;
             }
 

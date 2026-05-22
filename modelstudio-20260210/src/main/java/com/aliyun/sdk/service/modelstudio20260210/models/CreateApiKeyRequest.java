@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateApiKeyRequest</p>
  */
 public class CreateApiKeyRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("auth")
+    private Auth auth;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("description")
     @com.aliyun.core.annotation.Validation(maxLength = 200)
@@ -29,6 +33,7 @@ public class CreateApiKeyRequest extends Request {
 
     private CreateApiKeyRequest(Builder builder) {
         super(builder);
+        this.auth = builder.auth;
         this.description = builder.description;
         this.workspaceId = builder.workspaceId;
     }
@@ -47,6 +52,13 @@ public class CreateApiKeyRequest extends Request {
     }
 
     /**
+     * @return auth
+     */
+    public Auth getAuth() {
+        return this.auth;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -61,6 +73,7 @@ public class CreateApiKeyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateApiKeyRequest, Builder> {
+        private Auth auth; 
         private String description; 
         private String workspaceId; 
 
@@ -70,9 +83,19 @@ public class CreateApiKeyRequest extends Request {
 
         private Builder(CreateApiKeyRequest request) {
             super(request);
+            this.auth = request.auth;
             this.description = request.description;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * auth.
+         */
+        public Builder auth(Auth auth) {
+            this.putBodyParameter("auth", auth);
+            this.auth = auth;
+            return this;
+        }
 
         /**
          * description.
@@ -99,4 +122,79 @@ public class CreateApiKeyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApiKeyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApiKeyRequest</p>
+     */
+    public static class Auth extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("accessIps")
+        private java.util.List<String> accessIps;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private Auth(Builder builder) {
+            this.accessIps = builder.accessIps;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Auth create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessIps
+         */
+        public java.util.List<String> getAccessIps() {
+            return this.accessIps;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> accessIps; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Auth model) {
+                this.accessIps = model.accessIps;
+                this.type = model.type;
+            } 
+
+            /**
+             * accessIps.
+             */
+            public Builder accessIps(java.util.List<String> accessIps) {
+                this.accessIps = accessIps;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Auth build() {
+                return new Auth(this);
+            } 
+
+        } 
+
+    }
 }

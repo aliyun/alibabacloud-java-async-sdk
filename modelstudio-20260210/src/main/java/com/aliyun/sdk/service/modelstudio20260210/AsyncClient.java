@@ -38,6 +38,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteApiKeyResponse> deleteApiKey(DeleteApiKeyRequest request);
 
     /**
+     * @param request the request parameters of DisableApiKey  DisableApiKeyRequest
+     * @return DisableApiKeyResponse
+     */
+    CompletableFuture<DisableApiKeyResponse> disableApiKey(DisableApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of EnableApiKey  EnableApiKeyRequest
+     * @return EnableApiKeyResponse
+     */
+    CompletableFuture<EnableApiKeyResponse> enableApiKey(EnableApiKeyRequest request);
+
+    /**
      * @param request the request parameters of GetApiKey  GetApiKeyRequest
      * @return GetApiKeyResponse
      */
@@ -54,6 +66,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListWorkspacesResponse
      */
     CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
+
+    /**
+     * @param request the request parameters of ResetApiKey  ResetApiKeyRequest
+     * @return ResetApiKeyResponse
+     */
+    CompletableFuture<ResetApiKeyResponse> resetApiKey(ResetApiKeyRequest request);
 
     /**
      * @param request the request parameters of UpdateApiKey  UpdateApiKeyRequest

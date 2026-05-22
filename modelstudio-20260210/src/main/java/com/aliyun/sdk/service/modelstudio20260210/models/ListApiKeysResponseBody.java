@@ -244,12 +244,90 @@ public class ListApiKeysResponseBody extends TeaModel {
      *
      * <p>ListApiKeysResponseBody</p>
      */
+    public static class Auth extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("accessIps")
+        private java.util.List<String> accessIps;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private Auth(Builder builder) {
+            this.accessIps = builder.accessIps;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Auth create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessIps
+         */
+        public java.util.List<String> getAccessIps() {
+            return this.accessIps;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> accessIps; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Auth model) {
+                this.accessIps = model.accessIps;
+                this.type = model.type;
+            } 
+
+            /**
+             * accessIps.
+             */
+            public Builder accessIps(java.util.List<String> accessIps) {
+                this.accessIps = accessIps;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Auth build() {
+                return new Auth(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListApiKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApiKeysResponseBody</p>
+     */
     public static class ApiKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apiKeyId")
         private Long apiKeyId;
 
         @com.aliyun.core.annotation.NameInMap("apiKeyValue")
         private String apiKeyValue;
+
+        @com.aliyun.core.annotation.NameInMap("auth")
+        private Auth auth;
 
         @com.aliyun.core.annotation.NameInMap("createdBy")
         private String createdBy;
@@ -269,6 +347,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         private ApiKeys(Builder builder) {
             this.apiKeyId = builder.apiKeyId;
             this.apiKeyValue = builder.apiKeyValue;
+            this.auth = builder.auth;
             this.createdBy = builder.createdBy;
             this.description = builder.description;
             this.disabled = builder.disabled;
@@ -296,6 +375,13 @@ public class ListApiKeysResponseBody extends TeaModel {
          */
         public String getApiKeyValue() {
             return this.apiKeyValue;
+        }
+
+        /**
+         * @return auth
+         */
+        public Auth getAuth() {
+            return this.auth;
         }
 
         /**
@@ -336,6 +422,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public static final class Builder {
             private Long apiKeyId; 
             private String apiKeyValue; 
+            private Auth auth; 
             private String createdBy; 
             private String description; 
             private Integer disabled; 
@@ -348,6 +435,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             private Builder(ApiKeys model) {
                 this.apiKeyId = model.apiKeyId;
                 this.apiKeyValue = model.apiKeyValue;
+                this.auth = model.auth;
                 this.createdBy = model.createdBy;
                 this.description = model.description;
                 this.disabled = model.disabled;
@@ -371,6 +459,14 @@ public class ListApiKeysResponseBody extends TeaModel {
              */
             public Builder apiKeyValue(String apiKeyValue) {
                 this.apiKeyValue = apiKeyValue;
+                return this;
+            }
+
+            /**
+             * auth.
+             */
+            public Builder auth(Auth auth) {
+                this.auth = auth;
                 return this;
             }
 

@@ -22,6 +22,10 @@ public class UpdateApiKeyRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long apiKeyId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("auth")
+    private Auth auth;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("description")
     @com.aliyun.core.annotation.Validation(maxLength = 200)
@@ -30,6 +34,7 @@ public class UpdateApiKeyRequest extends Request {
     private UpdateApiKeyRequest(Builder builder) {
         super(builder);
         this.apiKeyId = builder.apiKeyId;
+        this.auth = builder.auth;
         this.description = builder.description;
     }
 
@@ -54,6 +59,13 @@ public class UpdateApiKeyRequest extends Request {
     }
 
     /**
+     * @return auth
+     */
+    public Auth getAuth() {
+        return this.auth;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -62,6 +74,7 @@ public class UpdateApiKeyRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateApiKeyRequest, Builder> {
         private Long apiKeyId; 
+        private Auth auth; 
         private String description; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class UpdateApiKeyRequest extends Request {
         private Builder(UpdateApiKeyRequest request) {
             super(request);
             this.apiKeyId = request.apiKeyId;
+            this.auth = request.auth;
             this.description = request.description;
         } 
 
@@ -84,6 +98,15 @@ public class UpdateApiKeyRequest extends Request {
         public Builder apiKeyId(Long apiKeyId) {
             this.putPathParameter("apiKeyId", apiKeyId);
             this.apiKeyId = apiKeyId;
+            return this;
+        }
+
+        /**
+         * auth.
+         */
+        public Builder auth(Auth auth) {
+            this.putBodyParameter("auth", auth);
+            this.auth = auth;
             return this;
         }
 
@@ -103,4 +126,79 @@ public class UpdateApiKeyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateApiKeyRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateApiKeyRequest</p>
+     */
+    public static class Auth extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("accessIps")
+        private java.util.List<String> accessIps;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private Auth(Builder builder) {
+            this.accessIps = builder.accessIps;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Auth create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessIps
+         */
+        public java.util.List<String> getAccessIps() {
+            return this.accessIps;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> accessIps; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Auth model) {
+                this.accessIps = model.accessIps;
+                this.type = model.type;
+            } 
+
+            /**
+             * accessIps.
+             */
+            public Builder accessIps(java.util.List<String> accessIps) {
+                this.accessIps = accessIps;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Auth build() {
+                return new Auth(this);
+            } 
+
+        } 
+
+    }
 }
