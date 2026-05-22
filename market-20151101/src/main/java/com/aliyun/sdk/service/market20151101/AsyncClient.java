@@ -205,6 +205,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PushMeteringDataResponse> pushMeteringData(PushMeteringDataRequest request);
 
     /**
+     * @param request the request parameters of PushTimesUsage  PushTimesUsageRequest
+     * @return PushTimesUsageResponse
+     */
+    CompletableFuture<PushTimesUsageResponse> pushTimesUsage(PushTimesUsageRequest request);
+
+    /**
      * @param request the request parameters of ResumeProject  ResumeProjectRequest
      * @return ResumeProjectResponse
      */
