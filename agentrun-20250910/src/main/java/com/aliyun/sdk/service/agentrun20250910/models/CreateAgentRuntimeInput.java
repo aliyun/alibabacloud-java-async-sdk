@@ -48,6 +48,9 @@ public class CreateAgentRuntimeInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("disableSessionAffinity")
+    private Boolean disableSessionAffinity;
+
     @com.aliyun.core.annotation.NameInMap("diskSize")
     private Integer diskSize;
 
@@ -120,6 +123,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
         this.credentialId = builder.credentialId;
         this.credentialName = builder.credentialName;
         this.description = builder.description;
+        this.disableSessionAffinity = builder.disableSessionAffinity;
         this.diskSize = builder.diskSize;
         this.edition = builder.edition;
         this.enableSessionIsolation = builder.enableSessionIsolation;
@@ -214,6 +218,13 @@ public class CreateAgentRuntimeInput extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return disableSessionAffinity
+     */
+    public Boolean getDisableSessionAffinity() {
+        return this.disableSessionAffinity;
     }
 
     /**
@@ -359,6 +370,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
         private String credentialId; 
         private String credentialName; 
         private String description; 
+        private Boolean disableSessionAffinity; 
         private Integer diskSize; 
         private String edition; 
         private Boolean enableSessionIsolation; 
@@ -392,6 +404,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
             this.credentialId = model.credentialId;
             this.credentialName = model.credentialName;
             this.description = model.description;
+            this.disableSessionAffinity = model.disableSessionAffinity;
             this.diskSize = model.diskSize;
             this.edition = model.edition;
             this.enableSessionIsolation = model.enableSessionIsolation;
@@ -509,6 +522,17 @@ public class CreateAgentRuntimeInput extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>是否禁用会话亲和性。默认为 false（即默认启用会话亲和），设置为 true 时关闭会话亲和</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder disableSessionAffinity(Boolean disableSessionAffinity) {
+            this.disableSessionAffinity = disableSessionAffinity;
             return this;
         }
 
