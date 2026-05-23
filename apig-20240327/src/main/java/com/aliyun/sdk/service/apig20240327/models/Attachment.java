@@ -17,8 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Attachment</p>
  */
 public class Attachment extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("attachResourceId")
+    private String attachResourceId;
+
     @com.aliyun.core.annotation.NameInMap("attachResourceIds")
     private java.util.List<String> attachResourceIds;
+
+    @com.aliyun.core.annotation.NameInMap("attachResourceParentIds")
+    private java.util.List<String> attachResourceParentIds;
 
     @com.aliyun.core.annotation.NameInMap("attachResourceType")
     private String attachResourceType;
@@ -33,7 +39,9 @@ public class Attachment extends TeaModel {
     private String policyAttachmentId;
 
     private Attachment(Builder builder) {
+        this.attachResourceId = builder.attachResourceId;
         this.attachResourceIds = builder.attachResourceIds;
+        this.attachResourceParentIds = builder.attachResourceParentIds;
         this.attachResourceType = builder.attachResourceType;
         this.environmentId = builder.environmentId;
         this.gatewayId = builder.gatewayId;
@@ -53,10 +61,24 @@ public class Attachment extends TeaModel {
     }
 
     /**
+     * @return attachResourceId
+     */
+    public String getAttachResourceId() {
+        return this.attachResourceId;
+    }
+
+    /**
      * @return attachResourceIds
      */
     public java.util.List<String> getAttachResourceIds() {
         return this.attachResourceIds;
+    }
+
+    /**
+     * @return attachResourceParentIds
+     */
+    public java.util.List<String> getAttachResourceParentIds() {
+        return this.attachResourceParentIds;
     }
 
     /**
@@ -88,7 +110,9 @@ public class Attachment extends TeaModel {
     }
 
     public static final class Builder {
+        private String attachResourceId; 
         private java.util.List<String> attachResourceIds; 
+        private java.util.List<String> attachResourceParentIds; 
         private String attachResourceType; 
         private String environmentId; 
         private String gatewayId; 
@@ -98,7 +122,9 @@ public class Attachment extends TeaModel {
         } 
 
         private Builder(Attachment model) {
+            this.attachResourceId = model.attachResourceId;
             this.attachResourceIds = model.attachResourceIds;
+            this.attachResourceParentIds = model.attachResourceParentIds;
             this.attachResourceType = model.attachResourceType;
             this.environmentId = model.environmentId;
             this.gatewayId = model.gatewayId;
@@ -106,10 +132,26 @@ public class Attachment extends TeaModel {
         } 
 
         /**
+         * attachResourceId.
+         */
+        public Builder attachResourceId(String attachResourceId) {
+            this.attachResourceId = attachResourceId;
+            return this;
+        }
+
+        /**
          * attachResourceIds.
          */
         public Builder attachResourceIds(java.util.List<String> attachResourceIds) {
             this.attachResourceIds = attachResourceIds;
+            return this;
+        }
+
+        /**
+         * attachResourceParentIds.
+         */
+        public Builder attachResourceParentIds(java.util.List<String> attachResourceParentIds) {
+            this.attachResourceParentIds = attachResourceParentIds;
             return this;
         }
 
