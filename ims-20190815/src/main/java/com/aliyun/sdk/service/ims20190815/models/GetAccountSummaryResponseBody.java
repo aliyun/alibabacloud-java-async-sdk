@@ -161,6 +161,9 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RolesQuota")
         private Integer rolesQuota;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceCredentialsPerUserPerServiceQuota")
+        private Integer serviceCredentialsPerUserPerServiceQuota;
+
         @com.aliyun.core.annotation.NameInMap("Users")
         private Integer users;
 
@@ -195,6 +198,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             this.policySizeQuota = builder.policySizeQuota;
             this.roles = builder.roles;
             this.rolesQuota = builder.rolesQuota;
+            this.serviceCredentialsPerUserPerServiceQuota = builder.serviceCredentialsPerUserPerServiceQuota;
             this.users = builder.users;
             this.usersQuota = builder.usersQuota;
             this.versionsPerPolicyQuota = builder.versionsPerPolicyQuota;
@@ -357,6 +361,13 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceCredentialsPerUserPerServiceQuota
+         */
+        public Integer getServiceCredentialsPerUserPerServiceQuota() {
+            return this.serviceCredentialsPerUserPerServiceQuota;
+        }
+
+        /**
          * @return users
          */
         public Integer getUsers() {
@@ -406,6 +417,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             private Integer policySizeQuota; 
             private Integer roles; 
             private Integer rolesQuota; 
+            private Integer serviceCredentialsPerUserPerServiceQuota; 
             private Integer users; 
             private Integer usersQuota; 
             private Integer versionsPerPolicyQuota; 
@@ -436,6 +448,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
                 this.policySizeQuota = model.policySizeQuota;
                 this.roles = model.roles;
                 this.rolesQuota = model.rolesQuota;
+                this.serviceCredentialsPerUserPerServiceQuota = model.serviceCredentialsPerUserPerServiceQuota;
                 this.users = model.users;
                 this.usersQuota = model.usersQuota;
                 this.versionsPerPolicyQuota = model.versionsPerPolicyQuota;
@@ -664,6 +677,14 @@ public class GetAccountSummaryResponseBody extends TeaModel {
              */
             public Builder rolesQuota(Integer rolesQuota) {
                 this.rolesQuota = rolesQuota;
+                return this;
+            }
+
+            /**
+             * ServiceCredentialsPerUserPerServiceQuota.
+             */
+            public Builder serviceCredentialsPerUserPerServiceQuota(Integer serviceCredentialsPerUserPerServiceQuota) {
+                this.serviceCredentialsPerUserPerServiceQuota = serviceCredentialsPerUserPerServiceQuota;
                 return this;
             }
 

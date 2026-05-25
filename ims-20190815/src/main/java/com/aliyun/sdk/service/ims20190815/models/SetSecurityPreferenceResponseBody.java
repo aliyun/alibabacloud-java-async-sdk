@@ -101,8 +101,12 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowUserToManageAccessKeys")
         private Boolean allowUserToManageAccessKeys;
 
+        @com.aliyun.core.annotation.NameInMap("AllowUserToManageServiceCredentials")
+        private Boolean allowUserToManageServiceCredentials;
+
         private AccessKeyPreference(Builder builder) {
             this.allowUserToManageAccessKeys = builder.allowUserToManageAccessKeys;
+            this.allowUserToManageServiceCredentials = builder.allowUserToManageServiceCredentials;
         }
 
         public static Builder builder() {
@@ -120,14 +124,23 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             return this.allowUserToManageAccessKeys;
         }
 
+        /**
+         * @return allowUserToManageServiceCredentials
+         */
+        public Boolean getAllowUserToManageServiceCredentials() {
+            return this.allowUserToManageServiceCredentials;
+        }
+
         public static final class Builder {
             private Boolean allowUserToManageAccessKeys; 
+            private Boolean allowUserToManageServiceCredentials; 
 
             private Builder() {
             } 
 
             private Builder(AccessKeyPreference model) {
                 this.allowUserToManageAccessKeys = model.allowUserToManageAccessKeys;
+                this.allowUserToManageServiceCredentials = model.allowUserToManageServiceCredentials;
             } 
 
             /**
@@ -138,6 +151,14 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
              */
             public Builder allowUserToManageAccessKeys(Boolean allowUserToManageAccessKeys) {
                 this.allowUserToManageAccessKeys = allowUserToManageAccessKeys;
+                return this;
+            }
+
+            /**
+             * AllowUserToManageServiceCredentials.
+             */
+            public Builder allowUserToManageServiceCredentials(Boolean allowUserToManageServiceCredentials) {
+                this.allowUserToManageServiceCredentials = allowUserToManageServiceCredentials;
                 return this;
             }
 

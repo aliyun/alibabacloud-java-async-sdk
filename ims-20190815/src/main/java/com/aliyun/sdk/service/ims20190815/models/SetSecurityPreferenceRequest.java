@@ -38,6 +38,10 @@ public class SetSecurityPreferenceRequest extends Request {
     private Boolean allowUserToManagePersonalDingTalk;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowUserToManageServiceCredentials")
+    private Boolean allowUserToManageServiceCredentials;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableSaveMFATicket")
     private Boolean enableSaveMFATicket;
 
@@ -77,6 +81,7 @@ public class SetSecurityPreferenceRequest extends Request {
         this.allowUserToManageAccessKeys = builder.allowUserToManageAccessKeys;
         this.allowUserToManageMFADevices = builder.allowUserToManageMFADevices;
         this.allowUserToManagePersonalDingTalk = builder.allowUserToManagePersonalDingTalk;
+        this.allowUserToManageServiceCredentials = builder.allowUserToManageServiceCredentials;
         this.enableSaveMFATicket = builder.enableSaveMFATicket;
         this.loginNetworkMasks = builder.loginNetworkMasks;
         this.loginSessionDuration = builder.loginSessionDuration;
@@ -133,6 +138,13 @@ public class SetSecurityPreferenceRequest extends Request {
      */
     public Boolean getAllowUserToManagePersonalDingTalk() {
         return this.allowUserToManagePersonalDingTalk;
+    }
+
+    /**
+     * @return allowUserToManageServiceCredentials
+     */
+    public Boolean getAllowUserToManageServiceCredentials() {
+        return this.allowUserToManageServiceCredentials;
     }
 
     /**
@@ -197,6 +209,7 @@ public class SetSecurityPreferenceRequest extends Request {
         private Boolean allowUserToManageAccessKeys; 
         private Boolean allowUserToManageMFADevices; 
         private Boolean allowUserToManagePersonalDingTalk; 
+        private Boolean allowUserToManageServiceCredentials; 
         private Boolean enableSaveMFATicket; 
         private String loginNetworkMasks; 
         private Integer loginSessionDuration; 
@@ -217,6 +230,7 @@ public class SetSecurityPreferenceRequest extends Request {
             this.allowUserToManageAccessKeys = request.allowUserToManageAccessKeys;
             this.allowUserToManageMFADevices = request.allowUserToManageMFADevices;
             this.allowUserToManagePersonalDingTalk = request.allowUserToManagePersonalDingTalk;
+            this.allowUserToManageServiceCredentials = request.allowUserToManageServiceCredentials;
             this.enableSaveMFATicket = request.enableSaveMFATicket;
             this.loginNetworkMasks = request.loginNetworkMasks;
             this.loginSessionDuration = request.loginSessionDuration;
@@ -304,6 +318,15 @@ public class SetSecurityPreferenceRequest extends Request {
         public Builder allowUserToManagePersonalDingTalk(Boolean allowUserToManagePersonalDingTalk) {
             this.putQueryParameter("AllowUserToManagePersonalDingTalk", allowUserToManagePersonalDingTalk);
             this.allowUserToManagePersonalDingTalk = allowUserToManagePersonalDingTalk;
+            return this;
+        }
+
+        /**
+         * AllowUserToManageServiceCredentials.
+         */
+        public Builder allowUserToManageServiceCredentials(Boolean allowUserToManageServiceCredentials) {
+            this.putQueryParameter("AllowUserToManageServiceCredentials", allowUserToManageServiceCredentials);
+            this.allowUserToManageServiceCredentials = allowUserToManageServiceCredentials;
             return this;
         }
 
