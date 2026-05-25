@@ -287,6 +287,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSignatureResponse> createSignature(CreateSignatureRequest request);
 
     /**
+     * @param request the request parameters of CreateStageModel  CreateStageModelRequest
+     * @return CreateStageModelResponse
+     */
+    CompletableFuture<CreateStageModelResponse> createStageModel(CreateStageModelRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This API is intended for API providers.</p>
      * <ul>
@@ -493,6 +499,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSignatureResponse
      */
     CompletableFuture<DeleteSignatureResponse> deleteSignature(DeleteSignatureRequest request);
+
+    /**
+     * @param request the request parameters of DeleteStageModel  DeleteStageModelRequest
+     * @return DeleteStageModelResponse
+     */
+    CompletableFuture<DeleteStageModelResponse> deleteStageModel(DeleteStageModelRequest request);
 
     /**
      * <b>description</b> :
@@ -1183,6 +1195,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSignaturesByApiResponse> describeSignaturesByApi(DescribeSignaturesByApiRequest request);
 
     /**
+     * @param request the request parameters of DescribeStageModels  DescribeStageModelsRequest
+     * @return DescribeStageModelsResponse
+     */
+    CompletableFuture<DescribeStageModelsResponse> describeStageModels(DescribeStageModelsRequest request);
+
+    /**
      * @param request the request parameters of DescribeSummaryData  DescribeSummaryDataRequest
      * @return DescribeSummaryDataResponse
      */
@@ -1511,6 +1529,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifySignatureResponse
      */
     CompletableFuture<ModifySignatureResponse> modifySignature(ModifySignatureRequest request);
+
+    /**
+     * @param request the request parameters of ModifyStageModel  ModifyStageModelRequest
+     * @return ModifyStageModelResponse
+     */
+    CompletableFuture<ModifyStageModelResponse> modifyStageModel(ModifyStageModelRequest request);
 
     /**
      * <b>description</b> :
