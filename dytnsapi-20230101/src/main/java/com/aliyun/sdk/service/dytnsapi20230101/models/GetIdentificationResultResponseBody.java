@@ -12,11 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetPhoneNumberIdentificationResultResponseBody} extends {@link TeaModel}
+ * {@link GetIdentificationResultResponseBody} extends {@link TeaModel}
  *
- * <p>GetPhoneNumberIdentificationResultResponseBody</p>
+ * <p>GetIdentificationResultResponseBody</p>
  */
-public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
+public class GetIdentificationResultResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -29,7 +32,8 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GetPhoneNumberIdentificationResultResponseBody(Builder builder) {
+    private GetIdentificationResultResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -40,12 +44,19 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetPhoneNumberIdentificationResultResponseBody create() {
+    public static GetIdentificationResultResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -77,6 +88,7 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
@@ -85,7 +97,8 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetPhoneNumberIdentificationResultResponseBody model) {
+        private Builder(GetIdentificationResultResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -93,16 +106,15 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return code. Valid values:</p>
-         * <ul>
-         * <li>OK: The request is successful.</li>
-         * <li>NoIdentificationResult: No verification result is available or the verification failed.</li>
-         * <li>SessionNotValid: The session is invalid or expired.</li>
-         * <li>MobileNumberIllegal: The format of the phone number is invalid.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -110,7 +122,7 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -118,10 +130,7 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the return code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,31 +138,28 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>68A40250-50CD-034C-B728-0BD******177</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetPhoneNumberIdentificationResultResponseBody build() {
-            return new GetPhoneNumberIdentificationResultResponseBody(this);
+        public GetIdentificationResultResponseBody build() {
+            return new GetIdentificationResultResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetPhoneNumberIdentificationResultResponseBody} extends {@link TeaModel}
+     * {@link GetIdentificationResultResponseBody} extends {@link TeaModel}
      *
-     * <p>GetPhoneNumberIdentificationResultResponseBody</p>
+     * <p>GetIdentificationResultResponseBody</p>
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsIdentified")
-        private String isIdentified;
+        private Boolean isIdentified;
 
         private Data(Builder builder) {
             this.isIdentified = builder.isIdentified;
@@ -170,12 +176,12 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
         /**
          * @return isIdentified
          */
-        public String getIsIdentified() {
+        public Boolean getIsIdentified() {
             return this.isIdentified;
         }
 
         public static final class Builder {
-            private String isIdentified; 
+            private Boolean isIdentified; 
 
             private Builder() {
             } 
@@ -185,12 +191,9 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the phone number passed the verification.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsIdentified.
              */
-            public Builder isIdentified(String isIdentified) {
+            public Builder isIdentified(Boolean isIdentified) {
                 this.isIdentified = isIdentified;
                 return this;
             }

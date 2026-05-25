@@ -32,6 +32,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeNumberMccMncResponse> describeNumberMccMnc(DescribeNumberMccMncRequest request);
 
     /**
+     * @param request the request parameters of GetIdentificationResult  GetIdentificationResultRequest
+     * @return GetIdentificationResultResponse
+     */
+    CompletableFuture<GetIdentificationResultResponse> getIdentificationResult(GetIdentificationResultRequest request);
+
+    /**
+     * @param request the request parameters of GetIdentificationSession  GetIdentificationSessionRequest
+     * @return GetIdentificationSessionResponse
+     */
+    CompletableFuture<GetIdentificationSessionResponse> getIdentificationSession(GetIdentificationSessionRequest request);
+
+    /**
      * @param request the request parameters of GetPhoneNumberIdentificationResult  GetPhoneNumberIdentificationResultRequest
      * @return GetPhoneNumberIdentificationResultResponse
      */

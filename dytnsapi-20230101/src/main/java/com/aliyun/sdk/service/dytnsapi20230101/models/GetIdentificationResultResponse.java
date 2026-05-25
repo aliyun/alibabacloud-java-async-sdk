@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeNumberMccMncResponse} extends {@link TeaModel}
+ * {@link GetIdentificationResultResponse} extends {@link TeaModel}
  *
- * <p>DescribeNumberMccMncResponse</p>
+ * <p>GetIdentificationResultResponse</p>
  */
-public class DescribeNumberMccMncResponse extends Response {
+public class GetIdentificationResultResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeNumberMccMncResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeNumberMccMncResponseBody body;
+    private GetIdentificationResultResponseBody body;
 
-    private DescribeNumberMccMncResponse(BuilderImpl builder) {
+    private GetIdentificationResultResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeNumberMccMncResponse create() {
+    public static GetIdentificationResultResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeNumberMccMncResponse extends Response {
     /**
      * @return body
      */
-    public DescribeNumberMccMncResponseBody getBody() {
+    public GetIdentificationResultResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeNumberMccMncResponse, Builder> {
+    public interface Builder extends Response.Builder<GetIdentificationResultResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeNumberMccMncResponseBody body);
+        Builder body(GetIdentificationResultResponseBody body);
 
         @Override
-        DescribeNumberMccMncResponse build();
+        GetIdentificationResultResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeNumberMccMncResponse, Builder>
+            extends Response.BuilderImpl<GetIdentificationResultResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeNumberMccMncResponseBody body; 
+        private GetIdentificationResultResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeNumberMccMncResponse response) {
+        private BuilderImpl(GetIdentificationResultResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeNumberMccMncResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeNumberMccMncResponseBody body) {
+        public Builder body(GetIdentificationResultResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeNumberMccMncResponse build() {
-            return new DescribeNumberMccMncResponse(this);
+        public GetIdentificationResultResponse build() {
+            return new GetIdentificationResultResponse(this);
         } 
 
     } 

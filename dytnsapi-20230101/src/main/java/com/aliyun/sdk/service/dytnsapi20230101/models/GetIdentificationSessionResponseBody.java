@@ -12,11 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetPhoneNumberIdentificationUrlResponseBody} extends {@link TeaModel}
+ * {@link GetIdentificationSessionResponseBody} extends {@link TeaModel}
  *
- * <p>GetPhoneNumberIdentificationUrlResponseBody</p>
+ * <p>GetIdentificationSessionResponseBody</p>
  */
-public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
+public class GetIdentificationSessionResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -29,7 +32,8 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GetPhoneNumberIdentificationUrlResponseBody(Builder builder) {
+    private GetIdentificationSessionResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -40,12 +44,19 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetPhoneNumberIdentificationUrlResponseBody create() {
+    public static GetIdentificationSessionResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -77,6 +88,7 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
@@ -85,7 +97,8 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetPhoneNumberIdentificationUrlResponseBody model) {
+        private Builder(GetIdentificationSessionResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -93,15 +106,15 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return code. Valid values:</p>
-         * <ul>
-         * <li><strong>OK</strong>: The request is successful.</li>
-         * <li><strong>IdentificationNotAvailable</strong>: The verification system does not support the phone number that corresponds to the IP address.</li>
-         * <li><strong>MobileNumberIllegal</strong>: The format of the phone number is invalid.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +122,7 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -117,10 +130,7 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the return code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -128,37 +138,34 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>68A40250-50CD-034C-B728-0BD******177</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetPhoneNumberIdentificationUrlResponseBody build() {
-            return new GetPhoneNumberIdentificationUrlResponseBody(this);
+        public GetIdentificationSessionResponseBody build() {
+            return new GetIdentificationSessionResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetPhoneNumberIdentificationUrlResponseBody} extends {@link TeaModel}
+     * {@link GetIdentificationSessionResponseBody} extends {@link TeaModel}
      *
-     * <p>GetPhoneNumberIdentificationUrlResponseBody</p>
+     * <p>GetIdentificationSessionResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("IdentificationUrl")
-        private String identificationUrl;
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
+        private String expireDate;
 
         @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
         private Data(Builder builder) {
-            this.identificationUrl = builder.identificationUrl;
+            this.expireDate = builder.expireDate;
             this.sessionId = builder.sessionId;
         }
 
@@ -171,10 +178,10 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * @return identificationUrl
+         * @return expireDate
          */
-        public String getIdentificationUrl() {
-            return this.identificationUrl;
+        public String getExpireDate() {
+            return this.expireDate;
         }
 
         /**
@@ -185,33 +192,27 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String identificationUrl; 
+            private String expireDate; 
             private String sessionId; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.identificationUrl = model.identificationUrl;
+                this.expireDate = model.expireDate;
                 this.sessionId = model.sessionId;
             } 
 
             /**
-             * <p>The verification URL.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://global-ip-auth.dycpaas.com/global/biz/ip_auth/start?ipa_s_c_c=IPF0000000000000******&ipa_s_i=8636b75e2fcb40c53ffecc2b59">https://global-ip-auth.dycpaas.com/global/biz/ip_auth/start?ipa_s_c_c=IPF0000000000000******&amp;ipa_s_i=8636b75e2fcb40c53ffecc2b59</a>******</p>
+             * ExpireDate.
              */
-            public Builder identificationUrl(String identificationUrl) {
-                this.identificationUrl = identificationUrl;
+            public Builder expireDate(String expireDate) {
+                this.expireDate = expireDate;
                 return this;
             }
 
             /**
-             * <p>The session ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8636b75e2fcb40c53ffecc2b5947115c.149b03d2a7494e6e8f5b34c915245815.707c7f0d93f4409db0761aa5da94ce01.1686******041</p>
+             * SessionId.
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

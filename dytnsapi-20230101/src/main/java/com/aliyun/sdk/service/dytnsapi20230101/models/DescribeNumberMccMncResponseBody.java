@@ -48,6 +48,10 @@ public class DescribeNumberMccMncResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class DescribeNumberMccMncResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNumberMccMncResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -203,6 +218,16 @@ public class DescribeNumberMccMncResponseBody extends TeaModel {
             private String mcc; 
             private String mnc; 
             private Boolean ported; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.countryIso3 = model.countryIso3;
+                this.mcc = model.mcc;
+                this.mnc = model.mnc;
+                this.ported = model.ported;
+            } 
 
             /**
              * CountryIso3.

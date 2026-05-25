@@ -48,6 +48,10 @@ public class DescribeNumberHLRResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class DescribeNumberHLRResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNumberHLRResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -192,6 +207,15 @@ public class DescribeNumberHLRResponseBody extends TeaModel {
             private Long maxLength; 
             private Long minLength; 
 
+            private Builder() {
+            } 
+
+            private Builder(Call model) {
+                this.cleansedCode = model.cleansedCode;
+                this.maxLength = model.maxLength;
+                this.minLength = model.minLength;
+            } 
+
             /**
              * <p>call</p>
              * 
@@ -294,6 +318,16 @@ public class DescribeNumberHLRResponseBody extends TeaModel {
             private String roamingCountry; 
             private String subscriberStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Live model) {
+                this.deviceStatus = model.deviceStatus;
+                this.roaming = model.roaming;
+                this.roamingCountry = model.roamingCountry;
+                this.subscriberStatus = model.subscriberStatus;
+            } 
+
             /**
              * DeviceStatus.
              */
@@ -388,6 +422,15 @@ public class DescribeNumberHLRResponseBody extends TeaModel {
             private Long cleansedCode; 
             private Long maxLength; 
             private Long minLength; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sms model) {
+                this.cleansedCode = model.cleansedCode;
+                this.maxLength = model.maxLength;
+                this.minLength = model.minLength;
+            } 
 
             /**
              * <p>sms</p>
@@ -538,6 +581,20 @@ public class DescribeNumberHLRResponseBody extends TeaModel {
             private Live live; 
             private String phoneType; 
             private Sms sms; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.blocked = model.blocked;
+                this.call = model.call;
+                this.carrier = model.carrier;
+                this.city = model.city;
+                this.countryIso3 = model.countryIso3;
+                this.live = model.live;
+                this.phoneType = model.phoneType;
+                this.sms = model.sms;
+            } 
 
             /**
              * Blocked.
