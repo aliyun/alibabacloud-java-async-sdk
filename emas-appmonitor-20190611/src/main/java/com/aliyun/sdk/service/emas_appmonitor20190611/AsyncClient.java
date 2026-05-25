@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CreateTlogTask  CreateTlogTaskRequest
+     * @return CreateTlogTaskResponse
+     */
+    CompletableFuture<CreateTlogTaskResponse> createTlogTask(CreateTlogTaskRequest request);
+
+    /**
      * @param request the request parameters of GetError  GetErrorRequest
      * @return GetErrorResponse
      */
@@ -50,10 +56,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSymbolicFilesResponse> getSymbolicFiles(GetSymbolicFilesRequest request);
 
     /**
+     * @param request the request parameters of GetTlogCollectList  GetTlogCollectListRequest
+     * @return GetTlogCollectListResponse
+     */
+    CompletableFuture<GetTlogCollectListResponse> getTlogCollectList(GetTlogCollectListRequest request);
+
+    /**
+     * @param request the request parameters of GetTlogDeviceInfo  GetTlogDeviceInfoRequest
+     * @return GetTlogDeviceInfoResponse
+     */
+    CompletableFuture<GetTlogDeviceInfoResponse> getTlogDeviceInfo(GetTlogDeviceInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetTlogDeviceList  GetTlogDeviceListRequest
+     * @return GetTlogDeviceListResponse
+     */
+    CompletableFuture<GetTlogDeviceListResponse> getTlogDeviceList(GetTlogDeviceListRequest request);
+
+    /**
+     * @param request the request parameters of GetTlogTaskCollections  GetTlogTaskCollectionsRequest
+     * @return GetTlogTaskCollectionsResponse
+     */
+    CompletableFuture<GetTlogTaskCollectionsResponse> getTlogTaskCollections(GetTlogTaskCollectionsRequest request);
+
+    /**
+     * @param request the request parameters of GetTlogTaskInfo  GetTlogTaskInfoRequest
+     * @return GetTlogTaskInfoResponse
+     */
+    CompletableFuture<GetTlogTaskInfoResponse> getTlogTaskInfo(GetTlogTaskInfoRequest request);
+
+    /**
      * @param request the request parameters of RequestUploadToken  RequestUploadTokenRequest
      * @return RequestUploadTokenResponse
      */
     CompletableFuture<RequestUploadTokenResponse> requestUploadToken(RequestUploadTokenRequest request);
+
+    /**
+     * @param request the request parameters of SearchTlog  SearchTlogRequest
+     * @return SearchTlogResponse
+     */
+    CompletableFuture<SearchTlogResponse> searchTlog(SearchTlogRequest request);
 
     /**
      * @param request the request parameters of SubmitSymbolic  SubmitSymbolicRequest

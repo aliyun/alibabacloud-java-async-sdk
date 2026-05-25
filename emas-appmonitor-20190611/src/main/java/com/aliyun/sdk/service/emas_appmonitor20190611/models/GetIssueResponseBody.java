@@ -257,6 +257,9 @@ public class GetIssueResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("Reason")
+        private String reason;
+
         @com.aliyun.core.annotation.NameInMap("Stack")
         private String stack;
 
@@ -271,6 +274,9 @@ public class GetIssueResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<String> tags;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
 
         private Model(Builder builder) {
             this.affectedVersions = builder.affectedVersions;
@@ -299,11 +305,13 @@ public class GetIssueResponseBody extends TeaModel {
             this.gmtLatest = builder.gmtLatest;
             this.keyLine = builder.keyLine;
             this.name = builder.name;
+            this.reason = builder.reason;
             this.stack = builder.stack;
             this.status = builder.status;
             this.summary = builder.summary;
             this.symbolicStatus = builder.symbolicStatus;
             this.tags = builder.tags;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -497,6 +505,13 @@ public class GetIssueResponseBody extends TeaModel {
         }
 
         /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
          * @return stack
          */
         public String getStack() {
@@ -531,6 +546,13 @@ public class GetIssueResponseBody extends TeaModel {
             return this.tags;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private java.util.List<String> affectedVersions; 
             private Long allocSizeMax; 
@@ -558,11 +580,13 @@ public class GetIssueResponseBody extends TeaModel {
             private Long gmtLatest; 
             private Integer keyLine; 
             private String name; 
+            private String reason; 
             private String stack; 
             private Integer status; 
             private String summary; 
             private Boolean symbolicStatus; 
             private java.util.List<String> tags; 
+            private String type; 
 
             private Builder() {
             } 
@@ -594,11 +618,13 @@ public class GetIssueResponseBody extends TeaModel {
                 this.gmtLatest = model.gmtLatest;
                 this.keyLine = model.keyLine;
                 this.name = model.name;
+                this.reason = model.reason;
                 this.stack = model.stack;
                 this.status = model.status;
                 this.summary = model.summary;
                 this.symbolicStatus = model.symbolicStatus;
                 this.tags = model.tags;
+                this.type = model.type;
             } 
 
             /**
@@ -810,6 +836,14 @@ public class GetIssueResponseBody extends TeaModel {
             }
 
             /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            /**
              * Stack.
              */
             public Builder stack(String stack) {
@@ -846,6 +880,14 @@ public class GetIssueResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

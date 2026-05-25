@@ -260,6 +260,9 @@ public class GetErrorResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColNo")
         private String colNo;
 
+        @com.aliyun.core.annotation.NameInMap("Controllers")
+        private String controllers;
+
         @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
@@ -365,6 +368,9 @@ public class GetErrorResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FeatureScene")
         private String featureScene;
 
+        @com.aliyun.core.annotation.NameInMap("FileDescriptor")
+        private String fileDescriptor;
+
         @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
@@ -413,6 +419,12 @@ public class GetErrorResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsBackTrace")
         private Integer isBackTrace;
 
+        @com.aliyun.core.annotation.NameInMap("IsJailbroken")
+        private Integer isJailbroken;
+
+        @com.aliyun.core.annotation.NameInMap("IsSimulator")
+        private Integer isSimulator;
+
         @com.aliyun.core.annotation.NameInMap("IsSpeedVersion")
         private Integer isSpeedVersion;
 
@@ -422,8 +434,14 @@ public class GetErrorResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JsBacktrace")
         private String jsBacktrace;
 
+        @com.aliyun.core.annotation.NameInMap("LagCost")
+        private Integer lagCost;
+
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
+
+        @com.aliyun.core.annotation.NameInMap("LaunchedCrashStage")
+        private Integer launchedCrashStage;
 
         @com.aliyun.core.annotation.NameInMap("LaunchedTime")
         private String launchedTime;
@@ -436,6 +454,9 @@ public class GetErrorResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MainLog")
         private String mainLog;
+
+        @com.aliyun.core.annotation.NameInMap("MemInfo")
+        private String memInfo;
 
         @com.aliyun.core.annotation.NameInMap("MemoryMap")
         private String memoryMap;
@@ -633,6 +654,7 @@ public class GetErrorResponseBody extends TeaModel {
             this.clientIp = builder.clientIp;
             this.clientTime = builder.clientTime;
             this.colNo = builder.colNo;
+            this.controllers = builder.controllers;
             this.country = builder.country;
             this.cpuModel = builder.cpuModel;
             this.cruxModule = builder.cruxModule;
@@ -668,6 +690,7 @@ public class GetErrorResponseBody extends TeaModel {
             this.exportStatus = builder.exportStatus;
             this.externalStorageDirectory = builder.externalStorageDirectory;
             this.featureScene = builder.featureScene;
+            this.fileDescriptor = builder.fileDescriptor;
             this.fileName = builder.fileName;
             this.filePath = builder.filePath;
             this.filename = builder.filename;
@@ -684,14 +707,19 @@ public class GetErrorResponseBody extends TeaModel {
             this.inMainProcess = builder.inMainProcess;
             this.installSdCard = builder.installSdCard;
             this.isBackTrace = builder.isBackTrace;
+            this.isJailbroken = builder.isJailbroken;
+            this.isSimulator = builder.isSimulator;
             this.isSpeedVersion = builder.isSpeedVersion;
             this.isp = builder.isp;
             this.jsBacktrace = builder.jsBacktrace;
+            this.lagCost = builder.lagCost;
             this.language = builder.language;
+            this.launchedCrashStage = builder.launchedCrashStage;
             this.launchedTime = builder.launchedTime;
             this.lineNo = builder.lineNo;
             this.logHash = builder.logHash;
             this.mainLog = builder.mainLog;
+            this.memInfo = builder.memInfo;
             this.memoryMap = builder.memoryMap;
             this.moreInfo1 = builder.moreInfo1;
             this.moreInfo2 = builder.moreInfo2;
@@ -948,6 +976,13 @@ public class GetErrorResponseBody extends TeaModel {
         }
 
         /**
+         * @return controllers
+         */
+        public String getControllers() {
+            return this.controllers;
+        }
+
+        /**
          * @return country
          */
         public String getCountry() {
@@ -1193,6 +1228,13 @@ public class GetErrorResponseBody extends TeaModel {
         }
 
         /**
+         * @return fileDescriptor
+         */
+        public String getFileDescriptor() {
+            return this.fileDescriptor;
+        }
+
+        /**
          * @return fileName
          */
         public String getFileName() {
@@ -1305,6 +1347,20 @@ public class GetErrorResponseBody extends TeaModel {
         }
 
         /**
+         * @return isJailbroken
+         */
+        public Integer getIsJailbroken() {
+            return this.isJailbroken;
+        }
+
+        /**
+         * @return isSimulator
+         */
+        public Integer getIsSimulator() {
+            return this.isSimulator;
+        }
+
+        /**
          * @return isSpeedVersion
          */
         public Integer getIsSpeedVersion() {
@@ -1326,10 +1382,24 @@ public class GetErrorResponseBody extends TeaModel {
         }
 
         /**
+         * @return lagCost
+         */
+        public Integer getLagCost() {
+            return this.lagCost;
+        }
+
+        /**
          * @return language
          */
         public String getLanguage() {
             return this.language;
+        }
+
+        /**
+         * @return launchedCrashStage
+         */
+        public Integer getLaunchedCrashStage() {
+            return this.launchedCrashStage;
         }
 
         /**
@@ -1358,6 +1428,13 @@ public class GetErrorResponseBody extends TeaModel {
          */
         public String getMainLog() {
             return this.mainLog;
+        }
+
+        /**
+         * @return memInfo
+         */
+        public String getMemInfo() {
+            return this.memInfo;
         }
 
         /**
@@ -1780,6 +1857,7 @@ public class GetErrorResponseBody extends TeaModel {
             private String clientIp; 
             private Long clientTime; 
             private String colNo; 
+            private String controllers; 
             private String country; 
             private String cpuModel; 
             private String cruxModule; 
@@ -1815,6 +1893,7 @@ public class GetErrorResponseBody extends TeaModel {
             private String exportStatus; 
             private String externalStorageDirectory; 
             private String featureScene; 
+            private String fileDescriptor; 
             private String fileName; 
             private String filePath; 
             private String filename; 
@@ -1831,14 +1910,19 @@ public class GetErrorResponseBody extends TeaModel {
             private Integer inMainProcess; 
             private Integer installSdCard; 
             private Integer isBackTrace; 
+            private Integer isJailbroken; 
+            private Integer isSimulator; 
             private Integer isSpeedVersion; 
             private String isp; 
             private String jsBacktrace; 
+            private Integer lagCost; 
             private String language; 
+            private Integer launchedCrashStage; 
             private String launchedTime; 
             private String lineNo; 
             private Long logHash; 
             private String mainLog; 
+            private String memInfo; 
             private String memoryMap; 
             private String moreInfo1; 
             private String moreInfo2; 
@@ -1927,6 +2011,7 @@ public class GetErrorResponseBody extends TeaModel {
                 this.clientIp = model.clientIp;
                 this.clientTime = model.clientTime;
                 this.colNo = model.colNo;
+                this.controllers = model.controllers;
                 this.country = model.country;
                 this.cpuModel = model.cpuModel;
                 this.cruxModule = model.cruxModule;
@@ -1962,6 +2047,7 @@ public class GetErrorResponseBody extends TeaModel {
                 this.exportStatus = model.exportStatus;
                 this.externalStorageDirectory = model.externalStorageDirectory;
                 this.featureScene = model.featureScene;
+                this.fileDescriptor = model.fileDescriptor;
                 this.fileName = model.fileName;
                 this.filePath = model.filePath;
                 this.filename = model.filename;
@@ -1978,14 +2064,19 @@ public class GetErrorResponseBody extends TeaModel {
                 this.inMainProcess = model.inMainProcess;
                 this.installSdCard = model.installSdCard;
                 this.isBackTrace = model.isBackTrace;
+                this.isJailbroken = model.isJailbroken;
+                this.isSimulator = model.isSimulator;
                 this.isSpeedVersion = model.isSpeedVersion;
                 this.isp = model.isp;
                 this.jsBacktrace = model.jsBacktrace;
+                this.lagCost = model.lagCost;
                 this.language = model.language;
+                this.launchedCrashStage = model.launchedCrashStage;
                 this.launchedTime = model.launchedTime;
                 this.lineNo = model.lineNo;
                 this.logHash = model.logHash;
                 this.mainLog = model.mainLog;
+                this.memInfo = model.memInfo;
                 this.memoryMap = model.memoryMap;
                 this.moreInfo1 = model.moreInfo1;
                 this.moreInfo2 = model.moreInfo2;
@@ -2268,6 +2359,14 @@ public class GetErrorResponseBody extends TeaModel {
              */
             public Builder colNo(String colNo) {
                 this.colNo = colNo;
+                return this;
+            }
+
+            /**
+             * Controllers.
+             */
+            public Builder controllers(String controllers) {
+                this.controllers = controllers;
                 return this;
             }
 
@@ -2557,6 +2656,14 @@ public class GetErrorResponseBody extends TeaModel {
             }
 
             /**
+             * FileDescriptor.
+             */
+            public Builder fileDescriptor(String fileDescriptor) {
+                this.fileDescriptor = fileDescriptor;
+                return this;
+            }
+
+            /**
              * FileName.
              */
             public Builder fileName(String fileName) {
@@ -2691,6 +2798,22 @@ public class GetErrorResponseBody extends TeaModel {
             }
 
             /**
+             * IsJailbroken.
+             */
+            public Builder isJailbroken(Integer isJailbroken) {
+                this.isJailbroken = isJailbroken;
+                return this;
+            }
+
+            /**
+             * IsSimulator.
+             */
+            public Builder isSimulator(Integer isSimulator) {
+                this.isSimulator = isSimulator;
+                return this;
+            }
+
+            /**
              * IsSpeedVersion.
              */
             public Builder isSpeedVersion(Integer isSpeedVersion) {
@@ -2718,10 +2841,26 @@ public class GetErrorResponseBody extends TeaModel {
             }
 
             /**
+             * LagCost.
+             */
+            public Builder lagCost(Integer lagCost) {
+                this.lagCost = lagCost;
+                return this;
+            }
+
+            /**
              * Language.
              */
             public Builder language(String language) {
                 this.language = language;
+                return this;
+            }
+
+            /**
+             * LaunchedCrashStage.
+             */
+            public Builder launchedCrashStage(Integer launchedCrashStage) {
+                this.launchedCrashStage = launchedCrashStage;
                 return this;
             }
 
@@ -2754,6 +2893,14 @@ public class GetErrorResponseBody extends TeaModel {
              */
             public Builder mainLog(String mainLog) {
                 this.mainLog = mainLog;
+                return this;
+            }
+
+            /**
+             * MemInfo.
+             */
+            public Builder memInfo(String memInfo) {
+                this.memInfo = memInfo;
                 return this;
             }
 

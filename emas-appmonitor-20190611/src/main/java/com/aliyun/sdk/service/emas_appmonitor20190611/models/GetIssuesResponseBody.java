@@ -233,14 +233,26 @@ public class GetIssuesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FirstVersion")
         private String firstVersion;
 
+        @com.aliyun.core.annotation.NameInMap("LagCost")
+        private Long lagCost;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Reason")
+        private String reason;
 
         @com.aliyun.core.annotation.NameInMap("Stack")
         private String stack;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
 
         private Items(Builder builder) {
             this.affectedUserCount = builder.affectedUserCount;
@@ -261,9 +273,13 @@ public class GetIssuesResponseBody extends TeaModel {
             this.errorType = builder.errorType;
             this.eventTime = builder.eventTime;
             this.firstVersion = builder.firstVersion;
+            this.lagCost = builder.lagCost;
             this.name = builder.name;
+            this.reason = builder.reason;
             this.stack = builder.stack;
             this.status = builder.status;
+            this.tags = builder.tags;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -401,10 +417,24 @@ public class GetIssuesResponseBody extends TeaModel {
         }
 
         /**
+         * @return lagCost
+         */
+        public Long getLagCost() {
+            return this.lagCost;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
         }
 
         /**
@@ -419,6 +449,20 @@ public class GetIssuesResponseBody extends TeaModel {
          */
         public Integer getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
         }
 
         public static final class Builder {
@@ -440,9 +484,13 @@ public class GetIssuesResponseBody extends TeaModel {
             private String errorType; 
             private String eventTime; 
             private String firstVersion; 
+            private Long lagCost; 
             private String name; 
+            private String reason; 
             private String stack; 
             private Integer status; 
+            private java.util.List<String> tags; 
+            private String type; 
 
             private Builder() {
             } 
@@ -466,9 +514,13 @@ public class GetIssuesResponseBody extends TeaModel {
                 this.errorType = model.errorType;
                 this.eventTime = model.eventTime;
                 this.firstVersion = model.firstVersion;
+                this.lagCost = model.lagCost;
                 this.name = model.name;
+                this.reason = model.reason;
                 this.stack = model.stack;
                 this.status = model.status;
+                this.tags = model.tags;
+                this.type = model.type;
             } 
 
             /**
@@ -616,10 +668,26 @@ public class GetIssuesResponseBody extends TeaModel {
             }
 
             /**
+             * LagCost.
+             */
+            public Builder lagCost(Long lagCost) {
+                this.lagCost = lagCost;
+                return this;
+            }
+
+            /**
              * Name.
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
                 return this;
             }
 
@@ -636,6 +704,22 @@ public class GetIssuesResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
