@@ -2182,6 +2182,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of LlmFullDuplexCallOperate  LlmFullDuplexCallOperateRequest
+     * @return LlmFullDuplexCallOperateResponse
+     */
+    @Override
+    public CompletableFuture<LlmFullDuplexCallOperateResponse> llmFullDuplexCallOperate(LlmFullDuplexCallOperateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("LlmFullDuplexCallOperate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(LlmFullDuplexCallOperateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<LlmFullDuplexCallOperateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of LlmSmartCall  LlmSmartCallRequest
      * @return LlmSmartCallResponse
      */
@@ -2212,6 +2230,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<LlmSmartCallEncryptResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of LlmSmartCallFullDuplex  LlmSmartCallFullDuplexRequest
+     * @return LlmSmartCallFullDuplexResponse
+     */
+    @Override
+    public CompletableFuture<LlmSmartCallFullDuplexResponse> llmSmartCallFullDuplex(LlmSmartCallFullDuplexRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("LlmSmartCallFullDuplex").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(LlmSmartCallFullDuplexResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<LlmSmartCallFullDuplexResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

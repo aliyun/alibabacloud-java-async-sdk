@@ -734,6 +734,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTaskDetailResponse> listTaskDetail(ListTaskDetailRequest request);
 
     /**
+     * @param request the request parameters of LlmFullDuplexCallOperate  LlmFullDuplexCallOperateRequest
+     * @return LlmFullDuplexCallOperateResponse
+     */
+    CompletableFuture<LlmFullDuplexCallOperateResponse> llmFullDuplexCallOperate(LlmFullDuplexCallOperateRequest request);
+
+    /**
      * @param request the request parameters of LlmSmartCall  LlmSmartCallRequest
      * @return LlmSmartCallResponse
      */
@@ -744,6 +750,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return LlmSmartCallEncryptResponse
      */
     CompletableFuture<LlmSmartCallEncryptResponse> llmSmartCallEncrypt(LlmSmartCallEncryptRequest request);
+
+    /**
+     * @param request the request parameters of LlmSmartCallFullDuplex  LlmSmartCallFullDuplexRequest
+     * @return LlmSmartCallFullDuplexResponse
+     */
+    CompletableFuture<LlmSmartCallFullDuplexResponse> llmSmartCallFullDuplex(LlmSmartCallFullDuplexRequest request);
 
     /**
      * @param request the request parameters of MakeCall  MakeCallRequest
