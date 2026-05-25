@@ -60,6 +60,10 @@ public class DescribeRecordFileRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
@@ -79,6 +83,7 @@ public class DescribeRecordFileRequest extends Request {
         this.pageSize = builder.pageSize;
         this.recordType = builder.recordType;
         this.regionId = builder.regionId;
+        this.resourceType = builder.resourceType;
         this.startTime = builder.startTime;
         this.status = builder.status;
     }
@@ -167,6 +172,13 @@ public class DescribeRecordFileRequest extends Request {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -191,6 +203,7 @@ public class DescribeRecordFileRequest extends Request {
         private Integer pageSize; 
         private String recordType; 
         private String regionId; 
+        private String resourceType; 
         private String startTime; 
         private Integer status; 
 
@@ -210,6 +223,7 @@ public class DescribeRecordFileRequest extends Request {
             this.pageSize = request.pageSize;
             this.recordType = request.recordType;
             this.regionId = request.regionId;
+            this.resourceType = request.resourceType;
             this.startTime = request.startTime;
             this.status = request.status;
         } 
@@ -304,6 +318,15 @@ public class DescribeRecordFileRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 
