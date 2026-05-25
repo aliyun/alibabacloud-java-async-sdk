@@ -1878,6 +1878,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryHistoryMetricDistributionResponse> queryHistoryMetricDistribution(QueryHistoryMetricDistributionRequest request);
 
     /**
+     * @param request the request parameters of QueryHistoryUsageDurationRank  QueryHistoryUsageDurationRankRequest
+     * @return QueryHistoryUsageDurationRankResponse
+     */
+    CompletableFuture<QueryHistoryUsageDurationRankResponse> queryHistoryUsageDurationRank(QueryHistoryUsageDurationRankRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The cloud computers that you want to restart must be in the Running state.</p>
      * 
