@@ -27,11 +27,6 @@ public class CreateWorkspaceRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String regionId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
@@ -41,13 +36,18 @@ public class CreateWorkspaceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
     private String workspaceName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String workspaceRegion;
+
     private CreateWorkspaceRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.description = builder.description;
-        this.regionId = builder.regionId;
         this.vpcId = builder.vpcId;
         this.workspaceName = builder.workspaceName;
+        this.workspaceRegion = builder.workspaceRegion;
     }
 
     public static Builder builder() {
@@ -78,13 +78,6 @@ public class CreateWorkspaceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -98,12 +91,19 @@ public class CreateWorkspaceRequest extends Request {
         return this.workspaceName;
     }
 
+    /**
+     * @return workspaceRegion
+     */
+    public String getWorkspaceRegion() {
+        return this.workspaceRegion;
+    }
+
     public static final class Builder extends Request.Builder<CreateWorkspaceRequest, Builder> {
         private String clientToken; 
         private String description; 
-        private String regionId; 
         private String vpcId; 
         private String workspaceName; 
+        private String workspaceRegion; 
 
         private Builder() {
             super();
@@ -113,9 +113,9 @@ public class CreateWorkspaceRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.description = request.description;
-            this.regionId = request.regionId;
             this.vpcId = request.vpcId;
             this.workspaceName = request.workspaceName;
+            this.workspaceRegion = request.workspaceRegion;
         } 
 
         /**
@@ -144,19 +144,6 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The region to which the workspace belongs.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * <p>The VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
@@ -179,6 +166,18 @@ public class CreateWorkspaceRequest extends Request {
         public Builder workspaceName(String workspaceName) {
             this.putQueryParameter("WorkspaceName", workspaceName);
             this.workspaceName = workspaceName;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder workspaceRegion(String workspaceRegion) {
+            this.putQueryParameter("WorkspaceRegion", workspaceRegion);
+            this.workspaceRegion = workspaceRegion;
             return this;
         }
 

@@ -4150,6 +4150,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>对应控制台 /knowledge/job/inventory/list，分页查询当前租户下的资产盘点任务历史，支持按任务 ID、创建人关键词及状态筛选</p>
+     * 
+     * @param request the request parameters of ListInventoryJobs  ListInventoryJobsRequest
+     * @return ListInventoryJobsResponse
+     */
+    @Override
+    public CompletableFuture<ListInventoryJobsResponse> listInventoryJobs(ListInventoryJobsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListInventoryJobs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInventoryJobsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListInventoryJobsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>  Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The <a href="https://help.aliyun.com/document_detail/424759.html">AddLhMembers</a> operation can be called to add a workspace member.</p>
      * <ul>
      * <li>If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.</li>
@@ -5412,6 +5433,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SearchDatabaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>对应控制台 /knowledge/job/inventory/asset，分页查询指定盘点任务产出的表级资产信息，支持关键词筛选与排序</p>
+     * 
+     * @param request the request parameters of SearchInventoryAsset  SearchInventoryAssetRequest
+     * @return SearchInventoryAssetResponse
+     */
+    @Override
+    public CompletableFuture<SearchInventoryAssetResponse> searchInventoryAsset(SearchInventoryAssetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SearchInventoryAsset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchInventoryAssetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchInventoryAssetResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

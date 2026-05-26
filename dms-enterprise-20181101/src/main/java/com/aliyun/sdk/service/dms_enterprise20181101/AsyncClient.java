@@ -1605,6 +1605,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>对应控制台 /knowledge/job/inventory/list，分页查询当前租户下的资产盘点任务历史，支持按任务 ID、创建人关键词及状态筛选</p>
+     * 
+     * @param request the request parameters of ListInventoryJobs  ListInventoryJobsRequest
+     * @return ListInventoryJobsResponse
+     */
+    CompletableFuture<ListInventoryJobsResponse> listInventoryJobs(ListInventoryJobsRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>  Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The <a href="https://help.aliyun.com/document_detail/424759.html">AddLhMembers</a> operation can be called to add a workspace member.</p>
      * <ul>
      * <li>If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.</li>
@@ -2055,6 +2064,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SearchDatabaseResponse
      */
     CompletableFuture<SearchDatabaseResponse> searchDatabase(SearchDatabaseRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>对应控制台 /knowledge/job/inventory/asset，分页查询指定盘点任务产出的表级资产信息，支持关键词筛选与排序</p>
+     * 
+     * @param request the request parameters of SearchInventoryAsset  SearchInventoryAssetRequest
+     * @return SearchInventoryAssetResponse
+     */
+    CompletableFuture<SearchInventoryAssetResponse> searchInventoryAsset(SearchInventoryAssetRequest request);
 
     /**
      * <b>description</b> :
