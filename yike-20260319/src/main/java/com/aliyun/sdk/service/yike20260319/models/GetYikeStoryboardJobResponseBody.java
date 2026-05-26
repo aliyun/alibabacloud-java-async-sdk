@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetYikeStoryboardJobResponseBody</p>
  */
 public class GetYikeStoryboardJobResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("JobCredit")
+    private JobCredit jobCredit;
+
     @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
@@ -33,6 +36,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
     private String requestId;
 
     private GetYikeStoryboardJobResponseBody(Builder builder) {
+        this.jobCredit = builder.jobCredit;
         this.jobId = builder.jobId;
         this.jobParams = builder.jobParams;
         this.jobResult = builder.jobResult;
@@ -50,6 +54,13 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return jobCredit
+     */
+    public JobCredit getJobCredit() {
+        return this.jobCredit;
     }
 
     /**
@@ -88,6 +99,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private JobCredit jobCredit; 
         private String jobId; 
         private JobParams jobParams; 
         private JobResult jobResult; 
@@ -98,12 +110,21 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         } 
 
         private Builder(GetYikeStoryboardJobResponseBody model) {
+            this.jobCredit = model.jobCredit;
             this.jobId = model.jobId;
             this.jobParams = model.jobParams;
             this.jobResult = model.jobResult;
             this.jobStatus = model.jobStatus;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * JobCredit.
+         */
+        public Builder jobCredit(JobCredit jobCredit) {
+            this.jobCredit = jobCredit;
+            return this;
+        }
 
         /**
          * JobId.
@@ -151,6 +172,123 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetYikeStoryboardJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetYikeStoryboardJobResponseBody</p>
+     */
+    public static class JobCredit extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ElementImageGeneration")
+        private String elementImageGeneration;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCreditCost")
+        private String totalCreditCost;
+
+        @com.aliyun.core.annotation.NameInMap("VideoComposition")
+        private String videoComposition;
+
+        @com.aliyun.core.annotation.NameInMap("VideoGeneration")
+        private String videoGeneration;
+
+        private JobCredit(Builder builder) {
+            this.elementImageGeneration = builder.elementImageGeneration;
+            this.totalCreditCost = builder.totalCreditCost;
+            this.videoComposition = builder.videoComposition;
+            this.videoGeneration = builder.videoGeneration;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static JobCredit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return elementImageGeneration
+         */
+        public String getElementImageGeneration() {
+            return this.elementImageGeneration;
+        }
+
+        /**
+         * @return totalCreditCost
+         */
+        public String getTotalCreditCost() {
+            return this.totalCreditCost;
+        }
+
+        /**
+         * @return videoComposition
+         */
+        public String getVideoComposition() {
+            return this.videoComposition;
+        }
+
+        /**
+         * @return videoGeneration
+         */
+        public String getVideoGeneration() {
+            return this.videoGeneration;
+        }
+
+        public static final class Builder {
+            private String elementImageGeneration; 
+            private String totalCreditCost; 
+            private String videoComposition; 
+            private String videoGeneration; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobCredit model) {
+                this.elementImageGeneration = model.elementImageGeneration;
+                this.totalCreditCost = model.totalCreditCost;
+                this.videoComposition = model.videoComposition;
+                this.videoGeneration = model.videoGeneration;
+            } 
+
+            /**
+             * ElementImageGeneration.
+             */
+            public Builder elementImageGeneration(String elementImageGeneration) {
+                this.elementImageGeneration = elementImageGeneration;
+                return this;
+            }
+
+            /**
+             * TotalCreditCost.
+             */
+            public Builder totalCreditCost(String totalCreditCost) {
+                this.totalCreditCost = totalCreditCost;
+                return this;
+            }
+
+            /**
+             * VideoComposition.
+             */
+            public Builder videoComposition(String videoComposition) {
+                this.videoComposition = videoComposition;
+                return this;
+            }
+
+            /**
+             * VideoGeneration.
+             */
+            public Builder videoGeneration(String videoGeneration) {
+                this.videoGeneration = videoGeneration;
+                return this;
+            }
+
+            public JobCredit build() {
+                return new JobCredit(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link GetYikeStoryboardJobResponseBody} extends {@link TeaModel}
