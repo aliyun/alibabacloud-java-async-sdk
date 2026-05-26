@@ -110,6 +110,15 @@ public class GetWorkloadIdentityResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
+        @com.aliyun.core.annotation.NameInMap("SessionBindingEnabled")
+        private Boolean sessionBindingEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("SourceAgentArn")
+        private String sourceAgentArn;
+
+        @com.aliyun.core.annotation.NameInMap("SourcePlatform")
+        private String sourcePlatform;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
@@ -125,6 +134,9 @@ public class GetWorkloadIdentityResponseBody extends TeaModel {
             this.description = builder.description;
             this.identityProviderName = builder.identityProviderName;
             this.roleArn = builder.roleArn;
+            this.sessionBindingEnabled = builder.sessionBindingEnabled;
+            this.sourceAgentArn = builder.sourceAgentArn;
+            this.sourcePlatform = builder.sourcePlatform;
             this.updateTime = builder.updateTime;
             this.workloadIdentityArn = builder.workloadIdentityArn;
             this.workloadIdentityName = builder.workloadIdentityName;
@@ -174,6 +186,27 @@ public class GetWorkloadIdentityResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionBindingEnabled
+         */
+        public Boolean getSessionBindingEnabled() {
+            return this.sessionBindingEnabled;
+        }
+
+        /**
+         * @return sourceAgentArn
+         */
+        public String getSourceAgentArn() {
+            return this.sourceAgentArn;
+        }
+
+        /**
+         * @return sourcePlatform
+         */
+        public String getSourcePlatform() {
+            return this.sourcePlatform;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -200,6 +233,9 @@ public class GetWorkloadIdentityResponseBody extends TeaModel {
             private String description; 
             private String identityProviderName; 
             private String roleArn; 
+            private Boolean sessionBindingEnabled; 
+            private String sourceAgentArn; 
+            private String sourcePlatform; 
             private String updateTime; 
             private String workloadIdentityArn; 
             private String workloadIdentityName; 
@@ -213,6 +249,9 @@ public class GetWorkloadIdentityResponseBody extends TeaModel {
                 this.description = model.description;
                 this.identityProviderName = model.identityProviderName;
                 this.roleArn = model.roleArn;
+                this.sessionBindingEnabled = model.sessionBindingEnabled;
+                this.sourceAgentArn = model.sourceAgentArn;
+                this.sourcePlatform = model.sourcePlatform;
                 this.updateTime = model.updateTime;
                 this.workloadIdentityArn = model.workloadIdentityArn;
                 this.workloadIdentityName = model.workloadIdentityName;
@@ -255,6 +294,30 @@ public class GetWorkloadIdentityResponseBody extends TeaModel {
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
+                return this;
+            }
+
+            /**
+             * SessionBindingEnabled.
+             */
+            public Builder sessionBindingEnabled(Boolean sessionBindingEnabled) {
+                this.sessionBindingEnabled = sessionBindingEnabled;
+                return this;
+            }
+
+            /**
+             * SourceAgentArn.
+             */
+            public Builder sourceAgentArn(String sourceAgentArn) {
+                this.sourceAgentArn = sourceAgentArn;
+                return this;
+            }
+
+            /**
+             * SourcePlatform.
+             */
+            public Builder sourcePlatform(String sourcePlatform) {
+                this.sourcePlatform = sourcePlatform;
                 return this;
             }
 

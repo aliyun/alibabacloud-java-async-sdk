@@ -34,6 +34,10 @@ public class UpdateWorkloadIdentityRequest extends Request {
     private String roleArn;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SessionBindingEnabled")
+    private String sessionBindingEnabled;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkloadIdentityName")
     private String workloadIdentityName;
 
@@ -43,6 +47,7 @@ public class UpdateWorkloadIdentityRequest extends Request {
         this.description = builder.description;
         this.identityProviderName = builder.identityProviderName;
         this.roleArn = builder.roleArn;
+        this.sessionBindingEnabled = builder.sessionBindingEnabled;
         this.workloadIdentityName = builder.workloadIdentityName;
     }
 
@@ -88,6 +93,13 @@ public class UpdateWorkloadIdentityRequest extends Request {
     }
 
     /**
+     * @return sessionBindingEnabled
+     */
+    public String getSessionBindingEnabled() {
+        return this.sessionBindingEnabled;
+    }
+
+    /**
      * @return workloadIdentityName
      */
     public String getWorkloadIdentityName() {
@@ -99,6 +111,7 @@ public class UpdateWorkloadIdentityRequest extends Request {
         private String description; 
         private String identityProviderName; 
         private String roleArn; 
+        private String sessionBindingEnabled; 
         private String workloadIdentityName; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class UpdateWorkloadIdentityRequest extends Request {
             this.description = request.description;
             this.identityProviderName = request.identityProviderName;
             this.roleArn = request.roleArn;
+            this.sessionBindingEnabled = request.sessionBindingEnabled;
             this.workloadIdentityName = request.workloadIdentityName;
         } 
 
@@ -148,6 +162,15 @@ public class UpdateWorkloadIdentityRequest extends Request {
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("RoleArn", roleArn);
             this.roleArn = roleArn;
+            return this;
+        }
+
+        /**
+         * SessionBindingEnabled.
+         */
+        public Builder sessionBindingEnabled(String sessionBindingEnabled) {
+            this.putBodyParameter("SessionBindingEnabled", sessionBindingEnabled);
+            this.sessionBindingEnabled = sessionBindingEnabled;
             return this;
         }
 

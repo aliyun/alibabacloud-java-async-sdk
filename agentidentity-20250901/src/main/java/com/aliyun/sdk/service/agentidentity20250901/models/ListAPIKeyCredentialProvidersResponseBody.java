@@ -170,6 +170,9 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("TokenVaultName")
+        private String tokenVaultName;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
@@ -178,6 +181,7 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.credentialProviderArn = builder.credentialProviderArn;
             this.description = builder.description;
+            this.tokenVaultName = builder.tokenVaultName;
             this.updateTime = builder.updateTime;
         }
 
@@ -218,6 +222,13 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
+         * @return tokenVaultName
+         */
+        public String getTokenVaultName() {
+            return this.tokenVaultName;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -229,6 +240,7 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
             private String createTime; 
             private String credentialProviderArn; 
             private String description; 
+            private String tokenVaultName; 
             private String updateTime; 
 
             private Builder() {
@@ -239,6 +251,7 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.credentialProviderArn = model.credentialProviderArn;
                 this.description = model.description;
+                this.tokenVaultName = model.tokenVaultName;
                 this.updateTime = model.updateTime;
             } 
 
@@ -271,6 +284,14 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * TokenVaultName.
+             */
+            public Builder tokenVaultName(String tokenVaultName) {
+                this.tokenVaultName = tokenVaultName;
                 return this;
             }
 

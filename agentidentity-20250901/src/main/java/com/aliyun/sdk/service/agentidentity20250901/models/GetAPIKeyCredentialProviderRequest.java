@@ -21,9 +21,14 @@ public class GetAPIKeyCredentialProviderRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("APIKeyCredentialProviderName")
     private String APIKeyCredentialProviderName;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TokenVaultName")
+    private String tokenVaultName;
+
     private GetAPIKeyCredentialProviderRequest(Builder builder) {
         super(builder);
         this.APIKeyCredentialProviderName = builder.APIKeyCredentialProviderName;
+        this.tokenVaultName = builder.tokenVaultName;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class GetAPIKeyCredentialProviderRequest extends Request {
         return this.APIKeyCredentialProviderName;
     }
 
+    /**
+     * @return tokenVaultName
+     */
+    public String getTokenVaultName() {
+        return this.tokenVaultName;
+    }
+
     public static final class Builder extends Request.Builder<GetAPIKeyCredentialProviderRequest, Builder> {
         private String APIKeyCredentialProviderName; 
+        private String tokenVaultName; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class GetAPIKeyCredentialProviderRequest extends Request {
         private Builder(GetAPIKeyCredentialProviderRequest request) {
             super(request);
             this.APIKeyCredentialProviderName = request.APIKeyCredentialProviderName;
+            this.tokenVaultName = request.tokenVaultName;
         } 
 
         /**
@@ -64,6 +78,15 @@ public class GetAPIKeyCredentialProviderRequest extends Request {
         public Builder APIKeyCredentialProviderName(String APIKeyCredentialProviderName) {
             this.putBodyParameter("APIKeyCredentialProviderName", APIKeyCredentialProviderName);
             this.APIKeyCredentialProviderName = APIKeyCredentialProviderName;
+            return this;
+        }
+
+        /**
+         * TokenVaultName.
+         */
+        public Builder tokenVaultName(String tokenVaultName) {
+            this.putBodyParameter("TokenVaultName", tokenVaultName);
+            this.tokenVaultName = tokenVaultName;
             return this;
         }
 

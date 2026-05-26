@@ -37,6 +37,10 @@ public class UpdateOAuth2CredentialProviderRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("OAuth2ProviderConfig")
     private OAuth2ProviderConfig oAuth2ProviderConfig;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TokenVaultName")
+    private String tokenVaultName;
+
     private UpdateOAuth2CredentialProviderRequest(Builder builder) {
         super(builder);
         this.callbackURL = builder.callbackURL;
@@ -44,6 +48,7 @@ public class UpdateOAuth2CredentialProviderRequest extends Request {
         this.description = builder.description;
         this.oAuth2CredentialProviderName = builder.oAuth2CredentialProviderName;
         this.oAuth2ProviderConfig = builder.oAuth2ProviderConfig;
+        this.tokenVaultName = builder.tokenVaultName;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class UpdateOAuth2CredentialProviderRequest extends Request {
         return this.oAuth2ProviderConfig;
     }
 
+    /**
+     * @return tokenVaultName
+     */
+    public String getTokenVaultName() {
+        return this.tokenVaultName;
+    }
+
     public static final class Builder extends Request.Builder<UpdateOAuth2CredentialProviderRequest, Builder> {
         private String callbackURL; 
         private String credentialProviderVendor; 
         private String description; 
         private String oAuth2CredentialProviderName; 
         private OAuth2ProviderConfig oAuth2ProviderConfig; 
+        private String tokenVaultName; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class UpdateOAuth2CredentialProviderRequest extends Request {
             this.description = request.description;
             this.oAuth2CredentialProviderName = request.oAuth2CredentialProviderName;
             this.oAuth2ProviderConfig = request.oAuth2ProviderConfig;
+            this.tokenVaultName = request.tokenVaultName;
         } 
 
         /**
@@ -160,6 +174,15 @@ public class UpdateOAuth2CredentialProviderRequest extends Request {
             String oAuth2ProviderConfigShrink = shrink(oAuth2ProviderConfig, "OAuth2ProviderConfig", "json");
             this.putBodyParameter("OAuth2ProviderConfig", oAuth2ProviderConfigShrink);
             this.oAuth2ProviderConfig = oAuth2ProviderConfig;
+            return this;
+        }
+
+        /**
+         * TokenVaultName.
+         */
+        public Builder tokenVaultName(String tokenVaultName) {
+            this.putBodyParameter("TokenVaultName", tokenVaultName);
+            this.tokenVaultName = tokenVaultName;
             return this;
         }
 

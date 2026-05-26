@@ -22,6 +22,10 @@ public class CreateWorkloadIdentityRequest extends Request {
     private java.util.List<String> allowedResourceOAuth2ReturnURLs;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateRAMRole")
+    private Boolean createRAMRole;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -34,15 +38,31 @@ public class CreateWorkloadIdentityRequest extends Request {
     private String roleArn;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SessionBindingEnabled")
+    private Boolean sessionBindingEnabled;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceAgentArn")
+    private String sourceAgentArn;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourcePlatform")
+    private String sourcePlatform;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkloadIdentityName")
     private String workloadIdentityName;
 
     private CreateWorkloadIdentityRequest(Builder builder) {
         super(builder);
         this.allowedResourceOAuth2ReturnURLs = builder.allowedResourceOAuth2ReturnURLs;
+        this.createRAMRole = builder.createRAMRole;
         this.description = builder.description;
         this.identityProviderName = builder.identityProviderName;
         this.roleArn = builder.roleArn;
+        this.sessionBindingEnabled = builder.sessionBindingEnabled;
+        this.sourceAgentArn = builder.sourceAgentArn;
+        this.sourcePlatform = builder.sourcePlatform;
         this.workloadIdentityName = builder.workloadIdentityName;
     }
 
@@ -67,6 +87,13 @@ public class CreateWorkloadIdentityRequest extends Request {
     }
 
     /**
+     * @return createRAMRole
+     */
+    public Boolean getCreateRAMRole() {
+        return this.createRAMRole;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -88,6 +115,27 @@ public class CreateWorkloadIdentityRequest extends Request {
     }
 
     /**
+     * @return sessionBindingEnabled
+     */
+    public Boolean getSessionBindingEnabled() {
+        return this.sessionBindingEnabled;
+    }
+
+    /**
+     * @return sourceAgentArn
+     */
+    public String getSourceAgentArn() {
+        return this.sourceAgentArn;
+    }
+
+    /**
+     * @return sourcePlatform
+     */
+    public String getSourcePlatform() {
+        return this.sourcePlatform;
+    }
+
+    /**
      * @return workloadIdentityName
      */
     public String getWorkloadIdentityName() {
@@ -96,9 +144,13 @@ public class CreateWorkloadIdentityRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateWorkloadIdentityRequest, Builder> {
         private java.util.List<String> allowedResourceOAuth2ReturnURLs; 
+        private Boolean createRAMRole; 
         private String description; 
         private String identityProviderName; 
         private String roleArn; 
+        private Boolean sessionBindingEnabled; 
+        private String sourceAgentArn; 
+        private String sourcePlatform; 
         private String workloadIdentityName; 
 
         private Builder() {
@@ -108,9 +160,13 @@ public class CreateWorkloadIdentityRequest extends Request {
         private Builder(CreateWorkloadIdentityRequest request) {
             super(request);
             this.allowedResourceOAuth2ReturnURLs = request.allowedResourceOAuth2ReturnURLs;
+            this.createRAMRole = request.createRAMRole;
             this.description = request.description;
             this.identityProviderName = request.identityProviderName;
             this.roleArn = request.roleArn;
+            this.sessionBindingEnabled = request.sessionBindingEnabled;
+            this.sourceAgentArn = request.sourceAgentArn;
+            this.sourcePlatform = request.sourcePlatform;
             this.workloadIdentityName = request.workloadIdentityName;
         } 
 
@@ -121,6 +177,15 @@ public class CreateWorkloadIdentityRequest extends Request {
             String allowedResourceOAuth2ReturnURLsShrink = shrink(allowedResourceOAuth2ReturnURLs, "AllowedResourceOAuth2ReturnURLs", "json");
             this.putBodyParameter("AllowedResourceOAuth2ReturnURLs", allowedResourceOAuth2ReturnURLsShrink);
             this.allowedResourceOAuth2ReturnURLs = allowedResourceOAuth2ReturnURLs;
+            return this;
+        }
+
+        /**
+         * CreateRAMRole.
+         */
+        public Builder createRAMRole(Boolean createRAMRole) {
+            this.putBodyParameter("CreateRAMRole", createRAMRole);
+            this.createRAMRole = createRAMRole;
             return this;
         }
 
@@ -148,6 +213,33 @@ public class CreateWorkloadIdentityRequest extends Request {
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("RoleArn", roleArn);
             this.roleArn = roleArn;
+            return this;
+        }
+
+        /**
+         * SessionBindingEnabled.
+         */
+        public Builder sessionBindingEnabled(Boolean sessionBindingEnabled) {
+            this.putBodyParameter("SessionBindingEnabled", sessionBindingEnabled);
+            this.sessionBindingEnabled = sessionBindingEnabled;
+            return this;
+        }
+
+        /**
+         * SourceAgentArn.
+         */
+        public Builder sourceAgentArn(String sourceAgentArn) {
+            this.putBodyParameter("SourceAgentArn", sourceAgentArn);
+            this.sourceAgentArn = sourceAgentArn;
+            return this;
+        }
+
+        /**
+         * SourcePlatform.
+         */
+        public Builder sourcePlatform(String sourcePlatform) {
+            this.putBodyParameter("SourcePlatform", sourcePlatform);
+            this.sourcePlatform = sourcePlatform;
             return this;
         }
 

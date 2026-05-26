@@ -25,10 +25,15 @@ public class ListAPIKeyCredentialProvidersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TokenVaultName")
+    private String tokenVaultName;
+
     private ListAPIKeyCredentialProvidersRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.tokenVaultName = builder.tokenVaultName;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class ListAPIKeyCredentialProvidersRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return tokenVaultName
+     */
+    public String getTokenVaultName() {
+        return this.tokenVaultName;
+    }
+
     public static final class Builder extends Request.Builder<ListAPIKeyCredentialProvidersRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
+        private String tokenVaultName; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class ListAPIKeyCredentialProvidersRequest extends Request {
             super(request);
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.tokenVaultName = request.tokenVaultName;
         } 
 
         /**
@@ -87,6 +101,15 @@ public class ListAPIKeyCredentialProvidersRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * TokenVaultName.
+         */
+        public Builder tokenVaultName(String tokenVaultName) {
+            this.putBodyParameter("TokenVaultName", tokenVaultName);
+            this.tokenVaultName = tokenVaultName;
             return this;
         }
 

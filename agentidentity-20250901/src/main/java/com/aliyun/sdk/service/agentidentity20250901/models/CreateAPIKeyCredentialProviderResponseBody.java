@@ -107,11 +107,15 @@ public class CreateAPIKeyCredentialProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("TokenVaultName")
+        private String tokenVaultName;
+
         private APIKeyCredentialProvider(Builder builder) {
             this.APIKeyCredentialProviderName = builder.APIKeyCredentialProviderName;
             this.createTime = builder.createTime;
             this.credentialProviderArn = builder.credentialProviderArn;
             this.description = builder.description;
+            this.tokenVaultName = builder.tokenVaultName;
         }
 
         public static Builder builder() {
@@ -150,11 +154,19 @@ public class CreateAPIKeyCredentialProviderResponseBody extends TeaModel {
             return this.description;
         }
 
+        /**
+         * @return tokenVaultName
+         */
+        public String getTokenVaultName() {
+            return this.tokenVaultName;
+        }
+
         public static final class Builder {
             private String APIKeyCredentialProviderName; 
             private String createTime; 
             private String credentialProviderArn; 
             private String description; 
+            private String tokenVaultName; 
 
             private Builder() {
             } 
@@ -164,6 +176,7 @@ public class CreateAPIKeyCredentialProviderResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.credentialProviderArn = model.credentialProviderArn;
                 this.description = model.description;
+                this.tokenVaultName = model.tokenVaultName;
             } 
 
             /**
@@ -195,6 +208,14 @@ public class CreateAPIKeyCredentialProviderResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * TokenVaultName.
+             */
+            public Builder tokenVaultName(String tokenVaultName) {
+                this.tokenVaultName = tokenVaultName;
                 return this;
             }
 
