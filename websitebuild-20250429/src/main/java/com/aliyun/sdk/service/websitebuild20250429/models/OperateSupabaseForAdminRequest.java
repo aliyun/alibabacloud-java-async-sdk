@@ -27,6 +27,10 @@ public class OperateSupabaseForAdminRequest extends Request {
     private String bizId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Env")
+    private String env;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExecuteSql")
     private String executeSql;
 
@@ -70,6 +74,7 @@ public class OperateSupabaseForAdminRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
+        this.env = builder.env;
         this.executeSql = builder.executeSql;
         this.operateType = builder.operateType;
         this.orderByClause = builder.orderByClause;
@@ -107,6 +112,13 @@ public class OperateSupabaseForAdminRequest extends Request {
      */
     public String getBizId() {
         return this.bizId;
+    }
+
+    /**
+     * @return env
+     */
+    public String getEnv() {
+        return this.env;
     }
 
     /**
@@ -182,6 +194,7 @@ public class OperateSupabaseForAdminRequest extends Request {
     public static final class Builder extends Request.Builder<OperateSupabaseForAdminRequest, Builder> {
         private String regionId; 
         private String bizId; 
+        private String env; 
         private String executeSql; 
         private String operateType; 
         private String orderByClause; 
@@ -201,6 +214,7 @@ public class OperateSupabaseForAdminRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.bizId = request.bizId;
+            this.env = request.env;
             this.executeSql = request.executeSql;
             this.operateType = request.operateType;
             this.orderByClause = request.orderByClause;
@@ -231,6 +245,15 @@ public class OperateSupabaseForAdminRequest extends Request {
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
             this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * Env.
+         */
+        public Builder env(String env) {
+            this.putQueryParameter("Env", env);
+            this.env = env;
             return this;
         }
 

@@ -32,6 +32,10 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends Request {
     private String bizId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Env")
+    private String env;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderColumn")
     private String orderColumn;
 
@@ -56,6 +60,7 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends Request {
         this.regionId = builder.regionId;
         this.authType = builder.authType;
         this.bizId = builder.bizId;
+        this.env = builder.env;
         this.orderColumn = builder.orderColumn;
         this.orderType = builder.orderType;
         this.pageNum = builder.pageNum;
@@ -98,6 +103,13 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends Request {
     }
 
     /**
+     * @return env
+     */
+    public String getEnv() {
+        return this.env;
+    }
+
+    /**
      * @return orderColumn
      */
     public String getOrderColumn() {
@@ -136,6 +148,7 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends Request {
         private String regionId; 
         private String authType; 
         private String bizId; 
+        private String env; 
         private String orderColumn; 
         private String orderType; 
         private Integer pageNum; 
@@ -151,6 +164,7 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends Request {
             this.regionId = request.regionId;
             this.authType = request.authType;
             this.bizId = request.bizId;
+            this.env = request.env;
             this.orderColumn = request.orderColumn;
             this.orderType = request.orderType;
             this.pageNum = request.pageNum;
@@ -188,6 +202,15 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends Request {
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
             this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * Env.
+         */
+        public Builder env(String env) {
+            this.putQueryParameter("Env", env);
+            this.env = env;
             return this;
         }
 
