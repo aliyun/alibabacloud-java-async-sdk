@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-aisearchengine20260417</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>alibabacloud-aisearchengine20260417</name>
   <description>Alibaba Cloud AiSearchEngine (20260417) Async SDK for Java

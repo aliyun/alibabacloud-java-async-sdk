@@ -19,10 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class QaChatRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("appId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("message")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Message message;
 
     @com.aliyun.core.annotation.Body
@@ -101,7 +103,10 @@ public class QaChatRequest extends Request {
         } 
 
         /**
-         * appId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2047140750220754946</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("appId", appId);
@@ -110,7 +115,7 @@ public class QaChatRequest extends Request {
         }
 
         /**
-         * message.
+         * <p>This parameter is required.</p>
          */
         public Builder message(Message message) {
             this.putBodyParameter("message", message);
