@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBenchmarkTaskResponse> createBenchmarkTask(CreateBenchmarkTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateConfig  CreateConfigRequest
+     * @return CreateConfigResponse
+     */
+    CompletableFuture<CreateConfigResponse> createConfig(CreateConfigRequest request);
+
+    /**
      * @param request the request parameters of CreateFaultInjection  CreateFaultInjectionRequest
      * @return CreateFaultInjectionResponse
      */
@@ -167,6 +173,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteBenchmarkTaskResponse
      */
     CompletableFuture<DeleteBenchmarkTaskResponse> deleteBenchmarkTask(DeleteBenchmarkTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteConfig  DeleteConfigRequest
+     * @return DeleteConfigResponse
+     */
+    CompletableFuture<DeleteConfigResponse> deleteConfig(DeleteConfigRequest request);
 
     /**
      * @param request the request parameters of DeleteFaultInjection  DeleteFaultInjectionRequest
@@ -462,6 +474,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListBenchmarkTaskResponse> listBenchmarkTask(ListBenchmarkTaskRequest request);
 
     /**
+     * @param request the request parameters of ListConfigs  ListConfigsRequest
+     * @return ListConfigsResponse
+     */
+    CompletableFuture<ListConfigsResponse> listConfigs(ListConfigsRequest request);
+
+    /**
      * @param request the request parameters of ListGateway  ListGatewayRequest
      * @return ListGatewayResponse
      */
@@ -629,6 +647,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateBenchmarkTaskResponse
      */
     CompletableFuture<UpdateBenchmarkTaskResponse> updateBenchmarkTask(UpdateBenchmarkTaskRequest request);
+
+    /**
+     * @param request the request parameters of UpdateConfig  UpdateConfigRequest
+     * @return UpdateConfigResponse
+     */
+    CompletableFuture<UpdateConfigResponse> updateConfig(UpdateConfigRequest request);
 
     /**
      * @param request the request parameters of UpdateGateway  UpdateGatewayRequest
