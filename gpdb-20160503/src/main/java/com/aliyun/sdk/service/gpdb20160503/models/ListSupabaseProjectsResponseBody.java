@@ -248,6 +248,9 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateConnectUrl")
         private String privateConnectUrl;
 
+        @com.aliyun.core.annotation.NameInMap("ProjectDescription")
+        private String projectDescription;
+
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
@@ -292,6 +295,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             this.expireTime = builder.expireTime;
             this.payType = builder.payType;
             this.privateConnectUrl = builder.privateConnectUrl;
+            this.projectDescription = builder.projectDescription;
             this.projectId = builder.projectId;
             this.projectName = builder.projectName;
             this.projectSpec = builder.projectSpec;
@@ -384,6 +388,13 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
 
         /**
+         * @return projectDescription
+         */
+        public String getProjectDescription() {
+            return this.projectDescription;
+        }
+
+        /**
          * @return projectId
          */
         public String getProjectId() {
@@ -471,6 +482,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             private String expireTime; 
             private String payType; 
             private String privateConnectUrl; 
+            private String projectDescription; 
             private String projectId; 
             private String projectName; 
             private String projectSpec; 
@@ -497,6 +509,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
                 this.expireTime = model.expireTime;
                 this.payType = model.payType;
                 this.privateConnectUrl = model.privateConnectUrl;
+                this.projectDescription = model.projectDescription;
                 this.projectId = model.projectId;
                 this.projectName = model.projectName;
                 this.projectSpec = model.projectSpec;
@@ -616,6 +629,14 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
              */
             public Builder privateConnectUrl(String privateConnectUrl) {
                 this.privateConnectUrl = privateConnectUrl;
+                return this;
+            }
+
+            /**
+             * ProjectDescription.
+             */
+            public Builder projectDescription(String projectDescription) {
+                this.projectDescription = projectDescription;
                 return this;
             }
 
