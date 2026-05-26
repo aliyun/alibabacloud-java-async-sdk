@@ -487,6 +487,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of HistoryThreeElementsVerification  HistoryThreeElementsVerificationRequest
+     * @return HistoryThreeElementsVerificationResponse
+     */
+    @Override
+    public CompletableFuture<HistoryThreeElementsVerificationResponse> historyThreeElementsVerification(HistoryThreeElementsVerificationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("HistoryThreeElementsVerification").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(HistoryThreeElementsVerificationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<HistoryThreeElementsVerificationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <strong>Activate Now</strong>, enter the required information, and then submit your application. After your application is approved, you can use the label.</p>
      * <h3><a href="#qps"></a>QPS limits</h3>
