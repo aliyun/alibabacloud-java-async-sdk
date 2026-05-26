@@ -36,6 +36,10 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermitPremiumRenew")
+    private Boolean permitPremiumRenew;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PromotionNo")
     private String promotionNo;
 
@@ -62,6 +66,7 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         this.currentExpirationDate = builder.currentExpirationDate;
         this.domainName = builder.domainName;
         this.lang = builder.lang;
+        this.permitPremiumRenew = builder.permitPremiumRenew;
         this.promotionNo = builder.promotionNo;
         this.subscriptionDuration = builder.subscriptionDuration;
         this.useCoupon = builder.useCoupon;
@@ -111,6 +116,13 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
     }
 
     /**
+     * @return permitPremiumRenew
+     */
+    public Boolean getPermitPremiumRenew() {
+        return this.permitPremiumRenew;
+    }
+
+    /**
      * @return promotionNo
      */
     public String getPromotionNo() {
@@ -150,6 +162,7 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         private Long currentExpirationDate; 
         private String domainName; 
         private String lang; 
+        private Boolean permitPremiumRenew; 
         private String promotionNo; 
         private Integer subscriptionDuration; 
         private Boolean useCoupon; 
@@ -166,6 +179,7 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
             this.currentExpirationDate = request.currentExpirationDate;
             this.domainName = request.domainName;
             this.lang = request.lang;
+            this.permitPremiumRenew = request.permitPremiumRenew;
             this.promotionNo = request.promotionNo;
             this.subscriptionDuration = request.subscriptionDuration;
             this.useCoupon = request.useCoupon;
@@ -212,6 +226,15 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * PermitPremiumRenew.
+         */
+        public Builder permitPremiumRenew(Boolean permitPremiumRenew) {
+            this.putQueryParameter("PermitPremiumRenew", permitPremiumRenew);
+            this.permitPremiumRenew = permitPremiumRenew;
             return this;
         }
 

@@ -226,12 +226,16 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
+        @com.aliyun.core.annotation.NameInMap("PermitPremiumRenew")
+        private Boolean permitPremiumRenew;
+
         @com.aliyun.core.annotation.NameInMap("SubscriptionDuration")
         private Integer subscriptionDuration;
 
         private OrderRenewParam(Builder builder) {
             this.currentExpirationDate = builder.currentExpirationDate;
             this.domainName = builder.domainName;
+            this.permitPremiumRenew = builder.permitPremiumRenew;
             this.subscriptionDuration = builder.subscriptionDuration;
         }
 
@@ -258,6 +262,13 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
+         * @return permitPremiumRenew
+         */
+        public Boolean getPermitPremiumRenew() {
+            return this.permitPremiumRenew;
+        }
+
+        /**
          * @return subscriptionDuration
          */
         public Integer getSubscriptionDuration() {
@@ -267,6 +278,7 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
         public static final class Builder {
             private Long currentExpirationDate; 
             private String domainName; 
+            private Boolean permitPremiumRenew; 
             private Integer subscriptionDuration; 
 
             private Builder() {
@@ -275,6 +287,7 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
             private Builder(OrderRenewParam model) {
                 this.currentExpirationDate = model.currentExpirationDate;
                 this.domainName = model.domainName;
+                this.permitPremiumRenew = model.permitPremiumRenew;
                 this.subscriptionDuration = model.subscriptionDuration;
             } 
 
@@ -291,6 +304,14 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
+                return this;
+            }
+
+            /**
+             * PermitPremiumRenew.
+             */
+            public Builder permitPremiumRenew(Boolean permitPremiumRenew) {
+                this.permitPremiumRenew = permitPremiumRenew;
                 return this;
             }
 
