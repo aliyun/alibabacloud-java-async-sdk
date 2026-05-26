@@ -20,8 +20,12 @@ public class DatasetConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Insights")
     private InsightsConfig insights;
 
+    @com.aliyun.core.annotation.NameInMap("SmartCluster")
+    private SmartClusterConfig smartCluster;
+
     private DatasetConfig(Builder builder) {
         this.insights = builder.insights;
+        this.smartCluster = builder.smartCluster;
     }
 
     public static Builder builder() {
@@ -43,14 +47,23 @@ public class DatasetConfig extends TeaModel {
         return this.insights;
     }
 
+    /**
+     * @return smartCluster
+     */
+    public SmartClusterConfig getSmartCluster() {
+        return this.smartCluster;
+    }
+
     public static final class Builder {
         private InsightsConfig insights; 
+        private SmartClusterConfig smartCluster; 
 
         private Builder() {
         } 
 
         private Builder(DatasetConfig model) {
             this.insights = model.insights;
+            this.smartCluster = model.smartCluster;
         } 
 
         /**
@@ -58,6 +71,14 @@ public class DatasetConfig extends TeaModel {
          */
         public Builder insights(InsightsConfig insights) {
             this.insights = insights;
+            return this;
+        }
+
+        /**
+         * SmartCluster.
+         */
+        public Builder smartCluster(SmartClusterConfig smartCluster) {
+            this.smartCluster = smartCluster;
             return this;
         }
 

@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SmartCluster</p>
  */
 public class SmartCluster extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    private String clusterType;
+
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
@@ -44,13 +47,20 @@ public class SmartCluster extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
+    @com.aliyun.core.annotation.NameInMap("Reason")
+    private String reason;
+
     @com.aliyun.core.annotation.NameInMap("Rule")
     private SmartClusterRule rule;
+
+    @com.aliyun.core.annotation.NameInMap("Rules")
+    private java.util.List<SmartClusterRule> rules;
 
     @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private SmartCluster(Builder builder) {
+        this.clusterType = builder.clusterType;
         this.createTime = builder.createTime;
         this.datasetName = builder.datasetName;
         this.description = builder.description;
@@ -60,7 +70,9 @@ public class SmartCluster extends TeaModel {
         this.objectType = builder.objectType;
         this.ownerId = builder.ownerId;
         this.projectName = builder.projectName;
+        this.reason = builder.reason;
         this.rule = builder.rule;
+        this.rules = builder.rules;
         this.updateTime = builder.updateTime;
     }
 
@@ -74,6 +86,13 @@ public class SmartCluster extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clusterType
+     */
+    public String getClusterType() {
+        return this.clusterType;
     }
 
     /**
@@ -140,10 +159,24 @@ public class SmartCluster extends TeaModel {
     }
 
     /**
+     * @return reason
+     */
+    public String getReason() {
+        return this.reason;
+    }
+
+    /**
      * @return rule
      */
     public SmartClusterRule getRule() {
         return this.rule;
+    }
+
+    /**
+     * @return rules
+     */
+    public java.util.List<SmartClusterRule> getRules() {
+        return this.rules;
     }
 
     /**
@@ -154,6 +187,7 @@ public class SmartCluster extends TeaModel {
     }
 
     public static final class Builder {
+        private String clusterType; 
         private String createTime; 
         private String datasetName; 
         private String description; 
@@ -163,13 +197,16 @@ public class SmartCluster extends TeaModel {
         private String objectType; 
         private String ownerId; 
         private String projectName; 
+        private String reason; 
         private SmartClusterRule rule; 
+        private java.util.List<SmartClusterRule> rules; 
         private String updateTime; 
 
         private Builder() {
         } 
 
         private Builder(SmartCluster model) {
+            this.clusterType = model.clusterType;
             this.createTime = model.createTime;
             this.datasetName = model.datasetName;
             this.description = model.description;
@@ -179,9 +216,19 @@ public class SmartCluster extends TeaModel {
             this.objectType = model.objectType;
             this.ownerId = model.ownerId;
             this.projectName = model.projectName;
+            this.reason = model.reason;
             this.rule = model.rule;
+            this.rules = model.rules;
             this.updateTime = model.updateTime;
         } 
+
+        /**
+         * ClusterType.
+         */
+        public Builder clusterType(String clusterType) {
+            this.clusterType = clusterType;
+            return this;
+        }
 
         /**
          * CreateTime.
@@ -256,10 +303,26 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
+         * Reason.
+         */
+        public Builder reason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+
+        /**
          * Rule.
          */
         public Builder rule(SmartClusterRule rule) {
             this.rule = rule;
+            return this;
+        }
+
+        /**
+         * Rules.
+         */
+        public Builder rules(java.util.List<SmartClusterRule> rules) {
+            this.rules = rules;
             return this;
         }
 

@@ -30,6 +30,10 @@ public class DetectImageCroppingRequest extends Request {
     private CredentialConfig credentialConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InclusionHints")
+    private java.util.List<String> inclusionHints;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
@@ -43,6 +47,7 @@ public class DetectImageCroppingRequest extends Request {
         this.regionId = builder.regionId;
         this.aspectRatios = builder.aspectRatios;
         this.credentialConfig = builder.credentialConfig;
+        this.inclusionHints = builder.inclusionHints;
         this.projectName = builder.projectName;
         this.sourceURI = builder.sourceURI;
     }
@@ -82,6 +87,13 @@ public class DetectImageCroppingRequest extends Request {
     }
 
     /**
+     * @return inclusionHints
+     */
+    public java.util.List<String> getInclusionHints() {
+        return this.inclusionHints;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -99,6 +111,7 @@ public class DetectImageCroppingRequest extends Request {
         private String regionId; 
         private String aspectRatios; 
         private CredentialConfig credentialConfig; 
+        private java.util.List<String> inclusionHints; 
         private String projectName; 
         private String sourceURI; 
 
@@ -111,6 +124,7 @@ public class DetectImageCroppingRequest extends Request {
             this.regionId = request.regionId;
             this.aspectRatios = request.aspectRatios;
             this.credentialConfig = request.credentialConfig;
+            this.inclusionHints = request.inclusionHints;
             this.projectName = request.projectName;
             this.sourceURI = request.sourceURI;
         } 
@@ -152,6 +166,16 @@ public class DetectImageCroppingRequest extends Request {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
             this.putQueryParameter("CredentialConfig", credentialConfigShrink);
             this.credentialConfig = credentialConfig;
+            return this;
+        }
+
+        /**
+         * InclusionHints.
+         */
+        public Builder inclusionHints(java.util.List<String> inclusionHints) {
+            String inclusionHintsShrink = shrink(inclusionHints, "InclusionHints", "json");
+            this.putQueryParameter("InclusionHints", inclusionHintsShrink);
+            this.inclusionHints = inclusionHints;
             return this;
         }
 

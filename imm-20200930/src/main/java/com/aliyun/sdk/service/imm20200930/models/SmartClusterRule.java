@@ -17,14 +17,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SmartClusterRule</p>
  */
 public class SmartClusterRule extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BaseURIs")
+    private java.util.List<String> baseURIs;
+
     @com.aliyun.core.annotation.NameInMap("Keywords")
     private java.util.List<String> keywords;
+
+    @com.aliyun.core.annotation.NameInMap("RuleType")
+    private String ruleType;
 
     @com.aliyun.core.annotation.NameInMap("Sensitivity")
     private Float sensitivity;
 
     private SmartClusterRule(Builder builder) {
+        this.baseURIs = builder.baseURIs;
         this.keywords = builder.keywords;
+        this.ruleType = builder.ruleType;
         this.sensitivity = builder.sensitivity;
     }
 
@@ -41,10 +49,24 @@ public class SmartClusterRule extends TeaModel {
     }
 
     /**
+     * @return baseURIs
+     */
+    public java.util.List<String> getBaseURIs() {
+        return this.baseURIs;
+    }
+
+    /**
      * @return keywords
      */
     public java.util.List<String> getKeywords() {
         return this.keywords;
+    }
+
+    /**
+     * @return ruleType
+     */
+    public String getRuleType() {
+        return this.ruleType;
     }
 
     /**
@@ -55,22 +77,42 @@ public class SmartClusterRule extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<String> baseURIs; 
         private java.util.List<String> keywords; 
+        private String ruleType; 
         private Float sensitivity; 
 
         private Builder() {
         } 
 
         private Builder(SmartClusterRule model) {
+            this.baseURIs = model.baseURIs;
             this.keywords = model.keywords;
+            this.ruleType = model.ruleType;
             this.sensitivity = model.sensitivity;
         } 
+
+        /**
+         * BaseURIs.
+         */
+        public Builder baseURIs(java.util.List<String> baseURIs) {
+            this.baseURIs = baseURIs;
+            return this;
+        }
 
         /**
          * Keywords.
          */
         public Builder keywords(java.util.List<String> keywords) {
             this.keywords = keywords;
+            return this;
+        }
+
+        /**
+         * RuleType.
+         */
+        public Builder ruleType(String ruleType) {
+            this.ruleType = ruleType;
             return this;
         }
 

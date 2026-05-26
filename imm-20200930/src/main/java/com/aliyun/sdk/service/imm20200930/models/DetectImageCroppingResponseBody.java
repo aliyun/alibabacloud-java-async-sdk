@@ -20,11 +20,15 @@ public class DetectImageCroppingResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Croppings")
     private java.util.List<CroppingSuggestion> croppings;
 
+    @com.aliyun.core.annotation.NameInMap("MatchedInclusionHints")
+    private java.util.List<String> matchedInclusionHints;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DetectImageCroppingResponseBody(Builder builder) {
         this.croppings = builder.croppings;
+        this.matchedInclusionHints = builder.matchedInclusionHints;
         this.requestId = builder.requestId;
     }
 
@@ -48,6 +52,13 @@ public class DetectImageCroppingResponseBody extends TeaModel {
     }
 
     /**
+     * @return matchedInclusionHints
+     */
+    public java.util.List<String> getMatchedInclusionHints() {
+        return this.matchedInclusionHints;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -56,6 +67,7 @@ public class DetectImageCroppingResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<CroppingSuggestion> croppings; 
+        private java.util.List<String> matchedInclusionHints; 
         private String requestId; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class DetectImageCroppingResponseBody extends TeaModel {
 
         private Builder(DetectImageCroppingResponseBody model) {
             this.croppings = model.croppings;
+            this.matchedInclusionHints = model.matchedInclusionHints;
             this.requestId = model.requestId;
         } 
 
@@ -71,6 +84,14 @@ public class DetectImageCroppingResponseBody extends TeaModel {
          */
         public Builder croppings(java.util.List<CroppingSuggestion> croppings) {
             this.croppings = croppings;
+            return this;
+        }
+
+        /**
+         * MatchedInclusionHints.
+         */
+        public Builder matchedInclusionHints(java.util.List<String> matchedInclusionHints) {
+            this.matchedInclusionHints = matchedInclusionHints;
             return this;
         }
 
