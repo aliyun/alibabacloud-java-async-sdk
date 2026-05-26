@@ -45,10 +45,6 @@ public class UpdateLiveRecordVodConfigRequest extends Request {
     private String domainName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("FormatConfig")
-    private Boolean formatConfig;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OnDemand")
     private Integer onDemand;
 
@@ -84,7 +80,6 @@ public class UpdateLiveRecordVodConfigRequest extends Request {
         this.cycleDuration = builder.cycleDuration;
         this.delayTime = builder.delayTime;
         this.domainName = builder.domainName;
-        this.formatConfig = builder.formatConfig;
         this.onDemand = builder.onDemand;
         this.ownerId = builder.ownerId;
         this.recordFormat = builder.recordFormat;
@@ -150,13 +145,6 @@ public class UpdateLiveRecordVodConfigRequest extends Request {
     }
 
     /**
-     * @return formatConfig
-     */
-    public Boolean getFormatConfig() {
-        return this.formatConfig;
-    }
-
-    /**
      * @return onDemand
      */
     public Integer getOnDemand() {
@@ -212,7 +200,6 @@ public class UpdateLiveRecordVodConfigRequest extends Request {
         private Integer cycleDuration; 
         private Integer delayTime; 
         private String domainName; 
-        private Boolean formatConfig; 
         private Integer onDemand; 
         private Long ownerId; 
         private java.util.List<RecordFormat> recordFormat; 
@@ -233,7 +220,6 @@ public class UpdateLiveRecordVodConfigRequest extends Request {
             this.cycleDuration = request.cycleDuration;
             this.delayTime = request.delayTime;
             this.domainName = request.domainName;
-            this.formatConfig = request.formatConfig;
             this.onDemand = request.onDemand;
             this.ownerId = request.ownerId;
             this.recordFormat = request.recordFormat;
@@ -318,15 +304,6 @@ public class UpdateLiveRecordVodConfigRequest extends Request {
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
-            return this;
-        }
-
-        /**
-         * FormatConfig.
-         */
-        public Builder formatConfig(Boolean formatConfig) {
-            this.putQueryParameter("FormatConfig", formatConfig);
-            this.formatConfig = formatConfig;
             return this;
         }
 
