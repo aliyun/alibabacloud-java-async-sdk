@@ -209,8 +209,17 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bytes")
         private Double bytes;
 
+        @com.aliyun.core.annotation.NameInMap("BytesIncrease")
+        private Double bytesIncrease;
+
+        @com.aliyun.core.annotation.NameInMap("BytesIncreaseRatio")
+        private Double bytesIncreaseRatio;
+
         @com.aliyun.core.annotation.NameInMap("BytesRate")
         private Double bytesRate;
+
+        @com.aliyun.core.annotation.NameInMap("CenId")
+        private String cenId;
 
         @com.aliyun.core.annotation.NameInMap("ClientAsn")
         private String clientAsn;
@@ -336,7 +345,10 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
             this.bindingResourceId = builder.bindingResourceId;
             this.bindingResourceType = builder.bindingResourceType;
             this.bytes = builder.bytes;
+            this.bytesIncrease = builder.bytesIncrease;
+            this.bytesIncreaseRatio = builder.bytesIncreaseRatio;
             this.bytesRate = builder.bytesRate;
+            this.cenId = builder.cenId;
             this.clientAsn = builder.clientAsn;
             this.clientCity = builder.clientCity;
             this.clientCountry = builder.clientCountry;
@@ -409,10 +421,31 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         }
 
         /**
+         * @return bytesIncrease
+         */
+        public Double getBytesIncrease() {
+            return this.bytesIncrease;
+        }
+
+        /**
+         * @return bytesIncreaseRatio
+         */
+        public Double getBytesIncreaseRatio() {
+            return this.bytesIncreaseRatio;
+        }
+
+        /**
          * @return bytesRate
          */
         public Double getBytesRate() {
             return this.bytesRate;
+        }
+
+        /**
+         * @return cenId
+         */
+        public String getCenId() {
+            return this.cenId;
         }
 
         /**
@@ -699,7 +732,10 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
             private String bindingResourceId; 
             private String bindingResourceType; 
             private Double bytes; 
+            private Double bytesIncrease; 
+            private Double bytesIncreaseRatio; 
             private Double bytesRate; 
+            private String cenId; 
             private String clientAsn; 
             private String clientCity; 
             private String clientCountry; 
@@ -748,7 +784,10 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
                 this.bindingResourceId = model.bindingResourceId;
                 this.bindingResourceType = model.bindingResourceType;
                 this.bytes = model.bytes;
+                this.bytesIncrease = model.bytesIncrease;
+                this.bytesIncreaseRatio = model.bytesIncreaseRatio;
                 this.bytesRate = model.bytesRate;
+                this.cenId = model.cenId;
                 this.clientAsn = model.clientAsn;
                 this.clientCity = model.clientCity;
                 this.clientCountry = model.clientCountry;
@@ -816,10 +855,34 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
             }
 
             /**
+             * BytesIncrease.
+             */
+            public Builder bytesIncrease(Double bytesIncrease) {
+                this.bytesIncrease = bytesIncrease;
+                return this;
+            }
+
+            /**
+             * BytesIncreaseRatio.
+             */
+            public Builder bytesIncreaseRatio(Double bytesIncreaseRatio) {
+                this.bytesIncreaseRatio = bytesIncreaseRatio;
+                return this;
+            }
+
+            /**
              * BytesRate.
              */
             public Builder bytesRate(Double bytesRate) {
                 this.bytesRate = bytesRate;
+                return this;
+            }
+
+            /**
+             * CenId.
+             */
+            public Builder cenId(String cenId) {
+                this.cenId = cenId;
                 return this;
             }
 
