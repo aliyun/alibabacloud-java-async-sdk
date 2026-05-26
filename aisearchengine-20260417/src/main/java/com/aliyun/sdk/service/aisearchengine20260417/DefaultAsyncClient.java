@@ -59,6 +59,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDatasetResourceUrl  GetDatasetResourceUrlRequest
+     * @return GetDatasetResourceUrlResponse
+     */
+    @Override
+    public CompletableFuture<GetDatasetResourceUrlResponse> getDatasetResourceUrl(GetDatasetResourceUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDatasetResourceUrl").setMethod(HttpMethod.POST).setPathRegex("/api/v1/dataset/open/resources").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDatasetResourceUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDatasetResourceUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ImportDatasetData  ImportDatasetDataRequest
+     * @return ImportDatasetDataResponse
+     */
+    @Override
+    public CompletableFuture<ImportDatasetDataResponse> importDatasetData(ImportDatasetDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImportDatasetData").setMethod(HttpMethod.POST).setPathRegex("/api/v1/dataset/open/upsert").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ImportDatasetDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ImportDatasetDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QaChat  QaChatRequest
      * @return QaChatResponse
      */

@@ -26,6 +26,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EngineSearchResponse> engineSearch(EngineSearchRequest request);
 
     /**
+     * @param request the request parameters of GetDatasetResourceUrl  GetDatasetResourceUrlRequest
+     * @return GetDatasetResourceUrlResponse
+     */
+    CompletableFuture<GetDatasetResourceUrlResponse> getDatasetResourceUrl(GetDatasetResourceUrlRequest request);
+
+    /**
+     * @param request the request parameters of ImportDatasetData  ImportDatasetDataRequest
+     * @return ImportDatasetDataResponse
+     */
+    CompletableFuture<ImportDatasetDataResponse> importDatasetData(ImportDatasetDataRequest request);
+
+    /**
      * @param request the request parameters of QaChat  QaChatRequest
      * @return QaChatResponse
      */
