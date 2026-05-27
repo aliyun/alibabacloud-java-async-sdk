@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDigitalEmployeeSkillResponse> createDigitalEmployeeSkill(CreateDigitalEmployeeSkillRequest request);
 
     /**
+     * @param request the request parameters of CreateMcpService  CreateMcpServiceRequest
+     * @return CreateMcpServiceResponse
+     */
+    CompletableFuture<CreateMcpServiceResponse> createMcpService(CreateMcpServiceRequest request);
+
+    /**
      * @param request the request parameters of CreateThread  CreateThreadRequest
      * @return CreateThreadResponse
      */
@@ -68,10 +74,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDigitalEmployeeSkillResponse> deleteDigitalEmployeeSkill(DeleteDigitalEmployeeSkillRequest request);
 
     /**
+     * @param request the request parameters of DeleteMcpService  DeleteMcpServiceRequest
+     * @return DeleteMcpServiceResponse
+     */
+    CompletableFuture<DeleteMcpServiceResponse> deleteMcpService(DeleteMcpServiceRequest request);
+
+    /**
      * @param request the request parameters of DeleteThread  DeleteThreadRequest
      * @return DeleteThreadResponse
      */
     CompletableFuture<DeleteThreadResponse> deleteThread(DeleteThreadRequest request);
+
+    /**
+     * @param request the request parameters of FetchRemoteMcpTools  FetchRemoteMcpToolsRequest
+     * @return FetchRemoteMcpToolsResponse
+     */
+    CompletableFuture<FetchRemoteMcpToolsResponse> fetchRemoteMcpTools(FetchRemoteMcpToolsRequest request);
 
     /**
      * @param request the request parameters of GetArtifact  GetArtifactRequest
@@ -90,6 +108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDigitalEmployeeSkillResponse
      */
     CompletableFuture<GetDigitalEmployeeSkillResponse> getDigitalEmployeeSkill(GetDigitalEmployeeSkillRequest request);
+
+    /**
+     * @param request the request parameters of GetMcpService  GetMcpServiceRequest
+     * @return GetMcpServiceResponse
+     */
+    CompletableFuture<GetMcpServiceResponse> getMcpService(GetMcpServiceRequest request);
 
     /**
      * @param request the request parameters of GetThread  GetThreadRequest
@@ -128,6 +152,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDigitalEmployeesResponse> listDigitalEmployees(ListDigitalEmployeesRequest request);
 
     /**
+     * @param request the request parameters of ListMcpServices  ListMcpServicesRequest
+     * @return ListMcpServicesResponse
+     */
+    CompletableFuture<ListMcpServicesResponse> listMcpServices(ListMcpServicesRequest request);
+
+    /**
      * @param request the request parameters of ListThreads  ListThreadsRequest
      * @return ListThreadsResponse
      */
@@ -144,6 +174,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDigitalEmployeeSkillResponse
      */
     CompletableFuture<UpdateDigitalEmployeeSkillResponse> updateDigitalEmployeeSkill(UpdateDigitalEmployeeSkillRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMcpService  UpdateMcpServiceRequest
+     * @return UpdateMcpServiceResponse
+     */
+    CompletableFuture<UpdateMcpServiceResponse> updateMcpService(UpdateMcpServiceRequest request);
 
     /**
      * @param request the request parameters of UpdateThread  UpdateThreadRequest

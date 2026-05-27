@@ -134,6 +134,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateMcpService  CreateMcpServiceRequest
+     * @return CreateMcpServiceResponse
+     */
+    @Override
+    public CompletableFuture<CreateMcpServiceResponse> createMcpService(CreateMcpServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateMcpService").setMethod(HttpMethod.POST).setPathRegex("/digitalEmployee/{name}/mcpService").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMcpServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMcpServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateThread  CreateThreadRequest
      * @return CreateThreadResponse
      */
@@ -206,6 +224,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteMcpService  DeleteMcpServiceRequest
+     * @return DeleteMcpServiceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMcpServiceResponse> deleteMcpService(DeleteMcpServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteMcpService").setMethod(HttpMethod.DELETE).setPathRegex("/digitalEmployee/{name}/mcpService/{mcpServiceName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMcpServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMcpServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteThread  DeleteThreadRequest
      * @return DeleteThreadResponse
      */
@@ -218,6 +254,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteThreadResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of FetchRemoteMcpTools  FetchRemoteMcpToolsRequest
+     * @return FetchRemoteMcpToolsResponse
+     */
+    @Override
+    public CompletableFuture<FetchRemoteMcpToolsResponse> fetchRemoteMcpTools(FetchRemoteMcpToolsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FetchRemoteMcpTools").setMethod(HttpMethod.POST).setPathRegex("/mcptools").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FetchRemoteMcpToolsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FetchRemoteMcpToolsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -272,6 +326,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetDigitalEmployeeSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMcpService  GetMcpServiceRequest
+     * @return GetMcpServiceResponse
+     */
+    @Override
+    public CompletableFuture<GetMcpServiceResponse> getMcpService(GetMcpServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMcpService").setMethod(HttpMethod.GET).setPathRegex("/digitalEmployee/{name}/mcpService/{mcpServiceName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMcpServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMcpServiceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -386,6 +458,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListMcpServices  ListMcpServicesRequest
+     * @return ListMcpServicesResponse
+     */
+    @Override
+    public CompletableFuture<ListMcpServicesResponse> listMcpServices(ListMcpServicesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMcpServices").setMethod(HttpMethod.GET).setPathRegex("/digitalEmployee/{name}/mcpServices").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMcpServicesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMcpServicesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListThreads  ListThreadsRequest
      * @return ListThreadsResponse
      */
@@ -434,6 +524,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateDigitalEmployeeSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMcpService  UpdateMcpServiceRequest
+     * @return UpdateMcpServiceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMcpServiceResponse> updateMcpService(UpdateMcpServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMcpService").setMethod(HttpMethod.PUT).setPathRegex("/digitalEmployee/{name}/mcpService/{mcpServiceName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMcpServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMcpServiceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
