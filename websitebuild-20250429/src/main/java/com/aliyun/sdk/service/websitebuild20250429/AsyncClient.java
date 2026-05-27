@@ -152,6 +152,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportMaterialFileResponse> exportMaterialFile(ExportMaterialFileRequest request);
 
     /**
+     * @param request the request parameters of GetAIStaffPreviewUrl  GetAIStaffPreviewUrlRequest
+     * @return GetAIStaffPreviewUrlResponse
+     */
+    CompletableFuture<GetAIStaffPreviewUrlResponse> getAIStaffPreviewUrl(GetAIStaffPreviewUrlRequest request);
+
+    /**
      * @param request the request parameters of GetAppInstance  GetAppInstanceRequest
      * @return GetAppInstanceResponse
      */
