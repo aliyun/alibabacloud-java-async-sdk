@@ -26,6 +26,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddHotlineNumberResponse> addHotlineNumber(AddHotlineNumberRequest request);
 
     /**
+     * @param request the request parameters of AddInboundNumber  AddInboundNumberRequest
+     * @return AddInboundNumberResponse
+     */
+    CompletableFuture<AddInboundNumberResponse> addInboundNumber(AddInboundNumberRequest request);
+
+    /**
+     * @param request the request parameters of AddLargeModel  AddLargeModelRequest
+     * @return AddLargeModelResponse
+     */
+    CompletableFuture<AddLargeModelResponse> addLargeModel(AddLargeModelRequest request);
+
+    /**
      * @param request the request parameters of AddOuterAccount  AddOuterAccountRequest
      * @return AddOuterAccountResponse
      */
@@ -1004,6 +1016,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TerminateAiOutboundTaskResponse> terminateAiOutboundTask(TerminateAiOutboundTaskRequest request);
 
     /**
+     * @param request the request parameters of TestLargeModel  TestLargeModelRequest
+     * @return TestLargeModelResponse
+     */
+    CompletableFuture<TestLargeModelResponse> testLargeModel(TestLargeModelRequest request);
+
+    /**
      * @param request the request parameters of TransferCallToSkillGroup  TransferCallToSkillGroupRequest
      * @return TransferCallToSkillGroupResponse
      */
@@ -1032,6 +1050,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDepartmentResponse
      */
     CompletableFuture<UpdateDepartmentResponse> updateDepartment(UpdateDepartmentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLargeModel  UpdateLargeModelRequest
+     * @return UpdateLargeModelResponse
+     */
+    CompletableFuture<UpdateLargeModelResponse> updateLargeModel(UpdateLargeModelRequest request);
 
     /**
      * @param request the request parameters of UpdateOuterAccount  UpdateOuterAccountRequest

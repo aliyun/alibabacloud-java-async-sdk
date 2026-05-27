@@ -58,6 +58,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddInboundNumber  AddInboundNumberRequest
+     * @return AddInboundNumberResponse
+     */
+    @Override
+    public CompletableFuture<AddInboundNumberResponse> addInboundNumber(AddInboundNumberRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddInboundNumber").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddInboundNumberResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddInboundNumberResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AddLargeModel  AddLargeModelRequest
+     * @return AddLargeModelResponse
+     */
+    @Override
+    public CompletableFuture<AddLargeModelResponse> addLargeModel(AddLargeModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddLargeModel").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddLargeModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddLargeModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddOuterAccount  AddOuterAccountRequest
      * @return AddOuterAccountResponse
      */
@@ -2992,6 +3028,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of TestLargeModel  TestLargeModelRequest
+     * @return TestLargeModelResponse
+     */
+    @Override
+    public CompletableFuture<TestLargeModelResponse> testLargeModel(TestLargeModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TestLargeModel").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TestLargeModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TestLargeModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of TransferCallToSkillGroup  TransferCallToSkillGroupRequest
      * @return TransferCallToSkillGroupResponse
      */
@@ -3076,6 +3130,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateDepartmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateLargeModel  UpdateLargeModelRequest
+     * @return UpdateLargeModelResponse
+     */
+    @Override
+    public CompletableFuture<UpdateLargeModelResponse> updateLargeModel(UpdateLargeModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateLargeModel").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateLargeModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateLargeModelResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
