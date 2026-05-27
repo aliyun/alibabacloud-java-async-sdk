@@ -311,6 +311,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchGetUserIdByOpenDingtalkId  BatchGetUserIdByOpenDingtalkIdRequest
+     * @return BatchGetUserIdByOpenDingtalkIdResponse
+     */
+    @Override
+    public CompletableFuture<BatchGetUserIdByOpenDingtalkIdResponse> batchGetUserIdByOpenDingtalkId(BatchGetUserIdByOpenDingtalkIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchGetUserIdByOpenDingtalkId").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/im/batchGetUserIdByOpenDingtalkId").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchGetUserIdByOpenDingtalkIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchGetUserIdByOpenDingtalkIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BatchQueryGroupMember  BatchQueryGroupMemberRequest
      * @return BatchQueryGroupMemberResponse
      */

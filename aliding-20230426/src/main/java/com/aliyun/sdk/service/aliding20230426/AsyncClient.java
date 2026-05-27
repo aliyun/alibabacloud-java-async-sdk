@@ -110,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchGetFormDataByIdListResponse> batchGetFormDataByIdList(BatchGetFormDataByIdListRequest request);
 
     /**
+     * @param request the request parameters of BatchGetUserIdByOpenDingtalkId  BatchGetUserIdByOpenDingtalkIdRequest
+     * @return BatchGetUserIdByOpenDingtalkIdResponse
+     */
+    CompletableFuture<BatchGetUserIdByOpenDingtalkIdResponse> batchGetUserIdByOpenDingtalkId(BatchGetUserIdByOpenDingtalkIdRequest request);
+
+    /**
      * @param request the request parameters of BatchQueryGroupMember  BatchQueryGroupMemberRequest
      * @return BatchQueryGroupMemberResponse
      */
