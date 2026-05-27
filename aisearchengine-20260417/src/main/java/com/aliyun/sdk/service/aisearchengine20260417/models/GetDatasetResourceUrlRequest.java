@@ -19,8 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetDatasetResourceUrlRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("datasetId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Long datasetId;
+    private String datasetId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("primaryKey")
@@ -49,7 +48,7 @@ public class GetDatasetResourceUrlRequest extends Request {
     /**
      * @return datasetId
      */
-    public Long getDatasetId() {
+    public String getDatasetId() {
         return this.datasetId;
     }
 
@@ -61,7 +60,7 @@ public class GetDatasetResourceUrlRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetDatasetResourceUrlRequest, Builder> {
-        private Long datasetId; 
+        private String datasetId; 
         private String primaryKey; 
 
         private Builder() {
@@ -75,12 +74,9 @@ public class GetDatasetResourceUrlRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>730</p>
+         * datasetId.
          */
-        public Builder datasetId(Long datasetId) {
+        public Builder datasetId(String datasetId) {
             this.putBodyParameter("datasetId", datasetId);
             this.datasetId = datasetId;
             return this;
