@@ -316,6 +316,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListComputeMetricsByInstanceResponse> listComputeMetricsByInstance(ListComputeMetricsByInstanceRequest request);
 
     /**
+     * @param request the request parameters of ListComputeMetricsBySignature  ListComputeMetricsBySignatureRequest
+     * @return ListComputeMetricsBySignatureResponse
+     */
+    CompletableFuture<ListComputeMetricsBySignatureResponse> listComputeMetricsBySignature(ListComputeMetricsBySignatureRequest request);
+
+    /**
      * @param request the request parameters of ListComputeQuotaPlan  ListComputeQuotaPlanRequest
      * @return ListComputeQuotaPlanResponse
      */
@@ -326,6 +332,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListFunctionsResponse
      */
     CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request);
+
+    /**
+     * @param request the request parameters of ListInstances  ListInstancesRequest
+     * @return ListInstancesResponse
+     */
+    CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
     /**
      * @param request the request parameters of ListJobInfos  ListJobInfosRequest
@@ -398,6 +410,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListMmsTimerLogsResponse
      */
     CompletableFuture<ListMmsTimerLogsResponse> listMmsTimerLogs(ListMmsTimerLogsRequest request);
+
+    /**
+     * @param request the request parameters of ListMmsTimers  ListMmsTimersRequest
+     * @return ListMmsTimersResponse
+     */
+    CompletableFuture<ListMmsTimersResponse> listMmsTimers(ListMmsTimersRequest request);
 
     /**
      * @param request the request parameters of ListPackages  ListPackagesRequest
@@ -520,6 +538,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RetryMmsJobResponse> retryMmsJob(RetryMmsJobRequest request);
 
     /**
+     * @param request the request parameters of RetryMmsTask  RetryMmsTaskRequest
+     * @return RetryMmsTaskResponse
+     */
+    CompletableFuture<RetryMmsTaskResponse> retryMmsTask(RetryMmsTaskRequest request);
+
+    /**
      * @param request the request parameters of StartMmsJob  StartMmsJobRequest
      * @return StartMmsJobResponse
      */
@@ -532,10 +556,52 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopMmsJobResponse> stopMmsJob(StopMmsJobRequest request);
 
     /**
+     * @param request the request parameters of SumBills  SumBillsRequest
+     * @return SumBillsResponse
+     */
+    CompletableFuture<SumBillsResponse> sumBills(SumBillsRequest request);
+
+    /**
+     * @param request the request parameters of SumBillsByDate  SumBillsByDateRequest
+     * @return SumBillsByDateResponse
+     */
+    CompletableFuture<SumBillsByDateResponse> sumBillsByDate(SumBillsByDateRequest request);
+
+    /**
+     * @param request the request parameters of SumComputeMetricsByRecord  SumComputeMetricsByRecordRequest
+     * @return SumComputeMetricsByRecordResponse
+     */
+    CompletableFuture<SumComputeMetricsByRecordResponse> sumComputeMetricsByRecord(SumComputeMetricsByRecordRequest request);
+
+    /**
+     * @param request the request parameters of SumComputeMetricsByUsage  SumComputeMetricsByUsageRequest
+     * @return SumComputeMetricsByUsageResponse
+     */
+    CompletableFuture<SumComputeMetricsByUsageResponse> sumComputeMetricsByUsage(SumComputeMetricsByUsageRequest request);
+
+    /**
+     * @param request the request parameters of SumDailyBillsByItem  SumDailyBillsByItemRequest
+     * @return SumDailyBillsByItemResponse
+     */
+    CompletableFuture<SumDailyBillsByItemResponse> sumDailyBillsByItem(SumDailyBillsByItemRequest request);
+
+    /**
      * @param request the request parameters of SumStorageMetricsByDate  SumStorageMetricsByDateRequest
      * @return SumStorageMetricsByDateResponse
      */
     CompletableFuture<SumStorageMetricsByDateResponse> sumStorageMetricsByDate(SumStorageMetricsByDateRequest request);
+
+    /**
+     * @param request the request parameters of SumStorageMetricsByType  SumStorageMetricsByTypeRequest
+     * @return SumStorageMetricsByTypeResponse
+     */
+    CompletableFuture<SumStorageMetricsByTypeResponse> sumStorageMetricsByType(SumStorageMetricsByTypeRequest request);
+
+    /**
+     * @param request the request parameters of TriggerMmsTimer  TriggerMmsTimerRequest
+     * @return TriggerMmsTimerResponse
+     */
+    CompletableFuture<TriggerMmsTimerResponse> triggerMmsTimer(TriggerMmsTimerRequest request);
 
     /**
      * <b>description</b> :
@@ -568,6 +634,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMmsDataSourceResponse
      */
     CompletableFuture<UpdateMmsDataSourceResponse> updateMmsDataSource(UpdateMmsDataSourceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMmsDb  UpdateMmsDbRequest
+     * @return UpdateMmsDbResponse
+     */
+    CompletableFuture<UpdateMmsDbResponse> updateMmsDb(UpdateMmsDbRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMmsTable  UpdateMmsTableRequest
+     * @return UpdateMmsTableResponse
+     */
+    CompletableFuture<UpdateMmsTableResponse> updateMmsTable(UpdateMmsTableRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMmsTables  UpdateMmsTablesRequest
+     * @return UpdateMmsTablesResponse
+     */
+    CompletableFuture<UpdateMmsTablesResponse> updateMmsTables(UpdateMmsTablesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMmsTimer  UpdateMmsTimerRequest
+     * @return UpdateMmsTimerResponse
+     */
+    CompletableFuture<UpdateMmsTimerResponse> updateMmsTimer(UpdateMmsTimerRequest request);
 
     /**
      * @param request the request parameters of UpdatePackage  UpdatePackageRequest

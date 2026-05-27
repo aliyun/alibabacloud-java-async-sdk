@@ -967,6 +967,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListComputeMetricsBySignature  ListComputeMetricsBySignatureRequest
+     * @return ListComputeMetricsBySignatureResponse
+     */
+    @Override
+    public CompletableFuture<ListComputeMetricsBySignatureResponse> listComputeMetricsBySignature(ListComputeMetricsBySignatureRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListComputeMetricsBySignature").setMethod(HttpMethod.POST).setPathRegex("/api/v1/computeMetrics/listBySignature").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListComputeMetricsBySignatureResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListComputeMetricsBySignatureResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListComputeQuotaPlan  ListComputeQuotaPlanRequest
      * @return ListComputeQuotaPlanResponse
      */
@@ -997,6 +1015,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListFunctionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListInstances  ListInstancesRequest
+     * @return ListInstancesResponse
+     */
+    @Override
+    public CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListInstances").setMethod(HttpMethod.GET).setPathRegex("/api/v1/bills/instances").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListInstancesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1213,6 +1249,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListMmsTimerLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMmsTimers  ListMmsTimersRequest
+     * @return ListMmsTimersResponse
+     */
+    @Override
+    public CompletableFuture<ListMmsTimersResponse> listMmsTimers(ListMmsTimersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMmsTimers").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/timers").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMmsTimersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMmsTimersResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1579,6 +1633,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RetryMmsTask  RetryMmsTaskRequest
+     * @return RetryMmsTaskResponse
+     */
+    @Override
+    public CompletableFuture<RetryMmsTaskResponse> retryMmsTask(RetryMmsTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RetryMmsTask").setMethod(HttpMethod.POST).setPathRegex("/api/v1/mms/datasources/{sourceId}/tasks/{taskId}/retry").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RetryMmsTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RetryMmsTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StartMmsJob  StartMmsJobRequest
      * @return StartMmsJobResponse
      */
@@ -1615,6 +1687,96 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SumBills  SumBillsRequest
+     * @return SumBillsResponse
+     */
+    @Override
+    public CompletableFuture<SumBillsResponse> sumBills(SumBillsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SumBills").setMethod(HttpMethod.POST).setPathRegex("/api/v1/bills/sum").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SumBillsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SumBillsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SumBillsByDate  SumBillsByDateRequest
+     * @return SumBillsByDateResponse
+     */
+    @Override
+    public CompletableFuture<SumBillsByDateResponse> sumBillsByDate(SumBillsByDateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SumBillsByDate").setMethod(HttpMethod.POST).setPathRegex("/api/v1/bills/sumByDate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SumBillsByDateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SumBillsByDateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SumComputeMetricsByRecord  SumComputeMetricsByRecordRequest
+     * @return SumComputeMetricsByRecordResponse
+     */
+    @Override
+    public CompletableFuture<SumComputeMetricsByRecordResponse> sumComputeMetricsByRecord(SumComputeMetricsByRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SumComputeMetricsByRecord").setMethod(HttpMethod.POST).setPathRegex("/api/v1/computeMetrics/sumByRecord").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SumComputeMetricsByRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SumComputeMetricsByRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SumComputeMetricsByUsage  SumComputeMetricsByUsageRequest
+     * @return SumComputeMetricsByUsageResponse
+     */
+    @Override
+    public CompletableFuture<SumComputeMetricsByUsageResponse> sumComputeMetricsByUsage(SumComputeMetricsByUsageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SumComputeMetricsByUsage").setMethod(HttpMethod.POST).setPathRegex("/api/v1/computeMetrics/sumByUsage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SumComputeMetricsByUsageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SumComputeMetricsByUsageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SumDailyBillsByItem  SumDailyBillsByItemRequest
+     * @return SumDailyBillsByItemResponse
+     */
+    @Override
+    public CompletableFuture<SumDailyBillsByItemResponse> sumDailyBillsByItem(SumDailyBillsByItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SumDailyBillsByItem").setMethod(HttpMethod.POST).setPathRegex("/api/v1/dailyBills/sumByItem").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SumDailyBillsByItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SumDailyBillsByItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SumStorageMetricsByDate  SumStorageMetricsByDateRequest
      * @return SumStorageMetricsByDateResponse
      */
@@ -1627,6 +1789,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SumStorageMetricsByDateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SumStorageMetricsByType  SumStorageMetricsByTypeRequest
+     * @return SumStorageMetricsByTypeResponse
+     */
+    @Override
+    public CompletableFuture<SumStorageMetricsByTypeResponse> sumStorageMetricsByType(SumStorageMetricsByTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SumStorageMetricsByType").setMethod(HttpMethod.POST).setPathRegex("/api/v1/storageMetrics/sumByType").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SumStorageMetricsByTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SumStorageMetricsByTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TriggerMmsTimer  TriggerMmsTimerRequest
+     * @return TriggerMmsTimerResponse
+     */
+    @Override
+    public CompletableFuture<TriggerMmsTimerResponse> triggerMmsTimer(TriggerMmsTimerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TriggerMmsTimer").setMethod(HttpMethod.POST).setPathRegex("/api/v1/mms/datasources/{sourceId}/timers/{timerId}/trigger").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TriggerMmsTimerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TriggerMmsTimerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1707,6 +1905,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateMmsDataSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMmsDb  UpdateMmsDbRequest
+     * @return UpdateMmsDbResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMmsDbResponse> updateMmsDb(UpdateMmsDbRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMmsDb").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/mms/datasources/{sourceId}/dbs/{dbId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMmsDbResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMmsDbResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMmsTable  UpdateMmsTableRequest
+     * @return UpdateMmsTableResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMmsTableResponse> updateMmsTable(UpdateMmsTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMmsTable").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/mms/datasources/{sourceId}/tables/{tableId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMmsTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMmsTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMmsTables  UpdateMmsTablesRequest
+     * @return UpdateMmsTablesResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMmsTablesResponse> updateMmsTables(UpdateMmsTablesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMmsTables").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/mms/datasources/{sourceId}/tables").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMmsTablesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMmsTablesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMmsTimer  UpdateMmsTimerRequest
+     * @return UpdateMmsTimerResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMmsTimerResponse> updateMmsTimer(UpdateMmsTimerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMmsTimer").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/mms/datasources/{sourceId}/timers/{timerId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMmsTimerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMmsTimerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

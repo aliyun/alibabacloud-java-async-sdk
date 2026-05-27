@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SumStorageMetricsByDateResponseBody} extends {@link TeaModel}
+ * {@link SumStorageMetricsByTypeResponseBody} extends {@link TeaModel}
  *
- * <p>SumStorageMetricsByDateResponseBody</p>
+ * <p>SumStorageMetricsByTypeResponseBody</p>
  */
-public class SumStorageMetricsByDateResponseBody extends TeaModel {
+public class SumStorageMetricsByTypeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List<Data> data;
 
@@ -26,7 +26,7 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private SumStorageMetricsByDateResponseBody(Builder builder) {
+    private SumStorageMetricsByTypeResponseBody(Builder builder) {
         this.data = builder.data;
         this.httpCode = builder.httpCode;
         this.requestId = builder.requestId;
@@ -36,7 +36,7 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SumStorageMetricsByDateResponseBody create() {
+    public static SumStorageMetricsByTypeResponseBody create() {
         return builder().build();
     }
 
@@ -73,7 +73,7 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(SumStorageMetricsByDateResponseBody model) {
+        private Builder(SumStorageMetricsByTypeResponseBody model) {
             this.data = model.data;
             this.httpCode = model.httpCode;
             this.requestId = model.requestId;
@@ -103,120 +103,24 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             return this;
         }
 
-        public SumStorageMetricsByDateResponseBody build() {
-            return new SumStorageMetricsByDateResponseBody(this);
+        public SumStorageMetricsByTypeResponseBody build() {
+            return new SumStorageMetricsByTypeResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link SumStorageMetricsByDateResponseBody} extends {@link TeaModel}
+     * {@link SumStorageMetricsByTypeResponseBody} extends {@link TeaModel}
      *
-     * <p>SumStorageMetricsByDateResponseBody</p>
+     * <p>SumStorageMetricsByTypeResponseBody</p>
      */
-    public static class ItemStorageMetrics extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("itemName")
-        private String itemName;
-
-        @com.aliyun.core.annotation.NameInMap("percentage")
-        private Double percentage;
-
-        @com.aliyun.core.annotation.NameInMap("usage")
-        private String usage;
-
-        private ItemStorageMetrics(Builder builder) {
-            this.itemName = builder.itemName;
-            this.percentage = builder.percentage;
-            this.usage = builder.usage;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ItemStorageMetrics create() {
-            return builder().build();
-        }
-
-        /**
-         * @return itemName
-         */
-        public String getItemName() {
-            return this.itemName;
-        }
-
-        /**
-         * @return percentage
-         */
-        public Double getPercentage() {
-            return this.percentage;
-        }
-
-        /**
-         * @return usage
-         */
-        public String getUsage() {
-            return this.usage;
-        }
-
-        public static final class Builder {
-            private String itemName; 
-            private Double percentage; 
-            private String usage; 
-
-            private Builder() {
-            } 
-
-            private Builder(ItemStorageMetrics model) {
-                this.itemName = model.itemName;
-                this.percentage = model.percentage;
-                this.usage = model.usage;
-            } 
-
-            /**
-             * itemName.
-             */
-            public Builder itemName(String itemName) {
-                this.itemName = itemName;
-                return this;
-            }
-
-            /**
-             * percentage.
-             */
-            public Builder percentage(Double percentage) {
-                this.percentage = percentage;
-                return this;
-            }
-
-            /**
-             * usage.
-             */
-            public Builder usage(String usage) {
-                this.usage = usage;
-                return this;
-            }
-
-            public ItemStorageMetrics build() {
-                return new ItemStorageMetrics(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link SumStorageMetricsByDateResponseBody} extends {@link TeaModel}
-     *
-     * <p>SumStorageMetricsByDateResponseBody</p>
-     */
-    public static class Data extends TeaModel {
+    public static class DailyStorageMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dateTime")
         private String dateTime;
 
-        @com.aliyun.core.annotation.NameInMap("itemStorageMetrics")
-        private java.util.List<ItemStorageMetrics> itemStorageMetrics;
+        @com.aliyun.core.annotation.NameInMap("percentage")
+        private Double percentage;
 
         @com.aliyun.core.annotation.NameInMap("storageType")
         private String storageType;
@@ -225,11 +129,11 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         private String unit;
 
         @com.aliyun.core.annotation.NameInMap("usage")
-        private String usage;
+        private Double usage;
 
-        private Data(Builder builder) {
+        private DailyStorageMetrics(Builder builder) {
             this.dateTime = builder.dateTime;
-            this.itemStorageMetrics = builder.itemStorageMetrics;
+            this.percentage = builder.percentage;
             this.storageType = builder.storageType;
             this.unit = builder.unit;
             this.usage = builder.usage;
@@ -239,7 +143,7 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Data create() {
+        public static DailyStorageMetrics create() {
             return builder().build();
         }
 
@@ -251,10 +155,10 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         }
 
         /**
-         * @return itemStorageMetrics
+         * @return percentage
          */
-        public java.util.List<ItemStorageMetrics> getItemStorageMetrics() {
-            return this.itemStorageMetrics;
+        public Double getPercentage() {
+            return this.percentage;
         }
 
         /**
@@ -274,23 +178,23 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         /**
          * @return usage
          */
-        public String getUsage() {
+        public Double getUsage() {
             return this.usage;
         }
 
         public static final class Builder {
             private String dateTime; 
-            private java.util.List<ItemStorageMetrics> itemStorageMetrics; 
+            private Double percentage; 
             private String storageType; 
             private String unit; 
-            private String usage; 
+            private Double usage; 
 
             private Builder() {
             } 
 
-            private Builder(Data model) {
+            private Builder(DailyStorageMetrics model) {
                 this.dateTime = model.dateTime;
-                this.itemStorageMetrics = model.itemStorageMetrics;
+                this.percentage = model.percentage;
                 this.storageType = model.storageType;
                 this.unit = model.unit;
                 this.usage = model.usage;
@@ -305,10 +209,10 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * itemStorageMetrics.
+             * percentage.
              */
-            public Builder itemStorageMetrics(java.util.List<ItemStorageMetrics> itemStorageMetrics) {
-                this.itemStorageMetrics = itemStorageMetrics;
+            public Builder percentage(Double percentage) {
+                this.percentage = percentage;
                 return this;
             }
 
@@ -331,7 +235,124 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             /**
              * usage.
              */
-            public Builder usage(String usage) {
+            public Builder usage(Double usage) {
+                this.usage = usage;
+                return this;
+            }
+
+            public DailyStorageMetrics build() {
+                return new DailyStorageMetrics(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SumStorageMetricsByTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>SumStorageMetricsByTypeResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dailyStorageMetrics")
+        private java.util.List<DailyStorageMetrics> dailyStorageMetrics;
+
+        @com.aliyun.core.annotation.NameInMap("storageType")
+        private String storageType;
+
+        @com.aliyun.core.annotation.NameInMap("unit")
+        private String unit;
+
+        @com.aliyun.core.annotation.NameInMap("usage")
+        private Double usage;
+
+        private Data(Builder builder) {
+            this.dailyStorageMetrics = builder.dailyStorageMetrics;
+            this.storageType = builder.storageType;
+            this.unit = builder.unit;
+            this.usage = builder.usage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dailyStorageMetrics
+         */
+        public java.util.List<DailyStorageMetrics> getDailyStorageMetrics() {
+            return this.dailyStorageMetrics;
+        }
+
+        /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        /**
+         * @return unit
+         */
+        public String getUnit() {
+            return this.unit;
+        }
+
+        /**
+         * @return usage
+         */
+        public Double getUsage() {
+            return this.usage;
+        }
+
+        public static final class Builder {
+            private java.util.List<DailyStorageMetrics> dailyStorageMetrics; 
+            private String storageType; 
+            private String unit; 
+            private Double usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dailyStorageMetrics = model.dailyStorageMetrics;
+                this.storageType = model.storageType;
+                this.unit = model.unit;
+                this.usage = model.usage;
+            } 
+
+            /**
+             * dailyStorageMetrics.
+             */
+            public Builder dailyStorageMetrics(java.util.List<DailyStorageMetrics> dailyStorageMetrics) {
+                this.dailyStorageMetrics = dailyStorageMetrics;
+                return this;
+            }
+
+            /**
+             * storageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
+                return this;
+            }
+
+            /**
+             * unit.
+             */
+            public Builder unit(String unit) {
+                this.unit = unit;
+                return this;
+            }
+
+            /**
+             * usage.
+             */
+            public Builder usage(Double usage) {
                 this.usage = usage;
                 return this;
             }

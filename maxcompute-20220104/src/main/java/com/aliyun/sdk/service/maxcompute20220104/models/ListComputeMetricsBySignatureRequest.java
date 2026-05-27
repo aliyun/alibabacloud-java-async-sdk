@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListComputeMetricsByInstanceRequest} extends {@link RequestModel}
+ * {@link ListComputeMetricsBySignatureRequest} extends {@link RequestModel}
  *
- * <p>ListComputeMetricsByInstanceRequest</p>
+ * <p>ListComputeMetricsBySignatureRequest</p>
  */
-public class ListComputeMetricsByInstanceRequest extends Request {
+public class ListComputeMetricsBySignatureRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("endDate")
     private Long endDate;
@@ -46,10 +46,6 @@ public class ListComputeMetricsByInstanceRequest extends Request {
     private String signature;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("specCodes")
-    private java.util.List<String> specCodes;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("startDate")
     private Long startDate;
 
@@ -57,7 +53,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("types")
     private java.util.List<String> types;
 
-    private ListComputeMetricsByInstanceRequest(Builder builder) {
+    private ListComputeMetricsBySignatureRequest(Builder builder) {
         super(builder);
         this.endDate = builder.endDate;
         this.instanceId = builder.instanceId;
@@ -66,7 +62,6 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         this.pageSize = builder.pageSize;
         this.projectNames = builder.projectNames;
         this.signature = builder.signature;
-        this.specCodes = builder.specCodes;
         this.startDate = builder.startDate;
         this.types = builder.types;
     }
@@ -75,7 +70,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         return new Builder();
     }
 
-    public static ListComputeMetricsByInstanceRequest create() {
+    public static ListComputeMetricsBySignatureRequest create() {
         return builder().build();
     }
 
@@ -134,13 +129,6 @@ public class ListComputeMetricsByInstanceRequest extends Request {
     }
 
     /**
-     * @return specCodes
-     */
-    public java.util.List<String> getSpecCodes() {
-        return this.specCodes;
-    }
-
-    /**
      * @return startDate
      */
     public Long getStartDate() {
@@ -154,7 +142,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         return this.types;
     }
 
-    public static final class Builder extends Request.Builder<ListComputeMetricsByInstanceRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListComputeMetricsBySignatureRequest, Builder> {
         private Long endDate; 
         private String instanceId; 
         private String jobOwner; 
@@ -162,7 +150,6 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         private Long pageSize; 
         private java.util.List<String> projectNames; 
         private String signature; 
-        private java.util.List<String> specCodes; 
         private Long startDate; 
         private java.util.List<String> types; 
 
@@ -170,7 +157,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ListComputeMetricsByInstanceRequest request) {
+        private Builder(ListComputeMetricsBySignatureRequest request) {
             super(request);
             this.endDate = request.endDate;
             this.instanceId = request.instanceId;
@@ -179,16 +166,12 @@ public class ListComputeMetricsByInstanceRequest extends Request {
             this.pageSize = request.pageSize;
             this.projectNames = request.projectNames;
             this.signature = request.signature;
-            this.specCodes = request.specCodes;
             this.startDate = request.startDate;
             this.types = request.types;
         } 
 
         /**
-         * <p>The end time for the period.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1718590596556</p>
+         * endDate.
          */
         public Builder endDate(Long endDate) {
             this.putBodyParameter("endDate", endDate);
@@ -197,10 +180,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The job(instance) ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20240730****ddlr</p>
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -209,10 +189,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account that is used to run the MaxCompute job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ALIYUN$7632***@aliyun.com</p>
+         * jobOwner.
          */
         public Builder jobOwner(String jobOwner) {
             this.putBodyParameter("jobOwner", jobOwner);
@@ -221,10 +198,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -233,10 +207,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -245,7 +216,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of MaxCompute project.</p>
+         * projectNames.
          */
         public Builder projectNames(java.util.List<String> projectNames) {
             this.putBodyParameter("projectNames", projectNames);
@@ -254,10 +225,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The signature of the SQL job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ghijkl789012</p>
+         * signature.
          */
         public Builder signature(String signature) {
             this.putBodyParameter("signature", signature);
@@ -266,19 +234,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specification types.</p>
-         */
-        public Builder specCodes(java.util.List<String> specCodes) {
-            this.putBodyParameter("specCodes", specCodes);
-            this.specCodes = specCodes;
-            return this;
-        }
-
-        /**
-         * <p>The start time for the period.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1715393576201</p>
+         * startDate.
          */
         public Builder startDate(Long startDate) {
             this.putBodyParameter("startDate", startDate);
@@ -287,7 +243,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>Metering types.</p>
+         * types.
          */
         public Builder types(java.util.List<String> types) {
             this.putBodyParameter("types", types);
@@ -296,8 +252,8 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         @Override
-        public ListComputeMetricsByInstanceRequest build() {
-            return new ListComputeMetricsByInstanceRequest(this);
+        public ListComputeMetricsBySignatureRequest build() {
+            return new ListComputeMetricsBySignatureRequest(this);
         } 
 
     } 

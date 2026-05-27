@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SumStorageMetricsByDateResponseBody} extends {@link TeaModel}
+ * {@link SumBillsByDateResponseBody} extends {@link TeaModel}
  *
- * <p>SumStorageMetricsByDateResponseBody</p>
+ * <p>SumBillsByDateResponseBody</p>
  */
-public class SumStorageMetricsByDateResponseBody extends TeaModel {
+public class SumBillsByDateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List<Data> data;
 
@@ -26,7 +26,7 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private SumStorageMetricsByDateResponseBody(Builder builder) {
+    private SumBillsByDateResponseBody(Builder builder) {
         this.data = builder.data;
         this.httpCode = builder.httpCode;
         this.requestId = builder.requestId;
@@ -36,7 +36,7 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SumStorageMetricsByDateResponseBody create() {
+    public static SumBillsByDateResponseBody create() {
         return builder().build();
     }
 
@@ -73,7 +73,7 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(SumStorageMetricsByDateResponseBody model) {
+        private Builder(SumBillsByDateResponseBody model) {
             this.data = model.data;
             this.httpCode = model.httpCode;
             this.requestId = model.requestId;
@@ -103,40 +103,58 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             return this;
         }
 
-        public SumStorageMetricsByDateResponseBody build() {
-            return new SumStorageMetricsByDateResponseBody(this);
+        public SumBillsByDateResponseBody build() {
+            return new SumBillsByDateResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link SumStorageMetricsByDateResponseBody} extends {@link TeaModel}
+     * {@link SumBillsByDateResponseBody} extends {@link TeaModel}
      *
-     * <p>SumStorageMetricsByDateResponseBody</p>
+     * <p>SumBillsByDateResponseBody</p>
      */
-    public static class ItemStorageMetrics extends TeaModel {
+    public static class ItemBills extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cost")
+        private String cost;
+
+        @com.aliyun.core.annotation.NameInMap("currency")
+        private String currency;
+
         @com.aliyun.core.annotation.NameInMap("itemName")
         private String itemName;
 
         @com.aliyun.core.annotation.NameInMap("percentage")
         private Double percentage;
 
-        @com.aliyun.core.annotation.NameInMap("usage")
-        private String usage;
-
-        private ItemStorageMetrics(Builder builder) {
+        private ItemBills(Builder builder) {
+            this.cost = builder.cost;
+            this.currency = builder.currency;
             this.itemName = builder.itemName;
             this.percentage = builder.percentage;
-            this.usage = builder.usage;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static ItemStorageMetrics create() {
+        public static ItemBills create() {
             return builder().build();
+        }
+
+        /**
+         * @return cost
+         */
+        public String getCost() {
+            return this.cost;
+        }
+
+        /**
+         * @return currency
+         */
+        public String getCurrency() {
+            return this.currency;
         }
 
         /**
@@ -153,26 +171,37 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             return this.percentage;
         }
 
-        /**
-         * @return usage
-         */
-        public String getUsage() {
-            return this.usage;
-        }
-
         public static final class Builder {
+            private String cost; 
+            private String currency; 
             private String itemName; 
             private Double percentage; 
-            private String usage; 
 
             private Builder() {
             } 
 
-            private Builder(ItemStorageMetrics model) {
+            private Builder(ItemBills model) {
+                this.cost = model.cost;
+                this.currency = model.currency;
                 this.itemName = model.itemName;
                 this.percentage = model.percentage;
-                this.usage = model.usage;
             } 
+
+            /**
+             * cost.
+             */
+            public Builder cost(String cost) {
+                this.cost = cost;
+                return this;
+            }
+
+            /**
+             * currency.
+             */
+            public Builder currency(String currency) {
+                this.currency = currency;
+                return this;
+            }
 
             /**
              * itemName.
@@ -190,16 +219,8 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
                 return this;
             }
 
-            /**
-             * usage.
-             */
-            public Builder usage(String usage) {
-                this.usage = usage;
-                return this;
-            }
-
-            public ItemStorageMetrics build() {
-                return new ItemStorageMetrics(this);
+            public ItemBills build() {
+                return new ItemBills(this);
             } 
 
         } 
@@ -207,32 +228,28 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link SumStorageMetricsByDateResponseBody} extends {@link TeaModel}
+     * {@link SumBillsByDateResponseBody} extends {@link TeaModel}
      *
-     * <p>SumStorageMetricsByDateResponseBody</p>
+     * <p>SumBillsByDateResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cost")
+        private String cost;
+
+        @com.aliyun.core.annotation.NameInMap("currency")
+        private String currency;
+
         @com.aliyun.core.annotation.NameInMap("dateTime")
         private String dateTime;
 
-        @com.aliyun.core.annotation.NameInMap("itemStorageMetrics")
-        private java.util.List<ItemStorageMetrics> itemStorageMetrics;
-
-        @com.aliyun.core.annotation.NameInMap("storageType")
-        private String storageType;
-
-        @com.aliyun.core.annotation.NameInMap("unit")
-        private String unit;
-
-        @com.aliyun.core.annotation.NameInMap("usage")
-        private String usage;
+        @com.aliyun.core.annotation.NameInMap("itemBills")
+        private java.util.List<ItemBills> itemBills;
 
         private Data(Builder builder) {
+            this.cost = builder.cost;
+            this.currency = builder.currency;
             this.dateTime = builder.dateTime;
-            this.itemStorageMetrics = builder.itemStorageMetrics;
-            this.storageType = builder.storageType;
-            this.unit = builder.unit;
-            this.usage = builder.usage;
+            this.itemBills = builder.itemBills;
         }
 
         public static Builder builder() {
@@ -244,6 +261,20 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         }
 
         /**
+         * @return cost
+         */
+        public String getCost() {
+            return this.cost;
+        }
+
+        /**
+         * @return currency
+         */
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        /**
          * @return dateTime
          */
         public String getDateTime() {
@@ -251,50 +282,43 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         }
 
         /**
-         * @return itemStorageMetrics
+         * @return itemBills
          */
-        public java.util.List<ItemStorageMetrics> getItemStorageMetrics() {
-            return this.itemStorageMetrics;
-        }
-
-        /**
-         * @return storageType
-         */
-        public String getStorageType() {
-            return this.storageType;
-        }
-
-        /**
-         * @return unit
-         */
-        public String getUnit() {
-            return this.unit;
-        }
-
-        /**
-         * @return usage
-         */
-        public String getUsage() {
-            return this.usage;
+        public java.util.List<ItemBills> getItemBills() {
+            return this.itemBills;
         }
 
         public static final class Builder {
+            private String cost; 
+            private String currency; 
             private String dateTime; 
-            private java.util.List<ItemStorageMetrics> itemStorageMetrics; 
-            private String storageType; 
-            private String unit; 
-            private String usage; 
+            private java.util.List<ItemBills> itemBills; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.cost = model.cost;
+                this.currency = model.currency;
                 this.dateTime = model.dateTime;
-                this.itemStorageMetrics = model.itemStorageMetrics;
-                this.storageType = model.storageType;
-                this.unit = model.unit;
-                this.usage = model.usage;
+                this.itemBills = model.itemBills;
             } 
+
+            /**
+             * cost.
+             */
+            public Builder cost(String cost) {
+                this.cost = cost;
+                return this;
+            }
+
+            /**
+             * currency.
+             */
+            public Builder currency(String currency) {
+                this.currency = currency;
+                return this;
+            }
 
             /**
              * dateTime.
@@ -305,34 +329,10 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * itemStorageMetrics.
+             * itemBills.
              */
-            public Builder itemStorageMetrics(java.util.List<ItemStorageMetrics> itemStorageMetrics) {
-                this.itemStorageMetrics = itemStorageMetrics;
-                return this;
-            }
-
-            /**
-             * storageType.
-             */
-            public Builder storageType(String storageType) {
-                this.storageType = storageType;
-                return this;
-            }
-
-            /**
-             * unit.
-             */
-            public Builder unit(String unit) {
-                this.unit = unit;
-                return this;
-            }
-
-            /**
-             * usage.
-             */
-            public Builder usage(String usage) {
-                this.usage = usage;
+            public Builder itemBills(java.util.List<ItemBills> itemBills) {
+                this.itemBills = itemBills;
                 return this;
             }
 

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SumStorageMetricsByDateRequest} extends {@link RequestModel}
+ * {@link SumStorageMetricsByTypeRequest} extends {@link RequestModel}
  *
- * <p>SumStorageMetricsByDateRequest</p>
+ * <p>SumStorageMetricsByTypeRequest</p>
  */
-public class SumStorageMetricsByDateRequest extends Request {
+public class SumStorageMetricsByTypeRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("endDate")
     private Long endDate;
@@ -33,7 +33,7 @@ public class SumStorageMetricsByDateRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("statsType")
     private String statsType;
 
-    private SumStorageMetricsByDateRequest(Builder builder) {
+    private SumStorageMetricsByTypeRequest(Builder builder) {
         super(builder);
         this.endDate = builder.endDate;
         this.projectNames = builder.projectNames;
@@ -45,7 +45,7 @@ public class SumStorageMetricsByDateRequest extends Request {
         return new Builder();
     }
 
-    public static SumStorageMetricsByDateRequest create() {
+    public static SumStorageMetricsByTypeRequest create() {
         return builder().build();
     }
 
@@ -82,7 +82,7 @@ public class SumStorageMetricsByDateRequest extends Request {
         return this.statsType;
     }
 
-    public static final class Builder extends Request.Builder<SumStorageMetricsByDateRequest, Builder> {
+    public static final class Builder extends Request.Builder<SumStorageMetricsByTypeRequest, Builder> {
         private Long endDate; 
         private java.util.List<String> projectNames; 
         private Long startDate; 
@@ -92,7 +92,7 @@ public class SumStorageMetricsByDateRequest extends Request {
             super();
         } 
 
-        private Builder(SumStorageMetricsByDateRequest request) {
+        private Builder(SumStorageMetricsByTypeRequest request) {
             super(request);
             this.endDate = request.endDate;
             this.projectNames = request.projectNames;
@@ -137,8 +137,8 @@ public class SumStorageMetricsByDateRequest extends Request {
         }
 
         @Override
-        public SumStorageMetricsByDateRequest build() {
-            return new SumStorageMetricsByDateRequest(this);
+        public SumStorageMetricsByTypeRequest build() {
+            return new SumStorageMetricsByTypeRequest(this);
         } 
 
     } 

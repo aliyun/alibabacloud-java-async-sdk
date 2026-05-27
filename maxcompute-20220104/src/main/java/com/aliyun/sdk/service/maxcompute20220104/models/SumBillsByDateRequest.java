@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SumStorageMetricsByDateRequest} extends {@link RequestModel}
+ * {@link SumBillsByDateRequest} extends {@link RequestModel}
  *
- * <p>SumStorageMetricsByDateRequest</p>
+ * <p>SumBillsByDateRequest</p>
  */
-public class SumStorageMetricsByDateRequest extends Request {
+public class SumBillsByDateRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("endDate")
     private Long endDate;
@@ -33,19 +33,24 @@ public class SumStorageMetricsByDateRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("statsType")
     private String statsType;
 
-    private SumStorageMetricsByDateRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("topN")
+    private Integer topN;
+
+    private SumBillsByDateRequest(Builder builder) {
         super(builder);
         this.endDate = builder.endDate;
         this.projectNames = builder.projectNames;
         this.startDate = builder.startDate;
         this.statsType = builder.statsType;
+        this.topN = builder.topN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SumStorageMetricsByDateRequest create() {
+    public static SumBillsByDateRequest create() {
         return builder().build();
     }
 
@@ -82,22 +87,31 @@ public class SumStorageMetricsByDateRequest extends Request {
         return this.statsType;
     }
 
-    public static final class Builder extends Request.Builder<SumStorageMetricsByDateRequest, Builder> {
+    /**
+     * @return topN
+     */
+    public Integer getTopN() {
+        return this.topN;
+    }
+
+    public static final class Builder extends Request.Builder<SumBillsByDateRequest, Builder> {
         private Long endDate; 
         private java.util.List<String> projectNames; 
         private Long startDate; 
         private String statsType; 
+        private Integer topN; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SumStorageMetricsByDateRequest request) {
+        private Builder(SumBillsByDateRequest request) {
             super(request);
             this.endDate = request.endDate;
             this.projectNames = request.projectNames;
             this.startDate = request.startDate;
             this.statsType = request.statsType;
+            this.topN = request.topN;
         } 
 
         /**
@@ -136,9 +150,18 @@ public class SumStorageMetricsByDateRequest extends Request {
             return this;
         }
 
+        /**
+         * topN.
+         */
+        public Builder topN(Integer topN) {
+            this.putBodyParameter("topN", topN);
+            this.topN = topN;
+            return this;
+        }
+
         @Override
-        public SumStorageMetricsByDateRequest build() {
-            return new SumStorageMetricsByDateRequest(this);
+        public SumBillsByDateRequest build() {
+            return new SumBillsByDateRequest(this);
         } 
 
     } 

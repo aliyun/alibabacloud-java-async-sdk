@@ -27,6 +27,10 @@ public class QueryTunnelMetricDetailRequest extends Request {
     private Boolean ascOrder;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("codeList")
+    private java.util.List<Long> codeList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("groupList")
     private java.util.List<String> groupList;
 
@@ -68,6 +72,7 @@ public class QueryTunnelMetricDetailRequest extends Request {
         super(builder);
         this.metric = builder.metric;
         this.ascOrder = builder.ascOrder;
+        this.codeList = builder.codeList;
         this.groupList = builder.groupList;
         this.limit = builder.limit;
         this.operationList = builder.operationList;
@@ -104,6 +109,13 @@ public class QueryTunnelMetricDetailRequest extends Request {
      */
     public Boolean getAscOrder() {
         return this.ascOrder;
+    }
+
+    /**
+     * @return codeList
+     */
+    public java.util.List<Long> getCodeList() {
+        return this.codeList;
     }
 
     /**
@@ -172,6 +184,7 @@ public class QueryTunnelMetricDetailRequest extends Request {
     public static final class Builder extends Request.Builder<QueryTunnelMetricDetailRequest, Builder> {
         private String metric; 
         private Boolean ascOrder; 
+        private java.util.List<Long> codeList; 
         private java.util.List<String> groupList; 
         private Long limit; 
         private java.util.List<String> operationList; 
@@ -190,6 +203,7 @@ public class QueryTunnelMetricDetailRequest extends Request {
             super(request);
             this.metric = request.metric;
             this.ascOrder = request.ascOrder;
+            this.codeList = request.codeList;
             this.groupList = request.groupList;
             this.limit = request.limit;
             this.operationList = request.operationList;
@@ -219,6 +233,15 @@ public class QueryTunnelMetricDetailRequest extends Request {
         public Builder ascOrder(Boolean ascOrder) {
             this.putBodyParameter("ascOrder", ascOrder);
             this.ascOrder = ascOrder;
+            return this;
+        }
+
+        /**
+         * codeList.
+         */
+        public Builder codeList(java.util.List<Long> codeList) {
+            this.putBodyParameter("codeList", codeList);
+            this.codeList = codeList;
             return this;
         }
 

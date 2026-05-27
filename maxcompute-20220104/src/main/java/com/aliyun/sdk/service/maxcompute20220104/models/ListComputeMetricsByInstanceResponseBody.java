@@ -20,12 +20,6 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @com.aliyun.core.annotation.NameInMap("errorCode")
-    private String errorCode;
-
-    @com.aliyun.core.annotation.NameInMap("errorMsg")
-    private String errorMsg;
-
     @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
@@ -34,8 +28,6 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
 
     private ListComputeMetricsByInstanceResponseBody(Builder builder) {
         this.data = builder.data;
-        this.errorCode = builder.errorCode;
-        this.errorMsg = builder.errorMsg;
         this.httpCode = builder.httpCode;
         this.requestId = builder.requestId;
     }
@@ -60,20 +52,6 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
     }
 
     /**
-     * @return errorCode
-     */
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    /**
-     * @return errorMsg
-     */
-    public String getErrorMsg() {
-        return this.errorMsg;
-    }
-
-    /**
      * @return httpCode
      */
     public Integer getHttpCode() {
@@ -89,8 +67,6 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private Data data; 
-        private String errorCode; 
-        private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
 
@@ -99,8 +75,6 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
 
         private Builder(ListComputeMetricsByInstanceResponseBody model) {
             this.data = model.data;
-            this.errorCode = model.errorCode;
-            this.errorMsg = model.errorMsg;
             this.httpCode = model.httpCode;
             this.requestId = model.requestId;
         } 
@@ -110,28 +84,6 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
          */
         public Builder data(Data data) {
             this.data = data;
-            return this;
-        }
-
-        /**
-         * <p>The error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OBJECT_NOT_EXIST</p>
-         */
-        public Builder errorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This object does not exist.</p>
-         */
-        public Builder errorMsg(String errorMsg) {
-            this.errorMsg = errorMsg;
             return this;
         }
 

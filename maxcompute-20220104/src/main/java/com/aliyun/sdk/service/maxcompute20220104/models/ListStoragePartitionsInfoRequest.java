@@ -354,7 +354,7 @@ public class ListStoragePartitionsInfoRequest extends Request {
          * <p>The storage types.</p>
          */
         public Builder types(java.util.List<String> types) {
-            String typesShrink = shrink(types, "types", "json");
+            String typesShrink = shrink(types, "types", "simple");
             this.putQueryParameter("types", typesShrink);
             this.types = types;
             return this;

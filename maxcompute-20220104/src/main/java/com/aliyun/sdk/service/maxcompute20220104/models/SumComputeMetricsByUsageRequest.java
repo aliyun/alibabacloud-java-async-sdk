@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SumStorageMetricsByDateRequest} extends {@link RequestModel}
+ * {@link SumComputeMetricsByUsageRequest} extends {@link RequestModel}
  *
- * <p>SumStorageMetricsByDateRequest</p>
+ * <p>SumComputeMetricsByUsageRequest</p>
  */
-public class SumStorageMetricsByDateRequest extends Request {
+public class SumComputeMetricsByUsageRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("endDate")
     private Long endDate;
@@ -30,22 +30,22 @@ public class SumStorageMetricsByDateRequest extends Request {
     private Long startDate;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("statsType")
-    private String statsType;
+    @com.aliyun.core.annotation.NameInMap("usageType")
+    private String usageType;
 
-    private SumStorageMetricsByDateRequest(Builder builder) {
+    private SumComputeMetricsByUsageRequest(Builder builder) {
         super(builder);
         this.endDate = builder.endDate;
         this.projectNames = builder.projectNames;
         this.startDate = builder.startDate;
-        this.statsType = builder.statsType;
+        this.usageType = builder.usageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SumStorageMetricsByDateRequest create() {
+    public static SumComputeMetricsByUsageRequest create() {
         return builder().build();
     }
 
@@ -76,28 +76,28 @@ public class SumStorageMetricsByDateRequest extends Request {
     }
 
     /**
-     * @return statsType
+     * @return usageType
      */
-    public String getStatsType() {
-        return this.statsType;
+    public String getUsageType() {
+        return this.usageType;
     }
 
-    public static final class Builder extends Request.Builder<SumStorageMetricsByDateRequest, Builder> {
+    public static final class Builder extends Request.Builder<SumComputeMetricsByUsageRequest, Builder> {
         private Long endDate; 
         private java.util.List<String> projectNames; 
         private Long startDate; 
-        private String statsType; 
+        private String usageType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SumStorageMetricsByDateRequest request) {
+        private Builder(SumComputeMetricsByUsageRequest request) {
             super(request);
             this.endDate = request.endDate;
             this.projectNames = request.projectNames;
             this.startDate = request.startDate;
-            this.statsType = request.statsType;
+            this.usageType = request.usageType;
         } 
 
         /**
@@ -128,17 +128,17 @@ public class SumStorageMetricsByDateRequest extends Request {
         }
 
         /**
-         * statsType.
+         * usageType.
          */
-        public Builder statsType(String statsType) {
-            this.putBodyParameter("statsType", statsType);
-            this.statsType = statsType;
+        public Builder usageType(String usageType) {
+            this.putBodyParameter("usageType", usageType);
+            this.usageType = usageType;
             return this;
         }
 
         @Override
-        public SumStorageMetricsByDateRequest build() {
-            return new SumStorageMetricsByDateRequest(this);
+        public SumComputeMetricsByUsageRequest build() {
+            return new SumComputeMetricsByUsageRequest(this);
         } 
 
     } 
