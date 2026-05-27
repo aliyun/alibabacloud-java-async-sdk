@@ -17,8 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetYikeAgentJobResponseBody</p>
  */
 public class GetYikeAgentJobResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
+    private String createTime;
+
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
+
+    @com.aliyun.core.annotation.NameInMap("FinishTime")
+    private String finishTime;
 
     @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
@@ -42,7 +48,9 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
     private String userData;
 
     private GetYikeAgentJobResponseBody(Builder builder) {
+        this.createTime = builder.createTime;
         this.errorCode = builder.errorCode;
+        this.finishTime = builder.finishTime;
         this.jobId = builder.jobId;
         this.jobParams = builder.jobParams;
         this.jobResult = builder.jobResult;
@@ -65,10 +73,24 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return createTime
+     */
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
      * @return errorCode
      */
     public String getErrorCode() {
         return this.errorCode;
+    }
+
+    /**
+     * @return finishTime
+     */
+    public String getFinishTime() {
+        return this.finishTime;
     }
 
     /**
@@ -121,7 +143,9 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String createTime; 
         private String errorCode; 
+        private String finishTime; 
         private String jobId; 
         private String jobParams; 
         private java.util.List<JobResult> jobResult; 
@@ -134,7 +158,9 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
         } 
 
         private Builder(GetYikeAgentJobResponseBody model) {
+            this.createTime = model.createTime;
             this.errorCode = model.errorCode;
+            this.finishTime = model.finishTime;
             this.jobId = model.jobId;
             this.jobParams = model.jobParams;
             this.jobResult = model.jobResult;
@@ -145,10 +171,26 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
         } 
 
         /**
+         * CreateTime.
+         */
+        public Builder createTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+
+        /**
          * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * FinishTime.
+         */
+        public Builder finishTime(String finishTime) {
+            this.finishTime = finishTime;
             return this;
         }
 

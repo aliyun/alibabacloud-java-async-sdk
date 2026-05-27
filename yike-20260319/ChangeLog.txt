@@ -1,3 +1,6 @@
+2026-05-27 Version: 1.0.12
+- Generated java-async 2026-03-19 for Yike.
+
 2026-05-26 Version: 1.0.11
 - Generated java-async 2026-03-19 for Yike.
 
