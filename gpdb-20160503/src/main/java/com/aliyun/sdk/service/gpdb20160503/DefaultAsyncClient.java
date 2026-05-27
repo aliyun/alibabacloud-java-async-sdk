@@ -3673,6 +3673,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListSupabaseProjectTags  ListSupabaseProjectTagsRequest
+     * @return ListSupabaseProjectTagsResponse
+     */
+    @Override
+    public CompletableFuture<ListSupabaseProjectTagsResponse> listSupabaseProjectTags(ListSupabaseProjectTagsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSupabaseProjectTags").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSupabaseProjectTagsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSupabaseProjectTagsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation to query Supabase instances.</p>
      * 
@@ -4258,6 +4276,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifySupabaseProjectDescription  ModifySupabaseProjectDescriptionRequest
+     * @return ModifySupabaseProjectDescriptionResponse
+     */
+    @Override
+    public CompletableFuture<ModifySupabaseProjectDescriptionResponse> modifySupabaseProjectDescription(ModifySupabaseProjectDescriptionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifySupabaseProjectDescription").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifySupabaseProjectDescriptionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifySupabaseProjectDescriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifySupabaseProjectResource  ModifySupabaseProjectResourceRequest
      * @return ModifySupabaseProjectResourceResponse
      */
@@ -4696,6 +4732,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of TagSupabaseProject  TagSupabaseProjectRequest
+     * @return TagSupabaseProjectResponse
+     */
+    @Override
+    public CompletableFuture<TagSupabaseProjectResponse> tagSupabaseProject(TagSupabaseProjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TagSupabaseProject").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TagSupabaseProjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TagSupabaseProjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of TextEmbedding  TextEmbeddingRequest
      * @return TextEmbeddingResponse
      */
@@ -4767,6 +4821,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UntagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UntagSupabaseProject  UntagSupabaseProjectRequest
+     * @return UntagSupabaseProjectResponse
+     */
+    @Override
+    public CompletableFuture<UntagSupabaseProjectResponse> untagSupabaseProject(UntagSupabaseProjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UntagSupabaseProject").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UntagSupabaseProjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UntagSupabaseProjectResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

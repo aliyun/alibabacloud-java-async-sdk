@@ -1434,6 +1434,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListStreamingJobsResponse> listStreamingJobs(ListStreamingJobsRequest request);
 
     /**
+     * @param request the request parameters of ListSupabaseProjectTags  ListSupabaseProjectTagsRequest
+     * @return ListSupabaseProjectTagsResponse
+     */
+    CompletableFuture<ListSupabaseProjectTagsResponse> listSupabaseProjectTags(ListSupabaseProjectTagsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation to query Supabase instances.</p>
      * 
@@ -1659,6 +1665,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySupabaseAutoScalePolicyResponse> modifySupabaseAutoScalePolicy(ModifySupabaseAutoScalePolicyRequest request);
 
     /**
+     * @param request the request parameters of ModifySupabaseProjectDescription  ModifySupabaseProjectDescriptionRequest
+     * @return ModifySupabaseProjectDescriptionResponse
+     */
+    CompletableFuture<ModifySupabaseProjectDescriptionResponse> modifySupabaseProjectDescription(ModifySupabaseProjectDescriptionRequest request);
+
+    /**
      * @param request the request parameters of ModifySupabaseProjectResource  ModifySupabaseProjectResourceRequest
      * @return ModifySupabaseProjectResourceResponse
      */
@@ -1833,6 +1845,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**
+     * @param request the request parameters of TagSupabaseProject  TagSupabaseProjectRequest
+     * @return TagSupabaseProjectResponse
+     */
+    CompletableFuture<TagSupabaseProjectResponse> tagSupabaseProject(TagSupabaseProjectRequest request);
+
+    /**
      * @param request the request parameters of TextEmbedding  TextEmbeddingRequest
      * @return TextEmbeddingResponse
      */
@@ -1860,6 +1878,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UntagSupabaseProject  UntagSupabaseProjectRequest
+     * @return UntagSupabaseProjectResponse
+     */
+    CompletableFuture<UntagSupabaseProjectResponse> untagSupabaseProject(UntagSupabaseProjectRequest request);
 
     /**
      * @param request the request parameters of UpdateCollectionDataMetadata  UpdateCollectionDataMetadataRequest
