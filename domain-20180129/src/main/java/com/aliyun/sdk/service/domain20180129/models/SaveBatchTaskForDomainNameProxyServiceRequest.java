@@ -27,6 +27,10 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
+    private String serviceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     @com.aliyun.core.annotation.Validation(required = true)
     private Boolean status;
@@ -39,6 +43,7 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.lang = builder.lang;
+        this.serviceType = builder.serviceType;
         this.status = builder.status;
         this.userClientIp = builder.userClientIp;
     }
@@ -71,6 +76,13 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends Request {
     }
 
     /**
+     * @return serviceType
+     */
+    public String getServiceType() {
+        return this.serviceType;
+    }
+
+    /**
      * @return status
      */
     public Boolean getStatus() {
@@ -87,6 +99,7 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends Request {
     public static final class Builder extends Request.Builder<SaveBatchTaskForDomainNameProxyServiceRequest, Builder> {
         private java.util.List<String> domainName; 
         private String lang; 
+        private String serviceType; 
         private Boolean status; 
         private String userClientIp; 
 
@@ -98,6 +111,7 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends Request {
             super(request);
             this.domainName = request.domainName;
             this.lang = request.lang;
+            this.serviceType = request.serviceType;
             this.status = request.status;
             this.userClientIp = request.userClientIp;
         } 
@@ -120,6 +134,15 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * ServiceType.
+         */
+        public Builder serviceType(String serviceType) {
+            this.putQueryParameter("ServiceType", serviceType);
+            this.serviceType = serviceType;
             return this;
         }
 

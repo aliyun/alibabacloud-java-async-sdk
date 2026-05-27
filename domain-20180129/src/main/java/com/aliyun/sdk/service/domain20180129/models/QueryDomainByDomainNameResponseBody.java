@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDomainByDomainNameResponseBody</p>
  */
 public class QueryDomainByDomainNameResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CnnicPrivacyServiceStatus")
+    private String cnnicPrivacyServiceStatus;
+
     @com.aliyun.core.annotation.NameInMap("DnsList")
     private DnsList dnsList;
 
@@ -67,6 +70,9 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Premium")
     private Boolean premium;
+
+    @com.aliyun.core.annotation.NameInMap("PrivacyServiceStatus")
+    private String privacyServiceStatus;
 
     @com.aliyun.core.annotation.NameInMap("RealNameStatus")
     private String realNameStatus;
@@ -123,6 +129,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     private String zhRegistrantOrganization;
 
     private QueryDomainByDomainNameResponseBody(Builder builder) {
+        this.cnnicPrivacyServiceStatus = builder.cnnicPrivacyServiceStatus;
         this.dnsList = builder.dnsList;
         this.domainGroupId = builder.domainGroupId;
         this.domainGroupName = builder.domainGroupName;
@@ -140,6 +147,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         this.expirationDateStatus = builder.expirationDateStatus;
         this.instanceId = builder.instanceId;
         this.premium = builder.premium;
+        this.privacyServiceStatus = builder.privacyServiceStatus;
         this.realNameStatus = builder.realNameStatus;
         this.registrantName = builder.registrantName;
         this.registrantOrganization = builder.registrantOrganization;
@@ -170,6 +178,13 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cnnicPrivacyServiceStatus
+     */
+    public String getCnnicPrivacyServiceStatus() {
+        return this.cnnicPrivacyServiceStatus;
     }
 
     /**
@@ -289,6 +304,13 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
      */
     public Boolean getPremium() {
         return this.premium;
+    }
+
+    /**
+     * @return privacyServiceStatus
+     */
+    public String getPrivacyServiceStatus() {
+        return this.privacyServiceStatus;
     }
 
     /**
@@ -418,6 +440,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String cnnicPrivacyServiceStatus; 
         private DnsList dnsList; 
         private Long domainGroupId; 
         private String domainGroupName; 
@@ -435,6 +458,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         private String expirationDateStatus; 
         private String instanceId; 
         private Boolean premium; 
+        private String privacyServiceStatus; 
         private String realNameStatus; 
         private String registrantName; 
         private String registrantOrganization; 
@@ -458,6 +482,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         } 
 
         private Builder(QueryDomainByDomainNameResponseBody model) {
+            this.cnnicPrivacyServiceStatus = model.cnnicPrivacyServiceStatus;
             this.dnsList = model.dnsList;
             this.domainGroupId = model.domainGroupId;
             this.domainGroupName = model.domainGroupName;
@@ -475,6 +500,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
             this.expirationDateStatus = model.expirationDateStatus;
             this.instanceId = model.instanceId;
             this.premium = model.premium;
+            this.privacyServiceStatus = model.privacyServiceStatus;
             this.realNameStatus = model.realNameStatus;
             this.registrantName = model.registrantName;
             this.registrantOrganization = model.registrantOrganization;
@@ -494,6 +520,14 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
             this.zhRegistrantName = model.zhRegistrantName;
             this.zhRegistrantOrganization = model.zhRegistrantOrganization;
         } 
+
+        /**
+         * CnnicPrivacyServiceStatus.
+         */
+        public Builder cnnicPrivacyServiceStatus(String cnnicPrivacyServiceStatus) {
+            this.cnnicPrivacyServiceStatus = cnnicPrivacyServiceStatus;
+            return this;
+        }
 
         /**
          * <p>The Domain Name System (DNS) servers of the domain name.</p>
@@ -697,6 +731,14 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
          */
         public Builder premium(Boolean premium) {
             this.premium = premium;
+            return this;
+        }
+
+        /**
+         * PrivacyServiceStatus.
+         */
+        public Builder privacyServiceStatus(String privacyServiceStatus) {
+            this.privacyServiceStatus = privacyServiceStatus;
             return this;
         }
 

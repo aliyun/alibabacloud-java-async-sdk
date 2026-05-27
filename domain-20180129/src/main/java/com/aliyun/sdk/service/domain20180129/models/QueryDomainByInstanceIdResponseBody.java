@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDomainByInstanceIdResponseBody</p>
  */
 public class QueryDomainByInstanceIdResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CnnicPrivacyServiceStatus")
+    private String cnnicPrivacyServiceStatus;
+
     @com.aliyun.core.annotation.NameInMap("DnsList")
     private DnsList dnsList;
 
@@ -126,6 +129,7 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     private String zhRegistrantOrganization;
 
     private QueryDomainByInstanceIdResponseBody(Builder builder) {
+        this.cnnicPrivacyServiceStatus = builder.cnnicPrivacyServiceStatus;
         this.dnsList = builder.dnsList;
         this.domainGroupId = builder.domainGroupId;
         this.domainGroupName = builder.domainGroupName;
@@ -174,6 +178,13 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cnnicPrivacyServiceStatus
+     */
+    public String getCnnicPrivacyServiceStatus() {
+        return this.cnnicPrivacyServiceStatus;
     }
 
     /**
@@ -429,6 +440,7 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String cnnicPrivacyServiceStatus; 
         private DnsList dnsList; 
         private Long domainGroupId; 
         private String domainGroupName; 
@@ -470,6 +482,7 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         } 
 
         private Builder(QueryDomainByInstanceIdResponseBody model) {
+            this.cnnicPrivacyServiceStatus = model.cnnicPrivacyServiceStatus;
             this.dnsList = model.dnsList;
             this.domainGroupId = model.domainGroupId;
             this.domainGroupName = model.domainGroupName;
@@ -507,6 +520,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
             this.zhRegistrantName = model.zhRegistrantName;
             this.zhRegistrantOrganization = model.zhRegistrantOrganization;
         } 
+
+        /**
+         * CnnicPrivacyServiceStatus.
+         */
+        public Builder cnnicPrivacyServiceStatus(String cnnicPrivacyServiceStatus) {
+            this.cnnicPrivacyServiceStatus = cnnicPrivacyServiceStatus;
+            return this;
+        }
 
         /**
          * DnsList.

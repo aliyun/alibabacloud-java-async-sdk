@@ -33,12 +33,17 @@ public class CreateIntlFixedPriceDomainOrderRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ExpectedPrice")
     private Long expectedPrice;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    private Integer productType;
+
     private CreateIntlFixedPriceDomainOrderRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
         this.contactId = builder.contactId;
         this.domain = builder.domain;
         this.expectedPrice = builder.expectedPrice;
+        this.productType = builder.productType;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class CreateIntlFixedPriceDomainOrderRequest extends Request {
         return this.expectedPrice;
     }
 
+    /**
+     * @return productType
+     */
+    public Integer getProductType() {
+        return this.productType;
+    }
+
     public static final class Builder extends Request.Builder<CreateIntlFixedPriceDomainOrderRequest, Builder> {
         private Boolean autoPay; 
         private Long contactId; 
         private String domain; 
         private Long expectedPrice; 
+        private Integer productType; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class CreateIntlFixedPriceDomainOrderRequest extends Request {
             this.contactId = request.contactId;
             this.domain = request.domain;
             this.expectedPrice = request.expectedPrice;
+            this.productType = request.productType;
         } 
 
         /**
@@ -133,6 +147,15 @@ public class CreateIntlFixedPriceDomainOrderRequest extends Request {
         public Builder expectedPrice(Long expectedPrice) {
             this.putQueryParameter("ExpectedPrice", expectedPrice);
             this.expectedPrice = expectedPrice;
+            return this;
+        }
+
+        /**
+         * ProductType.
+         */
+        public Builder productType(Integer productType) {
+            this.putQueryParameter("ProductType", productType);
+            this.productType = productType;
             return this;
         }
 
