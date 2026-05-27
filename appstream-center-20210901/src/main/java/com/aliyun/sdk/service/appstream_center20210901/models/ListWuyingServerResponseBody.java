@@ -397,6 +397,81 @@ public class ListWuyingServerResponseBody extends TeaModel {
      *
      * <p>ListWuyingServerResponseBody</p>
      */
+    public static class PrivateIpSets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Primary")
+        private Boolean primary;
+
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
+        private String privateIpAddress;
+
+        private PrivateIpSets(Builder builder) {
+            this.primary = builder.primary;
+            this.privateIpAddress = builder.privateIpAddress;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateIpSets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return primary
+         */
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
+        /**
+         * @return privateIpAddress
+         */
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        public static final class Builder {
+            private Boolean primary; 
+            private String privateIpAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpSets model) {
+                this.primary = model.primary;
+                this.privateIpAddress = model.privateIpAddress;
+            } 
+
+            /**
+             * Primary.
+             */
+            public Builder primary(Boolean primary) {
+                this.primary = primary;
+                return this;
+            }
+
+            /**
+             * PrivateIpAddress.
+             */
+            public Builder privateIpAddress(String privateIpAddress) {
+                this.privateIpAddress = privateIpAddress;
+                return this;
+            }
+
+            public PrivateIpSets build() {
+                return new PrivateIpSets(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListWuyingServerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWuyingServerResponseBody</p>
+     */
     public static class ServerInstanceTypeInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
@@ -668,6 +743,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDisk")
         private java.util.List<DataDisk> dataDisk;
 
+        @com.aliyun.core.annotation.NameInMap("EniPrivateIpAddressQuantity")
+        private Integer eniPrivateIpAddressQuantity;
+
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
@@ -703,6 +781,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PolicyGroupIdList")
         private java.util.List<String> policyGroupIdList;
+
+        @com.aliyun.core.annotation.NameInMap("PrivateIpSets")
+        private java.util.List<PrivateIpSets> privateIpSets;
 
         @com.aliyun.core.annotation.NameInMap("ResourceSessionStatus")
         private String resourceSessionStatus;
@@ -746,6 +827,12 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VirtualNodePoolId")
         private String virtualNodePoolId;
 
+        @com.aliyun.core.annotation.NameInMap("VkUpgradeNeeded")
+        private Boolean vkUpgradeNeeded;
+
+        @com.aliyun.core.annotation.NameInMap("VkVersion")
+        private String vkVersion;
+
         @com.aliyun.core.annotation.NameInMap("WuyingServerId")
         private String wuyingServerId;
 
@@ -760,6 +847,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             this.chargeType = builder.chargeType;
             this.createTime = builder.createTime;
             this.dataDisk = builder.dataDisk;
+            this.eniPrivateIpAddressQuantity = builder.eniPrivateIpAddressQuantity;
             this.expiredTime = builder.expiredTime;
             this.fotaVersion = builder.fotaVersion;
             this.imageId = builder.imageId;
@@ -772,6 +860,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             this.officeSiteType = builder.officeSiteType;
             this.osType = builder.osType;
             this.policyGroupIdList = builder.policyGroupIdList;
+            this.privateIpSets = builder.privateIpSets;
             this.resourceSessionStatus = builder.resourceSessionStatus;
             this.securityGroupIds = builder.securityGroupIds;
             this.serverInstanceTypeInfo = builder.serverInstanceTypeInfo;
@@ -786,6 +875,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
             this.users = builder.users;
             this.virtualKubeletIp = builder.virtualKubeletIp;
             this.virtualNodePoolId = builder.virtualNodePoolId;
+            this.vkUpgradeNeeded = builder.vkUpgradeNeeded;
+            this.vkVersion = builder.vkVersion;
             this.wuyingServerId = builder.wuyingServerId;
             this.wuyingServerName = builder.wuyingServerName;
         }
@@ -845,6 +936,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
          */
         public java.util.List<DataDisk> getDataDisk() {
             return this.dataDisk;
+        }
+
+        /**
+         * @return eniPrivateIpAddressQuantity
+         */
+        public Integer getEniPrivateIpAddressQuantity() {
+            return this.eniPrivateIpAddressQuantity;
         }
 
         /**
@@ -929,6 +1027,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
          */
         public java.util.List<String> getPolicyGroupIdList() {
             return this.policyGroupIdList;
+        }
+
+        /**
+         * @return privateIpSets
+         */
+        public java.util.List<PrivateIpSets> getPrivateIpSets() {
+            return this.privateIpSets;
         }
 
         /**
@@ -1030,6 +1135,20 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return vkUpgradeNeeded
+         */
+        public Boolean getVkUpgradeNeeded() {
+            return this.vkUpgradeNeeded;
+        }
+
+        /**
+         * @return vkVersion
+         */
+        public String getVkVersion() {
+            return this.vkVersion;
+        }
+
+        /**
          * @return wuyingServerId
          */
         public String getWuyingServerId() {
@@ -1051,6 +1170,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             private String chargeType; 
             private String createTime; 
             private java.util.List<DataDisk> dataDisk; 
+            private Integer eniPrivateIpAddressQuantity; 
             private String expiredTime; 
             private String fotaVersion; 
             private String imageId; 
@@ -1063,6 +1183,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             private String officeSiteType; 
             private String osType; 
             private java.util.List<String> policyGroupIdList; 
+            private java.util.List<PrivateIpSets> privateIpSets; 
             private String resourceSessionStatus; 
             private java.util.List<String> securityGroupIds; 
             private ServerInstanceTypeInfo serverInstanceTypeInfo; 
@@ -1077,6 +1198,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
             private java.util.List<String> users; 
             private String virtualKubeletIp; 
             private String virtualNodePoolId; 
+            private Boolean vkUpgradeNeeded; 
+            private String vkVersion; 
             private String wuyingServerId; 
             private String wuyingServerName; 
 
@@ -1091,6 +1214,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
                 this.chargeType = model.chargeType;
                 this.createTime = model.createTime;
                 this.dataDisk = model.dataDisk;
+                this.eniPrivateIpAddressQuantity = model.eniPrivateIpAddressQuantity;
                 this.expiredTime = model.expiredTime;
                 this.fotaVersion = model.fotaVersion;
                 this.imageId = model.imageId;
@@ -1103,6 +1227,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
                 this.officeSiteType = model.officeSiteType;
                 this.osType = model.osType;
                 this.policyGroupIdList = model.policyGroupIdList;
+                this.privateIpSets = model.privateIpSets;
                 this.resourceSessionStatus = model.resourceSessionStatus;
                 this.securityGroupIds = model.securityGroupIds;
                 this.serverInstanceTypeInfo = model.serverInstanceTypeInfo;
@@ -1117,6 +1242,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
                 this.users = model.users;
                 this.virtualKubeletIp = model.virtualKubeletIp;
                 this.virtualNodePoolId = model.virtualNodePoolId;
+                this.vkUpgradeNeeded = model.vkUpgradeNeeded;
+                this.vkVersion = model.vkVersion;
                 this.wuyingServerId = model.wuyingServerId;
                 this.wuyingServerName = model.wuyingServerName;
             } 
@@ -1187,6 +1314,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
+             * EniPrivateIpAddressQuantity.
+             */
+            public Builder eniPrivateIpAddressQuantity(Integer eniPrivateIpAddressQuantity) {
+                this.eniPrivateIpAddressQuantity = eniPrivateIpAddressQuantity;
+                return this;
+            }
+
+            /**
              * <p>The time when the subscription instance expires.</p>
              * 
              * <strong>example:</strong>
@@ -1218,6 +1353,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
             /**
              * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ubuntu 22.04</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1300,6 +1438,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
              */
             public Builder policyGroupIdList(java.util.List<String> policyGroupIdList) {
                 this.policyGroupIdList = policyGroupIdList;
+                return this;
+            }
+
+            /**
+             * PrivateIpSets.
+             */
+            public Builder privateIpSets(java.util.List<PrivateIpSets> privateIpSets) {
+                this.privateIpSets = privateIpSets;
                 return this;
             }
 
@@ -1424,6 +1570,22 @@ public class ListWuyingServerResponseBody extends TeaModel {
              */
             public Builder virtualNodePoolId(String virtualNodePoolId) {
                 this.virtualNodePoolId = virtualNodePoolId;
+                return this;
+            }
+
+            /**
+             * VkUpgradeNeeded.
+             */
+            public Builder vkUpgradeNeeded(Boolean vkUpgradeNeeded) {
+                this.vkUpgradeNeeded = vkUpgradeNeeded;
+                return this;
+            }
+
+            /**
+             * VkVersion.
+             */
+            public Builder vkVersion(String vkVersion) {
+                this.vkVersion = vkVersion;
                 return this;
             }
 

@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApproveOtaTaskResponse> approveOtaTask(ApproveOtaTaskRequest request);
 
     /**
+     * @param request the request parameters of AssignWuyingServerPrivateAddresses  AssignWuyingServerPrivateAddressesRequest
+     * @return AssignWuyingServerPrivateAddressesResponse
+     */
+    CompletableFuture<AssignWuyingServerPrivateAddressesResponse> assignWuyingServerPrivateAddresses(AssignWuyingServerPrivateAddressesRequest request);
+
+    /**
      * @param request the request parameters of AuthorizeInstanceGroup  AuthorizeInstanceGroupRequest
      * @return AuthorizeInstanceGroupResponse
      */
@@ -483,6 +489,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TagCloudResourcesResponse
      */
     CompletableFuture<TagCloudResourcesResponse> tagCloudResources(TagCloudResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UnassignWuyingServerPrivateAddresses  UnassignWuyingServerPrivateAddressesRequest
+     * @return UnassignWuyingServerPrivateAddressesResponse
+     */
+    CompletableFuture<UnassignWuyingServerPrivateAddressesResponse> unassignWuyingServerPrivateAddresses(UnassignWuyingServerPrivateAddressesRequest request);
 
     /**
      * @param request the request parameters of Unbind  UnbindRequest

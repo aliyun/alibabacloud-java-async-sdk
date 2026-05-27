@@ -398,6 +398,9 @@ public class ListWuyingServerRequest extends Request {
 
         /**
          * <p>The list of workstation IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-bp1234567890abcde</p>
          */
         public Builder wuyingServerIdList(java.util.List<String> wuyingServerIdList) {
             this.putBodyParameter("WuyingServerIdList", wuyingServerIdList);
