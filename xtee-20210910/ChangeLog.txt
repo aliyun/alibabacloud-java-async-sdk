@@ -1,3 +1,6 @@
+2026-05-27 Version: 2.0.8
+- Generated java-async 2021-09-10 for xtee.
+
 2026-05-22 Version: 2.0.7
 - Generated java-async 2021-09-10 for xtee.
 

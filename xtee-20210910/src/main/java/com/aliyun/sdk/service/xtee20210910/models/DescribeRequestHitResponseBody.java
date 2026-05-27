@@ -323,7 +323,10 @@ public class DescribeRequestHitResponseBody extends TeaModel {
             }
 
             /**
-             * ruleType.
+             * <p>Rule Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
