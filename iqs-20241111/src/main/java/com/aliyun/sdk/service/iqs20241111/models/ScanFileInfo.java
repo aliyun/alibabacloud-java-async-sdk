@@ -24,7 +24,7 @@ public class ScanFileInfo extends TeaModel {
     private Integer height;
 
     @com.aliyun.core.annotation.NameInMap("imageBase64")
-    private byte[] imageBase64;
+    private String imageBase64;
 
     @com.aliyun.core.annotation.NameInMap("width")
     private Integer width;
@@ -65,7 +65,7 @@ public class ScanFileInfo extends TeaModel {
     /**
      * @return imageBase64
      */
-    public byte[] getImageBase64() {
+    public String getImageBase64() {
         return this.imageBase64;
     }
 
@@ -79,7 +79,7 @@ public class ScanFileInfo extends TeaModel {
     public static final class Builder {
         private Integer angle; 
         private Integer height; 
-        private byte[] imageBase64; 
+        private String imageBase64; 
         private Integer width; 
 
         private Builder() {
@@ -111,7 +111,7 @@ public class ScanFileInfo extends TeaModel {
         /**
          * imageBase64.
          */
-        public Builder imageBase64(byte[] imageBase64) {
+        public Builder imageBase64(String imageBase64) {
             this.imageBase64 = imageBase64;
             return this;
         }
