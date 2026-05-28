@@ -26,13 +26,25 @@ public class CreateExecutorGroupRequest extends Request {
     private String authType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoScale")
+    private Boolean autoScale;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CmsWorkspaceId")
+    private String cmsWorkspaceId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IntegrationType")
+    private String integrationType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -57,17 +69,25 @@ public class CreateExecutorGroupRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String workers;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("XAttrs")
+    private String xAttrs;
+
     private CreateExecutorGroupRequest(Builder builder) {
         super(builder);
         this.apiKey = builder.apiKey;
         this.authType = builder.authType;
+        this.autoScale = builder.autoScale;
         this.clusterId = builder.clusterId;
+        this.cmsWorkspaceId = builder.cmsWorkspaceId;
         this.description = builder.description;
+        this.integrationType = builder.integrationType;
         this.name = builder.name;
         this.network = builder.network;
         this.protocol = builder.protocol;
         this.workerType = builder.workerType;
         this.workers = builder.workers;
+        this.xAttrs = builder.xAttrs;
     }
 
     public static Builder builder() {
@@ -98,6 +118,13 @@ public class CreateExecutorGroupRequest extends Request {
     }
 
     /**
+     * @return autoScale
+     */
+    public Boolean getAutoScale() {
+        return this.autoScale;
+    }
+
+    /**
      * @return clusterId
      */
     public String getClusterId() {
@@ -105,10 +132,24 @@ public class CreateExecutorGroupRequest extends Request {
     }
 
     /**
+     * @return cmsWorkspaceId
+     */
+    public String getCmsWorkspaceId() {
+        return this.cmsWorkspaceId;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return integrationType
+     */
+    public String getIntegrationType() {
+        return this.integrationType;
     }
 
     /**
@@ -146,16 +187,27 @@ public class CreateExecutorGroupRequest extends Request {
         return this.workers;
     }
 
+    /**
+     * @return xAttrs
+     */
+    public String getXAttrs() {
+        return this.xAttrs;
+    }
+
     public static final class Builder extends Request.Builder<CreateExecutorGroupRequest, Builder> {
         private String apiKey; 
         private String authType; 
+        private Boolean autoScale; 
         private String clusterId; 
+        private String cmsWorkspaceId; 
         private String description; 
+        private String integrationType; 
         private String name; 
         private String network; 
         private String protocol; 
         private String workerType; 
         private String workers; 
+        private String xAttrs; 
 
         private Builder() {
             super();
@@ -165,13 +217,17 @@ public class CreateExecutorGroupRequest extends Request {
             super(request);
             this.apiKey = request.apiKey;
             this.authType = request.authType;
+            this.autoScale = request.autoScale;
             this.clusterId = request.clusterId;
+            this.cmsWorkspaceId = request.cmsWorkspaceId;
             this.description = request.description;
+            this.integrationType = request.integrationType;
             this.name = request.name;
             this.network = request.network;
             this.protocol = request.protocol;
             this.workerType = request.workerType;
             this.workers = request.workers;
+            this.xAttrs = request.xAttrs;
         } 
 
         /**
@@ -193,6 +249,15 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
+         * AutoScale.
+         */
+        public Builder autoScale(Boolean autoScale) {
+            this.putBodyParameter("AutoScale", autoScale);
+            this.autoScale = autoScale;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,11 +270,29 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
+         * CmsWorkspaceId.
+         */
+        public Builder cmsWorkspaceId(String cmsWorkspaceId) {
+            this.putBodyParameter("CmsWorkspaceId", cmsWorkspaceId);
+            this.cmsWorkspaceId = cmsWorkspaceId;
+            return this;
+        }
+
+        /**
          * Description.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * IntegrationType.
+         */
+        public Builder integrationType(String integrationType) {
+            this.putBodyParameter("IntegrationType", integrationType);
+            this.integrationType = integrationType;
             return this;
         }
 
@@ -264,6 +347,15 @@ public class CreateExecutorGroupRequest extends Request {
         public Builder workers(String workers) {
             this.putBodyParameter("Workers", workers);
             this.workers = workers;
+            return this;
+        }
+
+        /**
+         * XAttrs.
+         */
+        public Builder xAttrs(String xAttrs) {
+            this.putBodyParameter("XAttrs", xAttrs);
+            this.xAttrs = xAttrs;
             return this;
         }
 

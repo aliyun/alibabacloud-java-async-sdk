@@ -27,10 +27,15 @@ public class DeleteExecutorGroupRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer id;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
     private DeleteExecutorGroupRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.id = builder.id;
+        this.name = builder.name;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class DeleteExecutorGroupRequest extends Request {
         return this.id;
     }
 
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
     public static final class Builder extends Request.Builder<DeleteExecutorGroupRequest, Builder> {
         private String clusterId; 
         private Integer id; 
+        private String name; 
 
         private Builder() {
             super();
@@ -72,6 +85,7 @@ public class DeleteExecutorGroupRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.id = request.id;
+            this.name = request.name;
         } 
 
         /**
@@ -96,6 +110,15 @@ public class DeleteExecutorGroupRequest extends Request {
         public Builder id(Integer id) {
             this.putBodyParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putBodyParameter("Name", name);
+            this.name = name;
             return this;
         }
 

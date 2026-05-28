@@ -26,9 +26,17 @@ public class UpdateExecutorGroupRequest extends Request {
     private String authType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoScale")
+    private Boolean autoScale;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CmsWorkspaceId")
+    private String cmsWorkspaceId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -36,8 +44,13 @@ public class UpdateExecutorGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
+    @Deprecated
     @com.aliyun.core.annotation.Validation(required = true)
     private String id;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Network")
@@ -55,17 +68,25 @@ public class UpdateExecutorGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Workers")
     private String workers;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("XAttrs")
+    private String xAttrs;
+
     private UpdateExecutorGroupRequest(Builder builder) {
         super(builder);
         this.apiKey = builder.apiKey;
         this.authType = builder.authType;
+        this.autoScale = builder.autoScale;
         this.clusterId = builder.clusterId;
+        this.cmsWorkspaceId = builder.cmsWorkspaceId;
         this.description = builder.description;
         this.id = builder.id;
+        this.name = builder.name;
         this.network = builder.network;
         this.protocol = builder.protocol;
         this.workerType = builder.workerType;
         this.workers = builder.workers;
+        this.xAttrs = builder.xAttrs;
     }
 
     public static Builder builder() {
@@ -96,10 +117,24 @@ public class UpdateExecutorGroupRequest extends Request {
     }
 
     /**
+     * @return autoScale
+     */
+    public Boolean getAutoScale() {
+        return this.autoScale;
+    }
+
+    /**
      * @return clusterId
      */
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    /**
+     * @return cmsWorkspaceId
+     */
+    public String getCmsWorkspaceId() {
+        return this.cmsWorkspaceId;
     }
 
     /**
@@ -114,6 +149,13 @@ public class UpdateExecutorGroupRequest extends Request {
      */
     public String getId() {
         return this.id;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -144,16 +186,27 @@ public class UpdateExecutorGroupRequest extends Request {
         return this.workers;
     }
 
+    /**
+     * @return xAttrs
+     */
+    public String getXAttrs() {
+        return this.xAttrs;
+    }
+
     public static final class Builder extends Request.Builder<UpdateExecutorGroupRequest, Builder> {
         private String apiKey; 
         private String authType; 
+        private Boolean autoScale; 
         private String clusterId; 
+        private String cmsWorkspaceId; 
         private String description; 
         private String id; 
+        private String name; 
         private String network; 
         private String protocol; 
         private String workerType; 
         private String workers; 
+        private String xAttrs; 
 
         private Builder() {
             super();
@@ -163,13 +216,17 @@ public class UpdateExecutorGroupRequest extends Request {
             super(request);
             this.apiKey = request.apiKey;
             this.authType = request.authType;
+            this.autoScale = request.autoScale;
             this.clusterId = request.clusterId;
+            this.cmsWorkspaceId = request.cmsWorkspaceId;
             this.description = request.description;
             this.id = request.id;
+            this.name = request.name;
             this.network = request.network;
             this.protocol = request.protocol;
             this.workerType = request.workerType;
             this.workers = request.workers;
+            this.xAttrs = request.xAttrs;
         } 
 
         /**
@@ -191,6 +248,15 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
+         * AutoScale.
+         */
+        public Builder autoScale(Boolean autoScale) {
+            this.putBodyParameter("AutoScale", autoScale);
+            this.autoScale = autoScale;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +265,15 @@ public class UpdateExecutorGroupRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * CmsWorkspaceId.
+         */
+        public Builder cmsWorkspaceId(String cmsWorkspaceId) {
+            this.putBodyParameter("CmsWorkspaceId", cmsWorkspaceId);
+            this.cmsWorkspaceId = cmsWorkspaceId;
             return this;
         }
 
@@ -221,6 +296,15 @@ public class UpdateExecutorGroupRequest extends Request {
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putBodyParameter("Name", name);
+            this.name = name;
             return this;
         }
 
@@ -257,6 +341,15 @@ public class UpdateExecutorGroupRequest extends Request {
         public Builder workers(String workers) {
             this.putBodyParameter("Workers", workers);
             this.workers = workers;
+            return this;
+        }
+
+        /**
+         * XAttrs.
+         */
+        public Builder xAttrs(String xAttrs) {
+            this.putBodyParameter("XAttrs", xAttrs);
+            this.xAttrs = xAttrs;
             return this;
         }
 

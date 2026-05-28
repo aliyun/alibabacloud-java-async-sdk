@@ -178,6 +178,9 @@ public class ListExecutorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
@@ -191,6 +194,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             this.label = builder.label;
             this.online = builder.online;
             this.port = builder.port;
+            this.status = builder.status;
             this.version = builder.version;
             this.weight = builder.weight;
         }
@@ -246,6 +250,13 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -266,6 +277,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             private String label; 
             private Boolean online; 
             private Integer port; 
+            private String status; 
             private String version; 
             private Integer weight; 
 
@@ -279,6 +291,7 @@ public class ListExecutorsResponseBody extends TeaModel {
                 this.label = model.label;
                 this.online = model.online;
                 this.port = model.port;
+                this.status = model.status;
                 this.version = model.version;
                 this.weight = model.weight;
             } 
@@ -328,6 +341,14 @@ public class ListExecutorsResponseBody extends TeaModel {
              */
             public Builder port(Integer port) {
                 this.port = port;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

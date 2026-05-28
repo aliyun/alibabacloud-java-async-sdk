@@ -288,11 +288,20 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
 
+        @com.aliyun.core.annotation.NameInMap("AutoScale")
+        private Boolean autoScale;
+
         @com.aliyun.core.annotation.NameInMap("CiteList")
         private java.util.List<CiteList> citeList;
 
+        @com.aliyun.core.annotation.NameInMap("CmsWorkspaceId")
+        private String cmsWorkspaceId;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("IntegrationType")
+        private String integrationType;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -303,6 +312,9 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
+        @com.aliyun.core.annotation.NameInMap("ResolvedWorkers")
+        private String resolvedWorkers;
+
         @com.aliyun.core.annotation.NameInMap("WorkerId")
         private Long workerId;
 
@@ -312,17 +324,25 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Workers")
         private String workers;
 
+        @com.aliyun.core.annotation.NameInMap("XAttrs")
+        private String xAttrs;
+
         private Records(Builder builder) {
             this.apiKey = builder.apiKey;
             this.authType = builder.authType;
+            this.autoScale = builder.autoScale;
             this.citeList = builder.citeList;
+            this.cmsWorkspaceId = builder.cmsWorkspaceId;
             this.description = builder.description;
+            this.integrationType = builder.integrationType;
             this.name = builder.name;
             this.network = builder.network;
             this.protocol = builder.protocol;
+            this.resolvedWorkers = builder.resolvedWorkers;
             this.workerId = builder.workerId;
             this.workerType = builder.workerType;
             this.workers = builder.workers;
+            this.xAttrs = builder.xAttrs;
         }
 
         public static Builder builder() {
@@ -348,6 +368,13 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return autoScale
+         */
+        public Boolean getAutoScale() {
+            return this.autoScale;
+        }
+
+        /**
          * @return citeList
          */
         public java.util.List<CiteList> getCiteList() {
@@ -355,10 +382,24 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return cmsWorkspaceId
+         */
+        public String getCmsWorkspaceId() {
+            return this.cmsWorkspaceId;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return integrationType
+         */
+        public String getIntegrationType() {
+            return this.integrationType;
         }
 
         /**
@@ -383,6 +424,13 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return resolvedWorkers
+         */
+        public String getResolvedWorkers() {
+            return this.resolvedWorkers;
+        }
+
+        /**
          * @return workerId
          */
         public Long getWorkerId() {
@@ -403,17 +451,29 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             return this.workers;
         }
 
+        /**
+         * @return xAttrs
+         */
+        public String getXAttrs() {
+            return this.xAttrs;
+        }
+
         public static final class Builder {
             private String apiKey; 
             private String authType; 
+            private Boolean autoScale; 
             private java.util.List<CiteList> citeList; 
+            private String cmsWorkspaceId; 
             private String description; 
+            private String integrationType; 
             private String name; 
             private String network; 
             private String protocol; 
+            private String resolvedWorkers; 
             private Long workerId; 
             private String workerType; 
             private String workers; 
+            private String xAttrs; 
 
             private Builder() {
             } 
@@ -421,14 +481,19 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             private Builder(Records model) {
                 this.apiKey = model.apiKey;
                 this.authType = model.authType;
+                this.autoScale = model.autoScale;
                 this.citeList = model.citeList;
+                this.cmsWorkspaceId = model.cmsWorkspaceId;
                 this.description = model.description;
+                this.integrationType = model.integrationType;
                 this.name = model.name;
                 this.network = model.network;
                 this.protocol = model.protocol;
+                this.resolvedWorkers = model.resolvedWorkers;
                 this.workerId = model.workerId;
                 this.workerType = model.workerType;
                 this.workers = model.workers;
+                this.xAttrs = model.xAttrs;
             } 
 
             /**
@@ -448,6 +513,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
+             * AutoScale.
+             */
+            public Builder autoScale(Boolean autoScale) {
+                this.autoScale = autoScale;
+                return this;
+            }
+
+            /**
              * CiteList.
              */
             public Builder citeList(java.util.List<CiteList> citeList) {
@@ -456,10 +529,26 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
+             * CmsWorkspaceId.
+             */
+            public Builder cmsWorkspaceId(String cmsWorkspaceId) {
+                this.cmsWorkspaceId = cmsWorkspaceId;
+                return this;
+            }
+
+            /**
              * Description.
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * IntegrationType.
+             */
+            public Builder integrationType(String integrationType) {
+                this.integrationType = integrationType;
                 return this;
             }
 
@@ -488,6 +577,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
+             * ResolvedWorkers.
+             */
+            public Builder resolvedWorkers(String resolvedWorkers) {
+                this.resolvedWorkers = resolvedWorkers;
+                return this;
+            }
+
+            /**
              * WorkerId.
              */
             public Builder workerId(Long workerId) {
@@ -508,6 +605,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
              */
             public Builder workers(String workers) {
                 this.workers = workers;
+                return this;
+            }
+
+            /**
+             * XAttrs.
+             */
+            public Builder xAttrs(String xAttrs) {
+                this.xAttrs = xAttrs;
                 return this;
             }
 
