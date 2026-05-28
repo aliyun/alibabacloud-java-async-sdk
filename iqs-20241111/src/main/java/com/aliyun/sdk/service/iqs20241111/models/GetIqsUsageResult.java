@@ -101,6 +101,9 @@ public class GetIqsUsageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("successCalls")
         private Integer successCalls;
 
+        @com.aliyun.core.annotation.NameInMap("totalBillStatCalls")
+        private Integer totalBillStatCalls;
+
         @com.aliyun.core.annotation.NameInMap("totalCalls")
         private Integer totalCalls;
 
@@ -120,6 +123,7 @@ public class GetIqsUsageResult extends TeaModel {
             this.mainAccountId = builder.mainAccountId;
             this.subAccountId = builder.subAccountId;
             this.successCalls = builder.successCalls;
+            this.totalBillStatCalls = builder.totalBillStatCalls;
             this.totalCalls = builder.totalCalls;
             this.valueAddedAdvanced = builder.valueAddedAdvanced;
             this.valueAddedSummary = builder.valueAddedSummary;
@@ -197,6 +201,13 @@ public class GetIqsUsageResult extends TeaModel {
         }
 
         /**
+         * @return totalBillStatCalls
+         */
+        public Integer getTotalBillStatCalls() {
+            return this.totalBillStatCalls;
+        }
+
+        /**
          * @return totalCalls
          */
         public Integer getTotalCalls() {
@@ -227,6 +238,7 @@ public class GetIqsUsageResult extends TeaModel {
             private String mainAccountId; 
             private String subAccountId; 
             private Integer successCalls; 
+            private Integer totalBillStatCalls; 
             private Integer totalCalls; 
             private Integer valueAddedAdvanced; 
             private Integer valueAddedSummary; 
@@ -244,6 +256,7 @@ public class GetIqsUsageResult extends TeaModel {
                 this.mainAccountId = model.mainAccountId;
                 this.subAccountId = model.subAccountId;
                 this.successCalls = model.successCalls;
+                this.totalBillStatCalls = model.totalBillStatCalls;
                 this.totalCalls = model.totalCalls;
                 this.valueAddedAdvanced = model.valueAddedAdvanced;
                 this.valueAddedSummary = model.valueAddedSummary;
@@ -318,6 +331,14 @@ public class GetIqsUsageResult extends TeaModel {
              */
             public Builder successCalls(Integer successCalls) {
                 this.successCalls = successCalls;
+                return this;
+            }
+
+            /**
+             * totalBillStatCalls.
+             */
+            public Builder totalBillStatCalls(Integer totalBillStatCalls) {
+                this.totalBillStatCalls = totalBillStatCalls;
                 return this;
             }
 

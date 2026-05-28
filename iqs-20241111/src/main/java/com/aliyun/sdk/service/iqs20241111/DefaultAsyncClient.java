@@ -69,6 +69,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CommonQueryByScene  CommonQueryBySceneRequest
+     * @return CommonQueryBySceneResponse
+     */
+    @Override
+    public CompletableFuture<CommonQueryBySceneResponse> commonQueryByScene(CommonQueryBySceneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CommonQueryByScene").setMethod(HttpMethod.POST).setPathRegex("/amap-function-call-agent/iqs-agent-service/v2/nl/common").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CommonQueryBySceneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CommonQueryBySceneResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GenericAdvancedSearch  GenericAdvancedSearchRequest
      * @return GenericAdvancedSearchResponse
      */
@@ -141,6 +159,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of MedicalAnswer  MedicalAnswerRequest
+     * @return MedicalAnswerResponse
+     */
+    @Override
+    public CompletableFuture<MedicalAnswerResponse> medicalAnswer(MedicalAnswerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MedicalAnswer").setMethod(HttpMethod.POST).setPathRegex("/linked-retrieval/linked-retrieval-entry/v1/iqs/domain/medical/answer").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MedicalAnswerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MedicalAnswerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of MedicalKnowledge  MedicalKnowledgeRequest
+     * @return MedicalKnowledgeResponse
+     */
+    @Override
+    public CompletableFuture<MedicalKnowledgeResponse> medicalKnowledge(MedicalKnowledgeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MedicalKnowledge").setMethod(HttpMethod.POST).setPathRegex("/linked-retrieval/linked-retrieval-entry/v1/iqs/domain/medical/know").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MedicalKnowledgeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MedicalKnowledgeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of MultimodalSearch  MultimodalSearchRequest
      * @return MultimodalSearchResponse
      */
@@ -156,6 +210,49 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * @param request the request parameters of OmniAnswer  OmniAnswerRequest
+     * @return OmniAnswerResponse
+     */
+    @Override
+    public CompletableFuture<OmniAnswerResponse> omniAnswer(OmniAnswerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("OmniAnswer").setMethod(HttpMethod.POST).setPathRegex("/linked-retrieval/linked-retrieval-entry/v1/iqs/answer/omni/search").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OmniAnswerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OmniAnswerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> omniAnswerWithAsyncResponseHandler(OmniAnswerRequest request, AsyncResponseHandler<OmniAnswerResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("OmniAnswer").setMethod(HttpMethod.POST).setPathRegex("/linked-retrieval/linked-retrieval-entry/v1/iqs/answer/omni/search").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(OmniAnswerResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((OmniAnswerResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<String> omniAnswerWithResponseIterable(OmniAnswerRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("OmniAnswer").setMethod(HttpMethod.POST).setPathRegex("/linked-retrieval/linked-retrieval-entry/v1/iqs/answer/omni/search").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        OmniAnswerResponseBodyIterator iterator = OmniAnswerResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**
@@ -189,6 +286,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ReadPageScrapeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ScanFile  ScanFileRequest
+     * @return ScanFileResponse
+     */
+    @Override
+    public CompletableFuture<ScanFileResponse> scanFile(ScanFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ScanFile").setMethod(HttpMethod.POST).setPathRegex("/linked-retrieval/linked-retrieval-entry/v1/iqs/domain/scan/file").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ScanFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ScanFileResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

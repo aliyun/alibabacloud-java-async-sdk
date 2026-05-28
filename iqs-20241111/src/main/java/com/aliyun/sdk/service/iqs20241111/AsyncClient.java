@@ -28,6 +28,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<AiSearchResponseBody> aiSearchWithResponseIterable(AiSearchRequest request);
 
     /**
+     * @param request the request parameters of CommonQueryByScene  CommonQueryBySceneRequest
+     * @return CommonQueryBySceneResponse
+     */
+    CompletableFuture<CommonQueryBySceneResponse> commonQueryByScene(CommonQueryBySceneRequest request);
+
+    /**
      * @param request the request parameters of GenericAdvancedSearch  GenericAdvancedSearchRequest
      * @return GenericAdvancedSearchResponse
      */
@@ -52,10 +58,32 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GlobalSearchResponse> globalSearch(GlobalSearchRequest request);
 
     /**
+     * @param request the request parameters of MedicalAnswer  MedicalAnswerRequest
+     * @return MedicalAnswerResponse
+     */
+    CompletableFuture<MedicalAnswerResponse> medicalAnswer(MedicalAnswerRequest request);
+
+    /**
+     * @param request the request parameters of MedicalKnowledge  MedicalKnowledgeRequest
+     * @return MedicalKnowledgeResponse
+     */
+    CompletableFuture<MedicalKnowledgeResponse> medicalKnowledge(MedicalKnowledgeRequest request);
+
+    /**
      * @param request the request parameters of MultimodalSearch  MultimodalSearchRequest
      * @return MultimodalSearchResponse
      */
     CompletableFuture<MultimodalSearchResponse> multimodalSearch(MultimodalSearchRequest request);
+
+    /**
+     * @param request the request parameters of OmniAnswer  OmniAnswerRequest
+     * @return OmniAnswerResponse
+     */
+    CompletableFuture<OmniAnswerResponse> omniAnswer(OmniAnswerRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> omniAnswerWithAsyncResponseHandler(OmniAnswerRequest request, AsyncResponseHandler<OmniAnswerResponse, ReturnT> responseHandler);
+
+    ResponseIterable<String> omniAnswerWithResponseIterable(OmniAnswerRequest request);
 
     /**
      * @param request the request parameters of ReadPageBasic  ReadPageBasicRequest
@@ -68,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ReadPageScrapeResponse
      */
     CompletableFuture<ReadPageScrapeResponse> readPageScrape(ReadPageScrapeRequest request);
+
+    /**
+     * @param request the request parameters of ScanFile  ScanFileRequest
+     * @return ScanFileResponse
+     */
+    CompletableFuture<ScanFileResponse> scanFile(ScanFileRequest request);
 
     /**
      * @param request the request parameters of UnifiedSearch  UnifiedSearchRequest
