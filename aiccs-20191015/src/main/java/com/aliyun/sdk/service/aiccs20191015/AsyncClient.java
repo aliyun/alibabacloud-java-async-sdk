@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddLargeModelResponse> addLargeModel(AddLargeModelRequest request);
 
     /**
+     * @param request the request parameters of AddModelApplication  AddModelApplicationRequest
+     * @return AddModelApplicationResponse
+     */
+    CompletableFuture<AddModelApplicationResponse> addModelApplication(AddModelApplicationRequest request);
+
+    /**
      * @param request the request parameters of AddOuterAccount  AddOuterAccountRequest
      * @return AddOuterAccountResponse
      */
@@ -1056,6 +1062,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateLargeModelResponse
      */
     CompletableFuture<UpdateLargeModelResponse> updateLargeModel(UpdateLargeModelRequest request);
+
+    /**
+     * @param request the request parameters of UpdateModelApplication  UpdateModelApplicationRequest
+     * @return UpdateModelApplicationResponse
+     */
+    CompletableFuture<UpdateModelApplicationResponse> updateModelApplication(UpdateModelApplicationRequest request);
 
     /**
      * @param request the request parameters of UpdateOuterAccount  UpdateOuterAccountRequest
