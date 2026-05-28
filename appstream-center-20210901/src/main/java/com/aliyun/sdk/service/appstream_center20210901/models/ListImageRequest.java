@@ -33,6 +33,10 @@ public class ListImageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("BizTypeList")
     private java.util.List<Integer> bizTypeList;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Distro")
+    private String distro;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FeatureList")
     private java.util.List<String> featureList;
@@ -111,6 +115,7 @@ public class ListImageRequest extends Request {
         this.bizRegionIdList = builder.bizRegionIdList;
         this.bizType = builder.bizType;
         this.bizTypeList = builder.bizTypeList;
+        this.distro = builder.distro;
         this.featureList = builder.featureList;
         this.fotaVersion = builder.fotaVersion;
         this.imageId = builder.imageId;
@@ -170,6 +175,13 @@ public class ListImageRequest extends Request {
      */
     public java.util.List<Integer> getBizTypeList() {
         return this.bizTypeList;
+    }
+
+    /**
+     * @return distro
+     */
+    public String getDistro() {
+        return this.distro;
     }
 
     /**
@@ -303,6 +315,7 @@ public class ListImageRequest extends Request {
         private java.util.List<String> bizRegionIdList; 
         private Integer bizType; 
         private java.util.List<Integer> bizTypeList; 
+        private String distro; 
         private java.util.List<String> featureList; 
         private String fotaVersion; 
         private String imageId; 
@@ -332,6 +345,7 @@ public class ListImageRequest extends Request {
             this.bizRegionIdList = request.bizRegionIdList;
             this.bizType = request.bizType;
             this.bizTypeList = request.bizTypeList;
+            this.distro = request.distro;
             this.featureList = request.featureList;
             this.fotaVersion = request.fotaVersion;
             this.imageId = request.imageId;
@@ -392,6 +406,15 @@ public class ListImageRequest extends Request {
         public Builder bizTypeList(java.util.List<Integer> bizTypeList) {
             this.putBodyParameter("BizTypeList", bizTypeList);
             this.bizTypeList = bizTypeList;
+            return this;
+        }
+
+        /**
+         * Distro.
+         */
+        public Builder distro(String distro) {
+            this.putQueryParameter("Distro", distro);
+            this.distro = distro;
             return this;
         }
 
