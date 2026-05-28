@@ -19,8 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyDesktopHostNameRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopIds")
+    private java.util.List<String> desktopIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NewHostName")
@@ -35,6 +38,7 @@ public class ModifyDesktopHostNameRequest extends Request {
     private ModifyDesktopHostNameRequest(Builder builder) {
         super(builder);
         this.desktopId = builder.desktopId;
+        this.desktopIds = builder.desktopIds;
         this.newHostName = builder.newHostName;
         this.regionId = builder.regionId;
     }
@@ -60,6 +64,13 @@ public class ModifyDesktopHostNameRequest extends Request {
     }
 
     /**
+     * @return desktopIds
+     */
+    public java.util.List<String> getDesktopIds() {
+        return this.desktopIds;
+    }
+
+    /**
      * @return newHostName
      */
     public String getNewHostName() {
@@ -75,6 +86,7 @@ public class ModifyDesktopHostNameRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDesktopHostNameRequest, Builder> {
         private String desktopId; 
+        private java.util.List<String> desktopIds; 
         private String newHostName; 
         private String regionId; 
 
@@ -85,13 +97,13 @@ public class ModifyDesktopHostNameRequest extends Request {
         private Builder(ModifyDesktopHostNameRequest request) {
             super(request);
             this.desktopId = request.desktopId;
+            this.desktopIds = request.desktopIds;
             this.newHostName = request.newHostName;
             this.regionId = request.regionId;
         } 
 
         /**
          * <p>The ID of the cloud computer.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -99,6 +111,15 @@ public class ModifyDesktopHostNameRequest extends Request {
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
+            return this;
+        }
+
+        /**
+         * DesktopIds.
+         */
+        public Builder desktopIds(java.util.List<String> desktopIds) {
+            this.putQueryParameter("DesktopIds", desktopIds);
+            this.desktopIds = desktopIds;
             return this;
         }
 

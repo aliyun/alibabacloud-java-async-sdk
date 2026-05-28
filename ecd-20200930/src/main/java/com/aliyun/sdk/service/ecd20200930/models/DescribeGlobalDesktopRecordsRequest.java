@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGlobalDesktopRecordsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
     private java.util.List<String> desktopId;
 
@@ -88,6 +92,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
 
     private DescribeGlobalDesktopRecordsRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.desktopId = builder.desktopId;
         this.desktopName = builder.desktopName;
         this.desktopStatusList = builder.desktopStatusList;
@@ -118,6 +123,13 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -240,6 +252,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeGlobalDesktopRecordsRequest, Builder> {
+        private String businessChannel; 
         private java.util.List<String> desktopId; 
         private String desktopName; 
         private java.util.List<String> desktopStatusList; 
@@ -264,6 +277,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
 
         private Builder(DescribeGlobalDesktopRecordsRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.desktopId = request.desktopId;
             this.desktopName = request.desktopName;
             this.desktopStatusList = request.desktopStatusList;
@@ -282,6 +296,15 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
             this.startTime = request.startTime;
             this.subPayType = request.subPayType;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The cloud computer IDs. You can specify 1 to 100 office network IDs.</p>

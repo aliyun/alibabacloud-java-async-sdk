@@ -19,12 +19,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyDesktopNameRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopIds")
+    private java.util.List<String> desktopIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NewDesktopName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String newDesktopName;
 
     @com.aliyun.core.annotation.Query
@@ -32,11 +34,17 @@ public class ModifyDesktopNameRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserAssignMode")
+    private String userAssignMode;
+
     private ModifyDesktopNameRequest(Builder builder) {
         super(builder);
         this.desktopId = builder.desktopId;
+        this.desktopIds = builder.desktopIds;
         this.newDesktopName = builder.newDesktopName;
         this.regionId = builder.regionId;
+        this.userAssignMode = builder.userAssignMode;
     }
 
     public static Builder builder() {
@@ -60,6 +68,13 @@ public class ModifyDesktopNameRequest extends Request {
     }
 
     /**
+     * @return desktopIds
+     */
+    public java.util.List<String> getDesktopIds() {
+        return this.desktopIds;
+    }
+
+    /**
      * @return newDesktopName
      */
     public String getNewDesktopName() {
@@ -73,10 +88,19 @@ public class ModifyDesktopNameRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return userAssignMode
+     */
+    public String getUserAssignMode() {
+        return this.userAssignMode;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDesktopNameRequest, Builder> {
         private String desktopId; 
+        private java.util.List<String> desktopIds; 
         private String newDesktopName; 
         private String regionId; 
+        private String userAssignMode; 
 
         private Builder() {
             super();
@@ -85,13 +109,14 @@ public class ModifyDesktopNameRequest extends Request {
         private Builder(ModifyDesktopNameRequest request) {
             super(request);
             this.desktopId = request.desktopId;
+            this.desktopIds = request.desktopIds;
             this.newDesktopName = request.newDesktopName;
             this.regionId = request.regionId;
+            this.userAssignMode = request.userAssignMode;
         } 
 
         /**
          * <p>The ID of the cloud computer.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -103,13 +128,21 @@ public class ModifyDesktopNameRequest extends Request {
         }
 
         /**
+         * DesktopIds.
+         */
+        public Builder desktopIds(java.util.List<String> desktopIds) {
+            this.putQueryParameter("DesktopIds", desktopIds);
+            this.desktopIds = desktopIds;
+            return this;
+        }
+
+        /**
          * <p>The new name of the cloud computer. The name of the cloud computer must meet the following requirements:</p>
          * <ul>
          * <li>The name must be 1 to 64 characters in length.</li>
          * <li>The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
          * <li>The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -130,6 +163,15 @@ public class ModifyDesktopNameRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * UserAssignMode.
+         */
+        public Builder userAssignMode(String userAssignMode) {
+            this.putQueryParameter("UserAssignMode", userAssignMode);
+            this.userAssignMode = userAssignMode;
             return this;
         }
 
