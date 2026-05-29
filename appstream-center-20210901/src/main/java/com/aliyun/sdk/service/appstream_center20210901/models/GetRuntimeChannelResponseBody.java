@@ -119,6 +119,9 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvatarUrl")
         private String avatarUrl;
 
+        @com.aliyun.core.annotation.NameInMap("ChannelType")
+        private String channelType;
+
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
@@ -142,6 +145,7 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.avatarUrl = builder.avatarUrl;
+            this.channelType = builder.channelType;
             this.code = builder.code;
             this.config = builder.config;
             this.configMode = builder.configMode;
@@ -164,6 +168,13 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
          */
         public String getAvatarUrl() {
             return this.avatarUrl;
+        }
+
+        /**
+         * @return channelType
+         */
+        public String getChannelType() {
+            return this.channelType;
         }
 
         /**
@@ -217,6 +228,7 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
 
         public static final class Builder {
             private String avatarUrl; 
+            private String channelType; 
             private String code; 
             private String config; 
             private String configMode; 
@@ -230,6 +242,7 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.avatarUrl = model.avatarUrl;
+                this.channelType = model.channelType;
                 this.code = model.code;
                 this.config = model.config;
                 this.configMode = model.configMode;
@@ -244,6 +257,14 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
+                return this;
+            }
+
+            /**
+             * ChannelType.
+             */
+            public Builder channelType(String channelType) {
+                this.channelType = channelType;
                 return this;
             }
 

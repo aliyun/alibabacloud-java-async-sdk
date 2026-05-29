@@ -292,6 +292,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListLlmTemplatesResponse> listLlmTemplates(ListLlmTemplatesRequest request);
 
     /**
+     * @param request the request parameters of ListModelProviderEndpoints  ListModelProviderEndpointsRequest
+     * @return ListModelProviderEndpointsResponse
+     */
+    CompletableFuture<ListModelProviderEndpointsResponse> listModelProviderEndpoints(ListModelProviderEndpointsRequest request);
+
+    /**
      * @param request the request parameters of ListModelProviderTemplates  ListModelProviderTemplatesRequest
      * @return ListModelProviderTemplatesResponse
      */

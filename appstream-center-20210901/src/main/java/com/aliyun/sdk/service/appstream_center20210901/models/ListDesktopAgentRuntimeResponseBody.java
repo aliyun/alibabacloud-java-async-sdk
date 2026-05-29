@@ -614,6 +614,12 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModelConfigure")
         private Boolean modelConfigure;
 
+        @com.aliyun.core.annotation.NameInMap("ModelTemplateId")
+        private String modelTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("ModelTemplateName")
+        private String modelTemplateName;
+
         @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
@@ -622,6 +628,9 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("RegionLocation")
+        private String regionLocation;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroup")
         private ResourceGroup resourceGroup;
@@ -643,9 +652,12 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             this.desktopStatus = builder.desktopStatus;
             this.hasAuthUser = builder.hasAuthUser;
             this.modelConfigure = builder.modelConfigure;
+            this.modelTemplateId = builder.modelTemplateId;
+            this.modelTemplateName = builder.modelTemplateName;
             this.osType = builder.osType;
             this.qrCodeConfiguringList = builder.qrCodeConfiguringList;
             this.regionId = builder.regionId;
+            this.regionLocation = builder.regionLocation;
             this.resourceGroup = builder.resourceGroup;
             this.resourceId = builder.resourceId;
             this.riskInfo = builder.riskInfo;
@@ -730,6 +742,20 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         }
 
         /**
+         * @return modelTemplateId
+         */
+        public String getModelTemplateId() {
+            return this.modelTemplateId;
+        }
+
+        /**
+         * @return modelTemplateName
+         */
+        public String getModelTemplateName() {
+            return this.modelTemplateName;
+        }
+
+        /**
          * @return osType
          */
         public String getOsType() {
@@ -748,6 +774,13 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return regionLocation
+         */
+        public String getRegionLocation() {
+            return this.regionLocation;
         }
 
         /**
@@ -782,9 +815,12 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             private String desktopStatus; 
             private Boolean hasAuthUser; 
             private Boolean modelConfigure; 
+            private String modelTemplateId; 
+            private String modelTemplateName; 
             private String osType; 
             private java.util.List<String> qrCodeConfiguringList; 
             private String regionId; 
+            private String regionLocation; 
             private ResourceGroup resourceGroup; 
             private String resourceId; 
             private RiskInfo riskInfo; 
@@ -803,9 +839,12 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
                 this.desktopStatus = model.desktopStatus;
                 this.hasAuthUser = model.hasAuthUser;
                 this.modelConfigure = model.modelConfigure;
+                this.modelTemplateId = model.modelTemplateId;
+                this.modelTemplateName = model.modelTemplateName;
                 this.osType = model.osType;
                 this.qrCodeConfiguringList = model.qrCodeConfiguringList;
                 this.regionId = model.regionId;
+                this.regionLocation = model.regionLocation;
                 this.resourceGroup = model.resourceGroup;
                 this.resourceId = model.resourceId;
                 this.riskInfo = model.riskInfo;
@@ -892,6 +931,22 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
+             * ModelTemplateId.
+             */
+            public Builder modelTemplateId(String modelTemplateId) {
+                this.modelTemplateId = modelTemplateId;
+                return this;
+            }
+
+            /**
+             * ModelTemplateName.
+             */
+            public Builder modelTemplateName(String modelTemplateName) {
+                this.modelTemplateName = modelTemplateName;
+                return this;
+            }
+
+            /**
              * OsType.
              */
             public Builder osType(String osType) {
@@ -912,6 +967,14 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RegionLocation.
+             */
+            public Builder regionLocation(String regionLocation) {
+                this.regionLocation = regionLocation;
                 return this;
             }
 

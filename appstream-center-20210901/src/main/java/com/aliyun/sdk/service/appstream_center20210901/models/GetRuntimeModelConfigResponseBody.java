@@ -479,11 +479,19 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModelTemplateName")
         private String modelTemplateName;
 
+        @com.aliyun.core.annotation.NameInMap("ModelTemplateRefType")
+        private String modelTemplateRefType;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         private Data(Builder builder) {
             this.defaultModel = builder.defaultModel;
             this.modelProviderList = builder.modelProviderList;
             this.modelTemplateId = builder.modelTemplateId;
             this.modelTemplateName = builder.modelTemplateName;
+            this.modelTemplateRefType = builder.modelTemplateRefType;
+            this.resourceGroupId = builder.resourceGroupId;
         }
 
         public static Builder builder() {
@@ -522,11 +530,27 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             return this.modelTemplateName;
         }
 
+        /**
+         * @return modelTemplateRefType
+         */
+        public String getModelTemplateRefType() {
+            return this.modelTemplateRefType;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public static final class Builder {
             private String defaultModel; 
             private java.util.List<ModelProviderList> modelProviderList; 
             private String modelTemplateId; 
             private String modelTemplateName; 
+            private String modelTemplateRefType; 
+            private String resourceGroupId; 
 
             private Builder() {
             } 
@@ -536,6 +560,8 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
                 this.modelProviderList = model.modelProviderList;
                 this.modelTemplateId = model.modelTemplateId;
                 this.modelTemplateName = model.modelTemplateName;
+                this.modelTemplateRefType = model.modelTemplateRefType;
+                this.resourceGroupId = model.resourceGroupId;
             } 
 
             /**
@@ -567,6 +593,22 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
              */
             public Builder modelTemplateName(String modelTemplateName) {
                 this.modelTemplateName = modelTemplateName;
+                return this;
+            }
+
+            /**
+             * ModelTemplateRefType.
+             */
+            public Builder modelTemplateRefType(String modelTemplateRefType) {
+                this.modelTemplateRefType = modelTemplateRefType;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
