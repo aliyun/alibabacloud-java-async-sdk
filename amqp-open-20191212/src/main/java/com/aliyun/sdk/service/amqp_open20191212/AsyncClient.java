@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddInstanceWhiteList  AddInstanceWhiteListRequest
+     * @return AddInstanceWhiteListResponse
+     */
+    CompletableFuture<AddInstanceWhiteListResponse> addInstanceWhiteList(AddInstanceWhiteListRequest request);
+
+    /**
      * @param request the request parameters of CreateAccount  CreateAccountRequest
      * @return CreateAccountResponse
      */
@@ -141,6 +147,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListExchangesResponse> listExchanges(ListExchangesRequest request);
 
     /**
+     * @param request the request parameters of ListInstanceWhiteList  ListInstanceWhiteListRequest
+     * @return ListInstanceWhiteListResponse
+     */
+    CompletableFuture<ListInstanceWhiteListResponse> listInstanceWhiteList(ListInstanceWhiteListRequest request);
+
+    /**
      * @param request the request parameters of ListInstances  ListInstancesRequest
      * @return ListInstancesResponse
      */
@@ -172,6 +184,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListVirtualHostsResponse
      */
     CompletableFuture<ListVirtualHostsResponse> listVirtualHosts(ListVirtualHostsRequest request);
+
+    /**
+     * @param request the request parameters of RemoveInstanceWhiteList  RemoveInstanceWhiteListRequest
+     * @return RemoveInstanceWhiteListResponse
+     */
+    CompletableFuture<RemoveInstanceWhiteListResponse> removeInstanceWhiteList(RemoveInstanceWhiteListRequest request);
 
     /**
      * @param request the request parameters of UpdateInstance  UpdateInstanceRequest
