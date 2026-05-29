@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.wuyingai20260311;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.wuyingai20260311.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -37,6 +38,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     @Override
     public void close() {
         this.handler.close();
+    }
+
+    /**
+     * @param request the request parameters of Chat  ChatRequest
+     * @return ChatResponse
+     */
+    @Override
+    public CompletableFuture<ChatResponse> chat(ChatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("Chat").setMethod(HttpMethod.POST).setPathRegex("/api/agent/chat").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChatResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<ChatResponseBody> chatWithResponseIterable(ChatRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("Chat").setMethod(HttpMethod.POST).setPathRegex("/api/agent/chat").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        ChatResponseBodyIterator iterator = ChatResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**
