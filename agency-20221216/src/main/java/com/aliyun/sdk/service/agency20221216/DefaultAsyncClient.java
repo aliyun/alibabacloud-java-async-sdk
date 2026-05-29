@@ -97,6 +97,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AutomaticWriteOff  AutomaticWriteOffRequest
+     * @return AutomaticWriteOffResponse
+     */
+    @Override
+    public CompletableFuture<AutomaticWriteOffResponse> automaticWriteOff(AutomaticWriteOffRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AutomaticWriteOff").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AutomaticWriteOffResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AutomaticWriteOffResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CancelCoupon  CancelCouponRequest
      * @return CancelCouponResponse
      */
@@ -748,6 +766,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ProcessApprovalResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryAutomaticWriteOffChangeRecords  QueryAutomaticWriteOffChangeRecordsRequest
+     * @return QueryAutomaticWriteOffChangeRecordsResponse
+     */
+    @Override
+    public CompletableFuture<QueryAutomaticWriteOffChangeRecordsResponse> queryAutomaticWriteOffChangeRecords(QueryAutomaticWriteOffChangeRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryAutomaticWriteOffChangeRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryAutomaticWriteOffChangeRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryAutomaticWriteOffChangeRecordsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AutomaticWriteOff  AutomaticWriteOffRequest
+     * @return AutomaticWriteOffResponse
+     */
+    CompletableFuture<AutomaticWriteOffResponse> automaticWriteOff(AutomaticWriteOffRequest request);
+
+    /**
      * @param request the request parameters of CancelCoupon  CancelCouponRequest
      * @return CancelCouponResponse
      */
@@ -267,6 +273,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ProcessApprovalResponse
      */
     CompletableFuture<ProcessApprovalResponse> processApproval(ProcessApprovalRequest request);
+
+    /**
+     * @param request the request parameters of QueryAutomaticWriteOffChangeRecords  QueryAutomaticWriteOffChangeRecordsRequest
+     * @return QueryAutomaticWriteOffChangeRecordsResponse
+     */
+    CompletableFuture<QueryAutomaticWriteOffChangeRecordsResponse> queryAutomaticWriteOffChangeRecords(QueryAutomaticWriteOffChangeRecordsRequest request);
 
     /**
      * @param request the request parameters of QueryReversedDeductionHistory  QueryReversedDeductionHistoryRequest
