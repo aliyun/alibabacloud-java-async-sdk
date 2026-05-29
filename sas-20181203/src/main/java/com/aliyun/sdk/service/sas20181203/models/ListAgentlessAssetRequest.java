@@ -30,6 +30,10 @@ public class ListAgentlessAssetRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
@@ -54,6 +58,7 @@ public class ListAgentlessAssetRequest extends Request {
         this.currentPage = builder.currentPage;
         this.diskType = builder.diskType;
         this.instanceId = builder.instanceId;
+        this.instanceIds = builder.instanceIds;
         this.instanceName = builder.instanceName;
         this.pageSize = builder.pageSize;
         this.platform = builder.platform;
@@ -96,6 +101,13 @@ public class ListAgentlessAssetRequest extends Request {
     }
 
     /**
+     * @return instanceIds
+     */
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    /**
      * @return instanceName
      */
     public String getInstanceName() {
@@ -134,6 +146,7 @@ public class ListAgentlessAssetRequest extends Request {
         private Integer currentPage; 
         private String diskType; 
         private String instanceId; 
+        private java.util.List<String> instanceIds; 
         private String instanceName; 
         private Integer pageSize; 
         private String platform; 
@@ -149,6 +162,7 @@ public class ListAgentlessAssetRequest extends Request {
             this.currentPage = request.currentPage;
             this.diskType = request.diskType;
             this.instanceId = request.instanceId;
+            this.instanceIds = request.instanceIds;
             this.instanceName = request.instanceName;
             this.pageSize = request.pageSize;
             this.platform = request.platform;
@@ -195,6 +209,15 @@ public class ListAgentlessAssetRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(java.util.List<String> instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
             return this;
         }
 
