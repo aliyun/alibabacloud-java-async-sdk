@@ -39,6 +39,10 @@ public class CreateServerGroupRequest extends Request {
     private HealthCheckConfig healthCheckConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersionAffinityMode")
+    private String ipVersionAffinityMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6Enabled")
     private Boolean ipv6Enabled;
 
@@ -98,6 +102,7 @@ public class CreateServerGroupRequest extends Request {
         this.crossZoneEnabled = builder.crossZoneEnabled;
         this.dryRun = builder.dryRun;
         this.healthCheckConfig = builder.healthCheckConfig;
+        this.ipVersionAffinityMode = builder.ipVersionAffinityMode;
         this.ipv6Enabled = builder.ipv6Enabled;
         this.protocol = builder.protocol;
         this.resourceGroupId = builder.resourceGroupId;
@@ -159,6 +164,13 @@ public class CreateServerGroupRequest extends Request {
      */
     public HealthCheckConfig getHealthCheckConfig() {
         return this.healthCheckConfig;
+    }
+
+    /**
+     * @return ipVersionAffinityMode
+     */
+    public String getIpVersionAffinityMode() {
+        return this.ipVersionAffinityMode;
     }
 
     /**
@@ -258,6 +270,7 @@ public class CreateServerGroupRequest extends Request {
         private Boolean crossZoneEnabled; 
         private Boolean dryRun; 
         private HealthCheckConfig healthCheckConfig; 
+        private String ipVersionAffinityMode; 
         private Boolean ipv6Enabled; 
         private String protocol; 
         private String resourceGroupId; 
@@ -283,6 +296,7 @@ public class CreateServerGroupRequest extends Request {
             this.crossZoneEnabled = request.crossZoneEnabled;
             this.dryRun = request.dryRun;
             this.healthCheckConfig = request.healthCheckConfig;
+            this.ipVersionAffinityMode = request.ipVersionAffinityMode;
             this.ipv6Enabled = request.ipv6Enabled;
             this.protocol = request.protocol;
             this.resourceGroupId = request.resourceGroupId;
@@ -376,6 +390,15 @@ public class CreateServerGroupRequest extends Request {
         public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
             this.putQueryParameter("HealthCheckConfig", healthCheckConfig);
             this.healthCheckConfig = healthCheckConfig;
+            return this;
+        }
+
+        /**
+         * IpVersionAffinityMode.
+         */
+        public Builder ipVersionAffinityMode(String ipVersionAffinityMode) {
+            this.putQueryParameter("IpVersionAffinityMode", ipVersionAffinityMode);
+            this.ipVersionAffinityMode = ipVersionAffinityMode;
             return this;
         }
 

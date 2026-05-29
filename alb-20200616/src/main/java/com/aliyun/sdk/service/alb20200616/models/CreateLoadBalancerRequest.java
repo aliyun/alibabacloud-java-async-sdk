@@ -65,6 +65,10 @@ public class CreateLoadBalancerRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
+    private java.util.List<SecurityGroupIds> securityGroupIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -91,6 +95,7 @@ public class CreateLoadBalancerRequest extends Request {
         this.loadBalancerName = builder.loadBalancerName;
         this.modificationProtectionConfig = builder.modificationProtectionConfig;
         this.resourceGroupId = builder.resourceGroupId;
+        this.securityGroupIds = builder.securityGroupIds;
         this.tag = builder.tag;
         this.vpcId = builder.vpcId;
         this.zoneMappings = builder.zoneMappings;
@@ -187,6 +192,13 @@ public class CreateLoadBalancerRequest extends Request {
     }
 
     /**
+     * @return securityGroupIds
+     */
+    public java.util.List<SecurityGroupIds> getSecurityGroupIds() {
+        return this.securityGroupIds;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -219,6 +231,7 @@ public class CreateLoadBalancerRequest extends Request {
         private String loadBalancerName; 
         private ModificationProtectionConfig modificationProtectionConfig; 
         private String resourceGroupId; 
+        private java.util.List<SecurityGroupIds> securityGroupIds; 
         private java.util.List<Tag> tag; 
         private String vpcId; 
         private java.util.List<ZoneMappings> zoneMappings; 
@@ -240,6 +253,7 @@ public class CreateLoadBalancerRequest extends Request {
             this.loadBalancerName = request.loadBalancerName;
             this.modificationProtectionConfig = request.modificationProtectionConfig;
             this.resourceGroupId = request.resourceGroupId;
+            this.securityGroupIds = request.securityGroupIds;
             this.tag = request.tag;
             this.vpcId = request.vpcId;
             this.zoneMappings = request.zoneMappings;
@@ -404,6 +418,15 @@ public class CreateLoadBalancerRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupIds.
+         */
+        public Builder securityGroupIds(java.util.List<SecurityGroupIds> securityGroupIds) {
+            this.putQueryParameter("SecurityGroupIds", securityGroupIds);
+            this.securityGroupIds = securityGroupIds;
             return this;
         }
 
@@ -617,6 +640,60 @@ public class CreateLoadBalancerRequest extends Request {
 
             public ModificationProtectionConfig build() {
                 return new ModificationProtectionConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateLoadBalancerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLoadBalancerRequest</p>
+     */
+    public static class SecurityGroupIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        private SecurityGroupIds(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityGroupIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupIds model) {
+                this.securityGroupId = model.securityGroupId;
+            } 
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            public SecurityGroupIds build() {
+                return new SecurityGroupIds(this);
             } 
 
         } 

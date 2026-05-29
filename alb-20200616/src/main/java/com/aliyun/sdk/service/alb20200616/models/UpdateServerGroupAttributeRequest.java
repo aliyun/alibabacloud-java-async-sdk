@@ -38,6 +38,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
     private HealthCheckConfig healthCheckConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersionAffinityMode")
+    private String ipVersionAffinityMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
@@ -77,6 +81,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         this.crossZoneEnabled = builder.crossZoneEnabled;
         this.dryRun = builder.dryRun;
         this.healthCheckConfig = builder.healthCheckConfig;
+        this.ipVersionAffinityMode = builder.ipVersionAffinityMode;
         this.scheduler = builder.scheduler;
         this.serverGroupId = builder.serverGroupId;
         this.serverGroupName = builder.serverGroupName;
@@ -133,6 +138,13 @@ public class UpdateServerGroupAttributeRequest extends Request {
      */
     public HealthCheckConfig getHealthCheckConfig() {
         return this.healthCheckConfig;
+    }
+
+    /**
+     * @return ipVersionAffinityMode
+     */
+    public String getIpVersionAffinityMode() {
+        return this.ipVersionAffinityMode;
     }
 
     /**
@@ -197,6 +209,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         private Boolean crossZoneEnabled; 
         private Boolean dryRun; 
         private HealthCheckConfig healthCheckConfig; 
+        private String ipVersionAffinityMode; 
         private String scheduler; 
         private String serverGroupId; 
         private String serverGroupName; 
@@ -217,6 +230,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             this.crossZoneEnabled = request.crossZoneEnabled;
             this.dryRun = request.dryRun;
             this.healthCheckConfig = request.healthCheckConfig;
+            this.ipVersionAffinityMode = request.ipVersionAffinityMode;
             this.scheduler = request.scheduler;
             this.serverGroupId = request.serverGroupId;
             this.serverGroupName = request.serverGroupName;
@@ -304,6 +318,15 @@ public class UpdateServerGroupAttributeRequest extends Request {
         public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
             this.putQueryParameter("HealthCheckConfig", healthCheckConfig);
             this.healthCheckConfig = healthCheckConfig;
+            return this;
+        }
+
+        /**
+         * IpVersionAffinityMode.
+         */
+        public Builder ipVersionAffinityMode(String ipVersionAffinityMode) {
+            this.putQueryParameter("IpVersionAffinityMode", ipVersionAffinityMode);
+            this.ipVersionAffinityMode = ipVersionAffinityMode;
             return this;
         }
 

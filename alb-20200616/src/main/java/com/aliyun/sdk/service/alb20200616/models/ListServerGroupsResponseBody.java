@@ -1021,6 +1021,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthCheckConfig")
         private HealthCheckConfig healthCheckConfig;
 
+        @com.aliyun.core.annotation.NameInMap("IpVersionAffinityMode")
+        private String ipVersionAffinityMode;
+
         @com.aliyun.core.annotation.NameInMap("Ipv6Enabled")
         private Boolean ipv6Enabled;
 
@@ -1078,6 +1081,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.crossZoneEnabled = builder.crossZoneEnabled;
             this.healthCheckConfig = builder.healthCheckConfig;
+            this.ipVersionAffinityMode = builder.ipVersionAffinityMode;
             this.ipv6Enabled = builder.ipv6Enabled;
             this.protocol = builder.protocol;
             this.relatedLoadBalancerIds = builder.relatedLoadBalancerIds;
@@ -1138,6 +1142,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
          */
         public HealthCheckConfig getHealthCheckConfig() {
             return this.healthCheckConfig;
+        }
+
+        /**
+         * @return ipVersionAffinityMode
+         */
+        public String getIpVersionAffinityMode() {
+            return this.ipVersionAffinityMode;
         }
 
         /**
@@ -1265,6 +1276,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String createTime; 
             private Boolean crossZoneEnabled; 
             private HealthCheckConfig healthCheckConfig; 
+            private String ipVersionAffinityMode; 
             private Boolean ipv6Enabled; 
             private String protocol; 
             private java.util.List<String> relatedLoadBalancerIds; 
@@ -1292,6 +1304,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.crossZoneEnabled = model.crossZoneEnabled;
                 this.healthCheckConfig = model.healthCheckConfig;
+                this.ipVersionAffinityMode = model.ipVersionAffinityMode;
                 this.ipv6Enabled = model.ipv6Enabled;
                 this.protocol = model.protocol;
                 this.relatedLoadBalancerIds = model.relatedLoadBalancerIds;
@@ -1372,6 +1385,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
              */
             public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
                 this.healthCheckConfig = healthCheckConfig;
+                return this;
+            }
+
+            /**
+             * IpVersionAffinityMode.
+             */
+            public Builder ipVersionAffinityMode(String ipVersionAffinityMode) {
+                this.ipVersionAffinityMode = ipVersionAffinityMode;
                 return this;
             }
 

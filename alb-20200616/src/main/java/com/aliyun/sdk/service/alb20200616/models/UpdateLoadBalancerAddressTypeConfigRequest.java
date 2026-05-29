@@ -36,6 +36,10 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
     private String loadBalancerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetainResourceType")
+    private java.util.List<String> retainResourceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneMappings")
     private java.util.List<ZoneMappings> zoneMappings;
 
@@ -45,6 +49,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.loadBalancerId = builder.loadBalancerId;
+        this.retainResourceType = builder.retainResourceType;
         this.zoneMappings = builder.zoneMappings;
     }
 
@@ -90,6 +95,13 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
     }
 
     /**
+     * @return retainResourceType
+     */
+    public java.util.List<String> getRetainResourceType() {
+        return this.retainResourceType;
+    }
+
+    /**
      * @return zoneMappings
      */
     public java.util.List<ZoneMappings> getZoneMappings() {
@@ -101,6 +113,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
         private String clientToken; 
         private String dryRun; 
         private String loadBalancerId; 
+        private java.util.List<String> retainResourceType; 
         private java.util.List<ZoneMappings> zoneMappings; 
 
         private Builder() {
@@ -113,6 +126,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.loadBalancerId = request.loadBalancerId;
+            this.retainResourceType = request.retainResourceType;
             this.zoneMappings = request.zoneMappings;
         } 
 
@@ -175,6 +189,15 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
             this.loadBalancerId = loadBalancerId;
+            return this;
+        }
+
+        /**
+         * RetainResourceType.
+         */
+        public Builder retainResourceType(java.util.List<String> retainResourceType) {
+            this.putQueryParameter("RetainResourceType", retainResourceType);
+            this.retainResourceType = retainResourceType;
             return this;
         }
 

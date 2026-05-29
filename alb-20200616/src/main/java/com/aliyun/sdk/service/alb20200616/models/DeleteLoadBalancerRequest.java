@@ -30,11 +30,16 @@ public class DeleteLoadBalancerRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetainResourceType")
+    private java.util.List<String> retainResourceType;
+
     private DeleteLoadBalancerRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.loadBalancerId = builder.loadBalancerId;
+        this.retainResourceType = builder.retainResourceType;
     }
 
     public static Builder builder() {
@@ -71,10 +76,18 @@ public class DeleteLoadBalancerRequest extends Request {
         return this.loadBalancerId;
     }
 
+    /**
+     * @return retainResourceType
+     */
+    public java.util.List<String> getRetainResourceType() {
+        return this.retainResourceType;
+    }
+
     public static final class Builder extends Request.Builder<DeleteLoadBalancerRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
         private String loadBalancerId; 
+        private java.util.List<String> retainResourceType; 
 
         private Builder() {
             super();
@@ -85,6 +98,7 @@ public class DeleteLoadBalancerRequest extends Request {
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.loadBalancerId = request.loadBalancerId;
+            this.retainResourceType = request.retainResourceType;
         } 
 
         /**
@@ -126,6 +140,15 @@ public class DeleteLoadBalancerRequest extends Request {
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
             this.loadBalancerId = loadBalancerId;
+            return this;
+        }
+
+        /**
+         * RetainResourceType.
+         */
+        public Builder retainResourceType(java.util.List<String> retainResourceType) {
+            this.putQueryParameter("RetainResourceType", retainResourceType);
+            this.retainResourceType = retainResourceType;
             return this;
         }
 
