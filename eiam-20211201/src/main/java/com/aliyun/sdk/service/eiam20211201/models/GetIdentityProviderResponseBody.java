@@ -1649,6 +1649,12 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequireRequestSigned")
         private Boolean requireRequestSigned;
 
+        @com.aliyun.core.annotation.NameInMap("WantAssertionsSigned")
+        private Boolean wantAssertionsSigned;
+
+        @com.aliyun.core.annotation.NameInMap("WantResponseSigned")
+        private Boolean wantResponseSigned;
+
         private SamlConfig(Builder builder) {
             this.bindingMethod = builder.bindingMethod;
             this.certificates = builder.certificates;
@@ -1656,6 +1662,8 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             this.idPSsoUrl = builder.idPSsoUrl;
             this.maxClockSkew = builder.maxClockSkew;
             this.requireRequestSigned = builder.requireRequestSigned;
+            this.wantAssertionsSigned = builder.wantAssertionsSigned;
+            this.wantResponseSigned = builder.wantResponseSigned;
         }
 
         public static Builder builder() {
@@ -1708,6 +1716,20 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             return this.requireRequestSigned;
         }
 
+        /**
+         * @return wantAssertionsSigned
+         */
+        public Boolean getWantAssertionsSigned() {
+            return this.wantAssertionsSigned;
+        }
+
+        /**
+         * @return wantResponseSigned
+         */
+        public Boolean getWantResponseSigned() {
+            return this.wantResponseSigned;
+        }
+
         public static final class Builder {
             private String bindingMethod; 
             private java.util.List<Certificates> certificates; 
@@ -1715,6 +1737,8 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             private String idPSsoUrl; 
             private Long maxClockSkew; 
             private Boolean requireRequestSigned; 
+            private Boolean wantAssertionsSigned; 
+            private Boolean wantResponseSigned; 
 
             private Builder() {
             } 
@@ -1726,6 +1750,8 @@ public class GetIdentityProviderResponseBody extends TeaModel {
                 this.idPSsoUrl = model.idPSsoUrl;
                 this.maxClockSkew = model.maxClockSkew;
                 this.requireRequestSigned = model.requireRequestSigned;
+                this.wantAssertionsSigned = model.wantAssertionsSigned;
+                this.wantResponseSigned = model.wantResponseSigned;
             } 
 
             /**
@@ -1773,6 +1799,22 @@ public class GetIdentityProviderResponseBody extends TeaModel {
              */
             public Builder requireRequestSigned(Boolean requireRequestSigned) {
                 this.requireRequestSigned = requireRequestSigned;
+                return this;
+            }
+
+            /**
+             * WantAssertionsSigned.
+             */
+            public Builder wantAssertionsSigned(Boolean wantAssertionsSigned) {
+                this.wantAssertionsSigned = wantAssertionsSigned;
+                return this;
+            }
+
+            /**
+             * WantResponseSigned.
+             */
+            public Builder wantResponseSigned(Boolean wantResponseSigned) {
+                this.wantResponseSigned = wantResponseSigned;
                 return this;
             }
 
