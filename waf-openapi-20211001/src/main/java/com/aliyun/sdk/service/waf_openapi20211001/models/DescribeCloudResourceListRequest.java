@@ -48,6 +48,10 @@ public class DescribeCloudResourceListRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDomain")
+    private String resourceDomain;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
     private String resourceInstanceId;
 
@@ -68,6 +72,7 @@ public class DescribeCloudResourceListRequest extends Request {
         this.ownerUserId = builder.ownerUserId;
         this.port = builder.port;
         this.regionId = builder.regionId;
+        this.resourceDomain = builder.resourceDomain;
         this.resourceInstanceId = builder.resourceInstanceId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.resourceProduct = builder.resourceProduct;
@@ -136,6 +141,13 @@ public class DescribeCloudResourceListRequest extends Request {
     }
 
     /**
+     * @return resourceDomain
+     */
+    public String getResourceDomain() {
+        return this.resourceDomain;
+    }
+
+    /**
      * @return resourceInstanceId
      */
     public String getResourceInstanceId() {
@@ -164,6 +176,7 @@ public class DescribeCloudResourceListRequest extends Request {
         private String ownerUserId; 
         private String port; 
         private String regionId; 
+        private String resourceDomain; 
         private String resourceInstanceId; 
         private String resourceManagerResourceGroupId; 
         private String resourceProduct; 
@@ -181,6 +194,7 @@ public class DescribeCloudResourceListRequest extends Request {
             this.ownerUserId = request.ownerUserId;
             this.port = request.port;
             this.regionId = request.regionId;
+            this.resourceDomain = request.resourceDomain;
             this.resourceInstanceId = request.resourceInstanceId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.resourceProduct = request.resourceProduct;
@@ -249,6 +263,15 @@ public class DescribeCloudResourceListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceDomain.
+         */
+        public Builder resourceDomain(String resourceDomain) {
+            this.putQueryParameter("ResourceDomain", resourceDomain);
+            this.resourceDomain = resourceDomain;
             return this;
         }
 

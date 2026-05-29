@@ -167,6 +167,9 @@ public class DescribeCloudResourceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceDomain")
+        private String resourceDomain;
+
         @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
         private String resourceInstanceId;
 
@@ -183,6 +186,7 @@ public class DescribeCloudResourceListResponseBody extends TeaModel {
             this.cloudResourceId = builder.cloudResourceId;
             this.port = builder.port;
             this.protocol = builder.protocol;
+            this.resourceDomain = builder.resourceDomain;
             this.resourceInstanceId = builder.resourceInstanceId;
             this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
             this.resourceProduct = builder.resourceProduct;
@@ -219,6 +223,13 @@ public class DescribeCloudResourceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceDomain
+         */
+        public String getResourceDomain() {
+            return this.resourceDomain;
+        }
+
+        /**
          * @return resourceInstanceId
          */
         public String getResourceInstanceId() {
@@ -250,6 +261,7 @@ public class DescribeCloudResourceListResponseBody extends TeaModel {
             private String cloudResourceId; 
             private Integer port; 
             private String protocol; 
+            private String resourceDomain; 
             private String resourceInstanceId; 
             private String resourceManagerResourceGroupId; 
             private String resourceProduct; 
@@ -262,6 +274,7 @@ public class DescribeCloudResourceListResponseBody extends TeaModel {
                 this.cloudResourceId = model.cloudResourceId;
                 this.port = model.port;
                 this.protocol = model.protocol;
+                this.resourceDomain = model.resourceDomain;
                 this.resourceInstanceId = model.resourceInstanceId;
                 this.resourceManagerResourceGroupId = model.resourceManagerResourceGroupId;
                 this.resourceProduct = model.resourceProduct;
@@ -289,6 +302,14 @@ public class DescribeCloudResourceListResponseBody extends TeaModel {
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * ResourceDomain.
+             */
+            public Builder resourceDomain(String resourceDomain) {
+                this.resourceDomain = resourceDomain;
                 return this;
             }
 

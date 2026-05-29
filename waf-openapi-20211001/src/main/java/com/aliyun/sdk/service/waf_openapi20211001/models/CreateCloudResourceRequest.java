@@ -343,6 +343,9 @@ public class CreateCloudResourceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("CustomCiphers")
         private java.util.List<String> customCiphers;
 
+        @com.aliyun.core.annotation.NameInMap("Domain")
+        private String domain;
+
         @com.aliyun.core.annotation.NameInMap("EnableTLSv3")
         private Boolean enableTLSv3;
 
@@ -350,15 +353,12 @@ public class CreateCloudResourceRequest extends Request {
         private Boolean http2Enabled;
 
         @com.aliyun.core.annotation.NameInMap("Port")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer port;
 
         @com.aliyun.core.annotation.NameInMap("Protocol")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String protocol;
 
         @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceInstanceId;
 
         @com.aliyun.core.annotation.NameInMap("ResourceProduct")
@@ -375,6 +375,7 @@ public class CreateCloudResourceRequest extends Request {
             this.certificates = builder.certificates;
             this.cipherSuite = builder.cipherSuite;
             this.customCiphers = builder.customCiphers;
+            this.domain = builder.domain;
             this.enableTLSv3 = builder.enableTLSv3;
             this.http2Enabled = builder.http2Enabled;
             this.port = builder.port;
@@ -412,6 +413,13 @@ public class CreateCloudResourceRequest extends Request {
          */
         public java.util.List<String> getCustomCiphers() {
             return this.customCiphers;
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
         }
 
         /**
@@ -474,6 +482,7 @@ public class CreateCloudResourceRequest extends Request {
             private java.util.List<Certificates> certificates; 
             private Integer cipherSuite; 
             private java.util.List<String> customCiphers; 
+            private String domain; 
             private Boolean enableTLSv3; 
             private Boolean http2Enabled; 
             private Integer port; 
@@ -490,6 +499,7 @@ public class CreateCloudResourceRequest extends Request {
                 this.certificates = model.certificates;
                 this.cipherSuite = model.cipherSuite;
                 this.customCiphers = model.customCiphers;
+                this.domain = model.domain;
                 this.enableTLSv3 = model.enableTLSv3;
                 this.http2Enabled = model.http2Enabled;
                 this.port = model.port;
@@ -533,6 +543,14 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
+             * Domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
              * <p>Specifies whether to support TLS 1.3. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
              * <ul>
              * <li><strong>true</strong></li>
@@ -564,7 +582,6 @@ public class CreateCloudResourceRequest extends Request {
 
             /**
              * <p>The port of the cloud service.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -580,7 +597,6 @@ public class CreateCloudResourceRequest extends Request {
              * <li><strong>http</strong></li>
              * <li><strong>https</strong></li>
              * </ul>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>http</p>
@@ -592,7 +608,6 @@ public class CreateCloudResourceRequest extends Request {
 
             /**
              * <p>The instance ID of the cloud service.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>lb-bp1*****</p>

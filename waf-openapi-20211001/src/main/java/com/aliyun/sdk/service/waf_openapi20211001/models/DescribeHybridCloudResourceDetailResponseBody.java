@@ -421,6 +421,102 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
      *
      * <p>DescribeHybridCloudResourceDetailResponseBody</p>
      */
+    public static class BackendPorts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackendPort")
+        private Integer backendPort;
+
+        @com.aliyun.core.annotation.NameInMap("ListenPort")
+        private Integer listenPort;
+
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
+
+        private BackendPorts(Builder builder) {
+            this.backendPort = builder.backendPort;
+            this.listenPort = builder.listenPort;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackendPorts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return backendPort
+         */
+        public Integer getBackendPort() {
+            return this.backendPort;
+        }
+
+        /**
+         * @return listenPort
+         */
+        public Integer getListenPort() {
+            return this.listenPort;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private Integer backendPort; 
+            private Integer listenPort; 
+            private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendPorts model) {
+                this.backendPort = model.backendPort;
+                this.listenPort = model.listenPort;
+                this.protocol = model.protocol;
+            } 
+
+            /**
+             * BackendPort.
+             */
+            public Builder backendPort(Integer backendPort) {
+                this.backendPort = backendPort;
+                return this;
+            }
+
+            /**
+             * ListenPort.
+             */
+            public Builder listenPort(Integer listenPort) {
+                this.listenPort = listenPort;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public BackendPorts build() {
+                return new BackendPorts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeHybridCloudResourceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridCloudResourceDetailResponseBody</p>
+     */
     public static class RequestHeaders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -497,6 +593,9 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
      * <p>DescribeHybridCloudResourceDetailResponseBody</p>
      */
     public static class Redirect extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackendPorts")
+        private java.util.List<BackendPorts> backendPorts;
+
         @com.aliyun.core.annotation.NameInMap("Backends")
         private java.util.List<String> backends;
 
@@ -521,6 +620,9 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Loadbalance")
         private String loadbalance;
 
+        @com.aliyun.core.annotation.NameInMap("ProxyProtocol")
+        private Boolean proxyProtocol;
+
         @com.aliyun.core.annotation.NameInMap("ReadTimeout")
         private Long readTimeout;
 
@@ -543,6 +645,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         private Long writeTimeout;
 
         private Redirect(Builder builder) {
+            this.backendPorts = builder.backendPorts;
             this.backends = builder.backends;
             this.cnameEnabled = builder.cnameEnabled;
             this.connectTimeout = builder.connectTimeout;
@@ -551,6 +654,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             this.keepaliveRequests = builder.keepaliveRequests;
             this.keepaliveTimeout = builder.keepaliveTimeout;
             this.loadbalance = builder.loadbalance;
+            this.proxyProtocol = builder.proxyProtocol;
             this.readTimeout = builder.readTimeout;
             this.requestHeaders = builder.requestHeaders;
             this.retry = builder.retry;
@@ -566,6 +670,13 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
 
         public static Redirect create() {
             return builder().build();
+        }
+
+        /**
+         * @return backendPorts
+         */
+        public java.util.List<BackendPorts> getBackendPorts() {
+            return this.backendPorts;
         }
 
         /**
@@ -625,6 +736,13 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return proxyProtocol
+         */
+        public Boolean getProxyProtocol() {
+            return this.proxyProtocol;
+        }
+
+        /**
          * @return readTimeout
          */
         public Long getReadTimeout() {
@@ -674,6 +792,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<BackendPorts> backendPorts; 
             private java.util.List<String> backends; 
             private Boolean cnameEnabled; 
             private Long connectTimeout; 
@@ -682,6 +801,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             private Long keepaliveRequests; 
             private Long keepaliveTimeout; 
             private String loadbalance; 
+            private Boolean proxyProtocol; 
             private Long readTimeout; 
             private java.util.List<RequestHeaders> requestHeaders; 
             private Boolean retry; 
@@ -694,6 +814,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             } 
 
             private Builder(Redirect model) {
+                this.backendPorts = model.backendPorts;
                 this.backends = model.backends;
                 this.cnameEnabled = model.cnameEnabled;
                 this.connectTimeout = model.connectTimeout;
@@ -702,6 +823,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
                 this.keepaliveRequests = model.keepaliveRequests;
                 this.keepaliveTimeout = model.keepaliveTimeout;
                 this.loadbalance = model.loadbalance;
+                this.proxyProtocol = model.proxyProtocol;
                 this.readTimeout = model.readTimeout;
                 this.requestHeaders = model.requestHeaders;
                 this.retry = model.retry;
@@ -710,6 +832,14 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
                 this.sniHost = model.sniHost;
                 this.writeTimeout = model.writeTimeout;
             } 
+
+            /**
+             * BackendPorts.
+             */
+            public Builder backendPorts(java.util.List<BackendPorts> backendPorts) {
+                this.backendPorts = backendPorts;
+                return this;
+            }
 
             /**
              * Backends.
@@ -772,6 +902,14 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
              */
             public Builder loadbalance(String loadbalance) {
                 this.loadbalance = loadbalance;
+                return this;
+            }
+
+            /**
+             * ProxyProtocol.
+             */
+            public Builder proxyProtocol(Boolean proxyProtocol) {
+                this.proxyProtocol = proxyProtocol;
                 return this;
             }
 

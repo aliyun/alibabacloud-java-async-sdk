@@ -459,6 +459,9 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerUserId")
         private String ownerUserId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceDomain")
+        private String resourceDomain;
+
         @com.aliyun.core.annotation.NameInMap("ResourceInstanceAccessStatus")
         private String resourceInstanceAccessStatus;
 
@@ -496,6 +499,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             this.accessPortAndProtocols = builder.accessPortAndProtocols;
             this.accessPorts = builder.accessPorts;
             this.ownerUserId = builder.ownerUserId;
+            this.resourceDomain = builder.resourceDomain;
             this.resourceInstanceAccessStatus = builder.resourceInstanceAccessStatus;
             this.resourceInstanceEdition = builder.resourceInstanceEdition;
             this.resourceInstanceId = builder.resourceInstanceId;
@@ -542,6 +546,13 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
          */
         public String getOwnerUserId() {
             return this.ownerUserId;
+        }
+
+        /**
+         * @return resourceDomain
+         */
+        public String getResourceDomain() {
+            return this.resourceDomain;
         }
 
         /**
@@ -619,6 +630,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             private java.util.List<AccessPortAndProtocols> accessPortAndProtocols; 
             private java.util.List<Integer> accessPorts; 
             private String ownerUserId; 
+            private String resourceDomain; 
             private String resourceInstanceAccessStatus; 
             private String resourceInstanceEdition; 
             private String resourceInstanceId; 
@@ -638,6 +650,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
                 this.accessPortAndProtocols = model.accessPortAndProtocols;
                 this.accessPorts = model.accessPorts;
                 this.ownerUserId = model.ownerUserId;
+                this.resourceDomain = model.resourceDomain;
                 this.resourceInstanceAccessStatus = model.resourceInstanceAccessStatus;
                 this.resourceInstanceEdition = model.resourceInstanceEdition;
                 this.resourceInstanceId = model.resourceInstanceId;
@@ -682,6 +695,14 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
+                return this;
+            }
+
+            /**
+             * ResourceDomain.
+             */
+            public Builder resourceDomain(String resourceDomain) {
+                this.resourceDomain = resourceDomain;
                 return this;
             }
 

@@ -1,3 +1,6 @@
+2026-05-29 Version: 7.0.20
+- Generated java-async 2021-10-01 for waf-openapi.
+
 2026-05-21 Version: 7.0.19
 - Generated java-async 2021-10-01 for waf-openapi.
 
