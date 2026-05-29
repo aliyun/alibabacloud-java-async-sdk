@@ -33,12 +33,17 @@ public class ListAvailableTtsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TtsVoiceCode")
     private String ttsVoiceCode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceType")
+    private String voiceType;
+
     private ListAvailableTtsRequest(Builder builder) {
         super(builder);
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.ttsVoiceCode = builder.ttsVoiceCode;
+        this.voiceType = builder.voiceType;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class ListAvailableTtsRequest extends Request {
         return this.ttsVoiceCode;
     }
 
+    /**
+     * @return voiceType
+     */
+    public String getVoiceType() {
+        return this.voiceType;
+    }
+
     public static final class Builder extends Request.Builder<ListAvailableTtsRequest, Builder> {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String ttsVoiceCode; 
+        private String voiceType; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class ListAvailableTtsRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.ttsVoiceCode = request.ttsVoiceCode;
+            this.voiceType = request.voiceType;
         } 
 
         /**
@@ -136,6 +150,15 @@ public class ListAvailableTtsRequest extends Request {
         public Builder ttsVoiceCode(String ttsVoiceCode) {
             this.putQueryParameter("TtsVoiceCode", ttsVoiceCode);
             this.ttsVoiceCode = ttsVoiceCode;
+            return this;
+        }
+
+        /**
+         * VoiceType.
+         */
+        public Builder voiceType(String voiceType) {
+            this.putQueryParameter("VoiceType", voiceType);
+            this.voiceType = voiceType;
             return this;
         }
 
