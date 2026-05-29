@@ -130,6 +130,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteQuotaPlanResponse> deleteQuotaPlan(DeleteQuotaPlanRequest request);
 
     /**
+     * @param request the request parameters of DeleteRole  DeleteRoleRequest
+     * @return DeleteRoleResponse
+     */
+    CompletableFuture<DeleteRoleResponse> deleteRole(DeleteRoleRequest request);
+
+    /**
      * @param request the request parameters of GetComputeEffectivePlan  GetComputeEffectivePlanRequest
      * @return GetComputeEffectivePlanResponse
      */
