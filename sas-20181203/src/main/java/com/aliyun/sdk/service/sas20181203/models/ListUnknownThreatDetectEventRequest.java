@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListUnknownThreatDetectEventRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnalyzeResult")
+    private String analyzeResult;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HashKey")
     private String hashKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
@@ -51,8 +59,10 @@ public class ListUnknownThreatDetectEventRequest extends Request {
 
     private ListUnknownThreatDetectEventRequest(Builder builder) {
         super(builder);
+        this.analyzeResult = builder.analyzeResult;
         this.currentPage = builder.currentPage;
         this.hashKey = builder.hashKey;
+        this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.parentProcessPath = builder.parentProcessPath;
         this.processPath = builder.processPath;
@@ -75,6 +85,13 @@ public class ListUnknownThreatDetectEventRequest extends Request {
     }
 
     /**
+     * @return analyzeResult
+     */
+    public String getAnalyzeResult() {
+        return this.analyzeResult;
+    }
+
+    /**
      * @return currentPage
      */
     public Integer getCurrentPage() {
@@ -86,6 +103,13 @@ public class ListUnknownThreatDetectEventRequest extends Request {
      */
     public String getHashKey() {
         return this.hashKey;
+    }
+
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
     }
 
     /**
@@ -131,8 +155,10 @@ public class ListUnknownThreatDetectEventRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListUnknownThreatDetectEventRequest, Builder> {
+        private String analyzeResult; 
         private Integer currentPage; 
         private String hashKey; 
+        private String lang; 
         private Integer pageSize; 
         private String parentProcessPath; 
         private String processPath; 
@@ -146,8 +172,10 @@ public class ListUnknownThreatDetectEventRequest extends Request {
 
         private Builder(ListUnknownThreatDetectEventRequest request) {
             super(request);
+            this.analyzeResult = request.analyzeResult;
             this.currentPage = request.currentPage;
             this.hashKey = request.hashKey;
+            this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.parentProcessPath = request.parentProcessPath;
             this.processPath = request.processPath;
@@ -155,6 +183,15 @@ public class ListUnknownThreatDetectEventRequest extends Request {
             this.status = request.status;
             this.uuid = request.uuid;
         } 
+
+        /**
+         * AnalyzeResult.
+         */
+        public Builder analyzeResult(String analyzeResult) {
+            this.putQueryParameter("AnalyzeResult", analyzeResult);
+            this.analyzeResult = analyzeResult;
+            return this;
+        }
 
         /**
          * CurrentPage.
@@ -171,6 +208,15 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         public Builder hashKey(String hashKey) {
             this.putQueryParameter("HashKey", hashKey);
             this.hashKey = hashKey;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

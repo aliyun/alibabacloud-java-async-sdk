@@ -119,6 +119,12 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
      * <p>ListUnknownThreatDetectEventResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AnalyzeDesc")
+        private String analyzeDesc;
+
+        @com.aliyun.core.annotation.NameInMap("AnalyzeResult")
+        private String analyzeResult;
+
         @com.aliyun.core.annotation.NameInMap("CmdChain")
         private String cmdChain;
 
@@ -177,6 +183,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         private String uuid;
 
         private Data(Builder builder) {
+            this.analyzeDesc = builder.analyzeDesc;
+            this.analyzeResult = builder.analyzeResult;
             this.cmdChain = builder.cmdChain;
             this.cmdline = builder.cmdline;
             this.count = builder.count;
@@ -204,6 +212,20 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return analyzeDesc
+         */
+        public String getAnalyzeDesc() {
+            return this.analyzeDesc;
+        }
+
+        /**
+         * @return analyzeResult
+         */
+        public String getAnalyzeResult() {
+            return this.analyzeResult;
         }
 
         /**
@@ -340,6 +362,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String analyzeDesc; 
+            private String analyzeResult; 
             private String cmdChain; 
             private String cmdline; 
             private Integer count; 
@@ -364,6 +388,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.analyzeDesc = model.analyzeDesc;
+                this.analyzeResult = model.analyzeResult;
                 this.cmdChain = model.cmdChain;
                 this.cmdline = model.cmdline;
                 this.count = model.count;
@@ -384,6 +410,22 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
                 this.status = model.status;
                 this.uuid = model.uuid;
             } 
+
+            /**
+             * AnalyzeDesc.
+             */
+            public Builder analyzeDesc(String analyzeDesc) {
+                this.analyzeDesc = analyzeDesc;
+                return this;
+            }
+
+            /**
+             * AnalyzeResult.
+             */
+            public Builder analyzeResult(String analyzeResult) {
+                this.analyzeResult = analyzeResult;
+                return this;
+            }
 
             /**
              * CmdChain.

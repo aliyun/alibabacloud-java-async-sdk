@@ -119,6 +119,9 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
      * <p>ListUnknownThreatDetectMachineResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EffectDays")
+        private Long effectDays;
+
         @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
@@ -127,6 +130,9 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
+
+        @com.aliyun.core.annotation.NameInMap("PluginStatus")
+        private String pluginStatus;
 
         @com.aliyun.core.annotation.NameInMap("ProcessCount")
         private Integer processCount;
@@ -137,6 +143,9 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StudyMode")
         private String studyMode;
 
+        @com.aliyun.core.annotation.NameInMap("StudyRemainDays")
+        private Long studyRemainDays;
+
         @com.aliyun.core.annotation.NameInMap("StudyStartTime")
         private Long studyStartTime;
 
@@ -144,12 +153,15 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         private String uuid;
 
         private Data(Builder builder) {
+            this.effectDays = builder.effectDays;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
+            this.pluginStatus = builder.pluginStatus;
             this.processCount = builder.processCount;
             this.status = builder.status;
             this.studyMode = builder.studyMode;
+            this.studyRemainDays = builder.studyRemainDays;
             this.studyStartTime = builder.studyStartTime;
             this.uuid = builder.uuid;
         }
@@ -160,6 +172,13 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return effectDays
+         */
+        public Long getEffectDays() {
+            return this.effectDays;
         }
 
         /**
@@ -184,6 +203,13 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         }
 
         /**
+         * @return pluginStatus
+         */
+        public String getPluginStatus() {
+            return this.pluginStatus;
+        }
+
+        /**
          * @return processCount
          */
         public Integer getProcessCount() {
@@ -205,6 +231,13 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         }
 
         /**
+         * @return studyRemainDays
+         */
+        public Long getStudyRemainDays() {
+            return this.studyRemainDays;
+        }
+
+        /**
          * @return studyStartTime
          */
         public Long getStudyStartTime() {
@@ -219,12 +252,15 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long effectDays; 
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
+            private String pluginStatus; 
             private Integer processCount; 
             private String status; 
             private String studyMode; 
+            private Long studyRemainDays; 
             private Long studyStartTime; 
             private String uuid; 
 
@@ -232,15 +268,26 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.effectDays = model.effectDays;
                 this.instanceName = model.instanceName;
                 this.internetIp = model.internetIp;
                 this.intranetIp = model.intranetIp;
+                this.pluginStatus = model.pluginStatus;
                 this.processCount = model.processCount;
                 this.status = model.status;
                 this.studyMode = model.studyMode;
+                this.studyRemainDays = model.studyRemainDays;
                 this.studyStartTime = model.studyStartTime;
                 this.uuid = model.uuid;
             } 
+
+            /**
+             * EffectDays.
+             */
+            public Builder effectDays(Long effectDays) {
+                this.effectDays = effectDays;
+                return this;
+            }
 
             /**
              * InstanceName.
@@ -267,6 +314,14 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             }
 
             /**
+             * PluginStatus.
+             */
+            public Builder pluginStatus(String pluginStatus) {
+                this.pluginStatus = pluginStatus;
+                return this;
+            }
+
+            /**
              * ProcessCount.
              */
             public Builder processCount(Integer processCount) {
@@ -287,6 +342,14 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
              */
             public Builder studyMode(String studyMode) {
                 this.studyMode = studyMode;
+                return this;
+            }
+
+            /**
+             * StudyRemainDays.
+             */
+            public Builder studyRemainDays(Long studyRemainDays) {
+                this.studyRemainDays = studyRemainDays;
                 return this;
             }
 

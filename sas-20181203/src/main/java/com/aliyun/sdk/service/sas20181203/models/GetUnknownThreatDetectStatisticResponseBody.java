@@ -98,6 +98,9 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
      * <p>GetUnknownThreatDetectStatisticResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BlockEventMachineCount")
+        private Integer blockEventMachineCount;
+
         @com.aliyun.core.annotation.NameInMap("BlockMachineCount")
         private Integer blockMachineCount;
 
@@ -114,6 +117,7 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
         private Integer studyingMachineCount;
 
         private Data(Builder builder) {
+            this.blockEventMachineCount = builder.blockEventMachineCount;
             this.blockMachineCount = builder.blockMachineCount;
             this.machineCount = builder.machineCount;
             this.monitorMachineCount = builder.monitorMachineCount;
@@ -127,6 +131,13 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return blockEventMachineCount
+         */
+        public Integer getBlockEventMachineCount() {
+            return this.blockEventMachineCount;
         }
 
         /**
@@ -165,6 +176,7 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer blockEventMachineCount; 
             private Integer blockMachineCount; 
             private Integer machineCount; 
             private Integer monitorMachineCount; 
@@ -175,12 +187,21 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.blockEventMachineCount = model.blockEventMachineCount;
                 this.blockMachineCount = model.blockMachineCount;
                 this.machineCount = model.machineCount;
                 this.monitorMachineCount = model.monitorMachineCount;
                 this.openMachineCount = model.openMachineCount;
                 this.studyingMachineCount = model.studyingMachineCount;
             } 
+
+            /**
+             * BlockEventMachineCount.
+             */
+            public Builder blockEventMachineCount(Integer blockEventMachineCount) {
+                this.blockEventMachineCount = blockEventMachineCount;
+                return this;
+            }
 
             /**
              * BlockMachineCount.

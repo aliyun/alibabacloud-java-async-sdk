@@ -84,6 +84,10 @@ public class AddClientUserDefineRuleRequest extends Request {
     private String registryKey;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetDefault")
+    private String targetDefault;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer type;
@@ -106,6 +110,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         this.procPath = builder.procPath;
         this.registryContent = builder.registryContent;
         this.registryKey = builder.registryKey;
+        this.targetDefault = builder.targetDefault;
         this.type = builder.type;
     }
 
@@ -235,6 +240,13 @@ public class AddClientUserDefineRuleRequest extends Request {
     }
 
     /**
+     * @return targetDefault
+     */
+    public String getTargetDefault() {
+        return this.targetDefault;
+    }
+
+    /**
      * @return type
      */
     public Integer getType() {
@@ -258,6 +270,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         private String procPath; 
         private String registryContent; 
         private String registryKey; 
+        private String targetDefault; 
         private Integer type; 
 
         private Builder() {
@@ -282,6 +295,7 @@ public class AddClientUserDefineRuleRequest extends Request {
             this.procPath = request.procPath;
             this.registryContent = request.registryContent;
             this.registryKey = request.registryKey;
+            this.targetDefault = request.targetDefault;
             this.type = request.type;
         } 
 
@@ -485,6 +499,15 @@ public class AddClientUserDefineRuleRequest extends Request {
         public Builder registryKey(String registryKey) {
             this.putQueryParameter("RegistryKey", registryKey);
             this.registryKey = registryKey;
+            return this;
+        }
+
+        /**
+         * TargetDefault.
+         */
+        public Builder targetDefault(String targetDefault) {
+            this.putQueryParameter("TargetDefault", targetDefault);
+            this.targetDefault = targetDefault;
             return this;
         }
 

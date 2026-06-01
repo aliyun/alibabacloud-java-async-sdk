@@ -122,6 +122,12 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnalyzeResult")
         private String analyzeResult;
 
+        @com.aliyun.core.annotation.NameInMap("ExplanationEn")
+        private String explanationEn;
+
+        @com.aliyun.core.annotation.NameInMap("ExplanationZh")
+        private String explanationZh;
+
         @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
@@ -142,6 +148,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.analyzeResult = builder.analyzeResult;
+            this.explanationEn = builder.explanationEn;
+            this.explanationZh = builder.explanationZh;
             this.firstTime = builder.firstTime;
             this.md5 = builder.md5;
             this.processId = builder.processId;
@@ -163,6 +171,20 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
          */
         public String getAnalyzeResult() {
             return this.analyzeResult;
+        }
+
+        /**
+         * @return explanationEn
+         */
+        public String getExplanationEn() {
+            return this.explanationEn;
+        }
+
+        /**
+         * @return explanationZh
+         */
+        public String getExplanationZh() {
+            return this.explanationZh;
         }
 
         /**
@@ -209,6 +231,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
 
         public static final class Builder {
             private String analyzeResult; 
+            private String explanationEn; 
+            private String explanationZh; 
             private Long firstTime; 
             private String md5; 
             private String processId; 
@@ -221,6 +245,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.analyzeResult = model.analyzeResult;
+                this.explanationEn = model.explanationEn;
+                this.explanationZh = model.explanationZh;
                 this.firstTime = model.firstTime;
                 this.md5 = model.md5;
                 this.processId = model.processId;
@@ -234,6 +260,22 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
              */
             public Builder analyzeResult(String analyzeResult) {
                 this.analyzeResult = analyzeResult;
+                return this;
+            }
+
+            /**
+             * ExplanationEn.
+             */
+            public Builder explanationEn(String explanationEn) {
+                this.explanationEn = explanationEn;
+                return this;
+            }
+
+            /**
+             * ExplanationZh.
+             */
+            public Builder explanationZh(String explanationZh) {
+                this.explanationZh = explanationZh;
                 return this;
             }
 
