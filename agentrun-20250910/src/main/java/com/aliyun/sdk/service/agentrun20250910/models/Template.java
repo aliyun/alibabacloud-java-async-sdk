@@ -42,6 +42,9 @@ public class Template extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("enableAgent")
     private Boolean enableAgent;
 
+    @com.aliyun.core.annotation.NameInMap("enablePreStop")
+    private Boolean enablePreStop;
+
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map<String, String> environmentVariables;
 
@@ -72,6 +75,9 @@ public class Template extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ossConfiguration")
     private java.util.List<OssConfiguration> ossConfiguration;
+
+    @com.aliyun.core.annotation.NameInMap("preStopTimeoutInSeconds")
+    private Integer preStopTimeoutInSeconds;
 
     @com.aliyun.core.annotation.NameInMap("resourceName")
     private String resourceName;
@@ -123,6 +129,7 @@ public class Template extends TeaModel {
         this.description = builder.description;
         this.diskSize = builder.diskSize;
         this.enableAgent = builder.enableAgent;
+        this.enablePreStop = builder.enablePreStop;
         this.environmentVariables = builder.environmentVariables;
         this.executionRoleArn = builder.executionRoleArn;
         this.lastUpdatedAt = builder.lastUpdatedAt;
@@ -133,6 +140,7 @@ public class Template extends TeaModel {
         this.nasConfig = builder.nasConfig;
         this.networkConfiguration = builder.networkConfiguration;
         this.ossConfiguration = builder.ossConfiguration;
+        this.preStopTimeoutInSeconds = builder.preStopTimeoutInSeconds;
         this.resourceName = builder.resourceName;
         this.sandboxIdleTimeoutInSeconds = builder.sandboxIdleTimeoutInSeconds;
         this.sandboxTTLInSeconds = builder.sandboxTTLInSeconds;
@@ -217,6 +225,13 @@ public class Template extends TeaModel {
     }
 
     /**
+     * @return enablePreStop
+     */
+    public Boolean getEnablePreStop() {
+        return this.enablePreStop;
+    }
+
+    /**
      * @return environmentVariables
      */
     public java.util.Map<String, String> getEnvironmentVariables() {
@@ -284,6 +299,13 @@ public class Template extends TeaModel {
      */
     public java.util.List<OssConfiguration> getOssConfiguration() {
         return this.ossConfiguration;
+    }
+
+    /**
+     * @return preStopTimeoutInSeconds
+     */
+    public Integer getPreStopTimeoutInSeconds() {
+        return this.preStopTimeoutInSeconds;
     }
 
     /**
@@ -386,6 +408,7 @@ public class Template extends TeaModel {
         private String description; 
         private Integer diskSize; 
         private Boolean enableAgent; 
+        private Boolean enablePreStop; 
         private java.util.Map<String, String> environmentVariables; 
         private String executionRoleArn; 
         private String lastUpdatedAt; 
@@ -396,6 +419,7 @@ public class Template extends TeaModel {
         private NASConfig nasConfig; 
         private NetworkConfiguration networkConfiguration; 
         private java.util.List<OssConfiguration> ossConfiguration; 
+        private Integer preStopTimeoutInSeconds; 
         private String resourceName; 
         private String sandboxIdleTimeoutInSeconds; 
         private String sandboxTTLInSeconds; 
@@ -422,6 +446,7 @@ public class Template extends TeaModel {
             this.description = model.description;
             this.diskSize = model.diskSize;
             this.enableAgent = model.enableAgent;
+            this.enablePreStop = model.enablePreStop;
             this.environmentVariables = model.environmentVariables;
             this.executionRoleArn = model.executionRoleArn;
             this.lastUpdatedAt = model.lastUpdatedAt;
@@ -432,6 +457,7 @@ public class Template extends TeaModel {
             this.nasConfig = model.nasConfig;
             this.networkConfiguration = model.networkConfiguration;
             this.ossConfiguration = model.ossConfiguration;
+            this.preStopTimeoutInSeconds = model.preStopTimeoutInSeconds;
             this.resourceName = model.resourceName;
             this.sandboxIdleTimeoutInSeconds = model.sandboxIdleTimeoutInSeconds;
             this.sandboxTTLInSeconds = model.sandboxTTLInSeconds;
@@ -512,6 +538,14 @@ public class Template extends TeaModel {
         }
 
         /**
+         * enablePreStop.
+         */
+        public Builder enablePreStop(Boolean enablePreStop) {
+            this.enablePreStop = enablePreStop;
+            return this;
+        }
+
+        /**
          * environmentVariables.
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
@@ -588,6 +622,14 @@ public class Template extends TeaModel {
          */
         public Builder ossConfiguration(java.util.List<OssConfiguration> ossConfiguration) {
             this.ossConfiguration = ossConfiguration;
+            return this;
+        }
+
+        /**
+         * preStopTimeoutInSeconds.
+         */
+        public Builder preStopTimeoutInSeconds(Integer preStopTimeoutInSeconds) {
+            this.preStopTimeoutInSeconds = preStopTimeoutInSeconds;
             return this;
         }
 

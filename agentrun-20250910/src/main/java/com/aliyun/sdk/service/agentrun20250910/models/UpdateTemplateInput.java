@@ -38,6 +38,9 @@ public class UpdateTemplateInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("enableAgent")
     private Boolean enableAgent;
 
+    @com.aliyun.core.annotation.NameInMap("enablePreStop")
+    private Boolean enablePreStop;
+
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map<String, String> environmentVariables;
 
@@ -58,6 +61,9 @@ public class UpdateTemplateInput extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ossConfiguration")
     private java.util.List<OssConfiguration> ossConfiguration;
+
+    @com.aliyun.core.annotation.NameInMap("preStopTimeoutInSeconds")
+    private Integer preStopTimeoutInSeconds;
 
     @com.aliyun.core.annotation.NameInMap("sandboxIdleTimeoutInSeconds")
     @com.aliyun.core.annotation.Validation(maximum = 21600, minimum = 1)
@@ -84,6 +90,7 @@ public class UpdateTemplateInput extends TeaModel {
         this.credentialConfiguration = builder.credentialConfiguration;
         this.description = builder.description;
         this.enableAgent = builder.enableAgent;
+        this.enablePreStop = builder.enablePreStop;
         this.environmentVariables = builder.environmentVariables;
         this.executionRoleArn = builder.executionRoleArn;
         this.logConfiguration = builder.logConfiguration;
@@ -91,6 +98,7 @@ public class UpdateTemplateInput extends TeaModel {
         this.nasConfig = builder.nasConfig;
         this.networkConfiguration = builder.networkConfiguration;
         this.ossConfiguration = builder.ossConfiguration;
+        this.preStopTimeoutInSeconds = builder.preStopTimeoutInSeconds;
         this.sandboxIdleTimeoutInSeconds = builder.sandboxIdleTimeoutInSeconds;
         this.sandboxTTLInSeconds = builder.sandboxTTLInSeconds;
         this.scalingConfig = builder.scalingConfig;
@@ -160,6 +168,13 @@ public class UpdateTemplateInput extends TeaModel {
     }
 
     /**
+     * @return enablePreStop
+     */
+    public Boolean getEnablePreStop() {
+        return this.enablePreStop;
+    }
+
+    /**
      * @return environmentVariables
      */
     public java.util.Map<String, String> getEnvironmentVariables() {
@@ -209,6 +224,13 @@ public class UpdateTemplateInput extends TeaModel {
     }
 
     /**
+     * @return preStopTimeoutInSeconds
+     */
+    public Integer getPreStopTimeoutInSeconds() {
+        return this.preStopTimeoutInSeconds;
+    }
+
+    /**
      * @return sandboxIdleTimeoutInSeconds
      */
     public Integer getSandboxIdleTimeoutInSeconds() {
@@ -251,6 +273,7 @@ public class UpdateTemplateInput extends TeaModel {
         private CredentialConfiguration credentialConfiguration; 
         private String description; 
         private Boolean enableAgent; 
+        private Boolean enablePreStop; 
         private java.util.Map<String, String> environmentVariables; 
         private String executionRoleArn; 
         private LogConfiguration logConfiguration; 
@@ -258,6 +281,7 @@ public class UpdateTemplateInput extends TeaModel {
         private NASConfig nasConfig; 
         private NetworkConfiguration networkConfiguration; 
         private java.util.List<OssConfiguration> ossConfiguration; 
+        private Integer preStopTimeoutInSeconds; 
         private Integer sandboxIdleTimeoutInSeconds; 
         private Integer sandboxTTLInSeconds; 
         private ScalingConfig scalingConfig; 
@@ -275,6 +299,7 @@ public class UpdateTemplateInput extends TeaModel {
             this.credentialConfiguration = model.credentialConfiguration;
             this.description = model.description;
             this.enableAgent = model.enableAgent;
+            this.enablePreStop = model.enablePreStop;
             this.environmentVariables = model.environmentVariables;
             this.executionRoleArn = model.executionRoleArn;
             this.logConfiguration = model.logConfiguration;
@@ -282,6 +307,7 @@ public class UpdateTemplateInput extends TeaModel {
             this.nasConfig = model.nasConfig;
             this.networkConfiguration = model.networkConfiguration;
             this.ossConfiguration = model.ossConfiguration;
+            this.preStopTimeoutInSeconds = model.preStopTimeoutInSeconds;
             this.sandboxIdleTimeoutInSeconds = model.sandboxIdleTimeoutInSeconds;
             this.sandboxTTLInSeconds = model.sandboxTTLInSeconds;
             this.scalingConfig = model.scalingConfig;
@@ -346,6 +372,14 @@ public class UpdateTemplateInput extends TeaModel {
         }
 
         /**
+         * enablePreStop.
+         */
+        public Builder enablePreStop(Boolean enablePreStop) {
+            this.enablePreStop = enablePreStop;
+            return this;
+        }
+
+        /**
          * environmentVariables.
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
@@ -398,6 +432,14 @@ public class UpdateTemplateInput extends TeaModel {
          */
         public Builder ossConfiguration(java.util.List<OssConfiguration> ossConfiguration) {
             this.ossConfiguration = ossConfiguration;
+            return this;
+        }
+
+        /**
+         * preStopTimeoutInSeconds.
+         */
+        public Builder preStopTimeoutInSeconds(Integer preStopTimeoutInSeconds) {
+            this.preStopTimeoutInSeconds = preStopTimeoutInSeconds;
             return this;
         }
 
