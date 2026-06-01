@@ -410,6 +410,9 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
+        @com.aliyun.core.annotation.NameInMap("Affinity")
+        private Long affinity;
+
         @com.aliyun.core.annotation.NameInMap("Capacities")
         private Capacities capacities;
 
@@ -451,6 +454,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
         private DeploymentSet(Builder builder) {
             this.accountId = builder.accountId;
+            this.affinity = builder.affinity;
             this.capacities = builder.capacities;
             this.creationTime = builder.creationTime;
             this.deploymentSetDescription = builder.deploymentSetDescription;
@@ -479,6 +483,13 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
          */
         public Long getAccountId() {
             return this.accountId;
+        }
+
+        /**
+         * @return affinity
+         */
+        public Long getAffinity() {
+            return this.affinity;
         }
 
         /**
@@ -574,6 +585,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long accountId; 
+            private Long affinity; 
             private Capacities capacities; 
             private String creationTime; 
             private String deploymentSetDescription; 
@@ -593,6 +605,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
             private Builder(DeploymentSet model) {
                 this.accountId = model.accountId;
+                this.affinity = model.affinity;
                 this.capacities = model.capacities;
                 this.creationTime = model.creationTime;
                 this.deploymentSetDescription = model.deploymentSetDescription;
@@ -613,6 +626,14 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * Affinity.
+             */
+            public Builder affinity(Long affinity) {
+                this.affinity = affinity;
                 return this;
             }
 

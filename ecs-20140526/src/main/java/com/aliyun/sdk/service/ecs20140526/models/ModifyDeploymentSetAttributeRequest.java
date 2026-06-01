@@ -22,6 +22,10 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Affinity")
+    private Long affinity;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String deploymentSetId;
@@ -58,6 +62,7 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
     private ModifyDeploymentSetAttributeRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.affinity = builder.affinity;
         this.deploymentSetId = builder.deploymentSetId;
         this.deploymentSetName = builder.deploymentSetName;
         this.description = builder.description;
@@ -86,6 +91,13 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return affinity
+     */
+    public Long getAffinity() {
+        return this.affinity;
     }
 
     /**
@@ -146,6 +158,7 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDeploymentSetAttributeRequest, Builder> {
         private String sourceRegionId; 
+        private Long affinity; 
         private String deploymentSetId; 
         private String deploymentSetName; 
         private String description; 
@@ -162,6 +175,7 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         private Builder(ModifyDeploymentSetAttributeRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.affinity = request.affinity;
             this.deploymentSetId = request.deploymentSetId;
             this.deploymentSetName = request.deploymentSetName;
             this.description = request.description;
@@ -178,6 +192,15 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Affinity.
+         */
+        public Builder affinity(Long affinity) {
+            this.putQueryParameter("Affinity", affinity);
+            this.affinity = affinity;
             return this;
         }
 
