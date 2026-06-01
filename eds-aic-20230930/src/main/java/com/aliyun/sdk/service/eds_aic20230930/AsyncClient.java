@@ -151,6 +151,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateKeyPairResponse> createKeyPair(CreateKeyPairRequest request);
 
     /**
+     * @param request the request parameters of CreateMobileAgentPackage  CreateMobileAgentPackageRequest
+     * @return CreateMobileAgentPackageResponse
+     */
+    CompletableFuture<CreateMobileAgentPackageResponse> createMobileAgentPackage(CreateMobileAgentPackageRequest request);
+
+    /**
      * @param request the request parameters of CreatePolicyGroup  CreatePolicyGroupRequest
      * @return CreatePolicyGroupResponse
      */
@@ -327,6 +333,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeMetricTopResponse
      */
     CompletableFuture<DescribeMetricTopResponse> describeMetricTop(DescribeMetricTopRequest request);
+
+    /**
+     * @param request the request parameters of DescribeMobileAgentPackage  DescribeMobileAgentPackageRequest
+     * @return DescribeMobileAgentPackageResponse
+     */
+    CompletableFuture<DescribeMobileAgentPackageResponse> describeMobileAgentPackage(DescribeMobileAgentPackageRequest request);
 
     /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
@@ -612,6 +624,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RenewCloudPhoneNodesResponse
      */
     CompletableFuture<RenewCloudPhoneNodesResponse> renewCloudPhoneNodes(RenewCloudPhoneNodesRequest request);
+
+    /**
+     * @param request the request parameters of RenewMobileAgentPackage  RenewMobileAgentPackageRequest
+     * @return RenewMobileAgentPackageResponse
+     */
+    CompletableFuture<RenewMobileAgentPackageResponse> renewMobileAgentPackage(RenewMobileAgentPackageRequest request);
 
     /**
      * <b>description</b> :
