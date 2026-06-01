@@ -123,6 +123,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateRayHistoryServer  CreateRayHistoryServerRequest
+     * @return CreateRayHistoryServerResponse
+     */
+    @Override
+    public CompletableFuture<CreateRayHistoryServerResponse> createRayHistoryServer(CreateRayHistoryServerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateRayHistoryServer").setMethod(HttpMethod.POST).setPathRegex("/api/v1/rayhistoryservers").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRayHistoryServerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRayHistoryServerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateTensorboard  CreateTensorboardRequest
      * @return CreateTensorboardResponse
      */
@@ -171,6 +189,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteJobTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteRayHistoryServer  DeleteRayHistoryServerRequest
+     * @return DeleteRayHistoryServerResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRayHistoryServerResponse> deleteRayHistoryServer(DeleteRayHistoryServerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteRayHistoryServer").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/rayhistoryservers/{RayHistoryServerId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRayHistoryServerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRayHistoryServerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -363,6 +399,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetRayHistoryServer  GetRayHistoryServerRequest
+     * @return GetRayHistoryServerResponse
+     */
+    @Override
+    public CompletableFuture<GetRayHistoryServerResponse> getRayHistoryServer(GetRayHistoryServerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRayHistoryServer").setMethod(HttpMethod.GET).setPathRegex("/api/v1/rayhistoryservers/{RayHistoryServerId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRayHistoryServerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRayHistoryServerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTensorboard  GetTensorboardRequest
      * @return GetTensorboardResponse
      */
@@ -507,6 +561,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListRayHistoryServers  ListRayHistoryServersRequest
+     * @return ListRayHistoryServersResponse
+     */
+    @Override
+    public CompletableFuture<ListRayHistoryServersResponse> listRayHistoryServers(ListRayHistoryServersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListRayHistoryServers").setMethod(HttpMethod.GET).setPathRegex("/api/v1/rayhistoryservers").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRayHistoryServersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRayHistoryServersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListTensorboards  ListTensorboardsRequest
      * @return ListTensorboardsResponse
      */
@@ -543,6 +615,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of StartRayHistoryServer  StartRayHistoryServerRequest
+     * @return StartRayHistoryServerResponse
+     */
+    @Override
+    public CompletableFuture<StartRayHistoryServerResponse> startRayHistoryServer(StartRayHistoryServerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartRayHistoryServer").setMethod(HttpMethod.POST).setPathRegex("/api/v1/rayhistoryservers/{RayHistoryServerId}/start").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartRayHistoryServerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartRayHistoryServerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StartTensorboard  StartTensorboardRequest
      * @return StartTensorboardResponse
      */
@@ -573,6 +663,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StopJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopRayHistoryServer  StopRayHistoryServerRequest
+     * @return StopRayHistoryServerResponse
+     */
+    @Override
+    public CompletableFuture<StopRayHistoryServerResponse> stopRayHistoryServer(StopRayHistoryServerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopRayHistoryServer").setMethod(HttpMethod.POST).setPathRegex("/api/v1/rayhistoryservers/{RayHistoryServerId}/stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopRayHistoryServerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopRayHistoryServerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

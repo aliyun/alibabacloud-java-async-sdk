@@ -35,6 +35,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateJobTemplateResponse> createJobTemplate(CreateJobTemplateRequest request);
 
     /**
+     * @param request the request parameters of CreateRayHistoryServer  CreateRayHistoryServerRequest
+     * @return CreateRayHistoryServerResponse
+     */
+    CompletableFuture<CreateRayHistoryServerResponse> createRayHistoryServer(CreateRayHistoryServerRequest request);
+
+    /**
      * @param request the request parameters of CreateTensorboard  CreateTensorboardRequest
      * @return CreateTensorboardResponse
      */
@@ -51,6 +57,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteJobTemplateResponse
      */
     CompletableFuture<DeleteJobTemplateResponse> deleteJobTemplate(DeleteJobTemplateRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRayHistoryServer  DeleteRayHistoryServerRequest
+     * @return DeleteRayHistoryServerResponse
+     */
+    CompletableFuture<DeleteRayHistoryServerResponse> deleteRayHistoryServer(DeleteRayHistoryServerRequest request);
 
     /**
      * @param request the request parameters of DeleteTensorboard  DeleteTensorboardRequest
@@ -119,6 +131,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRayDashboardResponse> getRayDashboard(GetRayDashboardRequest request);
 
     /**
+     * @param request the request parameters of GetRayHistoryServer  GetRayHistoryServerRequest
+     * @return GetRayHistoryServerResponse
+     */
+    CompletableFuture<GetRayHistoryServerResponse> getRayHistoryServer(GetRayHistoryServerRequest request);
+
+    /**
      * @param request the request parameters of GetTensorboard  GetTensorboardRequest
      * @return GetTensorboardResponse
      */
@@ -167,6 +185,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request);
 
     /**
+     * @param request the request parameters of ListRayHistoryServers  ListRayHistoryServersRequest
+     * @return ListRayHistoryServersResponse
+     */
+    CompletableFuture<ListRayHistoryServersResponse> listRayHistoryServers(ListRayHistoryServersRequest request);
+
+    /**
      * @param request the request parameters of ListTensorboards  ListTensorboardsRequest
      * @return ListTensorboardsResponse
      */
@@ -179,6 +203,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetJobTemplateDefaultVersionResponse> setJobTemplateDefaultVersion(SetJobTemplateDefaultVersionRequest request);
 
     /**
+     * @param request the request parameters of StartRayHistoryServer  StartRayHistoryServerRequest
+     * @return StartRayHistoryServerResponse
+     */
+    CompletableFuture<StartRayHistoryServerResponse> startRayHistoryServer(StartRayHistoryServerRequest request);
+
+    /**
      * @param request the request parameters of StartTensorboard  StartTensorboardRequest
      * @return StartTensorboardResponse
      */
@@ -189,6 +219,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopJobResponse
      */
     CompletableFuture<StopJobResponse> stopJob(StopJobRequest request);
+
+    /**
+     * @param request the request parameters of StopRayHistoryServer  StopRayHistoryServerRequest
+     * @return StopRayHistoryServerResponse
+     */
+    CompletableFuture<StopRayHistoryServerResponse> stopRayHistoryServer(StopRayHistoryServerRequest request);
 
     /**
      * @param request the request parameters of StopTensorboard  StopTensorboardRequest
