@@ -60,6 +60,10 @@ public class CreateDigitalEmployeeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<Tag> tags;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("toolPolicy")
+    private ToolPolicy toolPolicy;
+
     private CreateDigitalEmployeeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -72,6 +76,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.roleArn = builder.roleArn;
         this.tags = builder.tags;
+        this.toolPolicy = builder.toolPolicy;
     }
 
     public static Builder builder() {
@@ -157,6 +162,13 @@ public class CreateDigitalEmployeeRequest extends Request {
         return this.tags;
     }
 
+    /**
+     * @return toolPolicy
+     */
+    public ToolPolicy getToolPolicy() {
+        return this.toolPolicy;
+    }
+
     public static final class Builder extends Request.Builder<CreateDigitalEmployeeRequest, Builder> {
         private String regionId; 
         private java.util.Map<String, String> attributes; 
@@ -168,6 +180,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         private String resourceGroupId; 
         private String roleArn; 
         private java.util.List<Tag> tags; 
+        private ToolPolicy toolPolicy; 
 
         private Builder() {
             super();
@@ -185,6 +198,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.roleArn = request.roleArn;
             this.tags = request.tags;
+            this.toolPolicy = request.toolPolicy;
         } 
 
         /**
@@ -280,6 +294,18 @@ public class CreateDigitalEmployeeRequest extends Request {
         public Builder tags(java.util.List<Tag> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * <p>数字员工工具调用安全策略配置。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
+         */
+        public Builder toolPolicy(ToolPolicy toolPolicy) {
+            this.putBodyParameter("toolPolicy", toolPolicy);
+            this.toolPolicy = toolPolicy;
             return this;
         }
 
@@ -477,6 +503,273 @@ public class CreateDigitalEmployeeRequest extends Request {
 
             public Knowledges build() {
                 return new Knowledges(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDigitalEmployeeRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDigitalEmployeeRequest</p>
+     */
+    public static class Statements extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("actions")
+        private java.util.List<String> actions;
+
+        @com.aliyun.core.annotation.NameInMap("apiVersion")
+        private String apiVersion;
+
+        @com.aliyun.core.annotation.NameInMap("decision")
+        private String decision;
+
+        @com.aliyun.core.annotation.NameInMap("product")
+        private String product;
+
+        private Statements(Builder builder) {
+            this.actions = builder.actions;
+            this.apiVersion = builder.apiVersion;
+            this.decision = builder.decision;
+            this.product = builder.product;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Statements create() {
+            return builder().build();
+        }
+
+        /**
+         * @return actions
+         */
+        public java.util.List<String> getActions() {
+            return this.actions;
+        }
+
+        /**
+         * @return apiVersion
+         */
+        public String getApiVersion() {
+            return this.apiVersion;
+        }
+
+        /**
+         * @return decision
+         */
+        public String getDecision() {
+            return this.decision;
+        }
+
+        /**
+         * @return product
+         */
+        public String getProduct() {
+            return this.product;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> actions; 
+            private String apiVersion; 
+            private String decision; 
+            private String product; 
+
+            private Builder() {
+            } 
+
+            private Builder(Statements model) {
+                this.actions = model.actions;
+                this.apiVersion = model.apiVersion;
+                this.decision = model.decision;
+                this.product = model.product;
+            } 
+
+            /**
+             * <p>Aliyun OpenAPI Action 列表，格式为 product:ApiName、product:Prefix* 或 product:*。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]</p>
+             */
+            public Builder actions(java.util.List<String> actions) {
+                this.actions = actions;
+                return this;
+            }
+
+            /**
+             * <p>本条语句对应的 Aliyun OpenAPI API 版本。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-30</p>
+             */
+            public Builder apiVersion(String apiVersion) {
+                this.apiVersion = apiVersion;
+                return this;
+            }
+
+            /**
+             * <p>命中该 API 后的执行策略。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_ack</p>
+             */
+            public Builder decision(String decision) {
+                this.decision = decision;
+                return this;
+            }
+
+            /**
+             * <p>本条语句对应的 Aliyun OpenAPI 产品名。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sls</p>
+             */
+            public Builder product(String product) {
+                this.product = product;
+                return this;
+            }
+
+            public Statements build() {
+                return new Statements(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDigitalEmployeeRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDigitalEmployeeRequest</p>
+     */
+    public static class Aliyun extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("statements")
+        private java.util.List<Statements> statements;
+
+        private Aliyun(Builder builder) {
+            this.enable = builder.enable;
+            this.statements = builder.statements;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Aliyun create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return statements
+         */
+        public java.util.List<Statements> getStatements() {
+            return this.statements;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+            private java.util.List<Statements> statements; 
+
+            private Builder() {
+            } 
+
+            private Builder(Aliyun model) {
+                this.enable = model.enable;
+                this.statements = model.statements;
+            } 
+
+            /**
+             * <p>是否启用 Aliyun MCP 工具策略。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * <p>Aliyun OpenAPI 工具策略语句列表。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
+             */
+            public Builder statements(java.util.List<Statements> statements) {
+                this.statements = statements;
+                return this;
+            }
+
+            public Aliyun build() {
+                return new Aliyun(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDigitalEmployeeRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDigitalEmployeeRequest</p>
+     */
+    public static class ToolPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("aliyun")
+        private Aliyun aliyun;
+
+        private ToolPolicy(Builder builder) {
+            this.aliyun = builder.aliyun;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ToolPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aliyun
+         */
+        public Aliyun getAliyun() {
+            return this.aliyun;
+        }
+
+        public static final class Builder {
+            private Aliyun aliyun; 
+
+            private Builder() {
+            } 
+
+            private Builder(ToolPolicy model) {
+                this.aliyun = model.aliyun;
+            } 
+
+            /**
+             * <p>Aliyun MCP 工具调用安全策略配置。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>
+             */
+            public Builder aliyun(Aliyun aliyun) {
+                this.aliyun = aliyun;
+                return this;
+            }
+
+            public ToolPolicy build() {
+                return new ToolPolicy(this);
             } 
 
         } 
