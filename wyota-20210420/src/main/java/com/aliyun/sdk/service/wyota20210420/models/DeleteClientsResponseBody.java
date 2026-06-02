@@ -12,13 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UnbindDeviceSeatsResponseBody} extends {@link TeaModel}
+ * {@link DeleteClientsResponseBody} extends {@link TeaModel}
  *
- * <p>UnbindDeviceSeatsResponseBody</p>
+ * <p>DeleteClientsResponseBody</p>
  */
-public class UnbindDeviceSeatsResponseBody extends TeaModel {
+public class DeleteClientsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
+
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -26,17 +29,22 @@ public class UnbindDeviceSeatsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UnbindDeviceSeatsResponseBody(Builder builder) {
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
+    private DeleteClientsResponseBody(Builder builder) {
         this.code = builder.code;
+        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UnbindDeviceSeatsResponseBody create() {
+    public static DeleteClientsResponseBody create() {
         return builder().build();
     }
 
@@ -49,6 +57,13 @@ public class UnbindDeviceSeatsResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     /**
@@ -65,18 +80,29 @@ public class UnbindDeviceSeatsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String code; 
+        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(UnbindDeviceSeatsResponseBody model) {
+        private Builder(DeleteClientsResponseBody model) {
             this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
             this.requestId = model.requestId;
+            this.success = model.success;
         } 
 
         /**
@@ -84,6 +110,14 @@ public class UnbindDeviceSeatsResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
             return this;
         }
 
@@ -103,8 +137,16 @@ public class UnbindDeviceSeatsResponseBody extends TeaModel {
             return this;
         }
 
-        public UnbindDeviceSeatsResponseBody build() {
-            return new UnbindDeviceSeatsResponseBody(this);
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public DeleteClientsResponseBody build() {
+            return new DeleteClientsResponseBody(this);
         } 
 
     } 

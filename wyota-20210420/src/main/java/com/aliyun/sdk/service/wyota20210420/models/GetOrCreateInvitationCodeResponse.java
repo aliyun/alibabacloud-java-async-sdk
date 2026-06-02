@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UnbindDeviceSeatsResponse} extends {@link TeaModel}
+ * {@link GetOrCreateInvitationCodeResponse} extends {@link TeaModel}
  *
- * <p>UnbindDeviceSeatsResponse</p>
+ * <p>GetOrCreateInvitationCodeResponse</p>
  */
-public class UnbindDeviceSeatsResponse extends Response {
+public class GetOrCreateInvitationCodeResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class UnbindDeviceSeatsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UnbindDeviceSeatsResponseBody body;
+    private GetOrCreateInvitationCodeResponseBody body;
 
-    private UnbindDeviceSeatsResponse(BuilderImpl builder) {
+    private GetOrCreateInvitationCodeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UnbindDeviceSeatsResponse create() {
+    public static GetOrCreateInvitationCodeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class UnbindDeviceSeatsResponse extends Response {
     /**
      * @return body
      */
-    public UnbindDeviceSeatsResponseBody getBody() {
+    public GetOrCreateInvitationCodeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UnbindDeviceSeatsResponse, Builder> {
+    public interface Builder extends Response.Builder<GetOrCreateInvitationCodeResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UnbindDeviceSeatsResponseBody body);
+        Builder body(GetOrCreateInvitationCodeResponseBody body);
 
         @Override
-        UnbindDeviceSeatsResponse build();
+        GetOrCreateInvitationCodeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UnbindDeviceSeatsResponse, Builder>
+            extends Response.BuilderImpl<GetOrCreateInvitationCodeResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UnbindDeviceSeatsResponseBody body; 
+        private GetOrCreateInvitationCodeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UnbindDeviceSeatsResponse response) {
+        private BuilderImpl(GetOrCreateInvitationCodeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class UnbindDeviceSeatsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UnbindDeviceSeatsResponseBody body) {
+        public Builder body(GetOrCreateInvitationCodeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UnbindDeviceSeatsResponse build() {
-            return new UnbindDeviceSeatsResponse(this);
+        public GetOrCreateInvitationCodeResponse build() {
+            return new GetOrCreateInvitationCodeResponse(this);
         } 
 
     } 

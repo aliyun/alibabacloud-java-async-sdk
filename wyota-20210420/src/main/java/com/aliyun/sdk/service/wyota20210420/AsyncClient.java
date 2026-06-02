@@ -44,10 +44,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindPasswordFreeLoginUserResponse> bindPasswordFreeLoginUser(BindPasswordFreeLoginUserRequest request);
 
     /**
-     * @param request the request parameters of DescribeDeviceSeats  DescribeDeviceSeatsRequest
-     * @return DescribeDeviceSeatsResponse
+     * @param request the request parameters of DeleteClients  DeleteClientsRequest
+     * @return DeleteClientsResponse
      */
-    CompletableFuture<DescribeDeviceSeatsResponse> describeDeviceSeats(DescribeDeviceSeatsRequest request);
+    CompletableFuture<DeleteClientsResponse> deleteClients(DeleteClientsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeClients  DescribeClientsRequest
+     * @return DescribeClientsResponse
+     */
+    CompletableFuture<DescribeClientsResponse> describeClients(DescribeClientsRequest request);
+
+    /**
+     * @param request the request parameters of GetOrCreateInvitationCode  GetOrCreateInvitationCodeRequest
+     * @return GetOrCreateInvitationCodeResponse
+     */
+    CompletableFuture<GetOrCreateInvitationCodeResponse> getOrCreateInvitationCode(GetOrCreateInvitationCodeRequest request);
 
     /**
      * @param request the request parameters of ListTerminal  ListTerminalRequest
@@ -66,12 +78,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnbindAccountLessLoginUserResponse
      */
     CompletableFuture<UnbindAccountLessLoginUserResponse> unbindAccountLessLoginUser(UnbindAccountLessLoginUserRequest request);
-
-    /**
-     * @param request the request parameters of UnbindDeviceSeats  UnbindDeviceSeatsRequest
-     * @return UnbindDeviceSeatsResponse
-     */
-    CompletableFuture<UnbindDeviceSeatsResponse> unbindDeviceSeats(UnbindDeviceSeatsRequest request);
 
     /**
      * @param request the request parameters of UnbindPasswordFreeLoginUser  UnbindPasswordFreeLoginUserRequest
