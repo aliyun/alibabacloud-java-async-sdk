@@ -40,6 +40,10 @@ public class DebugBeginDialogueRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShouldUseSandBox")
+    private Boolean shouldUseSandBox;
+
     private DebugBeginDialogueRequest(Builder builder) {
         super(builder);
         this.calledNumber = builder.calledNumber;
@@ -47,6 +51,7 @@ public class DebugBeginDialogueRequest extends Request {
         this.conversationId = builder.conversationId;
         this.initialContext = builder.initialContext;
         this.instanceId = builder.instanceId;
+        this.shouldUseSandBox = builder.shouldUseSandBox;
     }
 
     public static Builder builder() {
@@ -97,12 +102,20 @@ public class DebugBeginDialogueRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return shouldUseSandBox
+     */
+    public Boolean getShouldUseSandBox() {
+        return this.shouldUseSandBox;
+    }
+
     public static final class Builder extends Request.Builder<DebugBeginDialogueRequest, Builder> {
         private String calledNumber; 
         private String callingNumber; 
         private String conversationId; 
         private String initialContext; 
         private String instanceId; 
+        private Boolean shouldUseSandBox; 
 
         private Builder() {
             super();
@@ -115,6 +128,7 @@ public class DebugBeginDialogueRequest extends Request {
             this.conversationId = request.conversationId;
             this.initialContext = request.initialContext;
             this.instanceId = request.instanceId;
+            this.shouldUseSandBox = request.shouldUseSandBox;
         } 
 
         /**
@@ -168,6 +182,15 @@ public class DebugBeginDialogueRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ShouldUseSandBox.
+         */
+        public Builder shouldUseSandBox(Boolean shouldUseSandBox) {
+            this.putQueryParameter("ShouldUseSandBox", shouldUseSandBox);
+            this.shouldUseSandBox = shouldUseSandBox;
             return this;
         }
 
