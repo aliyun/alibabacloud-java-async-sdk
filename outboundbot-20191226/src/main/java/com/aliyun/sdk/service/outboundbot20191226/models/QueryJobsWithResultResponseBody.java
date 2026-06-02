@@ -713,6 +713,9 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Extras")
         private java.util.List<Extras> extras;
 
+        @com.aliyun.core.annotation.NameInMap("HangUpDirection")
+        private String hangUpDirection;
+
         @com.aliyun.core.annotation.NameInMap("HasAnswered")
         private Boolean hasAnswered;
 
@@ -744,6 +747,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             this.contact = builder.contact;
             this.dialExceptionCodes = builder.dialExceptionCodes;
             this.extras = builder.extras;
+            this.hangUpDirection = builder.hangUpDirection;
             this.hasAnswered = builder.hasAnswered;
             this.hasHangUpByRejection = builder.hasHangUpByRejection;
             this.hasLastPlaybackCompleted = builder.hasLastPlaybackCompleted;
@@ -802,6 +806,13 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
          */
         public java.util.List<Extras> getExtras() {
             return this.extras;
+        }
+
+        /**
+         * @return hangUpDirection
+         */
+        public String getHangUpDirection() {
+            return this.hangUpDirection;
         }
 
         /**
@@ -867,6 +878,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             private Contact contact; 
             private java.util.List<DialExceptionCodes> dialExceptionCodes; 
             private java.util.List<Extras> extras; 
+            private String hangUpDirection; 
             private Boolean hasAnswered; 
             private Boolean hasHangUpByRejection; 
             private Boolean hasLastPlaybackCompleted; 
@@ -886,6 +898,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
                 this.contact = model.contact;
                 this.dialExceptionCodes = model.dialExceptionCodes;
                 this.extras = model.extras;
+                this.hangUpDirection = model.hangUpDirection;
                 this.hasAnswered = model.hasAnswered;
                 this.hasHangUpByRejection = model.hasHangUpByRejection;
                 this.hasLastPlaybackCompleted = model.hasLastPlaybackCompleted;
@@ -941,6 +954,14 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
              */
             public Builder extras(java.util.List<Extras> extras) {
                 this.extras = extras;
+                return this;
+            }
+
+            /**
+             * HangUpDirection.
+             */
+            public Builder hangUpDirection(String hangUpDirection) {
+                this.hangUpDirection = hangUpDirection;
                 return this;
             }
 

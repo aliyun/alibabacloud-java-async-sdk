@@ -1418,6 +1418,9 @@ public class DescribeJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
+        @com.aliyun.core.annotation.NameInMap("TotalDuration")
+        private Long totalDuration;
+
         private Tasks(Builder builder) {
             this.actualTime = builder.actualTime;
             this.brief = builder.brief;
@@ -1440,6 +1443,7 @@ public class DescribeJobResponseBody extends TeaModel {
             this.sipDuration = builder.sipDuration;
             this.status = builder.status;
             this.taskId = builder.taskId;
+            this.totalDuration = builder.totalDuration;
         }
 
         public static Builder builder() {
@@ -1597,6 +1601,13 @@ public class DescribeJobResponseBody extends TeaModel {
             return this.taskId;
         }
 
+        /**
+         * @return totalDuration
+         */
+        public Long getTotalDuration() {
+            return this.totalDuration;
+        }
+
         public static final class Builder {
             private Long actualTime; 
             private String brief; 
@@ -1619,6 +1630,7 @@ public class DescribeJobResponseBody extends TeaModel {
             private Long sipDuration; 
             private String status; 
             private String taskId; 
+            private Long totalDuration; 
 
             private Builder() {
             } 
@@ -1645,6 +1657,7 @@ public class DescribeJobResponseBody extends TeaModel {
                 this.sipDuration = model.sipDuration;
                 this.status = model.status;
                 this.taskId = model.taskId;
+                this.totalDuration = model.totalDuration;
             } 
 
             /**
@@ -1812,6 +1825,14 @@ public class DescribeJobResponseBody extends TeaModel {
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * TotalDuration.
+             */
+            public Builder totalDuration(Long totalDuration) {
+                this.totalDuration = totalDuration;
                 return this;
             }
 
