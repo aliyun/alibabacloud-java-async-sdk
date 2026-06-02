@@ -92,6 +92,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTrainPicAvatarResponse> createTrainPicAvatar(CreateTrainPicAvatarRequest request);
 
     /**
+     * @param request the request parameters of DeleteBroadcastSticker  DeleteBroadcastStickerRequest
+     * @return DeleteBroadcastStickerResponse
+     */
+    CompletableFuture<DeleteBroadcastStickerResponse> deleteBroadcastSticker(DeleteBroadcastStickerRequest request);
+
+    /**
      * @param request the request parameters of GetBroadcastTemplate  GetBroadcastTemplateRequest
      * @return GetBroadcastTemplateResponse
      */
