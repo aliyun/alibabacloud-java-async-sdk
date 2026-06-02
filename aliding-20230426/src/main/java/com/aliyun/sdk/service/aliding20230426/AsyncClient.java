@@ -1178,6 +1178,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MeetingFlashMinutesResponse> meetingFlashMinutes(MeetingFlashMinutesRequest request);
 
     /**
+     * @param request the request parameters of MeetingFlashMinutesText  MeetingFlashMinutesTextRequest
+     * @return MeetingFlashMinutesTextResponse
+     */
+    CompletableFuture<MeetingFlashMinutesTextResponse> meetingFlashMinutesText(MeetingFlashMinutesTextRequest request);
+
+    /**
      * @param request the request parameters of MuteAll  MuteAllRequest
      * @return MuteAllResponse
      */
