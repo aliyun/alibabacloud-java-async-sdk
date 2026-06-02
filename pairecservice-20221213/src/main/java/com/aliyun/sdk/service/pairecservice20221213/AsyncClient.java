@@ -38,6 +38,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeRecallManagementServiceVersionResponse> changeRecallManagementServiceVersion(ChangeRecallManagementServiceVersionRequest request);
 
     /**
+     * @param request the request parameters of ChatConversation  ChatConversationRequest
+     * @return ChatConversationResponse
+     */
+    CompletableFuture<ChatConversationResponse> chatConversation(ChatConversationRequest request);
+
+    ResponseIterable<ChatConversationResponseBody> chatConversationWithResponseIterable(ChatConversationRequest request);
+
+    /**
      * @param request the request parameters of CheckInstanceResources  CheckInstanceResourcesRequest
      * @return CheckInstanceResourcesResponse
      */

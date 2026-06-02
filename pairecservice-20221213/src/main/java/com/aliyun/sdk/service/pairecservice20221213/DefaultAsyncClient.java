@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.pairecservice20221213;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.pairecservice20221213.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -91,6 +92,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * @param request the request parameters of ChatConversation  ChatConversationRequest
+     * @return ChatConversationResponse
+     */
+    @Override
+    public CompletableFuture<ChatConversationResponse> chatConversation(ChatConversationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ChatConversation").setMethod(HttpMethod.POST).setPathRegex("/api/v1/conversations/chat").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChatConversationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChatConversationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<ChatConversationResponseBody> chatConversationWithResponseIterable(ChatConversationRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("ChatConversation").setMethod(HttpMethod.POST).setPathRegex("/api/v1/conversations/chat").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        ChatConversationResponseBodyIterator iterator = ChatConversationResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**
