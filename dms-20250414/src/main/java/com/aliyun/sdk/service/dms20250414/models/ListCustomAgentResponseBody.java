@@ -677,6 +677,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
+        @com.aliyun.core.annotation.NameInMap("RelatedSessionId")
+        private String relatedSessionId;
+
         @com.aliyun.core.annotation.NameInMap("ReleaseTime")
         private String releaseTime;
 
@@ -719,6 +722,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             this.nextRuntime = builder.nextRuntime;
             this.offlineTime = builder.offlineTime;
             this.region = builder.region;
+            this.relatedSessionId = builder.relatedSessionId;
             this.releaseTime = builder.releaseTime;
             this.scheduleTaskConfig = builder.scheduleTaskConfig;
             this.status = builder.status;
@@ -897,6 +901,13 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return relatedSessionId
+         */
+        public String getRelatedSessionId() {
+            return this.relatedSessionId;
+        }
+
+        /**
          * @return releaseTime
          */
         public String getReleaseTime() {
@@ -962,6 +973,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             private Long nextRuntime; 
             private String offlineTime; 
             private String region; 
+            private String relatedSessionId; 
             private String releaseTime; 
             private ScheduleTaskConfig scheduleTaskConfig; 
             private String status; 
@@ -996,6 +1008,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
                 this.nextRuntime = model.nextRuntime;
                 this.offlineTime = model.offlineTime;
                 this.region = model.region;
+                this.relatedSessionId = model.relatedSessionId;
                 this.releaseTime = model.releaseTime;
                 this.scheduleTaskConfig = model.scheduleTaskConfig;
                 this.status = model.status;
@@ -1185,6 +1198,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * RelatedSessionId.
+             */
+            public Builder relatedSessionId(String relatedSessionId) {
+                this.relatedSessionId = relatedSessionId;
                 return this;
             }
 

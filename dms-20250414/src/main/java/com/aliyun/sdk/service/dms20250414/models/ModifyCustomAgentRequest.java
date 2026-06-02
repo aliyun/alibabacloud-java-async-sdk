@@ -59,6 +59,10 @@ public class ModifyCustomAgentRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedSessionId")
+    private String relatedSessionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScheduleTaskConfig")
     private ScheduleTaskConfig scheduleTaskConfig;
 
@@ -86,6 +90,7 @@ public class ModifyCustomAgentRequest extends Request {
         this.knowledge = builder.knowledge;
         this.knowledgeConfigList = builder.knowledgeConfigList;
         this.name = builder.name;
+        this.relatedSessionId = builder.relatedSessionId;
         this.scheduleTaskConfig = builder.scheduleTaskConfig;
         this.textReportConfig = builder.textReportConfig;
         this.webReportConfig = builder.webReportConfig;
@@ -176,6 +181,13 @@ public class ModifyCustomAgentRequest extends Request {
     }
 
     /**
+     * @return relatedSessionId
+     */
+    public String getRelatedSessionId() {
+        return this.relatedSessionId;
+    }
+
+    /**
      * @return scheduleTaskConfig
      */
     public ScheduleTaskConfig getScheduleTaskConfig() {
@@ -214,6 +226,7 @@ public class ModifyCustomAgentRequest extends Request {
         private String knowledge; 
         private java.util.List<KnowledgeConfigList> knowledgeConfigList; 
         private String name; 
+        private String relatedSessionId; 
         private ScheduleTaskConfig scheduleTaskConfig; 
         private String textReportConfig; 
         private String webReportConfig; 
@@ -235,6 +248,7 @@ public class ModifyCustomAgentRequest extends Request {
             this.knowledge = request.knowledge;
             this.knowledgeConfigList = request.knowledgeConfigList;
             this.name = request.name;
+            this.relatedSessionId = request.relatedSessionId;
             this.scheduleTaskConfig = request.scheduleTaskConfig;
             this.textReportConfig = request.textReportConfig;
             this.webReportConfig = request.webReportConfig;
@@ -334,6 +348,15 @@ public class ModifyCustomAgentRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * RelatedSessionId.
+         */
+        public Builder relatedSessionId(String relatedSessionId) {
+            this.putQueryParameter("RelatedSessionId", relatedSessionId);
+            this.relatedSessionId = relatedSessionId;
             return this;
         }
 

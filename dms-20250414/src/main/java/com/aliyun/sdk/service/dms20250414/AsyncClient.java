@@ -176,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteFileUploadResponse> deleteFileUpload(DeleteFileUploadRequest request);
 
     /**
+     * @param request the request parameters of DeleteWorkspaceCode  DeleteWorkspaceCodeRequest
+     * @return DeleteWorkspaceCodeResponse
+     */
+    CompletableFuture<DeleteWorkspaceCodeResponse> deleteWorkspaceCode(DeleteWorkspaceCodeRequest request);
+
+    /**
      * @param request the request parameters of DescribeCustomAgent  DescribeCustomAgentRequest
      * @return DescribeCustomAgentResponse
      */
@@ -284,6 +290,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetNotebookTaskStatusResponse
      */
     CompletableFuture<GetNotebookTaskStatusResponse> getNotebookTaskStatus(GetNotebookTaskStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetWorkspaceCode  GetWorkspaceCodeRequest
+     * @return GetWorkspaceCodeResponse
+     */
+    CompletableFuture<GetWorkspaceCodeResponse> getWorkspaceCode(GetWorkspaceCodeRequest request);
 
     /**
      * @param request the request parameters of GetWorkspaceCodePublishSetting  GetWorkspaceCodePublishSettingRequest
@@ -430,6 +442,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListKnowledgeBasesResponse> listKnowledgeBases(ListKnowledgeBasesRequest request);
 
     /**
+     * @param request the request parameters of ListWorkspaceCode  ListWorkspaceCodeRequest
+     * @return ListWorkspaceCodeResponse
+     */
+    CompletableFuture<ListWorkspaceCodeResponse> listWorkspaceCode(ListWorkspaceCodeRequest request);
+
+    /**
      * @param request the request parameters of ModifyCustomAgent  ModifyCustomAgentRequest
      * @return ModifyCustomAgentResponse
      */
@@ -452,6 +470,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveUserToDataAgentWorkspaceResponse
      */
     CompletableFuture<RemoveUserToDataAgentWorkspaceResponse> removeUserToDataAgentWorkspace(RemoveUserToDataAgentWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of SaveWorkspaceCode  SaveWorkspaceCodeRequest
+     * @return SaveWorkspaceCodeResponse
+     */
+    CompletableFuture<SaveWorkspaceCodeResponse> saveWorkspaceCode(SaveWorkspaceCodeRequest request);
 
     /**
      * @param request the request parameters of SendChatMessage  SendChatMessageRequest
