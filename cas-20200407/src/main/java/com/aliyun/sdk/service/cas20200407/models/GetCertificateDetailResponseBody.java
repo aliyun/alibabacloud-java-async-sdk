@@ -47,6 +47,9 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ContactId")
     private Long contactId;
 
+    @com.aliyun.core.annotation.NameInMap("Csr")
+    private String csr;
+
     @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
@@ -97,6 +100,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         this.commonName = builder.commonName;
         this.companyId = builder.companyId;
         this.contactId = builder.contactId;
+        this.csr = builder.csr;
         this.domain = builder.domain;
         this.existPrivateKey = builder.existPrivateKey;
         this.fingerPrint = builder.fingerPrint;
@@ -192,6 +196,13 @@ public class GetCertificateDetailResponseBody extends TeaModel {
      */
     public Long getContactId() {
         return this.contactId;
+    }
+
+    /**
+     * @return csr
+     */
+    public String getCsr() {
+        return this.csr;
     }
 
     /**
@@ -296,6 +307,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         private String commonName; 
         private Long companyId; 
         private Long contactId; 
+        private String csr; 
         private String domain; 
         private Boolean existPrivateKey; 
         private String fingerPrint; 
@@ -324,6 +336,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
             this.commonName = model.commonName;
             this.companyId = model.companyId;
             this.contactId = model.contactId;
+            this.csr = model.csr;
             this.domain = model.domain;
             this.existPrivateKey = model.existPrivateKey;
             this.fingerPrint = model.fingerPrint;
@@ -416,6 +429,14 @@ public class GetCertificateDetailResponseBody extends TeaModel {
          */
         public Builder contactId(Long contactId) {
             this.contactId = contactId;
+            return this;
+        }
+
+        /**
+         * Csr.
+         */
+        public Builder csr(String csr) {
+            this.csr = csr;
             return this;
         }
 

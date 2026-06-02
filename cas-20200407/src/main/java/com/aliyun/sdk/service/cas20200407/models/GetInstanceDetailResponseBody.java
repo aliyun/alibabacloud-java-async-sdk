@@ -119,6 +119,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.NameInMap("UpgradeStatus")
+    private String upgradeStatus;
+
     @com.aliyun.core.annotation.NameInMap("ValidationMethod")
     private String validationMethod;
 
@@ -160,6 +163,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         this.spec = builder.spec;
         this.status = builder.status;
         this.tags = builder.tags;
+        this.upgradeStatus = builder.upgradeStatus;
         this.validationMethod = builder.validationMethod;
         this.wildcardDomainCount = builder.wildcardDomainCount;
     }
@@ -415,6 +419,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return upgradeStatus
+     */
+    public String getUpgradeStatus() {
+        return this.upgradeStatus;
+    }
+
+    /**
      * @return validationMethod
      */
     public String getValidationMethod() {
@@ -463,6 +474,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         private String spec; 
         private String status; 
         private java.util.List<Tags> tags; 
+        private String upgradeStatus; 
         private String validationMethod; 
         private Integer wildcardDomainCount; 
 
@@ -504,6 +516,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.spec = model.spec;
             this.status = model.status;
             this.tags = model.tags;
+            this.upgradeStatus = model.upgradeStatus;
             this.validationMethod = model.validationMethod;
             this.wildcardDomainCount = model.wildcardDomainCount;
         } 
@@ -781,6 +794,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * UpgradeStatus.
+         */
+        public Builder upgradeStatus(String upgradeStatus) {
+            this.upgradeStatus = upgradeStatus;
+            return this;
+        }
+
+        /**
          * ValidationMethod.
          */
         public Builder validationMethod(String validationMethod) {
@@ -929,6 +950,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
+        @com.aliyun.core.annotation.NameInMap("CnameKey")
+        private String cnameKey;
+
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
@@ -946,6 +970,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
         private DomainValidationList(Builder builder) {
             this.cname = builder.cname;
+            this.cnameKey = builder.cnameKey;
             this.domain = builder.domain;
             this.rootDomain = builder.rootDomain;
             this.validationKey = builder.validationKey;
@@ -966,6 +991,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
          */
         public String getCname() {
             return this.cname;
+        }
+
+        /**
+         * @return cnameKey
+         */
+        public String getCnameKey() {
+            return this.cnameKey;
         }
 
         /**
@@ -1005,6 +1037,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cname; 
+            private String cnameKey; 
             private String domain; 
             private String rootDomain; 
             private String validationKey; 
@@ -1016,6 +1049,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
             private Builder(DomainValidationList model) {
                 this.cname = model.cname;
+                this.cnameKey = model.cnameKey;
                 this.domain = model.domain;
                 this.rootDomain = model.rootDomain;
                 this.validationKey = model.validationKey;
@@ -1028,6 +1062,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
              */
             public Builder cname(String cname) {
                 this.cname = cname;
+                return this;
+            }
+
+            /**
+             * CnameKey.
+             */
+            public Builder cnameKey(String cnameKey) {
+                this.cnameKey = cnameKey;
                 return this;
             }
 

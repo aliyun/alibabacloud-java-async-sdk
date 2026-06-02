@@ -167,6 +167,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertIdentifier")
         private String certIdentifier;
 
+        @com.aliyun.core.annotation.NameInMap("CertificateDomain")
+        private String certificateDomain;
+
         @com.aliyun.core.annotation.NameInMap("CertificateId")
         private Long certificateId;
 
@@ -215,11 +218,17 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PendingResult")
         private String pendingResult;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("UsingProductList")
+        private java.util.List<String> usingProductList;
 
         @com.aliyun.core.annotation.NameInMap("WildcardDomainCount")
         private Integer wildcardDomainCount;
@@ -228,6 +237,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.autoReissue = builder.autoReissue;
             this.brand = builder.brand;
             this.certIdentifier = builder.certIdentifier;
+            this.certificateDomain = builder.certificateDomain;
             this.certificateId = builder.certificateId;
             this.certificateName = builder.certificateName;
             this.certificateNotAfter = builder.certificateNotAfter;
@@ -244,8 +254,10 @@ public class ListInstancesResponseBody extends TeaModel {
             this.orderEndTime = builder.orderEndTime;
             this.orderStartTime = builder.orderStartTime;
             this.pendingResult = builder.pendingResult;
+            this.resourceGroupId = builder.resourceGroupId;
             this.spec = builder.spec;
             this.status = builder.status;
+            this.usingProductList = builder.usingProductList;
             this.wildcardDomainCount = builder.wildcardDomainCount;
         }
 
@@ -276,6 +288,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public String getCertIdentifier() {
             return this.certIdentifier;
+        }
+
+        /**
+         * @return certificateDomain
+         */
+        public String getCertificateDomain() {
+            return this.certificateDomain;
         }
 
         /**
@@ -391,6 +410,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return spec
          */
         public String getSpec() {
@@ -405,6 +431,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return usingProductList
+         */
+        public java.util.List<String> getUsingProductList() {
+            return this.usingProductList;
+        }
+
+        /**
          * @return wildcardDomainCount
          */
         public Integer getWildcardDomainCount() {
@@ -415,6 +448,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String autoReissue; 
             private String brand; 
             private String certIdentifier; 
+            private String certificateDomain; 
             private Long certificateId; 
             private String certificateName; 
             private Long certificateNotAfter; 
@@ -431,8 +465,10 @@ public class ListInstancesResponseBody extends TeaModel {
             private Long orderEndTime; 
             private Long orderStartTime; 
             private String pendingResult; 
+            private String resourceGroupId; 
             private String spec; 
             private String status; 
+            private java.util.List<String> usingProductList; 
             private Integer wildcardDomainCount; 
 
             private Builder() {
@@ -442,6 +478,7 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.autoReissue = model.autoReissue;
                 this.brand = model.brand;
                 this.certIdentifier = model.certIdentifier;
+                this.certificateDomain = model.certificateDomain;
                 this.certificateId = model.certificateId;
                 this.certificateName = model.certificateName;
                 this.certificateNotAfter = model.certificateNotAfter;
@@ -458,8 +495,10 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.orderEndTime = model.orderEndTime;
                 this.orderStartTime = model.orderStartTime;
                 this.pendingResult = model.pendingResult;
+                this.resourceGroupId = model.resourceGroupId;
                 this.spec = model.spec;
                 this.status = model.status;
+                this.usingProductList = model.usingProductList;
                 this.wildcardDomainCount = model.wildcardDomainCount;
             } 
 
@@ -484,6 +523,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
+                return this;
+            }
+
+            /**
+             * CertificateDomain.
+             */
+            public Builder certificateDomain(String certificateDomain) {
+                this.certificateDomain = certificateDomain;
                 return this;
             }
 
@@ -616,6 +663,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * Spec.
              */
             public Builder spec(String spec) {
@@ -628,6 +683,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * UsingProductList.
+             */
+            public Builder usingProductList(java.util.List<String> usingProductList) {
+                this.usingProductList = usingProductList;
                 return this;
             }
 
