@@ -141,7 +141,7 @@ public class RuleInfo extends TeaModel {
     private String scoreName;
 
     @com.aliyun.core.annotation.NameInMap("ScoreNum")
-    private Integer scoreNum;
+    private Float scoreNum;
 
     @com.aliyun.core.annotation.NameInMap("ScoreNumType")
     private Integer scoreNumType;
@@ -546,7 +546,7 @@ public class RuleInfo extends TeaModel {
     /**
      * @return scoreNum
      */
-    public Integer getScoreNum() {
+    public Float getScoreNum() {
         return this.scoreNum;
     }
 
@@ -690,7 +690,7 @@ public class RuleInfo extends TeaModel {
         private Boolean scoreDeleted; 
         private Long scoreId; 
         private String scoreName; 
-        private Integer scoreNum; 
+        private Float scoreNum; 
         private Integer scoreNumType; 
         private Integer scoreRuleHitType; 
         private Long scoreSubId; 
@@ -1099,7 +1099,7 @@ public class RuleInfo extends TeaModel {
         /**
          * ScoreNum.
          */
-        public Builder scoreNum(Integer scoreNum) {
+        public Builder scoreNum(Float scoreNum) {
             this.scoreNum = scoreNum;
             return this;
         }
