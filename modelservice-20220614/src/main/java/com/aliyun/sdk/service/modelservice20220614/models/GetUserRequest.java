@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetUserRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("scene_type")
-    private String sceneType;
+    @com.aliyun.core.annotation.NameInMap("channel")
+    private String channel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
+    private String region;
 
     private GetUserRequest(Builder builder) {
         super(builder);
-        this.sceneType = builder.sceneType;
+        this.channel = builder.channel;
+        this.region = builder.region;
     }
 
     public static Builder builder() {
@@ -40,14 +45,22 @@ public class GetUserRequest extends Request {
     }
 
     /**
-     * @return sceneType
+     * @return channel
      */
-    public String getSceneType() {
-        return this.sceneType;
+    public String getChannel() {
+        return this.channel;
+    }
+
+    /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
     }
 
     public static final class Builder extends Request.Builder<GetUserRequest, Builder> {
-        private String sceneType; 
+        private String channel; 
+        private String region; 
 
         private Builder() {
             super();
@@ -55,15 +68,25 @@ public class GetUserRequest extends Request {
 
         private Builder(GetUserRequest request) {
             super(request);
-            this.sceneType = request.sceneType;
+            this.channel = request.channel;
+            this.region = request.region;
         } 
 
         /**
-         * scene_type.
+         * channel.
          */
-        public Builder sceneType(String sceneType) {
-            this.putQueryParameter("scene_type", sceneType);
-            this.sceneType = sceneType;
+        public Builder channel(String channel) {
+            this.putQueryParameter("channel", channel);
+            this.channel = channel;
+            return this;
+        }
+
+        /**
+         * region.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("region", region);
+            this.region = region;
             return this;
         }
 

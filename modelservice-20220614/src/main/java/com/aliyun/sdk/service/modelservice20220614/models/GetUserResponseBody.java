@@ -26,6 +26,9 @@ public class GetUserResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Host")
     private String host;
 
+    @com.aliyun.core.annotation.NameInMap("InnerToken")
+    private String innerToken;
+
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
@@ -39,6 +42,7 @@ public class GetUserResponseBody extends TeaModel {
         this.appId = builder.appId;
         this.code = builder.code;
         this.host = builder.host;
+        this.innerToken = builder.innerToken;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.token = builder.token;
@@ -78,6 +82,13 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     /**
+     * @return innerToken
+     */
+    public String getInnerToken() {
+        return this.innerToken;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -102,6 +113,7 @@ public class GetUserResponseBody extends TeaModel {
         private String appId; 
         private String code; 
         private String host; 
+        private String innerToken; 
         private String message; 
         private String requestId; 
         private String token; 
@@ -113,6 +125,7 @@ public class GetUserResponseBody extends TeaModel {
             this.appId = model.appId;
             this.code = model.code;
             this.host = model.host;
+            this.innerToken = model.innerToken;
             this.message = model.message;
             this.requestId = model.requestId;
             this.token = model.token;
@@ -139,6 +152,14 @@ public class GetUserResponseBody extends TeaModel {
          */
         public Builder host(String host) {
             this.host = host;
+            return this;
+        }
+
+        /**
+         * InnerToken.
+         */
+        public Builder innerToken(String innerToken) {
+            this.innerToken = innerToken;
             return this;
         }
 
