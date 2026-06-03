@@ -26,6 +26,10 @@ public class DescribeDesktopMetadataRequest extends Request {
     private java.util.List<String> desktopIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
+    private String endUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
@@ -74,6 +78,7 @@ public class DescribeDesktopMetadataRequest extends Request {
         super(builder);
         this.creationTimeStart = builder.creationTimeStart;
         this.desktopIds = builder.desktopIds;
+        this.endUserId = builder.endUserId;
         this.groupId = builder.groupId;
         this.hostName = builder.hostName;
         this.imageId = builder.imageId;
@@ -112,6 +117,13 @@ public class DescribeDesktopMetadataRequest extends Request {
      */
     public java.util.List<String> getDesktopIds() {
         return this.desktopIds;
+    }
+
+    /**
+     * @return endUserId
+     */
+    public String getEndUserId() {
+        return this.endUserId;
     }
 
     /**
@@ -194,6 +206,7 @@ public class DescribeDesktopMetadataRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDesktopMetadataRequest, Builder> {
         private String creationTimeStart; 
         private java.util.List<String> desktopIds; 
+        private String endUserId; 
         private String groupId; 
         private String hostName; 
         private String imageId; 
@@ -214,6 +227,7 @@ public class DescribeDesktopMetadataRequest extends Request {
             super(request);
             this.creationTimeStart = request.creationTimeStart;
             this.desktopIds = request.desktopIds;
+            this.endUserId = request.endUserId;
             this.groupId = request.groupId;
             this.hostName = request.hostName;
             this.imageId = request.imageId;
@@ -242,6 +256,15 @@ public class DescribeDesktopMetadataRequest extends Request {
         public Builder desktopIds(java.util.List<String> desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
             this.desktopIds = desktopIds;
+            return this;
+        }
+
+        /**
+         * EndUserId.
+         */
+        public Builder endUserId(String endUserId) {
+            this.putQueryParameter("EndUserId", endUserId);
+            this.endUserId = endUserId;
             return this;
         }
 

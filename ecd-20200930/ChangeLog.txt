@@ -1,3 +1,6 @@
+2026-06-03 Version: 4.0.96
+- Generated java-async 2020-09-30 for ecd.
+
 2026-05-28 Version: 4.0.95
 - Generated java-async 2020-09-30 for ecd.
 
