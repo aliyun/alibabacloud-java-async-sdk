@@ -43,6 +43,10 @@ public class CreateCapacityReservationRequest extends Request {
     private Integer instanceAmount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
+    private String instanceChargeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
@@ -97,6 +101,7 @@ public class CreateCapacityReservationRequest extends Request {
         this.endTime = builder.endTime;
         this.endTimeType = builder.endTimeType;
         this.instanceAmount = builder.instanceAmount;
+        this.instanceChargeType = builder.instanceChargeType;
         this.instanceType = builder.instanceType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -163,6 +168,13 @@ public class CreateCapacityReservationRequest extends Request {
      */
     public Integer getInstanceAmount() {
         return this.instanceAmount;
+    }
+
+    /**
+     * @return instanceChargeType
+     */
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     /**
@@ -249,6 +261,7 @@ public class CreateCapacityReservationRequest extends Request {
         private String endTime; 
         private String endTimeType; 
         private Integer instanceAmount; 
+        private String instanceChargeType; 
         private String instanceType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -273,6 +286,7 @@ public class CreateCapacityReservationRequest extends Request {
             this.endTime = request.endTime;
             this.endTimeType = request.endTimeType;
             this.instanceAmount = request.instanceAmount;
+            this.instanceChargeType = request.instanceChargeType;
             this.instanceType = request.instanceType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -358,6 +372,15 @@ public class CreateCapacityReservationRequest extends Request {
         public Builder instanceAmount(Integer instanceAmount) {
             this.putQueryParameter("InstanceAmount", instanceAmount);
             this.instanceAmount = instanceAmount;
+            return this;
+        }
+
+        /**
+         * InstanceChargeType.
+         */
+        public Builder instanceChargeType(String instanceChargeType) {
+            this.putQueryParameter("InstanceChargeType", instanceChargeType);
+            this.instanceChargeType = instanceChargeType;
             return this;
         }
 

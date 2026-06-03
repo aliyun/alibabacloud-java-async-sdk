@@ -1199,10 +1199,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HttpTokens")
         private String httpTokens;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceMetadataTags")
+        private String instanceMetadataTags;
+
         private MetadataOptions(Builder builder) {
             this.httpEndpoint = builder.httpEndpoint;
             this.httpPutResponseHopLimit = builder.httpPutResponseHopLimit;
             this.httpTokens = builder.httpTokens;
+            this.instanceMetadataTags = builder.instanceMetadataTags;
         }
 
         public static Builder builder() {
@@ -1234,10 +1238,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.httpTokens;
         }
 
+        /**
+         * @return instanceMetadataTags
+         */
+        public String getInstanceMetadataTags() {
+            return this.instanceMetadataTags;
+        }
+
         public static final class Builder {
             private String httpEndpoint; 
             private Integer httpPutResponseHopLimit; 
             private String httpTokens; 
+            private String instanceMetadataTags; 
 
             private Builder() {
             } 
@@ -1246,6 +1258,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.httpEndpoint = model.httpEndpoint;
                 this.httpPutResponseHopLimit = model.httpPutResponseHopLimit;
                 this.httpTokens = model.httpTokens;
+                this.instanceMetadataTags = model.instanceMetadataTags;
             } 
 
             /**
@@ -1288,6 +1301,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder httpTokens(String httpTokens) {
                 this.httpTokens = httpTokens;
+                return this;
+            }
+
+            /**
+             * InstanceMetadataTags.
+             */
+            public Builder instanceMetadataTags(String instanceMetadataTags) {
+                this.instanceMetadataTags = instanceMetadataTags;
                 return this;
             }
 

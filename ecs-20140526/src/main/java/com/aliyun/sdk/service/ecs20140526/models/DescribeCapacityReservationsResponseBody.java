@@ -740,6 +740,9 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CapacityReservationOwnerId")
         private String capacityReservationOwnerId;
 
+        @com.aliyun.core.annotation.NameInMap("DeliveryTime")
+        private String deliveryTime;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -791,9 +794,13 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimeSlot")
         private String timeSlot;
 
+        @com.aliyun.core.annotation.NameInMap("UnlockedTime")
+        private String unlockedTime;
+
         private CapacityReservationItem(Builder builder) {
             this.allocatedResources = builder.allocatedResources;
             this.capacityReservationOwnerId = builder.capacityReservationOwnerId;
+            this.deliveryTime = builder.deliveryTime;
             this.description = builder.description;
             this.endTime = builder.endTime;
             this.endTimeType = builder.endTimeType;
@@ -811,6 +818,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             this.status = builder.status;
             this.tags = builder.tags;
             this.timeSlot = builder.timeSlot;
+            this.unlockedTime = builder.unlockedTime;
         }
 
         public static Builder builder() {
@@ -833,6 +841,13 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
          */
         public String getCapacityReservationOwnerId() {
             return this.capacityReservationOwnerId;
+        }
+
+        /**
+         * @return deliveryTime
+         */
+        public String getDeliveryTime() {
+            return this.deliveryTime;
         }
 
         /**
@@ -954,9 +969,17 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             return this.timeSlot;
         }
 
+        /**
+         * @return unlockedTime
+         */
+        public String getUnlockedTime() {
+            return this.unlockedTime;
+        }
+
         public static final class Builder {
             private AllocatedResources allocatedResources; 
             private String capacityReservationOwnerId; 
+            private String deliveryTime; 
             private String description; 
             private String endTime; 
             private String endTimeType; 
@@ -974,6 +997,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             private String status; 
             private Tags tags; 
             private String timeSlot; 
+            private String unlockedTime; 
 
             private Builder() {
             } 
@@ -981,6 +1005,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             private Builder(CapacityReservationItem model) {
                 this.allocatedResources = model.allocatedResources;
                 this.capacityReservationOwnerId = model.capacityReservationOwnerId;
+                this.deliveryTime = model.deliveryTime;
                 this.description = model.description;
                 this.endTime = model.endTime;
                 this.endTimeType = model.endTimeType;
@@ -998,6 +1023,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
                 this.status = model.status;
                 this.tags = model.tags;
                 this.timeSlot = model.timeSlot;
+                this.unlockedTime = model.unlockedTime;
             } 
 
             /**
@@ -1016,6 +1042,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
              */
             public Builder capacityReservationOwnerId(String capacityReservationOwnerId) {
                 this.capacityReservationOwnerId = capacityReservationOwnerId;
+                return this;
+            }
+
+            /**
+             * DeliveryTime.
+             */
+            public Builder deliveryTime(String deliveryTime) {
+                this.deliveryTime = deliveryTime;
                 return this;
             }
 
@@ -1229,6 +1263,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
              */
             public Builder timeSlot(String timeSlot) {
                 this.timeSlot = timeSlot;
+                return this;
+            }
+
+            /**
+             * UnlockedTime.
+             */
+            public Builder unlockedTime(String unlockedTime) {
+                this.unlockedTime = unlockedTime;
                 return this;
             }
 
