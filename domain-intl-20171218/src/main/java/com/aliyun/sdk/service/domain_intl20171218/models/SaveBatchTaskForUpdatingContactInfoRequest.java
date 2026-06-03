@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForUpdatingContactInfoRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForUpdatingContactInfoRequest</p>
@@ -23,7 +29,7 @@ public class SaveBatchTaskForUpdatingContactInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > domainName;
+    private java.util.List<String> domainName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -56,7 +62,7 @@ public class SaveBatchTaskForUpdatingContactInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -78,7 +84,7 @@ public class SaveBatchTaskForUpdatingContactInfoRequest extends Request {
     /**
      * @return domainName
      */
-    public java.util.List < String > getDomainName() {
+    public java.util.List<String> getDomainName() {
         return this.domainName;
     }
 
@@ -106,7 +112,7 @@ public class SaveBatchTaskForUpdatingContactInfoRequest extends Request {
     public static final class Builder extends Request.Builder<SaveBatchTaskForUpdatingContactInfoRequest, Builder> {
         private Boolean addTransferLock; 
         private String contactType; 
-        private java.util.List < String > domainName; 
+        private java.util.List<String> domainName; 
         private String lang; 
         private Long registrantProfileId; 
         private String userClientIp; 
@@ -135,7 +141,7 @@ public class SaveBatchTaskForUpdatingContactInfoRequest extends Request {
         }
 
         /**
-         * ContactType.
+         * <p>This parameter is required.</p>
          */
         public Builder contactType(String contactType) {
             this.putQueryParameter("ContactType", contactType);
@@ -144,9 +150,9 @@ public class SaveBatchTaskForUpdatingContactInfoRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
-        public Builder domainName(java.util.List < String > domainName) {
+        public Builder domainName(java.util.List<String> domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
             return this;
@@ -162,7 +168,7 @@ public class SaveBatchTaskForUpdatingContactInfoRequest extends Request {
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>This parameter is required.</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);

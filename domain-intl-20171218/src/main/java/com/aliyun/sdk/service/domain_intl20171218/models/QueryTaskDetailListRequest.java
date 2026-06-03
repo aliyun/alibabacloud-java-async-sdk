@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTaskDetailListRequest} extends {@link RequestModel}
  *
  * <p>QueryTaskDetailListRequest</p>
@@ -66,7 +72,7 @@ public class QueryTaskDetailListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,7 +187,7 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>This parameter is required.</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -190,7 +196,7 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +205,7 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
-         * TaskNo.
+         * <p>This parameter is required.</p>
          */
         public Builder taskNo(String taskNo) {
             this.putQueryParameter("TaskNo", taskNo);

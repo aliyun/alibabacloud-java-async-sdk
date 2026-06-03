@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest} extends {@link RequestModel}
  *
  * <p>SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest</p>
@@ -26,7 +32,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > domainName;
+    private java.util.List<String> domainName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Email")
@@ -126,7 +132,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -155,7 +161,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     /**
      * @return domainName
      */
-    public java.util.List < String > getDomainName() {
+    public java.util.List<String> getDomainName() {
         return this.domainName;
     }
 
@@ -268,7 +274,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         private String address; 
         private String city; 
         private String country; 
-        private java.util.List < String > domainName; 
+        private java.util.List<String> domainName; 
         private String email; 
         private String identityCredential; 
         private String identityCredentialNo; 
@@ -340,9 +346,9 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
-        public Builder domainName(java.util.List < String > domainName) {
+        public Builder domainName(java.util.List<String> domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
             return this;
@@ -358,7 +364,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * IdentityCredential.
+         * <p>This parameter is required.</p>
          */
         public Builder identityCredential(String identityCredential) {
             this.putBodyParameter("IdentityCredential", identityCredential);
@@ -367,7 +373,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * IdentityCredentialNo.
+         * <p>This parameter is required.</p>
          */
         public Builder identityCredentialNo(String identityCredentialNo) {
             this.putQueryParameter("IdentityCredentialNo", identityCredentialNo);
@@ -376,7 +382,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * IdentityCredentialType.
+         * <p>This parameter is required.</p>
          */
         public Builder identityCredentialType(String identityCredentialType) {
             this.putQueryParameter("IdentityCredentialType", identityCredentialType);
@@ -430,7 +436,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * RegistrantType.
+         * <p>This parameter is required.</p>
          */
         public Builder registrantType(String registrantType) {
             this.putQueryParameter("RegistrantType", registrantType);
@@ -439,7 +445,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * TelArea.
+         * <p>This parameter is required.</p>
          */
         public Builder telArea(String telArea) {
             this.putQueryParameter("TelArea", telArea);
@@ -457,7 +463,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * Telephone.
+         * <p>This parameter is required.</p>
          */
         public Builder telephone(String telephone) {
             this.putQueryParameter("Telephone", telephone);
@@ -466,7 +472,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * TransferOutProhibited.
+         * <p>This parameter is required.</p>
          */
         public Builder transferOutProhibited(Boolean transferOutProhibited) {
             this.putQueryParameter("TransferOutProhibited", transferOutProhibited);

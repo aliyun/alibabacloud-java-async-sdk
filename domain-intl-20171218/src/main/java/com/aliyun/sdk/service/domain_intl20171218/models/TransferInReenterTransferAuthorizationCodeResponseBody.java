@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferInReenterTransferAuthorizationCodeResponseBody} extends {@link TeaModel}
  *
  * <p>TransferInReenterTransferAuthorizationCodeResponseBody</p>
@@ -26,6 +32,10 @@ public class TransferInReenterTransferAuthorizationCodeResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -35,6 +45,13 @@ public class TransferInReenterTransferAuthorizationCodeResponseBody extends TeaM
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TransferInReenterTransferAuthorizationCodeResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * RequestId.

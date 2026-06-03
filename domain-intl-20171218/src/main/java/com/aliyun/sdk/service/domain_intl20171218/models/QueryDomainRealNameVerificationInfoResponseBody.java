@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainRealNameVerificationInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainRealNameVerificationInfoResponseBody</p>
@@ -52,6 +58,10 @@ public class QueryDomainRealNameVerificationInfoResponseBody extends TeaModel {
 
     public static QueryDomainRealNameVerificationInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -119,6 +129,20 @@ public class QueryDomainRealNameVerificationInfoResponseBody extends TeaModel {
         private String instanceId; 
         private String requestId; 
         private String submissionDate; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDomainRealNameVerificationInfoResponseBody model) {
+            this.domainName = model.domainName;
+            this.identityCredential = model.identityCredential;
+            this.identityCredentialNo = model.identityCredentialNo;
+            this.identityCredentialType = model.identityCredentialType;
+            this.identityCredentialUrl = model.identityCredentialUrl;
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+            this.submissionDate = model.submissionDate;
+        } 
 
         /**
          * DomainName.

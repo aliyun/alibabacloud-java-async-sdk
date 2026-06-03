@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FuzzyMatchDomainSensitiveWordResponseBody} extends {@link TeaModel}
  *
  * <p>FuzzyMatchDomainSensitiveWordResponseBody</p>
@@ -36,6 +42,10 @@ public class FuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
 
     public static FuzzyMatchDomainSensitiveWordResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class FuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
         private String keyword; 
         private MatchedSentiveWords matchedSentiveWords; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FuzzyMatchDomainSensitiveWordResponseBody model) {
+            this.exist = model.exist;
+            this.keyword = model.keyword;
+            this.matchedSentiveWords = model.matchedSentiveWords;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Exist.
@@ -110,6 +130,12 @@ public class FuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FuzzyMatchDomainSensitiveWordResponseBody} extends {@link TeaModel}
+     *
+     * <p>FuzzyMatchDomainSensitiveWordResponseBody</p>
+     */
     public static class MatchedSensitiveWord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Word")
         private String word;
@@ -136,6 +162,13 @@ public class FuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
         public static final class Builder {
             private String word; 
 
+            private Builder() {
+            } 
+
+            private Builder(MatchedSensitiveWord model) {
+                this.word = model.word;
+            } 
+
             /**
              * Word.
              */
@@ -151,9 +184,15 @@ public class FuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FuzzyMatchDomainSensitiveWordResponseBody} extends {@link TeaModel}
+     *
+     * <p>FuzzyMatchDomainSensitiveWordResponseBody</p>
+     */
     public static class MatchedSentiveWords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchedSensitiveWord")
-        private java.util.List < MatchedSensitiveWord> matchedSensitiveWord;
+        private java.util.List<MatchedSensitiveWord> matchedSensitiveWord;
 
         private MatchedSentiveWords(Builder builder) {
             this.matchedSensitiveWord = builder.matchedSensitiveWord;
@@ -170,17 +209,24 @@ public class FuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
         /**
          * @return matchedSensitiveWord
          */
-        public java.util.List < MatchedSensitiveWord> getMatchedSensitiveWord() {
+        public java.util.List<MatchedSensitiveWord> getMatchedSensitiveWord() {
             return this.matchedSensitiveWord;
         }
 
         public static final class Builder {
-            private java.util.List < MatchedSensitiveWord> matchedSensitiveWord; 
+            private java.util.List<MatchedSensitiveWord> matchedSensitiveWord; 
+
+            private Builder() {
+            } 
+
+            private Builder(MatchedSentiveWords model) {
+                this.matchedSensitiveWord = model.matchedSensitiveWord;
+            } 
 
             /**
              * MatchedSensitiveWord.
              */
-            public Builder matchedSensitiveWord(java.util.List < MatchedSensitiveWord> matchedSensitiveWord) {
+            public Builder matchedSensitiveWord(java.util.List<MatchedSensitiveWord> matchedSensitiveWord) {
                 this.matchedSensitiveWord = matchedSensitiveWord;
                 return this;
             }

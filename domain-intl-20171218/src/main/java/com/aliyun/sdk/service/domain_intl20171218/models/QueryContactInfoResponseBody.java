@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryContactInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryContactInfoResponseBody</p>
@@ -72,6 +78,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
 
     public static QueryContactInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -179,6 +189,25 @@ public class QueryContactInfoResponseBody extends TeaModel {
         private String telArea; 
         private String telExt; 
         private String telephone; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryContactInfoResponseBody model) {
+            this.address = model.address;
+            this.city = model.city;
+            this.country = model.country;
+            this.createDate = model.createDate;
+            this.email = model.email;
+            this.postalCode = model.postalCode;
+            this.province = model.province;
+            this.registrantName = model.registrantName;
+            this.registrantOrganization = model.registrantOrganization;
+            this.requestId = model.requestId;
+            this.telArea = model.telArea;
+            this.telExt = model.telExt;
+            this.telephone = model.telephone;
+        } 
 
         /**
          * Address.

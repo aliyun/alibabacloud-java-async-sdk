@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRegistrantProfilesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRegistrantProfilesResponseBody</p>
@@ -52,6 +58,10 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
 
     public static QueryRegistrantProfilesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -119,6 +129,20 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryRegistrantProfilesResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.nextPage = model.nextPage;
+            this.pageSize = model.pageSize;
+            this.prePage = model.prePage;
+            this.registrantProfiles = model.registrantProfiles;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -190,6 +214,12 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryRegistrantProfilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRegistrantProfilesResponseBody</p>
+     */
     public static class RegistrantProfile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -432,6 +462,31 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             private String telephone; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegistrantProfile model) {
+                this.address = model.address;
+                this.city = model.city;
+                this.country = model.country;
+                this.createTime = model.createTime;
+                this.defaultRegistrantProfile = model.defaultRegistrantProfile;
+                this.email = model.email;
+                this.emailVerificationStatus = model.emailVerificationStatus;
+                this.postalCode = model.postalCode;
+                this.province = model.province;
+                this.realNameStatus = model.realNameStatus;
+                this.registrantName = model.registrantName;
+                this.registrantOrganization = model.registrantOrganization;
+                this.registrantProfileId = model.registrantProfileId;
+                this.registrantProfileType = model.registrantProfileType;
+                this.registrantType = model.registrantType;
+                this.telArea = model.telArea;
+                this.telExt = model.telExt;
+                this.telephone = model.telephone;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * Address.
              */
@@ -591,9 +646,15 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRegistrantProfilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRegistrantProfilesResponseBody</p>
+     */
     public static class RegistrantProfiles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegistrantProfile")
-        private java.util.List < RegistrantProfile> registrantProfile;
+        private java.util.List<RegistrantProfile> registrantProfile;
 
         private RegistrantProfiles(Builder builder) {
             this.registrantProfile = builder.registrantProfile;
@@ -610,17 +671,24 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         /**
          * @return registrantProfile
          */
-        public java.util.List < RegistrantProfile> getRegistrantProfile() {
+        public java.util.List<RegistrantProfile> getRegistrantProfile() {
             return this.registrantProfile;
         }
 
         public static final class Builder {
-            private java.util.List < RegistrantProfile> registrantProfile; 
+            private java.util.List<RegistrantProfile> registrantProfile; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegistrantProfiles model) {
+                this.registrantProfile = model.registrantProfile;
+            } 
 
             /**
              * RegistrantProfile.
              */
-            public Builder registrantProfile(java.util.List < RegistrantProfile> registrantProfile) {
+            public Builder registrantProfile(java.util.List<RegistrantProfile> registrantProfile) {
                 this.registrantProfile = registrantProfile;
                 return this;
             }

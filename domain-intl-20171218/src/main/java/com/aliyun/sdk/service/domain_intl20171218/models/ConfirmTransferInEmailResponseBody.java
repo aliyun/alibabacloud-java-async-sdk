@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfirmTransferInEmailResponseBody} extends {@link TeaModel}
  *
  * <p>ConfirmTransferInEmailResponseBody</p>
@@ -34,6 +40,10 @@ public class ConfirmTransferInEmailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failList
      */
@@ -59,6 +69,15 @@ public class ConfirmTransferInEmailResponseBody extends TeaModel {
         private FailList failList; 
         private String requestId; 
         private SuccessList successList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConfirmTransferInEmailResponseBody model) {
+            this.failList = model.failList;
+            this.requestId = model.requestId;
+            this.successList = model.successList;
+        } 
 
         /**
          * FailList.
@@ -90,9 +109,15 @@ public class ConfirmTransferInEmailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ConfirmTransferInEmailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ConfirmTransferInEmailResponseBody</p>
+     */
     public static class FailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailDomain")
-        private java.util.List < String > failDomain;
+        private java.util.List<String> failDomain;
 
         private FailList(Builder builder) {
             this.failDomain = builder.failDomain;
@@ -109,17 +134,24 @@ public class ConfirmTransferInEmailResponseBody extends TeaModel {
         /**
          * @return failDomain
          */
-        public java.util.List < String > getFailDomain() {
+        public java.util.List<String> getFailDomain() {
             return this.failDomain;
         }
 
         public static final class Builder {
-            private java.util.List < String > failDomain; 
+            private java.util.List<String> failDomain; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailList model) {
+                this.failDomain = model.failDomain;
+            } 
 
             /**
              * FailDomain.
              */
-            public Builder failDomain(java.util.List < String > failDomain) {
+            public Builder failDomain(java.util.List<String> failDomain) {
                 this.failDomain = failDomain;
                 return this;
             }
@@ -131,9 +163,15 @@ public class ConfirmTransferInEmailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ConfirmTransferInEmailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ConfirmTransferInEmailResponseBody</p>
+     */
     public static class SuccessList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SuccessDomain")
-        private java.util.List < String > successDomain;
+        private java.util.List<String> successDomain;
 
         private SuccessList(Builder builder) {
             this.successDomain = builder.successDomain;
@@ -150,17 +188,24 @@ public class ConfirmTransferInEmailResponseBody extends TeaModel {
         /**
          * @return successDomain
          */
-        public java.util.List < String > getSuccessDomain() {
+        public java.util.List<String> getSuccessDomain() {
             return this.successDomain;
         }
 
         public static final class Builder {
-            private java.util.List < String > successDomain; 
+            private java.util.List<String> successDomain; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuccessList model) {
+                this.successDomain = model.successDomain;
+            } 
 
             /**
              * SuccessDomain.
              */
-            public Builder successDomain(java.util.List < String > successDomain) {
+            public Builder successDomain(java.util.List<String> successDomain) {
                 this.successDomain = successDomain;
                 return this;
             }

@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SaveSingleTaskForCreatingOrderTransferResponseBody} extends {@link TeaModel}
+ * {@link SaveSingleTaskForReserveDropListDomainResponseBody} extends {@link TeaModel}
  *
- * <p>SaveSingleTaskForCreatingOrderTransferResponseBody</p>
+ * <p>SaveSingleTaskForReserveDropListDomainResponseBody</p>
  */
-public class SaveSingleTaskForCreatingOrderTransferResponseBody extends TeaModel {
+public class SaveSingleTaskForReserveDropListDomainResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TaskNo")
     private String taskNo;
 
-    private SaveSingleTaskForCreatingOrderTransferResponseBody(Builder builder) {
+    private SaveSingleTaskForReserveDropListDomainResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.taskNo = builder.taskNo;
     }
@@ -32,7 +32,7 @@ public class SaveSingleTaskForCreatingOrderTransferResponseBody extends TeaModel
         return new Builder();
     }
 
-    public static SaveSingleTaskForCreatingOrderTransferResponseBody create() {
+    public static SaveSingleTaskForReserveDropListDomainResponseBody create() {
         return builder().build();
     }
 
@@ -61,7 +61,7 @@ public class SaveSingleTaskForCreatingOrderTransferResponseBody extends TeaModel
         private Builder() {
         } 
 
-        private Builder(SaveSingleTaskForCreatingOrderTransferResponseBody model) {
+        private Builder(SaveSingleTaskForReserveDropListDomainResponseBody model) {
             this.requestId = model.requestId;
             this.taskNo = model.taskNo;
         } 
@@ -82,8 +82,8 @@ public class SaveSingleTaskForCreatingOrderTransferResponseBody extends TeaModel
             return this;
         }
 
-        public SaveSingleTaskForCreatingOrderTransferResponseBody build() {
-            return new SaveSingleTaskForCreatingOrderTransferResponseBody(this);
+        public SaveSingleTaskForReserveDropListDomainResponseBody build() {
+            return new SaveSingleTaskForReserveDropListDomainResponseBody(this);
         } 
 
     } 

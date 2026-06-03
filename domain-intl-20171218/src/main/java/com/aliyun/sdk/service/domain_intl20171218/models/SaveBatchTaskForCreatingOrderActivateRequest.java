@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForCreatingOrderActivateRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForCreatingOrderActivateRequest</p>
@@ -22,7 +28,7 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderActivateParam")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < OrderActivateParam> orderActivateParam;
+    private java.util.List<OrderActivateParam> orderActivateParam;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PromotionNo")
@@ -59,7 +65,7 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,7 +87,7 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
     /**
      * @return orderActivateParam
      */
-    public java.util.List < OrderActivateParam> getOrderActivateParam() {
+    public java.util.List<OrderActivateParam> getOrderActivateParam() {
         return this.orderActivateParam;
     }
 
@@ -116,7 +122,7 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
     public static final class Builder extends Request.Builder<SaveBatchTaskForCreatingOrderActivateRequest, Builder> {
         private String couponNo; 
         private String lang; 
-        private java.util.List < OrderActivateParam> orderActivateParam; 
+        private java.util.List<OrderActivateParam> orderActivateParam; 
         private String promotionNo; 
         private Boolean useCoupon; 
         private Boolean usePromotion; 
@@ -156,9 +162,9 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * OrderActivateParam.
+         * <p>This parameter is required.</p>
          */
-        public Builder orderActivateParam(java.util.List < OrderActivateParam> orderActivateParam) {
+        public Builder orderActivateParam(java.util.List<OrderActivateParam> orderActivateParam) {
             this.putQueryParameter("OrderActivateParam", orderActivateParam);
             this.orderActivateParam = orderActivateParam;
             return this;
@@ -207,6 +213,12 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveBatchTaskForCreatingOrderActivateRequest} extends {@link TeaModel}
+     *
+     * <p>SaveBatchTaskForCreatingOrderActivateRequest</p>
+     */
     public static class OrderActivateParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -472,6 +484,33 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
             private String telExt; 
             private String telephone; 
             private Boolean trademarkDomainActivation; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderActivateParam model) {
+                this.address = model.address;
+                this.aliyunDns = model.aliyunDns;
+                this.city = model.city;
+                this.country = model.country;
+                this.dns1 = model.dns1;
+                this.dns2 = model.dns2;
+                this.domainName = model.domainName;
+                this.email = model.email;
+                this.enableDomainProxy = model.enableDomainProxy;
+                this.permitPremiumActivation = model.permitPremiumActivation;
+                this.postalCode = model.postalCode;
+                this.province = model.province;
+                this.registrantName = model.registrantName;
+                this.registrantOrganization = model.registrantOrganization;
+                this.registrantProfileId = model.registrantProfileId;
+                this.registrantType = model.registrantType;
+                this.subscriptionDuration = model.subscriptionDuration;
+                this.telArea = model.telArea;
+                this.telExt = model.telExt;
+                this.telephone = model.telephone;
+                this.trademarkDomainActivation = model.trademarkDomainActivation;
+            } 
 
             /**
              * Address.

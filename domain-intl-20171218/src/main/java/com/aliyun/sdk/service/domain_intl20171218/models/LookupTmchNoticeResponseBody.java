@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
  *
  * <p>LookupTmchNoticeResponseBody</p>
@@ -44,6 +50,10 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
 
     public static LookupTmchNoticeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -95,6 +105,18 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         private String notAfter; 
         private String notBefore; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(LookupTmchNoticeResponseBody model) {
+            this.claims = model.claims;
+            this.id = model.id;
+            this.label = model.label;
+            this.notAfter = model.notAfter;
+            this.notBefore = model.notBefore;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Claims.
@@ -150,6 +172,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class ClassDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClassNum")
         private Integer classNum;
@@ -188,6 +216,14 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
             private Integer classNum; 
             private String desc; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClassDesc model) {
+                this.classNum = model.classNum;
+                this.desc = model.desc;
+            } 
+
             /**
              * ClassNum.
              */
@@ -211,9 +247,15 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class ClassDescs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClassDesc")
-        private java.util.List < ClassDesc> classDesc;
+        private java.util.List<ClassDesc> classDesc;
 
         private ClassDescs(Builder builder) {
             this.classDesc = builder.classDesc;
@@ -230,17 +272,24 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         /**
          * @return classDesc
          */
-        public java.util.List < ClassDesc> getClassDesc() {
+        public java.util.List<ClassDesc> getClassDesc() {
             return this.classDesc;
         }
 
         public static final class Builder {
-            private java.util.List < ClassDesc> classDesc; 
+            private java.util.List<ClassDesc> classDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClassDescs model) {
+                this.classDesc = model.classDesc;
+            } 
 
             /**
              * ClassDesc.
              */
-            public Builder classDesc(java.util.List < ClassDesc> classDesc) {
+            public Builder classDesc(java.util.List<ClassDesc> classDesc) {
                 this.classDesc = classDesc;
                 return this;
             }
@@ -252,9 +301,15 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Street extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Street")
-        private java.util.List < String > street;
+        private java.util.List<String> street;
 
         private Street(Builder builder) {
             this.street = builder.street;
@@ -271,17 +326,24 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         /**
          * @return street
          */
-        public java.util.List < String > getStreet() {
+        public java.util.List<String> getStreet() {
             return this.street;
         }
 
         public static final class Builder {
-            private java.util.List < String > street; 
+            private java.util.List<String> street; 
+
+            private Builder() {
+            } 
+
+            private Builder(Street model) {
+                this.street = model.street;
+            } 
 
             /**
              * Street.
              */
-            public Builder street(java.util.List < String > street) {
+            public Builder street(java.util.List<String> street) {
                 this.street = street;
                 return this;
             }
@@ -293,6 +355,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Addr extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cc")
         private String cc;
@@ -367,6 +435,17 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
             private String sp; 
             private Street street; 
 
+            private Builder() {
+            } 
+
+            private Builder(Addr model) {
+                this.cc = model.cc;
+                this.city = model.city;
+                this.pc = model.pc;
+                this.sp = model.sp;
+                this.street = model.street;
+            } 
+
             /**
              * Cc.
              */
@@ -414,6 +493,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Contact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addr")
         private Addr addr;
@@ -512,6 +597,19 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
             private String type; 
             private String voice; 
 
+            private Builder() {
+            } 
+
+            private Builder(Contact model) {
+                this.addr = model.addr;
+                this.email = model.email;
+                this.fax = model.fax;
+                this.name = model.name;
+                this.org = model.org;
+                this.type = model.type;
+                this.voice = model.voice;
+            } 
+
             /**
              * Addr.
              */
@@ -575,9 +673,15 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Contacts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contact")
-        private java.util.List < Contact> contact;
+        private java.util.List<Contact> contact;
 
         private Contacts(Builder builder) {
             this.contact = builder.contact;
@@ -594,17 +698,24 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         /**
          * @return contact
          */
-        public java.util.List < Contact> getContact() {
+        public java.util.List<Contact> getContact() {
             return this.contact;
         }
 
         public static final class Builder {
-            private java.util.List < Contact> contact; 
+            private java.util.List<Contact> contact; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contacts model) {
+                this.contact = model.contact;
+            } 
 
             /**
              * Contact.
              */
-            public Builder contact(java.util.List < Contact> contact) {
+            public Builder contact(java.util.List<Contact> contact) {
                 this.contact = contact;
                 return this;
             }
@@ -616,9 +727,15 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class AddrStreet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Street")
-        private java.util.List < String > street;
+        private java.util.List<String> street;
 
         private AddrStreet(Builder builder) {
             this.street = builder.street;
@@ -635,17 +752,24 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         /**
          * @return street
          */
-        public java.util.List < String > getStreet() {
+        public java.util.List<String> getStreet() {
             return this.street;
         }
 
         public static final class Builder {
-            private java.util.List < String > street; 
+            private java.util.List<String> street; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddrStreet model) {
+                this.street = model.street;
+            } 
 
             /**
              * Street.
              */
-            public Builder street(java.util.List < String > street) {
+            public Builder street(java.util.List<String> street) {
                 this.street = street;
                 return this;
             }
@@ -657,6 +781,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class HolderAddr extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cc")
         private String cc;
@@ -731,6 +861,17 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
             private String sp; 
             private AddrStreet street; 
 
+            private Builder() {
+            } 
+
+            private Builder(HolderAddr model) {
+                this.cc = model.cc;
+                this.city = model.city;
+                this.pc = model.pc;
+                this.sp = model.sp;
+                this.street = model.street;
+            } 
+
             /**
              * Cc.
              */
@@ -778,6 +919,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Holder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addr")
         private HolderAddr addr;
@@ -828,6 +975,15 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
             private String entitlement; 
             private String org; 
 
+            private Builder() {
+            } 
+
+            private Builder(Holder model) {
+                this.addr = model.addr;
+                this.entitlement = model.entitlement;
+                this.org = model.org;
+            } 
+
             /**
              * Addr.
              */
@@ -859,9 +1015,15 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Holders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Holder")
-        private java.util.List < Holder> holder;
+        private java.util.List<Holder> holder;
 
         private Holders(Builder builder) {
             this.holder = builder.holder;
@@ -878,17 +1040,24 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         /**
          * @return holder
          */
-        public java.util.List < Holder> getHolder() {
+        public java.util.List<Holder> getHolder() {
             return this.holder;
         }
 
         public static final class Builder {
-            private java.util.List < Holder> holder; 
+            private java.util.List<Holder> holder; 
+
+            private Builder() {
+            } 
+
+            private Builder(Holders model) {
+                this.holder = model.holder;
+            } 
 
             /**
              * Holder.
              */
-            public Builder holder(java.util.List < Holder> holder) {
+            public Builder holder(java.util.List<Holder> holder) {
                 this.holder = holder;
                 return this;
             }
@@ -900,6 +1069,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class JurDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
@@ -938,6 +1113,14 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
             private String desc; 
             private String jurCC; 
 
+            private Builder() {
+            } 
+
+            private Builder(JurDesc model) {
+                this.desc = model.desc;
+                this.jurCC = model.jurCC;
+            } 
+
             /**
              * Desc.
              */
@@ -961,6 +1144,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Claim extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClassDescs")
         private ClassDescs classDescs;
@@ -1047,6 +1236,18 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
             private JurDesc jurDesc; 
             private String markName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Claim model) {
+                this.classDescs = model.classDescs;
+                this.contacts = model.contacts;
+                this.goodsAndServices = model.goodsAndServices;
+                this.holders = model.holders;
+                this.jurDesc = model.jurDesc;
+                this.markName = model.markName;
+            } 
+
             /**
              * ClassDescs.
              */
@@ -1102,9 +1303,15 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Claims extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Claim")
-        private java.util.List < Claim> claim;
+        private java.util.List<Claim> claim;
 
         private Claims(Builder builder) {
             this.claim = builder.claim;
@@ -1121,17 +1328,24 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         /**
          * @return claim
          */
-        public java.util.List < Claim> getClaim() {
+        public java.util.List<Claim> getClaim() {
             return this.claim;
         }
 
         public static final class Builder {
-            private java.util.List < Claim> claim; 
+            private java.util.List<Claim> claim; 
+
+            private Builder() {
+            } 
+
+            private Builder(Claims model) {
+                this.claim = model.claim;
+            } 
 
             /**
              * Claim.
              */
-            public Builder claim(java.util.List < Claim> claim) {
+            public Builder claim(java.util.List<Claim> claim) {
                 this.claim = claim;
                 return this;
             }

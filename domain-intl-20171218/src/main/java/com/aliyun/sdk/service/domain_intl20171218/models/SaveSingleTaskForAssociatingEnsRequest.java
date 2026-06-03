@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForAssociatingEnsRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForAssociatingEnsRequest</p>
@@ -45,7 +51,7 @@ public class SaveSingleTaskForAssociatingEnsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +103,10 @@ public class SaveSingleTaskForAssociatingEnsRequest extends Request {
         } 
 
         /**
-         * Address.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x0000000000000000000000000000000000000003</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -106,7 +115,10 @@ public class SaveSingleTaskForAssociatingEnsRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc.luxe</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

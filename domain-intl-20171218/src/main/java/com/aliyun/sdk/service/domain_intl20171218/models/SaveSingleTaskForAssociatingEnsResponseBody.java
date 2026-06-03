@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForAssociatingEnsResponseBody} extends {@link TeaModel}
  *
  * <p>SaveSingleTaskForAssociatingEnsResponseBody</p>
@@ -30,6 +36,10 @@ public class SaveSingleTaskForAssociatingEnsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -47,6 +57,14 @@ public class SaveSingleTaskForAssociatingEnsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String taskNo; 
+
+        private Builder() {
+        } 
+
+        private Builder(SaveSingleTaskForAssociatingEnsResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskNo = model.taskNo;
+        } 
 
         /**
          * RequestId.

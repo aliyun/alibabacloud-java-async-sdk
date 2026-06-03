@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryArtExtensionResponseBody} extends {@link TeaModel}
  *
  * <p>QueryArtExtensionResponseBody</p>
@@ -64,6 +70,10 @@ public class QueryArtExtensionResponseBody extends TeaModel {
 
     public static QueryArtExtensionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -155,6 +165,23 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         private String requestId; 
         private String subject; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryArtExtensionResponseBody model) {
+            this.dateOrPeriod = model.dateOrPeriod;
+            this.dimensions = model.dimensions;
+            this.features = model.features;
+            this.inscriptionsAndMarkings = model.inscriptionsAndMarkings;
+            this.maker = model.maker;
+            this.materialsAndTechniques = model.materialsAndTechniques;
+            this.objectType = model.objectType;
+            this.reference = model.reference;
+            this.requestId = model.requestId;
+            this.subject = model.subject;
+            this.title = model.title;
+        } 
 
         /**
          * DateOrPeriod.

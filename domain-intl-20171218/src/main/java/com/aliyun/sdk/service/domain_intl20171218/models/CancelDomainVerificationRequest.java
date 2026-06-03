@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelDomainVerificationRequest} extends {@link RequestModel}
  *
  * <p>CancelDomainVerificationRequest</p>
@@ -45,7 +51,7 @@ public class CancelDomainVerificationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +103,7 @@ public class CancelDomainVerificationRequest extends Request {
         } 
 
         /**
-         * ActionType.
+         * <p>This parameter is required.</p>
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -106,7 +112,7 @@ public class CancelDomainVerificationRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

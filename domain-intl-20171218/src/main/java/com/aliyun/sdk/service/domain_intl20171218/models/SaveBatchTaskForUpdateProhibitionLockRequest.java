@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForUpdateProhibitionLockRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForUpdateProhibitionLockRequest</p>
@@ -14,7 +20,7 @@ public class SaveBatchTaskForUpdateProhibitionLockRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > domainName;
+    private java.util.List<String> domainName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -45,7 +51,7 @@ public class SaveBatchTaskForUpdateProhibitionLockRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -53,7 +59,7 @@ public class SaveBatchTaskForUpdateProhibitionLockRequest extends Request {
     /**
      * @return domainName
      */
-    public java.util.List < String > getDomainName() {
+    public java.util.List<String> getDomainName() {
         return this.domainName;
     }
 
@@ -79,7 +85,7 @@ public class SaveBatchTaskForUpdateProhibitionLockRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SaveBatchTaskForUpdateProhibitionLockRequest, Builder> {
-        private java.util.List < String > domainName; 
+        private java.util.List<String> domainName; 
         private String lang; 
         private Boolean status; 
         private String userClientIp; 
@@ -97,9 +103,9 @@ public class SaveBatchTaskForUpdateProhibitionLockRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
-        public Builder domainName(java.util.List < String > domainName) {
+        public Builder domainName(java.util.List<String> domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
             return this;
@@ -115,7 +121,7 @@ public class SaveBatchTaskForUpdateProhibitionLockRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
          */
         public Builder status(Boolean status) {
             this.putQueryParameter("Status", status);

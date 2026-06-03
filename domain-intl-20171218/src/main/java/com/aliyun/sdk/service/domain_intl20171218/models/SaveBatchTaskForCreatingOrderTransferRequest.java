@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForCreatingOrderTransferRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForCreatingOrderTransferRequest</p>
@@ -22,7 +28,7 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderTransferParam")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < OrderTransferParam> orderTransferParam;
+    private java.util.List<OrderTransferParam> orderTransferParam;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PromotionNo")
@@ -59,7 +65,7 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,7 +87,7 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
     /**
      * @return orderTransferParam
      */
-    public java.util.List < OrderTransferParam> getOrderTransferParam() {
+    public java.util.List<OrderTransferParam> getOrderTransferParam() {
         return this.orderTransferParam;
     }
 
@@ -116,7 +122,7 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
     public static final class Builder extends Request.Builder<SaveBatchTaskForCreatingOrderTransferRequest, Builder> {
         private String couponNo; 
         private String lang; 
-        private java.util.List < OrderTransferParam> orderTransferParam; 
+        private java.util.List<OrderTransferParam> orderTransferParam; 
         private String promotionNo; 
         private Boolean useCoupon; 
         private Boolean usePromotion; 
@@ -156,9 +162,9 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * OrderTransferParam.
+         * <p>This parameter is required.</p>
          */
-        public Builder orderTransferParam(java.util.List < OrderTransferParam> orderTransferParam) {
+        public Builder orderTransferParam(java.util.List<OrderTransferParam> orderTransferParam) {
             this.putQueryParameter("OrderTransferParam", orderTransferParam);
             this.orderTransferParam = orderTransferParam;
             return this;
@@ -207,6 +213,12 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveBatchTaskForCreatingOrderTransferRequest} extends {@link TeaModel}
+     *
+     * <p>SaveBatchTaskForCreatingOrderTransferRequest</p>
+     */
     public static class OrderTransferParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizationCode")
         private String authorizationCode;
@@ -268,6 +280,16 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
             private String domainName; 
             private Boolean permitPremiumTransfer; 
             private Long registrantProfileId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderTransferParam model) {
+                this.authorizationCode = model.authorizationCode;
+                this.domainName = model.domainName;
+                this.permitPremiumTransfer = model.permitPremiumTransfer;
+                this.registrantProfileId = model.registrantProfileId;
+            } 
 
             /**
              * AuthorizationCode.

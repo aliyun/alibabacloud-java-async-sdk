@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRegistrantProfileRealNameVerificationInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRegistrantProfileRealNameVerificationInfoResponseBody</p>
@@ -52,6 +58,10 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
 
     public static QueryRegistrantProfileRealNameVerificationInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -119,6 +129,20 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
         private Long registrantProfileId; 
         private String requestId; 
         private String submissionDate; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryRegistrantProfileRealNameVerificationInfoResponseBody model) {
+            this.identityCredential = model.identityCredential;
+            this.identityCredentialNo = model.identityCredentialNo;
+            this.identityCredentialType = model.identityCredentialType;
+            this.identityCredentialUrl = model.identityCredentialUrl;
+            this.modificationDate = model.modificationDate;
+            this.registrantProfileId = model.registrantProfileId;
+            this.requestId = model.requestId;
+            this.submissionDate = model.submissionDate;
+        } 
 
         /**
          * IdentityCredential.

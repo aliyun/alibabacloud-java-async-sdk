@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDSRecordResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDSRecordResponseBody</p>
  */
 public class QueryDSRecordResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DSRecordList")
-    private java.util.List < DSRecordList> DSRecordList;
+    private java.util.List<DSRecordList> DSRecordList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class QueryDSRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DSRecordList
      */
-    public java.util.List < DSRecordList> getDSRecordList() {
+    public java.util.List<DSRecordList> getDSRecordList() {
         return this.DSRecordList;
     }
 
@@ -45,13 +55,21 @@ public class QueryDSRecordResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DSRecordList> DSRecordList; 
+        private java.util.List<DSRecordList> DSRecordList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDSRecordResponseBody model) {
+            this.DSRecordList = model.DSRecordList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DSRecordList.
          */
-        public Builder DSRecordList(java.util.List < DSRecordList> DSRecordList) {
+        public Builder DSRecordList(java.util.List<DSRecordList> DSRecordList) {
             this.DSRecordList = DSRecordList;
             return this;
         }
@@ -70,6 +88,12 @@ public class QueryDSRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDSRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDSRecordResponseBody</p>
+     */
     public static class DSRecordList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Algorithm")
         private Integer algorithm;
@@ -131,6 +155,16 @@ public class QueryDSRecordResponseBody extends TeaModel {
             private String digest; 
             private Integer digestType; 
             private Integer keyTag; 
+
+            private Builder() {
+            } 
+
+            private Builder(DSRecordList model) {
+                this.algorithm = model.algorithm;
+                this.digest = model.digest;
+                this.digestType = model.digestType;
+                this.keyTag = model.keyTag;
+            } 
 
             /**
              * Algorithm.

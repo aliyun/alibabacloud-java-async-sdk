@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTaskDetailListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTaskDetailListResponseBody</p>
@@ -52,6 +58,10 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
 
     public static QueryTaskDetailListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -119,6 +129,20 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTaskDetailListResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.nextPage = model.nextPage;
+            this.pageSize = model.pageSize;
+            this.prePage = model.prePage;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -190,6 +214,12 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTaskDetailListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskDetailListResponseBody</p>
+     */
     public static class TaskDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -199,6 +229,9 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
+
+        @com.aliyun.core.annotation.NameInMap("FailReason")
+        private String failReason;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -234,6 +267,7 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.domainName = builder.domainName;
             this.errorMsg = builder.errorMsg;
+            this.failReason = builder.failReason;
             this.instanceId = builder.instanceId;
             this.taskDetailNo = builder.taskDetailNo;
             this.taskNo = builder.taskNo;
@@ -273,6 +307,13 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
          */
         public String getErrorMsg() {
             return this.errorMsg;
+        }
+
+        /**
+         * @return failReason
+         */
+        public String getFailReason() {
+            return this.failReason;
         }
 
         /**
@@ -349,6 +390,7 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             private String createTime; 
             private String domainName; 
             private String errorMsg; 
+            private String failReason; 
             private String instanceId; 
             private String taskDetailNo; 
             private String taskNo; 
@@ -359,6 +401,26 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             private String taskTypeDescription; 
             private Integer tryCount; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskDetail model) {
+                this.createTime = model.createTime;
+                this.domainName = model.domainName;
+                this.errorMsg = model.errorMsg;
+                this.failReason = model.failReason;
+                this.instanceId = model.instanceId;
+                this.taskDetailNo = model.taskDetailNo;
+                this.taskNo = model.taskNo;
+                this.taskResult = model.taskResult;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusCode = model.taskStatusCode;
+                this.taskType = model.taskType;
+                this.taskTypeDescription = model.taskTypeDescription;
+                this.tryCount = model.tryCount;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * CreateTime.
@@ -381,6 +443,14 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
+                return this;
+            }
+
+            /**
+             * FailReason.
+             */
+            public Builder failReason(String failReason) {
+                this.failReason = failReason;
                 return this;
             }
 
@@ -471,9 +541,15 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTaskDetailListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskDetailListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskDetail")
-        private java.util.List < TaskDetail> taskDetail;
+        private java.util.List<TaskDetail> taskDetail;
 
         private Data(Builder builder) {
             this.taskDetail = builder.taskDetail;
@@ -490,17 +566,24 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         /**
          * @return taskDetail
          */
-        public java.util.List < TaskDetail> getTaskDetail() {
+        public java.util.List<TaskDetail> getTaskDetail() {
             return this.taskDetail;
         }
 
         public static final class Builder {
-            private java.util.List < TaskDetail> taskDetail; 
+            private java.util.List<TaskDetail> taskDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskDetail = model.taskDetail;
+            } 
 
             /**
              * TaskDetail.
              */
-            public Builder taskDetail(java.util.List < TaskDetail> taskDetail) {
+            public Builder taskDetail(java.util.List<TaskDetail> taskDetail) {
                 this.taskDetail = taskDetail;
                 return this;
             }

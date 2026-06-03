@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegistrantProfileRealNameVerificationRequest} extends {@link RequestModel}
  *
  * <p>RegistrantProfileRealNameVerificationRequest</p>
@@ -57,7 +63,7 @@ public class RegistrantProfileRealNameVerificationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -127,7 +133,7 @@ public class RegistrantProfileRealNameVerificationRequest extends Request {
         } 
 
         /**
-         * IdentityCredential.
+         * <p>This parameter is required.</p>
          */
         public Builder identityCredential(String identityCredential) {
             this.putBodyParameter("IdentityCredential", identityCredential);
@@ -136,7 +142,7 @@ public class RegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * IdentityCredentialNo.
+         * <p>This parameter is required.</p>
          */
         public Builder identityCredentialNo(String identityCredentialNo) {
             this.putQueryParameter("IdentityCredentialNo", identityCredentialNo);
@@ -145,7 +151,7 @@ public class RegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * IdentityCredentialType.
+         * <p>This parameter is required.</p>
          */
         public Builder identityCredentialType(String identityCredentialType) {
             this.putQueryParameter("IdentityCredentialType", identityCredentialType);
@@ -163,7 +169,7 @@ public class RegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * RegistrantProfileID.
+         * <p>This parameter is required.</p>
          */
         public Builder registrantProfileID(Long registrantProfileID) {
             this.putQueryParameter("RegistrantProfileID", registrantProfileID);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest} extends {@link RequestModel}
  *
  * <p>SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest</p>
@@ -51,7 +57,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +118,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -121,7 +127,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -139,7 +145,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>This parameter is required.</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);

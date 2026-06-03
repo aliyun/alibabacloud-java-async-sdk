@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDnsHostResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDnsHostResponseBody</p>
  */
 public class QueryDnsHostResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DnsHostList")
-    private java.util.List < DnsHostList> dnsHostList;
+    private java.util.List<DnsHostList> dnsHostList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class QueryDnsHostResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dnsHostList
      */
-    public java.util.List < DnsHostList> getDnsHostList() {
+    public java.util.List<DnsHostList> getDnsHostList() {
         return this.dnsHostList;
     }
 
@@ -45,13 +55,21 @@ public class QueryDnsHostResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DnsHostList> dnsHostList; 
+        private java.util.List<DnsHostList> dnsHostList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDnsHostResponseBody model) {
+            this.dnsHostList = model.dnsHostList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DnsHostList.
          */
-        public Builder dnsHostList(java.util.List < DnsHostList> dnsHostList) {
+        public Builder dnsHostList(java.util.List<DnsHostList> dnsHostList) {
             this.dnsHostList = dnsHostList;
             return this;
         }
@@ -70,12 +88,18 @@ public class QueryDnsHostResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDnsHostResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDnsHostResponseBody</p>
+     */
     public static class DnsHostList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsName")
         private String dnsName;
 
         @com.aliyun.core.annotation.NameInMap("IpList")
-        private java.util.List < String > ipList;
+        private java.util.List<String> ipList;
 
         private DnsHostList(Builder builder) {
             this.dnsName = builder.dnsName;
@@ -100,13 +124,21 @@ public class QueryDnsHostResponseBody extends TeaModel {
         /**
          * @return ipList
          */
-        public java.util.List < String > getIpList() {
+        public java.util.List<String> getIpList() {
             return this.ipList;
         }
 
         public static final class Builder {
             private String dnsName; 
-            private java.util.List < String > ipList; 
+            private java.util.List<String> ipList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsHostList model) {
+                this.dnsName = model.dnsName;
+                this.ipList = model.ipList;
+            } 
 
             /**
              * DnsName.
@@ -119,7 +151,7 @@ public class QueryDnsHostResponseBody extends TeaModel {
             /**
              * IpList.
              */
-            public Builder ipList(java.util.List < String > ipList) {
+            public Builder ipList(java.util.List<String> ipList) {
                 this.ipList = ipList;
                 return this;
             }

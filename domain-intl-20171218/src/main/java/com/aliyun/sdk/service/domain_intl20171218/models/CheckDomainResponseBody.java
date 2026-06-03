@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckDomainResponseBody} extends {@link TeaModel}
  *
  * <p>CheckDomainResponseBody</p>
@@ -48,6 +54,10 @@ public class CheckDomainResponseBody extends TeaModel {
 
     public static CheckDomainResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -107,6 +117,19 @@ public class CheckDomainResponseBody extends TeaModel {
         private Long price; 
         private String reason; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckDomainResponseBody model) {
+            this.avail = model.avail;
+            this.domainName = model.domainName;
+            this.dynamicCheck = model.dynamicCheck;
+            this.premium = model.premium;
+            this.price = model.price;
+            this.reason = model.reason;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Avail.

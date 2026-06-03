@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTaskDetailHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTaskDetailHistoryResponseBody</p>
@@ -18,7 +24,7 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
     private NextPageCursor nextPageCursor;
 
     @com.aliyun.core.annotation.NameInMap("Objects")
-    private java.util.List < Objects> objects;
+    private java.util.List<Objects> objects;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -46,6 +52,10 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPageCursor
      */
@@ -63,7 +73,7 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
     /**
      * @return objects
      */
-    public java.util.List < Objects> getObjects() {
+    public java.util.List<Objects> getObjects() {
         return this.objects;
     }
 
@@ -91,10 +101,22 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
     public static final class Builder {
         private CurrentPageCursor currentPageCursor; 
         private NextPageCursor nextPageCursor; 
-        private java.util.List < Objects> objects; 
+        private java.util.List<Objects> objects; 
         private Integer pageSize; 
         private PrePageCursor prePageCursor; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTaskDetailHistoryResponseBody model) {
+            this.currentPageCursor = model.currentPageCursor;
+            this.nextPageCursor = model.nextPageCursor;
+            this.objects = model.objects;
+            this.pageSize = model.pageSize;
+            this.prePageCursor = model.prePageCursor;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CurrentPageCursor.
@@ -115,7 +137,7 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
         /**
          * Objects.
          */
-        public Builder objects(java.util.List < Objects> objects) {
+        public Builder objects(java.util.List<Objects> objects) {
             this.objects = objects;
             return this;
         }
@@ -150,6 +172,12 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTaskDetailHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskDetailHistoryResponseBody</p>
+     */
     public static class CurrentPageCursor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -308,6 +336,24 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
             private Integer tryCount; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(CurrentPageCursor model) {
+                this.createTime = model.createTime;
+                this.domainName = model.domainName;
+                this.errorMsg = model.errorMsg;
+                this.instanceId = model.instanceId;
+                this.taskDetailNo = model.taskDetailNo;
+                this.taskNo = model.taskNo;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusCode = model.taskStatusCode;
+                this.taskType = model.taskType;
+                this.taskTypeDescription = model.taskTypeDescription;
+                this.tryCount = model.tryCount;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * CreateTime.
              */
@@ -411,6 +457,12 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTaskDetailHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskDetailHistoryResponseBody</p>
+     */
     public static class NextPageCursor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -569,6 +621,24 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
             private Integer tryCount; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(NextPageCursor model) {
+                this.createTime = model.createTime;
+                this.domainName = model.domainName;
+                this.errorMsg = model.errorMsg;
+                this.instanceId = model.instanceId;
+                this.taskDetailNo = model.taskDetailNo;
+                this.taskNo = model.taskNo;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusCode = model.taskStatusCode;
+                this.taskType = model.taskType;
+                this.taskTypeDescription = model.taskTypeDescription;
+                this.tryCount = model.tryCount;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * CreateTime.
              */
@@ -672,6 +742,12 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTaskDetailHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskDetailHistoryResponseBody</p>
+     */
     public static class Objects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -830,6 +906,24 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
             private Integer tryCount; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Objects model) {
+                this.createTime = model.createTime;
+                this.domainName = model.domainName;
+                this.errorMsg = model.errorMsg;
+                this.instanceId = model.instanceId;
+                this.taskDetailNo = model.taskDetailNo;
+                this.taskNo = model.taskNo;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusCode = model.taskStatusCode;
+                this.taskType = model.taskType;
+                this.taskTypeDescription = model.taskTypeDescription;
+                this.tryCount = model.tryCount;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * CreateTime.
              */
@@ -933,6 +1027,12 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTaskDetailHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskDetailHistoryResponseBody</p>
+     */
     public static class PrePageCursor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -1090,6 +1190,24 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
             private String taskTypeDescription; 
             private Integer tryCount; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrePageCursor model) {
+                this.createTime = model.createTime;
+                this.domainName = model.domainName;
+                this.errorMsg = model.errorMsg;
+                this.instanceId = model.instanceId;
+                this.taskDetailNo = model.taskDetailNo;
+                this.taskNo = model.taskNo;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusCode = model.taskStatusCode;
+                this.taskType = model.taskType;
+                this.taskTypeDescription = model.taskTypeDescription;
+                this.tryCount = model.tryCount;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * CreateTime.

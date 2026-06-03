@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForUpdatingContactInfoByNewContactRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForUpdatingContactInfoByNewContactRequest</p>
@@ -31,7 +37,7 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > domainName;
+    private java.util.List<String> domainName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Email")
@@ -105,7 +111,7 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -141,7 +147,7 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
     /**
      * @return domainName
      */
-    public java.util.List < String > getDomainName() {
+    public java.util.List<String> getDomainName() {
         return this.domainName;
     }
 
@@ -227,7 +233,7 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         private String city; 
         private String contactType; 
         private String country; 
-        private java.util.List < String > domainName; 
+        private java.util.List<String> domainName; 
         private String email; 
         private String lang; 
         private String postalCode; 
@@ -283,7 +289,7 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * ContactType.
+         * <p>This parameter is required.</p>
          */
         public Builder contactType(String contactType) {
             this.putQueryParameter("ContactType", contactType);
@@ -301,9 +307,9 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
-        public Builder domainName(java.util.List < String > domainName) {
+        public Builder domainName(java.util.List<String> domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
             return this;

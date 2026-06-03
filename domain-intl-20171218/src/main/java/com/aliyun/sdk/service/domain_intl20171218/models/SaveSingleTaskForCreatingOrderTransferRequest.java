@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForCreatingOrderTransferRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForCreatingOrderTransferRequest</p>
@@ -76,7 +82,7 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -182,7 +188,7 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         } 
 
         /**
-         * AuthorizationCode.
+         * <p>This parameter is required.</p>
          */
         public Builder authorizationCode(String authorizationCode) {
             this.putQueryParameter("AuthorizationCode", authorizationCode);
@@ -200,7 +206,7 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -236,7 +242,7 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>This parameter is required.</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);

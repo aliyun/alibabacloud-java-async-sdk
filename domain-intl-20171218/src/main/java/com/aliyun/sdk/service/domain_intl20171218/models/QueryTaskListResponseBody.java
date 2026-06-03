@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTaskListResponseBody</p>
@@ -52,6 +58,10 @@ public class QueryTaskListResponseBody extends TeaModel {
 
     public static QueryTaskListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -119,6 +129,20 @@ public class QueryTaskListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTaskListResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.nextPage = model.nextPage;
+            this.pageSize = model.pageSize;
+            this.prePage = model.prePage;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -190,6 +214,12 @@ public class QueryTaskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskListResponseBody</p>
+     */
     public static class TaskInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Clientip")
         private String clientip;
@@ -324,6 +354,22 @@ public class QueryTaskListResponseBody extends TeaModel {
             private String taskType; 
             private String taskTypeDescription; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskInfo model) {
+                this.clientip = model.clientip;
+                this.createTime = model.createTime;
+                this.taskCancelStatus = model.taskCancelStatus;
+                this.taskCancelStatusCode = model.taskCancelStatusCode;
+                this.taskNo = model.taskNo;
+                this.taskNum = model.taskNum;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusCode = model.taskStatusCode;
+                this.taskType = model.taskType;
+                this.taskTypeDescription = model.taskTypeDescription;
+            } 
+
             /**
              * Clientip.
              */
@@ -411,9 +457,15 @@ public class QueryTaskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskInfo")
-        private java.util.List < TaskInfo> taskInfo;
+        private java.util.List<TaskInfo> taskInfo;
 
         private Data(Builder builder) {
             this.taskInfo = builder.taskInfo;
@@ -430,17 +482,24 @@ public class QueryTaskListResponseBody extends TeaModel {
         /**
          * @return taskInfo
          */
-        public java.util.List < TaskInfo> getTaskInfo() {
+        public java.util.List<TaskInfo> getTaskInfo() {
             return this.taskInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TaskInfo> taskInfo; 
+            private java.util.List<TaskInfo> taskInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskInfo = model.taskInfo;
+            } 
 
             /**
              * TaskInfo.
              */
-            public Builder taskInfo(java.util.List < TaskInfo> taskInfo) {
+            public Builder taskInfo(java.util.List<TaskInfo> taskInfo) {
                 this.taskInfo = taskInfo;
                 return this;
             }

@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse} extends {@link TeaModel}
  *
  * <p>SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse</p>
  */
 public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
@@ -31,7 +37,7 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse exte
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -39,7 +45,7 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse exte
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -59,7 +65,7 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse exte
 
     public interface Builder extends Response.Builder<SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
@@ -73,7 +79,7 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse exte
     private static final class BuilderImpl
             extends Response.BuilderImpl<SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
         private SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponseBody body; 
 
@@ -92,7 +98,7 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse exte
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SaveSingleTaskForApprovingTransferOutResponse} extends {@link TeaModel}
+ * {@link SaveSingleTaskForReserveDropListDomainResponse} extends {@link TeaModel}
  *
- * <p>SaveSingleTaskForApprovingTransferOutResponse</p>
+ * <p>SaveSingleTaskForReserveDropListDomainResponse</p>
  */
-public class SaveSingleTaskForApprovingTransferOutResponse extends Response {
+public class SaveSingleTaskForReserveDropListDomainResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class SaveSingleTaskForApprovingTransferOutResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private SaveSingleTaskForApprovingTransferOutResponseBody body;
+    private SaveSingleTaskForReserveDropListDomainResponseBody body;
 
-    private SaveSingleTaskForApprovingTransferOutResponse(BuilderImpl builder) {
+    private SaveSingleTaskForReserveDropListDomainResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SaveSingleTaskForApprovingTransferOutResponse create() {
+    public static SaveSingleTaskForReserveDropListDomainResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class SaveSingleTaskForApprovingTransferOutResponse extends Response {
     /**
      * @return body
      */
-    public SaveSingleTaskForApprovingTransferOutResponseBody getBody() {
+    public SaveSingleTaskForReserveDropListDomainResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SaveSingleTaskForApprovingTransferOutResponse, Builder> {
+    public interface Builder extends Response.Builder<SaveSingleTaskForReserveDropListDomainResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(SaveSingleTaskForApprovingTransferOutResponseBody body);
+        Builder body(SaveSingleTaskForReserveDropListDomainResponseBody body);
 
         @Override
-        SaveSingleTaskForApprovingTransferOutResponse build();
+        SaveSingleTaskForReserveDropListDomainResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SaveSingleTaskForApprovingTransferOutResponse, Builder>
+            extends Response.BuilderImpl<SaveSingleTaskForReserveDropListDomainResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private SaveSingleTaskForApprovingTransferOutResponseBody body; 
+        private SaveSingleTaskForReserveDropListDomainResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SaveSingleTaskForApprovingTransferOutResponse response) {
+        private BuilderImpl(SaveSingleTaskForReserveDropListDomainResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class SaveSingleTaskForApprovingTransferOutResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SaveSingleTaskForApprovingTransferOutResponseBody body) {
+        public Builder body(SaveSingleTaskForReserveDropListDomainResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SaveSingleTaskForApprovingTransferOutResponse build() {
-            return new SaveSingleTaskForApprovingTransferOutResponse(this);
+        public SaveSingleTaskForReserveDropListDomainResponse build() {
+            return new SaveSingleTaskForReserveDropListDomainResponse(this);
         } 
 
     } 

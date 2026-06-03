@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForReserveDropListDomainRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForReserveDropListDomainRequest</p>
@@ -19,7 +25,7 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domains")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Domains> domains;
+    private java.util.List<Domains> domains;
 
     private SaveBatchTaskForReserveDropListDomainRequest(Builder builder) {
         super(builder);
@@ -35,7 +41,7 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -50,13 +56,13 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
     /**
      * @return domains
      */
-    public java.util.List < Domains> getDomains() {
+    public java.util.List<Domains> getDomains() {
         return this.domains;
     }
 
     public static final class Builder extends Request.Builder<SaveBatchTaskForReserveDropListDomainRequest, Builder> {
         private String contactTemplateId; 
-        private java.util.List < Domains> domains; 
+        private java.util.List<Domains> domains; 
 
         private Builder() {
             super();
@@ -69,7 +75,7 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         } 
 
         /**
-         * ContactTemplateId.
+         * <p>This parameter is required.</p>
          */
         public Builder contactTemplateId(String contactTemplateId) {
             this.putQueryParameter("ContactTemplateId", contactTemplateId);
@@ -78,9 +84,9 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         }
 
         /**
-         * Domains.
+         * <p>This parameter is required.</p>
          */
-        public Builder domains(java.util.List < Domains> domains) {
+        public Builder domains(java.util.List<Domains> domains) {
             this.putQueryParameter("Domains", domains);
             this.domains = domains;
             return this;
@@ -93,6 +99,12 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveBatchTaskForReserveDropListDomainRequest} extends {@link TeaModel}
+     *
+     * <p>SaveBatchTaskForReserveDropListDomainRequest</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dns1")
         private String dns1;
@@ -144,6 +156,15 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
             private String dns2; 
             private String domainName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.dns1 = model.dns1;
+                this.dns2 = model.dns2;
+                this.domainName = model.domainName;
+            } 
+
             /**
              * Dns1.
              */
@@ -161,7 +182,7 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
             }
 
             /**
-             * DomainName.
+             * <p>This parameter is required.</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

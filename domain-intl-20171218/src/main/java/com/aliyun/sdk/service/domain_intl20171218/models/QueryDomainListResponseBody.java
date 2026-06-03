@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainListResponseBody</p>
@@ -52,6 +58,10 @@ public class QueryDomainListResponseBody extends TeaModel {
 
     public static QueryDomainListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -119,6 +129,20 @@ public class QueryDomainListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDomainListResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.nextPage = model.nextPage;
+            this.pageSize = model.pageSize;
+            this.prePage = model.prePage;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -190,6 +214,12 @@ public class QueryDomainListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainListResponseBody</p>
+     */
     public static class Domain extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainAuditStatus")
         private String domainAuditStatus;
@@ -384,6 +414,27 @@ public class QueryDomainListResponseBody extends TeaModel {
             private Long registrationDateLong; 
             private String remark; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domain model) {
+                this.domainAuditStatus = model.domainAuditStatus;
+                this.domainName = model.domainName;
+                this.domainStatus = model.domainStatus;
+                this.domainType = model.domainType;
+                this.expirationCurrDateDiff = model.expirationCurrDateDiff;
+                this.expirationDate = model.expirationDate;
+                this.expirationDateLong = model.expirationDateLong;
+                this.expirationDateStatus = model.expirationDateStatus;
+                this.instanceId = model.instanceId;
+                this.premium = model.premium;
+                this.productId = model.productId;
+                this.registrantType = model.registrantType;
+                this.registrationDate = model.registrationDate;
+                this.registrationDateLong = model.registrationDateLong;
+                this.remark = model.remark;
+            } 
+
             /**
              * DomainAuditStatus.
              */
@@ -511,9 +562,15 @@ public class QueryDomainListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
-        private java.util.List < Domain> domain;
+        private java.util.List<Domain> domain;
 
         private Data(Builder builder) {
             this.domain = builder.domain;
@@ -530,17 +587,24 @@ public class QueryDomainListResponseBody extends TeaModel {
         /**
          * @return domain
          */
-        public java.util.List < Domain> getDomain() {
+        public java.util.List<Domain> getDomain() {
             return this.domain;
         }
 
         public static final class Builder {
-            private java.util.List < Domain> domain; 
+            private java.util.List<Domain> domain; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.domain = model.domain;
+            } 
 
             /**
              * Domain.
              */
-            public Builder domain(java.util.List < Domain> domain) {
+            public Builder domain(java.util.List<Domain> domain) {
                 this.domain = domain;
                 return this;
             }

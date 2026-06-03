@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForModifyingDnsHostRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForModifyingDnsHostRequest</p>
@@ -24,7 +30,7 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ip")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > ip;
+    private java.util.List<String> ip;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -51,7 +57,7 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +79,7 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends Request {
     /**
      * @return ip
      */
-    public java.util.List < String > getIp() {
+    public java.util.List<String> getIp() {
         return this.ip;
     }
 
@@ -94,7 +100,7 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends Request {
     public static final class Builder extends Request.Builder<SaveSingleTaskForModifyingDnsHostRequest, Builder> {
         private String dnsName; 
         private String instanceId; 
-        private java.util.List < String > ip; 
+        private java.util.List<String> ip; 
         private String lang; 
         private String userClientIp; 
 
@@ -112,7 +118,7 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends Request {
         } 
 
         /**
-         * DnsName.
+         * <p>This parameter is required.</p>
          */
         public Builder dnsName(String dnsName) {
             this.putQueryParameter("DnsName", dnsName);
@@ -121,7 +127,7 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,9 +136,9 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends Request {
         }
 
         /**
-         * Ip.
+         * <p>This parameter is required.</p>
          */
-        public Builder ip(java.util.List < String > ip) {
+        public Builder ip(java.util.List<String> ip) {
             this.putQueryParameter("Ip", ip);
             this.ip = ip;
             return this;

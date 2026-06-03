@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AcknowledgeTaskResultRequest} extends {@link RequestModel}
  *
  * <p>AcknowledgeTaskResultRequest</p>
@@ -18,7 +24,7 @@ public class AcknowledgeTaskResultRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskDetailNo")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > taskDetailNo;
+    private java.util.List<String> taskDetailNo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserClientIp")
@@ -39,7 +45,7 @@ public class AcknowledgeTaskResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,7 @@ public class AcknowledgeTaskResultRequest extends Request {
     /**
      * @return taskDetailNo
      */
-    public java.util.List < String > getTaskDetailNo() {
+    public java.util.List<String> getTaskDetailNo() {
         return this.taskDetailNo;
     }
 
@@ -67,7 +73,7 @@ public class AcknowledgeTaskResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<AcknowledgeTaskResultRequest, Builder> {
         private String lang; 
-        private java.util.List < String > taskDetailNo; 
+        private java.util.List<String> taskDetailNo; 
         private String userClientIp; 
 
         private Builder() {
@@ -91,9 +97,9 @@ public class AcknowledgeTaskResultRequest extends Request {
         }
 
         /**
-         * TaskDetailNo.
+         * <p>This parameter is required.</p>
          */
-        public Builder taskDetailNo(java.util.List < String > taskDetailNo) {
+        public Builder taskDetailNo(java.util.List<String> taskDetailNo) {
             this.putQueryParameter("TaskDetailNo", taskDetailNo);
             this.taskDetailNo = taskDetailNo;
             return this;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForCreatingOrderRenewRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForCreatingOrderRenewRequest</p>
@@ -22,7 +28,7 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderRenewParam")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < OrderRenewParam> orderRenewParam;
+    private java.util.List<OrderRenewParam> orderRenewParam;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PromotionNo")
@@ -59,7 +65,7 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,7 +87,7 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
     /**
      * @return orderRenewParam
      */
-    public java.util.List < OrderRenewParam> getOrderRenewParam() {
+    public java.util.List<OrderRenewParam> getOrderRenewParam() {
         return this.orderRenewParam;
     }
 
@@ -116,7 +122,7 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
     public static final class Builder extends Request.Builder<SaveBatchTaskForCreatingOrderRenewRequest, Builder> {
         private String couponNo; 
         private String lang; 
-        private java.util.List < OrderRenewParam> orderRenewParam; 
+        private java.util.List<OrderRenewParam> orderRenewParam; 
         private String promotionNo; 
         private Boolean useCoupon; 
         private Boolean usePromotion; 
@@ -156,9 +162,9 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * OrderRenewParam.
+         * <p>This parameter is required.</p>
          */
-        public Builder orderRenewParam(java.util.List < OrderRenewParam> orderRenewParam) {
+        public Builder orderRenewParam(java.util.List<OrderRenewParam> orderRenewParam) {
             this.putQueryParameter("OrderRenewParam", orderRenewParam);
             this.orderRenewParam = orderRenewParam;
             return this;
@@ -207,6 +213,12 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveBatchTaskForCreatingOrderRenewRequest} extends {@link TeaModel}
+     *
+     * <p>SaveBatchTaskForCreatingOrderRenewRequest</p>
+     */
     public static class OrderRenewParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentExpirationDate")
         private Long currentExpirationDate;
@@ -256,6 +268,15 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
             private Long currentExpirationDate; 
             private String domainName; 
             private Integer subscriptionDuration; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderRenewParam model) {
+                this.currentExpirationDate = model.currentExpirationDate;
+                this.domainName = model.domainName;
+                this.subscriptionDuration = model.subscriptionDuration;
+            } 
 
             /**
              * CurrentExpirationDate.
