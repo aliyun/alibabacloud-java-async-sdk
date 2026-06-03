@@ -245,6 +245,9 @@ public class ChatRequest extends Request {
      * <p>ChatRequest</p>
      */
     public static class Content extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FileName")
+        private String fileName;
+
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
 
@@ -258,6 +261,7 @@ public class ChatRequest extends Request {
         private String type;
 
         private Content(Builder builder) {
+            this.fileName = builder.fileName;
             this.fileUrl = builder.fileUrl;
             this.imageUrl = builder.imageUrl;
             this.text = builder.text;
@@ -270,6 +274,13 @@ public class ChatRequest extends Request {
 
         public static Content create() {
             return builder().build();
+        }
+
+        /**
+         * @return fileName
+         */
+        public String getFileName() {
+            return this.fileName;
         }
 
         /**
@@ -301,6 +312,7 @@ public class ChatRequest extends Request {
         }
 
         public static final class Builder {
+            private String fileName; 
             private String fileUrl; 
             private String imageUrl; 
             private String text; 
@@ -310,11 +322,20 @@ public class ChatRequest extends Request {
             } 
 
             private Builder(Content model) {
+                this.fileName = model.fileName;
                 this.fileUrl = model.fileUrl;
                 this.imageUrl = model.imageUrl;
                 this.text = model.text;
                 this.type = model.type;
             } 
+
+            /**
+             * FileName.
+             */
+            public Builder fileName(String fileName) {
+                this.fileName = fileName;
+                return this;
+            }
 
             /**
              * FileUrl.
