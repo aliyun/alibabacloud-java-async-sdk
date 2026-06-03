@@ -38,6 +38,9 @@ public class CustomDomain extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("domainName")
     private String domainName;
 
+    @com.aliyun.core.annotation.NameInMap("isE2B")
+    private Boolean isE2B;
+
     @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
@@ -64,6 +67,7 @@ public class CustomDomain extends TeaModel {
         this.corsConfig = builder.corsConfig;
         this.createdTime = builder.createdTime;
         this.domainName = builder.domainName;
+        this.isE2B = builder.isE2B;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.protocol = builder.protocol;
         this.routeConfig = builder.routeConfig;
@@ -134,6 +138,13 @@ public class CustomDomain extends TeaModel {
     }
 
     /**
+     * @return isE2B
+     */
+    public Boolean getIsE2B() {
+        return this.isE2B;
+    }
+
+    /**
      * @return lastModifiedTime
      */
     public String getLastModifiedTime() {
@@ -183,6 +194,7 @@ public class CustomDomain extends TeaModel {
         private CORSConfig corsConfig; 
         private String createdTime; 
         private String domainName; 
+        private Boolean isE2B; 
         private String lastModifiedTime; 
         private String protocol; 
         private RouteConfig routeConfig; 
@@ -201,6 +213,7 @@ public class CustomDomain extends TeaModel {
             this.corsConfig = model.corsConfig;
             this.createdTime = model.createdTime;
             this.domainName = model.domainName;
+            this.isE2B = model.isE2B;
             this.lastModifiedTime = model.lastModifiedTime;
             this.protocol = model.protocol;
             this.routeConfig = model.routeConfig;
@@ -262,6 +275,14 @@ public class CustomDomain extends TeaModel {
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * isE2B.
+         */
+        public Builder isE2B(Boolean isE2B) {
+            this.isE2B = isE2B;
             return this;
         }
 

@@ -30,6 +30,9 @@ public class CreateCustomDomainInput extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 256, minLength = 1)
     private String domainName;
 
+    @com.aliyun.core.annotation.NameInMap("isE2B")
+    private Boolean isE2B;
+
     @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
@@ -47,6 +50,7 @@ public class CreateCustomDomainInput extends TeaModel {
         this.certConfig = builder.certConfig;
         this.corsConfig = builder.corsConfig;
         this.domainName = builder.domainName;
+        this.isE2B = builder.isE2B;
         this.protocol = builder.protocol;
         this.routeConfig = builder.routeConfig;
         this.tlsConfig = builder.tlsConfig;
@@ -94,6 +98,13 @@ public class CreateCustomDomainInput extends TeaModel {
     }
 
     /**
+     * @return isE2B
+     */
+    public Boolean getIsE2B() {
+        return this.isE2B;
+    }
+
+    /**
      * @return protocol
      */
     public String getProtocol() {
@@ -126,6 +137,7 @@ public class CreateCustomDomainInput extends TeaModel {
         private CertConfig certConfig; 
         private CORSConfig corsConfig; 
         private String domainName; 
+        private Boolean isE2B; 
         private String protocol; 
         private RouteConfig routeConfig; 
         private TLSConfig tlsConfig; 
@@ -139,6 +151,7 @@ public class CreateCustomDomainInput extends TeaModel {
             this.certConfig = model.certConfig;
             this.corsConfig = model.corsConfig;
             this.domainName = model.domainName;
+            this.isE2B = model.isE2B;
             this.protocol = model.protocol;
             this.routeConfig = model.routeConfig;
             this.tlsConfig = model.tlsConfig;
@@ -177,6 +190,14 @@ public class CreateCustomDomainInput extends TeaModel {
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * isE2B.
+         */
+        public Builder isE2B(Boolean isE2B) {
+            this.isE2B = isE2B;
             return this;
         }
 
