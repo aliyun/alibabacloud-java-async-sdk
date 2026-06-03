@@ -287,6 +287,82 @@ public class AddFilesFromAuthorizedOssRequest extends Request {
      *
      * <p>AddFilesFromAuthorizedOssRequest</p>
      */
+    public static class ParserConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ModelName")
+        private String modelName;
+
+        @com.aliyun.core.annotation.NameInMap("ModelPrompt")
+        @com.aliyun.core.annotation.Validation(maxLength = 1000, minLength = 1)
+        private String modelPrompt;
+
+        private ParserConfig(Builder builder) {
+            this.modelName = builder.modelName;
+            this.modelPrompt = builder.modelPrompt;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ParserConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return modelName
+         */
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        /**
+         * @return modelPrompt
+         */
+        public String getModelPrompt() {
+            return this.modelPrompt;
+        }
+
+        public static final class Builder {
+            private String modelName; 
+            private String modelPrompt; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParserConfig model) {
+                this.modelName = model.modelName;
+                this.modelPrompt = model.modelPrompt;
+            } 
+
+            /**
+             * ModelName.
+             */
+            public Builder modelName(String modelName) {
+                this.modelName = modelName;
+                return this;
+            }
+
+            /**
+             * ModelPrompt.
+             */
+            public Builder modelPrompt(String modelPrompt) {
+                this.modelPrompt = modelPrompt;
+                return this;
+            }
+
+            public ParserConfig build() {
+                return new ParserConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AddFilesFromAuthorizedOssRequest} extends {@link TeaModel}
+     *
+     * <p>AddFilesFromAuthorizedOssRequest</p>
+     */
     public static class FileDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileName")
         @com.aliyun.core.annotation.Validation(required = true, maxLength = 500, minLength = 1)
@@ -296,9 +372,17 @@ public class AddFilesFromAuthorizedOssRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true, maxLength = 256, minLength = 1)
         private String ossKey;
 
+        @com.aliyun.core.annotation.NameInMap("Parser")
+        private String parser;
+
+        @com.aliyun.core.annotation.NameInMap("ParserConfig")
+        private ParserConfig parserConfig;
+
         private FileDetails(Builder builder) {
             this.fileName = builder.fileName;
             this.ossKey = builder.ossKey;
+            this.parser = builder.parser;
+            this.parserConfig = builder.parserConfig;
         }
 
         public static Builder builder() {
@@ -323,9 +407,25 @@ public class AddFilesFromAuthorizedOssRequest extends Request {
             return this.ossKey;
         }
 
+        /**
+         * @return parser
+         */
+        public String getParser() {
+            return this.parser;
+        }
+
+        /**
+         * @return parserConfig
+         */
+        public ParserConfig getParserConfig() {
+            return this.parserConfig;
+        }
+
         public static final class Builder {
             private String fileName; 
             private String ossKey; 
+            private String parser; 
+            private ParserConfig parserConfig; 
 
             private Builder() {
             } 
@@ -333,6 +433,8 @@ public class AddFilesFromAuthorizedOssRequest extends Request {
             private Builder(FileDetails model) {
                 this.fileName = model.fileName;
                 this.ossKey = model.ossKey;
+                this.parser = model.parser;
+                this.parserConfig = model.parserConfig;
             } 
 
             /**
@@ -354,6 +456,22 @@ public class AddFilesFromAuthorizedOssRequest extends Request {
              */
             public Builder ossKey(String ossKey) {
                 this.ossKey = ossKey;
+                return this;
+            }
+
+            /**
+             * Parser.
+             */
+            public Builder parser(String parser) {
+                this.parser = parser;
+                return this;
+            }
+
+            /**
+             * ParserConfig.
+             */
+            public Builder parserConfig(ParserConfig parserConfig) {
+                this.parserConfig = parserConfig;
                 return this;
             }
 

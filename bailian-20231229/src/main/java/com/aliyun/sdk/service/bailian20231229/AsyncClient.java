@@ -181,6 +181,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteChunkResponse> deleteChunk(DeleteChunkRequest request);
 
     /**
+     * @param request the request parameters of DeleteConnector  DeleteConnectorRequest
+     * @return DeleteConnectorResponse
+     */
+    CompletableFuture<DeleteConnectorResponse> deleteConnector(DeleteConnectorRequest request);
+
+    /**
      * @param request the request parameters of DeleteFile  DeleteFileRequest
      * @return DeleteFileResponse
      */
@@ -482,6 +488,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateChunkResponse
      */
     CompletableFuture<UpdateChunkResponse> updateChunk(UpdateChunkRequest request);
+
+    /**
+     * @param request the request parameters of UpdateConnector  UpdateConnectorRequest
+     * @return UpdateConnectorResponse
+     */
+    CompletableFuture<UpdateConnectorResponse> updateConnector(UpdateConnectorRequest request);
 
     /**
      * @param request the request parameters of UpdateFileTag  UpdateFileTagRequest
