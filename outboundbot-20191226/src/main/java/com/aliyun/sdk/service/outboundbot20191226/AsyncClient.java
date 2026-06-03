@@ -164,6 +164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTaskExportTaskResponse> createTaskExportTask(CreateTaskExportTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateTenantKey  CreateTenantKeyRequest
+     * @return CreateTenantKeyResponse
+     */
+    CompletableFuture<CreateTenantKeyResponse> createTenantKey(CreateTenantKeyRequest request);
+
+    /**
      * @param request the request parameters of DeleteAgentProfiles  DeleteAgentProfilesRequest
      * @return DeleteAgentProfilesResponse
      */
@@ -503,6 +509,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNumberDistrictInfoTemplateDownloadUrlResponse> getNumberDistrictInfoTemplateDownloadUrl(GetNumberDistrictInfoTemplateDownloadUrlRequest request);
 
     /**
+     * @param request the request parameters of GetPublicKey  GetPublicKeyRequest
+     * @return GetPublicKeyResponse
+     */
+    CompletableFuture<GetPublicKeyResponse> getPublicKey(GetPublicKeyRequest request);
+
+    /**
      * @param request the request parameters of GetRealtimeConcurrencyReport  GetRealtimeConcurrencyReportRequest
      * @return GetRealtimeConcurrencyReportResponse
      */
@@ -681,6 +693,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListScriptRecordingResponse
      */
     CompletableFuture<ListScriptRecordingResponse> listScriptRecording(ListScriptRecordingRequest request);
+
+    /**
+     * @param request the request parameters of ListScriptVariables  ListScriptVariablesRequest
+     * @return ListScriptVariablesResponse
+     */
+    CompletableFuture<ListScriptVariablesResponse> listScriptVariables(ListScriptVariablesRequest request);
 
     /**
      * @param request the request parameters of ListScriptVoiceConfigs  ListScriptVoiceConfigsRequest
