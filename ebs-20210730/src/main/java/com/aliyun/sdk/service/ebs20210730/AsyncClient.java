@@ -233,16 +233,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Usage notes</h2>
-     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
-     * 
-     * @param request the request parameters of DescribeDiskEvents  DescribeDiskEventsRequest
-     * @return DescribeDiskEventsResponse
-     */
-    CompletableFuture<DescribeDiskEventsResponse> describeDiskEvents(DescribeDiskEventsRequest request);
-
-    /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
      * <ul>
      * <li>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</li>
      * <li>Up to 400 monitoring data entries can be returned at a time. An error is returned if the value calculated based on the following formula is greater than 400: <code>(EndTime - StartTime)/Period</code>.</li>
@@ -253,16 +243,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDiskMonitorDataResponse
      */
     CompletableFuture<DescribeDiskMonitorDataResponse> describeDiskMonitorData(DescribeDiskMonitorDataRequest request);
-
-    /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
-     * 
-     * @param request the request parameters of DescribeDiskMonitorDataList  DescribeDiskMonitorDataListRequest
-     * @return DescribeDiskMonitorDataListResponse
-     */
-    CompletableFuture<DescribeDiskMonitorDataListResponse> describeDiskMonitorDataList(DescribeDiskMonitorDataListRequest request);
 
     /**
      * <b>description</b> :
