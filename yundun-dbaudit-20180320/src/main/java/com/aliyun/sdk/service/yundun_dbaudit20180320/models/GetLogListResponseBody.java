@@ -1,0 +1,922 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.yundun_dbaudit20180320.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link GetLogListResponseBody} extends {@link TeaModel}
+ *
+ * <p>GetLogListResponseBody</p>
+ */
+public class GetLogListResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BeginDate")
+    private String beginDate;
+
+    @com.aliyun.core.annotation.NameInMap("EndDate")
+    private String endDate;
+
+    @com.aliyun.core.annotation.NameInMap("Incomplete")
+    private String incomplete;
+
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("Results")
+    private java.util.List<Results> results;
+
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
+    private GetLogListResponseBody(Builder builder) {
+        this.beginDate = builder.beginDate;
+        this.endDate = builder.endDate;
+        this.incomplete = builder.incomplete;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.requestId = builder.requestId;
+        this.results = builder.results;
+        this.totalCount = builder.totalCount;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetLogListResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return beginDate
+     */
+    public String getBeginDate() {
+        return this.beginDate;
+    }
+
+    /**
+     * @return endDate
+     */
+    public String getEndDate() {
+        return this.endDate;
+    }
+
+    /**
+     * @return incomplete
+     */
+    public String getIncomplete() {
+        return this.incomplete;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return results
+     */
+    public java.util.List<Results> getResults() {
+        return this.results;
+    }
+
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static final class Builder {
+        private String beginDate; 
+        private String endDate; 
+        private String incomplete; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String requestId; 
+        private java.util.List<Results> results; 
+        private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLogListResponseBody model) {
+            this.beginDate = model.beginDate;
+            this.endDate = model.endDate;
+            this.incomplete = model.incomplete;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.results = model.results;
+            this.totalCount = model.totalCount;
+        } 
+
+        /**
+         * BeginDate.
+         */
+        public Builder beginDate(String beginDate) {
+            this.beginDate = beginDate;
+            return this;
+        }
+
+        /**
+         * EndDate.
+         */
+        public Builder endDate(String endDate) {
+            this.endDate = endDate;
+            return this;
+        }
+
+        /**
+         * Incomplete.
+         */
+        public Builder incomplete(String incomplete) {
+            this.incomplete = incomplete;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Results.
+         */
+        public Builder results(java.util.List<Results> results) {
+            this.results = results;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
+        public GetLogListResponseBody build() {
+            return new GetLogListResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link GetLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLogListResponseBody</p>
+     */
+    public static class Results extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AffectRows")
+        private Integer affectRows;
+
+        @com.aliyun.core.annotation.NameInMap("AppClientIp")
+        private String appClientIp;
+
+        @com.aliyun.core.annotation.NameInMap("AppUsername")
+        private String appUsername;
+
+        @com.aliyun.core.annotation.NameInMap("CaptureTime")
+        private String captureTime;
+
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
+        private String clientIp;
+
+        @com.aliyun.core.annotation.NameInMap("ClientIpAlias")
+        private String clientIpAlias;
+
+        @com.aliyun.core.annotation.NameInMap("ClientMac")
+        private String clientMac;
+
+        @com.aliyun.core.annotation.NameInMap("ClientOsUser")
+        private String clientOsUser;
+
+        @com.aliyun.core.annotation.NameInMap("ClientPort")
+        private Integer clientPort;
+
+        @com.aliyun.core.annotation.NameInMap("ClientProgram")
+        private String clientProgram;
+
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        private Integer dbId;
+
+        @com.aliyun.core.annotation.NameInMap("DbServer")
+        private String dbServer;
+
+        @com.aliyun.core.annotation.NameInMap("DbUser")
+        private String dbUser;
+
+        @com.aliyun.core.annotation.NameInMap("ExecCostUS")
+        private Integer execCostUS;
+
+        @com.aliyun.core.annotation.NameInMap("FetchCostUS")
+        private Integer fetchCostUS;
+
+        @com.aliyun.core.annotation.NameInMap("InstName")
+        private String instName;
+
+        @com.aliyun.core.annotation.NameInMap("ResponseCode")
+        private String responseCode;
+
+        @com.aliyun.core.annotation.NameInMap("ResponseText")
+        private String responseText;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private Integer riskLevel;
+
+        @com.aliyun.core.annotation.NameInMap("RuleId")
+        private Integer ruleId;
+
+        @com.aliyun.core.annotation.NameInMap("RuleKeyId")
+        private Integer ruleKeyId;
+
+        @com.aliyun.core.annotation.NameInMap("RuleName")
+        private String ruleName;
+
+        @com.aliyun.core.annotation.NameInMap("RuleType")
+        private Integer ruleType;
+
+        @com.aliyun.core.annotation.NameInMap("Schema")
+        private String schema;
+
+        @com.aliyun.core.annotation.NameInMap("ServerMac")
+        private String serverMac;
+
+        @com.aliyun.core.annotation.NameInMap("SessionId")
+        private String sessionId;
+
+        @com.aliyun.core.annotation.NameInMap("SessionLoginTime")
+        private String sessionLoginTime;
+
+        @com.aliyun.core.annotation.NameInMap("SessionLogoutTime")
+        private String sessionLogoutTime;
+
+        @com.aliyun.core.annotation.NameInMap("SqlContent")
+        private String sqlContent;
+
+        @com.aliyun.core.annotation.NameInMap("SqlId")
+        private String sqlId;
+
+        @com.aliyun.core.annotation.NameInMap("SqlType")
+        private String sqlType;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        private String templateId;
+
+        private Results(Builder builder) {
+            this.affectRows = builder.affectRows;
+            this.appClientIp = builder.appClientIp;
+            this.appUsername = builder.appUsername;
+            this.captureTime = builder.captureTime;
+            this.clientIp = builder.clientIp;
+            this.clientIpAlias = builder.clientIpAlias;
+            this.clientMac = builder.clientMac;
+            this.clientOsUser = builder.clientOsUser;
+            this.clientPort = builder.clientPort;
+            this.clientProgram = builder.clientProgram;
+            this.dbId = builder.dbId;
+            this.dbServer = builder.dbServer;
+            this.dbUser = builder.dbUser;
+            this.execCostUS = builder.execCostUS;
+            this.fetchCostUS = builder.fetchCostUS;
+            this.instName = builder.instName;
+            this.responseCode = builder.responseCode;
+            this.responseText = builder.responseText;
+            this.riskLevel = builder.riskLevel;
+            this.ruleId = builder.ruleId;
+            this.ruleKeyId = builder.ruleKeyId;
+            this.ruleName = builder.ruleName;
+            this.ruleType = builder.ruleType;
+            this.schema = builder.schema;
+            this.serverMac = builder.serverMac;
+            this.sessionId = builder.sessionId;
+            this.sessionLoginTime = builder.sessionLoginTime;
+            this.sessionLogoutTime = builder.sessionLogoutTime;
+            this.sqlContent = builder.sqlContent;
+            this.sqlId = builder.sqlId;
+            this.sqlType = builder.sqlType;
+            this.templateId = builder.templateId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Results create() {
+            return builder().build();
+        }
+
+        /**
+         * @return affectRows
+         */
+        public Integer getAffectRows() {
+            return this.affectRows;
+        }
+
+        /**
+         * @return appClientIp
+         */
+        public String getAppClientIp() {
+            return this.appClientIp;
+        }
+
+        /**
+         * @return appUsername
+         */
+        public String getAppUsername() {
+            return this.appUsername;
+        }
+
+        /**
+         * @return captureTime
+         */
+        public String getCaptureTime() {
+            return this.captureTime;
+        }
+
+        /**
+         * @return clientIp
+         */
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
+        /**
+         * @return clientIpAlias
+         */
+        public String getClientIpAlias() {
+            return this.clientIpAlias;
+        }
+
+        /**
+         * @return clientMac
+         */
+        public String getClientMac() {
+            return this.clientMac;
+        }
+
+        /**
+         * @return clientOsUser
+         */
+        public String getClientOsUser() {
+            return this.clientOsUser;
+        }
+
+        /**
+         * @return clientPort
+         */
+        public Integer getClientPort() {
+            return this.clientPort;
+        }
+
+        /**
+         * @return clientProgram
+         */
+        public String getClientProgram() {
+            return this.clientProgram;
+        }
+
+        /**
+         * @return dbId
+         */
+        public Integer getDbId() {
+            return this.dbId;
+        }
+
+        /**
+         * @return dbServer
+         */
+        public String getDbServer() {
+            return this.dbServer;
+        }
+
+        /**
+         * @return dbUser
+         */
+        public String getDbUser() {
+            return this.dbUser;
+        }
+
+        /**
+         * @return execCostUS
+         */
+        public Integer getExecCostUS() {
+            return this.execCostUS;
+        }
+
+        /**
+         * @return fetchCostUS
+         */
+        public Integer getFetchCostUS() {
+            return this.fetchCostUS;
+        }
+
+        /**
+         * @return instName
+         */
+        public String getInstName() {
+            return this.instName;
+        }
+
+        /**
+         * @return responseCode
+         */
+        public String getResponseCode() {
+            return this.responseCode;
+        }
+
+        /**
+         * @return responseText
+         */
+        public String getResponseText() {
+            return this.responseText;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public Integer getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        /**
+         * @return ruleId
+         */
+        public Integer getRuleId() {
+            return this.ruleId;
+        }
+
+        /**
+         * @return ruleKeyId
+         */
+        public Integer getRuleKeyId() {
+            return this.ruleKeyId;
+        }
+
+        /**
+         * @return ruleName
+         */
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        /**
+         * @return ruleType
+         */
+        public Integer getRuleType() {
+            return this.ruleType;
+        }
+
+        /**
+         * @return schema
+         */
+        public String getSchema() {
+            return this.schema;
+        }
+
+        /**
+         * @return serverMac
+         */
+        public String getServerMac() {
+            return this.serverMac;
+        }
+
+        /**
+         * @return sessionId
+         */
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
+        /**
+         * @return sessionLoginTime
+         */
+        public String getSessionLoginTime() {
+            return this.sessionLoginTime;
+        }
+
+        /**
+         * @return sessionLogoutTime
+         */
+        public String getSessionLogoutTime() {
+            return this.sessionLogoutTime;
+        }
+
+        /**
+         * @return sqlContent
+         */
+        public String getSqlContent() {
+            return this.sqlContent;
+        }
+
+        /**
+         * @return sqlId
+         */
+        public String getSqlId() {
+            return this.sqlId;
+        }
+
+        /**
+         * @return sqlType
+         */
+        public String getSqlType() {
+            return this.sqlType;
+        }
+
+        /**
+         * @return templateId
+         */
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        public static final class Builder {
+            private Integer affectRows; 
+            private String appClientIp; 
+            private String appUsername; 
+            private String captureTime; 
+            private String clientIp; 
+            private String clientIpAlias; 
+            private String clientMac; 
+            private String clientOsUser; 
+            private Integer clientPort; 
+            private String clientProgram; 
+            private Integer dbId; 
+            private String dbServer; 
+            private String dbUser; 
+            private Integer execCostUS; 
+            private Integer fetchCostUS; 
+            private String instName; 
+            private String responseCode; 
+            private String responseText; 
+            private Integer riskLevel; 
+            private Integer ruleId; 
+            private Integer ruleKeyId; 
+            private String ruleName; 
+            private Integer ruleType; 
+            private String schema; 
+            private String serverMac; 
+            private String sessionId; 
+            private String sessionLoginTime; 
+            private String sessionLogoutTime; 
+            private String sqlContent; 
+            private String sqlId; 
+            private String sqlType; 
+            private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.affectRows = model.affectRows;
+                this.appClientIp = model.appClientIp;
+                this.appUsername = model.appUsername;
+                this.captureTime = model.captureTime;
+                this.clientIp = model.clientIp;
+                this.clientIpAlias = model.clientIpAlias;
+                this.clientMac = model.clientMac;
+                this.clientOsUser = model.clientOsUser;
+                this.clientPort = model.clientPort;
+                this.clientProgram = model.clientProgram;
+                this.dbId = model.dbId;
+                this.dbServer = model.dbServer;
+                this.dbUser = model.dbUser;
+                this.execCostUS = model.execCostUS;
+                this.fetchCostUS = model.fetchCostUS;
+                this.instName = model.instName;
+                this.responseCode = model.responseCode;
+                this.responseText = model.responseText;
+                this.riskLevel = model.riskLevel;
+                this.ruleId = model.ruleId;
+                this.ruleKeyId = model.ruleKeyId;
+                this.ruleName = model.ruleName;
+                this.ruleType = model.ruleType;
+                this.schema = model.schema;
+                this.serverMac = model.serverMac;
+                this.sessionId = model.sessionId;
+                this.sessionLoginTime = model.sessionLoginTime;
+                this.sessionLogoutTime = model.sessionLogoutTime;
+                this.sqlContent = model.sqlContent;
+                this.sqlId = model.sqlId;
+                this.sqlType = model.sqlType;
+                this.templateId = model.templateId;
+            } 
+
+            /**
+             * AffectRows.
+             */
+            public Builder affectRows(Integer affectRows) {
+                this.affectRows = affectRows;
+                return this;
+            }
+
+            /**
+             * AppClientIp.
+             */
+            public Builder appClientIp(String appClientIp) {
+                this.appClientIp = appClientIp;
+                return this;
+            }
+
+            /**
+             * AppUsername.
+             */
+            public Builder appUsername(String appUsername) {
+                this.appUsername = appUsername;
+                return this;
+            }
+
+            /**
+             * CaptureTime.
+             */
+            public Builder captureTime(String captureTime) {
+                this.captureTime = captureTime;
+                return this;
+            }
+
+            /**
+             * ClientIp.
+             */
+            public Builder clientIp(String clientIp) {
+                this.clientIp = clientIp;
+                return this;
+            }
+
+            /**
+             * ClientIpAlias.
+             */
+            public Builder clientIpAlias(String clientIpAlias) {
+                this.clientIpAlias = clientIpAlias;
+                return this;
+            }
+
+            /**
+             * ClientMac.
+             */
+            public Builder clientMac(String clientMac) {
+                this.clientMac = clientMac;
+                return this;
+            }
+
+            /**
+             * ClientOsUser.
+             */
+            public Builder clientOsUser(String clientOsUser) {
+                this.clientOsUser = clientOsUser;
+                return this;
+            }
+
+            /**
+             * ClientPort.
+             */
+            public Builder clientPort(Integer clientPort) {
+                this.clientPort = clientPort;
+                return this;
+            }
+
+            /**
+             * ClientProgram.
+             */
+            public Builder clientProgram(String clientProgram) {
+                this.clientProgram = clientProgram;
+                return this;
+            }
+
+            /**
+             * DbId.
+             */
+            public Builder dbId(Integer dbId) {
+                this.dbId = dbId;
+                return this;
+            }
+
+            /**
+             * DbServer.
+             */
+            public Builder dbServer(String dbServer) {
+                this.dbServer = dbServer;
+                return this;
+            }
+
+            /**
+             * DbUser.
+             */
+            public Builder dbUser(String dbUser) {
+                this.dbUser = dbUser;
+                return this;
+            }
+
+            /**
+             * ExecCostUS.
+             */
+            public Builder execCostUS(Integer execCostUS) {
+                this.execCostUS = execCostUS;
+                return this;
+            }
+
+            /**
+             * FetchCostUS.
+             */
+            public Builder fetchCostUS(Integer fetchCostUS) {
+                this.fetchCostUS = fetchCostUS;
+                return this;
+            }
+
+            /**
+             * InstName.
+             */
+            public Builder instName(String instName) {
+                this.instName = instName;
+                return this;
+            }
+
+            /**
+             * ResponseCode.
+             */
+            public Builder responseCode(String responseCode) {
+                this.responseCode = responseCode;
+                return this;
+            }
+
+            /**
+             * ResponseText.
+             */
+            public Builder responseText(String responseText) {
+                this.responseText = responseText;
+                return this;
+            }
+
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(Integer riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            /**
+             * RuleId.
+             */
+            public Builder ruleId(Integer ruleId) {
+                this.ruleId = ruleId;
+                return this;
+            }
+
+            /**
+             * RuleKeyId.
+             */
+            public Builder ruleKeyId(Integer ruleKeyId) {
+                this.ruleKeyId = ruleKeyId;
+                return this;
+            }
+
+            /**
+             * RuleName.
+             */
+            public Builder ruleName(String ruleName) {
+                this.ruleName = ruleName;
+                return this;
+            }
+
+            /**
+             * RuleType.
+             */
+            public Builder ruleType(Integer ruleType) {
+                this.ruleType = ruleType;
+                return this;
+            }
+
+            /**
+             * Schema.
+             */
+            public Builder schema(String schema) {
+                this.schema = schema;
+                return this;
+            }
+
+            /**
+             * ServerMac.
+             */
+            public Builder serverMac(String serverMac) {
+                this.serverMac = serverMac;
+                return this;
+            }
+
+            /**
+             * SessionId.
+             */
+            public Builder sessionId(String sessionId) {
+                this.sessionId = sessionId;
+                return this;
+            }
+
+            /**
+             * SessionLoginTime.
+             */
+            public Builder sessionLoginTime(String sessionLoginTime) {
+                this.sessionLoginTime = sessionLoginTime;
+                return this;
+            }
+
+            /**
+             * SessionLogoutTime.
+             */
+            public Builder sessionLogoutTime(String sessionLogoutTime) {
+                this.sessionLogoutTime = sessionLogoutTime;
+                return this;
+            }
+
+            /**
+             * SqlContent.
+             */
+            public Builder sqlContent(String sqlContent) {
+                this.sqlContent = sqlContent;
+                return this;
+            }
+
+            /**
+             * SqlId.
+             */
+            public Builder sqlId(String sqlId) {
+                this.sqlId = sqlId;
+                return this;
+            }
+
+            /**
+             * SqlType.
+             */
+            public Builder sqlType(String sqlType) {
+                this.sqlType = sqlType;
+                return this;
+            }
+
+            /**
+             * TemplateId.
+             */
+            public Builder templateId(String templateId) {
+                this.templateId = templateId;
+                return this;
+            }
+
+            public Results build() {
+                return new Results(this);
+            } 
+
+        } 
+
+    }
+}
