@@ -30,8 +30,16 @@ public class CreateAppInstanceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateAction")
+    private String createAction;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeployArea")
     private String deployArea;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Duration")
@@ -40,6 +48,10 @@ public class CreateAppInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Extend")
     private String extend;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PaymentType")
@@ -65,20 +77,28 @@ public class CreateAppInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private CreateAppInstanceRequest(Builder builder) {
         super(builder);
         this.applicationType = builder.applicationType;
         this.autoRenew = builder.autoRenew;
         this.clientToken = builder.clientToken;
+        this.createAction = builder.createAction;
         this.deployArea = builder.deployArea;
+        this.description = builder.description;
         this.duration = builder.duration;
         this.extend = builder.extend;
+        this.name = builder.name;
         this.paymentType = builder.paymentType;
         this.pricingCycle = builder.pricingCycle;
         this.quantity = builder.quantity;
         this.resourceGroupId = builder.resourceGroupId;
         this.siteVersion = builder.siteVersion;
         this.tags = builder.tags;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -116,10 +136,24 @@ public class CreateAppInstanceRequest extends Request {
     }
 
     /**
+     * @return createAction
+     */
+    public String getCreateAction() {
+        return this.createAction;
+    }
+
+    /**
      * @return deployArea
      */
     public String getDeployArea() {
         return this.deployArea;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -134,6 +168,13 @@ public class CreateAppInstanceRequest extends Request {
      */
     public String getExtend() {
         return this.extend;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -178,19 +219,30 @@ public class CreateAppInstanceRequest extends Request {
         return this.tags;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<CreateAppInstanceRequest, Builder> {
         private String applicationType; 
         private Boolean autoRenew; 
         private String clientToken; 
+        private String createAction; 
         private String deployArea; 
+        private String description; 
         private Integer duration; 
         private String extend; 
+        private String name; 
         private String paymentType; 
         private String pricingCycle; 
         private Integer quantity; 
         private String resourceGroupId; 
         private String siteVersion; 
         private java.util.List<Tags> tags; 
+        private String version; 
 
         private Builder() {
             super();
@@ -201,15 +253,19 @@ public class CreateAppInstanceRequest extends Request {
             this.applicationType = request.applicationType;
             this.autoRenew = request.autoRenew;
             this.clientToken = request.clientToken;
+            this.createAction = request.createAction;
             this.deployArea = request.deployArea;
+            this.description = request.description;
             this.duration = request.duration;
             this.extend = request.extend;
+            this.name = request.name;
             this.paymentType = request.paymentType;
             this.pricingCycle = request.pricingCycle;
             this.quantity = request.quantity;
             this.resourceGroupId = request.resourceGroupId;
             this.siteVersion = request.siteVersion;
             this.tags = request.tags;
+            this.version = request.version;
         } 
 
         /**
@@ -249,6 +305,15 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
+         * CreateAction.
+         */
+        public Builder createAction(String createAction) {
+            this.putQueryParameter("CreateAction", createAction);
+            this.createAction = createAction;
+            return this;
+        }
+
+        /**
          * <p>Deployment area</p>
          * 
          * <strong>example:</strong>
@@ -257,6 +322,15 @@ public class CreateAppInstanceRequest extends Request {
         public Builder deployArea(String deployArea) {
             this.putQueryParameter("DeployArea", deployArea);
             this.deployArea = deployArea;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
@@ -281,6 +355,15 @@ public class CreateAppInstanceRequest extends Request {
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
             this.extend = extend;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 
@@ -348,6 +431,15 @@ public class CreateAppInstanceRequest extends Request {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putBodyParameter("Tags", tagsShrink);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

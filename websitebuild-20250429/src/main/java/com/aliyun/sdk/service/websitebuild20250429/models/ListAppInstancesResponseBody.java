@@ -68,6 +68,9 @@ public class ListAppInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RootErrorMsg")
     private String rootErrorMsg;
 
+    @com.aliyun.core.annotation.NameInMap("StartPosition")
+    private String startPosition;
+
     @com.aliyun.core.annotation.NameInMap("Synchro")
     private Boolean synchro;
 
@@ -92,6 +95,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         this.resultLimit = builder.resultLimit;
         this.rootErrorCode = builder.rootErrorCode;
         this.rootErrorMsg = builder.rootErrorMsg;
+        this.startPosition = builder.startPosition;
         this.synchro = builder.synchro;
         this.totalPageNum = builder.totalPageNum;
     }
@@ -228,6 +232,13 @@ public class ListAppInstancesResponseBody extends TeaModel {
     }
 
     /**
+     * @return startPosition
+     */
+    public String getStartPosition() {
+        return this.startPosition;
+    }
+
+    /**
      * @return synchro
      */
     public Boolean getSynchro() {
@@ -259,6 +270,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         private Boolean resultLimit; 
         private String rootErrorCode; 
         private String rootErrorMsg; 
+        private String startPosition; 
         private Boolean synchro; 
         private Integer totalPageNum; 
 
@@ -283,6 +295,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             this.resultLimit = model.resultLimit;
             this.rootErrorCode = model.rootErrorCode;
             this.rootErrorMsg = model.rootErrorMsg;
+            this.startPosition = model.startPosition;
             this.synchro = model.synchro;
             this.totalPageNum = model.totalPageNum;
         } 
@@ -438,6 +451,9 @@ public class ListAppInstancesResponseBody extends TeaModel {
 
         /**
          * <p>For the current query, apart from pagination limits, the server processes up to the most recent 1000 records. If the result exceeds 1000 records, <strong>ResultLimit</strong> is <strong>true</strong>, please narrow down the time range and search again; otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder resultLimit(Boolean resultLimit) {
             this.resultLimit = resultLimit;
@@ -463,6 +479,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
+            return this;
+        }
+
+        /**
+         * StartPosition.
+         */
+        public Builder startPosition(String startPosition) {
+            this.startPosition = startPosition;
             return this;
         }
 

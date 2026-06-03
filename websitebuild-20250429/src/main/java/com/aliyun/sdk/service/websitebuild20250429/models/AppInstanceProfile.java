@@ -47,6 +47,9 @@ public class AppInstanceProfile extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PayTime")
     private String payTime;
 
+    @com.aliyun.core.annotation.NameInMap("PreviewUrl")
+    private String previewUrl;
+
     @com.aliyun.core.annotation.NameInMap("SeoSite")
     private String seoSite;
 
@@ -76,6 +79,7 @@ public class AppInstanceProfile extends TeaModel {
         this.ordTime = builder.ordTime;
         this.orderId = builder.orderId;
         this.payTime = builder.payTime;
+        this.previewUrl = builder.previewUrl;
         this.seoSite = builder.seoSite;
         this.siteVersion = builder.siteVersion;
         this.siteVersionText = builder.siteVersionText;
@@ -167,6 +171,13 @@ public class AppInstanceProfile extends TeaModel {
     }
 
     /**
+     * @return previewUrl
+     */
+    public String getPreviewUrl() {
+        return this.previewUrl;
+    }
+
+    /**
      * @return seoSite
      */
     public String getSeoSite() {
@@ -219,6 +230,7 @@ public class AppInstanceProfile extends TeaModel {
         private String ordTime; 
         private String orderId; 
         private String payTime; 
+        private String previewUrl; 
         private String seoSite; 
         private String siteVersion; 
         private String siteVersionText; 
@@ -240,6 +252,7 @@ public class AppInstanceProfile extends TeaModel {
             this.ordTime = model.ordTime;
             this.orderId = model.orderId;
             this.payTime = model.payTime;
+            this.previewUrl = model.previewUrl;
             this.seoSite = model.seoSite;
             this.siteVersion = model.siteVersion;
             this.siteVersionText = model.siteVersionText;
@@ -325,6 +338,14 @@ public class AppInstanceProfile extends TeaModel {
          */
         public Builder payTime(String payTime) {
             this.payTime = payTime;
+            return this;
+        }
+
+        /**
+         * PreviewUrl.
+         */
+        public Builder previewUrl(String previewUrl) {
+            this.previewUrl = previewUrl;
             return this;
         }
 
