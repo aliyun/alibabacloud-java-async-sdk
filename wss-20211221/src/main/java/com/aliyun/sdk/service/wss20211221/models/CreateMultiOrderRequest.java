@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateMultiOrderRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelCookie")
+    private String channelCookie;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderItems")
     private java.util.List<OrderItems> orderItems;
 
@@ -35,6 +39,7 @@ public class CreateMultiOrderRequest extends Request {
 
     private CreateMultiOrderRequest(Builder builder) {
         super(builder);
+        this.channelCookie = builder.channelCookie;
         this.orderItems = builder.orderItems;
         this.orderType = builder.orderType;
         this.properties = builder.properties;
@@ -52,6 +57,13 @@ public class CreateMultiOrderRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return channelCookie
+     */
+    public String getChannelCookie() {
+        return this.channelCookie;
     }
 
     /**
@@ -83,6 +95,7 @@ public class CreateMultiOrderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateMultiOrderRequest, Builder> {
+        private String channelCookie; 
         private java.util.List<OrderItems> orderItems; 
         private String orderType; 
         private java.util.Map<String, String> properties; 
@@ -94,11 +107,21 @@ public class CreateMultiOrderRequest extends Request {
 
         private Builder(CreateMultiOrderRequest request) {
             super(request);
+            this.channelCookie = request.channelCookie;
             this.orderItems = request.orderItems;
             this.orderType = request.orderType;
             this.properties = request.properties;
             this.resellerOwnerUid = request.resellerOwnerUid;
         } 
+
+        /**
+         * ChannelCookie.
+         */
+        public Builder channelCookie(String channelCookie) {
+            this.putQueryParameter("ChannelCookie", channelCookie);
+            this.channelCookie = channelCookie;
+            return this;
+        }
 
         /**
          * OrderItems.
