@@ -100,6 +100,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAppInstanceTicketResponse> createAppInstanceTicket(CreateAppInstanceTicketRequest request);
 
     /**
+     * @param request the request parameters of CreateAppLlmApiKeyForPartner  CreateAppLlmApiKeyForPartnerRequest
+     * @return CreateAppLlmApiKeyForPartnerResponse
+     */
+    CompletableFuture<CreateAppLlmApiKeyForPartnerResponse> createAppLlmApiKeyForPartner(CreateAppLlmApiKeyForPartnerRequest request);
+
+    /**
      * @param request the request parameters of CreateAppTokenService  CreateAppTokenServiceRequest
      * @return CreateAppTokenServiceResponse
      */
