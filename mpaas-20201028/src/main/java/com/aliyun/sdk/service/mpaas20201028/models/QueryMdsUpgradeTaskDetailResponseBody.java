@@ -599,6 +599,9 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReleaseType")
         private String releaseType;
 
+        @com.aliyun.core.annotation.NameInMap("ReminderPeriod")
+        private String reminderPeriod;
+
         @com.aliyun.core.annotation.NameInMap("RuleJsonList")
         private java.util.List<RuleJsonList> ruleJsonList;
 
@@ -671,6 +674,7 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
             this.pushContent = builder.pushContent;
             this.qrcodeUrl = builder.qrcodeUrl;
             this.releaseType = builder.releaseType;
+            this.reminderPeriod = builder.reminderPeriod;
             this.ruleJsonList = builder.ruleJsonList;
             this.silentType = builder.silentType;
             this.syncMode = builder.syncMode;
@@ -979,6 +983,13 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return reminderPeriod
+         */
+        public String getReminderPeriod() {
+            return this.reminderPeriod;
+        }
+
+        /**
          * @return ruleJsonList
          */
         public java.util.List<RuleJsonList> getRuleJsonList() {
@@ -1090,6 +1101,7 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
             private String pushContent; 
             private String qrcodeUrl; 
             private String releaseType; 
+            private String reminderPeriod; 
             private java.util.List<RuleJsonList> ruleJsonList; 
             private Long silentType; 
             private String syncMode; 
@@ -1146,6 +1158,7 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
                 this.pushContent = model.pushContent;
                 this.qrcodeUrl = model.qrcodeUrl;
                 this.releaseType = model.releaseType;
+                this.reminderPeriod = model.reminderPeriod;
                 this.ruleJsonList = model.ruleJsonList;
                 this.silentType = model.silentType;
                 this.syncMode = model.syncMode;
@@ -1483,6 +1496,14 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
              */
             public Builder releaseType(String releaseType) {
                 this.releaseType = releaseType;
+                return this;
+            }
+
+            /**
+             * ReminderPeriod.
+             */
+            public Builder reminderPeriod(String reminderPeriod) {
+                this.reminderPeriod = reminderPeriod;
                 return this;
             }
 

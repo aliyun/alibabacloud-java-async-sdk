@@ -161,10 +161,14 @@ public class QueryPayOrderToMsenceResponseBody extends TeaModel {
      * <p>QueryPayOrderToMsenceResponseBody</p>
      */
     public static class MpaasUserGamecenterPaymentQuerystatusResponse extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CpExtra")
+        private String cpExtra;
+
         @com.aliyun.core.annotation.NameInMap("OrderStatus")
         private String orderStatus;
 
         private MpaasUserGamecenterPaymentQuerystatusResponse(Builder builder) {
+            this.cpExtra = builder.cpExtra;
             this.orderStatus = builder.orderStatus;
         }
 
@@ -177,6 +181,13 @@ public class QueryPayOrderToMsenceResponseBody extends TeaModel {
         }
 
         /**
+         * @return cpExtra
+         */
+        public String getCpExtra() {
+            return this.cpExtra;
+        }
+
+        /**
          * @return orderStatus
          */
         public String getOrderStatus() {
@@ -184,14 +195,24 @@ public class QueryPayOrderToMsenceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String cpExtra; 
             private String orderStatus; 
 
             private Builder() {
             } 
 
             private Builder(MpaasUserGamecenterPaymentQuerystatusResponse model) {
+                this.cpExtra = model.cpExtra;
                 this.orderStatus = model.orderStatus;
             } 
+
+            /**
+             * CpExtra.
+             */
+            public Builder cpExtra(String cpExtra) {
+                this.cpExtra = cpExtra;
+                return this;
+            }
 
             /**
              * OrderStatus.
