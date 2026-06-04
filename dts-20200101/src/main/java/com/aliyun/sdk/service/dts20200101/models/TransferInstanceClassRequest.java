@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TransferInstanceClassRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseCount")
+    private Integer databaseCount;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DtsJobId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String dtsJobId;
@@ -42,6 +46,7 @@ public class TransferInstanceClassRequest extends Request {
 
     private TransferInstanceClassRequest(Builder builder) {
         super(builder);
+        this.databaseCount = builder.databaseCount;
         this.dtsJobId = builder.dtsJobId;
         this.instanceClass = builder.instanceClass;
         this.orderType = builder.orderType;
@@ -60,6 +65,13 @@ public class TransferInstanceClassRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return databaseCount
+     */
+    public Integer getDatabaseCount() {
+        return this.databaseCount;
     }
 
     /**
@@ -98,6 +110,7 @@ public class TransferInstanceClassRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TransferInstanceClassRequest, Builder> {
+        private Integer databaseCount; 
         private String dtsJobId; 
         private String instanceClass; 
         private String orderType; 
@@ -110,12 +123,22 @@ public class TransferInstanceClassRequest extends Request {
 
         private Builder(TransferInstanceClassRequest request) {
             super(request);
+            this.databaseCount = request.databaseCount;
             this.dtsJobId = request.dtsJobId;
             this.instanceClass = request.instanceClass;
             this.orderType = request.orderType;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
         } 
+
+        /**
+         * DatabaseCount.
+         */
+        public Builder databaseCount(Integer databaseCount) {
+            this.putQueryParameter("DatabaseCount", databaseCount);
+            this.databaseCount = databaseCount;
+            return this;
+        }
 
         /**
          * <p>The ID of the data migration or data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
