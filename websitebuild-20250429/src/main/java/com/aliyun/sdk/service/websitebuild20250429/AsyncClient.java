@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckUserResourceMeasureResponse> checkUserResourceMeasure(CheckUserResourceMeasureRequest request);
 
     /**
+     * @param request the request parameters of CopyAppPluginConfig  CopyAppPluginConfigRequest
+     * @return CopyAppPluginConfigResponse
+     */
+    CompletableFuture<CopyAppPluginConfigResponse> copyAppPluginConfig(CopyAppPluginConfigRequest request);
+
+    /**
      * @param request the request parameters of CreateAIStaffChat  CreateAIStaffChatRequest
      * @return CreateAIStaffChatResponse
      */
@@ -72,6 +78,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateAppAssistantAgentSsoLoginResponse
      */
     CompletableFuture<CreateAppAssistantAgentSsoLoginResponse> createAppAssistantAgentSsoLogin(CreateAppAssistantAgentSsoLoginRequest request);
+
+    /**
+     * @param request the request parameters of CreateAppChat  CreateAppChatRequest
+     * @return CreateAppChatResponse
+     */
+    CompletableFuture<CreateAppChatResponse> createAppChat(CreateAppChatRequest request);
+
+    ResponseIterable<String> createAppChatWithResponseIterable(CreateAppChatRequest request);
 
     /**
      * @param request the request parameters of CreateAppInstance  CreateAppInstanceRequest
@@ -116,6 +130,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAppDomainRedirectResponse> deleteAppDomainRedirect(DeleteAppDomainRedirectRequest request);
 
     /**
+     * @param request the request parameters of DeleteAppInstanceFile  DeleteAppInstanceFileRequest
+     * @return DeleteAppInstanceFileResponse
+     */
+    CompletableFuture<DeleteAppInstanceFileResponse> deleteAppInstanceFile(DeleteAppInstanceFileRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAppSupabaseSecrets  DeleteAppSupabaseSecretsRequest
+     * @return DeleteAppSupabaseSecretsResponse
+     */
+    CompletableFuture<DeleteAppSupabaseSecretsResponse> deleteAppSupabaseSecrets(DeleteAppSupabaseSecretsRequest request);
+
+    /**
      * @param request the request parameters of DeleteMaterialDirectory  DeleteMaterialDirectoryRequest
      * @return DeleteMaterialDirectoryResponse
      */
@@ -158,10 +184,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAIStaffPreviewUrlResponse> getAIStaffPreviewUrl(GetAIStaffPreviewUrlRequest request);
 
     /**
+     * @param request the request parameters of GetAppCodeWorkspaceDetail  GetAppCodeWorkspaceDetailRequest
+     * @return GetAppCodeWorkspaceDetailResponse
+     */
+    CompletableFuture<GetAppCodeWorkspaceDetailResponse> getAppCodeWorkspaceDetail(GetAppCodeWorkspaceDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetAppConversation  GetAppConversationRequest
+     * @return GetAppConversationResponse
+     */
+    CompletableFuture<GetAppConversationResponse> getAppConversation(GetAppConversationRequest request);
+
+    /**
+     * @param request the request parameters of GetAppConversationLockStatus  GetAppConversationLockStatusRequest
+     * @return GetAppConversationLockStatusResponse
+     */
+    CompletableFuture<GetAppConversationLockStatusResponse> getAppConversationLockStatus(GetAppConversationLockStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetAppDatabaseTableSchemas  GetAppDatabaseTableSchemasRequest
+     * @return GetAppDatabaseTableSchemasResponse
+     */
+    CompletableFuture<GetAppDatabaseTableSchemasResponse> getAppDatabaseTableSchemas(GetAppDatabaseTableSchemasRequest request);
+
+    /**
+     * @param request the request parameters of GetAppFileContent  GetAppFileContentRequest
+     * @return GetAppFileContentResponse
+     */
+    CompletableFuture<GetAppFileContentResponse> getAppFileContent(GetAppFileContentRequest request);
+
+    /**
      * @param request the request parameters of GetAppInstance  GetAppInstanceRequest
      * @return GetAppInstanceResponse
      */
     CompletableFuture<GetAppInstanceResponse> getAppInstance(GetAppInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetAppInstanceEntitlement  GetAppInstanceEntitlementRequest
+     * @return GetAppInstanceEntitlementResponse
+     */
+    CompletableFuture<GetAppInstanceEntitlementResponse> getAppInstanceEntitlement(GetAppInstanceEntitlementRequest request);
 
     /**
      * @param request the request parameters of GetAppInstanceForAdmin  GetAppInstanceForAdminRequest
@@ -176,10 +238,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAppInstanceForPartnerResponse> getAppInstanceForPartner(GetAppInstanceForPartnerRequest request);
 
     /**
+     * @param request the request parameters of GetAppInstanceTempShortUrl  GetAppInstanceTempShortUrlRequest
+     * @return GetAppInstanceTempShortUrlResponse
+     */
+    CompletableFuture<GetAppInstanceTempShortUrlResponse> getAppInstanceTempShortUrl(GetAppInstanceTempShortUrlRequest request);
+
+    /**
      * @param request the request parameters of GetAppPluginConfig  GetAppPluginConfigRequest
      * @return GetAppPluginConfigResponse
      */
     CompletableFuture<GetAppPluginConfigResponse> getAppPluginConfig(GetAppPluginConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetAppPublishStatus  GetAppPublishStatusRequest
+     * @return GetAppPublishStatusResponse
+     */
+    CompletableFuture<GetAppPublishStatusResponse> getAppPublishStatus(GetAppPublishStatusRequest request);
 
     /**
      * @param request the request parameters of GetAppRecommendedCommodities  GetAppRecommendedCommoditiesRequest
@@ -188,10 +262,70 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAppRecommendedCommoditiesResponse> getAppRecommendedCommodities(GetAppRecommendedCommoditiesRequest request);
 
     /**
+     * @param request the request parameters of GetAppRequirement  GetAppRequirementRequest
+     * @return GetAppRequirementResponse
+     */
+    CompletableFuture<GetAppRequirementResponse> getAppRequirement(GetAppRequirementRequest request);
+
+    /**
+     * @param request the request parameters of GetAppSandboxPreviewUrl  GetAppSandboxPreviewUrlRequest
+     * @return GetAppSandboxPreviewUrlResponse
+     */
+    CompletableFuture<GetAppSandboxPreviewUrlResponse> getAppSandboxPreviewUrl(GetAppSandboxPreviewUrlRequest request);
+
+    /**
+     * @param request the request parameters of GetAppSeoStatus  GetAppSeoStatusRequest
+     * @return GetAppSeoStatusResponse
+     */
+    CompletableFuture<GetAppSeoStatusResponse> getAppSeoStatus(GetAppSeoStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetAppSeoTrends  GetAppSeoTrendsRequest
+     * @return GetAppSeoTrendsResponse
+     */
+    CompletableFuture<GetAppSeoTrendsResponse> getAppSeoTrends(GetAppSeoTrendsRequest request);
+
+    /**
+     * @param request the request parameters of GetAppSitemap  GetAppSitemapRequest
+     * @return GetAppSitemapResponse
+     */
+    CompletableFuture<GetAppSitemapResponse> getAppSitemap(GetAppSitemapRequest request);
+
+    /**
+     * @param request the request parameters of GetAppSupabaseAuthConfig  GetAppSupabaseAuthConfigRequest
+     * @return GetAppSupabaseAuthConfigResponse
+     */
+    CompletableFuture<GetAppSupabaseAuthConfigResponse> getAppSupabaseAuthConfig(GetAppSupabaseAuthConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetAppSupabaseInstance  GetAppSupabaseInstanceRequest
+     * @return GetAppSupabaseInstanceResponse
+     */
+    CompletableFuture<GetAppSupabaseInstanceResponse> getAppSupabaseInstance(GetAppSupabaseInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetAppSupabaseSecrets  GetAppSupabaseSecretsRequest
+     * @return GetAppSupabaseSecretsResponse
+     */
+    CompletableFuture<GetAppSupabaseSecretsResponse> getAppSupabaseSecrets(GetAppSupabaseSecretsRequest request);
+
+    /**
+     * @param request the request parameters of GetAppTemplate  GetAppTemplateRequest
+     * @return GetAppTemplateResponse
+     */
+    CompletableFuture<GetAppTemplateResponse> getAppTemplate(GetAppTemplateRequest request);
+
+    /**
      * @param request the request parameters of GetAppTokenService  GetAppTokenServiceRequest
      * @return GetAppTokenServiceResponse
      */
     CompletableFuture<GetAppTokenServiceResponse> getAppTokenService(GetAppTokenServiceRequest request);
+
+    /**
+     * @param request the request parameters of GetAppWorkspaceDirectory  GetAppWorkspaceDirectoryRequest
+     * @return GetAppWorkspaceDirectoryResponse
+     */
+    CompletableFuture<GetAppWorkspaceDirectoryResponse> getAppWorkspaceDirectory(GetAppWorkspaceDirectoryRequest request);
 
     /**
      * @param request the request parameters of GetCreateLogoTask  GetCreateLogoTaskRequest
@@ -254,6 +388,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAppAssistantAgentsResponse> listAppAssistantAgents(ListAppAssistantAgentsRequest request);
 
     /**
+     * @param request the request parameters of ListAppChatMessages  ListAppChatMessagesRequest
+     * @return ListAppChatMessagesResponse
+     */
+    CompletableFuture<ListAppChatMessagesResponse> listAppChatMessages(ListAppChatMessagesRequest request);
+
+    /**
      * @deprecated OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.  * @param request  the request parameters of ListAppCommoditySpecificationsForPartner  ListAppCommoditySpecificationsForPartnerRequest
      * @return ListAppCommoditySpecificationsForPartnerResponse
      */
@@ -265,6 +405,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAppCommoditySpecificationsV2ForPartnerResponse
      */
     CompletableFuture<ListAppCommoditySpecificationsV2ForPartnerResponse> listAppCommoditySpecificationsV2ForPartner(ListAppCommoditySpecificationsV2ForPartnerRequest request);
+
+    /**
+     * @param request the request parameters of ListAppConversationMessages  ListAppConversationMessagesRequest
+     * @return ListAppConversationMessagesResponse
+     */
+    CompletableFuture<ListAppConversationMessagesResponse> listAppConversationMessages(ListAppConversationMessagesRequest request);
+
+    /**
+     * @param request the request parameters of ListAppConversations  ListAppConversationsRequest
+     * @return ListAppConversationsResponse
+     */
+    CompletableFuture<ListAppConversationsResponse> listAppConversations(ListAppConversationsRequest request);
 
     /**
      * @param request the request parameters of ListAppDomainRedirectRecords  ListAppDomainRedirectRecordsRequest
@@ -283,6 +435,42 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAppInstancesResponse
      */
     CompletableFuture<ListAppInstancesResponse> listAppInstances(ListAppInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListAppPluginConfigs  ListAppPluginConfigsRequest
+     * @return ListAppPluginConfigsResponse
+     */
+    CompletableFuture<ListAppPluginConfigsResponse> listAppPluginConfigs(ListAppPluginConfigsRequest request);
+
+    /**
+     * @param request the request parameters of ListAppPlugins  ListAppPluginsRequest
+     * @return ListAppPluginsResponse
+     */
+    CompletableFuture<ListAppPluginsResponse> listAppPlugins(ListAppPluginsRequest request);
+
+    /**
+     * @param request the request parameters of ListAppPublishHistory  ListAppPublishHistoryRequest
+     * @return ListAppPublishHistoryResponse
+     */
+    CompletableFuture<ListAppPublishHistoryResponse> listAppPublishHistory(ListAppPublishHistoryRequest request);
+
+    /**
+     * @param request the request parameters of ListAppTemplateDicts  ListAppTemplateDictsRequest
+     * @return ListAppTemplateDictsResponse
+     */
+    CompletableFuture<ListAppTemplateDictsResponse> listAppTemplateDicts(ListAppTemplateDictsRequest request);
+
+    /**
+     * @param request the request parameters of ListAppTemplates  ListAppTemplatesRequest
+     * @return ListAppTemplatesResponse
+     */
+    CompletableFuture<ListAppTemplatesResponse> listAppTemplates(ListAppTemplatesRequest request);
+
+    /**
+     * @param request the request parameters of ListIsvPaymentPluginConfigs  ListIsvPaymentPluginConfigsRequest
+     * @return ListIsvPaymentPluginConfigsResponse
+     */
+    CompletableFuture<ListIsvPaymentPluginConfigsResponse> listIsvPaymentPluginConfigs(ListIsvPaymentPluginConfigsRequest request);
 
     /**
      * @param request the request parameters of ModifyAppInstanceSpec  ModifyAppInstanceSpecRequest
@@ -333,10 +521,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateAppServiceForPartnerResponse> operateAppServiceForPartner(OperateAppServiceForPartnerRequest request);
 
     /**
+     * @param request the request parameters of OperateAppTemplateLike  OperateAppTemplateLikeRequest
+     * @return OperateAppTemplateLikeResponse
+     */
+    CompletableFuture<OperateAppTemplateLikeResponse> operateAppTemplateLike(OperateAppTemplateLikeRequest request);
+
+    /**
      * @param request the request parameters of OperateSupabaseForAdmin  OperateSupabaseForAdminRequest
      * @return OperateSupabaseForAdminResponse
      */
     CompletableFuture<OperateSupabaseForAdminResponse> operateSupabaseForAdmin(OperateSupabaseForAdminRequest request);
+
+    /**
+     * @param request the request parameters of PublishAppInstance  PublishAppInstanceRequest
+     * @return PublishAppInstanceResponse
+     */
+    CompletableFuture<PublishAppInstanceResponse> publishAppInstance(PublishAppInstanceRequest request);
 
     /**
      * @param request the request parameters of PushResourceMeasure  PushResourceMeasureRequest
@@ -417,6 +617,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QuerySupabaseInstanceInfoForAdminResponse> querySupabaseInstanceInfoForAdmin(QuerySupabaseInstanceInfoForAdminRequest request);
 
     /**
+     * @param request the request parameters of ReconnectAppChat  ReconnectAppChatRequest
+     * @return ReconnectAppChatResponse
+     */
+    CompletableFuture<ReconnectAppChatResponse> reconnectAppChat(ReconnectAppChatRequest request);
+
+    ResponseIterable<String> reconnectAppChatWithResponseIterable(ReconnectAppChatRequest request);
+
+    /**
      * @param request the request parameters of RefreshAppInstanceTicket  RefreshAppInstanceTicketRequest
      * @return RefreshAppInstanceTicketResponse
      */
@@ -435,6 +643,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenewAppInstanceResponse> renewAppInstance(RenewAppInstanceRequest request);
 
     /**
+     * @param request the request parameters of RenewAppSandbox  RenewAppSandboxRequest
+     * @return RenewAppSandboxResponse
+     */
+    CompletableFuture<RenewAppSandboxResponse> renewAppSandbox(RenewAppSandboxRequest request);
+
+    /**
+     * @param request the request parameters of RollbackAppCodeSnapshot  RollbackAppCodeSnapshotRequest
+     * @return RollbackAppCodeSnapshotResponse
+     */
+    CompletableFuture<RollbackAppCodeSnapshotResponse> rollbackAppCodeSnapshot(RollbackAppCodeSnapshotRequest request);
+
+    /**
+     * @param request the request parameters of RollbackAppInstancePublish  RollbackAppInstancePublishRequest
+     * @return RollbackAppInstancePublishResponse
+     */
+    CompletableFuture<RollbackAppInstancePublishResponse> rollbackAppInstancePublish(RollbackAppInstancePublishRequest request);
+
+    /**
+     * @param request the request parameters of SaveAppRequirement  SaveAppRequirementRequest
+     * @return SaveAppRequirementResponse
+     */
+    CompletableFuture<SaveAppRequirementResponse> saveAppRequirement(SaveAppRequirementRequest request);
+
+    /**
+     * @param request the request parameters of SaveAppSupabaseSecrets  SaveAppSupabaseSecretsRequest
+     * @return SaveAppSupabaseSecretsResponse
+     */
+    CompletableFuture<SaveAppSupabaseSecretsResponse> saveAppSupabaseSecrets(SaveAppSupabaseSecretsRequest request);
+
+    /**
      * @param request the request parameters of SearchImage  SearchImageRequest
      * @return SearchImageResponse
      */
@@ -447,10 +685,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetAppDomainCertificateResponse> setAppDomainCertificate(SetAppDomainCertificateRequest request);
 
     /**
+     * @param request the request parameters of SubmitAppSeoIndex  SubmitAppSeoIndexRequest
+     * @return SubmitAppSeoIndexResponse
+     */
+    CompletableFuture<SubmitAppSeoIndexResponse> submitAppSeoIndex(SubmitAppSeoIndexRequest request);
+
+    /**
      * @param request the request parameters of SubmitMaterialTask  SubmitMaterialTaskRequest
      * @return SubmitMaterialTaskResponse
      */
     CompletableFuture<SubmitMaterialTaskResponse> submitMaterialTask(SubmitMaterialTaskRequest request);
+
+    /**
+     * @param request the request parameters of SwitchAppConversation  SwitchAppConversationRequest
+     * @return SwitchAppConversationResponse
+     */
+    CompletableFuture<SwitchAppConversationResponse> switchAppConversation(SwitchAppConversationRequest request);
 
     /**
      * @param request the request parameters of SyncAppInstanceForPartner  SyncAppInstanceForPartnerRequest
@@ -463,6 +713,54 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnbindAppDomainResponse
      */
     CompletableFuture<UnbindAppDomainResponse> unbindAppDomain(UnbindAppDomainRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAppChatMessage  UpdateAppChatMessageRequest
+     * @return UpdateAppChatMessageResponse
+     */
+    CompletableFuture<UpdateAppChatMessageResponse> updateAppChatMessage(UpdateAppChatMessageRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAppCode  UpdateAppCodeRequest
+     * @return UpdateAppCodeResponse
+     */
+    CompletableFuture<UpdateAppCodeResponse> updateAppCode(UpdateAppCodeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAppFile  UpdateAppFileRequest
+     * @return UpdateAppFileResponse
+     */
+    CompletableFuture<UpdateAppFileResponse> updateAppFile(UpdateAppFileRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAppInstance  UpdateAppInstanceRequest
+     * @return UpdateAppInstanceResponse
+     */
+    CompletableFuture<UpdateAppInstanceResponse> updateAppInstance(UpdateAppInstanceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAppSeoStatus  UpdateAppSeoStatusRequest
+     * @return UpdateAppSeoStatusResponse
+     */
+    CompletableFuture<UpdateAppSeoStatusResponse> updateAppSeoStatus(UpdateAppSeoStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAppSupabaseAuthConfig  UpdateAppSupabaseAuthConfigRequest
+     * @return UpdateAppSupabaseAuthConfigResponse
+     */
+    CompletableFuture<UpdateAppSupabaseAuthConfigResponse> updateAppSupabaseAuthConfig(UpdateAppSupabaseAuthConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAppSupabaseSecret  UpdateAppSupabaseSecretRequest
+     * @return UpdateAppSupabaseSecretResponse
+     */
+    CompletableFuture<UpdateAppSupabaseSecretResponse> updateAppSupabaseSecret(UpdateAppSupabaseSecretRequest request);
+
+    /**
+     * @param request the request parameters of UploadAppSiteValidationFile  UploadAppSiteValidationFileRequest
+     * @return UploadAppSiteValidationFileResponse
+     */
+    CompletableFuture<UploadAppSiteValidationFileResponse> uploadAppSiteValidationFile(UploadAppSiteValidationFileRequest request);
 
     /**
      * @param request the request parameters of UploadMaterialFile  UploadMaterialFileRequest
