@@ -263,6 +263,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request);
 
     /**
+     * @param request the request parameters of RenewServiceInstance  RenewServiceInstanceRequest
+     * @return RenewServiceInstanceResponse
+     */
+    CompletableFuture<RenewServiceInstanceResponse> renewServiceInstance(RenewServiceInstanceRequest request);
+
+    /**
      * @param request the request parameters of RenewServiceInstanceResources  RenewServiceInstanceResourcesRequest
      * @return RenewServiceInstanceResourcesResponse
      */
