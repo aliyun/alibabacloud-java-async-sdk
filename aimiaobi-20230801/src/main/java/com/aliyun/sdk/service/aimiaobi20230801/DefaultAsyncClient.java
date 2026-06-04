@@ -977,6 +977,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of FetchParseDocumentLayoutTask  FetchParseDocumentLayoutTaskRequest
+     * @return FetchParseDocumentLayoutTaskResponse
+     */
+    @Override
+    public CompletableFuture<FetchParseDocumentLayoutTaskResponse> fetchParseDocumentLayoutTask(FetchParseDocumentLayoutTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("FetchParseDocumentLayoutTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FetchParseDocumentLayoutTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FetchParseDocumentLayoutTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GenerateExportWordTask  GenerateExportWordTaskRequest
      * @return GenerateExportWordTaskResponse
      */
@@ -4080,6 +4098,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitImportTermsTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitParseDocumentLayoutTask  SubmitParseDocumentLayoutTaskRequest
+     * @return SubmitParseDocumentLayoutTaskResponse
+     */
+    @Override
+    public CompletableFuture<SubmitParseDocumentLayoutTaskResponse> submitParseDocumentLayoutTask(SubmitParseDocumentLayoutTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitParseDocumentLayoutTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitParseDocumentLayoutTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitParseDocumentLayoutTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

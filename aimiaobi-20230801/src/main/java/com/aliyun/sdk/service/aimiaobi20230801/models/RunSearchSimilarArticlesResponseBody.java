@@ -125,6 +125,9 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
 
+        @com.aliyun.core.annotation.NameInMap("EventInfo")
+        private String eventInfo;
+
         @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
@@ -135,6 +138,7 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
             this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
             this.event = builder.event;
+            this.eventInfo = builder.eventInfo;
             this.sessionId = builder.sessionId;
             this.taskId = builder.taskId;
         }
@@ -169,6 +173,13 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         }
 
         /**
+         * @return eventInfo
+         */
+        public String getEventInfo() {
+            return this.eventInfo;
+        }
+
+        /**
          * @return sessionId
          */
         public String getSessionId() {
@@ -186,6 +197,7 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
             private String event; 
+            private String eventInfo; 
             private String sessionId; 
             private String taskId; 
 
@@ -196,6 +208,7 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
                 this.errorCode = model.errorCode;
                 this.errorMessage = model.errorMessage;
                 this.event = model.event;
+                this.eventInfo = model.eventInfo;
                 this.sessionId = model.sessionId;
                 this.taskId = model.taskId;
             } 
@@ -221,6 +234,14 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
              */
             public Builder event(String event) {
                 this.event = event;
+                return this;
+            }
+
+            /**
+             * EventInfo.
+             */
+            public Builder eventInfo(String eventInfo) {
+                this.eventInfo = eventInfo;
                 return this;
             }
 

@@ -332,6 +332,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FetchImportTermsTaskResponse> fetchImportTermsTask(FetchImportTermsTaskRequest request);
 
     /**
+     * @param request the request parameters of FetchParseDocumentLayoutTask  FetchParseDocumentLayoutTaskRequest
+     * @return FetchParseDocumentLayoutTaskResponse
+     */
+    CompletableFuture<FetchParseDocumentLayoutTaskResponse> fetchParseDocumentLayoutTask(FetchParseDocumentLayoutTaskRequest request);
+
+    /**
      * @param request the request parameters of GenerateExportWordTask  GenerateExportWordTaskRequest
      * @return GenerateExportWordTaskResponse
      */
@@ -1319,6 +1325,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitImportTermsTaskResponse
      */
     CompletableFuture<SubmitImportTermsTaskResponse> submitImportTermsTask(SubmitImportTermsTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitParseDocumentLayoutTask  SubmitParseDocumentLayoutTaskRequest
+     * @return SubmitParseDocumentLayoutTaskResponse
+     */
+    CompletableFuture<SubmitParseDocumentLayoutTaskResponse> submitParseDocumentLayoutTask(SubmitParseDocumentLayoutTaskRequest request);
 
     /**
      * @param request the request parameters of SubmitSmartAudit  SubmitSmartAuditRequest
