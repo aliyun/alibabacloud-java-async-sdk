@@ -110,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobTemplateResponse> getJobTemplate(GetJobTemplateRequest request);
 
     /**
+     * @param request the request parameters of GetMetrics  GetMetricsRequest
+     * @return GetMetricsResponse
+     */
+    CompletableFuture<GetMetricsResponse> getMetrics(GetMetricsRequest request);
+
+    /**
      * @param request the request parameters of GetPodEvents  GetPodEventsRequest
      * @return GetPodEventsResponse
      */
