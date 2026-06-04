@@ -40,7 +40,7 @@ public class RunStyleWritingRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("styleFeature")
-    @com.aliyun.core.annotation.Validation(maxLength = 1000)
+    @com.aliyun.core.annotation.Validation(maxLength = 2000)
     private String styleFeature;
 
     @com.aliyun.core.annotation.Body
