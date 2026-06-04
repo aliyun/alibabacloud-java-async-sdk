@@ -68,6 +68,12 @@ public class AppInstanceProfile extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
+    @com.aliyun.core.annotation.NameInMap("chatbiTaskId")
+    private String chatbiTaskId;
+
+    @com.aliyun.core.annotation.NameInMap("chatbiTaskStatus")
+    private String chatbiTaskStatus;
+
     private AppInstanceProfile(Builder builder) {
         this.applicationType = builder.applicationType;
         this.applicationTypeText = builder.applicationTypeText;
@@ -86,6 +92,8 @@ public class AppInstanceProfile extends TeaModel {
         this.source = builder.source;
         this.templateEtag = builder.templateEtag;
         this.templateId = builder.templateId;
+        this.chatbiTaskId = builder.chatbiTaskId;
+        this.chatbiTaskStatus = builder.chatbiTaskStatus;
     }
 
     public static Builder builder() {
@@ -219,6 +227,20 @@ public class AppInstanceProfile extends TeaModel {
         return this.templateId;
     }
 
+    /**
+     * @return chatbiTaskId
+     */
+    public String getChatbiTaskId() {
+        return this.chatbiTaskId;
+    }
+
+    /**
+     * @return chatbiTaskStatus
+     */
+    public String getChatbiTaskStatus() {
+        return this.chatbiTaskStatus;
+    }
+
     public static final class Builder {
         private String applicationType; 
         private String applicationTypeText; 
@@ -237,6 +259,8 @@ public class AppInstanceProfile extends TeaModel {
         private String source; 
         private String templateEtag; 
         private String templateId; 
+        private String chatbiTaskId; 
+        private String chatbiTaskStatus; 
 
         private Builder() {
         } 
@@ -259,6 +283,8 @@ public class AppInstanceProfile extends TeaModel {
             this.source = model.source;
             this.templateEtag = model.templateEtag;
             this.templateId = model.templateId;
+            this.chatbiTaskId = model.chatbiTaskId;
+            this.chatbiTaskStatus = model.chatbiTaskStatus;
         } 
 
         /**
@@ -394,6 +420,22 @@ public class AppInstanceProfile extends TeaModel {
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * chatbiTaskId.
+         */
+        public Builder chatbiTaskId(String chatbiTaskId) {
+            this.chatbiTaskId = chatbiTaskId;
+            return this;
+        }
+
+        /**
+         * chatbiTaskStatus.
+         */
+        public Builder chatbiTaskStatus(String chatbiTaskStatus) {
+            this.chatbiTaskStatus = chatbiTaskStatus;
             return this;
         }
 
