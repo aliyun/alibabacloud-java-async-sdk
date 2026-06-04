@@ -22,6 +22,10 @@ public class ListInstancesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
@@ -40,6 +44,7 @@ public class ListInstancesRequest extends Request {
     private ListInstancesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.edition = builder.edition;
         this.instanceIds = builder.instanceIds;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -64,6 +69,13 @@ public class ListInstancesRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -96,6 +108,7 @@ public class ListInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String regionId; 
+        private String edition; 
         private java.util.List<String> instanceIds; 
         private Long pageNumber; 
         private Long pageSize; 
@@ -108,6 +121,7 @@ public class ListInstancesRequest extends Request {
         private Builder(ListInstancesRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.edition = request.edition;
             this.instanceIds = request.instanceIds;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -120,6 +134,15 @@ public class ListInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
             return this;
         }
 
