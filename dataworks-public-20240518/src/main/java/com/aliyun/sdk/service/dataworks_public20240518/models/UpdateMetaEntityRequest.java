@@ -12,14 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateTableBusinessMetadataRequest} extends {@link RequestModel}
+ * {@link UpdateMetaEntityRequest} extends {@link RequestModel}
  *
- * <p>UpdateTableBusinessMetadataRequest</p>
+ * <p>UpdateMetaEntityRequest</p>
  */
-public class UpdateTableBusinessMetadataRequest extends Request {
+public class UpdateMetaEntityRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Attributes")
+    private java.util.Map<String, String> attributes;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    private String comment;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustomAttributes")
@@ -30,23 +38,20 @@ public class UpdateTableBusinessMetadataRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Readme")
-    private String readme;
-
-    private UpdateTableBusinessMetadataRequest(Builder builder) {
+    private UpdateMetaEntityRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.attributes = builder.attributes;
+        this.comment = builder.comment;
         this.customAttributes = builder.customAttributes;
         this.id = builder.id;
-        this.readme = builder.readme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateTableBusinessMetadataRequest create() {
+    public static UpdateMetaEntityRequest create() {
         return builder().build();
     }
 
@@ -63,6 +68,20 @@ public class UpdateTableBusinessMetadataRequest extends Request {
     }
 
     /**
+     * @return attributes
+     */
+    public java.util.Map<String, String> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
+     * @return comment
+     */
+    public String getComment() {
+        return this.comment;
+    }
+
+    /**
      * @return customAttributes
      */
     public java.util.Map<String, java.util.List<String>> getCustomAttributes() {
@@ -76,40 +95,51 @@ public class UpdateTableBusinessMetadataRequest extends Request {
         return this.id;
     }
 
-    /**
-     * @return readme
-     */
-    public String getReadme() {
-        return this.readme;
-    }
-
-    public static final class Builder extends Request.Builder<UpdateTableBusinessMetadataRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateMetaEntityRequest, Builder> {
         private String regionId; 
+        private java.util.Map<String, String> attributes; 
+        private String comment; 
         private java.util.Map<String, java.util.List<String>> customAttributes; 
         private String id; 
-        private String readme; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateTableBusinessMetadataRequest request) {
+        private Builder(UpdateMetaEntityRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.attributes = request.attributes;
+            this.comment = request.comment;
             this.customAttributes = request.customAttributes;
             this.id = request.id;
-            this.readme = request.readme;
         } 
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Attributes.
+         */
+        public Builder attributes(java.util.Map<String, String> attributes) {
+            String attributesShrink = shrink(attributes, "Attributes", "json");
+            this.putBodyParameter("Attributes", attributesShrink);
+            this.attributes = attributes;
+            return this;
+        }
+
+        /**
+         * Comment.
+         */
+        public Builder comment(String comment) {
+            this.putBodyParameter("Comment", comment);
+            this.comment = comment;
             return this;
         }
 
@@ -124,14 +154,10 @@ public class UpdateTableBusinessMetadataRequest extends Request {
         }
 
         /**
-         * <p>The table ID. You can refer to the format of the table ID returned by the ListTables operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>maxcompute-table:123456XXX::test_project::test_tbl
-         * dlf-table:123456XXX:test_catalog:test_db::test_tbl
-         * hms-table:c-abc123xxx::test_db::test_tbl
-         * holo-table:h-abc123xxx::test_db:test_schema:test_tbl</p>
+         * <p>custom_entity-customer_api:api_001</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -139,21 +165,9 @@ public class UpdateTableBusinessMetadataRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>The usage notes. The rich text format is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <h2>introduction</h2>
-         */
-        public Builder readme(String readme) {
-            this.putBodyParameter("Readme", readme);
-            this.readme = readme;
-            return this;
-        }
-
         @Override
-        public UpdateTableBusinessMetadataRequest build() {
-            return new UpdateTableBusinessMetadataRequest(this);
+        public UpdateMetaEntityRequest build() {
+            return new UpdateMetaEntityRequest(this);
         } 
 
     } 

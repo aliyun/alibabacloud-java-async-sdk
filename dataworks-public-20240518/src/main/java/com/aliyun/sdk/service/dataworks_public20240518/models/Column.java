@@ -263,10 +263,14 @@ public class Column extends TeaModel {
      * <p>Column</p>
      */
     public static class BusinessMetadata extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CustomAttributes")
+        private java.util.Map<String, java.util.List<String>> customAttributes;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private BusinessMetadata(Builder builder) {
+            this.customAttributes = builder.customAttributes;
             this.description = builder.description;
         }
 
@@ -279,6 +283,13 @@ public class Column extends TeaModel {
         }
 
         /**
+         * @return customAttributes
+         */
+        public java.util.Map<String, java.util.List<String>> getCustomAttributes() {
+            return this.customAttributes;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -286,14 +297,24 @@ public class Column extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map<String, java.util.List<String>> customAttributes; 
             private String description; 
 
             private Builder() {
             } 
 
             private Builder(BusinessMetadata model) {
+                this.customAttributes = model.customAttributes;
                 this.description = model.description;
             } 
+
+            /**
+             * CustomAttributes.
+             */
+            public Builder customAttributes(java.util.Map<String, java.util.List<String>> customAttributes) {
+                this.customAttributes = customAttributes;
+                return this;
+            }
 
             /**
              * Description.

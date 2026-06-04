@@ -22,6 +22,10 @@ public class UpdateColumnBusinessMetadataRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomAttributes")
+    private java.util.Map<String, java.util.List<String>> customAttributes;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -33,6 +37,7 @@ public class UpdateColumnBusinessMetadataRequest extends Request {
     private UpdateColumnBusinessMetadataRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.customAttributes = builder.customAttributes;
         this.description = builder.description;
         this.id = builder.id;
     }
@@ -58,6 +63,13 @@ public class UpdateColumnBusinessMetadataRequest extends Request {
     }
 
     /**
+     * @return customAttributes
+     */
+    public java.util.Map<String, java.util.List<String>> getCustomAttributes() {
+        return this.customAttributes;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -73,6 +85,7 @@ public class UpdateColumnBusinessMetadataRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateColumnBusinessMetadataRequest, Builder> {
         private String regionId; 
+        private java.util.Map<String, java.util.List<String>> customAttributes; 
         private String description; 
         private String id; 
 
@@ -83,16 +96,30 @@ public class UpdateColumnBusinessMetadataRequest extends Request {
         private Builder(UpdateColumnBusinessMetadataRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.customAttributes = request.customAttributes;
             this.description = request.description;
             this.id = request.id;
         } 
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CustomAttributes.
+         */
+        public Builder customAttributes(java.util.Map<String, java.util.List<String>> customAttributes) {
+            String customAttributesShrink = shrink(customAttributes, "CustomAttributes", "json");
+            this.putBodyParameter("CustomAttributes", customAttributesShrink);
+            this.customAttributes = customAttributes;
             return this;
         }
 

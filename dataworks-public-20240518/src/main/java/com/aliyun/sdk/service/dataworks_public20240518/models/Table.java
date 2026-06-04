@@ -650,6 +650,9 @@ public class Table extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List<java.util.List<Categories>> categories;
 
+        @com.aliyun.core.annotation.NameInMap("CustomAttributes")
+        private java.util.Map<String, java.util.List<String>> customAttributes;
+
         @com.aliyun.core.annotation.NameInMap("Extension")
         private Extension extension;
 
@@ -664,6 +667,7 @@ public class Table extends TeaModel {
 
         private BusinessMetadata(Builder builder) {
             this.categories = builder.categories;
+            this.customAttributes = builder.customAttributes;
             this.extension = builder.extension;
             this.readme = builder.readme;
             this.tags = builder.tags;
@@ -683,6 +687,13 @@ public class Table extends TeaModel {
          */
         public java.util.List<java.util.List<Categories>> getCategories() {
             return this.categories;
+        }
+
+        /**
+         * @return customAttributes
+         */
+        public java.util.Map<String, java.util.List<String>> getCustomAttributes() {
+            return this.customAttributes;
         }
 
         /**
@@ -715,6 +726,7 @@ public class Table extends TeaModel {
 
         public static final class Builder {
             private java.util.List<java.util.List<Categories>> categories; 
+            private java.util.Map<String, java.util.List<String>> customAttributes; 
             private Extension extension; 
             private String readme; 
             private java.util.List<Tags> tags; 
@@ -725,6 +737,7 @@ public class Table extends TeaModel {
 
             private Builder(BusinessMetadata model) {
                 this.categories = model.categories;
+                this.customAttributes = model.customAttributes;
                 this.extension = model.extension;
                 this.readme = model.readme;
                 this.tags = model.tags;
@@ -736,6 +749,14 @@ public class Table extends TeaModel {
              */
             public Builder categories(java.util.List<java.util.List<Categories>> categories) {
                 this.categories = categories;
+                return this;
+            }
+
+            /**
+             * CustomAttributes.
+             */
+            public Builder customAttributes(java.util.Map<String, java.util.List<String>> customAttributes) {
+                this.customAttributes = customAttributes;
                 return this;
             }
 

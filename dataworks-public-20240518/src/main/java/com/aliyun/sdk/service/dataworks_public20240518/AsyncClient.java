@@ -65,6 +65,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachDataQualityRulesToEvaluationTaskResponse> attachDataQualityRulesToEvaluationTask(AttachDataQualityRulesToEvaluationTaskRequest request);
 
     /**
+     * @param request the request parameters of BatchCreateMetaEntities  BatchCreateMetaEntitiesRequest
+     * @return BatchCreateMetaEntitiesResponse
+     */
+    CompletableFuture<BatchCreateMetaEntitiesResponse> batchCreateMetaEntities(BatchCreateMetaEntitiesRequest request);
+
+    /**
+     * @param request the request parameters of BatchDeleteMetaEntities  BatchDeleteMetaEntitiesRequest
+     * @return BatchDeleteMetaEntitiesResponse
+     */
+    CompletableFuture<BatchDeleteMetaEntitiesResponse> batchDeleteMetaEntities(BatchDeleteMetaEntitiesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -123,6 +135,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateComputeResourceResponse
      */
     CompletableFuture<CreateComputeResourceResponse> createComputeResource(CreateComputeResourceRequest request);
+
+    /**
+     * @param request the request parameters of CreateCustomAttribute  CreateCustomAttributeRequest
+     * @return CreateCustomAttributeResponse
+     */
+    CompletableFuture<CreateCustomAttributeResponse> createCustomAttribute(CreateCustomAttributeRequest request);
 
     /**
      * @param request the request parameters of CreateDIAlarmRule  CreateDIAlarmRuleRequest
@@ -306,6 +324,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMetaCollectionResponse> createMetaCollection(CreateMetaCollectionRequest request);
 
     /**
+     * @param request the request parameters of CreateMetaEntityDef  CreateMetaEntityDefRequest
+     * @return CreateMetaEntityDefResponse
+     */
+    CompletableFuture<CreateMetaEntityDefResponse> createMetaEntityDef(CreateMetaEntityDefRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -455,6 +479,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteComputeResourceResponse
      */
     CompletableFuture<DeleteComputeResourceResponse> deleteComputeResource(DeleteComputeResourceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCustomAttribute  DeleteCustomAttributeRequest
+     * @return DeleteCustomAttributeResponse
+     */
+    CompletableFuture<DeleteCustomAttributeResponse> deleteCustomAttribute(DeleteCustomAttributeRequest request);
 
     /**
      * @param request the request parameters of DeleteDIAlarmRule  DeleteDIAlarmRuleRequest
@@ -608,6 +638,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteMetaCollectionResponse
      */
     CompletableFuture<DeleteMetaCollectionResponse> deleteMetaCollection(DeleteMetaCollectionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMetaEntityDef  DeleteMetaEntityDefRequest
+     * @return DeleteMetaEntityDefResponse
+     */
+    CompletableFuture<DeleteMetaEntityDefResponse> deleteMetaEntityDef(DeleteMetaEntityDefRequest request);
 
     /**
      * <b>description</b> :
@@ -856,6 +892,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCreateWorkflowInstancesResultResponse> getCreateWorkflowInstancesResult(GetCreateWorkflowInstancesResultRequest request);
 
     /**
+     * @param request the request parameters of GetCustomAttribute  GetCustomAttributeRequest
+     * @return GetCustomAttributeResponse
+     */
+    CompletableFuture<GetCustomAttributeResponse> getCustomAttribute(GetCustomAttributeRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -1042,6 +1084,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetMetaCollectionResponse
      */
     CompletableFuture<GetMetaCollectionResponse> getMetaCollection(GetMetaCollectionRequest request);
+
+    /**
+     * @param request the request parameters of GetMetaEntity  GetMetaEntityRequest
+     * @return GetMetaEntityResponse
+     */
+    CompletableFuture<GetMetaEntityResponse> getMetaEntity(GetMetaEntityRequest request);
+
+    /**
+     * @param request the request parameters of GetMetaEntityDef  GetMetaEntityDefRequest
+     * @return GetMetaEntityDefResponse
+     */
+    CompletableFuture<GetMetaEntityDefResponse> getMetaEntityDef(GetMetaEntityDefRequest request);
 
     /**
      * <b>description</b> :
@@ -1302,6 +1356,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCrawlerTypesResponse
      */
     CompletableFuture<ListCrawlerTypesResponse> listCrawlerTypes(ListCrawlerTypesRequest request);
+
+    /**
+     * @param request the request parameters of ListCustomAttributes  ListCustomAttributesRequest
+     * @return ListCustomAttributesResponse
+     */
+    CompletableFuture<ListCustomAttributesResponse> listCustomAttributes(ListCustomAttributesRequest request);
 
     /**
      * @param request the request parameters of ListDIAlarmRules  ListDIAlarmRulesRequest
@@ -1582,6 +1642,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListMetaCollectionsResponse
      */
     CompletableFuture<ListMetaCollectionsResponse> listMetaCollections(ListMetaCollectionsRequest request);
+
+    /**
+     * @param request the request parameters of ListMetaEntities  ListMetaEntitiesRequest
+     * @return ListMetaEntitiesResponse
+     */
+    CompletableFuture<ListMetaEntitiesResponse> listMetaEntities(ListMetaEntitiesRequest request);
+
+    /**
+     * @param request the request parameters of ListMetaEntityDefs  ListMetaEntityDefsRequest
+     * @return ListMetaEntityDefsResponse
+     */
+    CompletableFuture<ListMetaEntityDefsResponse> listMetaEntityDefs(ListMetaEntityDefsRequest request);
 
     /**
      * <b>description</b> :
@@ -2049,6 +2121,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateComputeResourceResponse> updateComputeResource(UpdateComputeResourceRequest request);
 
     /**
+     * @param request the request parameters of UpdateCustomAttribute  UpdateCustomAttributeRequest
+     * @return UpdateCustomAttributeResponse
+     */
+    CompletableFuture<UpdateCustomAttributeResponse> updateCustomAttribute(UpdateCustomAttributeRequest request);
+
+    /**
      * @param request the request parameters of UpdateDIAlarmRule  UpdateDIAlarmRuleRequest
      * @return UpdateDIAlarmRuleResponse
      */
@@ -2178,6 +2256,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMetaCollectionResponse
      */
     CompletableFuture<UpdateMetaCollectionResponse> updateMetaCollection(UpdateMetaCollectionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMetaEntity  UpdateMetaEntityRequest
+     * @return UpdateMetaEntityResponse
+     */
+    CompletableFuture<UpdateMetaEntityResponse> updateMetaEntity(UpdateMetaEntityRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMetaEntityDef  UpdateMetaEntityDefRequest
+     * @return UpdateMetaEntityDefResponse
+     */
+    CompletableFuture<UpdateMetaEntityDefResponse> updateMetaEntityDef(UpdateMetaEntityDefRequest request);
 
     /**
      * @param request the request parameters of UpdateNode  UpdateNodeRequest
