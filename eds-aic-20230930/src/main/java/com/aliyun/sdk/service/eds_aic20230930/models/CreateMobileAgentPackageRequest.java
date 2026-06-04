@@ -42,12 +42,20 @@ public class CreateMobileAgentPackageRequest extends Request {
     private String creditConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private String imageId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MobileAgentPackageSpec")
     private String mobileAgentPackageSpec;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageSpecId")
+    private Long packageSpecId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PaidCallbackUrl")
@@ -73,8 +81,10 @@ public class CreateMobileAgentPackageRequest extends Request {
         this.bizRegionId = builder.bizRegionId;
         this.creditAmount = builder.creditAmount;
         this.creditConfig = builder.creditConfig;
+        this.imageId = builder.imageId;
         this.instanceName = builder.instanceName;
         this.mobileAgentPackageSpec = builder.mobileAgentPackageSpec;
+        this.packageSpecId = builder.packageSpecId;
         this.paidCallbackUrl = builder.paidCallbackUrl;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -137,6 +147,13 @@ public class CreateMobileAgentPackageRequest extends Request {
     }
 
     /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
      * @return instanceName
      */
     public String getInstanceName() {
@@ -148,6 +165,13 @@ public class CreateMobileAgentPackageRequest extends Request {
      */
     public String getMobileAgentPackageSpec() {
         return this.mobileAgentPackageSpec;
+    }
+
+    /**
+     * @return packageSpecId
+     */
+    public Long getPackageSpecId() {
+        return this.packageSpecId;
     }
 
     /**
@@ -185,8 +209,10 @@ public class CreateMobileAgentPackageRequest extends Request {
         private String bizRegionId; 
         private String creditAmount; 
         private String creditConfig; 
+        private String imageId; 
         private String instanceName; 
         private String mobileAgentPackageSpec; 
+        private Long packageSpecId; 
         private String paidCallbackUrl; 
         private Integer period; 
         private String periodUnit; 
@@ -204,8 +230,10 @@ public class CreateMobileAgentPackageRequest extends Request {
             this.bizRegionId = request.bizRegionId;
             this.creditAmount = request.creditAmount;
             this.creditConfig = request.creditConfig;
+            this.imageId = request.imageId;
             this.instanceName = request.instanceName;
             this.mobileAgentPackageSpec = request.mobileAgentPackageSpec;
+            this.packageSpecId = request.packageSpecId;
             this.paidCallbackUrl = request.paidCallbackUrl;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
@@ -267,6 +295,15 @@ public class CreateMobileAgentPackageRequest extends Request {
         }
 
         /**
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
+            return this;
+        }
+
+        /**
          * InstanceName.
          */
         public Builder instanceName(String instanceName) {
@@ -281,6 +318,15 @@ public class CreateMobileAgentPackageRequest extends Request {
         public Builder mobileAgentPackageSpec(String mobileAgentPackageSpec) {
             this.putQueryParameter("MobileAgentPackageSpec", mobileAgentPackageSpec);
             this.mobileAgentPackageSpec = mobileAgentPackageSpec;
+            return this;
+        }
+
+        /**
+         * PackageSpecId.
+         */
+        public Builder packageSpecId(Long packageSpecId) {
+            this.putQueryParameter("PackageSpecId", packageSpecId);
+            this.packageSpecId = packageSpecId;
             return this;
         }
 

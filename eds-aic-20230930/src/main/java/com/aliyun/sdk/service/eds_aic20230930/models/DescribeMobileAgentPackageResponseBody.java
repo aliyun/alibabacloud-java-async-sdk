@@ -173,6 +173,9 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PackageSpec")
         private String packageSpec;
 
+        @com.aliyun.core.annotation.NameInMap("PackageSpecName")
+        private String packageSpecName;
+
         @com.aliyun.core.annotation.NameInMap("PackageStatus")
         private String packageStatus;
 
@@ -185,6 +188,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             this.packageCredit = builder.packageCredit;
             this.packageId = builder.packageId;
             this.packageSpec = builder.packageSpec;
+            this.packageSpecName = builder.packageSpecName;
             this.packageStatus = builder.packageStatus;
             this.usedCredit = builder.usedCredit;
         }
@@ -233,6 +237,13 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         }
 
         /**
+         * @return packageSpecName
+         */
+        public String getPackageSpecName() {
+            return this.packageSpecName;
+        }
+
+        /**
          * @return packageStatus
          */
         public String getPackageStatus() {
@@ -252,6 +263,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             private String packageCredit; 
             private String packageId; 
             private String packageSpec; 
+            private String packageSpecName; 
             private String packageStatus; 
             private String usedCredit; 
 
@@ -264,6 +276,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
                 this.packageCredit = model.packageCredit;
                 this.packageId = model.packageId;
                 this.packageSpec = model.packageSpec;
+                this.packageSpecName = model.packageSpecName;
                 this.packageStatus = model.packageStatus;
                 this.usedCredit = model.usedCredit;
             } 
@@ -305,6 +318,14 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
              */
             public Builder packageSpec(String packageSpec) {
                 this.packageSpec = packageSpec;
+                return this;
+            }
+
+            /**
+             * PackageSpecName.
+             */
+            public Builder packageSpecName(String packageSpecName) {
+                this.packageSpecName = packageSpecName;
                 return this;
             }
 

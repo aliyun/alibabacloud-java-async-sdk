@@ -31,6 +31,10 @@ public class SendFileRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileMd5")
+    private String fileMd5;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceFilePath")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sourceFilePath;
@@ -58,6 +62,7 @@ public class SendFileRequest extends Request {
         this.androidInstanceIdList = builder.androidInstanceIdList;
         this.autoInstall = builder.autoInstall;
         this.clientToken = builder.clientToken;
+        this.fileMd5 = builder.fileMd5;
         this.sourceFilePath = builder.sourceFilePath;
         this.targetFileName = builder.targetFileName;
         this.uploadEndpoint = builder.uploadEndpoint;
@@ -100,6 +105,13 @@ public class SendFileRequest extends Request {
     }
 
     /**
+     * @return fileMd5
+     */
+    public String getFileMd5() {
+        return this.fileMd5;
+    }
+
+    /**
      * @return sourceFilePath
      */
     public String getSourceFilePath() {
@@ -138,6 +150,7 @@ public class SendFileRequest extends Request {
         private java.util.List<String> androidInstanceIdList; 
         private Boolean autoInstall; 
         private String clientToken; 
+        private String fileMd5; 
         private String sourceFilePath; 
         private String targetFileName; 
         private String uploadEndpoint; 
@@ -153,6 +166,7 @@ public class SendFileRequest extends Request {
             this.androidInstanceIdList = request.androidInstanceIdList;
             this.autoInstall = request.autoInstall;
             this.clientToken = request.clientToken;
+            this.fileMd5 = request.fileMd5;
             this.sourceFilePath = request.sourceFilePath;
             this.targetFileName = request.targetFileName;
             this.uploadEndpoint = request.uploadEndpoint;
@@ -185,6 +199,15 @@ public class SendFileRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * FileMd5.
+         */
+        public Builder fileMd5(String fileMd5) {
+            this.putQueryParameter("FileMd5", fileMd5);
+            this.fileMd5 = fileMd5;
             return this;
         }
 
