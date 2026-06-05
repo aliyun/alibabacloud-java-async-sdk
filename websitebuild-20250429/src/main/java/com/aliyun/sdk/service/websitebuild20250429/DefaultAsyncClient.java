@@ -228,7 +228,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CreateAppChatResponse> createAppChat(CreateAppChatRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAppChat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAppChat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.STRING).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAppChatResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -241,7 +241,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     @Override
     public ResponseIterable<String> createAppChatWithResponseIterable(CreateAppChatRequest request) {
         this.handler.validateRequestModel(request);
-        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("CreateAppChat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("CreateAppChat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.STRING).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
         CreateAppChatResponseBodyIterator iterator = CreateAppChatResponseBodyIterator.create();
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);

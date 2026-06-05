@@ -21,23 +21,23 @@ public class CreateAppChatRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BotId")
     private String botId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ChatId")
     private String chatId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ConversationId")
     private String conversationId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Messages")
     private String messages;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SiteId")
     private String siteId;
 
@@ -141,7 +141,7 @@ public class CreateAppChatRequest extends Request {
          * BotId.
          */
         public Builder botId(String botId) {
-            this.putQueryParameter("BotId", botId);
+            this.putBodyParameter("BotId", botId);
             this.botId = botId;
             return this;
         }
@@ -150,7 +150,7 @@ public class CreateAppChatRequest extends Request {
          * ChatId.
          */
         public Builder chatId(String chatId) {
-            this.putQueryParameter("ChatId", chatId);
+            this.putBodyParameter("ChatId", chatId);
             this.chatId = chatId;
             return this;
         }
@@ -159,7 +159,7 @@ public class CreateAppChatRequest extends Request {
          * ConversationId.
          */
         public Builder conversationId(String conversationId) {
-            this.putQueryParameter("ConversationId", conversationId);
+            this.putBodyParameter("ConversationId", conversationId);
             this.conversationId = conversationId;
             return this;
         }
@@ -168,7 +168,7 @@ public class CreateAppChatRequest extends Request {
          * Messages.
          */
         public Builder messages(String messages) {
-            this.putQueryParameter("Messages", messages);
+            this.putBodyParameter("Messages", messages);
             this.messages = messages;
             return this;
         }
@@ -177,7 +177,7 @@ public class CreateAppChatRequest extends Request {
          * SiteId.
          */
         public Builder siteId(String siteId) {
-            this.putQueryParameter("SiteId", siteId);
+            this.putBodyParameter("SiteId", siteId);
             this.siteId = siteId;
             return this;
         }
