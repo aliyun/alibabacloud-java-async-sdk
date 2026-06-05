@@ -223,6 +223,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteStopGatewayResponse> deleteStopGateway(DeleteStopGatewayRequest request);
 
     /**
+     * @param request the request parameters of DescribeAuditLogs  DescribeAuditLogsRequest
+     * @return DescribeAuditLogsResponse
+     */
+    CompletableFuture<DescribeAuditLogsResponse> describeAuditLogs(DescribeAuditLogsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
