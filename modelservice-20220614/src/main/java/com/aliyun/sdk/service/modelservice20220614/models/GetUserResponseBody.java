@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserResponseBody</p>
  */
 public class GetUserResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AnthropicHost")
+    private String anthropicHost;
+
+    @com.aliyun.core.annotation.NameInMap("ApiKeys")
+    private Object apiKeys;
+
     @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
@@ -39,6 +45,8 @@ public class GetUserResponseBody extends TeaModel {
     private String token;
 
     private GetUserResponseBody(Builder builder) {
+        this.anthropicHost = builder.anthropicHost;
+        this.apiKeys = builder.apiKeys;
         this.appId = builder.appId;
         this.code = builder.code;
         this.host = builder.host;
@@ -58,6 +66,20 @@ public class GetUserResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return anthropicHost
+     */
+    public String getAnthropicHost() {
+        return this.anthropicHost;
+    }
+
+    /**
+     * @return apiKeys
+     */
+    public Object getApiKeys() {
+        return this.apiKeys;
     }
 
     /**
@@ -110,6 +132,8 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String anthropicHost; 
+        private Object apiKeys; 
         private String appId; 
         private String code; 
         private String host; 
@@ -122,6 +146,8 @@ public class GetUserResponseBody extends TeaModel {
         } 
 
         private Builder(GetUserResponseBody model) {
+            this.anthropicHost = model.anthropicHost;
+            this.apiKeys = model.apiKeys;
             this.appId = model.appId;
             this.code = model.code;
             this.host = model.host;
@@ -130,6 +156,22 @@ public class GetUserResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.token = model.token;
         } 
+
+        /**
+         * AnthropicHost.
+         */
+        public Builder anthropicHost(String anthropicHost) {
+            this.anthropicHost = anthropicHost;
+            return this;
+        }
+
+        /**
+         * ApiKeys.
+         */
+        public Builder apiKeys(Object apiKeys) {
+            this.apiKeys = apiKeys;
+            return this;
+        }
 
         /**
          * AppId.
