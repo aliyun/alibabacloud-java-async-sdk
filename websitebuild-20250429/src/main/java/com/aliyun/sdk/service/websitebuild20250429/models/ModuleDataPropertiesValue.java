@@ -128,7 +128,10 @@ public class ModuleDataPropertiesValue extends TeaModel {
             } 
 
             /**
-             * Value.
+             * <p>placeholder</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeholder</p>
              */
             public Builder value(String value) {
                 this.value = value;

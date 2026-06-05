@@ -282,7 +282,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
