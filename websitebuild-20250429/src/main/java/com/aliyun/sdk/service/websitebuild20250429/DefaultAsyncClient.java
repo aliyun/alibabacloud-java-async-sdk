@@ -2222,6 +2222,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>WanXiaoZhi 2.0 AI Conversation</p>
+     * 
      * @param request the request parameters of UpdateAppSeoStatus  UpdateAppSeoStatusRequest
      * @return UpdateAppSeoStatusResponse
      */

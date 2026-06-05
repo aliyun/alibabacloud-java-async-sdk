@@ -745,6 +745,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAppInstanceResponse> updateAppInstance(UpdateAppInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>WanXiaoZhi 2.0 AI Conversation</p>
+     * 
      * @param request the request parameters of UpdateAppSeoStatus  UpdateAppSeoStatusRequest
      * @return UpdateAppSeoStatusResponse
      */
