@@ -107,6 +107,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloneDataSourceResponse> cloneDataSource(CloneDataSourceRequest request);
 
     /**
+     * @param request the request parameters of CreateAgent  CreateAgentRequest
+     * @return CreateAgentResponse
+     */
+    CompletableFuture<CreateAgentResponse> createAgent(CreateAgentRequest request);
+
+    /**
      * @param request the request parameters of CreateAgentSession  CreateAgentSessionRequest
      * @return CreateAgentSessionResponse
      */
@@ -433,6 +439,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateWorkflowInstancesResponse> createWorkflowInstances(CreateWorkflowInstancesRequest request);
 
     /**
+     * @param request the request parameters of DeleteAgent  DeleteAgentRequest
+     * @return DeleteAgentResponse
+     */
+    CompletableFuture<DeleteAgentResponse> deleteAgent(DeleteAgentRequest request);
+
+    /**
      * @param request the request parameters of DeleteAlertRule  DeleteAlertRuleRequest
      * @return DeleteAlertRuleResponse
      */
@@ -634,6 +646,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteLineageRelationshipResponse> deleteLineageRelationship(DeleteLineageRelationshipRequest request);
 
     /**
+     * @param request the request parameters of DeleteMcpServer  DeleteMcpServerRequest
+     * @return DeleteMcpServerResponse
+     */
+    CompletableFuture<DeleteMcpServerResponse> deleteMcpServer(DeleteMcpServerRequest request);
+
+    /**
      * @param request the request parameters of DeleteMetaCollection  DeleteMetaCollectionRequest
      * @return DeleteMetaCollectionResponse
      */
@@ -728,6 +746,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRouteResponse> deleteRoute(DeleteRouteRequest request);
 
     /**
+     * @param request the request parameters of DeleteSkill  DeleteSkillRequest
+     * @return DeleteSkillResponse
+     */
+    CompletableFuture<DeleteSkillResponse> deleteSkill(DeleteSkillRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -816,6 +840,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExecuteAdhocWorkflowInstanceResponse
      */
     CompletableFuture<ExecuteAdhocWorkflowInstanceResponse> executeAdhocWorkflowInstance(ExecuteAdhocWorkflowInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetAgent  GetAgentRequest
+     * @return GetAgentResponse
+     */
+    CompletableFuture<GetAgentResponse> getAgent(GetAgentRequest request);
 
     /**
      * @param request the request parameters of GetAgentSessionArtifactMeta  GetAgentSessionArtifactMetaRequest
