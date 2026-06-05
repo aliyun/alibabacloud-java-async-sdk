@@ -1059,6 +1059,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetMiniAppAuthUrl  GetMiniAppAuthUrlRequest
+     * @return GetMiniAppAuthUrlResponse
+     */
+    @Override
+    public CompletableFuture<GetMiniAppAuthUrlResponse> getMiniAppAuthUrl(GetMiniAppAuthUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetMiniAppAuthUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMiniAppAuthUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMiniAppAuthUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMiniAppBinding  GetMiniAppBindingRequest
+     * @return GetMiniAppBindingResponse
+     */
+    @Override
+    public CompletableFuture<GetMiniAppBindingResponse> getMiniAppBinding(GetMiniAppBindingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetMiniAppBinding").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMiniAppBindingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMiniAppBindingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMiniAppBindingForAdmin  GetMiniAppBindingForAdminRequest
+     * @return GetMiniAppBindingForAdminResponse
+     */
+    @Override
+    public CompletableFuture<GetMiniAppBindingForAdminResponse> getMiniAppBindingForAdmin(GetMiniAppBindingForAdminRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetMiniAppBindingForAdmin").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMiniAppBindingForAdminResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMiniAppBindingForAdminResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetUserAccessTokenForPartner  GetUserAccessTokenForPartnerRequest
      * @return GetUserAccessTokenForPartnerResponse
      */
@@ -2273,6 +2327,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAppSupabaseSecretResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMiniAppBinding  UpdateMiniAppBindingRequest
+     * @return UpdateMiniAppBindingResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMiniAppBindingResponse> updateMiniAppBinding(UpdateMiniAppBindingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateMiniAppBinding").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMiniAppBindingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMiniAppBindingResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

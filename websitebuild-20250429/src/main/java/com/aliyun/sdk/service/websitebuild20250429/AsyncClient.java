@@ -358,6 +358,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLlmProxyConfigForAdminResponse> getLlmProxyConfigForAdmin(GetLlmProxyConfigForAdminRequest request);
 
     /**
+     * @param request the request parameters of GetMiniAppAuthUrl  GetMiniAppAuthUrlRequest
+     * @return GetMiniAppAuthUrlResponse
+     */
+    CompletableFuture<GetMiniAppAuthUrlResponse> getMiniAppAuthUrl(GetMiniAppAuthUrlRequest request);
+
+    /**
+     * @param request the request parameters of GetMiniAppBinding  GetMiniAppBindingRequest
+     * @return GetMiniAppBindingResponse
+     */
+    CompletableFuture<GetMiniAppBindingResponse> getMiniAppBinding(GetMiniAppBindingRequest request);
+
+    /**
+     * @param request the request parameters of GetMiniAppBindingForAdmin  GetMiniAppBindingForAdminRequest
+     * @return GetMiniAppBindingForAdminResponse
+     */
+    CompletableFuture<GetMiniAppBindingForAdminResponse> getMiniAppBindingForAdmin(GetMiniAppBindingForAdminRequest request);
+
+    /**
      * @param request the request parameters of GetUserAccessTokenForPartner  GetUserAccessTokenForPartnerRequest
      * @return GetUserAccessTokenForPartnerResponse
      */
@@ -764,6 +782,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAppSupabaseSecretResponse
      */
     CompletableFuture<UpdateAppSupabaseSecretResponse> updateAppSupabaseSecret(UpdateAppSupabaseSecretRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMiniAppBinding  UpdateMiniAppBindingRequest
+     * @return UpdateMiniAppBindingResponse
+     */
+    CompletableFuture<UpdateMiniAppBindingResponse> updateMiniAppBinding(UpdateMiniAppBindingRequest request);
 
     /**
      * @param request the request parameters of UploadAppSiteValidationFile  UploadAppSiteValidationFileRequest
