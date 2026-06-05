@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteApiKeyResponse> deleteApiKey(DeleteApiKeyRequest request);
 
     /**
+     * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
+     * @return DeleteWorkspaceResponse
+     */
+    CompletableFuture<DeleteWorkspaceResponse> deleteWorkspace(DeleteWorkspaceRequest request);
+
+    /**
      * @param request the request parameters of DisableApiKey  DisableApiKeyRequest
      * @return DisableApiKeyResponse
      */
