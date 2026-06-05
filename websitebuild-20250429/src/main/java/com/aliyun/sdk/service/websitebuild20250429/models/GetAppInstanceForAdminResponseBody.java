@@ -184,7 +184,10 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Detailed reason for access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Whether retry is allowed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The name of the application. The name must be 4 to 26 characters in length. The name can contain letters, digits, and underscores (_), and must start with a letter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>Dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>Dynamic error message, used to replace <code>%s</code> in the error message of the returned parameter <strong>ErrMessage</strong>.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it means that the input request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The parameter whose value is invalid.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,18 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>Data table module.</p>
+         * <ul>
+         * <li><p>ABTest: Experiment data table</p>
+         * </li>
+         * <li><p>ExperimentTool: Experiment tool table</p>
+         * </li>
+         * <li><p>DataDiagnosis: Data diagnosis</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder module(AppInstanceAggregate module) {
             this.module = module;
@@ -251,7 +280,10 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>Error Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +291,10 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +302,10 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;

@@ -73,7 +73,10 @@ public class GetAppInstanceForAdminRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The ID of the delivery receipt. The delivery receipt ID is the value of the BizId parameter that is returned when you call the SendSms or SendBatchSms operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250801154628000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -82,7 +85,16 @@ public class GetAppInstanceForAdminRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The domain name.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>Wildcard domain names are supported. You can use the wildcard character asterisk (*) to specify a wildcard domain name.</li>
+         * </ul>
+         * <p>For example, you can enter *.baidu.com to specify the domain name baidu.com.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yjdw.bpu.edu.cn-waf</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
