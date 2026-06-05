@@ -788,6 +788,9 @@ public class GetMcpServerResponseBody extends TeaModel {
      * <p>GetMcpServerResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("apiId")
+        private String apiId;
+
         @com.aliyun.core.annotation.NameInMap("assembledSources")
         private java.util.List<AssembledSources> assembledSources;
 
@@ -855,6 +858,7 @@ public class GetMcpServerResponseBody extends TeaModel {
         private String type;
 
         private Data(Builder builder) {
+            this.apiId = builder.apiId;
             this.assembledSources = builder.assembledSources;
             this.backend = builder.backend;
             this.createFromType = builder.createFromType;
@@ -885,6 +889,13 @@ public class GetMcpServerResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return apiId
+         */
+        public String getApiId() {
+            return this.apiId;
         }
 
         /**
@@ -1042,6 +1053,7 @@ public class GetMcpServerResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String apiId; 
             private java.util.List<AssembledSources> assembledSources; 
             private Backend backend; 
             private String createFromType; 
@@ -1069,6 +1081,7 @@ public class GetMcpServerResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.apiId = model.apiId;
                 this.assembledSources = model.assembledSources;
                 this.backend = model.backend;
                 this.createFromType = model.createFromType;
@@ -1092,6 +1105,14 @@ public class GetMcpServerResponseBody extends TeaModel {
                 this.routeId = model.routeId;
                 this.type = model.type;
             } 
+
+            /**
+             * apiId.
+             */
+            public Builder apiId(String apiId) {
+                this.apiId = apiId;
+                return this;
+            }
 
             /**
              * <p>The list of assembly sources. This parameter is required when the type parameter is set to AssemblyMCP.</p>
