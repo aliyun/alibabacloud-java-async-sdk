@@ -20,6 +20,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddHiveEdgeWorkers  AddHiveEdgeWorkersRequest
+     * @return AddHiveEdgeWorkersResponse
+     */
+    CompletableFuture<AddHiveEdgeWorkersResponse> addHiveEdgeWorkers(AddHiveEdgeWorkersRequest request);
+
+    /**
      * @param request the request parameters of AddVsPullStreamInfoConfig  AddVsPullStreamInfoConfigRequest
      * @return AddVsPullStreamInfoConfigResponse
      */
@@ -176,6 +188,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindTemplateResponse> bindTemplate(BindTemplateRequest request);
 
     /**
+     * @param request the request parameters of CancelComfyTask  CancelComfyTaskRequest
+     * @return CancelComfyTaskResponse
+     */
+    CompletableFuture<CancelComfyTaskResponse> cancelComfyTask(CancelComfyTaskRequest request);
+
+    /**
      * @param request the request parameters of ContinuousAdjust  ContinuousAdjustRequest
      * @return ContinuousAdjustResponse
      */
@@ -186,6 +204,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ContinuousMoveResponse
      */
     CompletableFuture<ContinuousMoveResponse> continuousMove(ContinuousMoveRequest request);
+
+    /**
+     * @param request the request parameters of CreateComfyTask  CreateComfyTaskRequest
+     * @return CreateComfyTaskResponse
+     */
+    CompletableFuture<CreateComfyTaskResponse> createComfyTask(CreateComfyTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateComfyUserDataDir  CreateComfyUserDataDirRequest
+     * @return CreateComfyUserDataDirResponse
+     */
+    CompletableFuture<CreateComfyUserDataDirResponse> createComfyUserDataDir(CreateComfyUserDataDirRequest request);
+
+    /**
+     * @param request the request parameters of CreateComfyWorkflow  CreateComfyWorkflowRequest
+     * @return CreateComfyWorkflowResponse
+     */
+    CompletableFuture<CreateComfyWorkflowResponse> createComfyWorkflow(CreateComfyWorkflowRequest request);
 
     /**
      * @param request the request parameters of CreateDevice  CreateDeviceRequest
@@ -210,6 +246,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateGroupResponse
      */
     CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateHive  CreateHiveRequest
+     * @return CreateHiveResponse
+     */
+    CompletableFuture<CreateHiveResponse> createHive(CreateHiveRequest request);
 
     /**
      * @param request the request parameters of CreateParentPlatform  CreateParentPlatformRequest
@@ -254,10 +302,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DelHiveEdgeWorkers  DelHiveEdgeWorkersRequest
+     * @return DelHiveEdgeWorkersResponse
+     */
+    CompletableFuture<DelHiveEdgeWorkersResponse> delHiveEdgeWorkers(DelHiveEdgeWorkersRequest request);
+
+    /**
      * @param request the request parameters of DeleteCloudApp  DeleteCloudAppRequest
      * @return DeleteCloudAppResponse
      */
     CompletableFuture<DeleteCloudAppResponse> deleteCloudApp(DeleteCloudAppRequest request);
+
+    /**
+     * @param request the request parameters of DeleteComfyProduction  DeleteComfyProductionRequest
+     * @return DeleteComfyProductionResponse
+     */
+    CompletableFuture<DeleteComfyProductionResponse> deleteComfyProduction(DeleteComfyProductionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteComfyUserData  DeleteComfyUserDataRequest
+     * @return DeleteComfyUserDataResponse
+     */
+    CompletableFuture<DeleteComfyUserDataResponse> deleteComfyUserData(DeleteComfyUserDataRequest request);
+
+    /**
+     * @param request the request parameters of DeleteComfyWorkflow  DeleteComfyWorkflowRequest
+     * @return DeleteComfyWorkflowResponse
+     */
+    CompletableFuture<DeleteComfyWorkflowResponse> deleteComfyWorkflow(DeleteComfyWorkflowRequest request);
 
     /**
      * @param request the request parameters of DeleteDevice  DeleteDeviceRequest
@@ -282,6 +360,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteGroupResponse
      */
     CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteHive  DeleteHiveRequest
+     * @return DeleteHiveResponse
+     */
+    CompletableFuture<DeleteHiveResponse> deleteHive(DeleteHiveRequest request);
 
     /**
      * @param request the request parameters of DeleteParentPlatform  DeleteParentPlatformRequest
@@ -348,6 +438,48 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAccountStatResponse
      */
     CompletableFuture<DescribeAccountStatResponse> describeAccountStat(DescribeAccountStatRequest request);
+
+    /**
+     * @param request the request parameters of DescribeComfyProductionDownloadUrl  DescribeComfyProductionDownloadUrlRequest
+     * @return DescribeComfyProductionDownloadUrlResponse
+     */
+    CompletableFuture<DescribeComfyProductionDownloadUrlResponse> describeComfyProductionDownloadUrl(DescribeComfyProductionDownloadUrlRequest request);
+
+    /**
+     * @param request the request parameters of DescribeComfyProductions  DescribeComfyProductionsRequest
+     * @return DescribeComfyProductionsResponse
+     */
+    CompletableFuture<DescribeComfyProductionsResponse> describeComfyProductions(DescribeComfyProductionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeComfyTasks  DescribeComfyTasksRequest
+     * @return DescribeComfyTasksResponse
+     */
+    CompletableFuture<DescribeComfyTasksResponse> describeComfyTasks(DescribeComfyTasksRequest request);
+
+    /**
+     * @param request the request parameters of DescribeComfyUserDataDownloadUrl  DescribeComfyUserDataDownloadUrlRequest
+     * @return DescribeComfyUserDataDownloadUrlResponse
+     */
+    CompletableFuture<DescribeComfyUserDataDownloadUrlResponse> describeComfyUserDataDownloadUrl(DescribeComfyUserDataDownloadUrlRequest request);
+
+    /**
+     * @param request the request parameters of DescribeComfyUserDataUploadUrl  DescribeComfyUserDataUploadUrlRequest
+     * @return DescribeComfyUserDataUploadUrlResponse
+     */
+    CompletableFuture<DescribeComfyUserDataUploadUrlResponse> describeComfyUserDataUploadUrl(DescribeComfyUserDataUploadUrlRequest request);
+
+    /**
+     * @param request the request parameters of DescribeComfyUserDatas  DescribeComfyUserDatasRequest
+     * @return DescribeComfyUserDatasResponse
+     */
+    CompletableFuture<DescribeComfyUserDatasResponse> describeComfyUserDatas(DescribeComfyUserDatasRequest request);
+
+    /**
+     * @param request the request parameters of DescribeComfyWorkflows  DescribeComfyWorkflowsRequest
+     * @return DescribeComfyWorkflowsResponse
+     */
+    CompletableFuture<DescribeComfyWorkflowsResponse> describeComfyWorkflows(DescribeComfyWorkflowsRequest request);
 
     /**
      * @param request the request parameters of DescribeDevice  DescribeDeviceRequest
@@ -722,6 +854,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCloudAppsResponse> listCloudApps(ListCloudAppsRequest request);
 
     /**
+     * @param request the request parameters of ListEdgeWorkers  ListEdgeWorkersRequest
+     * @return ListEdgeWorkersResponse
+     */
+    CompletableFuture<ListEdgeWorkersResponse> listEdgeWorkers(ListEdgeWorkersRequest request);
+
+    /**
      * @param request the request parameters of ListFilePushStatuses  ListFilePushStatusesRequest
      * @return ListFilePushStatusesResponse
      */
@@ -732,6 +870,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListFilesResponse
      */
     CompletableFuture<ListFilesResponse> listFiles(ListFilesRequest request);
+
+    /**
+     * @param request the request parameters of ListHives  ListHivesRequest
+     * @return ListHivesResponse
+     */
+    CompletableFuture<ListHivesResponse> listHives(ListHivesRequest request);
 
     /**
      * @param request the request parameters of ListPublicKeys  ListPublicKeysRequest
@@ -796,10 +940,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRenderingSessionsResponse> listRenderingSessions(ListRenderingSessionsRequest request);
 
     /**
+     * @param request the request parameters of ListSpecifications  ListSpecificationsRequest
+     * @return ListSpecificationsResponse
+     */
+    CompletableFuture<ListSpecificationsResponse> listSpecifications(ListSpecificationsRequest request);
+
+    /**
      * @param request the request parameters of ManageLogin  ManageLoginRequest
      * @return ManageLoginResponse
      */
     CompletableFuture<ManageLoginResponse> manageLogin(ManageLoginRequest request);
+
+    /**
+     * @param request the request parameters of ModifyComfyWorkflow  ModifyComfyWorkflowRequest
+     * @return ModifyComfyWorkflowResponse
+     */
+    CompletableFuture<ModifyComfyWorkflowResponse> modifyComfyWorkflow(ModifyComfyWorkflowRequest request);
 
     /**
      * @param request the request parameters of ModifyDevice  ModifyDeviceRequest
@@ -838,6 +994,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyGroupResponse> modifyGroup(ModifyGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyHiveAttribute  ModifyHiveAttributeRequest
+     * @return ModifyHiveAttributeResponse
+     */
+    CompletableFuture<ModifyHiveAttributeResponse> modifyHiveAttribute(ModifyHiveAttributeRequest request);
+
+    /**
      * @param request the request parameters of ModifyParentPlatform  ModifyParentPlatformRequest
      * @return ModifyParentPlatformResponse
      */
@@ -872,6 +1040,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyTemplateResponse
      */
     CompletableFuture<ModifyTemplateResponse> modifyTemplate(ModifyTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of MoveHiveEdgeWorkers  MoveHiveEdgeWorkersRequest
+     * @return MoveHiveEdgeWorkersResponse
+     */
+    CompletableFuture<MoveHiveEdgeWorkersResponse> moveHiveEdgeWorkers(MoveHiveEdgeWorkersRequest request);
 
     /**
      * @param request the request parameters of OpenVsService  OpenVsServiceRequest

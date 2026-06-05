@@ -59,6 +59,9 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceAttributes")
     private ResourceAttributes resourceAttributes;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceStatus")
+    private ResourceStatus resourceStatus;
+
     @com.aliyun.core.annotation.NameInMap("StorageSize")
     private Integer storageSize;
 
@@ -80,6 +83,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         this.renderingStatus = builder.renderingStatus;
         this.requestId = builder.requestId;
         this.resourceAttributes = builder.resourceAttributes;
+        this.resourceStatus = builder.resourceStatus;
         this.storageSize = builder.storageSize;
         this.systemInfo = builder.systemInfo;
     }
@@ -195,6 +199,13 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceStatus
+     */
+    public ResourceStatus getResourceStatus() {
+        return this.resourceStatus;
+    }
+
+    /**
      * @return storageSize
      */
     public Integer getStorageSize() {
@@ -223,6 +234,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         private RenderingStatus renderingStatus; 
         private String requestId; 
         private ResourceAttributes resourceAttributes; 
+        private ResourceStatus resourceStatus; 
         private Integer storageSize; 
         private SystemInfo systemInfo; 
 
@@ -244,6 +256,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             this.renderingStatus = model.renderingStatus;
             this.requestId = model.requestId;
             this.resourceAttributes = model.resourceAttributes;
+            this.resourceStatus = model.resourceStatus;
             this.storageSize = model.storageSize;
             this.systemInfo = model.systemInfo;
         } 
@@ -357,6 +370,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
          */
         public Builder resourceAttributes(ResourceAttributes resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
+            return this;
+        }
+
+        /**
+         * ResourceStatus.
+         */
+        public Builder resourceStatus(ResourceStatus resourceStatus) {
+            this.resourceStatus = resourceStatus;
             return this;
         }
 
@@ -1178,6 +1199,60 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
 
             public ResourceAttributes build() {
                 return new ResourceAttributes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRenderingInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceResponseBody</p>
+     */
+    public static class ResourceStatus extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private ResourceStatus(Builder builder) {
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceStatus model) {
+                this.status = model.status;
+            } 
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public ResourceStatus build() {
+                return new ResourceStatus(this);
             } 
 
         } 
