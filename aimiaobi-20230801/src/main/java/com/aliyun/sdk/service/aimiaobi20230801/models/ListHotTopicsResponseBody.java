@@ -437,8 +437,14 @@ public class ListHotTopicsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsyncTaskId")
         private String asyncTaskId;
 
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
         @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
+
+        @com.aliyun.core.annotation.NameInMap("CustomField")
+        private String customField;
 
         @com.aliyun.core.annotation.NameInMap("HotValue")
         private Long hotValue;
@@ -467,12 +473,17 @@ public class ListHotTopicsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TopicSource")
         private String topicSource;
 
+        @com.aliyun.core.annotation.NameInMap("TopicUrl")
+        private String topicUrl;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Data(Builder builder) {
             this.asyncTaskId = builder.asyncTaskId;
+            this.createTime = builder.createTime;
             this.createUser = builder.createUser;
+            this.customField = builder.customField;
             this.hotValue = builder.hotValue;
             this.id = builder.id;
             this.status = builder.status;
@@ -482,6 +493,7 @@ public class ListHotTopicsResponseBody extends TeaModel {
             this.taskStatus = builder.taskStatus;
             this.topic = builder.topic;
             this.topicSource = builder.topicSource;
+            this.topicUrl = builder.topicUrl;
             this.version = builder.version;
         }
 
@@ -501,10 +513,24 @@ public class ListHotTopicsResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return createUser
          */
         public String getCreateUser() {
             return this.createUser;
+        }
+
+        /**
+         * @return customField
+         */
+        public String getCustomField() {
+            return this.customField;
         }
 
         /**
@@ -571,6 +597,13 @@ public class ListHotTopicsResponseBody extends TeaModel {
         }
 
         /**
+         * @return topicUrl
+         */
+        public String getTopicUrl() {
+            return this.topicUrl;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -579,7 +612,9 @@ public class ListHotTopicsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String asyncTaskId; 
+            private String createTime; 
             private String createUser; 
+            private String customField; 
             private Long hotValue; 
             private String id; 
             private String status; 
@@ -589,6 +624,7 @@ public class ListHotTopicsResponseBody extends TeaModel {
             private Integer taskStatus; 
             private String topic; 
             private String topicSource; 
+            private String topicUrl; 
             private String version; 
 
             private Builder() {
@@ -596,7 +632,9 @@ public class ListHotTopicsResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.asyncTaskId = model.asyncTaskId;
+                this.createTime = model.createTime;
                 this.createUser = model.createUser;
+                this.customField = model.customField;
                 this.hotValue = model.hotValue;
                 this.id = model.id;
                 this.status = model.status;
@@ -606,6 +644,7 @@ public class ListHotTopicsResponseBody extends TeaModel {
                 this.taskStatus = model.taskStatus;
                 this.topic = model.topic;
                 this.topicSource = model.topicSource;
+                this.topicUrl = model.topicUrl;
                 this.version = model.version;
             } 
 
@@ -618,10 +657,26 @@ public class ListHotTopicsResponseBody extends TeaModel {
             }
 
             /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
              * CreateUser.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
+                return this;
+            }
+
+            /**
+             * CustomField.
+             */
+            public Builder customField(String customField) {
+                this.customField = customField;
                 return this;
             }
 
@@ -694,6 +749,14 @@ public class ListHotTopicsResponseBody extends TeaModel {
              */
             public Builder topicSource(String topicSource) {
                 this.topicSource = topicSource;
+                return this;
+            }
+
+            /**
+             * TopicUrl.
+             */
+            public Builder topicUrl(String topicUrl) {
+                this.topicUrl = topicUrl;
                 return this;
             }
 

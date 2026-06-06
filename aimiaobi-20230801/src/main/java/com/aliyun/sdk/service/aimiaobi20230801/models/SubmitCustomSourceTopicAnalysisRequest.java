@@ -485,15 +485,24 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
      * <p>SubmitCustomSourceTopicAnalysisRequest</p>
      */
     public static class Topics extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CustomField")
+        @com.aliyun.core.annotation.Validation(maxLength = 255)
+        private String customField;
+
         @com.aliyun.core.annotation.NameInMap("News")
         private java.util.List<HottopicNews> news;
 
         @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
+        @com.aliyun.core.annotation.NameInMap("TopicUrl")
+        private String topicUrl;
+
         private Topics(Builder builder) {
+            this.customField = builder.customField;
             this.news = builder.news;
             this.topic = builder.topic;
+            this.topicUrl = builder.topicUrl;
         }
 
         public static Builder builder() {
@@ -502,6 +511,13 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
 
         public static Topics create() {
             return builder().build();
+        }
+
+        /**
+         * @return customField
+         */
+        public String getCustomField() {
+            return this.customField;
         }
 
         /**
@@ -518,17 +534,36 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
             return this.topic;
         }
 
+        /**
+         * @return topicUrl
+         */
+        public String getTopicUrl() {
+            return this.topicUrl;
+        }
+
         public static final class Builder {
+            private String customField; 
             private java.util.List<HottopicNews> news; 
             private String topic; 
+            private String topicUrl; 
 
             private Builder() {
             } 
 
             private Builder(Topics model) {
+                this.customField = model.customField;
                 this.news = model.news;
                 this.topic = model.topic;
+                this.topicUrl = model.topicUrl;
             } 
+
+            /**
+             * CustomField.
+             */
+            public Builder customField(String customField) {
+                this.customField = customField;
+                return this;
+            }
 
             /**
              * News.
@@ -543,6 +578,14 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
              */
             public Builder topic(String topic) {
                 this.topic = topic;
+                return this;
+            }
+
+            /**
+             * TopicUrl.
+             */
+            public Builder topicUrl(String topicUrl) {
+                this.topicUrl = topicUrl;
                 return this;
             }
 

@@ -27,6 +27,19 @@ public class ListHotTopicsRequest extends Request {
     private String agentKey;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateTimeEnd")
+    private String createTimeEnd;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateTimeStart")
+    private String createTimeStart;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomField")
+    @com.aliyun.core.annotation.Validation(maxLength = 255)
+    private String customField;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -62,6 +75,9 @@ public class ListHotTopicsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
+        this.createTimeEnd = builder.createTimeEnd;
+        this.createTimeStart = builder.createTimeStart;
+        this.customField = builder.customField;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.topicIds = builder.topicIds;
@@ -97,6 +113,27 @@ public class ListHotTopicsRequest extends Request {
      */
     public String getAgentKey() {
         return this.agentKey;
+    }
+
+    /**
+     * @return createTimeEnd
+     */
+    public String getCreateTimeEnd() {
+        return this.createTimeEnd;
+    }
+
+    /**
+     * @return createTimeStart
+     */
+    public String getCreateTimeStart() {
+        return this.createTimeStart;
+    }
+
+    /**
+     * @return customField
+     */
+    public String getCustomField() {
+        return this.customField;
     }
 
     /**
@@ -158,6 +195,9 @@ public class ListHotTopicsRequest extends Request {
     public static final class Builder extends Request.Builder<ListHotTopicsRequest, Builder> {
         private String regionId; 
         private String agentKey; 
+        private String createTimeEnd; 
+        private String createTimeStart; 
+        private String customField; 
         private Integer maxResults; 
         private String nextToken; 
         private java.util.List<String> topicIds; 
@@ -175,6 +215,9 @@ public class ListHotTopicsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.agentKey = request.agentKey;
+            this.createTimeEnd = request.createTimeEnd;
+            this.createTimeStart = request.createTimeStart;
+            this.customField = request.customField;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.topicIds = request.topicIds;
@@ -203,6 +246,33 @@ public class ListHotTopicsRequest extends Request {
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
             this.agentKey = agentKey;
+            return this;
+        }
+
+        /**
+         * CreateTimeEnd.
+         */
+        public Builder createTimeEnd(String createTimeEnd) {
+            this.putBodyParameter("CreateTimeEnd", createTimeEnd);
+            this.createTimeEnd = createTimeEnd;
+            return this;
+        }
+
+        /**
+         * CreateTimeStart.
+         */
+        public Builder createTimeStart(String createTimeStart) {
+            this.putBodyParameter("CreateTimeStart", createTimeStart);
+            this.createTimeStart = createTimeStart;
+            return this;
+        }
+
+        /**
+         * CustomField.
+         */
+        public Builder customField(String customField) {
+            this.putBodyParameter("CustomField", customField);
+            this.customField = customField;
             return this;
         }
 
