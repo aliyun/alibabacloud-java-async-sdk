@@ -20,6 +20,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of BatchCancelTasks  BatchCancelTasksRequest
+     * @return BatchCancelTasksResponse
+     */
+    CompletableFuture<BatchCancelTasksResponse> batchCancelTasks(BatchCancelTasksRequest request);
+
+    /**
+     * @param request the request parameters of BatchQueryTaskStatus  BatchQueryTaskStatusRequest
+     * @return BatchQueryTaskStatusResponse
+     */
+    CompletableFuture<BatchQueryTaskStatusResponse> batchQueryTaskStatus(BatchQueryTaskStatusRequest request);
+
+    /**
      * @param request the request parameters of CancelAsyncTask  CancelAsyncTaskRequest
      * @return CancelAsyncTaskResponse
      */
@@ -66,6 +78,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTagMiningAnalysisTaskResponse
      */
     CompletableFuture<GetTagMiningAnalysisTaskResponse> getTagMiningAnalysisTask(GetTagMiningAnalysisTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetTaskExecutionStatistics  GetTaskExecutionStatisticsRequest
+     * @return GetTaskExecutionStatisticsResponse
+     */
+    CompletableFuture<GetTaskExecutionStatisticsResponse> getTaskExecutionStatistics(GetTaskExecutionStatisticsRequest request);
 
     /**
      * @param request the request parameters of GetVideoAnalysisConfig  GetVideoAnalysisConfigRequest

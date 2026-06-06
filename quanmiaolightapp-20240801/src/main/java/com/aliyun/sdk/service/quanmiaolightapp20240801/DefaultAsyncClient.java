@@ -41,6 +41,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchCancelTasks  BatchCancelTasksRequest
+     * @return BatchCancelTasksResponse
+     */
+    @Override
+    public CompletableFuture<BatchCancelTasksResponse> batchCancelTasks(BatchCancelTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchCancelTasks").setMethod(HttpMethod.PUT).setPathRegex("/{workspaceId}/quanmiao/lightapp/batchCancelTasks").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchCancelTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchCancelTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BatchQueryTaskStatus  BatchQueryTaskStatusRequest
+     * @return BatchQueryTaskStatusResponse
+     */
+    @Override
+    public CompletableFuture<BatchQueryTaskStatusResponse> batchQueryTaskStatus(BatchQueryTaskStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchQueryTaskStatus").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/batchQueryTaskStatus").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchQueryTaskStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchQueryTaskStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CancelAsyncTask  CancelAsyncTaskRequest
      * @return CancelAsyncTaskResponse
      */
@@ -179,6 +215,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetTagMiningAnalysisTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetTaskExecutionStatistics  GetTaskExecutionStatisticsRequest
+     * @return GetTaskExecutionStatisticsResponse
+     */
+    @Override
+    public CompletableFuture<GetTaskExecutionStatisticsResponse> getTaskExecutionStatistics(GetTaskExecutionStatisticsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTaskExecutionStatistics").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/quanmiao/lightapp/getTaskExecutionStatistics").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTaskExecutionStatisticsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTaskExecutionStatisticsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
