@@ -324,6 +324,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateLineageRelationshipResponse> createLineageRelationship(CreateLineageRelationshipRequest request);
 
     /**
+     * @param request the request parameters of CreateMcpServer  CreateMcpServerRequest
+     * @return CreateMcpServerResponse
+     */
+    CompletableFuture<CreateMcpServerResponse> createMcpServer(CreateMcpServerRequest request);
+
+    /**
      * @param request the request parameters of CreateMetaCollection  CreateMetaCollectionRequest
      * @return CreateMetaCollectionResponse
      */
@@ -414,6 +420,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateRouteResponse
      */
     CompletableFuture<CreateRouteResponse> createRoute(CreateRouteRequest request);
+
+    /**
+     * @param request the request parameters of CreateSkill  CreateSkillRequest
+     * @return CreateSkillResponse
+     */
+    CompletableFuture<CreateSkillResponse> createSkill(CreateSkillRequest request);
 
     /**
      * @param request the request parameters of CreateUdfFile  CreateUdfFileRequest
@@ -1110,6 +1122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLineageRelationshipResponse> getLineageRelationship(GetLineageRelationshipRequest request);
 
     /**
+     * @param request the request parameters of GetMcpServer  GetMcpServerRequest
+     * @return GetMcpServerResponse
+     */
+    CompletableFuture<GetMcpServerResponse> getMcpServer(GetMcpServerRequest request);
+
+    /**
      * @param request the request parameters of GetMetaCollection  GetMetaCollectionRequest
      * @return GetMetaCollectionResponse
      */
@@ -1234,6 +1252,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSchemaResponse
      */
     CompletableFuture<GetSchemaResponse> getSchema(GetSchemaRequest request);
+
+    /**
+     * @param request the request parameters of GetSkill  GetSkillRequest
+     * @return GetSkillResponse
+     */
+    CompletableFuture<GetSkillResponse> getSkill(GetSkillRequest request);
 
     /**
      * @param request the request parameters of GetTable  GetTableRequest
@@ -1386,6 +1410,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCrawlerTypesResponse
      */
     CompletableFuture<ListCrawlerTypesResponse> listCrawlerTypes(ListCrawlerTypesRequest request);
+
+    /**
+     * @param request the request parameters of ListCustomAgents  ListCustomAgentsRequest
+     * @return ListCustomAgentsResponse
+     */
+    CompletableFuture<ListCustomAgentsResponse> listCustomAgents(ListCustomAgentsRequest request);
 
     /**
      * @param request the request parameters of ListCustomAttributes  ListCustomAttributesRequest
@@ -1668,6 +1698,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListLineagesResponse> listLineages(ListLineagesRequest request);
 
     /**
+     * @param request the request parameters of ListMcpServers  ListMcpServersRequest
+     * @return ListMcpServersResponse
+     */
+    CompletableFuture<ListMcpServersResponse> listMcpServers(ListMcpServersRequest request);
+
+    /**
      * @param request the request parameters of ListMetaCollections  ListMetaCollectionsRequest
      * @return ListMetaCollectionsResponse
      */
@@ -1804,6 +1840,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSchemasResponse
      */
     CompletableFuture<ListSchemasResponse> listSchemas(ListSchemasRequest request);
+
+    /**
+     * @param request the request parameters of ListSkills  ListSkillsRequest
+     * @return ListSkillsResponse
+     */
+    CompletableFuture<ListSkillsResponse> listSkills(ListSkillsRequest request);
 
     /**
      * @param request the request parameters of ListTables  ListTablesRequest
@@ -2280,6 +2322,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateIDEEventResultResponse
      */
     CompletableFuture<UpdateIDEEventResultResponse> updateIDEEventResult(UpdateIDEEventResultRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMcpServer  UpdateMcpServerRequest
+     * @return UpdateMcpServerResponse
+     */
+    CompletableFuture<UpdateMcpServerResponse> updateMcpServer(UpdateMcpServerRequest request);
 
     /**
      * @param request the request parameters of UpdateMetaCollection  UpdateMetaCollectionRequest
