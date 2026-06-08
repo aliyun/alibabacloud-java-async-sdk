@@ -35,6 +35,9 @@ public class FeatureViewConfigValue extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SecondJoinKey")
     private String secondJoinKey;
 
+    @com.aliyun.core.annotation.NameInMap("JoinWithLabel")
+    private Boolean joinWithLabel;
+
     private FeatureViewConfigValue(Builder builder) {
         this.partitions = builder.partitions;
         this.eventTime = builder.eventTime;
@@ -42,6 +45,7 @@ public class FeatureViewConfigValue extends TeaModel {
         this.useMock = builder.useMock;
         this.snapshot = builder.snapshot;
         this.secondJoinKey = builder.secondJoinKey;
+        this.joinWithLabel = builder.joinWithLabel;
     }
 
     public static Builder builder() {
@@ -98,6 +102,13 @@ public class FeatureViewConfigValue extends TeaModel {
         return this.secondJoinKey;
     }
 
+    /**
+     * @return joinWithLabel
+     */
+    public Boolean getJoinWithLabel() {
+        return this.joinWithLabel;
+    }
+
     public static final class Builder {
         private java.util.Map<String, FeatureViewConfigValuePartitionsValue> partitions; 
         private String eventTime; 
@@ -105,6 +116,7 @@ public class FeatureViewConfigValue extends TeaModel {
         private Boolean useMock; 
         private Snapshot snapshot; 
         private String secondJoinKey; 
+        private Boolean joinWithLabel; 
 
         private Builder() {
         } 
@@ -116,6 +128,7 @@ public class FeatureViewConfigValue extends TeaModel {
             this.useMock = model.useMock;
             this.snapshot = model.snapshot;
             this.secondJoinKey = model.secondJoinKey;
+            this.joinWithLabel = model.joinWithLabel;
         } 
 
         /**
@@ -163,6 +176,14 @@ public class FeatureViewConfigValue extends TeaModel {
          */
         public Builder secondJoinKey(String secondJoinKey) {
             this.secondJoinKey = secondJoinKey;
+            return this;
+        }
+
+        /**
+         * JoinWithLabel.
+         */
+        public Builder joinWithLabel(Boolean joinWithLabel) {
+            this.joinWithLabel = joinWithLabel;
             return this;
         }
 

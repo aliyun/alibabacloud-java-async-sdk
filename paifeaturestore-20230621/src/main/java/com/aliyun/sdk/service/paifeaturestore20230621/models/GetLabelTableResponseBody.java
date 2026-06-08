@@ -284,6 +284,9 @@ public class GetLabelTableResponseBody extends TeaModel {
      * <p>GetLabelTableResponseBody</p>
      */
     public static class Fields extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlignedEntityName")
+        private String alignedEntityName;
+
         @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List<String> attributes;
 
@@ -294,6 +297,7 @@ public class GetLabelTableResponseBody extends TeaModel {
         private String type;
 
         private Fields(Builder builder) {
+            this.alignedEntityName = builder.alignedEntityName;
             this.attributes = builder.attributes;
             this.name = builder.name;
             this.type = builder.type;
@@ -305,6 +309,13 @@ public class GetLabelTableResponseBody extends TeaModel {
 
         public static Fields create() {
             return builder().build();
+        }
+
+        /**
+         * @return alignedEntityName
+         */
+        public String getAlignedEntityName() {
+            return this.alignedEntityName;
         }
 
         /**
@@ -329,6 +340,7 @@ public class GetLabelTableResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String alignedEntityName; 
             private java.util.List<String> attributes; 
             private String name; 
             private String type; 
@@ -337,10 +349,19 @@ public class GetLabelTableResponseBody extends TeaModel {
             } 
 
             private Builder(Fields model) {
+                this.alignedEntityName = model.alignedEntityName;
                 this.attributes = model.attributes;
                 this.name = model.name;
                 this.type = model.type;
             } 
+
+            /**
+             * AlignedEntityName.
+             */
+            public Builder alignedEntityName(String alignedEntityName) {
+                this.alignedEntityName = alignedEntityName;
+                return this;
+            }
 
             /**
              * Attributes.

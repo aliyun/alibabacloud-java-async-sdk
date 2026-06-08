@@ -213,6 +213,9 @@ public class CreateLabelTableRequest extends Request {
      * <p>CreateLabelTableRequest</p>
      */
     public static class Fields extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlignedEntityName")
+        private String alignedEntityName;
+
         @com.aliyun.core.annotation.NameInMap("Attributes")
         @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<String> attributes;
@@ -226,6 +229,7 @@ public class CreateLabelTableRequest extends Request {
         private String type;
 
         private Fields(Builder builder) {
+            this.alignedEntityName = builder.alignedEntityName;
             this.attributes = builder.attributes;
             this.name = builder.name;
             this.type = builder.type;
@@ -237,6 +241,13 @@ public class CreateLabelTableRequest extends Request {
 
         public static Fields create() {
             return builder().build();
+        }
+
+        /**
+         * @return alignedEntityName
+         */
+        public String getAlignedEntityName() {
+            return this.alignedEntityName;
         }
 
         /**
@@ -261,6 +272,7 @@ public class CreateLabelTableRequest extends Request {
         }
 
         public static final class Builder {
+            private String alignedEntityName; 
             private java.util.List<String> attributes; 
             private String name; 
             private String type; 
@@ -269,10 +281,19 @@ public class CreateLabelTableRequest extends Request {
             } 
 
             private Builder(Fields model) {
+                this.alignedEntityName = model.alignedEntityName;
                 this.attributes = model.attributes;
                 this.name = model.name;
                 this.type = model.type;
             } 
+
+            /**
+             * AlignedEntityName.
+             */
+            public Builder alignedEntityName(String alignedEntityName) {
+                this.alignedEntityName = alignedEntityName;
+                return this;
+            }
 
             /**
              * <p>This parameter is required.</p>
