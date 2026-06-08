@@ -34,6 +34,14 @@ public class SaveOrderRelationInfoToMsenceRequest extends Request {
     private Integer bizOrderStatus;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientType")
+    private String clientType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CpExtra")
+    private String cpExtra;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustomId")
     private String customId;
 
@@ -63,6 +71,8 @@ public class SaveOrderRelationInfoToMsenceRequest extends Request {
         this.appId = builder.appId;
         this.bizOrderId = builder.bizOrderId;
         this.bizOrderStatus = builder.bizOrderStatus;
+        this.clientType = builder.clientType;
+        this.cpExtra = builder.cpExtra;
         this.customId = builder.customId;
         this.miniProgramId = builder.miniProgramId;
         this.openUid = builder.openUid;
@@ -113,6 +123,20 @@ public class SaveOrderRelationInfoToMsenceRequest extends Request {
     }
 
     /**
+     * @return clientType
+     */
+    public String getClientType() {
+        return this.clientType;
+    }
+
+    /**
+     * @return cpExtra
+     */
+    public String getCpExtra() {
+        return this.cpExtra;
+    }
+
+    /**
      * @return customId
      */
     public String getCustomId() {
@@ -159,6 +183,8 @@ public class SaveOrderRelationInfoToMsenceRequest extends Request {
         private String appId; 
         private String bizOrderId; 
         private Integer bizOrderStatus; 
+        private String clientType; 
+        private String cpExtra; 
         private String customId; 
         private String miniProgramId; 
         private String openUid; 
@@ -176,6 +202,8 @@ public class SaveOrderRelationInfoToMsenceRequest extends Request {
             this.appId = request.appId;
             this.bizOrderId = request.bizOrderId;
             this.bizOrderStatus = request.bizOrderStatus;
+            this.clientType = request.clientType;
+            this.cpExtra = request.cpExtra;
             this.customId = request.customId;
             this.miniProgramId = request.miniProgramId;
             this.openUid = request.openUid;
@@ -217,6 +245,24 @@ public class SaveOrderRelationInfoToMsenceRequest extends Request {
         public Builder bizOrderStatus(Integer bizOrderStatus) {
             this.putBodyParameter("BizOrderStatus", bizOrderStatus);
             this.bizOrderStatus = bizOrderStatus;
+            return this;
+        }
+
+        /**
+         * ClientType.
+         */
+        public Builder clientType(String clientType) {
+            this.putBodyParameter("ClientType", clientType);
+            this.clientType = clientType;
+            return this;
+        }
+
+        /**
+         * CpExtra.
+         */
+        public Builder cpExtra(String cpExtra) {
+            this.putBodyParameter("CpExtra", cpExtra);
+            this.cpExtra = cpExtra;
             return this;
         }
 
