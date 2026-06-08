@@ -584,6 +584,9 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessType")
         private String accessType;
 
+        @com.aliyun.core.annotation.NameInMap("IsLoginByCipherParam")
+        private String isLoginByCipherParam;
+
         @com.aliyun.core.annotation.NameInMap("PreferVpcAccess")
         private Boolean preferVpcAccess;
 
@@ -595,6 +598,7 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
 
         private TenantAliasInfo(Builder builder) {
             this.accessType = builder.accessType;
+            this.isLoginByCipherParam = builder.isLoginByCipherParam;
             this.preferVpcAccess = builder.preferVpcAccess;
             this.tenantAlias = builder.tenantAlias;
             this.vpcAccessAddress = builder.vpcAccessAddress;
@@ -613,6 +617,13 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
          */
         public String getAccessType() {
             return this.accessType;
+        }
+
+        /**
+         * @return isLoginByCipherParam
+         */
+        public String getIsLoginByCipherParam() {
+            return this.isLoginByCipherParam;
         }
 
         /**
@@ -638,6 +649,7 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accessType; 
+            private String isLoginByCipherParam; 
             private Boolean preferVpcAccess; 
             private String tenantAlias; 
             private String vpcAccessAddress; 
@@ -647,6 +659,7 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
 
             private Builder(TenantAliasInfo model) {
                 this.accessType = model.accessType;
+                this.isLoginByCipherParam = model.isLoginByCipherParam;
                 this.preferVpcAccess = model.preferVpcAccess;
                 this.tenantAlias = model.tenantAlias;
                 this.vpcAccessAddress = model.vpcAccessAddress;
@@ -657,6 +670,14 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
+                return this;
+            }
+
+            /**
+             * IsLoginByCipherParam.
+             */
+            public Builder isLoginByCipherParam(String isLoginByCipherParam) {
+                this.isLoginByCipherParam = isLoginByCipherParam;
                 return this;
             }
 

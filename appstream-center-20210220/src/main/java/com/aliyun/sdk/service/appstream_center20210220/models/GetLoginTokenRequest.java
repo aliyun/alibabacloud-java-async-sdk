@@ -34,6 +34,14 @@ public class GetLoginTokenRequest extends Request {
     private String channel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CipherEndUserId")
+    private String cipherEndUserId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CipherPassword")
+    private String cipherPassword;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
@@ -177,6 +185,8 @@ public class GetLoginTokenRequest extends Request {
         this.authenticationCode = builder.authenticationCode;
         this.availableFeatures = builder.availableFeatures;
         this.channel = builder.channel;
+        this.cipherEndUserId = builder.cipherEndUserId;
+        this.cipherPassword = builder.cipherPassword;
         this.clientId = builder.clientId;
         this.clientName = builder.clientName;
         this.clientOS = builder.clientOS;
@@ -252,6 +262,20 @@ public class GetLoginTokenRequest extends Request {
      */
     public String getChannel() {
         return this.channel;
+    }
+
+    /**
+     * @return cipherEndUserId
+     */
+    public String getCipherEndUserId() {
+        return this.cipherEndUserId;
+    }
+
+    /**
+     * @return cipherPassword
+     */
+    public String getCipherPassword() {
+        return this.cipherPassword;
     }
 
     /**
@@ -497,6 +521,8 @@ public class GetLoginTokenRequest extends Request {
         private String authenticationCode; 
         private java.util.Map<String, String> availableFeatures; 
         private String channel; 
+        private String cipherEndUserId; 
+        private String cipherPassword; 
         private String clientId; 
         private String clientName; 
         private String clientOS; 
@@ -542,6 +568,8 @@ public class GetLoginTokenRequest extends Request {
             this.authenticationCode = request.authenticationCode;
             this.availableFeatures = request.availableFeatures;
             this.channel = request.channel;
+            this.cipherEndUserId = request.cipherEndUserId;
+            this.cipherPassword = request.cipherPassword;
             this.clientId = request.clientId;
             this.clientName = request.clientName;
             this.clientOS = request.clientOS;
@@ -612,6 +640,24 @@ public class GetLoginTokenRequest extends Request {
         public Builder channel(String channel) {
             this.putQueryParameter("Channel", channel);
             this.channel = channel;
+            return this;
+        }
+
+        /**
+         * CipherEndUserId.
+         */
+        public Builder cipherEndUserId(String cipherEndUserId) {
+            this.putQueryParameter("CipherEndUserId", cipherEndUserId);
+            this.cipherEndUserId = cipherEndUserId;
+            return this;
+        }
+
+        /**
+         * CipherPassword.
+         */
+        public Builder cipherPassword(String cipherPassword) {
+            this.putQueryParameter("CipherPassword", cipherPassword);
+            this.cipherPassword = cipherPassword;
             return this;
         }
 
