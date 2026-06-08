@@ -20,10 +20,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AskLuma  AskLumaRequest
+     * @return AskLumaResponse
+     */
+    CompletableFuture<AskLumaResponse> askLuma(AskLumaRequest request);
+
+    /**
      * @param request the request parameters of CheckServiceLinkedRoleForProduct  CheckServiceLinkedRoleForProductRequest
      * @return CheckServiceLinkedRoleForProductResponse
      */
     CompletableFuture<CheckServiceLinkedRoleForProductResponse> checkServiceLinkedRoleForProduct(CheckServiceLinkedRoleForProductRequest request);
+
+    /**
+     * @param request the request parameters of CreateAgent  CreateAgentRequest
+     * @return CreateAgentResponse
+     */
+    CompletableFuture<CreateAgentResponse> createAgent(CreateAgentRequest request);
 
     /**
      * <b>description</b> :
@@ -87,6 +99,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateServiceLinkedRoleForProductResponse
      */
     CompletableFuture<CreateServiceLinkedRoleForProductResponse> createServiceLinkedRoleForProduct(CreateServiceLinkedRoleForProductRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAgent  DeleteAgentRequest
+     * @return DeleteAgentResponse
+     */
+    CompletableFuture<DeleteAgentResponse> deleteAgent(DeleteAgentRequest request);
 
     /**
      * <b>description</b> :
@@ -182,6 +200,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EventCenterQueryEventsResponse> eventCenterQueryEvents(EventCenterQueryEventsRequest request);
 
     /**
+     * @param request the request parameters of GetAgent  GetAgentRequest
+     * @return GetAgentResponse
+     */
+    CompletableFuture<GetAgentResponse> getAgent(GetAgentRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to query the information about an API destination.</p>
      * 
@@ -225,6 +249,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetRuleResponse
      */
     CompletableFuture<GetRuleResponse> getRule(GetRuleRequest request);
+
+    /**
+     * @param request the request parameters of ListAgents  ListAgentsRequest
+     * @return ListAgentsResponse
+     */
+    CompletableFuture<ListAgentsResponse> listAgents(ListAgentsRequest request);
 
     /**
      * <b>description</b> :
@@ -305,6 +335,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PauseEventStreamingResponse> pauseEventStreaming(PauseEventStreamingRequest request);
 
     /**
+     * @param request the request parameters of PollAskResult  PollAskResultRequest
+     * @return PollAskResultResponse
+     */
+    CompletableFuture<PollAskResultResponse> pollAskResult(PollAskResultRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to create or update event targets under a rule.</p>
      * 
@@ -312,6 +348,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PutTargetsResponse
      */
     CompletableFuture<PutTargetsResponse> putTargets(PutTargetsRequest request);
+
+    /**
+     * @param request the request parameters of QueryAskLumaLog  QueryAskLumaLogRequest
+     * @return QueryAskLumaLogResponse
+     */
+    CompletableFuture<QueryAskLumaLogResponse> queryAskLumaLog(QueryAskLumaLogRequest request);
 
     /**
      * <b>description</b> :
@@ -375,6 +417,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TestEventSourceConfigResponse
      */
     CompletableFuture<TestEventSourceConfigResponse> testEventSourceConfig(TestEventSourceConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAgent  UpdateAgentRequest
+     * @return UpdateAgentResponse
+     */
+    CompletableFuture<UpdateAgentResponse> updateAgent(UpdateAgentRequest request);
 
     /**
      * <b>description</b> :
