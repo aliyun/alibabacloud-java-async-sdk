@@ -251,6 +251,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTempFilesResponse> listTempFiles(ListTempFilesRequest request);
 
     /**
+     * @param request the request parameters of QueryAutoShutdownPolicies  QueryAutoShutdownPoliciesRequest
+     * @return QueryAutoShutdownPoliciesResponse
+     */
+    CompletableFuture<QueryAutoShutdownPoliciesResponse> queryAutoShutdownPolicies(QueryAutoShutdownPoliciesRequest request);
+
+    /**
      * @param request the request parameters of StartInstance  StartInstanceRequest
      * @return StartInstanceResponse
      */
