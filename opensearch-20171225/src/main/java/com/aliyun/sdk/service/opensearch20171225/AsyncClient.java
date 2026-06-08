@@ -784,6 +784,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateABTestSceneResponse> updateABTestScene(UpdateABTestSceneRequest request);
 
     /**
+     * @param request the request parameters of UpdateAppGroupDeleteProtection  UpdateAppGroupDeleteProtectionRequest
+     * @return UpdateAppGroupDeleteProtectionResponse
+     */
+    CompletableFuture<UpdateAppGroupDeleteProtectionResponse> updateAppGroupDeleteProtection(UpdateAppGroupDeleteProtectionRequest request);
+
+    /**
      * @param request the request parameters of UpdateFetchFields  UpdateFetchFieldsRequest
      * @return UpdateFetchFieldsResponse
      */
