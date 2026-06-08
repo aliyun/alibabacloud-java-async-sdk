@@ -74,6 +74,10 @@ public class InitFaceVerifyRequest extends Request {
     private String crop;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableBeauty")
+    private String enableBeauty;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptType")
     private String encryptType;
 
@@ -194,6 +198,7 @@ public class InitFaceVerifyRequest extends Request {
         this.certifyUrlStyle = builder.certifyUrlStyle;
         this.certifyUrlType = builder.certifyUrlType;
         this.crop = builder.crop;
+        this.enableBeauty = builder.enableBeauty;
         this.encryptType = builder.encryptType;
         this.faceContrastPicture = builder.faceContrastPicture;
         this.faceContrastPictureUrl = builder.faceContrastPictureUrl;
@@ -331,6 +336,13 @@ public class InitFaceVerifyRequest extends Request {
      */
     public String getCrop() {
         return this.crop;
+    }
+
+    /**
+     * @return enableBeauty
+     */
+    public String getEnableBeauty() {
+        return this.enableBeauty;
     }
 
     /**
@@ -530,6 +542,7 @@ public class InitFaceVerifyRequest extends Request {
         private String certifyUrlStyle; 
         private String certifyUrlType; 
         private String crop; 
+        private String enableBeauty; 
         private String encryptType; 
         private String faceContrastPicture; 
         private String faceContrastPictureUrl; 
@@ -577,6 +590,7 @@ public class InitFaceVerifyRequest extends Request {
             this.certifyUrlStyle = request.certifyUrlStyle;
             this.certifyUrlType = request.certifyUrlType;
             this.crop = request.crop;
+            this.enableBeauty = request.enableBeauty;
             this.encryptType = request.encryptType;
             this.faceContrastPicture = request.faceContrastPicture;
             this.faceContrastPictureUrl = request.faceContrastPictureUrl;
@@ -823,6 +837,15 @@ public class InitFaceVerifyRequest extends Request {
         public Builder crop(String crop) {
             this.putBodyParameter("Crop", crop);
             this.crop = crop;
+            return this;
+        }
+
+        /**
+         * EnableBeauty.
+         */
+        public Builder enableBeauty(String enableBeauty) {
+            this.putQueryParameter("EnableBeauty", enableBeauty);
+            this.enableBeauty = enableBeauty;
             return this;
         }
 
