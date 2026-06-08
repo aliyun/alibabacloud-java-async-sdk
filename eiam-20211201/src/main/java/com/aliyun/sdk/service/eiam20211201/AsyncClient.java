@@ -1535,6 +1535,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
 
     /**
+     * @param request the request parameters of ListResourceServerScopes  ListResourceServerScopesRequest
+     * @return ListResourceServerScopesResponse
+     */
+    CompletableFuture<ListResourceServerScopesResponse> listResourceServerScopes(ListResourceServerScopesRequest request);
+
+    /**
      * @param request the request parameters of ListResourceServersForUser  ListResourceServersForUserRequest
      * @return ListResourceServersForUserResponse
      */

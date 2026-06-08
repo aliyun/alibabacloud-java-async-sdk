@@ -1,3 +1,6 @@
+2026-06-08 Version: 2.0.40
+- Generated java-async 2021-12-01 for Eiam.
+
 2026-06-04 Version: 2.0.39
 - Generated java-async 2021-12-01 for Eiam.
 
