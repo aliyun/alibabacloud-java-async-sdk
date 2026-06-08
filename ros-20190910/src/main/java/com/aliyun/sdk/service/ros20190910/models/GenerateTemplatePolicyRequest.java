@@ -18,8 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenerateTemplatePolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GenerateOptions")
+    private java.util.List<String> generateOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationTypes")
     private java.util.List<String> operationTypes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
@@ -39,7 +47,9 @@ public class GenerateTemplatePolicyRequest extends Request {
 
     private GenerateTemplatePolicyRequest(Builder builder) {
         super(builder);
+        this.generateOptions = builder.generateOptions;
         this.operationTypes = builder.operationTypes;
+        this.parameters = builder.parameters;
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
         this.templateURL = builder.templateURL;
@@ -60,10 +70,24 @@ public class GenerateTemplatePolicyRequest extends Request {
     }
 
     /**
+     * @return generateOptions
+     */
+    public java.util.List<String> getGenerateOptions() {
+        return this.generateOptions;
+    }
+
+    /**
      * @return operationTypes
      */
     public java.util.List<String> getOperationTypes() {
         return this.operationTypes;
+    }
+
+    /**
+     * @return parameters
+     */
+    public java.util.List<Parameters> getParameters() {
+        return this.parameters;
     }
 
     /**
@@ -95,7 +119,9 @@ public class GenerateTemplatePolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateTemplatePolicyRequest, Builder> {
+        private java.util.List<String> generateOptions; 
         private java.util.List<String> operationTypes; 
+        private java.util.List<Parameters> parameters; 
         private String templateBody; 
         private String templateId; 
         private String templateURL; 
@@ -107,12 +133,23 @@ public class GenerateTemplatePolicyRequest extends Request {
 
         private Builder(GenerateTemplatePolicyRequest request) {
             super(request);
+            this.generateOptions = request.generateOptions;
             this.operationTypes = request.operationTypes;
+            this.parameters = request.parameters;
             this.templateBody = request.templateBody;
             this.templateId = request.templateId;
             this.templateURL = request.templateURL;
             this.templateVersion = request.templateVersion;
         } 
+
+        /**
+         * GenerateOptions.
+         */
+        public Builder generateOptions(java.util.List<String> generateOptions) {
+            this.putQueryParameter("GenerateOptions", generateOptions);
+            this.generateOptions = generateOptions;
+            return this;
+        }
 
         /**
          * <p>The type of operation N for which you want to generate the policy information.</p>
@@ -135,6 +172,15 @@ public class GenerateTemplatePolicyRequest extends Request {
         public Builder operationTypes(java.util.List<String> operationTypes) {
             this.putQueryParameter("OperationTypes", operationTypes);
             this.operationTypes = operationTypes;
+            return this;
+        }
+
+        /**
+         * Parameters.
+         */
+        public Builder parameters(java.util.List<Parameters> parameters) {
+            this.putQueryParameter("Parameters", parameters);
+            this.parameters = parameters;
             return this;
         }
 
@@ -201,4 +247,79 @@ public class GenerateTemplatePolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateTemplatePolicyRequest} extends {@link TeaModel}
+     *
+     * <p>GenerateTemplatePolicyRequest</p>
+     */
+    public static class Parameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
+        private String parameterKey;
+
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
+        private String parameterValue;
+
+        private Parameters(Builder builder) {
+            this.parameterKey = builder.parameterKey;
+            this.parameterValue = builder.parameterValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Parameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return parameterKey
+         */
+        public String getParameterKey() {
+            return this.parameterKey;
+        }
+
+        /**
+         * @return parameterValue
+         */
+        public String getParameterValue() {
+            return this.parameterValue;
+        }
+
+        public static final class Builder {
+            private String parameterKey; 
+            private String parameterValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
+            /**
+             * ParameterKey.
+             */
+            public Builder parameterKey(String parameterKey) {
+                this.parameterKey = parameterKey;
+                return this;
+            }
+
+            /**
+             * ParameterValue.
+             */
+            public Builder parameterValue(String parameterValue) {
+                this.parameterValue = parameterValue;
+                return this;
+            }
+
+            public Parameters build() {
+                return new Parameters(this);
+            } 
+
+        } 
+
+    }
 }
