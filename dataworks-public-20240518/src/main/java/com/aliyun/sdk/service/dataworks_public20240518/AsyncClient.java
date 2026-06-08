@@ -37,6 +37,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddEntityIntoMetaCollectionResponse> addEntityIntoMetaCollection(AddEntityIntoMetaCollectionRequest request);
 
     /**
+     * @param request the request parameters of ApplyResourceAccessPermission  ApplyResourceAccessPermissionRequest
+     * @return ApplyResourceAccessPermissionResponse
+     */
+    CompletableFuture<ApplyResourceAccessPermissionResponse> applyResourceAccessPermission(ApplyResourceAccessPermissionRequest request);
+
+    /**
+     * @param request the request parameters of ApproveProcessInstance  ApproveProcessInstanceRequest
+     * @return ApproveProcessInstanceResponse
+     */
+    CompletableFuture<ApproveProcessInstanceResponse> approveProcessInstance(ApproveProcessInstanceRequest request);
+
+    /**
      * @param request the request parameters of AssociateProjectToImage  AssociateProjectToImageRequest
      * @return AssociateProjectToImageResponse
      */
@@ -380,6 +392,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePipelineRunResponse> createPipelineRun(CreatePipelineRunRequest request);
 
     /**
+     * @param request the request parameters of CreateProcessDefinition  CreateProcessDefinitionRequest
+     * @return CreateProcessDefinitionResponse
+     */
+    CompletableFuture<CreateProcessDefinitionResponse> createProcessDefinition(CreateProcessDefinitionRequest request);
+
+    /**
      * @param request the request parameters of CreateProject  CreateProjectRequest
      * @return CreateProjectResponse
      */
@@ -420,6 +438,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateRouteResponse
      */
     CompletableFuture<CreateRouteResponse> createRoute(CreateRouteRequest request);
+
+    /**
+     * @param request the request parameters of CreateSecurityStrategy  CreateSecurityStrategyRequest
+     * @return CreateSecurityStrategyResponse
+     */
+    CompletableFuture<CreateSecurityStrategyResponse> createSecurityStrategy(CreateSecurityStrategyRequest request);
 
     /**
      * @param request the request parameters of CreateSkill  CreateSkillRequest
@@ -702,6 +726,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteParameterResponse> deleteParameter(DeleteParameterRequest request);
 
     /**
+     * @param request the request parameters of DeleteProcessDefinition  DeleteProcessDefinitionRequest
+     * @return DeleteProcessDefinitionResponse
+     */
+    CompletableFuture<DeleteProcessDefinitionResponse> deleteProcessDefinition(DeleteProcessDefinitionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -758,6 +788,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRouteResponse> deleteRoute(DeleteRouteRequest request);
 
     /**
+     * @param request the request parameters of DeleteSecurityStrategy  DeleteSecurityStrategyRequest
+     * @return DeleteSecurityStrategyResponse
+     */
+    CompletableFuture<DeleteSecurityStrategyResponse> deleteSecurityStrategy(DeleteSecurityStrategyRequest request);
+
+    /**
      * @param request the request parameters of DeleteSkill  DeleteSkillRequest
      * @return DeleteSkillResponse
      */
@@ -806,6 +842,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DetachDataQualityRulesFromEvaluationTaskResponse> detachDataQualityRulesFromEvaluationTask(DetachDataQualityRulesFromEvaluationTaskRequest request);
 
     /**
+     * @param request the request parameters of DisableProcessDefinition  DisableProcessDefinitionRequest
+     * @return DisableProcessDefinitionResponse
+     */
+    CompletableFuture<DisableProcessDefinitionResponse> disableProcessDefinition(DisableProcessDefinitionRequest request);
+
+    /**
      * @param request the request parameters of DissociateProjectFromImage  DissociateProjectFromImageRequest
      * @return DissociateProjectFromImageResponse
      */
@@ -825,6 +867,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DissociateProjectFromResourceGroupResponse
      */
     CompletableFuture<DissociateProjectFromResourceGroupResponse> dissociateProjectFromResourceGroup(DissociateProjectFromResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of EnableProcessDefinition  EnableProcessDefinitionRequest
+     * @return EnableProcessDefinitionResponse
+     */
+    CompletableFuture<EnableProcessDefinitionResponse> enableProcessDefinition(EnableProcessDefinitionRequest request);
 
     /**
      * @param request the request parameters of EstablishRelationTableToBusiness  EstablishRelationTableToBusinessRequest
@@ -854,6 +902,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteAdhocWorkflowInstanceResponse> executeAdhocWorkflowInstance(ExecuteAdhocWorkflowInstanceRequest request);
 
     /**
+     * @param request the request parameters of FindBestMatchSecurityStrategy  FindBestMatchSecurityStrategyRequest
+     * @return FindBestMatchSecurityStrategyResponse
+     */
+    CompletableFuture<FindBestMatchSecurityStrategyResponse> findBestMatchSecurityStrategy(FindBestMatchSecurityStrategyRequest request);
+
+    /**
      * @param request the request parameters of GetAgent  GetAgentRequest
      * @return GetAgentResponse
      */
@@ -876,6 +930,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAlertRuleResponse
      */
     CompletableFuture<GetAlertRuleResponse> getAlertRule(GetAlertRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetApplicationContents  GetApplicationContentsRequest
+     * @return GetApplicationContentsResponse
+     */
+    CompletableFuture<GetApplicationContentsResponse> getApplicationContents(GetApplicationContentsRequest request);
 
     /**
      * @param request the request parameters of GetBusiness  GetBusinessRequest
@@ -1185,6 +1245,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPipelineRunResponse> getPipelineRun(GetPipelineRunRequest request);
 
     /**
+     * @param request the request parameters of GetProcessDefinition  GetProcessDefinitionRequest
+     * @return GetProcessDefinitionResponse
+     */
+    CompletableFuture<GetProcessDefinitionResponse> getProcessDefinition(GetProcessDefinitionRequest request);
+
+    /**
+     * @param request the request parameters of GetProcessInstance  GetProcessInstanceRequest
+     * @return GetProcessInstanceResponse
+     */
+    CompletableFuture<GetProcessInstanceResponse> getProcessInstance(GetProcessInstanceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -1252,6 +1324,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSchemaResponse
      */
     CompletableFuture<GetSchemaResponse> getSchema(GetSchemaRequest request);
+
+    /**
+     * @param request the request parameters of GetSecurityStrategy  GetSecurityStrategyRequest
+     * @return GetSecurityStrategyResponse
+     */
+    CompletableFuture<GetSecurityStrategyResponse> getSecurityStrategy(GetSecurityStrategyRequest request);
 
     /**
      * @param request the request parameters of GetSkill  GetSkillRequest
@@ -1722,6 +1800,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMetaEntityDefsResponse> listMetaEntityDefs(ListMetaEntityDefsRequest request);
 
     /**
+     * @param request the request parameters of ListMyApplications  ListMyApplicationsRequest
+     * @return ListMyApplicationsResponse
+     */
+    CompletableFuture<ListMyApplicationsResponse> listMyApplications(ListMyApplicationsRequest request);
+
+    /**
+     * @param request the request parameters of ListMyRelatedApprovals  ListMyRelatedApprovalsRequest
+     * @return ListMyRelatedApprovalsResponse
+     */
+    CompletableFuture<ListMyRelatedApprovalsResponse> listMyRelatedApprovals(ListMyRelatedApprovalsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -1761,6 +1851,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPartitionsResponse> listPartitions(ListPartitionsRequest request);
 
     /**
+     * @param request the request parameters of ListPendingApprovals  ListPendingApprovalsRequest
+     * @return ListPendingApprovalsResponse
+     */
+    CompletableFuture<ListPendingApprovalsResponse> listPendingApprovals(ListPendingApprovalsRequest request);
+
+    /**
      * @param request the request parameters of ListPipelineRunItems  ListPipelineRunItemsRequest
      * @return ListPipelineRunItemsResponse
      */
@@ -1771,6 +1867,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPipelineRunsResponse
      */
     CompletableFuture<ListPipelineRunsResponse> listPipelineRuns(ListPipelineRunsRequest request);
+
+    /**
+     * @param request the request parameters of ListProcessDefinitions  ListProcessDefinitionsRequest
+     * @return ListProcessDefinitionsResponse
+     */
+    CompletableFuture<ListProcessDefinitionsResponse> listProcessDefinitions(ListProcessDefinitionsRequest request);
 
     /**
      * <b>description</b> :
@@ -1840,6 +1942,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSchemasResponse
      */
     CompletableFuture<ListSchemasResponse> listSchemas(ListSchemasRequest request);
+
+    /**
+     * @param request the request parameters of ListSecurityStrategies  ListSecurityStrategiesRequest
+     * @return ListSecurityStrategiesResponse
+     */
+    CompletableFuture<ListSecurityStrategiesResponse> listSecurityStrategies(ListSecurityStrategiesRequest request);
 
     /**
      * @param request the request parameters of ListSkills  ListSkillsRequest
@@ -2086,6 +2194,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopDIJobResponse
      */
     CompletableFuture<StopDIJobResponse> stopDIJob(StopDIJobRequest request);
+
+    /**
+     * @param request the request parameters of StopProcessInstance  StopProcessInstanceRequest
+     * @return StopProcessInstanceResponse
+     */
+    CompletableFuture<StopProcessInstanceResponse> stopProcessInstance(StopProcessInstanceRequest request);
 
     /**
      * <b>description</b> :
@@ -2360,6 +2474,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateParameterResponse> updateParameter(UpdateParameterRequest request);
 
     /**
+     * @param request the request parameters of UpdateProcessDefinition  UpdateProcessDefinitionRequest
+     * @return UpdateProcessDefinitionResponse
+     */
+    CompletableFuture<UpdateProcessDefinitionResponse> updateProcessDefinition(UpdateProcessDefinitionRequest request);
+
+    /**
      * @param request the request parameters of UpdateProject  UpdateProjectRequest
      * @return UpdateProjectResponse
      */
@@ -2388,6 +2508,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRouteResponse
      */
     CompletableFuture<UpdateRouteResponse> updateRoute(UpdateRouteRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSecurityStrategy  UpdateSecurityStrategyRequest
+     * @return UpdateSecurityStrategyResponse
+     */
+    CompletableFuture<UpdateSecurityStrategyResponse> updateSecurityStrategy(UpdateSecurityStrategyRequest request);
 
     /**
      * @param request the request parameters of UpdateTableBusinessMetadata  UpdateTableBusinessMetadataRequest
