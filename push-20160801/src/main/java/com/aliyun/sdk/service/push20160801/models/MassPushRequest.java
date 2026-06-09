@@ -302,6 +302,12 @@ public class MassPushRequest extends Request {
         @Deprecated
         private String androidXiaomiBigPictureUrl;
 
+        @com.aliyun.core.annotation.NameInMap("AndroidXiaomiFocusParam")
+        private String androidXiaomiFocusParam;
+
+        @com.aliyun.core.annotation.NameInMap("AndroidXiaomiFocusPics")
+        private String androidXiaomiFocusPics;
+
         @com.aliyun.core.annotation.NameInMap("AndroidXiaomiImageUrl")
         @Deprecated
         private String androidXiaomiImageUrl;
@@ -531,6 +537,8 @@ public class MassPushRequest extends Request {
             this.androidXiaoMiNotifyBody = builder.androidXiaoMiNotifyBody;
             this.androidXiaoMiNotifyTitle = builder.androidXiaoMiNotifyTitle;
             this.androidXiaomiBigPictureUrl = builder.androidXiaomiBigPictureUrl;
+            this.androidXiaomiFocusParam = builder.androidXiaomiFocusParam;
+            this.androidXiaomiFocusPics = builder.androidXiaomiFocusPics;
             this.androidXiaomiImageUrl = builder.androidXiaomiImageUrl;
             this.body = builder.body;
             this.deviceType = builder.deviceType;
@@ -973,6 +981,20 @@ public class MassPushRequest extends Request {
          */
         public String getAndroidXiaomiBigPictureUrl() {
             return this.androidXiaomiBigPictureUrl;
+        }
+
+        /**
+         * @return androidXiaomiFocusParam
+         */
+        public String getAndroidXiaomiFocusParam() {
+            return this.androidXiaomiFocusParam;
+        }
+
+        /**
+         * @return androidXiaomiFocusPics
+         */
+        public String getAndroidXiaomiFocusPics() {
+            return this.androidXiaomiFocusPics;
         }
 
         /**
@@ -1422,6 +1444,8 @@ public class MassPushRequest extends Request {
             private String androidXiaoMiNotifyBody; 
             private String androidXiaoMiNotifyTitle; 
             private String androidXiaomiBigPictureUrl; 
+            private String androidXiaomiFocusParam; 
+            private String androidXiaomiFocusPics; 
             private String androidXiaomiImageUrl; 
             private String body; 
             private String deviceType; 
@@ -1537,6 +1561,8 @@ public class MassPushRequest extends Request {
                 this.androidXiaoMiNotifyBody = model.androidXiaoMiNotifyBody;
                 this.androidXiaoMiNotifyTitle = model.androidXiaoMiNotifyTitle;
                 this.androidXiaomiBigPictureUrl = model.androidXiaomiBigPictureUrl;
+                this.androidXiaomiFocusParam = model.androidXiaomiFocusParam;
+                this.androidXiaomiFocusPics = model.androidXiaomiFocusPics;
                 this.androidXiaomiImageUrl = model.androidXiaomiImageUrl;
                 this.body = model.body;
                 this.deviceType = model.deviceType;
@@ -2024,6 +2050,22 @@ public class MassPushRequest extends Request {
              */
             public Builder androidXiaomiBigPictureUrl(String androidXiaomiBigPictureUrl) {
                 this.androidXiaomiBigPictureUrl = androidXiaomiBigPictureUrl;
+                return this;
+            }
+
+            /**
+             * AndroidXiaomiFocusParam.
+             */
+            public Builder androidXiaomiFocusParam(String androidXiaomiFocusParam) {
+                this.androidXiaomiFocusParam = androidXiaomiFocusParam;
+                return this;
+            }
+
+            /**
+             * AndroidXiaomiFocusPics.
+             */
+            public Builder androidXiaomiFocusPics(String androidXiaomiFocusPics) {
+                this.androidXiaomiFocusPics = androidXiaomiFocusPics;
                 return this;
             }
 

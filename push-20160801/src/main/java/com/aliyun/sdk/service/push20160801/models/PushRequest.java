@@ -242,6 +242,14 @@ public class PushRequest extends Request {
     private String androidXiaomiBigPictureUrl;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidXiaomiFocusParam")
+    private String androidXiaomiFocusParam;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidXiaomiFocusPics")
+    private String androidXiaomiFocusPics;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidXiaomiImageUrl")
     @Deprecated
     private String androidXiaomiImageUrl;
@@ -558,6 +566,8 @@ public class PushRequest extends Request {
         this.androidXiaoMiNotifyBody = builder.androidXiaoMiNotifyBody;
         this.androidXiaoMiNotifyTitle = builder.androidXiaoMiNotifyTitle;
         this.androidXiaomiBigPictureUrl = builder.androidXiaomiBigPictureUrl;
+        this.androidXiaomiFocusParam = builder.androidXiaomiFocusParam;
+        this.androidXiaomiFocusPics = builder.androidXiaomiFocusPics;
         this.androidXiaomiImageUrl = builder.androidXiaomiImageUrl;
         this.appKey = builder.appKey;
         this.body = builder.body;
@@ -1012,6 +1022,20 @@ public class PushRequest extends Request {
      */
     public String getAndroidXiaomiBigPictureUrl() {
         return this.androidXiaomiBigPictureUrl;
+    }
+
+    /**
+     * @return androidXiaomiFocusParam
+     */
+    public String getAndroidXiaomiFocusParam() {
+        return this.androidXiaomiFocusParam;
+    }
+
+    /**
+     * @return androidXiaomiFocusPics
+     */
+    public String getAndroidXiaomiFocusPics() {
+        return this.androidXiaomiFocusPics;
     }
 
     /**
@@ -1510,6 +1534,8 @@ public class PushRequest extends Request {
         private String androidXiaoMiNotifyBody; 
         private String androidXiaoMiNotifyTitle; 
         private String androidXiaomiBigPictureUrl; 
+        private String androidXiaomiFocusParam; 
+        private String androidXiaomiFocusPics; 
         private String androidXiaomiImageUrl; 
         private Long appKey; 
         private String body; 
@@ -1634,6 +1660,8 @@ public class PushRequest extends Request {
             this.androidXiaoMiNotifyBody = request.androidXiaoMiNotifyBody;
             this.androidXiaoMiNotifyTitle = request.androidXiaoMiNotifyTitle;
             this.androidXiaomiBigPictureUrl = request.androidXiaomiBigPictureUrl;
+            this.androidXiaomiFocusParam = request.androidXiaomiFocusParam;
+            this.androidXiaomiFocusPics = request.androidXiaomiFocusPics;
             this.androidXiaomiImageUrl = request.androidXiaomiImageUrl;
             this.appKey = request.appKey;
             this.body = request.body;
@@ -2184,6 +2212,24 @@ public class PushRequest extends Request {
         public Builder androidXiaomiBigPictureUrl(String androidXiaomiBigPictureUrl) {
             this.putQueryParameter("AndroidXiaomiBigPictureUrl", androidXiaomiBigPictureUrl);
             this.androidXiaomiBigPictureUrl = androidXiaomiBigPictureUrl;
+            return this;
+        }
+
+        /**
+         * AndroidXiaomiFocusParam.
+         */
+        public Builder androidXiaomiFocusParam(String androidXiaomiFocusParam) {
+            this.putQueryParameter("AndroidXiaomiFocusParam", androidXiaomiFocusParam);
+            this.androidXiaomiFocusParam = androidXiaomiFocusParam;
+            return this;
+        }
+
+        /**
+         * AndroidXiaomiFocusPics.
+         */
+        public Builder androidXiaomiFocusPics(String androidXiaomiFocusPics) {
+            this.putQueryParameter("AndroidXiaomiFocusPics", androidXiaomiFocusPics);
+            this.androidXiaomiFocusPics = androidXiaomiFocusPics;
             return this;
         }
 

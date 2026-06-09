@@ -980,8 +980,16 @@ public class PushTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channel")
         private String channel;
 
+        @com.aliyun.core.annotation.NameInMap("FocusParam")
+        private String focusParam;
+
+        @com.aliyun.core.annotation.NameInMap("FocusPics")
+        private String focusPics;
+
         private Xiaomi(Builder builder) {
             this.channel = builder.channel;
+            this.focusParam = builder.focusParam;
+            this.focusPics = builder.focusPics;
         }
 
         public static Builder builder() {
@@ -999,14 +1007,32 @@ public class PushTask extends TeaModel {
             return this.channel;
         }
 
+        /**
+         * @return focusParam
+         */
+        public String getFocusParam() {
+            return this.focusParam;
+        }
+
+        /**
+         * @return focusPics
+         */
+        public String getFocusPics() {
+            return this.focusPics;
+        }
+
         public static final class Builder {
             private String channel; 
+            private String focusParam; 
+            private String focusPics; 
 
             private Builder() {
             } 
 
             private Builder(Xiaomi model) {
                 this.channel = model.channel;
+                this.focusParam = model.focusParam;
+                this.focusPics = model.focusPics;
             } 
 
             /**
@@ -1014,6 +1040,22 @@ public class PushTask extends TeaModel {
              */
             public Builder channel(String channel) {
                 this.channel = channel;
+                return this;
+            }
+
+            /**
+             * FocusParam.
+             */
+            public Builder focusParam(String focusParam) {
+                this.focusParam = focusParam;
+                return this;
+            }
+
+            /**
+             * FocusPics.
+             */
+            public Builder focusPics(String focusPics) {
+                this.focusPics = focusPics;
                 return this;
             }
 
