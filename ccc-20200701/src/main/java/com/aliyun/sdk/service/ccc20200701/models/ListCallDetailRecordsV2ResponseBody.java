@@ -935,6 +935,9 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OffsiteAgentReleaseReason")
         private String offsiteAgentReleaseReason;
 
+        @com.aliyun.core.annotation.NameInMap("OutsideNumberDestinationNumber")
+        private String outsideNumberDestinationNumber;
+
         @com.aliyun.core.annotation.NameInMap("OutsideNumberReleaseReason")
         private String outsideNumberReleaseReason;
 
@@ -1038,6 +1041,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             this.offsiteAgentDestinationNumbers = builder.offsiteAgentDestinationNumbers;
             this.offsiteAgentOriginatorNumbers = builder.offsiteAgentOriginatorNumbers;
             this.offsiteAgentReleaseReason = builder.offsiteAgentReleaseReason;
+            this.outsideNumberDestinationNumber = builder.outsideNumberDestinationNumber;
             this.outsideNumberReleaseReason = builder.outsideNumberReleaseReason;
             this.queueTime = builder.queueTime;
             this.recordingDuration = builder.recordingDuration;
@@ -1343,6 +1347,13 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return outsideNumberDestinationNumber
+         */
+        public String getOutsideNumberDestinationNumber() {
+            return this.outsideNumberDestinationNumber;
+        }
+
+        /**
          * @return outsideNumberReleaseReason
          */
         public String getOutsideNumberReleaseReason() {
@@ -1529,6 +1540,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             private String offsiteAgentDestinationNumbers; 
             private String offsiteAgentOriginatorNumbers; 
             private String offsiteAgentReleaseReason; 
+            private String outsideNumberDestinationNumber; 
             private String outsideNumberReleaseReason; 
             private Long queueTime; 
             private Long recordingDuration; 
@@ -1594,6 +1606,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
                 this.offsiteAgentDestinationNumbers = model.offsiteAgentDestinationNumbers;
                 this.offsiteAgentOriginatorNumbers = model.offsiteAgentOriginatorNumbers;
                 this.offsiteAgentReleaseReason = model.offsiteAgentReleaseReason;
+                this.outsideNumberDestinationNumber = model.outsideNumberDestinationNumber;
                 this.outsideNumberReleaseReason = model.outsideNumberReleaseReason;
                 this.queueTime = model.queueTime;
                 this.recordingDuration = model.recordingDuration;
@@ -1926,6 +1939,14 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
              */
             public Builder offsiteAgentReleaseReason(String offsiteAgentReleaseReason) {
                 this.offsiteAgentReleaseReason = offsiteAgentReleaseReason;
+                return this;
+            }
+
+            /**
+             * OutsideNumberDestinationNumber.
+             */
+            public Builder outsideNumberDestinationNumber(String outsideNumberDestinationNumber) {
+                this.outsideNumberDestinationNumber = outsideNumberDestinationNumber;
                 return this;
             }
 
