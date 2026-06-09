@@ -26,6 +26,10 @@ public class ListAppPublishHistoryRequest extends Request {
     private String bizId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployChannel")
+    private String deployChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
@@ -61,6 +65,7 @@ public class ListAppPublishHistoryRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
+        this.deployChannel = builder.deployChannel;
         this.keyword = builder.keyword;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -96,6 +101,13 @@ public class ListAppPublishHistoryRequest extends Request {
      */
     public String getBizId() {
         return this.bizId;
+    }
+
+    /**
+     * @return deployChannel
+     */
+    public String getDeployChannel() {
+        return this.deployChannel;
     }
 
     /**
@@ -157,6 +169,7 @@ public class ListAppPublishHistoryRequest extends Request {
     public static final class Builder extends Request.Builder<ListAppPublishHistoryRequest, Builder> {
         private String regionId; 
         private String bizId; 
+        private String deployChannel; 
         private String keyword; 
         private Integer maxResults; 
         private String nextToken; 
@@ -174,6 +187,7 @@ public class ListAppPublishHistoryRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.bizId = request.bizId;
+            this.deployChannel = request.deployChannel;
             this.keyword = request.keyword;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -199,6 +213,15 @@ public class ListAppPublishHistoryRequest extends Request {
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
             this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * DeployChannel.
+         */
+        public Builder deployChannel(String deployChannel) {
+            this.putQueryParameter("DeployChannel", deployChannel);
+            this.deployChannel = deployChannel;
             return this;
         }
 

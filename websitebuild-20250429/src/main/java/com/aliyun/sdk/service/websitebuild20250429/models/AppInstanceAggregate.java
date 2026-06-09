@@ -113,6 +113,9 @@ public class AppInstanceAggregate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private String version;
+
     private AppInstanceAggregate(Builder builder) {
         this.aiStaffList = builder.aiStaffList;
         this.appOperationAddress = builder.appOperationAddress;
@@ -146,6 +149,7 @@ public class AppInstanceAggregate extends TeaModel {
         this.tags = builder.tags;
         this.thumbnailUrl = builder.thumbnailUrl;
         this.userId = builder.userId;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -384,6 +388,13 @@ public class AppInstanceAggregate extends TeaModel {
         return this.userId;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder {
         private java.util.List<AppAiStaff> aiStaffList; 
         private AppOperationAddress appOperationAddress; 
@@ -417,6 +428,7 @@ public class AppInstanceAggregate extends TeaModel {
         private java.util.List<Tags> tags; 
         private String thumbnailUrl; 
         private String userId; 
+        private String version; 
 
         private Builder() {
         } 
@@ -454,6 +466,7 @@ public class AppInstanceAggregate extends TeaModel {
             this.tags = model.tags;
             this.thumbnailUrl = model.thumbnailUrl;
             this.userId = model.userId;
+            this.version = model.version;
         } 
 
         /**
@@ -709,6 +722,14 @@ public class AppInstanceAggregate extends TeaModel {
          */
         public Builder userId(String userId) {
             this.userId = userId;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.version = version;
             return this;
         }
 

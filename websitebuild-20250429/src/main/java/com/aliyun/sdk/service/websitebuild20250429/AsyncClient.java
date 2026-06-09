@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckUserResourceMeasureResponse> checkUserResourceMeasure(CheckUserResourceMeasureRequest request);
 
     /**
+     * @param request the request parameters of ConfirmAppInstance  ConfirmAppInstanceRequest
+     * @return ConfirmAppInstanceResponse
+     */
+    CompletableFuture<ConfirmAppInstanceResponse> confirmAppInstance(ConfirmAppInstanceRequest request);
+
+    /**
      * @param request the request parameters of CopyAppPluginConfig  CopyAppPluginConfigRequest
      * @return CopyAppPluginConfigResponse
      */
@@ -134,6 +140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAppDomainRedirectResponse
      */
     CompletableFuture<DeleteAppDomainRedirectResponse> deleteAppDomainRedirect(DeleteAppDomainRedirectRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAppFile  DeleteAppFileRequest
+     * @return DeleteAppFileResponse
+     */
+    CompletableFuture<DeleteAppFileResponse> deleteAppFile(DeleteAppFileRequest request);
 
     /**
      * @param request the request parameters of DeleteAppInstanceFile  DeleteAppInstanceFileRequest
@@ -374,6 +386,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetMiniAppBindingForAdminResponse
      */
     CompletableFuture<GetMiniAppBindingForAdminResponse> getMiniAppBindingForAdmin(GetMiniAppBindingForAdminRequest request);
+
+    /**
+     * @param request the request parameters of GetOssUploadPolicy  GetOssUploadPolicyRequest
+     * @return GetOssUploadPolicyResponse
+     */
+    CompletableFuture<GetOssUploadPolicyResponse> getOssUploadPolicy(GetOssUploadPolicyRequest request);
+
+    /**
+     * @param request the request parameters of GetTempDownloadUrl  GetTempDownloadUrlRequest
+     * @return GetTempDownloadUrlResponse
+     */
+    CompletableFuture<GetTempDownloadUrlResponse> getTempDownloadUrl(GetTempDownloadUrlRequest request);
 
     /**
      * @param request the request parameters of GetUserAccessTokenForPartner  GetUserAccessTokenForPartnerRequest

@@ -30,6 +30,10 @@ public class UpdateAppSeoStatusRequest extends Request {
     private String domain;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SeAuthInfo")
+    private String seAuthInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SeType")
     private String seType;
 
@@ -38,6 +42,7 @@ public class UpdateAppSeoStatusRequest extends Request {
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
         this.domain = builder.domain;
+        this.seAuthInfo = builder.seAuthInfo;
         this.seType = builder.seType;
     }
 
@@ -76,6 +81,13 @@ public class UpdateAppSeoStatusRequest extends Request {
     }
 
     /**
+     * @return seAuthInfo
+     */
+    public String getSeAuthInfo() {
+        return this.seAuthInfo;
+    }
+
+    /**
      * @return seType
      */
     public String getSeType() {
@@ -86,6 +98,7 @@ public class UpdateAppSeoStatusRequest extends Request {
         private String regionId; 
         private String bizId; 
         private String domain; 
+        private String seAuthInfo; 
         private String seType; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class UpdateAppSeoStatusRequest extends Request {
             this.regionId = request.regionId;
             this.bizId = request.bizId;
             this.domain = request.domain;
+            this.seAuthInfo = request.seAuthInfo;
             this.seType = request.seType;
         } 
 
@@ -130,6 +144,15 @@ public class UpdateAppSeoStatusRequest extends Request {
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * SeAuthInfo.
+         */
+        public Builder seAuthInfo(String seAuthInfo) {
+            this.putQueryParameter("SeAuthInfo", seAuthInfo);
+            this.seAuthInfo = seAuthInfo;
             return this;
         }
 
