@@ -472,6 +472,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveUserToDataAgentWorkspaceResponse> removeUserToDataAgentWorkspace(RemoveUserToDataAgentWorkspaceRequest request);
 
     /**
+     * @param request the request parameters of RetrieveKnowledgeBase  RetrieveKnowledgeBaseRequest
+     * @return RetrieveKnowledgeBaseResponse
+     */
+    CompletableFuture<RetrieveKnowledgeBaseResponse> retrieveKnowledgeBase(RetrieveKnowledgeBaseRequest request);
+
+    /**
      * @param request the request parameters of SaveWorkspaceCode  SaveWorkspaceCodeRequest
      * @return SaveWorkspaceCodeResponse
      */
