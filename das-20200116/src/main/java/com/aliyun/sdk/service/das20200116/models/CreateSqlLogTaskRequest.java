@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateSqlLogTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
@@ -43,6 +44,7 @@ public class CreateSqlLogTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     @com.aliyun.core.annotation.Body
@@ -158,6 +160,7 @@ public class CreateSqlLogTaskRequest extends Request {
 
         /**
          * <p>The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1608888296000</p>
@@ -234,6 +237,7 @@ public class CreateSqlLogTaskRequest extends Request {
 
         /**
          * <p>The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1596177993000</p>

@@ -290,6 +290,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocsExamined")
         private String docsExamined;
 
+        @com.aliyun.core.annotation.NameInMap("ExtText")
+        private String extText;
+
         @com.aliyun.core.annotation.NameInMap("Fail")
         private String fail;
 
@@ -434,6 +437,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             this.dbId = builder.dbId;
             this.dbInstanceName = builder.dbInstanceName;
             this.docsExamined = builder.docsExamined;
+            this.extText = builder.extText;
             this.fail = builder.fail;
             this.frows = builder.frows;
             this.hostAddress = builder.hostAddress;
@@ -563,6 +567,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
          */
         public String getDocsExamined() {
             return this.docsExamined;
+        }
+
+        /**
+         * @return extText
+         */
+        public String getExtText() {
+            return this.extText;
         }
 
         /**
@@ -885,6 +896,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String dbId; 
             private String dbInstanceName; 
             private String docsExamined; 
+            private String extText; 
             private String fail; 
             private Long frows; 
             private String hostAddress; 
@@ -945,6 +957,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
                 this.dbId = model.dbId;
                 this.dbInstanceName = model.dbInstanceName;
                 this.docsExamined = model.docsExamined;
+                this.extText = model.extText;
                 this.fail = model.fail;
                 this.frows = model.frows;
                 this.hostAddress = model.hostAddress;
@@ -1076,6 +1089,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
              */
             public Builder docsExamined(String docsExamined) {
                 this.docsExamined = docsExamined;
+                return this;
+            }
+
+            /**
+             * ExtText.
+             */
+            public Builder extText(String extText) {
+                this.extText = extText;
                 return this;
             }
 
