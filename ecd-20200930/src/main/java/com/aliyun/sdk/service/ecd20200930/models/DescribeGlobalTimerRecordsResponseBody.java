@@ -173,6 +173,9 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceParentId")
+        private String resourceParentId;
+
         @com.aliyun.core.annotation.NameInMap("Retryable")
         private Boolean retryable;
 
@@ -198,6 +201,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             this.displayResultName = builder.displayResultName;
             this.finishTime = builder.finishTime;
             this.regionId = builder.regionId;
+            this.resourceParentId = builder.resourceParentId;
             this.retryable = builder.retryable;
             this.timerGroupId = builder.timerGroupId;
             this.timerRecordId = builder.timerRecordId;
@@ -277,6 +281,13 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceParentId
+         */
+        public String getResourceParentId() {
+            return this.resourceParentId;
+        }
+
+        /**
          * @return retryable
          */
         public Boolean getRetryable() {
@@ -321,6 +332,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             private String displayResultName; 
             private String finishTime; 
             private String regionId; 
+            private String resourceParentId; 
             private Boolean retryable; 
             private String timerGroupId; 
             private String timerRecordId; 
@@ -340,6 +352,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
                 this.displayResultName = model.displayResultName;
                 this.finishTime = model.finishTime;
                 this.regionId = model.regionId;
+                this.resourceParentId = model.resourceParentId;
                 this.retryable = model.retryable;
                 this.timerGroupId = model.timerGroupId;
                 this.timerRecordId = model.timerRecordId;
@@ -434,6 +447,14 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceParentId.
+             */
+            public Builder resourceParentId(String resourceParentId) {
+                this.resourceParentId = resourceParentId;
                 return this;
             }
 

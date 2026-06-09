@@ -34,6 +34,10 @@ public class DescribeGlobalTimerBatchesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
+    private java.util.List<String> resourceTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchRegionId")
     private String searchRegionId;
 
@@ -47,6 +51,7 @@ public class DescribeGlobalTimerBatchesRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.resourceTypes = builder.resourceTypes;
         this.searchRegionId = builder.searchRegionId;
         this.timerType = builder.timerType;
     }
@@ -93,6 +98,13 @@ public class DescribeGlobalTimerBatchesRequest extends Request {
     }
 
     /**
+     * @return resourceTypes
+     */
+    public java.util.List<String> getResourceTypes() {
+        return this.resourceTypes;
+    }
+
+    /**
      * @return searchRegionId
      */
     public String getSearchRegionId() {
@@ -111,6 +123,7 @@ public class DescribeGlobalTimerBatchesRequest extends Request {
         private String maxResults; 
         private String nextToken; 
         private String regionId; 
+        private java.util.List<String> resourceTypes; 
         private String searchRegionId; 
         private String timerType; 
 
@@ -124,6 +137,7 @@ public class DescribeGlobalTimerBatchesRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
+            this.resourceTypes = request.resourceTypes;
             this.searchRegionId = request.searchRegionId;
             this.timerType = request.timerType;
         } 
@@ -161,6 +175,15 @@ public class DescribeGlobalTimerBatchesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceTypes.
+         */
+        public Builder resourceTypes(java.util.List<String> resourceTypes) {
+            this.putQueryParameter("ResourceTypes", resourceTypes);
+            this.resourceTypes = resourceTypes;
             return this;
         }
 

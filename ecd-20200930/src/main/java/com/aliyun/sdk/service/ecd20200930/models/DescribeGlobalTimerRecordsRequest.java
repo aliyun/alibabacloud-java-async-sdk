@@ -46,6 +46,10 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
+    private java.util.List<String> resourceTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResultCategory")
     private String resultCategory;
 
@@ -65,6 +69,10 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TimerTypes")
     private java.util.List<String> timerTypes;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WuyingServerIds")
+    private java.util.List<String> wuyingServerIds;
+
     private DescribeGlobalTimerRecordsRequest(Builder builder) {
         super(builder);
         this.batchId = builder.batchId;
@@ -74,11 +82,13 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.resourceTypes = builder.resourceTypes;
         this.resultCategory = builder.resultCategory;
         this.retryable = builder.retryable;
         this.searchRegionId = builder.searchRegionId;
         this.timerResult = builder.timerResult;
         this.timerTypes = builder.timerTypes;
+        this.wuyingServerIds = builder.wuyingServerIds;
     }
 
     public static Builder builder() {
@@ -144,6 +154,13 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
     }
 
     /**
+     * @return resourceTypes
+     */
+    public java.util.List<String> getResourceTypes() {
+        return this.resourceTypes;
+    }
+
+    /**
      * @return resultCategory
      */
     public String getResultCategory() {
@@ -178,6 +195,13 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         return this.timerTypes;
     }
 
+    /**
+     * @return wuyingServerIds
+     */
+    public java.util.List<String> getWuyingServerIds() {
+        return this.wuyingServerIds;
+    }
+
     public static final class Builder extends Request.Builder<DescribeGlobalTimerRecordsRequest, Builder> {
         private String batchId; 
         private java.util.List<String> desktopIds; 
@@ -186,11 +210,13 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         private String maxResults; 
         private String nextToken; 
         private String regionId; 
+        private java.util.List<String> resourceTypes; 
         private String resultCategory; 
         private Boolean retryable; 
         private String searchRegionId; 
         private String timerResult; 
         private java.util.List<String> timerTypes; 
+        private java.util.List<String> wuyingServerIds; 
 
         private Builder() {
             super();
@@ -205,11 +231,13 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
+            this.resourceTypes = request.resourceTypes;
             this.resultCategory = request.resultCategory;
             this.retryable = request.retryable;
             this.searchRegionId = request.searchRegionId;
             this.timerResult = request.timerResult;
             this.timerTypes = request.timerTypes;
+            this.wuyingServerIds = request.wuyingServerIds;
         } 
 
         /**
@@ -293,6 +321,15 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
+         * ResourceTypes.
+         */
+        public Builder resourceTypes(java.util.List<String> resourceTypes) {
+            this.putQueryParameter("ResourceTypes", resourceTypes);
+            this.resourceTypes = resourceTypes;
+            return this;
+        }
+
+        /**
          * <p>The type of the execution result. You can specify this parameter to filter the execution results.</p>
          * <p>Valid values:</p>
          * <ul>
@@ -359,6 +396,15 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         public Builder timerTypes(java.util.List<String> timerTypes) {
             this.putQueryParameter("TimerTypes", timerTypes);
             this.timerTypes = timerTypes;
+            return this;
+        }
+
+        /**
+         * WuyingServerIds.
+         */
+        public Builder wuyingServerIds(java.util.List<String> wuyingServerIds) {
+            this.putQueryParameter("WuyingServerIds", wuyingServerIds);
+            this.wuyingServerIds = wuyingServerIds;
             return this;
         }
 
