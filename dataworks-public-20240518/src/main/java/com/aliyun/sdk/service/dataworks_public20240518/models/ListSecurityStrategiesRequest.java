@@ -35,6 +35,7 @@ public class ListSecurityStrategiesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
     private ListSecurityStrategiesRequest(Builder builder) {

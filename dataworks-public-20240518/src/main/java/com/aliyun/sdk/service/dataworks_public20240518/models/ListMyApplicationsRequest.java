@@ -37,6 +37,7 @@ public class ListMyApplicationsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Body
