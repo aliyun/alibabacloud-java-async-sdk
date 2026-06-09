@@ -22,12 +22,17 @@ public class TurnOffZoneRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("hpAlbZoneDrained")
+    private Boolean hpAlbZoneDrained;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("zone")
     private String zone;
 
     private TurnOffZoneRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.hpAlbZoneDrained = builder.hpAlbZoneDrained;
         this.zone = builder.zone;
     }
 
@@ -52,6 +57,13 @@ public class TurnOffZoneRequest extends Request {
     }
 
     /**
+     * @return hpAlbZoneDrained
+     */
+    public Boolean getHpAlbZoneDrained() {
+        return this.hpAlbZoneDrained;
+    }
+
+    /**
      * @return zone
      */
     public String getZone() {
@@ -60,6 +72,7 @@ public class TurnOffZoneRequest extends Request {
 
     public static final class Builder extends Request.Builder<TurnOffZoneRequest, Builder> {
         private String instanceId; 
+        private Boolean hpAlbZoneDrained; 
         private String zone; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class TurnOffZoneRequest extends Request {
         private Builder(TurnOffZoneRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.hpAlbZoneDrained = request.hpAlbZoneDrained;
             this.zone = request.zone;
         } 
 
@@ -78,6 +92,15 @@ public class TurnOffZoneRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * hpAlbZoneDrained.
+         */
+        public Builder hpAlbZoneDrained(Boolean hpAlbZoneDrained) {
+            this.putQueryParameter("hpAlbZoneDrained", hpAlbZoneDrained);
+            this.hpAlbZoneDrained = hpAlbZoneDrained;
             return this;
         }
 
