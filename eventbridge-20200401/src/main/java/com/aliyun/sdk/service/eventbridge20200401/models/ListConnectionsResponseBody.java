@@ -1203,6 +1203,12 @@ public class ListConnectionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkParameters")
         private NetworkParameters networkParameters;
 
+        @com.aliyun.core.annotation.NameInMap("Parameters")
+        private Object parameters;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
         private Connections(Builder builder) {
             this.authParameters = builder.authParameters;
             this.connectionName = builder.connectionName;
@@ -1210,6 +1216,8 @@ public class ListConnectionsResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.id = builder.id;
             this.networkParameters = builder.networkParameters;
+            this.parameters = builder.parameters;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -1262,6 +1270,20 @@ public class ListConnectionsResponseBody extends TeaModel {
             return this.networkParameters;
         }
 
+        /**
+         * @return parameters
+         */
+        public Object getParameters() {
+            return this.parameters;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private AuthParameters authParameters; 
             private String connectionName; 
@@ -1269,6 +1291,8 @@ public class ListConnectionsResponseBody extends TeaModel {
             private Long gmtCreate; 
             private Long id; 
             private NetworkParameters networkParameters; 
+            private Object parameters; 
+            private String type; 
 
             private Builder() {
             } 
@@ -1280,6 +1304,8 @@ public class ListConnectionsResponseBody extends TeaModel {
                 this.gmtCreate = model.gmtCreate;
                 this.id = model.id;
                 this.networkParameters = model.networkParameters;
+                this.parameters = model.parameters;
+                this.type = model.type;
             } 
 
             /**
@@ -1339,6 +1365,28 @@ public class ListConnectionsResponseBody extends TeaModel {
              */
             public Builder networkParameters(NetworkParameters networkParameters) {
                 this.networkParameters = networkParameters;
+                return this;
+            }
+
+            /**
+             * <p>数据源连接参数（JSON 对象）。仅数据源类型连接返回，Http 类型为空。字段定义参考 GetConnectionType 返回的 ParamsSchema</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
+             */
+            public Builder parameters(Object parameters) {
+                this.parameters = parameters;
+                return this;
+            }
+
+            /**
+             * <p>连接类型。可选值：Http、MySQL、PostgreSQL、Elasticsearch</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Http</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

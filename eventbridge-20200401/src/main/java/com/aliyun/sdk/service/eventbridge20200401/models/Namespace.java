@@ -94,7 +94,11 @@ public class Namespace extends TeaModel {
         } 
 
         /**
+         * <p>命名空间所属的数据目录名称</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_catalog</p>
          */
         public Builder catalog(String catalog) {
             this.catalog = catalog;
@@ -102,7 +106,10 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * Comment.
+         * <p>命名空间的备注描述信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试命名空间</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -110,7 +117,10 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>命名空间的唯一标识名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_namespace</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -118,7 +128,10 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * properties.
+         * <p>命名空间的扩展属性</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder properties(String properties) {
             this.properties = properties;

@@ -12,54 +12,61 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
  * 
- * {@link Table} extends {@link TeaModel}
+ * {@link CreateTableRequest} extends {@link RequestModel}
  *
- * <p>Table</p>
+ * <p>CreateTableRequest</p>
  */
-public class Table extends TeaModel {
+public class CreateTableRequest extends Request {
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Catalog")
+    @com.aliyun.core.annotation.Validation(maxLength = 255)
     private String catalog;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Columns")
     private java.util.List<Columns> columns;
 
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @com.aliyun.core.annotation.NameInMap("CreateTime")
-    private Long createTime;
-
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 127, minLength = 1)
     private String name;
 
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RetentionPolicy")
     private RetentionPolicy retentionPolicy;
 
-    @com.aliyun.core.annotation.NameInMap("UpdateTime")
-    private Long updateTime;
-
-    private Table(Builder builder) {
+    private CreateTableRequest(Builder builder) {
+        super(builder);
         this.catalog = builder.catalog;
+        this.clientToken = builder.clientToken;
         this.columns = builder.columns;
         this.comment = builder.comment;
-        this.createTime = builder.createTime;
         this.name = builder.name;
         this.namespace = builder.namespace;
         this.retentionPolicy = builder.retentionPolicy;
-        this.updateTime = builder.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Table create() {
+    public static CreateTableRequest create() {
         return builder().build();
     }
 
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,6 +76,13 @@ public class Table extends TeaModel {
      */
     public String getCatalog() {
         return this.catalog;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -83,13 +97,6 @@ public class Table extends TeaModel {
      */
     public String getComment() {
         return this.comment;
-    }
-
-    /**
-     * @return createTime
-     */
-    public Long getCreateTime() {
-        return this.createTime;
     }
 
     /**
@@ -113,133 +120,129 @@ public class Table extends TeaModel {
         return this.retentionPolicy;
     }
 
-    /**
-     * @return updateTime
-     */
-    public Long getUpdateTime() {
-        return this.updateTime;
-    }
-
-    public static final class Builder {
+    public static final class Builder extends Request.Builder<CreateTableRequest, Builder> {
         private String catalog; 
+        private String clientToken; 
         private java.util.List<Columns> columns; 
         private String comment; 
-        private Long createTime; 
         private String name; 
         private String namespace; 
         private RetentionPolicy retentionPolicy; 
-        private Long updateTime; 
 
         private Builder() {
+            super();
         } 
 
-        private Builder(Table model) {
-            this.catalog = model.catalog;
-            this.columns = model.columns;
-            this.comment = model.comment;
-            this.createTime = model.createTime;
-            this.name = model.name;
-            this.namespace = model.namespace;
-            this.retentionPolicy = model.retentionPolicy;
-            this.updateTime = model.updateTime;
+        private Builder(CreateTableRequest request) {
+            super(request);
+            this.catalog = request.catalog;
+            this.clientToken = request.clientToken;
+            this.columns = request.columns;
+            this.comment = request.comment;
+            this.name = request.name;
+            this.namespace = request.namespace;
+            this.retentionPolicy = request.retentionPolicy;
         } 
 
         /**
-         * <p>表所属的数据目录名称</p>
+         * <p>表所属的数据目录名称。可通过 ListCatalogs 获取已有目录列表</p>
          * 
          * <strong>example:</strong>
          * <p>my_catalog</p>
          */
         public Builder catalog(String catalog) {
+            this.putQueryParameter("Catalog", catalog);
             this.catalog = catalog;
             return this;
         }
 
         /**
-         * <p>表的列定义列表。每列包含 Name（列名）、Type（数据类型）、Comment（备注）</p>
+         * <p>用于保证请求幂等性的Token，防止因网络重试导致重复创建。建议使用 UUID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>表的列定义（JSON 数组）。每列包含 Name（列名，必填）、Type（数据类型，必填，如 STRING、INT32、INT64、FLOAT、DOUBLE、BOOLEAN、TIMESTAMP）、Comment（列备注，选填）</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}]</p>
          */
         public Builder columns(java.util.List<Columns> columns) {
+            String columnsShrink = shrink(columns, "Columns", "json");
+            this.putQueryParameter("Columns", columnsShrink);
             this.columns = columns;
             return this;
         }
 
         /**
-         * <p>表的备注描述信息</p>
+         * <p>表的备注描述信息，无格式限制</p>
          * 
          * <strong>example:</strong>
          * <p>测试事件表</p>
          */
         public Builder comment(String comment) {
+            this.putQueryParameter("Comment", comment);
             this.comment = comment;
             return this;
         }
 
         /**
-         * <p>表的创建时间（Unix 时间戳，毫秒）</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1717948800000</p>
-         */
-        public Builder createTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-
-        /**
-         * <p>事件表的唯一标识名称</p>
+         * <p>事件表名称。以字母或数字开头，支持字母、数字、下划线和短横线，长度1~127。在同一命名空间下唯一</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>my_table</p>
          */
         public Builder name(String name) {
+            this.putQueryParameter("Name", name);
             this.name = name;
             return this;
         }
 
         /**
-         * <p>表所属的命名空间名称</p>
+         * <p>表所属的命名空间名称。可通过 ListNamespaces 获取已有命名空间列表</p>
          * 
          * <strong>example:</strong>
          * <p>my_namespace</p>
          */
         public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
             this.namespace = namespace;
             return this;
         }
 
         /**
-         * <p>数据保留策略。包含热数据和冷数据的保留天数</p>
+         * <p>数据保留策略（JSON 对象）。包含 HotTTL（热数据保留天数，高性能查询）和 ColdTTL（冷数据保留天数，低成本存储）。不传则使用系统默认值</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;HotTTL&quot;:7,&quot;ColdTTL&quot;:30}</p>
          */
         public Builder retentionPolicy(RetentionPolicy retentionPolicy) {
+            String retentionPolicyShrink = shrink(retentionPolicy, "RetentionPolicy", "json");
+            this.putQueryParameter("RetentionPolicy", retentionPolicyShrink);
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        /**
-         * <p>表的最后更新时间（Unix 时间戳，毫秒）</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1717948800000</p>
-         */
-        public Builder updateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-
-        public Table build() {
-            return new Table(this);
+        @Override
+        public CreateTableRequest build() {
+            return new CreateTableRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link Table} extends {@link TeaModel}
+     * {@link CreateTableRequest} extends {@link TeaModel}
      *
-     * <p>Table</p>
+     * <p>CreateTableRequest</p>
      */
     public static class Columns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comment")
@@ -301,7 +304,7 @@ public class Table extends TeaModel {
             } 
 
             /**
-             * <p>表的备注描述信息</p>
+             * <p>表的备注描述信息，无格式限制</p>
              * 
              * <strong>example:</strong>
              * <p>测试事件表</p>
@@ -312,7 +315,8 @@ public class Table extends TeaModel {
             }
 
             /**
-             * <p>事件表的唯一标识名称</p>
+             * <p>事件表名称。以字母或数字开头，支持字母、数字、下划线和短横线，长度1~127。在同一命名空间下唯一</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>my_table</p>
@@ -339,9 +343,9 @@ public class Table extends TeaModel {
     }
     /**
      * 
-     * {@link Table} extends {@link TeaModel}
+     * {@link CreateTableRequest} extends {@link TeaModel}
      *
-     * <p>Table</p>
+     * <p>CreateTableRequest</p>
      */
     public static class RetentionPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColdTTL")
@@ -390,10 +394,7 @@ public class Table extends TeaModel {
             } 
 
             /**
-             * <p>冷数据保留天数，低成本归档存储</p>
-             * 
-             * <strong>example:</strong>
-             * <p>30</p>
+             * ColdTTL.
              */
             public Builder coldTTL(Integer coldTTL) {
                 this.coldTTL = coldTTL;
@@ -401,10 +402,7 @@ public class Table extends TeaModel {
             }
 
             /**
-             * <p>热数据保留天数，高性能查询存储</p>
-             * 
-             * <strong>example:</strong>
-             * <p>7</p>
+             * HotTTL.
              */
             public Builder hotTTL(Integer hotTTL) {
                 this.hotTTL = hotTTL;

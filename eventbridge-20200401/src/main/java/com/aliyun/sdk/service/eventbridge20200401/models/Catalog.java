@@ -20,6 +20,9 @@ public class Catalog extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
+    @com.aliyun.core.annotation.NameInMap("ConnectionName")
+    private String connectionName;
+
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -34,6 +37,7 @@ public class Catalog extends TeaModel {
 
     private Catalog(Builder builder) {
         this.comment = builder.comment;
+        this.connectionName = builder.connectionName;
         this.name = builder.name;
         this.properties = builder.properties;
         this.provider = builder.provider;
@@ -57,6 +61,13 @@ public class Catalog extends TeaModel {
      */
     public String getComment() {
         return this.comment;
+    }
+
+    /**
+     * @return connectionName
+     */
+    public String getConnectionName() {
+        return this.connectionName;
     }
 
     /**
@@ -89,6 +100,7 @@ public class Catalog extends TeaModel {
 
     public static final class Builder {
         private String comment; 
+        private String connectionName; 
         private String name; 
         private java.util.Map<String, ?> properties; 
         private String provider; 
@@ -99,6 +111,7 @@ public class Catalog extends TeaModel {
 
         private Builder(Catalog model) {
             this.comment = model.comment;
+            this.connectionName = model.connectionName;
             this.name = model.name;
             this.properties = model.properties;
             this.provider = model.provider;
@@ -106,7 +119,10 @@ public class Catalog extends TeaModel {
         } 
 
         /**
-         * Comment.
+         * <p>数据目录的备注描述信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试数据目录</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -114,7 +130,21 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>挂载类型 Catalog 关联的连接名称。仅 Provider 为 MySQL/PostgreSQL/Elasticsearch 时有值</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_connection</p>
+         */
+        public Builder connectionName(String connectionName) {
+            this.connectionName = connectionName;
+            return this;
+        }
+
+        /**
+         * <p>数据目录的唯一标识名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_catalog</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -122,7 +152,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * Properties.
+         * <p>扩展属性（JSON 对象）。Elasticsearch 类型包含 IndexPattern 等信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;IndexPattern&quot;:&quot;my-index-*&quot;}</p>
          */
         public Builder properties(java.util.Map<String, ?> properties) {
             this.properties = properties;
@@ -130,7 +163,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * Provider.
+         * <p>数据源提供方。EventHouse 为内置存储，MySQL/PostgreSQL/Elasticsearch 为外部挂载</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EventHouse</p>
          */
         public Builder provider(String provider) {
             this.provider = provider;
@@ -138,7 +174,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>数据目录类型，如 RELATIONAL</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RELATIONAL</p>
          */
         public Builder type(String type) {
             this.type = type;

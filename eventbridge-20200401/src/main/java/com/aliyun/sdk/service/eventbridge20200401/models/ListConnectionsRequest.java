@@ -29,11 +29,16 @@ public class ListConnectionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private ListConnectionsRequest(Builder builder) {
         super(builder);
         this.connectionNamePrefix = builder.connectionNamePrefix;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class ListConnectionsRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<ListConnectionsRequest, Builder> {
         private String connectionNamePrefix; 
         private Long maxResults; 
         private String nextToken; 
+        private String type; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class ListConnectionsRequest extends Request {
             this.connectionNamePrefix = request.connectionNamePrefix;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.type = request.type;
         } 
 
         /**
@@ -125,6 +139,18 @@ public class ListConnectionsRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>按连接类型过滤查询结果。可选值：Http、MySQL、PostgreSQL、Elasticsearch。不传则返回所有类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Http</p>
+         */
+        public Builder type(String type) {
+            this.putBodyParameter("Type", type);
+            this.type = type;
             return this;
         }
 

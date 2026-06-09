@@ -36,12 +36,22 @@ public class UpdateConnectionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private NetworkParameters networkParameters;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private Object parameters;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private UpdateConnectionRequest(Builder builder) {
         super(builder);
         this.authParameters = builder.authParameters;
         this.connectionName = builder.connectionName;
         this.description = builder.description;
         this.networkParameters = builder.networkParameters;
+        this.parameters = builder.parameters;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -85,11 +95,27 @@ public class UpdateConnectionRequest extends Request {
         return this.networkParameters;
     }
 
+    /**
+     * @return parameters
+     */
+    public Object getParameters() {
+        return this.parameters;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<UpdateConnectionRequest, Builder> {
         private AuthParameters authParameters; 
         private String connectionName; 
         private String description; 
         private NetworkParameters networkParameters; 
+        private Object parameters; 
+        private String type; 
 
         private Builder() {
             super();
@@ -101,6 +127,8 @@ public class UpdateConnectionRequest extends Request {
             this.connectionName = request.connectionName;
             this.description = request.description;
             this.networkParameters = request.networkParameters;
+            this.parameters = request.parameters;
+            this.type = request.type;
         } 
 
         /**
@@ -146,6 +174,31 @@ public class UpdateConnectionRequest extends Request {
             String networkParametersShrink = shrink(networkParameters, "NetworkParameters", "json");
             this.putQueryParameter("NetworkParameters", networkParametersShrink);
             this.networkParameters = networkParameters;
+            return this;
+        }
+
+        /**
+         * <p>数据源连接参数（JSON 对象）。具体字段定义请调用 GetConnectionType 接口，参考返回结果中的 ParamsSchema</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
+         */
+        public Builder parameters(Object parameters) {
+            String parametersShrink = shrink(parameters, "Parameters", "json");
+            this.putQueryParameter("Parameters", parametersShrink);
+            this.parameters = parameters;
+            return this;
+        }
+
+        /**
+         * <p>连接类型。可选值：MySQL、PostgreSQL、Elasticsearch、Http</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Http</p>
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

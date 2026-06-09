@@ -83,6 +83,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEventStreamingResponse> createEventStreaming(CreateEventStreamingRequest request);
 
     /**
+     * @param request the request parameters of CreateNamespace  CreateNamespaceRequest
+     * @return CreateNamespaceResponse
+     */
+    CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to create an event rule.</p>
      * 
@@ -99,6 +105,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateServiceLinkedRoleForProductResponse
      */
     CompletableFuture<CreateServiceLinkedRoleForProductResponse> createServiceLinkedRoleForProduct(CreateServiceLinkedRoleForProductRequest request);
+
+    /**
+     * @param request the request parameters of CreateTable  CreateTableRequest
+     * @return CreateTableResponse
+     */
+    CompletableFuture<CreateTableResponse> createTable(CreateTableRequest request);
 
     /**
      * @param request the request parameters of DeleteAgent  DeleteAgentRequest
@@ -152,6 +164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEventStreamingResponse> deleteEventStreaming(DeleteEventStreamingRequest request);
 
     /**
+     * @param request the request parameters of DeleteNamespace  DeleteNamespaceRequest
+     * @return DeleteNamespaceResponse
+     */
+    CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to delete an event rule.</p>
      * 
@@ -159,6 +177,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRuleResponse
      */
     CompletableFuture<DeleteRuleResponse> deleteRule(DeleteRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteTable  DeleteTableRequest
+     * @return DeleteTableResponse
+     */
+    CompletableFuture<DeleteTableResponse> deleteTable(DeleteTableRequest request);
 
     /**
      * <b>description</b> :
@@ -215,6 +239,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApiDestinationResponse> getApiDestination(GetApiDestinationRequest request);
 
     /**
+     * @param request the request parameters of GetCatalog  GetCatalogRequest
+     * @return GetCatalogResponse
+     */
+    CompletableFuture<GetCatalogResponse> getCatalog(GetCatalogRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to query the configurations of a connection.</p>
      * 
@@ -242,6 +272,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEventStreamingResponse> getEventStreaming(GetEventStreamingRequest request);
 
     /**
+     * @param request the request parameters of GetNamespace  GetNamespaceRequest
+     * @return GetNamespaceResponse
+     */
+    CompletableFuture<GetNamespaceResponse> getNamespace(GetNamespaceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to query the details of an event rule.</p>
      * 
@@ -249,6 +285,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetRuleResponse
      */
     CompletableFuture<GetRuleResponse> getRule(GetRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetTable  GetTableRequest
+     * @return GetTableResponse
+     */
+    CompletableFuture<GetTableResponse> getTable(GetTableRequest request);
 
     /**
      * @param request the request parameters of ListAgents  ListAgentsRequest
@@ -273,6 +315,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListApiDestinationsResponse
      */
     CompletableFuture<ListApiDestinationsResponse> listApiDestinations(ListApiDestinationsRequest request);
+
+    /**
+     * @param request the request parameters of ListCatalogs  ListCatalogsRequest
+     * @return ListCatalogsResponse
+     */
+    CompletableFuture<ListCatalogsResponse> listCatalogs(ListCatalogsRequest request);
 
     /**
      * <b>description</b> :
@@ -302,6 +350,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEventStreamingsResponse> listEventStreamings(ListEventStreamingsRequest request);
 
     /**
+     * @param request the request parameters of ListNamespaces  ListNamespacesRequest
+     * @return ListNamespacesResponse
+     */
+    CompletableFuture<ListNamespacesResponse> listNamespaces(ListNamespacesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to query all rules of an event bus.</p>
      * 
@@ -309,6 +363,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListRulesResponse
      */
     CompletableFuture<ListRulesResponse> listRules(ListRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListTables  ListTablesRequest
+     * @return ListTablesResponse
+     */
+    CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request);
 
     /**
      * @param request the request parameters of ListTargets  ListTargetsRequest
@@ -363,6 +423,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryEventResponse
      */
     CompletableFuture<QueryEventResponse> queryEvent(QueryEventRequest request);
+
+    /**
+     * @param request the request parameters of QueryEventHouse  QueryEventHouseRequest
+     * @return QueryEventHouseResponse
+     */
+    CompletableFuture<QueryEventHouseResponse> queryEventHouse(QueryEventHouseRequest request);
 
     /**
      * <b>description</b> :
@@ -476,6 +542,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateEventStreamingBusinessOptionResponse> updateEventStreamingBusinessOption(UpdateEventStreamingBusinessOptionRequest request);
 
     /**
+     * @param request the request parameters of UpdateNamespace  UpdateNamespaceRequest
+     * @return UpdateNamespaceResponse
+     */
+    CompletableFuture<UpdateNamespaceResponse> updateNamespace(UpdateNamespaceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to update the configurations of an event rule.</p>
      * 
@@ -483,5 +555,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRuleResponse
      */
     CompletableFuture<UpdateRuleResponse> updateRule(UpdateRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateTable  UpdateTableRequest
+     * @return UpdateTableResponse
+     */
+    CompletableFuture<UpdateTableResponse> updateTable(UpdateTableRequest request);
 
 }
