@@ -22,12 +22,17 @@ public class DescribeCdcVersionListRequest extends Request {
     private String DBInstanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    private String instanceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DescribeCdcVersionListRequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
+        this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
     }
 
@@ -52,6 +57,13 @@ public class DescribeCdcVersionListRequest extends Request {
     }
 
     /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -60,6 +72,7 @@ public class DescribeCdcVersionListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCdcVersionListRequest, Builder> {
         private String DBInstanceName; 
+        private String instanceName; 
         private String regionId; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class DescribeCdcVersionListRequest extends Request {
         private Builder(DescribeCdcVersionListRequest request) {
             super(request);
             this.DBInstanceName = request.DBInstanceName;
+            this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
 
@@ -78,6 +92,15 @@ public class DescribeCdcVersionListRequest extends Request {
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
             this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 
