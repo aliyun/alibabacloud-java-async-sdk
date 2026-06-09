@@ -588,6 +588,191 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
      *
      * <p>DescribeRenewalPriceResponseBody</p>
      */
+    public static class MarketplaceImagePrice extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Currency")
+        private String currency;
+
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
+        private Float discountPrice;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
+        private Float originalPrice;
+
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
+        private Float tradePrice;
+
+        private MarketplaceImagePrice(Builder builder) {
+            this.currency = builder.currency;
+            this.discountPrice = builder.discountPrice;
+            this.originalPrice = builder.originalPrice;
+            this.tradePrice = builder.tradePrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MarketplaceImagePrice create() {
+            return builder().build();
+        }
+
+        /**
+         * @return currency
+         */
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        /**
+         * @return discountPrice
+         */
+        public Float getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        /**
+         * @return originalPrice
+         */
+        public Float getOriginalPrice() {
+            return this.originalPrice;
+        }
+
+        /**
+         * @return tradePrice
+         */
+        public Float getTradePrice() {
+            return this.tradePrice;
+        }
+
+        public static final class Builder {
+            private String currency; 
+            private Float discountPrice; 
+            private Float originalPrice; 
+            private Float tradePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(MarketplaceImagePrice model) {
+                this.currency = model.currency;
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.tradePrice = model.tradePrice;
+            } 
+
+            /**
+             * <p>The currency unit.</p>
+             * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
+             * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
+             */
+            public Builder currency(String currency) {
+                this.currency = currency;
+                return this;
+            }
+
+            /**
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>655.2</p>
+             */
+            public Builder discountPrice(Float discountPrice) {
+                this.discountPrice = discountPrice;
+                return this;
+            }
+
+            /**
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4368</p>
+             */
+            public Builder originalPrice(Float originalPrice) {
+                this.originalPrice = originalPrice;
+                return this;
+            }
+
+            /**
+             * <p>The transaction price, which is equal to the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3712.8</p>
+             */
+            public Builder tradePrice(Float tradePrice) {
+                this.tradePrice = tradePrice;
+                return this;
+            }
+
+            public MarketplaceImagePrice build() {
+                return new MarketplaceImagePrice(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenewalPriceResponseBody</p>
+     */
+    public static class RelatedPrice extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MarketplaceImagePrice")
+        private MarketplaceImagePrice marketplaceImagePrice;
+
+        private RelatedPrice(Builder builder) {
+            this.marketplaceImagePrice = builder.marketplaceImagePrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RelatedPrice create() {
+            return builder().build();
+        }
+
+        /**
+         * @return marketplaceImagePrice
+         */
+        public MarketplaceImagePrice getMarketplaceImagePrice() {
+            return this.marketplaceImagePrice;
+        }
+
+        public static final class Builder {
+            private MarketplaceImagePrice marketplaceImagePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedPrice model) {
+                this.marketplaceImagePrice = model.marketplaceImagePrice;
+            } 
+
+            /**
+             * MarketplaceImagePrice.
+             */
+            public Builder marketplaceImagePrice(MarketplaceImagePrice marketplaceImagePrice) {
+                this.marketplaceImagePrice = marketplaceImagePrice;
+                return this;
+            }
+
+            public RelatedPrice build() {
+                return new RelatedPrice(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenewalPriceResponseBody</p>
+     */
     public static class RulesRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -727,11 +912,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Price")
         private Price price;
 
+        @com.aliyun.core.annotation.NameInMap("RelatedPrice")
+        private RelatedPrice relatedPrice;
+
         @com.aliyun.core.annotation.NameInMap("Rules")
         private Rules rules;
 
         private PriceInfo(Builder builder) {
             this.price = builder.price;
+            this.relatedPrice = builder.relatedPrice;
             this.rules = builder.rules;
         }
 
@@ -751,6 +940,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return relatedPrice
+         */
+        public RelatedPrice getRelatedPrice() {
+            return this.relatedPrice;
+        }
+
+        /**
          * @return rules
          */
         public Rules getRules() {
@@ -759,6 +955,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Price price; 
+            private RelatedPrice relatedPrice; 
             private Rules rules; 
 
             private Builder() {
@@ -766,6 +963,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
             private Builder(PriceInfo model) {
                 this.price = model.price;
+                this.relatedPrice = model.relatedPrice;
                 this.rules = model.rules;
             } 
 
@@ -774,6 +972,14 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
              */
             public Builder price(Price price) {
                 this.price = price;
+                return this;
+            }
+
+            /**
+             * RelatedPrice.
+             */
+            public Builder relatedPrice(RelatedPrice relatedPrice) {
+                this.relatedPrice = relatedPrice;
                 return this;
             }
 
