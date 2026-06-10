@@ -447,6 +447,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OfficeSiteType")
         private String officeSiteType;
 
+        @com.aliyun.core.annotation.NameInMap("OrgId")
+        private String orgId;
+
         @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
@@ -558,6 +561,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
             this.officeSiteType = builder.officeSiteType;
+            this.orgId = builder.orgId;
             this.osType = builder.osType;
             this.ownBundleId = builder.ownBundleId;
             this.ownBundleName = builder.ownBundleName;
@@ -839,6 +843,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return orgId
+         */
+        public String getOrgId() {
+            return this.orgId;
+        }
+
+        /**
          * @return osType
          */
         public String getOsType() {
@@ -1049,6 +1060,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String officeSiteId; 
             private String officeSiteName; 
             private String officeSiteType; 
+            private String orgId; 
             private String osType; 
             private String ownBundleId; 
             private String ownBundleName; 
@@ -1114,6 +1126,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
                 this.officeSiteId = model.officeSiteId;
                 this.officeSiteName = model.officeSiteName;
                 this.officeSiteType = model.officeSiteType;
+                this.orgId = model.orgId;
                 this.osType = model.osType;
                 this.ownBundleId = model.ownBundleId;
                 this.ownBundleName = model.ownBundleName;
@@ -1527,6 +1540,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder officeSiteType(String officeSiteType) {
                 this.officeSiteType = officeSiteType;
+                return this;
+            }
+
+            /**
+             * OrgId.
+             */
+            public Builder orgId(String orgId) {
+                this.orgId = orgId;
                 return this;
             }
 

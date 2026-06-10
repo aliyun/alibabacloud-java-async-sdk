@@ -30,6 +30,10 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
     private java.util.List<String> endUserIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrgId")
+    private String orgId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -51,6 +55,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         this.desktopGroupId = builder.desktopGroupId;
         this.desktopGroupIds = builder.desktopGroupIds;
         this.endUserIds = builder.endUserIds;
+        this.orgId = builder.orgId;
         this.regionId = builder.regionId;
         this.simpleUserGroupId = builder.simpleUserGroupId;
         this.userGroupName = builder.userGroupName;
@@ -92,6 +97,13 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return orgId
+     */
+    public String getOrgId() {
+        return this.orgId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -123,6 +135,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         private String desktopGroupId; 
         private java.util.List<String> desktopGroupIds; 
         private java.util.List<String> endUserIds; 
+        private String orgId; 
         private String regionId; 
         private String simpleUserGroupId; 
         private String userGroupName; 
@@ -137,6 +150,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
             this.desktopGroupId = request.desktopGroupId;
             this.desktopGroupIds = request.desktopGroupIds;
             this.endUserIds = request.endUserIds;
+            this.orgId = request.orgId;
             this.regionId = request.regionId;
             this.simpleUserGroupId = request.simpleUserGroupId;
             this.userGroupName = request.userGroupName;
@@ -170,6 +184,15 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
             this.endUserIds = endUserIds;
+            return this;
+        }
+
+        /**
+         * OrgId.
+         */
+        public Builder orgId(String orgId) {
+            this.putQueryParameter("OrgId", orgId);
+            this.orgId = orgId;
             return this;
         }
 

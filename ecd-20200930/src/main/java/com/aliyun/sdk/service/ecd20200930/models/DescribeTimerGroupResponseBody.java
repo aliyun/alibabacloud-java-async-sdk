@@ -116,6 +116,9 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
+        @com.aliyun.core.annotation.NameInMap("IpSegments")
+        private java.util.List<String> ipSegments;
+
         @com.aliyun.core.annotation.NameInMap("LockScreenTime")
         private Integer lockScreenTime;
 
@@ -159,6 +162,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             this.enforce = builder.enforce;
             this.imageId = builder.imageId;
             this.interval = builder.interval;
+            this.ipSegments = builder.ipSegments;
             this.lockScreenTime = builder.lockScreenTime;
             this.notificationTime = builder.notificationTime;
             this.operationType = builder.operationType;
@@ -221,6 +225,13 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
          */
         public Integer getInterval() {
             return this.interval;
+        }
+
+        /**
+         * @return ipSegments
+         */
+        public java.util.List<String> getIpSegments() {
+            return this.ipSegments;
         }
 
         /**
@@ -314,6 +325,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             private Boolean enforce; 
             private String imageId; 
             private Integer interval; 
+            private java.util.List<String> ipSegments; 
             private Integer lockScreenTime; 
             private Integer notificationTime; 
             private String operationType; 
@@ -337,6 +349,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
                 this.enforce = model.enforce;
                 this.imageId = model.imageId;
                 this.interval = model.interval;
+                this.ipSegments = model.ipSegments;
                 this.lockScreenTime = model.lockScreenTime;
                 this.notificationTime = model.notificationTime;
                 this.operationType = model.operationType;
@@ -396,6 +409,14 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
+                return this;
+            }
+
+            /**
+             * IpSegments.
+             */
+            public Builder ipSegments(java.util.List<String> ipSegments) {
+                this.ipSegments = ipSegments;
                 return this;
             }
 
