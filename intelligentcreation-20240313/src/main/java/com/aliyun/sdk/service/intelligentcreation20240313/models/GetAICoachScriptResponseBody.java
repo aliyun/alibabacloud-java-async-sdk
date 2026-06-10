@@ -2495,6 +2495,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("questionDescription")
         private String questionDescription;
 
+        @com.aliyun.core.annotation.NameInMap("questionSample")
+        private String questionSample;
+
         @com.aliyun.core.annotation.NameInMap("scriptPointId")
         private String scriptPointId;
 
@@ -2510,6 +2513,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             this.name = builder.name;
             this.pointId = builder.pointId;
             this.questionDescription = builder.questionDescription;
+            this.questionSample = builder.questionSample;
             this.scriptPointId = builder.scriptPointId;
             this.sortNo = builder.sortNo;
             this.weight = builder.weight;
@@ -2559,6 +2563,13 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         }
 
         /**
+         * @return questionSample
+         */
+        public String getQuestionSample() {
+            return this.questionSample;
+        }
+
+        /**
          * @return scriptPointId
          */
         public String getScriptPointId() {
@@ -2585,6 +2596,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             private String name; 
             private String pointId; 
             private String questionDescription; 
+            private String questionSample; 
             private String scriptPointId; 
             private Integer sortNo; 
             private Integer weight; 
@@ -2598,6 +2610,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
                 this.name = model.name;
                 this.pointId = model.pointId;
                 this.questionDescription = model.questionDescription;
+                this.questionSample = model.questionSample;
                 this.scriptPointId = model.scriptPointId;
                 this.sortNo = model.sortNo;
                 this.weight = model.weight;
@@ -2640,6 +2653,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
              */
             public Builder questionDescription(String questionDescription) {
                 this.questionDescription = questionDescription;
+                return this;
+            }
+
+            /**
+             * questionSample.
+             */
+            public Builder questionSample(String questionSample) {
+                this.questionSample = questionSample;
                 return this;
             }
 

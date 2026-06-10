@@ -137,6 +137,9 @@ public class ListAgentsResponseBody extends TeaModel {
      * <p>ListAgentsResponseBody</p>
      */
     public static class List extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("agentIconUrl")
+        private String agentIconUrl;
+
         @com.aliyun.core.annotation.NameInMap("agentId")
         private String agentId;
 
@@ -145,6 +148,12 @@ public class ListAgentsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("agentScene")
         private String agentScene;
+
+        @com.aliyun.core.annotation.NameInMap("characterAgeStage")
+        private String characterAgeStage;
+
+        @com.aliyun.core.annotation.NameInMap("characterName")
+        private String characterName;
 
         @com.aliyun.core.annotation.NameInMap("charactersDescription")
         private String charactersDescription;
@@ -174,9 +183,12 @@ public class ListAgentsResponseBody extends TeaModel {
         private String viewer;
 
         private List(Builder builder) {
+            this.agentIconUrl = builder.agentIconUrl;
             this.agentId = builder.agentId;
             this.agentName = builder.agentName;
             this.agentScene = builder.agentScene;
+            this.characterAgeStage = builder.characterAgeStage;
+            this.characterName = builder.characterName;
             this.charactersDescription = builder.charactersDescription;
             this.enableInteraction = builder.enableInteraction;
             this.industry = builder.industry;
@@ -194,6 +206,13 @@ public class ListAgentsResponseBody extends TeaModel {
 
         public static List create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentIconUrl
+         */
+        public String getAgentIconUrl() {
+            return this.agentIconUrl;
         }
 
         /**
@@ -215,6 +234,20 @@ public class ListAgentsResponseBody extends TeaModel {
          */
         public String getAgentScene() {
             return this.agentScene;
+        }
+
+        /**
+         * @return characterAgeStage
+         */
+        public String getCharacterAgeStage() {
+            return this.characterAgeStage;
+        }
+
+        /**
+         * @return characterName
+         */
+        public String getCharacterName() {
+            return this.characterName;
         }
 
         /**
@@ -281,9 +314,12 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentIconUrl; 
             private String agentId; 
             private String agentName; 
             private String agentScene; 
+            private String characterAgeStage; 
+            private String characterName; 
             private String charactersDescription; 
             private Integer enableInteraction; 
             private String industry; 
@@ -298,9 +334,12 @@ public class ListAgentsResponseBody extends TeaModel {
             } 
 
             private Builder(List model) {
+                this.agentIconUrl = model.agentIconUrl;
                 this.agentId = model.agentId;
                 this.agentName = model.agentName;
                 this.agentScene = model.agentScene;
+                this.characterAgeStage = model.characterAgeStage;
+                this.characterName = model.characterName;
                 this.charactersDescription = model.charactersDescription;
                 this.enableInteraction = model.enableInteraction;
                 this.industry = model.industry;
@@ -311,6 +350,14 @@ public class ListAgentsResponseBody extends TeaModel {
                 this.textStyle = model.textStyle;
                 this.viewer = model.viewer;
             } 
+
+            /**
+             * agentIconUrl.
+             */
+            public Builder agentIconUrl(String agentIconUrl) {
+                this.agentIconUrl = agentIconUrl;
+                return this;
+            }
 
             /**
              * agentId.
@@ -333,6 +380,22 @@ public class ListAgentsResponseBody extends TeaModel {
              */
             public Builder agentScene(String agentScene) {
                 this.agentScene = agentScene;
+                return this;
+            }
+
+            /**
+             * characterAgeStage.
+             */
+            public Builder characterAgeStage(String characterAgeStage) {
+                this.characterAgeStage = characterAgeStage;
+                return this;
+            }
+
+            /**
+             * characterName.
+             */
+            public Builder characterName(String characterName) {
+                this.characterName = characterName;
                 return this;
             }
 
