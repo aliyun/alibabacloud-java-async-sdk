@@ -79,6 +79,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceUsageResponse> createServiceUsage(CreateServiceUsageRequest request);
 
     /**
+     * @param request the request parameters of CreateSkill  CreateSkillRequest
+     * @return CreateSkillResponse
+     */
+    CompletableFuture<CreateSkillResponse> createSkill(CreateSkillRequest request);
+
+    /**
+     * @param request the request parameters of CreateSkillFileDetect  CreateSkillFileDetectRequest
+     * @return CreateSkillFileDetectResponse
+     */
+    CompletableFuture<CreateSkillFileDetectResponse> createSkillFileDetect(CreateSkillFileDetectRequest request);
+
+    /**
+     * @param request the request parameters of CreateSkillHubConfig  CreateSkillHubConfigRequest
+     * @return CreateSkillHubConfigResponse
+     */
+    CompletableFuture<CreateSkillHubConfigResponse> createSkillHubConfig(CreateSkillHubConfigRequest request);
+
+    /**
+     * @param request the request parameters of CreateSkillSpace  CreateSkillSpaceRequest
+     * @return CreateSkillSpaceResponse
+     */
+    CompletableFuture<CreateSkillSpaceResponse> createSkillSpace(CreateSkillSpaceRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Prerequisites</h3>
      * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
@@ -93,6 +117,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteServiceInstancesResponse
      */
     CompletableFuture<DeleteServiceInstancesResponse> deleteServiceInstances(DeleteServiceInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSkill  DeleteSkillRequest
+     * @return DeleteSkillResponse
+     */
+    CompletableFuture<DeleteSkillResponse> deleteSkill(DeleteSkillRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSkillSpace  DeleteSkillSpaceRequest
+     * @return DeleteSkillSpaceResponse
+     */
+    CompletableFuture<DeleteSkillSpaceResponse> deleteSkillSpace(DeleteSkillSpaceRequest request);
 
     /**
      * @param request the request parameters of DeployServiceInstance  DeployServiceInstanceRequest
@@ -165,6 +201,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServiceTemplateParameterConstraintsResponse> getServiceTemplateParameterConstraints(GetServiceTemplateParameterConstraintsRequest request);
 
     /**
+     * @param request the request parameters of GetSkill  GetSkillRequest
+     * @return GetSkillResponse
+     */
+    CompletableFuture<GetSkillResponse> getSkill(GetSkillRequest request);
+
+    /**
+     * @param request the request parameters of GetSkillFileDetectResult  GetSkillFileDetectResultRequest
+     * @return GetSkillFileDetectResultResponse
+     */
+    CompletableFuture<GetSkillFileDetectResultResponse> getSkillFileDetectResult(GetSkillFileDetectResultRequest request);
+
+    /**
+     * @param request the request parameters of GetSkillHubConfig  GetSkillHubConfigRequest
+     * @return GetSkillHubConfigResponse
+     */
+    CompletableFuture<GetSkillHubConfigResponse> getSkillHubConfig(GetSkillHubConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetSkillSpace  GetSkillSpaceRequest
+     * @return GetSkillSpaceResponse
+     */
+    CompletableFuture<GetSkillSpaceResponse> getSkillSpace(GetSkillSpaceRequest request);
+
+    /**
      * @param request the request parameters of GetUserInformation  GetUserInformationRequest
      * @return GetUserInformationResponse
      */
@@ -185,6 +245,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPoliciesResponse
      */
     CompletableFuture<ListPoliciesResponse> listPolicies(ListPoliciesRequest request);
+
+    /**
+     * @param request the request parameters of ListPublicSkills  ListPublicSkillsRequest
+     * @return ListPublicSkillsResponse
+     */
+    CompletableFuture<ListPublicSkillsResponse> listPublicSkills(ListPublicSkillsRequest request);
 
     /**
      * <b>description</b> :
@@ -243,6 +309,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListServicesResponse
      */
     CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
+
+    /**
+     * @param request the request parameters of ListSkillFiles  ListSkillFilesRequest
+     * @return ListSkillFilesResponse
+     */
+    CompletableFuture<ListSkillFilesResponse> listSkillFiles(ListSkillFilesRequest request);
+
+    /**
+     * @param request the request parameters of ListSkillSpaces  ListSkillSpacesRequest
+     * @return ListSkillSpacesResponse
+     */
+    CompletableFuture<ListSkillSpacesResponse> listSkillSpaces(ListSkillSpacesRequest request);
+
+    /**
+     * @param request the request parameters of ListSkills  ListSkillsRequest
+     * @return ListSkillsResponse
+     */
+    CompletableFuture<ListSkillsResponse> listSkills(ListSkillsRequest request);
 
     /**
      * @param request the request parameters of ListTagKeys  ListTagKeysRequest
@@ -331,6 +415,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateServiceUsageResponse
      */
     CompletableFuture<UpdateServiceUsageResponse> updateServiceUsage(UpdateServiceUsageRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSkill  UpdateSkillRequest
+     * @return UpdateSkillResponse
+     */
+    CompletableFuture<UpdateSkillResponse> updateSkill(UpdateSkillRequest request);
 
     /**
      * @param request the request parameters of UpdateUserInformation  UpdateUserInformationRequest
