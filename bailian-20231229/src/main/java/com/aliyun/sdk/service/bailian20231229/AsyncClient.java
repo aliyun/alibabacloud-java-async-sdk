@@ -193,6 +193,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteFileResponse> deleteFile(DeleteFileRequest request);
 
     /**
+     * @param request the request parameters of DeleteFiles  DeleteFilesRequest
+     * @return DeleteFilesResponse
+     */
+    CompletableFuture<DeleteFilesResponse> deleteFiles(DeleteFilesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
      * <ul>
