@@ -66,6 +66,14 @@ public class CreateClusterRequest extends Request {
     private Boolean deletionProtection;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrowInterval")
+    private Integer growInterval;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleInterval")
+    private Integer idleInterval;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsEnterpriseSecurityGroup")
     private Boolean isEnterpriseSecurityGroup;
 
@@ -115,6 +123,8 @@ public class CreateClusterRequest extends Request {
         this.clusterVSwitchId = builder.clusterVSwitchId;
         this.clusterVpcId = builder.clusterVpcId;
         this.deletionProtection = builder.deletionProtection;
+        this.growInterval = builder.growInterval;
+        this.idleInterval = builder.idleInterval;
         this.isEnterpriseSecurityGroup = builder.isEnterpriseSecurityGroup;
         this.manager = builder.manager;
         this.maxCoreCount = builder.maxCoreCount;
@@ -224,6 +234,20 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return growInterval
+     */
+    public Integer getGrowInterval() {
+        return this.growInterval;
+    }
+
+    /**
+     * @return idleInterval
+     */
+    public Integer getIdleInterval() {
+        return this.idleInterval;
+    }
+
+    /**
      * @return isEnterpriseSecurityGroup
      */
     public Boolean getIsEnterpriseSecurityGroup() {
@@ -299,6 +323,8 @@ public class CreateClusterRequest extends Request {
         private String clusterVSwitchId; 
         private String clusterVpcId; 
         private Boolean deletionProtection; 
+        private Integer growInterval; 
+        private Integer idleInterval; 
         private Boolean isEnterpriseSecurityGroup; 
         private Manager manager; 
         private Integer maxCoreCount; 
@@ -327,6 +353,8 @@ public class CreateClusterRequest extends Request {
             this.clusterVSwitchId = request.clusterVSwitchId;
             this.clusterVpcId = request.clusterVpcId;
             this.deletionProtection = request.deletionProtection;
+            this.growInterval = request.growInterval;
+            this.idleInterval = request.idleInterval;
             this.isEnterpriseSecurityGroup = request.isEnterpriseSecurityGroup;
             this.manager = request.manager;
             this.maxCoreCount = request.maxCoreCount;
@@ -486,6 +514,24 @@ public class CreateClusterRequest extends Request {
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
             this.deletionProtection = deletionProtection;
+            return this;
+        }
+
+        /**
+         * GrowInterval.
+         */
+        public Builder growInterval(Integer growInterval) {
+            this.putQueryParameter("GrowInterval", growInterval);
+            this.growInterval = growInterval;
+            return this;
+        }
+
+        /**
+         * IdleInterval.
+         */
+        public Builder idleInterval(Integer idleInterval) {
+            this.putQueryParameter("IdleInterval", idleInterval);
+            this.idleInterval = idleInterval;
             return this;
         }
 
