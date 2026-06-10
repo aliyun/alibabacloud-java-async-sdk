@@ -21,7 +21,7 @@ public class GetUserResponseBody extends TeaModel {
     private String anthropicHost;
 
     @com.aliyun.core.annotation.NameInMap("ApiKeys")
-    private Object apiKeys;
+    private java.util.List<ApiKeys> apiKeys;
 
     @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
@@ -78,7 +78,7 @@ public class GetUserResponseBody extends TeaModel {
     /**
      * @return apiKeys
      */
-    public Object getApiKeys() {
+    public java.util.List<ApiKeys> getApiKeys() {
         return this.apiKeys;
     }
 
@@ -133,7 +133,7 @@ public class GetUserResponseBody extends TeaModel {
 
     public static final class Builder {
         private String anthropicHost; 
-        private Object apiKeys; 
+        private java.util.List<ApiKeys> apiKeys; 
         private String appId; 
         private String code; 
         private String host; 
@@ -168,7 +168,7 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * ApiKeys.
          */
-        public Builder apiKeys(Object apiKeys) {
+        public Builder apiKeys(java.util.List<ApiKeys> apiKeys) {
             this.apiKeys = apiKeys;
             return this;
         }
@@ -235,4 +235,79 @@ public class GetUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserResponseBody</p>
+     */
+    public static class ApiKeys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApiKey")
+        private String apiKey;
+
+        @com.aliyun.core.annotation.NameInMap("InnerApiKey")
+        private String innerApiKey;
+
+        private ApiKeys(Builder builder) {
+            this.apiKey = builder.apiKey;
+            this.innerApiKey = builder.innerApiKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApiKeys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return apiKey
+         */
+        public String getApiKey() {
+            return this.apiKey;
+        }
+
+        /**
+         * @return innerApiKey
+         */
+        public String getInnerApiKey() {
+            return this.innerApiKey;
+        }
+
+        public static final class Builder {
+            private String apiKey; 
+            private String innerApiKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiKeys model) {
+                this.apiKey = model.apiKey;
+                this.innerApiKey = model.innerApiKey;
+            } 
+
+            /**
+             * ApiKey.
+             */
+            public Builder apiKey(String apiKey) {
+                this.apiKey = apiKey;
+                return this;
+            }
+
+            /**
+             * InnerApiKey.
+             */
+            public Builder innerApiKey(String innerApiKey) {
+                this.innerApiKey = innerApiKey;
+                return this;
+            }
+
+            public ApiKeys build() {
+                return new ApiKeys(this);
+            } 
+
+        } 
+
+    }
 }
