@@ -302,6 +302,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MetaData")
         private String metaData;
 
+        @com.aliyun.core.annotation.NameInMap("RecordKey")
+        private String recordKey;
+
         @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
@@ -311,6 +314,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             this.consumeTime = builder.consumeTime;
             this.consumeType = builder.consumeType;
             this.metaData = builder.metaData;
+            this.recordKey = builder.recordKey;
             this.sceneName = builder.sceneName;
         }
 
@@ -358,6 +362,13 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return recordKey
+         */
+        public String getRecordKey() {
+            return this.recordKey;
+        }
+
+        /**
          * @return sceneName
          */
         public String getSceneName() {
@@ -370,6 +381,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             private String consumeTime; 
             private String consumeType; 
             private String metaData; 
+            private String recordKey; 
             private String sceneName; 
 
             private Builder() {
@@ -381,6 +393,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
                 this.consumeTime = model.consumeTime;
                 this.consumeType = model.consumeType;
                 this.metaData = model.metaData;
+                this.recordKey = model.recordKey;
                 this.sceneName = model.sceneName;
             } 
 
@@ -421,6 +434,14 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
+                return this;
+            }
+
+            /**
+             * RecordKey.
+             */
+            public Builder recordKey(String recordKey) {
+                this.recordKey = recordKey;
                 return this;
             }
 

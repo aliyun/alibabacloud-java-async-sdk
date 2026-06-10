@@ -41,6 +41,9 @@ public class AppService extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("NodeList")
+    private java.util.List<TreeNode> nodeList;
+
     @com.aliyun.core.annotation.NameInMap("Profile")
     private AppServiceProfile profile;
 
@@ -71,6 +74,7 @@ public class AppService extends TeaModel {
         this.gmtModified = builder.gmtModified;
         this.instanceBizId = builder.instanceBizId;
         this.name = builder.name;
+        this.nodeList = builder.nodeList;
         this.profile = builder.profile;
         this.serviceType = builder.serviceType;
         this.serviceTypeText = builder.serviceTypeText;
@@ -149,6 +153,13 @@ public class AppService extends TeaModel {
     }
 
     /**
+     * @return nodeList
+     */
+    public java.util.List<TreeNode> getNodeList() {
+        return this.nodeList;
+    }
+
+    /**
      * @return profile
      */
     public AppServiceProfile getProfile() {
@@ -206,6 +217,7 @@ public class AppService extends TeaModel {
         private String gmtModified; 
         private String instanceBizId; 
         private String name; 
+        private java.util.List<TreeNode> nodeList; 
         private AppServiceProfile profile; 
         private String serviceType; 
         private String serviceTypeText; 
@@ -226,6 +238,7 @@ public class AppService extends TeaModel {
             this.gmtModified = model.gmtModified;
             this.instanceBizId = model.instanceBizId;
             this.name = model.name;
+            this.nodeList = model.nodeList;
             this.profile = model.profile;
             this.serviceType = model.serviceType;
             this.serviceTypeText = model.serviceTypeText;
@@ -296,6 +309,14 @@ public class AppService extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * NodeList.
+         */
+        public Builder nodeList(java.util.List<TreeNode> nodeList) {
+            this.nodeList = nodeList;
             return this;
         }
 

@@ -35,11 +35,17 @@ public class AppServiceAggregate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
+    @com.aliyun.core.annotation.NameInMap("Group")
+    private AppServiceGroup group;
+
     @com.aliyun.core.annotation.NameInMap("InstanceBizId")
     private String instanceBizId;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
+
+    @com.aliyun.core.annotation.NameInMap("NodeList")
+    private java.util.List<TreeNode> nodeList;
 
     @com.aliyun.core.annotation.NameInMap("OperationAddress")
     private AppOperationAddress operationAddress;
@@ -72,8 +78,10 @@ public class AppServiceAggregate extends TeaModel {
         this.espBizId = builder.espBizId;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
+        this.group = builder.group;
         this.instanceBizId = builder.instanceBizId;
         this.name = builder.name;
+        this.nodeList = builder.nodeList;
         this.operationAddress = builder.operationAddress;
         this.profile = builder.profile;
         this.serviceType = builder.serviceType;
@@ -139,6 +147,13 @@ public class AppServiceAggregate extends TeaModel {
     }
 
     /**
+     * @return group
+     */
+    public AppServiceGroup getGroup() {
+        return this.group;
+    }
+
+    /**
      * @return instanceBizId
      */
     public String getInstanceBizId() {
@@ -150,6 +165,13 @@ public class AppServiceAggregate extends TeaModel {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return nodeList
+     */
+    public java.util.List<TreeNode> getNodeList() {
+        return this.nodeList;
     }
 
     /**
@@ -215,8 +237,10 @@ public class AppServiceAggregate extends TeaModel {
         private String espBizId; 
         private String gmtCreate; 
         private String gmtModified; 
+        private AppServiceGroup group; 
         private String instanceBizId; 
         private String name; 
+        private java.util.List<TreeNode> nodeList; 
         private AppOperationAddress operationAddress; 
         private AppServiceProfile profile; 
         private String serviceType; 
@@ -236,8 +260,10 @@ public class AppServiceAggregate extends TeaModel {
             this.espBizId = model.espBizId;
             this.gmtCreate = model.gmtCreate;
             this.gmtModified = model.gmtModified;
+            this.group = model.group;
             this.instanceBizId = model.instanceBizId;
             this.name = model.name;
+            this.nodeList = model.nodeList;
             this.operationAddress = model.operationAddress;
             this.profile = model.profile;
             this.serviceType = model.serviceType;
@@ -297,6 +323,14 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
+         * Group.
+         */
+        public Builder group(AppServiceGroup group) {
+            this.group = group;
+            return this;
+        }
+
+        /**
          * InstanceBizId.
          */
         public Builder instanceBizId(String instanceBizId) {
@@ -309,6 +343,14 @@ public class AppServiceAggregate extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * NodeList.
+         */
+        public Builder nodeList(java.util.List<TreeNode> nodeList) {
+            this.nodeList = nodeList;
             return this;
         }
 
