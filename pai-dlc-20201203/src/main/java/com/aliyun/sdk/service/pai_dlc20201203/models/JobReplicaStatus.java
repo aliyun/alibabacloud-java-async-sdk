@@ -20,6 +20,9 @@ public class JobReplicaStatus extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Active")
     private Integer active;
 
+    @com.aliyun.core.annotation.NameInMap("CurrentSpotInstanceType")
+    private String currentSpotInstanceType;
+
     @com.aliyun.core.annotation.NameInMap("Dequeued")
     private Integer dequeued;
 
@@ -40,6 +43,7 @@ public class JobReplicaStatus extends TeaModel {
 
     private JobReplicaStatus(Builder builder) {
         this.active = builder.active;
+        this.currentSpotInstanceType = builder.currentSpotInstanceType;
         this.dequeued = builder.dequeued;
         this.estimatedAutoScalingSpec = builder.estimatedAutoScalingSpec;
         this.estimatedPodCount = builder.estimatedPodCount;
@@ -65,6 +69,13 @@ public class JobReplicaStatus extends TeaModel {
      */
     public Integer getActive() {
         return this.active;
+    }
+
+    /**
+     * @return currentSpotInstanceType
+     */
+    public String getCurrentSpotInstanceType() {
+        return this.currentSpotInstanceType;
     }
 
     /**
@@ -111,6 +122,7 @@ public class JobReplicaStatus extends TeaModel {
 
     public static final class Builder {
         private Integer active; 
+        private String currentSpotInstanceType; 
         private Integer dequeued; 
         private AutoScalingSpec estimatedAutoScalingSpec; 
         private Long estimatedPodCount; 
@@ -123,6 +135,7 @@ public class JobReplicaStatus extends TeaModel {
 
         private Builder(JobReplicaStatus model) {
             this.active = model.active;
+            this.currentSpotInstanceType = model.currentSpotInstanceType;
             this.dequeued = model.dequeued;
             this.estimatedAutoScalingSpec = model.estimatedAutoScalingSpec;
             this.estimatedPodCount = model.estimatedPodCount;
@@ -136,6 +149,14 @@ public class JobReplicaStatus extends TeaModel {
          */
         public Builder active(Integer active) {
             this.active = active;
+            return this;
+        }
+
+        /**
+         * CurrentSpotInstanceType.
+         */
+        public Builder currentSpotInstanceType(String currentSpotInstanceType) {
+            this.currentSpotInstanceType = currentSpotInstanceType;
             return this;
         }
 

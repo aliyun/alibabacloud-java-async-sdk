@@ -29,6 +29,9 @@ public class JobSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
+    @com.aliyun.core.annotation.NameInMap("ElasticSpotSpecs")
+    private java.util.List<ElasticSpotSpec> elasticSpotSpecs;
+
     @com.aliyun.core.annotation.NameInMap("ExtraPodSpec")
     private ExtraPodSpec extraPodSpec;
 
@@ -84,6 +87,7 @@ public class JobSpec extends TeaModel {
         this.autoScalingSpec = builder.autoScalingSpec;
         this.considerInSuccessPolicy = builder.considerInSuccessPolicy;
         this.ecsSpec = builder.ecsSpec;
+        this.elasticSpotSpecs = builder.elasticSpotSpecs;
         this.extraPodSpec = builder.extraPodSpec;
         this.image = builder.image;
         this.imageConfig = builder.imageConfig;
@@ -140,6 +144,13 @@ public class JobSpec extends TeaModel {
      */
     public String getEcsSpec() {
         return this.ecsSpec;
+    }
+
+    /**
+     * @return elasticSpotSpecs
+     */
+    public java.util.List<ElasticSpotSpec> getElasticSpotSpecs() {
+        return this.elasticSpotSpecs;
     }
 
     /**
@@ -259,6 +270,7 @@ public class JobSpec extends TeaModel {
         private AutoScalingSpec autoScalingSpec; 
         private Boolean considerInSuccessPolicy; 
         private String ecsSpec; 
+        private java.util.List<ElasticSpotSpec> elasticSpotSpecs; 
         private ExtraPodSpec extraPodSpec; 
         private String image; 
         private ImageConfig imageConfig; 
@@ -284,6 +296,7 @@ public class JobSpec extends TeaModel {
             this.autoScalingSpec = model.autoScalingSpec;
             this.considerInSuccessPolicy = model.considerInSuccessPolicy;
             this.ecsSpec = model.ecsSpec;
+            this.elasticSpotSpecs = model.elasticSpotSpecs;
             this.extraPodSpec = model.extraPodSpec;
             this.image = model.image;
             this.imageConfig = model.imageConfig;
@@ -331,6 +344,14 @@ public class JobSpec extends TeaModel {
          */
         public Builder ecsSpec(String ecsSpec) {
             this.ecsSpec = ecsSpec;
+            return this;
+        }
+
+        /**
+         * ElasticSpotSpecs.
+         */
+        public Builder elasticSpotSpecs(java.util.List<ElasticSpotSpec> elasticSpotSpecs) {
+            this.elasticSpotSpecs = elasticSpotSpecs;
             return this;
         }
 
