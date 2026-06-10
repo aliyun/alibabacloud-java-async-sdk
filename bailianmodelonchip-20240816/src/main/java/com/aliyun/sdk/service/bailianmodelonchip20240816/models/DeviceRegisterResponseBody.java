@@ -197,12 +197,16 @@ public class DeviceRegisterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("signature")
         private String signature;
 
+        @com.aliyun.core.annotation.NameInMap("workspaceId")
+        private String workspaceId;
+
         private Data(Builder builder) {
             this.appId = builder.appId;
             this.deviceName = builder.deviceName;
             this.nonce = builder.nonce;
             this.responseTime = builder.responseTime;
             this.signature = builder.signature;
+            this.workspaceId = builder.workspaceId;
         }
 
         public static Builder builder() {
@@ -248,12 +252,20 @@ public class DeviceRegisterResponseBody extends TeaModel {
             return this.signature;
         }
 
+        /**
+         * @return workspaceId
+         */
+        public String getWorkspaceId() {
+            return this.workspaceId;
+        }
+
         public static final class Builder {
             private String appId; 
             private String deviceName; 
             private String nonce; 
             private String responseTime; 
             private String signature; 
+            private String workspaceId; 
 
             private Builder() {
             } 
@@ -264,6 +276,7 @@ public class DeviceRegisterResponseBody extends TeaModel {
                 this.nonce = model.nonce;
                 this.responseTime = model.responseTime;
                 this.signature = model.signature;
+                this.workspaceId = model.workspaceId;
             } 
 
             /**
@@ -303,6 +316,14 @@ public class DeviceRegisterResponseBody extends TeaModel {
              */
             public Builder signature(String signature) {
                 this.signature = signature;
+                return this;
+            }
+
+            /**
+             * workspaceId.
+             */
+            public Builder workspaceId(String workspaceId) {
+                this.workspaceId = workspaceId;
                 return this;
             }
 

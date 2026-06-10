@@ -37,12 +37,17 @@ public class DeviceRegisterRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String signature;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private DeviceRegisterRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
         this.nonce = builder.nonce;
         this.requestTime = builder.requestTime;
         this.signature = builder.signature;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -86,11 +91,19 @@ public class DeviceRegisterRequest extends Request {
         return this.signature;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<DeviceRegisterRequest, Builder> {
         private String appId; 
         private String nonce; 
         private String requestTime; 
         private String signature; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -102,6 +115,7 @@ public class DeviceRegisterRequest extends Request {
             this.nonce = request.nonce;
             this.requestTime = request.requestTime;
             this.signature = request.signature;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -140,6 +154,15 @@ public class DeviceRegisterRequest extends Request {
         public Builder signature(String signature) {
             this.putBodyParameter("signature", signature);
             this.signature = signature;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putBodyParameter("workspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 
