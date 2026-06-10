@@ -97,4 +97,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<TextTranslateResponse> textTranslate(TextTranslateRequest request);
 
+    /**
+     * @param request the request parameters of UsageQuery  UsageQueryRequest
+     * @return UsageQueryResponse
+     */
+    CompletableFuture<UsageQueryResponse> usageQuery(UsageQueryRequest request);
+
 }
