@@ -26,6 +26,10 @@ public class CreateInstanceInspectionRequest extends Request {
     private java.util.List<String> items;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("metricSource")
+    private String metricSource;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
@@ -37,6 +41,7 @@ public class CreateInstanceInspectionRequest extends Request {
         super(builder);
         this.instance = builder.instance;
         this.items = builder.items;
+        this.metricSource = builder.metricSource;
         this.region = builder.region;
         this.source = builder.source;
     }
@@ -69,6 +74,13 @@ public class CreateInstanceInspectionRequest extends Request {
     }
 
     /**
+     * @return metricSource
+     */
+    public String getMetricSource() {
+        return this.metricSource;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -85,6 +97,7 @@ public class CreateInstanceInspectionRequest extends Request {
     public static final class Builder extends Request.Builder<CreateInstanceInspectionRequest, Builder> {
         private String instance; 
         private java.util.List<String> items; 
+        private String metricSource; 
         private String region; 
         private String source; 
 
@@ -96,6 +109,7 @@ public class CreateInstanceInspectionRequest extends Request {
             super(request);
             this.instance = request.instance;
             this.items = request.items;
+            this.metricSource = request.metricSource;
             this.region = request.region;
             this.source = request.source;
         } 
@@ -115,6 +129,15 @@ public class CreateInstanceInspectionRequest extends Request {
         public Builder items(java.util.List<String> items) {
             this.putBodyParameter("items", items);
             this.items = items;
+            return this;
+        }
+
+        /**
+         * metricSource.
+         */
+        public Builder metricSource(String metricSource) {
+            this.putBodyParameter("metricSource", metricSource);
+            this.metricSource = metricSource;
             return this;
         }
 
