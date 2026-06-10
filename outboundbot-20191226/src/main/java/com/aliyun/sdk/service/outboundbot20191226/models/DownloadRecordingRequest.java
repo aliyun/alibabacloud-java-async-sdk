@@ -27,6 +27,10 @@ public class DownloadRecordingRequest extends Request {
     private Boolean needVoiceSliceRecording;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwapChannels")
+    private Boolean swapChannels;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
@@ -35,6 +39,7 @@ public class DownloadRecordingRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.needVoiceSliceRecording = builder.needVoiceSliceRecording;
+        this.swapChannels = builder.swapChannels;
         this.taskId = builder.taskId;
     }
 
@@ -66,6 +71,13 @@ public class DownloadRecordingRequest extends Request {
     }
 
     /**
+     * @return swapChannels
+     */
+    public Boolean getSwapChannels() {
+        return this.swapChannels;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -75,6 +87,7 @@ public class DownloadRecordingRequest extends Request {
     public static final class Builder extends Request.Builder<DownloadRecordingRequest, Builder> {
         private String instanceId; 
         private Boolean needVoiceSliceRecording; 
+        private Boolean swapChannels; 
         private String taskId; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class DownloadRecordingRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.needVoiceSliceRecording = request.needVoiceSliceRecording;
+            this.swapChannels = request.swapChannels;
             this.taskId = request.taskId;
         } 
 
@@ -106,6 +120,15 @@ public class DownloadRecordingRequest extends Request {
         public Builder needVoiceSliceRecording(Boolean needVoiceSliceRecording) {
             this.putQueryParameter("NeedVoiceSliceRecording", needVoiceSliceRecording);
             this.needVoiceSliceRecording = needVoiceSliceRecording;
+            return this;
+        }
+
+        /**
+         * SwapChannels.
+         */
+        public Builder swapChannels(Boolean swapChannels) {
+            this.putQueryParameter("SwapChannels", swapChannels);
+            this.swapChannels = swapChannels;
             return this;
         }
 
