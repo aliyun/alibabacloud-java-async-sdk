@@ -332,6 +332,9 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Steps")
         private java.util.List<String> steps;
 
+        @com.aliyun.core.annotation.NameInMap("Subchannel")
+        private String subchannel;
+
         private Module(Builder builder) {
             this.canQuickRevert = builder.canQuickRevert;
             this.currentStep = builder.currentStep;
@@ -348,6 +351,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             this.publishTime = builder.publishTime;
             this.siteId = builder.siteId;
             this.steps = builder.steps;
+            this.subchannel = builder.subchannel;
         }
 
         public static Builder builder() {
@@ -463,6 +467,13 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             return this.steps;
         }
 
+        /**
+         * @return subchannel
+         */
+        public String getSubchannel() {
+            return this.subchannel;
+        }
+
         public static final class Builder {
             private String canQuickRevert; 
             private String currentStep; 
@@ -479,6 +490,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             private String publishTime; 
             private String siteId; 
             private java.util.List<String> steps; 
+            private String subchannel; 
 
             private Builder() {
             } 
@@ -499,6 +511,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
                 this.publishTime = model.publishTime;
                 this.siteId = model.siteId;
                 this.steps = model.steps;
+                this.subchannel = model.subchannel;
             } 
 
             /**
@@ -621,6 +634,14 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
              */
             public Builder steps(java.util.List<String> steps) {
                 this.steps = steps;
+                return this;
+            }
+
+            /**
+             * Subchannel.
+             */
+            public Builder subchannel(String subchannel) {
+                this.subchannel = subchannel;
                 return this;
             }
 

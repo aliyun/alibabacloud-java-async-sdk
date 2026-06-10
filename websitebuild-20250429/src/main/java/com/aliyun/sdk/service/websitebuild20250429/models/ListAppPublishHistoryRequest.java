@@ -50,12 +50,20 @@ public class ListAppPublishHistoryRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublishEnv")
+    private String publishEnv;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Subchannel")
+    private String subchannel;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WebsiteDomain")
@@ -71,8 +79,10 @@ public class ListAppPublishHistoryRequest extends Request {
         this.nextToken = builder.nextToken;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
+        this.publishEnv = builder.publishEnv;
         this.sort = builder.sort;
         this.status = builder.status;
+        this.subchannel = builder.subchannel;
         this.websiteDomain = builder.websiteDomain;
     }
 
@@ -146,6 +156,13 @@ public class ListAppPublishHistoryRequest extends Request {
     }
 
     /**
+     * @return publishEnv
+     */
+    public String getPublishEnv() {
+        return this.publishEnv;
+    }
+
+    /**
      * @return sort
      */
     public String getSort() {
@@ -157,6 +174,13 @@ public class ListAppPublishHistoryRequest extends Request {
      */
     public String getStatus() {
         return this.status;
+    }
+
+    /**
+     * @return subchannel
+     */
+    public String getSubchannel() {
+        return this.subchannel;
     }
 
     /**
@@ -175,8 +199,10 @@ public class ListAppPublishHistoryRequest extends Request {
         private String nextToken; 
         private Integer pageNum; 
         private Integer pageSize; 
+        private String publishEnv; 
         private String sort; 
         private String status; 
+        private String subchannel; 
         private String websiteDomain; 
 
         private Builder() {
@@ -193,8 +219,10 @@ public class ListAppPublishHistoryRequest extends Request {
             this.nextToken = request.nextToken;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
+            this.publishEnv = request.publishEnv;
             this.sort = request.sort;
             this.status = request.status;
+            this.subchannel = request.subchannel;
             this.websiteDomain = request.websiteDomain;
         } 
 
@@ -271,6 +299,15 @@ public class ListAppPublishHistoryRequest extends Request {
         }
 
         /**
+         * PublishEnv.
+         */
+        public Builder publishEnv(String publishEnv) {
+            this.putQueryParameter("PublishEnv", publishEnv);
+            this.publishEnv = publishEnv;
+            return this;
+        }
+
+        /**
          * Sort.
          */
         public Builder sort(String sort) {
@@ -285,6 +322,15 @@ public class ListAppPublishHistoryRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * Subchannel.
+         */
+        public Builder subchannel(String subchannel) {
+            this.putQueryParameter("Subchannel", subchannel);
+            this.subchannel = subchannel;
             return this;
         }
 

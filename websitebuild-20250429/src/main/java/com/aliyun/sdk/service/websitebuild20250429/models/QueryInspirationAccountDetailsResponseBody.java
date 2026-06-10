@@ -293,6 +293,9 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Balance")
         private Long balance;
 
+        @com.aliyun.core.annotation.NameInMap("BalanceStr")
+        private String balanceStr;
+
         @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
@@ -301,6 +304,9 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("InitQuota")
         private Long initQuota;
+
+        @com.aliyun.core.annotation.NameInMap("InitQuotaStr")
+        private String initQuotaStr;
 
         @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
@@ -314,9 +320,11 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.acquisitionTime = builder.acquisitionTime;
             this.balance = builder.balance;
+            this.balanceStr = builder.balanceStr;
             this.endDate = builder.endDate;
             this.expired = builder.expired;
             this.initQuota = builder.initQuota;
+            this.initQuotaStr = builder.initQuotaStr;
             this.sourceType = builder.sourceType;
             this.sourceTypeName = builder.sourceTypeName;
             this.status = builder.status;
@@ -345,6 +353,13 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return balanceStr
+         */
+        public String getBalanceStr() {
+            return this.balanceStr;
+        }
+
+        /**
          * @return endDate
          */
         public String getEndDate() {
@@ -363,6 +378,13 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
          */
         public Long getInitQuota() {
             return this.initQuota;
+        }
+
+        /**
+         * @return initQuotaStr
+         */
+        public String getInitQuotaStr() {
+            return this.initQuotaStr;
         }
 
         /**
@@ -389,9 +411,11 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public static final class Builder {
             private String acquisitionTime; 
             private Long balance; 
+            private String balanceStr; 
             private String endDate; 
             private Boolean expired; 
             private Long initQuota; 
+            private String initQuotaStr; 
             private String sourceType; 
             private String sourceTypeName; 
             private String status; 
@@ -402,9 +426,11 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.acquisitionTime = model.acquisitionTime;
                 this.balance = model.balance;
+                this.balanceStr = model.balanceStr;
                 this.endDate = model.endDate;
                 this.expired = model.expired;
                 this.initQuota = model.initQuota;
+                this.initQuotaStr = model.initQuotaStr;
                 this.sourceType = model.sourceType;
                 this.sourceTypeName = model.sourceTypeName;
                 this.status = model.status;
@@ -423,6 +449,14 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
              */
             public Builder balance(Long balance) {
                 this.balance = balance;
+                return this;
+            }
+
+            /**
+             * BalanceStr.
+             */
+            public Builder balanceStr(String balanceStr) {
+                this.balanceStr = balanceStr;
                 return this;
             }
 
@@ -447,6 +481,14 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
              */
             public Builder initQuota(Long initQuota) {
                 this.initQuota = initQuota;
+                return this;
+            }
+
+            /**
+             * InitQuotaStr.
+             */
+            public Builder initQuotaStr(String initQuotaStr) {
+                this.initQuotaStr = initQuotaStr;
                 return this;
             }
 
@@ -494,6 +536,9 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Balance")
         private Long balance;
 
+        @com.aliyun.core.annotation.NameInMap("BalanceStr")
+        private String balanceStr;
+
         @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
@@ -502,6 +547,9 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("InitQuota")
         private Long initQuota;
+
+        @com.aliyun.core.annotation.NameInMap("InitQuotaStr")
+        private String initQuotaStr;
 
         @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
@@ -512,9 +560,11 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         private Next(Builder builder) {
             this.acquisitionTime = builder.acquisitionTime;
             this.balance = builder.balance;
+            this.balanceStr = builder.balanceStr;
             this.endDate = builder.endDate;
             this.expired = builder.expired;
             this.initQuota = builder.initQuota;
+            this.initQuotaStr = builder.initQuotaStr;
             this.sourceType = builder.sourceType;
             this.sourceTypeName = builder.sourceTypeName;
         }
@@ -542,6 +592,13 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return balanceStr
+         */
+        public String getBalanceStr() {
+            return this.balanceStr;
+        }
+
+        /**
          * @return endDate
          */
         public String getEndDate() {
@@ -563,6 +620,13 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return initQuotaStr
+         */
+        public String getInitQuotaStr() {
+            return this.initQuotaStr;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -579,9 +643,11 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public static final class Builder {
             private String acquisitionTime; 
             private Long balance; 
+            private String balanceStr; 
             private String endDate; 
             private Boolean expired; 
             private Long initQuota; 
+            private String initQuotaStr; 
             private String sourceType; 
             private String sourceTypeName; 
 
@@ -591,9 +657,11 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             private Builder(Next model) {
                 this.acquisitionTime = model.acquisitionTime;
                 this.balance = model.balance;
+                this.balanceStr = model.balanceStr;
                 this.endDate = model.endDate;
                 this.expired = model.expired;
                 this.initQuota = model.initQuota;
+                this.initQuotaStr = model.initQuotaStr;
                 this.sourceType = model.sourceType;
                 this.sourceTypeName = model.sourceTypeName;
             } 
@@ -611,6 +679,14 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
              */
             public Builder balance(Long balance) {
                 this.balance = balance;
+                return this;
+            }
+
+            /**
+             * BalanceStr.
+             */
+            public Builder balanceStr(String balanceStr) {
+                this.balanceStr = balanceStr;
                 return this;
             }
 
@@ -635,6 +711,14 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
              */
             public Builder initQuota(Long initQuota) {
                 this.initQuota = initQuota;
+                return this;
+            }
+
+            /**
+             * InitQuotaStr.
+             */
+            public Builder initQuotaStr(String initQuotaStr) {
+                this.initQuotaStr = initQuotaStr;
                 return this;
             }
 

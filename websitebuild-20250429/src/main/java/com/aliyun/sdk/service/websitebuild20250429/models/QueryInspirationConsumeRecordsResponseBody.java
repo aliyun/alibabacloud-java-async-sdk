@@ -290,8 +290,14 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Long amount;
 
+        @com.aliyun.core.annotation.NameInMap("AmountStr")
+        private String amountStr;
+
         @com.aliyun.core.annotation.NameInMap("ConsumeTime")
         private String consumeTime;
+
+        @com.aliyun.core.annotation.NameInMap("ConsumeType")
+        private String consumeType;
 
         @com.aliyun.core.annotation.NameInMap("MetaData")
         private String metaData;
@@ -301,7 +307,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.amount = builder.amount;
+            this.amountStr = builder.amountStr;
             this.consumeTime = builder.consumeTime;
+            this.consumeType = builder.consumeType;
             this.metaData = builder.metaData;
             this.sceneName = builder.sceneName;
         }
@@ -322,10 +330,24 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return amountStr
+         */
+        public String getAmountStr() {
+            return this.amountStr;
+        }
+
+        /**
          * @return consumeTime
          */
         public String getConsumeTime() {
             return this.consumeTime;
+        }
+
+        /**
+         * @return consumeType
+         */
+        public String getConsumeType() {
+            return this.consumeType;
         }
 
         /**
@@ -344,7 +366,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long amount; 
+            private String amountStr; 
             private String consumeTime; 
+            private String consumeType; 
             private String metaData; 
             private String sceneName; 
 
@@ -353,7 +377,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.amount = model.amount;
+                this.amountStr = model.amountStr;
                 this.consumeTime = model.consumeTime;
+                this.consumeType = model.consumeType;
                 this.metaData = model.metaData;
                 this.sceneName = model.sceneName;
             } 
@@ -367,10 +393,26 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * AmountStr.
+             */
+            public Builder amountStr(String amountStr) {
+                this.amountStr = amountStr;
+                return this;
+            }
+
+            /**
              * ConsumeTime.
              */
             public Builder consumeTime(String consumeTime) {
                 this.consumeTime = consumeTime;
+                return this;
+            }
+
+            /**
+             * ConsumeType.
+             */
+            public Builder consumeType(String consumeType) {
+                this.consumeType = consumeType;
                 return this;
             }
 
@@ -407,8 +449,14 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Long amount;
 
+        @com.aliyun.core.annotation.NameInMap("AmountStr")
+        private String amountStr;
+
         @com.aliyun.core.annotation.NameInMap("ConsumeTime")
         private String consumeTime;
+
+        @com.aliyun.core.annotation.NameInMap("ConsumeType")
+        private String consumeType;
 
         @com.aliyun.core.annotation.NameInMap("MetaData")
         private String metaData;
@@ -418,7 +466,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
         private Next(Builder builder) {
             this.amount = builder.amount;
+            this.amountStr = builder.amountStr;
             this.consumeTime = builder.consumeTime;
+            this.consumeType = builder.consumeType;
             this.metaData = builder.metaData;
             this.sceneName = builder.sceneName;
         }
@@ -439,10 +489,24 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return amountStr
+         */
+        public String getAmountStr() {
+            return this.amountStr;
+        }
+
+        /**
          * @return consumeTime
          */
         public String getConsumeTime() {
             return this.consumeTime;
+        }
+
+        /**
+         * @return consumeType
+         */
+        public String getConsumeType() {
+            return this.consumeType;
         }
 
         /**
@@ -461,7 +525,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long amount; 
+            private String amountStr; 
             private String consumeTime; 
+            private String consumeType; 
             private String metaData; 
             private String sceneName; 
 
@@ -470,7 +536,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
             private Builder(Next model) {
                 this.amount = model.amount;
+                this.amountStr = model.amountStr;
                 this.consumeTime = model.consumeTime;
+                this.consumeType = model.consumeType;
                 this.metaData = model.metaData;
                 this.sceneName = model.sceneName;
             } 
@@ -484,10 +552,26 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * AmountStr.
+             */
+            public Builder amountStr(String amountStr) {
+                this.amountStr = amountStr;
+                return this;
+            }
+
+            /**
              * ConsumeTime.
              */
             public Builder consumeTime(String consumeTime) {
                 this.consumeTime = consumeTime;
+                return this;
+            }
+
+            /**
+             * ConsumeType.
+             */
+            public Builder consumeType(String consumeType) {
+                this.consumeType = consumeType;
                 return this;
             }
 

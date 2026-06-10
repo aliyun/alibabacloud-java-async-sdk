@@ -389,6 +389,9 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveLogicalNumber")
         private Integer activeLogicalNumber;
 
+        @com.aliyun.core.annotation.NameInMap("CommitHash")
+        private String commitHash;
+
         @com.aliyun.core.annotation.NameInMap("IsDirty")
         private Boolean isDirty;
 
@@ -403,6 +406,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
 
         private Module(Builder builder) {
             this.activeLogicalNumber = builder.activeLogicalNumber;
+            this.commitHash = builder.commitHash;
             this.isDirty = builder.isDirty;
             this.maxLogicalNumber = builder.maxLogicalNumber;
             this.siteId = builder.siteId;
@@ -422,6 +426,13 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
          */
         public Integer getActiveLogicalNumber() {
             return this.activeLogicalNumber;
+        }
+
+        /**
+         * @return commitHash
+         */
+        public String getCommitHash() {
+            return this.commitHash;
         }
 
         /**
@@ -454,6 +465,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer activeLogicalNumber; 
+            private String commitHash; 
             private Boolean isDirty; 
             private Integer maxLogicalNumber; 
             private String siteId; 
@@ -464,6 +476,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
 
             private Builder(Module model) {
                 this.activeLogicalNumber = model.activeLogicalNumber;
+                this.commitHash = model.commitHash;
                 this.isDirty = model.isDirty;
                 this.maxLogicalNumber = model.maxLogicalNumber;
                 this.siteId = model.siteId;
@@ -478,6 +491,14 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
              */
             public Builder activeLogicalNumber(Integer activeLogicalNumber) {
                 this.activeLogicalNumber = activeLogicalNumber;
+                return this;
+            }
+
+            /**
+             * CommitHash.
+             */
+            public Builder commitHash(String commitHash) {
+                this.commitHash = commitHash;
                 return this;
             }
 

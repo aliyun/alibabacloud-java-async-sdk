@@ -290,16 +290,28 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Remaining")
         private Long remaining;
 
+        @com.aliyun.core.annotation.NameInMap("RemainingStr")
+        private String remainingStr;
+
         @com.aliyun.core.annotation.NameInMap("TotalQuota")
         private Long totalQuota;
+
+        @com.aliyun.core.annotation.NameInMap("TotalQuotaStr")
+        private String totalQuotaStr;
 
         @com.aliyun.core.annotation.NameInMap("TotalUsed")
         private Long totalUsed;
 
+        @com.aliyun.core.annotation.NameInMap("TotalUsedStr")
+        private String totalUsedStr;
+
         private Module(Builder builder) {
             this.remaining = builder.remaining;
+            this.remainingStr = builder.remainingStr;
             this.totalQuota = builder.totalQuota;
+            this.totalQuotaStr = builder.totalQuotaStr;
             this.totalUsed = builder.totalUsed;
+            this.totalUsedStr = builder.totalUsedStr;
         }
 
         public static Builder builder() {
@@ -318,10 +330,24 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return remainingStr
+         */
+        public String getRemainingStr() {
+            return this.remainingStr;
+        }
+
+        /**
          * @return totalQuota
          */
         public Long getTotalQuota() {
             return this.totalQuota;
+        }
+
+        /**
+         * @return totalQuotaStr
+         */
+        public String getTotalQuotaStr() {
+            return this.totalQuotaStr;
         }
 
         /**
@@ -331,18 +357,31 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
             return this.totalUsed;
         }
 
+        /**
+         * @return totalUsedStr
+         */
+        public String getTotalUsedStr() {
+            return this.totalUsedStr;
+        }
+
         public static final class Builder {
             private Long remaining; 
+            private String remainingStr; 
             private Long totalQuota; 
+            private String totalQuotaStr; 
             private Long totalUsed; 
+            private String totalUsedStr; 
 
             private Builder() {
             } 
 
             private Builder(Module model) {
                 this.remaining = model.remaining;
+                this.remainingStr = model.remainingStr;
                 this.totalQuota = model.totalQuota;
+                this.totalQuotaStr = model.totalQuotaStr;
                 this.totalUsed = model.totalUsed;
+                this.totalUsedStr = model.totalUsedStr;
             } 
 
             /**
@@ -350,6 +389,14 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
              */
             public Builder remaining(Long remaining) {
                 this.remaining = remaining;
+                return this;
+            }
+
+            /**
+             * RemainingStr.
+             */
+            public Builder remainingStr(String remainingStr) {
+                this.remainingStr = remainingStr;
                 return this;
             }
 
@@ -362,10 +409,26 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
             }
 
             /**
+             * TotalQuotaStr.
+             */
+            public Builder totalQuotaStr(String totalQuotaStr) {
+                this.totalQuotaStr = totalQuotaStr;
+                return this;
+            }
+
+            /**
              * TotalUsed.
              */
             public Builder totalUsed(Long totalUsed) {
                 this.totalUsed = totalUsed;
+                return this;
+            }
+
+            /**
+             * TotalUsedStr.
+             */
+            public Builder totalUsedStr(String totalUsedStr) {
+                this.totalUsedStr = totalUsedStr;
                 return this;
             }
 

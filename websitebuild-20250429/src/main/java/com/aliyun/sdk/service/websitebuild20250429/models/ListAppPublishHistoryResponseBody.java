@@ -332,6 +332,9 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanQuickRevert")
         private String canQuickRevert;
 
+        @com.aliyun.core.annotation.NameInMap("CommitHash")
+        private String commitHash;
+
         @com.aliyun.core.annotation.NameInMap("CurrentStep")
         private String currentStep;
 
@@ -371,8 +374,12 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Steps")
         private java.util.List<String> steps;
 
+        @com.aliyun.core.annotation.NameInMap("Subchannel")
+        private String subchannel;
+
         private History(Builder builder) {
             this.canQuickRevert = builder.canQuickRevert;
+            this.commitHash = builder.commitHash;
             this.currentStep = builder.currentStep;
             this.deployChannel = builder.deployChannel;
             this.description = builder.description;
@@ -386,6 +393,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             this.publishOrderId = builder.publishOrderId;
             this.publishTime = builder.publishTime;
             this.steps = builder.steps;
+            this.subchannel = builder.subchannel;
         }
 
         public static Builder builder() {
@@ -401,6 +409,13 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
          */
         public String getCanQuickRevert() {
             return this.canQuickRevert;
+        }
+
+        /**
+         * @return commitHash
+         */
+        public String getCommitHash() {
+            return this.commitHash;
         }
 
         /**
@@ -494,8 +509,16 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             return this.steps;
         }
 
+        /**
+         * @return subchannel
+         */
+        public String getSubchannel() {
+            return this.subchannel;
+        }
+
         public static final class Builder {
             private String canQuickRevert; 
+            private String commitHash; 
             private String currentStep; 
             private String deployChannel; 
             private String description; 
@@ -509,12 +532,14 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             private Long publishOrderId; 
             private String publishTime; 
             private java.util.List<String> steps; 
+            private String subchannel; 
 
             private Builder() {
             } 
 
             private Builder(History model) {
                 this.canQuickRevert = model.canQuickRevert;
+                this.commitHash = model.commitHash;
                 this.currentStep = model.currentStep;
                 this.deployChannel = model.deployChannel;
                 this.description = model.description;
@@ -528,6 +553,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
                 this.publishOrderId = model.publishOrderId;
                 this.publishTime = model.publishTime;
                 this.steps = model.steps;
+                this.subchannel = model.subchannel;
             } 
 
             /**
@@ -535,6 +561,14 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
              */
             public Builder canQuickRevert(String canQuickRevert) {
                 this.canQuickRevert = canQuickRevert;
+                return this;
+            }
+
+            /**
+             * CommitHash.
+             */
+            public Builder commitHash(String commitHash) {
+                this.commitHash = commitHash;
                 return this;
             }
 
@@ -642,6 +676,14 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
              */
             public Builder steps(java.util.List<String> steps) {
                 this.steps = steps;
+                return this;
+            }
+
+            /**
+             * Subchannel.
+             */
+            public Builder subchannel(String subchannel) {
+                this.subchannel = subchannel;
                 return this;
             }
 
