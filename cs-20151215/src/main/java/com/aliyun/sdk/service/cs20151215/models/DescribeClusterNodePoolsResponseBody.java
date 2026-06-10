@@ -1282,6 +1282,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
      * <p>DescribeClusterNodePoolsResponseBody</p>
      */
     public static class Management extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("auto_fault_diagnosis")
+        private Boolean autoFaultDiagnosis;
+
         @com.aliyun.core.annotation.NameInMap("auto_repair")
         private Boolean autoRepair;
 
@@ -1307,6 +1310,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         private UpgradeConfig upgradeConfig;
 
         private Management(Builder builder) {
+            this.autoFaultDiagnosis = builder.autoFaultDiagnosis;
             this.autoRepair = builder.autoRepair;
             this.autoRepairPolicy = builder.autoRepairPolicy;
             this.autoUpgrade = builder.autoUpgrade;
@@ -1323,6 +1327,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         public static Management create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoFaultDiagnosis
+         */
+        public Boolean getAutoFaultDiagnosis() {
+            return this.autoFaultDiagnosis;
         }
 
         /**
@@ -1382,6 +1393,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean autoFaultDiagnosis; 
             private Boolean autoRepair; 
             private AutoRepairPolicy autoRepairPolicy; 
             private Boolean autoUpgrade; 
@@ -1395,6 +1407,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             } 
 
             private Builder(Management model) {
+                this.autoFaultDiagnosis = model.autoFaultDiagnosis;
                 this.autoRepair = model.autoRepair;
                 this.autoRepairPolicy = model.autoRepairPolicy;
                 this.autoUpgrade = model.autoUpgrade;
@@ -1404,6 +1417,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
                 this.enable = model.enable;
                 this.upgradeConfig = model.upgradeConfig;
             } 
+
+            /**
+             * auto_fault_diagnosis.
+             */
+            public Builder autoFaultDiagnosis(Boolean autoFaultDiagnosis) {
+                this.autoFaultDiagnosis = autoFaultDiagnosis;
+                return this;
+            }
 
             /**
              * <p>Specifies whether to enable auto repair. This parameter takes effect only if <code>enable</code> is set to true. Valid values:</p>
