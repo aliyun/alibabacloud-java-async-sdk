@@ -103,7 +103,10 @@ public class DescribeTagRequest extends Request {
         } 
 
         /**
-         * AgentKey.
+         * <p>AgentKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sssxx</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);

@@ -118,7 +118,10 @@ public class UpdateTagRequest extends Request {
         } 
 
         /**
-         * AgentKey.
+         * <p>AgentKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);

@@ -235,7 +235,10 @@ public class DescribeTagResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxXxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
