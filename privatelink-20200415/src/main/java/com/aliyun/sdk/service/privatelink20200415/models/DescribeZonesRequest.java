@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeZonesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossRegion")
+    private Boolean crossRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossRegionSide")
+    private String crossRegionSide;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -28,6 +36,8 @@ public class DescribeZonesRequest extends Request {
 
     private DescribeZonesRequest(Builder builder) {
         super(builder);
+        this.crossRegion = builder.crossRegion;
+        this.crossRegionSide = builder.crossRegionSide;
         this.regionId = builder.regionId;
         this.serviceResourceType = builder.serviceResourceType;
     }
@@ -46,6 +56,20 @@ public class DescribeZonesRequest extends Request {
     }
 
     /**
+     * @return crossRegion
+     */
+    public Boolean getCrossRegion() {
+        return this.crossRegion;
+    }
+
+    /**
+     * @return crossRegionSide
+     */
+    public String getCrossRegionSide() {
+        return this.crossRegionSide;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -60,6 +84,8 @@ public class DescribeZonesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeZonesRequest, Builder> {
+        private Boolean crossRegion; 
+        private String crossRegionSide; 
         private String regionId; 
         private String serviceResourceType; 
 
@@ -69,9 +95,29 @@ public class DescribeZonesRequest extends Request {
 
         private Builder(DescribeZonesRequest request) {
             super(request);
+            this.crossRegion = request.crossRegion;
+            this.crossRegionSide = request.crossRegionSide;
             this.regionId = request.regionId;
             this.serviceResourceType = request.serviceResourceType;
         } 
+
+        /**
+         * CrossRegion.
+         */
+        public Builder crossRegion(Boolean crossRegion) {
+            this.putQueryParameter("CrossRegion", crossRegion);
+            this.crossRegion = crossRegion;
+            return this;
+        }
+
+        /**
+         * CrossRegionSide.
+         */
+        public Builder crossRegionSide(String crossRegionSide) {
+            this.putQueryParameter("CrossRegionSide", crossRegionSide);
+            this.crossRegionSide = crossRegionSide;
+            return this;
+        }
 
         /**
          * <p>The region ID of the zone. You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
