@@ -155,6 +155,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckReadableResponse> checkReadable(CheckReadableRequest request);
 
     /**
+     * @param request the request parameters of ClearDynamicTagCache  ClearDynamicTagCacheRequest
+     * @return ClearDynamicTagCacheResponse
+     */
+    CompletableFuture<ClearDynamicTagCacheResponse> clearDynamicTagCache(ClearDynamicTagCacheRequest request);
+
+    /**
      * @param request the request parameters of CreateCubeBySql  CreateCubeBySqlRequest
      * @return CreateCubeBySqlResponse
      */
@@ -361,6 +367,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDataSourceResponse
      */
     CompletableFuture<ListDataSourceResponse> listDataSource(ListDataSourceRequest request);
+
+    /**
+     * @param request the request parameters of ListDynamicTag  ListDynamicTagRequest
+     * @return ListDynamicTagResponse
+     */
+    CompletableFuture<ListDynamicTagResponse> listDynamicTag(ListDynamicTagRequest request);
 
     /**
      * @param request the request parameters of ListFavoriteReports  ListFavoriteReportsRequest
