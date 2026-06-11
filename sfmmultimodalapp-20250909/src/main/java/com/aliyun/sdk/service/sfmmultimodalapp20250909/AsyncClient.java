@@ -80,6 +80,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMmAppResponse> describeMmApp(DescribeMmAppRequest request);
 
     /**
+     * @param request the request parameters of DevicePage  DevicePageRequest
+     * @return DevicePageResponse
+     */
+    CompletableFuture<DevicePageResponse> devicePage(DevicePageRequest request);
+
+    /**
+     * @param request the request parameters of DeviceUpdate  DeviceUpdateRequest
+     * @return DeviceUpdateResponse
+     */
+    CompletableFuture<DeviceUpdateResponse> deviceUpdate(DeviceUpdateRequest request);
+
+    /**
      * @param request the request parameters of ListCommand  ListCommandRequest
      * @return ListCommandResponse
      */
@@ -120,6 +132,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PublishMmAppResponse
      */
     CompletableFuture<PublishMmAppResponse> publishMmApp(PublishMmAppRequest request);
+
+    /**
+     * @param request the request parameters of QueryAppQuota  QueryAppQuotaRequest
+     * @return QueryAppQuotaResponse
+     */
+    CompletableFuture<QueryAppQuotaResponse> queryAppQuota(QueryAppQuotaRequest request);
 
     /**
      * @param request the request parameters of QueryMemoryConfig  QueryMemoryConfigRequest

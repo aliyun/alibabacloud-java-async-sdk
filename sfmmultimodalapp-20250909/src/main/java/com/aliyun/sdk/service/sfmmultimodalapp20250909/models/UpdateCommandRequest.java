@@ -31,6 +31,10 @@ public class UpdateCommandRequest extends Request {
     private String domainName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplyMode")
+    private String replyMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ToolDescription")
     @com.aliyun.core.annotation.Validation(required = true)
     private String toolDescription;
@@ -62,6 +66,7 @@ public class UpdateCommandRequest extends Request {
         this.appId = builder.appId;
         this.domainCode = builder.domainCode;
         this.domainName = builder.domainName;
+        this.replyMode = builder.replyMode;
         this.toolDescription = builder.toolDescription;
         this.toolExamples = builder.toolExamples;
         this.toolId = builder.toolId;
@@ -102,6 +107,13 @@ public class UpdateCommandRequest extends Request {
      */
     public String getDomainName() {
         return this.domainName;
+    }
+
+    /**
+     * @return replyMode
+     */
+    public String getReplyMode() {
+        return this.replyMode;
     }
 
     /**
@@ -150,6 +162,7 @@ public class UpdateCommandRequest extends Request {
         private String appId; 
         private String domainCode; 
         private String domainName; 
+        private String replyMode; 
         private String toolDescription; 
         private java.util.List<ToolExamples> toolExamples; 
         private String toolId; 
@@ -166,6 +179,7 @@ public class UpdateCommandRequest extends Request {
             this.appId = request.appId;
             this.domainCode = request.domainCode;
             this.domainName = request.domainName;
+            this.replyMode = request.replyMode;
             this.toolDescription = request.toolDescription;
             this.toolExamples = request.toolExamples;
             this.toolId = request.toolId;
@@ -201,6 +215,15 @@ public class UpdateCommandRequest extends Request {
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * ReplyMode.
+         */
+        public Builder replyMode(String replyMode) {
+            this.putQueryParameter("ReplyMode", replyMode);
+            this.replyMode = replyMode;
             return this;
         }
 
@@ -283,10 +306,14 @@ public class UpdateCommandRequest extends Request {
      * <p>UpdateCommandRequest</p>
      */
     public static class ToolExamples extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Parameters")
+        private java.util.Map<String, String> parameters;
+
         @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
 
         private ToolExamples(Builder builder) {
+            this.parameters = builder.parameters;
             this.query = builder.query;
         }
 
@@ -299,6 +326,13 @@ public class UpdateCommandRequest extends Request {
         }
 
         /**
+         * @return parameters
+         */
+        public java.util.Map<String, String> getParameters() {
+            return this.parameters;
+        }
+
+        /**
          * @return query
          */
         public String getQuery() {
@@ -306,14 +340,24 @@ public class UpdateCommandRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.Map<String, String> parameters; 
             private String query; 
 
             private Builder() {
             } 
 
             private Builder(ToolExamples model) {
+                this.parameters = model.parameters;
                 this.query = model.query;
             } 
+
+            /**
+             * Parameters.
+             */
+            public Builder parameters(java.util.Map<String, String> parameters) {
+                this.parameters = parameters;
+                return this;
+            }
 
             /**
              * Query.
@@ -346,10 +390,18 @@ public class UpdateCommandRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
+        @com.aliyun.core.annotation.NameInMap("ParamType")
+        private String paramType;
+
+        @com.aliyun.core.annotation.NameInMap("Required")
+        private Boolean required;
+
         private ToolParams(Builder builder) {
             this.paramDesc = builder.paramDesc;
             this.paramExample = builder.paramExample;
             this.paramName = builder.paramName;
+            this.paramType = builder.paramType;
+            this.required = builder.required;
         }
 
         public static Builder builder() {
@@ -381,10 +433,26 @@ public class UpdateCommandRequest extends Request {
             return this.paramName;
         }
 
+        /**
+         * @return paramType
+         */
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        /**
+         * @return required
+         */
+        public Boolean getRequired() {
+            return this.required;
+        }
+
         public static final class Builder {
             private String paramDesc; 
             private String paramExample; 
             private String paramName; 
+            private String paramType; 
+            private Boolean required; 
 
             private Builder() {
             } 
@@ -393,6 +461,8 @@ public class UpdateCommandRequest extends Request {
                 this.paramDesc = model.paramDesc;
                 this.paramExample = model.paramExample;
                 this.paramName = model.paramName;
+                this.paramType = model.paramType;
+                this.required = model.required;
             } 
 
             /**
@@ -416,6 +486,22 @@ public class UpdateCommandRequest extends Request {
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
+                return this;
+            }
+
+            /**
+             * ParamType.
+             */
+            public Builder paramType(String paramType) {
+                this.paramType = paramType;
+                return this;
+            }
+
+            /**
+             * Required.
+             */
+            public Builder required(Boolean required) {
+                this.required = required;
                 return this;
             }
 

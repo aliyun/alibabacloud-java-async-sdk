@@ -47,6 +47,9 @@ public class DescribeCommandResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ModifyUserName")
     private String modifyUserName;
 
+    @com.aliyun.core.annotation.NameInMap("ReplyMode")
+    private String replyMode;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -73,6 +76,7 @@ public class DescribeCommandResponseBody extends TeaModel {
         this.gmtModified = builder.gmtModified;
         this.modifyUserId = builder.modifyUserId;
         this.modifyUserName = builder.modifyUserName;
+        this.replyMode = builder.replyMode;
         this.requestId = builder.requestId;
         this.toolExamples = builder.toolExamples;
         this.toolId = builder.toolId;
@@ -163,6 +167,13 @@ public class DescribeCommandResponseBody extends TeaModel {
     }
 
     /**
+     * @return replyMode
+     */
+    public String getReplyMode() {
+        return this.replyMode;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -208,6 +219,7 @@ public class DescribeCommandResponseBody extends TeaModel {
         private String gmtModified; 
         private String modifyUserId; 
         private String modifyUserName; 
+        private String replyMode; 
         private String requestId; 
         private java.util.List<ToolExamples> toolExamples; 
         private String toolId; 
@@ -228,6 +240,7 @@ public class DescribeCommandResponseBody extends TeaModel {
             this.gmtModified = model.gmtModified;
             this.modifyUserId = model.modifyUserId;
             this.modifyUserName = model.modifyUserName;
+            this.replyMode = model.replyMode;
             this.requestId = model.requestId;
             this.toolExamples = model.toolExamples;
             this.toolId = model.toolId;
@@ -316,6 +329,14 @@ public class DescribeCommandResponseBody extends TeaModel {
         }
 
         /**
+         * ReplyMode.
+         */
+        public Builder replyMode(String replyMode) {
+            this.replyMode = replyMode;
+            return this;
+        }
+
+        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -368,10 +389,14 @@ public class DescribeCommandResponseBody extends TeaModel {
      * <p>DescribeCommandResponseBody</p>
      */
     public static class ToolExamples extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Parameters")
+        private java.util.Map<String, String> parameters;
+
         @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
 
         private ToolExamples(Builder builder) {
+            this.parameters = builder.parameters;
             this.query = builder.query;
         }
 
@@ -384,6 +409,13 @@ public class DescribeCommandResponseBody extends TeaModel {
         }
 
         /**
+         * @return parameters
+         */
+        public java.util.Map<String, String> getParameters() {
+            return this.parameters;
+        }
+
+        /**
          * @return query
          */
         public String getQuery() {
@@ -391,14 +423,24 @@ public class DescribeCommandResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map<String, String> parameters; 
             private String query; 
 
             private Builder() {
             } 
 
             private Builder(ToolExamples model) {
+                this.parameters = model.parameters;
                 this.query = model.query;
             } 
+
+            /**
+             * Parameters.
+             */
+            public Builder parameters(java.util.Map<String, String> parameters) {
+                this.parameters = parameters;
+                return this;
+            }
 
             /**
              * Query.
@@ -431,10 +473,18 @@ public class DescribeCommandResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
+        @com.aliyun.core.annotation.NameInMap("ParamType")
+        private String paramType;
+
+        @com.aliyun.core.annotation.NameInMap("Required")
+        private Boolean required;
+
         private ToolParams(Builder builder) {
             this.paramDesc = builder.paramDesc;
             this.paramExample = builder.paramExample;
             this.paramName = builder.paramName;
+            this.paramType = builder.paramType;
+            this.required = builder.required;
         }
 
         public static Builder builder() {
@@ -466,10 +516,26 @@ public class DescribeCommandResponseBody extends TeaModel {
             return this.paramName;
         }
 
+        /**
+         * @return paramType
+         */
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        /**
+         * @return required
+         */
+        public Boolean getRequired() {
+            return this.required;
+        }
+
         public static final class Builder {
             private String paramDesc; 
             private String paramExample; 
             private String paramName; 
+            private String paramType; 
+            private Boolean required; 
 
             private Builder() {
             } 
@@ -478,6 +544,8 @@ public class DescribeCommandResponseBody extends TeaModel {
                 this.paramDesc = model.paramDesc;
                 this.paramExample = model.paramExample;
                 this.paramName = model.paramName;
+                this.paramType = model.paramType;
+                this.required = model.required;
             } 
 
             /**
@@ -501,6 +569,22 @@ public class DescribeCommandResponseBody extends TeaModel {
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
+                return this;
+            }
+
+            /**
+             * ParamType.
+             */
+            public Builder paramType(String paramType) {
+                this.paramType = paramType;
+                return this;
+            }
+
+            /**
+             * Required.
+             */
+            public Builder required(Boolean required) {
+                this.required = required;
                 return this;
             }
 
