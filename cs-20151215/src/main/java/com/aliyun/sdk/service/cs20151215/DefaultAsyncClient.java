@@ -2360,6 +2360,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunNodeOperation  RunNodeOperationRequest
+     * @return RunNodeOperationResponse
+     */
+    @Override
+    public CompletableFuture<RunNodeOperationResponse> runNodeOperation(RunNodeOperationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunNodeOperation").setMethod(HttpMethod.POST).setPathRegex("/clusters/{clusterId}/nodepools/{nodepoolId}/nodes/{nodeName}/operation").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunNodeOperationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunNodeOperationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ScaleClusterNodePool  ScaleClusterNodePoolRequest
      * @return ScaleClusterNodePoolResponse
      */

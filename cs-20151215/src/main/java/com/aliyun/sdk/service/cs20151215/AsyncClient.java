@@ -881,6 +881,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunClusterInspectResponse> runClusterInspect(RunClusterInspectRequest request);
 
     /**
+     * @param request the request parameters of RunNodeOperation  RunNodeOperationRequest
+     * @return RunNodeOperationResponse
+     */
+    CompletableFuture<RunNodeOperationResponse> runNodeOperation(RunNodeOperationRequest request);
+
+    /**
      * @param request the request parameters of ScaleClusterNodePool  ScaleClusterNodePoolRequest
      * @return ScaleClusterNodePoolResponse
      */
