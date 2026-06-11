@@ -112,6 +112,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CancelRayJob  CancelRayJobRequest
+     * @return CancelRayJobResponse
+     */
+    @Override
+    public CompletableFuture<CancelRayJobResponse> cancelRayJob(CancelRayJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CancelRayJob").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/{workspaceId}/rayJob/{submissionId}/cancel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelRayJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelRayJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -598,6 +616,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetRayJob  GetRayJobRequest
+     * @return GetRayJobResponse
+     */
+    @Override
+    public CompletableFuture<GetRayJobResponse> getRayJob(GetRayJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRayJob").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{workspaceId}/rayJob/{submissionId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRayJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRayJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetRunConfiguration  GetRunConfigurationRequest
      * @return GetRunConfigurationResponse
      */
@@ -940,6 +976,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListRayJob  ListRayJobRequest
+     * @return ListRayJobResponse
+     */
+    @Override
+    public CompletableFuture<ListRayJobResponse> listRayJob(ListRayJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListRayJob").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{workspaceId}/rayJob").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRayJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRayJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListReleaseVersions  ListReleaseVersionsRequest
      * @return ListReleaseVersionsResponse
      */
@@ -1240,6 +1294,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StopSessionClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitRayJob  SubmitRayJobRequest
+     * @return SubmitRayJobResponse
+     */
+    @Override
+    public CompletableFuture<SubmitRayJobResponse> submitRayJob(SubmitRayJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SubmitRayJob").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/{workspaceId}/rayJob").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitRayJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitRayJobResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

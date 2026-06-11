@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelKyuubiSparkApplicationResponse> cancelKyuubiSparkApplication(CancelKyuubiSparkApplicationRequest request);
 
     /**
+     * @param request the request parameters of CancelRayJob  CancelRayJobRequest
+     * @return CancelRayJobResponse
+     */
+    CompletableFuture<CancelRayJobResponse> cancelRayJob(CancelRayJobRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -206,6 +212,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRayClusterResponse> getRayCluster(GetRayClusterRequest request);
 
     /**
+     * @param request the request parameters of GetRayJob  GetRayJobRequest
+     * @return GetRayJobResponse
+     */
+    CompletableFuture<GetRayJobResponse> getRayJob(GetRayJobRequest request);
+
+    /**
      * @param request the request parameters of GetRunConfiguration  GetRunConfigurationRequest
      * @return GetRunConfigurationResponse
      */
@@ -320,6 +332,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRayClusterResponse> listRayCluster(ListRayClusterRequest request);
 
     /**
+     * @param request the request parameters of ListRayJob  ListRayJobRequest
+     * @return ListRayJobResponse
+     */
+    CompletableFuture<ListRayJobResponse> listRayJob(ListRayJobRequest request);
+
+    /**
      * @param request the request parameters of ListReleaseVersions  ListReleaseVersionsRequest
      * @return ListReleaseVersionsResponse
      */
@@ -420,6 +438,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopSessionClusterResponse
      */
     CompletableFuture<StopSessionClusterResponse> stopSessionCluster(StopSessionClusterRequest request);
+
+    /**
+     * @param request the request parameters of SubmitRayJob  SubmitRayJobRequest
+     * @return SubmitRayJobResponse
+     */
+    CompletableFuture<SubmitRayJobResponse> submitRayJob(SubmitRayJobRequest request);
 
     /**
      * @param request the request parameters of TerminateSqlStatement  TerminateSqlStatementRequest

@@ -611,6 +611,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private java.util.List<String> gpuSpec;
 
+        @com.aliyun.core.annotation.NameInMap("ipWhiteList")
+        private java.util.List<String> ipWhiteList;
+
         @com.aliyun.core.annotation.NameInMap("paymentDurationUnit")
         private String paymentDurationUnit;
 
@@ -664,6 +667,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.failReason = builder.failReason;
             this.gpuSpec = builder.gpuSpec;
+            this.ipWhiteList = builder.ipWhiteList;
             this.paymentDurationUnit = builder.paymentDurationUnit;
             this.paymentStatus = builder.paymentStatus;
             this.paymentType = builder.paymentType;
@@ -756,6 +760,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
          */
         public java.util.List<String> getGpuSpec() {
             return this.gpuSpec;
+        }
+
+        /**
+         * @return ipWhiteList
+         */
+        public java.util.List<String> getIpWhiteList() {
+            return this.ipWhiteList;
         }
 
         /**
@@ -867,6 +878,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private Long endTime; 
             private String failReason; 
             private java.util.List<String> gpuSpec; 
+            private java.util.List<String> ipWhiteList; 
             private String paymentDurationUnit; 
             private String paymentStatus; 
             private String paymentType; 
@@ -896,6 +908,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
                 this.endTime = model.endTime;
                 this.failReason = model.failReason;
                 this.gpuSpec = model.gpuSpec;
+                this.ipWhiteList = model.ipWhiteList;
                 this.paymentDurationUnit = model.paymentDurationUnit;
                 this.paymentStatus = model.paymentStatus;
                 this.paymentType = model.paymentType;
@@ -1016,6 +1029,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
              */
             public Builder gpuSpec(java.util.List<String> gpuSpec) {
                 this.gpuSpec = gpuSpec;
+                return this;
+            }
+
+            /**
+             * ipWhiteList.
+             */
+            public Builder ipWhiteList(java.util.List<String> ipWhiteList) {
+                this.ipWhiteList = ipWhiteList;
                 return this;
             }
 

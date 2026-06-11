@@ -30,6 +30,10 @@ public class UpdateWorkspaceRequest extends Request {
     private java.util.List<String> gpuSpec;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ipWhiteList")
+    private java.util.List<String> ipWhiteList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
@@ -54,6 +58,7 @@ public class UpdateWorkspaceRequest extends Request {
         this.cu = builder.cu;
         this.gpu = builder.gpu;
         this.gpuSpec = builder.gpuSpec;
+        this.ipWhiteList = builder.ipWhiteList;
         this.resourceGroupId = builder.resourceGroupId;
         this.subscription = builder.subscription;
         this.workspaceId = builder.workspaceId;
@@ -96,6 +101,13 @@ public class UpdateWorkspaceRequest extends Request {
     }
 
     /**
+     * @return ipWhiteList
+     */
+    public java.util.List<String> getIpWhiteList() {
+        return this.ipWhiteList;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -134,6 +146,7 @@ public class UpdateWorkspaceRequest extends Request {
         private Integer cu; 
         private Integer gpu; 
         private java.util.List<String> gpuSpec; 
+        private java.util.List<String> ipWhiteList; 
         private String resourceGroupId; 
         private Subscription subscription; 
         private String workspaceId; 
@@ -149,6 +162,7 @@ public class UpdateWorkspaceRequest extends Request {
             this.cu = request.cu;
             this.gpu = request.gpu;
             this.gpuSpec = request.gpuSpec;
+            this.ipWhiteList = request.ipWhiteList;
             this.resourceGroupId = request.resourceGroupId;
             this.subscription = request.subscription;
             this.workspaceId = request.workspaceId;
@@ -180,6 +194,15 @@ public class UpdateWorkspaceRequest extends Request {
         public Builder gpuSpec(java.util.List<String> gpuSpec) {
             this.putBodyParameter("gpuSpec", gpuSpec);
             this.gpuSpec = gpuSpec;
+            return this;
+        }
+
+        /**
+         * ipWhiteList.
+         */
+        public Builder ipWhiteList(java.util.List<String> ipWhiteList) {
+            this.putBodyParameter("ipWhiteList", ipWhiteList);
+            this.ipWhiteList = ipWhiteList;
             return this;
         }
 

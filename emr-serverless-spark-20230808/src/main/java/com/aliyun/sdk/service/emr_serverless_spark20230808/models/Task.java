@@ -111,6 +111,63 @@ public class Task extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("pyFiles")
     private java.util.List<String> pyFiles;
 
+    @com.aliyun.core.annotation.NameInMap("rayActiveDeadlineSeconds")
+    private Long rayActiveDeadlineSeconds;
+
+    @com.aliyun.core.annotation.NameInMap("rayBackoffLimit")
+    private Integer rayBackoffLimit;
+
+    @com.aliyun.core.annotation.NameInMap("rayEntrypoint")
+    private String rayEntrypoint;
+
+    @com.aliyun.core.annotation.NameInMap("rayEntrypointMemory")
+    private String rayEntrypointMemory;
+
+    @com.aliyun.core.annotation.NameInMap("rayEntrypointNumCpus")
+    private String rayEntrypointNumCpus;
+
+    @com.aliyun.core.annotation.NameInMap("rayEntrypointNumGpus")
+    private String rayEntrypointNumGpus;
+
+    @com.aliyun.core.annotation.NameInMap("rayEntrypointResources")
+    private String rayEntrypointResources;
+
+    @com.aliyun.core.annotation.NameInMap("rayExtraParam")
+    private String rayExtraParam;
+
+    @com.aliyun.core.annotation.NameInMap("rayHeadSpec")
+    private RayHeadSpec rayHeadSpec;
+
+    @com.aliyun.core.annotation.NameInMap("rayMetadataJson")
+    private String rayMetadataJson;
+
+    @com.aliyun.core.annotation.NameInMap("rayNetworkServiceName")
+    private String rayNetworkServiceName;
+
+    @com.aliyun.core.annotation.NameInMap("rayRuntimeEnvJson")
+    private String rayRuntimeEnvJson;
+
+    @com.aliyun.core.annotation.NameInMap("rayShutdownAfterJobFinishes")
+    private Boolean rayShutdownAfterJobFinishes;
+
+    @com.aliyun.core.annotation.NameInMap("raySubmissionMode")
+    private String raySubmissionMode;
+
+    @com.aliyun.core.annotation.NameInMap("rayTtlSecondsAfterFinished")
+    private Long rayTtlSecondsAfterFinished;
+
+    @com.aliyun.core.annotation.NameInMap("rayVersion")
+    private String rayVersion;
+
+    @com.aliyun.core.annotation.NameInMap("rayVolumeIds")
+    private java.util.List<String> rayVolumeIds;
+
+    @com.aliyun.core.annotation.NameInMap("rayWorkerSpec")
+    private java.util.List<RayWorkerSpec> rayWorkerSpec;
+
+    @com.aliyun.core.annotation.NameInMap("rayWorkingDir")
+    private String rayWorkingDir;
+
     @com.aliyun.core.annotation.NameInMap("sessionClusterId")
     private String sessionClusterId;
 
@@ -194,6 +251,25 @@ public class Task extends TeaModel {
         this.name = builder.name;
         this.params = builder.params;
         this.pyFiles = builder.pyFiles;
+        this.rayActiveDeadlineSeconds = builder.rayActiveDeadlineSeconds;
+        this.rayBackoffLimit = builder.rayBackoffLimit;
+        this.rayEntrypoint = builder.rayEntrypoint;
+        this.rayEntrypointMemory = builder.rayEntrypointMemory;
+        this.rayEntrypointNumCpus = builder.rayEntrypointNumCpus;
+        this.rayEntrypointNumGpus = builder.rayEntrypointNumGpus;
+        this.rayEntrypointResources = builder.rayEntrypointResources;
+        this.rayExtraParam = builder.rayExtraParam;
+        this.rayHeadSpec = builder.rayHeadSpec;
+        this.rayMetadataJson = builder.rayMetadataJson;
+        this.rayNetworkServiceName = builder.rayNetworkServiceName;
+        this.rayRuntimeEnvJson = builder.rayRuntimeEnvJson;
+        this.rayShutdownAfterJobFinishes = builder.rayShutdownAfterJobFinishes;
+        this.raySubmissionMode = builder.raySubmissionMode;
+        this.rayTtlSecondsAfterFinished = builder.rayTtlSecondsAfterFinished;
+        this.rayVersion = builder.rayVersion;
+        this.rayVolumeIds = builder.rayVolumeIds;
+        this.rayWorkerSpec = builder.rayWorkerSpec;
+        this.rayWorkingDir = builder.rayWorkingDir;
         this.sessionClusterId = builder.sessionClusterId;
         this.sparkArgs = builder.sparkArgs;
         this.sparkConf = builder.sparkConf;
@@ -427,6 +503,139 @@ public class Task extends TeaModel {
     }
 
     /**
+     * @return rayActiveDeadlineSeconds
+     */
+    public Long getRayActiveDeadlineSeconds() {
+        return this.rayActiveDeadlineSeconds;
+    }
+
+    /**
+     * @return rayBackoffLimit
+     */
+    public Integer getRayBackoffLimit() {
+        return this.rayBackoffLimit;
+    }
+
+    /**
+     * @return rayEntrypoint
+     */
+    public String getRayEntrypoint() {
+        return this.rayEntrypoint;
+    }
+
+    /**
+     * @return rayEntrypointMemory
+     */
+    public String getRayEntrypointMemory() {
+        return this.rayEntrypointMemory;
+    }
+
+    /**
+     * @return rayEntrypointNumCpus
+     */
+    public String getRayEntrypointNumCpus() {
+        return this.rayEntrypointNumCpus;
+    }
+
+    /**
+     * @return rayEntrypointNumGpus
+     */
+    public String getRayEntrypointNumGpus() {
+        return this.rayEntrypointNumGpus;
+    }
+
+    /**
+     * @return rayEntrypointResources
+     */
+    public String getRayEntrypointResources() {
+        return this.rayEntrypointResources;
+    }
+
+    /**
+     * @return rayExtraParam
+     */
+    public String getRayExtraParam() {
+        return this.rayExtraParam;
+    }
+
+    /**
+     * @return rayHeadSpec
+     */
+    public RayHeadSpec getRayHeadSpec() {
+        return this.rayHeadSpec;
+    }
+
+    /**
+     * @return rayMetadataJson
+     */
+    public String getRayMetadataJson() {
+        return this.rayMetadataJson;
+    }
+
+    /**
+     * @return rayNetworkServiceName
+     */
+    public String getRayNetworkServiceName() {
+        return this.rayNetworkServiceName;
+    }
+
+    /**
+     * @return rayRuntimeEnvJson
+     */
+    public String getRayRuntimeEnvJson() {
+        return this.rayRuntimeEnvJson;
+    }
+
+    /**
+     * @return rayShutdownAfterJobFinishes
+     */
+    public Boolean getRayShutdownAfterJobFinishes() {
+        return this.rayShutdownAfterJobFinishes;
+    }
+
+    /**
+     * @return raySubmissionMode
+     */
+    public String getRaySubmissionMode() {
+        return this.raySubmissionMode;
+    }
+
+    /**
+     * @return rayTtlSecondsAfterFinished
+     */
+    public Long getRayTtlSecondsAfterFinished() {
+        return this.rayTtlSecondsAfterFinished;
+    }
+
+    /**
+     * @return rayVersion
+     */
+    public String getRayVersion() {
+        return this.rayVersion;
+    }
+
+    /**
+     * @return rayVolumeIds
+     */
+    public java.util.List<String> getRayVolumeIds() {
+        return this.rayVolumeIds;
+    }
+
+    /**
+     * @return rayWorkerSpec
+     */
+    public java.util.List<RayWorkerSpec> getRayWorkerSpec() {
+        return this.rayWorkerSpec;
+    }
+
+    /**
+     * @return rayWorkingDir
+     */
+    public String getRayWorkingDir() {
+        return this.rayWorkingDir;
+    }
+
+    /**
      * @return sessionClusterId
      */
     public String getSessionClusterId() {
@@ -561,6 +770,25 @@ public class Task extends TeaModel {
         private String name; 
         private java.util.Map<String, String> params; 
         private java.util.List<String> pyFiles; 
+        private Long rayActiveDeadlineSeconds; 
+        private Integer rayBackoffLimit; 
+        private String rayEntrypoint; 
+        private String rayEntrypointMemory; 
+        private String rayEntrypointNumCpus; 
+        private String rayEntrypointNumGpus; 
+        private String rayEntrypointResources; 
+        private String rayExtraParam; 
+        private RayHeadSpec rayHeadSpec; 
+        private String rayMetadataJson; 
+        private String rayNetworkServiceName; 
+        private String rayRuntimeEnvJson; 
+        private Boolean rayShutdownAfterJobFinishes; 
+        private String raySubmissionMode; 
+        private Long rayTtlSecondsAfterFinished; 
+        private String rayVersion; 
+        private java.util.List<String> rayVolumeIds; 
+        private java.util.List<RayWorkerSpec> rayWorkerSpec; 
+        private String rayWorkingDir; 
         private String sessionClusterId; 
         private String sparkArgs; 
         private java.util.List<SparkConf> sparkConf; 
@@ -610,6 +838,25 @@ public class Task extends TeaModel {
             this.name = model.name;
             this.params = model.params;
             this.pyFiles = model.pyFiles;
+            this.rayActiveDeadlineSeconds = model.rayActiveDeadlineSeconds;
+            this.rayBackoffLimit = model.rayBackoffLimit;
+            this.rayEntrypoint = model.rayEntrypoint;
+            this.rayEntrypointMemory = model.rayEntrypointMemory;
+            this.rayEntrypointNumCpus = model.rayEntrypointNumCpus;
+            this.rayEntrypointNumGpus = model.rayEntrypointNumGpus;
+            this.rayEntrypointResources = model.rayEntrypointResources;
+            this.rayExtraParam = model.rayExtraParam;
+            this.rayHeadSpec = model.rayHeadSpec;
+            this.rayMetadataJson = model.rayMetadataJson;
+            this.rayNetworkServiceName = model.rayNetworkServiceName;
+            this.rayRuntimeEnvJson = model.rayRuntimeEnvJson;
+            this.rayShutdownAfterJobFinishes = model.rayShutdownAfterJobFinishes;
+            this.raySubmissionMode = model.raySubmissionMode;
+            this.rayTtlSecondsAfterFinished = model.rayTtlSecondsAfterFinished;
+            this.rayVersion = model.rayVersion;
+            this.rayVolumeIds = model.rayVolumeIds;
+            this.rayWorkerSpec = model.rayWorkerSpec;
+            this.rayWorkingDir = model.rayWorkingDir;
             this.sessionClusterId = model.sessionClusterId;
             this.sparkArgs = model.sparkArgs;
             this.sparkConf = model.sparkConf;
@@ -856,6 +1103,158 @@ public class Task extends TeaModel {
          */
         public Builder pyFiles(java.util.List<String> pyFiles) {
             this.pyFiles = pyFiles;
+            return this;
+        }
+
+        /**
+         * rayActiveDeadlineSeconds.
+         */
+        public Builder rayActiveDeadlineSeconds(Long rayActiveDeadlineSeconds) {
+            this.rayActiveDeadlineSeconds = rayActiveDeadlineSeconds;
+            return this;
+        }
+
+        /**
+         * rayBackoffLimit.
+         */
+        public Builder rayBackoffLimit(Integer rayBackoffLimit) {
+            this.rayBackoffLimit = rayBackoffLimit;
+            return this;
+        }
+
+        /**
+         * rayEntrypoint.
+         */
+        public Builder rayEntrypoint(String rayEntrypoint) {
+            this.rayEntrypoint = rayEntrypoint;
+            return this;
+        }
+
+        /**
+         * rayEntrypointMemory.
+         */
+        public Builder rayEntrypointMemory(String rayEntrypointMemory) {
+            this.rayEntrypointMemory = rayEntrypointMemory;
+            return this;
+        }
+
+        /**
+         * rayEntrypointNumCpus.
+         */
+        public Builder rayEntrypointNumCpus(String rayEntrypointNumCpus) {
+            this.rayEntrypointNumCpus = rayEntrypointNumCpus;
+            return this;
+        }
+
+        /**
+         * rayEntrypointNumGpus.
+         */
+        public Builder rayEntrypointNumGpus(String rayEntrypointNumGpus) {
+            this.rayEntrypointNumGpus = rayEntrypointNumGpus;
+            return this;
+        }
+
+        /**
+         * rayEntrypointResources.
+         */
+        public Builder rayEntrypointResources(String rayEntrypointResources) {
+            this.rayEntrypointResources = rayEntrypointResources;
+            return this;
+        }
+
+        /**
+         * rayExtraParam.
+         */
+        public Builder rayExtraParam(String rayExtraParam) {
+            this.rayExtraParam = rayExtraParam;
+            return this;
+        }
+
+        /**
+         * rayHeadSpec.
+         */
+        public Builder rayHeadSpec(RayHeadSpec rayHeadSpec) {
+            this.rayHeadSpec = rayHeadSpec;
+            return this;
+        }
+
+        /**
+         * rayMetadataJson.
+         */
+        public Builder rayMetadataJson(String rayMetadataJson) {
+            this.rayMetadataJson = rayMetadataJson;
+            return this;
+        }
+
+        /**
+         * rayNetworkServiceName.
+         */
+        public Builder rayNetworkServiceName(String rayNetworkServiceName) {
+            this.rayNetworkServiceName = rayNetworkServiceName;
+            return this;
+        }
+
+        /**
+         * rayRuntimeEnvJson.
+         */
+        public Builder rayRuntimeEnvJson(String rayRuntimeEnvJson) {
+            this.rayRuntimeEnvJson = rayRuntimeEnvJson;
+            return this;
+        }
+
+        /**
+         * rayShutdownAfterJobFinishes.
+         */
+        public Builder rayShutdownAfterJobFinishes(Boolean rayShutdownAfterJobFinishes) {
+            this.rayShutdownAfterJobFinishes = rayShutdownAfterJobFinishes;
+            return this;
+        }
+
+        /**
+         * raySubmissionMode.
+         */
+        public Builder raySubmissionMode(String raySubmissionMode) {
+            this.raySubmissionMode = raySubmissionMode;
+            return this;
+        }
+
+        /**
+         * rayTtlSecondsAfterFinished.
+         */
+        public Builder rayTtlSecondsAfterFinished(Long rayTtlSecondsAfterFinished) {
+            this.rayTtlSecondsAfterFinished = rayTtlSecondsAfterFinished;
+            return this;
+        }
+
+        /**
+         * rayVersion.
+         */
+        public Builder rayVersion(String rayVersion) {
+            this.rayVersion = rayVersion;
+            return this;
+        }
+
+        /**
+         * rayVolumeIds.
+         */
+        public Builder rayVolumeIds(java.util.List<String> rayVolumeIds) {
+            this.rayVolumeIds = rayVolumeIds;
+            return this;
+        }
+
+        /**
+         * rayWorkerSpec.
+         */
+        public Builder rayWorkerSpec(java.util.List<RayWorkerSpec> rayWorkerSpec) {
+            this.rayWorkerSpec = rayWorkerSpec;
+            return this;
+        }
+
+        /**
+         * rayWorkingDir.
+         */
+        public Builder rayWorkingDir(String rayWorkingDir) {
+            this.rayWorkingDir = rayWorkingDir;
             return this;
         }
 
@@ -1181,6 +1580,387 @@ public class Task extends TeaModel {
 
             public Credential build() {
                 return new Credential(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link Task} extends {@link TeaModel}
+     *
+     * <p>Task</p>
+     */
+    public static class RayHeadSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cpu")
+        private String cpu;
+
+        @com.aliyun.core.annotation.NameInMap("enableAutoScaling")
+        private Boolean enableAutoScaling;
+
+        @com.aliyun.core.annotation.NameInMap("gpuSpec")
+        private String gpuSpec;
+
+        @com.aliyun.core.annotation.NameInMap("idleTimeoutSeconds")
+        private Long idleTimeoutSeconds;
+
+        @com.aliyun.core.annotation.NameInMap("memory")
+        private String memory;
+
+        @com.aliyun.core.annotation.NameInMap("queueName")
+        private String queueName;
+
+        @com.aliyun.core.annotation.NameInMap("replica")
+        private Integer replica;
+
+        private RayHeadSpec(Builder builder) {
+            this.cpu = builder.cpu;
+            this.enableAutoScaling = builder.enableAutoScaling;
+            this.gpuSpec = builder.gpuSpec;
+            this.idleTimeoutSeconds = builder.idleTimeoutSeconds;
+            this.memory = builder.memory;
+            this.queueName = builder.queueName;
+            this.replica = builder.replica;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RayHeadSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public String getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return enableAutoScaling
+         */
+        public Boolean getEnableAutoScaling() {
+            return this.enableAutoScaling;
+        }
+
+        /**
+         * @return gpuSpec
+         */
+        public String getGpuSpec() {
+            return this.gpuSpec;
+        }
+
+        /**
+         * @return idleTimeoutSeconds
+         */
+        public Long getIdleTimeoutSeconds() {
+            return this.idleTimeoutSeconds;
+        }
+
+        /**
+         * @return memory
+         */
+        public String getMemory() {
+            return this.memory;
+        }
+
+        /**
+         * @return queueName
+         */
+        public String getQueueName() {
+            return this.queueName;
+        }
+
+        /**
+         * @return replica
+         */
+        public Integer getReplica() {
+            return this.replica;
+        }
+
+        public static final class Builder {
+            private String cpu; 
+            private Boolean enableAutoScaling; 
+            private String gpuSpec; 
+            private Long idleTimeoutSeconds; 
+            private String memory; 
+            private String queueName; 
+            private Integer replica; 
+
+            private Builder() {
+            } 
+
+            private Builder(RayHeadSpec model) {
+                this.cpu = model.cpu;
+                this.enableAutoScaling = model.enableAutoScaling;
+                this.gpuSpec = model.gpuSpec;
+                this.idleTimeoutSeconds = model.idleTimeoutSeconds;
+                this.memory = model.memory;
+                this.queueName = model.queueName;
+                this.replica = model.replica;
+            } 
+
+            /**
+             * cpu.
+             */
+            public Builder cpu(String cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * enableAutoScaling.
+             */
+            public Builder enableAutoScaling(Boolean enableAutoScaling) {
+                this.enableAutoScaling = enableAutoScaling;
+                return this;
+            }
+
+            /**
+             * gpuSpec.
+             */
+            public Builder gpuSpec(String gpuSpec) {
+                this.gpuSpec = gpuSpec;
+                return this;
+            }
+
+            /**
+             * idleTimeoutSeconds.
+             */
+            public Builder idleTimeoutSeconds(Long idleTimeoutSeconds) {
+                this.idleTimeoutSeconds = idleTimeoutSeconds;
+                return this;
+            }
+
+            /**
+             * memory.
+             */
+            public Builder memory(String memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * queueName.
+             */
+            public Builder queueName(String queueName) {
+                this.queueName = queueName;
+                return this;
+            }
+
+            /**
+             * replica.
+             */
+            public Builder replica(Integer replica) {
+                this.replica = replica;
+                return this;
+            }
+
+            public RayHeadSpec build() {
+                return new RayHeadSpec(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link Task} extends {@link TeaModel}
+     *
+     * <p>Task</p>
+     */
+    public static class RayWorkerSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cpu")
+        private String cpu;
+
+        @com.aliyun.core.annotation.NameInMap("gpuSpec")
+        private String gpuSpec;
+
+        @com.aliyun.core.annotation.NameInMap("groupName")
+        private String groupName;
+
+        @com.aliyun.core.annotation.NameInMap("maxReplica")
+        private Integer maxReplica;
+
+        @com.aliyun.core.annotation.NameInMap("memory")
+        private String memory;
+
+        @com.aliyun.core.annotation.NameInMap("minReplica")
+        private Integer minReplica;
+
+        @com.aliyun.core.annotation.NameInMap("queueName")
+        private String queueName;
+
+        @com.aliyun.core.annotation.NameInMap("replica")
+        private Integer replica;
+
+        private RayWorkerSpec(Builder builder) {
+            this.cpu = builder.cpu;
+            this.gpuSpec = builder.gpuSpec;
+            this.groupName = builder.groupName;
+            this.maxReplica = builder.maxReplica;
+            this.memory = builder.memory;
+            this.minReplica = builder.minReplica;
+            this.queueName = builder.queueName;
+            this.replica = builder.replica;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RayWorkerSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public String getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return gpuSpec
+         */
+        public String getGpuSpec() {
+            return this.gpuSpec;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return maxReplica
+         */
+        public Integer getMaxReplica() {
+            return this.maxReplica;
+        }
+
+        /**
+         * @return memory
+         */
+        public String getMemory() {
+            return this.memory;
+        }
+
+        /**
+         * @return minReplica
+         */
+        public Integer getMinReplica() {
+            return this.minReplica;
+        }
+
+        /**
+         * @return queueName
+         */
+        public String getQueueName() {
+            return this.queueName;
+        }
+
+        /**
+         * @return replica
+         */
+        public Integer getReplica() {
+            return this.replica;
+        }
+
+        public static final class Builder {
+            private String cpu; 
+            private String gpuSpec; 
+            private String groupName; 
+            private Integer maxReplica; 
+            private String memory; 
+            private Integer minReplica; 
+            private String queueName; 
+            private Integer replica; 
+
+            private Builder() {
+            } 
+
+            private Builder(RayWorkerSpec model) {
+                this.cpu = model.cpu;
+                this.gpuSpec = model.gpuSpec;
+                this.groupName = model.groupName;
+                this.maxReplica = model.maxReplica;
+                this.memory = model.memory;
+                this.minReplica = model.minReplica;
+                this.queueName = model.queueName;
+                this.replica = model.replica;
+            } 
+
+            /**
+             * cpu.
+             */
+            public Builder cpu(String cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * gpuSpec.
+             */
+            public Builder gpuSpec(String gpuSpec) {
+                this.gpuSpec = gpuSpec;
+                return this;
+            }
+
+            /**
+             * groupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * maxReplica.
+             */
+            public Builder maxReplica(Integer maxReplica) {
+                this.maxReplica = maxReplica;
+                return this;
+            }
+
+            /**
+             * memory.
+             */
+            public Builder memory(String memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * minReplica.
+             */
+            public Builder minReplica(Integer minReplica) {
+                this.minReplica = minReplica;
+                return this;
+            }
+
+            /**
+             * queueName.
+             */
+            public Builder queueName(String queueName) {
+                this.queueName = queueName;
+                return this;
+            }
+
+            /**
+             * replica.
+             */
+            public Builder replica(Integer replica) {
+                this.replica = replica;
+                return this;
+            }
+
+            public RayWorkerSpec build() {
+                return new RayWorkerSpec(this);
             } 
 
         } 
