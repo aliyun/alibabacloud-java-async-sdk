@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddGatewayQuotaRule  AddGatewayQuotaRuleRequest
+     * @return AddGatewayQuotaRuleResponse
+     */
+    CompletableFuture<AddGatewayQuotaRuleResponse> addGatewayQuotaRule(AddGatewayQuotaRuleRequest request);
+
+    /**
      * @param request the request parameters of AddGatewaySecurityGroupRule  AddGatewaySecurityGroupRuleRequest
      * @return AddGatewaySecurityGroupRuleResponse
      */
@@ -184,6 +190,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteGatewayResponse> deleteGateway(DeleteGatewayRequest request);
 
     /**
+     * @param request the request parameters of DeleteGatewayQuotaRule  DeleteGatewayQuotaRuleRequest
+     * @return DeleteGatewayQuotaRuleResponse
+     */
+    CompletableFuture<DeleteGatewayQuotaRuleResponse> deleteGatewayQuotaRule(DeleteGatewayQuotaRuleRequest request);
+
+    /**
      * @param request the request parameters of DeleteGatewaySecurityGroupRule  DeleteGatewaySecurityGroupRuleRequest
      * @return DeleteGatewaySecurityGroupRuleResponse
      */
@@ -309,6 +321,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetGatewayResponse
      */
     CompletableFuture<GetGatewayResponse> getGateway(GetGatewayRequest request);
+
+    /**
+     * @param request the request parameters of GetGatewayQuotaRule  GetGatewayQuotaRuleRequest
+     * @return GetGatewayQuotaRuleResponse
+     */
+    CompletableFuture<GetGatewayQuotaRuleResponse> getGatewayQuotaRule(GetGatewayQuotaRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetGatewayQuotaRuleSubjectUsage  GetGatewayQuotaRuleSubjectUsageRequest
+     * @return GetGatewayQuotaRuleSubjectUsageResponse
+     */
+    CompletableFuture<GetGatewayQuotaRuleSubjectUsageResponse> getGatewayQuotaRuleSubjectUsage(GetGatewayQuotaRuleSubjectUsageRequest request);
 
     /**
      * @param request the request parameters of GetHttpApi  GetHttpApiRequest
@@ -444,6 +468,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGatewayFeaturesResponse> listGatewayFeatures(ListGatewayFeaturesRequest request);
 
     /**
+     * @param request the request parameters of ListGatewayQuotaRules  ListGatewayQuotaRulesRequest
+     * @return ListGatewayQuotaRulesResponse
+     */
+    CompletableFuture<ListGatewayQuotaRulesResponse> listGatewayQuotaRules(ListGatewayQuotaRulesRequest request);
+
+    /**
      * @param request the request parameters of ListGateways  ListGatewaysRequest
      * @return ListGatewaysResponse
      */
@@ -555,6 +585,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveConsumerAuthorizationRuleResponse> removeConsumerAuthorizationRule(RemoveConsumerAuthorizationRuleRequest request);
 
     /**
+     * @param request the request parameters of ResetGatewayQuotaRule  ResetGatewayQuotaRuleRequest
+     * @return ResetGatewayQuotaRuleResponse
+     */
+    CompletableFuture<ResetGatewayQuotaRuleResponse> resetGatewayQuotaRule(ResetGatewayQuotaRuleRequest request);
+
+    /**
      * @param request the request parameters of RestartGateway  RestartGatewayRequest
      * @return RestartGatewayResponse
      */
@@ -629,6 +665,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateGatewayNameResponse
      */
     CompletableFuture<UpdateGatewayNameResponse> updateGatewayName(UpdateGatewayNameRequest request);
+
+    /**
+     * @param request the request parameters of UpdateGatewayQuotaRule  UpdateGatewayQuotaRuleRequest
+     * @return UpdateGatewayQuotaRuleResponse
+     */
+    CompletableFuture<UpdateGatewayQuotaRuleResponse> updateGatewayQuotaRule(UpdateGatewayQuotaRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateGatewayQuotaRuleStatus  UpdateGatewayQuotaRuleStatusRequest
+     * @return UpdateGatewayQuotaRuleStatusResponse
+     */
+    CompletableFuture<UpdateGatewayQuotaRuleStatusResponse> updateGatewayQuotaRuleStatus(UpdateGatewayQuotaRuleStatusRequest request);
 
     /**
      * @param request the request parameters of UpdateHttpApi  UpdateHttpApiRequest

@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddGatewayQuotaRule  AddGatewayQuotaRuleRequest
+     * @return AddGatewayQuotaRuleResponse
+     */
+    @Override
+    public CompletableFuture<AddGatewayQuotaRuleResponse> addGatewayQuotaRule(AddGatewayQuotaRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddGatewayQuotaRule").setMethod(HttpMethod.POST).setPathRegex("/v1/gateways/{gatewayId}/quota-rules").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddGatewayQuotaRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddGatewayQuotaRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddGatewaySecurityGroupRule  AddGatewaySecurityGroupRuleRequest
      * @return AddGatewaySecurityGroupRuleResponse
      */
@@ -516,6 +534,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteGatewayQuotaRule  DeleteGatewayQuotaRuleRequest
+     * @return DeleteGatewayQuotaRuleResponse
+     */
+    @Override
+    public CompletableFuture<DeleteGatewayQuotaRuleResponse> deleteGatewayQuotaRule(DeleteGatewayQuotaRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteGatewayQuotaRule").setMethod(HttpMethod.DELETE).setPathRegex("/v1/gateways/{gatewayId}/quota-rules/{ruleId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteGatewayQuotaRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteGatewayQuotaRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteGatewaySecurityGroupRule  DeleteGatewaySecurityGroupRuleRequest
      * @return DeleteGatewaySecurityGroupRuleResponse
      */
@@ -889,6 +925,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetGatewayQuotaRule  GetGatewayQuotaRuleRequest
+     * @return GetGatewayQuotaRuleResponse
+     */
+    @Override
+    public CompletableFuture<GetGatewayQuotaRuleResponse> getGatewayQuotaRule(GetGatewayQuotaRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetGatewayQuotaRule").setMethod(HttpMethod.GET).setPathRegex("/v1/gateways/{gatewayId}/quota-rules/{ruleId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGatewayQuotaRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGatewayQuotaRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetGatewayQuotaRuleSubjectUsage  GetGatewayQuotaRuleSubjectUsageRequest
+     * @return GetGatewayQuotaRuleSubjectUsageResponse
+     */
+    @Override
+    public CompletableFuture<GetGatewayQuotaRuleSubjectUsageResponse> getGatewayQuotaRuleSubjectUsage(GetGatewayQuotaRuleSubjectUsageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetGatewayQuotaRuleSubjectUsage").setMethod(HttpMethod.GET).setPathRegex("/v1/gateways/{gatewayId}/quota-rules/{ruleId}/subjects/{subjectId}/usage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGatewayQuotaRuleSubjectUsageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGatewayQuotaRuleSubjectUsageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1280,6 +1352,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListGatewayQuotaRules  ListGatewayQuotaRulesRequest
+     * @return ListGatewayQuotaRulesResponse
+     */
+    @Override
+    public CompletableFuture<ListGatewayQuotaRulesResponse> listGatewayQuotaRules(ListGatewayQuotaRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListGatewayQuotaRules").setMethod(HttpMethod.GET).setPathRegex("/v1/gateways/{gatewayId}/quota-rules").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListGatewayQuotaRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListGatewayQuotaRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListGateways  ListGatewaysRequest
      * @return ListGatewaysResponse
      */
@@ -1595,6 +1685,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ResetGatewayQuotaRule  ResetGatewayQuotaRuleRequest
+     * @return ResetGatewayQuotaRuleResponse
+     */
+    @Override
+    public CompletableFuture<ResetGatewayQuotaRuleResponse> resetGatewayQuotaRule(ResetGatewayQuotaRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ResetGatewayQuotaRule").setMethod(HttpMethod.POST).setPathRegex("/v1/gateways/{gatewayId}/quota-rules/{ruleId}/reset").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResetGatewayQuotaRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResetGatewayQuotaRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RestartGateway  RestartGatewayRequest
      * @return RestartGatewayResponse
      */
@@ -1809,6 +1917,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateGatewayNameResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateGatewayQuotaRule  UpdateGatewayQuotaRuleRequest
+     * @return UpdateGatewayQuotaRuleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateGatewayQuotaRuleResponse> updateGatewayQuotaRule(UpdateGatewayQuotaRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateGatewayQuotaRule").setMethod(HttpMethod.PUT).setPathRegex("/v1/gateways/{gatewayId}/quota-rules/{ruleId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateGatewayQuotaRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateGatewayQuotaRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateGatewayQuotaRuleStatus  UpdateGatewayQuotaRuleStatusRequest
+     * @return UpdateGatewayQuotaRuleStatusResponse
+     */
+    @Override
+    public CompletableFuture<UpdateGatewayQuotaRuleStatusResponse> updateGatewayQuotaRuleStatus(UpdateGatewayQuotaRuleStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateGatewayQuotaRuleStatus").setMethod(HttpMethod.POST).setPathRegex("/v1/gateways/{gatewayId}/quota-rules/{ruleId}/status").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateGatewayQuotaRuleStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateGatewayQuotaRuleStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
