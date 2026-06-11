@@ -21,20 +21,20 @@ public class SaveWorkspaceCodeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Content")
     @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Iac")
     private Boolean iac;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Mtime")
     private String mtime;
 
@@ -43,7 +43,7 @@ public class SaveWorkspaceCodeRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String path;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Repo")
     private String repo;
 
@@ -170,12 +170,9 @@ public class SaveWorkspaceCodeRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Description: &quot;Example template, describe instances in some status&quot;nFormatVersion: OOS-2019-06-01nTasks:n  - Name: SleepTaskn    Action: ACS::Sleepn    Properties:n      Duration: PT1Mn</p>
          */
         public Builder content(String content) {
-            this.putQueryParameter("Content", content);
+            this.putBodyParameter("Content", content);
             this.content = content;
             return this;
         }
@@ -184,7 +181,7 @@ public class SaveWorkspaceCodeRequest extends Request {
          * Force.
          */
         public Builder force(Boolean force) {
-            this.putQueryParameter("Force", force);
+            this.putBodyParameter("Force", force);
             this.force = force;
             return this;
         }
@@ -193,7 +190,7 @@ public class SaveWorkspaceCodeRequest extends Request {
          * Iac.
          */
         public Builder iac(Boolean iac) {
-            this.putQueryParameter("Iac", iac);
+            this.putBodyParameter("Iac", iac);
             this.iac = iac;
             return this;
         }
@@ -202,7 +199,7 @@ public class SaveWorkspaceCodeRequest extends Request {
          * Mtime.
          */
         public Builder mtime(String mtime) {
-            this.putQueryParameter("Mtime", mtime);
+            this.putBodyParameter("Mtime", mtime);
             this.mtime = mtime;
             return this;
         }
@@ -223,7 +220,7 @@ public class SaveWorkspaceCodeRequest extends Request {
          * Repo.
          */
         public Builder repo(String repo) {
-            this.putQueryParameter("Repo", repo);
+            this.putBodyParameter("Repo", repo);
             this.repo = repo;
             return this;
         }
