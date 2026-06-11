@@ -25,4 +25,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateSkillFileCheckResponse> createSkillFileCheck(CreateSkillFileCheckRequest request);
 
+    /**
+     * @param request the request parameters of ListSubTasks  ListSubTasksRequest
+     * @return ListSubTasksResponse
+     */
+    CompletableFuture<ListSubTasksResponse> listSubTasks(ListSubTasksRequest request);
+
 }
