@@ -765,6 +765,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ManageAlertRulesResponse> manageAlertRules(ManageAlertRulesRequest request);
 
     /**
+     * @param request the request parameters of OpenCmsService  OpenCmsServiceRequest
+     * @return OpenCmsServiceResponse
+     */
+    CompletableFuture<OpenCmsServiceResponse> openCmsService(OpenCmsServiceRequest request);
+
+    /**
      * @param request the request parameters of PutWorkspace  PutWorkspaceRequest
      * @return PutWorkspaceResponse
      */

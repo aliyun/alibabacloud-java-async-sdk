@@ -27,6 +27,14 @@ public class ListAddonReleasesRequest extends Request {
     private String addonName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxResults")
+    private String maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("parentAddonReleaseId")
     private String parentAddonReleaseId;
 
@@ -34,6 +42,8 @@ public class ListAddonReleasesRequest extends Request {
         super(builder);
         this.policyId = builder.policyId;
         this.addonName = builder.addonName;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.parentAddonReleaseId = builder.parentAddonReleaseId;
     }
 
@@ -65,6 +75,20 @@ public class ListAddonReleasesRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public String getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return parentAddonReleaseId
      */
     public String getParentAddonReleaseId() {
@@ -74,6 +98,8 @@ public class ListAddonReleasesRequest extends Request {
     public static final class Builder extends Request.Builder<ListAddonReleasesRequest, Builder> {
         private String policyId; 
         private String addonName; 
+        private String maxResults; 
+        private String nextToken; 
         private String parentAddonReleaseId; 
 
         private Builder() {
@@ -84,6 +110,8 @@ public class ListAddonReleasesRequest extends Request {
             super(request);
             this.policyId = request.policyId;
             this.addonName = request.addonName;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.parentAddonReleaseId = request.parentAddonReleaseId;
         } 
 
@@ -109,6 +137,24 @@ public class ListAddonReleasesRequest extends Request {
         public Builder addonName(String addonName) {
             this.putQueryParameter("addonName", addonName);
             this.addonName = addonName;
+            return this;
+        }
+
+        /**
+         * maxResults.
+         */
+        public Builder maxResults(String maxResults) {
+            this.putQueryParameter("maxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * nextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("nextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

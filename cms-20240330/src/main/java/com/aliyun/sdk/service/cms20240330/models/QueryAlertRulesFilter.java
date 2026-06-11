@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryAlertRulesFilter</p>
  */
 public class QueryAlertRulesFilter extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("datasourceType")
+    private String datasourceType;
+
     @com.aliyun.core.annotation.NameInMap("displayName")
     private DisplayNameFilter displayName;
 
@@ -26,6 +29,18 @@ public class QueryAlertRulesFilter extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("labels")
     private LabelsFilter labels;
 
+    @com.aliyun.core.annotation.NameInMap("observeResourceGlobalScope")
+    private Boolean observeResourceGlobalScope;
+
+    @com.aliyun.core.annotation.NameInMap("observeResourceInstanceId")
+    private String observeResourceInstanceId;
+
+    @com.aliyun.core.annotation.NameInMap("observeResourceType")
+    private String observeResourceType;
+
+    @com.aliyun.core.annotation.NameInMap("severityLevels")
+    private String severityLevels;
+
     @com.aliyun.core.annotation.NameInMap("status")
     private StatusFilter status;
 
@@ -33,9 +48,14 @@ public class QueryAlertRulesFilter extends TeaModel {
     private UuidFilter uuid;
 
     private QueryAlertRulesFilter(Builder builder) {
+        this.datasourceType = builder.datasourceType;
         this.displayName = builder.displayName;
         this.enabled = builder.enabled;
         this.labels = builder.labels;
+        this.observeResourceGlobalScope = builder.observeResourceGlobalScope;
+        this.observeResourceInstanceId = builder.observeResourceInstanceId;
+        this.observeResourceType = builder.observeResourceType;
+        this.severityLevels = builder.severityLevels;
         this.status = builder.status;
         this.uuid = builder.uuid;
     }
@@ -50,6 +70,13 @@ public class QueryAlertRulesFilter extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return datasourceType
+     */
+    public String getDatasourceType() {
+        return this.datasourceType;
     }
 
     /**
@@ -74,6 +101,34 @@ public class QueryAlertRulesFilter extends TeaModel {
     }
 
     /**
+     * @return observeResourceGlobalScope
+     */
+    public Boolean getObserveResourceGlobalScope() {
+        return this.observeResourceGlobalScope;
+    }
+
+    /**
+     * @return observeResourceInstanceId
+     */
+    public String getObserveResourceInstanceId() {
+        return this.observeResourceInstanceId;
+    }
+
+    /**
+     * @return observeResourceType
+     */
+    public String getObserveResourceType() {
+        return this.observeResourceType;
+    }
+
+    /**
+     * @return severityLevels
+     */
+    public String getSeverityLevels() {
+        return this.severityLevels;
+    }
+
+    /**
      * @return status
      */
     public StatusFilter getStatus() {
@@ -88,9 +143,14 @@ public class QueryAlertRulesFilter extends TeaModel {
     }
 
     public static final class Builder {
+        private String datasourceType; 
         private DisplayNameFilter displayName; 
         private EnabledFilter enabled; 
         private LabelsFilter labels; 
+        private Boolean observeResourceGlobalScope; 
+        private String observeResourceInstanceId; 
+        private String observeResourceType; 
+        private String severityLevels; 
         private StatusFilter status; 
         private UuidFilter uuid; 
 
@@ -98,12 +158,25 @@ public class QueryAlertRulesFilter extends TeaModel {
         } 
 
         private Builder(QueryAlertRulesFilter model) {
+            this.datasourceType = model.datasourceType;
             this.displayName = model.displayName;
             this.enabled = model.enabled;
             this.labels = model.labels;
+            this.observeResourceGlobalScope = model.observeResourceGlobalScope;
+            this.observeResourceInstanceId = model.observeResourceInstanceId;
+            this.observeResourceType = model.observeResourceType;
+            this.severityLevels = model.severityLevels;
             this.status = model.status;
             this.uuid = model.uuid;
         } 
+
+        /**
+         * datasourceType.
+         */
+        public Builder datasourceType(String datasourceType) {
+            this.datasourceType = datasourceType;
+            return this;
+        }
 
         /**
          * displayName.
@@ -126,6 +199,38 @@ public class QueryAlertRulesFilter extends TeaModel {
          */
         public Builder labels(LabelsFilter labels) {
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * observeResourceGlobalScope.
+         */
+        public Builder observeResourceGlobalScope(Boolean observeResourceGlobalScope) {
+            this.observeResourceGlobalScope = observeResourceGlobalScope;
+            return this;
+        }
+
+        /**
+         * observeResourceInstanceId.
+         */
+        public Builder observeResourceInstanceId(String observeResourceInstanceId) {
+            this.observeResourceInstanceId = observeResourceInstanceId;
+            return this;
+        }
+
+        /**
+         * observeResourceType.
+         */
+        public Builder observeResourceType(String observeResourceType) {
+            this.observeResourceType = observeResourceType;
+            return this;
+        }
+
+        /**
+         * severityLevels.
+         */
+        public Builder severityLevels(String severityLevels) {
+            this.severityLevels = severityLevels;
             return this;
         }
 

@@ -2141,6 +2141,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of OpenCmsService  OpenCmsServiceRequest
+     * @return OpenCmsServiceResponse
+     */
+    @Override
+    public CompletableFuture<OpenCmsServiceResponse> openCmsService(OpenCmsServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("OpenCmsService").setMethod(HttpMethod.POST).setPathRegex("/cmsservice").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenCmsServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OpenCmsServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of PutWorkspace  PutWorkspaceRequest
      * @return PutWorkspaceResponse
      */

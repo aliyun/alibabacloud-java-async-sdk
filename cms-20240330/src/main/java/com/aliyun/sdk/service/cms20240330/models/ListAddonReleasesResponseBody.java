@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAddonReleasesResponseBody</p>
  */
 public class ListAddonReleasesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("nextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("releases")
     private java.util.List<Releases> releases;
 
@@ -27,6 +30,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
     private Long total;
 
     private ListAddonReleasesResponseBody(Builder builder) {
+        this.nextToken = builder.nextToken;
         this.releases = builder.releases;
         this.requestId = builder.requestId;
         this.total = builder.total;
@@ -42,6 +46,13 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -66,6 +77,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String nextToken; 
         private java.util.List<Releases> releases; 
         private String requestId; 
         private Long total; 
@@ -74,10 +86,19 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         } 
 
         private Builder(ListAddonReleasesResponseBody model) {
+            this.nextToken = model.nextToken;
             this.releases = model.releases;
             this.requestId = model.requestId;
             this.total = model.total;
         } 
+
+        /**
+         * nextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
 
         /**
          * <p>Set of add-on component information.</p>

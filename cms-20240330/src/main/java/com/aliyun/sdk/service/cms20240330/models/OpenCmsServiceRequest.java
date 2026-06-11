@@ -12,30 +12,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeRegionsRequest} extends {@link RequestModel}
+ * {@link OpenCmsServiceRequest} extends {@link RequestModel}
  *
- * <p>DescribeRegionsRequest</p>
+ * <p>OpenCmsServiceRequest</p>
  */
-public class DescribeRegionsRequest extends Request {
+public class OpenCmsServiceRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("language")
-    private String language;
-
-    private DescribeRegionsRequest(Builder builder) {
+    private OpenCmsServiceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.language = builder.language;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeRegionsRequest create() {
+    public static OpenCmsServiceRequest create() {
         return builder().build();
     }
 
@@ -51,25 +46,16 @@ public class DescribeRegionsRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return language
-     */
-    public String getLanguage() {
-        return this.language;
-    }
-
-    public static final class Builder extends Request.Builder<DescribeRegionsRequest, Builder> {
+    public static final class Builder extends Request.Builder<OpenCmsServiceRequest, Builder> {
         private String regionId; 
-        private String language; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeRegionsRequest request) {
+        private Builder(OpenCmsServiceRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.language = request.language;
         } 
 
         /**
@@ -81,18 +67,9 @@ public class DescribeRegionsRequest extends Request {
             return this;
         }
 
-        /**
-         * language.
-         */
-        public Builder language(String language) {
-            this.putQueryParameter("language", language);
-            this.language = language;
-            return this;
-        }
-
         @Override
-        public DescribeRegionsRequest build() {
-            return new DescribeRegionsRequest(this);
+        public OpenCmsServiceRequest build() {
+            return new OpenCmsServiceRequest(this);
         } 
 
     } 

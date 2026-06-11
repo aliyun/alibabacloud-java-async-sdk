@@ -32,11 +32,17 @@ public class AlertRuleV2 extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("contentTemplate")
     private String contentTemplate;
 
+    @com.aliyun.core.annotation.NameInMap("coveredSeverityLevels")
+    private String coveredSeverityLevels;
+
     @com.aliyun.core.annotation.NameInMap("createdAt")
     private String createdAt;
 
     @com.aliyun.core.annotation.NameInMap("datasourceConfig")
     private DatasourceConfigUnified datasourceConfig;
+
+    @com.aliyun.core.annotation.NameInMap("datasourceType")
+    private String datasourceType;
 
     @com.aliyun.core.annotation.NameInMap("displayName")
     private String displayName;
@@ -49,6 +55,15 @@ public class AlertRuleV2 extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("notifyConfig")
     private NotifyConfigUnified notifyConfig;
+
+    @com.aliyun.core.annotation.NameInMap("observeResourceGlobalScope")
+    private Boolean observeResourceGlobalScope;
+
+    @com.aliyun.core.annotation.NameInMap("observeResourceList")
+    private String observeResourceList;
+
+    @com.aliyun.core.annotation.NameInMap("observeResourceType")
+    private String observeResourceType;
 
     @com.aliyun.core.annotation.NameInMap("queryConfig")
     private QueryConfigUnified queryConfig;
@@ -74,12 +89,17 @@ public class AlertRuleV2 extends TeaModel {
         this.armsIntegrationConfig = builder.armsIntegrationConfig;
         this.conditionConfig = builder.conditionConfig;
         this.contentTemplate = builder.contentTemplate;
+        this.coveredSeverityLevels = builder.coveredSeverityLevels;
         this.createdAt = builder.createdAt;
         this.datasourceConfig = builder.datasourceConfig;
+        this.datasourceType = builder.datasourceType;
         this.displayName = builder.displayName;
         this.enabled = builder.enabled;
         this.labels = builder.labels;
         this.notifyConfig = builder.notifyConfig;
+        this.observeResourceGlobalScope = builder.observeResourceGlobalScope;
+        this.observeResourceList = builder.observeResourceList;
+        this.observeResourceType = builder.observeResourceType;
         this.queryConfig = builder.queryConfig;
         this.scheduleConfig = builder.scheduleConfig;
         this.status = builder.status;
@@ -136,6 +156,13 @@ public class AlertRuleV2 extends TeaModel {
     }
 
     /**
+     * @return coveredSeverityLevels
+     */
+    public String getCoveredSeverityLevels() {
+        return this.coveredSeverityLevels;
+    }
+
+    /**
      * @return createdAt
      */
     public String getCreatedAt() {
@@ -147,6 +174,13 @@ public class AlertRuleV2 extends TeaModel {
      */
     public DatasourceConfigUnified getDatasourceConfig() {
         return this.datasourceConfig;
+    }
+
+    /**
+     * @return datasourceType
+     */
+    public String getDatasourceType() {
+        return this.datasourceType;
     }
 
     /**
@@ -175,6 +209,27 @@ public class AlertRuleV2 extends TeaModel {
      */
     public NotifyConfigUnified getNotifyConfig() {
         return this.notifyConfig;
+    }
+
+    /**
+     * @return observeResourceGlobalScope
+     */
+    public Boolean getObserveResourceGlobalScope() {
+        return this.observeResourceGlobalScope;
+    }
+
+    /**
+     * @return observeResourceList
+     */
+    public String getObserveResourceList() {
+        return this.observeResourceList;
+    }
+
+    /**
+     * @return observeResourceType
+     */
+    public String getObserveResourceType() {
+        return this.observeResourceType;
     }
 
     /**
@@ -225,12 +280,17 @@ public class AlertRuleV2 extends TeaModel {
         private ArmsIntegrationConfig armsIntegrationConfig; 
         private ConditionConfigUnified conditionConfig; 
         private String contentTemplate; 
+        private String coveredSeverityLevels; 
         private String createdAt; 
         private DatasourceConfigUnified datasourceConfig; 
+        private String datasourceType; 
         private String displayName; 
         private Boolean enabled; 
         private java.util.Map<String, String> labels; 
         private NotifyConfigUnified notifyConfig; 
+        private Boolean observeResourceGlobalScope; 
+        private String observeResourceList; 
+        private String observeResourceType; 
         private QueryConfigUnified queryConfig; 
         private ScheduleConfigUnified scheduleConfig; 
         private String status; 
@@ -247,12 +307,17 @@ public class AlertRuleV2 extends TeaModel {
             this.armsIntegrationConfig = model.armsIntegrationConfig;
             this.conditionConfig = model.conditionConfig;
             this.contentTemplate = model.contentTemplate;
+            this.coveredSeverityLevels = model.coveredSeverityLevels;
             this.createdAt = model.createdAt;
             this.datasourceConfig = model.datasourceConfig;
+            this.datasourceType = model.datasourceType;
             this.displayName = model.displayName;
             this.enabled = model.enabled;
             this.labels = model.labels;
             this.notifyConfig = model.notifyConfig;
+            this.observeResourceGlobalScope = model.observeResourceGlobalScope;
+            this.observeResourceList = model.observeResourceList;
+            this.observeResourceType = model.observeResourceType;
             this.queryConfig = model.queryConfig;
             this.scheduleConfig = model.scheduleConfig;
             this.status = model.status;
@@ -302,6 +367,14 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
+         * coveredSeverityLevels.
+         */
+        public Builder coveredSeverityLevels(String coveredSeverityLevels) {
+            this.coveredSeverityLevels = coveredSeverityLevels;
+            return this;
+        }
+
+        /**
          * <p>创建时间（只读），ISO 8601</p>
          */
         public Builder createdAt(String createdAt) {
@@ -314,6 +387,14 @@ public class AlertRuleV2 extends TeaModel {
          */
         public Builder datasourceConfig(DatasourceConfigUnified datasourceConfig) {
             this.datasourceConfig = datasourceConfig;
+            return this;
+        }
+
+        /**
+         * datasourceType.
+         */
+        public Builder datasourceType(String datasourceType) {
+            this.datasourceType = datasourceType;
             return this;
         }
 
@@ -346,6 +427,30 @@ public class AlertRuleV2 extends TeaModel {
          */
         public Builder notifyConfig(NotifyConfigUnified notifyConfig) {
             this.notifyConfig = notifyConfig;
+            return this;
+        }
+
+        /**
+         * observeResourceGlobalScope.
+         */
+        public Builder observeResourceGlobalScope(Boolean observeResourceGlobalScope) {
+            this.observeResourceGlobalScope = observeResourceGlobalScope;
+            return this;
+        }
+
+        /**
+         * observeResourceList.
+         */
+        public Builder observeResourceList(String observeResourceList) {
+            this.observeResourceList = observeResourceList;
+            return this;
+        }
+
+        /**
+         * observeResourceType.
+         */
+        public Builder observeResourceType(String observeResourceType) {
+            this.observeResourceType = observeResourceType;
             return this;
         }
 
