@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
     /**
+     * @param request the request parameters of CreateSubscription  CreateSubscriptionRequest
+     * @return CreateSubscriptionResponse
+     */
+    CompletableFuture<CreateSubscriptionResponse> createSubscription(CreateSubscriptionRequest request);
+
+    /**
      * @param request the request parameters of CreateTopic  CreateTopicRequest
      * @return CreateTopicResponse
      */
@@ -36,6 +42,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteProjectResponse
      */
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSubscription  DeleteSubscriptionRequest
+     * @return DeleteSubscriptionResponse
+     */
+    CompletableFuture<DeleteSubscriptionResponse> deleteSubscription(DeleteSubscriptionRequest request);
 
     /**
      * @param request the request parameters of DeleteTopic  DeleteTopicRequest
