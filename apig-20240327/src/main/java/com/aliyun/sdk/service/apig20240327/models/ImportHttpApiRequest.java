@@ -69,6 +69,10 @@ public class ImportHttpApiRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("versionConfig")
     private HttpApiVersionConfig versionConfig;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("withGatewayExtension")
+    private Boolean withGatewayExtension;
+
     private ImportHttpApiRequest(Builder builder) {
         super(builder);
         this.deployConfigs = builder.deployConfigs;
@@ -84,6 +88,7 @@ public class ImportHttpApiRequest extends Request {
         this.strategy = builder.strategy;
         this.targetHttpApiId = builder.targetHttpApiId;
         this.versionConfig = builder.versionConfig;
+        this.withGatewayExtension = builder.withGatewayExtension;
     }
 
     public static Builder builder() {
@@ -190,6 +195,13 @@ public class ImportHttpApiRequest extends Request {
         return this.versionConfig;
     }
 
+    /**
+     * @return withGatewayExtension
+     */
+    public Boolean getWithGatewayExtension() {
+        return this.withGatewayExtension;
+    }
+
     public static final class Builder extends Request.Builder<ImportHttpApiRequest, Builder> {
         private java.util.List<HttpApiDeployConfig> deployConfigs; 
         private String description; 
@@ -204,6 +216,7 @@ public class ImportHttpApiRequest extends Request {
         private String strategy; 
         private String targetHttpApiId; 
         private HttpApiVersionConfig versionConfig; 
+        private Boolean withGatewayExtension; 
 
         private Builder() {
             super();
@@ -224,6 +237,7 @@ public class ImportHttpApiRequest extends Request {
             this.strategy = request.strategy;
             this.targetHttpApiId = request.targetHttpApiId;
             this.versionConfig = request.versionConfig;
+            this.withGatewayExtension = request.withGatewayExtension;
         } 
 
         /**
@@ -375,6 +389,15 @@ public class ImportHttpApiRequest extends Request {
         public Builder versionConfig(HttpApiVersionConfig versionConfig) {
             this.putBodyParameter("versionConfig", versionConfig);
             this.versionConfig = versionConfig;
+            return this;
+        }
+
+        /**
+         * withGatewayExtension.
+         */
+        public Builder withGatewayExtension(Boolean withGatewayExtension) {
+            this.putBodyParameter("withGatewayExtension", withGatewayExtension);
+            this.withGatewayExtension = withGatewayExtension;
             return this;
         }
 

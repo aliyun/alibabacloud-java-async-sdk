@@ -331,6 +331,87 @@ public class ImportHttpApiResponseBody extends TeaModel {
      *
      * <p>ImportHttpApiResponseBody</p>
      */
+    public static class FailureRoutes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("errorMessage")
+        private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private FailureRoutes(Builder builder) {
+            this.errorMessage = builder.errorMessage;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FailureRoutes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String errorMessage; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailureRoutes model) {
+                this.errorMessage = model.errorMessage;
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Missing response definition.</p>
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * <p>The data struct name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>orderDTO</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public FailureRoutes build() {
+                return new FailureRoutes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ImportHttpApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportHttpApiResponseBody</p>
+     */
     public static class SuccessComponents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("action")
         private String action;
@@ -549,6 +630,91 @@ public class ImportHttpApiResponseBody extends TeaModel {
      *
      * <p>ImportHttpApiResponseBody</p>
      */
+    public static class SuccessRoutes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("action")
+        private String action;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private SuccessRoutes(Builder builder) {
+            this.action = builder.action;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SuccessRoutes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuccessRoutes model) {
+                this.action = model.action;
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>The action that will be performed for the operation after the dry run.</p>
+             * <ul>
+             * <li>Create: The operation is created.</li>
+             * <li>Update: The operation is updated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Create</p>
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * <p>The operation name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateUser</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public SuccessRoutes build() {
+                return new SuccessRoutes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ImportHttpApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportHttpApiResponseBody</p>
+     */
     public static class DryRunInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("errorMessages")
         private java.util.List<String> errorMessages;
@@ -562,6 +728,9 @@ public class ImportHttpApiResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("failureOperations")
         private java.util.List<FailureOperations> failureOperations;
 
+        @com.aliyun.core.annotation.NameInMap("failureRoutes")
+        private java.util.List<FailureRoutes> failureRoutes;
+
         @com.aliyun.core.annotation.NameInMap("mcpToolsDefinition")
         private String mcpToolsDefinition;
 
@@ -571,6 +740,9 @@ public class ImportHttpApiResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("successOperations")
         private java.util.List<SuccessOperations> successOperations;
 
+        @com.aliyun.core.annotation.NameInMap("successRoutes")
+        private java.util.List<SuccessRoutes> successRoutes;
+
         @com.aliyun.core.annotation.NameInMap("warningMessages")
         private java.util.List<String> warningMessages;
 
@@ -579,9 +751,11 @@ public class ImportHttpApiResponseBody extends TeaModel {
             this.existHttpApiInfo = builder.existHttpApiInfo;
             this.failureComponents = builder.failureComponents;
             this.failureOperations = builder.failureOperations;
+            this.failureRoutes = builder.failureRoutes;
             this.mcpToolsDefinition = builder.mcpToolsDefinition;
             this.successComponents = builder.successComponents;
             this.successOperations = builder.successOperations;
+            this.successRoutes = builder.successRoutes;
             this.warningMessages = builder.warningMessages;
         }
 
@@ -622,6 +796,13 @@ public class ImportHttpApiResponseBody extends TeaModel {
         }
 
         /**
+         * @return failureRoutes
+         */
+        public java.util.List<FailureRoutes> getFailureRoutes() {
+            return this.failureRoutes;
+        }
+
+        /**
          * @return mcpToolsDefinition
          */
         public String getMcpToolsDefinition() {
@@ -643,6 +824,13 @@ public class ImportHttpApiResponseBody extends TeaModel {
         }
 
         /**
+         * @return successRoutes
+         */
+        public java.util.List<SuccessRoutes> getSuccessRoutes() {
+            return this.successRoutes;
+        }
+
+        /**
          * @return warningMessages
          */
         public java.util.List<String> getWarningMessages() {
@@ -654,9 +842,11 @@ public class ImportHttpApiResponseBody extends TeaModel {
             private HttpApiApiInfo existHttpApiInfo; 
             private java.util.List<FailureComponents> failureComponents; 
             private java.util.List<FailureOperations> failureOperations; 
+            private java.util.List<FailureRoutes> failureRoutes; 
             private String mcpToolsDefinition; 
             private java.util.List<SuccessComponents> successComponents; 
             private java.util.List<SuccessOperations> successOperations; 
+            private java.util.List<SuccessRoutes> successRoutes; 
             private java.util.List<String> warningMessages; 
 
             private Builder() {
@@ -667,9 +857,11 @@ public class ImportHttpApiResponseBody extends TeaModel {
                 this.existHttpApiInfo = model.existHttpApiInfo;
                 this.failureComponents = model.failureComponents;
                 this.failureOperations = model.failureOperations;
+                this.failureRoutes = model.failureRoutes;
                 this.mcpToolsDefinition = model.mcpToolsDefinition;
                 this.successComponents = model.successComponents;
                 this.successOperations = model.successOperations;
+                this.successRoutes = model.successRoutes;
                 this.warningMessages = model.warningMessages;
             } 
 
@@ -706,6 +898,14 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
+             * failureRoutes.
+             */
+            public Builder failureRoutes(java.util.List<FailureRoutes> failureRoutes) {
+                this.failureRoutes = failureRoutes;
+                return this;
+            }
+
+            /**
              * mcpToolsDefinition.
              */
             public Builder mcpToolsDefinition(String mcpToolsDefinition) {
@@ -726,6 +926,14 @@ public class ImportHttpApiResponseBody extends TeaModel {
              */
             public Builder successOperations(java.util.List<SuccessOperations> successOperations) {
                 this.successOperations = successOperations;
+                return this;
+            }
+
+            /**
+             * successRoutes.
+             */
+            public Builder successRoutes(java.util.List<SuccessRoutes> successRoutes) {
+                this.successRoutes = successRoutes;
                 return this;
             }
 
