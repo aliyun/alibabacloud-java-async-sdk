@@ -22,6 +22,10 @@ public class GenerateServicePolicyRequest extends Request {
     private java.util.List<String> operationTypes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.Map<String, ?> parameters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -46,6 +50,7 @@ public class GenerateServicePolicyRequest extends Request {
     private GenerateServicePolicyRequest(Builder builder) {
         super(builder);
         this.operationTypes = builder.operationTypes;
+        this.parameters = builder.parameters;
         this.regionId = builder.regionId;
         this.serviceId = builder.serviceId;
         this.serviceVersion = builder.serviceVersion;
@@ -71,6 +76,13 @@ public class GenerateServicePolicyRequest extends Request {
      */
     public java.util.List<String> getOperationTypes() {
         return this.operationTypes;
+    }
+
+    /**
+     * @return parameters
+     */
+    public java.util.Map<String, ?> getParameters() {
+        return this.parameters;
     }
 
     /**
@@ -110,6 +122,7 @@ public class GenerateServicePolicyRequest extends Request {
 
     public static final class Builder extends Request.Builder<GenerateServicePolicyRequest, Builder> {
         private java.util.List<String> operationTypes; 
+        private java.util.Map<String, ?> parameters; 
         private String regionId; 
         private String serviceId; 
         private String serviceVersion; 
@@ -123,6 +136,7 @@ public class GenerateServicePolicyRequest extends Request {
         private Builder(GenerateServicePolicyRequest request) {
             super(request);
             this.operationTypes = request.operationTypes;
+            this.parameters = request.parameters;
             this.regionId = request.regionId;
             this.serviceId = request.serviceId;
             this.serviceVersion = request.serviceVersion;
@@ -136,6 +150,16 @@ public class GenerateServicePolicyRequest extends Request {
         public Builder operationTypes(java.util.List<String> operationTypes) {
             this.putQueryParameter("OperationTypes", operationTypes);
             this.operationTypes = operationTypes;
+            return this;
+        }
+
+        /**
+         * Parameters.
+         */
+        public Builder parameters(java.util.Map<String, ?> parameters) {
+            String parametersShrink = shrink(parameters, "Parameters", "json");
+            this.putQueryParameter("Parameters", parametersShrink);
+            this.parameters = parameters;
             return this;
         }
 
