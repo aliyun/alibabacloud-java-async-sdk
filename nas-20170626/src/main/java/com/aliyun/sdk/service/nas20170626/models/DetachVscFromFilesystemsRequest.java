@@ -26,10 +26,15 @@ public class DetachVscFromFilesystemsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<ResourceIds> resourceIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleChain")
+    private java.util.List<RoleChain> roleChain;
+
     private DetachVscFromFilesystemsRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.resourceIds = builder.resourceIds;
+        this.roleChain = builder.roleChain;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class DetachVscFromFilesystemsRequest extends Request {
         return this.resourceIds;
     }
 
+    /**
+     * @return roleChain
+     */
+    public java.util.List<RoleChain> getRoleChain() {
+        return this.roleChain;
+    }
+
     public static final class Builder extends Request.Builder<DetachVscFromFilesystemsRequest, Builder> {
         private String clientToken; 
         private java.util.List<ResourceIds> resourceIds; 
+        private java.util.List<RoleChain> roleChain; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class DetachVscFromFilesystemsRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.resourceIds = request.resourceIds;
+            this.roleChain = request.roleChain;
         } 
 
         /**
@@ -96,6 +110,15 @@ public class DetachVscFromFilesystemsRequest extends Request {
         public Builder resourceIds(java.util.List<ResourceIds> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
             this.resourceIds = resourceIds;
+            return this;
+        }
+
+        /**
+         * RoleChain.
+         */
+        public Builder roleChain(java.util.List<RoleChain> roleChain) {
+            this.putQueryParameter("RoleChain", roleChain);
+            this.roleChain = roleChain;
             return this;
         }
 
@@ -182,6 +205,102 @@ public class DetachVscFromFilesystemsRequest extends Request {
 
             public ResourceIds build() {
                 return new ResourceIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DetachVscFromFilesystemsRequest} extends {@link TeaModel}
+     *
+     * <p>DetachVscFromFilesystemsRequest</p>
+     */
+    public static class RoleChain extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssumeRoleFor")
+        private String assumeRoleFor;
+
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
+        private String roleArn;
+
+        @com.aliyun.core.annotation.NameInMap("RoleType")
+        private String roleType;
+
+        private RoleChain(Builder builder) {
+            this.assumeRoleFor = builder.assumeRoleFor;
+            this.roleArn = builder.roleArn;
+            this.roleType = builder.roleType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RoleChain create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assumeRoleFor
+         */
+        public String getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+        /**
+         * @return roleArn
+         */
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        /**
+         * @return roleType
+         */
+        public String getRoleType() {
+            return this.roleType;
+        }
+
+        public static final class Builder {
+            private String assumeRoleFor; 
+            private String roleArn; 
+            private String roleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoleChain model) {
+                this.assumeRoleFor = model.assumeRoleFor;
+                this.roleArn = model.roleArn;
+                this.roleType = model.roleType;
+            } 
+
+            /**
+             * AssumeRoleFor.
+             */
+            public Builder assumeRoleFor(String assumeRoleFor) {
+                this.assumeRoleFor = assumeRoleFor;
+                return this;
+            }
+
+            /**
+             * RoleArn.
+             */
+            public Builder roleArn(String roleArn) {
+                this.roleArn = roleArn;
+                return this;
+            }
+
+            /**
+             * RoleType.
+             */
+            public Builder roleType(String roleType) {
+                this.roleType = roleType;
+                return this;
+            }
+
+            public RoleChain build() {
+                return new RoleChain(this);
             } 
 
         } 
