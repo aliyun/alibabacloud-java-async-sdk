@@ -1,3 +1,6 @@
+2026-06-15 Version: 1.0.40
+- Generated java-async 2015-11-23 for Dm.
+
 2026-05-18 Version: 1.0.39
 - Generated java-async 2015-11-23 for Dm.
 
