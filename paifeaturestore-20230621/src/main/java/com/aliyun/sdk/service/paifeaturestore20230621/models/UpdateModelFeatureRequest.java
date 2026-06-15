@@ -238,6 +238,9 @@ public class UpdateModelFeatureRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("PrefixName")
+        private String prefixName;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         @com.aliyun.core.annotation.Validation(required = true)
         private String type;
@@ -246,6 +249,7 @@ public class UpdateModelFeatureRequest extends Request {
             this.aliasName = builder.aliasName;
             this.featureViewId = builder.featureViewId;
             this.name = builder.name;
+            this.prefixName = builder.prefixName;
             this.type = builder.type;
         }
 
@@ -279,6 +283,13 @@ public class UpdateModelFeatureRequest extends Request {
         }
 
         /**
+         * @return prefixName
+         */
+        public String getPrefixName() {
+            return this.prefixName;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -289,6 +300,7 @@ public class UpdateModelFeatureRequest extends Request {
             private String aliasName; 
             private String featureViewId; 
             private String name; 
+            private String prefixName; 
             private String type; 
 
             private Builder() {
@@ -298,6 +310,7 @@ public class UpdateModelFeatureRequest extends Request {
                 this.aliasName = model.aliasName;
                 this.featureViewId = model.featureViewId;
                 this.name = model.name;
+                this.prefixName = model.prefixName;
                 this.type = model.type;
             } 
 
@@ -328,6 +341,14 @@ public class UpdateModelFeatureRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * PrefixName.
+             */
+            public Builder prefixName(String prefixName) {
+                this.prefixName = prefixName;
                 return this;
             }
 

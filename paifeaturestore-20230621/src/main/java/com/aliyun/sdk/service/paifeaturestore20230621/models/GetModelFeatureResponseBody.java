@@ -380,6 +380,9 @@ public class GetModelFeatureResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("PrefixName")
+        private String prefixName;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -388,6 +391,7 @@ public class GetModelFeatureResponseBody extends TeaModel {
             this.featureViewId = builder.featureViewId;
             this.featureViewName = builder.featureViewName;
             this.name = builder.name;
+            this.prefixName = builder.prefixName;
             this.type = builder.type;
         }
 
@@ -428,6 +432,13 @@ public class GetModelFeatureResponseBody extends TeaModel {
         }
 
         /**
+         * @return prefixName
+         */
+        public String getPrefixName() {
+            return this.prefixName;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -439,6 +450,7 @@ public class GetModelFeatureResponseBody extends TeaModel {
             private String featureViewId; 
             private String featureViewName; 
             private String name; 
+            private String prefixName; 
             private String type; 
 
             private Builder() {
@@ -449,6 +461,7 @@ public class GetModelFeatureResponseBody extends TeaModel {
                 this.featureViewId = model.featureViewId;
                 this.featureViewName = model.featureViewName;
                 this.name = model.name;
+                this.prefixName = model.prefixName;
                 this.type = model.type;
             } 
 
@@ -481,6 +494,14 @@ public class GetModelFeatureResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * PrefixName.
+             */
+            public Builder prefixName(String prefixName) {
+                this.prefixName = prefixName;
                 return this;
             }
 
