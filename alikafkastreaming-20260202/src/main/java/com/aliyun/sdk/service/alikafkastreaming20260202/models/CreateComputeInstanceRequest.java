@@ -27,10 +27,20 @@ public class CreateComputeInstanceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
     private CreateComputeInstanceRequest(Builder builder) {
         super(builder);
         this.paidType = builder.paidType;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -60,9 +70,25 @@ public class CreateComputeInstanceRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public static final class Builder extends Request.Builder<CreateComputeInstanceRequest, Builder> {
         private Long paidType; 
         private String regionId; 
+        private String resourceGroupId; 
+        private String resourceType; 
 
         private Builder() {
             super();
@@ -72,6 +98,8 @@ public class CreateComputeInstanceRequest extends Request {
             super(request);
             this.paidType = request.paidType;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
@@ -89,6 +117,24 @@ public class CreateComputeInstanceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 
