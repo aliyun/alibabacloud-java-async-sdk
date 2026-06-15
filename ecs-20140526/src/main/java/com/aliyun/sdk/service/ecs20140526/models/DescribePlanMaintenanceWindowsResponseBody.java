@@ -485,6 +485,9 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
+        @com.aliyun.core.annotation.NameInMap("MinMaintenanceInterval")
+        private Integer minMaintenanceInterval;
+
         @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
@@ -506,6 +509,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         private PlanMaintenanceWindowList(Builder builder) {
             this.createTime = builder.createTime;
             this.enable = builder.enable;
+            this.minMaintenanceInterval = builder.minMaintenanceInterval;
             this.modifiedTime = builder.modifiedTime;
             this.planWindowId = builder.planWindowId;
             this.planWindowName = builder.planWindowName;
@@ -534,6 +538,13 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
          */
         public Boolean getEnable() {
             return this.enable;
+        }
+
+        /**
+         * @return minMaintenanceInterval
+         */
+        public Integer getMinMaintenanceInterval() {
+            return this.minMaintenanceInterval;
         }
 
         /**
@@ -581,6 +592,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private Boolean enable; 
+            private Integer minMaintenanceInterval; 
             private String modifiedTime; 
             private String planWindowId; 
             private String planWindowName; 
@@ -594,6 +606,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             private Builder(PlanMaintenanceWindowList model) {
                 this.createTime = model.createTime;
                 this.enable = model.enable;
+                this.minMaintenanceInterval = model.minMaintenanceInterval;
                 this.modifiedTime = model.modifiedTime;
                 this.planWindowId = model.planWindowId;
                 this.planWindowName = model.planWindowName;
@@ -615,6 +628,14 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
+                return this;
+            }
+
+            /**
+             * MinMaintenanceInterval.
+             */
+            public Builder minMaintenanceInterval(Integer minMaintenanceInterval) {
+                this.minMaintenanceInterval = minMaintenanceInterval;
                 return this;
             }
 

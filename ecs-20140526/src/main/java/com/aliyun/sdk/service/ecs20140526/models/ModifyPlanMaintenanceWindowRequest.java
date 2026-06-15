@@ -26,6 +26,10 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
     private Boolean enable;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinMaintenanceInterval")
+    private Integer minMaintenanceInterval;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PlanWindowId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String planWindowId;
@@ -55,6 +59,7 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.enable = builder.enable;
+        this.minMaintenanceInterval = builder.minMaintenanceInterval;
         this.planWindowId = builder.planWindowId;
         this.planWindowName = builder.planWindowName;
         this.regionId = builder.regionId;
@@ -88,6 +93,13 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
      */
     public Boolean getEnable() {
         return this.enable;
+    }
+
+    /**
+     * @return minMaintenanceInterval
+     */
+    public Integer getMinMaintenanceInterval() {
+        return this.minMaintenanceInterval;
     }
 
     /**
@@ -135,6 +147,7 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyPlanMaintenanceWindowRequest, Builder> {
         private String sourceRegionId; 
         private Boolean enable; 
+        private Integer minMaintenanceInterval; 
         private String planWindowId; 
         private String planWindowName; 
         private String regionId; 
@@ -150,6 +163,7 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.enable = request.enable;
+            this.minMaintenanceInterval = request.minMaintenanceInterval;
             this.planWindowId = request.planWindowId;
             this.planWindowName = request.planWindowName;
             this.regionId = request.regionId;
@@ -173,6 +187,15 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
             this.enable = enable;
+            return this;
+        }
+
+        /**
+         * MinMaintenanceInterval.
+         */
+        public Builder minMaintenanceInterval(Integer minMaintenanceInterval) {
+            this.putQueryParameter("MinMaintenanceInterval", minMaintenanceInterval);
+            this.minMaintenanceInterval = minMaintenanceInterval;
             return this;
         }
 
