@@ -472,6 +472,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetCacheCluster  GetCacheClusterRequest
+     * @return GetCacheClusterResponse
+     */
+    @Override
+    public CompletableFuture<GetCacheClusterResponse> getCacheCluster(GetCacheClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCacheCluster").setMethod(HttpMethod.GET).setPathRegex("/api/v1/cache/{cacheClusterId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCacheClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCacheClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetCuHours  GetCuHoursRequest
      * @return GetCuHoursResponse
      */
@@ -1120,6 +1138,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of StartCacheCluster  StartCacheClusterRequest
+     * @return StartCacheClusterResponse
+     */
+    @Override
+    public CompletableFuture<StartCacheClusterResponse> startCacheCluster(StartCacheClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartCacheCluster").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/cache/{cacheClusterId}/start").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartCacheClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartCacheClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StartJobRun  StartJobRunRequest
      * @return StartJobRunResponse
      */
@@ -1222,6 +1258,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StartSessionClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopCacheCluster  StopCacheClusterRequest
+     * @return StopCacheClusterResponse
+     */
+    @Override
+    public CompletableFuture<StopCacheClusterResponse> stopCacheCluster(StopCacheClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopCacheCluster").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/cache/{cacheClusterId}/stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopCacheClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopCacheClusterResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -164,6 +164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAICenterStateResponse> getAICenterState(GetAICenterStateRequest request);
 
     /**
+     * @param request the request parameters of GetCacheCluster  GetCacheClusterRequest
+     * @return GetCacheClusterResponse
+     */
+    CompletableFuture<GetCacheClusterResponse> getCacheCluster(GetCacheClusterRequest request);
+
+    /**
      * @param request the request parameters of GetCuHours  GetCuHoursRequest
      * @return GetCuHoursResponse
      */
@@ -380,6 +386,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefreshLivyComputeTokenResponse> refreshLivyComputeToken(RefreshLivyComputeTokenRequest request);
 
     /**
+     * @param request the request parameters of StartCacheCluster  StartCacheClusterRequest
+     * @return StartCacheClusterResponse
+     */
+    CompletableFuture<StartCacheClusterResponse> startCacheCluster(StartCacheClusterRequest request);
+
+    /**
      * @param request the request parameters of StartJobRun  StartJobRunRequest
      * @return StartJobRunResponse
      */
@@ -414,6 +426,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StartSessionClusterResponse
      */
     CompletableFuture<StartSessionClusterResponse> startSessionCluster(StartSessionClusterRequest request);
+
+    /**
+     * @param request the request parameters of StopCacheCluster  StopCacheClusterRequest
+     * @return StopCacheClusterResponse
+     */
+    CompletableFuture<StopCacheClusterResponse> stopCacheCluster(StopCacheClusterRequest request);
 
     /**
      * @param request the request parameters of StopKyuubiService  StopKyuubiServiceRequest

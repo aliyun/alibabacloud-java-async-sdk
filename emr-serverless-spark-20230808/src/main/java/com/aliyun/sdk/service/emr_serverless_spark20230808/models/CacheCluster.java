@@ -44,6 +44,9 @@ public class CacheCluster extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("creator")
     private String creator;
 
+    @com.aliyun.core.annotation.NameInMap("extra")
+    private String extra;
+
     @com.aliyun.core.annotation.NameInMap("gmtCreated")
     private Long gmtCreated;
 
@@ -93,6 +96,7 @@ public class CacheCluster extends TeaModel {
         this.configurations = builder.configurations;
         this.createTime = builder.createTime;
         this.creator = builder.creator;
+        this.extra = builder.extra;
         this.gmtCreated = builder.gmtCreated;
         this.gmtModified = builder.gmtModified;
         this.modifier = builder.modifier;
@@ -181,6 +185,13 @@ public class CacheCluster extends TeaModel {
      */
     public String getCreator() {
         return this.creator;
+    }
+
+    /**
+     * @return extra
+     */
+    public String getExtra() {
+        return this.extra;
     }
 
     /**
@@ -284,6 +295,7 @@ public class CacheCluster extends TeaModel {
         private java.util.List<Configurations> configurations; 
         private String createTime; 
         private String creator; 
+        private String extra; 
         private Long gmtCreated; 
         private Long gmtModified; 
         private String modifier; 
@@ -311,6 +323,7 @@ public class CacheCluster extends TeaModel {
             this.configurations = model.configurations;
             this.createTime = model.createTime;
             this.creator = model.creator;
+            this.extra = model.extra;
             this.gmtCreated = model.gmtCreated;
             this.gmtModified = model.gmtModified;
             this.modifier = model.modifier;
@@ -395,6 +408,14 @@ public class CacheCluster extends TeaModel {
          */
         public Builder creator(String creator) {
             this.creator = creator;
+            return this;
+        }
+
+        /**
+         * extra.
+         */
+        public Builder extra(String extra) {
+            this.extra = extra;
             return this;
         }
 
