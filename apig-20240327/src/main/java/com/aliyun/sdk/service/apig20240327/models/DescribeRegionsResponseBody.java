@@ -20,10 +20,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("data")
+    private Data data;
+
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("regions")
+    @Deprecated
     private Regions regions;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
@@ -31,6 +35,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     private DescribeRegionsResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
         this.regions = builder.regions;
         this.requestId = builder.requestId;
@@ -56,6 +61,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -78,6 +90,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private Data data; 
         private String message; 
         private Regions regions; 
         private String requestId; 
@@ -87,6 +100,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         private Builder(DescribeRegionsResponseBody model) {
             this.code = model.code;
+            this.data = model.data;
             this.message = model.message;
             this.regions = model.regions;
             this.requestId = model.requestId;
@@ -97,6 +111,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
             return this;
         }
 
@@ -130,6 +152,135 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
+    public static class DataRegions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("localName")
+        private String localName;
+
+        @com.aliyun.core.annotation.NameInMap("regionId")
+        private String regionId;
+
+        private DataRegions(Builder builder) {
+            this.localName = builder.localName;
+            this.regionId = builder.regionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataRegions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return localName
+         */
+        public String getLocalName() {
+            return this.localName;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public static final class Builder {
+            private String localName; 
+            private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataRegions model) {
+                this.localName = model.localName;
+                this.regionId = model.regionId;
+            } 
+
+            /**
+             * localName.
+             */
+            public Builder localName(String localName) {
+                this.localName = localName;
+                return this;
+            }
+
+            /**
+             * regionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            public DataRegions build() {
+                return new DataRegions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("regions")
+        private java.util.List<DataRegions> regions;
+
+        private Data(Builder builder) {
+            this.regions = builder.regions;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return regions
+         */
+        public java.util.List<DataRegions> getRegions() {
+            return this.regions;
+        }
+
+        public static final class Builder {
+            private java.util.List<DataRegions> regions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.regions = model.regions;
+            } 
+
+            /**
+             * regions.
+             */
+            public Builder regions(java.util.List<DataRegions> regions) {
+                this.regions = regions;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
