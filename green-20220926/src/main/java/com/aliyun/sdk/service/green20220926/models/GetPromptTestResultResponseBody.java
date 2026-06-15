@@ -101,9 +101,13 @@ public class GetPromptTestResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
+        @com.aliyun.core.annotation.NameInMap("Reason")
+        private String reason;
+
         private LabelDetails(Builder builder) {
             this.description = builder.description;
             this.label = builder.label;
+            this.reason = builder.reason;
         }
 
         public static Builder builder() {
@@ -128,9 +132,17 @@ public class GetPromptTestResultResponseBody extends TeaModel {
             return this.label;
         }
 
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
         public static final class Builder {
             private String description; 
             private String label; 
+            private String reason; 
 
             private Builder() {
             } 
@@ -138,6 +150,7 @@ public class GetPromptTestResultResponseBody extends TeaModel {
             private Builder(LabelDetails model) {
                 this.description = model.description;
                 this.label = model.label;
+                this.reason = model.reason;
             } 
 
             /**
@@ -153,6 +166,14 @@ public class GetPromptTestResultResponseBody extends TeaModel {
              */
             public Builder label(String label) {
                 this.label = label;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
                 return this;
             }
 

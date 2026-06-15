@@ -362,6 +362,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTextScanResultResponse> getTextScanResult(GetTextScanResultRequest request);
 
     /**
+     * @param request the request parameters of GetTuneProposalById  GetTuneProposalByIdRequest
+     * @return GetTuneProposalByIdResponse
+     */
+    CompletableFuture<GetTuneProposalByIdResponse> getTuneProposalById(GetTuneProposalByIdRequest request);
+
+    /**
      * @param request the request parameters of GetUploadInfo  GetUploadInfoRequest
      * @return GetUploadInfoResponse
      */
