@@ -312,6 +312,12 @@ public class MassPushRequest extends Request {
         @Deprecated
         private String androidXiaomiImageUrl;
 
+        @com.aliyun.core.annotation.NameInMap("AndroidXiaomiTemplateId")
+        private String androidXiaomiTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("AndroidXiaomiTemplateParams")
+        private String androidXiaomiTemplateParams;
+
         @com.aliyun.core.annotation.NameInMap("Body")
         private String body;
 
@@ -540,6 +546,8 @@ public class MassPushRequest extends Request {
             this.androidXiaomiFocusParam = builder.androidXiaomiFocusParam;
             this.androidXiaomiFocusPics = builder.androidXiaomiFocusPics;
             this.androidXiaomiImageUrl = builder.androidXiaomiImageUrl;
+            this.androidXiaomiTemplateId = builder.androidXiaomiTemplateId;
+            this.androidXiaomiTemplateParams = builder.androidXiaomiTemplateParams;
             this.body = builder.body;
             this.deviceType = builder.deviceType;
             this.expireTime = builder.expireTime;
@@ -1005,6 +1013,20 @@ public class MassPushRequest extends Request {
         }
 
         /**
+         * @return androidXiaomiTemplateId
+         */
+        public String getAndroidXiaomiTemplateId() {
+            return this.androidXiaomiTemplateId;
+        }
+
+        /**
+         * @return androidXiaomiTemplateParams
+         */
+        public String getAndroidXiaomiTemplateParams() {
+            return this.androidXiaomiTemplateParams;
+        }
+
+        /**
          * @return body
          */
         public String getBody() {
@@ -1447,6 +1469,8 @@ public class MassPushRequest extends Request {
             private String androidXiaomiFocusParam; 
             private String androidXiaomiFocusPics; 
             private String androidXiaomiImageUrl; 
+            private String androidXiaomiTemplateId; 
+            private String androidXiaomiTemplateParams; 
             private String body; 
             private String deviceType; 
             private String expireTime; 
@@ -1564,6 +1588,8 @@ public class MassPushRequest extends Request {
                 this.androidXiaomiFocusParam = model.androidXiaomiFocusParam;
                 this.androidXiaomiFocusPics = model.androidXiaomiFocusPics;
                 this.androidXiaomiImageUrl = model.androidXiaomiImageUrl;
+                this.androidXiaomiTemplateId = model.androidXiaomiTemplateId;
+                this.androidXiaomiTemplateParams = model.androidXiaomiTemplateParams;
                 this.body = model.body;
                 this.deviceType = model.deviceType;
                 this.expireTime = model.expireTime;
@@ -2074,6 +2100,22 @@ public class MassPushRequest extends Request {
              */
             public Builder androidXiaomiImageUrl(String androidXiaomiImageUrl) {
                 this.androidXiaomiImageUrl = androidXiaomiImageUrl;
+                return this;
+            }
+
+            /**
+             * AndroidXiaomiTemplateId.
+             */
+            public Builder androidXiaomiTemplateId(String androidXiaomiTemplateId) {
+                this.androidXiaomiTemplateId = androidXiaomiTemplateId;
+                return this;
+            }
+
+            /**
+             * AndroidXiaomiTemplateParams.
+             */
+            public Builder androidXiaomiTemplateParams(String androidXiaomiTemplateParams) {
+                this.androidXiaomiTemplateParams = androidXiaomiTemplateParams;
                 return this;
             }
 

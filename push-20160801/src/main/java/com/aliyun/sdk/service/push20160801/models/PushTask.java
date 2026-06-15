@@ -986,10 +986,18 @@ public class PushTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FocusPics")
         private String focusPics;
 
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        private String templateId;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateParams")
+        private String templateParams;
+
         private Xiaomi(Builder builder) {
             this.channel = builder.channel;
             this.focusParam = builder.focusParam;
             this.focusPics = builder.focusPics;
+            this.templateId = builder.templateId;
+            this.templateParams = builder.templateParams;
         }
 
         public static Builder builder() {
@@ -1021,10 +1029,26 @@ public class PushTask extends TeaModel {
             return this.focusPics;
         }
 
+        /**
+         * @return templateId
+         */
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        /**
+         * @return templateParams
+         */
+        public String getTemplateParams() {
+            return this.templateParams;
+        }
+
         public static final class Builder {
             private String channel; 
             private String focusParam; 
             private String focusPics; 
+            private String templateId; 
+            private String templateParams; 
 
             private Builder() {
             } 
@@ -1033,6 +1057,8 @@ public class PushTask extends TeaModel {
                 this.channel = model.channel;
                 this.focusParam = model.focusParam;
                 this.focusPics = model.focusPics;
+                this.templateId = model.templateId;
+                this.templateParams = model.templateParams;
             } 
 
             /**
@@ -1056,6 +1082,22 @@ public class PushTask extends TeaModel {
              */
             public Builder focusPics(String focusPics) {
                 this.focusPics = focusPics;
+                return this;
+            }
+
+            /**
+             * TemplateId.
+             */
+            public Builder templateId(String templateId) {
+                this.templateId = templateId;
+                return this;
+            }
+
+            /**
+             * TemplateParams.
+             */
+            public Builder templateParams(String templateParams) {
+                this.templateParams = templateParams;
                 return this;
             }
 

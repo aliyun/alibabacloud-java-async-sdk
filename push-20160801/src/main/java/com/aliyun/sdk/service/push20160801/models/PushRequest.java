@@ -255,6 +255,14 @@ public class PushRequest extends Request {
     private String androidXiaomiImageUrl;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidXiaomiTemplateId")
+    private String androidXiaomiTemplateId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidXiaomiTemplateParams")
+    private String androidXiaomiTemplateParams;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppKey")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long appKey;
@@ -569,6 +577,8 @@ public class PushRequest extends Request {
         this.androidXiaomiFocusParam = builder.androidXiaomiFocusParam;
         this.androidXiaomiFocusPics = builder.androidXiaomiFocusPics;
         this.androidXiaomiImageUrl = builder.androidXiaomiImageUrl;
+        this.androidXiaomiTemplateId = builder.androidXiaomiTemplateId;
+        this.androidXiaomiTemplateParams = builder.androidXiaomiTemplateParams;
         this.appKey = builder.appKey;
         this.body = builder.body;
         this.deviceType = builder.deviceType;
@@ -1043,6 +1053,20 @@ public class PushRequest extends Request {
      */
     public String getAndroidXiaomiImageUrl() {
         return this.androidXiaomiImageUrl;
+    }
+
+    /**
+     * @return androidXiaomiTemplateId
+     */
+    public String getAndroidXiaomiTemplateId() {
+        return this.androidXiaomiTemplateId;
+    }
+
+    /**
+     * @return androidXiaomiTemplateParams
+     */
+    public String getAndroidXiaomiTemplateParams() {
+        return this.androidXiaomiTemplateParams;
     }
 
     /**
@@ -1537,6 +1561,8 @@ public class PushRequest extends Request {
         private String androidXiaomiFocusParam; 
         private String androidXiaomiFocusPics; 
         private String androidXiaomiImageUrl; 
+        private String androidXiaomiTemplateId; 
+        private String androidXiaomiTemplateParams; 
         private Long appKey; 
         private String body; 
         private String deviceType; 
@@ -1663,6 +1689,8 @@ public class PushRequest extends Request {
             this.androidXiaomiFocusParam = request.androidXiaomiFocusParam;
             this.androidXiaomiFocusPics = request.androidXiaomiFocusPics;
             this.androidXiaomiImageUrl = request.androidXiaomiImageUrl;
+            this.androidXiaomiTemplateId = request.androidXiaomiTemplateId;
+            this.androidXiaomiTemplateParams = request.androidXiaomiTemplateParams;
             this.appKey = request.appKey;
             this.body = request.body;
             this.deviceType = request.deviceType;
@@ -2239,6 +2267,24 @@ public class PushRequest extends Request {
         public Builder androidXiaomiImageUrl(String androidXiaomiImageUrl) {
             this.putQueryParameter("AndroidXiaomiImageUrl", androidXiaomiImageUrl);
             this.androidXiaomiImageUrl = androidXiaomiImageUrl;
+            return this;
+        }
+
+        /**
+         * AndroidXiaomiTemplateId.
+         */
+        public Builder androidXiaomiTemplateId(String androidXiaomiTemplateId) {
+            this.putQueryParameter("AndroidXiaomiTemplateId", androidXiaomiTemplateId);
+            this.androidXiaomiTemplateId = androidXiaomiTemplateId;
+            return this;
+        }
+
+        /**
+         * AndroidXiaomiTemplateParams.
+         */
+        public Builder androidXiaomiTemplateParams(String androidXiaomiTemplateParams) {
+            this.putQueryParameter("AndroidXiaomiTemplateParams", androidXiaomiTemplateParams);
+            this.androidXiaomiTemplateParams = androidXiaomiTemplateParams;
             return this;
         }
 
