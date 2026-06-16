@@ -38,6 +38,10 @@ public class CreateTaskGroupRequest extends Request {
     private String serviceCodes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceList")
+    private String serviceList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceNames")
     private String serviceNames;
 
@@ -60,6 +64,7 @@ public class CreateTaskGroupRequest extends Request {
         this.sampleIds = builder.sampleIds;
         this.scenes = builder.scenes;
         this.serviceCodes = builder.serviceCodes;
+        this.serviceList = builder.serviceList;
         this.serviceNames = builder.serviceNames;
         this.tab = builder.tab;
         this.taskGroupName = builder.taskGroupName;
@@ -115,6 +120,13 @@ public class CreateTaskGroupRequest extends Request {
     }
 
     /**
+     * @return serviceList
+     */
+    public String getServiceList() {
+        return this.serviceList;
+    }
+
+    /**
      * @return serviceNames
      */
     public String getServiceNames() {
@@ -148,6 +160,7 @@ public class CreateTaskGroupRequest extends Request {
         private String sampleIds; 
         private String scenes; 
         private String serviceCodes; 
+        private String serviceList; 
         private String serviceNames; 
         private String tab; 
         private String taskGroupName; 
@@ -164,6 +177,7 @@ public class CreateTaskGroupRequest extends Request {
             this.sampleIds = request.sampleIds;
             this.scenes = request.scenes;
             this.serviceCodes = request.serviceCodes;
+            this.serviceList = request.serviceList;
             this.serviceNames = request.serviceNames;
             this.tab = request.tab;
             this.taskGroupName = request.taskGroupName;
@@ -212,6 +226,15 @@ public class CreateTaskGroupRequest extends Request {
         public Builder serviceCodes(String serviceCodes) {
             this.putQueryParameter("ServiceCodes", serviceCodes);
             this.serviceCodes = serviceCodes;
+            return this;
+        }
+
+        /**
+         * ServiceList.
+         */
+        public Builder serviceList(String serviceList) {
+            this.putQueryParameter("ServiceList", serviceList);
+            this.serviceList = serviceList;
             return this;
         }
 
