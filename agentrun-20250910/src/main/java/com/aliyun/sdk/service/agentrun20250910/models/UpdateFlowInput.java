@@ -225,7 +225,7 @@ public class UpdateFlowInput extends TeaModel {
          * <p>为工作流提供访问云服务权限的执行角色ARN</p>
          * 
          * <strong>example:</strong>
-         * <p>acs:ram::1760720386195983:role/FlowExecutionRole</p>
+         * <p>acs:ram::123456789012:role/FlowExecutionRole</p>
          */
         public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = executionRoleArn;

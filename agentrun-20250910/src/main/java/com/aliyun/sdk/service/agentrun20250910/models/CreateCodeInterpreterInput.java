@@ -195,7 +195,7 @@ public class CreateCodeInterpreterInput extends TeaModel {
          * <p>此代码解释器的执行角色</p>
          * 
          * <strong>example:</strong>
-         * <p>acs:ram::1760720386195983:role/CodeInterpreterExecutionRole</p>
+         * <p>acs:ram::123456789012:role/CodeInterpreterExecutionRole</p>
          */
         public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = executionRoleArn;

@@ -122,7 +122,7 @@ public class AgentRuntimeVersion extends TeaModel {
          * <p>智能体运行时的ARN</p>
          * 
          * <strong>example:</strong>
-         * <p>acs:agentrun:cn-hangzhou:1760720386195983:runtimes/7a1b6d39-9f8f-4ce2-b9c9-6db1b0b9e169</p>
+         * <p>acs:agentrun:cn-hangzhou:123456789012:runtimes/runtime-xxx</p>
          */
         public Builder agentRuntimeArn(String agentRuntimeArn) {
             this.agentRuntimeArn = agentRuntimeArn;

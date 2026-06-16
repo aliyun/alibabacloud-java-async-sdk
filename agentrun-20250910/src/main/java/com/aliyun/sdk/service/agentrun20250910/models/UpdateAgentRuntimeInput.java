@@ -42,6 +42,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("disableOndemand")
+    private Boolean disableOndemand;
+
     @com.aliyun.core.annotation.NameInMap("disableSessionAffinity")
     private Boolean disableSessionAffinity;
 
@@ -62,6 +65,13 @@ public class UpdateAgentRuntimeInput extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("externalAgentEndpointUrl")
     private String externalAgentEndpointUrl;
+
+    @com.aliyun.core.annotation.NameInMap("forceEvictInstances")
+    private Boolean forceEvictInstances;
+
+    @com.aliyun.core.annotation.NameInMap("headerFieldName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
+    private String headerFieldName;
 
     @com.aliyun.core.annotation.NameInMap("healthCheckConfiguration")
     private HealthCheckConfiguration healthCheckConfiguration;
@@ -87,6 +97,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("protocolConfiguration")
     private ProtocolConfiguration protocolConfiguration;
 
+    @com.aliyun.core.annotation.NameInMap("sessionAffinityType")
+    private String sessionAffinityType;
+
     @com.aliyun.core.annotation.NameInMap("sessionConcurrencyLimitPerInstance")
     @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer sessionConcurrencyLimitPerInstance;
@@ -109,6 +122,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         this.cpu = builder.cpu;
         this.credentialName = builder.credentialName;
         this.description = builder.description;
+        this.disableOndemand = builder.disableOndemand;
         this.disableSessionAffinity = builder.disableSessionAffinity;
         this.diskSize = builder.diskSize;
         this.edition = builder.edition;
@@ -116,6 +130,8 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         this.environmentVariables = builder.environmentVariables;
         this.executionRoleArn = builder.executionRoleArn;
         this.externalAgentEndpointUrl = builder.externalAgentEndpointUrl;
+        this.forceEvictInstances = builder.forceEvictInstances;
+        this.headerFieldName = builder.headerFieldName;
         this.healthCheckConfiguration = builder.healthCheckConfiguration;
         this.logConfiguration = builder.logConfiguration;
         this.memory = builder.memory;
@@ -124,6 +140,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         this.ossMountConfig = builder.ossMountConfig;
         this.port = builder.port;
         this.protocolConfiguration = builder.protocolConfiguration;
+        this.sessionAffinityType = builder.sessionAffinityType;
         this.sessionConcurrencyLimitPerInstance = builder.sessionConcurrencyLimitPerInstance;
         this.sessionIdleTimeoutSeconds = builder.sessionIdleTimeoutSeconds;
         this.systemTags = builder.systemTags;
@@ -199,6 +216,13 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     }
 
     /**
+     * @return disableOndemand
+     */
+    public Boolean getDisableOndemand() {
+        return this.disableOndemand;
+    }
+
+    /**
      * @return disableSessionAffinity
      */
     public Boolean getDisableSessionAffinity() {
@@ -245,6 +269,20 @@ public class UpdateAgentRuntimeInput extends TeaModel {
      */
     public String getExternalAgentEndpointUrl() {
         return this.externalAgentEndpointUrl;
+    }
+
+    /**
+     * @return forceEvictInstances
+     */
+    public Boolean getForceEvictInstances() {
+        return this.forceEvictInstances;
+    }
+
+    /**
+     * @return headerFieldName
+     */
+    public String getHeaderFieldName() {
+        return this.headerFieldName;
     }
 
     /**
@@ -304,6 +342,13 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     }
 
     /**
+     * @return sessionAffinityType
+     */
+    public String getSessionAffinityType() {
+        return this.sessionAffinityType;
+    }
+
+    /**
      * @return sessionConcurrencyLimitPerInstance
      */
     public Integer getSessionConcurrencyLimitPerInstance() {
@@ -340,6 +385,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         private Float cpu; 
         private String credentialName; 
         private String description; 
+        private Boolean disableOndemand; 
         private Boolean disableSessionAffinity; 
         private Integer diskSize; 
         private String edition; 
@@ -347,6 +393,8 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         private java.util.Map<String, String> environmentVariables; 
         private String executionRoleArn; 
         private String externalAgentEndpointUrl; 
+        private Boolean forceEvictInstances; 
+        private String headerFieldName; 
         private HealthCheckConfiguration healthCheckConfiguration; 
         private LogConfiguration logConfiguration; 
         private Integer memory; 
@@ -355,6 +403,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         private OSSMountConfig ossMountConfig; 
         private Integer port; 
         private ProtocolConfiguration protocolConfiguration; 
+        private String sessionAffinityType; 
         private Integer sessionConcurrencyLimitPerInstance; 
         private Integer sessionIdleTimeoutSeconds; 
         private java.util.List<String> systemTags; 
@@ -372,6 +421,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
             this.cpu = model.cpu;
             this.credentialName = model.credentialName;
             this.description = model.description;
+            this.disableOndemand = model.disableOndemand;
             this.disableSessionAffinity = model.disableSessionAffinity;
             this.diskSize = model.diskSize;
             this.edition = model.edition;
@@ -379,6 +429,8 @@ public class UpdateAgentRuntimeInput extends TeaModel {
             this.environmentVariables = model.environmentVariables;
             this.executionRoleArn = model.executionRoleArn;
             this.externalAgentEndpointUrl = model.externalAgentEndpointUrl;
+            this.forceEvictInstances = model.forceEvictInstances;
+            this.headerFieldName = model.headerFieldName;
             this.healthCheckConfiguration = model.healthCheckConfiguration;
             this.logConfiguration = model.logConfiguration;
             this.memory = model.memory;
@@ -387,6 +439,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
             this.ossMountConfig = model.ossMountConfig;
             this.port = model.port;
             this.protocolConfiguration = model.protocolConfiguration;
+            this.sessionAffinityType = model.sessionAffinityType;
             this.sessionConcurrencyLimitPerInstance = model.sessionConcurrencyLimitPerInstance;
             this.sessionIdleTimeoutSeconds = model.sessionIdleTimeoutSeconds;
             this.systemTags = model.systemTags;
@@ -473,6 +526,17 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         }
 
         /**
+         * <p>是否禁用按需弹性能力。默认为 false，设置为 true 时关闭按需弹性</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder disableOndemand(Boolean disableOndemand) {
+            this.disableOndemand = disableOndemand;
+            return this;
+        }
+
+        /**
          * <p>是否禁用会话亲和性。默认为 false（即默认启用会话亲和），设置为 true 时关闭会话亲和</p>
          * 
          * <strong>example:</strong>
@@ -525,7 +589,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
          * <p>为智能体运行时提供访问云服务权限的执行角色ARN</p>
          * 
          * <strong>example:</strong>
-         * <p>acs:ram::1760720386195983:role/AgentRunExecutionRole</p>
+         * <p>acs:ram::123456789012:role/AgentRunExecutionRole</p>
          */
         public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
@@ -540,6 +604,28 @@ public class UpdateAgentRuntimeInput extends TeaModel {
          */
         public Builder externalAgentEndpointUrl(String externalAgentEndpointUrl) {
             this.externalAgentEndpointUrl = externalAgentEndpointUrl;
+            return this;
+        }
+
+        /**
+         * <p>更新运行时配置后是否尽力驱逐当前活跃 FC 会话，使新配置尽快生效</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder forceEvictInstances(Boolean forceEvictInstances) {
+            this.forceEvictInstances = forceEvictInstances;
+            return this;
+        }
+
+        /**
+         * <p>当 sessionAffinityType 为 HEADER_FIELD 时用于会话亲和的请求头名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x-agentrun-session-id</p>
+         */
+        public Builder headerFieldName(String headerFieldName) {
+            this.headerFieldName = headerFieldName;
             return this;
         }
 
@@ -622,6 +708,17 @@ public class UpdateAgentRuntimeInput extends TeaModel {
          */
         public Builder protocolConfiguration(ProtocolConfiguration protocolConfiguration) {
             this.protocolConfiguration = protocolConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>会话亲和模式。NONE 表示关闭会话亲和；HEADER_FIELD 表示基于请求头的会话亲和；GENERATED_COOKIE 表示由 FC 生成 Cookie 进行会话亲和；COOKIE 为兼容别名，服务端会归一为 GENERATED_COOKIE</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GENERATED_COOKIE</p>
+         */
+        public Builder sessionAffinityType(String sessionAffinityType) {
+            this.sessionAffinityType = sessionAffinityType;
             return this;
         }
 

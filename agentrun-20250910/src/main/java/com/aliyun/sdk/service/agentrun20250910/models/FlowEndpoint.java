@@ -204,7 +204,7 @@ public class FlowEndpoint extends TeaModel {
          * <p>工作流端点的全局唯一资源名称</p>
          * 
          * <strong>example:</strong>
-         * <p>acs:agentrun:cn-hangzhou:1760720386195983:workspaces/ws-xxx/flows/flow-xxx/endpoints/fe-xxx</p>
+         * <p>acs:agentrun:cn-hangzhou:123456789012:workspaces/ws-xxx/flows/flow-xxx/endpoints/fe-xxx</p>
          */
         public Builder flowEndpointArn(String flowEndpointArn) {
             this.flowEndpointArn = flowEndpointArn;

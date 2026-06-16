@@ -29,8 +29,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "AgentRun";
         this.version = "2025-09-10";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-shenzhen", "agentrun.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "agentrun.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "agentrun.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "agentrun.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "agentrun.ap-southeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 

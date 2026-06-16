@@ -21,6 +21,9 @@ public class OssConfiguration extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String bucketName;
 
+    @com.aliyun.core.annotation.NameInMap("endpoint")
+    private String endpoint;
+
     @com.aliyun.core.annotation.NameInMap("mountPoint")
     @com.aliyun.core.annotation.Validation(required = true)
     private String mountPoint;
@@ -37,6 +40,7 @@ public class OssConfiguration extends TeaModel {
 
     private OssConfiguration(Builder builder) {
         this.bucketName = builder.bucketName;
+        this.endpoint = builder.endpoint;
         this.mountPoint = builder.mountPoint;
         this.permission = builder.permission;
         this.prefix = builder.prefix;
@@ -60,6 +64,13 @@ public class OssConfiguration extends TeaModel {
      */
     public String getBucketName() {
         return this.bucketName;
+    }
+
+    /**
+     * @return endpoint
+     */
+    public String getEndpoint() {
+        return this.endpoint;
     }
 
     /**
@@ -92,6 +103,7 @@ public class OssConfiguration extends TeaModel {
 
     public static final class Builder {
         private String bucketName; 
+        private String endpoint; 
         private String mountPoint; 
         private String permission; 
         private String prefix; 
@@ -102,6 +114,7 @@ public class OssConfiguration extends TeaModel {
 
         private Builder(OssConfiguration model) {
             this.bucketName = model.bucketName;
+            this.endpoint = model.endpoint;
             this.mountPoint = model.mountPoint;
             this.permission = model.permission;
             this.prefix = model.prefix;
@@ -113,6 +126,14 @@ public class OssConfiguration extends TeaModel {
          */
         public Builder bucketName(String bucketName) {
             this.bucketName = bucketName;
+            return this;
+        }
+
+        /**
+         * endpoint.
+         */
+        public Builder endpoint(String endpoint) {
+            this.endpoint = endpoint;
             return this;
         }
 
