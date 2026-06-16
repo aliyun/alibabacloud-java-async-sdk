@@ -32,35 +32,20 @@ public class EngineSearchRequest extends Request {
     private EngineSearchRequestQuery query;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("recall")
-    private Recall recall;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sessionId")
     private String sessionId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("strategyId")
-    private String strategyId;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user")
     private User user;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("version")
-    private String version;
 
     private EngineSearchRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
         this.grey = builder.grey;
         this.query = builder.query;
-        this.recall = builder.recall;
         this.sessionId = builder.sessionId;
-        this.strategyId = builder.strategyId;
         this.user = builder.user;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -98,24 +83,10 @@ public class EngineSearchRequest extends Request {
     }
 
     /**
-     * @return recall
-     */
-    public Recall getRecall() {
-        return this.recall;
-    }
-
-    /**
      * @return sessionId
      */
     public String getSessionId() {
         return this.sessionId;
-    }
-
-    /**
-     * @return strategyId
-     */
-    public String getStrategyId() {
-        return this.strategyId;
     }
 
     /**
@@ -125,22 +96,12 @@ public class EngineSearchRequest extends Request {
         return this.user;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<EngineSearchRequest, Builder> {
         private String appId; 
         private Boolean grey; 
         private EngineSearchRequestQuery query; 
-        private Recall recall; 
         private String sessionId; 
-        private String strategyId; 
         private User user; 
-        private String version; 
 
         private Builder() {
             super();
@@ -151,11 +112,8 @@ public class EngineSearchRequest extends Request {
             this.appId = request.appId;
             this.grey = request.grey;
             this.query = request.query;
-            this.recall = request.recall;
             this.sessionId = request.sessionId;
-            this.strategyId = request.strategyId;
             this.user = request.user;
-            this.version = request.version;
         } 
 
         /**
@@ -189,15 +147,6 @@ public class EngineSearchRequest extends Request {
         }
 
         /**
-         * recall.
-         */
-        public Builder recall(Recall recall) {
-            this.putBodyParameter("recall", recall);
-            this.recall = recall;
-            return this;
-        }
-
-        /**
          * sessionId.
          */
         public Builder sessionId(String sessionId) {
@@ -207,29 +156,11 @@ public class EngineSearchRequest extends Request {
         }
 
         /**
-         * strategyId.
-         */
-        public Builder strategyId(String strategyId) {
-            this.putBodyParameter("strategyId", strategyId);
-            this.strategyId = strategyId;
-            return this;
-        }
-
-        /**
          * user.
          */
         public Builder user(User user) {
             this.putBodyParameter("user", user);
             this.user = user;
-            return this;
-        }
-
-        /**
-         * version.
-         */
-        public Builder version(String version) {
-            this.putBodyParameter("version", version);
-            this.version = version;
             return this;
         }
 
@@ -373,81 +304,6 @@ public class EngineSearchRequest extends Request {
 
             public EngineSearchRequestQuery build() {
                 return new EngineSearchRequestQuery(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link EngineSearchRequest} extends {@link TeaModel}
-     *
-     * <p>EngineSearchRequest</p>
-     */
-    public static class Recall extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("closeRecallAsr")
-        private Boolean closeRecallAsr;
-
-        @com.aliyun.core.annotation.NameInMap("needMergeSegments")
-        private Boolean needMergeSegments;
-
-        private Recall(Builder builder) {
-            this.closeRecallAsr = builder.closeRecallAsr;
-            this.needMergeSegments = builder.needMergeSegments;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Recall create() {
-            return builder().build();
-        }
-
-        /**
-         * @return closeRecallAsr
-         */
-        public Boolean getCloseRecallAsr() {
-            return this.closeRecallAsr;
-        }
-
-        /**
-         * @return needMergeSegments
-         */
-        public Boolean getNeedMergeSegments() {
-            return this.needMergeSegments;
-        }
-
-        public static final class Builder {
-            private Boolean closeRecallAsr; 
-            private Boolean needMergeSegments; 
-
-            private Builder() {
-            } 
-
-            private Builder(Recall model) {
-                this.closeRecallAsr = model.closeRecallAsr;
-                this.needMergeSegments = model.needMergeSegments;
-            } 
-
-            /**
-             * closeRecallAsr.
-             */
-            public Builder closeRecallAsr(Boolean closeRecallAsr) {
-                this.closeRecallAsr = closeRecallAsr;
-                return this;
-            }
-
-            /**
-             * needMergeSegments.
-             */
-            public Builder needMergeSegments(Boolean needMergeSegments) {
-                this.needMergeSegments = needMergeSegments;
-                return this;
-            }
-
-            public Recall build() {
-                return new Recall(this);
             } 
 
         } 
