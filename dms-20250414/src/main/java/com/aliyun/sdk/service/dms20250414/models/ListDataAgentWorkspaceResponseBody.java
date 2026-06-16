@@ -221,6 +221,9 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalMember")
         private Long totalMember;
 
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
         @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
@@ -238,6 +241,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             this.modifyTime = builder.modifyTime;
             this.roleName = builder.roleName;
             this.totalMember = builder.totalMember;
+            this.type = builder.type;
             this.workspaceId = builder.workspaceId;
             this.workspaceName = builder.workspaceName;
             this.workspaceStatus = builder.workspaceStatus;
@@ -301,6 +305,13 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
          * @return workspaceId
          */
         public String getWorkspaceId() {
@@ -329,6 +340,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             private Long modifyTime; 
             private String roleName; 
             private Long totalMember; 
+            private String type; 
             private String workspaceId; 
             private String workspaceName; 
             private String workspaceStatus; 
@@ -344,6 +356,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
                 this.modifyTime = model.modifyTime;
                 this.roleName = model.roleName;
                 this.totalMember = model.totalMember;
+                this.type = model.type;
                 this.workspaceId = model.workspaceId;
                 this.workspaceName = model.workspaceName;
                 this.workspaceStatus = model.workspaceStatus;
@@ -402,6 +415,14 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
              */
             public Builder totalMember(Long totalMember) {
                 this.totalMember = totalMember;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

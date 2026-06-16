@@ -160,6 +160,207 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
      *
      * <p>DescribeDataAgentSessionResponseBody</p>
      */
+    public static class Artifacts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
+        private String finishTime;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("ReceiveTime")
+        private String receiveTime;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Artifacts(Builder builder) {
+            this.description = builder.description;
+            this.finishTime = builder.finishTime;
+            this.id = builder.id;
+            this.name = builder.name;
+            this.receiveTime = builder.receiveTime;
+            this.startTime = builder.startTime;
+            this.status = builder.status;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Artifacts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return finishTime
+         */
+        public String getFinishTime() {
+            return this.finishTime;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return receiveTime
+         */
+        public String getReceiveTime() {
+            return this.receiveTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String finishTime; 
+            private String id; 
+            private String name; 
+            private String receiveTime; 
+            private String startTime; 
+            private String status; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Artifacts model) {
+                this.description = model.description;
+                this.finishTime = model.finishTime;
+                this.id = model.id;
+                this.name = model.name;
+                this.receiveTime = model.receiveTime;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * FinishTime.
+             */
+            public Builder finishTime(String finishTime) {
+                this.finishTime = finishTime;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * ReceiveTime.
+             */
+            public Builder receiveTime(String receiveTime) {
+                this.receiveTime = receiveTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Artifacts build() {
+                return new Artifacts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDataAgentSessionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataAgentSessionResponseBody</p>
+     */
     public static class ChatHistoryLocations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -224,6 +425,177 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
 
             public ChatHistoryLocations build() {
                 return new ChatHistoryLocations(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDataAgentSessionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataAgentSessionResponseBody</p>
+     */
+    public static class DataSources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("Detail")
+        private String detail;
+
+        private DataSources(Builder builder) {
+            this.category = builder.category;
+            this.detail = builder.detail;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataSources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return detail
+         */
+        public String getDetail() {
+            return this.detail;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private String detail; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSources model) {
+                this.category = model.category;
+                this.detail = model.detail;
+            } 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * Detail.
+             */
+            public Builder detail(String detail) {
+                this.detail = detail;
+                return this;
+            }
+
+            public DataSources build() {
+                return new DataSources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDataAgentSessionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataAgentSessionResponseBody</p>
+     */
+    public static class RecallResults extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("Score")
+        private Double score;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private RecallResults(Builder builder) {
+            this.content = builder.content;
+            this.score = builder.score;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecallResults create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return score
+         */
+        public Double getScore() {
+            return this.score;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private Double score; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecallResults model) {
+                this.content = model.content;
+                this.score = model.score;
+                this.type = model.type;
+            } 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * Score.
+             */
+            public Builder score(Double score) {
+                this.score = score;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public RecallResults build() {
+                return new RecallResults(this);
             } 
 
         } 
@@ -527,17 +899,26 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentStatus")
         private String agentStatus;
 
+        @com.aliyun.core.annotation.NameInMap("Artifacts")
+        private java.util.List<Artifacts> artifacts;
+
         @com.aliyun.core.annotation.NameInMap("ChatHistoryLocations")
         private java.util.List<ChatHistoryLocations> chatHistoryLocations;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DataSources")
+        private java.util.List<DataSources> dataSources;
+
         @com.aliyun.core.annotation.NameInMap("FavoriteInWorkspace")
         private String favoriteInWorkspace;
 
         @com.aliyun.core.annotation.NameInMap("File")
         private String file;
+
+        @com.aliyun.core.annotation.NameInMap("RecallResults")
+        private java.util.List<RecallResults> recallResults;
 
         @com.aliyun.core.annotation.NameInMap("Saved")
         private Boolean saved;
@@ -560,10 +941,13 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.agentId = builder.agentId;
             this.agentStatus = builder.agentStatus;
+            this.artifacts = builder.artifacts;
             this.chatHistoryLocations = builder.chatHistoryLocations;
             this.createTime = builder.createTime;
+            this.dataSources = builder.dataSources;
             this.favoriteInWorkspace = builder.favoriteInWorkspace;
             this.file = builder.file;
+            this.recallResults = builder.recallResults;
             this.saved = builder.saved;
             this.sessionConfig = builder.sessionConfig;
             this.sessionId = builder.sessionId;
@@ -595,6 +979,13 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
+         * @return artifacts
+         */
+        public java.util.List<Artifacts> getArtifacts() {
+            return this.artifacts;
+        }
+
+        /**
          * @return chatHistoryLocations
          */
         public java.util.List<ChatHistoryLocations> getChatHistoryLocations() {
@@ -609,6 +1000,13 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
+         * @return dataSources
+         */
+        public java.util.List<DataSources> getDataSources() {
+            return this.dataSources;
+        }
+
+        /**
          * @return favoriteInWorkspace
          */
         public String getFavoriteInWorkspace() {
@@ -620,6 +1018,13 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
          */
         public String getFile() {
             return this.file;
+        }
+
+        /**
+         * @return recallResults
+         */
+        public java.util.List<RecallResults> getRecallResults() {
+            return this.recallResults;
         }
 
         /**
@@ -667,10 +1072,13 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public static final class Builder {
             private String agentId; 
             private String agentStatus; 
+            private java.util.List<Artifacts> artifacts; 
             private java.util.List<ChatHistoryLocations> chatHistoryLocations; 
             private Long createTime; 
+            private java.util.List<DataSources> dataSources; 
             private String favoriteInWorkspace; 
             private String file; 
+            private java.util.List<RecallResults> recallResults; 
             private Boolean saved; 
             private SessionConfig sessionConfig; 
             private String sessionId; 
@@ -684,10 +1092,13 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.agentId = model.agentId;
                 this.agentStatus = model.agentStatus;
+                this.artifacts = model.artifacts;
                 this.chatHistoryLocations = model.chatHistoryLocations;
                 this.createTime = model.createTime;
+                this.dataSources = model.dataSources;
                 this.favoriteInWorkspace = model.favoriteInWorkspace;
                 this.file = model.file;
+                this.recallResults = model.recallResults;
                 this.saved = model.saved;
                 this.sessionConfig = model.sessionConfig;
                 this.sessionId = model.sessionId;
@@ -713,6 +1124,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
+             * Artifacts.
+             */
+            public Builder artifacts(java.util.List<Artifacts> artifacts) {
+                this.artifacts = artifacts;
+                return this;
+            }
+
+            /**
              * ChatHistoryLocations.
              */
             public Builder chatHistoryLocations(java.util.List<ChatHistoryLocations> chatHistoryLocations) {
@@ -729,6 +1148,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
+             * DataSources.
+             */
+            public Builder dataSources(java.util.List<DataSources> dataSources) {
+                this.dataSources = dataSources;
+                return this;
+            }
+
+            /**
              * FavoriteInWorkspace.
              */
             public Builder favoriteInWorkspace(String favoriteInWorkspace) {
@@ -741,6 +1168,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
              */
             public Builder file(String file) {
                 this.file = file;
+                return this;
+            }
+
+            /**
+             * RecallResults.
+             */
+            public Builder recallResults(java.util.List<RecallResults> recallResults) {
+                this.recallResults = recallResults;
                 return this;
             }
 

@@ -167,12 +167,16 @@ public class SendChatMessageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
+        @com.aliyun.core.annotation.NameInMap("MessageId")
+        private String messageId;
+
         @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
         private Data(Builder builder) {
             this.agentId = builder.agentId;
             this.message = builder.message;
+            this.messageId = builder.messageId;
             this.sessionId = builder.sessionId;
         }
 
@@ -199,6 +203,13 @@ public class SendChatMessageResponseBody extends TeaModel {
         }
 
         /**
+         * @return messageId
+         */
+        public String getMessageId() {
+            return this.messageId;
+        }
+
+        /**
          * @return sessionId
          */
         public String getSessionId() {
@@ -208,6 +219,7 @@ public class SendChatMessageResponseBody extends TeaModel {
         public static final class Builder {
             private String agentId; 
             private String message; 
+            private String messageId; 
             private String sessionId; 
 
             private Builder() {
@@ -216,6 +228,7 @@ public class SendChatMessageResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.agentId = model.agentId;
                 this.message = model.message;
+                this.messageId = model.messageId;
                 this.sessionId = model.sessionId;
             } 
 
@@ -238,6 +251,14 @@ public class SendChatMessageResponseBody extends TeaModel {
              */
             public Builder message(String message) {
                 this.message = message;
+                return this;
+            }
+
+            /**
+             * MessageId.
+             */
+            public Builder messageId(String messageId) {
+                this.messageId = messageId;
                 return this;
             }
 

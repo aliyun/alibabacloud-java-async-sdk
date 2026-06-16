@@ -176,6 +176,9 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalMember")
         private String totalMember;
 
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
         @com.aliyun.core.annotation.NameInMap("WorkspaceDesc")
         private String workspaceDesc;
 
@@ -195,6 +198,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             this.modifyTime = builder.modifyTime;
             this.roleName = builder.roleName;
             this.totalMember = builder.totalMember;
+            this.type = builder.type;
             this.workspaceDesc = builder.workspaceDesc;
             this.workspaceId = builder.workspaceId;
             this.workspaceName = builder.workspaceName;
@@ -252,6 +256,13 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
          * @return workspaceDesc
          */
         public String getWorkspaceDesc() {
@@ -286,6 +297,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             private String modifyTime; 
             private String roleName; 
             private String totalMember; 
+            private String type; 
             private String workspaceDesc; 
             private String workspaceId; 
             private String workspaceName; 
@@ -301,6 +313,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
                 this.modifyTime = model.modifyTime;
                 this.roleName = model.roleName;
                 this.totalMember = model.totalMember;
+                this.type = model.type;
                 this.workspaceDesc = model.workspaceDesc;
                 this.workspaceId = model.workspaceId;
                 this.workspaceName = model.workspaceName;
@@ -352,6 +365,14 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
              */
             public Builder totalMember(String totalMember) {
                 this.totalMember = totalMember;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

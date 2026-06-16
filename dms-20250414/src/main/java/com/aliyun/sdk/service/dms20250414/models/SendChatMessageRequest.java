@@ -68,6 +68,10 @@ public class SendChatMessageRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskConfig")
+    private TaskConfig taskConfig;
+
     private SendChatMessageRequest(Builder builder) {
         super(builder);
         this.agentId = builder.agentId;
@@ -82,6 +86,7 @@ public class SendChatMessageRequest extends Request {
         this.replyTo = builder.replyTo;
         this.sessionConfig = builder.sessionConfig;
         this.sessionId = builder.sessionId;
+        this.taskConfig = builder.taskConfig;
     }
 
     public static Builder builder() {
@@ -181,6 +186,13 @@ public class SendChatMessageRequest extends Request {
         return this.sessionId;
     }
 
+    /**
+     * @return taskConfig
+     */
+    public TaskConfig getTaskConfig() {
+        return this.taskConfig;
+    }
+
     public static final class Builder extends Request.Builder<SendChatMessageRequest, Builder> {
         private String agentId; 
         private String DMSUnit; 
@@ -194,6 +206,7 @@ public class SendChatMessageRequest extends Request {
         private String replyTo; 
         private SessionConfig sessionConfig; 
         private String sessionId; 
+        private TaskConfig taskConfig; 
 
         private Builder() {
             super();
@@ -213,6 +226,7 @@ public class SendChatMessageRequest extends Request {
             this.replyTo = request.replyTo;
             this.sessionConfig = request.sessionConfig;
             this.sessionId = request.sessionId;
+            this.taskConfig = request.taskConfig;
         } 
 
         /**
@@ -332,6 +346,16 @@ public class SendChatMessageRequest extends Request {
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * TaskConfig.
+         */
+        public Builder taskConfig(TaskConfig taskConfig) {
+            String taskConfigShrink = shrink(taskConfig, "TaskConfig", "json");
+            this.putQueryParameter("TaskConfig", taskConfigShrink);
+            this.taskConfig = taskConfig;
             return this;
         }
 
@@ -892,12 +916,28 @@ public class SendChatMessageRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ReportWaterMark")
         private String reportWaterMark;
 
+        @com.aliyun.core.annotation.NameInMap("SkipAskHuman")
+        private Boolean skipAskHuman;
+
+        @com.aliyun.core.annotation.NameInMap("SkipPlan")
+        private Boolean skipPlan;
+
+        @com.aliyun.core.annotation.NameInMap("SkipSqlConfirm")
+        private Boolean skipSqlConfirm;
+
+        @com.aliyun.core.annotation.NameInMap("SkipWebReportConfirm")
+        private Boolean skipWebReportConfirm;
+
         private SessionConfig(Builder builder) {
             this.customAgentId = builder.customAgentId;
             this.customAgentStage = builder.customAgentStage;
             this.language = builder.language;
             this.mode = builder.mode;
             this.reportWaterMark = builder.reportWaterMark;
+            this.skipAskHuman = builder.skipAskHuman;
+            this.skipPlan = builder.skipPlan;
+            this.skipSqlConfirm = builder.skipSqlConfirm;
+            this.skipWebReportConfirm = builder.skipWebReportConfirm;
         }
 
         public static Builder builder() {
@@ -943,12 +983,44 @@ public class SendChatMessageRequest extends Request {
             return this.reportWaterMark;
         }
 
+        /**
+         * @return skipAskHuman
+         */
+        public Boolean getSkipAskHuman() {
+            return this.skipAskHuman;
+        }
+
+        /**
+         * @return skipPlan
+         */
+        public Boolean getSkipPlan() {
+            return this.skipPlan;
+        }
+
+        /**
+         * @return skipSqlConfirm
+         */
+        public Boolean getSkipSqlConfirm() {
+            return this.skipSqlConfirm;
+        }
+
+        /**
+         * @return skipWebReportConfirm
+         */
+        public Boolean getSkipWebReportConfirm() {
+            return this.skipWebReportConfirm;
+        }
+
         public static final class Builder {
             private String customAgentId; 
             private String customAgentStage; 
             private String language; 
             private String mode; 
             private String reportWaterMark; 
+            private Boolean skipAskHuman; 
+            private Boolean skipPlan; 
+            private Boolean skipSqlConfirm; 
+            private Boolean skipWebReportConfirm; 
 
             private Builder() {
             } 
@@ -959,6 +1031,10 @@ public class SendChatMessageRequest extends Request {
                 this.language = model.language;
                 this.mode = model.mode;
                 this.reportWaterMark = model.reportWaterMark;
+                this.skipAskHuman = model.skipAskHuman;
+                this.skipPlan = model.skipPlan;
+                this.skipSqlConfirm = model.skipSqlConfirm;
+                this.skipWebReportConfirm = model.skipWebReportConfirm;
             } 
 
             /**
@@ -1001,8 +1077,190 @@ public class SendChatMessageRequest extends Request {
                 return this;
             }
 
+            /**
+             * SkipAskHuman.
+             */
+            public Builder skipAskHuman(Boolean skipAskHuman) {
+                this.skipAskHuman = skipAskHuman;
+                return this;
+            }
+
+            /**
+             * SkipPlan.
+             */
+            public Builder skipPlan(Boolean skipPlan) {
+                this.skipPlan = skipPlan;
+                return this;
+            }
+
+            /**
+             * SkipSqlConfirm.
+             */
+            public Builder skipSqlConfirm(Boolean skipSqlConfirm) {
+                this.skipSqlConfirm = skipSqlConfirm;
+                return this;
+            }
+
+            /**
+             * SkipWebReportConfirm.
+             */
+            public Builder skipWebReportConfirm(Boolean skipWebReportConfirm) {
+                this.skipWebReportConfirm = skipWebReportConfirm;
+                return this;
+            }
+
             public SessionConfig build() {
                 return new SessionConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SendChatMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatMessageRequest</p>
+     */
+    public static class ReportConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ReportPrompt")
+        private String reportPrompt;
+
+        @com.aliyun.core.annotation.NameInMap("ReportTheme")
+        private String reportTheme;
+
+        @com.aliyun.core.annotation.NameInMap("ReportType")
+        private String reportType;
+
+        private ReportConfig(Builder builder) {
+            this.reportPrompt = builder.reportPrompt;
+            this.reportTheme = builder.reportTheme;
+            this.reportType = builder.reportType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReportConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reportPrompt
+         */
+        public String getReportPrompt() {
+            return this.reportPrompt;
+        }
+
+        /**
+         * @return reportTheme
+         */
+        public String getReportTheme() {
+            return this.reportTheme;
+        }
+
+        /**
+         * @return reportType
+         */
+        public String getReportType() {
+            return this.reportType;
+        }
+
+        public static final class Builder {
+            private String reportPrompt; 
+            private String reportTheme; 
+            private String reportType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReportConfig model) {
+                this.reportPrompt = model.reportPrompt;
+                this.reportTheme = model.reportTheme;
+                this.reportType = model.reportType;
+            } 
+
+            /**
+             * ReportPrompt.
+             */
+            public Builder reportPrompt(String reportPrompt) {
+                this.reportPrompt = reportPrompt;
+                return this;
+            }
+
+            /**
+             * ReportTheme.
+             */
+            public Builder reportTheme(String reportTheme) {
+                this.reportTheme = reportTheme;
+                return this;
+            }
+
+            /**
+             * ReportType.
+             */
+            public Builder reportType(String reportType) {
+                this.reportType = reportType;
+                return this;
+            }
+
+            public ReportConfig build() {
+                return new ReportConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SendChatMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatMessageRequest</p>
+     */
+    public static class TaskConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ReportConfig")
+        private ReportConfig reportConfig;
+
+        private TaskConfig(Builder builder) {
+            this.reportConfig = builder.reportConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TaskConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reportConfig
+         */
+        public ReportConfig getReportConfig() {
+            return this.reportConfig;
+        }
+
+        public static final class Builder {
+            private ReportConfig reportConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskConfig model) {
+                this.reportConfig = model.reportConfig;
+            } 
+
+            /**
+             * ReportConfig.
+             */
+            public Builder reportConfig(ReportConfig reportConfig) {
+                this.reportConfig = reportConfig;
+                return this;
+            }
+
+            public TaskConfig build() {
+                return new TaskConfig(this);
             } 
 
         } 
