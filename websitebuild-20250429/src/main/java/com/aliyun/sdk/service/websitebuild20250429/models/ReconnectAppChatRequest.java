@@ -21,15 +21,15 @@ public class ReconnectAppChatRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ChatId")
     private String chatId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ConversationId")
     private String conversationId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LastEventId")
     private Integer lastEventId;
 
@@ -113,7 +113,7 @@ public class ReconnectAppChatRequest extends Request {
          * ChatId.
          */
         public Builder chatId(String chatId) {
-            this.putQueryParameter("ChatId", chatId);
+            this.putBodyParameter("ChatId", chatId);
             this.chatId = chatId;
             return this;
         }
@@ -122,7 +122,7 @@ public class ReconnectAppChatRequest extends Request {
          * ConversationId.
          */
         public Builder conversationId(String conversationId) {
-            this.putQueryParameter("ConversationId", conversationId);
+            this.putBodyParameter("ConversationId", conversationId);
             this.conversationId = conversationId;
             return this;
         }
@@ -131,7 +131,7 @@ public class ReconnectAppChatRequest extends Request {
          * LastEventId.
          */
         public Builder lastEventId(Integer lastEventId) {
-            this.putQueryParameter("LastEventId", lastEventId);
+            this.putBodyParameter("LastEventId", lastEventId);
             this.lastEventId = lastEventId;
             return this;
         }

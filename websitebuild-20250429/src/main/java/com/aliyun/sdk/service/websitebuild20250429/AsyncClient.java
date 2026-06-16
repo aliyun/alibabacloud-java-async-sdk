@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindAppDomainResponse> bindAppDomain(BindAppDomainRequest request);
 
     /**
+     * @param request the request parameters of CheckAppVerifyCode  CheckAppVerifyCodeRequest
+     * @return CheckAppVerifyCodeResponse
+     */
+    CompletableFuture<CheckAppVerifyCodeResponse> checkAppVerifyCode(CheckAppVerifyCodeRequest request);
+
+    /**
      * @param request the request parameters of CheckResourceMeasure  CheckResourceMeasureRequest
      * @return CheckResourceMeasureResponse
      */
@@ -112,6 +118,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAppLlmApiKeyForPartnerResponse> createAppLlmApiKeyForPartner(CreateAppLlmApiKeyForPartnerRequest request);
 
     /**
+     * @param request the request parameters of CreateAppNotificationScene  CreateAppNotificationSceneRequest
+     * @return CreateAppNotificationSceneResponse
+     */
+    CompletableFuture<CreateAppNotificationSceneResponse> createAppNotificationScene(CreateAppNotificationSceneRequest request);
+
+    /**
      * @param request the request parameters of CreateAppTokenService  CreateAppTokenServiceRequest
      * @return CreateAppTokenServiceResponse
      */
@@ -152,6 +164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAppInstanceFileResponse
      */
     CompletableFuture<DeleteAppInstanceFileResponse> deleteAppInstanceFile(DeleteAppInstanceFileRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAppNotificationScene  DeleteAppNotificationSceneRequest
+     * @return DeleteAppNotificationSceneResponse
+     */
+    CompletableFuture<DeleteAppNotificationSceneResponse> deleteAppNotificationScene(DeleteAppNotificationSceneRequest request);
 
     /**
      * @param request the request parameters of DeleteAppSupabaseSecrets  DeleteAppSupabaseSecretsRequest
@@ -555,6 +573,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return MoveMaterialFileResponse
      */
     CompletableFuture<MoveMaterialFileResponse> moveMaterialFile(MoveMaterialFileRequest request);
+
+    /**
+     * @param request the request parameters of NotifyAppNotificationForAdmin  NotifyAppNotificationForAdminRequest
+     * @return NotifyAppNotificationForAdminResponse
+     */
+    CompletableFuture<NotifyAppNotificationForAdminResponse> notifyAppNotificationForAdmin(NotifyAppNotificationForAdminRequest request);
 
     /**
      * @param request the request parameters of OperateAppInstanceForPartner  OperateAppInstanceForPartnerRequest

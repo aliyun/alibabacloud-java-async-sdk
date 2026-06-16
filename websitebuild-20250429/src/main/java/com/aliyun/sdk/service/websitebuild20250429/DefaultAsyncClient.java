@@ -95,6 +95,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CheckAppVerifyCode  CheckAppVerifyCodeRequest
+     * @return CheckAppVerifyCodeResponse
+     */
+    @Override
+    public CompletableFuture<CheckAppVerifyCodeResponse> checkAppVerifyCode(CheckAppVerifyCodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckAppVerifyCode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckAppVerifyCodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckAppVerifyCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CheckResourceMeasure  CheckResourceMeasureRequest
      * @return CheckResourceMeasureResponse
      */
@@ -321,6 +339,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAppNotificationScene  CreateAppNotificationSceneRequest
+     * @return CreateAppNotificationSceneResponse
+     */
+    @Override
+    public CompletableFuture<CreateAppNotificationSceneResponse> createAppNotificationScene(CreateAppNotificationSceneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAppNotificationScene").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAppNotificationSceneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAppNotificationSceneResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateAppTokenService  CreateAppTokenServiceRequest
      * @return CreateAppTokenServiceResponse
      */
@@ -441,6 +477,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteAppInstanceFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAppNotificationScene  DeleteAppNotificationSceneRequest
+     * @return DeleteAppNotificationSceneResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAppNotificationSceneResponse> deleteAppNotificationScene(DeleteAppNotificationSceneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAppNotificationScene").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAppNotificationSceneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAppNotificationSceneResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1654,6 +1708,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of NotifyAppNotificationForAdmin  NotifyAppNotificationForAdminRequest
+     * @return NotifyAppNotificationForAdminResponse
+     */
+    @Override
+    public CompletableFuture<NotifyAppNotificationForAdminResponse> notifyAppNotificationForAdmin(NotifyAppNotificationForAdminRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("NotifyAppNotificationForAdmin").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(NotifyAppNotificationForAdminResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<NotifyAppNotificationForAdminResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of OperateAppInstanceForPartner  OperateAppInstanceForPartnerRequest
      * @return OperateAppInstanceForPartnerResponse
      */
@@ -1985,7 +2057,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ReconnectAppChatResponse> reconnectAppChat(ReconnectAppChatRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReconnectAppChat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReconnectAppChat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.STRING).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReconnectAppChatResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1998,7 +2070,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     @Override
     public ResponseIterable<String> reconnectAppChatWithResponseIterable(ReconnectAppChatRequest request) {
         this.handler.validateRequestModel(request);
-        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("ReconnectAppChat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("ReconnectAppChat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.STRING).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
         ReconnectAppChatResponseBodyIterator iterator = ReconnectAppChatResponseBodyIterator.create();
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);
