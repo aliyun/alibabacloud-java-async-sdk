@@ -785,6 +785,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetAccountPasswordRestrictResponse> resetAccountPasswordRestrict(ResetAccountPasswordRestrictRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ResetMem0AccountPassword  ResetMem0AccountPasswordRequest
+     * @return ResetMem0AccountPasswordResponse
+     */
+    CompletableFuture<ResetMem0AccountPasswordResponse> resetMem0AccountPassword(ResetMem0AccountPasswordRequest request);
+
+    /**
      * @param request the request parameters of RestartDBInstance  RestartDBInstanceRequest
      * @return RestartDBInstanceResponse
      */

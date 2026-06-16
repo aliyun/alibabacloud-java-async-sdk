@@ -2339,6 +2339,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ResetMem0AccountPassword  ResetMem0AccountPasswordRequest
+     * @return ResetMem0AccountPasswordResponse
+     */
+    @Override
+    public CompletableFuture<ResetMem0AccountPasswordResponse> resetMem0AccountPassword(ResetMem0AccountPasswordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ResetMem0AccountPassword").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResetMem0AccountPasswordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResetMem0AccountPasswordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RestartDBInstance  RestartDBInstanceRequest
      * @return RestartDBInstanceResponse
      */
