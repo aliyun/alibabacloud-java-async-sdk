@@ -29,6 +29,9 @@ public class GetUserResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("DashscopeHost")
+    private String dashscopeHost;
+
     @com.aliyun.core.annotation.NameInMap("Host")
     private String host;
 
@@ -49,6 +52,7 @@ public class GetUserResponseBody extends TeaModel {
         this.apiKeys = builder.apiKeys;
         this.appId = builder.appId;
         this.code = builder.code;
+        this.dashscopeHost = builder.dashscopeHost;
         this.host = builder.host;
         this.innerToken = builder.innerToken;
         this.message = builder.message;
@@ -97,6 +101,13 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     /**
+     * @return dashscopeHost
+     */
+    public String getDashscopeHost() {
+        return this.dashscopeHost;
+    }
+
+    /**
      * @return host
      */
     public String getHost() {
@@ -136,6 +147,7 @@ public class GetUserResponseBody extends TeaModel {
         private java.util.List<ApiKeys> apiKeys; 
         private String appId; 
         private String code; 
+        private String dashscopeHost; 
         private String host; 
         private String innerToken; 
         private String message; 
@@ -150,6 +162,7 @@ public class GetUserResponseBody extends TeaModel {
             this.apiKeys = model.apiKeys;
             this.appId = model.appId;
             this.code = model.code;
+            this.dashscopeHost = model.dashscopeHost;
             this.host = model.host;
             this.innerToken = model.innerToken;
             this.message = model.message;
@@ -186,6 +199,14 @@ public class GetUserResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * DashscopeHost.
+         */
+        public Builder dashscopeHost(String dashscopeHost) {
+            this.dashscopeHost = dashscopeHost;
             return this;
         }
 
