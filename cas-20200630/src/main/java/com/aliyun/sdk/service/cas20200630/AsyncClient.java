@@ -265,6 +265,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCAInstanceStatusResponse> getCAInstanceStatus(GetCAInstanceStatusRequest request);
 
     /**
+     * @param request the request parameters of GetCaInstanceCrlAddress  GetCaInstanceCrlAddressRequest
+     * @return GetCaInstanceCrlAddressResponse
+     */
+    CompletableFuture<GetCaInstanceCrlAddressResponse> getCaInstanceCrlAddress(GetCaInstanceCrlAddressRequest request);
+
+    /**
      * @param request the request parameters of ListAllEndEntityInstance  ListAllEndEntityInstanceRequest
      * @return ListAllEndEntityInstanceResponse
      */

@@ -589,6 +589,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetCaInstanceCrlAddress  GetCaInstanceCrlAddressRequest
+     * @return GetCaInstanceCrlAddressResponse
+     */
+    @Override
+    public CompletableFuture<GetCaInstanceCrlAddressResponse> getCaInstanceCrlAddress(GetCaInstanceCrlAddressRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCaInstanceCrlAddress").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCaInstanceCrlAddressResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCaInstanceCrlAddressResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAllEndEntityInstance  ListAllEndEntityInstanceRequest
      * @return ListAllEndEntityInstanceResponse
      */

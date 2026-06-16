@@ -212,6 +212,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertIssuedCount")
         private Long certIssuedCount;
 
+        @com.aliyun.core.annotation.NameInMap("CertMaxTime")
+        private Integer certMaxTime;
+
         @com.aliyun.core.annotation.NameInMap("CertRemainingCount")
         private Long certRemainingCount;
 
@@ -308,6 +311,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             this.beforeDate = builder.beforeDate;
             this.caCertChain = builder.caCertChain;
             this.certIssuedCount = builder.certIssuedCount;
+            this.certMaxTime = builder.certMaxTime;
             this.certRemainingCount = builder.certRemainingCount;
             this.certTotalCount = builder.certTotalCount;
             this.certificateType = builder.certificateType;
@@ -381,6 +385,13 @@ public class DescribeCACertificateResponseBody extends TeaModel {
          */
         public Long getCertIssuedCount() {
             return this.certIssuedCount;
+        }
+
+        /**
+         * @return certMaxTime
+         */
+        public Integer getCertMaxTime() {
+            return this.certMaxTime;
         }
 
         /**
@@ -599,6 +610,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             private Long beforeDate; 
             private String caCertChain; 
             private Long certIssuedCount; 
+            private Integer certMaxTime; 
             private Long certRemainingCount; 
             private Long certTotalCount; 
             private String certificateType; 
@@ -639,6 +651,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
                 this.beforeDate = model.beforeDate;
                 this.caCertChain = model.caCertChain;
                 this.certIssuedCount = model.certIssuedCount;
+                this.certMaxTime = model.certMaxTime;
                 this.certRemainingCount = model.certRemainingCount;
                 this.certTotalCount = model.certTotalCount;
                 this.certificateType = model.certificateType;
@@ -736,6 +749,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
              */
             public Builder certIssuedCount(Long certIssuedCount) {
                 this.certIssuedCount = certIssuedCount;
+                return this;
+            }
+
+            /**
+             * CertMaxTime.
+             */
+            public Builder certMaxTime(Integer certMaxTime) {
+                this.certMaxTime = certMaxTime;
                 return this;
             }
 
