@@ -1,0 +1,131 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dtsai20260401.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link WebFetchResponse} extends {@link TeaModel}
+ *
+ * <p>WebFetchResponse</p>
+ */
+public class WebFetchResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
+
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
+    private WebFetchResponseBody body;
+
+    private WebFetchResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
+        this.body = builder.body;
+    }
+
+    public static WebFetchResponse create() {
+        return new BuilderImpl().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
+     * @return body
+     */
+    public WebFetchResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<WebFetchResponse, Builder> {
+
+        Builder headers(java.util.Map<String, String> headers);
+
+        Builder statusCode(Integer statusCode);
+
+        Builder body(WebFetchResponseBody body);
+
+        @Override
+        WebFetchResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<WebFetchResponse, Builder>
+            implements Builder {
+        private java.util.Map<String, String> headers; 
+        private Integer statusCode; 
+        private WebFetchResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(WebFetchResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.statusCode = response.statusCode;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map<String, String> headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(WebFetchResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public WebFetchResponse build() {
+            return new WebFetchResponse(this);
+        } 
+
+    } 
+
+}
