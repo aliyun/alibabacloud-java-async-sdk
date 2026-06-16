@@ -29,8 +29,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Cloudauth-intl";
         this.version = "2022-08-09";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-hongkong", "cloudauth-intl.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "cloudauth-intl.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "cloudauth-intl.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "cloudauth-intl.ap-southeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
