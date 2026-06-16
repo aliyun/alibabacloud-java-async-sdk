@@ -45,6 +45,11 @@ public class DescribeDdosEventListRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 50)
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryDays")
+    @com.aliyun.core.annotation.Validation(maximum = 186, minimum = 1)
+    private Integer queryDays;
+
     private DescribeDdosEventListRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
@@ -53,6 +58,7 @@ public class DescribeDdosEventListRequest extends Request {
         this.instanceType = builder.instanceType;
         this.internetIp = builder.internetIp;
         this.pageSize = builder.pageSize;
+        this.queryDays = builder.queryDays;
     }
 
     public static Builder builder() {
@@ -110,6 +116,13 @@ public class DescribeDdosEventListRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return queryDays
+     */
+    public Integer getQueryDays() {
+        return this.queryDays;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDdosEventListRequest, Builder> {
         private Integer currentPage; 
         private String ddosRegionId; 
@@ -117,6 +130,7 @@ public class DescribeDdosEventListRequest extends Request {
         private String instanceType; 
         private String internetIp; 
         private Integer pageSize; 
+        private Integer queryDays; 
 
         private Builder() {
             super();
@@ -130,6 +144,7 @@ public class DescribeDdosEventListRequest extends Request {
             this.instanceType = request.instanceType;
             this.internetIp = request.internetIp;
             this.pageSize = request.pageSize;
+            this.queryDays = request.queryDays;
         } 
 
         /**
@@ -219,6 +234,15 @@ public class DescribeDdosEventListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * QueryDays.
+         */
+        public Builder queryDays(Integer queryDays) {
+            this.putQueryParameter("QueryDays", queryDays);
+            this.queryDays = queryDays;
             return this;
         }
 
