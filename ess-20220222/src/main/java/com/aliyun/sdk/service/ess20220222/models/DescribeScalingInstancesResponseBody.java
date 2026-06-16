@@ -227,6 +227,9 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
+        @com.aliyun.core.annotation.NameInMap("ReplaceStatus")
+        private String replaceStatus;
+
         @com.aliyun.core.annotation.NameInMap("ScalingActivityId")
         private String scalingActivityId;
 
@@ -263,6 +266,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             this.lifecycleState = builder.lifecycleState;
             this.loadBalancerWeight = builder.loadBalancerWeight;
             this.privateIpAddress = builder.privateIpAddress;
+            this.replaceStatus = builder.replaceStatus;
             this.scalingActivityId = builder.scalingActivityId;
             this.scalingConfigurationId = builder.scalingConfigurationId;
             this.scalingGroupId = builder.scalingGroupId;
@@ -359,6 +363,13 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return replaceStatus
+         */
+        public String getReplaceStatus() {
+            return this.replaceStatus;
+        }
+
+        /**
          * @return scalingActivityId
          */
         public String getScalingActivityId() {
@@ -426,6 +437,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             private String lifecycleState; 
             private Integer loadBalancerWeight; 
             private String privateIpAddress; 
+            private String replaceStatus; 
             private String scalingActivityId; 
             private String scalingConfigurationId; 
             private String scalingGroupId; 
@@ -450,6 +462,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
                 this.lifecycleState = model.lifecycleState;
                 this.loadBalancerWeight = model.loadBalancerWeight;
                 this.privateIpAddress = model.privateIpAddress;
+                this.replaceStatus = model.replaceStatus;
                 this.scalingActivityId = model.scalingActivityId;
                 this.scalingConfigurationId = model.scalingConfigurationId;
                 this.scalingGroupId = model.scalingGroupId;
@@ -608,6 +621,14 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
+                return this;
+            }
+
+            /**
+             * ReplaceStatus.
+             */
+            public Builder replaceStatus(String replaceStatus) {
+                this.replaceStatus = replaceStatus;
                 return this;
             }
 

@@ -63,6 +63,10 @@ public class StartInstanceRefreshRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SkipMatching")
     private Boolean skipMatching;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Strategy")
+    private String strategy;
+
     private StartInstanceRefreshRequest(Builder builder) {
         super(builder);
         this.checkpointPauseTime = builder.checkpointPauseTime;
@@ -76,6 +80,7 @@ public class StartInstanceRefreshRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.scalingGroupId = builder.scalingGroupId;
         this.skipMatching = builder.skipMatching;
+        this.strategy = builder.strategy;
     }
 
     public static Builder builder() {
@@ -168,6 +173,13 @@ public class StartInstanceRefreshRequest extends Request {
         return this.skipMatching;
     }
 
+    /**
+     * @return strategy
+     */
+    public String getStrategy() {
+        return this.strategy;
+    }
+
     public static final class Builder extends Request.Builder<StartInstanceRefreshRequest, Builder> {
         private Integer checkpointPauseTime; 
         private java.util.List<Checkpoints> checkpoints; 
@@ -180,6 +192,7 @@ public class StartInstanceRefreshRequest extends Request {
         private String resourceOwnerAccount; 
         private String scalingGroupId; 
         private Boolean skipMatching; 
+        private String strategy; 
 
         private Builder() {
             super();
@@ -198,6 +211,7 @@ public class StartInstanceRefreshRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.scalingGroupId = request.scalingGroupId;
             this.skipMatching = request.skipMatching;
+            this.strategy = request.strategy;
         } 
 
         /**
@@ -344,6 +358,15 @@ public class StartInstanceRefreshRequest extends Request {
         public Builder skipMatching(Boolean skipMatching) {
             this.putQueryParameter("SkipMatching", skipMatching);
             this.skipMatching = skipMatching;
+            return this;
+        }
+
+        /**
+         * Strategy.
+         */
+        public Builder strategy(String strategy) {
+            this.putQueryParameter("Strategy", strategy);
+            this.strategy = strategy;
             return this;
         }
 

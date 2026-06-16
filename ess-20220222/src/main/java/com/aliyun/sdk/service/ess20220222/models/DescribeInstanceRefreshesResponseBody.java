@@ -719,6 +719,9 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Strategy")
+        private String strategy;
+
         @com.aliyun.core.annotation.NameInMap("TotalNeedUpdateCapacity")
         private Integer totalNeedUpdateCapacity;
 
@@ -737,6 +740,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             this.skipMatching = builder.skipMatching;
             this.startTime = builder.startTime;
             this.status = builder.status;
+            this.strategy = builder.strategy;
             this.totalNeedUpdateCapacity = builder.totalNeedUpdateCapacity;
         }
 
@@ -847,6 +851,13 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         }
 
         /**
+         * @return strategy
+         */
+        public String getStrategy() {
+            return this.strategy;
+        }
+
+        /**
          * @return totalNeedUpdateCapacity
          */
         public Integer getTotalNeedUpdateCapacity() {
@@ -868,6 +879,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             private Boolean skipMatching; 
             private String startTime; 
             private String status; 
+            private String strategy; 
             private Integer totalNeedUpdateCapacity; 
 
             private Builder() {
@@ -888,6 +900,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
                 this.skipMatching = model.skipMatching;
                 this.startTime = model.startTime;
                 this.status = model.status;
+                this.strategy = model.strategy;
                 this.totalNeedUpdateCapacity = model.totalNeedUpdateCapacity;
             } 
 
@@ -1053,6 +1066,14 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Strategy.
+             */
+            public Builder strategy(String strategy) {
+                this.strategy = strategy;
                 return this;
             }
 
