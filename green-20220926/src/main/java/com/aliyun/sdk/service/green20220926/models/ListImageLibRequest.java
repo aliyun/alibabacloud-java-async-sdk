@@ -21,9 +21,14 @@ public class ListImageLibRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
+    private String serviceCode;
+
     private ListImageLibRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.serviceCode = builder.serviceCode;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class ListImageLibRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return serviceCode
+     */
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
     public static final class Builder extends Request.Builder<ListImageLibRequest, Builder> {
         private String regionId; 
+        private String serviceCode; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class ListImageLibRequest extends Request {
         private Builder(ListImageLibRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.serviceCode = request.serviceCode;
         } 
 
         /**
@@ -67,6 +81,15 @@ public class ListImageLibRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ServiceCode.
+         */
+        public Builder serviceCode(String serviceCode) {
+            this.putBodyParameter("ServiceCode", serviceCode);
+            this.serviceCode = serviceCode;
             return this;
         }
 

@@ -21,9 +21,14 @@ public class ListKeywordLibsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantCode")
+    private String tenantCode;
+
     private ListKeywordLibsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.tenantCode = builder.tenantCode;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class ListKeywordLibsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return tenantCode
+     */
+    public String getTenantCode() {
+        return this.tenantCode;
+    }
+
     public static final class Builder extends Request.Builder<ListKeywordLibsRequest, Builder> {
         private String regionId; 
+        private String tenantCode; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class ListKeywordLibsRequest extends Request {
         private Builder(ListKeywordLibsRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.tenantCode = request.tenantCode;
         } 
 
         /**
@@ -67,6 +81,15 @@ public class ListKeywordLibsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TenantCode.
+         */
+        public Builder tenantCode(String tenantCode) {
+            this.putQueryParameter("TenantCode", tenantCode);
+            this.tenantCode = tenantCode;
             return this;
         }
 

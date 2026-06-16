@@ -26,6 +26,9 @@ public class ListImageLibResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LibList")
     private java.util.List<LibList> libList;
 
+    @com.aliyun.core.annotation.NameInMap("MaxLibCount")
+    private Integer maxLibCount;
+
     @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
@@ -39,6 +42,7 @@ public class ListImageLibResponseBody extends TeaModel {
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
         this.libList = builder.libList;
+        this.maxLibCount = builder.maxLibCount;
         this.msg = builder.msg;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -78,6 +82,13 @@ public class ListImageLibResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxLibCount
+     */
+    public Integer getMaxLibCount() {
+        return this.maxLibCount;
+    }
+
+    /**
      * @return msg
      */
     public String getMsg() {
@@ -102,6 +113,7 @@ public class ListImageLibResponseBody extends TeaModel {
         private Integer code; 
         private Integer httpStatusCode; 
         private java.util.List<LibList> libList; 
+        private Integer maxLibCount; 
         private String msg; 
         private String requestId; 
         private Boolean success; 
@@ -113,6 +125,7 @@ public class ListImageLibResponseBody extends TeaModel {
             this.code = model.code;
             this.httpStatusCode = model.httpStatusCode;
             this.libList = model.libList;
+            this.maxLibCount = model.maxLibCount;
             this.msg = model.msg;
             this.requestId = model.requestId;
             this.success = model.success;
@@ -145,6 +158,14 @@ public class ListImageLibResponseBody extends TeaModel {
          */
         public Builder libList(java.util.List<LibList> libList) {
             this.libList = libList;
+            return this;
+        }
+
+        /**
+         * MaxLibCount.
+         */
+        public Builder maxLibCount(Integer maxLibCount) {
+            this.maxLibCount = maxLibCount;
             return this;
         }
 

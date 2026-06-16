@@ -169,6 +169,60 @@ public class ListKeywordsResponseBody extends TeaModel {
      *
      * <p>ListKeywordsResponseBody</p>
      */
+    public static class Properties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Attribute")
+        private String attribute;
+
+        private Properties(Builder builder) {
+            this.attribute = builder.attribute;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Properties create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attribute
+         */
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        public static final class Builder {
+            private String attribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.attribute = model.attribute;
+            } 
+
+            /**
+             * Attribute.
+             */
+            public Builder attribute(String attribute) {
+                this.attribute = attribute;
+                return this;
+            }
+
+            public Properties build() {
+                return new Properties(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListKeywordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKeywordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
@@ -185,6 +239,9 @@ public class ListKeywordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeywordMd5Id")
         private Long keywordMd5Id;
 
+        @com.aliyun.core.annotation.NameInMap("Properties")
+        private Properties properties;
+
         @com.aliyun.core.annotation.NameInMap("Word")
         private String word;
 
@@ -194,6 +251,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             this.id = builder.id;
             this.keywordLibId = builder.keywordLibId;
             this.keywordMd5Id = builder.keywordMd5Id;
+            this.properties = builder.properties;
             this.word = builder.word;
         }
 
@@ -241,6 +299,13 @@ public class ListKeywordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return properties
+         */
+        public Properties getProperties() {
+            return this.properties;
+        }
+
+        /**
          * @return word
          */
         public String getWord() {
@@ -253,6 +318,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             private Long id; 
             private String keywordLibId; 
             private Long keywordMd5Id; 
+            private Properties properties; 
             private String word; 
 
             private Builder() {
@@ -264,6 +330,7 @@ public class ListKeywordsResponseBody extends TeaModel {
                 this.id = model.id;
                 this.keywordLibId = model.keywordLibId;
                 this.keywordMd5Id = model.keywordMd5Id;
+                this.properties = model.properties;
                 this.word = model.word;
             } 
 
@@ -319,6 +386,14 @@ public class ListKeywordsResponseBody extends TeaModel {
              */
             public Builder keywordMd5Id(Long keywordMd5Id) {
                 this.keywordMd5Id = keywordMd5Id;
+                return this;
+            }
+
+            /**
+             * Properties.
+             */
+            public Builder properties(Properties properties) {
+                this.properties = properties;
                 return this;
             }
 

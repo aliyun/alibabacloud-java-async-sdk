@@ -33,12 +33,17 @@ public class DeleteKeywordRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantCode")
+    private String tenantCode;
+
     private DeleteKeywordRequest(Builder builder) {
         super(builder);
         this.keywordIdList = builder.keywordIdList;
         this.keywordIds = builder.keywordIds;
         this.libId = builder.libId;
         this.regionId = builder.regionId;
+        this.tenantCode = builder.tenantCode;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class DeleteKeywordRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return tenantCode
+     */
+    public String getTenantCode() {
+        return this.tenantCode;
+    }
+
     public static final class Builder extends Request.Builder<DeleteKeywordRequest, Builder> {
         private String keywordIdList; 
         private String keywordIds; 
         private String libId; 
         private String regionId; 
+        private String tenantCode; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class DeleteKeywordRequest extends Request {
             this.keywordIds = request.keywordIds;
             this.libId = request.libId;
             this.regionId = request.regionId;
+            this.tenantCode = request.tenantCode;
         } 
 
         /**
@@ -145,6 +159,15 @@ public class DeleteKeywordRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TenantCode.
+         */
+        public Builder tenantCode(String tenantCode) {
+            this.putQueryParameter("TenantCode", tenantCode);
+            this.tenantCode = tenantCode;
             return this;
         }
 

@@ -30,15 +30,25 @@ public class AddKeywordLibRequest extends Request {
     private String libName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Properties")
+    private String properties;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantCode")
+    private String tenantCode;
 
     private AddKeywordLibRequest(Builder builder) {
         super(builder);
         this.keywords = builder.keywords;
         this.keywordsObject = builder.keywordsObject;
         this.libName = builder.libName;
+        this.properties = builder.properties;
         this.regionId = builder.regionId;
+        this.tenantCode = builder.tenantCode;
     }
 
     public static Builder builder() {
@@ -76,17 +86,33 @@ public class AddKeywordLibRequest extends Request {
     }
 
     /**
+     * @return properties
+     */
+    public String getProperties() {
+        return this.properties;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return tenantCode
+     */
+    public String getTenantCode() {
+        return this.tenantCode;
+    }
+
     public static final class Builder extends Request.Builder<AddKeywordLibRequest, Builder> {
         private String keywords; 
         private String keywordsObject; 
         private String libName; 
+        private String properties; 
         private String regionId; 
+        private String tenantCode; 
 
         private Builder() {
             super();
@@ -97,7 +123,9 @@ public class AddKeywordLibRequest extends Request {
             this.keywords = request.keywords;
             this.keywordsObject = request.keywordsObject;
             this.libName = request.libName;
+            this.properties = request.properties;
             this.regionId = request.regionId;
+            this.tenantCode = request.tenantCode;
         } 
 
         /**
@@ -137,6 +165,15 @@ public class AddKeywordLibRequest extends Request {
         }
 
         /**
+         * Properties.
+         */
+        public Builder properties(String properties) {
+            this.putQueryParameter("Properties", properties);
+            this.properties = properties;
+            return this;
+        }
+
+        /**
          * <p>Region ID</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +182,15 @@ public class AddKeywordLibRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TenantCode.
+         */
+        public Builder tenantCode(String tenantCode) {
+            this.putQueryParameter("TenantCode", tenantCode);
+            this.tenantCode = tenantCode;
             return this;
         }
 
