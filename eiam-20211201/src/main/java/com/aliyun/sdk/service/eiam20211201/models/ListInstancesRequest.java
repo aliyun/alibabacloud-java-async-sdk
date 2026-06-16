@@ -22,6 +22,10 @@ public class ListInstancesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossRegionReplication")
+    private String crossRegionReplication;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Edition")
     private String edition;
 
@@ -44,6 +48,7 @@ public class ListInstancesRequest extends Request {
     private ListInstancesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.crossRegionReplication = builder.crossRegionReplication;
         this.edition = builder.edition;
         this.instanceIds = builder.instanceIds;
         this.pageNumber = builder.pageNumber;
@@ -69,6 +74,13 @@ public class ListInstancesRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return crossRegionReplication
+     */
+    public String getCrossRegionReplication() {
+        return this.crossRegionReplication;
     }
 
     /**
@@ -108,6 +120,7 @@ public class ListInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String regionId; 
+        private String crossRegionReplication; 
         private String edition; 
         private java.util.List<String> instanceIds; 
         private Long pageNumber; 
@@ -121,6 +134,7 @@ public class ListInstancesRequest extends Request {
         private Builder(ListInstancesRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.crossRegionReplication = request.crossRegionReplication;
             this.edition = request.edition;
             this.instanceIds = request.instanceIds;
             this.pageNumber = request.pageNumber;
@@ -134,6 +148,15 @@ public class ListInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CrossRegionReplication.
+         */
+        public Builder crossRegionReplication(String crossRegionReplication) {
+            this.putQueryParameter("CrossRegionReplication", crossRegionReplication);
+            this.crossRegionReplication = crossRegionReplication;
             return this;
         }
 
