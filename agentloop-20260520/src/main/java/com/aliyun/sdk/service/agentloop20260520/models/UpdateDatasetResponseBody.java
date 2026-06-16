@@ -1,0 +1,73 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.agentloop20260520.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link UpdateDatasetResponseBody} extends {@link TeaModel}
+ *
+ * <p>UpdateDatasetResponseBody</p>
+ */
+public class UpdateDatasetResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
+    private UpdateDatasetResponseBody(Builder builder) {
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static UpdateDatasetResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateDatasetResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC5B6F62-6FA2-57FC-8285-99753BD34B6D</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public UpdateDatasetResponseBody build() {
+            return new UpdateDatasetResponseBody(this);
+        } 
+
+    } 
+
+}
