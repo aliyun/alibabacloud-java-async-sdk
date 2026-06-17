@@ -62,6 +62,9 @@ public class ChatResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Text")
     private String text;
 
+    @com.aliyun.core.annotation.NameInMap("TraceId")
+    private String traceId;
+
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
@@ -81,6 +84,7 @@ public class ChatResponseBody extends TeaModel {
         this.status = builder.status;
         this.success = builder.success;
         this.text = builder.text;
+        this.traceId = builder.traceId;
         this.type = builder.type;
     }
 
@@ -202,6 +206,13 @@ public class ChatResponseBody extends TeaModel {
     }
 
     /**
+     * @return traceId
+     */
+    public String getTraceId() {
+        return this.traceId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -224,6 +235,7 @@ public class ChatResponseBody extends TeaModel {
         private String status; 
         private Boolean success; 
         private String text; 
+        private String traceId; 
         private String type; 
 
         private Builder() {
@@ -245,6 +257,7 @@ public class ChatResponseBody extends TeaModel {
             this.status = model.status;
             this.success = model.success;
             this.text = model.text;
+            this.traceId = model.traceId;
             this.type = model.type;
         } 
 
@@ -365,6 +378,14 @@ public class ChatResponseBody extends TeaModel {
          */
         public Builder text(String text) {
             this.text = text;
+            return this;
+        }
+
+        /**
+         * TraceId.
+         */
+        public Builder traceId(String traceId) {
+            this.traceId = traceId;
             return this;
         }
 

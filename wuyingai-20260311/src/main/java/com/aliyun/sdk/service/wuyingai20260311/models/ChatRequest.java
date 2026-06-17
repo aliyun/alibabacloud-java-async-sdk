@@ -30,6 +30,14 @@ public class ChatRequest extends Request {
     private java.util.List<Input> input;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Model")
+    private String model;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Resume")
+    private Boolean resume;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RoutingKey")
     private String routingKey;
 
@@ -54,6 +62,8 @@ public class ChatRequest extends Request {
         this.authorization = builder.authorization;
         this.externalUserId = builder.externalUserId;
         this.input = builder.input;
+        this.model = builder.model;
+        this.resume = builder.resume;
         this.routingKey = builder.routingKey;
         this.sessionId = builder.sessionId;
         this.settings = builder.settings;
@@ -96,6 +106,20 @@ public class ChatRequest extends Request {
     }
 
     /**
+     * @return model
+     */
+    public String getModel() {
+        return this.model;
+    }
+
+    /**
+     * @return resume
+     */
+    public Boolean getResume() {
+        return this.resume;
+    }
+
+    /**
      * @return routingKey
      */
     public String getRoutingKey() {
@@ -134,6 +158,8 @@ public class ChatRequest extends Request {
         private String authorization; 
         private String externalUserId; 
         private java.util.List<Input> input; 
+        private String model; 
+        private Boolean resume; 
         private String routingKey; 
         private String sessionId; 
         private Settings settings; 
@@ -149,6 +175,8 @@ public class ChatRequest extends Request {
             this.authorization = request.authorization;
             this.externalUserId = request.externalUserId;
             this.input = request.input;
+            this.model = request.model;
+            this.resume = request.resume;
             this.routingKey = request.routingKey;
             this.sessionId = request.sessionId;
             this.settings = request.settings;
@@ -181,6 +209,24 @@ public class ChatRequest extends Request {
             String inputShrink = shrink(input, "Input", "json");
             this.putBodyParameter("Input", inputShrink);
             this.input = input;
+            return this;
+        }
+
+        /**
+         * Model.
+         */
+        public Builder model(String model) {
+            this.putBodyParameter("Model", model);
+            this.model = model;
+            return this;
+        }
+
+        /**
+         * Resume.
+         */
+        public Builder resume(Boolean resume) {
+            this.putBodyParameter("Resume", resume);
+            this.resume = resume;
             return this;
         }
 
