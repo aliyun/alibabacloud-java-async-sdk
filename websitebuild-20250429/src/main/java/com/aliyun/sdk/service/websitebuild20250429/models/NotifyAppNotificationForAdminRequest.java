@@ -30,6 +30,10 @@ public class NotifyAppNotificationForAdminRequest extends Request {
     private String env;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Payload")
+    private String payload;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
@@ -38,6 +42,7 @@ public class NotifyAppNotificationForAdminRequest extends Request {
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
         this.env = builder.env;
+        this.payload = builder.payload;
         this.sceneId = builder.sceneId;
     }
 
@@ -76,6 +81,13 @@ public class NotifyAppNotificationForAdminRequest extends Request {
     }
 
     /**
+     * @return payload
+     */
+    public String getPayload() {
+        return this.payload;
+    }
+
+    /**
      * @return sceneId
      */
     public String getSceneId() {
@@ -86,6 +98,7 @@ public class NotifyAppNotificationForAdminRequest extends Request {
         private String regionId; 
         private String bizId; 
         private String env; 
+        private String payload; 
         private String sceneId; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class NotifyAppNotificationForAdminRequest extends Request {
             this.regionId = request.regionId;
             this.bizId = request.bizId;
             this.env = request.env;
+            this.payload = request.payload;
             this.sceneId = request.sceneId;
         } 
 
@@ -124,6 +138,15 @@ public class NotifyAppNotificationForAdminRequest extends Request {
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
             this.env = env;
+            return this;
+        }
+
+        /**
+         * Payload.
+         */
+        public Builder payload(String payload) {
+            this.putQueryParameter("Payload", payload);
+            this.payload = payload;
             return this;
         }
 
