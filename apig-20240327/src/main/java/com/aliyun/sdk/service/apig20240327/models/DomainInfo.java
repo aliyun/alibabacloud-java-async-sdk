@@ -32,6 +32,9 @@ public class DomainInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("domainId")
     private String domainId;
 
+    @com.aliyun.core.annotation.NameInMap("domainScope")
+    private String domainScope;
+
     @com.aliyun.core.annotation.NameInMap("forceHttps")
     private Boolean forceHttps;
 
@@ -59,6 +62,7 @@ public class DomainInfo extends TeaModel {
         this.createFrom = builder.createFrom;
         this.createTimestamp = builder.createTimestamp;
         this.domainId = builder.domainId;
+        this.domainScope = builder.domainScope;
         this.forceHttps = builder.forceHttps;
         this.mTLSEnabled = builder.mTLSEnabled;
         this.name = builder.name;
@@ -116,6 +120,13 @@ public class DomainInfo extends TeaModel {
     }
 
     /**
+     * @return domainScope
+     */
+    public String getDomainScope() {
+        return this.domainScope;
+    }
+
+    /**
      * @return forceHttps
      */
     public Boolean getForceHttps() {
@@ -170,6 +181,7 @@ public class DomainInfo extends TeaModel {
         private String createFrom; 
         private Long createTimestamp; 
         private String domainId; 
+        private String domainScope; 
         private Boolean forceHttps; 
         private Boolean mTLSEnabled; 
         private String name; 
@@ -187,6 +199,7 @@ public class DomainInfo extends TeaModel {
             this.createFrom = model.createFrom;
             this.createTimestamp = model.createTimestamp;
             this.domainId = model.domainId;
+            this.domainScope = model.domainScope;
             this.forceHttps = model.forceHttps;
             this.mTLSEnabled = model.mTLSEnabled;
             this.name = model.name;
@@ -233,6 +246,14 @@ public class DomainInfo extends TeaModel {
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
+            return this;
+        }
+
+        /**
+         * domainScope.
+         */
+        public Builder domainScope(String domainScope) {
+            this.domainScope = domainScope;
             return this;
         }
 

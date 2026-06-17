@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDomainsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("domainScope")
+    private String domainScope;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("gatewayId")
     private String gatewayId;
 
@@ -43,6 +47,7 @@ public class ListDomainsRequest extends Request {
 
     private ListDomainsRequest(Builder builder) {
         super(builder);
+        this.domainScope = builder.domainScope;
         this.gatewayId = builder.gatewayId;
         this.gatewayType = builder.gatewayType;
         this.nameLike = builder.nameLike;
@@ -62,6 +67,13 @@ public class ListDomainsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return domainScope
+     */
+    public String getDomainScope() {
+        return this.domainScope;
     }
 
     /**
@@ -107,6 +119,7 @@ public class ListDomainsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDomainsRequest, Builder> {
+        private String domainScope; 
         private String gatewayId; 
         private String gatewayType; 
         private String nameLike; 
@@ -120,6 +133,7 @@ public class ListDomainsRequest extends Request {
 
         private Builder(ListDomainsRequest request) {
             super(request);
+            this.domainScope = request.domainScope;
             this.gatewayId = request.gatewayId;
             this.gatewayType = request.gatewayType;
             this.nameLike = request.nameLike;
@@ -127,6 +141,15 @@ public class ListDomainsRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
         } 
+
+        /**
+         * domainScope.
+         */
+        public Builder domainScope(String domainScope) {
+            this.putQueryParameter("domainScope", domainScope);
+            this.domainScope = domainScope;
+            return this;
+        }
 
         /**
          * <p>The instance ID.</p>

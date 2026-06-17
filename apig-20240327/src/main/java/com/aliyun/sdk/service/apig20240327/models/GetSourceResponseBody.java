@@ -308,6 +308,12 @@ public class GetSourceResponseBody extends TeaModel {
      * <p>GetSourceResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("associationReason")
+        private String associationReason;
+
+        @com.aliyun.core.annotation.NameInMap("associationStatus")
+        private String associationStatus;
+
         @com.aliyun.core.annotation.NameInMap("createTimestamp")
         private Long createTimestamp;
 
@@ -336,6 +342,8 @@ public class GetSourceResponseBody extends TeaModel {
         private Long updateTimestamp;
 
         private Data(Builder builder) {
+            this.associationReason = builder.associationReason;
+            this.associationStatus = builder.associationStatus;
             this.createTimestamp = builder.createTimestamp;
             this.gatewayId = builder.gatewayId;
             this.k8SSourceInfo = builder.k8SSourceInfo;
@@ -353,6 +361,20 @@ public class GetSourceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return associationReason
+         */
+        public String getAssociationReason() {
+            return this.associationReason;
+        }
+
+        /**
+         * @return associationStatus
+         */
+        public String getAssociationStatus() {
+            return this.associationStatus;
         }
 
         /**
@@ -419,6 +441,8 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String associationReason; 
+            private String associationStatus; 
             private Long createTimestamp; 
             private String gatewayId; 
             private K8SSourceInfo k8SSourceInfo; 
@@ -433,6 +457,8 @@ public class GetSourceResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.associationReason = model.associationReason;
+                this.associationStatus = model.associationStatus;
                 this.createTimestamp = model.createTimestamp;
                 this.gatewayId = model.gatewayId;
                 this.k8SSourceInfo = model.k8SSourceInfo;
@@ -443,6 +469,22 @@ public class GetSourceResponseBody extends TeaModel {
                 this.type = model.type;
                 this.updateTimestamp = model.updateTimestamp;
             } 
+
+            /**
+             * associationReason.
+             */
+            public Builder associationReason(String associationReason) {
+                this.associationReason = associationReason;
+                return this;
+            }
+
+            /**
+             * associationStatus.
+             */
+            public Builder associationStatus(String associationStatus) {
+                this.associationStatus = associationStatus;
+                return this;
+            }
 
             /**
              * <p>The creation timestamp.</p>

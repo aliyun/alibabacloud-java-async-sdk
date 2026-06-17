@@ -35,6 +35,10 @@ public class UpdateDomainRequest extends Request {
     private String clientCACert;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("domainScope")
+    private String domainScope;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("forceHttps")
     private Boolean forceHttps;
 
@@ -48,7 +52,6 @@ public class UpdateDomainRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("protocol")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String protocol;
 
     @com.aliyun.core.annotation.Body
@@ -69,6 +72,7 @@ public class UpdateDomainRequest extends Request {
         this.caCertIdentifier = builder.caCertIdentifier;
         this.certIdentifier = builder.certIdentifier;
         this.clientCACert = builder.clientCACert;
+        this.domainScope = builder.domainScope;
         this.forceHttps = builder.forceHttps;
         this.http2Option = builder.http2Option;
         this.mTLSEnabled = builder.mTLSEnabled;
@@ -117,6 +121,13 @@ public class UpdateDomainRequest extends Request {
      */
     public String getClientCACert() {
         return this.clientCACert;
+    }
+
+    /**
+     * @return domainScope
+     */
+    public String getDomainScope() {
+        return this.domainScope;
     }
 
     /**
@@ -173,6 +184,7 @@ public class UpdateDomainRequest extends Request {
         private String caCertIdentifier; 
         private String certIdentifier; 
         private String clientCACert; 
+        private String domainScope; 
         private Boolean forceHttps; 
         private String http2Option; 
         private Boolean mTLSEnabled; 
@@ -191,6 +203,7 @@ public class UpdateDomainRequest extends Request {
             this.caCertIdentifier = request.caCertIdentifier;
             this.certIdentifier = request.certIdentifier;
             this.clientCACert = request.clientCACert;
+            this.domainScope = request.domainScope;
             this.forceHttps = request.forceHttps;
             this.http2Option = request.http2Option;
             this.mTLSEnabled = request.mTLSEnabled;
@@ -254,6 +267,15 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
+         * domainScope.
+         */
+        public Builder domainScope(String domainScope) {
+            this.putBodyParameter("domainScope", domainScope);
+            this.domainScope = domainScope;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to enable forcible HTTPS redirection. If protocol is set to HTTPS, forceHttps is required.</p>
          * 
          * <strong>example:</strong>
@@ -298,7 +320,6 @@ public class UpdateDomainRequest extends Request {
          * <li>HTTP</li>
          * <li>HTTPS</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>

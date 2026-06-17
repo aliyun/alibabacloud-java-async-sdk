@@ -20,6 +20,9 @@ public class GatewayInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("engineVersion")
     private String engineVersion;
 
+    @com.aliyun.core.annotation.NameInMap("gatewayEdition")
+    private String gatewayEdition;
+
     @com.aliyun.core.annotation.NameInMap("gatewayId")
     private String gatewayId;
 
@@ -31,6 +34,7 @@ public class GatewayInfo extends TeaModel {
 
     private GatewayInfo(Builder builder) {
         this.engineVersion = builder.engineVersion;
+        this.gatewayEdition = builder.gatewayEdition;
         this.gatewayId = builder.gatewayId;
         this.name = builder.name;
         this.vpcInfo = builder.vpcInfo;
@@ -56,6 +60,13 @@ public class GatewayInfo extends TeaModel {
     }
 
     /**
+     * @return gatewayEdition
+     */
+    public String getGatewayEdition() {
+        return this.gatewayEdition;
+    }
+
+    /**
      * @return gatewayId
      */
     public String getGatewayId() {
@@ -78,6 +89,7 @@ public class GatewayInfo extends TeaModel {
 
     public static final class Builder {
         private String engineVersion; 
+        private String gatewayEdition; 
         private String gatewayId; 
         private String name; 
         private VpcInfo vpcInfo; 
@@ -87,6 +99,7 @@ public class GatewayInfo extends TeaModel {
 
         private Builder(GatewayInfo model) {
             this.engineVersion = model.engineVersion;
+            this.gatewayEdition = model.gatewayEdition;
             this.gatewayId = model.gatewayId;
             this.name = model.name;
             this.vpcInfo = model.vpcInfo;
@@ -97,6 +110,14 @@ public class GatewayInfo extends TeaModel {
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
+         * gatewayEdition.
+         */
+        public Builder gatewayEdition(String gatewayEdition) {
+            this.gatewayEdition = gatewayEdition;
             return this;
         }
 

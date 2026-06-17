@@ -431,6 +431,9 @@ public class HttpApiApiInfo extends TeaModel {
      * <p>HttpApiApiInfo</p>
      */
     public static class GatewayInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("gatewayEdition")
+        private String gatewayEdition;
+
         @com.aliyun.core.annotation.NameInMap("gatewayId")
         private String gatewayId;
 
@@ -438,6 +441,7 @@ public class HttpApiApiInfo extends TeaModel {
         private String name;
 
         private GatewayInfo(Builder builder) {
+            this.gatewayEdition = builder.gatewayEdition;
             this.gatewayId = builder.gatewayId;
             this.name = builder.name;
         }
@@ -448,6 +452,13 @@ public class HttpApiApiInfo extends TeaModel {
 
         public static GatewayInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return gatewayEdition
+         */
+        public String getGatewayEdition() {
+            return this.gatewayEdition;
         }
 
         /**
@@ -465,6 +476,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         public static final class Builder {
+            private String gatewayEdition; 
             private String gatewayId; 
             private String name; 
 
@@ -472,9 +484,18 @@ public class HttpApiApiInfo extends TeaModel {
             } 
 
             private Builder(GatewayInfo model) {
+                this.gatewayEdition = model.gatewayEdition;
                 this.gatewayId = model.gatewayId;
                 this.name = model.name;
             } 
+
+            /**
+             * gatewayEdition.
+             */
+            public Builder gatewayEdition(String gatewayEdition) {
+                this.gatewayEdition = gatewayEdition;
+                return this;
+            }
 
             /**
              * gatewayId.

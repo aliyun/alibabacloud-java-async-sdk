@@ -251,6 +251,9 @@ public class GetDomainResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domainId")
         private String domainId;
 
+        @com.aliyun.core.annotation.NameInMap("domainScope")
+        private String domainScope;
+
         @com.aliyun.core.annotation.NameInMap("forceHttps")
         private Boolean forceHttps;
 
@@ -306,6 +309,7 @@ public class GetDomainResponseBody extends TeaModel {
             this.createTimestamp = builder.createTimestamp;
             this._default = builder._default;
             this.domainId = builder.domainId;
+            this.domainScope = builder.domainScope;
             this.forceHttps = builder.forceHttps;
             this.http2Option = builder.http2Option;
             this.issuer = builder.issuer;
@@ -392,6 +396,13 @@ public class GetDomainResponseBody extends TeaModel {
          */
         public String getDomainId() {
             return this.domainId;
+        }
+
+        /**
+         * @return domainScope
+         */
+        public String getDomainScope() {
+            return this.domainScope;
         }
 
         /**
@@ -509,6 +520,7 @@ public class GetDomainResponseBody extends TeaModel {
             private Long createTimestamp; 
             private Boolean _default; 
             private String domainId; 
+            private String domainScope; 
             private Boolean forceHttps; 
             private String http2Option; 
             private String issuer; 
@@ -538,6 +550,7 @@ public class GetDomainResponseBody extends TeaModel {
                 this.createTimestamp = model.createTimestamp;
                 this._default = model._default;
                 this.domainId = model.domainId;
+                this.domainScope = model.domainScope;
                 this.forceHttps = model.forceHttps;
                 this.http2Option = model.http2Option;
                 this.issuer = model.issuer;
@@ -663,6 +676,14 @@ public class GetDomainResponseBody extends TeaModel {
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
+                return this;
+            }
+
+            /**
+             * domainScope.
+             */
+            public Builder domainScope(String domainScope) {
+                this.domainScope = domainScope;
                 return this;
             }
 

@@ -29,8 +29,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "APIG";
         this.version = "2024-03-27";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "apig.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "apig.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "apig.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "apig.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "apig.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "apig.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "apig.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "apig.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "apig.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "apig.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "apig.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "apig.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "apig.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "apig.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "apig.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "apig.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "apig.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "apig.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "apig.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "apig.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "apig.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "apig.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "apig.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "apig.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "apig.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 

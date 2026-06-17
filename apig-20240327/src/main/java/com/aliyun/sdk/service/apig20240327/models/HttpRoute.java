@@ -422,6 +422,9 @@ public class HttpRoute extends TeaModel {
      * <p>HttpRoute</p>
      */
     public static class GatewayInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("gatewayEdition")
+        private String gatewayEdition;
+
         @com.aliyun.core.annotation.NameInMap("gatewayId")
         private String gatewayId;
 
@@ -429,6 +432,7 @@ public class HttpRoute extends TeaModel {
         private String name;
 
         private GatewayInfo(Builder builder) {
+            this.gatewayEdition = builder.gatewayEdition;
             this.gatewayId = builder.gatewayId;
             this.name = builder.name;
         }
@@ -439,6 +443,13 @@ public class HttpRoute extends TeaModel {
 
         public static GatewayInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return gatewayEdition
+         */
+        public String getGatewayEdition() {
+            return this.gatewayEdition;
         }
 
         /**
@@ -456,6 +467,7 @@ public class HttpRoute extends TeaModel {
         }
 
         public static final class Builder {
+            private String gatewayEdition; 
             private String gatewayId; 
             private String name; 
 
@@ -463,9 +475,18 @@ public class HttpRoute extends TeaModel {
             } 
 
             private Builder(GatewayInfo model) {
+                this.gatewayEdition = model.gatewayEdition;
                 this.gatewayId = model.gatewayId;
                 this.name = model.name;
             } 
+
+            /**
+             * gatewayEdition.
+             */
+            public Builder gatewayEdition(String gatewayEdition) {
+                this.gatewayEdition = gatewayEdition;
+                return this;
+            }
 
             /**
              * gatewayId.
