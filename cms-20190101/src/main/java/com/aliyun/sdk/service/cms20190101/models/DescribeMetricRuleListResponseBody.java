@@ -1677,6 +1677,9 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
+        @com.aliyun.core.annotation.NameInMap("SendOK")
+        private Boolean sendOK;
+
         @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private Integer silenceTime;
 
@@ -1710,6 +1713,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             this.resources = builder.resources;
             this.ruleId = builder.ruleId;
             this.ruleName = builder.ruleName;
+            this.sendOK = builder.sendOK;
             this.silenceTime = builder.silenceTime;
             this.sourceType = builder.sourceType;
             this.webhook = builder.webhook;
@@ -1885,6 +1889,13 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         }
 
         /**
+         * @return sendOK
+         */
+        public Boolean getSendOK() {
+            return this.sendOK;
+        }
+
+        /**
          * @return silenceTime
          */
         public Integer getSilenceTime() {
@@ -1929,6 +1940,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             private String resources; 
             private String ruleId; 
             private String ruleName; 
+            private Boolean sendOK; 
             private Integer silenceTime; 
             private String sourceType; 
             private String webhook; 
@@ -1960,6 +1972,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
                 this.resources = model.resources;
                 this.ruleId = model.ruleId;
                 this.ruleName = model.ruleName;
+                this.sendOK = model.sendOK;
                 this.silenceTime = model.silenceTime;
                 this.sourceType = model.sourceType;
                 this.webhook = model.webhook;
@@ -2217,6 +2230,17 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
+                return this;
+            }
+
+            /**
+             * <p>是否关闭恢复告警。取值：true（是）、false（否）。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder sendOK(Boolean sendOK) {
+                this.sendOK = sendOK;
                 return this;
             }
 
