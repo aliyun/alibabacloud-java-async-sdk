@@ -25,4 +25,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateComputeInstanceResponse> createComputeInstance(CreateComputeInstanceRequest request);
 
+    /**
+     * @param request the request parameters of DeleteComputeInstance  DeleteComputeInstanceRequest
+     * @return DeleteComputeInstanceResponse
+     */
+    CompletableFuture<DeleteComputeInstanceResponse> deleteComputeInstance(DeleteComputeInstanceRequest request);
+
 }
