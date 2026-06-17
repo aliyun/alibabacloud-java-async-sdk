@@ -35,6 +35,10 @@ public class CreateSupabaseProjectRequest extends Request {
     private String diskPerformanceLevel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    private String engineVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
@@ -90,6 +94,7 @@ public class CreateSupabaseProjectRequest extends Request {
         this.autoScale = builder.autoScale;
         this.clientToken = builder.clientToken;
         this.diskPerformanceLevel = builder.diskPerformanceLevel;
+        this.engineVersion = builder.engineVersion;
         this.payType = builder.payType;
         this.period = builder.period;
         this.projectName = builder.projectName;
@@ -142,6 +147,13 @@ public class CreateSupabaseProjectRequest extends Request {
      */
     public String getDiskPerformanceLevel() {
         return this.diskPerformanceLevel;
+    }
+
+    /**
+     * @return engineVersion
+     */
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     /**
@@ -226,6 +238,7 @@ public class CreateSupabaseProjectRequest extends Request {
         private Boolean autoScale; 
         private String clientToken; 
         private String diskPerformanceLevel; 
+        private String engineVersion; 
         private String payType; 
         private String period; 
         private String projectName; 
@@ -248,6 +261,7 @@ public class CreateSupabaseProjectRequest extends Request {
             this.autoScale = request.autoScale;
             this.clientToken = request.clientToken;
             this.diskPerformanceLevel = request.diskPerformanceLevel;
+            this.engineVersion = request.engineVersion;
             this.payType = request.payType;
             this.period = request.period;
             this.projectName = request.projectName;
@@ -313,6 +327,15 @@ public class CreateSupabaseProjectRequest extends Request {
         public Builder diskPerformanceLevel(String diskPerformanceLevel) {
             this.putQueryParameter("DiskPerformanceLevel", diskPerformanceLevel);
             this.diskPerformanceLevel = diskPerformanceLevel;
+            return this;
+        }
+
+        /**
+         * EngineVersion.
+         */
+        public Builder engineVersion(String engineVersion) {
+            this.putQueryParameter("EngineVersion", engineVersion);
+            this.engineVersion = engineVersion;
             return this;
         }
 

@@ -270,6 +270,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRemoteADBDataSourceResponse> createRemoteADBDataSource(CreateRemoteADBDataSourceRequest request);
 
     /**
+     * @param request the request parameters of CreateSaasService  CreateSaasServiceRequest
+     * @return CreateSaasServiceResponse
+     */
+    CompletableFuture<CreateSaasServiceResponse> createSaasService(CreateSaasServiceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation to create a sample dataset for an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to experience or test your instance. For more information about query statements, see <a href="https://help.aliyun.com/document_detail/452277.html">Dataset information and query examples</a>.</p>
      * <ul>
@@ -326,6 +332,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateVectorIndexResponse
      */
     CompletableFuture<CreateVectorIndexResponse> createVectorIndex(CreateVectorIndexRequest request);
+
+    /**
+     * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
+    CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
 
     /**
      * <b>description</b> :
@@ -488,6 +500,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRemoteADBDataSourceResponse> deleteRemoteADBDataSource(DeleteRemoteADBDataSourceRequest request);
 
     /**
+     * @param request the request parameters of DeleteSaasService  DeleteSaasServiceRequest
+     * @return DeleteSaasServiceResponse
+     */
+    CompletableFuture<DeleteSaasServiceResponse> deleteSaasService(DeleteSaasServiceRequest request);
+
+    /**
      * @param request the request parameters of DeleteSecret  DeleteSecretRequest
      * @return DeleteSecretResponse
      */
@@ -525,6 +543,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteVectorIndexResponse
      */
     CompletableFuture<DeleteVectorIndexResponse> deleteVectorIndex(DeleteVectorIndexRequest request);
+
+    /**
+     * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
+     * @return DeleteWorkspaceResponse
+     */
+    CompletableFuture<DeleteWorkspaceResponse> deleteWorkspace(DeleteWorkspaceRequest request);
 
     /**
      * <b>description</b> :
@@ -1203,10 +1227,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetGraphRAGJobResponse> getGraphRAGJob(GetGraphRAGJobRequest request);
 
     /**
+     * @param request the request parameters of GetSaasService  GetSaasServiceRequest
+     * @return GetSaasServiceResponse
+     */
+    CompletableFuture<GetSaasServiceResponse> getSaasService(GetSaasServiceRequest request);
+
+    /**
      * @param request the request parameters of GetSecretValue  GetSecretValueRequest
      * @return GetSecretValueResponse
      */
     CompletableFuture<GetSecretValueResponse> getSecretValue(GetSecretValueRequest request);
+
+    /**
+     * @param request the request parameters of GetServiceAccessInfo  GetServiceAccessInfoRequest
+     * @return GetServiceAccessInfoResponse
+     */
+    CompletableFuture<GetServiceAccessInfoResponse> getServiceAccessInfo(GetServiceAccessInfoRequest request);
 
     /**
      * @param request the request parameters of GetStatementResult  GetStatementResultRequest
@@ -1398,6 +1434,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRemoteADBDataSourcesResponse> listRemoteADBDataSources(ListRemoteADBDataSourcesRequest request);
 
     /**
+     * @param request the request parameters of ListSaasService  ListSaasServiceRequest
+     * @return ListSaasServiceResponse
+     */
+    CompletableFuture<ListSaasServiceResponse> listSaasService(ListSaasServiceRequest request);
+
+    /**
      * @param request the request parameters of ListSchemas  ListSchemasRequest
      * @return ListSchemasResponse
      */
@@ -1468,6 +1510,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTagResourcesResponse
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
+     * @return ListWorkspacesResponse
+     */
+    CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
 
     /**
      * @param request the request parameters of ModifyAIServiceSecurityIps  ModifyAIServiceSecurityIpsRequest
