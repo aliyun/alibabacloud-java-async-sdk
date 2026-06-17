@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateBatchTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationType")
+    private String applicationType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> instanceIds;
@@ -43,6 +47,7 @@ public class CreateBatchTaskRequest extends Request {
 
     private CreateBatchTaskRequest(Builder builder) {
         super(builder);
+        this.applicationType = builder.applicationType;
         this.instanceIds = builder.instanceIds;
         this.param = builder.param;
         this.regionId = builder.regionId;
@@ -61,6 +66,13 @@ public class CreateBatchTaskRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return applicationType
+     */
+    public String getApplicationType() {
+        return this.applicationType;
     }
 
     /**
@@ -99,6 +111,7 @@ public class CreateBatchTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateBatchTaskRequest, Builder> {
+        private String applicationType; 
         private java.util.List<String> instanceIds; 
         private String param; 
         private String regionId; 
@@ -111,12 +124,22 @@ public class CreateBatchTaskRequest extends Request {
 
         private Builder(CreateBatchTaskRequest request) {
             super(request);
+            this.applicationType = request.applicationType;
             this.instanceIds = request.instanceIds;
             this.param = request.param;
             this.regionId = request.regionId;
             this.taskName = request.taskName;
             this.taskType = request.taskType;
         } 
+
+        /**
+         * ApplicationType.
+         */
+        public Builder applicationType(String applicationType) {
+            this.putQueryParameter("ApplicationType", applicationType);
+            this.applicationType = applicationType;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

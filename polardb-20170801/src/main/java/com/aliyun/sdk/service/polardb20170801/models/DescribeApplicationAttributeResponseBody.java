@@ -1574,6 +1574,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EmbedderModelName")
         private String embedderModelName;
 
+        @com.aliyun.core.annotation.NameInMap("GraphLlmModelName")
+        private String graphLlmModelName;
+
         @com.aliyun.core.annotation.NameInMap("LlmModelName")
         private String llmModelName;
 
@@ -1589,6 +1592,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private MemApplicationAttribute(Builder builder) {
             this.dbName = builder.dbName;
             this.embedderModelName = builder.embedderModelName;
+            this.graphLlmModelName = builder.graphLlmModelName;
             this.llmModelName = builder.llmModelName;
             this.projectName = builder.projectName;
             this.rerankerModelName = builder.rerankerModelName;
@@ -1615,6 +1619,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          */
         public String getEmbedderModelName() {
             return this.embedderModelName;
+        }
+
+        /**
+         * @return graphLlmModelName
+         */
+        public String getGraphLlmModelName() {
+            return this.graphLlmModelName;
         }
 
         /**
@@ -1648,6 +1659,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String dbName; 
             private String embedderModelName; 
+            private String graphLlmModelName; 
             private String llmModelName; 
             private String projectName; 
             private String rerankerModelName; 
@@ -1659,6 +1671,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             private Builder(MemApplicationAttribute model) {
                 this.dbName = model.dbName;
                 this.embedderModelName = model.embedderModelName;
+                this.graphLlmModelName = model.graphLlmModelName;
                 this.llmModelName = model.llmModelName;
                 this.projectName = model.projectName;
                 this.rerankerModelName = model.rerankerModelName;
@@ -1678,6 +1691,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
              */
             public Builder embedderModelName(String embedderModelName) {
                 this.embedderModelName = embedderModelName;
+                return this;
+            }
+
+            /**
+             * GraphLlmModelName.
+             */
+            public Builder graphLlmModelName(String graphLlmModelName) {
+                this.graphLlmModelName = graphLlmModelName;
                 return this;
             }
 

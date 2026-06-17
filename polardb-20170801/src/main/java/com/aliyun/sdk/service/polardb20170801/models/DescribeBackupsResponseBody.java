@@ -233,6 +233,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsAvail")
         private String isAvail;
 
+        @com.aliyun.core.annotation.NameInMap("TableRestoreMetaStatus")
+        private String tableRestoreMetaStatus;
+
         private Backup(Builder builder) {
             this.backupEndTime = builder.backupEndTime;
             this.backupId = builder.backupId;
@@ -248,6 +251,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             this.expectExpireTime = builder.expectExpireTime;
             this.expectExpireType = builder.expectExpireType;
             this.isAvail = builder.isAvail;
+            this.tableRestoreMetaStatus = builder.tableRestoreMetaStatus;
         }
 
         public static Builder builder() {
@@ -356,6 +360,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.isAvail;
         }
 
+        /**
+         * @return tableRestoreMetaStatus
+         */
+        public String getTableRestoreMetaStatus() {
+            return this.tableRestoreMetaStatus;
+        }
+
         public static final class Builder {
             private String backupEndTime; 
             private String backupId; 
@@ -371,6 +382,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String expectExpireTime; 
             private String expectExpireType; 
             private String isAvail; 
+            private String tableRestoreMetaStatus; 
 
             private Builder() {
             } 
@@ -390,6 +402,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
                 this.expectExpireTime = model.expectExpireTime;
                 this.expectExpireType = model.expectExpireType;
                 this.isAvail = model.isAvail;
+                this.tableRestoreMetaStatus = model.tableRestoreMetaStatus;
             } 
 
             /**
@@ -585,6 +598,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder isAvail(String isAvail) {
                 this.isAvail = isAvail;
+                return this;
+            }
+
+            /**
+             * TableRestoreMetaStatus.
+             */
+            public Builder tableRestoreMetaStatus(String tableRestoreMetaStatus) {
+                this.tableRestoreMetaStatus = tableRestoreMetaStatus;
                 return this;
             }
 

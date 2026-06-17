@@ -2424,6 +2424,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OpenAITaskResponse> openAITask(OpenAITaskRequest request);
 
     /**
+     * @param request the request parameters of OperateApplication  OperateApplicationRequest
+     * @return OperateApplicationResponse
+     */
+    CompletableFuture<OperateApplicationResponse> operateApplication(OperateApplicationRequest request);
+
+    /**
      * @param request the request parameters of PatchPolarClawConfig  PatchPolarClawConfigRequest
      * @return PatchPolarClawConfigResponse
      */

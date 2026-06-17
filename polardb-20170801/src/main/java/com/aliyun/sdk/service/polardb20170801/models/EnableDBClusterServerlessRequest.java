@@ -23,12 +23,24 @@ public class EnableDBClusterServerlessRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromTimeService")
+    private Boolean fromTimeService;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedEndTime")
+    private String plannedEndTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedStartTime")
+    private String plannedStartTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -65,8 +77,11 @@ public class EnableDBClusterServerlessRequest extends Request {
     private EnableDBClusterServerlessRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.fromTimeService = builder.fromTimeService;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.plannedEndTime = builder.plannedEndTime;
+        this.plannedStartTime = builder.plannedStartTime;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.scaleApRoNumMax = builder.scaleApRoNumMax;
@@ -98,6 +113,13 @@ public class EnableDBClusterServerlessRequest extends Request {
     }
 
     /**
+     * @return fromTimeService
+     */
+    public Boolean getFromTimeService() {
+        return this.fromTimeService;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -109,6 +131,20 @@ public class EnableDBClusterServerlessRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return plannedEndTime
+     */
+    public String getPlannedEndTime() {
+        return this.plannedEndTime;
+    }
+
+    /**
+     * @return plannedStartTime
+     */
+    public String getPlannedStartTime() {
+        return this.plannedStartTime;
     }
 
     /**
@@ -169,8 +205,11 @@ public class EnableDBClusterServerlessRequest extends Request {
 
     public static final class Builder extends Request.Builder<EnableDBClusterServerlessRequest, Builder> {
         private String DBClusterId; 
+        private Boolean fromTimeService; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String plannedEndTime; 
+        private String plannedStartTime; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scaleApRoNumMax; 
@@ -187,8 +226,11 @@ public class EnableDBClusterServerlessRequest extends Request {
         private Builder(EnableDBClusterServerlessRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.fromTimeService = request.fromTimeService;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.plannedEndTime = request.plannedEndTime;
+            this.plannedStartTime = request.plannedStartTime;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.scaleApRoNumMax = request.scaleApRoNumMax;
@@ -213,6 +255,15 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
+         * FromTimeService.
+         */
+        public Builder fromTimeService(Boolean fromTimeService) {
+            this.putQueryParameter("FromTimeService", fromTimeService);
+            this.fromTimeService = fromTimeService;
+            return this;
+        }
+
+        /**
          * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
@@ -227,6 +278,24 @@ public class EnableDBClusterServerlessRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PlannedEndTime.
+         */
+        public Builder plannedEndTime(String plannedEndTime) {
+            this.putQueryParameter("PlannedEndTime", plannedEndTime);
+            this.plannedEndTime = plannedEndTime;
+            return this;
+        }
+
+        /**
+         * PlannedStartTime.
+         */
+        public Builder plannedStartTime(String plannedStartTime) {
+            this.putQueryParameter("PlannedStartTime", plannedStartTime);
+            this.plannedStartTime = plannedStartTime;
             return this;
         }
 

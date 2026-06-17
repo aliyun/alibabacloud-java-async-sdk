@@ -79,8 +79,8 @@ public class CreateAIDBClusterRequest extends Request {
     private String managementMode;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ModeName")
-    private String modeName;
+    @com.aliyun.core.annotation.NameInMap("ModelName")
+    private String modelName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -171,7 +171,7 @@ public class CreateAIDBClusterRequest extends Request {
         this.kubeType = builder.kubeType;
         this.kubernetesConfig = builder.kubernetesConfig;
         this.managementMode = builder.managementMode;
-        this.modeName = builder.modeName;
+        this.modelName = builder.modelName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.password = builder.password;
@@ -310,10 +310,10 @@ public class CreateAIDBClusterRequest extends Request {
     }
 
     /**
-     * @return modeName
+     * @return modelName
      */
-    public String getModeName() {
-        return this.modeName;
+    public String getModelName() {
+        return this.modelName;
     }
 
     /**
@@ -451,7 +451,7 @@ public class CreateAIDBClusterRequest extends Request {
         private String kubeType; 
         private String kubernetesConfig; 
         private String managementMode; 
-        private String modeName; 
+        private String modelName; 
         private String ownerAccount; 
         private Long ownerId; 
         private String password; 
@@ -491,7 +491,7 @@ public class CreateAIDBClusterRequest extends Request {
             this.kubeType = request.kubeType;
             this.kubernetesConfig = request.kubernetesConfig;
             this.managementMode = request.managementMode;
-            this.modeName = request.modeName;
+            this.modelName = request.modelName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.password = request.password;
@@ -653,11 +653,11 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * ModeName.
+         * ModelName.
          */
-        public Builder modeName(String modeName) {
-            this.putQueryParameter("ModeName", modeName);
-            this.modeName = modeName;
+        public Builder modelName(String modelName) {
+            this.putQueryParameter("ModelName", modelName);
+            this.modelName = modelName;
             return this;
         }
 

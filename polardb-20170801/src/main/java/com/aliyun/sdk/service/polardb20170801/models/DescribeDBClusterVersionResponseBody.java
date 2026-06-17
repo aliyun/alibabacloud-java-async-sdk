@@ -20,6 +20,9 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
+    @com.aliyun.core.annotation.NameInMap("DBLatestStableVersion")
+    private String DBLatestStableVersion;
+
     @com.aliyun.core.annotation.NameInMap("DBLatestVersion")
     private String DBLatestVersion;
 
@@ -37,6 +40,9 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("DBVersionStatus")
     private String DBVersionStatus;
+
+    @com.aliyun.core.annotation.NameInMap("IsLatestStableVersion")
+    private String isLatestStableVersion;
 
     @com.aliyun.core.annotation.NameInMap("IsLatestVersion")
     private String isLatestVersion;
@@ -61,12 +67,14 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
 
     private DescribeDBClusterVersionResponseBody(Builder builder) {
         this.DBClusterId = builder.DBClusterId;
+        this.DBLatestStableVersion = builder.DBLatestStableVersion;
         this.DBLatestVersion = builder.DBLatestVersion;
         this.DBMinorVersion = builder.DBMinorVersion;
         this.DBRevisionVersion = builder.DBRevisionVersion;
         this.DBRevisionVersionList = builder.DBRevisionVersionList;
         this.DBVersion = builder.DBVersion;
         this.DBVersionStatus = builder.DBVersionStatus;
+        this.isLatestStableVersion = builder.isLatestStableVersion;
         this.isLatestVersion = builder.isLatestVersion;
         this.isProxyLatestVersion = builder.isProxyLatestVersion;
         this.proxyLatestVersion = builder.proxyLatestVersion;
@@ -93,6 +101,13 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return DBLatestStableVersion
+     */
+    public String getDBLatestStableVersion() {
+        return this.DBLatestStableVersion;
     }
 
     /**
@@ -135,6 +150,13 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
      */
     public String getDBVersionStatus() {
         return this.DBVersionStatus;
+    }
+
+    /**
+     * @return isLatestStableVersion
+     */
+    public String getIsLatestStableVersion() {
+        return this.isLatestStableVersion;
     }
 
     /**
@@ -188,12 +210,14 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBClusterId; 
+        private String DBLatestStableVersion; 
         private String DBLatestVersion; 
         private String DBMinorVersion; 
         private String DBRevisionVersion; 
         private java.util.List<DBRevisionVersionList> DBRevisionVersionList; 
         private String DBVersion; 
         private String DBVersionStatus; 
+        private String isLatestStableVersion; 
         private String isLatestVersion; 
         private String isProxyLatestVersion; 
         private String proxyLatestVersion; 
@@ -207,12 +231,14 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
 
         private Builder(DescribeDBClusterVersionResponseBody model) {
             this.DBClusterId = model.DBClusterId;
+            this.DBLatestStableVersion = model.DBLatestStableVersion;
             this.DBLatestVersion = model.DBLatestVersion;
             this.DBMinorVersion = model.DBMinorVersion;
             this.DBRevisionVersion = model.DBRevisionVersion;
             this.DBRevisionVersionList = model.DBRevisionVersionList;
             this.DBVersion = model.DBVersion;
             this.DBVersionStatus = model.DBVersionStatus;
+            this.isLatestStableVersion = model.isLatestStableVersion;
             this.isLatestVersion = model.isLatestVersion;
             this.isProxyLatestVersion = model.isProxyLatestVersion;
             this.proxyLatestVersion = model.proxyLatestVersion;
@@ -230,6 +256,14 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * DBLatestStableVersion.
+         */
+        public Builder DBLatestStableVersion(String DBLatestStableVersion) {
+            this.DBLatestStableVersion = DBLatestStableVersion;
             return this;
         }
 
@@ -318,6 +352,14 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
          */
         public Builder DBVersionStatus(String DBVersionStatus) {
             this.DBVersionStatus = DBVersionStatus;
+            return this;
+        }
+
+        /**
+         * IsLatestStableVersion.
+         */
+        public Builder isLatestStableVersion(String isLatestStableVersion) {
+            this.isLatestStableVersion = isLatestStableVersion;
             return this;
         }
 

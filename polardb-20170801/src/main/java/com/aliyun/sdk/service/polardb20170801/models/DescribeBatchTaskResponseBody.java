@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBatchTaskResponseBody</p>
  */
 public class DescribeBatchTaskResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ApplicationType")
+    private String applicationType;
+
     @com.aliyun.core.annotation.NameInMap("BatchId")
     private String batchId;
 
@@ -48,6 +51,7 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     private Integer totalCount;
 
     private DescribeBatchTaskResponseBody(Builder builder) {
+        this.applicationType = builder.applicationType;
         this.batchId = builder.batchId;
         this.requestId = builder.requestId;
         this.status = builder.status;
@@ -70,6 +74,13 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return applicationType
+     */
+    public String getApplicationType() {
+        return this.applicationType;
     }
 
     /**
@@ -143,6 +154,7 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String applicationType; 
         private String batchId; 
         private String requestId; 
         private String status; 
@@ -158,6 +170,7 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeBatchTaskResponseBody model) {
+            this.applicationType = model.applicationType;
             this.batchId = model.batchId;
             this.requestId = model.requestId;
             this.status = model.status;
@@ -169,6 +182,14 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
             this.taskType = model.taskType;
             this.totalCount = model.totalCount;
         } 
+
+        /**
+         * ApplicationType.
+         */
+        public Builder applicationType(String applicationType) {
+            this.applicationType = applicationType;
+            return this;
+        }
 
         /**
          * BatchId.
