@@ -668,6 +668,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFirewallVswitchResourcesResponse> describeFirewallVswitchResources(DescribeFirewallVswitchResourcesRequest request);
 
     /**
+     * @param request the request parameters of DescribeIPSRules  DescribeIPSRulesRequest
+     * @return DescribeIPSRulesResponse
+     */
+    CompletableFuture<DescribeIPSRulesResponse> describeIPSRules(DescribeIPSRulesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can use this operation to query the information about members in Cloud Firewall.</p>
      * <h2>Limits</h2>

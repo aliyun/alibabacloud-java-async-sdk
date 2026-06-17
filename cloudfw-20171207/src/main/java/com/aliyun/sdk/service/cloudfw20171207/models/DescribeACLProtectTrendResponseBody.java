@@ -32,6 +32,12 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TotalAlertCnt")
+    private Long totalAlertCnt;
+
+    @com.aliyun.core.annotation.NameInMap("TotalPassCnt")
+    private Long totalPassCnt;
+
     @com.aliyun.core.annotation.NameInMap("TotalProtectCnt")
     private Long totalProtectCnt;
 
@@ -44,6 +50,8 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         this.interval = builder.interval;
         this.outProtectCnt = builder.outProtectCnt;
         this.requestId = builder.requestId;
+        this.totalAlertCnt = builder.totalAlertCnt;
+        this.totalPassCnt = builder.totalPassCnt;
         this.totalProtectCnt = builder.totalProtectCnt;
         this.trendList = builder.trendList;
     }
@@ -96,6 +104,20 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalAlertCnt
+     */
+    public Long getTotalAlertCnt() {
+        return this.totalAlertCnt;
+    }
+
+    /**
+     * @return totalPassCnt
+     */
+    public Long getTotalPassCnt() {
+        return this.totalPassCnt;
+    }
+
+    /**
      * @return totalProtectCnt
      */
     public Long getTotalProtectCnt() {
@@ -115,6 +137,8 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         private Integer interval; 
         private Long outProtectCnt; 
         private String requestId; 
+        private Long totalAlertCnt; 
+        private Long totalPassCnt; 
         private Long totalProtectCnt; 
         private java.util.List<TrendList> trendList; 
 
@@ -127,6 +151,8 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
             this.interval = model.interval;
             this.outProtectCnt = model.outProtectCnt;
             this.requestId = model.requestId;
+            this.totalAlertCnt = model.totalAlertCnt;
+            this.totalPassCnt = model.totalPassCnt;
             this.totalProtectCnt = model.totalProtectCnt;
             this.trendList = model.trendList;
         } 
@@ -187,6 +213,22 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
+         * TotalAlertCnt.
+         */
+        public Builder totalAlertCnt(Long totalAlertCnt) {
+            this.totalAlertCnt = totalAlertCnt;
+            return this;
+        }
+
+        /**
+         * TotalPassCnt.
+         */
+        public Builder totalPassCnt(Long totalPassCnt) {
+            this.totalPassCnt = totalPassCnt;
+            return this;
+        }
+
+        /**
          * <p>The total number of requests that are blocked by the ACL feature.</p>
          * 
          * <strong>example:</strong>
@@ -218,6 +260,12 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
      * <p>DescribeACLProtectTrendResponseBody</p>
      */
     public static class TrendList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlertCnt")
+        private Integer alertCnt;
+
+        @com.aliyun.core.annotation.NameInMap("PassCnt")
+        private Integer passCnt;
+
         @com.aliyun.core.annotation.NameInMap("ProtectCnt")
         private Integer protectCnt;
 
@@ -225,6 +273,8 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         private Long time;
 
         private TrendList(Builder builder) {
+            this.alertCnt = builder.alertCnt;
+            this.passCnt = builder.passCnt;
             this.protectCnt = builder.protectCnt;
             this.time = builder.time;
         }
@@ -235,6 +285,20 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
 
         public static TrendList create() {
             return builder().build();
+        }
+
+        /**
+         * @return alertCnt
+         */
+        public Integer getAlertCnt() {
+            return this.alertCnt;
+        }
+
+        /**
+         * @return passCnt
+         */
+        public Integer getPassCnt() {
+            return this.passCnt;
         }
 
         /**
@@ -252,6 +316,8 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer alertCnt; 
+            private Integer passCnt; 
             private Integer protectCnt; 
             private Long time; 
 
@@ -259,9 +325,27 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
             } 
 
             private Builder(TrendList model) {
+                this.alertCnt = model.alertCnt;
+                this.passCnt = model.passCnt;
                 this.protectCnt = model.protectCnt;
                 this.time = model.time;
             } 
+
+            /**
+             * AlertCnt.
+             */
+            public Builder alertCnt(Integer alertCnt) {
+                this.alertCnt = alertCnt;
+                return this;
+            }
+
+            /**
+             * PassCnt.
+             */
+            public Builder passCnt(Integer passCnt) {
+                this.passCnt = passCnt;
+                return this;
+            }
 
             /**
              * <p>The number of requests that are blocked by ACL on the current day.</p>

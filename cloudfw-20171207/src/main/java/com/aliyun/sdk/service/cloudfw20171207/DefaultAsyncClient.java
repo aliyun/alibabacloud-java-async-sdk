@@ -32,7 +32,31 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.endpointRule = "central";
         this.endpointMap = CommonUtil.buildMap(
             new TeaPair("ap-southeast-1", "cloudfw.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "cloudfw.cn-hangzhou.aliyuncs.com")
+            new TeaPair("cn-hangzhou", "cloudfw.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("us-west-1", "cloudfw.aliyuncs.com"),
+            new TeaPair("us-east-1", "cloudfw.aliyuncs.com"),
+            new TeaPair("me-east-1", "cloudfw.aliyuncs.com"),
+            new TeaPair("eu-west-1", "cloudfw.aliyuncs.com"),
+            new TeaPair("eu-central-1", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "cloudfw.aliyuncs.com"),
+            new TeaPair("cn-beijing", "cloudfw.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "cloudfw.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "cloudfw.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "cloudfw.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -1777,6 +1801,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeFirewallVswitchResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeIPSRules  DescribeIPSRulesRequest
+     * @return DescribeIPSRulesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeIPSRulesResponse> describeIPSRules(DescribeIPSRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeIPSRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeIPSRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeIPSRulesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

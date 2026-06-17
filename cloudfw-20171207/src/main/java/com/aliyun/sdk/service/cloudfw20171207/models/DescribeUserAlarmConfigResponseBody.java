@@ -29,9 +29,6 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DefaultContact")
     private DefaultContact defaultContact;
 
-    @com.aliyun.core.annotation.NameInMap("NotifyConfig")
-    private java.util.List<NotifyConfig> notifyConfig;
-
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -40,7 +37,6 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         this.alarmLang = builder.alarmLang;
         this.contactConfig = builder.contactConfig;
         this.defaultContact = builder.defaultContact;
-        this.notifyConfig = builder.notifyConfig;
         this.requestId = builder.requestId;
     }
 
@@ -85,13 +81,6 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
     }
 
     /**
-     * @return notifyConfig
-     */
-    public java.util.List<NotifyConfig> getNotifyConfig() {
-        return this.notifyConfig;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -103,7 +92,6 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         private String alarmLang; 
         private java.util.List<ContactConfig> contactConfig; 
         private DefaultContact defaultContact; 
-        private java.util.List<NotifyConfig> notifyConfig; 
         private String requestId; 
 
         private Builder() {
@@ -114,7 +102,6 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             this.alarmLang = model.alarmLang;
             this.contactConfig = model.contactConfig;
             this.defaultContact = model.defaultContact;
-            this.notifyConfig = model.notifyConfig;
             this.requestId = model.requestId;
         } 
 
@@ -147,14 +134,6 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
          */
         public Builder defaultContact(DefaultContact defaultContact) {
             this.defaultContact = defaultContact;
-            return this;
-        }
-
-        /**
-         * NotifyConfig.
-         */
-        public Builder notifyConfig(java.util.List<NotifyConfig> notifyConfig) {
-            this.notifyConfig = notifyConfig;
             return this;
         }
 
@@ -560,81 +539,6 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
 
             public DefaultContact build() {
                 return new DefaultContact(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link DescribeUserAlarmConfigResponseBody} extends {@link TeaModel}
-     *
-     * <p>DescribeUserAlarmConfigResponseBody</p>
-     */
-    public static class NotifyConfig extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("NotifyType")
-        private String notifyType;
-
-        @com.aliyun.core.annotation.NameInMap("NotifyValue")
-        private String notifyValue;
-
-        private NotifyConfig(Builder builder) {
-            this.notifyType = builder.notifyType;
-            this.notifyValue = builder.notifyValue;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static NotifyConfig create() {
-            return builder().build();
-        }
-
-        /**
-         * @return notifyType
-         */
-        public String getNotifyType() {
-            return this.notifyType;
-        }
-
-        /**
-         * @return notifyValue
-         */
-        public String getNotifyValue() {
-            return this.notifyValue;
-        }
-
-        public static final class Builder {
-            private String notifyType; 
-            private String notifyValue; 
-
-            private Builder() {
-            } 
-
-            private Builder(NotifyConfig model) {
-                this.notifyType = model.notifyType;
-                this.notifyValue = model.notifyValue;
-            } 
-
-            /**
-             * NotifyType.
-             */
-            public Builder notifyType(String notifyType) {
-                this.notifyType = notifyType;
-                return this;
-            }
-
-            /**
-             * NotifyValue.
-             */
-            public Builder notifyValue(String notifyValue) {
-                this.notifyValue = notifyValue;
-                return this;
-            }
-
-            public NotifyConfig build() {
-                return new NotifyConfig(this);
             } 
 
         } 

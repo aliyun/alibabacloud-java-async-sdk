@@ -35,10 +35,6 @@ public class ModifyUserAlarmConfigRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NotifyConfig")
-    private java.util.List<NotifyConfig> notifyConfig;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
@@ -52,7 +48,6 @@ public class ModifyUserAlarmConfigRequest extends Request {
         this.alarmLang = builder.alarmLang;
         this.contactConfig = builder.contactConfig;
         this.lang = builder.lang;
-        this.notifyConfig = builder.notifyConfig;
         this.sourceIp = builder.sourceIp;
         this.useDefaultContact = builder.useDefaultContact;
     }
@@ -99,13 +94,6 @@ public class ModifyUserAlarmConfigRequest extends Request {
     }
 
     /**
-     * @return notifyConfig
-     */
-    public java.util.List<NotifyConfig> getNotifyConfig() {
-        return this.notifyConfig;
-    }
-
-    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -124,7 +112,6 @@ public class ModifyUserAlarmConfigRequest extends Request {
         private String alarmLang; 
         private java.util.List<ContactConfig> contactConfig; 
         private String lang; 
-        private java.util.List<NotifyConfig> notifyConfig; 
         private String sourceIp; 
         private Integer useDefaultContact; 
 
@@ -138,7 +125,6 @@ public class ModifyUserAlarmConfigRequest extends Request {
             this.alarmLang = request.alarmLang;
             this.contactConfig = request.contactConfig;
             this.lang = request.lang;
-            this.notifyConfig = request.notifyConfig;
             this.sourceIp = request.sourceIp;
             this.useDefaultContact = request.useDefaultContact;
         } 
@@ -165,7 +151,8 @@ public class ModifyUserAlarmConfigRequest extends Request {
          * ContactConfig.
          */
         public Builder contactConfig(java.util.List<ContactConfig> contactConfig) {
-            this.putQueryParameter("ContactConfig", contactConfig);
+            String contactConfigShrink = shrink(contactConfig, "ContactConfig", "json");
+            this.putQueryParameter("ContactConfig", contactConfigShrink);
             this.contactConfig = contactConfig;
             return this;
         }
@@ -176,15 +163,6 @@ public class ModifyUserAlarmConfigRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
-            return this;
-        }
-
-        /**
-         * NotifyConfig.
-         */
-        public Builder notifyConfig(java.util.List<NotifyConfig> notifyConfig) {
-            this.putQueryParameter("NotifyConfig", notifyConfig);
-            this.notifyConfig = notifyConfig;
             return this;
         }
 
@@ -389,7 +367,7 @@ public class ModifyUserAlarmConfigRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Status")
-        private String status;
+        private Integer status;
 
         private ContactConfig(Builder builder) {
             this.email = builder.email;
@@ -430,7 +408,7 @@ public class ModifyUserAlarmConfigRequest extends Request {
         /**
          * @return status
          */
-        public String getStatus() {
+        public Integer getStatus() {
             return this.status;
         }
 
@@ -438,7 +416,7 @@ public class ModifyUserAlarmConfigRequest extends Request {
             private String email; 
             private String mobilePhone; 
             private String name; 
-            private String status; 
+            private Integer status; 
 
             private Builder() {
             } 
@@ -477,88 +455,13 @@ public class ModifyUserAlarmConfigRequest extends Request {
             /**
              * Status.
              */
-            public Builder status(String status) {
+            public Builder status(Integer status) {
                 this.status = status;
                 return this;
             }
 
             public ContactConfig build() {
                 return new ContactConfig(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link ModifyUserAlarmConfigRequest} extends {@link TeaModel}
-     *
-     * <p>ModifyUserAlarmConfigRequest</p>
-     */
-    public static class NotifyConfig extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("NotifyType")
-        private String notifyType;
-
-        @com.aliyun.core.annotation.NameInMap("NotifyValue")
-        private String notifyValue;
-
-        private NotifyConfig(Builder builder) {
-            this.notifyType = builder.notifyType;
-            this.notifyValue = builder.notifyValue;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static NotifyConfig create() {
-            return builder().build();
-        }
-
-        /**
-         * @return notifyType
-         */
-        public String getNotifyType() {
-            return this.notifyType;
-        }
-
-        /**
-         * @return notifyValue
-         */
-        public String getNotifyValue() {
-            return this.notifyValue;
-        }
-
-        public static final class Builder {
-            private String notifyType; 
-            private String notifyValue; 
-
-            private Builder() {
-            } 
-
-            private Builder(NotifyConfig model) {
-                this.notifyType = model.notifyType;
-                this.notifyValue = model.notifyValue;
-            } 
-
-            /**
-             * NotifyType.
-             */
-            public Builder notifyType(String notifyType) {
-                this.notifyType = notifyType;
-                return this;
-            }
-
-            /**
-             * NotifyValue.
-             */
-            public Builder notifyValue(String notifyValue) {
-                this.notifyValue = notifyValue;
-                return this;
-            }
-
-            public NotifyConfig build() {
-                return new NotifyConfig(this);
             } 
 
         } 

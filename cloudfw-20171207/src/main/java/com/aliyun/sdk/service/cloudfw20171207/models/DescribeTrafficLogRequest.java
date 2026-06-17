@@ -135,6 +135,10 @@ public class DescribeTrafficLogRequest extends Request {
     private String ruleSource;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleSourceFinal")
+    private String ruleSourceFinal;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceCode")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sourceCode;
@@ -211,6 +215,7 @@ public class DescribeTrafficLogRequest extends Request {
         this.ruleId = builder.ruleId;
         this.ruleResult = builder.ruleResult;
         this.ruleSource = builder.ruleSource;
+        this.ruleSourceFinal = builder.ruleSourceFinal;
         this.sourceCode = builder.sourceCode;
         this.sourceIp = builder.sourceIp;
         this.srcIP = builder.srcIP;
@@ -441,6 +446,13 @@ public class DescribeTrafficLogRequest extends Request {
     }
 
     /**
+     * @return ruleSourceFinal
+     */
+    public String getRuleSourceFinal() {
+        return this.ruleSourceFinal;
+    }
+
+    /**
      * @return sourceCode
      */
     public String getSourceCode() {
@@ -547,6 +559,7 @@ public class DescribeTrafficLogRequest extends Request {
         private String ruleId; 
         private String ruleResult; 
         private String ruleSource; 
+        private String ruleSourceFinal; 
         private String sourceCode; 
         private String sourceIp; 
         private String srcIP; 
@@ -594,6 +607,7 @@ public class DescribeTrafficLogRequest extends Request {
             this.ruleId = request.ruleId;
             this.ruleResult = request.ruleResult;
             this.ruleSource = request.ruleSource;
+            this.ruleSourceFinal = request.ruleSourceFinal;
             this.sourceCode = request.sourceCode;
             this.sourceIp = request.sourceIp;
             this.srcIP = request.srcIP;
@@ -868,6 +882,15 @@ public class DescribeTrafficLogRequest extends Request {
         public Builder ruleSource(String ruleSource) {
             this.putQueryParameter("RuleSource", ruleSource);
             this.ruleSource = ruleSource;
+            return this;
+        }
+
+        /**
+         * RuleSourceFinal.
+         */
+        public Builder ruleSourceFinal(String ruleSourceFinal) {
+            this.putQueryParameter("RuleSourceFinal", ruleSourceFinal);
+            this.ruleSourceFinal = ruleSourceFinal;
             return this;
         }
 

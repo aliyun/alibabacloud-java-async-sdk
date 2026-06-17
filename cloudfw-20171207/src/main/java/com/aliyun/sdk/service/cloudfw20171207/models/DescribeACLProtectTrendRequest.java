@@ -22,6 +22,14 @@ public class DescribeACLProtectTrendRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallType")
+    private String firewallType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
+    private Long interval;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -36,6 +44,8 @@ public class DescribeACLProtectTrendRequest extends Request {
     private DescribeACLProtectTrendRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
+        this.firewallType = builder.firewallType;
+        this.interval = builder.interval;
         this.lang = builder.lang;
         this.sourceIp = builder.sourceIp;
         this.startTime = builder.startTime;
@@ -62,6 +72,20 @@ public class DescribeACLProtectTrendRequest extends Request {
     }
 
     /**
+     * @return firewallType
+     */
+    public String getFirewallType() {
+        return this.firewallType;
+    }
+
+    /**
+     * @return interval
+     */
+    public Long getInterval() {
+        return this.interval;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -84,6 +108,8 @@ public class DescribeACLProtectTrendRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeACLProtectTrendRequest, Builder> {
         private String endTime; 
+        private String firewallType; 
+        private Long interval; 
         private String lang; 
         private String sourceIp; 
         private String startTime; 
@@ -95,6 +121,8 @@ public class DescribeACLProtectTrendRequest extends Request {
         private Builder(DescribeACLProtectTrendRequest request) {
             super(request);
             this.endTime = request.endTime;
+            this.firewallType = request.firewallType;
+            this.interval = request.interval;
             this.lang = request.lang;
             this.sourceIp = request.sourceIp;
             this.startTime = request.startTime;
@@ -109,6 +137,24 @@ public class DescribeACLProtectTrendRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * FirewallType.
+         */
+        public Builder firewallType(String firewallType) {
+            this.putQueryParameter("FirewallType", firewallType);
+            this.firewallType = firewallType;
+            return this;
+        }
+
+        /**
+         * Interval.
+         */
+        public Builder interval(Long interval) {
+            this.putQueryParameter("Interval", interval);
+            this.interval = interval;
             return this;
         }
 

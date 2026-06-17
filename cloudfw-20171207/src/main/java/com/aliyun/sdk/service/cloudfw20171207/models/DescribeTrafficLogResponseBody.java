@@ -218,9 +218,13 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
+        @com.aliyun.core.annotation.NameInMap("RuleSource")
+        private String ruleSource;
+
         private Rules(Builder builder) {
             this.ruleId = builder.ruleId;
             this.ruleName = builder.ruleName;
+            this.ruleSource = builder.ruleSource;
         }
 
         public static Builder builder() {
@@ -245,9 +249,17 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             return this.ruleName;
         }
 
+        /**
+         * @return ruleSource
+         */
+        public String getRuleSource() {
+            return this.ruleSource;
+        }
+
         public static final class Builder {
             private String ruleId; 
             private String ruleName; 
+            private String ruleSource; 
 
             private Builder() {
             } 
@@ -255,6 +267,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             private Builder(Rules model) {
                 this.ruleId = model.ruleId;
                 this.ruleName = model.ruleName;
+                this.ruleSource = model.ruleSource;
             } 
 
             /**
@@ -270,6 +283,14 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
+                return this;
+            }
+
+            /**
+             * RuleSource.
+             */
+            public Builder ruleSource(String ruleSource) {
+                this.ruleSource = ruleSource;
                 return this;
             }
 
