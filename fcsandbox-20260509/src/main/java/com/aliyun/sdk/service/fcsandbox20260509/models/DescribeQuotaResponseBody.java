@@ -1,0 +1,133 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.fcsandbox20260509.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link DescribeQuotaResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeQuotaResponseBody</p>
+ */
+public class DescribeQuotaResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
+
+    @com.aliyun.core.annotation.NameInMap("quota")
+    private Quota quota;
+
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
+    private DescribeQuotaResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
+        this.quota = builder.quota;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeQuotaResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return quota
+     */
+    public Quota getQuota() {
+        return this.quota;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private String message; 
+        private Quota quota; 
+        private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeQuotaResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.quota = model.quota;
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * quota.
+         */
+        public Builder quota(Quota quota) {
+            this.quota = quota;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public DescribeQuotaResponseBody build() {
+            return new DescribeQuotaResponseBody(this);
+        } 
+
+    } 
+
+}
