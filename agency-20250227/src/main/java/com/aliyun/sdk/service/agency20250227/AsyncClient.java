@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCustomerOrderListResponse> getCustomerOrderList(GetCustomerOrderListRequest request);
 
     /**
+     * @param request the request parameters of GetIntlCommissionDetailFileList  GetIntlCommissionDetailFileListRequest
+     * @return GetIntlCommissionDetailFileListResponse
+     */
+    CompletableFuture<GetIntlCommissionDetailFileListResponse> getIntlCommissionDetailFileList(GetIntlCommissionDetailFileListRequest request);
+
+    /**
      * @param request the request parameters of GetRenewalRateList  GetRenewalRateListRequest
      * @return GetRenewalRateListResponse
      */

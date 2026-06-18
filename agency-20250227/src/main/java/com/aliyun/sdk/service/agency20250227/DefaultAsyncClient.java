@@ -86,7 +86,8 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("me-east-1", "agency.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "agency.aliyuncs.com"),
             new TeaPair("us-east-1", "agency.aliyuncs.com"),
-            new TeaPair("us-west-1", "agency.aliyuncs.com")
+            new TeaPair("us-west-1", "agency.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "agency.ap-southeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -145,6 +146,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetCustomerOrderListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetIntlCommissionDetailFileList  GetIntlCommissionDetailFileListRequest
+     * @return GetIntlCommissionDetailFileListResponse
+     */
+    @Override
+    public CompletableFuture<GetIntlCommissionDetailFileListResponse> getIntlCommissionDetailFileList(GetIntlCommissionDetailFileListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetIntlCommissionDetailFileList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetIntlCommissionDetailFileListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetIntlCommissionDetailFileListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
