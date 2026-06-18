@@ -77,6 +77,9 @@ public class DescribeNodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.NameInMap("SavingsPlanId")
+    private String savingsPlanId;
+
     @com.aliyun.core.annotation.NameInMap("Sn")
     private String sn;
 
@@ -107,6 +110,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         this.operatingState = builder.operatingState;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.savingsPlanId = builder.savingsPlanId;
         this.sn = builder.sn;
         this.userData = builder.userData;
         this.zoneId = builder.zoneId;
@@ -265,6 +269,13 @@ public class DescribeNodeResponseBody extends TeaModel {
     }
 
     /**
+     * @return savingsPlanId
+     */
+    public String getSavingsPlanId() {
+        return this.savingsPlanId;
+    }
+
+    /**
      * @return sn
      */
     public String getSn() {
@@ -306,6 +317,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         private String operatingState; 
         private String requestId; 
         private String resourceGroupId; 
+        private String savingsPlanId; 
         private String sn; 
         private String userData; 
         private String zoneId; 
@@ -334,6 +346,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             this.operatingState = model.operatingState;
             this.requestId = model.requestId;
             this.resourceGroupId = model.resourceGroupId;
+            this.savingsPlanId = model.savingsPlanId;
             this.sn = model.sn;
             this.userData = model.userData;
             this.zoneId = model.zoneId;
@@ -560,6 +573,14 @@ public class DescribeNodeResponseBody extends TeaModel {
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * SavingsPlanId.
+         */
+        public Builder savingsPlanId(String savingsPlanId) {
+            this.savingsPlanId = savingsPlanId;
             return this;
         }
 

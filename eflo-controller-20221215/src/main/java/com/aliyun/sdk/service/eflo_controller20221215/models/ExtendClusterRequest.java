@@ -1647,6 +1647,9 @@ public class ExtendClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Period")
         private Long period;
 
+        @com.aliyun.core.annotation.NameInMap("SavingsPlanId")
+        private String savingsPlanId;
+
         @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
@@ -1670,6 +1673,7 @@ public class ExtendClusterRequest extends Request {
             this.nodeTag = builder.nodeTag;
             this.nodes = builder.nodes;
             this.period = builder.period;
+            this.savingsPlanId = builder.savingsPlanId;
             this.userData = builder.userData;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -1755,6 +1759,13 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
+         * @return savingsPlanId
+         */
+        public String getSavingsPlanId() {
+            return this.savingsPlanId;
+        }
+
+        /**
          * @return userData
          */
         public String getUserData() {
@@ -1793,6 +1804,7 @@ public class ExtendClusterRequest extends Request {
             private java.util.List<NodeTag> nodeTag; 
             private java.util.List<Nodes> nodes; 
             private Long period; 
+            private String savingsPlanId; 
             private String userData; 
             private String vSwitchId; 
             private String vpcId; 
@@ -1812,6 +1824,7 @@ public class ExtendClusterRequest extends Request {
                 this.nodeTag = model.nodeTag;
                 this.nodes = model.nodes;
                 this.period = model.period;
+                this.savingsPlanId = model.savingsPlanId;
                 this.userData = model.userData;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
@@ -1913,6 +1926,14 @@ public class ExtendClusterRequest extends Request {
              */
             public Builder period(Long period) {
                 this.period = period;
+                return this;
+            }
+
+            /**
+             * SavingsPlanId.
+             */
+            public Builder savingsPlanId(String savingsPlanId) {
+                this.savingsPlanId = savingsPlanId;
                 return this;
             }
 

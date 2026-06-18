@@ -30,7 +30,26 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "eflo-controller";
         this.version = "2022-12-15";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("me-east-1", "eflo-controller.me-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "eflo-controller.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "eflo-controller.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "eflo-controller.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "eflo-controller.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "eflo-controller.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "eflo-controller.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "eflo-controller.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "eflo-controller.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "eflo-controller.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "eflo-controller.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "eflo-controller.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "eflo-controller.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "eflo-controller.ap-sourtheast-8.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "eflo-controller.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "eflo-controller.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "eflo-controller.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "eflo-controller.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
