@@ -167,6 +167,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
 
     /**
+     * @param request the request parameters of CreateBranch  CreateBranchRequest
+     * @return CreateBranchResponse
+     */
+    CompletableFuture<CreateBranchResponse> createBranch(CreateBranchRequest request);
+
+    /**
      * @param request the request parameters of CreateCollection  CreateCollectionRequest
      * @return CreateCollectionResponse
      */
@@ -301,6 +307,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
 
     /**
+     * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
+     * @return CreateSnapshotResponse
+     */
+    CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request);
+
+    /**
      * @param request the request parameters of CreateStreamingDataService  CreateStreamingDataServiceRequest
      * @return CreateStreamingDataServiceResponse
      */
@@ -368,6 +380,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteBackupResponse
      */
     CompletableFuture<DeleteBackupResponse> deleteBackup(DeleteBackupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteBranch  DeleteBranchRequest
+     * @return DeleteBranchResponse
+     */
+    CompletableFuture<DeleteBranchResponse> deleteBranch(DeleteBranchRequest request);
 
     /**
      * @param request the request parameters of DeleteChunks  DeleteChunksRequest
@@ -512,6 +530,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSecretResponse> deleteSecret(DeleteSecretRequest request);
 
     /**
+     * @param request the request parameters of DeleteSnapshot  DeleteSnapshotRequest
+     * @return DeleteSnapshotResponse
+     */
+    CompletableFuture<DeleteSnapshotResponse> deleteSnapshot(DeleteSnapshotRequest request);
+
+    /**
      * @param request the request parameters of DeleteStreamingDataService  DeleteStreamingDataServiceRequest
      * @return DeleteStreamingDataServiceResponse
      */
@@ -610,6 +634,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeBackupPolicyResponse
      */
     CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBranch  DescribeBranchRequest
+     * @return DescribeBranchResponse
+     */
+    CompletableFuture<DescribeBranchResponse> describeBranch(DescribeBranchRequest request);
 
     /**
      * @param request the request parameters of DescribeCollection  DescribeCollectionRequest
@@ -1221,6 +1251,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAccountResponse> getAccount(GetAccountRequest request);
 
     /**
+     * @param request the request parameters of GetBranchSchema  GetBranchSchemaRequest
+     * @return GetBranchSchemaResponse
+     */
+    CompletableFuture<GetBranchSchemaResponse> getBranchSchema(GetBranchSchemaRequest request);
+
+    /**
      * @param request the request parameters of GetGraphRAGJob  GetGraphRAGJobRequest
      * @return GetGraphRAGJobResponse
      */
@@ -1342,6 +1378,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListBackupJobsResponse
      */
     CompletableFuture<ListBackupJobsResponse> listBackupJobs(ListBackupJobsRequest request);
+
+    /**
+     * @param request the request parameters of ListBranches  ListBranchesRequest
+     * @return ListBranchesResponse
+     */
+    CompletableFuture<ListBranchesResponse> listBranches(ListBranchesRequest request);
 
     /**
      * @param request the request parameters of ListChunks  ListChunksRequest
@@ -1827,6 +1869,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RestartDBInstanceResponse
      */
     CompletableFuture<RestartDBInstanceResponse> restartDBInstance(RestartDBInstanceRequest request);
+
+    /**
+     * @param request the request parameters of RestartSupabaseProject  RestartSupabaseProjectRequest
+     * @return RestartSupabaseProjectResponse
+     */
+    CompletableFuture<RestartSupabaseProjectResponse> restartSupabaseProject(RestartSupabaseProjectRequest request);
+
+    /**
+     * @param request the request parameters of RestoreSnapshot  RestoreSnapshotRequest
+     * @return RestoreSnapshotResponse
+     */
+    CompletableFuture<RestoreSnapshotResponse> restoreSnapshot(RestoreSnapshotRequest request);
 
     /**
      * @param request the request parameters of ResumeDataRedistribute  ResumeDataRedistributeRequest
