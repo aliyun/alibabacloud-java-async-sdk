@@ -213,6 +213,9 @@ public class DescribeFileResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileType")
         private String fileType;
 
+        @com.aliyun.core.annotation.NameInMap("ParseErrorMessage")
+        private String parseErrorMessage;
+
         @com.aliyun.core.annotation.NameInMap("ParseResultDownloadUrl")
         private String parseResultDownloadUrl;
 
@@ -234,6 +237,7 @@ public class DescribeFileResponseBody extends TeaModel {
             this.fileId = builder.fileId;
             this.fileName = builder.fileName;
             this.fileType = builder.fileType;
+            this.parseErrorMessage = builder.parseErrorMessage;
             this.parseResultDownloadUrl = builder.parseResultDownloadUrl;
             this.parser = builder.parser;
             this.sizeInBytes = builder.sizeInBytes;
@@ -285,6 +289,13 @@ public class DescribeFileResponseBody extends TeaModel {
         }
 
         /**
+         * @return parseErrorMessage
+         */
+        public String getParseErrorMessage() {
+            return this.parseErrorMessage;
+        }
+
+        /**
          * @return parseResultDownloadUrl
          */
         public String getParseResultDownloadUrl() {
@@ -325,6 +336,7 @@ public class DescribeFileResponseBody extends TeaModel {
             private String fileId; 
             private String fileName; 
             private String fileType; 
+            private String parseErrorMessage; 
             private String parseResultDownloadUrl; 
             private String parser; 
             private Long sizeInBytes; 
@@ -340,6 +352,7 @@ public class DescribeFileResponseBody extends TeaModel {
                 this.fileId = model.fileId;
                 this.fileName = model.fileName;
                 this.fileType = model.fileType;
+                this.parseErrorMessage = model.parseErrorMessage;
                 this.parseResultDownloadUrl = model.parseResultDownloadUrl;
                 this.parser = model.parser;
                 this.sizeInBytes = model.sizeInBytes;
@@ -399,6 +412,14 @@ public class DescribeFileResponseBody extends TeaModel {
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
+                return this;
+            }
+
+            /**
+             * ParseErrorMessage.
+             */
+            public Builder parseErrorMessage(String parseErrorMessage) {
+                this.parseErrorMessage = parseErrorMessage;
                 return this;
             }
 

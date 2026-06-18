@@ -37,6 +37,11 @@ public class AddTableRequest extends Request {
     private java.util.List<TableColumns> tableColumns;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TableDesc")
+    @com.aliyun.core.annotation.Validation(maxLength = 200, minLength = 1)
+    private String tableDesc;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TableName")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String tableName;
@@ -47,6 +52,7 @@ public class AddTableRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.connectorId = builder.connectorId;
         this.tableColumns = builder.tableColumns;
+        this.tableDesc = builder.tableDesc;
         this.tableName = builder.tableName;
     }
 
@@ -92,6 +98,13 @@ public class AddTableRequest extends Request {
     }
 
     /**
+     * @return tableDesc
+     */
+    public String getTableDesc() {
+        return this.tableDesc;
+    }
+
+    /**
      * @return tableName
      */
     public String getTableName() {
@@ -103,6 +116,7 @@ public class AddTableRequest extends Request {
         private String workspaceId; 
         private String connectorId; 
         private java.util.List<TableColumns> tableColumns; 
+        private String tableDesc; 
         private String tableName; 
 
         private Builder() {
@@ -115,6 +129,7 @@ public class AddTableRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.connectorId = request.connectorId;
             this.tableColumns = request.tableColumns;
+            this.tableDesc = request.tableDesc;
             this.tableName = request.tableName;
         } 
 
@@ -158,6 +173,15 @@ public class AddTableRequest extends Request {
             String tableColumnsShrink = shrink(tableColumns, "TableColumns", "json");
             this.putBodyParameter("TableColumns", tableColumnsShrink);
             this.tableColumns = tableColumns;
+            return this;
+        }
+
+        /**
+         * TableDesc.
+         */
+        public Builder tableDesc(String tableDesc) {
+            this.putBodyParameter("TableDesc", tableDesc);
+            this.tableDesc = tableDesc;
             return this;
         }
 
