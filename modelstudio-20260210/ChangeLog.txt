@@ -1,3 +1,6 @@
+2026-06-18 Version: 1.0.4
+- Generated java-async 2026-02-10 for ModelStudio.
+
 2026-06-05 Version: 1.0.3
 - Generated java-async 2026-02-10 for ModelStudio.
 

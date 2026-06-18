@@ -20,10 +20,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddOrganizationMember  AddOrganizationMemberRequest
+     * @return AddOrganizationMemberResponse
+     */
+    CompletableFuture<AddOrganizationMemberResponse> addOrganizationMember(AddOrganizationMemberRequest request);
+
+    /**
+     * @param request the request parameters of BatchAssignSeats  BatchAssignSeatsRequest
+     * @return BatchAssignSeatsResponse
+     */
+    CompletableFuture<BatchAssignSeatsResponse> batchAssignSeats(BatchAssignSeatsRequest request);
+
+    /**
      * @param request the request parameters of CreateApiKey  CreateApiKeyRequest
      * @return CreateApiKeyResponse
      */
     CompletableFuture<CreateApiKeyResponse> createApiKey(CreateApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of CreateTokenPlanKey  CreateTokenPlanKeyRequest
+     * @return CreateTokenPlanKeyResponse
+     */
+    CompletableFuture<CreateTokenPlanKeyResponse> createTokenPlanKey(CreateTokenPlanKeyRequest request);
 
     /**
      * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
@@ -60,6 +78,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetApiKeyResponse
      */
     CompletableFuture<GetApiKeyResponse> getApiKey(GetApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of GetSubscriptionSeatDetails  GetSubscriptionSeatDetailsRequest
+     * @return GetSubscriptionSeatDetailsResponse
+     */
+    CompletableFuture<GetSubscriptionSeatDetailsResponse> getSubscriptionSeatDetails(GetSubscriptionSeatDetailsRequest request);
 
     /**
      * @param request the request parameters of ListApiKeys  ListApiKeysRequest
