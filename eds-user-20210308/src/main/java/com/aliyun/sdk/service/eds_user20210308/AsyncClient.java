@@ -281,6 +281,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SyncAllEduInfoResponse> syncAllEduInfo(SyncAllEduInfoRequest request);
 
     /**
+     * @param request the request parameters of TransferResourcesIntoGroup  TransferResourcesIntoGroupRequest
+     * @return TransferResourcesIntoGroupResponse
+     */
+    CompletableFuture<TransferResourcesIntoGroupResponse> transferResourcesIntoGroup(TransferResourcesIntoGroupRequest request);
+
+    /**
+     * @param request the request parameters of TransferResourcesOutofGroup  TransferResourcesOutofGroupRequest
+     * @return TransferResourcesOutofGroupResponse
+     */
+    CompletableFuture<TransferResourcesOutofGroupResponse> transferResourcesOutofGroup(TransferResourcesOutofGroupRequest request);
+
+    /**
      * @param request the request parameters of UnlockMfaDevice  UnlockMfaDeviceRequest
      * @return UnlockMfaDeviceResponse
      */

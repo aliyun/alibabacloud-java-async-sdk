@@ -30,7 +30,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "eds-user";
         this.version = "2021-03-08";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-shanghai", "eds-user.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "eds-user.ap-southeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -775,6 +778,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SyncAllEduInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TransferResourcesIntoGroup  TransferResourcesIntoGroupRequest
+     * @return TransferResourcesIntoGroupResponse
+     */
+    @Override
+    public CompletableFuture<TransferResourcesIntoGroupResponse> transferResourcesIntoGroup(TransferResourcesIntoGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TransferResourcesIntoGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TransferResourcesIntoGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TransferResourcesIntoGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TransferResourcesOutofGroup  TransferResourcesOutofGroupRequest
+     * @return TransferResourcesOutofGroupResponse
+     */
+    @Override
+    public CompletableFuture<TransferResourcesOutofGroupResponse> transferResourcesOutofGroup(TransferResourcesOutofGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TransferResourcesOutofGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TransferResourcesOutofGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TransferResourcesOutofGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
