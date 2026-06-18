@@ -75,7 +75,19 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("eu-west-1", "polardbx.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "polardbx.aliyuncs.com"),
             new TeaPair("me-east-1", "polardbx.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "polardbx.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "polardbx.aliyuncs.com"),
+            new TeaPair("us-west-1", "polardbx.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "polardbx.us-east-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "polardbx.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "polardbx.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "polardbx.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "polardbx.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "polardbx.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "polardbx.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "polardbx.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "polardbx.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "polardbx.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "polardbx.ap-southeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -1406,6 +1418,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeMem0SecurityIps  DescribeMem0SecurityIpsRequest
+     * @return DescribeMem0SecurityIpsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeMem0SecurityIpsResponse> describeMem0SecurityIps(DescribeMem0SecurityIpsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeMem0SecurityIps").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeMem0SecurityIpsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeMem0SecurityIpsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeOpenBackupSet  DescribeOpenBackupSetRequest
      * @return DescribeOpenBackupSetResponse
      */
@@ -2186,6 +2216,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyEngineMigrationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyMem0SecurityIps  ModifyMem0SecurityIpsRequest
+     * @return ModifyMem0SecurityIpsResponse
+     */
+    @Override
+    public CompletableFuture<ModifyMem0SecurityIpsResponse> modifyMem0SecurityIps(ModifyMem0SecurityIpsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyMem0SecurityIps").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyMem0SecurityIpsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyMem0SecurityIpsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -464,6 +464,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMem0InfoResponse> describeMem0Info(DescribeMem0InfoRequest request);
 
     /**
+     * @param request the request parameters of DescribeMem0SecurityIps  DescribeMem0SecurityIpsRequest
+     * @return DescribeMem0SecurityIpsResponse
+     */
+    CompletableFuture<DescribeMem0SecurityIpsResponse> describeMem0SecurityIps(DescribeMem0SecurityIpsRequest request);
+
+    /**
      * @param request the request parameters of DescribeOpenBackupSet  DescribeOpenBackupSetRequest
      * @return DescribeOpenBackupSetResponse
      */
@@ -732,6 +738,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyEngineMigrationResponse
      */
     CompletableFuture<ModifyEngineMigrationResponse> modifyEngineMigration(ModifyEngineMigrationRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyMem0SecurityIps  ModifyMem0SecurityIpsRequest
+     * @return ModifyMem0SecurityIpsResponse
+     */
+    CompletableFuture<ModifyMem0SecurityIpsResponse> modifyMem0SecurityIps(ModifyMem0SecurityIpsRequest request);
 
     /**
      * @param request the request parameters of ModifyParameter  ModifyParameterRequest

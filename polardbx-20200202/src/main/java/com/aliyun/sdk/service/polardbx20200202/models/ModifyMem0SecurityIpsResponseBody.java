@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ResetMem0AccountPasswordResponseBody} extends {@link TeaModel}
+ * {@link ModifyMem0SecurityIpsResponseBody} extends {@link TeaModel}
  *
- * <p>ResetMem0AccountPasswordResponseBody</p>
+ * <p>ModifyMem0SecurityIpsResponseBody</p>
  */
-public class ResetMem0AccountPasswordResponseBody extends TeaModel {
+public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private AccessDeniedDetail accessDeniedDetail;
 
@@ -26,7 +26,7 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ResetMem0AccountPasswordResponseBody(Builder builder) {
+    private ModifyMem0SecurityIpsResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.data = builder.data;
         this.requestId = builder.requestId;
@@ -36,7 +36,7 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ResetMem0AccountPasswordResponseBody create() {
+    public static ModifyMem0SecurityIpsResponseBody create() {
         return builder().build();
     }
 
@@ -73,7 +73,7 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ResetMem0AccountPasswordResponseBody model) {
+        private Builder(ModifyMem0SecurityIpsResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.data = model.data;
             this.requestId = model.requestId;
@@ -103,17 +103,17 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
             return this;
         }
 
-        public ResetMem0AccountPasswordResponseBody build() {
-            return new ResetMem0AccountPasswordResponseBody(this);
+        public ModifyMem0SecurityIpsResponseBody build() {
+            return new ModifyMem0SecurityIpsResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ResetMem0AccountPasswordResponseBody} extends {@link TeaModel}
+     * {@link ModifyMem0SecurityIpsResponseBody} extends {@link TeaModel}
      *
-     * <p>ResetMem0AccountPasswordResponseBody</p>
+     * <p>ModifyMem0SecurityIpsResponseBody</p>
      */
     public static class AccessDeniedDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthAction")
@@ -275,7 +275,10 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>PolicyType</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -291,19 +294,15 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link ResetMem0AccountPasswordResponseBody} extends {@link TeaModel}
+     * {@link ModifyMem0SecurityIpsResponseBody} extends {@link TeaModel}
      *
-     * <p>ResetMem0AccountPasswordResponseBody</p>
+     * <p>ModifyMem0SecurityIpsResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Mem0ApiKey")
-        private String mem0ApiKey;
-
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private Integer taskId;
 
         private Data(Builder builder) {
-            this.mem0ApiKey = builder.mem0ApiKey;
             this.taskId = builder.taskId;
         }
 
@@ -316,13 +315,6 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * @return mem0ApiKey
-         */
-        public String getMem0ApiKey() {
-            return this.mem0ApiKey;
-        }
-
-        /**
          * @return taskId
          */
         public Integer getTaskId() {
@@ -330,27 +322,14 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String mem0ApiKey; 
             private Integer taskId; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.mem0ApiKey = model.mem0ApiKey;
                 this.taskId = model.taskId;
             } 
-
-            /**
-             * <p>API KEY</p>
-             * 
-             * <strong>example:</strong>
-             * <p>aafdf2e7d0988ef***</p>
-             */
-            public Builder mem0ApiKey(String mem0ApiKey) {
-                this.mem0ApiKey = mem0ApiKey;
-                return this;
-            }
 
             /**
              * TaskId.

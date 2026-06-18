@@ -647,6 +647,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnNodeCount")
         private Integer dnNodeCount;
 
+        @com.aliyun.core.annotation.NameInMap("DnStorageSpace")
+        private String dnStorageSpace;
+
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
@@ -785,6 +788,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.differentDNSpec = builder.differentDNSpec;
             this.dnNodeClassCode = builder.dnNodeClassCode;
             this.dnNodeCount = builder.dnNodeCount;
+            this.dnStorageSpace = builder.dnStorageSpace;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
             this.expireDate = builder.expireDate;
@@ -971,6 +975,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Integer getDnNodeCount() {
             return this.dnNodeCount;
+        }
+
+        /**
+         * @return dnStorageSpace
+         */
+        public String getDnStorageSpace() {
+            return this.dnStorageSpace;
         }
 
         /**
@@ -1260,6 +1271,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Boolean differentDNSpec; 
             private String dnNodeClassCode; 
             private Integer dnNodeCount; 
+            private String dnStorageSpace; 
             private String engine; 
             private String engineVersion; 
             private String expireDate; 
@@ -1323,6 +1335,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.differentDNSpec = model.differentDNSpec;
                 this.dnNodeClassCode = model.dnNodeClassCode;
                 this.dnNodeCount = model.dnNodeCount;
+                this.dnStorageSpace = model.dnStorageSpace;
                 this.engine = model.engine;
                 this.engineVersion = model.engineVersion;
                 this.expireDate = model.expireDate;
@@ -1520,6 +1533,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder dnNodeCount(Integer dnNodeCount) {
                 this.dnNodeCount = dnNodeCount;
+                return this;
+            }
+
+            /**
+             * <p>DN数据节点磁盘空间大小，单位GB</p>
+             */
+            public Builder dnStorageSpace(String dnStorageSpace) {
+                this.dnStorageSpace = dnStorageSpace;
                 return this;
             }
 

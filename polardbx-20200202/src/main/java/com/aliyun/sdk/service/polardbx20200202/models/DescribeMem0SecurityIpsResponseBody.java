@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ResetMem0AccountPasswordResponseBody} extends {@link TeaModel}
+ * {@link DescribeMem0SecurityIpsResponseBody} extends {@link TeaModel}
  *
- * <p>ResetMem0AccountPasswordResponseBody</p>
+ * <p>DescribeMem0SecurityIpsResponseBody</p>
  */
-public class ResetMem0AccountPasswordResponseBody extends TeaModel {
+public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private AccessDeniedDetail accessDeniedDetail;
 
@@ -26,7 +26,7 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ResetMem0AccountPasswordResponseBody(Builder builder) {
+    private DescribeMem0SecurityIpsResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.data = builder.data;
         this.requestId = builder.requestId;
@@ -36,7 +36,7 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ResetMem0AccountPasswordResponseBody create() {
+    public static DescribeMem0SecurityIpsResponseBody create() {
         return builder().build();
     }
 
@@ -73,7 +73,7 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ResetMem0AccountPasswordResponseBody model) {
+        private Builder(DescribeMem0SecurityIpsResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.data = model.data;
             this.requestId = model.requestId;
@@ -103,17 +103,17 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
             return this;
         }
 
-        public ResetMem0AccountPasswordResponseBody build() {
-            return new ResetMem0AccountPasswordResponseBody(this);
+        public DescribeMem0SecurityIpsResponseBody build() {
+            return new DescribeMem0SecurityIpsResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ResetMem0AccountPasswordResponseBody} extends {@link TeaModel}
+     * {@link DescribeMem0SecurityIpsResponseBody} extends {@link TeaModel}
      *
-     * <p>ResetMem0AccountPasswordResponseBody</p>
+     * <p>DescribeMem0SecurityIpsResponseBody</p>
      */
     public static class AccessDeniedDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthAction")
@@ -267,7 +267,10 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>NoPermissionType</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -275,7 +278,10 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>PolicyType</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -291,20 +297,116 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link ResetMem0AccountPasswordResponseBody} extends {@link TeaModel}
+     * {@link DescribeMem0SecurityIpsResponseBody} extends {@link TeaModel}
      *
-     * <p>ResetMem0AccountPasswordResponseBody</p>
+     * <p>DescribeMem0SecurityIpsResponseBody</p>
+     */
+    public static class Groups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GroupName")
+        private String groupName;
+
+        @com.aliyun.core.annotation.NameInMap("GroupTag")
+        private String groupTag;
+
+        @com.aliyun.core.annotation.NameInMap("IpLists")
+        private String ipLists;
+
+        private Groups(Builder builder) {
+            this.groupName = builder.groupName;
+            this.groupTag = builder.groupTag;
+            this.ipLists = builder.ipLists;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Groups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return groupTag
+         */
+        public String getGroupTag() {
+            return this.groupTag;
+        }
+
+        /**
+         * @return ipLists
+         */
+        public String getIpLists() {
+            return this.ipLists;
+        }
+
+        public static final class Builder {
+            private String groupName; 
+            private String groupTag; 
+            private String ipLists; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.groupName = model.groupName;
+                this.groupTag = model.groupTag;
+                this.ipLists = model.ipLists;
+            } 
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * GroupTag.
+             */
+            public Builder groupTag(String groupTag) {
+                this.groupTag = groupTag;
+                return this;
+            }
+
+            /**
+             * IpLists.
+             */
+            public Builder ipLists(String ipLists) {
+                this.ipLists = ipLists;
+                return this;
+            }
+
+            public Groups build() {
+                return new Groups(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeMem0SecurityIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMem0SecurityIpsResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Mem0ApiKey")
-        private String mem0ApiKey;
+        @com.aliyun.core.annotation.NameInMap("CustinsName")
+        private String custinsName;
 
-        @com.aliyun.core.annotation.NameInMap("TaskId")
-        private Integer taskId;
+        @com.aliyun.core.annotation.NameInMap("Groups")
+        private java.util.List<Groups> groups;
 
         private Data(Builder builder) {
-            this.mem0ApiKey = builder.mem0ApiKey;
-            this.taskId = builder.taskId;
+            this.custinsName = builder.custinsName;
+            this.groups = builder.groups;
         }
 
         public static Builder builder() {
@@ -316,47 +418,44 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * @return mem0ApiKey
+         * @return custinsName
          */
-        public String getMem0ApiKey() {
-            return this.mem0ApiKey;
+        public String getCustinsName() {
+            return this.custinsName;
         }
 
         /**
-         * @return taskId
+         * @return groups
          */
-        public Integer getTaskId() {
-            return this.taskId;
+        public java.util.List<Groups> getGroups() {
+            return this.groups;
         }
 
         public static final class Builder {
-            private String mem0ApiKey; 
-            private Integer taskId; 
+            private String custinsName; 
+            private java.util.List<Groups> groups; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.mem0ApiKey = model.mem0ApiKey;
-                this.taskId = model.taskId;
+                this.custinsName = model.custinsName;
+                this.groups = model.groups;
             } 
 
             /**
-             * <p>API KEY</p>
-             * 
-             * <strong>example:</strong>
-             * <p>aafdf2e7d0988ef***</p>
+             * CustinsName.
              */
-            public Builder mem0ApiKey(String mem0ApiKey) {
-                this.mem0ApiKey = mem0ApiKey;
+            public Builder custinsName(String custinsName) {
+                this.custinsName = custinsName;
                 return this;
             }
 
             /**
-             * TaskId.
+             * Groups.
              */
-            public Builder taskId(Integer taskId) {
-                this.taskId = taskId;
+            public Builder groups(java.util.List<Groups> groups) {
+                this.groups = groups;
                 return this;
             }
 
