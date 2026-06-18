@@ -356,6 +356,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAllDepartmentResponse> getAllDepartment(GetAllDepartmentRequest request);
 
     /**
+     * @param request the request parameters of GetAudioNoteUploadUrl  GetAudioNoteUploadUrlRequest
+     * @return GetAudioNoteUploadUrlResponse
+     */
+    CompletableFuture<GetAudioNoteUploadUrlResponse> getAudioNoteUploadUrl(GetAudioNoteUploadUrlRequest request);
+
+    /**
      * @param request the request parameters of GetCallDialogContent  GetCallDialogContentRequest
      * @return GetCallDialogContentResponse
      */
@@ -1002,6 +1008,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopTaskResponse
      */
     CompletableFuture<StopTaskResponse> stopTask(StopTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitAudioNote  SubmitAudioNoteRequest
+     * @return SubmitAudioNoteResponse
+     */
+    CompletableFuture<SubmitAudioNoteResponse> submitAudioNote(SubmitAudioNoteRequest request);
 
     /**
      * @param request the request parameters of SuspendHotlineService  SuspendHotlineServiceRequest

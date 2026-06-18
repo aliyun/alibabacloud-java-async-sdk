@@ -71,12 +71,24 @@ public class UpdateModelApplicationRequest extends Request {
     private String dtmfRetryPromptText;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtmfSendMaxCount")
+    private Long dtmfSendMaxCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtmfSendWaitTimeout")
+    private Long dtmfSendWaitTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DyvmsSceneName")
     private String dyvmsSceneName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableDtmfReceive")
     private Boolean enableDtmfReceive;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDtmfSend")
+    private Boolean enableDtmfSend;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableMorse")
@@ -105,6 +117,10 @@ public class UpdateModelApplicationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MuteHangupNum")
     private Long muteHangupNum;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MutePushMode")
+    private String mutePushMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -181,8 +197,11 @@ public class UpdateModelApplicationRequest extends Request {
         this.dtmfOutOfRangeAction = builder.dtmfOutOfRangeAction;
         this.dtmfRetryPlayTimes = builder.dtmfRetryPlayTimes;
         this.dtmfRetryPromptText = builder.dtmfRetryPromptText;
+        this.dtmfSendMaxCount = builder.dtmfSendMaxCount;
+        this.dtmfSendWaitTimeout = builder.dtmfSendWaitTimeout;
         this.dyvmsSceneName = builder.dyvmsSceneName;
         this.enableDtmfReceive = builder.enableDtmfReceive;
+        this.enableDtmfSend = builder.enableDtmfSend;
         this.enableMorse = builder.enableMorse;
         this.interruptConfig = builder.interruptConfig;
         this.modelCode = builder.modelCode;
@@ -190,6 +209,7 @@ public class UpdateModelApplicationRequest extends Request {
         this.muteActive = builder.muteActive;
         this.muteDuration = builder.muteDuration;
         this.muteHangupNum = builder.muteHangupNum;
+        this.mutePushMode = builder.mutePushMode;
         this.ownerId = builder.ownerId;
         this.prompt = builder.prompt;
         this.qualificationId = builder.qualificationId;
@@ -312,6 +332,20 @@ public class UpdateModelApplicationRequest extends Request {
     }
 
     /**
+     * @return dtmfSendMaxCount
+     */
+    public Long getDtmfSendMaxCount() {
+        return this.dtmfSendMaxCount;
+    }
+
+    /**
+     * @return dtmfSendWaitTimeout
+     */
+    public Long getDtmfSendWaitTimeout() {
+        return this.dtmfSendWaitTimeout;
+    }
+
+    /**
      * @return dyvmsSceneName
      */
     public String getDyvmsSceneName() {
@@ -323,6 +357,13 @@ public class UpdateModelApplicationRequest extends Request {
      */
     public Boolean getEnableDtmfReceive() {
         return this.enableDtmfReceive;
+    }
+
+    /**
+     * @return enableDtmfSend
+     */
+    public Boolean getEnableDtmfSend() {
+        return this.enableDtmfSend;
     }
 
     /**
@@ -372,6 +413,13 @@ public class UpdateModelApplicationRequest extends Request {
      */
     public Long getMuteHangupNum() {
         return this.muteHangupNum;
+    }
+
+    /**
+     * @return mutePushMode
+     */
+    public String getMutePushMode() {
+        return this.mutePushMode;
     }
 
     /**
@@ -493,8 +541,11 @@ public class UpdateModelApplicationRequest extends Request {
         private String dtmfOutOfRangeAction; 
         private Long dtmfRetryPlayTimes; 
         private String dtmfRetryPromptText; 
+        private Long dtmfSendMaxCount; 
+        private Long dtmfSendWaitTimeout; 
         private String dyvmsSceneName; 
         private Boolean enableDtmfReceive; 
+        private Boolean enableDtmfSend; 
         private Boolean enableMorse; 
         private InterruptConfig interruptConfig; 
         private String modelCode; 
@@ -502,6 +553,7 @@ public class UpdateModelApplicationRequest extends Request {
         private Boolean muteActive; 
         private Long muteDuration; 
         private Long muteHangupNum; 
+        private String mutePushMode; 
         private Long ownerId; 
         private String prompt; 
         private Long qualificationId; 
@@ -537,8 +589,11 @@ public class UpdateModelApplicationRequest extends Request {
             this.dtmfOutOfRangeAction = request.dtmfOutOfRangeAction;
             this.dtmfRetryPlayTimes = request.dtmfRetryPlayTimes;
             this.dtmfRetryPromptText = request.dtmfRetryPromptText;
+            this.dtmfSendMaxCount = request.dtmfSendMaxCount;
+            this.dtmfSendWaitTimeout = request.dtmfSendWaitTimeout;
             this.dyvmsSceneName = request.dyvmsSceneName;
             this.enableDtmfReceive = request.enableDtmfReceive;
+            this.enableDtmfSend = request.enableDtmfSend;
             this.enableMorse = request.enableMorse;
             this.interruptConfig = request.interruptConfig;
             this.modelCode = request.modelCode;
@@ -546,6 +601,7 @@ public class UpdateModelApplicationRequest extends Request {
             this.muteActive = request.muteActive;
             this.muteDuration = request.muteDuration;
             this.muteHangupNum = request.muteHangupNum;
+            this.mutePushMode = request.mutePushMode;
             this.ownerId = request.ownerId;
             this.prompt = request.prompt;
             this.qualificationId = request.qualificationId;
@@ -694,6 +750,24 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
+         * DtmfSendMaxCount.
+         */
+        public Builder dtmfSendMaxCount(Long dtmfSendMaxCount) {
+            this.putQueryParameter("DtmfSendMaxCount", dtmfSendMaxCount);
+            this.dtmfSendMaxCount = dtmfSendMaxCount;
+            return this;
+        }
+
+        /**
+         * DtmfSendWaitTimeout.
+         */
+        public Builder dtmfSendWaitTimeout(Long dtmfSendWaitTimeout) {
+            this.putQueryParameter("DtmfSendWaitTimeout", dtmfSendWaitTimeout);
+            this.dtmfSendWaitTimeout = dtmfSendWaitTimeout;
+            return this;
+        }
+
+        /**
          * <p>场景名称</p>
          * 
          * <strong>example:</strong>
@@ -711,6 +785,15 @@ public class UpdateModelApplicationRequest extends Request {
         public Builder enableDtmfReceive(Boolean enableDtmfReceive) {
             this.putQueryParameter("EnableDtmfReceive", enableDtmfReceive);
             this.enableDtmfReceive = enableDtmfReceive;
+            return this;
+        }
+
+        /**
+         * EnableDtmfSend.
+         */
+        public Builder enableDtmfSend(Boolean enableDtmfSend) {
+            this.putQueryParameter("EnableDtmfSend", enableDtmfSend);
+            this.enableDtmfSend = enableDtmfSend;
             return this;
         }
 
@@ -758,7 +841,7 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>第一个静音是否唤起模型</p>
+         * <p>静音事件是否唤起模型</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -790,6 +873,18 @@ public class UpdateModelApplicationRequest extends Request {
         public Builder muteHangupNum(Long muteHangupNum) {
             this.putQueryParameter("MuteHangupNum", muteHangupNum);
             this.muteHangupNum = muteHangupNum;
+            return this;
+        }
+
+        /**
+         * <p>静音事件推送模式</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FIRST_ONLY</p>
+         */
+        public Builder mutePushMode(String mutePushMode) {
+            this.putQueryParameter("MutePushMode", mutePushMode);
+            this.mutePushMode = mutePushMode;
             return this;
         }
 
