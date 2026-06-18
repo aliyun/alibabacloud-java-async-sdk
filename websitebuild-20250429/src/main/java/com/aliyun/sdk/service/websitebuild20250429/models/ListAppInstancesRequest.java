@@ -22,6 +22,10 @@ public class ListAppInstancesRequest extends Request {
     private String bizId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizIds")
+    private java.util.List<String> bizIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTimeBegin")
     private String endTimeBegin;
 
@@ -68,6 +72,7 @@ public class ListAppInstancesRequest extends Request {
     private ListAppInstancesRequest(Builder builder) {
         super(builder);
         this.bizId = builder.bizId;
+        this.bizIds = builder.bizIds;
         this.endTimeBegin = builder.endTimeBegin;
         this.endTimeEnd = builder.endTimeEnd;
         this.extend = builder.extend;
@@ -99,6 +104,13 @@ public class ListAppInstancesRequest extends Request {
      */
     public String getBizId() {
         return this.bizId;
+    }
+
+    /**
+     * @return bizIds
+     */
+    public java.util.List<String> getBizIds() {
+        return this.bizIds;
     }
 
     /**
@@ -180,6 +192,7 @@ public class ListAppInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListAppInstancesRequest, Builder> {
         private String bizId; 
+        private java.util.List<String> bizIds; 
         private String endTimeBegin; 
         private String endTimeEnd; 
         private String extend; 
@@ -199,6 +212,7 @@ public class ListAppInstancesRequest extends Request {
         private Builder(ListAppInstancesRequest request) {
             super(request);
             this.bizId = request.bizId;
+            this.bizIds = request.bizIds;
             this.endTimeBegin = request.endTimeBegin;
             this.endTimeEnd = request.endTimeEnd;
             this.extend = request.extend;
@@ -221,6 +235,16 @@ public class ListAppInstancesRequest extends Request {
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
             this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * BizIds.
+         */
+        public Builder bizIds(java.util.List<String> bizIds) {
+            String bizIdsShrink = shrink(bizIds, "BizIds", "json");
+            this.putQueryParameter("BizIds", bizIdsShrink);
+            this.bizIds = bizIds;
             return this;
         }
 
