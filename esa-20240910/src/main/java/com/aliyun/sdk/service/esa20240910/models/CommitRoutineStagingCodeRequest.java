@@ -22,6 +22,10 @@ public class CommitRoutineStagingCodeRequest extends Request {
     private String codeDescription;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeployEnv")
+    private String deployEnv;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
@@ -29,6 +33,7 @@ public class CommitRoutineStagingCodeRequest extends Request {
     private CommitRoutineStagingCodeRequest(Builder builder) {
         super(builder);
         this.codeDescription = builder.codeDescription;
+        this.deployEnv = builder.deployEnv;
         this.name = builder.name;
     }
 
@@ -53,6 +58,13 @@ public class CommitRoutineStagingCodeRequest extends Request {
     }
 
     /**
+     * @return deployEnv
+     */
+    public String getDeployEnv() {
+        return this.deployEnv;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -61,6 +73,7 @@ public class CommitRoutineStagingCodeRequest extends Request {
 
     public static final class Builder extends Request.Builder<CommitRoutineStagingCodeRequest, Builder> {
         private String codeDescription; 
+        private String deployEnv; 
         private String name; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class CommitRoutineStagingCodeRequest extends Request {
         private Builder(CommitRoutineStagingCodeRequest request) {
             super(request);
             this.codeDescription = request.codeDescription;
+            this.deployEnv = request.deployEnv;
             this.name = request.name;
         } 
 
@@ -82,6 +96,15 @@ public class CommitRoutineStagingCodeRequest extends Request {
         public Builder codeDescription(String codeDescription) {
             this.putBodyParameter("CodeDescription", codeDescription);
             this.codeDescription = codeDescription;
+            return this;
+        }
+
+        /**
+         * DeployEnv.
+         */
+        public Builder deployEnv(String deployEnv) {
+            this.putBodyParameter("DeployEnv", deployEnv);
+            this.deployEnv = deployEnv;
             return this;
         }
 

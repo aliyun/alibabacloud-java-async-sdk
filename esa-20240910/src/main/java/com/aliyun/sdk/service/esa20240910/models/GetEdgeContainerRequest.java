@@ -12,31 +12,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteSiteRequest} extends {@link RequestModel}
+ * {@link GetEdgeContainerRequest} extends {@link RequestModel}
  *
- * <p>DeleteSiteRequest</p>
+ * <p>GetEdgeContainerRequest</p>
  */
-public class DeleteSiteRequest extends Request {
+public class GetEdgeContainerRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SiteId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Long siteId;
-
-    private DeleteSiteRequest(Builder builder) {
+    private GetEdgeContainerRequest(Builder builder) {
         super(builder);
         this.securityToken = builder.securityToken;
-        this.siteId = builder.siteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteSiteRequest create() {
+    public static GetEdgeContainerRequest create() {
         return builder().build();
     }
 
@@ -52,25 +46,16 @@ public class DeleteSiteRequest extends Request {
         return this.securityToken;
     }
 
-    /**
-     * @return siteId
-     */
-    public Long getSiteId() {
-        return this.siteId;
-    }
-
-    public static final class Builder extends Request.Builder<DeleteSiteRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetEdgeContainerRequest, Builder> {
         private String securityToken; 
-        private Long siteId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteSiteRequest request) {
+        private Builder(GetEdgeContainerRequest request) {
             super(request);
             this.securityToken = request.securityToken;
-            this.siteId = request.siteId;
         } 
 
         /**
@@ -82,22 +67,9 @@ public class DeleteSiteRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567890123</p>
-         */
-        public Builder siteId(Long siteId) {
-            this.putQueryParameter("SiteId", siteId);
-            this.siteId = siteId;
-            return this;
-        }
-
         @Override
-        public DeleteSiteRequest build() {
-            return new DeleteSiteRequest(this);
+        public GetEdgeContainerRequest build() {
+            return new GetEdgeContainerRequest(this);
         } 
 
     } 

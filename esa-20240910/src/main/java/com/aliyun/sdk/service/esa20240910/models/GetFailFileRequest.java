@@ -12,26 +12,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ExportRecordsRequest} extends {@link RequestModel}
+ * {@link GetFailFileRequest} extends {@link RequestModel}
  *
- * <p>ExportRecordsRequest</p>
+ * <p>GetFailFileRequest</p>
  */
-public class ExportRecordsRequest extends Request {
+public class GetFailFileRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
-    private ExportRecordsRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UploadId")
+    private Long uploadId;
+
+    private GetFailFileRequest(Builder builder) {
         super(builder);
         this.siteId = builder.siteId;
+        this.uploadId = builder.uploadId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ExportRecordsRequest create() {
+    public static GetFailFileRequest create() {
         return builder().build();
     }
 
@@ -47,24 +51,32 @@ public class ExportRecordsRequest extends Request {
         return this.siteId;
     }
 
-    public static final class Builder extends Request.Builder<ExportRecordsRequest, Builder> {
+    /**
+     * @return uploadId
+     */
+    public Long getUploadId() {
+        return this.uploadId;
+    }
+
+    public static final class Builder extends Request.Builder<GetFailFileRequest, Builder> {
         private Long siteId; 
+        private Long uploadId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ExportRecordsRequest request) {
+        private Builder(GetFailFileRequest request) {
             super(request);
             this.siteId = request.siteId;
+            this.uploadId = request.uploadId;
         } 
 
         /**
-         * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
-         * <p>This parameter is required.</p>
+         * <p>The website ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234567890123</p>
+         * <p>123456789****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -72,9 +84,21 @@ public class ExportRecordsRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The ID of the file upload task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593805857882113</p>
+         */
+        public Builder uploadId(Long uploadId) {
+            this.putQueryParameter("UploadId", uploadId);
+            this.uploadId = uploadId;
+            return this;
+        }
+
         @Override
-        public ExportRecordsRequest build() {
-            return new ExportRecordsRequest(this);
+        public GetFailFileRequest build() {
+            return new GetFailFileRequest(this);
         } 
 
     } 

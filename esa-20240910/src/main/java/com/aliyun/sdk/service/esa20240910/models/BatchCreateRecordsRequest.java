@@ -629,6 +629,12 @@ public class BatchCreateRecordsRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private Data data;
 
+        @com.aliyun.core.annotation.NameInMap("HttpPorts")
+        private String httpPorts;
+
+        @com.aliyun.core.annotation.NameInMap("HttpsPorts")
+        private String httpsPorts;
+
         @com.aliyun.core.annotation.NameInMap("Proxied")
         @com.aliyun.core.annotation.Validation(required = true)
         private Boolean proxied;
@@ -652,6 +658,8 @@ public class BatchCreateRecordsRequest extends Request {
             this.authConf = builder.authConf;
             this.bizName = builder.bizName;
             this.data = builder.data;
+            this.httpPorts = builder.httpPorts;
+            this.httpsPorts = builder.httpsPorts;
             this.proxied = builder.proxied;
             this.recordName = builder.recordName;
             this.sourceType = builder.sourceType;
@@ -686,6 +694,20 @@ public class BatchCreateRecordsRequest extends Request {
          */
         public Data getData() {
             return this.data;
+        }
+
+        /**
+         * @return httpPorts
+         */
+        public String getHttpPorts() {
+            return this.httpPorts;
+        }
+
+        /**
+         * @return httpsPorts
+         */
+        public String getHttpsPorts() {
+            return this.httpsPorts;
         }
 
         /**
@@ -727,6 +749,8 @@ public class BatchCreateRecordsRequest extends Request {
             private AuthConf authConf; 
             private String bizName; 
             private Data data; 
+            private String httpPorts; 
+            private String httpsPorts; 
             private Boolean proxied; 
             private String recordName; 
             private String sourceType; 
@@ -740,6 +764,8 @@ public class BatchCreateRecordsRequest extends Request {
                 this.authConf = model.authConf;
                 this.bizName = model.bizName;
                 this.data = model.data;
+                this.httpPorts = model.httpPorts;
+                this.httpsPorts = model.httpsPorts;
                 this.proxied = model.proxied;
                 this.recordName = model.recordName;
                 this.sourceType = model.sourceType;
@@ -782,6 +808,22 @@ public class BatchCreateRecordsRequest extends Request {
              */
             public Builder data(Data data) {
                 this.data = data;
+                return this;
+            }
+
+            /**
+             * HttpPorts.
+             */
+            public Builder httpPorts(String httpPorts) {
+                this.httpPorts = httpPorts;
+                return this;
+            }
+
+            /**
+             * HttpsPorts.
+             */
+            public Builder httpsPorts(String httpsPorts) {
+                this.httpsPorts = httpsPorts;
                 return this;
             }
 

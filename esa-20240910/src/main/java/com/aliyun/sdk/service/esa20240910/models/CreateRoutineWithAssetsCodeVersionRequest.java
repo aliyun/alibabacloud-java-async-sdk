@@ -30,6 +30,10 @@ public class CreateRoutineWithAssetsCodeVersionRequest extends Request {
     private ConfOptions confOptions;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeployEnv")
+    private String deployEnv;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExtraInfo")
     private String extraInfo;
 
@@ -43,6 +47,7 @@ public class CreateRoutineWithAssetsCodeVersionRequest extends Request {
         this.buildId = builder.buildId;
         this.codeDescription = builder.codeDescription;
         this.confOptions = builder.confOptions;
+        this.deployEnv = builder.deployEnv;
         this.extraInfo = builder.extraInfo;
         this.name = builder.name;
     }
@@ -82,6 +87,13 @@ public class CreateRoutineWithAssetsCodeVersionRequest extends Request {
     }
 
     /**
+     * @return deployEnv
+     */
+    public String getDeployEnv() {
+        return this.deployEnv;
+    }
+
+    /**
      * @return extraInfo
      */
     public String getExtraInfo() {
@@ -99,6 +111,7 @@ public class CreateRoutineWithAssetsCodeVersionRequest extends Request {
         private Long buildId; 
         private String codeDescription; 
         private ConfOptions confOptions; 
+        private String deployEnv; 
         private String extraInfo; 
         private String name; 
 
@@ -111,6 +124,7 @@ public class CreateRoutineWithAssetsCodeVersionRequest extends Request {
             this.buildId = request.buildId;
             this.codeDescription = request.codeDescription;
             this.confOptions = request.confOptions;
+            this.deployEnv = request.deployEnv;
             this.extraInfo = request.extraInfo;
             this.name = request.name;
         } 
@@ -140,6 +154,15 @@ public class CreateRoutineWithAssetsCodeVersionRequest extends Request {
             String confOptionsShrink = shrink(confOptions, "ConfOptions", "json");
             this.putBodyParameter("ConfOptions", confOptionsShrink);
             this.confOptions = confOptions;
+            return this;
+        }
+
+        /**
+         * DeployEnv.
+         */
+        public Builder deployEnv(String deployEnv) {
+            this.putBodyParameter("DeployEnv", deployEnv);
+            this.deployEnv = deployEnv;
             return this;
         }
 

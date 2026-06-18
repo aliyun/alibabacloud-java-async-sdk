@@ -22,6 +22,10 @@ public class ListRecordsRequest extends Request {
     private String bizName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomPort")
+    private String customPort;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -57,6 +61,7 @@ public class ListRecordsRequest extends Request {
     private ListRecordsRequest(Builder builder) {
         super(builder);
         this.bizName = builder.bizName;
+        this.customPort = builder.customPort;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.proxied = builder.proxied;
@@ -85,6 +90,13 @@ public class ListRecordsRequest extends Request {
      */
     public String getBizName() {
         return this.bizName;
+    }
+
+    /**
+     * @return customPort
+     */
+    public String getCustomPort() {
+        return this.customPort;
     }
 
     /**
@@ -145,6 +157,7 @@ public class ListRecordsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListRecordsRequest, Builder> {
         private String bizName; 
+        private String customPort; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Boolean proxied; 
@@ -161,6 +174,7 @@ public class ListRecordsRequest extends Request {
         private Builder(ListRecordsRequest request) {
             super(request);
             this.bizName = request.bizName;
+            this.customPort = request.customPort;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.proxied = request.proxied;
@@ -185,6 +199,15 @@ public class ListRecordsRequest extends Request {
         public Builder bizName(String bizName) {
             this.putQueryParameter("BizName", bizName);
             this.bizName = bizName;
+            return this;
+        }
+
+        /**
+         * CustomPort.
+         */
+        public Builder customPort(String customPort) {
+            this.putQueryParameter("CustomPort", customPort);
+            this.customPort = customPort;
             return this;
         }
 

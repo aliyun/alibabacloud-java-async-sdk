@@ -746,11 +746,20 @@ public class ListRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("CustomPort")
+        private String customPort;
+
         @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
         @com.aliyun.core.annotation.NameInMap("HostPolicy")
         private String hostPolicy;
+
+        @com.aliyun.core.annotation.NameInMap("HttpPorts")
+        private String httpPorts;
+
+        @com.aliyun.core.annotation.NameInMap("HttpsPorts")
+        private String httpsPorts;
 
         @com.aliyun.core.annotation.NameInMap("Proxied")
         private Boolean proxied;
@@ -787,8 +796,11 @@ public class ListRecordsResponseBody extends TeaModel {
             this.bizName = builder.bizName;
             this.comment = builder.comment;
             this.createTime = builder.createTime;
+            this.customPort = builder.customPort;
             this.data = builder.data;
             this.hostPolicy = builder.hostPolicy;
+            this.httpPorts = builder.httpPorts;
+            this.httpsPorts = builder.httpsPorts;
             this.proxied = builder.proxied;
             this.recordCname = builder.recordCname;
             this.recordId = builder.recordId;
@@ -838,6 +850,13 @@ public class ListRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return customPort
+         */
+        public String getCustomPort() {
+            return this.customPort;
+        }
+
+        /**
          * @return data
          */
         public Data getData() {
@@ -849,6 +868,20 @@ public class ListRecordsResponseBody extends TeaModel {
          */
         public String getHostPolicy() {
             return this.hostPolicy;
+        }
+
+        /**
+         * @return httpPorts
+         */
+        public String getHttpPorts() {
+            return this.httpPorts;
+        }
+
+        /**
+         * @return httpsPorts
+         */
+        public String getHttpsPorts() {
+            return this.httpsPorts;
         }
 
         /**
@@ -926,8 +959,11 @@ public class ListRecordsResponseBody extends TeaModel {
             private String bizName; 
             private String comment; 
             private String createTime; 
+            private String customPort; 
             private Data data; 
             private String hostPolicy; 
+            private String httpPorts; 
+            private String httpsPorts; 
             private Boolean proxied; 
             private String recordCname; 
             private Long recordId; 
@@ -947,8 +983,11 @@ public class ListRecordsResponseBody extends TeaModel {
                 this.bizName = model.bizName;
                 this.comment = model.comment;
                 this.createTime = model.createTime;
+                this.customPort = model.customPort;
                 this.data = model.data;
                 this.hostPolicy = model.hostPolicy;
+                this.httpPorts = model.httpPorts;
+                this.httpsPorts = model.httpsPorts;
                 this.proxied = model.proxied;
                 this.recordCname = model.recordCname;
                 this.recordId = model.recordId;
@@ -1008,6 +1047,14 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * CustomPort.
+             */
+            public Builder customPort(String customPort) {
+                this.customPort = customPort;
+                return this;
+            }
+
+            /**
              * <p>The DNS record information. Different types of records contain different information.</p>
              * 
              * <strong>example:</strong>
@@ -1030,6 +1077,22 @@ public class ListRecordsResponseBody extends TeaModel {
              */
             public Builder hostPolicy(String hostPolicy) {
                 this.hostPolicy = hostPolicy;
+                return this;
+            }
+
+            /**
+             * HttpPorts.
+             */
+            public Builder httpPorts(String httpPorts) {
+                this.httpPorts = httpPorts;
+                return this;
+            }
+
+            /**
+             * HttpsPorts.
+             */
+            public Builder httpsPorts(String httpsPorts) {
+                this.httpsPorts = httpsPorts;
                 return this;
             }
 

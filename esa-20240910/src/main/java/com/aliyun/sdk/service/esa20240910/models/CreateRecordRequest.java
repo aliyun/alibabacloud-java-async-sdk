@@ -39,6 +39,14 @@ public class CreateRecordRequest extends Request {
     private String hostPolicy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpPorts")
+    private String httpPorts;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpsPorts")
+    private String httpsPorts;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Proxied")
     private Boolean proxied;
 
@@ -73,6 +81,8 @@ public class CreateRecordRequest extends Request {
         this.comment = builder.comment;
         this.data = builder.data;
         this.hostPolicy = builder.hostPolicy;
+        this.httpPorts = builder.httpPorts;
+        this.httpsPorts = builder.httpsPorts;
         this.proxied = builder.proxied;
         this.recordName = builder.recordName;
         this.siteId = builder.siteId;
@@ -130,6 +140,20 @@ public class CreateRecordRequest extends Request {
     }
 
     /**
+     * @return httpPorts
+     */
+    public String getHttpPorts() {
+        return this.httpPorts;
+    }
+
+    /**
+     * @return httpsPorts
+     */
+    public String getHttpsPorts() {
+        return this.httpsPorts;
+    }
+
+    /**
      * @return proxied
      */
     public Boolean getProxied() {
@@ -177,6 +201,8 @@ public class CreateRecordRequest extends Request {
         private String comment; 
         private Data data; 
         private String hostPolicy; 
+        private String httpPorts; 
+        private String httpsPorts; 
         private Boolean proxied; 
         private String recordName; 
         private Long siteId; 
@@ -195,6 +221,8 @@ public class CreateRecordRequest extends Request {
             this.comment = request.comment;
             this.data = request.data;
             this.hostPolicy = request.hostPolicy;
+            this.httpPorts = request.httpPorts;
+            this.httpsPorts = request.httpsPorts;
             this.proxied = request.proxied;
             this.recordName = request.recordName;
             this.siteId = request.siteId;
@@ -271,6 +299,24 @@ public class CreateRecordRequest extends Request {
         public Builder hostPolicy(String hostPolicy) {
             this.putQueryParameter("HostPolicy", hostPolicy);
             this.hostPolicy = hostPolicy;
+            return this;
+        }
+
+        /**
+         * HttpPorts.
+         */
+        public Builder httpPorts(String httpPorts) {
+            this.putQueryParameter("HttpPorts", httpPorts);
+            this.httpPorts = httpPorts;
+            return this;
+        }
+
+        /**
+         * HttpsPorts.
+         */
+        public Builder httpsPorts(String httpsPorts) {
+            this.putQueryParameter("HttpsPorts", httpsPorts);
+            this.httpsPorts = httpsPorts;
             return this;
         }
 

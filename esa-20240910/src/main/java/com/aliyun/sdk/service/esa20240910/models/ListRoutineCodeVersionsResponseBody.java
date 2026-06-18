@@ -242,8 +242,14 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DeployEnv")
+        private String deployEnv;
+
         @com.aliyun.core.annotation.NameInMap("ExtraInfo")
         private String extraInfo;
+
+        @com.aliyun.core.annotation.NameInMap("HasEnvVars")
+        private Boolean hasEnvVars;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -254,7 +260,9 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             this.codeVersion = builder.codeVersion;
             this.confOptions = builder.confOptions;
             this.createTime = builder.createTime;
+            this.deployEnv = builder.deployEnv;
             this.extraInfo = builder.extraInfo;
+            this.hasEnvVars = builder.hasEnvVars;
             this.status = builder.status;
         }
 
@@ -302,10 +310,24 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return deployEnv
+         */
+        public String getDeployEnv() {
+            return this.deployEnv;
+        }
+
+        /**
          * @return extraInfo
          */
         public String getExtraInfo() {
             return this.extraInfo;
+        }
+
+        /**
+         * @return hasEnvVars
+         */
+        public Boolean getHasEnvVars() {
+            return this.hasEnvVars;
         }
 
         /**
@@ -321,7 +343,9 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             private String codeVersion; 
             private ConfOptions confOptions; 
             private String createTime; 
+            private String deployEnv; 
             private String extraInfo; 
+            private Boolean hasEnvVars; 
             private String status; 
 
             private Builder() {
@@ -333,7 +357,9 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
                 this.codeVersion = model.codeVersion;
                 this.confOptions = model.confOptions;
                 this.createTime = model.createTime;
+                this.deployEnv = model.deployEnv;
                 this.extraInfo = model.extraInfo;
+                this.hasEnvVars = model.hasEnvVars;
                 this.status = model.status;
             } 
 
@@ -390,6 +416,14 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
+             * DeployEnv.
+             */
+            public Builder deployEnv(String deployEnv) {
+                this.deployEnv = deployEnv;
+                return this;
+            }
+
+            /**
              * <p>Additional information about the code version.</p>
              * 
              * <strong>example:</strong>
@@ -397,6 +431,14 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
+                return this;
+            }
+
+            /**
+             * HasEnvVars.
+             */
+            public Builder hasEnvVars(Boolean hasEnvVars) {
+                this.hasEnvVars = hasEnvVars;
                 return this;
             }
 

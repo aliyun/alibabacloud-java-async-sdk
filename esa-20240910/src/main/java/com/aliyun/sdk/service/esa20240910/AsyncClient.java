@@ -818,6 +818,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWaitingRoomRuleResponse> deleteWaitingRoomRule(DeleteWaitingRoomRuleRequest request);
 
     /**
+     * @param request the request parameters of DescribeBotPrice  DescribeBotPriceRequest
+     * @return DescribeBotPriceResponse
+     */
+    CompletableFuture<DescribeBotPriceResponse> describeBotPrice(DescribeBotPriceRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCacheReservePrice  DescribeCacheReservePriceRequest
+     * @return DescribeCacheReservePriceResponse
+     */
+    CompletableFuture<DescribeCacheReservePriceResponse> describeCacheReservePrice(DescribeCacheReservePriceRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCacheReservePriceGap  DescribeCacheReservePriceGapRequest
+     * @return DescribeCacheReservePriceGapResponse
+     */
+    CompletableFuture<DescribeCacheReservePriceGapResponse> describeCacheReservePriceGap(DescribeCacheReservePriceGapRequest request);
+
+    /**
      * @param request the request parameters of DescribeCustomScenePolicies  DescribeCustomScenePoliciesRequest
      * @return DescribeCustomScenePoliciesResponse
      */
@@ -915,6 +933,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRatePlanPriceResponse
      */
     CompletableFuture<DescribeRatePlanPriceResponse> describeRatePlanPrice(DescribeRatePlanPriceRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRatePlanPriceGap  DescribeRatePlanPriceGapRequest
+     * @return DescribeRatePlanPriceGapResponse
+     */
+    CompletableFuture<DescribeRatePlanPriceGapResponse> describeRatePlanPriceGap(DescribeRatePlanPriceGapRequest request);
 
     /**
      * <b>description</b> :
@@ -1107,6 +1131,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDevelopmentModeResponse> getDevelopmentMode(GetDevelopmentModeRequest request);
 
     /**
+     * @param request the request parameters of GetEdgeContainer  GetEdgeContainerRequest
+     * @return GetEdgeContainerResponse
+     */
+    CompletableFuture<GetEdgeContainerResponse> getEdgeContainer(GetEdgeContainerRequest request);
+
+    /**
      * @param request the request parameters of GetEdgeContainerApp  GetEdgeContainerAppRequest
      * @return GetEdgeContainerAppResponse
      */
@@ -1177,6 +1207,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetErServiceResponse
      */
     CompletableFuture<GetErServiceResponse> getErService(GetErServiceRequest request);
+
+    /**
+     * @param request the request parameters of GetFailFile  GetFailFileRequest
+     * @return GetFailFileResponse
+     */
+    CompletableFuture<GetFailFileResponse> getFailFile(GetFailFileRequest request);
 
     /**
      * @param request the request parameters of GetHttpIncomingRequestHeaderModificationRule  GetHttpIncomingRequestHeaderModificationRuleRequest
@@ -1586,6 +1622,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCacheRulesResponse
      */
     CompletableFuture<ListCacheRulesResponse> listCacheRules(ListCacheRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListCasCertificates  ListCasCertificatesRequest
+     * @return ListCasCertificatesResponse
+     */
+    CompletableFuture<ListCasCertificatesResponse> listCasCertificates(ListCasCertificatesRequest request);
 
     /**
      * @param request the request parameters of ListCertificates  ListCertificatesRequest
@@ -2223,6 +2265,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopScheduledPreloadExecutionResponse
      */
     CompletableFuture<StopScheduledPreloadExecutionResponse> stopScheduledPreloadExecution(StopScheduledPreloadExecutionRequest request);
+
+    /**
+     * @param request the request parameters of SubmitUploadTask  SubmitUploadTaskRequest
+     * @return SubmitUploadTaskResponse
+     */
+    CompletableFuture<SubmitUploadTaskResponse> submitUploadTask(SubmitUploadTaskRequest request);
 
     /**
      * @param request the request parameters of TagResources  TagResourcesRequest

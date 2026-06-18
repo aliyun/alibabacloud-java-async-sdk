@@ -486,6 +486,12 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("HttpPorts")
+        private String httpPorts;
+
+        @com.aliyun.core.annotation.NameInMap("HttpsPorts")
+        private String httpsPorts;
+
         @com.aliyun.core.annotation.NameInMap("Proxied")
         private Boolean proxied;
 
@@ -508,6 +514,8 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
             this.bizName = builder.bizName;
             this.data = builder.data;
             this.description = builder.description;
+            this.httpPorts = builder.httpPorts;
+            this.httpsPorts = builder.httpsPorts;
             this.proxied = builder.proxied;
             this.recordId = builder.recordId;
             this.recordName = builder.recordName;
@@ -543,6 +551,20 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return httpPorts
+         */
+        public String getHttpPorts() {
+            return this.httpPorts;
+        }
+
+        /**
+         * @return httpsPorts
+         */
+        public String getHttpsPorts() {
+            return this.httpsPorts;
         }
 
         /**
@@ -591,6 +613,8 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
             private String bizName; 
             private Data data; 
             private String description; 
+            private String httpPorts; 
+            private String httpsPorts; 
             private Boolean proxied; 
             private Long recordId; 
             private String recordName; 
@@ -605,6 +629,8 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
                 this.bizName = model.bizName;
                 this.data = model.data;
                 this.description = model.description;
+                this.httpPorts = model.httpPorts;
+                this.httpsPorts = model.httpsPorts;
                 this.proxied = model.proxied;
                 this.recordId = model.recordId;
                 this.recordName = model.recordName;
@@ -645,6 +671,22 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * HttpPorts.
+             */
+            public Builder httpPorts(String httpPorts) {
+                this.httpPorts = httpPorts;
+                return this;
+            }
+
+            /**
+             * HttpsPorts.
+             */
+            public Builder httpsPorts(String httpsPorts) {
+                this.httpsPorts = httpsPorts;
                 return this;
             }
 
@@ -1127,6 +1169,12 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("HttpPorts")
+        private String httpPorts;
+
+        @com.aliyun.core.annotation.NameInMap("HttpsPorts")
+        private String httpsPorts;
+
         @com.aliyun.core.annotation.NameInMap("Proxied")
         private Boolean proxied;
 
@@ -1149,6 +1197,8 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
             this.bizName = builder.bizName;
             this.data = builder.data;
             this.description = builder.description;
+            this.httpPorts = builder.httpPorts;
+            this.httpsPorts = builder.httpsPorts;
             this.proxied = builder.proxied;
             this.recordId = builder.recordId;
             this.recordName = builder.recordName;
@@ -1184,6 +1234,20 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return httpPorts
+         */
+        public String getHttpPorts() {
+            return this.httpPorts;
+        }
+
+        /**
+         * @return httpsPorts
+         */
+        public String getHttpsPorts() {
+            return this.httpsPorts;
         }
 
         /**
@@ -1232,6 +1296,8 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
             private String bizName; 
             private SuccessData data; 
             private String description; 
+            private String httpPorts; 
+            private String httpsPorts; 
             private Boolean proxied; 
             private Long recordId; 
             private String recordName; 
@@ -1246,6 +1312,8 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
                 this.bizName = model.bizName;
                 this.data = model.data;
                 this.description = model.description;
+                this.httpPorts = model.httpPorts;
+                this.httpsPorts = model.httpsPorts;
                 this.proxied = model.proxied;
                 this.recordId = model.recordId;
                 this.recordName = model.recordName;
@@ -1289,6 +1357,22 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * HttpPorts.
+             */
+            public Builder httpPorts(String httpPorts) {
+                this.httpPorts = httpPorts;
+                return this;
+            }
+
+            /**
+             * HttpsPorts.
+             */
+            public Builder httpsPorts(String httpsPorts) {
+                this.httpsPorts = httpsPorts;
                 return this;
             }
 

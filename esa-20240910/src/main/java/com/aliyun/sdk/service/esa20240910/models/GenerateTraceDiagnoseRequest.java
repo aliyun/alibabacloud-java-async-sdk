@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenerateTraceDiagnoseRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Url")
     @com.aliyun.core.annotation.Validation(required = true)
     private String url;
 
     private GenerateTraceDiagnoseRequest(Builder builder) {
         super(builder);
+        this.source = builder.source;
         this.url = builder.url;
     }
 
@@ -41,6 +46,13 @@ public class GenerateTraceDiagnoseRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return url
      */
     public String getUrl() {
@@ -48,6 +60,7 @@ public class GenerateTraceDiagnoseRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateTraceDiagnoseRequest, Builder> {
+        private String source; 
         private String url; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class GenerateTraceDiagnoseRequest extends Request {
 
         private Builder(GenerateTraceDiagnoseRequest request) {
             super(request);
+            this.source = request.source;
             this.url = request.url;
         } 
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

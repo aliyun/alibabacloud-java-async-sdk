@@ -362,6 +362,12 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PlanType")
         private String planType;
 
+        @com.aliyun.core.annotation.NameInMap("RenewalDuration")
+        private Long renewalDuration;
+
+        @com.aliyun.core.annotation.NameInMap("RenewalStatus")
+        private String renewalStatus;
+
         @com.aliyun.core.annotation.NameInMap("SiteQuota")
         private String siteQuota;
 
@@ -400,6 +406,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             this.planName = builder.planName;
             this.planTraffic = builder.planTraffic;
             this.planType = builder.planType;
+            this.renewalDuration = builder.renewalDuration;
+            this.renewalStatus = builder.renewalStatus;
             this.siteQuota = builder.siteQuota;
             this.sites = builder.sites;
             this.smartRoutingRequest = builder.smartRoutingRequest;
@@ -550,6 +558,20 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return renewalDuration
+         */
+        public Long getRenewalDuration() {
+            return this.renewalDuration;
+        }
+
+        /**
+         * @return renewalStatus
+         */
+        public String getRenewalStatus() {
+            return this.renewalStatus;
+        }
+
+        /**
          * @return siteQuota
          */
         public String getSiteQuota() {
@@ -611,6 +633,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             private String planName; 
             private String planTraffic; 
             private String planType; 
+            private Long renewalDuration; 
+            private String renewalStatus; 
             private String siteQuota; 
             private java.util.List<Sites> sites; 
             private String smartRoutingRequest; 
@@ -641,6 +665,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
                 this.planName = model.planName;
                 this.planTraffic = model.planTraffic;
                 this.planType = model.planType;
+                this.renewalDuration = model.renewalDuration;
+                this.renewalStatus = model.renewalStatus;
                 this.siteQuota = model.siteQuota;
                 this.sites = model.sites;
                 this.smartRoutingRequest = model.smartRoutingRequest;
@@ -835,6 +861,22 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
              */
             public Builder planType(String planType) {
                 this.planType = planType;
+                return this;
+            }
+
+            /**
+             * RenewalDuration.
+             */
+            public Builder renewalDuration(Long renewalDuration) {
+                this.renewalDuration = renewalDuration;
+                return this;
+            }
+
+            /**
+             * RenewalStatus.
+             */
+            public Builder renewalStatus(String renewalStatus) {
+                this.renewalStatus = renewalStatus;
                 return this;
             }
 
