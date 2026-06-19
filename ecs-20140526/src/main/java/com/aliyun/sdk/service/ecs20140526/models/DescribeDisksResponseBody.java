@@ -359,6 +359,81 @@ public class DescribeDisksResponseBody extends TeaModel {
      *
      * <p>DescribeDisksResponseBody</p>
      */
+    public static class DataSource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private DataSource(Builder builder) {
+            this.id = builder.id;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataSource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.id = model.id;
+                this.type = model.type;
+            } 
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public DataSource build() {
+                return new DataSource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksResponseBody</p>
+     */
     public static class MountInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachedTime")
         private String attachedTime;
@@ -844,6 +919,9 @@ public class DescribeDisksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("DataSource")
+        private DataSource dataSource;
+
         @com.aliyun.core.annotation.NameInMap("DeleteAutoSnapshot")
         private Boolean deleteAutoSnapshot;
 
@@ -981,6 +1059,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.creationTime = builder.creationTime;
+            this.dataSource = builder.dataSource;
             this.deleteAutoSnapshot = builder.deleteAutoSnapshot;
             this.deleteWithInstance = builder.deleteWithInstance;
             this.description = builder.description;
@@ -1081,6 +1160,13 @@ public class DescribeDisksResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return dataSource
+         */
+        public DataSource getDataSource() {
+            return this.dataSource;
         }
 
         /**
@@ -1392,6 +1478,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private Boolean burstingEnabled; 
             private String category; 
             private String creationTime; 
+            private DataSource dataSource; 
             private Boolean deleteAutoSnapshot; 
             private Boolean deleteWithInstance; 
             private String description; 
@@ -1447,6 +1534,7 @@ public class DescribeDisksResponseBody extends TeaModel {
                 this.burstingEnabled = model.burstingEnabled;
                 this.category = model.category;
                 this.creationTime = model.creationTime;
+                this.dataSource = model.dataSource;
                 this.deleteAutoSnapshot = model.deleteAutoSnapshot;
                 this.deleteWithInstance = model.deleteWithInstance;
                 this.description = model.description;
@@ -1582,6 +1670,14 @@ public class DescribeDisksResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * DataSource.
+             */
+            public Builder dataSource(DataSource dataSource) {
+                this.dataSource = dataSource;
                 return this;
             }
 
