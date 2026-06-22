@@ -1,3 +1,6 @@
+2026-06-22 Version: 8.0.0
+- Generated java-async 2024-03-27 for APIG.
+
 2026-06-17 Version: 7.0.9
 - Generated java-async 2024-03-27 for APIG.
 

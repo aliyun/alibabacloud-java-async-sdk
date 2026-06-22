@@ -21,14 +21,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private Data data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
-
-    @com.aliyun.core.annotation.NameInMap("regions")
-    @Deprecated
-    private Regions regions;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -37,7 +33,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
-        this.regions = builder.regions;
         this.requestId = builder.requestId;
     }
 
@@ -63,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Data getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -75,13 +70,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     /**
-     * @return regions
-     */
-    public Regions getRegions() {
-        return this.regions;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -90,9 +78,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Data data; 
+        private java.util.List<Data> data; 
         private String message; 
-        private Regions regions; 
         private String requestId; 
 
         private Builder() {
@@ -102,7 +89,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
-            this.regions = model.regions;
             this.requestId = model.requestId;
         } 
 
@@ -117,7 +103,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(Data data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -127,14 +113,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
-            return this;
-        }
-
-        /**
-         * regions.
-         */
-        public Builder regions(Regions regions) {
-            this.regions = regions;
             return this;
         }
 
@@ -158,87 +136,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
      *
      * <p>DescribeRegionsResponseBody</p>
      */
-    public static class DataRegions extends TeaModel {
+    public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("localName")
         private String localName;
 
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        private DataRegions(Builder builder) {
+        private Data(Builder builder) {
             this.localName = builder.localName;
             this.regionId = builder.regionId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DataRegions create() {
-            return builder().build();
-        }
-
-        /**
-         * @return localName
-         */
-        public String getLocalName() {
-            return this.localName;
-        }
-
-        /**
-         * @return regionId
-         */
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public static final class Builder {
-            private String localName; 
-            private String regionId; 
-
-            private Builder() {
-            } 
-
-            private Builder(DataRegions model) {
-                this.localName = model.localName;
-                this.regionId = model.regionId;
-            } 
-
-            /**
-             * localName.
-             */
-            public Builder localName(String localName) {
-                this.localName = localName;
-                return this;
-            }
-
-            /**
-             * regionId.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            public DataRegions build() {
-                return new DataRegions(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
-     *
-     * <p>DescribeRegionsResponseBody</p>
-     */
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("regions")
-        private java.util.List<DataRegions> regions;
-
-        private Data(Builder builder) {
-            this.regions = builder.regions;
         }
 
         public static Builder builder() {
@@ -250,64 +157,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return regions
-         */
-        public java.util.List<DataRegions> getRegions() {
-            return this.regions;
-        }
-
-        public static final class Builder {
-            private java.util.List<DataRegions> regions; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.regions = model.regions;
-            } 
-
-            /**
-             * regions.
-             */
-            public Builder regions(java.util.List<DataRegions> regions) {
-                this.regions = regions;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
-     *
-     * <p>DescribeRegionsResponseBody</p>
-     */
-    public static class Region extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("localName")
-        private String localName;
-
-        @com.aliyun.core.annotation.NameInMap("regionId")
-        private String regionId;
-
-        private Region(Builder builder) {
-            this.localName = builder.localName;
-            this.regionId = builder.regionId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Region create() {
-            return builder().build();
-        }
-
-        /**
          * @return localName
          */
         public String getLocalName() {
@@ -328,7 +177,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Region model) {
+            private Builder(Data model) {
                 this.localName = model.localName;
                 this.regionId = model.regionId;
             } 
@@ -349,62 +198,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
                 return this;
             }
 
-            public Region build() {
-                return new Region(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
-     *
-     * <p>DescribeRegionsResponseBody</p>
-     */
-    public static class Regions extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Region")
-        private java.util.List<Region> region;
-
-        private Regions(Builder builder) {
-            this.region = builder.region;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Regions create() {
-            return builder().build();
-        }
-
-        /**
-         * @return region
-         */
-        public java.util.List<Region> getRegion() {
-            return this.region;
-        }
-
-        public static final class Builder {
-            private java.util.List<Region> region; 
-
-            private Builder() {
-            } 
-
-            private Builder(Regions model) {
-                this.region = model.region;
-            } 
-
-            /**
-             * Region.
-             */
-            public Builder region(java.util.List<Region> region) {
-                this.region = region;
-                return this;
-            }
-
-            public Regions build() {
-                return new Regions(this);
+            public Data build() {
+                return new Data(this);
             } 
 
         } 
