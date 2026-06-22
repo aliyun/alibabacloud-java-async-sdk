@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
 
     /**
+     * @param request the request parameters of DeleteNodeGroup  DeleteNodeGroupRequest
+     * @return DeleteNodeGroupResponse
+     */
+    CompletableFuture<DeleteNodeGroupResponse> deleteNodeGroup(DeleteNodeGroupRequest request);
+
+    /**
      * @param request the request parameters of DeleteScript  DeleteScriptRequest
      * @return DeleteScriptResponse
      */
@@ -555,6 +561,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateClusterAutoRenewResponse
      */
     CompletableFuture<UpdateClusterAutoRenewResponse> updateClusterAutoRenew(UpdateClusterAutoRenewRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>更新节点组基本属性。</p>
+     * 
+     * @param request the request parameters of UpdateNodeGroupAttributes  UpdateNodeGroupAttributesRequest
+     * @return UpdateNodeGroupAttributesResponse
+     */
+    CompletableFuture<UpdateNodeGroupAttributesResponse> updateNodeGroupAttributes(UpdateNodeGroupAttributesRequest request);
 
     /**
      * @param request the request parameters of UpdateScript  UpdateScriptRequest

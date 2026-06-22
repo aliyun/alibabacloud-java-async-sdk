@@ -20,11 +20,15 @@ public class OperationData extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("actualDeliveredAmounts")
     private Integer actualDeliveredAmounts;
 
+    @com.aliyun.core.annotation.NameInMap("failedRefundInstanceIds")
+    private java.util.List<String> failedRefundInstanceIds;
+
     @com.aliyun.core.annotation.NameInMap("toBeDeliveredAmounts")
     private Integer toBeDeliveredAmounts;
 
     private OperationData(Builder builder) {
         this.actualDeliveredAmounts = builder.actualDeliveredAmounts;
+        this.failedRefundInstanceIds = builder.failedRefundInstanceIds;
         this.toBeDeliveredAmounts = builder.toBeDeliveredAmounts;
     }
 
@@ -48,6 +52,13 @@ public class OperationData extends TeaModel {
     }
 
     /**
+     * @return failedRefundInstanceIds
+     */
+    public java.util.List<String> getFailedRefundInstanceIds() {
+        return this.failedRefundInstanceIds;
+    }
+
+    /**
      * @return toBeDeliveredAmounts
      */
     public Integer getToBeDeliveredAmounts() {
@@ -56,6 +67,7 @@ public class OperationData extends TeaModel {
 
     public static final class Builder {
         private Integer actualDeliveredAmounts; 
+        private java.util.List<String> failedRefundInstanceIds; 
         private Integer toBeDeliveredAmounts; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class OperationData extends TeaModel {
 
         private Builder(OperationData model) {
             this.actualDeliveredAmounts = model.actualDeliveredAmounts;
+            this.failedRefundInstanceIds = model.failedRefundInstanceIds;
             this.toBeDeliveredAmounts = model.toBeDeliveredAmounts;
         } 
 
@@ -71,6 +84,14 @@ public class OperationData extends TeaModel {
          */
         public Builder actualDeliveredAmounts(Integer actualDeliveredAmounts) {
             this.actualDeliveredAmounts = actualDeliveredAmounts;
+            return this;
+        }
+
+        /**
+         * failedRefundInstanceIds.
+         */
+        public Builder failedRefundInstanceIds(java.util.List<String> failedRefundInstanceIds) {
+            this.failedRefundInstanceIds = failedRefundInstanceIds;
             return this;
         }
 

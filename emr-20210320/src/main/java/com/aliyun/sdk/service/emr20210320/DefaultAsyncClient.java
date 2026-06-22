@@ -72,7 +72,22 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhangjiakou-na62-a01", "emr.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "emr.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "emr.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "emr.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "emr.aliyuncs.com"),
+            new TeaPair("us-east-1", "emr.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "emr.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "emr.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "emr.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "emr.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "emr.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "emr.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "emr.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "emr.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "emr.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "emr.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "emr.cn-chengdu.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "emr.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "emr.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "emr.ap-northeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -227,6 +242,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteNodeGroup  DeleteNodeGroupRequest
+     * @return DeleteNodeGroupResponse
+     */
+    @Override
+    public CompletableFuture<DeleteNodeGroupResponse> deleteNodeGroup(DeleteNodeGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteNodeGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteNodeGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteNodeGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1478,6 +1511,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateClusterAutoRenewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新节点组基本属性。</p>
+     * 
+     * @param request the request parameters of UpdateNodeGroupAttributes  UpdateNodeGroupAttributesRequest
+     * @return UpdateNodeGroupAttributesResponse
+     */
+    @Override
+    public CompletableFuture<UpdateNodeGroupAttributesResponse> updateNodeGroupAttributes(UpdateNodeGroupAttributesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateNodeGroupAttributes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateNodeGroupAttributesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateNodeGroupAttributesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
