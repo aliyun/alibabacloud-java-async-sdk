@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AddMem0MemoriesResponse} extends {@link TeaModel}
+ * {@link AddDatasetDataResponse} extends {@link TeaModel}
  *
- * <p>AddMem0MemoriesResponse</p>
+ * <p>AddDatasetDataResponse</p>
  */
-public class AddMem0MemoriesResponse extends Response {
+public class AddDatasetDataResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class AddMem0MemoriesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.Map<String, ?> body;
+    private AddDatasetDataResponseBody body;
 
-    private AddMem0MemoriesResponse(BuilderImpl builder) {
+    private AddDatasetDataResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AddMem0MemoriesResponse create() {
+    public static AddDatasetDataResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class AddMem0MemoriesResponse extends Response {
     /**
      * @return body
      */
-    public java.util.Map<String, ?> getBody() {
+    public AddDatasetDataResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AddMem0MemoriesResponse, Builder> {
+    public interface Builder extends Response.Builder<AddDatasetDataResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.Map<String, ?> body);
+        Builder body(AddDatasetDataResponseBody body);
 
         @Override
-        AddMem0MemoriesResponse build();
+        AddDatasetDataResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AddMem0MemoriesResponse, Builder>
+            extends Response.BuilderImpl<AddDatasetDataResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.Map<String, ?> body; 
+        private AddDatasetDataResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AddMem0MemoriesResponse response) {
+        private BuilderImpl(AddDatasetDataResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class AddMem0MemoriesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.Map<String, ?> body) {
+        public Builder body(AddDatasetDataResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AddMem0MemoriesResponse build() {
-            return new AddMem0MemoriesResponse(this);
+        public AddDatasetDataResponse build() {
+            return new AddDatasetDataResponse(this);
         } 
 
     } 

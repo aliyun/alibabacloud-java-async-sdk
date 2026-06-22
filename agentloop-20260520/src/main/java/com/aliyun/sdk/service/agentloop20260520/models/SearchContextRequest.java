@@ -161,6 +161,9 @@ public class SearchContextRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -170,6 +173,9 @@ public class SearchContextRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-context-store</p>
          */
         public Builder contextStoreName(String contextStoreName) {
             this.putPathParameter("contextStoreName", contextStoreName);
@@ -206,6 +212,9 @@ public class SearchContextRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户最近的偏好设置</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("query", query);

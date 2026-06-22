@@ -29,8 +29,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "AgentLoop";
         this.version = "2026-05-20";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-zhangjiakou", "agentloop.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "agentloop.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "agentloop.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "agentloop.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "agentloop.cn-beijing.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -40,18 +46,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of AddMem0Memories  AddMem0MemoriesRequest
-     * @return AddMem0MemoriesResponse
+     * @param request the request parameters of AddDatasetData  AddDatasetDataRequest
+     * @return AddDatasetDataResponse
      */
     @Override
-    public CompletableFuture<AddMem0MemoriesResponse> addMem0Memories(AddMem0MemoriesRequest request) {
+    public CompletableFuture<AddDatasetDataResponse> addDatasetData(AddDatasetDataRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddMem0Memories").setMethod(HttpMethod.POST).setPathRegex("/v1/memories").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddMem0MemoriesResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddDatasetData").setMethod(HttpMethod.POST).setPathRegex("/agentspace/{agentSpace}/dataset/{datasetName}/rows").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddDatasetDataResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<AddMem0MemoriesResponse> future = new CompletableFuture<>();
+            CompletableFuture<AddDatasetDataResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -202,42 +208,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeleteMem0Memories  DeleteMem0MemoriesRequest
-     * @return DeleteMem0MemoriesResponse
-     */
-    @Override
-    public CompletableFuture<DeleteMem0MemoriesResponse> deleteMem0Memories(DeleteMem0MemoriesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteMem0Memories").setMethod(HttpMethod.DELETE).setPathRegex("/v1/memories").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMem0MemoriesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteMem0MemoriesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of DeleteMem0Memory  DeleteMem0MemoryRequest
-     * @return DeleteMem0MemoryResponse
-     */
-    @Override
-    public CompletableFuture<DeleteMem0MemoryResponse> deleteMem0Memory(DeleteMem0MemoryRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteMem0Memory").setMethod(HttpMethod.DELETE).setPathRegex("/v1/memories/{memoryId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMem0MemoryResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteMem0MemoryResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of DeletePipeline  DeletePipelineRequest
      * @return DeletePipelineResponse
      */
@@ -358,42 +328,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetDatasetResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of GetMem0Memories  GetMem0MemoriesRequest
-     * @return GetMem0MemoriesResponse
-     */
-    @Override
-    public CompletableFuture<GetMem0MemoriesResponse> getMem0Memories(GetMem0MemoriesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMem0Memories").setMethod(HttpMethod.POST).setPathRegex("/v2/memories").setBodyType(BodyType.ARRAY).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMem0MemoriesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetMem0MemoriesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of GetMem0Memory  GetMem0MemoryRequest
-     * @return GetMem0MemoryResponse
-     */
-    @Override
-    public CompletableFuture<GetMem0MemoryResponse> getMem0Memory(GetMem0MemoryRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMem0Memory").setMethod(HttpMethod.GET).setPathRegex("/v1/memories/{memoryId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMem0MemoryResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetMem0MemoryResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -526,24 +460,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of SearchMem0Memories  SearchMem0MemoriesRequest
-     * @return SearchMem0MemoriesResponse
-     */
-    @Override
-    public CompletableFuture<SearchMem0MemoriesResponse> searchMem0Memories(SearchMem0MemoriesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SearchMem0Memories").setMethod(HttpMethod.POST).setPathRegex("/v2/memories/search").setBodyType(BodyType.ARRAY).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchMem0MemoriesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SearchMem0MemoriesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of UpdateAgentSpace  UpdateAgentSpaceRequest
      * @return UpdateAgentSpaceResponse
      */
@@ -598,24 +514,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of UpdateMem0Memory  UpdateMem0MemoryRequest
-     * @return UpdateMem0MemoryResponse
-     */
-    @Override
-    public CompletableFuture<UpdateMem0MemoryResponse> updateMem0Memory(UpdateMem0MemoryRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMem0Memory").setMethod(HttpMethod.PUT).setPathRegex("/v1/memories/{memoryId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMem0MemoryResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UpdateMem0MemoryResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of UpdatePipeline  UpdatePipelineRequest
      * @return UpdatePipelineResponse
      */
@@ -628,24 +526,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdatePipelineResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of ValidateMem0APIKey  ValidateMem0APIKeyRequest
-     * @return ValidateMem0APIKeyResponse
-     */
-    @Override
-    public CompletableFuture<ValidateMem0APIKeyResponse> validateMem0APIKey(ValidateMem0APIKeyRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ValidateMem0APIKey").setMethod(HttpMethod.GET).setPathRegex("/v1/ping").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ValidateMem0APIKeyResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ValidateMem0APIKeyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

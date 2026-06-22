@@ -20,10 +20,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-     * @param request the request parameters of AddMem0Memories  AddMem0MemoriesRequest
-     * @return AddMem0MemoriesResponse
+     * @param request the request parameters of AddDatasetData  AddDatasetDataRequest
+     * @return AddDatasetDataResponse
      */
-    CompletableFuture<AddMem0MemoriesResponse> addMem0Memories(AddMem0MemoriesRequest request);
+    CompletableFuture<AddDatasetDataResponse> addDatasetData(AddDatasetDataRequest request);
 
     /**
      * @param request the request parameters of CreateAgentSpace  CreateAgentSpaceRequest
@@ -74,18 +74,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDatasetResponse> deleteDataset(DeleteDatasetRequest request);
 
     /**
-     * @param request the request parameters of DeleteMem0Memories  DeleteMem0MemoriesRequest
-     * @return DeleteMem0MemoriesResponse
-     */
-    CompletableFuture<DeleteMem0MemoriesResponse> deleteMem0Memories(DeleteMem0MemoriesRequest request);
-
-    /**
-     * @param request the request parameters of DeleteMem0Memory  DeleteMem0MemoryRequest
-     * @return DeleteMem0MemoryResponse
-     */
-    CompletableFuture<DeleteMem0MemoryResponse> deleteMem0Memory(DeleteMem0MemoryRequest request);
-
-    /**
      * @param request the request parameters of DeletePipeline  DeletePipelineRequest
      * @return DeletePipelineResponse
      */
@@ -126,18 +114,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDatasetResponse
      */
     CompletableFuture<GetDatasetResponse> getDataset(GetDatasetRequest request);
-
-    /**
-     * @param request the request parameters of GetMem0Memories  GetMem0MemoriesRequest
-     * @return GetMem0MemoriesResponse
-     */
-    CompletableFuture<GetMem0MemoriesResponse> getMem0Memories(GetMem0MemoriesRequest request);
-
-    /**
-     * @param request the request parameters of GetMem0Memory  GetMem0MemoryRequest
-     * @return GetMem0MemoryResponse
-     */
-    CompletableFuture<GetMem0MemoryResponse> getMem0Memory(GetMem0MemoryRequest request);
 
     /**
      * @param request the request parameters of GetPipeline  GetPipelineRequest
@@ -182,12 +158,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchContextResponse> searchContext(SearchContextRequest request);
 
     /**
-     * @param request the request parameters of SearchMem0Memories  SearchMem0MemoriesRequest
-     * @return SearchMem0MemoriesResponse
-     */
-    CompletableFuture<SearchMem0MemoriesResponse> searchMem0Memories(SearchMem0MemoriesRequest request);
-
-    /**
      * @param request the request parameters of UpdateAgentSpace  UpdateAgentSpaceRequest
      * @return UpdateAgentSpaceResponse
      */
@@ -206,21 +176,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDatasetResponse> updateDataset(UpdateDatasetRequest request);
 
     /**
-     * @param request the request parameters of UpdateMem0Memory  UpdateMem0MemoryRequest
-     * @return UpdateMem0MemoryResponse
-     */
-    CompletableFuture<UpdateMem0MemoryResponse> updateMem0Memory(UpdateMem0MemoryRequest request);
-
-    /**
      * @param request the request parameters of UpdatePipeline  UpdatePipelineRequest
      * @return UpdatePipelineResponse
      */
     CompletableFuture<UpdatePipelineResponse> updatePipeline(UpdatePipelineRequest request);
-
-    /**
-     * @param request the request parameters of ValidateMem0APIKey  ValidateMem0APIKeyRequest
-     * @return ValidateMem0APIKeyResponse
-     */
-    CompletableFuture<ValidateMem0APIKeyResponse> validateMem0APIKey(ValidateMem0APIKeyRequest request);
 
 }
