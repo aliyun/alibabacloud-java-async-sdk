@@ -1008,6 +1008,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolicyPriorUsedResponse> describePolicyPriorUsed(DescribePolicyPriorUsedRequest request);
 
     /**
+     * @param request the request parameters of DescribePostpayBill  DescribePostpayBillRequest
+     * @return DescribePostpayBillResponse
+     */
+    CompletableFuture<DescribePostpayBillResponse> describePostpayBill(DescribePostpayBillRequest request);
+
+    /**
      * @param request the request parameters of DescribePostpayEnabledProtection  DescribePostpayEnabledProtectionRequest
      * @return DescribePostpayEnabledProtectionResponse
      */
@@ -1054,6 +1060,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePrefixListsResponse
      */
     CompletableFuture<DescribePrefixListsResponse> describePrefixLists(DescribePrefixListsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePrepayBillTotal  DescribePrepayBillTotalRequest
+     * @return DescribePrepayBillTotalResponse
+     */
+    CompletableFuture<DescribePrepayBillTotalResponse> describePrepayBillTotal(DescribePrepayBillTotalRequest request);
 
     /**
      * @param request the request parameters of DescribePrivateDnsDomainNameList  DescribePrivateDnsDomainNameListRequest

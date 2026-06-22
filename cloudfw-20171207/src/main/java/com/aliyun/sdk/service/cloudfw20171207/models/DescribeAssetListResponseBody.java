@@ -189,6 +189,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
         private String syncStatus;
 
         @com.aliyun.core.annotation.NameInMap("Type")
+        @Deprecated
         private String type;
 
         private Assets(Builder builder) {

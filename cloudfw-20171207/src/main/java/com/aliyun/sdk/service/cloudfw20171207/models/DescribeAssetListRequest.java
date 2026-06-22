@@ -73,6 +73,7 @@ public class DescribeAssetListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
+    @Deprecated
     private String type;
 
     @com.aliyun.core.annotation.Query

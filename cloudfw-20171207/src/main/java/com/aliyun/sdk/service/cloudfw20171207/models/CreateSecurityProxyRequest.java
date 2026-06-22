@@ -22,6 +22,10 @@ public class CreateSecurityProxyRequest extends Request {
     private String firewallSwitch;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FwVswitchZoneId")
+    private String fwVswitchZoneId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -69,6 +73,7 @@ public class CreateSecurityProxyRequest extends Request {
     private CreateSecurityProxyRequest(Builder builder) {
         super(builder);
         this.firewallSwitch = builder.firewallSwitch;
+        this.fwVswitchZoneId = builder.fwVswitchZoneId;
         this.lang = builder.lang;
         this.natGatewayId = builder.natGatewayId;
         this.natRouteEntryList = builder.natRouteEntryList;
@@ -99,6 +104,13 @@ public class CreateSecurityProxyRequest extends Request {
      */
     public String getFirewallSwitch() {
         return this.firewallSwitch;
+    }
+
+    /**
+     * @return fwVswitchZoneId
+     */
+    public String getFwVswitchZoneId() {
+        return this.fwVswitchZoneId;
     }
 
     /**
@@ -173,6 +185,7 @@ public class CreateSecurityProxyRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSecurityProxyRequest, Builder> {
         private String firewallSwitch; 
+        private String fwVswitchZoneId; 
         private String lang; 
         private String natGatewayId; 
         private java.util.List<NatRouteEntryList> natRouteEntryList; 
@@ -191,6 +204,7 @@ public class CreateSecurityProxyRequest extends Request {
         private Builder(CreateSecurityProxyRequest request) {
             super(request);
             this.firewallSwitch = request.firewallSwitch;
+            this.fwVswitchZoneId = request.fwVswitchZoneId;
             this.lang = request.lang;
             this.natGatewayId = request.natGatewayId;
             this.natRouteEntryList = request.natRouteEntryList;
@@ -216,6 +230,15 @@ public class CreateSecurityProxyRequest extends Request {
         public Builder firewallSwitch(String firewallSwitch) {
             this.putQueryParameter("FirewallSwitch", firewallSwitch);
             this.firewallSwitch = firewallSwitch;
+            return this;
+        }
+
+        /**
+         * FwVswitchZoneId.
+         */
+        public Builder fwVswitchZoneId(String fwVswitchZoneId) {
+            this.putQueryParameter("FwVswitchZoneId", fwVswitchZoneId);
+            this.fwVswitchZoneId = fwVswitchZoneId;
             return this;
         }
 

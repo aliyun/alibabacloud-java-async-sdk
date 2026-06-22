@@ -24,6 +24,7 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
     private Integer internetOutAclCount;
 
     @com.aliyun.core.annotation.NameInMap("NatInAclCount")
+    @Deprecated
     private Integer natInAclCount;
 
     @com.aliyun.core.annotation.NameInMap("NatOutAclCount")

@@ -21,6 +21,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     private Long inProtectCnt;
 
     @com.aliyun.core.annotation.NameInMap("InterVPCProtectCnt")
+    @Deprecated
     private Long interVPCProtectCnt;
 
     @com.aliyun.core.annotation.NameInMap("Interval")

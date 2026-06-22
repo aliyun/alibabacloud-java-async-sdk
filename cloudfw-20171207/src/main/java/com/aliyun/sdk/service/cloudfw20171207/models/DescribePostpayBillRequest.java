@@ -12,43 +12,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeACLProtectTrendRequest} extends {@link RequestModel}
+ * {@link DescribePostpayBillRequest} extends {@link RequestModel}
  *
- * <p>DescribeACLProtectTrendRequest</p>
+ * <p>DescribePostpayBillRequest</p>
  */
-public class DescribeACLProtectTrendRequest extends Request {
+public class DescribePostpayBillRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    private Long currentPage;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("FirewallType")
-    private String firewallType;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Interval")
-    private Long interval;
+    private Integer interval;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SourceIp")
-    @Deprecated
-    private String sourceIp;
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Long pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    private DescribeACLProtectTrendRequest(Builder builder) {
+    private DescribePostpayBillRequest(Builder builder) {
         super(builder);
+        this.currentPage = builder.currentPage;
         this.endTime = builder.endTime;
-        this.firewallType = builder.firewallType;
         this.interval = builder.interval;
         this.lang = builder.lang;
-        this.sourceIp = builder.sourceIp;
+        this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
     }
 
@@ -56,13 +57,20 @@ public class DescribeACLProtectTrendRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeACLProtectTrendRequest create() {
+    public static DescribePostpayBillRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return currentPage
+     */
+    public Long getCurrentPage() {
+        return this.currentPage;
     }
 
     /**
@@ -73,16 +81,9 @@ public class DescribeACLProtectTrendRequest extends Request {
     }
 
     /**
-     * @return firewallType
-     */
-    public String getFirewallType() {
-        return this.firewallType;
-    }
-
-    /**
      * @return interval
      */
-    public Long getInterval() {
+    public Integer getInterval() {
         return this.interval;
     }
 
@@ -94,10 +95,10 @@ public class DescribeACLProtectTrendRequest extends Request {
     }
 
     /**
-     * @return sourceIp
+     * @return pageSize
      */
-    public String getSourceIp() {
-        return this.sourceIp;
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -107,33 +108,42 @@ public class DescribeACLProtectTrendRequest extends Request {
         return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder<DescribeACLProtectTrendRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribePostpayBillRequest, Builder> {
+        private Long currentPage; 
         private String endTime; 
-        private String firewallType; 
-        private Long interval; 
+        private Integer interval; 
         private String lang; 
-        private String sourceIp; 
+        private Long pageSize; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeACLProtectTrendRequest request) {
+        private Builder(DescribePostpayBillRequest request) {
             super(request);
+            this.currentPage = request.currentPage;
             this.endTime = request.endTime;
-            this.firewallType = request.firewallType;
             this.interval = request.interval;
             this.lang = request.lang;
-            this.sourceIp = request.sourceIp;
+            this.pageSize = request.pageSize;
             this.startTime = request.startTime;
         } 
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp that is accurate to seconds.</p>
+         * CurrentPage.
+         */
+        public Builder currentPage(Long currentPage) {
+            this.putQueryParameter("CurrentPage", currentPage);
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1670397599</p>
+         * <p>1646063922</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -142,32 +152,16 @@ public class DescribeACLProtectTrendRequest extends Request {
         }
 
         /**
-         * FirewallType.
-         */
-        public Builder firewallType(String firewallType) {
-            this.putQueryParameter("FirewallType", firewallType);
-            this.firewallType = firewallType;
-            return this;
-        }
-
-        /**
          * Interval.
          */
-        public Builder interval(Long interval) {
+        public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
             this.interval = interval;
             return this;
         }
 
         /**
-         * <p>The language of the content within the request and the response. Valid values:</p>
-         * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>zh</p>
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -176,22 +170,19 @@ public class DescribeACLProtectTrendRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>223.95.87.130</p>
+         * PageSize.
          */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp that is accurate to seconds.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1677050306</p>
+         * <p>1656664560</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -200,8 +191,8 @@ public class DescribeACLProtectTrendRequest extends Request {
         }
 
         @Override
-        public DescribeACLProtectTrendRequest build() {
-            return new DescribeACLProtectTrendRequest(this);
+        public DescribePostpayBillRequest build() {
+            return new DescribePostpayBillRequest(this);
         } 
 
     } 
