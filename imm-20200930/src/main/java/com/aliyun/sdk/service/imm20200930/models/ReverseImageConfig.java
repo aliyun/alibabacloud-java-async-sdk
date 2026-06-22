@@ -12,23 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InsightsConfig} extends {@link TeaModel}
+ * {@link ReverseImageConfig} extends {@link TeaModel}
  *
- * <p>InsightsConfig</p>
+ * <p>ReverseImageConfig</p>
  */
-public class InsightsConfig extends TeaModel {
+public class ReverseImageConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Image")
-    private ImageInsightsConfig image;
-
-    @com.aliyun.core.annotation.NameInMap("Language")
-    private String language;
+    private ImageReverseImageConfig image;
 
     @com.aliyun.core.annotation.NameInMap("Video")
-    private VideoInsightsConfig video;
+    private VideoReverseImageConfig video;
 
-    private InsightsConfig(Builder builder) {
+    private ReverseImageConfig(Builder builder) {
         this.image = builder.image;
-        this.language = builder.language;
         this.video = builder.video;
     }
 
@@ -36,7 +32,7 @@ public class InsightsConfig extends TeaModel {
         return new Builder();
     }
 
-    public static InsightsConfig create() {
+    public static ReverseImageConfig create() {
         return builder().build();
     }
 
@@ -47,64 +43,47 @@ public class InsightsConfig extends TeaModel {
     /**
      * @return image
      */
-    public ImageInsightsConfig getImage() {
+    public ImageReverseImageConfig getImage() {
         return this.image;
-    }
-
-    /**
-     * @return language
-     */
-    public String getLanguage() {
-        return this.language;
     }
 
     /**
      * @return video
      */
-    public VideoInsightsConfig getVideo() {
+    public VideoReverseImageConfig getVideo() {
         return this.video;
     }
 
     public static final class Builder {
-        private ImageInsightsConfig image; 
-        private String language; 
-        private VideoInsightsConfig video; 
+        private ImageReverseImageConfig image; 
+        private VideoReverseImageConfig video; 
 
         private Builder() {
         } 
 
-        private Builder(InsightsConfig model) {
+        private Builder(ReverseImageConfig model) {
             this.image = model.image;
-            this.language = model.language;
             this.video = model.video;
         } 
 
         /**
          * Image.
          */
-        public Builder image(ImageInsightsConfig image) {
+        public Builder image(ImageReverseImageConfig image) {
             this.image = image;
-            return this;
-        }
-
-        /**
-         * Language.
-         */
-        public Builder language(String language) {
-            this.language = language;
             return this;
         }
 
         /**
          * Video.
          */
-        public Builder video(VideoInsightsConfig video) {
+        public Builder video(VideoReverseImageConfig video) {
             this.video = video;
             return this;
         }
 
-        public InsightsConfig build() {
-            return new InsightsConfig(this);
+        public ReverseImageConfig build() {
+            return new ReverseImageConfig(this);
         } 
 
     } 

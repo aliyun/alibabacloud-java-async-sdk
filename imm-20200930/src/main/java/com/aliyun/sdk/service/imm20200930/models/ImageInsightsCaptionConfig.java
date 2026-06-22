@@ -12,23 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link VideoInsightsCaptionConfig} extends {@link TeaModel}
+ * {@link ImageInsightsCaptionConfig} extends {@link TeaModel}
  *
- * <p>VideoInsightsCaptionConfig</p>
+ * <p>ImageInsightsCaptionConfig</p>
  */
-public class VideoInsightsCaptionConfig extends TeaModel {
+public class ImageInsightsCaptionConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
-
-    @com.aliyun.core.annotation.NameInMap("PersonReference")
-    private PersonReferenceConfig personReference;
 
     @com.aliyun.core.annotation.NameInMap("Prompt")
     private String prompt;
 
-    private VideoInsightsCaptionConfig(Builder builder) {
+    private ImageInsightsCaptionConfig(Builder builder) {
         this.enable = builder.enable;
-        this.personReference = builder.personReference;
         this.prompt = builder.prompt;
     }
 
@@ -36,7 +32,7 @@ public class VideoInsightsCaptionConfig extends TeaModel {
         return new Builder();
     }
 
-    public static VideoInsightsCaptionConfig create() {
+    public static ImageInsightsCaptionConfig create() {
         return builder().build();
     }
 
@@ -52,13 +48,6 @@ public class VideoInsightsCaptionConfig extends TeaModel {
     }
 
     /**
-     * @return personReference
-     */
-    public PersonReferenceConfig getPersonReference() {
-        return this.personReference;
-    }
-
-    /**
      * @return prompt
      */
     public String getPrompt() {
@@ -67,15 +56,13 @@ public class VideoInsightsCaptionConfig extends TeaModel {
 
     public static final class Builder {
         private Boolean enable; 
-        private PersonReferenceConfig personReference; 
         private String prompt; 
 
         private Builder() {
         } 
 
-        private Builder(VideoInsightsCaptionConfig model) {
+        private Builder(ImageInsightsCaptionConfig model) {
             this.enable = model.enable;
-            this.personReference = model.personReference;
             this.prompt = model.prompt;
         } 
 
@@ -88,14 +75,6 @@ public class VideoInsightsCaptionConfig extends TeaModel {
         }
 
         /**
-         * PersonReference.
-         */
-        public Builder personReference(PersonReferenceConfig personReference) {
-            this.personReference = personReference;
-            return this;
-        }
-
-        /**
          * Prompt.
          */
         public Builder prompt(String prompt) {
@@ -103,8 +82,8 @@ public class VideoInsightsCaptionConfig extends TeaModel {
             return this;
         }
 
-        public VideoInsightsCaptionConfig build() {
-            return new VideoInsightsCaptionConfig(this);
+        public ImageInsightsCaptionConfig build() {
+            return new ImageInsightsCaptionConfig(this);
         } 
 
     } 

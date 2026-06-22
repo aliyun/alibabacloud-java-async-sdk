@@ -32,7 +32,26 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2020-09-30";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-beijing-gov-1", "imm-vpc.cn-beijing-gov-1.aliyuncs.com")
+            new TeaPair("cn-beijing-gov-1", "imm-vpc.cn-beijing-gov-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "imm.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "imm.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "imm.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "imm.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "imm.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "imm.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "imm.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "imm.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "imm.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "imm.cn-north-2-gov-1.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "imm.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "imm.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "imm.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "imm.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "imm.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "imm.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "imm.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "imm.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "imm.ap-south-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
