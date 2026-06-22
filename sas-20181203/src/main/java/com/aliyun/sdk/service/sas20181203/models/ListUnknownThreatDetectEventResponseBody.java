@@ -137,6 +137,9 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
+        @com.aliyun.core.annotation.NameInMap("HandleType")
+        private String handleType;
+
         @com.aliyun.core.annotation.NameInMap("HashKey")
         private String hashKey;
 
@@ -189,6 +192,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             this.cmdline = builder.cmdline;
             this.count = builder.count;
             this.firstTime = builder.firstTime;
+            this.handleType = builder.handleType;
             this.hashKey = builder.hashKey;
             this.id = builder.id;
             this.instanceName = builder.instanceName;
@@ -254,6 +258,13 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
          */
         public Long getFirstTime() {
             return this.firstTime;
+        }
+
+        /**
+         * @return handleType
+         */
+        public String getHandleType() {
+            return this.handleType;
         }
 
         /**
@@ -368,6 +379,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             private String cmdline; 
             private Integer count; 
             private Long firstTime; 
+            private String handleType; 
             private String hashKey; 
             private String id; 
             private String instanceName; 
@@ -394,6 +406,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
                 this.cmdline = model.cmdline;
                 this.count = model.count;
                 this.firstTime = model.firstTime;
+                this.handleType = model.handleType;
                 this.hashKey = model.hashKey;
                 this.id = model.id;
                 this.instanceName = model.instanceName;
@@ -456,6 +469,14 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
+                return this;
+            }
+
+            /**
+             * HandleType.
+             */
+            public Builder handleType(String handleType) {
+                this.handleType = handleType;
                 return this;
             }
 

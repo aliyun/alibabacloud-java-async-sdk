@@ -101,6 +101,18 @@ public class GetCheckSaleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumeCount")
         private Long consumeCount;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceConsumeCount")
+        private Long instanceConsumeCount;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceHybridPostLatestCycledResourceCount")
+        private Long instanceHybridPostLatestCycledResourceCount;
+
+        @com.aliyun.core.annotation.NameInMap("InstancePostConsumeCount")
+        private Long instancePostConsumeCount;
+
+        @com.aliyun.core.annotation.NameInMap("InstancePurchaseCount")
+        private Long instancePurchaseCount;
+
         @com.aliyun.core.annotation.NameInMap("LoyalUser")
         private Boolean loyalUser;
 
@@ -112,6 +124,10 @@ public class GetCheckSaleResponseBody extends TeaModel {
 
         private CheckSale(Builder builder) {
             this.consumeCount = builder.consumeCount;
+            this.instanceConsumeCount = builder.instanceConsumeCount;
+            this.instanceHybridPostLatestCycledResourceCount = builder.instanceHybridPostLatestCycledResourceCount;
+            this.instancePostConsumeCount = builder.instancePostConsumeCount;
+            this.instancePurchaseCount = builder.instancePurchaseCount;
             this.loyalUser = builder.loyalUser;
             this.purchaseCount = builder.purchaseCount;
             this.saleUserType = builder.saleUserType;
@@ -130,6 +146,34 @@ public class GetCheckSaleResponseBody extends TeaModel {
          */
         public Long getConsumeCount() {
             return this.consumeCount;
+        }
+
+        /**
+         * @return instanceConsumeCount
+         */
+        public Long getInstanceConsumeCount() {
+            return this.instanceConsumeCount;
+        }
+
+        /**
+         * @return instanceHybridPostLatestCycledResourceCount
+         */
+        public Long getInstanceHybridPostLatestCycledResourceCount() {
+            return this.instanceHybridPostLatestCycledResourceCount;
+        }
+
+        /**
+         * @return instancePostConsumeCount
+         */
+        public Long getInstancePostConsumeCount() {
+            return this.instancePostConsumeCount;
+        }
+
+        /**
+         * @return instancePurchaseCount
+         */
+        public Long getInstancePurchaseCount() {
+            return this.instancePurchaseCount;
         }
 
         /**
@@ -155,6 +199,10 @@ public class GetCheckSaleResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long consumeCount; 
+            private Long instanceConsumeCount; 
+            private Long instanceHybridPostLatestCycledResourceCount; 
+            private Long instancePostConsumeCount; 
+            private Long instancePurchaseCount; 
             private Boolean loyalUser; 
             private Long purchaseCount; 
             private Integer saleUserType; 
@@ -164,6 +212,10 @@ public class GetCheckSaleResponseBody extends TeaModel {
 
             private Builder(CheckSale model) {
                 this.consumeCount = model.consumeCount;
+                this.instanceConsumeCount = model.instanceConsumeCount;
+                this.instanceHybridPostLatestCycledResourceCount = model.instanceHybridPostLatestCycledResourceCount;
+                this.instancePostConsumeCount = model.instancePostConsumeCount;
+                this.instancePurchaseCount = model.instancePurchaseCount;
                 this.loyalUser = model.loyalUser;
                 this.purchaseCount = model.purchaseCount;
                 this.saleUserType = model.saleUserType;
@@ -177,6 +229,38 @@ public class GetCheckSaleResponseBody extends TeaModel {
              */
             public Builder consumeCount(Long consumeCount) {
                 this.consumeCount = consumeCount;
+                return this;
+            }
+
+            /**
+             * InstanceConsumeCount.
+             */
+            public Builder instanceConsumeCount(Long instanceConsumeCount) {
+                this.instanceConsumeCount = instanceConsumeCount;
+                return this;
+            }
+
+            /**
+             * InstanceHybridPostLatestCycledResourceCount.
+             */
+            public Builder instanceHybridPostLatestCycledResourceCount(Long instanceHybridPostLatestCycledResourceCount) {
+                this.instanceHybridPostLatestCycledResourceCount = instanceHybridPostLatestCycledResourceCount;
+                return this;
+            }
+
+            /**
+             * InstancePostConsumeCount.
+             */
+            public Builder instancePostConsumeCount(Long instancePostConsumeCount) {
+                this.instancePostConsumeCount = instancePostConsumeCount;
+                return this;
+            }
+
+            /**
+             * InstancePurchaseCount.
+             */
+            public Builder instancePurchaseCount(Long instancePurchaseCount) {
+                this.instancePurchaseCount = instancePurchaseCount;
                 return this;
             }
 

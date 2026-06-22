@@ -162,6 +162,9 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssetTypeName")
         private String assetTypeName;
 
+        @com.aliyun.core.annotation.NameInMap("AssetUuid")
+        private String assetUuid;
+
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
@@ -179,6 +182,12 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("RiskStatus")
         private String riskStatus;
+
+        @com.aliyun.core.annotation.NameInMap("SaleCspm")
+        private Integer saleCspm;
+
+        @com.aliyun.core.annotation.NameInMap("SaleType")
+        private Integer saleType;
 
         @com.aliyun.core.annotation.NameInMap("SecurityInfo")
         private String securityInfo;
@@ -201,12 +210,15 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             this.assetSubTypeName = builder.assetSubTypeName;
             this.assetType = builder.assetType;
             this.assetTypeName = builder.assetTypeName;
+            this.assetUuid = builder.assetUuid;
             this.createdTime = builder.createdTime;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.regionId = builder.regionId;
             this.riskStatus = builder.riskStatus;
+            this.saleCspm = builder.saleCspm;
+            this.saleType = builder.saleType;
             this.securityInfo = builder.securityInfo;
             this.tags = builder.tags;
             this.vendor = builder.vendor;
@@ -258,6 +270,13 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return assetUuid
+         */
+        public String getAssetUuid() {
+            return this.assetUuid;
+        }
+
+        /**
          * @return createdTime
          */
         public Long getCreatedTime() {
@@ -297,6 +316,20 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
          */
         public String getRiskStatus() {
             return this.riskStatus;
+        }
+
+        /**
+         * @return saleCspm
+         */
+        public Integer getSaleCspm() {
+            return this.saleCspm;
+        }
+
+        /**
+         * @return saleType
+         */
+        public Integer getSaleType() {
+            return this.saleType;
         }
 
         /**
@@ -340,12 +373,15 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             private String assetSubTypeName; 
             private Integer assetType; 
             private String assetTypeName; 
+            private String assetUuid; 
             private Long createdTime; 
             private String instanceId; 
             private String instanceName; 
             private String internetIp; 
             private String regionId; 
             private String riskStatus; 
+            private Integer saleCspm; 
+            private Integer saleType; 
             private String securityInfo; 
             private java.util.List<String> tags; 
             private Integer vendor; 
@@ -361,12 +397,15 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
                 this.assetSubTypeName = model.assetSubTypeName;
                 this.assetType = model.assetType;
                 this.assetTypeName = model.assetTypeName;
+                this.assetUuid = model.assetUuid;
                 this.createdTime = model.createdTime;
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
                 this.internetIp = model.internetIp;
                 this.regionId = model.regionId;
                 this.riskStatus = model.riskStatus;
+                this.saleCspm = model.saleCspm;
+                this.saleType = model.saleType;
                 this.securityInfo = model.securityInfo;
                 this.tags = model.tags;
                 this.vendor = model.vendor;
@@ -589,6 +628,14 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * AssetUuid.
+             */
+            public Builder assetUuid(String assetUuid) {
+                this.assetUuid = assetUuid;
+                return this;
+            }
+
+            /**
              * <p>The time when the instance was created.</p>
              * 
              * <strong>example:</strong>
@@ -655,6 +702,22 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
+                return this;
+            }
+
+            /**
+             * SaleCspm.
+             */
+            public Builder saleCspm(Integer saleCspm) {
+                this.saleCspm = saleCspm;
+                return this;
+            }
+
+            /**
+             * SaleType.
+             */
+            public Builder saleType(Integer saleType) {
+                this.saleType = saleType;
                 return this;
             }
 

@@ -22,12 +22,17 @@ public class GetCloudAssetSummaryRequest extends Request {
     private java.util.List<CloudAssetTypes> cloudAssetTypes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSaleData")
+    private Boolean isSaleData;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendors")
     private java.util.List<Integer> vendors;
 
     private GetCloudAssetSummaryRequest(Builder builder) {
         super(builder);
         this.cloudAssetTypes = builder.cloudAssetTypes;
+        this.isSaleData = builder.isSaleData;
         this.vendors = builder.vendors;
     }
 
@@ -52,6 +57,13 @@ public class GetCloudAssetSummaryRequest extends Request {
     }
 
     /**
+     * @return isSaleData
+     */
+    public Boolean getIsSaleData() {
+        return this.isSaleData;
+    }
+
+    /**
      * @return vendors
      */
     public java.util.List<Integer> getVendors() {
@@ -60,6 +72,7 @@ public class GetCloudAssetSummaryRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetCloudAssetSummaryRequest, Builder> {
         private java.util.List<CloudAssetTypes> cloudAssetTypes; 
+        private Boolean isSaleData; 
         private java.util.List<Integer> vendors; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class GetCloudAssetSummaryRequest extends Request {
         private Builder(GetCloudAssetSummaryRequest request) {
             super(request);
             this.cloudAssetTypes = request.cloudAssetTypes;
+            this.isSaleData = request.isSaleData;
             this.vendors = request.vendors;
         } 
 
@@ -78,6 +92,15 @@ public class GetCloudAssetSummaryRequest extends Request {
         public Builder cloudAssetTypes(java.util.List<CloudAssetTypes> cloudAssetTypes) {
             this.putQueryParameter("CloudAssetTypes", cloudAssetTypes);
             this.cloudAssetTypes = cloudAssetTypes;
+            return this;
+        }
+
+        /**
+         * IsSaleData.
+         */
+        public Builder isSaleData(Boolean isSaleData) {
+            this.putQueryParameter("IsSaleData", isSaleData);
+            this.isSaleData = isSaleData;
             return this;
         }
 

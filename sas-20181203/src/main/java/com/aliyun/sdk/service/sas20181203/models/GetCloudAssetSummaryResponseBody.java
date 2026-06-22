@@ -110,6 +110,12 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceRiskCount")
         private Integer instanceRiskCount;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceSaleCount")
+        private Integer instanceSaleCount;
+
+        @com.aliyun.core.annotation.NameInMap("IsInstanceSale")
+        private Boolean isInstanceSale;
+
         @com.aliyun.core.annotation.NameInMap("Vendor")
         private Integer vendor;
 
@@ -118,6 +124,8 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             this.assetType = builder.assetType;
             this.instanceCount = builder.instanceCount;
             this.instanceRiskCount = builder.instanceRiskCount;
+            this.instanceSaleCount = builder.instanceSaleCount;
+            this.isInstanceSale = builder.isInstanceSale;
             this.vendor = builder.vendor;
         }
 
@@ -158,6 +166,20 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceSaleCount
+         */
+        public Integer getInstanceSaleCount() {
+            return this.instanceSaleCount;
+        }
+
+        /**
+         * @return isInstanceSale
+         */
+        public Boolean getIsInstanceSale() {
+            return this.isInstanceSale;
+        }
+
+        /**
          * @return vendor
          */
         public Integer getVendor() {
@@ -169,6 +191,8 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             private Integer assetType; 
             private Integer instanceCount; 
             private Integer instanceRiskCount; 
+            private Integer instanceSaleCount; 
+            private Boolean isInstanceSale; 
             private Integer vendor; 
 
             private Builder() {
@@ -179,6 +203,8 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
                 this.assetType = model.assetType;
                 this.instanceCount = model.instanceCount;
                 this.instanceRiskCount = model.instanceRiskCount;
+                this.instanceSaleCount = model.instanceSaleCount;
+                this.isInstanceSale = model.isInstanceSale;
                 this.vendor = model.vendor;
             } 
 
@@ -254,6 +280,22 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceSaleCount.
+             */
+            public Builder instanceSaleCount(Integer instanceSaleCount) {
+                this.instanceSaleCount = instanceSaleCount;
+                return this;
+            }
+
+            /**
+             * IsInstanceSale.
+             */
+            public Builder isInstanceSale(Boolean isInstanceSale) {
+                this.isInstanceSale = isInstanceSale;
+                return this;
+            }
+
+            /**
              * <p>Server vendor. Values:</p>
              * <ul>
              * <li><strong>0</strong>: Alibaba Cloud Asset </li>
@@ -294,10 +336,14 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceRiskCountTotal")
         private Integer instanceRiskCountTotal;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceSaleCountTotal")
+        private Integer instanceSaleCountTotal;
+
         private GroupedFields(Builder builder) {
             this.cloudAssetSummaryMetas = builder.cloudAssetSummaryMetas;
             this.instanceCountTotal = builder.instanceCountTotal;
             this.instanceRiskCountTotal = builder.instanceRiskCountTotal;
+            this.instanceSaleCountTotal = builder.instanceSaleCountTotal;
         }
 
         public static Builder builder() {
@@ -329,10 +375,18 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             return this.instanceRiskCountTotal;
         }
 
+        /**
+         * @return instanceSaleCountTotal
+         */
+        public Integer getInstanceSaleCountTotal() {
+            return this.instanceSaleCountTotal;
+        }
+
         public static final class Builder {
             private java.util.List<CloudAssetSummaryMetas> cloudAssetSummaryMetas; 
             private Integer instanceCountTotal; 
             private Integer instanceRiskCountTotal; 
+            private Integer instanceSaleCountTotal; 
 
             private Builder() {
             } 
@@ -341,6 +395,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
                 this.cloudAssetSummaryMetas = model.cloudAssetSummaryMetas;
                 this.instanceCountTotal = model.instanceCountTotal;
                 this.instanceRiskCountTotal = model.instanceRiskCountTotal;
+                this.instanceSaleCountTotal = model.instanceSaleCountTotal;
             } 
 
             /**
@@ -370,6 +425,14 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
              */
             public Builder instanceRiskCountTotal(Integer instanceRiskCountTotal) {
                 this.instanceRiskCountTotal = instanceRiskCountTotal;
+                return this;
+            }
+
+            /**
+             * InstanceSaleCountTotal.
+             */
+            public Builder instanceSaleCountTotal(Integer instanceSaleCountTotal) {
+                this.instanceSaleCountTotal = instanceSaleCountTotal;
                 return this;
             }
 

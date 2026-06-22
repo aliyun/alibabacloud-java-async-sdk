@@ -44,11 +44,23 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CspmCapacity")
     private Long cspmCapacity;
 
+    @com.aliyun.core.annotation.NameInMap("CspmInstanceCapacity")
+    private Integer cspmInstanceCapacity;
+
     @com.aliyun.core.annotation.NameInMap("HighestVersion")
     private Integer highestVersion;
 
     @com.aliyun.core.annotation.NameInMap("HoneypotCapacity")
     private Long honeypotCapacity;
+
+    @com.aliyun.core.annotation.NameInMap("HybridPaidModuleSwitchMap")
+    private Integer hybridPaidModuleSwitchMap;
+
+    @com.aliyun.core.annotation.NameInMap("HybridPaidStatus")
+    private Integer hybridPaidStatus;
+
+    @com.aliyun.core.annotation.NameInMap("HybridSwitch")
+    private Integer hybridSwitch;
 
     @com.aliyun.core.annotation.NameInMap("ImageScanCapacity")
     private Long imageScanCapacity;
@@ -91,6 +103,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("MultiVersion")
     private String multiVersion;
+
+    @com.aliyun.core.annotation.NameInMap("NewPostPaidCspm")
+    private Integer newPostPaidCspm;
 
     @com.aliyun.core.annotation.NameInMap("NewThreatAnalysis")
     private Integer newThreatAnalysis;
@@ -171,8 +186,12 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.assetLevel = builder.assetLevel;
         this.canTryPostPaidPackage = builder.canTryPostPaidPackage;
         this.cspmCapacity = builder.cspmCapacity;
+        this.cspmInstanceCapacity = builder.cspmInstanceCapacity;
         this.highestVersion = builder.highestVersion;
         this.honeypotCapacity = builder.honeypotCapacity;
+        this.hybridPaidModuleSwitchMap = builder.hybridPaidModuleSwitchMap;
+        this.hybridPaidStatus = builder.hybridPaidStatus;
+        this.hybridSwitch = builder.hybridSwitch;
         this.imageScanCapacity = builder.imageScanCapacity;
         this.instanceBuyType = builder.instanceBuyType;
         this.instanceId = builder.instanceId;
@@ -187,6 +206,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.MVUnusedAuthCount = builder.MVUnusedAuthCount;
         this.mergedVersion = builder.mergedVersion;
         this.multiVersion = builder.multiVersion;
+        this.newPostPaidCspm = builder.newPostPaidCspm;
         this.newThreatAnalysis = builder.newThreatAnalysis;
         this.onboardedAssets = builder.onboardedAssets;
         this.openTime = builder.openTime;
@@ -288,6 +308,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return cspmInstanceCapacity
+     */
+    public Integer getCspmInstanceCapacity() {
+        return this.cspmInstanceCapacity;
+    }
+
+    /**
      * @return highestVersion
      */
     public Integer getHighestVersion() {
@@ -299,6 +326,27 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Long getHoneypotCapacity() {
         return this.honeypotCapacity;
+    }
+
+    /**
+     * @return hybridPaidModuleSwitchMap
+     */
+    public Integer getHybridPaidModuleSwitchMap() {
+        return this.hybridPaidModuleSwitchMap;
+    }
+
+    /**
+     * @return hybridPaidStatus
+     */
+    public Integer getHybridPaidStatus() {
+        return this.hybridPaidStatus;
+    }
+
+    /**
+     * @return hybridSwitch
+     */
+    public Integer getHybridSwitch() {
+        return this.hybridSwitch;
     }
 
     /**
@@ -397,6 +445,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public String getMultiVersion() {
         return this.multiVersion;
+    }
+
+    /**
+     * @return newPostPaidCspm
+     */
+    public Integer getNewPostPaidCspm() {
+        return this.newPostPaidCspm;
     }
 
     /**
@@ -570,8 +625,12 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Integer assetLevel; 
         private Integer canTryPostPaidPackage; 
         private Long cspmCapacity; 
+        private Integer cspmInstanceCapacity; 
         private Integer highestVersion; 
         private Long honeypotCapacity; 
+        private Integer hybridPaidModuleSwitchMap; 
+        private Integer hybridPaidStatus; 
+        private Integer hybridSwitch; 
         private Long imageScanCapacity; 
         private Integer instanceBuyType; 
         private String instanceId; 
@@ -586,6 +645,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Integer MVUnusedAuthCount; 
         private Integer mergedVersion; 
         private String multiVersion; 
+        private Integer newPostPaidCspm; 
         private Integer newThreatAnalysis; 
         private Integer onboardedAssets; 
         private Long openTime; 
@@ -623,8 +683,12 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
             this.assetLevel = model.assetLevel;
             this.canTryPostPaidPackage = model.canTryPostPaidPackage;
             this.cspmCapacity = model.cspmCapacity;
+            this.cspmInstanceCapacity = model.cspmInstanceCapacity;
             this.highestVersion = model.highestVersion;
             this.honeypotCapacity = model.honeypotCapacity;
+            this.hybridPaidModuleSwitchMap = model.hybridPaidModuleSwitchMap;
+            this.hybridPaidStatus = model.hybridPaidStatus;
+            this.hybridSwitch = model.hybridSwitch;
             this.imageScanCapacity = model.imageScanCapacity;
             this.instanceBuyType = model.instanceBuyType;
             this.instanceId = model.instanceId;
@@ -639,6 +703,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
             this.MVUnusedAuthCount = model.MVUnusedAuthCount;
             this.mergedVersion = model.mergedVersion;
             this.multiVersion = model.multiVersion;
+            this.newPostPaidCspm = model.newPostPaidCspm;
             this.newThreatAnalysis = model.newThreatAnalysis;
             this.onboardedAssets = model.onboardedAssets;
             this.openTime = model.openTime;
@@ -786,6 +851,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
+         * CspmInstanceCapacity.
+         */
+        public Builder cspmInstanceCapacity(Integer cspmInstanceCapacity) {
+            this.cspmInstanceCapacity = cspmInstanceCapacity;
+            return this;
+        }
+
+        /**
          * <p>Purchase the highest version of the Security Center. Values:</p>
          * <ul>
          * <li><strong>1</strong>: Free Edition </li>
@@ -815,6 +888,30 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder honeypotCapacity(Long honeypotCapacity) {
             this.honeypotCapacity = honeypotCapacity;
+            return this;
+        }
+
+        /**
+         * HybridPaidModuleSwitchMap.
+         */
+        public Builder hybridPaidModuleSwitchMap(Integer hybridPaidModuleSwitchMap) {
+            this.hybridPaidModuleSwitchMap = hybridPaidModuleSwitchMap;
+            return this;
+        }
+
+        /**
+         * HybridPaidStatus.
+         */
+        public Builder hybridPaidStatus(Integer hybridPaidStatus) {
+            this.hybridPaidStatus = hybridPaidStatus;
+            return this;
+        }
+
+        /**
+         * HybridSwitch.
+         */
+        public Builder hybridSwitch(Integer hybridSwitch) {
+            this.hybridSwitch = hybridSwitch;
             return this;
         }
 
@@ -1003,6 +1100,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder multiVersion(String multiVersion) {
             this.multiVersion = multiVersion;
+            return this;
+        }
+
+        /**
+         * NewPostPaidCspm.
+         */
+        public Builder newPostPaidCspm(Integer newPostPaidCspm) {
+            this.newPostPaidCspm = newPostPaidCspm;
             return this;
         }
 

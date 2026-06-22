@@ -34,6 +34,10 @@ public class ListCloudAssetInstancesRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSaleData")
+    private Boolean isSaleData;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogicalExp")
     private String logicalExp;
 
@@ -52,6 +56,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         this.cloudAssetTypes = builder.cloudAssetTypes;
         this.criteria = builder.criteria;
         this.currentPage = builder.currentPage;
+        this.isSaleData = builder.isSaleData;
         this.logicalExp = builder.logicalExp;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -99,6 +104,13 @@ public class ListCloudAssetInstancesRequest extends Request {
     }
 
     /**
+     * @return isSaleData
+     */
+    public Boolean getIsSaleData() {
+        return this.isSaleData;
+    }
+
+    /**
      * @return logicalExp
      */
     public String getLogicalExp() {
@@ -124,6 +136,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         private java.util.List<CloudAssetTypes> cloudAssetTypes; 
         private String criteria; 
         private Integer currentPage; 
+        private Boolean isSaleData; 
         private String logicalExp; 
         private Integer pageSize; 
         private String regionId; 
@@ -138,6 +151,7 @@ public class ListCloudAssetInstancesRequest extends Request {
             this.cloudAssetTypes = request.cloudAssetTypes;
             this.criteria = request.criteria;
             this.currentPage = request.currentPage;
+            this.isSaleData = request.isSaleData;
             this.logicalExp = request.logicalExp;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
@@ -197,6 +211,15 @@ public class ListCloudAssetInstancesRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * IsSaleData.
+         */
+        public Builder isSaleData(Boolean isSaleData) {
+            this.putQueryParameter("IsSaleData", isSaleData);
+            this.isSaleData = isSaleData;
             return this;
         }
 

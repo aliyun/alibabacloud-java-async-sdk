@@ -54,6 +54,10 @@ public class BindAuthToMachineRequest extends Request {
     private Long preBindOrderId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UnBind")
     private java.util.List<String> unBind;
 
@@ -68,6 +72,7 @@ public class BindAuthToMachineRequest extends Request {
         this.logicalExp = builder.logicalExp;
         this.ntmVersion = builder.ntmVersion;
         this.preBindOrderId = builder.preBindOrderId;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.unBind = builder.unBind;
     }
 
@@ -148,6 +153,13 @@ public class BindAuthToMachineRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return unBind
      */
     public java.util.List<String> getUnBind() {
@@ -164,6 +176,7 @@ public class BindAuthToMachineRequest extends Request {
         private String logicalExp; 
         private String ntmVersion; 
         private Long preBindOrderId; 
+        private Long resourceDirectoryAccountId; 
         private java.util.List<String> unBind; 
 
         private Builder() {
@@ -181,6 +194,7 @@ public class BindAuthToMachineRequest extends Request {
             this.logicalExp = request.logicalExp;
             this.ntmVersion = request.ntmVersion;
             this.preBindOrderId = request.preBindOrderId;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.unBind = request.unBind;
         } 
 
@@ -325,6 +339,15 @@ public class BindAuthToMachineRequest extends Request {
         public Builder preBindOrderId(Long preBindOrderId) {
             this.putQueryParameter("PreBindOrderId", preBindOrderId);
             this.preBindOrderId = preBindOrderId;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 
