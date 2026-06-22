@@ -1020,6 +1020,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SendChatappMessageResponse> sendChatappMessage(SendChatappMessageRequest request);
 
     /**
+     * @param request the request parameters of SubmitVerifyCodeResult  SubmitVerifyCodeResultRequest
+     * @return SubmitVerifyCodeResultResponse
+     */
+    CompletableFuture<SubmitVerifyCodeResultResponse> submitVerifyCodeResult(SubmitVerifyCodeResultRequest request);
+
+    /**
      * @param request the request parameters of SyncBusinessAppHistory  SyncBusinessAppHistoryRequest
      * @return SyncBusinessAppHistoryResponse
      */

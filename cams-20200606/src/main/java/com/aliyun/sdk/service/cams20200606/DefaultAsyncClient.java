@@ -30,7 +30,9 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "cams";
         this.version = "2020-06-06";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("ap-southeast-1", "cams.ap-southeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -2750,6 +2752,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SendChatappMessageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitVerifyCodeResult  SubmitVerifyCodeResultRequest
+     * @return SubmitVerifyCodeResultResponse
+     */
+    @Override
+    public CompletableFuture<SubmitVerifyCodeResultResponse> submitVerifyCodeResult(SubmitVerifyCodeResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitVerifyCodeResult").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitVerifyCodeResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitVerifyCodeResultResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
