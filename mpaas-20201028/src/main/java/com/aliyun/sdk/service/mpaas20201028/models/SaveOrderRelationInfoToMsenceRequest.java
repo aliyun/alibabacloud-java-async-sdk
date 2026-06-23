@@ -46,6 +46,14 @@ public class SaveOrderRelationInfoToMsenceRequest extends Request {
     private String customId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemId")
+    private String itemId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemTitle")
+    private String itemTitle;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MiniProgramId")
     private String miniProgramId;
 
@@ -74,6 +82,8 @@ public class SaveOrderRelationInfoToMsenceRequest extends Request {
         this.clientType = builder.clientType;
         this.cpExtra = builder.cpExtra;
         this.customId = builder.customId;
+        this.itemId = builder.itemId;
+        this.itemTitle = builder.itemTitle;
         this.miniProgramId = builder.miniProgramId;
         this.openUid = builder.openUid;
         this.platformId = builder.platformId;
@@ -144,6 +154,20 @@ public class SaveOrderRelationInfoToMsenceRequest extends Request {
     }
 
     /**
+     * @return itemId
+     */
+    public String getItemId() {
+        return this.itemId;
+    }
+
+    /**
+     * @return itemTitle
+     */
+    public String getItemTitle() {
+        return this.itemTitle;
+    }
+
+    /**
      * @return miniProgramId
      */
     public String getMiniProgramId() {
@@ -186,6 +210,8 @@ public class SaveOrderRelationInfoToMsenceRequest extends Request {
         private String clientType; 
         private String cpExtra; 
         private String customId; 
+        private String itemId; 
+        private String itemTitle; 
         private String miniProgramId; 
         private String openUid; 
         private String platformId; 
@@ -205,6 +231,8 @@ public class SaveOrderRelationInfoToMsenceRequest extends Request {
             this.clientType = request.clientType;
             this.cpExtra = request.cpExtra;
             this.customId = request.customId;
+            this.itemId = request.itemId;
+            this.itemTitle = request.itemTitle;
             this.miniProgramId = request.miniProgramId;
             this.openUid = request.openUid;
             this.platformId = request.platformId;
@@ -272,6 +300,24 @@ public class SaveOrderRelationInfoToMsenceRequest extends Request {
         public Builder customId(String customId) {
             this.putBodyParameter("CustomId", customId);
             this.customId = customId;
+            return this;
+        }
+
+        /**
+         * ItemId.
+         */
+        public Builder itemId(String itemId) {
+            this.putBodyParameter("ItemId", itemId);
+            this.itemId = itemId;
+            return this;
+        }
+
+        /**
+         * ItemTitle.
+         */
+        public Builder itemTitle(String itemTitle) {
+            this.putBodyParameter("ItemTitle", itemTitle);
+            this.itemTitle = itemTitle;
             return this;
         }
 
